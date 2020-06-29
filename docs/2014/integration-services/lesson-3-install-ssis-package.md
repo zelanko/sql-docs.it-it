@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3fa7119ba9a8321e2b3bb8cbe1015271c9a3c95e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ed53af447271aad48abd08e8e98b0fd11bbcf7c4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965199"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440498"
 ---
 # <a name="lesson-3-installing-packages"></a>Lezione 3: Installazione di pacchetti
   Nella [lezione 2: creazione del pacchetto di distribuzione](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)è stata compilata un'utilità di distribuzione e è stato creato il pacchetto di distribuzione che contiene gli elementi necessari per installare i pacchetti in un altro computer. È stato inoltre verificato l'elenco dei file inclusi nel pacchetto di distribuzione ed è stato esaminato il contenuto del file manifesto creato contestualmente all'utilità di distribuzione.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 723eb7c1c0e8547ee411fc54ecd4aca613011b38
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: aa44924311e412c348a92b0e6abb522ae36bbc14
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547113"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468996"
 ---
 # <a name="database-readwritemodes"></a>Proprietà ReadWriteMode del database
   Spesso, un amministratore di database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vuole impostare un database di lettura/scrittura in sola lettura o viceversa. Queste situazioni sono il più delle volte determinate da esigenze aziendali, ad esempio la condivisione della stessa cartella di database tra più server per ottenere la scalabilità orizzontale di una soluzione, e per migliorare le prestazioni. In questi casi, la `ReadWriteMode` Proprietà database consente all' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] amministratore di database di modificare facilmente la modalità operativa del database.  
@@ -46,7 +46,7 @@ ms.locfileid: "84547113"
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft. AnalysisServices. database. Detach *](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Collegamento e scollegamento di Analysis Services database](attach-and-detach-analysis-services-databases.md)   
  [Spostare un database di Analysis Services](move-an-analysis-services-database.md)   
  [Scollega elemento](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   

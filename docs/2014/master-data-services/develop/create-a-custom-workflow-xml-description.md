@@ -9,15 +9,15 @@ ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7cceedac33c3f368f99fd87ab3aa2453f1cf9ba9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 4920844de9e20c3c4a4a89a192c2d67f0e58f0b8
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84971511"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469036"
 ---
 # <a name="custom-workflow-xml-description-master-data-services"></a>Descrizione XML del flusso di lavoro personalizzato (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] il metodo <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> viene chiamato da SQL Server MDS Workflow Integration Service all'avvio di un flusso di lavoro. Questo metodo riceve i metadati e i dati sull'elemento che ha attivato la regola business del flusso di lavoro come blocco di XML. Per un esempio di codice che implementa un gestore del flusso di lavoro, vedere [Creare un flusso di lavoro personalizzato - Esempio &#40;Master Data Services&#41;](create-a-custom-workflow-example.md).  
+  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] il metodo [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) viene chiamato dal servizio di integrazione del flusso di lavoro di SQL Server MDS all'avvio di un flusso di lavoro. Questo metodo riceve i metadati e i dati sull'elemento che ha attivato la regola business del flusso di lavoro come blocco di XML. Per un esempio di codice che implementa un gestore del flusso di lavoro, vedere [Creare un flusso di lavoro personalizzato - Esempio &#40;Master Data Services&#41;](create-a-custom-workflow-example.md).  
   
  Nell'esempio seguente viene illustrato il possibile aspetto del codice XML inviato al gestore del flusso di lavoro:  
   
@@ -61,7 +61,7 @@ ms.locfileid: "84971511"
   
  Nella tabella seguente vengono descritti alcuni dei tag contenuti nel codice XML:  
   
-|Tag|Description|  
+|Tag|Descrizione|  
 |---------|-----------------|  
 |\<Type>|Testo immesso nella casella di testo **Tipo di flusso di lavoro** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] per identificare l'assembly del flusso di lavoro personalizzato da caricare.|  
 |\<SendData>|Valore booleano gestito dalla casella di controllo **Includi dati membro nel messaggio** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Il valore 1 indica che la \<MemberData> sezione viene inviata; in caso contrario, la \<MemberData> sezione non viene inviata.|  

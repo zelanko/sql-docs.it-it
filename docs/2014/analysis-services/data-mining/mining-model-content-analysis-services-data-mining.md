@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 0943e3f98ae65ec6c142fb1b98f86da054e88638
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 3cbfbf253bfd080084b8182b353b1efb8b535d3c
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84521618"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468966"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
   In seguito alla progettazione e all'elaborazione di un modello di data mining mediante i dati della struttura di data mining sottostante, il modello di data mining è completo e contiene il *contenuto del modello di data mining*. È possibile utilizzare questo contenuto per eseguire stime o analisi di dati.  
@@ -231,7 +231,7 @@ ms.locfileid: "84521618"
 |17|Altro|Rappresenta un valore personalizzato definito dall'algoritmo.|  
 |18|Stringa visualizzabile|Rappresenta un valore personalizzato che viene visualizzato come stringa dall'algoritmo. Non è stata applicata alcuna formattazione dal modello a oggetti.|  
   
- I tipi di valore derivano dall'enumerazione ADMOMD.NET. Per altre informazioni, vedere <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>.  
+ I tipi di valore derivano dall'enumerazione ADMOMD.NET. Per ulteriori informazioni, vedere [Microsoft. AnalysisServices. AdomdServer. MiningValueType](/previous-versions/sql/sql-server-2014/ms144375(v=sql.120)).  
   
 ### <a name="node-score"></a>Punteggio del nodo  
  Il significato del punteggio del nodo varia a seconda del tipo di modello e può anche essere specifico del tipo di nodo. Per informazioni sulla modalità di calcolo di NODE_SCORE per ogni modello e tipo di nodo, vedere [Contenuto del modello di data mining in base al tipo di algoritmo](#bkmk_AlgoType).  

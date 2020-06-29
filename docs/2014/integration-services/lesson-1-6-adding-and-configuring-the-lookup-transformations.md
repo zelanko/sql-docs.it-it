@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 53e12d2be6cc4829fd9fc983ca5a24e2057da4e8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3798dd0632522cf68b1b73976b7f4b932b257c0f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966141"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440688"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Passaggio 6: Aggiunta e configurazione delle trasformazioni Ricerca
   Dopo aver configurato l'origine file flat per l'estrazione di dati dal file di origine si definiranno le trasformazioni Ricerca necessarie per ottenere i valori di **CurrencyKey** e **DateKey**. Una trasformazione Ricerca esegue una ricerca tramite l'unione in join dei dati della colonna di input specificata con una colonna di un set di dati di riferimento. Il set di dati di riferimento può essere una vista o tabella esistente, una nuova tabella o il risultato di un'istruzione SQL. In questa esercitazione, la trasformazione Ricerca utilizza una gestione connessione OLE DB per connettersi al database che contiene i dati che costituiscono l'origine del set di dati di riferimento.  

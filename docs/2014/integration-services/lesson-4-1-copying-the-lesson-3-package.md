@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fdeb04558cf8544eb8aad5456ec42fed8160f025
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1645a1dee923da3913d12e36bdd60829918bbf7b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965161"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440478"
 ---
 # <a name="step-1-copying-the-lesson-3-package"></a>Passaggio 1: Copia del pacchetto della lezione 3
   In questa attività si creerà una copia del pacchetto della lezione 3, denominato Lesson 3.dtsx. In alternativa, se non è stata completata la lezione 3, è possibile aggiungere al progetto il pacchetto completo della lezione 3 incluso nell'esercitazione e quindi effettuarne una copia. Questa nuova copia verrà usata nella lezione 4.  

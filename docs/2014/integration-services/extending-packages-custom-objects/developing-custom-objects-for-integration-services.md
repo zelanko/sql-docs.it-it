@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6afb7c8bcb0b6873ff0040eccdcf86dd90997851
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: 299c45662bc4034ba9db3331d09980b4fa31afe7
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85427638"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469316"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Sviluppo di oggetti personalizzati per Integration Services
   Quando gli oggetti del flusso di controllo e del flusso di dati inclusi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non soddisfano completamente specifici requisiti, è possibile sviluppare molti tipi di oggetti personalizzati, tra cui:
@@ -60,7 +60,7 @@ ms.locfileid: "85427638"
 
 |Oggetto personalizzato|Classe di base|Attributo|Metodi importanti|
 |-------------------|----------------|---------------|-----------------------|
-|Attività|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|
+|Attività|[Microsoft. SqlServer. Dts. Runtime. Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task)|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|
 |Gestione connessione|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|
 |Provider di log|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>|
 |Enumeratore|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A>|
@@ -69,17 +69,17 @@ ms.locfileid: "85427638"
 ## <a name="providing-links-to-samples-and-help-content"></a>Collegamenti a esempi e contenuto della Guida
  Per visualizzare un collegamento nella **Casella degli strumenti SSIS** a esempi e contenuto della Guida per un oggetto personalizzato scritto in codice gestito, usare le proprietà seguenti.
 
--   <xref:Microsoft.SqlServer.Dts.Pipeline.DTSPipelineComponentAttribute.SamplesTag%2A>
+-   [Microsoft. SqlServer. Dts. Pipeline. DTSPipelineComponentAttribute. SamplesTag *](/dotnet/api/microsoft.sqlserver.dts.pipeline.dtspipelinecomponentattribute.samplestag)
 
--   <xref:Microsoft.SqlServer.Dts.Pipeline.DTSPipelineComponentAttribute.HelpCollection%2A>
+-   [Microsoft. SqlServer. Dts. Pipeline. DTSPipelineComponentAttribute. HelpCollection *](/dotnet/api/microsoft.sqlserver.dts.pipeline.dtspipelinecomponentattribute.helpcollection)
 
--   <xref:Microsoft.SqlServer.Dts.Pipeline.DTSPipelineComponentAttribute.HelpKeyword%2A>
+-   [Microsoft. SqlServer. Dts. Pipeline. DTSPipelineComponentAttribute. HelpKeyword *](/dotnet/api/microsoft.sqlserver.dts.pipeline.dtspipelinecomponentattribute.helpkeyword)
 
--   <xref:Microsoft.SqlServer.Dts.Runtime.DTSTaskAttribute.SamplesTag%2A>
+-   [Microsoft. SqlServer. Dts. Runtime. DTSTaskAttribute. SamplesTag *](/dotnet/api/microsoft.sqlserver.dts.runtime.dtstaskattribute.samplestag)
 
--   <xref:Microsoft.SqlServer.Dts.Runtime.DTSTaskAttribute.HelpCollection%2A>
+-   [Microsoft. SqlServer. Dts. Runtime. DTSTaskAttribute. HelpCollection *](/dotnet/api/microsoft.sqlserver.dts.runtime.dtstaskattribute.helpcollection)
 
--   <xref:Microsoft.SqlServer.Dts.Runtime.DTSTaskAttribute.HelpKeyword%2A>
+-   [Microsoft. SqlServer. Dts. Runtime. DTSTaskAttribute. HelpKeyword *](/dotnet/api/microsoft.sqlserver.dts.runtime.dtstaskattribute.helpkeyword)
 
  Per visualizzare un collegamento a esempi e contenuto della Guida per un oggetto personalizzato scritto in codice nativo, aggiungere voci nel file (con estensione rgs) dello script del Registro di sistema per SamplesTag, HelpKeyword e HelpCollection. Di seguito è riportato un esempio.
 

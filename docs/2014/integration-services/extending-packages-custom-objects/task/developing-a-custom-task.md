@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0df04b8388bc54f0181e5d5b7bb7600faece6260
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: b4257d883b1f39e918f0f8a6eb8135e25b784a79
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85427228"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469286"
 ---
 # <a name="developing-a-custom-task"></a>Sviluppo di un'attività personalizzata
   In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] vengono utilizzate attività per eseguire unità di lavoro a supporto dell'estrazione, della trasformazione e del caricamento dei dati. In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] è inclusa una varietà di attività per l'esecuzione delle azioni più frequenti, dall'esecuzione di un'istruzione SQL al download di un file da un sito FTP. Se le attività incluse e le azioni supportate non soddisfano completamente specifici requisiti, è possibile creare un'attività personalizzata.  
   
- A tale scopo, è necessario creare una classe che eredita dalla classe di base <xref:Microsoft.SqlServer.Dts.Runtime.Task>, applicare l'attributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> alla nuova classe ed eseguire l'override dei metodi e delle proprietà importanti della classe di base, tra cui il metodo <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>.  
+ Per creare un'attività personalizzata, è necessario creare una classe che eredita dalla classe di base [Microsoft. SqlServer. Dts. Runtime. Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task) , applicare l' <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> attributo alla nuova classe ed eseguire l'override dei metodi e delle proprietà importanti della classe di base, incluso il <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> metodo.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  In questa sezione viene descritto come creare, configurare e scrivere il codice di un'attività personalizzata e della relativa interfaccia utente personalizzata facoltativa.  

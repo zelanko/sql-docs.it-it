@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5a237fac7322ed1529a8962b096c6b918ffee33b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1a3225e4ae703f473e9c7e6679d304da596accba
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968211"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440578"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>Passaggio 3: Modifica della gestione connessione file flat
   In questa attività verrà modificata la gestione connessione file flat creata e configurata nella lezione 1. Al momento della creazione, la gestione connessione file flat era stata configurata per caricare staticamente un singolo file. Per abilitare Gestione connessione file flat affinché carichi i file in modo iterativo, è necessario modificare la proprietà ConnectionString della gestione connessione in modo che accetti la variabile `User:varFileName`definita dall'utente contenente il percorso del file da caricare in fase di esecuzione.  

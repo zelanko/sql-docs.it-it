@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 04d332e2c71e69b9a3e7d1d1b0c60eb9aabaf2e5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 679ce02fe6e0016dfe7fd2d81dd285fbacd6523f
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84960151"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469066"
 ---
 # <a name="sql-server-powershell-provider"></a>Provider PowerShell per SQL Server
   Il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per Windows PowerShell espone la gerarchia degli oggetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in percorsi simili ai percorsi del file system. È possibile usare i percorsi per trovare un oggetto e, successivamente, usare i metodi dei modelli SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) per eseguire azioni sugli oggetti.  
@@ -40,7 +40,7 @@ ms.locfileid: "84960151"
 |SQLSERVER:\SQLPolicy|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|Oggetti di gestione basata sui criteri, come criteri e facet.|  
 |SQLSERVER:\SQLRegistration|<xref:Microsoft.SqlServer.Management.RegisteredServers><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>|Oggetti server registrati, come gruppi di server e server registrati.|  
 |SQLSERVER:\Utility|<xref:Microsoft.SqlServer.Management.Utility>|Oggetti utilità, ad esempio le istanze gestite del [!INCLUDE[ssDE](../includes/ssde-md.md)].|  
-|SQLSERVER:\DAC|<xref:Microsoft.SqlServer.Management.DAC>|Oggetti applicazione del livello dati, ad esempio pacchetti DAC e operazioni quali l'implementazione di DAC.|  
+|SQLSERVER:\DAC|[Microsoft. SqlServer. Management. DAC](/dotnet/api/microsoft.sqlserver.management.utility.deployeddac)|Oggetti applicazione del livello dati, ad esempio pacchetti DAC e operazioni quali l'implementazione di DAC.|  
 |SQLSERVER:\DataCollection|<xref:Microsoft.SqlServer.Management.Collector>|Oggetti dell'agente di raccolta dati, ad esempio set di raccolta e archivi di configurazione.|  
 |SQLSERVER:\IntegrationServices|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oggetti come progetti, pacchetti e ambienti.|  
 |SQLSERVER:\SQLAS|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oggetti come cubi, aggregazioni e dimensioni.|  
@@ -57,7 +57,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
   
  I nodi delle raccolte in un percorso sono associati a una classe di raccolte nel modello a oggetti associato. I nodi dei nomi di oggetti sono associati a una classe di oggetti nel modello a oggetti associato, come indicato nella tabella seguente.  
   
-|Path|Classe SMO|  
+|Percorso|Classe SMO|  
 |----------|---------------|  
 |SQLSERVER:\SQL\MyComputer\DEFAULT\Databases|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
 |SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
@@ -67,9 +67,9 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
 |Viene descritto come utilizzare i cmdlet di Windows PowerShell per spostarsi tra i nodi all'interno di un percorso e, a ogni nodo, ottenere un elenco degli oggetti in corrispondenza di quel nodo.|[Spostarsi all'interno dei percorsi di SQL Server PowerShell](navigate-sql-server-powershell-paths.md)|  
-|Viene descritto come utilizzare i metodi e le proprietà SMO per eseguire report e attività sull'oggetto rappresentato da un nodo in un percorso. Viene inoltre descritto come ottenere un elenco dei metodi e delle proprietà SMO per quel nodo.|[Usare i percorsi di SQL Server PowerShell](work-with-sql-server-powershell-paths.md)|  
-|Viene descritto come convertire un Uniform Resource Name SMO (URN) in un percorso del provider SQL Server.|[Convertire URN in percorsi di provider di SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)|  
-|Viene descritto come stabilire connessioni con autenticazione di SQL Server tramite il provider di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per impostazione predefinita, il provider utilizza connessioni di autenticazione di Windows stabilite mediante le credenziali dell'account di Windows che esegue il processo di Windows PowerShell.|[Gestire l'autenticazione nel motore di database PowerShell](manage-authentication-in-database-engine-powershell.md)|  
+|Viene descritto come utilizzare i metodi e le proprietà SMO per eseguire report e attività sull'oggetto rappresentato da un nodo in un percorso. Viene inoltre descritto come ottenere un elenco dei metodi e delle proprietà SMO per quel nodo.|[Utilizzo di percorsi di SQL Server PowerShell](work-with-sql-server-powershell-paths.md)|  
+|Viene descritto come convertire un Uniform Resource Name SMO (URN) in un percorso del provider SQL Server.|[Conversione di URN in percorsi di provider di SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)|  
+|Viene descritto come stabilire connessioni con autenticazione di SQL Server tramite il provider di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per impostazione predefinita, il provider utilizza connessioni di autenticazione di Windows stabilite mediante le credenziali dell'account di Windows che esegue il processo di Windows PowerShell.|[Gestire l'autenticazione in motore di database PowerShell](manage-authentication-in-database-engine-powershell.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server PowerShell](sql-server-powershell.md)  

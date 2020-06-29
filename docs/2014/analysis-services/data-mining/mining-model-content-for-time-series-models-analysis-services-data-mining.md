@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 550dd2bad920dc3538de011b7841c0174912e718
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: fc9186b0250f0bdb8dd5ad91cc7e84782218bbc2
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84521255"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468906"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli Time Series (Analysis Services - Data mining)
   Tutti i modelli di data mining utilizzano la stessa struttura per archiviare i propri contenuti. Tale struttura viene definita secondo il set di righe dello schema relativo al contenuto di data mining. Tuttavia, all'interno della struttura standard i nodi che contengono informazioni vengono disposti in modi diversi per rappresentare vari tipi di albero. In questo argomento vengono descritti l'organizzazione e il significato dei nodi per i modelli di data mining basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series.  
@@ -423,7 +423,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  Il valore per l' *ordine delle differenze* indica il numero di volte in cui vengono confrontate le serie o in cui vengono calcolate le relative differenze.  
   
- Per un'enumerazione dei tipi di valore possibili, vedere <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>.  
+ Per un'enumerazione dei tipi di valore possibili, vedere [Microsoft. AnalysisServices. AdomdServer. MiningValueType](/previous-versions/sql/sql-server-2014/ms144375(v=sql.120)).  
   
 ### <a name="using-the-arima-tree-information"></a>Utilizzo delle informazioni dell'albero ARIMA  
  Se si utilizzano stime basate sull'algoritmo ARIMA in una soluzione aziendale, è necessario incollare l'equazione in un report per illustrare il metodo utilizzato per creare la stima. È possibile utilizzare la didascalia e la descrizione per presentare le formule rispettivamente in formato abbreviato ed esteso.  

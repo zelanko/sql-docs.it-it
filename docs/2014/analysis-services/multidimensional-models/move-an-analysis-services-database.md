@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 4f10901625ece0a154248f99370e427c7a999c87
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: fc9a6d3ee38e50120ab22ec48b1a673013eb50da
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84546063"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468956"
 ---
 # <a name="move-an-analysis-services-database"></a>Spostare un database di Analysis Services
   Spesso, un amministratore del database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] desidera spostare un database multidimensionale o tabulare in un percorso diverso. Queste situazioni spesso sono determinate da esigenze aziendali, ad esempio lo spostamento del database in un disco diverso per migliorare le prestazioni, la necessità di ottenere più spazio per la crescita del database oppure per aggiornare un prodotto.  
@@ -140,7 +140,7 @@ ms.locfileid: "84546063"
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft. AnalysisServices. database. Detach *](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Collegamento e scollegamento di Analysis Services database](attach-and-detach-analysis-services-databases.md)   
  [Percorso di archiviazione del database](database-storage-location.md)   
  [Proprietà ReadWriteMode del database](database-readwritemodes.md)   

@@ -9,18 +9,18 @@ ms.topic: reference
 ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 77b954956a4934d1b325667cbbeb75060de16c31
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 9d72e31b8e4040353c9c93bceb65ca3c2be98788
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84971521"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469046"
 ---
 # <a name="custom-workflow-example-master-data-services"></a>Esempio di flusso di lavoro personalizzato (Master Data Services)
-  Quando in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] si crea una libreria di classi di flussi personalizzati, si crea una classe che implementa l'interfaccia <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. Questa interfaccia include il metodo <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> chiamato da SQL Server MDS Workflow Integration Service all'avvio di un flusso di lavoro. Il metodo <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> contiene due parametri: *workflowType* contiene il testo immesso nella casella di testo **Tipo di flusso di lavoro** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], mentre *dataElement* contiene i metadati e i dati dell'elemento che ha attivato la regola business del flusso di lavoro.  
+  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , quando si crea una libreria di classi del flusso di lavoro personalizzata, si crea una classe che implementa l'interfaccia [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) . Questa interfaccia include un metodo, [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)), che viene chiamato da SQL Server servizio di integrazione del flusso di lavoro MDS all'avvio di un flusso di lavoro. Il metodo [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) contiene due parametri: *WorkflowType* contiene il testo immesso nella casella di testo **tipo di flusso di lavoro** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] e *dataElement* contiene i metadati e i dati dell'elemento che ha attivato la regola business del flusso di lavoro.  
   
 ## <a name="custom-workflow-example"></a>Esempio di flusso di lavoro personalizzato  
- Nell'esempio di codice seguente viene illustrato come implementare il metodo <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> per estrarre gli attributi Name, Code e LastChgUserName dai dati XML dell'elemento che ha attivato la regola business del flusso di lavoro e come chiamare una stored procedure per inserirli in un altro database. Per un esempio del codice XML dei dati dell'elemento e per una spiegazione dei tag in esso contenuti, vedere [Descrizione XML del flusso di lavoro personalizzato &#40;Master Data Services&#41;](create-a-custom-workflow-xml-description.md).  
+ Nell'esempio di codice seguente viene illustrato come implementare il metodo [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) per estrarre gli attributi Name, code e LastChgUserName dai dati XML per l'elemento che ha attivato la regola business del flusso di lavoro e come chiamare un stored procedure per inserirli in un altro database. Per un esempio del codice XML dei dati dell'elemento e per una spiegazione dei tag in esso contenuti, vedere [Descrizione XML del flusso di lavoro personalizzato &#40;Master Data Services&#41;](create-a-custom-workflow-xml-description.md).  
   
 ```csharp  
 using System;  

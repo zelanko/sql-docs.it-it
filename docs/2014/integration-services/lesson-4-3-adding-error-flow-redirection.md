@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3c2d7be5fa95e92b97e76e28647f4406ee356c5f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e2c9e20ae26c3eec7069a20a09d54bd43836c0c9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968251"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440458"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>Passaggio 3: Aggiunta del reindirizzamento del flusso degli errori
   Come dimostrato nell'attività precedente, la trasformazione Lookup Currency Key non crea una corrispondenza quando tenta di elaborare il file flat di esempio danneggiato che ha generato un errore. Dato che la trasformazione utilizza le impostazioni predefinite per l'output degli errori, qualsiasi errore determina l'esito negativo della trasformazione. Quando la trasformazione viene interrotta, si interrompe anche il resto del pacchetto.  

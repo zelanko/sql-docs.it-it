@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b6b446d566e7c9aa18e635799e81120d1ac73470
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6ffa1849e099e670b5fa13db399af67883e8806c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965175"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440468"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Passaggio 3: Test del pacchetto creato nella lezione 3 dell'esercitazione
   In questa attività verrà eseguito il pacchetto Lesson 3.dtsx. Durante l'esecuzione del pacchetto, nella finestra Registra eventi verranno elencate le voci di log scritte nel file di log. Al termine dell'esecuzione del pacchetto sarà possibile verificare il contenuto del file di log generato dal provider di log.  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 348e49fc-4390-43c1-9b6c-61b386ff4373
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 59e63b6be2253c69e0676a0bf33281b441e39b95
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 93669980e989b1cb11673f45c111de3609bbe920
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84546733"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468946"
 ---
 # <a name="extending-olap-through-personalizations"></a>Estensione di OLAP tramite personalizzazioni
   In Microsoft [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] sono disponibili diverse funzioni intrinseche da utilizzare con i linguaggi MDX (Multidimensional Expressions) e DMX (Data Mining Extensions). Queste funzioni sono progettate per consentire l'esecuzione di qualsiasi operazione, dai calcoli statistici standard all'attraversamento dei membri di una gerarchia. Come avviene per qualsiasi altro prodotto complesso e affidabile, tuttavia, si è avvertita l'esigenza di estendere ulteriormente le funzionalità di questo servizio.  
@@ -27,7 +27,7 @@ ms.locfileid: "84546733"
  Gli assembly consentono di estendere la funzionalità business dei linguaggi MDX e DMX. È necessario compilare la funzionalità desiderata in una libreria, ad esempio in una libreria a collegamento dinamico (DLL), quindi aggiungere tale libreria come assembly a un'istanza o a un database di Analysis Services. I metodi pubblici della libreria vengono quindi esposti come funzioni definite dall'utente in espressioni MDX e DMX, procedure, calcoli, azioni e applicazioni client.  
   
 ## <a name="personalized-extensions"></a>Estensioni personalizzate  
- Le estensioni della personalizzazione di SQL Server Analysis Services rappresentano la struttura di base dell'implementazione di un'architettura plug-in. Le estensioni della personalizzazione di Analysis Services rappresentano una semplice ed elegante modifica all'architettura dell'assembly gestito esistente e vengono esposte nel modello a oggetti <xref:Microsoft.AnalysisServices.AdomdServer> di Analysis Services, nella sintassi MDX e nei set di righe degli schemi.  
+ Le estensioni della personalizzazione di SQL Server Analysis Services rappresentano la struttura di base dell'implementazione di un'architettura plug-in. Analysis Services le estensioni di personalizzazione rappresentano una semplice ed elegante modifica all'architettura dell'assembly gestito esistente e vengono esposte nel modello a oggetti Analysis Services [Microsoft. AnalysisServices. AdomdServer](/previous-versions/sql/sql-server-2014/ms131779(v=sql.120)) , nella sintassi MDX (Multidimensional Expressions) e nei set di righe dello schema.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione di assembly di modelli multidimensionali](../multidimensional-model-assemblies-management.md)   

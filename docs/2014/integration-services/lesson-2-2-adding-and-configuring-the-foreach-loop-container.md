@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 761407023130b2bc18c8e1b64d09d9b30155c3b3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 77aac43aa6fc00a408c049ea7f6d078417a8d4dd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966070"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440618"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Passaggio 2: Aggiunta e configurazione del contenitore Ciclo Foreach
   In questa attività verrà aggiunta la capacità di creare un ciclo in una cartella di file flat e applicare la stessa trasformazione del flusso di dati utilizzata nella lezione 1 a ognuno di questi file flat. Ciò si ottiene tramite l'aggiunta e la configurazione di un contenitore Ciclo Foreach al flusso di controllo.  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], remote packages
 ms.assetid: fd571567-b625-4f9a-8b7e-42c5c588b11b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5f0adbcc17ad629f585cd04f43f757612a120ba4
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b45fa6607d6edc1559d8ebcbbbc7598e11eac408
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951241"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440288"
 ---
 # <a name="logging-for-load-balanced-packages-on-remote-servers"></a>Registrazione per pacchetti con bilanciamento del carico in server remoti
   La gestione dei log di tutti i pacchetti figlio in esecuzione su più server risulta più semplice se tutti i pacchetti figlio utilizzano lo stesso provider di log e scrivono nella stessa destinazione. Per creare un file di log comune per tutti i pacchetti figlio, è possibile configurare i pacchetti figlio in modo da registrare i propri eventi in un provider di log di tipo SQL Server. È possibile configurare tutti i pacchetti in modo che utilizzino lo stesso database, lo stesso server e la stessa istanza del server.  

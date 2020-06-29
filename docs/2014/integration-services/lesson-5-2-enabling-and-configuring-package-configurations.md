@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 06d31a4244da2a751bc501080cdf501d540fbc92
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: da51560f2ccfb7bef849f1b191c43f19d35d36ed
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951532"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440388"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Passaggio 2: Abilitazione e impostazione delle configurazioni dei pacchetti
   In questa attività si convertirà il progetto nel modello di distribuzione del pacchetto e si abiliteranno le configurazioni di pacchetto utilizzando la Configurazione guidata pacchetto. Questa procedura guidata consente di generare un file di configurazione XML contenente le impostazioni di configurazione per la proprietà `Directory` del contenitore Ciclo Foreach. Il valore della proprietà Directory è specificato da una variabile a livello di pacchetto che è possibile aggiornare in fase di esecuzione. Verrà inoltre popolata una cartella di dati di esempio da utilizzare durante il test.  

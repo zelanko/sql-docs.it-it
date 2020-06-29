@@ -19,12 +19,12 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 9464a28505707abe602decabd00cde58a02d1feb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6b0894c29e1c3cb525cd9378c0a95e56299e8a1e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833760"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440708"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (Database di SQL Azure)
 
@@ -32,7 +32,7 @@ ms.locfileid: "82833760"
 
   Restituisce informazioni sulle operazioni eseguite sui database in un server del [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |session_activity_id|**uniqueidentifier**|ID dell'operazione. Non Null.|  
 |resource_type|**int**|Indica il tipo di risorsa in cui viene eseguita l'operazione. Non Null. Nella versione corrente questa vista tiene traccia delle operazioni eseguite solo nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e il valore intero corrispondente è 0.|  
@@ -53,7 +53,7 @@ ms.locfileid: "82833760"
 ## <a name="permissions"></a>Autorizzazioni  
  Questa vista è disponibile solo nel database **Master** per l'account di accesso dell'entità di livello server.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per utilizzare questa vista, è necessario essere connessi al database **Master** . Utilizzare la `sys.dm_operation_status` vista nel database **Master** del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Server per tenere traccia dello stato delle operazioni seguenti eseguite su un [!INCLUDE[ssSDS](../../includes/sssds-md.md)] :  
   
 -   Creazione del database  
@@ -73,7 +73,9 @@ ms.locfileid: "82833760"
 -   Ripristina database  
   
 -   Elimina database  
-  
+
+Le informazioni contenute in questa vista vengono mantenute per circa 1 ora. Per visualizzare i dettagli delle operazioni negli ultimi 90 giorni, usare il [log attività di Azure](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log) . Per la conservazione di più di 90 giorni, è consigliabile inviare le voci del [log attività](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) a un'area di lavoro log Analytics.
+
 ## <a name="example"></a>Esempio  
  Mostra le operazioni di replica geografica più recenti associate al database ' MyDB '.  
   

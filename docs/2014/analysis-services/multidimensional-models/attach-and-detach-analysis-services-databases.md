@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: a0c62698f1aed231128803cb91c80264a2fbdbf4
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 44698c89eff608d6c993c3cec030098883eb5aee
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544833"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469006"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Collegamento e scollegamento di database di Analysis Services
   Spesso, un amministratore di database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vuole portare un database offline per un determinato periodo e quindi riportarlo online nella stessa istanza del server o in una diversa. Queste situazioni spesso sono determinate da esigenze aziendali, ad esempio lo spostamento del database in un disco diverso per migliorare le prestazioni, la necessità di ottenere più spazio per la crescita del database oppure per aggiornare un prodotto. Per tutti questi e altri casi, i `Attach` `Detach` comandi e consentono all' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] amministratore di database di portare il database offline e di riportarlo online con scarso sforzo.  
@@ -57,7 +57,7 @@ ms.locfileid: "84544833"
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft. AnalysisServices. database. Detach *](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Spostare un database di Analysis Services](move-an-analysis-services-database.md)   
  [Proprietà ReadWriteMode del database](database-readwritemodes.md)   
  [Passare a un database Analysis Services tra le modalità ReadOnly e ReadWrite](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   

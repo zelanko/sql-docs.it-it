@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 0dcf79644ba3e9bc337b14e4ff28fe703e81564d
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: a49aa41d158bf2c9fd1ebb1a711d6ff35c0df98b
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545433"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469016"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>Funzioni definite dall'utente e stored procedure
   Con gli oggetti del server ADOMD.NET è possibile creare funzioni definite dall'utente o stored procedure per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che interagiscono con i metadati e i dati dal server. Questi metodi in-process vengono chiamati tramite istruzioni MDX (Multidimensional Expressions) o DMX (Data Mining Extensions) per fornire funzionalità aggiunte senza le latenze associate alle comunicazioni di rete.  
@@ -28,7 +28,7 @@ ms.locfileid: "84545433"
 ## <a name="udf-examples"></a>Esempi di funzioni definite dall'utente  
  Una funzione definita dall'utente è un metodo che può essere chiamato nel contesto di un'istruzione MDX o DMX, accettare un numero qualsiasi di parametri e restituire qualsiasi tipo di dati.  
   
- Una funzione definita dall'utente creata utilizzando MDX è analoga a una creata per DMX. La differenza principale consiste nel fatto che alcune proprietà dell'oggetto <xref:Microsoft.AnalysisServices.AdomdServer.Context>, ad esempio le proprietà <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentCube%2A> e <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentMiningModel%2A>, sono disponibili solo per uno dei due linguaggi di scripting.  
+ Una funzione definita dall'utente creata utilizzando MDX è analoga a una creata per DMX. La differenza principale è che alcune proprietà dell'oggetto [Microsoft. AnalysisServices. AdomdServer. Context](/previous-versions/sql/sql-server-2014/ms143353(v=sql.120)) , ad esempio le proprietà [Microsoft. AnalysisServices. AdomdServer. Context. CURRENTCUBE *](/previous-versions/sql/sql-server-2014/ms137081(v=sql.120)) e [Microsoft. AnalysisServices. AdomdServer. Context. CurrentMiningModel *](/previous-versions/sql/sql-server-2014/ms137178(v=sql.120)) , sono disponibili solo per un linguaggio di scripting o l'altro.  
   
  Negli esempi seguenti viene illustrato come utilizzare una funzione definita dall'utente per restituire una descrizione del nodo e tuple di filtri e per applicare un filtro a una tupla.  
   
