@@ -21,14 +21,14 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b563160c9cd41a449b4669bb6b17ca43d427ff6e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 30f65b7bfd4563bbc9ada1d615f0d48af225895d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964711"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423408"
 ---
 # <a name="integration-services-ssis-logging"></a>Registrazione di Integration Services (SSIS)
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili provider di log che è possibile usare per implementare la registrazione in pacchetti, contenitori e attività. Tramite la registrazione è possibile acquisire informazioni di run-time su un pacchetto, che consentono di controllare e risolvere i problemi del pacchetto ogni volta che viene eseguito. Nel log è ad esempio possibile acquisire il nome dell'operatore che ha eseguito il pacchetto, nonché la data e l'ora di inizio e di fine dell'esecuzione.  
@@ -167,7 +167,7 @@ ms.locfileid: "84964711"
   
 |Passaggio|Descrizione|  
 |----------|-----------------|  
-|Validate|Il componente verifica la presenza di impostazioni di configurazione e valori di proprietà validi.|  
+|Convalida|Il componente verifica la presenza di impostazioni di configurazione e valori di proprietà validi.|  
 |PreExecute|Il componente esegue un'unica elaborazione prima di iniziare a elaborare le righe di dati.|  
 |PostExecute|Il componente esegue un'unica elaborazione dopo avere elaborato tutte le righe di dati.|  
 |ProcessInput|Il componente di destinazione o di trasformazione elabora le righe di dati in ingresso ricevute da un'origine o da una trasformazione a monte.|  

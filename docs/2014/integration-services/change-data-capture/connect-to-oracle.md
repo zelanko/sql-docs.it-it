@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - connOra
 ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0d83154a1453dce3b4d338c6823a3e1d1b714114
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e6546e3bbde666107ed7757c41d98d5b7b598924
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923445"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438768"
 ---
 # <a name="connect-to-oracle"></a>Connettersi a Oracle
   Quando si aggiungono o modificano le tabelle utilizzate nell'istanza di CDC per la prima volta, è possibile che venga richiesto di connettersi al database Oracle. Immettere le credenziali di un utente Oracle che può accedere allo schema delle tabelle da acquisire. Immettere quanto segue nella finestra di dialogo:  

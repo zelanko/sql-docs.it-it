@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.welcome.f1
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6eed68c1cc3e1df9dab1c17589353a4b796ade44
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 60d369dcbf76258ec51887f961352587645fe0ac
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965501"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436622"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>Importazione/Esportazione guidata SQL Server
   Utilizzare l' **importazione/esportazione guidata SQL Server** per copiare e trasformare i dati tra le origini dati e le destinazioni supportate.  

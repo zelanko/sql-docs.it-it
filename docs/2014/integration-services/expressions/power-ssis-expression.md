@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - POWER function
 ms.assetid: db48ae65-bfa6-4db1-8d3c-d0d4f8a399bc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: aaa36617b6b51abe985001bbe431862237436d1a
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5c89408e2d1bd840bc2dac5d7cf27486569f40de
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969131"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428298"
 ---
 # <a name="power-ssis-expression"></a>POWER (espressione SSIS)
   Restituisce il risultato dell'elevamento a potenza di un'espressione numerica. Il parametro power deve restituire un valore integer.  

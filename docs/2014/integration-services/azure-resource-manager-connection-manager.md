@@ -10,14 +10,14 @@ f1_keywords:
 - SQL12.DTS.DESIGNER.AFPARMCM.F1
 - SQL11.DTS.DESIGNER.AFPARMCM.F1
 ms.assetid: a2380258-0418-4a8c-a731-5071a44ddf1e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2db468ae6a9bc90c492a9c4557d248f7f7ef81d1
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1dce4def11f14072295dbf3cde9d5ab77304fe74
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925228"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439348"
 ---
 # <a name="azure-resource-manager-connection-manager"></a>Gestione connessione Azure Resource Manager
 La **gestione connessione Azure Resource Manager** consente a un pacchetto SSIS di gestire le risorse di Azure mediante un'[entità servizio](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Save Copy of Package dialog box
 ms.assetid: 7b44c0d7-d8fa-4491-8836-0899f621d3a8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 29e6b0cfe7d7646b317073298410c479c2cd5665
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 91c35defd543ae33ed45903e7888da905812d1fc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964334"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422448"
 ---
 # <a name="save-copy-of-package"></a>Salva copia del pacchetto
   Usare la finestra di dialogo **Salva copia del pacchetto** , disponibile in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], per salvare una copia di un pacchetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] da [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] in un percorso diverso ed eventualmente modificarne il livello di protezione.  

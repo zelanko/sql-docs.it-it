@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 72dfbb5873728efb87a797f1fee9fb4aa469275c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4f2a7c3c1e70e8d402bcd73add2be04d93d182fe
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965412"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436498"
 ---
 # <a name="integration-services-ssis-packages"></a>Pacchetti di Integration Services (SSIS)
   Un pacchetto è una raccolta organizzata di connessioni, elementi di flusso di controllo, elementi di flusso di dati, gestori eventi, variabili, parametri e configurazioni che possono essere assemblati usando gli strumenti di progettazione grafica disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oppure creati a livello di codice.  Salvare il pacchetto completo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], nell'archivio pacchetti di [!INCLUDE[ssIS](../includes/ssis-md.md)] o nel file system oppure distribuire il progetto ssISnoversion nel server [!INCLUDE[ssIS](../includes/ssis-md.md)] . Il pacchetto è l'unità di lavoro che viene recuperata, eseguita e salvata.  
@@ -90,7 +90,7 @@ ms.locfileid: "84965412"
 ## <a name="custom-log-entries-available-on-the-package"></a>Voci di log personalizzate disponibili nei pacchetti  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per i pacchetti. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../../2014/integration-services/custom-messages-for-logging.md).  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |`PackageStart`|Indica che l'esecuzione del pacchetto è iniziata.<br /><br /> Nota: questa voce di log viene scritta automaticamente nel log. e non può essere esclusa.|  
 |`PackageEnd`|Indica che l'esecuzione del pacchetto è stata completata.<br /><br /> Nota: questa voce di log viene scritta automaticamente nel log. e non può essere esclusa.|  

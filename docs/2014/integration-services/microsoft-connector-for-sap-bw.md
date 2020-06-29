@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7d689824674c1e14f2051deafbdc9ca58f302441
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d1ae4e7a49d0ae2fe84c7f726a91fb3c5f7fc4ba
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967061"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424558"
 ---
 # <a name="microsoft-connector-11-for-sap-bw"></a>Microsoft Connector 1.1 for SAP BW
   Il [!INCLUDE[msCoName](../includes/msconame-md.md)] connettore 1,1 per SAP BW è costituito da un set di tre componenti che consentono di estrarre o caricare dati in un sistema SAP NETWEAVER BW versione 7.  
