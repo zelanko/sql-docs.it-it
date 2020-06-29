@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b19c61cf736ad888cdcb2ecb1f36060eebf30812
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 21ec7d4d38996ecf4cb5522fcfdf29fb6e80db89
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964991"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424168"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>Editor destinazione OLE DB (pagina Gestione connessione)
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione OLE DB** per selezionare la connessione OLE DB per la destinazione. Tramite questa pagina è inoltre possibile selezionare una tabella o una vista del database.  
@@ -38,7 +38,7 @@ ms.locfileid: "84964991"
  **Modalità di accesso ai dati**  
  Consente di specificare il metodo di caricamento dei dati nella destinazione. Per i dati DBCS (Double-Byte Character Set) è necessario utilizzare una delle opzioni di caricamento rapido. Per altre informazioni sulle modalità di accesso ai dati con caricamento rapido, ottimizzate per gli inserimenti bulk, vedere [Destinazione OLE DB](data-flow/ole-db-destination.md).  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |Tabella o vista|Consente di caricare i dati in una tabella o vista nella destinazione OLE DB.|  
 |Tabella o vista - Caricamento rapido|Consente di caricare i dati in una tabella o vista nella destinazione OLE DB e di utilizzare l'opzione di caricamento rapido. Per altre informazioni sulle modalità di accesso ai dati con caricamento rapido, ottimizzate per gli inserimenti bulk, vedere [Destinazione OLE DB](data-flow/ole-db-destination.md).|  

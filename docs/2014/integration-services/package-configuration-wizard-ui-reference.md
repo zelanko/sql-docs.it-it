@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.dts.configwizard.finishdtsconfiguration.f1
 - sql12.dts.configwizard.welcome.f1
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8179e5caddbd104fdf35598b7ea25e0f32fd9e84
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 70576676604340a3239d4903d895f1dd385882d6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964915"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424048"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>Riferimento all'interfaccia utente della Configurazione guidata pacchetti
   Usare la **Configurazione guidata pacchetto** per creare configurazioni tramite cui è possibile aggiornare le proprietà di un pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e i relativi oggetti in fase di esecuzione. Questa procedura guidata viene eseguita quando si aggiunge una nuova configurazione o se ne modifica una esistente nella finestra di dialogo **Libreria configurazioni pacchetto** . Per aprire la finestra di dialogo **Libreria configurazioni pacchetto** , selezionare **Configurazioni pacchetto** nel menu **SSIS** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Per altre informazioni, vedere [Creazione di configurazioni dei pacchetti](../../2014/integration-services/create-package-configurations.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "84964915"
  **Tipo configurazione**  
  Selezionare una delle opzioni seguenti per impostare il tipo di origine in cui archiviare la configurazione:  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**File di configurazione XML**|Consente di archiviare la configurazione come file in formato XML. Tramite la selezione di questo valore le opzioni dinamiche vengono visualizzate nella sezione **Tipo configurazione**.|  
 |**Variabile di ambiente**|Consente di archiviare la configurazione in una delle variabili di ambiente. Tramite la selezione di questo valore le opzioni dinamiche vengono visualizzate nella sezione **Tipo configurazione**.|  
@@ -65,7 +65,7 @@ ms.locfileid: "84964915"
  **Usa le impostazioni di configurazione specificate di seguito**  
  Consente di specificare le impostazioni da utilizzare.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Nome file di configurazione**|Consente di digitare il percorso del file di configurazione generato dalla procedura guidata.|  
 |**Sfoglia**|Usare la finestra di dialogo **Selezionare il percorso del file di configurazione** per impostare il percorso del file di configurazione generato dalla procedura guidata. Se il file non esiste, verrà creato durante la procedura guidata.|  
@@ -73,7 +73,7 @@ ms.locfileid: "84964915"
  **Percorso della configurazione memorizzato in una variabile di ambiente**  
  Consente di specificare la variabile di ambiente in cui memorizzare la configurazione.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Variabile di ambiente**|Consente di selezionare una variabile di ambiente nell'elenco.|  
   
@@ -85,14 +85,14 @@ ms.locfileid: "84964915"
  **Usa le impostazioni di configurazione specificate di seguito**  
  Consente di specificare le impostazioni da utilizzare.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Voce del registro di sistema**|Digitare la chiave del Registro di sistema contenente le informazioni di configurazione Il formato è \<registry key>.<br /><br /> È necessario che la chiave del Registro di sistema esista già in HKEY_CURRENT_USER e che il suo valore sia denominato Value. Il valore può essere un DWORD o una stringa.<br /><br /> Se si desidera utilizzare una chiave del registro di sistema non è alla radice di HKEY_CURRENT_USER, utilizzare il formato \<Registry key\registry key\\...> per identificare la chiave.|  
   
  **Percorso della configurazione memorizzato in una variabile di ambiente**  
  Consente di specificare la variabile di ambiente in cui memorizzare la configurazione.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Variabile di ambiente**|Consente di selezionare una variabile di ambiente nell'elenco.|  
   
@@ -100,14 +100,14 @@ ms.locfileid: "84964915"
  **Usa le impostazioni di configurazione specificate di seguito**  
  Consente di specificare le impostazioni da utilizzare.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Variabile padre**|Consente di specificare la variabile inclusa nel pacchetto padre contenente le informazioni di configurazione.|  
   
  **Percorso della configurazione memorizzato in una variabile di ambiente**  
  Consente di specificare la variabile di ambiente in cui viene memorizzata la configurazione.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Variabile di ambiente**|Consente di selezionare una variabile di ambiente nell'elenco.|  
   
@@ -115,7 +115,7 @@ ms.locfileid: "84964915"
  **Usa le impostazioni di configurazione specificate di seguito**  
  Consente di specificare le impostazioni da utilizzare.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Connection**|Consente di selezionare una connessione nell'elenco o di creare una nuova connessione facendo clic su **Nuova** .|  
 |**Tabella configurazione**|Consente di selezionare una tabella esistente o di creare una nuova tabella facendo clic su **Nuova** per scrivere un'apposita istruzione SQL.|  
@@ -124,7 +124,7 @@ ms.locfileid: "84964915"
  **Percorso della configurazione memorizzato in una variabile di ambiente**  
  Consente di specificare la variabile di ambiente in cui è memorizzata la configurazione.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Variabile di ambiente**|Consente di selezionare una variabile di ambiente nell'elenco.|  
   

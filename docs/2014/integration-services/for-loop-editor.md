@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.forloopcontainer.f1
 ms.assetid: c4db9df6-d2f4-44da-9f4d-628893e86956
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e48610bb0bbb40a5a8385468e355cbca40420fdb
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ca06230922be4fe1c6ecbf8f3e941ab8cf7728fc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966385"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425368"
 ---
 # <a name="for-loop-editor"></a>Editor ciclo For
   La pagina **Ciclo For** della finestra di dialogo **Editor ciclo For** consente di configurare un ciclo che ripeta un flusso di lavoro fino a quando una determinata condizione non restituisca il valore False.  

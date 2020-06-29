@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 33a152e645706507b00a6ae261fdaec8d9450f12
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 86da6b855756fa6aca7d8423623638615eb7a981
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964971"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424128"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>Editor destinazione OLE DB (pagina Output degli errori)
   Usare la pagina **Output degli errori** della finestra di dialogo **Editor destinazione OLE DB** per specificare le opzioni di gestione degli errori.  
@@ -32,7 +32,7 @@ ms.locfileid: "84964971"
  **Colonna**  
  Non usato.  
   
- **Error (Errore) (Error (Errore)e)**  
+ **Errore**  
  Consente di specificare l'azione da eseguire in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
  **Argomenti correlati:** [Gestione degli errori nei dati](data-flow/error-handling-in-data.md)  

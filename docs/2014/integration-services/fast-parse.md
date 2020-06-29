@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - fast parse [Integration Services]
 ms.assetid: 6688707d-3c5b-404e-aa2f-e13092ac8d95
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bac087d9f4b086f2e50faef319208b52de19d766
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 343b8b8b74338512dbf29b3d2efd436df1ffa8ae
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967141"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425698"
 ---
 # <a name="fast-parse"></a>Analisi veloce
   L'analisi veloce offre un set di routine semplici e veloci per l'analisi dei dati. Tali routine sono indipendenti dalle impostazioni locali e supportano solo un subset dei formati di data, ora e integer.  

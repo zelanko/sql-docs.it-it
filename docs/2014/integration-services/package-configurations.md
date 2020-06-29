@@ -18,14 +18,14 @@ helpviewer_keywords:
 - direct configurations [Integration Services]
 - packages [Integration Services], configurations
 ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 84acc1541e8c66da15405330ca48b41f256811ab
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 84ad905a0b9e19c27e8b24bf9d4b2d0329a7db2c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964881"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423918"
 ---
 # <a name="package-configurations"></a>SSIS
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]fornisce le configurazioni di pacchetto che è possibile usare per aggiornare i valori delle proprietà in fase di esecuzione.  
@@ -83,7 +83,7 @@ ms.locfileid: "84964881"
 ## <a name="package-configuration-types"></a>Tipi di configurazioni di pacchetto  
  Nella tabella seguente vengono descritti i tipi di configurazione di pacchetto.  
   
-|Tipo|Description|  
+|Type|Descrizione|  
 |----------|-----------------|  
 |File di configurazione XML|Le configurazioni sono incluse in un file XML. Il file può includere più configurazioni.|  
 |Variabile di ambiente|La configurazione è contenuta in una variabile di ambiente.|  

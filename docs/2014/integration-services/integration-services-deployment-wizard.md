@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.deploymentwizard.f1
 ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 727eb2b745a732049d6eb4a5e2f1808f076167d0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2039968976df2e22a16c47abbcc3f51ba25bbeb2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968311"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424808"
 ---
 # <a name="integration-services-deployment-wizard"></a>Distribuzione guidata Integration Services
   Con la Distribuzione guidata [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è possibile distribuire progetti nel catalogo SSISDB in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzando il modello di distribuzione del progetto.  
@@ -49,7 +49,7 @@ ms.locfileid: "84968311"
 ## <a name="deployresults"></a>Distribuisci/Risultati  
  Quando si fa clic su **Distribuisci** nella pagina **Verifica** , il progetto viene distribuito e nella pagina **risultati** viene visualizzato l'esito positivo o negativo di ogni azione. Se l'azione non viene completata correttamente, fare clic su **Non riuscito** nella colonna **Risultato** per visualizzare una spiegazione dell'errore. Fare clic su **Salva report...** per salvare i risultati in un file XML.  
   
- Fare clic su **Chiudi** per uscire dalla procedura guidata.  
+ Per uscire dalla procedura guidata, fare clic su **Chiudi**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Distribuire progetti nel server Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   

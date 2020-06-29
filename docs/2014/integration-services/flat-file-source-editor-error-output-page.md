@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c6df7faa3dbb88ba8df836b59c47cad6a391e0d8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 38bc7adf218327c8718295a4300ff6a5c4b53f0c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966411"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425478"
 ---
 # <a name="flat-file-source-editor-error-output-page"></a>Editor origine file flat (pagina Output degli errori)
   Usare la pagina **Output degli errori** della finestra di dialogo **Editor origine file flat** per selezionare le opzioni di gestione degli errori e impostare le proprietà nelle colonne di output degli errori.\  
@@ -32,7 +32,7 @@ ms.locfileid: "84966411"
  **Colonna**  
  Consente di visualizzare le colonne esterne (di origine) selezionate nella pagina **Gestione connessione** della finestra di dialogo **Editor origine file flat**.  
   
- **Error (Errore) (Error (Errore)e)**  
+ **Errore**  
  Consente di specificare l'azione da eseguire in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
  **Argomenti correlati:** [Gestione degli errori nei dati](data-flow/error-handling-in-data.md)  

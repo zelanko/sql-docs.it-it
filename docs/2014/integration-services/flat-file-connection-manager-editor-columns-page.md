@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bc4c008445837341dca21211e2c5e943afe50dc7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c1b2a60f82e354513d25003b035bfbb689858107
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967111"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425668"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>Editor gestione connessione file flat (pagina Colonne)
   Utilizzare la pagina **Colonne** della finestra di dialogo **Editor gestione connessione file flat** per specificare le informazioni di riga e di colonna e per visualizzare un'anteprima del file.  
@@ -38,7 +38,7 @@ ms.locfileid: "84967111"
  **Delimitatore di riga**  
  Consente di selezionare il delimitatore di riga desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**CR**|Le righe sono delimitate da un ritorno a capo.|  
@@ -52,7 +52,7 @@ ms.locfileid: "84967111"
  **Delimitatore di colonna**  
  Consente di selezionare il delimitatore di colonna desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**CR**|Le colonne sono delimitate da un ritorno a capo.|  
@@ -99,7 +99,7 @@ ms.locfileid: "84967111"
  **Delimitatore di riga**  
  Consente di selezionare il delimitatore di riga desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**CR**|Le righe sono delimitate da un ritorno a capo.|  

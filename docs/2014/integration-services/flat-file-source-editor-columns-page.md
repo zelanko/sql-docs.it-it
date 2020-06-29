@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5f882aae9062d97914c86644a7be0ea126ed9dd8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e0a62bdbfc427605a89d7241d6246cf2caaa33dc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966441"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425528"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>Editor origine file flat (pagina Colonne)
   Usare il nodo **Colonne** della finestra di dialogo **Editor origine file flat** per eseguire il mapping tra una colonna di output e ogni colonna esterna (di origine).  

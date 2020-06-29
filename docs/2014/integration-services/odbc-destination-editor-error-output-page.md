@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: 0a743f8d-2a51-4296-9976-8104f5ca22d3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 82853123767237314edac1e301723724628439d9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 06e82633d29654872523e60a792663424594ab79
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965041"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424358"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>Editor destinazione ODBC (pagina Output errori)
   Utilizzare la pagina **Output degli errori** della finestra di dialogo **ODBC Destination Editor** per selezionare le opzioni di gestione degli errori.  
@@ -47,7 +47,7 @@ ms.locfileid: "84965041"
 ### <a name="truncation"></a>Troncamento  
  Consente di selezionare il modo in cui la destinazione ODBC deve gestire il troncamento in un flusso: ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  Consente di visualizzare una descrizione dell'errore.  
   
 ### <a name="set-this-value-to-selected-cells"></a>Imposta questo valore nelle celle selezionate  
