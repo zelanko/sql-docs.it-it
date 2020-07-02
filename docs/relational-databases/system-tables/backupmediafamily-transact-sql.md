@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ee16de24-3d95-4b2e-a094-78df2514d18a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e955cb7378a9da430608bf55d287be0fd7237ef5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: be1df53780b7472d613c49d2d105c606a09de8df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807411"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750369"
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Include una riga per ogni gruppo di supporti. Se un gruppo di supporti risiede in un set di supporti con mirroring, il gruppo includerà una riga distinta per ciascun mirror del set di supporti. Questa tabella è archiviata nel database **msdb** .  
     
@@ -40,9 +40,9 @@ ms.locfileid: "82807411"
 |**physical_device_name**|**nvarchar(260)**|Nome fisico del dispositivo di backup. Può essere NULL. Questo campo è condiviso tra il processo di backup e ripristino. Può contenere il percorso di destinazione del backup originale o il percorso di origine del ripristino originale. A seconda del fatto che il backup o il ripristino si sia verificato per primo in un server per un database. Si noti che i ripristini consecutivi dallo stesso file di backup non aggiorneranno il percorso indipendentemente dalla posizione in fase di ripristino. Per questo motivo, non è possibile usare **physical_device_name** campo per visualizzare il percorso di ripristino usato.|  
 |**device_type**|**tinyint**|Tipo di dispositivo di backup:<br /><br /> 2 = Disco<br /><br /> 5 = Nastro<br /><br /> 7 = Dispositivo virtuale<br /><br /> 9 = archiviazione di Azure<br /><br /> 105 = Dispositivo di backup permanente<br /><br /> Può essere NULL.<br /><br /> Tutti i nomi e i numeri di dispositivo permanenti sono disponibili in **sys. backup_devices**.|  
 |**physical_block_size**|**int**|Dimensioni fisiche del blocco utilizzate per la scrittura del gruppo di supporti. Può essere NULL.|  
-|**specchio**|**tinyint**|Numero di mirroring (0-3).|  
+|**mirror**|**tinyint**|Numero di mirroring (0-3).|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  RESTOre VERIFYONLY FROM *backup_device* with LOADHISTORY popola le colonne della tabella **BackupMediaSet** con i valori appropriati dell'intestazione del set di supporti.  
   
  Per ridurre il numero di righe in questa tabella e in altre tabelle di backup e di cronologia, eseguire la [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) stored procedure.  

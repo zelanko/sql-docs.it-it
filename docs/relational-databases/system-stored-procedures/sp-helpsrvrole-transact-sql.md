@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9abcbec940d9afa7b5aeb36183610b471bb3a3df
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 204668e8983ed3503e1a5697c47a4abde92d26cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833184"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750517"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce un elenco dei ruoli predefiniti del server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -41,7 +41,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ## <a name="arguments"></a>Argomenti  
 `[ @srvrolename = ] 'role'`Nome del ruolo predefinito del server. *Role* è di **tipo sysname**e il valore predefinito è null. *Role* può essere uno dei valori seguenti.  
   
-|Ruolo predefinito del server|Description|  
+|Ruolo predefinito del server|Descrizione|  
 |-----------------------|-----------------|  
 |sysadmin|Amministratori di sistema|  
 |securityadmin|Amministratori di sicurezza|  
@@ -60,7 +60,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|Nome del ruolo del server|  
-|Description|**sysname**|Descrizione di ServerRole|  
+|Descrizione|**sysname**|Descrizione di ServerRole|  
   
 ## <a name="remarks"></a>Osservazioni  
  I ruoli predefiniti del server sono definiti a livello di server e dispongono delle autorizzazioni per l'esecuzione di attività amministrative specifiche a livello del server. Non è possibile aggiungere, rimuovere o modificare i ruoli predefiniti del server.  

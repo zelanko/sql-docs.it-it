@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5d6c7f07-a163-48fa-8c1f-abc252043dde
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e413b677062841dbd25e2c57e0437efe566ccf98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b95711af5a6ee39c89d9b33834c0609a01c2b030
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085324"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750594"
 ---
 # <a name="sp_delete_log_shipping_alert_job-transact-sql"></a>sp_delete_log_shipping_alert_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Rimuove un processo per la gestione degli avvisi dal server di monitoraggio per il log shipping se il processo esiste e non ci sono ulteriori database primari o secondari da monitorare.  
   
@@ -40,13 +40,13 @@ sp_delete_log_shipping_alert_job
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- Nessuno.  
+ No.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno.  
+ No.  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_delete_log_shipping_alert_job** deve essere eseguito dal database **Master** sul server di monitoraggio.  
@@ -64,7 +64,7 @@ EXEC sp_delete_log_shipping_alert_job;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul &#40;di log shipping SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

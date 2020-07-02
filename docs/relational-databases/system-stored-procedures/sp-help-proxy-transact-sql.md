@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c091872c7e79a45fd6fb135d20c0910f9cd0158d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e9c59c6347317d193eafe43c511c0ece3831e29c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828415"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750537"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Visualizza le informazioni per uno o più proxy.  
   
@@ -51,7 +51,7 @@ sp_help_proxy
   
  Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
   
-|Valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |ActiveScripting|Script ActiveX|  
 |CmdExec|Sistema operativo (CmdExec)|  
@@ -75,7 +75,7 @@ sp_help_proxy
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Numero di identificazione del proxy.|  
-|**name**|**sysname**|Nome del proxy.|  
+|**nome**|**sysname**|Nome del proxy.|  
 |**credential_identity**|**sysname**|Nome utente e del dominio Microsoft Windows per le credenziali associate al proxy.|  
 |**abilitato**|**tinyint**|Indica se il proxy è attivato. { **0** = non abilitato, **1** = abilitato}|  
 |**Descrizione**|**nvarchar(1024)**|Descrizione del proxy.|  
@@ -83,7 +83,7 @@ sp_help_proxy
 |**credential_id**|**int**|Identificatore per le credenziali associate a questo proxy.|  
 |**credential_identity_exists**|**int**|Indica se credential_identity esiste. { 0 = non esiste, 1 = esiste }|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se non vengono specificati parametri, **sp_help_proxy** elenca le informazioni per tutti i proxy nell'istanza di.  
   
  Per determinare quali proxy possono essere utilizzati da un account di accesso per un determinato sottosistema, specificare *Name* e *subsystem_name*. Quando vengono forniti questi argomenti, **sp_help_proxy** elenca i proxy a cui l'account di accesso specificato può accedere e che possono essere utilizzati per il sottosistema specificato.  

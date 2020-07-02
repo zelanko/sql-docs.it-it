@@ -1,7 +1,7 @@
 ---
 title: Eseguire la migrazione di SQL Server al database SQL di Azure usando il Data Migration Assistant
 description: Informazioni su come usare Data Migration Assistant per eseguire la migrazione di un SQL Server locale al database SQL di Azure
-ms.date: 07/15/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6280a3ea803424dc2a6a72d673c59e1e48816601
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: ec6b5ad0ab2047e72a1f3e3e5dfcd9fc49b954d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885928"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749780"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Eseguire la migrazione di SQL Server o SQL Server locali in macchine virtuali di Azure al database SQL di Azure usando il Data Migration Assistant
 
@@ -75,7 +75,7 @@ Questo articolo fornisce istruzioni dettagliate per la migrazione di SQL Server 
 4. Selezionare un singolo database di destinazione in cui eseguire la migrazione.
 
    > [!NOTE]
-   > Se si intende eseguire la migrazione degli utenti di Windows, nella casella di testo **nome di dominio dell'utente esterno di destinazione** verificare che il nome di dominio dell'utente esterno di sincronizzati sia specificato correttamente.
+   > Se si intende eseguire la migrazione degli utenti di Windows, nella casella di testo **nome di dominio dell'utente esterno di destinazione** verificare che il nome di dominio dell'utente esterno di destinazione sia specificato correttamente.
 
     ![Selezione database di destinazione](../dma/media/select-target-database.png)
 
@@ -87,8 +87,8 @@ Questo articolo fornisce istruzioni dettagliate per la migrazione di SQL Server 
 
     ![Selezionare gli oggetti dello schema](../dma/media/select-schema-objects.png)
 
-       > [!NOTE]
-       > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
+    > [!NOTE]
+    > Vengono presentati alcuni degli oggetti che non possono essere convertiti così come sono, offrendo l'opportunità di eseguire la correzione automatica. Facendo clic su questi oggetti nel riquadro sinistro, vengono visualizzate le correzioni suggerite nel riquadro destro. Esaminare le correzioni e scegliere se applicare o ignorare tutte le modifiche, per ogni singolo oggetto. Si noti che il fatto di applicare o ignorare tutte le modifiche per un oggetto non influisce sulle modifiche degli altri oggetti di database. Le istruzioni che non possono essere convertite o corrette automaticamente vengono riprodotte nel database di destinazione e impostate come commenti.
 
     ![Correzione suggerita](../dma/media/suggested-fix.png)
 

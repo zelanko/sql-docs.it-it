@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08f459761c6e72063979bef6f7d9067611f2dd78
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 05c00137acdf989456903fedddcc45a7b79e0e61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826569"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751635"
 ---
 # <a name="sp_repladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Aggiunge una colonna a un articolo di tabella esistente che è stato pubblicato. È possibile aggiungere la nuova colonna in tutti i server di pubblicazione che pubblicano la tabella specificata oppure solo in una pubblicazione specifica della tabella. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -52,7 +52,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  [ @column =]'*colonna*'  
  Nome della colonna della tabella da aggiungere per la replica. *Column* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
- [ @typetext =]'*TypeText*'  
+ [ @typetext = ]'*TypeText*'  
  Definizione della colonna da aggiungere. *TypeText* è di **tipo nvarchar (3000)** e non prevede alcun valore predefinito. Se, ad esempio, la colonna order_filled viene aggiunta ed è un campo a carattere singolo, non NULL, e il valore predefinito è **N**, order_filled sarebbe il parametro della *colonna* , mentre la definizione del **vincolo char (1) not null constraint_name valore predefinito ' n'** corrisponderebbe al parametro *TypeText* .  
   
  [ @publication_to_add =]'*publication_to_add*'  

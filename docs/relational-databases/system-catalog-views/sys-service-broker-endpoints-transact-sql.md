@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 221a490f6accb13706c19860f70c1de2db6d2bf8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a59beeb51d59b00fbd902045f0f1aaebc9322a64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832672"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752899"
 ---
 # <a name="sysservice_broker_endpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Questa vista del catalogo contiene una riga per l'endpoint di Service Broker. Per ogni riga in questa visualizzazione è presente una riga corrispondente con lo stesso **endpoint_id** nella vista **sys. tcp_endpoints** che contiene i metadati di configurazione TCP. TCP è l'unico protocollo consentito in Service Broker.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**\<colonne ereditate>**|**--**|Eredita le colonne da [sys. endpoints &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
+|**\<inherited columns>**|**--**|Eredita le colonne da [sys. endpoints &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
 |**is_message_forwarding_enabled**|**bit**|Specifica se l'endpoint supporta l'inoltro di messaggi. Inizialmente è impostato su **0** (disabilitato). Non ammette i valori Null.|  
 |**message_forwarding_size**|**int**|Numero massimo di megabyte di spazio di **tempdb** consentito per l'invio dei messaggi. Inizialmente è impostato su **10**. Non ammette i valori Null.|  
 |**connection_auth**|**tinyint**|Tipo di autenticazione della connessione necessario per le connessioni all'endpoint. I possibili valori sono i seguenti:<br /><br /> **1** -NTLM<br /><br /> **2** -Kerberos<br /><br /> **3** -negoziazione<br /><br /> **4** -certificato<br /><br /> **5** -NTLM, certificato<br /><br /> **6** -Kerberos, certificato<br /><br /> **7** -negoziazione, certificato<br /><br /> **8** : certificato, NTLM<br /><br /> **9** -certificato, Kerberos<br /><br /> **10** : certificato, negoziazione<br /><br /> Non ammette i valori Null.|  

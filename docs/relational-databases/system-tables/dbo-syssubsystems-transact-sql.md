@@ -1,5 +1,5 @@
 ---
-title: dbo. syssubsystems (Transact-SQL) | Microsoft Docs
+title: Sottosistemi dbo.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ff13af62635273773551ded6df3175bc80157a45
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4a4374f0ffddb380f56e5c51e26a59e253e7585b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82806572"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750269"
 ---
 # <a name="dbosyssubsystems-transact-sql"></a>dbo.syssubsystems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene informazioni su tutti i sottosistemi proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent disponibili. La tabella **syssubsystems** è archiviata nel database **msdb** .  
   
@@ -43,12 +43,12 @@ ms.locfileid: "82806572"
 |**stop_entry_point**|**nvarchar(30)**|Funzione richiamata quando l'esecuzione di un sottosistema viene interrotta.|  
 |**max_worker_threads**|**int**|Numero massimo di passaggi simultanei per un sottosistema specifico.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono accedere a questa tabella.  
   
 ## <a name="see-also"></a>Vedere anche  
- [dbo. sysproxysubsystem &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
- [dbo. sysproxies &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)   
+ [dbo.sysproxysubsystem &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
+ [Proxy didbo.sys&#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
   
   

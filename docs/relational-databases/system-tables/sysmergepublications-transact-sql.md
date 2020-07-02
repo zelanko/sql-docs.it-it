@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 96708a8109594e0978757a163840d605d09cb522
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ae4203442a4596a8e52ab7212c21c7cc24759d50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829832"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751570"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una riga per ogni pubblicazione di tipo merge definita nel database. Questa tabella è archiviata nei database di pubblicazione e di sottoscrizione.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "82829832"
 |-----------------|---------------|-----------------|  
 |**pubblicazione**|**sysname**|Nome del server predefinito.|  
 |**publisher_db**|**sysname**|Nome del database del server di pubblicazione predefinito.|  
-|**name**|**sysname**|Nome della pubblicazione.|  
+|**nome**|**sysname**|Nome della pubblicazione.|  
 |**Descrizione**|**nvarchar(255)**|Breve descrizione della pubblicazione.|  
 |**conservazione**|**int**|Periodo di memorizzazione per l'intero set di pubblicazioni, in cui l'unità è indicata dal valore della colonna **retention_period_unit** .|  
 |**publication_type**|**tinyint**|Indica se la pubblicazione viene filtrata:<br /><br /> **0** = non filtrato.<br /><br /> **1** = filtrato.|  

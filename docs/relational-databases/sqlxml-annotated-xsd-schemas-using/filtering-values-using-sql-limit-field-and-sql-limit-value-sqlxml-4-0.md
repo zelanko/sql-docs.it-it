@@ -20,15 +20,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8bc7636fb13674b51290417ee9eb639a6633bd3
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 50732a867c0329610b0a03eebcd97d3f3224d6e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689404"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750769"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtrare valori tramite sql:limit-field e sql:limit-value (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   È possibile limitare le righe restituite da una query di database in base a un valore di limitazione. Le annotazioni **SQL: limit-field** e **SQL: limit-value** vengono utilizzate per identificare la colonna di database che contiene valori di limitazione e per specificare un valore di limitazione specifico da utilizzare per filtrare i dati restituiti.  
   
  L'annotazione **SQL: limit-field** viene utilizzata per identificare una colonna che contiene un valore di limitazione. è consentita su ogni elemento o attributo mappato.  
@@ -38,7 +38,7 @@ ms.locfileid: "83689404"
 > [!NOTE]  
 >  Quando si usa un oggetto **SQL: limit-field** in cui la colonna SQL mappata è di tipo **real**, SQLXML 4,0 esegue la conversione sul **valore SQL: Limit-Value** come specificato negli schemi XML come valore **nvarchar** specificato. Per questa operazione è necessario che i valori del limite decimale siano specificati tramite la notazione scientifica completa. Per ulteriori informazioni, vedere l'esempio B seguente.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Per creare esempi reali utilizzando questi esempi, è necessario che siano installati gli elementi seguenti.  
   
 -   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -47,7 +47,7 @@ ms.locfileid: "83689404"
   
  In questi esempi vengono utilizzati modelli per specificare query XPath sullo schema di mapping XSD.  
   
-### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>A. Limitazione degli indirizzi dei clienti restituiti a un tipo di indirizzo specifico  
+### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>R. Limitazione degli indirizzi dei clienti restituiti a un tipo di indirizzo specifico  
  In questo esempio un database contiene due tabelle:  
   
 -   Customer (CustomerID, CompanyName)  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 46abcc422058503a0c1911d69ec36b1539957753
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d9a581803d232f704dd27592a354c6331660ac03
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826578"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751705"
 ---
 # <a name="sp_reinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contrassegna una sottoscrizione pull o anonima transazionale per la reinizializzazione alla successiva esecuzione dell'agente di distribuzione. Questa stored procedure viene eseguita nel database di sottoscrizione pull del Sottoscrittore.  
   
@@ -48,7 +48,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_reinitpullsubscription** viene utilizzata nella replica transazionale.  
   
  **sp_reinitpullsubscription** non è supportato per la replica transazionale peer-to-peer.  

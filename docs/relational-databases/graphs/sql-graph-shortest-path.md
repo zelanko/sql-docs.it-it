@@ -18,15 +18,15 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18527b8a6d64a3dca27a0c5e8a99d36bf1d6d45a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056406"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753249"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
 
   Specifica una condizione di ricerca per un grafo, in cui viene eseguita la ricerca in modo ricorsivo o ripetitivo. Nell'istruzione SELECT è possibile usare SHORTEST_PATH per la corrispondenza con il nodo del grafico e le tabelle Edge. 
   
@@ -93,7 +93,7 @@ Mentre l'ultimo nodo è l'ultimo ennesimo nodo nel percorso del grafico di outpu
 Questa funzione restituisce la somma dei valori dell'attributo node/Edge forniti o dell'espressione che è stata visualizzata nel percorso attraversato.
 
 ### <a name="count"></a>COUNT
-Questa funzione restituisce il numero di valori non null dell'attributo node/Edge desiderato nel percorso. La funzione COUNT supporta l'operatore\*'' con un alias di tabella Node o Edge. Senza l'alias della tabella Node o Edge, l'utilizzo \* di è ambiguo e verrà generato un errore.
+Questa funzione restituisce il numero di valori non null dell'attributo node/Edge desiderato nel percorso. La funzione COUNT supporta l' \* operatore '' con un alias di tabella Node o Edge. Senza l'alias della tabella Node o Edge, l'utilizzo di \* è ambiguo e verrà generato un errore.
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 
@@ -117,7 +117,7 @@ In alcuni casi, è possibile che vengano generati piani danneggiati per le query
 ## <a name="examples"></a>Esempi 
 Per le query di esempio illustrate di seguito, verrà usato il nodo e le tabelle Edge create in [SQL Graph Sample](./sql-graph-sample.md)
 
-### <a name="a--find-shortest-path-between-2-people"></a>A.  Trova il percorso più breve tra due persone
+### <a name="a--find-shortest-path-between-2-people"></a>R.  Trova il percorso più breve tra due persone
  Nell'esempio seguente viene trovato il percorso più breve tra Jacob e Alice. Sono necessari il nodo Person e amica Edge creati dallo script di esempio Graph. 
 
  ```

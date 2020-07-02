@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 05ddadf1089969a2e345bbfdb638c9dea8b71676
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 709f99ce8e45e9a362aa8ef1aa0d5607d3b79172
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808149"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751581"
 ---
 # <a name="replication-tables-transact-sql"></a>Tabelle di replica (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Una topologia di replica è supportata dalle tabelle di replica di sistema. Quando un database utente viene configurato come server di pubblicazione o Sottoscrittore, la replica aggiunge tabelle di sistema al database. Tali tabelle vengono rimosse non appena un database utente viene rimosso da una topologia di replica. Per le regole generali relative all'utilizzo delle tabelle di sistema, vedere [tabelle di sistema &#40;&#41;Transact-SQL ](system-tables-transact-sql.md).  
   
@@ -92,7 +92,7 @@ ms.locfileid: "83808149"
  
 |||  
 |-|-|  
-|[conflict_ \< schema>_ \< tabella>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
+|[conflict_ \<schema> _\<table>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
 |[MSdynamicsnapshotjobs](msdynamicsnapshotjobs-transact-sql.md)             |[MSpeer_response](mspeer-response-transact-sql.md)|
 |[MSdynamicsnapshotviews](msdynamicsnapshotviews-transact-sql.md)           |[MSpeer_topologyrequest](mspeer-topologyrequest-transact-sql.md)|  
 |[MSmerge_altsyncpartners](msmerge-altsyncpartners-transact-sql.md)         |[MSpeer_topologyresponse](mspeer-topologyresponse-transact-sql.md)|  

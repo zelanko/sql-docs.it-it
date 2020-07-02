@@ -1,5 +1,5 @@
 ---
-title: dbo. sysproxysubsystem (Transact-SQL) | Microsoft Docs
+title: dbo.sysproxysubsystem (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 6d7713f5-1253-4a19-b1fb-635c377c95c1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4065c65b8e93d551fcf0af8f2bd242fa71d8d0aa
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 04ffb0b8cd280566c77111cfba55319510237127
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82806802"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750284"
 ---
 # <a name="dbosysproxysubsystem-transact-sql"></a>dbo.sysproxysubsystem (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Registra quale sottosistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene utilizzato da ogni account proxy. Questa tabella è archiviata nel database **msdb** .  
   
@@ -36,11 +36,11 @@ ms.locfileid: "82806802"
 |**subsystem_id**|**int**|ID del sottosistema. Questo valore corrisponde alla colonna **subsystem_id** nella tabella **syssubsystems** .|  
 |**proxy_id**|**int**|ID dell'account proxy. Questo valore corrisponde alla colonna **proxy_id** nella tabella **sysproxies** .|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono accedere a questa tabella.  
   
 ## <a name="see-also"></a>Vedere anche  
- [dbo. syssubsystems &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)   
- [dbo. sysproxies &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
+ [Sottosistemidbo.sys&#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)   
+ [Proxy didbo.sys&#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
   
   

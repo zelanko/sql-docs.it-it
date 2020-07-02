@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c1ffcec53c40feef7d72baefd39208f3d289f1a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 534e695a9648ef1e183660f15f6f76d882c52bd9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814138"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752722"
 ---
 # <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce un elenco di informazioni sulle associazioni tra i profili di Posta elettronica database e le entità di database.  
   
@@ -64,7 +64,7 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 |**profile_name**|**sysname**|Nome del profilo di Posta elettronica database.|  
 |**is_default**|**bit**|Flag che indica se il profilo è il profilo predefinito per l'utente.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se **sysmail_help_principalprofile_sp** viene richiamato senza parametri, il set di risultati restituito elenca tutte le associazioni nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Negli altri casi il set di risultati conterrà le informazioni relative alle associazioni che corrispondono ai parametri specificati. Se ad esempio si specifica il nome di un profilo, la procedura elenca tutte le associazioni per tale profilo.  
   
  **sysmail_help_principalprofile_sp** si trova nel database **msdb** ed è di proprietà dello schema **dbo** . La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  

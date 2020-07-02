@@ -1,5 +1,5 @@
 ---
-title: dbo. sysoperators (Transact-SQL) | Microsoft Docs
+title: Operatori di dbo.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3c4d8b72eb4c8083ce17541b12305dcf008090d4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6f56da445992067e31f2088dc3d35f109fb02c2f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829934"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750309"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una riga per ogni operatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID dell'operatore.|  
-|**name**|**sysname**|Nome dell'operatore.|  
+|**nome**|**sysname**|Nome dell'operatore.|  
 |**abilitato**|**tinyint**|Stato delle notifiche di avvisi (booleano). Se è **1**, questo operatore può ricevere notifiche quando si verifica un avviso.|  
 |**email_address**|**nvarchar (100)**|Indirizzo di posta elettronica dell'operatore.|  
 |**last_email_date**|**int**|Data dell'ultima notifica di avviso tramite posta elettronica ricevuta dall'operatore.|  

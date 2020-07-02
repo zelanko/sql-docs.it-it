@@ -18,17 +18,17 @@ ms.assetid: ed295312-e586-4fc2-9e80-806b490ee7bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 660405e7e7592557422e43655c35ec27c194aad3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b942b64b8d97ac69b03b9e1aef03056200f4eef4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130675"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750657"
 ---
 # <a name="sp_delete_database_firewall_rule-azure-sql-database"></a>sp_delete_database_firewall_rule (Database di SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  Rimuove l' [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]impostazione del firewall a livello di database dal. Le regole del firewall del database possono essere configurate ed eliminate per il database master [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]e per i database utente in.   
+  Rimuove l'impostazione del firewall a livello di database dal [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . Le regole del firewall del database possono essere configurate ed eliminate per il database master e per i database utente in [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] .   
   
  
 ## <a name="syntax"></a>Sintassi  
@@ -40,13 +40,13 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
   
 ## <a name="arguments"></a>Argomenti  
  `[@name =] [N]'name'`  
- Nome dell'impostazione del firewall a livello di database che verrà rimossa. *Name* è di **tipo nvarchar (128)** e non prevede alcun valore predefinito. L'identificatore `N` Unicode è facoltativo per [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
+ Nome dell'impostazione del firewall a livello di database che verrà rimossa. *Name* è di **tipo nvarchar (128)** e non prevede alcun valore predefinito. L'identificatore Unicode `N` è facoltativo per [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] . 
   
 ## <a name="permissions"></a>Autorizzazioni  
  Solo l'account di accesso dell'entità di livello server creato dal processo di provisioning o un'entità Azure Active Directory assegnata come amministratore può eliminare le regole del firewall a livello di database.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene rimossa l'impostazione del firewall a `Example DB Setting 1`livello di database denominata.
+ Nell'esempio seguente viene rimossa l'impostazione del firewall a livello di database denominata `Example DB Setting 1` .
   
 ```  
 -- Remove database-level firewall setting  

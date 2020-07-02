@@ -15,16 +15,16 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1737ae8427df8d6d9bd6dbb9dea359da09f0c657
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b08fdf07bf73b8d485ce9334d8998e055454dcb2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68035869"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751157"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Creare un database a grafo ed eseguire alcune query di criteri di ricerca usando T-SQL
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 Questo esempio fornisce uno [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script per creare un database a grafo con nodi e bordi e quindi usare la nuova clausola match per trovare una corrispondenza con alcuni modelli e attraversare il grafo. Questo script di esempio funziona sia nel database SQL di Azure sia in[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
 
@@ -163,7 +163,7 @@ go
 ```
 
 ## <a name="script-explanation"></a>Spiegazione dello script  
-Questo script usa la nuova sintassi T-SQL per creare tabelle dei nodi e dei bordi. Viene illustrato come inserire i dati nelle tabelle nodi e bordi `INSERT` usando l'istruzione e come usare `MATCH` la clausola per la corrispondenza dei criteri e la navigazione.
+Questo script usa la nuova sintassi T-SQL per creare tabelle dei nodi e dei bordi. Viene illustrato come inserire i dati nelle tabelle nodi e bordi usando l' `INSERT` istruzione e come usare la `MATCH` clausola per la corrispondenza dei criteri e la navigazione.
 
 |Comando    |Note
 |---  |---  |

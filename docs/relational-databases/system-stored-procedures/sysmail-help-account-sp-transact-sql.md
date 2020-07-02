@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb61b115689472c5be3ec14de2e7387de3317d4d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f5d5c822264682aa3fb6fd43d26f589aeb272f45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814141"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752739"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Visualizza un elenco di informazioni (eccetto le password) sugli account di Posta elettronica database.  
   
@@ -53,19 +53,19 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |-|-|-|  
 |Nome colonna|Tipo di dati|Descrizione|  
 |**account_id**|**int**|ID dell'account.|  
-|**name**|**sysname**|Nome dell'account.|  
+|**nome**|**sysname**|Nome dell'account.|  
 |**Descrizione**|**nvarchar(256)**|Descrizione dell'account.|  
 |**email_address**|**nvarchar(128)**|Indirizzo di posta elettronica da cui inviare i messaggi.|  
 |**display_name**|**nvarchar(128)**|Nome visualizzato dell'account.|  
 |**replyto_address**|**nvarchar(128)**|Indirizzo a cui vengono inviate le risposte ai messaggi da questo account.|  
 |**ServerType**|**sysname**|Tipo di server di posta elettronica per l'account.|  
 |**nomeserver**|**sysname**|Nome del server di posta elettronica per l'account.|  
-|**porta**|**int**|Numero della porta del server di posta elettronica.|  
-|**nomeutente**|**nvarchar(128)**|Nome utente da utilizzare per accedere al server di posta elettronica se il server di posta elettronica utilizza l'autenticazione. Quando **username** è NULL, posta elettronica database non utilizza l'autenticazione per questo account.|  
+|**port**|**int**|Numero della porta del server di posta elettronica.|  
+|**username**|**nvarchar(128)**|Nome utente da utilizzare per accedere al server di posta elettronica se il server di posta elettronica utilizza l'autenticazione. Quando **username** è NULL, posta elettronica database non utilizza l'autenticazione per questo account.|  
 |**use_default_credentials**|**bit**|Specifica se inviare la posta elettronica al server SMTP utilizzando le credenziali di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** è di bit e non prevede alcun valore predefinito. Se questo parametro è 1, Posta elettronica database utilizza le credenziali del servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Quando questo parametro è 0, Posta elettronica database utilizza il ** \@ nome utente** e la ** \@ password** per l'autenticazione nel server SMTP. Se ** \@ nome utente** e ** \@ password** sono null, posta elettronica database usa l'autenticazione anonima. Prima di specificare questo parametro consultare l'amministratore del server SMTP.|  
 |**enable_ssl**|**bit**|Specifica se Posta elettronica database crittografa la comunicazione utilizzando Transport Layer Security (TLS), precedentemente nota come Secure Sockets Layer (SSL). Utilizzare questa opzione se TLS è necessario sul server SMTP. **enable_ssl** è di bit e non prevede alcun valore predefinito. 1 indica Posta elettronica database crittografa la comunicazione usando TLS. 0 indica Posta elettronica database invia il messaggio di posta elettronica senza crittografia TLS.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Quando non viene specificato alcun *account_id* o *account_name* , **sysmail_help_account** elenca le informazioni su tutti gli account di posta elettronica database nell'istanza di Microsoft SQL Server.  
   
  Il stored procedure **sysmail_help_account_sp** si trova nel database **msdb** ed è di proprietà dello schema **dbo** . La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
@@ -73,7 +73,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  **A. Visualizzazione di un elenco di informazioni per tutti gli account**  
   
  Nell'esempio seguente viene visualizzato un elenco di informazioni per tutti gli account nell'istanza.  

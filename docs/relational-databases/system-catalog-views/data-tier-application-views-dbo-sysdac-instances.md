@@ -1,5 +1,5 @@
 ---
-title: dbo. sysdac_instances (Transact-SQL) | Microsoft Docs
+title: dbo.sysdac_instances (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dfff37bc876302e404b63eb7babf4fc3700fc9d9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 18031fac584eea39e5901276b597fc556263b18e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823645"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752977"
 ---
-# <a name="data-tier-application-views---dbosysdac_instances"></a>Viste dell'applicazione livello dati-dbo. sysdac_instances
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="data-tier-application-views---dbosysdac_instances"></a>Viste dell'applicazione livello dati-dbo.sysdac_instances
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Consente di visualizzare una riga per ogni istanza di applicazione livello dati distribuita in un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. sysdac_instances appartiene allo schema dbo nel database msdb. Nella tabella seguente vengono descritte le colonne nella vista sysdac_instances.  
   

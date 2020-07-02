@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9fbc18b737c4c901527e6dc1684b75c2f5ddedda
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ac90a8a3e892aef0bb5d45a6864fb2291f52d60f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826066"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751737"
 ---
 # <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Visualizza informazioni sul processo Xactset per un server di pubblicazione Oracle. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   
@@ -48,7 +48,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**thisdate**|**varchar (22)**|Ora della modifica|  
 |**nextdate**|**varchar (22)**|Data della successiva esecuzione del processo.|  
 |**broken**|**varchar(1)**|Flag che indica se il processo è interrotto.|  
-|**interval**|**varchar (200)**|Intervallo del processo.|  
+|**intervallo**|**varchar (200)**|Intervallo del processo.|  
 |**fallimenti**|**int**|Numero di errori per il processo.|  
 |**xactsetjobwhat**|**varchar (200)**|Nome della procedura eseguita dal processo.|  
 |**xactsetjob**|**varchar(1)**|Stato del processo. I possibili valori sono i seguenti:<br /><br /> **1** -il processo è abilitato.<br /><br /> **0** : il processo è disabilitato.|  
@@ -60,7 +60,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_helpxactsetjob** viene utilizzata nella replica snapshot e nella replica transazionale per i Publisher Oracle.  
   
  **sp_helpxactsetjob** restituisce sempre le impostazioni correnti per il processo del Xactset (HREPL_XactSetJob) nel server di pubblicazione. Se il processo Xactset è attualmente nella coda dei processi, restituisce anche gli attributi del processo dalla vista del dizionario dei dati USER_JOB creata nell'ambito dell'account di amministratore nel server di pubblicazione Oracle.  

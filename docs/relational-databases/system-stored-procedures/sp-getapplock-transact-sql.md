@@ -19,15 +19,15 @@ ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b415e24ec1b81ed660f1ca43b3d4283d11c8e44
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: 7f1072cf996bf32c9511586c24cd6eb8dbb920f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423185"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752813"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Acquisisce un blocco su una risorsa di applicazione.  
   
@@ -69,7 +69,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ## <a name="return-code-values"></a>Valori del codice restituito  
  \>= 0 (esito positivo) o < 0 (esito negativo)  
   
-|Valore|Risultato|  
+|valore|Risultato|  
 |-----------|------------|  
 |0|Il blocco è stato concesso in modo sincrono.|  
 |1|Il blocco è stato concesso dopo il rilascio di altri blocchi incompatibili.|  
@@ -78,7 +78,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |-3|La richiesta di blocco è stata scelta come vittima del deadlock.|  
 |-999|Indica un errore di convalida di un parametro o un altro errore di chiamata.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  I blocchi acquisiti per una risorsa sono associati alla transazione o alla sessione corrente. I blocchi associati alla transazione corrente vengono rilasciati in corrispondenza del commit o del rollback della transazione. I blocchi associati alla sessione vengono rilasciati al momento della disconnessione della sessione. Quando il server viene arrestato per qualsiasi motivo, vengono rilasciati tutti i blocchi.  
   
  La risorsa di blocco creata da sp_getapplock è valida per il database corrente nella sessione corrente. Ogni risorsa di blocco viene identificata tramite la combinazione dei valori seguenti:  
@@ -139,7 +139,7 @@ GO
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo public.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene inserito un blocco condiviso, associato alla transazione corrente, nella risorsa `Form1` del database `AdventureWorks2012`.  
   
 ```  

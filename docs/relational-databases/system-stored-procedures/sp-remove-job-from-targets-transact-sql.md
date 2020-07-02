@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d195ca70eb1c1236518ce9af804dc4c5771cd37
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 033a2c950ec695a64aced30a383d25206e7f6d10
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817334"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751678"
 ---
 # <a name="sp_remove_job_from_targets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Rimuove il processo specificato dai server di destinazione o gruppi di server di destinazione specificati.  
   
@@ -56,7 +56,7 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni per l'esecuzione di questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente il processo `Weekly Sales Backups` creato in precedenza viene rimosso dal gruppo di server di destinazione `Servers Processing Customer Orders` e dai server `SEATTLE1` e `SEATTLE2`.  
   
 ```  

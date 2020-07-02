@@ -1,5 +1,5 @@
 ---
-title: dbo. sysschedules (Transact-SQL) | Microsoft Docs
+title: Pianificazioni dbo.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de79a475b8edb8f02eee15d79f1259b8032b60e8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 09ece580c45e1ec93b183f2d830c9daf68287ab1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82806707"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750255"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene informazioni sulle pianificazioni dei processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Questa tabella è archiviata nel database **msdb** .  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82806707"
 |**schedule_id**|**int**|ID della pianificazione dei processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
 |**schedule_uid**|**uniqueidentifier**|Identificatore univoco della pianificazione dei processi. Questo valore viene utilizzato per identificare una pianificazione per i processi distribuiti.|  
 |**originating_server_id**|**int**|ID del server master di provenienza della pianificazione dei processi.|  
-|**name**|**sysname (nvarchar (128))**|Nome definito dall'utente per la pianificazione dei processi. Il nome deve essere univoco all'interno di un processo.|  
+|**nome**|**sysname (nvarchar (128))**|Nome definito dall'utente per la pianificazione dei processi. Il nome deve essere univoco all'interno di un processo.|  
 |**owner_sid**|**varbinary (85)**|Microsoft Windows *security_identifier* dell'utente o del gruppo a cui appartiene la pianificazione del processo.|  
 |**abilitato**|**int**|Stato della pianificazione dei processi:<br /><br /> **0** = non abilitato.<br /><br /> **1** = abilitata.<br /><br /> Quando la pianificazione non è abilitata, non verrà eseguito alcun processo su questa pianificazione.|  
 |**freq_type**|**int**|Frequenza di esecuzione di un processo per questa pianificazione.<br /><br /> **1** = solo una volta<br /><br /> **4** = giornaliero<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile, relativo a **freq_interval**<br /><br /> **64** = viene eseguito all'avvio del servizio SQL Server Agent<br /><br /> **128** = viene eseguito quando il computer è inattivo|  
@@ -65,6 +65,6 @@ ms.locfileid: "82806707"
 |**128** (viene eseguito quando il computer è inattivo)|**freq_interval** non usato (**0**)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [dbo. sysjobschedules &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
+ [dbo.sysJobSchedules &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 02f08a02236195d02f36c0b8e24b792adf46933e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 15fe17913bfb00d983772a84f625ff41e690f263
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833094"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750355"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt; capture_instance &gt; _CT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Tabella delle modiche creata quando Change Data Capture è abilitato in una tabella di origine. La tabella restituisce una riga per ogni operazione di inserimento ed eliminazione eseguita nella tabella di origine e due righe per ogni operazione di aggiornamento eseguita nella tabella di origine. Se non viene specificato al momento dell'abilitazione della tabella di origine, il nome della tabella delle modifiche viene derivato. Il formato del nome è CDC. *capture_instance*_CT dove *capture_instance* è il nome dello schema della tabella di origine e il nome della tabella di origine nel formato *schema_table*. Se, ad esempio, la tabella **Person. Address** nel database di esempio **AdventureWorks** è abilitata per Change Data Capture, il nome della tabella delle modifiche derivata sarà **CDC. Person_Address_CT**.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82833094"
 |**__$seqval**|**binary(10)**|Valore di sequenza utilizzato per ordinare le modifiche a una riga all'interno di una transazione.|  
 |**_ _ $ operation**|**int**|Identifica l'operazione DML (Data Manipulation Language) associata alla modifica. Può essere uno dei seguenti:<br /><br /> 1 = eliminazione<br /><br /> 2 = inserimento<br /><br /> 3 = aggiornamento (valori obsoleti)<br /><br /> I dati della colonna includono valori di riga prima dell'esecuzione dell'istruzione di aggiornamento.<br /><br /> 4 = aggiornamento (valori nuovi)<br /><br /> I dati della colonna includono valori di riga dopo l'esecuzione dell'istruzione di aggiornamento.|  
 |**__$update_mask**|**varbinary(128)**|Maschera di bit basata su numeri ordinali di colonna della tabella delle modifiche che identificano le colonne modificate.|  
-|*\<colonne della tabella di origine acquisite>*|variabile|Le colonne rimanenti della tabella delle modifiche sono le colonne della tabella di origine identificate come colonne acquisite durante la creazione dell'istanza di acquisizione. Se non è stata specificata alcuna colonna nell'elenco delle colonne acquisite, tutte le colonne della tabella di origine vengono incluse in questa tabella.|  
+|*\<captured source table columns>*|variabile|Le colonne rimanenti della tabella delle modifiche sono le colonne della tabella di origine identificate come colonne acquisite durante la creazione dell'istanza di acquisizione. Se non è stata specificata alcuna colonna nell'elenco delle colonne acquisite, tutte le colonne della tabella di origine vengono incluse in questa tabella.|  
 |**_ _ $ command_id** |**int** |Tiene traccia dell'ordine delle operazioni all'interno di una transazione. |  
   
 ## <a name="remarks"></a>Osservazioni  

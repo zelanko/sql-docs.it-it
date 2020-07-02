@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: bdfeab5754a2397c01ace2bb9f822fa168eeef6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7ac6bfbd157a72cee716b4a5a916cf2c7069ba8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72005861"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750540"
 ---
 # <a name="sp_grant_login_to_proxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Concede a un'entità di sicurezza l'accesso a un proxy.  
 
@@ -44,15 +44,15 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @login_name = ] 'login_name'`Nome dell'account di accesso a cui concedere l'accesso. Il *login_name* è di **tipo nvarchar (256)** e il valore predefinito è null. È necessario specificare uno dei ** \@login_name**, ** \@fixed_server_role**o ** \@msdb_role** oppure il stored procedure ha esito negativo.  
+`[ @login_name = ] 'login_name'`Nome dell'account di accesso a cui concedere l'accesso. Il *login_name* è di **tipo nvarchar (256)** e il valore predefinito è null. È necessario specificare uno dei ** \@ login_name**, ** \@ fixed_server_role**o ** \@ msdb_role** oppure il stored procedure ha esito negativo.  
   
-`[ @fixed_server_role = ] 'fixed_server_role'`Ruolo predefinito del server al quale concedere l'accesso. Il *fixed_server_role* è di **tipo nvarchar (256)** e il valore predefinito è null. È necessario specificare uno dei ** \@login_name**, ** \@fixed_server_role**o ** \@msdb_role** oppure il stored procedure ha esito negativo.  
+`[ @fixed_server_role = ] 'fixed_server_role'`Ruolo predefinito del server al quale concedere l'accesso. Il *fixed_server_role* è di **tipo nvarchar (256)** e il valore predefinito è null. È necessario specificare uno dei ** \@ login_name**, ** \@ fixed_server_role**o ** \@ msdb_role** oppure il stored procedure ha esito negativo.  
   
-`[ @msdb_role = ] 'msdb_role'`Ruolo del database nel database **msdb** al quale concedere l'accesso. Il *msdb_role* è di **tipo nvarchar (256)** e il valore predefinito è null. È necessario specificare uno dei ** \@login_name**, ** \@fixed_server_role**o ** \@msdb_role** oppure il stored procedure ha esito negativo.  
+`[ @msdb_role = ] 'msdb_role'`Ruolo del database nel database **msdb** al quale concedere l'accesso. Il *msdb_role* è di **tipo nvarchar (256)** e il valore predefinito è null. È necessario specificare uno dei ** \@ login_name**, ** \@ fixed_server_role**o ** \@ msdb_role** oppure il stored procedure ha esito negativo.  
   
-`[ @proxy_id = ] id`Identificatore del proxy al quale concedere l'accesso. *ID* è di **tipo int**e il valore predefinito è null. È necessario specificare uno dei ** \@proxy_id** o ** \@proxy_name** oppure il stored procedure ha esito negativo.  
+`[ @proxy_id = ] id`Identificatore del proxy al quale concedere l'accesso. *ID* è di **tipo int**e il valore predefinito è null. È necessario specificare uno dei ** \@ proxy_id** o ** \@ proxy_name** oppure il stored procedure ha esito negativo.  
   
-`[ @proxy_name = ] 'proxy_name'`Nome del proxy per il quale concedere l'accesso. Il *proxy_name* è di **tipo nvarchar (256)** e il valore predefinito è null. È necessario specificare uno dei ** \@proxy_id** o ** \@proxy_name** oppure il stored procedure ha esito negativo.  
+`[ @proxy_name = ] 'proxy_name'`Nome del proxy per il quale concedere l'accesso. Il *proxy_name* è di **tipo nvarchar (256)** e il valore predefinito è null. È necessario specificare uno dei ** \@ proxy_id** o ** \@ proxy_name** oppure il stored procedure ha esito negativo.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  

@@ -14,29 +14,29 @@ ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e063d1053d8a6e5e10a1234d33893adf27fbc3ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 241c7e6bd0bfbd3b0239e610606a26b50f6e112d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302353"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751924"
 ---
 # <a name="sqlputdata"></a>SQLPutData
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Quando si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] USA SQLPutData per inviare più di 65.535 byte di dati (per la versione 4.21 a) o 400 KB di dati (per SQL Server versione 6,0 e successive) per una colonna SQL_LONGVARCHAR (**testo**), SQL_WLONGVARCHAR (**ntext**) o SQL_LONGVARBINARY (**immagine**), si applicano le restrizioni seguenti:  
+  Quando si usa SQLPutData per inviare più di 65.535 byte di dati (per la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 4.21 a) o 400 KB di dati (per SQL Server versione 6,0 e successive) per una colonna SQL_LONGVARCHAR (**testo**), SQL_WLONGVARCHAR (**ntext**) o SQL_LONGVARBINARY (**immagine**), si applicano le restrizioni seguenti:  
   
 -   Il parametro a cui si fa riferimento può essere il *insert_Value* in un'istruzione INSERT.  
   
 -   Il parametro a cui si fa riferimento può essere un' *espressione* nella clausola set di un'istruzione Update.  
   
- L'annullamento di una sequenza di chiamate SQLPutData che forniscono dati in blocchi a un server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che esegue comporta un aggiornamento parziale del valore della colonna quando si usa la versione 6,5 o precedente. La colonna di tipo **Text**, **ntext**o **Image** a cui è stato fatto riferimento quando è stato chiamato SQLCancel è impostata su un valore di segnaposto intermedio.  
+ L'annullamento di una sequenza di chiamate SQLPutData che forniscono dati in blocchi a un server che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comporta un aggiornamento parziale del valore della colonna quando si usa la versione 6,5 o precedente. La colonna di tipo **Text**, **ntext**o **Image** a cui è stato fatto riferimento quando è stato chiamato SQLCancel è impostata su un valore di segnaposto intermedio.  
   
 > [!NOTE]  
 >  Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client non supporta la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 e versioni precedenti.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Per SQLPutData è [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibile un SQLSTATE specifico di Native Client:  
+ Per SQLPutData è disponibile un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLSTATE specifico di Native Client:  
   
 |SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  

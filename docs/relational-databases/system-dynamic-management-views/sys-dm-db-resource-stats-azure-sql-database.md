@@ -19,15 +19,15 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9165a4a371a611a5b9c2d962e700b424a60a9384
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 174c4e6c864dab1866326fdd69b5c588ec26b3b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175152"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738721"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (Database SQL di Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Restituisce il consumo di CPU, I/O e memoria per un database [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. È presente una riga per ogni 15 secondi, anche se non esiste alcuna attività nel database. I dati cronologici vengono conservati per circa un'ora.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "78175152"
 |cpu_limit|**Decimal (5, 2)**|Numero di Vcore per il database durante questo intervallo. Per i database che usano il modello basato su DTU, questa colonna è NULL.|
 |avg_instance_cpu_percent|**Decimal (5, 2)**|Utilizzo medio della CPU per l'istanza di SQL Server che ospita il database, misurato dal sistema operativo. Include l'utilizzo della CPU da carichi di lavoro di utenti e interni.|
 |avg_instance_memory_percent|**Decimal (5, 2)**|Utilizzo medio della memoria per l'istanza SQL Server che ospita il database, misurato dal sistema operativo. Include l'utilizzo della memoria da carichi di lavoro di utenti e interni.|
-|avg_login_rate_percent|**Decimal (5, 2)**|Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.|
+|avg_login_rate_percent|**Decimal (5, 2)**|Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.|
 |replica_role|**int**|Rappresenta il ruolo della replica corrente con 0 come primario, 1 come secondario e 2 come server di trasmissione (primario della replica geografica secondaria). Quando si è connessi con la finalità ReadOnly a tutti i database secondari leggibili, viene visualizzato "1". Se ci si connette a una replica geografica secondaria senza specificare la finalità di sola lettura, verrà visualizzato "2" (connessione al server d'istruzione).|
 |||
   

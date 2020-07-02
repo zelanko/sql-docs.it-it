@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6e24fcd2d134e9b66c15bd704416ef332f41d31e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ed310262b4f233a8642bbbab382a6d0b30a311e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820404"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752791"
 ---
 # <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Visualizza un elenco di tutti i server di destinazione.  
   
@@ -94,7 +94,7 @@ GO
  [sp_delete_targetserver &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
  [sp_delete_targetservergroup &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
  [sp_update_targetservergroup &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
- [dbo. sysdownloadlist &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
+ [dbo.sysdownload &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

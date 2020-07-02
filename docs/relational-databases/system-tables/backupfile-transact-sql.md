@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85271f37c441ab88ce5ad14279c07f6feda3d95d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f122698756a6d2359112b535158dcb6ff89569b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827361"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750439"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una riga per ogni file di dati o di log di un database. Le colonne descrivono la configurazione dei file al momento dell'esecuzione del backup. Il fatto che il file sia incluso o meno nel backup è determinato dalla colonna **is_present** . Questa tabella è archiviata nel database **msdb** .  
   
@@ -59,7 +59,7 @@ ms.locfileid: "82827361"
 |**is_readonly**|**bit**|1 = il file è di sola lettura.|  
 |**is_present**|**bit**|1 = il file è incluso nel set di backup.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  RESTOre VERIFYONLY FROM *backup_device* with LOADHISTORY popola le colonne della tabella **BackupMediaSet** con i valori appropriati dell'intestazione del set di supporti.  
   
  Per ridurre il numero di righe in questa tabella e in altre tabelle di backup e di cronologia, eseguire la [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) stored procedure.  

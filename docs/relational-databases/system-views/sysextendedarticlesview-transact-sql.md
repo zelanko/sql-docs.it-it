@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8bdd22f7-c268-49b6-820c-3fe603feb128
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d88db9492489175ab12e2f808b846899a1bf4a5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c89e15e2a5da3a33afc5641ac9d96c468afb20c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910109"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750122"
 ---
 # <a name="sysextendedarticlesview-transact-sql"></a>sysextendedarticlesview (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La visualizzazione **sysextendedarticlesview** fornisce informazioni sugli articoli pubblicati. Questa vista è archiviata nel database di distribuzione.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67910109"
 |**filtro**|**int**|Identificatore di oggetto della stored procedure utilizzata per il partizionamento orizzontale.|  
 |**filter_clause**|**ntext**|Clausola WHERE dell'articolo, utilizzata per il filtro orizzontale.|  
 |**ins_cmd**|**nvarchar(255)**|Comando da eseguire a seguito di un'istruzione INSERT.|  
-|**name**|**nvarchar(128)**|Nome associato all'articolo, univoco all'interno della pubblicazione.|  
+|**nome**|**nvarchar(128)**|Nome associato all'articolo, univoco all'interno della pubblicazione.|  
 |**objid**|**int**|ID dell'oggetto di tabella pubblicato.|  
 |**pubid**|**int**|ID della pubblicazione a cui appartiene l'articolo.|  
 |**pre_creation_cmd**|**tinyint**|Comando preliminare per l'istruzione DROP TABLE, DELETE TABLE o TRUNCATE:<br /><br /> **0** = nessuna.<br /><br /> **1** = Elimina.<br /><br /> **2** = Delete.<br /><br /> **3** = troncamento.|  
@@ -55,7 +55,7 @@ ms.locfileid: "67910109"
 |**custom_script**|**int**|Identificatore di oggetto della stored procedure o dello script personalizzati eseguiti al completamento di un trigger DDL.|  
 |**fire_triggers_on_snapshot**|**int**|Indica se i trigger replicati vengono eseguiti o meno quando lo snapshot viene applicato. I possibili valori sono i seguenti.<br /><br /> **0** = i trigger non vengono eseguiti.<br /><br /> **1** = i trigger vengono eseguiti.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste di replica &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addarticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   

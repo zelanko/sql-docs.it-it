@@ -19,15 +19,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 7303649ec6d7a849979871de3f4f91b978adc23a
-ms.sourcegitcommit: a0ebbcb717f09d3614de5ce9eb9f3c00f0a45f81
+ms.openlocfilehash: a825843a69d9ba2f65f272adba86e6d8656aedde
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409370"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750698"
 ---
 # <a name="sysexternal_libraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Supporta la gestione di librerie di pacchetti correlate a runtime esterni, ad esempio R, Python e Java.
 
@@ -44,10 +44,10 @@ La vista del catalogo sys. external_libraries elenca una riga per ogni libreria 
 |name |sysname |Nome della libreria esterna. È univoco all'interno del database per proprietario.|
 |principal_id |INT |ID dell'entità a cui appartiene la libreria esterna. |
 |Linguaggio | sysname | Nome della lingua o del runtime che supporta la libreria esterna. I valori validi sono ' R ',' Python ' è Java '. In futuro potrebbero essere aggiunti altri Runtime.|
-|ambito |INT |0 per ambito pubblico; 1 per ambito privato |  
+|scope |INT |0 per ambito pubblico; 1 per ambito privato |  
 |scope_desc |varchar (7) |Indica se il pacchetto è pubblico o privato.|
 
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
 
 + [sys.external_library_files](sys-external-library-files-transact-sql.md)  
 + [CREA LIBRERIA ESTERNA](../../t-sql/statements/create-external-library-transact-sql.md)  

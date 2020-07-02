@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e2f1c1ae33bd94ffcbe6faef16523d7d808ac70
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f35d035779b5d26fe47c41c06a2b91a39f8da407
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827388"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750384"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una riga per ogni filegroup in un database al momento del backup. **backupfilegroup** è archiviato nel database **msdb** .  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82827388"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|Set di backup contenente questo filegroup.|  
-|**name**|**sysname**|Nome del filegroup|  
+|**nome**|**sysname**|Nome del filegroup|  
 |**filegroup_id**|**int**|ID del filegroup, univoco all'interno del database. Corrisponde a **data_space_id** in **sys. filegroups**.|  
 |**filegroup_guid**|**uniqueidentifier**|Identificatore univoco globale per il filegroup. Può essere NULL.|  
 |**type**|**char(2)**|Tipo di contenuto, può corrispondere a:<br /><br /> FG = Filegroup "Rows"<br /><br /> SL = Filegroup di log [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
@@ -45,7 +45,7 @@ ms.locfileid: "82827388"
 |**is_readonly**|**bit**|1 = Il filegroup è di sola lettura.|  
 |**log_filegroup_guid**|**uniqueidentifier**|Può essere NULL.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
   
 > [!IMPORTANT]  
 >  Lo stesso nome di filegroup può apparire in diversi database, ogni filegroup dispone tuttavia di un GUID proprio. Pertanto, **(backup_set_id, filegroup_guid)** è una chiave univoca che identifica un filegroup in **backupfilegroup**.  
