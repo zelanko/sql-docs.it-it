@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c3c044f9cd63f5942fdc212b2321628ac1b2c21
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: eca0c3f3c03438c9bcc6a715bf06b4aa58f8690a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828937"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733236"
 ---
 # <a name="sp_helpdistributor_properties-transact-sql"></a>sp_helpdistributor_properties (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Restituisce le proprietà del server di distribuzione. La stored procedure viene eseguita nel database di distribuzione del server di distribuzione.  
   
@@ -45,7 +45,7 @@ sp_helpdistributor_properties
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_helpdistributor_properties** viene utilizzato con tutti i tipi di replica.  
   
 ## <a name="permissions"></a>Autorizzazioni  

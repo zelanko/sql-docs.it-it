@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1c3e0e4f48037f471ad260f709879ea7ce8ff5e8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7ffabc2f8bb48b006ec1224a3ae81ac49d6c21f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829450"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734792"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per ogni attributo del piano specificato dall'handle di piano. È possibile utilizzare questa funzione con valori di tabella per recuperare informazioni dettagliate su un particolare piano, come i valori di chiave nella cache o il numero corrente di esecuzioni simultanee del piano.  
   
 > [!NOTE]  
->  Alcune delle informazioni restituite tramite questa funzione sono mappate alla vista di compatibilità con le versioni precedenti [sys. syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) .
+>  Alcune delle informazioni restituite tramite questa funzione sono mappate alla vista di compatibilità con le versioni precedenti di [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) .
 
 ## <a name="syntax"></a>Sintassi  
 ```  
@@ -47,7 +47,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |Attributo|**varchar(128)**|Nome dell'attributo associato al piano. La tabella immediatamente sotto questo elenco elenca i possibili attributi, i relativi tipi di dati e le relative descrizioni.|  
-|value|**sql_variant**|Valore dell'attributo associato al piano.|  
+|Valore|**sql_variant**|Valore dell'attributo associato al piano.|  
 |is_cache_key|**bit**|Indica se l'attributo viene utilizzato come parte della chiave di ricerca nella cache per il piano.|  
 
 Nella tabella precedente, l' **attributo** può avere i valori seguenti:
@@ -59,7 +59,7 @@ Nella tabella precedente, l' **attributo** può avere i valori seguenti:
 |dbid|**int**|ID del database contenente l'entità alla quale fa riferimento il piano.<br /><br /> Per i piani ad hoc o preparati, corrisponde all'ID del database da cui viene eseguito il batch.|  
 |dbid_execute|**int**|Per gli oggetti di sistema archiviati nel database **Resource** , l'ID del database da cui viene eseguito il piano memorizzato nella cache. In tutti gli altri casi è 0.|  
 |user_id|**int**|Il valore -2 indica che il batch inviato non dipende dalla risoluzione implicita del nome e può essere condiviso da diversi utenti. Questo è il metodo preferito. Qualsiasi altro valore rappresenta l'ID dell'utente che invia la query al database.| 
-|language_id|**smallint**|ID della lingua della connessione in cui è stato creato l'oggetto della cache. Per ulteriori informazioni, vedere [sys. syslanguages &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
+|language_id|**smallint**|ID della lingua della connessione in cui è stato creato l'oggetto della cache. Per ulteriori informazioni, vedere [linguaggisys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |date_format|**smallint**|Formato della data della connessione in cui è stato creato l'oggetto della cache. Per altre informazioni, vedere [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |date_first|**tinyint**|Primo valore di data. Per altre informazioni, vedere [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
 |status|**int**|Bit di stato interni che fanno parte della chiave di ricerca nella cache.|  
@@ -83,7 +83,7 @@ Nella tabella precedente, l' **attributo** può avere i valori seguenti:
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
 
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="set-options"></a>Opzioni SET  
  Le copie dello stesso piano compilato potrebbero differire solo per il valore nella colonna **set_options** . Ciò indica che connessioni diverse utilizzano set di opzioni SET diversi per la stessa query. L'utilizzo di set diversi di opzioni è in genere poco consigliabile perché può causare compilazioni aggiuntive, un minore riutilizzo del piano e un aumento delle dimensioni della cache dei piani in seguito alla presenza di più copie dei piani.  
@@ -121,7 +121,7 @@ Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l
   
 |Opzione|Valore|  
 |------------|-----------|  
-|Nessuno|0|  
+|nessuno|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  

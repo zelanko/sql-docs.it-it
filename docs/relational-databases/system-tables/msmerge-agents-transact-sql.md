@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c1c4d976d97dee95e09a053525a14df632cd7e62
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 46c68043b1b04f888fb154862ca5e4368ba604e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82803123"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736820"
 ---
 # <a name="msmerge_agents-transact-sql"></a>MSmerge_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabella **MSmerge_agents** contiene una riga per ogni agente di merge in esecuzione nel Sottoscrittore. Questa tabella è archiviata nel database di distribuzione.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID dell'agente di merge.|  
-|**name**|**nvarchar (100)**|Nome dell'agente di merge.|  
+|**nome**|**nvarchar (100)**|Nome dell'agente di merge.|  
 |**publisher_id**|**smallint**|ID del server di pubblicazione.|  
 |**publisher_db**|**sysname**|Nome del database del server di pubblicazione.|  
 |**pubblicazione**|**sysname**|Nome della pubblicazione.|  

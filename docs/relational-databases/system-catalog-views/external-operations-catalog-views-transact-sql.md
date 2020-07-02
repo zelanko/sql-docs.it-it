@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 9abc595c-346d-42dc-a227-a73cd0a356eb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c50aa211af4a359357ae2d3aa9b892e9fc51983f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9ed21f6458cfeb7b9a812a179339029846209344
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823446"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733560"
 ---
 # <a name="external-operations-catalog-views-transact-sql"></a>Viste del catalogo delle operazioni esterne (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Di seguito sono riportate le viste del catalogo di oggetti dati esterni, ad esempio origini dati, formati di file e tabelle. Utilizzare queste viste per eseguire una query sullo stato degli elementi, ad esempio le tabelle Hadoop utilizzate nelle operazioni di base.  
   

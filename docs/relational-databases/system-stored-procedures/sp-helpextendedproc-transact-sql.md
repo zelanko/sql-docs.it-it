@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8341f752b266d245603f849325dc32f90f9d92c2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7866b9d64a6064cac23382ea3bb33f4fc355cd80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828911"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733213"
 ---
 # <a name="sp_helpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Visualizza le stored procedure estese definite e il nome della libreria a collegamento dinamico (DLL) a cui appartiene la procedura (funzione).  
   
@@ -54,7 +54,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 |**nome**|**sysname**|Nome della stored procedure estesa.|  
 |**Libreria dll**|**nvarchar(255)**|Nome della DLL.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Quando viene specificata la *procedura* , **sp_helpextendedproc** segnala la stored procedure estesa specificata. Quando questo parametro non viene specificato, **sp_helpextendedproc** restituisce tutti i nomi di stored procedure estesi e i nomi delle dll a cui appartiene ogni stored procedure estesa.  
   
 ## <a name="permissions"></a>Autorizzazioni  

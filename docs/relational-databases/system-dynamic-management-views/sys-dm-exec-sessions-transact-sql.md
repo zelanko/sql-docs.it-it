@@ -20,19 +20,19 @@ ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ce44d14573000e9880fb1daf3a1ddb42746ee85
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: eff5e947caed2471d63c980418688f6945c78b21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151968"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734683"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Restituisce una riga per ogni sessione autenticata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_exec_sessions è una vista con ambito server che contiene informazioni su tutte le attività interne e le connessioni utente attive. Tali informazioni includono la versione del client, il nome del programma client, l'ora di accesso del client, l'utente che esegue l'accesso, l'impostazione di sessione corrente e altro. Utilizzare sys.dm_exec_sessions prima di tutto per visualizzare il carico di sistema corrente e individuare una sessione di interesse, quindi per raccogliere ulteriori informazioni su tale sessione utilizzando altre viste o funzioni a gestione dinamica.  
   
- La vista a gestione dinamica sys. dm_exec_connections, sys. dm_exec_sessions e sys. dm_exec_requests è mappata alla tabella di sistema [sys. sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) .  
+ Le viste a gestione dinamica sys. dm_exec_connections, sys. dm_exec_sessions e sys. dm_exec_requests vengono mappate alla tabella di sistema [sys.sysprocessi](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) .  
   
 > **Nota:** Per chiamare questo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oggetto da o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , usare il nome **sys. dm_pdw_nodes_exec_sessions**.  
   

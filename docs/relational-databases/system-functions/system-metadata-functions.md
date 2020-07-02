@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: a6fb85b2-b010-4ca9-b65f-4402917076ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6da1ec838a3c3f52778400b23c804e18388b79ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 94161328366e96e051039824ca46ef20d7431825
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059087"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738552"
 ---
 # <a name="system-metadata-functions"></a>Funzioni per i metadati di sistema
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili le funzioni dei metadati riportate di seguito.  
   

@@ -22,15 +22,15 @@ ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 126b05adab3a07099f6c9110e18e54910f5b2f25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b4ee24b0ee74540a967c713579365c68aa849dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "73982985"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738572"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Legge file creati dalla destinazione asincrona dei file degli eventi estesi. Viene restituito un evento per riga in formato XML.  
   
@@ -79,7 +79,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 
   
 ## <a name="remarks"></a>Osservazioni  
- La lettura di set di risultati di grandi dimensioni tramite l' [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] esecuzione di **sys. fn_xe_file_target_read_file** in può causare un errore. Usare i **Risultati in modalità file** (**CTRL + MAIUSC + F**) per esportare set di risultati di grandi dimensioni in un file e leggere il file con un altro strumento.  
+ La lettura di set di risultati di grandi dimensioni tramite l'esecuzione di **sys. fn_xe_file_target_read_file** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] può causare un errore. Usare i **Risultati in modalità file** (**CTRL + MAIUSC + F**) per esportare set di risultati di grandi dimensioni in un file e leggere il file con un altro strumento.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
@@ -93,7 +93,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 SELECT * FROM sys.fn_xe_file_target_read_file('C:\traces\*.xel', 'C:\traces\metafile.xem', null, null);  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Viste a gestione dinamica degli eventi estesi](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [Viste del catalogo degli eventi estesi &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)  

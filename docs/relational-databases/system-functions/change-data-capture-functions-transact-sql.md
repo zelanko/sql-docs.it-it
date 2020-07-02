@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e5270557-aca3-44ab-8715-daccd498b88d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9031f4b2e5923d1382c10c97dd6886959af108a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 21aeb49750c0a451166da8147b424589b3902856
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68043017"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734441"
 ---
 # <a name="change-data-capture-functions-transact-sql"></a>Funzioni Change Data Capture (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   I record di acquisizione dei dati delle modifiche inseriscono, aggiornano ed eliminano le attività applicate alle tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fornendo i dettagli delle modifiche in un formato relazionale facilmente utilizzabile. Le informazioni sulla colonna che rispecchiano la struttura della colonna di una tabella di origine rilevata vengono acquisite per le righe modificate, insieme ai metadati necessari ad applicare le modifiche a un ambiente di destinazione. Per restituire informazioni sulle modifiche, sono utilizzare le funzioni seguenti.  
   

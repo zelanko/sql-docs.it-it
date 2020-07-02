@@ -20,20 +20,20 @@ ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 31dd240f15d9d778cbab43f6b4b1bfda2e4e1857
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a7b691103a32b49ab7ef017a9820500b7ab0526
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265971"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734577"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Restituisce informazioni sui cataloghi full-text caratterizzati da attività di popolamento in corso nel server.  
   
 > [!NOTE]
->  Le colonne seguenti verranno rimosse in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: is_paused, previous_status, previous_status_description, row_count_in_thousands, status, status_description e worker_count. Evitare di utilizzare queste colonne in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui vengono utilizzate.  
+>  Le colonne seguenti verranno rimosse in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : is_paused, previous_status, previous_status_description, row_count_in_thousands, status, status_description e worker_count. Evitare di utilizzare queste colonne in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui vengono utilizzate.  
   
  
 |Nome colonna|Tipo di dati|Descrizione|  
@@ -41,7 +41,7 @@ ms.locfileid: "68265971"
 |**database_id**|**int**|ID del database contenente il catalogo full-text attivo.|  
 |**catalog_id**|**int**|ID del catalogo full-text attivo.|  
 |**memory_address**|**varbinary (8)**|Indirizzo dei buffer di memoria allocati per l'attività di popolamento correlata al catalogo full-text.|  
-|**name**|**nvarchar(128)**|Nome del catalogo full-text attivo.|  
+|**nome**|**nvarchar(128)**|Nome del catalogo full-text attivo.|  
 |**is_paused**|**bit**|Indica se il popolamento del catalogo full-text attivo è stato sospeso.|  
 |**Stato**|**int**|Stato corrente del catalogo full-text. I tipi validi sono:<br /><br /> 0 = Inizializzazione in corso<br /><br /> 1 = Pronto<br /><br /> 2 = sospeso<br /><br /> 3 = Errore temporaneo<br /><br /> 4 = Rimontaggio necessario<br /><br /> 5 = Chiusura<br /><br /> 6 = In stato di inattività per backup<br /><br /> 7 = Il backup viene eseguito tramite il catalogo<br /><br /> 8 = Il catalogo è danneggiato|  
 |**status_description**|**nvarchar(120)**|Descrizione dello stato corrente del catalogo full-text attivo.|  
@@ -56,11 +56,11 @@ ms.locfileid: "68265971"
 |**is_importing**|**bit**|Indica se il catalogo full-text viene importato:<br /><br /> 1 = Il catalogo viene importato.<br /><br /> 2 = Il catalogo non viene importato.|  
   
 ## <a name="remarks"></a>Osservazioni  
- La colonna is_importing è stata introdotta in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+ La colonna is_importing è stata introdotta in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
   
 ## <a name="permissions"></a>Autorizzazioni  
 
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
+In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
    
 ## <a name="physical-joins"></a>Join fisici  

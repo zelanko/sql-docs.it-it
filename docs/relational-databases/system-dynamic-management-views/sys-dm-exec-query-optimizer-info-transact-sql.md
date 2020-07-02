@@ -20,24 +20,24 @@ ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d15b171b20e81ea928528dc2124a0f33b697d2a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0d544d95cc2a0159a3502544489cf58514fe19fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829399"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734774"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Restituisce statistiche dettagliate sul funzionamento di Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile utilizzare questa vista durante l'ottimizzazione di un carico di lavoro per individuare problemi o miglioramenti per l'ottimizzazione delle query. Ad esempio, è possibile utilizzare il numero totale di ottimizzazioni, il valore del tempo trascorso e il valore di costo finale per confrontare le ottimizzazioni della query per il carico di lavoro corrente con eventuali variazioni rilevate durante il processo di ottimizzazione. Alcuni contatori forniscono dati rilevanti solo per utilizzo diagnostico interno in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questi contatori sono contrassegnati come "Solo per uso interno".  
   
 > [!NOTE]  
 >  Per chiamare questo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oggetto da o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , usare il nome **sys. dm_pdw_nodes_exec_query_optimizer_info**.  
   
-|Nome|Tipo di dati|Descrizione|  
+|Name|Tipo di dati|Descrizione|  
 |----------|---------------|-----------------|  
-|**Counter**|**nvarchar(4000)**|Nome dell'evento statistiche di Query Optimizer.|  
+|**counter**|**nvarchar(4000)**|Nome dell'evento statistiche di Query Optimizer.|  
 |**occurrence**|**bigint**|Numero di occorrenze dell'evento di ottimizzazione per il contatore corrente.|  
 |**value**|**float**|Valore medio della proprietà per occorrenza dell'evento.|  
 |**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
@@ -47,10 +47,10 @@ ms.locfileid: "82829399"
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
     
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sys. dm_exec_query_optimizer_info** contiene le proprietà (contatori) seguenti. Tutti i valori di occorrenza sono cumulativi e vengono impostati su 0 al riavvio del sistema. Tutti i valori dei campi valori vengono impostati su NULL al riavvio del sistema. Tutti i valori delle colonne valori che specificano una media utilizzano il valore di occorrenza della stessa riga del denominatore nel calcolo della media. Tutte le ottimizzazioni delle query vengono misurate quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determina le modifiche apportate **dm_exec_query_optimizer_info**, incluse le query generate dall'utente e dal sistema. L'esecuzione di un piano già memorizzato nella cache non comporta la modifica dei valori in **dm_exec_query_optimizer_info**, ma solo le ottimizzazioni sono significative.  
   
-|Contatore|Occorrenza|Valore|  
+|Counter|Occorrenza|Valore|  
 |-------------|----------------|-----------|  
 |optimizations|Numero totale di ottimizzazioni.|Non applicabile|  
 |elapsed time|Numero totale di ottimizzazioni.|Tempo medio trascorso per ottimizzazione in una singola istruzione (query), espresso in secondi.|  

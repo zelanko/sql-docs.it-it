@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f77b7a36e51d08aa3ae82b5d42e28b0173d750cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2a07c87dea5be1a3d66c5e24996a120323d09ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659024"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738457"
 ---
 # <a name="sqlerrorlogevent-class"></a>Classe SqlErrorLogEvent
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   Fornisce proprietà per la visualizzazione di eventi in un file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificato.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -58,7 +58,7 @@ class SQLErrorLogEvent
 |Spazio dei nomi|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come recuperare valori per tutti gli eventi registrati in un file di log specificato. Per eseguire l'esempio, sostituire \< *Instance_Name*> con il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio "instance1", e sostituire "file_name" con il nome del file di log degli errori, ad esempio "log degli errori. 1".  
+ Nell'esempio seguente viene illustrato come recuperare valori per tutti gli eventi registrati in un file di log specificato. Per eseguire l'esempio, sostituire \<*Instance_Name*> con il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio ' Instance1', e sostituire ' file_name ' con il nome del file di log degli errori, ad esempio ' log degli errori. 1'.  
   
 ```  
 on error resume next  
@@ -90,9 +90,9 @@ Next
   
 -   Accesso in lettura allo spazio dei nomi WMI **allo root\Microsoft\SqlServer\ComputerManagement10** . Per impostazione predefinita, chiunque dispone di accesso in lettura tramite l'autorizzazione Abilita account.  
   
--   Autorizzazione di lettura per la cartella che contiene i log degli errori. Per impostazione predefinita, i log degli errori si trovano nel percorso seguente, dove \< *unità>* rappresenta l'unità in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cui \<è stato installato e *NomeIstanza*> è il nome [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dell'istanza di:  
+-   Autorizzazione di lettura per la cartella che contiene i log degli errori. Per impostazione predefinita, i log degli errori si trovano nel percorso seguente \<*Drive> , dove * rappresenta l'unità in cui è stato installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e \<*InstanceName*> è il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-     **Unità>: \Programmi\Microsoft SQL Server\MSSQL13. \<** **\< Nomeistanza> \MSSQL\Log**  
+     ** \<Drive> : \Programmi\microsoft SQL Server\MSSQL13** **. \<InstanceName> \MSSQL\Log**  
   
  Se si sta eseguendo la connessione attraverso un firewall, assicurarsi che sia impostata un'eccezione nel firewall per WMI nei computer di destinazione remoti. Per ulteriori informazioni, vedere [connessione a WMI in modalità remota a partire da Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
   

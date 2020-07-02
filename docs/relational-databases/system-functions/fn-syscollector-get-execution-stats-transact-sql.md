@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71a070de7c74d353be395628566c0bd3f63fd99a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dad75f84dd7696364528fe215bcf2665d78562c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68042738"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734389"
 ---
 # <a name="fn_syscollector_get_execution_stats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce statistiche dettagliate sul set di raccolta o sul pacchetto, incluso il numero di righe di errore registrato dall'attività Flusso di dati di un pacchetto. Un'attività Flusso di dati è un componente di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tramite cui vengono elaborati i dati. I dati sono in formato relazionale, pertanto sono presenti un set di dati di input e uno di output costituiti da righe.  
   
@@ -48,7 +48,7 @@ fn_syscollector_get_execution_stats ( log_id )
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|avg_row_count_in|**int**|Numero medio di righe passate nelle attività del flusso di dati del pacchetto.<br /><br /> Nota: un'attività flusso di dati è [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] un componente che elabora i dati. I dati sono in formato relazionale, pertanto è presente un set di dati di input costituito da righe. Si tratta del numero di righe immesse nell'attività. Dopo la trasformazione dei dati, viene restituito l'output rappresentato da un set di risultati costituito da righe. L'attività Flusso di dati trasforma i dati e restituisce un set di risultati costituito da righe. L'output è costituito dal numero di righe restituite dall'attività.|  
+|avg_row_count_in|**int**|Numero medio di righe passate nelle attività del flusso di dati del pacchetto.<br /><br /> Nota: un'attività flusso di dati è un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] componente che elabora i dati. I dati sono in formato relazionale, pertanto è presente un set di dati di input costituito da righe. Si tratta del numero di righe immesse nell'attività. Dopo la trasformazione dei dati, viene restituito l'output rappresentato da un set di risultati costituito da righe. L'attività Flusso di dati trasforma i dati e restituisce un set di risultati costituito da righe. L'output è costituito dal numero di righe restituite dall'attività.|  
 |min_row_count_in|**int**|Numero minimo di righe passate nelle attività del flusso di dati del pacchetto.|  
 |max_row_count_in|**int**|Numero massimo di righe passate nelle attività del flusso di dati del pacchetto.|  
 |avg_row_count_out|**int**|Numero medio di righe uscite dalle attività del flusso di dati del pacchetto.|  
@@ -61,7 +61,7 @@ fn_syscollector_get_execution_stats ( log_id )
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede SELECT per **dc_operator**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [syscollector_execution_stats &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql.md)   
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)  
   

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d7e4ac0e338ac556c88c8cc22d6a87a53c67d51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7c93aec2d5246073073fefaaaf4b21d3d542416a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737661"
 ---
 # <a name="clr-integration-and-transactions"></a>Integrazione con CLR e transazioni
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Lo spazio dei nomi **System. Transactions** fornisce un Framework di transazione completamente integrato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con ADO.NET e l'integrazione con Common Language Runtime (CLR). **System. Transactions** e ADO.NET collaborano per estendere e semplificare l'utilizzo di transazioni locali e distribuite nelle applicazioni gestite.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  Lo spazio dei nomi **System. Transactions** fornisce un Framework di transazione completamente integrato con ADO.NET e l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrazione con Common Language Runtime (CLR). **System. Transactions** e ADO.NET collaborano per estendere e semplificare l'utilizzo di transazioni locali e distribuite nelle applicazioni gestite.  
   
 > [!NOTE]  
 >  Una procedura CLR definita dall'utente non può stabilire una connessione allo stesso server nel quale viene eseguita, ovvero una connessione loopback, ed essere integrata nella stessa transazione. Un eventuale tentativo di connessione verrà bloccato e il controllo non verrà restituito alla procedura definita dall'utente. Verrà pertanto generato un errore di timeout (messaggio 1206) nella procedura definita dall'utente.  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c41294867de508ed39815b16183d5151c55197a4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b974356db48a7621103d24894a39e9f0a3037e63
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826076"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736951"
 ---
 # <a name="sp_helpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Restituisce tutti gli errori di replica transazionale per una specifica sottoscrizione. La stored procedure viene eseguita nel database di distribuzione del server di distribuzione.  
   
@@ -69,7 +69,7 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_helpsubscriptionerrors** viene utilizzato con la replica snapshot e transazionale.  
   
 ## <a name="permissions"></a>Autorizzazioni  

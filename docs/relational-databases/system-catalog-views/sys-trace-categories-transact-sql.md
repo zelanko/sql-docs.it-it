@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f6a86766-e2a9-4d9f-a073-1b59e888ba7d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4898bdb8e05c2b2fce20ca30ef7f056107a4befa
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8ebbce0ef5bf49b1105a5ce7306011b4f7e512e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821268"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733423"
 ---
 # <a name="systrace_categories-transact-sql"></a>sys.trace_categories (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Classi di evento simili vengono raggruppate in base a una categoria specifica. Ogni riga della vista del catalogo **sys. trace_categories** identifica una categoria univoca sul server. Queste categorie non cambiano per una versione specifica di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82821268"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**smallint**|ID univoco della categoria. Questa colonna si trova anche nella vista del catalogo **sys. trace_events** .|  
-|**name**|**nvarchar(128)**|Nome univoco della categoria. Questo parametro non è localizzato.|  
+|**nome**|**nvarchar(128)**|Nome univoco della categoria. Questo parametro non è localizzato.|  
 |**type**|**tinyint**|Tipo di categoria:<br /><br /> 0 = normale<br /><br /> 1 = connessione<br /><br /> 2 = errore|  
   
 ## <a name="permissions"></a>Autorizzazioni  

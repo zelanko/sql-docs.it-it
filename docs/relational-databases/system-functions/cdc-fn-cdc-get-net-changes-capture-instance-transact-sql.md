@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 77fb03c71bd0773cc8f004a89c28c1925284876b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b2825efb9d6b0b16c0e68f2f5744b4371bc59e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68043039"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734451"
 ---
 # <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga di modifica NET per ogni riga di origine modificata nell'intervallo di numeri di sequenza del file di log (LSN) specificato.  
   
  **Attendere, che cos'è un LSN?** Ogni record presente nel [log delle transazioni SQL Server](../logs/the-transaction-log-sql-server.md) viene identificato in modo univoco da un numero di sequenza del file di log (LSN). LSN sono ordinati in modo tale che se LSN2 è maggiore di LSN1, la modifica descritta dal record di log a cui fa riferimento LSN2 si è verificata **dopo** la modifica descritta dall'LSN del record di log.  
   
- Il numero LSN di un record di log in cui si è verificato un evento significativo può essere utile per la creazione di sequenze di ripristino corrette. Poiché LSN sono ordinati, è possibile confrontarli per verificarne l'uguaglianza e la disuguaglianza ( \<ovvero, >, = \<, =, >=). Questi confronti sono utili nella creazione di sequenze di ripristino.  
+ Il numero LSN di un record di log in cui si è verificato un evento significativo può essere utile per la creazione di sequenze di ripristino corrette. Poiché LSN sono ordinati, è possibile confrontarli per verificarne l'uguaglianza e la disuguaglianza, ovvero, \<, > =, \<=, > =. Questi confronti sono utili nella creazione di sequenze di ripristino.  
   
  Quando una riga di origine presenta più modifiche durante l'intervallo LSN, una singola riga che riflette il contenuto finale della riga viene restituita dalla funzione di enumerazione descritta di seguito. Se, ad esempio, una transazione inserisce una riga nella tabella di origine e una transazione successiva nell'intervallo LSN aggiorna una o più colonne della riga, la funzione **restituisce una sola riga,** che include i valori di colonna aggiornati.  
   
@@ -66,13 +66,13 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  Opzione applicata al contenuto delle colonne dei metadati e alle righe restituite nel set di risultati. Le opzioni possibili sono le seguenti:  
   
  all  
- Restituisce il numero LSN della modifica finale alla riga e l'operazione necessaria per applicare la riga nelle colonne di metadati _ _ $ start_lsn e \_ \_$Operation. La colonna \_ \_$Update _mask è sempre null.  
+ Restituisce il numero LSN della modifica finale alla riga e l'operazione necessaria per applicare la riga nelle colonne di metadati _ _ $ start_lsn e \_ \_ $Operation. La colonna \_ \_ $Update _mask è sempre null.  
   
  all with mask  
- Restituisce il numero LSN della modifica finale alla riga e l'operazione necessaria per applicare la riga nelle colonne di metadati _ _ $ start_lsn e \_ \_$Operation. Inoltre, quando un'operazione di aggiornamento restituisce (\_\_$Operation = 4) le colonne acquisite modificate nell'aggiornamento sono contrassegnate nel valore restituito in \_ \_$Update _mask.  
+ Restituisce il numero LSN della modifica finale alla riga e l'operazione necessaria per applicare la riga nelle colonne di metadati _ _ $ start_lsn e \_ \_ $Operation. Inoltre, quando un'operazione di aggiornamento restituisce ( \_ \_ $Operation = 4) le colonne acquisite modificate nell'aggiornamento sono contrassegnate nel valore restituito in \_ \_ $Update _mask.  
   
  all with merge  
- Restituisce il numero LSN della modifica finale alla riga nelle colonne metadati __$start_lsn. La colonna \_ \_$Operation sarà uno dei due valori seguenti: 1 per Delete e 5 per indicare che l'operazione necessaria per applicare la modifica è un inserimento o un aggiornamento. La colonna \_ \_$Update _mask è sempre null.  
+ Restituisce il numero LSN della modifica finale alla riga nelle colonne metadati __$start_lsn. La colonna \_ \_ $Operation sarà uno dei due valori seguenti: 1 per Delete e 5 per indicare che l'operazione necessaria per applicare la modifica è un inserimento o un aggiornamento. La colonna \_ \_ $Update _mask è sempre null.  
   
  La logica necessaria a determinare l'operazione precisa per una determinata modifica aggiunge maggiore complessità alla query, pertanto questa opzione è progettata per migliorare le prestazioni di esecuzione delle query quando è sufficiente indicare che l'operazione necessaria ad applicare i dati di modifica è un inserimento o un aggiornamento, ma non è necessario distinguere in modo esplicito tra i due. Questa opzione è molto interessante negli ambienti di destinazione dove è direttamente disponibile un'operazione di unione, ad esempio un ambiente [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -82,8 +82,8 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 |-----------------|---------------|-----------------|  
 |__$start_lsn|**binary(10)**|Valore LSN associato al commit della transazione per la modifica.<br /><br /> Tutte le modifiche di cui è stato eseguito il commit nella stessa transazione condividono lo stesso valore LSN di commit. Se, ad esempio, un'operazione di aggiornamento nella tabella di origine modifica due colonne in due righe, la tabella delle modifiche conterrà quattro righe, ognuna con lo stesso _ _ $ start_lsnvalue.|  
 |__$operation|**int**|Identifica l'operazione DML (Data Manipulation Language) necessaria per applicare la riga di dati di modifica all'origine dati di destinazione.<br /><br /> Se il valore del parametro row_filter_option è 'all' oppure 'all with mask', il valore in questa colonna può essere uno dei seguenti:<br /><br /> 1 = eliminazione<br /><br /> 2 = inserimento<br /><br /> 4 = aggiornamento<br /><br /> Se il valore del parametro row_filter_option è 'all with merge', il valore in questa colonna può essere uno dei seguenti:<br /><br /> 1 = eliminazione|  
-|__$update_mask|**varbinary(128)**|Maschera di bit in cui a ogni colonna acquisita identificata per l'istanza di acquisizione corrisponde un bit. Tutti i bit definiti per questo valore sono impostati su 1 quando __$operation = 1 o 2. Quando \_ \_$Operation = 3 o 4, solo i bit corrispondenti alle colonne modificate sono impostati su 1.|  
-|*\<colonne della tabella di origine acquisite>*|variabile|Le colonne rimanenti restituite dalla funzione sono le colonne della tabella di origine identificate come colonne acquisite durante la creazione dell'istanza di acquisizione. Se nessuna colonna è stata specificata nell'elenco delle colonne acquisite, vengono restituite tutte le colonne nella tabella di origine.|  
+|__$update_mask|**varbinary(128)**|Maschera di bit in cui a ogni colonna acquisita identificata per l'istanza di acquisizione corrisponde un bit. Tutti i bit definiti per questo valore sono impostati su 1 quando __$operation = 1 o 2. Quando \_ \_ $Operation = 3 o 4, solo i bit corrispondenti alle colonne modificate sono impostati su 1.|  
+|*\<captured source table columns>*|variabile|Le colonne rimanenti restituite dalla funzione sono le colonne della tabella di origine identificate come colonne acquisite durante la creazione dell'istanza di acquisizione. Se nessuna colonna è stata specificata nell'elenco delle colonne acquisite, vengono restituite tutte le colonne nella tabella di origine.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server sysadmin o al ruolo predefinito del database db_owner. Per tutti gli altri utenti, è richiesta l'autorizzazione SELECT su tutte le colonne acquisite nella tabella di origine e, se è stato definito un ruolo di controllo per l'istanza di acquisizione, l'appartenenza a tale ruolo del database. Se il chiamante non dispone delle autorizzazioni per visualizzare i dati di origine, la funzione restituisce un errore 208 (Il nome di oggetto non è valido).  
@@ -94,7 +94,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  Le modifiche apportate all'identificatore univoco di una riga comfn_cdc_get_net_changes porteranno la visualizzazione del comando di aggiornamento iniziale con un comando DELETE e then INSERT.  Questo comportamento è necessario per tenere traccia della chiave prima e dopo la modifica.
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene utilizzata la `cdc.fn_cdc_get_net_changes_HR_Department` funzione per segnalare le modifiche nette apportate alla `HumanResources.Department` tabella di origine durante un intervallo di tempo specifico.  
+ Nell'esempio seguente viene utilizzata la funzione `cdc.fn_cdc_get_net_changes_HR_Department` per segnalare le modifiche nette apportate alla tabella di origine `HumanResources.Department` durante un intervallo di tempo specifico.  
   
  Innanzitutto, per contrassegnare l'inizio dell'intervallo di tempo viene utilizzata la funzione `GETDATE`. Dopo l'applicazione delle istruzioni DML alla tabella di origine, la funzione `GETDATE` viene chiamata nuovamente per identificare la fine dell'intervallo di tempo. La funzione [sys. fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) viene quindi utilizzata per eseguire il mapping dell'intervallo di tempo a un intervallo di query Change Data Capture delimitato da valori LSN. Infine, la funzione `cdc.fn_cdc_get_net_changes_HR_Department` viene eseguita per ottenere tutte le modifiche alla tabella di origine per l'intervallo di tempo. La riga inserita ed eliminata non viene visualizzata nel set dei risultati restituito dalla funzione. Ciò avviene perché una riga aggiunta ed eliminata all'interno di una finestra di query non produce modifiche totali sulla tabella di origine per l'intervallo. Prima di eseguire questo esempio, è necessario prima eseguire l'esempio B in [sys. sp_cdc_enable_table &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
   

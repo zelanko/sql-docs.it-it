@@ -28,15 +28,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e4cfa5ef312bc9048a53405a6c1083183b10054
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 01fd8e99d6eb770c2f5680ead1e2c4d9b9ec98b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529781"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733665"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Aggiornamento di dati tramite updategram XML (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Quando si aggiornano i dati esistenti, è necessario specificare entrambi i **\<before>** **\<after>** blocchi e. Gli elementi specificati nei **\<before>** blocchi e **\<after>** descrivono la modifica desiderata. L'updategram utilizza gli elementi specificati nel **\<before>** blocco per identificare i record o i record esistenti nel database. Gli elementi corrispondenti nel **\<after>** blocco indicano la modalità di aspetto dei record dopo l'esecuzione dell'operazione di aggiornamento. Da queste informazioni, l'updategram crea un'istruzione SQL che corrisponde al **\<after>** blocco. L'updategram utilizza quindi questa istruzione per aggiornare il database.  
   
  Di seguito viene illustrato il formato dell'updategram per un'operazione di aggiornamento:  
@@ -87,14 +87,14 @@ ms.locfileid: "84529781"
   
  Se si specifica un elemento nel **\<before>** blocco e solo un elemento corrispondente nel **\<after>** blocco, l'utilizzo di **attributo updg: ID** non è necessario. Tuttavia, è consigliabile specificare **attributo updg: ID** comunque per evitare ambiguità.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Prima di utilizzare gli esempi di updategram, tenere presente quanto segue:  
   
 -   La maggior parte degli esempi utilizza il mapping predefinito, ovvero non viene specificato alcuno schema di mapping nell'updategram. Per ulteriori esempi di updategram che utilizzano schemi di mapping, vedere [specifica di uno schema di mapping con annotazioni in un Updategram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 -   La maggior parte degli esempi utilizza il database di esempio AdventureWorks. Tutti gli aggiornamenti vengono applicati alle tabelle di questo database. È possibile ripristinare il database AdventureWorks.  
   
-### <a name="a-updating-a-record"></a>A. Aggiornamento di un record  
+### <a name="a-updating-a-record"></a>R. Aggiornamento di un record  
  Nell'updategram seguente il cognome del dipendente viene aggiornato a Fuller nella tabella Person.Contact del database AdventureWorks. Poiché l'updategram non specifica alcuno schema di mapping, utilizza il mapping predefinito.  
   
 ```  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d5c34cba36e4427c2f0def227b0641fa2f2fa84
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 16a0c7ffa2c12e43404f17eaa36fa787c2ae11cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828934"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738510"
 ---
 # <a name="sp_helpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce un elenco dei ruoli predefiniti del database.  
   
@@ -51,7 +51,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |**DbFixedRole**|**sysname**|Nome del ruolo predefinito del database.|  
 |**Descrizione**|**nvarchar (70)**|Descrizione di **DbFixedRole.**|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  I ruoli predefiniti del database vengono definiti a livello del database e dispongono delle autorizzazioni per l'esecuzione di specifiche attività amministrative a livello del database, come indicato nella tabella seguente. Non è possibile aggiungere o rimuovere i ruoli predefiniti del database e non è possibile modificare le autorizzazioni concesse a un ruolo predefinito del database.  
   
 |Ruolo predefinito del database|Descrizione|  
@@ -77,9 +77,9 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
- Le informazioni restituite sono soggette a limitazioni di accesso ai metadati. Non vengono visualizzate le entità per le quali l'entità di database non dispone dell'autorizzazione.  Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Le informazioni restituite sono soggette a limitazioni di accesso ai metadati. Non vengono visualizzate le entità per le quali l'entità di database non dispone dell'autorizzazione. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene visualizzato un elenco di tutti i ruoli predefiniti del database.  
   
 ```  

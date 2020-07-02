@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 82f433d18ff0940c9283f93cfa5e3f87179d31ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cffa7327162b4ae333719ad0e50c02002d0a4528
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078549"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734552"
 ---
 # <a name="sysdm_fts_index_keywords_by_property-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce tutto il contenuto correlato alla proprietà nell'indice full-text di una tabella specificata. Sono inclusi tutti i dati che appartengono a qualsiasi proprietà registrata dall'elenco delle proprietà di ricerca associato a tale indice full-text.  
   
@@ -85,7 +85,7 @@ OBJECT_ID('table_name')
   
  Quando la colonna chiave full-text è, come consigliato, un tipo di dati integer, viene eseguito il mapping diretto di document_id al valore della chiave full-text nella tabella di base.  
   
- Quando invece la colonna chiave full-text utilizza un tipo di dati diverso da integer, document_id non rappresenta la chiave full-text della tabella di base. In questo caso, per identificare la riga nella tabella di base restituita da dm_fts_index_keywords_by_property, è necessario unire in join questa visualizzazione con i risultati restituiti da [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Prima di poter eseguire il join, è necessario archiviare l'output della stored procedure in una tabella temporanea È quindi possibile unire in join la colonna document_id di dm_fts_index_keywords_by_property con la colonna DocId restituita da questa stored procedure. Si noti che una colonna **timestamp** non può ricevere valori in fase di inserimento, perché vengono generati automaticamente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]da. La colonna **timestamp** deve pertanto essere convertita in colonne **varbinary (8)** . Nell'esempio seguente sono illustrati i passaggi per l'operazione. In questo esempio *table_id* è l'ID della tabella, *database_name* è il nome del database e *table_name* è il nome della tabella.  
+ Quando invece la colonna chiave full-text utilizza un tipo di dati diverso da integer, document_id non rappresenta la chiave full-text della tabella di base. In questo caso, per identificare la riga nella tabella di base restituita da dm_fts_index_keywords_by_property, è necessario unire in join questa visualizzazione con i risultati restituiti da [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Prima di poter eseguire il join, è necessario archiviare l'output della stored procedure in una tabella temporanea È quindi possibile unire in join la colonna document_id di dm_fts_index_keywords_by_property con la colonna DocId restituita da questa stored procedure. Si noti che una colonna **timestamp** non può ricevere valori in fase di inserimento, perché vengono generati automaticamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La colonna **timestamp** deve pertanto essere convertita in colonne **varbinary (8)** . Nell'esempio seguente sono illustrati i passaggi per l'operazione. In questo esempio *table_id* è l'ID della tabella, *database_name* è il nome del database e *table_name* è il nome della tabella.  
   
 ```  
 USE database_name;  
@@ -109,7 +109,7 @@ GO
  Sono necessarie l'autorizzazione SELECT per le colonne analizzate dall'indice full-text e le autorizzazioni CREATE FULLTEXT CATALOG.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente vengono restituite parole chiave dalla proprietà `Author` nell'indice full-text della tabella `Production.Document` del database di esempio `AdventureWorks`. Nell'esempio viene utilizzato l' `KWBPOP` alias per la tabella restituita da **sys. dm_fts_index_keywords_by_property**. Nell'esempio vengono utilizzati inner join per combinare colonne da [sys. registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) e [sys. fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+ Nell'esempio seguente vengono restituite parole chiave dalla proprietà `Author` nell'indice full-text della tabella `Production.Document` del database di esempio `AdventureWorks`. Nell'esempio viene utilizzato l'alias `KWBPOP` per la tabella restituita da **sys. dm_fts_index_keywords_by_property**. Nell'esempio vengono utilizzati inner join per combinare colonne da [sys. registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) e [sys. fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
 ```  
 -- Once the full-text index is configured to support property searching  

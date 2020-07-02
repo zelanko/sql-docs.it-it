@@ -17,15 +17,15 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 279f1a8fbe3ec78dc0cae30d9879615b169075bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3bd7aa786466f3bde9aa42d75437d2406ef1e808
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75656993"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734748"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys. dm_exec_query_plan_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 Restituisce l'equivalente dell'ultimo piano di esecuzione effettivo noto per un piano di query precedentemente memorizzato nella cache.
 
@@ -58,11 +58,11 @@ Il *plan_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti
 |**dbid**|**smallint**|ID del database di contesto attivo al momento della compilazione dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] corrispondente a questo piano. Per istruzioni SQL ad hoc e preparate, l'ID del database in cui sono state compilate le istruzioni.<br /><br /> La colonna ammette i valori Null.|  
 |**ObjectId**|**int**|ID dell'oggetto (ad esempio, stored procedure o funzione definita dall'utente) per il piano della query. Per i batch ad hoc e preparati, questa colonna è **null**.<br /><br /> La colonna ammette i valori Null.|  
 |**number**|**smallint**|Valore intero della stored procedure numerata. Ad esempio, le procedure utilizzate per l'applicazione **orders** potrebbero essere denominate **orderproc;1**, **orderproc;2** e così via. Per i batch ad hoc e preparati, questa colonna è **null**.<br /><br /> La colonna ammette i valori Null.|  
-|**encrypted**|**bit**|Indica se la stored procedure corrispondente è crittografata.<br /><br /> 0 = non crittografata<br /><br /> 1 = crittografata<br /><br /> La colonna non ammette i valori Null.|  
+|**crittografati**|**bit**|Indica se la stored procedure corrispondente è crittografata.<br /><br /> 0 = non crittografata<br /><br /> 1 = crittografata<br /><br /> La colonna non ammette i valori Null.|  
 |**query_plan**|**xml**|Contiene l'ultima rappresentazione Showplan Runtime nota del piano di esecuzione della query effettivo specificato con *plan_handle*. La rappresentazione Showplan è in formato XML. Viene generato un piano per ogni batch contenente ad esempio istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, chiamate di stored procedure e chiamate di funzioni definite dall'utente.<br /><br /> La colonna ammette i valori Null.| 
 
 ## <a name="remarks"></a>Osservazioni
-Questa funzione di sistema è disponibile a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] partire dalla versione CTP 2,4.
+Questa funzione di sistema è disponibile a partire dalla [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] versione CTP 2,4.
 
 Questa funzione prevede il consenso esplicito e richiede l'abilitazione del [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451. a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5, per eseguire questa operazione a livello di database, vedere l'opzione LAST_QUERY_PLAN_STATS in [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
@@ -75,25 +75,25 @@ Showplan output by sys. dm_exec_query_plan_stats contiene le informazioni seguen
 Nelle condizioni seguenti viene restituito un output di Showplan **equivalente a un piano di esecuzione effettivo** nella colonna **query_plan** della tabella restituita per **sys. dm_exec_query_plan_stats**:  
 
 -   Il piano si trova in [sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
-    **AND**    
+    **E**    
 -   La query eseguita è complessa o richiede risorse.
 
 Nelle condizioni seguenti viene restituito un output di Showplan ** <sup>1</sup> semplificato** nella colonna **query_plan** della tabella restituita per **sys. dm_exec_query_plan_stats**:  
 
 -   Il piano si trova in [sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
-    **AND**    
+    **E**    
 -   La query è abbastanza semplice, in genere categorizzata come parte di un carico di lavoro OLTP.
 
-<sup>1</sup> a partire [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] dalla versione CTP 2,5, si riferisce a uno Showplan che contiene solo l'operatore nodo radice (Select). Per [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] la versione CTP 2,4 si riferisce al piano memorizzato `sys.dm_exec_cached_plans`nella cache come disponibile tramite.
+<sup>1</sup> a partire dalla [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] versione CTP 2,5, si riferisce a uno Showplan che contiene solo l'operatore nodo radice (Select). Per [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] la versione CTP 2,4 si riferisce al piano memorizzato nella cache come disponibile tramite `sys.dm_exec_cached_plans` .
 
 Nelle condizioni seguenti **non viene restituito alcun output** da **sys. dm_exec_query_plan_stats**:
 
 -   Il piano di query specificato utilizzando *plan_handle* è stato eliminato dalla cache dei piani.     
-    **O**    
+    **OR**    
 -   Il piano di query non è stato inserito nella cache. Per ulteriori informazioni, vedere [memorizzazione nella cache e riutilizzo del piano di esecuzione ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse).
   
 > [!NOTE] 
-> A causa di una limitazione del numero di livelli annidati consentiti nel tipo di dati **XML** , **sys. dm_exec_query_plan** non può restituire piani di query che soddisfano o superano 128 livelli di elementi annidati. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]questa condizione impediva la restituzione del piano di query e generava l' [errore 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versioni successive, la colonna **query_plan** restituisce null.  
+> A causa di una limitazione del numero di livelli annidati consentiti nel tipo di dati **XML** , **sys. dm_exec_query_plan** non può restituire piani di query che soddisfano o superano 128 livelli di elementi annidati. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa condizione impediva la restituzione del piano di query e generava l' [errore 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versioni successive, la colonna **QUERY_PLAN** restituisce null.  
 
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione `VIEW SERVER STATE` per il server.  
@@ -101,14 +101,14 @@ Nelle condizioni seguenti **non viene restituito alcun output** da **sys. dm_exe
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-looking-at-last-known-actual-query-execution-plan-for-a-specific-cached-plan"></a>R. Esame dell'ultimo piano di esecuzione effettivo della query noto per un piano specifico memorizzato nella cache  
- Nell'esempio seguente viene eseguita una query su **sys. dm_exec_cached_plans** per trovare il piano `plan_handle` interessante e copiarne l'oggetto dall'output.  
+ Nell'esempio seguente viene eseguita una query su **sys. dm_exec_cached_plans** per trovare il piano interessante e copiarne l'oggetto `plan_handle` dall'output.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_cached_plans;  
 GO  
 ```  
   
-Quindi, per ottenere l'ultimo piano di esecuzione effettivo della query, usare l' `plan_handle` oggetto copiato con la funzione di sistema **sys. dm_exec_query_plan_stats**.  
+Quindi, per ottenere l'ultimo piano di esecuzione effettivo della query, usare l'oggetto copiato `plan_handle` con la funzione di sistema **sys. dm_exec_query_plan_stats**.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_query_plan_stats(< copied plan_handle >);  

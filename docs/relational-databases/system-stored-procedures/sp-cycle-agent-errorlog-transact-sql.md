@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8fcb9bad5548107ef3a9294f22696abeacbdedcd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b51893b5676222a713b81409e3778904e4fc9580
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826249"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733304"
 ---
 # <a name="sp_cycle_agent_errorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Chiude il log degli errori corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e rinumera le estensioni del log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, esattamente come quando si riavvia il server. Il nuovo log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent contiene una riga in cui è registrata l'operazione di creazione di un nuovo log.  
   
@@ -52,7 +52,7 @@ sp_cycle_agent_errorlog
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per **sp_cycle_agent_errorlog** sono limitate ai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene rinumerato il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ```  

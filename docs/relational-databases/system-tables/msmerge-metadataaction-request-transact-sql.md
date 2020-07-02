@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73fe0094b77c730f496dc0650c1169824018d00f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 747a8f7717ba9d0778c506166df583d98f99386d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829868"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736687"
 ---
 # <a name="msmerge_metadataaction_request-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabella **MSmerge_metadataaction_request** archivia una riga per ogni azione di compensazione richiesta. Utilizzando la sincronizzazione Web, se si verifica un errore e la sincronizzazione deve essere ripetuta, viene apportata una voce in **MSmerge_metadataaction_request**. Durante la fase di caricamento del merge successivo, le richieste di tutti gli articoli facenti parte della pubblicazione in fase di sincronizzazione vengono recuperate da questa tabella e caricate. Quando la sincronizzazione viene completata correttamente, viene eliminata la riga corrispondente nella tabella **MSmerge_metadataaction_request** . Questa tabella è archiviata nel database di pubblicazione del server di pubblicazione e nel database di sottoscrizione del Sottoscrittore.  
   

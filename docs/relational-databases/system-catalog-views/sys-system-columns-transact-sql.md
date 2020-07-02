@@ -1,5 +1,5 @@
 ---
-title: sys. system_columns (Transact-SQL) | Microsoft Docs
+title: sys.system_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,22 +20,22 @@ ms.assetid: 4ab1d48a-d57a-4e76-a08c-9627eeaf4588
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76706ee2d516bce0f60a78224c983056b5220d72
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 984f0d9d7738137d0a892fb6634e124a32869a89
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831317"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733464"
 ---
 # <a name="syssystem_columns-transact-sql"></a>sys.system_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Contiene una riga per ogni colonna di oggetti di sistema che includono colonne.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID dell'oggetto a cui appartiene la colonna.|  
-|**name**|**sysname**|Nome della colonna. Valore univoco all'interno dell'oggetto.|  
+|**nome**|**sysname**|Nome della colonna. Valore univoco all'interno dell'oggetto.|  
 |**column_id**|**int**|ID della colonna. Valore univoco all'interno dell'oggetto.<br /><br /> È possibile che gli ID di colonna non siano sequenziali.|  
 |**system_type_id**|**tinyint**|ID del tipo di sistema della colonna.|  
 |**user_type_id**|**int**|ID del tipo di colonna definito dall'utente.<br /><br /> Per restituire il nome del tipo, eseguire il join alla vista del catalogo [sys. Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) in questa colonna.|  

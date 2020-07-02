@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 10b4aa19b86530213f852ea90f959a1d7ef6c74f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1311ddfe90beafa3f3d89b27e510eac34aa5ae94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251236"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734398"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce il percorso UNC di livello radice per una tabella FileTable specifica o per il database corrente.  
   
@@ -41,11 +41,11 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
  Nome dell'oggetto FileTable. *FileTable_name* è di tipo **nvarchar**. Questo parametro è facoltativo. Il valore predefinito corrisponde al database corrente. È inoltre facoltativo specificare *schema_name* . È possibile passare NULL per *FileTable_name* per usare il valore del parametro predefinito  
   
  *\@opzione*  
- Espressione Integer che definisce la formattazione del componente server del percorso. l'opzione può avere uno dei valori seguenti: * \@*  
+ Espressione Integer che definisce la formattazione del componente server del percorso. l' * \@ opzione* può avere uno dei valori seguenti:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
-|**0**|Restituisce il nome del server convertito in formato NetBIOS, ad esempio:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Questo è il valore predefinito.|  
+|**0**|Restituisce il nome del server convertito in formato NetBIOS, ad esempio:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Si tratta del valore predefinito.|  
 |**1**|Restituisce il nome del server senza conversione, ad esempio:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
 |**2**|Restituisce il percorso completo del server, ad esempio:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab020c70d1d1062f507bbb745f2e5f00d9faba6a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2d5a9063447752406a2898f6d72ea6e43ff316ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824876"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733393"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una riga per ogni allegato inviato a Posta elettronica database. Utilizzare questa vista quando si desidera ottenere informazioni sugli allegati di Posta elettronica database. Per esaminare tutti i messaggi di posta elettronica elaborati da Posta elettronica database usare [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md).  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82824876"
 |**last_mod_date**|**datetime**|Data e ora dell'ultima modifica della riga.|  
 |**last_mod_user**|**sysname**|Autore dell'ultima modifica della riga.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Quando si risolvono i problemi relativi a Posta elettronica database, è possibile utilizzare questa vista per visualizzare le proprietà degli allegati.  
   
  Gli allegati archiviati nelle tabelle di sistema possono causare l'aumento delle dimensioni del database **msdb** . Utilizzare **sysmail_delete_mailitems_sp** per eliminare gli elementi di posta elettronica e gli allegati associati. Per ulteriori informazioni, vedere [la pagina relativa alla creazione di un processo di SQL Server Agent per l'archiviazione di messaggi posta elettronica database e log eventi](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  

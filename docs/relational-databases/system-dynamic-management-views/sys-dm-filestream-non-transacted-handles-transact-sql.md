@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 22a45505d5b79e7431902331d1dbca5ef0facbbf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0ede8e0515decf06304694fa3a907cc468b16de1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830595"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734590"
 ---
 # <a name="sysdm_filestream_non_transacted_handles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Consente di visualizzare gli handle di file non transazionali aperti associati a dati di tabelle FileTable.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82830595"
   
  Per altre informazioni, vedere [Gestire le tabelle FileTable](../../relational-databases/blob/manage-filetables.md).  
   
-|**Colonna**|**Type**|**Descrizione**|  
+|**Colonna**|**Tipo**|**Descrizione**|  
 |----------------|--------------|---------------------|  
 |database_id|INT|ID del database associato all'handle.|  
 |object_id|INT|ID oggetto della tabella FileTable a cui è associato l'handle.|  

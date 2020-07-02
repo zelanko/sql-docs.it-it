@@ -20,15 +20,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ae59154acbaed6d02ab0e2a4ba1f78c5f46dc93
-ms.sourcegitcommit: a0ebbcb717f09d3614de5ce9eb9f3c00f0a45f81
+ms.openlocfilehash: 8267c35e2453873269ae94d1bff331d025a76fd8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409340"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734644"
 ---
 # <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Restituisce una riga per ogni tipo di richiesta di script esterni. Le richieste di script esterni vengono raggruppate per il linguaggio di script esterno supportato. Viene generata una riga per ogni funzione di script esterni registrata. Le funzioni di script esterni arbitrarie non vengono registrate a meno che non siano inviate da un processo padre, ad esempio `rxExec`.
   
@@ -48,7 +48,7 @@ Restituisce una riga per ogni tipo di richiesta di script esterni. Le richieste 
 > [!NOTE]  
 > Gli utenti che eseguono script esterni devono avere l'autorizzazione aggiuntiva EXECUTE ANY EXTERNAL SCRIPT, tuttavia, questa DMV può essere usata dagli amministratori senza tale autorizzazione.
   
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
   Questa DMV viene fornita per la telemetria interna, per monitorare l'utilizzo complessivo della nuova funzionalità di esecuzione di script esterni disponibile in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Il servizio di telemetria viene avviato insieme al LaunchPad e viene incrementato di un contatore basato su disco ogni volta che viene chiamata una funzione di script esterni registrata.
 
@@ -74,7 +74,7 @@ R supporta gli script arbitrari e la community R fornisce molte migliaia di pacc
 
 La registrazione di queste funzioni viene eseguita quando è installata la funzionalità e le funzioni registrate non possono essere aggiunte o eliminate.
 
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
   
 ### <a name="viewing-the-number-of-r-scripts-run-on-the-server"></a>Visualizzazione del numero di script R eseguiti nel server
 
@@ -96,7 +96,7 @@ FROM sys.dm_external_script_execution_stats
 WHERE language = 'Python';
 ```  
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 + [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
 + [Funzioni e viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)

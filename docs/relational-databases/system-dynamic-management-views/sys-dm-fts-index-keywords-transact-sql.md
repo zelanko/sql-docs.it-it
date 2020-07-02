@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e2b5631443603ea111c3ba154726ec3e6b39e0df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e29fcabeb2f99def9f2e06b1d0b157c8d148002a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900941"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734540"
 ---
 # <a name="sysdm_fts_index_keywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni sul contenuto di un indice full-text per la tabella specificata.  
   
@@ -89,7 +89,7 @@ SELECT * FROM sys.dm_fts_index_keywords(db_id('AdventureWorks2012'), object_id('
 GO  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica per la ricerca full-text e la ricerca semantica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [Ricerca full-text](../../relational-databases/search/full-text-search.md)   
  [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  

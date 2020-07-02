@@ -20,15 +20,15 @@ ms.assetid: 863498b4-849c-434d-b748-837411458738
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65072bd42e1e1f85189afe8bb832a2b0811417e2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 97f86ba0da21561604b30a2936b27fc3904c01ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824563"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734631"
 ---
 # <a name="sysdm_exec_trigger_stats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Restituisce dati statistici aggregati sulle prestazioni dei trigger memorizzati nella cache. La vista contiene una riga per ogni trigger e la durata della riga è uguale al periodo in cui il trigger rimane memorizzato nella cache. Quando un trigger viene rimosso dalla cache, le righe corrispondenti vengono eliminate dalla vista. A questo punto, viene generato un evento di traccia SQL di Performance Statistics simile a **sys.dm_exec_query_stats**.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "82824563"
 |**max_page_server_reads**|**bigint**|Numero massimo di letture di pagine del server eseguite da questo trigger durante una singola esecuzione.<br /><br /> **Si applica a**: iperscalabilità del database SQL di Azure|  
 
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene filtrata.  
 
 Le statistiche nella vista vengono aggiornate quando viene completata una query.  
@@ -83,7 +83,7 @@ Le statistiche nella vista vengono aggiornate quando viene completata una query.
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite informazioni sui primi cinque trigger identificati in base al tempo medio trascorso.  
   
 ```sql  

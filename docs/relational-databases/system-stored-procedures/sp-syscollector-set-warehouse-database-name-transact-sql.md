@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a85aca1b-8135-4c81-9a05-da5aec76f1ed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 856f0a65acd7fddae37c980906a4aaedba9807c1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8779b04b7431978d687189cc6dd2536fe4a32370
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828205"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736897"
 ---
 # <a name="sp_syscollector_set_warehouse_database_name-transact-sql"></a>sp_syscollector_set_warehouse_database_name (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Specifica il nome del database definito nella stringa di connessione utilizzata per connettersi al data warehouse di gestione.  
   
@@ -46,7 +46,7 @@ sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  È necessario disabilitare l'agente di raccolta dati prima di modificare la configurazione dell'agente di raccolta dati. La procedura non ha esito positivo se l'agente di raccolta dati è abilitato.  
   
  Per visualizzare il nome del database corrente, eseguire una query sulla vista di sistema [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) .  
@@ -54,7 +54,7 @@ sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa procedura, è richiesta l'appartenenza al ruolo predefinito del database dc_admin (con autorizzazione EXECUTE) .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene impostato il nome del data warehouse di gestione su `RemoteMDW`.  
   
 ```  

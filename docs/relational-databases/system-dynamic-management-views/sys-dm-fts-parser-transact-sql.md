@@ -19,16 +19,16 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: fa60c1785e0740dde4bc6b3755dea36db8a5a21a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0552dbdce5da12db4fedadecb5a4bd7e9c55c278
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900913"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738655"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce il risultato della suddivisione in token finale dopo aver applicato una determinata combinazione di [Word breaker](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md), [Thesaurus](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)ed elementi di parole non [significative](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) all'input di una stringa di query. Il risultato della tokenizzazione è equivalente all'output del motore di ricerca full-text per la stringa di query specificata.  
   
@@ -55,13 +55,13 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  *accent_sensitivity*  
  Valore booleano che controlla se la ricerca full-text supporta o meno la distinzione relativa ai segni diacritici. *accent_sensitivity* è di **bit**, con uno dei valori seguenti:  
   
-|valore|Distinzione tra caratteri accentati...|  
+|Valore|Distinzione tra caratteri accentati...|  
 |-----------|----------------------------|  
 |0|Non attiva<br /><br /> Parole del tipo "café" e "cafe" vengono considerate in modo identico.|  
 |1|Sensibili<br /><br /> Parole del tipo "café" e "cafe" vengono considerate in modo diverso.|  
   
 > [!NOTE]  
->  Per visualizzare l'impostazione corrente di questo valore per un catalogo full-text, eseguire l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente: `SELECT fulltextcatalogproperty('` *catalog_name*`', 'AccentSensitivity');`.  
+>  Per visualizzare l'impostazione corrente di questo valore per un catalogo full-text, eseguire l' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione seguente: `SELECT fulltextcatalogproperty('` *catalog_name* `', 'AccentSensitivity');` .  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
@@ -80,7 +80,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  **sys. dm_fts_parser** supporta la sintassi e le funzionalità dei predicati full-text, ad esempio [Contains](../../t-sql/queries/contains-transact-sql.md) e [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), e funzioni, ad esempio [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
   
 ## <a name="using-unicode-for-parsing-special-characters"></a>Utilizzo di Unicode per l'analisi di caratteri speciali  
- Quando si analizza una stringa di query, **sys. dm_fts_parser** utilizza le regole di confronto del database a cui si è connessi, a meno che non si specifichi la stringa di query come Unicode. Pertanto, per una stringa non Unicode che contiene caratteri speciali, ad esempio ü o ç, l'output potrebbe essere imprevisto, a seconda delle regole di confronto del database. Per elaborare una stringa di query indipendentemente dalle regole di confronto del database, anteporre alla `N`stringa il prefisso, `N'`ovvero *QUERY_STRING*`'`.  
+ Quando si analizza una stringa di query, **sys. dm_fts_parser** utilizza le regole di confronto del database a cui si è connessi, a meno che non si specifichi la stringa di query come Unicode. Pertanto, per una stringa non Unicode che contiene caratteri speciali, ad esempio ü o ç, l'output potrebbe essere imprevisto, a seconda delle regole di confronto del database. Per elaborare una stringa di query indipendentemente dalle regole di confronto del database, anteporre alla stringa il prefisso `N` , ovvero `N'` *QUERY_STRING* `'` .  
   
  Per ulteriori informazioni, vedere "C. Visualizzazione dell'output di una stringa che contiene caratteri speciali" più avanti in questo argomento.  
   
@@ -161,7 +161,7 @@ SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis"  OR " MS re
 SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica per la ricerca full-text e la ricerca semantica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [Ricerca full-text](../../relational-databases/search/full-text-search.md)   
  [Configurare e gestire Word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4b8ddf9753578f6d73cd6baf7511c73d90377e1a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7869fed1b04a16a57750fcfd91d18e1b0c0d18a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831649"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738533"
 ---
 # <a name="sp_dbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Crea un processo di Monitoraggio mirroring del database che aggiorna periodicamente lo stato di mirroring per ogni database con mirroring nell'istanza del server.  
   
@@ -47,7 +47,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 >  Se il periodo di aggiornamento è impostato su un valore troppo basso, i tempi di risposta per i client potrebbero aumentare.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- Nessuno  
+ nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
  nessuno  
@@ -63,7 +63,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene avviato il monitoraggio con un periodo di aggiornamento di `3` minuti.  
   
 ```  

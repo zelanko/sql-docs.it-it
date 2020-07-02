@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0ebbe0c5-07ad-4a76-a918-e379930adf71
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65dcb9ae3f6b6ea51e0e594785ace42539494c4f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3ee5d11b9b72e4d915a6f4af4dc9f085212702f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660307"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736649"
 ---
 # <a name="setdisable-method-servernetworkprotocol-class"></a>Metodo SetDisable (classe ServerNetworkProtocol)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Disabilita il protocollo di rete del server.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,7 +36,7 @@ object.SetDisable()
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe ServerNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md) che rappresenta il protocollo di rete utilizzato dall'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  

@@ -20,26 +20,26 @@ ms.assetid: 439b7299-dce3-4d26-b1c7-61be5e0df82a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb36dddcab514692a7d6b59dee969846430d75b5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 35d2682709e1f9d19fe51dfae331e0999c0e3570
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823438"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733569"
 ---
 # <a name="extended-properties-catalog-views---sysextended_properties"></a>Viste del catalogo delle proprietà estese-sys. extended_properties
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Restituisce una riga per ogni proprietà estesa nel database corrente.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|classe|**tinyint**|Identifica la classe di elementi in cui è inclusa la proprietà. Può essere uno dei seguenti:<br /><br /> 0 = Database<br /><br /> 1 = Oggetto o colonna<br /><br /> 2 = Parametro<br /><br /> 3 = Schema<br /><br /> 4 = Entità database<br /><br /> 5 = Assembly<br /><br /> 6 = Tipo<br /><br /> 7 = Indice<br /><br /> 10 = Raccolta di XML Schema<br /><br /> 15 = Tipo di messaggio<br /><br /> 16 = Contratto di servizio<br /><br /> 17 = Servizio<br /><br /> 18 = Associazione al servizio remoto<br /><br /> 19 = Route<br /><br /> 20 = Spazio dati (schema di partizione o filegroup)<br /><br /> 21 = Funzione di partizione<br /><br /> 22 = File di database<br /><br /> 27 = Guida di piano|  
-|class_desc|**nvarchar(60)**|Descrizione della classe in cui è inclusa la proprietà estesa. Può essere uno dei seguenti:<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> PARAMETRO<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> INDEX<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> DATASPACE<br /><br /> PARTITION_FUNCTION<br /><br /> DATABASE_FILE<br /><br /> PLAN_GUIDE|  
+|class|**tinyint**|Identifica la classe di elementi in cui è inclusa la proprietà. Può essere uno dei seguenti:<br /><br /> 0 = Database<br /><br /> 1 = Oggetto o colonna<br /><br /> 2 = Parametro<br /><br /> 3 = Schema<br /><br /> 4 = Entità database<br /><br /> 5 = Assembly<br /><br /> 6 = Tipo<br /><br /> 7 = Indice<br /><br /> 10 = Raccolta di XML Schema<br /><br /> 15 = Tipo di messaggio<br /><br /> 16 = Contratto di servizio<br /><br /> 17 = Servizio<br /><br /> 18 = Associazione al servizio remoto<br /><br /> 19 = Route<br /><br /> 20 = Spazio dati (schema di partizione o filegroup)<br /><br /> 21 = Funzione di partizione<br /><br /> 22 = File di database<br /><br /> 27 = Guida di piano|  
+|class_desc|**nvarchar(60)**|Descrizione della classe in cui è inclusa la proprietà estesa. Può essere uno dei seguenti:<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> PARAMETER<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> INDEX<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> DATASPACE<br /><br /> PARTITION_FUNCTION<br /><br /> DATABASE_FILE<br /><br /> PLAN_GUIDE|  
 |major_id|**int**|ID dell'elemento in cui è inclusa la proprietà estesa, interpretato in base alla classe di appartenenza. Per la maggior parte degli elementi, questo ID si applica a ciò che rappresenta la classe. L'interpretazione per gli ID principali non standard è la seguente:<br /><br /> Se la classe è 0, major_id è sempre 0.<br /><br /> Se la classe è 1, 2 o 7, major_id è object_id.|  
 |minor_id|**int**|ID secondario dell'elemento in cui è inclusa la proprietà estesa, interpretato in base alla classe di appartenenza. Per la maggior parte degli elementi corrisponde a 0. Negli altri casi i possibili valori sono i seguenti:<br /><br /> Se la classe è 1, minor_id è column_id se colonna, altrimenti 0 se oggetto.<br /><br /> Se la classe è 2, minor_id è parameter_id.<br /><br /> Se la classe è 7, minor _id è index_id.|  
 |name|**sysname**|Nome della proprietà, univoco con class, major_id e minor_id.|  
-|value|**sql_variant**|Valore della proprietà estesa.|  
+|Valore|**sql_variant**|Valore della proprietà estesa.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

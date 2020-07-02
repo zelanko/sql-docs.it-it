@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4f1e6d9b7f9bce06a8003b56fc6767c992636957
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3ab8827795c2d65bcd6044102567d9b265c319f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831087"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733280"
 ---
 # <a name="sp_enumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce un elenco di tutte le modifiche dello schema in sospeso. Questo stored procedure può essere utilizzato con [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md), che consente a un amministratore di ignorare le modifiche dello schema in sospeso selezionate in modo che non vengano replicate. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1ad8663f-a624-42a2-8641-fefac3433c97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e15f6a424a4fc13b4aaf1ad8240fa43cf7708b42
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 95d1c30abf269c763bb3c346edd340805d5278f2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829174"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736683"
 ---
 # <a name="sysmergearticlecolumns-transact-sql"></a>sysmergearticlecolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabella **sysmergearticlecolumns** contiene una riga per ogni colonna di tabella pubblicata in una pubblicazione di tipo merge ed esegue il mapping di ogni colonna all'articolo di merge. Questa tabella è archiviata nel database di pubblicazione.  
   

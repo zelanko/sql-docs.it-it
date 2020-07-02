@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a432685809676f997049940ea5aa1ce43dc38a60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a965be50e45300aeca3ba158251c665e8204a6f2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029631"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736669"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La vista **IHsyscolumns** espone le informazioni sulle colonne per gli articoli pubblicati da un server di pubblicazione non SQL Server. Questa vista è archiviata in DistributionDatabase.  
   
@@ -33,10 +33,10 @@ ms.locfileid: "68029631"
 |-----------------|---------------|-----------------|  
 |**nome**|**sysname**|Nome della colonna o del parametro della procedura.|  
 |**id**|**int**|ID di oggetto della tabella a cui appartiene la colonna o ID della stored procedure a cui è associato il parametro.|  
-|**xtype**|**tinyint**|Tipo di archiviazione fisica da [sys. systypes &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**xtype**|**tinyint**|Tipo di archiviazione fisica dei [tipi disys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**typestat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**tinyint**|ID del tipo di dati esteso definito dall'utente.|  
-|**length**|**bigint**|Lunghezza massima di archiviazione fisica da [sys. systypes &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**length**|**bigint**|Lunghezza massima di archiviazione fisica dei [tipi disys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**xprec**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xscale**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colid**|**int**|ID di colonna o di parametro.|  
@@ -51,10 +51,10 @@ ms.locfileid: "68029631"
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**int**|Offset nella riga in cui appare la colonna.|  
 |**CollationID**|**int**|ID delle regole di confronto della colonna. NULL per colonne non di tipo carattere.|  
-|**linguaggio**|**int**|Identificatore di lingua per la colonna.|  
+|**lingua**|**int**|Identificatore di lingua per la colonna.|  
 |**Stato**|**int**|Mappa di bit utilizzata per descrivere una proprietà della colonna o del parametro:<br /><br /> **0x08** = la colonna consente valori null.<br /><br /> **0x10** = il riempimento ANSI era attivo quando sono state aggiunte colonne **varchar** o **varbinary** . Gli spazi vuoti finali vengono conservati per **varchar** e gli zeri finali vengono conservati per le colonne **varbinary** .<br /><br /> **0x40** = il parametro è un parametro di output.<br /><br /> **0x80** = la colonna è una colonna Identity.|  
-|**type**|**int**|Tipo di archiviazione fisica da [sys. systypes &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
-|**UserType**|**tinyint**|ID del tipo di dati definito dall'utente da [sys. systypes &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**type**|**int**|Tipo di archiviazione fisica dei [tipi disys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**UserType**|**tinyint**|ID del tipo di dati definito dall'utente da [tipi disys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**printfmt**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**int**|Livello di precisione della colonna|  
 |**scale**|**int**|Scala della colonna.|  

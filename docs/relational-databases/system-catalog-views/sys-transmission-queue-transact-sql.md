@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1d420ae3d04072af5b0ce4bbc7d31e09bef78d8d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8f336c91717a8842ff5d3b3da980b413a13296d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826451"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733428"
 ---
 # <a name="systransmission_queue-transact-sql"></a>sys.transmission_queue (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Questa vista del catalogo contiene una riga per ogni messaggio nella coda di trasmissione, come illustrato nella tabella seguente:  
   
@@ -45,7 +45,7 @@ ms.locfileid: "82826451"
 |**is_end_of_dialog**|**bit**|Indica se il messaggio è un messaggio di fine conversazione. Non ammette i valori Null.<br /><br /> 0 = Non è un messaggio di fine conversazione.<br /><br /> 1 = Messaggio di fine conversazione.<br /><br /> Non ammette i valori Null.|  
 |**message_body**|**varbinary(max)**|Corpo del messaggio. Ammette valori Null.|  
 |**transmission_status**|**nvarchar(4000)**|Motivo per cui il messaggio si trova nella coda. Di solito è un messaggio di errore che illustra perché l'invio del messaggio non è riuscito. Se non contiene alcun valore, il messaggio non è ancora stato inviato. Ammette valori Null.|  
-|**priorità**|**tinyint**|Livello di priorità assegnato al messaggio. Non ammette i valori Null.|  
+|**priority**|**tinyint**|Livello di priorità assegnato al messaggio. Non ammette i valori Null.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

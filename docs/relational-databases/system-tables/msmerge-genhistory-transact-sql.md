@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 475d08ae-eb8b-49de-afd6-33c96ab8004d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8d79f0c0cc71b2295dbea6340c515afb5e2c899c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4a7053329a33317eb952f6608652df20891b0187
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82805389"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736713"
 ---
 # <a name="msmerge_genhistory-transact-sql"></a>MSmerge_genhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabella **MSmerge_genhistory** contiene una riga per ogni generazione che un Sottoscrittore conosce (entro il periodo di conservazione). Viene utilizzata per evitare l'invio di generazioni comuni durante operazioni di scambio e per risincronizzare i Sottoscrittori ripristinati dai backup. Questa tabella è archiviata nei database di pubblicazione e di sottoscrizione.  
   

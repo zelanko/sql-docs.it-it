@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb3ab70170f1b96bcfd62a9d7108792871ccd5d7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3a31eb5fa85ab7634d6fc65ac446607117ec70ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828955"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738521"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni su un database specifico o su tutti i database.  
   
@@ -69,7 +69,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**growth**|**nvarchar (18)**|Incremento per l'aumento delle dimensioni del file. Indica la quantità di spazio aggiunta al file ogni volta che è necessario spazio aggiuntivo.|  
 |**utilizzo**|**varchar (9)**|Utilizzo del file. Per un file di dati, il valore è **"solo dati"** e per il file di log il valore è **"log only"**.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  La colonna **stato** del set di risultati indica le opzioni impostate su on nel database. Tutte le opzioni di database non vengono segnalate dalla colonna **stato** . Per visualizzare un elenco completo delle impostazioni dell'opzione di database correnti, utilizzare la vista del catalogo **sys. databases** .  
   
 ## <a name="permissions"></a>Autorizzazioni  

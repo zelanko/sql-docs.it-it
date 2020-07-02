@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b76ae96-737a-4000-a6b6-fcc8772c2af4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8d86c5566aa7d97f1aea0d4cc8e6e9e9140001c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4e727ed1f9d8d204e81b09e853c1d9ae70b23449
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82805476"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736793"
 ---
 # <a name="msmerge_conflicts_info-transact-sql"></a>MSmerge_conflicts_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabella **MSmerge_conflicts_info** tiene traccia dei conflitti che si verificano durante la sincronizzazione di una sottoscrizione di una pubblicazione di tipo merge. I dati della riga che perdono i conflitti vengono archiviati nella tabella [MSmerge_conflict_publication_article](../../relational-databases/system-tables/msmerge-conflict-publication-article-transact-sql.md) per l'articolo in cui si è verificato il conflitto. Questa tabella è archiviata nel database di pubblicazione del server di pubblicazione e nel database di sottoscrizione del Sottoscrittore.  
   

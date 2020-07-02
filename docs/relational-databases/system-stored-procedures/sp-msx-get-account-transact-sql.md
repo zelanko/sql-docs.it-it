@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e0fbfe21194dbfa30c54942352d9bd28d6df45b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 82c26d20933562b05bb95796140dcc51bbc0777d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828837"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734329"
 ---
 # <a name="sp_msx_get_account-transact-sql"></a>sp_msx_get_account (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Visualizza un elenco di informazioni sulle credenziali utilizzate dal server di destinazione per accedere al server master.  
   
@@ -44,20 +44,20 @@ sp_msx_get_account
 ## <a name="result-sets"></a>Set di risultati  
  Restituisce il set di risultati seguente:  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |msx_connection|**int**|Numero della connessione al server master.|  
 |msx_credential_id|**int**|ID delle credenziali utilizzate per questa connessione al server master.|  
 |msx_credential_name|**sysname**|Nome delle credenziali utilizzate per questa connessione al server master.|  
 |msx_login_name|**nvarchar(4000)**|Nome del dominio e nome utente dell'utente di Windows per le credenziali.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  In assenza di credenziali specificate per questo server di destinazione, restituisce un set di risultati vuoto. Per impostare le credenziali, utilizzare sp_msx_set_account.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server sysadmin.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene visualizzato un elenco di informazioni per le credenziali utilizzate dal server di destinazione per accedere al server master.  
   
 ```  

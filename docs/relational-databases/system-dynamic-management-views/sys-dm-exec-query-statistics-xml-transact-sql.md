@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e2bd7a4ce174d547d0cb8d0f9bcb89d23e6543db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6304e6381b9bbfcc17b218122631d06293e15830
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78180091"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734706"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>sys. dm_exec_query_statistics_xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 Restituisce il piano di esecuzione della query per le richieste in corso. Utilizzare questa DMV per recuperare Showplan XML con statistiche temporanee. 
 
@@ -55,7 +55,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |query_plan|**xml**|Contiene la rappresentazione Showplan di runtime del piano di esecuzione della query specificato con *plan_handle* contenenti statistiche parziali. La rappresentazione Showplan è in formato XML. Viene generato un piano per ogni batch contenente ad esempio istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, chiamate di stored procedure e chiamate di funzioni definite dall'utente. Ammette valori Null.|
 
 ## <a name="remarks"></a>Osservazioni
-Questa funzione di sistema è disponibile a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] partire da SP1. Vedere KB [3190871](https://support.microsoft.com/help/3190871)
+Questa funzione di sistema è disponibile a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. Vedere KB [3190871](https://support.microsoft.com/help/3190871)
 
 Questa funzione di sistema funziona con l'infrastruttura di profilatura delle statistiche di esecuzione di query **standard** e **Lightweight** . Per altre informazioni, vedere [query profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
@@ -63,23 +63,23 @@ Nelle condizioni seguenti non viene restituito alcun output Showplan nella colon
   
 -   Se il piano di query che corrisponde al *session_id* specificato non è più in esecuzione, la colonna **query_plan** della tabella restituita è null. Questa condizione, ad esempio, può verificarsi se si verifica un ritardo tra il momento in cui l'handle del piano è stato acquisito e il momento in cui è stato utilizzato con **sys. dm_exec_query_statistics_xml**.  
     
-A causa di una limitazione del numero di livelli annidati consentiti nel tipo di dati **XML** , **sys. dm_exec_query_statistics_xml** non può restituire piani di query che soddisfano o superano 128 livelli di elementi annidati. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa condizione impediva il completamento del piano di query e generava l'errore 6335. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versioni successive, la colonna **query_plan** restituisce null.   
+A causa di una limitazione del numero di livelli annidati consentiti nel tipo di dati **XML** , **sys. dm_exec_query_statistics_xml** non può restituire piani di query che soddisfano o superano 128 livelli di elementi annidati. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa condizione impediva il completamento del piano di query e generava l'errore 6335. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versioni successive, la colonna **QUERY_PLAN** restituisce null.   
 
 ## <a name="permissions"></a>Autorizzazioni  
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione per il server.  
+In è [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiesta `VIEW SERVER STATE` l'autorizzazione per il server.  
 Nei [!INCLUDE[ssSDS](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .
 
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>R. Analisi delle statistiche di esecuzione e del piano di query in tempo reale per un batch in esecuzione  
- Nell'esempio seguente viene eseguita una query su **sys. dm_exec_requests** per trovare la query `session_id` interessante e copiarne l'oggetto dall'output.  
+ Nell'esempio seguente viene eseguita una query su **sys. dm_exec_requests** per trovare la query interessante e copiarne l'oggetto `session_id` dall'output.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
- Per ottenere il piano di query e le statistiche di esecuzione in tempo reale, `session_id` usare la copia con la funzione di sistema **sys. dm_exec_query_statistics_xml**.  
+ Per ottenere il piano di query e le statistiche di esecuzione in tempo reale, usare la copia `session_id` con la funzione di sistema **sys. dm_exec_query_statistics_xml**.  
   
 ```sql  
 --Run this in a different session than the session in which your query is running.

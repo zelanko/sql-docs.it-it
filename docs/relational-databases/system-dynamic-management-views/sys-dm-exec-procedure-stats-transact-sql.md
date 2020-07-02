@@ -20,15 +20,15 @@ ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3620efe22d2a285aed7f78f6573bdc2280be47f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9c180e31958c6d1a6c9cdd728de5ea9a2e6b32ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829425"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734785"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Restituisce dati statistici aggregati sulle prestazioni delle stored procedure memorizzate nella cache. La vista restituisce una riga per ogni piano di stored procedure memorizzato nella cache e la durata della riga è uguale al periodo in cui la stored procedure rimane memorizzata nella cache. Quando una stored procedure viene rimossa dalla cache, la riga corrispondente viene elimina dalla vista. A questo punto, viene generato un evento di traccia SQL di Performance Statistics simile a **sys.dm_exec_query_stats**.  
   
@@ -87,10 +87,10 @@ ms.locfileid: "82829425"
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
    
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Le statistiche nella vista vengono aggiornate quando viene completata l'esecuzione della stored procedure.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite informazioni sulle prime dieci stored procedure identificate in base al tempo medio trascorso.  
   
 ```sql  

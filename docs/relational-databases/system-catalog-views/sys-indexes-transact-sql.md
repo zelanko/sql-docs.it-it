@@ -20,22 +20,22 @@ ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1083c3510ed8aeb74f1be1610d8b46b009559567
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3fbd009d47d7019994359c480c55c251950d0940
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825130"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734854"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Contiene una riga per ogni indice o heap di un oggetto in formato tabella, come una tabella, una vista o una funzione con valori di tabella.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID dell'oggetto a cui appartiene l'indice.|  
-|**name**|**sysname**|Nome dell'indice. il **nome** è univoco solo all'interno dell'oggetto.<br /><br /> NULL = Heap|  
+|**nome**|**sysname**|Nome dell'indice. il **nome** è univoco solo all'interno dell'oggetto.<br /><br /> NULL = Heap|  
 |**index_id**|**int**|ID dell'indice. **index_id** è univoco solo all'interno dell'oggetto.<br /><br /> 0 = heap<br /><br /> 1 = indice cluster<br /><br /> > 1 = Indice non cluster|  
 |**type**|**tinyint**|Tipo di indice:<br /><br /> 0 = heap<br /><br /> 1 = Cluster<br /><br /> 2 = Non cluster<br /><br /> 3 = XML<br /><br /> 4 = Spaziale<br /><br /> 5 = indice columnstore cluster. **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.<br /><br /> 6 = indice columnstore non cluster. **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> 7 = indice hash non cluster. **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.|  
 |**type_desc**|**nvarchar(60)**|Descrizione del tipo di indice:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> COLUMNStore CLUSTER: **si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.<br /><br /> COLUMNStore non CLUSTER: **si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> HASH non CLUSTER: gli indici HASH non CLUSTER sono supportati solo nelle tabelle ottimizzate per la memoria. Nella vista sys.hash_indexes vengono mostrati gli indici hash correnti e le proprietà hash. Per ulteriori informazioni, vedere [sys. hash_indexes &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.|  
@@ -61,7 +61,7 @@ ms.locfileid: "82825130"
 ## <a name="permissions"></a>Autorizzazioni  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituiti tutti gli indici per la tabella `Production.Product` nel [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```  
@@ -91,7 +91,7 @@ GO
  [Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys. index_columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [sys. xml_indexes &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
+ [sys.xml_indexes &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [sys. Objects &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys. key_constraints &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
  [sys. filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   

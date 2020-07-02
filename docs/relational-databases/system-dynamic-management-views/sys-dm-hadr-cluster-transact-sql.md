@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4e2b27e9c284676c576586c125309fa8116531d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6195682217af76a27342c3592e69cccc74655210
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833787"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734483"
 ---
 # <a name="sysdm_hadr_cluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Se il nodo WSFC (Windows Server Failover Clustering) che ospita un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abilitata per [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] dispone del quorum WSFC, **sys. dm_hadr_cluster** restituisce una riga che espone il nome del cluster e informazioni sul quorum. Se il nodo WSFC non dispone di quorum, non viene restituita alcuna riga.  
  > [!TIP]

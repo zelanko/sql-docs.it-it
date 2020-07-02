@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f439fa61b8bfecfba9d03589af0d09ff737f3bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b09864e65bb0c46370ee0f8c3d09994f94027d6d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831764"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733338"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Apre un cursore. sp_cursoropen definisce l'istruzione SQL associata al cursore e alle opzioni del cursore, quindi popola il cursore. sp_cursoropen equivale alla combinazione delle [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni DECLARE_CURSOR e Open. Questa routine viene richiamata specificando ID = 2 in un pacchetto del flusso TDS.  
   
@@ -117,7 +117,7 @@ sp_cursoropen cursor OUTPUT, stmt
  0x0002  
  È in corso l'elaborazione di un'operazione FETCH.  
   
- Una   
+ Una  
  Questo cursore è stato deallocato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non è disponibile.  
   
  Quando viene generato un errore, è possibile che i valori restituiti siano incoerenti. L'accuratezza non può pertanto essere garantita.  
@@ -201,7 +201,7 @@ sp_cursoropen cursor OUTPUT, stmt
 ## <a name="rpc-considerations"></a>Considerazioni su RPC  
  Per richiedere che vengano restituiti metadati sull'elenco di selezione del cursore nel flusso TDS, è possibile impostare il flag di input RPC RETURN_METADATA su 0x0001.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
   
 ### <a name="bound_param-parameter"></a>Parametro bound_param  
  I parametri dopo il quinto vengono passati insieme sul piano dell'istruzione come parametri di input. Il primo parametro di questo tipo deve essere una stringa nel formato:  

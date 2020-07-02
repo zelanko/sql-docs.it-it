@@ -1,5 +1,5 @@
 ---
-title: dbo. sysjobs (Transact-SQL) | Microsoft Docs
+title: Processi di dbo.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8fe374a81fc88b6591da8fb0303d5ea490cccac0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: adf7124fe37d506eb0ac9b3dcb0bab5d6e85423b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807039"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736869"
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysjobs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Archivia le informazioni su tutti i processi pianificati da eseguire tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Questa tabella è archiviata nel database **msdb** .  
   
@@ -35,7 +35,7 @@ ms.locfileid: "82807039"
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|ID univoco del processo.|  
 |**originating_server_id**|**int**|ID del server di provenienza del processo.|  
-|**name**|**sysname**|Nome del processo.|  
+|**nome**|**sysname**|Nome del processo.|  
 |**abilitato**|**tinyint**|Indica se il processo è abilitato per l'esecuzione.|  
 |**Descrizione**|**nvarchar(512)**|Descrizione del processo.|  
 |**start_step_id**|**int**|ID del passaggio del processo da cui deve iniziare l'esecuzione.|  

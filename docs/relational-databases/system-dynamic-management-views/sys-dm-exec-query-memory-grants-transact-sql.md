@@ -20,15 +20,15 @@ ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50c336c329f5e610d90637f80ef8ef24569bb204
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: f39ef72cb01ecef7fca9d26cc87d003807089e16
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83731890"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734765"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Restituisce informazioni su tutte le query che hanno richiesto e sono in attesa di una concessione di memoria o di una concessione di memoria. Le query che non richiedono una concessione di memoria non verranno visualizzate in questa visualizzazione. Ad esempio, le operazioni di ordinamento e hash join hanno concessioni di memoria per l'esecuzione di query, mentre le query senza una clausola **Order by** non avranno una concessione di memoria.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "83731890"
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] è richiesta l'autorizzazione `VIEW DATABASE STATE` per il database.   
    
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Di seguito è illustrato un tipico scenario di debug per il timeout delle query:  
   
 -   Verificare lo stato complessivo della memoria di sistema utilizzando [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) e diversi contatori di prestazioni.  

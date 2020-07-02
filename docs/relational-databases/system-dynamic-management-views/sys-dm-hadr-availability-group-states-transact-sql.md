@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bace0824a7c8411e267186c3e9919ba2eb4be15c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 51f6125602813dda2fdc8dbddceaa93ccc5edea2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812028"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738632"
 ---
 # <a name="sysdm_hadr_availability_group_states-transact-sql"></a>sys.dm_hadr_availability_group_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per ogni gruppo di disponibilità Always On che dispone di una replica di disponibilità nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni riga visualizza gli stati che definiscono l'integrità di un determinato gruppo di disponibilità.  
   

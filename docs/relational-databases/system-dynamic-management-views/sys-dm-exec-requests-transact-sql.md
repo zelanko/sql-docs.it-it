@@ -20,16 +20,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8e1cf6bdf4270759a94761e67b94009576ef6ad
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: 44c20aeed09468b9f2e0cc7047364f563e463daf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84941082"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734687"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Restituisce informazioni su ogni richiesta in esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni sulle richieste, vedere la [Guida all'architettura dei thread e delle attività](../../relational-databases/thread-and-task-architecture-guide.md).
    
@@ -98,7 +98,7 @@ Restituisce informazioni su ogni richiesta in esecuzione in [!INCLUDE[ssNoVersio
 |page_server_reads|**bigint**|**Si applica a**: iperscalabilità del database SQL di Azure<br /><br /> Numero di letture di pagine del server eseguite dalla richiesta. Non ammette i valori Null.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Commenti 
+## <a name="remarks"></a>Osservazioni 
 Per eseguire codice esterno a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio stored procedure estese e query distribuite, è necessario che un thread venga eseguito esternamente al controllo dell'utilità di pianificazione in modalità non preemptive. A tale scopo, un thread di lavoro passa alla modalità preemptive. I valori temporali restituiti da questa DMW non includono il tempo trascorso in modalità preemptive.
 
 Quando si eseguono richieste parallele in [modalità riga](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna un thread di lavoro per coordinare i thread di lavoro responsabili del completamento delle attività ad essi assegnati. In questa DMV solo il thread coordinatore è visibile per la richiesta. Le colonne **Read**, **writes**, **logical_reads**e **ROW_COUNT** **non vengono aggiornate** per il thread coordinatore. Le colonne **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**e **granted_query_memory** vengono **aggiornate solo** per il thread coordinatore. Per altre informazioni, vedere [Guida sull'architettura dei thread e delle attività](../../relational-databases/thread-and-task-architecture-guide.md).

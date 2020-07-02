@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4e42daae837968ddcf0f61b860886e372bb47245
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e62fbc7e23d20bd5e4256a69a1a088bdd10c79ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827996"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738671"
 ---
 # <a name="sysdm_db_uncontained_entities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Mostra qualsiasi oggetto non contenuto utilizzato nel database. Gli oggetti non contenuti sono oggetti che superano il limite del database in un database indipendente. Questa vista è accessibile sia da un database indipendente che da un database non indipendente. Se sys.dm_db_uncontained_entities è vuoto, il database non utilizza entità non contenute.  
   
@@ -34,9 +34,9 @@ ms.locfileid: "82827996"
   
 ||||  
 |-|-|-|  
-|**Nome colonna**|**Type**|**Descrizione**|  
+|**Nome colonna**|**Tipo**|**Descrizione**|  
 |*classe*|**int**|1 = Oggetto o colonna (include moduli, XP, viste, sinonimi e tabelle).<br /><br /> 4 = Entità di database<br /><br /> 5 = Assembly<br /><br /> 6 = Tipo<br /><br /> 7 = Indice (indice full-text)<br /><br /> 12 = Trigger DDL database<br /><br /> 19 = Route<br /><br /> 30 = Specifica del controllo|  
-|*class_desc*|**nvarchar(120)**|Descrizione della classe dell'entità. Uno dei seguenti elementi per trovare la corrispondenza con la classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TIPO**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
+|*class_desc*|**nvarchar(120)**|Descrizione della classe dell'entità. Uno dei seguenti elementi per trovare la corrispondenza con la classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TIPO**<br /><br /> **Indice**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*major_id*|**int**|ID dell'entità.<br /><br /> Se *Class* = 1, object_id<br /><br /> Se *Class* = 4, sys. database_principals. principal_id.<br /><br /> Se *Class* = 5, quindi sys. assemblies. assembly_id.<br /><br /> Se *Class* = 6, quindi sys. types. user_type_id.<br /><br /> Se *Class* = 7, sys. indexes. index_id.<br /><br /> Se *Class* = 12, sys. Triggers. object_id.<br /><br /> Se *Class* = 19, sys. routes. Route_ID.<br /><br /> Se *Class* = 30, sys. database_audit_specifications. database_specification_id.|  
 |*statement_line_number*|**int**|Se la classe è un modulo, restituisce il numero di riga in cui si trova l'utilizzo non contenuto.  In caso contrario, il valore è Null.|  
 |*statement_ offset_begin*|**int**|Se la classe è un modulo, indica la posizione iniziale dell'utilizzo non contenuto partendo da 0. Il valore viene espresso in byte. In caso contrario, il valore restituito è Null.|  
@@ -45,7 +45,7 @@ ms.locfileid: "82827996"
 |*nome feature_*|**nvarchar(256)**|Restituisce il nome esterno dell'oggetto.|  
 |*feature_type_name*|**nvarchar(256)**|Restituisce il tipo di funzionalità.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  sys. dm_db_uncontained_entities Mostra le entità che potenzialmente possono superare il limite del database. Restituirà le entità utente che possono utilizzare gli oggetti al di fuori del database.  
   
  I tipi di funzionalità seguenti vengono segnalati.  
@@ -67,7 +67,7 @@ ms.locfileid: "82827996"
 ### <a name="permissions"></a>Autorizzazioni  
  sys.dm_db_uncontained_entities restituisce solo oggetti per cui l'utente dispone di un qualsiasi tipo di autorizzazione. Per valutare completamente l'indipendenza del database, questa funzione deve essere utilizzata da un utente con privilegi elevati, ad esempio un membro del ruolo predefinito del server **sysadmin** o del ruolo **db_owner** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata una procedura denominata P1, quindi viene eseguita una query su `sys.dm_db_uncontained_entities`. Nella query viene segnalato che P1 utilizza **sys.endpoints** , che si trova all'esterno del database.  
   
 ```sql  

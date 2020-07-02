@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 641086797c9d6b8ddf6a86a83de1b5d7b69dcb39
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 21710c1cda732c09eed0a71da2286a12b8496783
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831716"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733328"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Compila il batch o l'istruzione del cursore in un piano di esecuzione, ma non crea il cursore. L'istruzione compilata può essere utilizzata in un secondo momento da sp_cursorexecute. Questa procedura, associata a sp_cursorexecute, ha la stessa funzione di sp_cursoropen, ma è suddivisa in due fasi. sp_cursorprepare viene richiamato specificando ID = 3 in un pacchetto del flusso TDS (Tabular Data Stream).  
   
@@ -112,10 +112,10 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |Valore|Descrizione|  
 |-----------|-----------------|  
 |0|Operazione completata|  
-|0x0001|Errore|  
+|0x0001|Operazioni non riuscite|  
 |1FF6|Non è stato possibile restituire metadati.<br /><br /> Nota: il motivo è che l'istruzione non produce un set di risultati. ad esempio, si tratta di un'istruzione INSERT o DDL.|  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
   Di seguito è riportato un esempio di utilizzo di sp_cursorprepare e sp_cursorexecute
 
 ```sql
@@ -144,7 +144,7 @@ exec sp_cursorclose @p2
  
  Quando *stmt* è con parametri e il valore di *scrollopt* PARAMETERIZED_STMT è on, il formato della stringa è il seguente:  
   
- { * \< nome variabile locale> * * \< tipo di dati>* } [,... *n* ]  
+ { *\<local variable name>**\<data type>* } [ ,... *n* ]  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_cursorexecute &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   

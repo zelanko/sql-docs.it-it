@@ -21,17 +21,17 @@ ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aade9e02515e0d18e4edae188d72e5edafebbd3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b805e9db3c9a5472f78cffd24624cf0a26a463dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059200"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738600"
 ---
 # <a name="sysfn_virtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Restituisce le statistiche di I/O per i file di database, compresi i file di log. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]queste informazioni sono disponibili anche nella vista a gestione dinamica [sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) .  
+  Restituisce le statistiche di I/O per i file di database, compresi i file di log. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] queste informazioni sono disponibili anche nella vista a gestione dinamica [sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) .  
 
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|ID del database.|  
 |**FileId**|**smallint**|ID di file.|  
-|**TimeStamp**|**bigint**|Timestamp del prelevamento dei dati. **int** nelle versioni precedenti [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]a. |  
+|**TimeStamp**|**bigint**|Timestamp del prelevamento dei dati. **int** nelle versioni precedenti a [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] . |  
 |**NumberReads**|**bigint**|Numero di letture eseguite nel file.|  
 |**BytesRead**|**bigint**|Numero di letture di byte eseguite nel file.|  
 |**IoStallReadMS**|**bigint**|Periodo di tempo totale, in millisecondi, durante il quale gli utenti attendono il completamento delle operazioni di lettura I/O nel file.|  
@@ -101,7 +101,7 @@ FROM fn_virtualfilestats(NULL,NULL);
 GO  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [DB_ID &#40;&#41;Transact-SQL](../../t-sql/functions/db-id-transact-sql.md)   
  [FILE_IDEX &#40;&#41;Transact-SQL](../../t-sql/functions/file-idex-transact-sql.md)   
  [sys. database_files &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

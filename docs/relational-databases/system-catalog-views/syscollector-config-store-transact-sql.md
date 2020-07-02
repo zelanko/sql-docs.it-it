@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 17271cf5e5f7f3bfafe8b0fbf52ddb77a2746e3f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3484bef3a7af5048e5023957a5b1aaa7355fafc8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824943"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734806"
 ---
 # <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce le proprietà che si applicano all'intero agente di raccolta dati, a differenza di un'istanza di un set di raccolta. Ogni riga in questa vista descrive una specifica proprietà dell'agente di raccolta dati, ad esempio il nome del data warehouse di gestione e il nome dell'istanza in cui si trova il data warehouse di gestione.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82824943"
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione SELECT sulla vista o l'appartenenza ai ruoli predefiniti del database dc_operator, dc_proxy o dc_admin.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  L'elenco di proprietà disponibile è fisso e i relativi valori possono essere modificati utilizzando solo la stored procedure appropriata. Nella tabella seguente vengono descritte le proprietà esposte tramite questa vista.  
   
 |Nome proprietà|Descrizione|  
@@ -49,7 +49,7 @@ ms.locfileid: "82824943"
 |MDWDatabase|Nome del data warehouse di gestione. Utilizzare la stored procedure sp_syscollector_set_warehouse_database_name per modificare questo valore.|  
 |MDWInstance|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il data warehouse di gestione. Utilizzare la stored procedure sp_syscollector_set_warehouse_instance_name per modificare questo valore.|  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene eseguita una query sulla vista syscollector_config_store.  
   
 ```sql  

@@ -18,15 +18,15 @@ ms.assetid: 24135456-05f0-427c-884b-93cf38dd47a8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39bc13882e3293bca022f52240f18de696f3b7c1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0ae5b287b7740566681da141ecc2225426a7e6c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826666"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736934"
 ---
 # <a name="sp_helptext-transact-sql"></a>sp_helptext (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Visualizza la definizione di una regola definita dell'utente, un valore predefinito, una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] non crittografata, una funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente, un trigger, una colonna calcolata, un vincolo CHECK, una vista oppure un oggetto di sistema quale una stored procedure di sistema.  
   
@@ -53,7 +53,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 |-----------------|---------------|-----------------|  
 |**Testo**|**nvarchar(255)**|Definizione dell'oggetto|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  sp_helptext visualizza la definizione utilizzata per creare un oggetto in più righe. Ogni riga include 255 caratteri della definizione [!INCLUDE[tsql](../../includes/tsql-md.md)]. La definizione risiede nella colonna di **definizione** della vista del catalogo [sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) .  
   
 ## <a name="permissions"></a>Autorizzazioni  

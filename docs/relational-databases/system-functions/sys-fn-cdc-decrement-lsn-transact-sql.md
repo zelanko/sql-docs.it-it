@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 83c182ad-4713-439b-8769-9b7408aec8b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 468fa452a5b9015bf5fcc613c040f76160e87210
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50f1699f857bafed3aa904ce03b31b2c5e9bd00b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046510"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738576"
 ---
 # <a name="sysfn_cdc_decrement_lsn-transact-sql"></a>sys.fn_cdc_decrement_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce il precedente numero di sequenza del file di log (LSN) nella sequenza basata sul valore LSN specificato.  
   
@@ -67,7 +67,7 @@ SELECT * FROM cdc.fn_cdc_get_all_changes_HumanResources_Employee( @from_lsn, @to
 GO  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sys. fn_cdc_increment_lsn &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)   
  [sys. fn_cdc_get_min_lsn &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
  [sys. fn_cdc_get_max_lsn &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   

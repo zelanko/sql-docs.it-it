@@ -20,15 +20,15 @@ ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de6ed0a0b8f91157b61c7d38564c8ab0941f1c6c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b2a7a5e9f8410ab8ca66f0621d6a2c955258c28c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830638"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734659"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Restituisce il testo del batch SQL identificato dal *sql_handle*specificato. Questa funzione con valori di tabella sostituisce la funzione di sistema **fn_get_sql**.  
   
@@ -79,7 +79,7 @@ Il *plan_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti
 |**dbid**|**smallint**|ID del database.<br /><br /> Per istruzioni SQL ad hoc e preparate, l'ID del database in cui sono state compilate le istruzioni.|  
 |**ObjectId**|**int**|ID dell'oggetto.<br /><br /> Per istruzioni SQL ad hoc e preparate viene restituito NULL.|  
 |**number**|**smallint**|Per una stored procedure numerata, questa colonna restituisce il numero della stored procedure. Per ulteriori informazioni, vedere [sys. numbered_procedures &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Per istruzioni SQL ad hoc e preparate viene restituito NULL.|  
-|**encrypted**|**bit**|1 = Il testo SQL è crittografato.<br /><br /> 0 = Il testo SQL non è crittografato.|  
+|**crittografati**|**bit**|1 = Il testo SQL è crittografato.<br /><br /> 0 = Il testo SQL non è crittografato.|  
 |**text**|**nvarchar (max** **)**|Testo della query SQL.<br /><br /> Per gli oggetti crittografati viene restituito NULL.|  
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -16,15 +16,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96b2454ef4440318c7a386caab9b703ddecf9f83
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 61ad2bae525acfe7b461e2e89bf9477ff73513ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529822"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733644"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Utilizzo di un updategram in un'applicazione ASP di esempio (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Questa applicazione ASP (Active Server Pages) consente di aggiornare le informazioni sul cliente nella tabella Person.Contact nel database di esempio AdventureWorks in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'applicazione effettua quanto segue:  
   
 -   Chiede all'utente di immettere un ID del contatto.  

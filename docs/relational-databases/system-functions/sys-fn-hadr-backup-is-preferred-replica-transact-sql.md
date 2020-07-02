@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 287acb7986b3e518260f82278f8079391932ab6f
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: be33120bd19561055095fb81f4a4595edbcf394f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262139"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734352"
 ---
 # <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys. fn_hadr_backup_is_preferred_replica (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Utilizzato per determinare se la replica corrente è la replica di backup preferita.  
   
@@ -78,7 +78,7 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di gruppi di disponibilità Always On &#40;&#41;Transact-SQL](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [CREARE un gruppo di disponibilità &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  Repliche secondarie [attive: backup in repliche secondarie &#40;always on gruppi di disponibilità&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) [Always on viste del catalogo dei gruppi di disponibilità &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)      
   

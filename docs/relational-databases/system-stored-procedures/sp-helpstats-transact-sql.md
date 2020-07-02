@@ -18,15 +18,15 @@ ms.assetid: 00ab3cfd-2736-4fc0-b1b2-16dd49fb2fe5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b4f84f187ea3f511b8dddcc79c712dfd7809748d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cc07dec5878e0d31a325aa75af483ab4b1b04e58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824424"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736967"
 ---
 # <a name="sp_helpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Restituisce informazioni statistiche sulle colonne e gli indici della tabella specificata.  
   
@@ -59,7 +59,7 @@ sp_helpstats[ @objname = ] 'object_name'
 |**statistics_name**|Nome delle statistiche. Restituisce **sysname** e non può essere null.|  
 |**statistics_keys**|Chiavi su cui sono basate le statistiche. Restituisce **nvarchar (2078)** e non può essere null.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare DBCC SHOW_STATISTICS per visualizzare informazioni statistiche dettagliate su indici o statistiche specifici. Per ulteriori informazioni, vedere [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) e [sp_helpindex &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
