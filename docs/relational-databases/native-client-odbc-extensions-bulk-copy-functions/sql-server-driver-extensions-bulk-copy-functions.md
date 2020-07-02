@@ -16,15 +16,15 @@ ms.assetid: 6526b892-1d58-4f55-8335-f09887f6ea02
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bee3ca51a46559231242188835ff1b75624cb68
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dd07a563a80da555544100b7dca374daa4d494d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782062"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783364"
 ---
 # <a name="sql-server-driver-extensions---bulk-copy-functions"></a>Estensioni del driver SQL Server - Funzioni di copia bulk
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   ODBC (Open Database Connectivity) è un'API Microsoft Win32 utilizzata dalle applicazioni per l'accesso ai dati delle origini dati ODBC. Nella guida di riferimento al driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client non sono documentate tutte le chiamate alle funzioni di ODBC. Vengono infatti prese in esame solo le funzioni che, se utilizzate con il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, presentano comportamenti o parametri specifici del driver.  
   

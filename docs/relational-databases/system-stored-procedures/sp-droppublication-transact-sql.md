@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 46faa94ed9a85433b9212856ea5d95f43fb01972
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 980b40421b51594ef0d687521ba9e436c2a16c4c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807800"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783831"
 ---
 # <a name="sp_droppublication-transact-sql"></a>sp_droppublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Elimina una pubblicazione e l'agente snapshot associato. Prima di eliminare una pubblicazione, è necessario eliminare tutte le sottoscrizioni. Gli articoli della pubblicazione vengono eliminati automaticamente. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -46,12 +46,12 @@ sp_droppublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_droppublication** viene utilizzata nella replica snapshot e nella replica transazionale.  
   
  **sp_droppublication** Elimina in modo ricorsivo tutti gli articoli associati a una pubblicazione e quindi Elimina la pubblicazione stessa. Non è possibile rimuovere una pubblicazione per cui esistono una o più sottoscrizioni. Per informazioni su come rimuovere le sottoscrizioni, vedere [eliminare una sottoscrizione push](../../relational-databases/replication/delete-a-push-subscription.md) ed [eliminare una sottoscrizione pull](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
- L'esecuzione di **sp_droppublication** per eliminare una pubblicazione non comporta la rimozione degli oggetti pubblicati dal database di pubblicazione o degli oggetti corrispondenti dal database di sottoscrizione. Utilizzare DROP \< object> per rimuovere questi oggetti manualmente, se necessario.  
+ L'esecuzione di **sp_droppublication** per eliminare una pubblicazione non comporta la rimozione degli oggetti pubblicati dal database di pubblicazione o degli oggetti corrispondenti dal database di sottoscrizione. Usare DROP \<object> per rimuovere questi oggetti manualmente, se necessario.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_droppublication**.  

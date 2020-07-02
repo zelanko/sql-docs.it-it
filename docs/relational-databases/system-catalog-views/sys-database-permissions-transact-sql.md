@@ -20,15 +20,15 @@ ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a87be6fe0a68172a99ade4704ae4111cabbe95f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e051d7351e5279bef3980d8fc8bfd77d20984eff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982732"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775254"
 ---
 # <a name="sysdatabase_permissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Restituisce una riga per ogni autorizzazione o per ogni autorizzazione per le eccezioni di colonna nel database. Per le colonne, esiste una riga per ogni autorizzazione che è diversa dall'autorizzazione corrispondente a livello di oggetto. Se l'autorizzazione per la colonna corrisponde all'autorizzazione per gli oggetti corrispondente, non è presente alcuna riga e l'autorizzazione applicata è quella dell'oggetto.  
   
@@ -115,7 +115,7 @@ Sono possibili i seguenti tipi di autorizzazioni.
 |IM|IMPERSONATE|USER|  
 |IN|INSERT|DATABASE, OBJECT, SCHEMA|  
 |RC|RECEIVE|OBJECT|  
-|RF|REFERENCES|ASSEMBLY, ASYMMETRIC KEY, CERTIFICATE, CONTRACT, DATABASE, FULLTEXT CATALOG, MESSAGE TYPE, OBJECT, SCHEMA, SYMMETRIC KEY, TYPE, XML SCHEMA COLLECTION|  
+|RF|RIFERIMENTI|ASSEMBLY, ASYMMETRIC KEY, CERTIFICATE, CONTRACT, DATABASE, FULLTEXT CATALOG, MESSAGE TYPE, OBJECT, SCHEMA, SYMMETRIC KEY, TYPE, XML SCHEMA COLLECTION|  
 |SL|SELECT|DATABASE, OBJECT, SCHEMA|  
 |SN|SEND|SERVICE|  
 |SPLN|SHOWPLAN|DATABASE|  

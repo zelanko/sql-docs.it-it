@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 25926ff4-9271-45bf-bc32-d5d3344bd47a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7a0a99f46cdd3ec5d2b6b9ac96cae7a1dc5c55e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dca09294b86e1654cab12331b2b72462dd1598f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832723"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775210"
 ---
 # <a name="sysserver_triggers-transact-sql"></a>sys.server_triggers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Include il set di tutti i trigger DDL a livello di server con object_type TR o TA. Nel caso dei trigger CLR, l'assembly deve essere caricato nel database **Master** . Tutti i nomi dei trigger DDL a livello di server esistono in un singolo ambito globale.  
   

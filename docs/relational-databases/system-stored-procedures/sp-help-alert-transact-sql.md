@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08569c2313bfb7c9d992c510ef4c9c7548f51e64
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 525ebee42d097c4d4d171767a8b0a8fc844bc5f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827747"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783751"
 ---
 # <a name="sp_help_alert-transact-sql"></a>sp_help_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni sugli avvisi definiti per il server.  
   
@@ -62,7 +62,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identificatore univoco di tipo integer assegnato dal sistema.|  
-|**name**|**sysname**|Nome dell'avviso (ad esempio, demo: log **msdb** completo).|  
+|**nome**|**sysname**|Nome dell'avviso (ad esempio, demo: log **msdb** completo).|  
 |**event_source**|**nvarchar (100)**|Origine dell'evento. Sarà sempre **MSSQLSERVER** per la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7,0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -96,7 +96,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identificatore univoco di tipo integer assegnato dal sistema.|  
-|**name**|**sysname**|Nome dell'avviso (ad esempio, demo: log **msdb** completo).|  
+|**nome**|**sysname**|Nome dell'avviso (ad esempio, demo: log **msdb** completo).|  
 |**event_source**|**nvarchar (100)**|Origine dell'evento. Sarà sempre **MSSQLSERVER** per la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7,0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -123,7 +123,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Sarà sempre '**[Uncategorized]**' per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.|  
 |**type**|**int**|Tipo di avviso:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviso evento<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviso di prestazioni<br /><br /> **3** = avviso evento WMI|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_help_alert** deve essere eseguito dal database **msdb** .  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -131,7 +131,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
   
  Per informazioni dettagliate su **SQLAgentOperatorRole**, vedere [SQL Server Agent ruoli](../../ssms/agent/sql-server-agent-fixed-database-roles.md)predefiniti del database.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite informazioni sull'avviso `Demo: Sev. 25 Errors`.  
   
 ```  

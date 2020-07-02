@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b27ea0fa-ab31-424b-80cf-aad1e87f3816
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dfce86c61e2eea1306e1dbd46859f5486413dd4f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8a41da6cdf05d1f222a9218347056c10146eebe5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660559"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784762"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolproperty-class"></a>Proprietà IPAddressName (classe ServerNetworkProtocolProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Ottiene il nome dell'indirizzo IP.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,8 +36,8 @@ object.IPAddressName [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
- Oggetto della [classe ServerNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) che rappresenta un attributo del protocollo di rete nell'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ *object*  
+ Oggetto della [classe ServerNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) che rappresenta un attributo del protocollo di rete nell'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore string che specifica il nome dell'indirizzo IP.  

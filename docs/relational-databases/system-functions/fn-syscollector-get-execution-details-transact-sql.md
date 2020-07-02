@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b2ed385026d2bd47912a1a95d237b2adedafa26d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44180a30c69a8da47cfad77c07f86ee6b9b8bfaa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042826"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775181"
 ---
 # <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una parte del log di [!INCLUDE[ssIS](../../includes/ssis-md.md)] (sysssislog) corrispondente a package_execution_id per il pacchetto specificato. La tabella contiene una riga per ogni voce di log generata in fase di esecuzione dai pacchetti o dai relativi contenitori o attività.  
   

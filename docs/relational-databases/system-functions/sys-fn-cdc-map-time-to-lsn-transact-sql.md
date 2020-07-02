@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f4f6820aeeca8b600631810ed35933d2519b495
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea779dfb66d9fce2053fcee0b6fd3eedbc26a4ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046335"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784844"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce il valore del numero di sequenza del file di log (LSN) dalla colonna **start_lsn** nella tabella di sistema [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) per l'ora specificata. È possibile utilizzare questa funzione per eseguire sistematicamente il mapping di intervalli DateTime nell'intervallo basato su LSN richiesto dalle funzioni di enumerazione Change Data Capture [CDC. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) e [CDC. fn_cdc_get_net_changes_](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance>per restituire le modifiche dei dati all'interno di tale intervallo.  
   
@@ -75,13 +75,13 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
   
  `SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@begin_lsn, @end_lsn, 'all` `');`  
   
- L'operatore relazionale '`smallest greater than`' è utilizzato per limitare le modifiche a quelle che si sono verificate dopo la mezzanotte del giorno precedente. Se più voci con valori LSN diversi condividono il valore **tran_end_time** identificato come limite inferiore nella tabella [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) , la funzione restituirà il valore LSN più piccolo, assicurando che tutte le voci siano incluse. Per il limite superiore, viene usato l'operatore relazionale '`largest less than or equal to`' per garantire che l'intervallo includa tutte le voci per il giorno, incluse quelle che hanno mezzanotte come valore **tran_end_time** . Se più voci con valori LSN diversi condividono il valore **tran_end_time** identificato come limite superiore, la funzione restituirà il valore LSN più grande che garantisce che tutte le voci siano incluse.  
+ L'operatore relazionale '`smallest greater than`' è utilizzato per limitare le modifiche a quelle che si sono verificate dopo la mezzanotte del giorno precedente. Se più voci con valori LSN diversi condividono il valore **tran_end_time** identificato come limite inferiore nella tabella [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) , la funzione restituirà il valore LSN più piccolo, assicurando che tutte le voci siano incluse. Per il limite superiore, viene usato l'operatore relazionale ' `largest less than or equal to` ' per garantire che l'intervallo includa tutte le voci per il giorno, incluse quelle che hanno mezzanotte come valore **tran_end_time** . Se più voci con valori LSN diversi condividono il valore **tran_end_time** identificato come limite superiore, la funzione restituirà il valore LSN più grande che garantisce che tutte le voci siano incluse.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene utilizzata `sys.fn_cdc_map_time_lsn` la funzione per determinare se sono presenti righe nella tabella [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) con un valore **tran_end_time** maggiore o uguale a mezzanotte. Questa query può essere utilizzata per determinare, ad esempio, se il processo di acquisizione ha già elaborato le modifiche di cui è stato eseguito il commit fino alla mezzanotte del giorno precedente, in modo tale che possa procedere l'estrazione di dati delle modifiche per il giorno specifico.  
+ Nell'esempio seguente viene utilizzata la `sys.fn_cdc_map_time_lsn` funzione per determinare se sono presenti righe nella tabella [cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) con un valore **tran_end_time** maggiore o uguale a mezzanotte. Questa query può essere utilizzata per determinare, ad esempio, se il processo di acquisizione ha già elaborato le modifiche di cui è stato eseguito il commit fino alla mezzanotte del giorno precedente, in modo tale che possa procedere l'estrazione di dati delle modifiche per il giorno specifico.  
   
 ```  
 DECLARE @extraction_time datetime, @lsn binary(10);  
@@ -93,7 +93,7 @@ BEGIN
 END  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [CDC. lsn_time_mapping &#40;&#41;Transact-SQL](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)   
  [sys. fn_cdc_map_lsn_to_time &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md)   
  [CDC. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   

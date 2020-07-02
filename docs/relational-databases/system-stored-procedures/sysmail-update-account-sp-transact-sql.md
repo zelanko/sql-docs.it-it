@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3dd772a1519ea856cac0302d31be9eb7d0f9d782
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df0cbdda40b8e473ce81bf95b7c38e1cd2ec75c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283164"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783683"
 ---
 # <a name="sysmail_update_account_sp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Modifica le informazioni di un account di Posta elettronica database esistente.  
  
@@ -64,7 +64,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @description = ] 'description'`Nuova descrizione dell'account. *Description* è di **tipo nvarchar (256)** e il valore predefinito è null.  
   
-`[ @mailserver_name = ] 'server_name'`Nuovo nome del server di posta SMTP da utilizzare per l'account. Il computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione deve essere in grado di risolvere il *server_name* in un indirizzo IP. *server_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @mailserver_name = ] 'server_name'`Nuovo nome del server di posta SMTP da utilizzare per l'account. Il computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere in grado di risolvere il *server_name* in un indirizzo IP. *server_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 `[ @mailserver_type = ] 'server_type'`Nuovo tipo di server di posta elettronica. *server_type* è di **tipo sysname**e non prevede alcun valore predefinito. È supportato solo il valore **' SMTP '** .  
   
@@ -76,7 +76,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @password = ] 'password'`Nuova password da utilizzare per accedere al server di posta elettronica. *password* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @use_default_credentials = ] use_default_credentials`Specifica se inviare il messaggio di posta elettronica al server SMTP utilizzando le credenziali del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] servizio. **use_default_credentials** è di bit e non prevede alcun valore predefinito. Se questo parametro è 1, Posta elettronica database utilizza le credenziali di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Quando questo parametro è 0, posta elettronica database utilizza il ** \@nome utente** e ** \@la password** per l'autenticazione nel server SMTP. Se ** \@nome utente** e ** \@password** sono null, verrà utilizzata l'autenticazione anonima. Prima di specificare questo parametro consultare l'amministratore del server SMTP.  
+`[ @use_default_credentials = ] use_default_credentials`Specifica se inviare il messaggio di posta elettronica al server SMTP utilizzando le credenziali del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] servizio. **use_default_credentials** è di bit e non prevede alcun valore predefinito. Se questo parametro è 1, Posta elettronica database utilizza le credenziali di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Quando questo parametro è 0, Posta elettronica database utilizza il ** \@ nome utente** e la ** \@ password** per l'autenticazione nel server SMTP. Se ** \@ nome utente** e ** \@ password** sono null, verrà utilizzata l'autenticazione anonima. Prima di specificare questo parametro consultare l'amministratore del server SMTP.  
   
 `[ @enable_ssl = ] enable_ssl`Specifica se Posta elettronica database crittografa la comunicazione utilizzando Transport Layer Security (TLS), precedentemente nota come Secure Sockets Layer (SSL). Utilizzare questa opzione se TLS è necessario sul server SMTP. **enable_ssl** è di bit e non prevede alcun valore predefinito.  
   
@@ -94,7 +94,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-changing-the-information-for-an-account"></a>R. Modifica delle informazioni di un account  
- Nell'esempio seguente viene aggiornato l' `AdventureWorks Administrator` account nel database **msdb** . Le informazioni dell'account vengono impostate in base ai valori specificati.  
+ Nell'esempio seguente viene aggiornato l'account `AdventureWorks Administrator` nel database **msdb** . Le informazioni dell'account vengono impostate in base ai valori specificati.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_account_sp  

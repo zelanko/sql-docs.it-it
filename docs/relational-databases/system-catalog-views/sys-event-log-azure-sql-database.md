@@ -20,16 +20,16 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e6eb1173bf191ae319dc257c42199f02a05c9455
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 52bc643e1af6f09c0f1ab8e90021ae949310968c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832001"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784932"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Database di SQL Azure)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Restituisce [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] le connessioni al database, gli errori di connessione e i deadlock. È possibile usare queste informazioni per tenere traccia dell'attività del database con il [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o per risolvere i problemi relativi.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82832001"
   
  La vista `sys.event_log` contiene le colonne seguenti.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nome del database. Se la connessione ha esito negativo e l'utente non ha specificato un nome di database, questa colonna è vuota.|  
 |**start_time**|**datetime2**|Data e ora UTC dell'inizio dell'intervallo di aggregazione. In caso di eventi aggregati, l'ora è sempre un multiplo di 5 minuti. Ad esempio:<br /><br /> 28/09/2011 16:00:00<br />'29-09-2011 16:05:00'<br />'28-09-2011 16:10:00'|  
@@ -76,7 +76,7 @@ ms.locfileid: "82832001"
 |**connettività**|**connection_failed**|9|**riconfigurazione**|2|*Nota: si applica solo al database SQL di Azure V11.*<br /><br /> Impossibile stabilire la connessione poiché era in corso una riconfigurazione del database.|  
 |**connettività**|**connection_terminated**|0|**idle_connection_timeout**|2|*Nota: si applica solo al database SQL di Azure V11.*<br /><br /> Il tempo di inattività della connessione è stato maggiore rispetto alla soglia definita dal sistema.|  
 |**connettività**|**connection_terminated**|1|**riconfigurazione**|2|*Nota: si applica solo al database SQL di Azure V11.*<br /><br /> La sessione è stata terminata a causa di una riconfigurazione del database.|  
-|**connettività**|**limitazione**|*\<codice motivo>*|**reason_code**|2|*Nota: si applica solo al database SQL di Azure V11.*<br /><br /> La richiesta è limitata.  Codice motivo limitazione: * \<>il codice motivo *. Per altre informazioni, vedere [limitazione del motore](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
+|**connettività**|**limitazione**|*\<reason code>*|**reason_code**|2|*Nota: si applica solo al database SQL di Azure V11.*<br /><br /> La richiesta è limitata.  Codice motivo limitazione: *\<reason code>* . Per altre informazioni, vedere [limitazione del motore](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
 |**connettività**|**throttling_long_transaction**|40549|**long_transaction**|2|*Nota: si applica solo al database SQL di Azure V11.*<br /><br /> Sessione terminata perché è presente una transazione a lunga esecuzione. Provare ad abbreviare la transazione. Per altre informazioni, vedere [limiti delle risorse](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**connettività**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Nota: si applica solo al database SQL di Azure V11.*<br /><br /> Sessione terminata perché ha acquisito troppi blocchi. Provare a leggere o modificare meno righe in una sola transazione. Per altre informazioni, vedere [limiti delle risorse](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**connettività**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Nota: si applica solo al database SQL di Azure V11.*<br /><br /> Sessione terminata a causa di un utilizzo eccessivo di TEMPDB. Provare a modificare la query per ridurre l'utilizzo dello spazio delle tabelle temporanee. Per altre informazioni, vedere [limiti delle risorse](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
@@ -128,7 +128,7 @@ start_time                    end_time
 - Se si verifica un errore del computer nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Data Center, è possibile che nella tabella eventi manchi una piccola quantità di dati.  
 - Se un indirizzo IP è stato bloccato tramite DoSGuard, gli eventi di tentativi di connessione dall'indirizzo IP in questione non possono essere raccolti, né verranno visualizzati in questa vista.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
   
 ### <a name="simple-examples"></a>Esempi semplici
 

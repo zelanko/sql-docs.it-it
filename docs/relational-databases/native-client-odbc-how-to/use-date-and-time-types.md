@@ -11,15 +11,15 @@ ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79ace76e1652cad35c3c04a78e767c0e9a6b4228
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8f86bf7fc6e473685d918e7109180e2bdb8bdb86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298281"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783216"
 ---
 # <a name="use-date-and-time-types"></a>Utilizzare tipi di data e ora
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   In questo esempio viene illustrato come inizializzare le strutture dati di data e ora aggiunte in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Successivamente vengono preparati i valori di input e associati i parametri e viene eseguita la query. Per ulteriori informazioni sull'utilizzo di questi tipi, vedere [miglioramenti di data e ora &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
@@ -30,11 +30,11 @@ ms.locfileid: "81298281"
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
- Il primo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di creare una tabella utilizzata da questo esempio.  
+ Il primo [!INCLUDE[tsql](../../includes/tsql-md.md)] Listato di codice () consente di creare una tabella utilizzata da questo esempio.  
   
  Compilare il secondo listato di codice (C++) con odbc32.lib e user32.lib. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
- Il terzo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di eliminare la tabella utilizzata dall'esempio.  
+ Il terzo [!INCLUDE[tsql](../../includes/tsql-md.md)] Listato di codice () consente di eliminare la tabella utilizzata dall'esempio.  
   
 ```sql
 use tempdb  

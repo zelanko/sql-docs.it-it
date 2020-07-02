@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6fae362d3a8d1fe387dd7561b1476bb37f0c255
-ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
+ms.openlocfilehash: 692eda0029e60121422244f8829bac9785269423
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85295384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775631"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Utilizzo di WQL con il provider WMI per eventi del server
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   Le applicazioni di gestione accedono agli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il provider WMI per eventi del server ed eseguendo istruzioni WQL (WMI Query Language). WQL è un subset semplificato del linguaggio SQL (Structured Query Language), con alcune estensioni specifiche di WMI. Quando si utilizza WQL, un'applicazione recupera un tipo di evento da un'istanza specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un database o un oggetto di database (l'unico oggetto attualmente supportato è la coda). Il provider WMI per eventi del server converte la query in una notifica degli eventi creata nel database di destinazione per le notifiche degli eventi con ambito database o oggetto o nel database **Master** per le notifiche degli eventi con ambito server.  
   
  Si consideri, ad esempio, la query WQL seguente:  
@@ -84,7 +84,7 @@ WHERE where_condition
   
  `=`È possibile utilizzare solo l'operando insieme a **DatabaseName**, **SchemaName**e **ObjectName**. Con queste proprietà di evento non è possibile utilizzare altre espressioni.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Il *where_condition* della sintassi del provider WMI per gli eventi del server determina quanto segue:  
   
 -   Ambito dal quale il provider tenta di recuperare il *event_type*specificato, ovvero a livello di server, a livello di database o a livello di oggetto (l'unico oggetto attualmente supportato è Queue). Infine, tale ambito determina il tipo di notifica degli eventi creato nel database di destinazione. Questo processo viene chiamato registrazione della notifica degli eventi.  

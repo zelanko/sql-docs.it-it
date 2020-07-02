@@ -20,16 +20,16 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee626b9eef8cf2f2e80217b2a3709271a227f293
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa2a3f7436574d43f0cfc04d5cb7147b1c15f629
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67906119"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783135"
 ---
 # <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Restituisce un elenco di tutte le regole di confronto supportate.  
   
@@ -47,10 +47,10 @@ fn_helpcollations ()
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|Nome|**sysname**|Nome standard delle regole di confronto|  
+|Name|**sysname**|Nome standard delle regole di confronto|  
 |Descrizione|**nvarchar (1000)**|Descrizione delle regole di confronto|  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportate le regole di confronto di Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]supporta inoltre un numero limitato (<80) di regole di confronto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominate regole di confronto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che sono state sviluppate prima delle regole di confronto di Windows supportate. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]le regole di confronto sono ancora supportate per compatibilità con le versioni precedenti, ma non devono essere usate per nuove attività di sviluppo. Per altre informazioni sulle regole di confronto di Windows, vedere [Nome delle regole di confronto di Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Per altre informazioni sulle regole di confronto, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportate le regole di confronto di Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]supporta inoltre un numero limitato (<80) di regole di confronto denominate regole di confronto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , che sono state sviluppate prima delle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] regole di confronto di Windows supportate. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]le regole di confronto sono ancora supportate per compatibilità con le versioni precedenti, ma non devono essere usate per nuove attività di sviluppo. Per altre informazioni sulle regole di confronto di Windows, vedere [Nome delle regole di confronto di Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Per altre informazioni sulle regole di confronto, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Esempi
 
@@ -80,7 +80,7 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
  (7 row(s) affected)  
  ```
   
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
 [COLLATIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  

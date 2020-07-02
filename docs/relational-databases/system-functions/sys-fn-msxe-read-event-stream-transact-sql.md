@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 5edb1162-625a-41e0-8ec9-1edc8ab9a74a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 886b874aeee47f71eb8b50dba27fdfdf8ea45c62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05be6f4b30e42ddc1213231a6d96a823dfc9f1cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68082695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783098"
 ---
 # <a name="sysfn_msxe_read_event_stream-transact-sql"></a>sys.fn_MSxe_read_event_stream (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gli eventi estesi forniscono una funzione con valori di tabella per l'utilizzo interno da parte dell'interfaccia utente degli eventi estesi. La tabella non fornisce dati utilizzabili dagli utenti.  
   
@@ -59,7 +59,7 @@ sys.fn_MSxe_read_event_stream ( session_name)
 |type|**Integer (4)**|Tipo di evento. Non ammette i valori Null.|  
 |data|**Image (16)**|Dati immagine dell'evento. Ammette i valori Null.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Viste a gestione dinamica degli eventi estesi](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [Viste del catalogo degli eventi estesi &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)  

@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9619f06273b60076f41ad217465d3aa134855135
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b95e5f5d33d44ad1b23dffbd9425a11fc439861
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68121156"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783905"
 ---
 # <a name="syspolicy_policies-transact-sql"></a>syspolicy_policies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Consente di visualizzare una riga per ogni criterio della gestione basata su criteri nell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]istanza di. syspolicy_policies appartiene allo schema dbo nel database msdb. Nella tabella seguente vengono descritte le colonne contenute nella vista syspolicy_policies.  
+  Consente di visualizzare una riga per ogni criterio della gestione basata su criteri nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . syspolicy_policies appartiene allo schema dbo nel database msdb. Nella tabella seguente vengono descritte le colonne contenute nella vista syspolicy_policies.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -36,7 +36,7 @@ ms.locfileid: "68121156"
 |condition_id|**int**|ID della condizione applicata o testata da questi criteri.|  
 |root_condition_id|**int**|Solo per uso interno.|  
 |date_created|**datetime**|Data e ora di creazione dei criteri.|  
-|execution_mode|**int**|Modalità di valutazione per i criteri. Sono disponibili i valori seguenti:<br /><br /> 0 = Su richiesta<br /><br /> Questa modalità consente di valutare i criteri quando questi vengono specificati direttamente dall'utente.<br /><br /> 1 = Su modifica: impedisci esecuzione<br /><br /> Questa modalità automatica utilizza trigger DDL per impedire violazioni dei criteri.<br /><br /> 2 = Su modifica: solo log<br /><br /> Questa modalità automatica utilizza la notifica degli eventi per valutare i criteri quando viene apportata una modifica rilevante e consente di registrare le violazioni dei criteri.<br /><br /> 4 = Su pianificazione<br /><br /> Questa modalità automatica utilizza un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per valutare periodicamente i criteri e consente di registrare le violazioni dei criteri.<br /><br /> Nota: il valore 3 non è un valore possibile.|  
+|execution_mode|**int**|Modalità di valutazione per i criteri. I possibili valori sono i seguenti:<br /><br /> 0 = Su richiesta<br /><br /> Questa modalità consente di valutare i criteri quando questi vengono specificati direttamente dall'utente.<br /><br /> 1 = Su modifica: impedisci esecuzione<br /><br /> Questa modalità automatica utilizza trigger DDL per impedire violazioni dei criteri.<br /><br /> 2 = Su modifica: solo log<br /><br /> Questa modalità automatica utilizza la notifica degli eventi per valutare i criteri quando viene apportata una modifica rilevante e consente di registrare le violazioni dei criteri.<br /><br /> 4 = Su pianificazione<br /><br /> Questa modalità automatica utilizza un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per valutare periodicamente i criteri e consente di registrare le violazioni dei criteri.<br /><br /> Nota: il valore 3 non è un valore possibile.|  
 |policy_category|**int**|ID della categoria di criteri della gestione basata su criteri cui appartengono i criteri. Se il valore è NULL; viene utilizzato il gruppo di criteri predefinito.|  
 |schedule_uid|**uniqueidentifier**|Quando il valore di execution_mode è Su pianificazione, contiene l'ID della pianificazione; in caso contrario, il valore è NULL.|  
 |description|**nvarchar(max)**|Descrizione dei criteri. La colonna della descrizione è facoltativa e il valore può essere NULL.|  

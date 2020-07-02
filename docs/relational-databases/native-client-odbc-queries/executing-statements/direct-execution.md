@@ -16,23 +16,23 @@ ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a89888ac055e83ab38588646f2f9b38ecd6444d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 73cd53e5b9c83fe77027b8260d46bc5b989e91a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297990"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775947"
 ---
 # <a name="direct-execution"></a>Esecuzione diretta
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  L'esecuzione diretta rappresenta la modalità più semplice di esecuzione di un'istruzione. Un'applicazione compila una stringa di caratteri contenente [!INCLUDE[tsql](../../../includes/tsql-md.md)] un'istruzione e la invia per l'esecuzione mediante la funzione **SQLExecDirect** . Dopo avere raggiunto il server, l'istruzione viene compilata da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un piano di esecuzione, che viene quindi immediatamente eseguito.  
+  L'esecuzione diretta rappresenta la modalità più semplice di esecuzione di un'istruzione. Un'applicazione compila una stringa di caratteri contenente un' [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzione e la invia per l'esecuzione mediante la funzione **SQLExecDirect** . Dopo avere raggiunto il server, l'istruzione viene compilata da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un piano di esecuzione, che viene quindi immediatamente eseguito.  
   
  L'esecuzione diretta viene in genere utilizzata dalle applicazioni che compilano ed eseguono istruzioni in fase di esecuzione e rappresenta il metodo più efficiente per le istruzioni eseguite una sola volta. Lo svantaggio con molti database consiste nel fatto che l'istruzione SQL deve essere analizzata e compilata ogni volta che viene eseguita determinando un aumento dell'overhead se l'istruzione viene eseguita più volte.  
   
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono notevolmente migliorate le prestazioni dell'esecuzione diretta delle istruzioni utilizzate più di frequente negli ambienti multiutente e l'utilizzo di SQLExecDirect con gi marcatori di parametro per le istruzioni SQL utilizzate più di frequente si avvicina all'efficienza dell'esecuzione preparata.  
   
- Quando si è connessi a un' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , il driver ODBC di Native client utilizza [SP_EXECUTESQL](../../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) per trasmettere l'istruzione SQL o il batch specificato in **SQLExecDirect**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]dispone della logica per determinare rapidamente se un'istruzione SQL o un batch eseguito con **sp_executesql** corrisponde all'istruzione o al batch che ha generato un piano di esecuzione già esistente in memoria. Se esiste una corrispondenza, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] riutilizza semplicemente il piano esistente anziché compilarne uno nuovo. Ciò significa che le istruzioni SQL comunemente eseguite eseguite con **SQLExecDirect** in un sistema con molti utenti trarranno vantaggio da molti dei vantaggi del riutilizzo del piano disponibili solo per le stored procedure nelle versioni precedenti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]di.  
+ Quando si è connessi a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client utilizza [sp_executesql](../../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) per trasmettere l'istruzione SQL o il batch specificato in **SQLExecDirect**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]dispone della logica per determinare rapidamente se un'istruzione SQL o un batch eseguito con **sp_executesql** corrisponde all'istruzione o al batch che ha generato un piano di esecuzione già esistente in memoria. Se esiste una corrispondenza, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] riutilizza semplicemente il piano esistente anziché compilarne uno nuovo. Ciò significa che le istruzioni SQL comunemente eseguite eseguite con **SQLExecDirect** in un sistema con molti utenti trarranno vantaggio da molti dei vantaggi del riutilizzo del piano disponibili solo per le stored procedure nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Il vantaggio di riutilizzare i piani di esecuzione è valido solo quando più utenti eseguono lo stesso batch o la stessa istruzione SQL. Rispettare le seguenti convenzioni di scrittura del codice per aumentare la probabilità che le istruzioni SQL eseguite da client diversi siano simili abbastanza per potere riutilizzare i piani di esecuzione:  
   
@@ -42,7 +42,7 @@ ms.locfileid: "81297990"
   
 -   Se possibile, utilizzare per le connessioni dell'applicazione un set comune di opzioni dell'istruzione e di connessione. I piani di esecuzione generati per una connessione con un set di opzioni, ad esempio ANSI_NULLS, non vengono riutilizzati per una connessione con un altro set di opzioni. Il driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e il provider ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client hanno le stesse impostazioni predefinite per queste opzioni.  
   
- Se tutte le istruzioni eseguite con **SQLExecDirect** vengono codificate utilizzando queste convenzioni, può riutilizzare i piani di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esecuzione quando si verifica l'opportunità.  
+ Se tutte le istruzioni eseguite con **SQLExecDirect** vengono codificate utilizzando queste convenzioni, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] può riutilizzare i piani di esecuzione quando si verifica l'opportunità.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione di istruzioni &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  

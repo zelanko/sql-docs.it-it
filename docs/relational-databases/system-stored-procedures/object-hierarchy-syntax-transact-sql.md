@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3405621d604e6450756520f6d93b66a51d4d66c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5cd7b04ebf16ce11791bf1d7caeb0d1012c5d9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67941981"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783050"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>Sintassi della gerarchia degli oggetti (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Il parametro *PropertyName* di sp_OAGetProperty e sp_OASetProperty e il parametro *methodname* di sp_OAMethod supportano una sintassi della gerarchia degli oggetti simile a quella [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]di. Quando viene adottata questa sintassi speciale, i parametri sopraindicati seguono il seguente formato generale.  
+  Il parametro *PropertyName* di sp_OAGetProperty e sp_OASetProperty e il parametro *methodname* di sp_OAMethod supportano una sintassi della gerarchia degli oggetti simile a quella di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Quando viene adottata questa sintassi speciale, i parametri sopraindicati seguono il seguente formato generale.  
   
 ## <a name="syntax"></a>Sintassi  
   

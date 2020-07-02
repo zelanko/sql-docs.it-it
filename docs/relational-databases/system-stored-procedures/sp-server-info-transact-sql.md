@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a83d216b0830b035da72ad579a2448a12f41adba
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a711624214b262560766f49e8294b36291ad9d91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810431"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783724"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Restituisce un elenco dei nomi degli attributi e dei valori corrispondenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il gateway di database o l'origine dati sottostante.  
   
@@ -43,7 +43,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 `[ @attribute_id = ] 'attribute_id'`ID di tipo integer dell'attributo. *Attribute_ID* è di **tipo int**e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- Nessuno  
+ nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -87,7 +87,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**113**|REMOTE_SPROC<br /><br /> Specifica se è possibile eseguire stored procedure tramite le funzioni di stored procedure remote di DB-Library.|S|  
 |**500**|SYS_SPROC_VERSION<br /><br /> Specifica la versione delle stored procedure di catalogo implementate.|Numero di versione corrente|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_server_info** restituisce un subset delle informazioni fornite da **SQLGetInfo** in ODBC.  
   
 ## <a name="permissions"></a>Autorizzazioni  

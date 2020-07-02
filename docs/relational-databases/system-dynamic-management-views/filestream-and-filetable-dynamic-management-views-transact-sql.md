@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e50a135d-6644-42a4-a0df-1c7a2b722051
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 216cbfbfd1357298d4b816838fd8bfa5428a65f8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f2870cfe7eec9e2f6c8e40d7ffb0c0de30ff69de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829515"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784946"
 ---
 # <a name="filestream-and-filetable-dynamic-management-views-transact-sql"></a>DMV per FILESTREAM e tabelle FileTable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   In questa sezione vengono descritti le DMV correlate alle caratteristiche FILESTREAM e FileTable.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82829515"
  Consente di visualizzare gli handle di file non transazionali aperti per dati di tabelle FileTable.  
 
 ## <a name="see-also"></a>Vedere anche
-[FileStream](../../relational-databases/blob/filestream-sql-server.md)
+[Filestream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Tabelle FileTable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Viste del catalogo Filestream e FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
 <br>[Stored procedure di sistema FILESTREAM e FileTable (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8241e15643eb4aa25912451ddfed94699954797f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52d3c9676adbd95d219221270090dbcedc798bfb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388609"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775420"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>Funzioni per estensioni XQuery - sql:variable()
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Espone in un'espressione XQuery una variabile che contiene un valore SQL relazionale.  
   
@@ -55,7 +55,7 @@ sql:variable("variableName") as xdt:anyAtomicType?
   
 -   Un valore (`DiscountPrice`) ottenuto da una variabile [!INCLUDE[tsql](../includes/tsql-md.md)]. Il metodo `sql:variable()` viene utilizzato per associare tale valore nell'istanza XML.  
   
--   Valore (`ProductModelName`) da una colonna di tipo **XML** , per rendere la query più interessante.  
+-   Valore ( `ProductModelName` ) da una colonna di tipo **XML** , per rendere la query più interessante.  
   
  Query:  
   
@@ -98,7 +98,7 @@ WHERE ProductID=771
  [Confronto dati XML tipizzati con dati XML non tipizzati](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [&#40;di dati XML SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Creare istanze di dati XML](../relational-databases/xml/create-instances-of-xml-data.md)   
- [Metodi con tipo di dati XML](../t-sql/xml/xml-data-type-methods.md)   
+ [metodi con tipo di dati XML](../t-sql/xml/xml-data-type-methods.md)   
  [Linguaggio XML di manipolazione dei dati &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

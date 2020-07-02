@@ -20,15 +20,15 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f51c090baea876c662b3fa31210d1eec59139bf4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9ab99e0ce3e63a42795d17fc859bbbd3b6c8059d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823488"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785023"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Contiene una riga per ogni file di un database archiviata nel database stesso. Si tratta di una vista specifica per ogni database.  
   
@@ -39,8 +39,8 @@ ms.locfileid: "82823488"
 |**type**|**tinyint**|Tipo di file:<br/><br /> 0 = righe<br /><br/> 1 = Log<br/><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = full-text|  
 |**type_desc**|**nvarchar(60)**|Descrizione del tipo di file:<br /><br /> ROWS <br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|Il valore può essere uguale o maggiore di 0. Un valore uguale a 0 rappresenta il file di log del database, mentre un valore maggiore di 0 rappresenta l'ID del filegroup in cui è archiviato il file di dati.|  
-|**name**|**sysname**|Nome logico del file nel database.|  
-|**physical_name**|**nvarchar(260)**|Nome del file del sistema operativo. Se il database è ospitato da una [replica secondaria leggibile](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)AlwaysOn, **physical_name** indica il percorso del file del database di replica primaria. Per il percorso file corretto di un database secondario leggibile, eseguire una query su [sys. sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md).|  
+|**nome**|**sysname**|Nome logico del file nel database.|  
+|**physical_name**|**nvarchar(260)**|Nome del file del sistema operativo. Se il database è ospitato da una [replica secondaria leggibile](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)AlwaysOn, **physical_name** indica il percorso del file del database di replica primaria. Per il percorso file corretto di un database secondario leggibile, eseguire una query [sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md).|  
 |**state**|**tinyint**|Stato del file:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |**state_desc**|**nvarchar(60)**|Descrizione dello stato del file:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Per altre informazioni, vedere [Stati del file](../../relational-databases/databases/file-states.md).|  
 |**size**|**int**|Dimensioni del file in pagine da 8 KB.<br /><br /> 0 = Non applicabile<br /><br /> Per uno snapshot del database, il valore size corrisponde allo spazio massimo utilizzabile dallo snapshot per il file.<br /><br /> Per i contenitori del filegroup FILESTREAM, le dimensioni riflettono le dimensioni correnti utilizzate del contenitore.|  
@@ -68,9 +68,9 @@ ms.locfileid: "82823488"
 >  In caso di eliminazione o ricompilazione di indici di grandi dimensioni oppure di eliminazione o troncamento di tabelle di grandi dimensioni, in [!INCLUDE[ssDE](../../includes/ssde-md.md)] le deallocazioni di pagine effettive e i relativi blocchi associati vengono posticipati fino all'esecuzione del commit della transazione. Le operazioni di eliminazione posticipate non rendono immediatamente disponibile lo spazio allocato. Pertanto, i valori restituiti da sys.database_files subito dopo l'eliminazione o il troncamento di un oggetto di grandi dimensioni potrebbero non rispecchiare lo spazio su disco effettivamente disponibile.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza al ruolo **public** .  Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ È richiesta l'appartenenza al ruolo **public** . Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
 
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
 L'istruzione seguente restituisce il nome, le dimensioni del file e la quantità di spazio vuoto per ogni file di database.
 
 ```

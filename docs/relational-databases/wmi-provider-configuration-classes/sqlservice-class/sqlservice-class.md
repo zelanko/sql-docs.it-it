@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 772a7640f93fa11d6596511bc72ec9d1d5e2e1c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ea415866676f0eb4f04984ee0ee427d68854ea2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660886"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784696"
 ---
 # <a name="sqlservice-class"></a>Classe SqlService
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   La [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) rappresenta un'istanza di un servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  La [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) viene utilizzata per gestire a livello di programmazione il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Con la [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) è possibile effettuare le attività seguenti:  

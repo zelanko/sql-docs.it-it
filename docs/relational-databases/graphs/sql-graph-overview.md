@@ -15,17 +15,17 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbe223d890d443508cd32f6ab73c039848c4372a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79428152"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776473"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Elaborazione di grafi con SQL Server e il database SQL di Azure
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]offre funzionalità di database a grafo per modellare relazioni molti-a-molti. Le relazioni tra grafi sono integrate in [!INCLUDE[tsql-md](../../includes/tsql-md.md)] e ricevono i vantaggi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] derivanti dall'utilizzo di come sistema di gestione di database di base.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]offre funzionalità di database a grafo per modellare relazioni molti-a-molti. Le relazioni tra grafi sono integrate in [!INCLUDE[tsql-md](../../includes/tsql-md.md)] e ricevono i vantaggi derivanti dall'utilizzo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come sistema di gestione di database di base.
 
 
 ## <a name="what-is-a-graph-database"></a>Cos'è un database a grafo?  
@@ -58,7 +58,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 Nodi e bordi vengono archiviati come tabelle  
 
 ### <a name="query-language-extensions"></a>Estensioni del linguaggio di query  
-La `MATCH` nuova clausola è stata introdotta per supportare la ricerca e l'esplorazione a più hop tramite il grafo. La `MATCH` funzione usa la sintassi di stile ASCII per i criteri di ricerca. Ad esempio:  
+`MATCH`La nuova clausola è stata introdotta per supportare la ricerca e l'esplorazione a più hop tramite il grafo. La `MATCH` funzione usa la sintassi di stile ASCII per i criteri di ricerca. Ad esempio:  
 
 ```   
 -- Find friends of John
@@ -69,11 +69,11 @@ AND Person1.Name = 'John';
 ```   
  
 ### <a name="fully-integrated-in-ssnoversion-engine"></a>Completamente integrato nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motore 
-Le estensioni del grafo sono completamente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrate nel motore di. Usare lo stesso motore di archiviazione, metadati, query processor e così via per archiviare ed eseguire query sui dati del grafo. Eseguire query su dati grafici e relazionali in un'unica query. Combinando le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Graph con altre tecnologie come columnstore, ha, R Services e così via. Il database SQL Graph supporta inoltre tutte le funzionalità di sicurezza e conformità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]disponibili con.
+Le estensioni del grafo sono completamente integrate nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motore di. Usare lo stesso motore di archiviazione, metadati, query processor e così via per archiviare ed eseguire query sui dati del grafo. Eseguire query su dati grafici e relazionali in un'unica query. Combinando le funzionalità di Graph con altre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tecnologie come columnstore, ha, R Services e così via. Il database SQL Graph supporta inoltre tutte le funzionalità di sicurezza e conformità disponibili con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
  
 ### <a name="tooling-and-ecosystem"></a>Strumenti e ecosistema
 
-Vantaggi offerti dagli strumenti e dall'ecosistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esistenti. Strumenti come backup e ripristino, importazione ed esportazione, BCP funzionano in modo predefinito. Altri strumenti o servizi come SSIS, SSRS o Power BI funzioneranno con le tabelle dei grafici, proprio come funzionano con le tabelle relazionali.
+Vantaggi offerti dagli strumenti e dall'ecosistema esistenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Strumenti come backup e ripristino, importazione ed esportazione, BCP funzionano in modo predefinito. Altri strumenti o servizi come SSIS, SSRS o Power BI funzioneranno con le tabelle dei grafici, proprio come funzionano con le tabelle relazionali.
 
 ## <a name="edge-constraints"></a>Vincoli di arco
 Un vincolo Edge viene definito in una tabella Edge del grafico ed è una coppia di tabelle di nodi a cui un determinato tipo di bordo può connettersi. Questo consente agli utenti di ottenere un controllo migliore sullo schema del grafo. Con l'ausilio di vincoli Edge, gli utenti possono limitare il tipo di nodi a cui un determinato bordo è autorizzato a connettersi. 

@@ -16,17 +16,17 @@ ms.assetid: 46c0c22e-d105-4d5b-bb9d-5694472e8651
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d632d1d22cd8439a3d787e22301ec06ec4e0d93
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae8db3dad7c93b49f5698396e84b5feff1198393
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291745"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783481"
 ---
 # <a name="error-messages"></a>messaggi di errore
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Il testo dei messaggi restituiti dal driver [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC di Native client viene inserito nel parametro *MessageText* di **SQLGetDiagRec**. L'origine di un errore viene indicata dall'intestazione del messaggio:  
+  Il testo dei messaggi restituiti dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client viene inserito nel parametro *MessageText* di **SQLGetDiagRec**. L'origine di un errore viene indicata dall'intestazione del messaggio:  
   
  [Microsoft][Gestione driver ODBC]  
  Questi errori vengono generati da Gestione driver ODBC.  
@@ -35,13 +35,13 @@ ms.locfileid: "81291745"
  Questi errori vengono generati dalla libreria di cursori ODBC.  
   
  [Microsoft][SQL Server Native Client]  
- Questi errori vengono generati dal driver [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC di Native Client. Se non sono presenti altri nodi con il nome di una libreria di rete o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'errore è stato rilevato nel driver.  
+ Questi errori vengono generati dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client. Se non sono presenti altri nodi con il nome di una libreria di rete o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'errore è stato rilevato nel driver.  
   
  Microsoft [SQL Server Native Client] [*Net-transportaname*]  
- Questi errori vengono generati dalla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libreria di rete, dove *net-TransportName* è il nome visualizzato del trasporto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rete di un client, ad esempio Named Pipes, Shared Memory, TCP/IP Sockets o via. Il resto del messaggio di errore contiene la funzione della libreria di rete chiamata e la funzione chiamata nell'API di rete sottostante dalla funzione TDS. Il codice di errore *pfNative* restituito con questi errori è il codice di errore dello stack del protocollo di rete sottostante.  
+ Questi errori vengono generati dalla libreria di rete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , dove *net-TransportName* è il nome visualizzato del trasporto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rete di un client, ad esempio Named Pipes, Shared Memory, TCP/IP Sockets o via. Il resto del messaggio di errore contiene la funzione della libreria di rete chiamata e la funzione chiamata nell'API di rete sottostante dalla funzione TDS. Il codice di errore *pfNative* restituito con questi errori è il codice di errore dello stack del protocollo di rete sottostante.  
   
  Microsoft [SQL Server Native Client] [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]  
- Questi errori vengono generati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il resto del messaggio di errore corrisponde al testo del messaggio di errore restituito da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il codice *pfNative* restituito con questi errori è il numero di errore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di. Per ulteriori informazioni su un elenco di messaggi di errore (e sui relativi numeri) che possono essere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]restituiti da, vedere la descrizione e le colonne di errore della tabella di sistema **sysmessages** nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]database **Master** in.  
+ Questi errori vengono generati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il resto del messaggio di errore corrisponde al testo del messaggio di errore restituito da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il codice *pfNative* restituito con questi errori è il numero di errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni su un elenco di messaggi di errore (e sui relativi numeri) che possono essere restituiti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere la descrizione e le colonne di errore della tabella di sistema **sysmessages** nel database **Master** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione di errori e messaggi](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

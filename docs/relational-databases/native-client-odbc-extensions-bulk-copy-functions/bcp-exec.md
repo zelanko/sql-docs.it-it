@@ -18,15 +18,15 @@ ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0767886191923c15f65bde7b9fe4bfb7d270b271
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bd9b2b63332b23034e46b071f76dc9129c3c6f9f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782757"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774296"
 ---
 # <a name="bcp_exec"></a>bcp_exec
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Esegue una copia bulk completa di dati tra una tabella di database e un file utente.  
   
@@ -46,7 +46,7 @@ RETCODE bcp_exec (
  *pnRowsProcessed*  
  Puntatore a DBINT. La funzione **bcp_exec** compila questo DBINT con il numero di righe copiate correttamente. Se *pnRowsProcessed* è null, viene ignorato da **bcp_exec**.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SUCCEED, SUCCEED_ASYNC o FAIL. La funzione **bcp_exec** restituisce esito positivo se vengono copiate tutte le righe. **bcp_exec** restituisce SUCCEED_ASYNC se un'operazione di copia bulk asincrona è ancora in attesa. **bcp_exec** restituisce esito negativo se si verifica un errore completo o se il numero di righe che generano errori raggiunge il valore specificato per BCPMAXERRS utilizzando [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md). Il valore predefinito BCPMAXERRS è 10. L'opzione BCPMAXERRS influisce solo sugli errori di sintassi rilevati dal provider durante la lettura delle righe dal file di dati, ma non delle righe inviate al server. Il server interrompe il batch quando rileva un errore con una riga. Controllare il parametro *pnRowsProcessed* per il numero di righe copiate correttamente.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -56,7 +56,7 @@ RETCODE bcp_exec (
   
  **bcp_exec** è l'unica funzione di copia bulk che probabilmente sarà in attesa per un periodo di tempo. è anche l'unica funzione di copia bulk che supporta la modalità asincrona. Per impostare la modalità asincrona, utilizzare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) per impostare SQL_ATTR_ASYNC_ENABLE su SQL_ASYNC_ENABLE_ON prima di chiamare **bcp_exec**. Per verificare il completamento, chiamare **bcp_exec** con gli stessi parametri. Se la copia bulk non è stata ancora completata, **bcp_exec** restituisce SUCCEED_ASYNC. Restituisce anche in *pnRowsProcessed* un conteggio dello stato del numero di righe inviate al server. Il commit delle righe inviate al server non viene eseguito fino a quando non viene raggiunta la fine di un batch.  
   
- Per informazioni sulle modifiche di rilievo apportate alla copia bulk [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]a partire da, vedere [esecuzione di operazioni di copia bulk &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
+ Per informazioni sulle modifiche di rilievo apportate alla copia bulk a partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , vedere [esecuzione di operazioni di copia bulk &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come utilizzare **bcp_exec**:  

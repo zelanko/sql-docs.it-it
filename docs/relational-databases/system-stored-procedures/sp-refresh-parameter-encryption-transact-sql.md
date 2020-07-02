@@ -19,15 +19,15 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 47f622c287eb0e32e1c5db2d33b64af2de3e379b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 87b905aa178aec6aa10d4d7585384183bdb5d6c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833145"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783010"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 Aggiorna i metadati di Always Encrypted per i parametri della stored procedure non associata a schema specificata, della funzione definita dall'utente, della vista, del trigger DML, del trigger DDL a livello di database o del trigger DDL a livello di server nel database corrente. 
 
@@ -80,7 +80,7 @@ Quando il modulo specificato è un trigger DDL a livello di server, richiede l' 
 
 Per i moduli definiti con la `EXECUTE AS` clausola, `IMPERSONATE` è richiesta l'autorizzazione per l'entità specificata. In genere, l'aggiornamento di un oggetto non comporta la modifica `EXECUTE AS` dell'entità, a meno che il modulo non sia stato definito con `EXECUTE AS USER` e il nome utente del server principale venga risolto in un altro utente rispetto al momento in cui è stato creato il modulo.
  
-## <a name="examples"></a>Esempio
+## <a name="examples"></a>Esempi
 
 Nell'esempio seguente viene creata una tabella e una procedura che fa riferimento alla tabella, viene configurato Always Encrypted, quindi viene illustrata la modifica della tabella e l'esecuzione della `sp_refresh_parameter_encryption` stored procedure.  
 

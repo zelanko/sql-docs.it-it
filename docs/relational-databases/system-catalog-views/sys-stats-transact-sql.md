@@ -20,15 +20,15 @@ ms.assetid: 42605c80-126f-460a-befb-a0b7482fae6a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c6d5a67293cd03bc7d20150bbff177b0391113c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: eb1d43e7cfd9892b7146ecbe551ecb7b42625981
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833945"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783939"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Contiene una riga per ogni oggetto statistiche presente per le tabelle, gli indici e le viste indicizzate nel database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ogni indice avrà una riga di statistiche corrispondente con lo stesso nome e lo stesso ID (**index_id**  =  **stats_id**), ma non tutte le righe delle statistiche hanno un indice corrispondente.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82833945"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID dell'oggetto a cui appartengono le statistiche.|  
-|**name**|**sysname**|Nome delle statistiche. Valore univoco all'interno dell'oggetto.|  
+|**nome**|**sysname**|Nome delle statistiche. Valore univoco all'interno dell'oggetto.|  
 |**stats_id**|**int**|ID delle statistiche. Valore univoco all'interno dell'oggetto.<br /><br />Se le statistiche corrispondono a un indice, il valore *stats_id* corrisponde al valore *index_id* nella vista del catalogo [sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) .|  
 |**auto_created**|**bit**|Indica se le statistiche sono state create automaticamente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0 = le statistiche non sono state create automaticamente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = le statistiche sono state create automaticamente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**user_created**|**bit**|Indica se le statistiche sono state create da un utente.<br /><br /> 0 = le statistiche non sono state create da un utente.<br /><br /> 1 = le statistiche sono state create da un utente.|  
@@ -50,7 +50,7 @@ ms.locfileid: "82833945"
 ## <a name="permissions"></a>Autorizzazioni  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Negli esempi seguenti vengono restituite tutte le statistiche e colonne delle statistiche per la tabella `HumanResources.Employee`.  
   
 ```sql  

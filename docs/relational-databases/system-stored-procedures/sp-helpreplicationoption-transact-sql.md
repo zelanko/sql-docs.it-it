@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 395a7c2227fb23a177cb1b3980b26014f0651c0c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e04daaa5be757df60f07a8bd9205e1fd44f95502
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817731"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775747"
 ---
 # <a name="sp_helpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Visualizza i tipi di opzioni di replica attivate per un server. Questa stored procedure viene eseguita in qualsiasi database di qualsiasi server.  
   
@@ -39,7 +39,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ## <a name="arguments"></a>Argomenti  
 `[ @optname = ] 'option_name'`Nome dell'opzione di replica per cui eseguire una query. *option_name* è di **tipo sysname**e il valore predefinito è null.  
   
-|Valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |**transazionale**|Viene restituito un set di risultati quando è attivata la replica transazionale.|  
 |**merge**|Viene restituito un set di risultati quando è attivata la replica di tipo merge.|  
@@ -53,7 +53,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 |**value**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**major_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**minor_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**revision**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**Revisione**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**install_failures**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  

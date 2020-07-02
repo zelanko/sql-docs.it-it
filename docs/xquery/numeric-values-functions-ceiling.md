@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd1d131fadf2fb594b9ad2799791313d0136f39b
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: dc2a85c48e404fa717b001482bbe5fc8f8356e99
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689768"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775497"
 ---
 # <a name="numeric-values-functions---ceiling"></a>Funzioni per valori numerici - ceiling 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Restituisce il più piccolo numero senza una parte frazionaria e non inferiore al valore del relativo argomento. Se l'argomento è una sequenza vuota, restituisce la sequenza vuota.  
   
@@ -39,7 +39,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
  *$arg*  
  Numero al quale viene applicata la funzione.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se il tipo di *$arg* è uno dei tre tipi numerici di base, **xs: float**, **xs: Double**o **xs: Decimal**, il tipo restituito è uguale al tipo di *$arg* .  
   
  Se il tipo di *$arg* è un tipo derivato da uno dei tipi numerici, il tipo restituito è il tipo numerico di base.  
@@ -48,10 +48,10 @@ fn:ceiling ( $arg as numeric?) as numeric?
   
  Qualsiasi altro tipo di dati genera un errore statico.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
-### <a name="a-using-the-ceiling-xquery-function"></a>A. Utilizzo della funzione booleana XQuery ceiling()  
+### <a name="a-using-the-ceiling-xquery-function"></a>R. Utilizzo della funzione booleana XQuery ceiling()  
  Per il modello di prodotto 7, la query restituisce un elenco dei centri di lavorazione coinvolti nel processo di produzione del modello. Per ogni centro di lavorazione, la query restituisce l'ID, le ore di manodopera e la dimensione del lotto, se documentati. La query usa la funzione **Ceiling** per restituire le ore lavorative come valori di tipo **Decimal**.  
   
 ```  
@@ -76,9 +76,9 @@ WHERE ProductModelID=7
   
 -   **Le istruzioni** sono una colonna di tipo **XML** . Per specificare XQuery, viene pertanto utilizzato il [metodo query () (tipo di dati XML)](../t-sql/xml/query-method-xml-data-type.md) . L'istruzione XQuery viene specificata come argomento per il metodo di query.  
   
--   **per... Return** è un costrutto di ciclo. Nella query il ciclo **for** identifica un elenco di \< percorsi> elementi. Per ogni centro di lavorazione, l'istruzione **return** nel ciclo **for** descrive il codice XML da generare:  
+-   **per... Return** è un costrutto di ciclo. Nella query il ciclo **for** identifica un elenco di \<Location> elementi. Per ogni centro di lavorazione, l'istruzione **return** nel ciclo **for** descrive il codice XML da generare:  
   
-    -   Un \< percorso> elemento con attributi LocationID e LaborHrs. L'espressione corrispondente racchiusa tra parentesi graffe ({ }) recupera i valori necessari dal documento.  
+    -   \<Location>Elemento con attributi LocationID e LaborHrs. L'espressione corrispondente racchiusa tra parentesi graffe ({ }) recupera i valori necessari dal documento.  
   
     -   L'espressione {$ i/@LotSize } Recupera l'attributo LotSize dal documento, se presente.  
   

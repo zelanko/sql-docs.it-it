@@ -18,17 +18,17 @@ ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 91c3a4101f19afe4a986514fea8dab207c6d9b48
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 98845a3733477c13761dfdf236685be9edce2b4c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155546"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775231"
 ---
 # <a name="sysfirewall_rules-azure-sql-database"></a>sys.firewall_rules (Database SQL di Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  Restituisce informazioni sulle impostazioni del firewall a livello di server associate al [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+  Restituisce informazioni sulle impostazioni del firewall a livello di server associate al [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .  
   
  La vista `sys.firewall_rules` contiene le colonne seguenti:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "70155546"
 |id|**INT**|Identificatore dell'impostazione del firewall a livello di server.|  
 |name|**NVARCHAR (128)**|Nome scelto per descrivere e distinguere l'impostazione del firewall a livello di server.|  
 |start_ip_address|**VARCHAR (45)**|L'indirizzo IP più basso nell'intervallo dell'impostazione del firewall a livello di server. Gli indirizzi IP uguali o maggiori di questo possono tentare la connessione al server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più basso possibile è `0.0.0.0`.|  
-|end_ip_address|**VARCHAR (45)**|L'indirizzo IP più alto nell'intervallo dell'impostazione del firewall a livello di server. Gli indirizzi IP uguali o minori di questo possono tentare la connessione al server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più alto possibile è `255.255.255.255`.<br /><br /> Nota: i tentativi di connessione di Azure sono consentiti quando **start_ip_address** sia questo campo che `0.0.0.0`il campo start_ip_address è uguale a.|  
+|end_ip_address|**VARCHAR (45)**|L'indirizzo IP più alto nell'intervallo dell'impostazione del firewall a livello di server. Gli indirizzi IP uguali o minori di questo possono tentare la connessione al server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più alto possibile è `255.255.255.255`.<br /><br /> Nota: i tentativi di connessione di Azure sono consentiti quando sia questo campo che il campo **start_ip_address** è uguale a `0.0.0.0` .|  
 |create_date|**DATETIME**|Data e ora UTC in cui è stata creata l'impostazione del firewall a livello di server.<br /><br /> Nota: UTC è un acronimo di Coordinated Universal Time.|  
 |modify_date|**DATETIME**|Data e ora UTC in cui è stata modificata per l'ultima volta l'impostazione del firewall a livello di server.|  
   

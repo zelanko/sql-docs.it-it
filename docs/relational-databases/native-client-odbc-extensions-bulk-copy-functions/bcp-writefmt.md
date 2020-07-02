@@ -18,15 +18,15 @@ ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 388b51c79681589d3caec2ee3ea03b1ece6ff459
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e95fa5bb0948661faf9f8575557a39b90528879c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782341"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783381"
 ---
 # <a name="bcp_writefmt"></a>bcp_writefmt
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Crea un file di formato che contiene una descrizione del formato del file di dati della copia bulk corrente.  
   
@@ -46,7 +46,7 @@ RETCODE bcp_writefmt (
  *szFormatFile*  
  Percorso e nome del file utente per ricevere i valori di formato per il file di dati.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SUCCEED o FAIL.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -57,7 +57,7 @@ RETCODE bcp_writefmt (
  Per caricare un file di formato salvato, utilizzare [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md).  
   
 > [!NOTE]  
->  Il file di formato prodotto da **bcp_writefmt** è supportato solo dalle versioni dell'utilità **bcp** distribuite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la versione 7,0 e successive.  
+>  Il file di formato prodotto da **bcp_writefmt** è supportato solo dalle versioni dell'utilità **bcp** distribuite con la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7,0 e successive.  
   
 ## <a name="example"></a>Esempio  
   

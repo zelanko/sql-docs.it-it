@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 24a900409ae5979c13bdbff0d67d9d2670059208
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de61da8e636ff3f6e38dac6fe85d45eaff75df3c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770849"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783871"
 ---
 # <a name="sp_add_agent_profile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crea un nuovo profilo per un agente di replica. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   
@@ -48,7 +48,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
 `[ @agent_type = ] 'agent_type'`Tipo di agente di replica. *agent_type* è di **tipo int**e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|agente snapshot|  
 |**2**|Agente di lettura log|  
@@ -58,7 +58,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
 `[ @profile_type = ] profile_type`Tipo di profilo. *profile_type* è di **tipo int**e il valore predefinito è **1**.  
   
- **0** indica un profilo di sistema. **1** indica un profilo personalizzato. È possibile creare solo profili personalizzati utilizzando questo stored procedure; Pertanto l'unico valore valido è **1**. Crea [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo profili di sistema.  
+ **0** indica un profilo di sistema. **1** indica un profilo personalizzato. È possibile creare solo profili personalizzati utilizzando questo stored procedure; Pertanto l'unico valore valido è **1**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Crea solo profili di sistema.  
   
 `[ @description = ] 'description'`Descrizione del profilo. *Description* è di **tipo nvarchar (3000)** e non prevede alcun valore predefinito.  
   

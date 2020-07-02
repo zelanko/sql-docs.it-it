@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9ac532e5212f32e5ee3bda029a2a7fb5a1231974
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 89a936fa8dad5df860f72295c93c915b055a3c48
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829225"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784812"
 ---
 # <a name="msmerge_settingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabella **MSmerge_settingshistory** viene utilizzata per mantenere una cronologia delle modifiche apportate alle proprietà degli articoli e delle pubblicazioni per la replica di tipo merge, con una riga per ogni modifica apportata a una topologia di replica di tipo merge. Nella tabella sono inoltre archiviate informazioni sulle impostazioni iniziali delle proprietà. Questa tabella è archiviata nei database di pubblicazione e di sottoscrizione.  
   

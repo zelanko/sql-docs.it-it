@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b5d39e560b3137daf711ea49794fe6a2a0499743
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 1a0b9cf43331e45d4aa1253fe5ad4b90d0bbea92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529723"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775458"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery e tipizzazione statica
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], XQuery è un linguaggio tipizzato in modo statico, ovvero genera errori di tipo durante la compilazione della query quando un'espressione restituisce un valore con una cardinalità o un tipo non accettato da una funzione o da un operatore specifico. Il controllo dei tipi statici può inoltre rilevare se un'espressione di percorso in un documento XML tipizzato è stata tipizzata in modo non corretto. Il compilatore XQuery applica innanzitutto la fase di normalizzazione che aggiunge le operazioni implicite, ad esempio l'atomizzazione, e quindi esegue l'inferenza e il controllo dei tipi statici.  
   

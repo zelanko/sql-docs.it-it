@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 045ee36f-5bf0-4626-b5ee-e84db06ce16f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 753375d139a03d5c0cec20dc994d83399e04f094
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c6ed9d4a05759495090a35224e5aa5ef805e520f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037398"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783695"
 ---
 # <a name="sysmail_stop_sp-transact-sql"></a>sysmail_stop_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Arresta l'esecuzione di Posta elettronica database mediante l'arresto degli oggetti di [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilizzati dal programma esterno.  
   
@@ -51,7 +51,7 @@ sysmail_stop_sp
   
  Se le code vengono arrestate, il programma esterno Posta elettronica database non elabora i messaggi. Questa stored procedure consente di arrestare l'esecuzione di Posta elettronica database per motivi di manutenzione o risoluzione dei problemi.  
   
- Per avviare Posta elettronica database, utilizzare **sysmail_start_sp**. Si noti che **sp_send_dbmail** accetta comunque la posta [!INCLUDE[ssSB](../../includes/sssb-md.md)] elettronica quando gli oggetti vengono arrestati.  
+ Per avviare Posta elettronica database, utilizzare **sysmail_start_sp**. Si noti che **sp_send_dbmail** accetta comunque la posta elettronica quando gli [!INCLUDE[ssSB](../../includes/sssb-md.md)] oggetti vengono arrestati.  
   
 > [!NOTE]  
 >  Questa stored procedure arresta solo le code di Posta elettronica database e non disattiva il recapito dei messaggi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] nel database. Questa stored procedure non disabilita le stored procedure estese di Posta elettronica database per ridurre la superficie di attacco. Per disabilitare le stored procedure estese, vedere l' [opzione posta elettronica database XPS](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) del sistema **sp_configure** stored procedure.  

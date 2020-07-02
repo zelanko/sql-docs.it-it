@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5d56d780-ee40-4afc-9c2a-d1723d86e430
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36dcdf9fbe003daa110c38a9e3f10650af422075
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2e0c7be221847924f48523526793fcd3d4664477
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827231"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784838"
 ---
 # <a name="msmerge_partition_groups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabella **MSmerge_partition_groups** archivia una riga per ogni partizione pre-calcolata in un database specifico. Oltre alle colonne elencate, a questa tabella viene aggiunta una colonna per ogni funzione utilizzata in un filtro di riga con parametri. Se, ad esempio, un filtro utilizza la funzione [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) , viene aggiunta una colonna denominata **HOST_NAME_FN** alla tabella. Viene archiviata una riga per ogni set univoco di valori di funzione sincronizzati con il server di pubblicazione corrente. Due o più Sottoscrittori che eseguono la sincronizzazione in base allo stesso valore per tutte le funzioni dovranno condividere la stessa riga della tabella e pertanto lo stesso ID di partizione. La tabella è archiviata nel database di pubblicazione.  
   

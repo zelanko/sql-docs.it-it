@@ -18,15 +18,15 @@ ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3d09d1f577c9af59ea085eefbf51e9a70558a36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a58b41665d1b10a1e9f9868796b98b80e43e92d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782879"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774298"
 ---
 # <a name="bcp_control"></a>bcp_control
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Modifica le impostazioni predefinite per vari parametri di controllo per una copia bulk tra un file e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -56,7 +56,7 @@ RETCODE bcp_control (
  BCPDELAYREADFMT  
  Un valore booleano, se impostato su true, causerà la lettura [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) in fase di esecuzione. Se false (impostazione predefinita), bcp_readfmt leggerà immediatamente il file di formato. Si verificherà un errore di sequenza se BCPDELAYREADFMT è true e si chiama bcp_columns o bcp_setcolfmt.  
   
- Si verificherà un errore di sequenza anche se `bcp_control(hdbc,` si`, (void *)FALSE)` chiama BCPDELAYREADFMT `bcp_control(hdbc,` dopo`, (void *)TRUE)` avere chiamato BCPDELAYREADFMT e bcp_writefmt.  
+ Si verificherà un errore di sequenza anche se si chiama `bcp_control(hdbc,` BCPDELAYREADFMT `, (void *)FALSE)` dopo avere chiamato `bcp_control(hdbc,` BCPDELAYREADFMT `, (void *)TRUE)` e bcp_writefmt.  
   
  Per altre informazioni, vedere [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   
@@ -70,7 +70,7 @@ RETCODE bcp_control (
  BCPFILE_RAW: i dati contenuti nel file utilizzano la tabella codici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  BCPFILEFMT  
- Numero di versione del formato del file di dati. Può [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]essere 80 (), 90 ( [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) o 120 ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 è il valore predefinito. Questo valore è utile per l'esportazione e l'importazione di dati in formati supportati da una versione precedente del server. Ad esempio, per importare i dati ottenuti da una colonna di testo di [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] un server in una colonna **varchar (max)** di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] un server o versione successiva, è necessario specificare 80. Analogamente, se si specifica 80 quando si esportano dati da una colonna **varchar (max)** , questo verrà salvato esattamente come le [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] colonne di testo vengono salvate nel formato e possono essere importate in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] una colonna di testo di un server.  
+ Numero di versione del formato del file di dati. Può essere 80 ( [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ), 90 ( [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ), 100 ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ), 110 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ) o 120 ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ). 120 è il valore predefinito. Questo valore è utile per l'esportazione e l'importazione di dati in formati supportati da una versione precedente del server. Ad esempio, per importare i dati ottenuti da una colonna di testo di un [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server in una colonna **varchar (max)** di un [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Server o versione successiva, è necessario specificare 80. Analogamente, se si specifica 80 quando si esportano dati da una colonna **varchar (max)** , questo verrà salvato esattamente come le colonne di testo vengono salvate nel [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] formato e possono essere importate in una colonna di testo di un [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Server.  
   
  BCPFIRST  
  Indica la prima riga di dati del file o della tabella da copiare. Il valore predefinito è 1. Un valore minore di 1 reimposta l'opzione sul valore predefinito.  
@@ -94,10 +94,10 @@ RETCODE bcp_control (
  *iValue* contiene un puntatore alla stringa di caratteri SQLTCHAR. Tale stringa specifica hint di elaborazione della copia bulk di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un'istruzione Transact-SQL che restituisce un set di risultati. Se viene specificata un'istruzione Transact-SQL che restituisce più set di risultati, vengono ignorati tutti i set di risultati successivi al primo. Per ulteriori informazioni sugli hint di elaborazione per la copia bulk, vedere [utilità bcp](../../tools/bcp-utility.md).  
   
  BCPKEEPIDENTITY  
- Quando *iValue* è true, specifica che le funzioni di copia bulk inseriscono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i valori dei dati forniti per le colonne definite con un vincolo Identity. Il file di input deve fornire valori per le colonne di identità. Se questa impostazione non è disponibile, per le righe inserite vengono generati nuovi valori Identity. Eventuali dati presenti nel file per le colonne di identità vengono ignorati.  
+ Quando *iValue* è true, specifica che le funzioni di copia bulk inseriscono i valori dei dati forniti per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le colonne definite con un vincolo Identity. Il file di input deve fornire valori per le colonne di identità. Se questa impostazione non è disponibile, per le righe inserite vengono generati nuovi valori Identity. Eventuali dati presenti nel file per le colonne di identità vengono ignorati.  
   
  BCPKEEPNULLS  
- Specifica se i valori di dati vuoti nel file verranno convertiti in valori NULL nella tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando *iValue* è true, i valori vuoti verranno convertiti in valori null [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella tabella. L'impostazione predefinita prevede che i valori vuoti vengano convertiti in un valore predefinito, se presente, per la colonna nella tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Specifica se i valori di dati vuoti nel file verranno convertiti in valori NULL nella tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando *iValue* è true, i valori vuoti verranno convertiti in valori null nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella. L'impostazione predefinita prevede che i valori vuoti vengano convertiti in un valore predefinito, se presente, per la colonna nella tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  BCPLAST  
  Indica l'ultima riga da copiare. Il valore predefinito prevede che vengano copiate tutte le righe. Un valore inferiore a 1 reimposta l'opzione sul valore predefinito.  
@@ -129,7 +129,7 @@ RETCODE bcp_control (
  *iValue*  
  Valore per l'oggetto *eOption*specificato. *iValue* è un valore integer (LONGLONG) di cui viene eseguito il cast a un puntatore void per consentire l'espansione futura a valori di bit 64.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SUCCEED o FAIL.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -137,7 +137,7 @@ RETCODE bcp_control (
   
  Questa funzione viene utilizzata anche per specificare l'istruzione SELECT quando si esegue una copia bulk del set di risultati di un'istruzione SELECT da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Impostare *eOption* su BCPHINTS e impostare *iValue* su un puntatore a una stringa SQLTCHAR che contiene l'istruzione SELECT.  
   
- Questi parametri di controllo sono significativi solo in caso di copia tra un file utente e una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le impostazioni dei parametri di controllo non hanno effetto sulle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] righe copiate in con [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
+ Questi parametri di controllo sono significativi solo in caso di copia tra un file utente e una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le impostazioni dei parametri di controllo non hanno effetto sulle righe copiate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
   
 ## <a name="example"></a>Esempio  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 044b5e79ba558dd5bb38331d9b2a07410a3a50de
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 6524de89a96f64d2eed6a9f01b38b492ffb0fc04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84294008"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783737"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Acquisisce dati diagnostici e informazioni di integrità su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per rilevare potenziali errori. La procedura viene eseguita in modalità di ripetizione e i risultati vengono inviati periodicamente. Può essere richiamata da una connessione normale o di applicazione livello dati.  
   
@@ -60,7 +60,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |------------|---------------|-----------------|  
 |**create_time**|**datetime**|Indica il timestamp della creazione della riga. Ogni riga di un singolo set di righe dispone dello stesso timestamp.|  
 |**component_type**|**sysname**|Indica se la riga contiene informazioni per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente a livello di istanza o per un gruppo di disponibilità always on:<br /><br /> instance<br /><br /> Always On: AvailabilityGroup|  
-|**component_name**|**sysname**|Indica il nome del componente o il nome del gruppo di disponibilità:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventi<br /><br /> *\<name of the availability group>*|  
+|**component_name**|**sysname**|Indica il nome del componente o il nome del gruppo di disponibilità:<br /><br /> sistema<br /><br /> Risorsa<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventi<br /><br /> *\<name of the availability group>*|  
 |**state**|**int**|Indica lo stato di integrità del componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Descrive la colonna contenente gli stati. Le descrizioni che corrispondono ai valori nella colonna contenente gli stati sono:<br /><br /> 0: Sconosciuto<br /><br /> 1: Pulisci<br /><br /> 2: avviso<br /><br /> 3: errore|  
 |**data**|**varchar (max)**|Indica dati specifici del componente.|  
@@ -79,7 +79,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **\<name of the availability group>**: Raccoglie i dati per il gruppo di disponibilità specificato (se component_type = "Always On: AvailabilityGroup").  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
 Da una prospettiva di errore, i componenti di elaborazione di query, risorsa e sistema verranno utilizzati per il rilevamento dell'errore mentre i componenti di eventi e io_subsystem verranno utilizzati solo per gli scopi diagnostici.  
   
 Nella tabella seguente viene eseguito il mapping dei componenti agli stati di integrità associati.  
@@ -87,7 +87,7 @@ Nella tabella seguente viene eseguito il mapping dei componenti agli stati di in
 |Componenti|Pulito (1)|Avviso (2)|Errore (3)|Sconosciuto (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |sistema|x|x|x||  
-|resource|x|x|x||  
+|Risorsa|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
 |eventi||||x|  
@@ -100,7 +100,7 @@ La (x) in ogni riga rappresenta gli stati di integrità validi per il componente
 ## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
 È consigliabile utilizzare le sessioni estese per acquisire le informazioni di integrità e salvarle in un file che si trova fuori da SQL Server. Pertanto, è ancora possibile accedervi se si verifica un errore. Nell'esempio seguente viene salvato l'output da una sessione eventi in un file:  
 ```sql  
 CREATE EVENT SESSION [diag]  

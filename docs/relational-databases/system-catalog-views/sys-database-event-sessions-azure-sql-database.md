@@ -9,15 +9,15 @@ ms.assetid: 02c2cd71-d35e-4d4c-b844-92b240f768f4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 7384cf9bfcf08f307a4e81cb0cdebe78e8011ea3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2246ea5cb32aed2c49aa5d7a609362c9dffd1d73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823534"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785024"
 ---
 # <a name="sysdatabase_event_sessions-azure-sql-database"></a>sys.database_event_sessions (database SQL di Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Elenca tutte le definizioni di sessione eventi presenti nel database corrente, in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .  
   

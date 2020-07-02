@@ -14,15 +14,15 @@ ms.assetid: 77b6c15c-9cf7-4019-b3f0-3d27d23ef656
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f3fa2b053c41facba7d608b2352772abd3ff103
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf32a7f0bc0bcdbe5dc1d45a34f71d7c13fdc7d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291744"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783466"
 ---
 # <a name="sqltables"></a>SQLTables
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   SQLTables può essere eseguito su un cursore del server statico. Il tentativo di eseguire SQLTables su un cursore aggiornabile (dinamico o keyset) restituirà SQL_SUCCESS_WITH_INFO indicante che il tipo di cursore è stato modificato.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "81291744"
   
  Per segnalare i cataloghi, gli schemi e i tipi di tabella disponibili, SQLTables utilizza in modo speciale le stringhe vuote (puntatori a byte di lunghezza zero). Le stringhe vuote non sono valori predefiniti (puntatori NULL).  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client supporta la segnalazione di informazioni per le tabelle nei server collegati accettando un nome in due parti per il parametro *catalogname* : *linked_server_name. catalog_name*.  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client supporta la segnalazione di informazioni per le tabelle nei server collegati accettando un nome in due parti per il parametro *CatalogName* : *linked_server_name. catalog_name*.  
   
  SQLTables restituisce informazioni su tutte le tabelle i cui nomi corrispondono a *TableName* e sono di proprietà dell'utente corrente.  
   

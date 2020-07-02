@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 776e7b0c713e36f0d9f67112592dff6d24a46fbd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 933774af820c80abb70c5fbdad0441053533b451
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810290"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783705"
 ---
 # <a name="sp_serveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Imposta le opzioni per server remoti e server collegati.  
   
@@ -58,7 +58,7 @@ sp_serveroption [@server = ] 'server'
 |**timeout query**|Timeout per le query eseguite nel server collegato.<br /><br /> Se è **0**, usare il valore predefinito **sp_configure** .|  
 |**RPC**|Abilita l'esecuzione di chiamate RPC dal server specificato.|  
 |**RPC in uscita**|Abilita l'esecuzione di chiamate RPC al server specificato.|  
-|**Sub**|Sottoscrittore.|  
+|**sub**|Sottoscrittore.|  
 |**sistema**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Usa regole di confronto remote**|Determina se vengono utilizzate le regole di confronto di una colonna remota o di un server locale.<br /><br /> Se **true**, le regole di confronto delle colonne remote vengono utilizzate per le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origini dati e le regole di confronto specificate nel **nome delle regole di confronto** vengono utilizzate per le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origini dati non.<br /><br /> Se **false**, le query distribuite utilizzeranno sempre le regole di confronto predefinite del server locale, mentre il **nome delle regole** di confronto e le regole di confronto delle colonne remote vengono ignorati. Il valore predefinito è **false**. Il valore **false** è compatibile con la semantica delle regole di confronto utilizzata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.|  
 |**remote proc transaction promotion**|Questa opzione consente di proteggere le azioni di una procedura da server a server tramite una transazione MS DTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator). Quando questa opzione è impostata su TRUE (o ON), la chiamata di una stored procedure remota comporta l'avvio di una transazione distribuita e l'integrazione della transazione in MS DTC. L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene chiamata la stored procedure remota corrisponde all'origine della transazione e ne controlla il completamento. Quando per la connessione viene successivamente eseguita un'istruzione COMMIT TRANSACTION o ROLLBACK TRANSACTION, l'istanza di controllo richiede che il completamento della transazione distribuita nei computer interessati venga gestito da MS DTC.<br /><br /> Dopo l'avvio di una transazione distribuita [!INCLUDE[tsql](../../includes/tsql-md.md)], è possibile chiamare stored procedure remote in altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definite come server collegati. Tutti i server collegati sono integrati nella transazione distribuita [!INCLUDE[tsql](../../includes/tsql-md.md)]. MS DTC garantisce inoltre che la transazione venga completata in ogni server collegato.<br /><br /> Se questa opzione è impostata su FALSE (o OFF), una transazione locale non sarà promossa a transazione distribuita durante una chiamata di procedura remota in un server collegato.<br /><br /> Se prima di effettuare una chiamata di una procedura da server a server la transazione è già una transazione distribuita, questa opzione non ha alcun effetto. La chiamata di procedura nel server collegato verrà eseguita nella stessa transazione distribuita.<br /><br /> Se prima di effettuare una chiamata di una procedura da server a server non vi sono transazioni attive nella connessione, questa opzione non ha alcun effetto. La procedura viene quindi eseguita nel server collegato senza transazioni attive.<br /><br /> Il valore predefinito per questa opzione è TRUE (o ON).|  
@@ -70,13 +70,13 @@ sp_serveroption [@server = ] 'server'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se l'opzione relativa alla **compatibilità delle regole di confronto** è impostata su true, il nome delle regole di **confronto** verrà impostato automaticamente su null. Se il **nome delle regole di confronto** è impostato su un valore non null, le regole di **confronto compatibili** automaticamente verranno impostate su false.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY LINKED SERVER per il server.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene configurata la compatibilità delle regole di confronto tra un server collegato corrispondente a un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `SEATTLE3`, e l'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```sql  

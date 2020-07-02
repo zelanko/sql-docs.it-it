@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b28d7e40-5fd8-4aad-a2a6-b4131d8152b2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d38a9cfd11f3f48c2e5827f58e525deacab56c60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62661cc17950f32fb55733cb32c93a3c97a70a18
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73657567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775698"
 ---
 # <a name="protocolname-property-servernetworkprotocolproperty-class"></a>Proprietà ProtocolName (classe ServerNetworkProtocolProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Ottiene il nome del protocollo a cui appartiene la proprietà a cui si fa riferimento.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,8 +36,8 @@ object.PropertyName [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
- Oggetto della [classe ServerNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) che rappresenta un attributo del protocollo di rete nell'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ *object*  
+ Oggetto della [classe ServerNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) che rappresenta un attributo del protocollo di rete nell'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore string che specifica il nome del protocollo a cui appartiene la proprietà.  

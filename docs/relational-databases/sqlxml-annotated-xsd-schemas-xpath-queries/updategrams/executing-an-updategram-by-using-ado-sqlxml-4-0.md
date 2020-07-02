@@ -16,20 +16,20 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7392ec41759116b350047302cfe770da006e6c66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2da024366da5789631aee147ab25d89a5103b40e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388731"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785050"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Esecuzione di un updategram mediante ADO (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Questa applicazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic utilizza ADO per stabilire una connessione a un'istanza di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed eseguire un updategram. L'updategram aggiorna il cognome di un dipendente specifico. In questo esempio viene utilizzato il database di esempio AdventureWorks.  
   
  In questa applicazione di esempio:  
   
--   Oggetto **conn** (**ADODB. Connessione**) stabilisce una connessione a un'istanza in esecuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di in un computer server specifico.  
+-   Oggetto **conn** (**ADODB. Connessione**) stabilisce una connessione a un'istanza in esecuzione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un computer server specifico.  
   
 -   L'oggetto **cmd** (**ADODB. Command**) viene eseguito sulla connessione stabilita.  
   

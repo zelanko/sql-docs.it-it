@@ -30,15 +30,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58155c9ec390259410538e9716dad87146acda2a
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 15274c3b46ac7b0dfb3e9f43fad0dd1174f5fbbf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215713"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775758"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Definizione di relazioni tramite sql:relationship (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Gli elementi in un documento XML possono essere correlati. È possibile nidificare gerarchicamente gli elementi e specificare relazioni ID, IDREF o IDREFS tra gli elementi.  
   
  In uno schema XSD, ad esempio, un **\<Customer>** elemento contiene **\<Order>** elementi figlio. Quando viene eseguito il mapping dello schema al database AdventureWorks, l'elemento viene mappato **\<Customer>** alla tabella Sales. Customer e l' **\<Order>** elemento viene mappato alla tabella Sales. SalesOrderHeader. Queste tabelle sottostanti, Sales.Customer e Sales.SalesOrderHeader, sono correlate in quanto i clienti effettuano ordini. L'elemento CustomerID nella tabella Sales.SalesOrderHeader è una chiave esterna che fa riferimento alla chiave primaria CustomerID nella tabella Sales.Customer. È possibile stabilire queste relazioni tra gli elementi dello schema di mapping tramite l'annotazione **SQL: Relationship** .  
@@ -75,10 +75,10 @@ ms.locfileid: "84215713"
   
  Per produrre una nidificazione appropriata nel risultato, è consigliabile specificare **SQL: key-fields** in tutti gli schemi.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. Specifica dell'annotazione sql:relationship in un elemento  
+### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>R. Specifica dell'annotazione sql:relationship in un elemento  
  Nello schema XSD con annotazioni seguente sono inclusi **\<Customer>** **\<Order>** gli elementi e. L' **\<Order>** elemento è un elemento figlio dell' **\<Customer>** elemento.  
   
  Nello schema l'annotazione **SQL: Relationship** è specificata nell' **\<Order>** elemento figlio. La relazione stessa è definita nell' **\<xsd:appinfo>** elemento.  

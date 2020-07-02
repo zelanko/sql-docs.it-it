@@ -22,15 +22,15 @@ ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 020d75e780dcc2036b70348fa57cf1007ce0e401
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6d46a0e06f96f646ebd68e383ad26f99e309082
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037326"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783643"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Stored procedure di sistema (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] molte attività amministrative e informative possono essere eseguite mediante le stored procedure di sistema. Le stored procedure di sistema sono raggruppate in categorie, descritte nella tabella seguente.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68037326"
 >  Se non specificato diversamente, tutte le stored procedure di sistema restituiscono il valore 0 per indicare esito positivo. Per indicare esito negativo, viene restituito un valore diverso da zero.  
   
 ## <a name="api-system-stored-procedures"></a>Stored procedure di sistema (API)  
- Gli utenti che eseguono [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per applicazioni ADO, OLE DB e ODBC possono notare che queste applicazioni utilizzano stored procedure di sistema che non vengono trattate nella Guida di riferimento a [!INCLUDE[tsql](../../includes/tsql-md.md)]. Queste stored procedure vengono utilizzate dal [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB di Native client e dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client per implementare la funzionalità di un'API di database. Rappresentano il meccanismo con cui il provider o il driver comunica le richieste degli utenti a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Devono essere utilizzate solo internamente dal provider o dal driver. La chiamata in modo esplicito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]da un'applicazione basata su non è supportata.  
+ Gli utenti che eseguono [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per applicazioni ADO, OLE DB e ODBC possono notare che queste applicazioni utilizzano stored procedure di sistema che non vengono trattate nella Guida di riferimento a [!INCLUDE[tsql](../../includes/tsql-md.md)]. Queste stored procedure vengono utilizzate dal [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB di Native client e dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client per implementare la funzionalità di un'API di database. Rappresentano il meccanismo con cui il provider o il driver comunica le richieste degli utenti a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Devono essere utilizzate solo internamente dal provider o dal driver. La chiamata in modo esplicito da un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applicazione basata su non è supportata.  
   
  Le stored procedure sp_createorphan e sp_droporphans vengono utilizzate per l'elaborazione di tipo **ntext**, **Text**e **Image** di ODBC.  
   

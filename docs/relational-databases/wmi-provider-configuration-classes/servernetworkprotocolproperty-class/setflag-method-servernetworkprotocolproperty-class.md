@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 95288931-8eb1-4477-ad80-619cf7073e61
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b341456d2135206083e632b6bbf6dd97f12ca50
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 853b9f401d08692efe737a66107ebf2e27150f5e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658970"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775690"
 ---
 # <a name="setflag-method-servernetworkprotocolproperty-class"></a>Metodo SetFlag (classe ServerNetworkProtocolProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Imposta il flag della proprietà a cui si fa riferimento.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,8 +36,8 @@ object.SetFlag(BoolValue)
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
- Oggetto della [classe ServerNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) che rappresenta un attributo del protocollo di rete nell'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ *object*  
+ Oggetto della [classe ServerNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) che rappresenta un attributo del protocollo di rete nell'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Parametri  
   
