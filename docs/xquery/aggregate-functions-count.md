@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a359251dbb2bd2a2685e5d9fb91d5c1603950c25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1b56d549d00fb0b76c530a5274adb6a9c82c80c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67986310"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643716"
 ---
 # <a name="aggregate-functions---count"></a>Funzioni di aggregazione - count
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Restituisce il numero di elementi contenuti nella sequenza specificata da *$arg*.  
   
@@ -44,7 +44,7 @@ fn:count($arg as item()*) as xs:integer
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
-### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. Utilizzo della funzione XQuery count() per il conteggio del numero di centri di lavorazione nella produzione di un modello di prodotto  
+### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>R. Utilizzo della funzione XQuery count() per il conteggio del numero di centri di lavorazione nella produzione di un modello di prodotto  
  La query seguente conta il numero di centri di lavorazione nel processo di produzione di un modello di prodotto (ProductModelID=7).  
   
 ```  
@@ -64,7 +64,7 @@ WHERE Production.ProductModel.ProductModelID=7
   
 -   La parola chiave **namespace** nel [prologo XQuery](../xquery/modules-and-prologs-xquery-prolog.md) definisce un prefisso dello spazio dei nomi. Il prefisso viene quindi utilizzato nel corpo della query XQuery.  
   
--   La query costruisce il codice XML che include `NoOfWorkStations` l'elemento <>.  
+-   La query costruisce il codice XML che include l' `NoOfWorkStations` elemento <>.  
   
 -   La funzione **Count ()** nel corpo della query XQuery conta il numero di `Location` elementi <>.  
   

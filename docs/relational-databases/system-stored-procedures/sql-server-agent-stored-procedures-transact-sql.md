@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9c8de925-928b-460c-9455-779c4c37b966
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c393ccfc3225136996be33efe31a3d1d6bdbfd9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 00347b61a88092b8d95e2851e132ef69aa5edf93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827446"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626432"
 ---
 # <a name="sql-server-agent-stored-procedures-transact-sql"></a>Stored procedure di SQL Server Agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le seguenti stored procedure di sistema utilizzate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per gestire le attività pianificate e guidate dagli eventi.  
   

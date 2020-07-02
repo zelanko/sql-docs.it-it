@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 52afba46b09552af62ba9f08c34e1749689f41cc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e67e43a7725e7b7ae7ef76d8b48c26a7038c86d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809975"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633807"
 ---
 # <a name="sp_syscollector_start_collection_set-transact-sql"></a>sp_syscollector_start_collection_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Avvia un set di raccolta se l'agente di raccolta è già abilitato e il set di raccolta non è in esecuzione. Se l'agente di raccolta non è abilitato, abilitarlo eseguendo [sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md) e quindi usare questa stored procedure per avviare un set di raccolta.  
 
@@ -50,7 +50,7 @@ sp_syscollector_start_collection_set
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  È necessario eseguire sp_syscollector_create_collection_set nel contesto del database di sistema msdb e SQL Server Agent deve essere abilitato.  
   
  Questa procedura ha esito negativo se viene eseguita in un set di raccolta che non include una pianificazione. Se il set di raccolta non dispone di una pianificazione, ad esempio perché la relativa modalità di raccolta è impostata su non memorizzato nella cache, utilizzare la [sp_syscollector_run_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md) stored procedure per avviare il set di raccolta.  
@@ -62,7 +62,7 @@ sp_syscollector_start_collection_set
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa procedura, è necessaria l'appartenenza al ruolo predefinito del database dc_operator. Se al set di raccolta non è associato un account proxy, è richiesta l'appartenenza al ruolo predefinito del server sysadmin.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene avviato un set di raccolta utilizzando il relativo identificatore.  
   
 ```  

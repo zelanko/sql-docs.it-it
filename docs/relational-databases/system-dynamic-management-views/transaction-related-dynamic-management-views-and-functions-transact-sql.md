@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4db9f715-995e-4e71-9544-26eb59e9fae0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ba61ecbaa985e81260bb443f875858248400e2dd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e6812cec628c1b085b5090e35dbdc36aa92e13fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828973"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647924"
 ---
 # <a name="transaction-related-dynamic-management-views-and-functions-transact-sql"></a>Funzioni e viste a gestione dinamica relative alle transazioni (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   In questa sezione sono contenuti gli oggetti a gestione dinamica seguenti.  
   

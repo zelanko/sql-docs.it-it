@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1cb929158a6d17a7a7c16e5e303c403a2c03112
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e6accbb03bf4ed06f84f67263e89ab9c6bfa7654
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831798"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646050"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Recupera un buffer di una o più righe dal database. Il gruppo di righe in questo buffer viene denominato *buffer di recupero*del cursore. sp_cursorfetch viene richiamato specificando ID = 7 in un pacchetto del flusso TDS (Tabular Data Stream).  
   
@@ -46,7 +46,7 @@ sp_cursorfetch cursor
  *FetchType*  
  Specifica il buffer del cursore da recuperare. *FetchType* è un parametro facoltativo che richiede uno dei valori di input Integer seguenti.  
   
-|valore|Nome|Description|  
+|valore|Nome|Descrizione|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|Recupera il primo buffer delle righe *nrows* . Se *nrows* è uguale a 0, il cursore viene posizionato prima del set di risultati e non viene restituita alcuna riga.|  
 |0x0002|NEXT|Recupera il buffer successivo di righe *nrows* .|  
@@ -81,7 +81,7 @@ sp_cursorfetch cursor
 > [!NOTE]  
 >  : Se non vengono restituite righe, il contenuto del buffer rimane inalterato.  
   
-|*\<>rowNum*|Impostare su|  
+|*\<rownum>*|Impostare su|  
 |------------------|------------|  
 |Se non aperto|0|  
 |Se posizionato prima del set di risultati|0|  
@@ -90,7 +90,7 @@ sp_cursorfetch cursor
 |Peri cursori DYNAMIC|1|  
 |Per ABSOLUTE|-1 restituisce l'ultima riga di un set.<br /><br /> -2 restituisce la penultima riga di un set e così via.<br /><br /> Nota: se è necessario recuperare più di una riga in questo caso, vengono restituite le ultime due righe del set di risultati.|  
   
-|*\<>nrows*|Impostare su|  
+|*\<nrows>*|Impostare su|  
 |-----------------|------------|  
 |Se non aperto|0|  
 |Per i cursori STATIC e KEYSET|In genere la dimensione del keyset corrente.<br /><br /> **-m** se il cursore si trova in una creazione asincrona con *m* righe trovate fino a questo punto.|  

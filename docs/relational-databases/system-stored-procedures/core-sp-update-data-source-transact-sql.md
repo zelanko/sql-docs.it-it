@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 207b27a4d7006f8181cbfe7a6cb6e072ee741d82
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 49859c498b0c2cb8550d7153334252a35d5d0e42
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829668"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646868"
 ---
 # <a name="coresp_update_data_source-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Aggiorna una riga esistente o inserisce una nuova riga nella tabella core.source_info_internal del data warehouse di gestione. Questa routine viene chiamata dal componente di runtime dell'agente di raccolta dati tutte le volte che un pacchetto di caricamento avvia il caricamento dei dati nel data warehouse di gestione.  
   
@@ -67,7 +67,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Ogni volta che un pacchetto di caricamento inizia a caricare i dati nel data warehouse di gestione, il componente di runtime dell'agente di raccolta dati chiama core.sp_update_data_source. La tabella core.source_info_internal viene aggiornata se dopo l'ultimo caricamento si è verificata una delle modifiche seguenti:  
   
 -   È stato aggiunto un nuovo set di raccolta.  
@@ -77,7 +77,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del database di **mdw_writer** (con autorizzazione Execute).  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene aggiornata l'origine dati (in questo caso il set di raccolta Utilizzo disco), viene impostato il numero di giorni che mancano alla scadenza e viene restituito l'identificatore per l'origine. In questo esempio viene utilizzata l'istanza predefinita.  
   
 ```  

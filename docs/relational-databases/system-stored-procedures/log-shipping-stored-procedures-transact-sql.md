@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 39554188-20fe-42ec-a53f-35e1dc98c274
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f93be0c72dcd5e8f555cd6610ccf3caeb64790c2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2eb9fef4642702b3a2603f444baa442f30ac1b5d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830410"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634781"
 ---
 # <a name="log-shipping-stored-procedures-transact-sql"></a>Stored procedure per il log shipping (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e versioni successive supportano le seguenti stored procedure di sistema utilizzate per configurare, modificare e monitorare le configurazioni per il log shipping.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "82830410"
 |[sp_delete_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md)||  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul &#40;di log shipping SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

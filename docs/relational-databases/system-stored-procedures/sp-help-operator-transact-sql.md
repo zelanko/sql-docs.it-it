@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c41a8f1bb7e1083bdb80eca875331e0ce8c92ab1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 79a123faab9b587d56d957a3f9e1765e8619f97d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820440"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634305"
 ---
 # <a name="sp_help_operator-transact-sql"></a>sp_help_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni sugli operatori definiti per il server.  
   
@@ -57,7 +57,7 @@ sp_help_operator
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Numero di identificazione dell'operatore.|  
-|**name**|**sysname**|Nome dell'operatore.|  
+|**nome**|**sysname**|Nome dell'operatore.|  
 |**abilitato**|**tinyint**|Specifica se l'operatore è disponibile per la ricezione di notifiche:<br /><br /> **1** = Sì<br /><br /> **0** = No|  
 |**email_address**|**nvarchar (100)**|Indirizzo di posta elettronica dell'operatore.|  
 |**last_email_date**|**int**|Data dell'ultima notifica dell'operatore tramite posta elettronica.|  
@@ -91,7 +91,7 @@ sp_help_operator
   
  Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite informazioni sull'operatore `François Ajenstat`.  
   
 ```  

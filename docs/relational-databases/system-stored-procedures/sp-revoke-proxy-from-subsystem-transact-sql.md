@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8901c46c5654b6c633e03d62e8eaec2a3e903e02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a6654fb7bd83f3c247c972c3c044af7b0a2d932
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022275"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645438"
 ---
 # <a name="sp_revoke_proxy_from_subsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Revoca l'accesso a un sottosistema da un proxy.  
   
@@ -49,9 +49,9 @@ sp_revoke_proxy_from_subsystem
   
 `[ @subsystem_id = ] id`Numero ID del sottosistema a cui revocare l'accesso. Il *subsystem_id* è di **tipo int**e il valore predefinito è null. È necessario specificare *subsystem_id* o *subsystem_name* , ma non è possibile specificarli entrambi. Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
-|**2**|Script ActiveX<br /><br /> ** \* Importante \* \* ** Il sottosistema di scripting ActiveX verrà rimosso da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
+|**2**|Script ActiveX<br /><br /> Importante il sottosistema di scripting ActiveX verrà rimosso da Agent in una versione futura di ** \* . \* \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
 |**3**|Sistema operativo (CmdExec)|  
 |**4**|Agente snapshot repliche|  
 |**5**|Agente lettura log repliche|  
@@ -65,7 +65,7 @@ sp_revoke_proxy_from_subsystem
   
 `[ @subsystem_name = ] 'subsystem_name'`Nome del sottosistema a cui revocare l'accesso. Il *subsystem_name* è di **tipo sysname**e il valore predefinito è null. È necessario specificare *subsystem_id* o *subsystem_name* , ma non è possibile specificarli entrambi. Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |ActiveScripting|Script ActiveX|  
 |CmdExec|Sistema operativo (CmdExec)|  
@@ -83,7 +83,7 @@ sp_revoke_proxy_from_subsystem
  La revoca dell'accesso a un sottosistema non modifica le autorizzazione per l'entità specificata nel proxy.  
   
 > [!NOTE]  
->  Per determinare i passaggi del processo che fanno riferimento a un proxy, fare clic con il pulsante destro del [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]mouse sul nodo **proxy** in **SQL Server Agent** in Microsoft, quindi scegliere **Proprietà**. Nella finestra di dialogo **Proprietà account proxy** selezionare la pagina **riferimenti** per visualizzare tutti i passaggi del processo che fanno riferimento a questo proxy.  
+>  Per determinare i passaggi del processo che fanno riferimento a un proxy, fare clic con il pulsante destro del mouse sul nodo **proxy** in **SQL Server Agent** in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , quindi scegliere **Proprietà**. Nella finestra di dialogo **Proprietà account proxy** selezionare la pagina **riferimenti** per visualizzare tutti i passaggi del processo che fanno riferimento a questo proxy.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_revoke_proxy_from_subsystem**.  

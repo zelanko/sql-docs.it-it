@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 885e29f8abbeb185017bc2472566e41596a56900
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e228f2a2363cab777c2b7ae44185e3c215e8f93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68116766"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633695"
 ---
 # <a name="xp_enumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce un elenco di gruppi locali di Microsoft Windows o di gruppi globali definiti nel dominio Windows specificato.  
   
@@ -53,7 +53,7 @@ xp_enumgroups [ 'domain_name' ]
 |**Commento**|**sysname**|Descrizione del gruppo di Windows fornita da Windows.|  
   
 ## <a name="remarks"></a>Osservazioni  
- Se *Domain_name* è il nome del computer basato su Windows su cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un'istanza di o se non è specificato alcun nome di dominio, **xp_enumgroups** enumera i gruppi locali dal computer in cui è [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in esecuzione.  
+ Se *Domain_name* è il nome del computer basato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su Windows su cui è in esecuzione un'istanza di o se non è specificato alcun nome di dominio, **xp_enumgroups** enumera i gruppi locali dal computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Impossibile utilizzare **xp_enumgroups** quando un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione in Windows 98.  
   

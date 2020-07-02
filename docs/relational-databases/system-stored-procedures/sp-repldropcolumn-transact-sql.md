@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf3aefc677f3eca48b26faf51eb92243e3806f10
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 718309e24e9ad7936dfc359e6db6ac529c926345
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815417"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646098"
 ---
 # <a name="sp_repldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Elimina una colonna da un articolo di tabella esistente pubblicato. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   

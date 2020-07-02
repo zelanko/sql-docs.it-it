@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 46193a7fa201dedc9f3936c727ac45d221cdd9da
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3a06adaa2f533094b7527dcb1fb7fb7ece8cf8d4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828783"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85644897"
 ---
 # <a name="sp_syscollector_set_cache_directory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Specifica la directory in cui vengono archiviati i dati raccolti prima di essere caricati nel data warehouse di gestione.  
   
@@ -45,7 +45,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  È necessario disabilitare l'agente di raccolta dati prima di modificare la configurazione della directory della cache. La stored procedure ha esito negativo se l'agente di raccolta dati è abilitato. Per altre informazioni, vedere [abilitare o disabilitare la raccolta di dati](../../relational-databases/data-collection/enable-or-disable-data-collection.md)e [gestire la raccolta dei dati](../../relational-databases/data-collection/manage-data-collection.md).  
   
  Non è necessario che la directory specificata esista al momento dell'esecuzione del sp_syscollector_set_cache_directory. Tuttavia, i dati non possono essere memorizzati nella cache e caricati fino a quando non viene creata la directory. È consigliabile pertanto creare la directory prima di eseguire questa stored procedure.  
@@ -53,7 +53,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa procedura, è richiesta l'appartenenza al ruolo predefinito del database dc_admin (con autorizzazione EXECUTE) .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene disabilitato l'agente di raccolta dati, viene impostata la directory della cache per l'agente di raccolta dati su `D:\tempdata` e quindi viene abilitato l'agente di raccolta dati.  
   
 ```sql  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac86bea128939be70a3931183f23d4fdffa0d8c3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 12cfa8fa0ebde7fe2cb6d1a6e9402a0466a4895f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829016"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648026"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Segnala i consumer di memoria a livello di sistema per [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. La memoria per questi consumer deriva dal pool predefinito (quando l'allocazione è nel contesto di un thread utente) o dal pool interno (se l'allocazione è nel contesto di un thread di sistema).  
   
@@ -37,7 +37,7 @@ select * from sys.dm_xtp_system_memory_consumers
   
  Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|ID interno del consumer di memoria.|  
 |memory_consumer_type|**int**|Intero che rappresenta il tipo di consumer di memoria con uno dei valori seguenti:<br /><br /> 0: non deve essere visualizzato. Aggrega l'utilizzo della memoria due o più consumer.<br /><br /> 1-LOOKASIDE: tiene traccia dell'utilizzo di memoria per un LOOKASIDE di sistema.<br /><br /> 2-VARHEAP: tiene traccia dell'utilizzo di memoria per un heap a lunghezza variabile.<br /><br /> 4: pool di pagine IO: tiene traccia dell'utilizzo di memoria per un pool di pagine di sistema usato per operazioni di i/o.|  

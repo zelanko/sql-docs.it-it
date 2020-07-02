@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 7dad0cf6-eafa-47cf-98cc-75ba8d3c7959
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1d3d9c528b7fd74055e5a98348b9766af320b7d7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c961900bf92133a2b5bddca21c1d67c2c5f8329c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829716"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648941"
 ---
 # <a name="sysendpoint_webmethods-transact-sql"></a>sys.endpoint_webmethods (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -38,10 +38,10 @@ ms.locfileid: "82829716"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |endpoint_id|**int**|ID dell'endpoint in base al quale è definito il metodo Web.|  
-|namespace|**nvarchar (384)**|Spazio dei nomi per il metodo Web.|  
+|spazio dei nomi|**nvarchar (384)**|Spazio dei nomi per il metodo Web.|  
 |method_alias|**nvarchar (64)**|Alias del metodo.<br /><br /> Nota: gli [!INCLUDE[tsql](../../includes/tsql-md.md)] identificatori consentono caratteri non validi nei nomi di metodo WSDL.<br /><br /> L'alias viene utilizzato per eseguire il mapping del nome esposto nella descrizione WSDL dell'endpoint all'effettivo oggetto eseguibile [!INCLUDE[tsql](../../includes/tsql-md.md)] sottostante richiamato quando viene eseguita la chiamata al metodo Web.|  
 |object_name|**nvarchar (776)**|Nome dell'oggetto al quale il metodo Web è reindirizzato, come specificato dall'opzione NAME =. Le parti del nome sono separate da un punto (.) e delimitate tramite parentesi quadre, `[``]` .<br /><br /> Il nome dell'oggetto deve essere composto da tre parti, come specificato dall'opzione WSDL.|  
-|result_schema|**tinyint**|Opzione che determina l'eventuale schema XSD inviato assieme a una risposta.<br /><br /> 0 = Nessuno<br /><br /> 1 = Standard<br /><br /> 2 = Predefinito|  
+|result_schema|**tinyint**|Opzione che determina l'eventuale schema XSD inviato assieme a una risposta.<br /><br /> 0 = Nessuna<br /><br /> 1 = Standard<br /><br /> 2 = Predefinito|  
 |result_schema_desc|**nvarchar(60)**|Descrizione dell'opzione che determina l'eventuale schema XSD inviato assieme a una risposta.<br /><br /> NONE<br /><br /> STANDARD<br /><br /> DEFAULT|  
 |result_format|**tinyint**|Opzione che determina il formato dei risultati nella risposta.<br /><br /> 1 = ALL_RESULTS<br /><br /> 2 = ROWSETS_ONLY<br /><br /> 3 = NONE|  
 |result_format_desc|**nvarchar(60)**|Descrizione dell'opzione che determina il formato dei risultati nella risposta.<br /><br /> ALL_RESULTS<br /><br /> ROWSETS_ONLY<br /><br /> NONE|  

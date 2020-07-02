@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 431defb262bbc93fbf0925acd569ced9921fe533
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e87afd1d76eb4bfb9602e1b3d57dd62a43b65772
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824331"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85639876"
 ---
 # <a name="sp_resetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Reimposta il processo di recapito degli snapshot per una sottoscrizione pull in modo che il recapito degli snapshot possa essere riavviato. Questa stored procedure viene eseguita nel database di sottoscrizione del Sottoscrittore.  
   
@@ -45,7 +45,7 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_resetsnapshotdeliveryprogress** vengono rimosse tutte le righe nella tabella **MSsnapshotdeliveryprogress** . Vengono effettivamente rimossi tutti i metadati rimasti nel database di sottoscrizione in seguito alle precedenti fasi dei processi di recapito degli snapshot.  
   
 ## <a name="permissions"></a>Autorizzazioni  

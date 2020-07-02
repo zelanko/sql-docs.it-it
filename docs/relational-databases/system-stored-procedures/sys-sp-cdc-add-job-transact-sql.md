@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65f75b5f9830a19a973db0fffa06b7baf2bbdbae
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 194835abe2691a74116e51222fb069d941fd3c92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825963"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626271"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Consente di creare un processo di pulizia dell'acquisizione dei dati delle modifiche o un processo di acquisizione nel database corrente.  
   
@@ -89,7 +89,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  Poiché i processi di pulizia e di acquisizione vengono creati per impostazione predefinita, questa stored procedure è necessaria solo quando un processo è stato eliminato in modo esplicito e deve essere ricreato.  
   
- Il nome del processo è **CDC.** ** \_ pulizia** del _ \< \_ nome \> del database_o **CDC.** _ \< \_ nome \> del database_** \_ Capture**, dove *<database_name>* è il nome del database corrente. Se esiste già un processo con lo stesso nome, il nome viene aggiunto con un punto (**.**) seguito da un identificatore univoco, ad esempio: **CDC. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ Il nome del processo è **CDC.** _\<database\_name\>_ ** \_ Cleanup** o **CDC.** _\<database\_name\>_ ** \_ acquisizione**, dove *<database_name>* è il nome del database corrente. Se esiste già un processo con lo stesso nome, il nome viene aggiunto con un punto (**.**) seguito da un identificatore univoco, ad esempio: **CDC. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  Per visualizzare la configurazione corrente di un processo di pulizia o di acquisizione, utilizzare [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Per modificare la configurazione di un processo, utilizzare [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   

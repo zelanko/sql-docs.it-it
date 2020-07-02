@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85dd8567599de98af1abb72394fef747bd2da6b5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c11132450e88326740af485a7293dd5a27b8326b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829980"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645649"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Restituisce i comandi per le transazioni contrassegnate per la replica. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -48,7 +48,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |-----------------|---------------|-----------------|  
 |**ID articolo**|**int**|ID dell'articolo.|  
 |**partial_command**|**bit**|Indica se si tratta di un comando parziale.|  
-|**comando**|**varbinary (1024)**|Valore del comando.|  
+|**command**|**varbinary (1024)**|Valore del comando.|  
 |**xactid**|**binary(10)**|ID della transazione.|  
 |**xact_seqno**|**varbinary(16)**|Numero di sequenza della transazione.|  
 |**publication_id**|**int**|ID della pubblicazione.|  

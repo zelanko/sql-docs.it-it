@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5263215c8ccac3d9337f415fe9c279bb3f3ad3ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1548b23aceb5eb4f622ada1289df88ff790c8645
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68091214"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640846"
 ---
 # <a name="localdbgetversions-function"></a>Funzione LocalDBGetVersions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Vengono restituite tutte le versioni del database locale di SQL Server Express disponibili nel computer.  
   
  **File di intestazione:** sqlncli. h  
@@ -42,7 +42,7 @@ ms.locfileid: "68091214"
  [Input/output] In input include il numero di slot per le versioni nel buffer di *pVersionNames* .   
 In fase di output, è contenuto il numero di versioni del database locale esistenti.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  S_OK  
  Funzione completata.  
   

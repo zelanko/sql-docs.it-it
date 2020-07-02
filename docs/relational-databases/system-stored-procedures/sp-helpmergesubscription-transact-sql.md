@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e790d110fc45708c7aa2be76db3890c8d1bc7f13
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c966899707c7e37dee82dda9c678b4ac40df026f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834465"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626981"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni su una sottoscrizione, sia push che pull, di una pubblicazione di tipo merge. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione o nel database di sottoscrizione di un Sottoscrittore di ripubblicazione.  
   
@@ -76,7 +76,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**Stato**|**int**|Stato della sottoscrizione:<br /><br /> **0** = tutti i processi sono in attesa di essere avviati<br /><br /> **1** = uno o più processi vengono avviati<br /><br /> **2** = tutti i processi sono stati eseguiti correttamente<br /><br /> **3** = almeno un processo è in esecuzione<br /><br /> **4** = tutti i processi sono pianificati e inattivi<br /><br /> **5** = è in corso un tentativo di esecuzione di almeno un processo dopo un errore precedente<br /><br /> **6** = almeno un processo non è stato eseguito correttamente|  
 |**subscriber_type**|**int**|Tipo di Sottoscrittore.|  
 |**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = entrambi|  
-|**priorità**|**float (8)**|Numero che indica il livello di priorità della sottoscrizione.|  
+|**priority**|**float (8)**|Numero che indica il livello di priorità della sottoscrizione.|  
 |**sync_type**|**tinyint**|Tipo di sincronizzazione della sottoscrizione.|  
 |**Descrizione**|**nvarchar(255)**|Breve descrizione della sottoscrizione di tipo merge.|  
 |**merge_jobid**|**binary(16)**|ID di processo dell'agente di merge.|  

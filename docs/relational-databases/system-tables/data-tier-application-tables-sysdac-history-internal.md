@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 025c11a6d04f61378080c303a4935ce98e64f164
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0330c68c8399318b2db96a5f88880fdd566c9acd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833123"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85625757"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Tabelle applicazioni livello dati - sysdac_history_internal
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene informazioni sulle azioni eseguite per gestire le applicazioni livello dati. Questa tabella è archiviata nello schema **dbo** del database **msdb** .  
   
@@ -33,7 +33,7 @@ ms.locfileid: "82833123"
 |-----------------|---------------|-----------------|  
 |**action_id**|**int**|Identificatore dell'azione|  
 |**sequence_id**|**int**|Consente di identificare un passaggio all'interno di un'azione.|  
-|**instance_id**|**uniqueidentifier**|Identificatore dell'istanza di applicazione livello dati. Questa colonna può essere unita in join alla colonna **Instance_Id** in [dbo. sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
+|**instance_id**|**uniqueidentifier**|Identificatore dell'istanza di applicazione livello dati. Questa colonna può essere unita in join alla colonna **Instance_Id** in [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
 |**action_type**|**tinyint**|Identificatore del tipo di azione:<br /><br /> **0** = distribuzione<br /><br /> **1** = creazione<br /><br /> **2** = Rinomina<br /><br /> **3** = scollegamento<br /><br /> **4** = Elimina|  
 |**action_type_name**|**varchar (19)**|Nome del tipo di azione:<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **Scollegare**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|Identificatore del tipo di oggetto interessato dall'azione:<br /><br /> **0** = dacpac<br /><br /> **1** = account di accesso<br /><br /> **2** = database|  
@@ -81,7 +81,7 @@ WHERE instance_id NOT IN
   
 ## <a name="see-also"></a>Vedere anche  
  [Applicazioni livello dati](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [dbo. sysdac_instances &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
+ [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
  [sysdac_instances_internal &#40;&#41;Transact-SQL](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   
   

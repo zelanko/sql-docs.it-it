@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70d623d8583535aae7ddcc23f26ab7c5e4e36fc7
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 0264c6d5c533510e7350e2f88e270d2cc7538dd3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84886890"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643594"
 ---
 # <a name="atomization-xquery"></a>Atomizzazione (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   Per atomizzazione si intende il processo di estrazione del valore tipizzato di un elemento. In determinate circostanze, il processo è implicito. Alcuni operatori XQuery, ad esempio gli operatori aritmetici e di confronto, dipendono da tale processo. Ad esempio, quando si applicano operatori aritmetici direttamente ai nodi, il valore tipizzato di un nodo viene innanzitutto recuperato richiamando in modo implicito la [funzione dati](../xquery/data-accessor-functions-data-xquery.md). Tale funzione passa il valore atomico come operando all'operatore aritmetico.  
   

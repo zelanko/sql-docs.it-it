@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 54c5c0f9bfa6bc64a79e0f4dcde72c09b2a281fb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 43fef1a35d36446cdf402b145c0afec68c9eb47d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809402"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85639534"
 ---
 # <a name="sp_unbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Disassocia una regola da una colonna o da un tipo di dati alias nel database corrente.  
   
@@ -53,7 +53,7 @@ sp_unbindrule [ @objname = ] 'object_name'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Per visualizzare il testo di una regola, eseguire **sp_helptext** specificando il nome della regola come parametro.  
   
  Quando una regola non è associata, le informazioni sull'associazione vengono rimosse dalla tabella **sys. Columns** se la regola è stata associata a una colonna e dalla tabella **sys. Types** se la regola è stata associata a un tipo di dati alias.  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac9221ee6a2e9b50cec8800ebb4e611211634b60
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ecb59448ff76114d25dbb8422cf7dc1fefc44e15
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828320"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640268"
 ---
 # <a name="sp_mergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Esegue un aggiornamento fittizio della riga specificata in modo che venga inviata nuovamente durante la successiva operazione di merge. Questa stored procedure può essere eseguita nel database di pubblicazione del server di pubblicazione oppure nel database di sottoscrizione del Sottoscrittore.  
   
@@ -44,10 +44,10 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_mergedummyupdate** viene utilizzata nella replica di tipo merge.  
   
- **sp_mergedummyupdate** è utile se si scrive un'alternativa personalizzata al Visualizzatore conflitti di replica (Wzcnflct. exe).  
+ **sp_mergedummyupdate** è utile se si scrive un'alternativa personalizzata al Visualizzatore conflitti di replica (Wzcnflct.exe).  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del database **db_owner** possono eseguire **sp_mergedummyupdate**.  

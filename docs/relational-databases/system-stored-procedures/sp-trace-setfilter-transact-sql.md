@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d6646bb794b50158035759916ba823c6fca2102
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: eeb6fd370bfd107864845439086138fff3d379c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820266"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85644850"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Applica un filtro a una traccia. **sp_trace_setfilter** possono essere eseguite solo su tracce esistenti interrotte (*lo stato* è **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Restituisce un errore se questa stored procedure viene eseguita su una traccia che non esiste o il cui *stato* è diverso da **0**.  
   
@@ -101,7 +101,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="permissions"></a>Autorizzazioni  
  L'utente deve disporre delle autorizzazioni ALTER TRACE.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono impostati tre filtri in Trace `1`. I filtri `N'SQLT%'` e `N'MS%'` vengono applicati alla colonna `AppName`, valore `10`, tramite l'operatore di confronto "`LIKE`". Il filtro `N'joe'` viene applicato a una colonna diversa, ovvero `UserName`, valore `11`, tramite l'operatore di confronto "`EQUAL`".  
   
 ```  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d07956f6-9543-4476-9426-536f95991150
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0941ca2f5fc1a05397dd3dbec5e0dd27c6e5d815
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b10ac8c1ac9ccba804b892617df0b8d6c0d2f14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488453"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637492"
 ---
 # <a name="handling-large-object-lob-parameters-in-the-clr"></a>Gestione di parametri di tipo LOB (Large Object) in CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilizzare **SqlBytes** e **SqlChars** per passare i parametri LOB (Large Object) di tipo binario (**varbinary (max)**) e LOB (**nvarchar (max)**) rispettivamente. Questi tipi consentono di eseguire il flusso dei valori LOB dal database alla routine CLR (Common Language Runtime) anziché copiare l'intero valore nello spazio gestito. **SqlBinary** e **SqlString** devono essere usati solo per valori di stringa di caratteri e binari di piccole dimensioni.  
   
 ## <a name="see-also"></a>Vedere anche  

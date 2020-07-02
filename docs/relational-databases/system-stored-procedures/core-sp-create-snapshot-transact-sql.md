@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98963dbab83ffea8590c213284b2540393d7c0fd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c4ba72a35ba3b8339a1ebc919327ce353b2c7697
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831852"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646936"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Inserisce una riga nella vista core.snapshots del data warehouse di gestione. Questa procedura viene chiamata tutte le volte che un pacchetto di caricamento avvia il caricamento dei dati nel data warehouse di gestione.  
   
@@ -60,7 +60,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  Nome dell'istanza per l'insieme di raccolta. *named_instance* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
  [ @log_id =] *log_id*  
- Identificatore univoco tramite cui viene eseguito il mapping al registro eventi del set di raccolta nel server da cui sono stati raccolti i dati. *log_id* è di tipo **bigint** e non prevede alcun valore predefinito. Per ottenere il valore per *log_id*, eseguire una query sulla vista dbo. syscollector_execution_log nel database msdb.  
+ Identificatore univoco tramite cui viene eseguito il mapping al registro eventi del set di raccolta nel server da cui sono stati raccolti i dati. *log_id* è di tipo **bigint** e non prevede alcun valore predefinito. Per ottenere il valore per *log_id*, eseguire una query sulla visualizzazione dbo.syscollector_execution_log nel database msdb.  
   
  [ @snapshot_id =] *snapshot_id*  
  Identificatore univoco di una riga inserita nella vista core. Snapshots. *snapshot_id* è di **tipo int** e viene restituito come output.  
@@ -82,7 +82,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del database di **mdw_writer** (con autorizzazione Execute).  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creato uno snapshot per il set di raccolta Utilizzo disco, lo snapshot viene aggiunto al data warehouse di gestione e viene restituito l'identificatore dello snapshot. In questo esempio viene utilizzata l'istanza predefinita.  
   
 ```  

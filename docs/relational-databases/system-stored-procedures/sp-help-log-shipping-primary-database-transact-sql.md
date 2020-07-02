@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9559a882da12c3e2a7a48a0aaa656a554633aa6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c88a4ac30ba51cdfdbd9a9d711a141044d099a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937911"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634549"
 ---
 # <a name="sp_help_log_shipping_primary_database-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Recupera le impostazioni del database primario.  
   
@@ -57,7 +57,7 @@ sp_help_log_shipping_primary_database
 |**backup_directory**|Directory in cui vengono archiviati i file di backup del log delle transazioni dal server primario.|  
 |**backup_share**|Percorso di rete o UNC della directory di backup.|  
 |**backup_retention_period**|Intervallo di tempo, espresso in minuti, di conservazione del file di backup dei log nella directory di backup trascorso il quale il file viene eliminato.|  
-|**backup_compression**|Indica se la configurazione di log shipping utilizza la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md).<br /><br /> **0** = disabilitato. I backup del log non vengono mai compressi.<br /><br /> **1** = abilitata. I backup del log vengono sempre compressi.<br /><br /> **2** = utilizzare l'impostazione dell' [opzione di configurazione del server visualizzazione o configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Questo è il valore predefinito.<br /><br /> La compressione dei backup è supportata solo in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versione successiva. Nelle altre edizioni il valore è sempre 2.|  
+|**backup_compression**|Indica se la configurazione di log shipping utilizza la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md).<br /><br /> **0** = disabilitato. I backup del log non vengono mai compressi.<br /><br /> **1** = abilitata. I backup del log vengono sempre compressi.<br /><br /> **2** = utilizzare l'impostazione dell' [opzione di configurazione del server visualizzazione o configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Si tratta del valore predefinito.<br /><br /> La compressione dei backup è supportata solo in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versione successiva. Nelle altre edizioni il valore è sempre 2.|  
 |**backup_job_id**|ID del processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent associato al processo di backup nel server primario.|  
 |**monitor_server**|Nome dell'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utilizzata come server di monitoraggio nella configurazione del log shipping.|  
 |**monitor_server_security_mode**|Modalità di sicurezza utilizzata per connettersi al server di monitoraggio.<br /><br /> 1 = Autenticazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione di.|  
@@ -76,7 +76,7 @@ sp_help_log_shipping_primary_database
  Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
- In questo esempio viene illustrato l'utilizzo di **sp_help_log_shipping_primary_database** per recuperare le impostazioni del [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]database primario per il database.  
+ In questo esempio viene illustrato l'utilizzo di **sp_help_log_shipping_primary_database** per recuperare le impostazioni del database primario per il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  
 EXEC master.dbo.sp_help_log_shipping_primary_database @database=N'AdventureWorks2012';  
@@ -84,7 +84,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul &#40;di log shipping SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

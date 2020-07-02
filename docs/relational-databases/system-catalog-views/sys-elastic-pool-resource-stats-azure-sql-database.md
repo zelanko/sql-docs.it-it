@@ -18,15 +18,15 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d642c8991a9043249f896d0d9b27fb23acd9632e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 34f524eb8e6c7a64a53f64eda67a370aace745c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829700"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648893"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Database SQL di Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Restituisce statistiche di uso delle risorse per tutti i pool elastici in un server di database SQL di Azure. Per ogni pool elastico è presente una riga per ogni finestra di report di 15 secondi (quattro righe al minuto). Sono inclusi CPU, IO, Log, uso dell'archiviazione e uso di richieste/sessioni simultanee da parte di tutti i database nel pool. Questi dati vengono conservati per 14 giorni. 
   
@@ -57,7 +57,7 @@ ms.locfileid: "82829700"
 
  È richiesta l'appartenenza al ruolo **dbmanager** .  
   
-## <a name="examples"></a>Esempio
+## <a name="examples"></a>Esempi
 
  Nell'esempio seguente vengono restituiti i dati di utilizzo delle risorse ordinati in base all'ora più recente per tutti i pool di database elastici nel server di database SQL corrente.  
   

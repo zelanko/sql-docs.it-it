@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: be45e7dd794ab7e03ffc70eb9b73109411fd3a02
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3001731959da3b253ee10f43c333b0c2a8b85380
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827455"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626585"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Stored procedure per l'indice spaziale-argomenti e proprietà
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   In questo argomento vengono descritti gli argomenti e le proprietà per le stored procedure relative agli indici spaziali.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82827455"
   
 -   [sp_help_spatial_geography_index_xml &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argomenti  
 `[ @tabname = ] 'tabname'`Nome completo o non qualificato della tabella per la quale è stato specificato l'indice spaziale.  
   
  Le virgolette sono necessarie solo se viene specificata una tabella qualificata. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. *TabName* è di **tipo nvarchar**(776) e non prevede alcun valore predefinito.  
@@ -300,10 +300,10 @@ ms.locfileid: "82827455"
 ## <a name="permissions"></a>Autorizzazioni  
  L'utente deve essere un membro del ruolo **public** . È necessario disporre dell'autorizzazione READ ACCESS per il server e l'oggetto. Queste condizioni si applicano a tutte le stored procedure relative agli indici spaziali.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Le proprietà che contengono valori NULL non sono incluse nel set restituito.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Per gli esempi, vedere gli argomenti seguenti:  
   
 -   [sp_help_spatial_geometry_index &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  

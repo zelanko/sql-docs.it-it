@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af38463c5104da636d04f961b0cee5210369e38d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e0abc3934e1cfec8e37a4b1f3060a7aeef38a06e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834504"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626935"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni sulle sottoscrizioni pull esistenti in un Sottoscrittore. Questa stored procedure viene eseguita nel database di sottoscrizione del Sottoscrittore.  
   
@@ -61,7 +61,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**Stato**|**int**|Stato della sottoscrizione:<br /><br /> **0** = sottoscrizione inattiva<br /><br /> **1** = sottoscrizione attiva<br /><br /> **2** = sottoscrizione eliminata<br /><br /> **3** = sottoscrizione scollegata<br /><br /> **4** = sottoscrizione collegata<br /><br /> **5** = la sottoscrizione è stata contrassegnata per la reinizializzazione con il caricamento<br /><br /> **6** = connessione della sottoscrizione non riuscita<br /><br /> **7** = sottoscrizione ripristinata dal backup|  
 |**subscriber_type**|**int**|Tipo di Sottoscrittore:<br /><br /> **1** = globale<br /><br /> **2** = locale<br /><br /> **3** = Anonimo|  
 |**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = Anonimo|  
-|**priorità**|**float (8)**|Priorità della sottoscrizione. Il valore deve essere minore di **100,00**.|  
+|**priority**|**float (8)**|Priorità della sottoscrizione. Il valore deve essere minore di **100,00**.|  
 |**sync_type**|**tinyint**|Tipo di sincronizzazione per la sottoscrizione:<br /><br /> **1** = automatico<br /><br /> **2** = lo snapshot non viene utilizzato.|  
 |**Descrizione**|**nvarchar(255)**|Breve descrizione della sottoscrizione pull.|  
 |**merge_jobid**|**binary(16)**|ID di processo dell'agente di merge.|  

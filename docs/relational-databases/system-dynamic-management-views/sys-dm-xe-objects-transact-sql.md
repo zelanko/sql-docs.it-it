@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80170f22636b9542524f8ce97b6fe8a5e595953c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f89b6d7e2e4843ba252f884f02a6944de57a8326
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827844"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648401"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per ogni oggetto esposto da un pacchetto dell'evento. Gli oggetti possibili sono i seguenti:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82827844"
  |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|Nome dell'oggetto . il nome è univoco all'interno di un pacchetto per un tipo di oggetto specifico. Non ammette i valori Null.|  
-|object_type|**nvarchar(60)**|Tipo dell'oggetto. object_type è uno dei seguenti:<br /><br /> event<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> tipo<br /><br /> Non ammette i valori Null.|  
+|object_type|**nvarchar(60)**|Tipo dell'oggetto. object_type è uno dei seguenti:<br /><br /> event<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> Non ammette i valori Null.|  
 |package_guid|**uniqueidentifier**|GUID del pacchetto che espone questa azione. C'è una relazione molti-a-uno con sys.dm_xe_packages.package_id. Non ammette i valori Null.|  
 |description|**nvarchar(256)**|Descrizione dell'azione. la descrizione viene impostata dall'autore del pacchetto. Non ammette i valori Null.|  
 |capabilities|**int**|Bitmap che descrive le funzionalità dell'oggetto. Ammette i valori Null.|  

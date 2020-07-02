@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 21eb3b9a-7d32-455b-89bb-f624198cd202
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f19226e4945d2f163247b7d94f029a6c5b6ee4af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7b6ca5e83973c167ce2c39ffb0ac717a44c29b85
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68091258"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640804"
 ---
 # <a name="localdbshareinstance-function"></a>Funzione LocalDBShareInstance
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Condivide l'istanza di SQL Server Express LocalDB specificata con altri utenti del computer, utilizzando il nome condiviso specificato.  
   
  **File di intestazione:** sqlncli. h  
@@ -52,7 +52,7 @@ HRESULT LocalDBShareInstance(
  *dwFlags*  
  [Input] Riservato per utilizzi futuri. Deve essere impostato attualmente su 0.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  S_OK  
  Funzione completata.  
   

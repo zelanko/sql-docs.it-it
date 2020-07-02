@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e26fa9b22578d91636eb554c75a55f184869d529
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ec2f258b02df154c2c629f19f8ea99f1a3950d4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046208"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647368"
 ---
 # <a name="sp_add_log_shipping_secondary_database-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Imposta un database secondario per il log shipping.  
   
@@ -108,7 +108,7 @@ sp_add_log_shipping_secondary_database
  Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
- Questo esempio illustra l'uso del stored procedure **sp_add_log_shipping_secondary_database** per aggiungere il database **LogShipAdventureWorks** come database secondario in una configurazione log shipping con il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] primario che risiede nel server primario Tribeca.  
+ Questo esempio illustra l'uso del stored procedure **sp_add_log_shipping_secondary_database** per aggiungere il database **LogShipAdventureWorks** come database secondario in una configurazione log shipping con il database primario che [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] risiede nel server primario Tribeca.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_database   
@@ -125,7 +125,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul &#40;di log shipping SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57087264554d228ec02ed22baa2afb932e646b10
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c748dd4980fb7b3b142893f5a04dd36f1676f8a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826388"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635006"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>Notifiche di query-sys. dm_qn_subscriptions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni sulle sottoscrizioni di notifica delle query attive nel server. È possibile utilizzare questa vista per individuare le sottoscrizioni attive nel server o in un database specificato oppure per individuare un'entità server specificata.  
   
@@ -42,12 +42,12 @@ ms.locfileid: "82826388"
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|From|A|On|Tipo|  
+|From|A|On|Type|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|Molti-a-uno|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|Molti-a-uno|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Il codice di stato 0 indica uno stato non definito.  
   
  I codici di stato seguenti indicano che è stata attivata una sottoscrizione a causa di una modifica:  
@@ -55,7 +55,7 @@ ms.locfileid: "82826388"
 |Codice|Stato minore|Info|  
 |----------|------------------|----------|  
 |65798|La sottoscrizione è stata attivata perché i dati sono stati modificati|sottoscrizione attivata dall'inserimento|  
-|65799|La sottoscrizione è stata attivata perché i dati sono stati modificati|Elimina|  
+|65799|La sottoscrizione è stata attivata perché i dati sono stati modificati|Delete|  
 |65800|La sottoscrizione è stata attivata perché i dati sono stati modificati|Aggiornamento|  
 |65801|La sottoscrizione è stata attivata perché i dati sono stati modificati|Unione|  
 |65802|La sottoscrizione è stata attivata perché i dati sono stati modificati|Tronca tabella|  

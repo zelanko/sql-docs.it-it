@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 86e06938-9d0a-44e5-99e2-55c8ef5f2f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fb396d47da69724d16c0d72e1373527f9c5e700f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 892a1ff4570f209b89866e1287cb55691d9b6189
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68102432"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635294"
 ---
 # <a name="syslogin_token-transact-sql"></a>sys.login_token (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per ogni entità server appartenente al token dell'account di accesso.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68102432"
 |-----------------|---------------|-----------------|  
 |**principal_id**|**int**|ID dell'entità. Questo valore è univoco all'interno del server.|  
 |**sid**|**varbinary (85)**|ID di sicurezza dell'entità. Se si tratta di un'entità di Windows, **SID** = SID di Windows. Se viene eseguito il mapping dell'account di accesso a un certificato, **SID** = GUID del certificato.|  
-|**name**|**nvarchar(128)**|Nome dell'entità. Questo valore è univoco all'interno del server.|  
+|**nome**|**nvarchar(128)**|Nome dell'entità. Questo valore è univoco all'interno del server.|  
 |**type**|**nvarchar(128)**|Descrizione del tipo dell'entità. Viene eseguito il mapping di tutti i tipi a **SID**. I possibili valori sono i seguenti:<br /><br /> SQL LOGIN<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> SERVER ROLE<br /><br /> LOGIN MAPPED TO CERTIFICATE<br /><br /> LOGIN MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
 |**utilizzo**|**nvarchar(128)**|Specifica che l'entità partecipa alla valutazione di autorizzazioni GRANT or DENY o funge da autenticatore.<br /><br /> I valori validi sono i seguenti:<br /><br /> GRANT OR DENY<br /><br /> DENY ONLY<br /><br /> AUTHENTICATOR|  
   

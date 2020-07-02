@@ -20,15 +20,15 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50385161b417d02db2dc44ad1172910d31f198b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4dbeed2c84db6a94237df6878fba688c6ed08a66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905142"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85625933"
 ---
 # <a name="syssp_drop_trusted_assembly-transact-sql"></a>sys.sp_drop_trusted_assembly (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 Elimina un assembly dall'elenco di assembly attendibili nel server.
 
@@ -43,7 +43,7 @@ sp_drop_trusted_assembly
 
 ## <a name="arguments"></a>Argomenti
 
-[ @hash = ] '*valore*'  
+[ @hash =]'*valore*'  
 Valore hash SHA2_512 dell'assembly da eliminare dall'elenco di assembly attendibili per il server. Gli assembly attendibili possono essere caricati quando è abilitata la sicurezza CLR rigida, anche se l'assembly non è firmato oppure il database non è contrassegnato come attendibile.
 
 ## <a name="remarks"></a>Osservazioni  
@@ -52,7 +52,7 @@ Questa procedura rimuove un assembly da [sys. trusted_assemblies](../../relation
 
 ## <a name="permissions"></a>Autorizzazioni
 
-È richiesta l'appartenenza `sysadmin` al ruolo predefinito del `CONTROL SERVER` server o all'autorizzazione.
+È richiesta l'appartenenza al `sysadmin` ruolo predefinito del server o all' `CONTROL SERVER` autorizzazione.
 
 ## <a name="examples"></a>Esempi  
 
@@ -63,7 +63,7 @@ EXEC sp_drop_trusted_assembly
 0x8893AD6D78D14EE43DF482E2EAD44123E3A0B684A8873C3F7BF3B5E8D8F09503F3E62370CE742BBC96FE3394477214B84C7C1B0F7A04DCC788FA99C2C09DFCCC; 
 ```  
 
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
   [sys. sp_add_trusted_assembly](sys-sp-add-trusted-assembly-transact-sql.md) [sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) [Drop assembly &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  

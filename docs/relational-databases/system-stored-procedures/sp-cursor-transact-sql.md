@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e99f8f657c3d35cc91ff92a9ae5d920271769b8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7550a640b723e77f3bfbc9b3473e762962ae2da3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820606"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646422"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Richiede aggiornamenti posizionati. Con questa routine è possibile effettuare operazioni in una o più righe all'interno del buffer di recupero di un cursore. sp_cursor viene richiamato specificando ID = 1 in un pacchetto del flusso TDS (Tabular Data Stream).  
   
@@ -98,7 +98,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="return-code-values"></a>Valori del codice restituito  
  Quando si utilizza una RPC, un'operazione di eliminazione o aggiornamento posizionata con un numero di buffer 0 restituirà un messaggio completato con un *conteggio delle righe* pari a 0 (esito negativo) o 1 (esito positivo) per ogni riga del buffer di recupero.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="optype-parameter"></a>Parametro optype  
  Fatta eccezione per le combinazioni di seposition con UPDATE, DELETE, REFRESH o LOCK; o ABSOLUTe con UPDATE o DELETE, i valori *optype* si escludono a vicenda.  
@@ -129,7 +129,7 @@ sp_cursor  cursor, optype, rownum, table
   
 2.  Utilizzare un parametro per inviare un'istruzione UPDATE o INSERT completa oppure utilizzare più parametri per inviare parti di un'istruzione UPDATE o INSERT che SQL Server verrà compilata in un'istruzione completa. È possibile trovare alcuni esempi nella sezione Esempi più avanti in questo argomento.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
   
 ### <a name="alternative-value-parameter-uses"></a>Utilizzi alternativi del parametro value  
  Per UPDATE:  
@@ -139,7 +139,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
->  Se \< viene specificato il nome della tabella UPDATE>, qualsiasi valore specificato per il parametro *Table* verrà ignorato.  
+>  Se \<table name> si specifica Update, qualsiasi valore specificato per il parametro *Table* verrà ignorato.  
   
  Quando vengono usati più parametri, il primo parametro deve essere una stringa nel formato seguente:  
   
@@ -149,7 +149,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `<column name> = expression  [,...n]`  
   
- In questo caso, il \< nome della tabella> nell'istruzione di aggiornamento costruita è quello specificato o impostato come valore predefinito dal parametro *Table* .  
+ In questo caso, l'oggetto \<table name> nell'istruzione di aggiornamento costruita è quello specificato o impostato come valore predefinito dal parametro *Table* .  
   
  Per INSERT:  
   
@@ -158,7 +158,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  Se viene specificato il * \< nome della tabella Insert>* , qualsiasi valore specificato per il parametro *Table* verrà ignorato.  
+>  Se *\<table name>* viene specificato INSERT, qualsiasi valore specificato per il parametro *Table* verrà ignorato.  
   
  Quando vengono usati più parametri, il primo parametro deve essere una stringa nel formato seguente:  
   
@@ -168,7 +168,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- ad eccezione dei casi in cui è stato specificato VALUES. In questo caso, l'ultima espressione deve essere seguita da una parentesi finale ")". In questo caso, il * \< nome della tabella>* nell'istruzione di aggiornamento costruita è quello specificato o impostato come valore predefinito dal parametro *Table* .  
+ ad eccezione dei casi in cui è stato specificato VALUES. In questo caso, l'ultima espressione deve essere seguita da una parentesi finale ")". In questo caso, l'oggetto *\<table name>* nell'istruzione di aggiornamento costruita è quello specificato o impostato come valore predefinito dal parametro *Table* .  
   
 > [!NOTE]  
 >  È possibile inviare un parametro come parametro denominato, ad esempio "`@VALUES`". In questo caso è possibile non usare altri parametri denominati.  

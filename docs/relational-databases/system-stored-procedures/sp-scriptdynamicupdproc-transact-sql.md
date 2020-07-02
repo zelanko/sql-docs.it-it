@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3967b1e7c8e3b9da93d131a0b82eec1684009210
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c46a7e30f6f5163fba7b630e365f90e521a96e0c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816671"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645306"
 ---
 # <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Genera l'istruzione CREATE PROCEDURE, che crea una stored procedure ad aggiornamento dinamico. L'istruzione UPDATE all'interno della stored procedure personalizzata viene compilata in modo dinamico in base alla sintassi MCALL che indica le colonne da modificare. Utilizzare questa stored procedure se il numero di indici nella tabella di sottoscrizione è in aumento e il numero di colonne in fase di modifica è ridotto. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -48,7 +48,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_scriptdynamicupdproc**.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  In questo esempio viene creato un articolo (con *artid* impostato su **1**) nella tabella **authors** nel database **pubs** e viene specificato che l'istruzione Update è la procedura personalizzata da eseguire:  
   
 ```  

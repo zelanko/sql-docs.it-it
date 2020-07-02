@@ -17,15 +17,15 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 931babcaa6e229d6114930bba5f06803aa25f59e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0151b29c6375cdefd2ad1a6430591cb98b51e08e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647061"
 ---
 # <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>Replica geografica attiva-sp_wait_for_database_copy_sync
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Questa procedura è determinata da una relazione della [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] tra un database primario e uno secondario. La chiamata del **sp_wait_for_database_copy_sync** fa sì che l'applicazione attenda finché tutte le transazioni di cui è stato eseguito il commit non vengono replicate e riconosciute dal database secondario attivo. Eseguire **sp_wait_for_database_copy_sync** solo sul database primario.  
   
@@ -64,7 +64,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ## <a name="remarks"></a>Osservazioni  
  Tutte le transazioni di cui è stato eseguito il commit prima di una chiamata **sp_wait_for_database_copy_sync** vengono inviate al database secondario attivo.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene richiamato **sp_wait_for_database_copy_sync** per assicurarsi che venga eseguito il commit di tutte le transazioni nel database primario, DB0, inviato al relativo database secondario attivo nel server di destinazione ubfyu5ssyt.  
   
 ```  

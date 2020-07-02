@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f840af0170278692de43b7933965500b304669b1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e863c10b3f2086d6318d6c53b599c7ad186572c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828350"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634224"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Visualizza informazioni su un articolo. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione. Per i server di pubblicazione Oracle questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   
@@ -85,14 +85,14 @@ sp_helparticle [ @publication = ] 'publication'
 |**auto_identity_range**|**int**|Flag che indica se la gestione automatica degli intervalli di valori Identity era attivata nella pubblicazione quando la pubblicazione è stata creata. **1** indica che l'intervallo di valori Identity automatico è abilitato. **0** indica che è disabilitato.|  
 |**publisher_identity_range**|**int**|Dimensioni dell'intervallo di valori Identity nel server di pubblicazione se l'articolo ha *identityrangemanagementoption* impostato su **auto** o **auto_identity_range** impostato su **true**.|  
 |**identity_range**|**bigint**|Dimensioni dell'intervallo di valori Identity nel Sottoscrittore se l'articolo ha *identityrangemanagementoption* impostato su **auto** o **auto_identity_range** impostato su **true**.|  
-|**soglia**|**bigint**|Valore percentuale che indica quando l'agente di distribuzione assegna un nuovo intervallo di valori Identity.|  
+|**threshold**|**bigint**|Valore percentuale che indica quando l'agente di distribuzione assegna un nuovo intervallo di valori Identity.|  
 |**identityrangemanagementoption**|**int**|Indica la gestione degli intervalli di valori Identity per l'articolo.|  
 |**fire_triggers_on_snapshot**|**bit**|Indica se i trigger utente replicati vengono eseguiti quando viene applicato lo snapshot iniziale.<br /><br /> **1** = i trigger utente vengono eseguiti.<br /><br /> **0** = i trigger utente non vengono eseguiti.|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_helparticle** viene utilizzata nella replica snapshot e nella replica transazionale.  
   
 ## <a name="permissions"></a>Autorizzazioni  
