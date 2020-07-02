@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9ec21119-35f1-4e39-abaa-b2c790c485b1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b2c3f429a8b4cecedc65bc2a3208299e664b9153
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bb88096faf336edf7a42e9f65a72b6435c2f855c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827282"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773784"
 ---
 # <a name="ihsubscriptions-transact-sql"></a>IHsubscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabella di sistema **IHsubscriptions** contiene una riga per ogni sottoscrizione di una pubblicazione da un server di pubblicazione non SQL Server che utilizza il server di distribuzione corrente. Questa tabella è archiviata nel database di distribuzione.  
   

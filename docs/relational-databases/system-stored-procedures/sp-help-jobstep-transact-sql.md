@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55fcc73b489a781601a2a6c5bbe139ee449cd60d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b7313e3784c5af9922fb5301b339087510a98e91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827565"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773830"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni sui passaggi di un processo utilizzato dal servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per l'esecuzione di attività automatizzate.  
   
@@ -65,14 +65,14 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**step_id**|**int**|Identificatore univoco del passaggio.|  
 |**step_name**|**sysname**|Nome del passaggio del processo.|  
 |**sottosistema**|**nvarchar(40)**|Sottosistema in cui eseguire il comando del passaggio.|  
-|**comando**|**nvarchar(max)**|Comando eseguito nel passaggio.|  
+|**command**|**nvarchar(max)**|Comando eseguito nel passaggio.|  
 |**flags**|**int**|Maschera di bit dei valori che controllano il funzionamento del passaggio.|  
 |**cmdexec_success_code**|**int**|Per un passaggio **CmdExec** , questo è il codice di uscita del processo di un comando riuscito.|  
 |**on_success_action**|**tinyint**|Azione da eseguire se il passaggio viene eseguito correttamente:<br /><br /> **1** = termina il processo segnalato correttamente.<br /><br /> **2** = chiude l'errore di segnalazione dei processi.<br /><br /> **3** = Vai al passaggio successivo.<br /><br /> **4** = Vai al passaggio.|  
 |**on_success_step_id**|**int**|Se **on_success_action** è 4, indica il passaggio successivo da eseguire.|  
 |**on_fail_action**|**tinyint**|Azione da eseguire se il passaggio non viene eseguito correttamente. I valori sono uguali a **on_success_action**.|  
 |**on_fail_step_id**|**int**|Se **on_fail_action** è 4, indica il passaggio successivo da eseguire.|  
-|**Server**|**sysname**|Riservato.|  
+|**server**|**sysname**|Riservato.|  
 |**database_name**|**sysname**|Per un passaggio [!INCLUDE[tsql](../../includes/tsql-md.md)], indica il database in cui viene eseguito il comando.|  
 |**database_user_name**|**sysname**|Per un passaggio [!INCLUDE[tsql](../../includes/tsql-md.md)], indica il contesto utente del database in cui viene eseguito il comando.|  
 |**retry_attempts**|**int**|Numero massimo di tentativi di esecuzione del comando (nel caso in cui non sia stato eseguito correttamente).|  
@@ -86,7 +86,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**last_run_time**|**int**|Ora di inizio dell'ultima esecuzione del passaggio.|  
 |**proxy_id**|**int**|Proxy per il passaggio del processo.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_help_jobstep** si trova nel database **msdb** .  
   
 ## <a name="permissions"></a>Autorizzazioni  

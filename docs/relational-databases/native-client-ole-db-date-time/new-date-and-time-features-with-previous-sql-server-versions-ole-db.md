@@ -11,24 +11,24 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a90863fb061912dd0a6c44fe23ba2baa402662c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08a88db90322a3618cc53e60113f5d17ce749ec9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301020"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773411"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Nuove funzionalità di data e ora con le versioni precedenti di SQL Server (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  In questo argomento viene descritto il comportamento previsto quando un'applicazione client che utilizza le caratteristiche avanzate di data e ora comunica con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una versione [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]di precedente a e quando un client compilato con una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione di Native client [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] precedente a Invia comandi a un server che supporta le caratteristiche avanzate di data e ora.  
+  In questo argomento viene descritto il comportamento previsto quando un'applicazione client che utilizza le caratteristiche avanzate di data e ora comunica con una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e quando un client compilato con una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client precedente [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a Invia comandi a un server che supporta le caratteristiche avanzate di data e ora.  
   
 ## <a name="down-level-client-behavior"></a>Comportamento dei client legacy  
- Le applicazioni client che utilizzano una versione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di Native Client precedente [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a visualizzano i nuovi tipi di data/ora come colonne **nvarchar** . Il contenuto delle colonne è costituito da rappresentazioni letterali. Per ulteriori informazioni, vedere la sezione "formati di dati: stringhe e valori letterali" del [supporto dei tipi di dati per OLE DB miglioramenti di data e ora](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md). Le dimensioni di colonna corrispondono alla lunghezza massima in valori letterali per la precisione specificata per la colonna.  
+ Le applicazioni client che utilizzano una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] visualizzano i nuovi tipi di data/ora come colonne **nvarchar** . Il contenuto delle colonne è costituito da rappresentazioni letterali. Per ulteriori informazioni, vedere la sezione "formati di dati: stringhe e valori letterali" del [supporto dei tipi di dati per OLE DB miglioramenti di data e ora](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md). Le dimensioni di colonna corrispondono alla lunghezza massima in valori letterali per la precisione specificata per la colonna.  
   
  Le API di catalogo restituiranno metadati coerenti con il codice del tipo di dati di livello inferiore restituito al client (ad esempio, **nvarchar**) e la rappresentazione di livello inferiore associata (ad esempio, il formato letterale appropriato). Il nome del tipo di dati restituito, tuttavia, coinciderà con il nome effettivo del tipo di dati di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Quando un'applicazione client legacy viene eseguita in un [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Server (o versioni successive) in cui sono state apportate modifiche dello schema ai tipi di data/ora, il comportamento previsto è il seguente:  
+ Quando un'applicazione client legacy viene eseguita [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] in un server (o versioni successive) in cui sono state apportate modifiche dello schema ai tipi di data/ora, il comportamento previsto è il seguente:  
   
 |Tipo di client OLE DB|Tipo di SQL Server 2005|Tipo di SQL Server 2008 (o versioni successive)|Conversione risultati (da server a client)|Conversione parametri (da client a server)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
@@ -56,10 +56,10 @@ ms.locfileid: "81301020"
   
 -   Passare a **datetime2** perché si tratta del tipo di dati preferito per data e ora.  
   
- Le applicazioni che utilizzano i metadati del server ottenuti tramite ICommandWithParameters:: GetParameterInfo o set di righe dello schema per impostare le informazioni sul tipo di parametro tramite ICommandWithParameters:: sqlparameterinfo avranno esito negativo durante le conversioni client dove la rappresentazione di stringa di un tipo di origine è maggiore della rappresentazione di stringa del tipo di destinazione. Se, ad esempio, un'associazione client utilizza DBTYPE_DBTIMESTAMP e la colonna Server è data [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in Native Client il valore verrà convertito in "aaaa-gg-mm HH: mm: SS. fff", ma i metadati del server verranno restituiti come **nvarchar (10)**. L'overflow risultante restituisce DBSTATUS_E_CATCONVERTVALUE. Problemi analoghi si verificano con le conversioni di dati da IRowsetChange, perché i metadati del set di righe vengono impostati dai metadati del ResultSet.  
+ Le applicazioni che utilizzano i metadati del server ottenuti tramite ICommandWithParameters:: GetParameterInfo o set di righe dello schema per impostare le informazioni sul tipo di parametro tramite ICommandWithParameters:: sqlparameterinfo avranno esito negativo durante le conversioni client dove la rappresentazione di stringa di un tipo di origine è maggiore della rappresentazione di stringa del tipo di destinazione. Se, ad esempio, un'associazione client utilizza DBTYPE_DBTIMESTAMP e la colonna Server è data, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Native Client il valore verrà convertito in "aaaa-gg-mm HH: mm: SS. fff", ma i metadati del server verranno restituiti come **nvarchar (10)**. L'overflow risultante restituisce DBSTATUS_E_CATCONVERTVALUE. Problemi analoghi si verificano con le conversioni di dati da IRowsetChange, perché i metadati del set di righe vengono impostati dai metadati del ResultSet.  
   
 ### <a name="parameter-and-rowset-metadata"></a>Metadati per parametri e set di righe  
- In questa sezione vengono descritti i metadati per parametri, colonne dei risultati e set di righe dello schema per i client compilati con una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+ In questa sezione vengono descritti i metadati per parametri, colonne dei risultati e set di righe dello schema per i client compilati con una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
   
 #### <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  La struttura DBPARAMINFO restituisce le informazioni seguenti tramite il parametro *prgParamInfo* :  
@@ -100,7 +100,7 @@ ms.locfileid: "81301020"
 |datetimeoffset|DBTYPE_WSTR|26, 28.. 34|~0|~0|  
   
 ### <a name="schema-rowsets"></a>Set di righe dello schema  
- In questa sezione vengono descritti i metadati per parametri, colonne dei risultati e set di righe dello schema per i nuovi tipi di dati. Queste informazioni sono utili se si dispone di un provider client sviluppato con strumenti precedenti [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a Native Client.  
+ In questa sezione vengono descritti i metadati per parametri, colonne dei risultati e set di righe dello schema per i nuovi tipi di dati. Queste informazioni sono utili se si dispone di un provider client sviluppato con strumenti precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 #### <a name="columns-rowset"></a>Set di righe COLUMNS  
  Per i tipi di data/ora vengono restituiti i valori di colonna seguenti:  
@@ -154,7 +154,7 @@ ms.locfileid: "81301020"
 |IS_FIXEDLENGTH|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
   
 ## <a name="down-level-server-behavior"></a>Comportamento dei server legacy  
- Quando si è connessi a un server di una versione [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]precedente a, qualsiasi tentativo di utilizzare i nuovi nomi dei tipi di server, ad esempio con ICommandWithParameters:: separameterinfo o ITableDefinition:: CreateTable, comporterà DB_E_BADTYPENAME.  
+ Quando si è connessi a un server di una versione precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , qualsiasi tentativo di utilizzare i nuovi nomi dei tipi di server, ad esempio con ICommandWithParameters:: separameterinfo o ITableDefinition:: CreateTable, comporterà DB_E_BADTYPENAME.  
   
  Se vengono associati nuovi tipi per parametri o risultati senza l'utilizzo di un nome del tipo e il nuovo tipo viene utilizzato per specificare in modo implicito il tipo di server o non è disponibile una conversione valida dal tipo di server al tipo di client, viene restituito DB_E_ERRORSOCCURRED e DBBINDSTATUS_UNSUPPORTED_CONVERSION viene impostato come stato dell'associazione per la funzione di accesso utilizzata in fase di esecuzione.  
   

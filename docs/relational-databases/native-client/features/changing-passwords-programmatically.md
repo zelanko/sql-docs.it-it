@@ -21,17 +21,17 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4bada5561a4e9af4b779ea26c13fac7ea57dad2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f75555473e529b44d0b1fa99d0b526db8be1e64b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303854"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773228"
 ---
 # <a name="changing-passwords-programmatically"></a>Modifica delle password a livello di programmazione
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Nelle versioni precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] una password di un utente scaduta può essere reimpostata solo da un amministratore. A partire [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Native Client supporta la gestione della scadenza delle password a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] livello di programmazione tramite il provider [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di OLE DB di Native client e il driver ODBC di Native client e le modifiche apportate alle finestre di dialogo **SQL Server account di accesso** .  
+  Nelle versioni precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] una password di un utente scaduta può essere reimpostata solo da un amministratore. A partire da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta la gestione della scadenza delle password a livello di programmazione tramite il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native client e il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native client e le modifiche apportate alle finestre di dialogo **SQL Server account di accesso** .  
   
 > [!NOTE]  
 >  Quando possibile, richiedere agli utenti di immettere le credenziali in fase di esecuzione ed evitare di archiviarle in un formato persistente. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532). Per altre informazioni sull'uso delle password, vedere [Password complesse](../../../relational-databases/security/strong-passwords.md).  
@@ -70,7 +70,7 @@ ms.locfileid: "81303854"
  Quando il tentativo di ripristino non riesce, la connessione viene rimossa dal pool e viene restituito un errore.  
   
 ### <a name="ole-db-programmatic-password-expiration"></a>Scadenza password OLE DB a livello di programmazione  
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta la scadenza delle password tramite l'aggiunta della proprietà SSPROP_AUTH_OLD_PASSWORD (Type VT_BSTR) aggiunta al set di proprietà DBPROPSET_SQLSERVERDBINIT.  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta la scadenza delle password tramite l'aggiunta della proprietà SSPROP_AUTH_OLD_PASSWORD (type VT_BSTR) aggiunta al set di proprietà DBPROPSET_SQLSERVERDBINIT.  
   
  La proprietà "Password" esistente si riferisce a DBPROP_AUTH_PASSWORD e viene utilizzata per archiviare la nuova password.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "81303854"
   
  Se **DriverCompletion** è stato impostato su qualsiasi altro valore, l'utente Visualizza la finestra di dialogo **SQL Server login** , indipendentemente dal fatto che la password sia scaduta o meno. L'utente può cambiare la password facendo clic sul pulsante **Opzioni** e selezionando **Cambia password**.  
   
- Se l'utente fa clic su OK e la password è [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] scaduta, viene richiesto di immettere e confermare una nuova password utilizzando la finestra di dialogo **Cambia SQL Server password** .  
+ Se l'utente fa clic su OK e la password è scaduta, viene [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] richiesto di immettere e confermare una nuova password utilizzando la finestra di dialogo **Cambia SQL Server password** .  
   
 #### <a name="odbc-prompt-behavior-and-locked-accounts"></a>Comportamento del prompt di ODBC e account bloccati  
  È possibile che non si riesca a stabilire una connessione perché l'account è bloccato. Se questo problema si verifica in seguito alla visualizzazione della finestra di dialogo **Account di accesso di SQL Server**, viene visualizzato il messaggio di errore del server e il tentativo di connessione viene interrotto. Il problema può verificarsi anche se, in seguito alla visualizzazione della finestra di dialogo **Modifica password SQL Server**, l'utente immette un valore non corretto per la vecchia password. In questo caso viene visualizzato lo stesso messaggio di errore e il tentativo di connessione viene interrotto.  
