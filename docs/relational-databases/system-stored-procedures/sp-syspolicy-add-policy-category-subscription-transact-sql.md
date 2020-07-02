@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 795a806b1b945407a2db947f6037c435efe68b56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9f4f60a56dff14fd06318899fdf89c5602f7029b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010507"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718648"
 ---
 # <a name="sp_syspolicy_add_policy_category_subscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Aggiunge una sottoscrizione di categoria di criteri al database specificato.  
   
@@ -48,7 +48,7 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
   
 `[ @policy_category = ] 'policy_category'`Nome della categoria di criteri da sottoscrivere. *policy_category* è di **tipo sysname**ed è obbligatorio.  
   
- Per ottenere i valori per *policy_category*, eseguire una query sulla vista di sistema msdb. dbo. syspolicy_policy_categories.  
+ Per ottenere i valori per *policy_category*, eseguire una query sulla vista di sistema msdb.dbo.syspolicy_policy_categories.  
   
 `[ @policy_category_subscription_id = ] policy_category_subscription_id`Identificatore della sottoscrizione di categoria. *policy_category_subscription_id* è di **tipo int**e viene restituito come output.  
   

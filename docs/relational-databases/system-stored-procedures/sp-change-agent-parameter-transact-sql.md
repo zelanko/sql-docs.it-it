@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f22b2446713274503071e615690aaf7a03fc33d2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 86a450e69eb72724b64b9a2861e3cd282ebf87a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824835"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715949"
 ---
 # <a name="sp_change_agent_parameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifica un parametro di un profilo dell'agente di replica archiviato nella tabella di sistema [MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) . Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione in cui l'agente è in esecuzione.  
   
@@ -216,7 +216,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **UseInprocLoader**  
   
--   **Validate**  
+-   **Convalidare**  
   
 -   **ValidateInterval**  
   
@@ -245,7 +245,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_change_agent_parameter** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="permissions"></a>Autorizzazioni  

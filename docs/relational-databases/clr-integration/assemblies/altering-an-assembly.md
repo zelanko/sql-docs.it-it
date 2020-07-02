@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e765fbd-f339-473c-8537-22f478e79696
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07fd94c855a81a8d58ac1ed4b578edf478dc77aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d9ec69415e270770360b6901d8c3117790b5e16d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486852"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717944"
 ---
 # <a name="altering-an-assembly"></a>Modifica di un assembly
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Gli assembly registrati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono essere aggiornati da una versione più recente utilizzando l'istruzione ALTER ASSEMBLY. Per aggiornare un assembly, utilizzare l'istruzione ALTER ASSEMBLY con la sintassi seguente:  
   
 ```  

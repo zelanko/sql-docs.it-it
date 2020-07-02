@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8108896e5ef7599c3441e922c54ba606d65d5fe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a6f56713f2ac50a5e367f23a7987b62e2fb9a78b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828860"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719242"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ottiene informazioni sull'errore di automazione OLE.  
   
@@ -71,13 +71,13 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |------------------|---------------|-----------------|  
-|**Erroree**|**binario (4)**|Rappresentazione binaria del numero di errore.|  
-|**origine**|**nvarchar (nn)**|Origine dell'errore.|  
+|**Errore**|**binario (4)**|Rappresentazione binaria del numero di errore.|  
+|**Origine**|**nvarchar (nn)**|Origine dell'errore.|  
 |**Descrizione**|**nvarchar (nn)**|Descrizione dell'errore.|  
 |**HelpFile**|**nvarchar (nn)**|File della Guida relativo all'origine.|  
 |**HelpID**|**int**|ID di contesto della Guida nel file di origine della Guida.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Ogni chiamata a un stored procedure di automazione OLE (eccetto **sp_OAGetErrorInfo**) Reimposta le informazioni sull'errore. Pertanto, **sp_OAGetErrorInfo** ottiene informazioni sugli errori solo per la chiamata stored procedure di automazione OLE più recente. Si noti che poiché **sp_OAGetErrorInfo** non reimposta le informazioni sull'errore, può essere chiamato più volte per ottenere le stesse informazioni sull'errore.  
   
  Nella tabella seguente vengono elencati gli errori di automazione OLE e le cause più comuni.  
@@ -86,7 +86,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |-----------------------|------------------|  
 |**Tipo di variabile non valido (0x80020008)**|Il tipo di dati di un [!INCLUDE[tsql](../../includes/tsql-md.md)] valore passato come parametro del metodo non corrisponde al [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] tipo di dati del parametro del metodo oppure è stato passato un valore null come parametro del metodo.|  
 |**Nome sconosciuto (0x8002006)**|Il nome di proprietà o metodo specificato non è stato trovato per l'oggetto specificato.|  
-|**Stringa della classe non valida (0x800401f3)**|Il valore ProgID o CLSID specificato non è registrato come oggetto OLE in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È necessario registrare i server di automazione OLE personalizzati prima di potervi creare un'istanza utilizzando **sp_OACreate**. A tale scopo, è possibile utilizzare l'utilità regsvr32. exe per i server in-process (dll) o l'opzione della riga di comando **/regserver** per i server locali (exe).|  
+|**Stringa della classe non valida (0x800401f3)**|Il valore ProgID o CLSID specificato non è registrato come oggetto OLE in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È necessario registrare i server di automazione OLE personalizzati prima di potervi creare un'istanza utilizzando **sp_OACreate**. A tale scopo, è possibile utilizzare l'utilità Regsvr32.exe per i server in-process (dll) o l'opzione della riga di comando **/regserver** per i server locali (exe).|  
 |**Esecuzione del server non completata (0x80080005)**|L'oggetto OLE specificato è registrato come server OLE locale (file exe), ma non è stato possibile trovare o avviare il file.|  
 |**Impossibile trovare il modulo specificato (0x8007007e)**|L'oggetto OLE specificato è registrato come server OLE in-process (file dll), ma non è stato possibile trovare o caricare il file.|  
 |**Tipo non corrispondente (0x80020005)**|Il tipo di dati di una variabile locale [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzata per l'archiviazione del valore restituito di una proprietà o un metodo non corrisponde al tipo di dati di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] del valore restituito della proprietà o del metodo oppure è stato richiesto il valore restituito di una proprietà o un metodo ma non viene restituito alcun valore.|  
@@ -97,7 +97,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o l'autorizzazione Execute direttamente in questa stored procedure. `Ole Automation Procedures`la configurazione deve essere **abilitata** per l'utilizzo di qualsiasi procedura di sistema correlata all'automazione OLE.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono visualizzate le informazioni sull'errore di automazione OLE.  
   
 ```  

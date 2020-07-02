@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2fb0c990c03e0dfbf1cd279efa7a249bb5bc9645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: adc2e7d74f8479384bd9f34b5442e796e4b74d66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112389"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718546"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Database di esempio Wide World Importers per Microsoft SQL
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Si tratta di una panoramica delle aziende e dei flussi di lavoro del mondo fittizio che vengono risolti nei database di esempio WideWorldImporters per SQL Server e il database SQL di Azure.  
 
 Wide World Importers (prima guerra) è un ingrosso dei prodotti importatori e distributori che operano dall'area San Francisco Bay.
@@ -63,6 +63,6 @@ La società opera con un anno finanziario che inizia il 1 ° novembre.
 
 ## <a name="terms-of-use"></a>Condizioni per l'utilizzo
 
-La licenza per il database di esempio e il codice di esempio è descritta di seguito: [License. txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
+La licenza per il database di esempio e il codice di esempio è descritta di seguito: [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
 Il database di esempio include dati pubblici caricati da data.gov e EarthData naturale. Le condizioni per l'utilizzo sono:[https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)

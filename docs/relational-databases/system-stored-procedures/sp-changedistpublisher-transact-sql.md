@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb90ec6a3d5413d22f4721491d3b151a7e28ac05
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8aec9e25008c8dfe3b14bbe838f8122bb93fb756
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833432"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717402"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifica le proprietà del server di pubblicazione della distribuzione. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   

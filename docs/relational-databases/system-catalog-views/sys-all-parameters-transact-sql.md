@@ -20,22 +20,22 @@ ms.assetid: eecbb68e-9b4c-4243-94e2-8096a9cc7892
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc5c7fff4b0226012e82d103dc9f52d84036c218
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3651de5aba112eb48fcb49a066ab409c396d6f14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82822175"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718940"
 ---
 # <a name="sysall_parameters-transact-sql"></a>sys.all_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Visualizza tutti i parametri appartenenti agli oggetti definiti dall'utente e agli oggetti di sistema.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID dell'oggetto a cui appartiene il parametro.|  
-|**name**|**sysname**|Nome del parametro. Valore univoco all'interno dell'oggetto. Se l'oggetto è una funzione scalare, il nome del parametro è una stringa vuota nella riga che rappresenta il valore restituito.|  
+|**nome**|**sysname**|Nome del parametro. Valore univoco all'interno dell'oggetto. Se l'oggetto è una funzione scalare, il nome del parametro è una stringa vuota nella riga che rappresenta il valore restituito.|  
 |**parameter_id**|**int**|ID del parametro. Valore univoco all'interno dell'oggetto. Se l'oggetto è una funzione scalare, **parameter_id** = 0 rappresenta il valore restituito.|  
 |**system_type_id**|**tinyint**|ID del tipo di sistema del parametro.|  
 |**user_type_id**|**int**|ID del tipo di parametro definito dall'utente.<br /><br /> Per restituire il nome del tipo, eseguire il join alla vista del catalogo [sys. Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) in questa colonna.|  
@@ -57,6 +57,6 @@ ms.locfileid: "82822175"
  [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Domande frequenti sull'esecuzione di query sul catalogo di sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys. Parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)   
- [sys. system_parameters &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md)  
+ [sys.system_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md)  
   
   

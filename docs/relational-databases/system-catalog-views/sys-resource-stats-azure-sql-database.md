@@ -19,15 +19,15 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e88d3916f5122564b443bc3c439200526b1f2d5e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a72bb16eddc55f5cf741a7809665b44ada4a7a30
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246906"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717573"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Database SQL di Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Restituisce i dati di archiviazione e di utilizzo della CPU per un database SQL di Azure. I dati vengono raccolti e aggregati in intervalli di cinque minuti. Per ogni database utente è presente una riga per ogni finestra di report di cinque minuti in cui viene apportata una modifica al consumo delle risorse. I dati restituiti includono l'utilizzo della CPU, la modifica delle dimensioni di archiviazione e la modifica dello SKU del database. I database inattivi senza modifiche potrebbero non avere righe per ogni intervallo di cinque minuti. I dati cronologici vengono mantenuti per circa 14 giorni.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "75246906"
 |max_session_percent|**Decimal (5, 2)**|Numero massimo di sessioni simultanee in percentuale in base al limite del livello di servizio del database.<br /><br /> Il valore massimo è attualmente calcolato per l'intervallo di cinque minuti in base agli esempi di 15 secondi relativi ai conteggi delle sessioni simultanee.|  
 |dtu_limit|**int**|Impostazione DTU database Max corrente per questo database durante questo intervallo. |
 |xtp_storage_percent|**Decimal (5, 2)**|Utilizzo dello spazio di archiviazione per OLTP in memoria, in percentuale rispetto al limite del livello di servizio (alla fine dell'intervallo di Reporting). Ciò include la memoria usata per l'archiviazione dei seguenti oggetti di OLTP in memoria: tabelle ottimizzate per la memoria, indici e variabili di tabella. Include inoltre la memoria utilizzata per l'elaborazione delle operazioni ALTER TABLE.<br /><br /> Restituisce 0 se OLTP in memoria non viene utilizzato nel database.|
-|avg_login_rate_percent|**Decimal (5, 2)**|Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.|
+|avg_login_rate_percent|**Decimal (5, 2)**|Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.|
 |avg_instance_cpu_percent|**Decimal (5, 2)**|Utilizzo medio della CPU del database come percentuale del processo di database SQL.|
 |avg_instance_memory_percent|**Decimal (5, 2)**|Utilizzo medio della memoria del database come percentuale del processo di database SQL.|
 |cpu_limit|**Decimal (5, 2)**|Numero di Vcore per il database durante questo intervallo. Per i database che usano il modello basato su DTU, questa colonna è NULL.|

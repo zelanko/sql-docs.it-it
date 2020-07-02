@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c7a2ce13a0dddf5e3cda22bef47d43478170655
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c26cfb617809c3e7019e279a8da06a4008d08abb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820748"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717411"
 ---
 # <a name="sp_kill_filestream_non_transacted_handles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Consente di chiudere handle di file non transazionali per dati di tabelle FileTable.  
   
@@ -67,7 +67,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
 ### <a name="permissions"></a>Autorizzazioni  
  È necessario disporre dell'autorizzazione **View database state** per ottenere gli handle di file dalla vista a gestione dinamica **sys. dm_FILESTREAM_non_transacted_handles** e per eseguire **sp_kill_filestream_non_transacted_handles**.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Negli esempi seguenti viene illustrato come chiamare **sp_kill_filestream_non_transacted_handles** per chiudere gli handle di file non transazionali per i dati della tabella FileTable.  
   
 ```sql  

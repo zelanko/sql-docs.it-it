@@ -19,16 +19,16 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3c94f7f23697539b000c9c76dc1d0970a56a96d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5af0f04d9fce1fbcb455590d0e68a79bd98bdd73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834100"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717627"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
   Contiene informazioni sulle informazioni di attesa per la query.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "82834100"
 |**0**|**Sconosciuto**|Sconosciuto |  
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**Thread di lavoro**|THREADPOOL|
-|**3**|**Blocco**|LCK_M_%|
+|**3**|**Lock**|LCK_M_%|
 |**4**|**Latch**|LATCH_%|
 |**5**|**Latch del buffer**|PAGELATCH_%|
 |**6**|**IO buffer**|PAGEIOLATCH_%|
@@ -65,7 +65,7 @@ ms.locfileid: "82834100"
 |**8**|**SQL CLR**|% CLR, SQLCLR%|
 |**9**|**Mirroring**|DBMIRROR|
 |**10**|**Transazione**|XACT%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
-|**11**|**Inattivo**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|
+|**11**|**Idle**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|
 |**12**|**PreEmptive**|PREEMPTIVE_%|
 |**13**|**Service Broker**|BROKER_% **(ma non BROKER_RECEIVE_WAITFOR)**|
 |**14**|**IO log i/o**|LOGMGR, LOGBUFFER, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, CHKPT, WRITELOG|

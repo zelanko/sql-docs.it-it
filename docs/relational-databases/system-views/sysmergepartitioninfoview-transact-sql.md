@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 40b1ebc5319c13b5aa84a28e1a5c5546dd62bd03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9ae92407c52d84acaebbe157568e6d6476e4aa73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68094817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717252"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La vista **sysmergepartitioninfoview** espone le informazioni di partizionamento per gli articoli di tabella. Questa vista è archiviata nel database di pubblicazione del server di pubblicazione e nel database di sottoscrizione del Sottoscrittore.  
   
@@ -86,8 +86,8 @@ ms.locfileid: "68094817"
 |**delete_tracking**|**bit**|Specifica se le eliminazioni vengono replicate.<br /><br /> **0** = le eliminazioni non vengono replicate.<br /><br /> **1** = le eliminazioni vengono replicate, ovvero il comportamento predefinito per la replica di tipo merge.<br /><br /> Quando il valore di *delete_tracking* è **0**, le righe eliminate nel Sottoscrittore devono essere rimosse manualmente nel server di pubblicazione e le righe eliminate nel server di pubblicazione devono essere rimosse manualmente nel Sottoscrittore.<br /><br /> Nota: un valore pari a **0** comporta la non convergenza.|  
 |**compensate_for_errors**|**bit**|Specifica se devono essere eseguite azioni di compensazione quando vengono rilevati errori durante la sincronizzazione.<br /><br /> **0** = le azioni di compensazione sono disabilitate.<br /><br /> **1** = le modifiche che non possono essere applicate a un Sottoscrittore o a un server di pubblicazione comportano sempre azioni di compensazione per annullare queste modifiche, che è il comportamento predefinito per la replica di tipo merge.<br /><br /> Nota: un valore pari a **0** comporta la non convergenza.|  
 |**pub_range**|**bigint**|Dimensioni dell'intervallo di valori Identity del server di pubblicazione.|  
-|**intervallo**|**bigint**|Dimensioni dei valori Identity consecutivi che verrebbero assegnati nei Sottoscrittori durante un intervento di regolazione.|  
-|**soglia**|**int**|Percentuale di soglia dell'intervallo di valori Identity.|  
+|**range**|**bigint**|Dimensioni dei valori Identity consecutivi che verrebbero assegnati nei Sottoscrittori durante un intervento di regolazione.|  
+|**threshold**|**int**|Percentuale di soglia dell'intervallo di valori Identity.|  
 |**stream_blob_columns**|**bit**|Indica se per le colonne BLOB (Binary Large Object) viene utilizzata l'ottimizzazione del flusso. **1** indica che viene eseguito un tentativo di ottimizzazione.|  
 |**preserve_rowguidcol**|**bit**|Specifica se per la replica viene utilizzata una colonna rowguid esistente. Il valore **1** indica che viene utilizzata una colonna ROWGUIDCOL esistente. **0** indica che la replica ha aggiunto la colonna ROWGUIDCOL.|  
 |**partition_view_id**|**int**|Identifica la vista che definisce una partizione del Sottoscrittore.|  
@@ -104,7 +104,7 @@ ms.locfileid: "68094817"
 |**logical_record_level_conflict_detection**|**bit**|Indica se è necessario rilevare i conflitti a livello di record logico oppure a livello di riga o colonna.<br /><br /> **0** = viene utilizzato il rilevamento dei conflitti a livello di riga o di colonna.<br /><br /> **1** = viene utilizzato il rilevamento dei conflitti tra record logici, in cui una modifica in una riga del server di pubblicazione e la modifica in una riga distinta lo stesso record logico nel Sottoscrittore viene gestita come un conflitto.<br /><br /> Se questo valore è 1, è possibile utilizzare solo la risoluzione dei conflitti a livello di record logico.|  
 |**logical_record_level_conflict_resolution**|**bit**|Indica se è necessario risolvere i conflitti a livello di record logico oppure a livello di riga o colonna.<br /><br /> **0** = viene utilizzata la risoluzione a livello di riga o di colonna.<br /><br /> **1** = in caso di conflitto, l'intero record logico del vincitore sovrascrive l'intero record logico sul lato perduto.<br /><br /> È possibile utilizzare il valore 1 sia con il rilevamento a livello di record logico che con il rilevamento a livello di riga o colonna.|  
 |**partition_options**|**tinyint**|Definisce il modo in cui vengono partizionati i dati nell'articolo. Ciò consente di ottimizzare le prestazioni se tutte le righe appartengono a un'unica partizione o a un'unica sottoscrizione. Il *partition_options* può essere uno dei valori seguenti.<br /><br /> **0** = il filtro per l'articolo è statico oppure non restituisce un subset univoco di dati per ogni partizione, ovvero una partizione "sovrapposta".<br /><br /> **1** = le partizioni sono sovrapposte e gli aggiornamenti DML eseguiti nel Sottoscrittore non possono modificare la partizione a cui appartiene una riga.<br /><br /> **2** = il filtro per l'articolo restituisce partizioni non sovrapposte, ma più sottoscrittori possono ricevere la stessa partizione.<br /><br /> **3** = il filtro per l'articolo restituisce partizioni non sovrapposte univoche per ogni sottoscrizione.|  
-|**name**|**sysname**|Nome di una partizione.|  
+|**nome**|**sysname**|Nome di una partizione.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestire le partizioni per una pubblicazione di tipo merge con filtri con parametri](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   

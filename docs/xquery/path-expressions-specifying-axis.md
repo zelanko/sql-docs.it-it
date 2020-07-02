@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f8e753f4961d33251120151bff6db1f8cd5e14c
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 96240f605762be382065268fa39198baeeaaa53f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215752"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717171"
 ---
 # <a name="path-expressions---specifying-axis"></a>Espressioni di percorso - Specifica asse
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Ogni passo dell'asse in un'espressione di percorso include i componenti seguenti:  
   
@@ -57,10 +57,10 @@ ms.locfileid: "84215752"
   
  L'espressione di percorso relativo `child::root/child::Location/attribute::LocationID` include tre passi. I primi due passi specificano ognuno un asse `child`, mentre il terzo passo specifica l'asse `attribute`. Quando viene eseguito sui documenti XML delle istruzioni di produzione nella tabella **Production. ProductModel** , l'espressione restituisce l' `LocationID` attributo del \<Location> nodo elemento figlio dell' \<root> elemento.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Gli esempi di query in questo argomento vengono specificati per le colonne di tipo **XML** nel database **AdventureWorks** .  
   
-### <a name="a-specifying-a-child-axis"></a>A. Definizione di un asse child  
+### <a name="a-specifying-a-child-axis"></a>R. Definizione di un asse child  
  Per un modello di prodotto specifico, la query seguente recupera i \<Features> nodi figlio del \<ProductDescription> nodo elemento dalla descrizione del catalogo dei prodotti archiviati nella `Production.ProductModel` tabella.  
   
 ```  

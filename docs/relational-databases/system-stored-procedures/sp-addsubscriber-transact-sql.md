@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf49c44ca3de4325c8d5c6ecab22adc3ac0614cf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 462fe9e3634ea1dfa844fe4a97f1086bdef82cba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833631"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716359"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
 
   Aggiunge in un server di pubblicazione un nuovo Sottoscrittore per abilitarlo alla ricezione di pubblicazioni. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione per pubblicazioni snapshot e transazionali. Per pubblicazioni di tipo merge che utilizzano un server di distribuzione remoto, viene eseguita nel server di distribuzione.  
   
@@ -107,7 +107,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |**2**|On demand|  
 |**4**|Ogni giorno|  
 |**8**|Settimanale|  
-|**16**|Ogni mese|  
+|**16**|Mensile|  
 |**32**|Mensile relativa|  
 |**64** (impostazione predefinita)|Avvio automatico|  
 |**128**|Periodica|  

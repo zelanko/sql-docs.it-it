@@ -20,15 +20,15 @@ ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08193bd8f9b6dfd3aace80315c75bbb88e076f3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbba738f10f570af693cc126cb20f0f857e405aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255837"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718902"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Restituisce una riga per ogni certificato nel database.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "75255837"
 |**Oggetto**|**nvarchar(4000)**|Oggetto del certificato.|  
 |**expiry_date**|**datetime**|Data di scadenza del certificato.|  
 |**start_date**|**datetime**|Data di inizio di validità del certificato.|  
-|**thumbprint**|**varbinary(32)**|Hash SHA-1 del certificato. L'hash SHA-1 è univoco globale.|  
+|**Thumbprint**|**varbinary(32)**|Hash SHA-1 del certificato. L'hash SHA-1 è univoco globale.|  
 |**attested_by**|**nvarchar(260)**|Riservato per l'utilizzo nel sistema.|  
 |**pvt_key_last_backup_date**|**datetime**|Data e ora dell'ultima esportazione della chiave privata del certificato.|  
   

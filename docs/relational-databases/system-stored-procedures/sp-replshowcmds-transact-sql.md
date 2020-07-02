@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 21f2bf7a43bd391044deb03d08cc86ebc9a772bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 67cf4522b88e9922027a671feeda02b3305dbfc3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828238"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718632"
 ---
 # <a name="sp_replshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Restituisce i comandi per le transazioni contrassegnate per la replica in formato leggibile. **sp_replshowcmds** può essere eseguita solo quando le connessioni client (inclusa la connessione corrente) non leggono le transazioni replicate dal log. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -49,9 +49,9 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 |**publisher_database_id**|**int**|ID del database del server di pubblicazione, sempre **0**.|  
 |**article_id**|**int**|ID dell'articolo.|  
 |**type**|**int**|Tipo di comando.|  
-|**comando**|**nvarchar(1024)**|Comando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
+|**command**|**nvarchar(1024)**|Comando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_replshowcmds** viene utilizzata nella replica transazionale.  
   
  Utilizzando **sp_replshowcmds**, è possibile visualizzare le transazioni attualmente non distribuite (le transazioni rimanenti nel log delle transazioni che non sono state inviate al server di distribuzione).  

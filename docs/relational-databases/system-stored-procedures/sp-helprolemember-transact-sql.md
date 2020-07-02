@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65a1f4d2098e55c7007bd04e2fef00bcbac30ffc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 12d66cfa4668c8ca91d82d00cfa5abd4504e76eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824419"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719282"
 ---
 # <a name="sp_helprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni sui membri diretti di un ruolo del database corrente.  
   
@@ -52,7 +52,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 |**MemberName**|**sysname**|Nome di un membro di **DbRole.**|  
 |**MemberSID**|**varbinary (85)**|ID di sicurezza di **memberName.**|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se il database contiene ruoli annidati, **memberName** può essere il nome di un ruolo. **sp_helprolemember** non Mostra l'appartenenza ottenuta tramite ruoli annidati. Se, ad esempio, User1 è un membro di Role1 e Role1 è un membro di Role2, `EXEC sp_helprolemember 'Role2'`, verrà restituito Role1, ma non i membri di Role1 (User1 in questo esempio). Per restituire le appartenenze annidate, è necessario eseguire ripetutamente **sp_helprolemember** per ogni ruolo annidato.  
   
  Utilizzare **sp_helpsrvrolemember** per visualizzare i membri di un ruolo predefinito del server.  

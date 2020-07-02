@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a2984479c8a1be35f8ccfa63d14b3250939f56c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e7ba3827b9a659c0100805d0a9895fad503b2a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68117897"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716289"
 ---
 # <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Aggiunge un nuovo utente al database corrente.  
   
@@ -44,7 +44,7 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @loginame = ] 'login'`Nome dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso di o dell'account di accesso di Windows. *login* è di **tipo sysname**e non prevede alcun valore predefinito. *login* deve essere un account [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di accesso o un account di accesso di Windows esistente.  
+`[ @loginame = ] 'login'`Nome dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso di o dell'account di accesso di Windows. *login* è di **tipo sysname**e non prevede alcun valore predefinito. *login* deve essere un account di accesso o un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows esistente.  
   
 `[ @name_in_db = ] 'user'`Nome del nuovo utente del database. *User* è di **tipo sysname**e il valore predefinito è null. Se l' *utente* non è specificato, il nome del nuovo utente del database viene impostato sul nome dell' *account di accesso* . Se si specifica *User* , al nuovo utente viene assegnato un nome nel database diverso dal nome dell'account di accesso a livello di server.  
   

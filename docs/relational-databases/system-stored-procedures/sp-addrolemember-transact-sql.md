@@ -18,15 +18,15 @@ ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9e0d3152c6d60faff4c1c42410374287bd7d111
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 87fbcab87999c83c688ec4fa9e46f1aeed033bcf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030898"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716418"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Aggiunge un utente del database, un ruolo del database, un account di accesso di Windows o un gruppo di Windows a un ruolo del database nel database corrente.  
   
@@ -43,10 +43,10 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ```    
   
 ## <a name="arguments"></a>Argomenti  
- [ @rolename= ] '*Role*'  
+ [ @rolename =]'*Role*'  
  Nome del ruolo del database nel database corrente. *Role* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
- [ @membername= ] '*security_account*'  
+ [ @membername =]'*security_account*'  
  Account di sicurezza aggiunto al ruolo. *security_account* è di **tipo sysname**e non prevede alcun valore predefinito. *security_account* può essere un utente del database, un ruolo del database, un account di accesso di Windows o un gruppo di Windows.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
@@ -75,7 +75,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-adding-a-windows-login"></a>R. Aggiunta di un account di accesso di Windows  
- Nell'esempio seguente l'account di accesso `Contoso\Mary5` di Windows `AdventureWorks2012` viene aggiunto al `Mary5`database come utente. L'utente `Mary5` viene quindi aggiunto al ruolo `Production`.  
+ Nell'esempio seguente l'account di accesso di Windows viene aggiunto `Contoso\Mary5` al `AdventureWorks2012` database come utente `Mary5` . L'utente `Mary5` viene quindi aggiunto al ruolo `Production`.  
   
 > [!NOTE]  
 >  Poiché `Contoso\Mary5` è noto come utente del database `Mary5` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], è necessario specificare il nome utente `Mary5`. L'istruzione non verrà eseguita correttamente se non esiste un account di accesso `Contoso\Mary5`. Eseguire un test mediante un account di accesso dal dominio.  
@@ -97,10 +97,10 @@ EXEC sp_addrolemember 'Production', 'Mary5';
 ## <a name="examples-sspdw"></a>Esempi: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>C. Aggiunta di un account di accesso di Windows  
- Nell'esempio seguente l'account di `LoginMary` accesso viene `AdventureWorks2008R2` aggiunto al database `UserMary`come utente. L'utente `UserMary` viene quindi aggiunto al ruolo `Production`.  
+ Nell'esempio seguente l'account di accesso viene aggiunto `LoginMary` al `AdventureWorks2008R2` database come utente `UserMary` . L'utente `UserMary` viene quindi aggiunto al ruolo `Production`.  
   
 > [!NOTE]  
->  Poiché l'account `LoginMary` di accesso è noto come utente `UserMary` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] nel database, è necessario `UserMary` specificare il nome utente. L'istruzione non verrà eseguita correttamente se non esiste un account di accesso `Mary5`. Gli account di accesso e gli utenti di solito hanno lo stesso nome. Questo esempio usa nomi diversi per distinguere le azioni che interessano l'accesso e l'utente.  
+>  Poiché l'account `LoginMary` di accesso è noto come utente del database `UserMary` nel [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database, è necessario specificare il nome utente `UserMary` . L'istruzione non verrà eseguita correttamente se non esiste un account di accesso `Mary5`. Gli account di accesso e gli utenti di solito hanno lo stesso nome. Questo esempio usa nomi diversi per distinguere le azioni che interessano l'accesso e l'utente.  
   
 ```  
 -- Uses AdventureWorks  

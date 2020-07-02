@@ -18,15 +18,15 @@ ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c01290f0f95a7e240931a9398ab7acea1b287be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 546e980aeb021f57a0267d1f668f7acd181b4dcf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824404"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719278"
 ---
 # <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Viene restituito il tipo o i tipi di trigger DML definiti nella tabella specificata per il database corrente. non è possibile usare sp_helptrigger con i trigger DDL. In alternativa, eseguire una query sulla vista del catalogo delle [stored procedure di sistema](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) .  
   
@@ -45,7 +45,7 @@ sp_helptrigger [ @tabname = ] 'table'
   
 `[ @triggertype = ] 'type'`Tipo di trigger DML per cui restituire informazioni. il *tipo* è **char (6)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |**DELETE**|Restituisce informazioni sui trigger DELETE.|  
 |**INSERT**|Restituisce informazioni sui trigger INSERT.|  
@@ -71,7 +71,7 @@ sp_helptrigger [ @tabname = ] 'table'
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione di [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md) per la tabella.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene eseguita la stored procedure `sp_helptrigger` per generare informazioni sui trigger definiti nella tabella `Person.Person`.  
   
 ```  

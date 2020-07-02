@@ -21,22 +21,22 @@ ms.assetid: 630d4caa-9bea-4cd3-a5b1-01098b0855fc
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 87af4645a052001ddfc2d0540b6b40e75e3dbb20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b721b35f68518ee0c2863544c42a8fa11d99f3a8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68067849"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717604"
 ---
 # <a name="sysregistered_search_property_lists-transact-sql"></a>sys.registered_search_property_lists (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una riga per ogni elenco delle proprietà di ricerca nel database corrente.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**property_list_id**|**int**|ID dell'elenco di proprietà.|  
-|**name**|**sysname**|Nome dell'elenco di proprietà.|  
+|**nome**|**sysname**|Nome dell'elenco di proprietà.|  
 |**create_date**|**datetime**|Data di creazione dell'elenco di proprietà.|  
 |**modify_date**|**datetime**|Data dell'ultima modifica apportata all'elenco di proprietà mediante un'istruzione ALTER.|  
 |**principal_id**|**int**|Proprietario dell'elenco di proprietà.|  

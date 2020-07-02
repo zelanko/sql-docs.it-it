@@ -20,15 +20,15 @@ ms.assetid: 440875ab-b0e9-4966-8c16-01503558fedd
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c5dc4f2dc42452560162d214844e2264cd0e5e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c9c17ef0384d1b4ef1bc5534ffeffa8b2ba3d598
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73593802"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718889"
 ---
 # <a name="syscolumn_encryption_key_values-transact-sql"></a>sys. column_encryption_key_values (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Restituisce informazioni sui valori crittografati delle chiavi di crittografia di colonna (chiavi CEK) create con la chiave di crittografia della colonna [Create Column](../../t-sql/statements/create-column-encryption-key-transact-sql.md) o l'istruzione [ALTER column Encryption Key &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md) . Ogni riga rappresenta un valore di un CEK, crittografato con una chiave master della colonna (CMK).  
   

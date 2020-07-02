@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b0c847215d31bd2064467c3edbce42ba957c2e78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ecd2576cac046984394b093832769363968e637a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79448338"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715895"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Viene eseguito il mapping di un utente di database esistente a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
@@ -47,23 +47,23 @@ sp_change_users_login [ @Action = ] 'action'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @Action= ] '*azione*'  
+ [ @Action =]'*azione*'  
  Descrive l'azione che deve essere eseguita dalla procedura. *Action* è di tipo **varchar (10)**. l' *azione* può avere uno dei valori seguenti.  
   
-|valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |**Auto_Fix**|Collega una voce utente presente nella vista del catalogo di sistema sys.database_principals del database corrente a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con lo stesso nome. Se non esiste un account di accesso con lo stesso nome, ne verrà creato uno. Esaminare il risultato dell'istruzione **Auto_Fix** per verificare che sia effettivamente stato eseguito il collegamento corretto. Evitare l'uso di **Auto_Fix** in situazioni sensibili alla sicurezza.<br /><br /> Quando si utilizza **Auto_Fix**, è necessario specificare *utente* e *password* se l'account di accesso non esiste già. in caso contrario, è necessario specificare l' *utente* , ma la *password* verrà ignorata. l' *account di accesso* deve essere null. l' *utente* deve essere un utente valido nel database corrente. Non è possibile eseguire il mapping dell'account di accesso a un altro utente.|  
 |**Report**|Elenca gli utenti e gli ID di sicurezza (SID) corrispondenti disponibili nel database corrente e non collegati ad alcun account di accesso. l' *utente*, l' *account di accesso*e la *password* devono essere null o non specificati.<br /><br /> Per sostituire l'opzione del report con una query utilizzando le tabelle di sistema, confrontare le voci in **sys. server_prinicpals** con le voci in **sys. database_principals**.|  
 |**Update_One**|Collega l' *utente* specificato nel database corrente a un account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *accesso*esistente. è necessario specificare l' *utente* e l' *account di accesso* . la *password* deve essere null o non specificata.|  
   
- [ @UserNamePattern= ] '*User*'  
+ [ @UserNamePattern =]'*utente*'  
  Nome di un utente nel database corrente. *User* è di **tipo sysname**e il valore predefinito è null.  
   
- [ @LoginName= ] '*login*'  
+ [ @LoginName =]'*login*'  
  Nome di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* è di tipo **sysname** e il valore predefinito è NULL.  
   
- [ @Password= ] '*password*'  
- Password assegnata a un nuovo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso creato specificando **Auto_Fix**. Se un account di accesso corrispondente esiste già, viene eseguito il mapping dell'utente e dell'account di accesso e la *password* viene ignorata. Se un account di accesso corrispondente non esiste, sp_change_users_login crea un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nuovo account di accesso e assegna la *password* come password per il nuovo account di accesso. *password* è di **tipo sysname**e non può essere null.  
+ [ @Password =]'*password*'  
+ Password assegnata a un nuovo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso creato specificando **Auto_Fix**. Se un account di accesso corrispondente esiste già, viene eseguito il mapping dell'utente e dell'account di accesso e la *password* viene ignorata. Se un account di accesso corrispondente non esiste, sp_change_users_login crea un nuovo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso e assegna la *password* come password per il nuovo account di accesso. *password* è di **tipo sysname**e non può essere null.  
   
 > **IMPORTANTE** Usare sempre una [password complessa.](../../relational-databases/security/strong-passwords.md)
   

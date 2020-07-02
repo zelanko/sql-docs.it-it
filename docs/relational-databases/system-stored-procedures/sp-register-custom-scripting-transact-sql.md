@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d57f3098a69e499392af502d2d3a6d94840bde21
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: af2feda317d3cbcbf7391179c0797291644eca26
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834354"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719211"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La replica consente di sostituire una o più stored procedure predefinite utilizzate per la replica transazionale con stored procedure personalizzate definite dall'utente. Quando viene apportata una modifica dello schema a una tabella replicata, queste stored procedure vengono ricreate. **sp_register_custom_scripting** registra un stored procedure o un [!INCLUDE[tsql](../../includes/tsql-md.md)] file di script che viene eseguito quando si verifica una modifica dello schema per inserire nello script la definizione per un nuovo stored procedure personalizzato definito dall'utente. Questa nuova stored procedure personalizzata definita dall'utente deve riflettere il nuovo schema della tabella. **sp_register_custom_scripting** viene eseguita nel database di pubblicazione del server di pubblicazione e il file di script o stored procedure registrato viene eseguito nel Sottoscrittore quando si verifica una modifica dello schema.  
   

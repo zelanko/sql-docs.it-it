@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d2b8fc2ac96821427aaf0ef2550fb6624a923d7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6bf5b4c74b39c9326382089579e111b118235170
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68000936"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715855"
 ---
 # <a name="sp_help_log_shipping_monitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce un set di risultati contenente lo stato e altre informazioni per i database primari e secondari registrati in un server primario, secondario o di monitoraggio.  
   
@@ -39,7 +39,7 @@ sp_help_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- Nessuno.  
+ No.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -50,7 +50,7 @@ sp_help_log_shipping_monitor
 |-----------------|---------------|-----------------|  
 |**Stato**|**bit**|Stato collettivo degli agenti per il database per il log shipping:<br /><br /> **0** = errori integri e senza agente.<br /><br /> **1** = in caso contrario.|  
 |**is_primary**|**bit**|Indica se questa riga è per un database primario o meno:<br /><br /> **1** = la riga è per un database primario.<br /><br /> **0** = la riga è per un database secondario.|  
-|**Server**|**sysname**|Nome del server primario o secondario contenente il database.|  
+|**server**|**sysname**|Nome del server primario o secondario contenente il database.|  
 |**database_name**|**sysname**|Nome del database.|  
 |**time_since_last_backup**|**int**|Periodo di tempo, in minuti, dall'ultimo backup del log.<br /><br /> NULL = Informazioni non disponibili o non rilevanti.|  
 |**last_backup_file**|**nvarchar (500)**|Nome dell'ultimo file di backup del log.<br /><br /> NULL = Informazioni non disponibili o non rilevanti.|  
@@ -71,7 +71,7 @@ sp_help_log_shipping_monitor
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul &#40;di log shipping SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

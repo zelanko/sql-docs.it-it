@@ -24,15 +24,15 @@ ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e65eaac59bcc16e123bda3e47af29dc4a836ce5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d393936953ead282578f69e8ad1945914a252e66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388393"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719561"
 ---
 # <a name="creating-a-driver-application"></a>Creazione di un'applicazione driver
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   L'architettura ODBC include quattro componenti che eseguono le funzioni seguenti.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "81388393"
 |Driver|Elabora tutte le chiamate di funzioni ODBC dall'applicazione, si connette a un'origine dati, passa istruzioni SQL dall'applicazione all'origine dati e restituisce risultati all'applicazione. Se necessario, il driver converte dati ODBC SQL dall'applicazione al formato SQL nativo utilizzato dall'origine dati.|  
 |Origine dati|Contiene tutte le informazioni di cui necessita un driver per accedere a un'istanza specifica di dati in un DBMS.|  
   
- Un'applicazione che utilizza il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client per comunicare con un'istanza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di esegue le attività seguenti:  
+ Un'applicazione che utilizza il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client per comunicare con un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esegue le attività seguenti:  
   
 -   Si connette a un'origine dati  
   
@@ -77,7 +77,7 @@ ms.locfileid: "81388393"
   
  Per eseguire chiamate di funzioni ODBC, un'applicazione C o C++ deve includere i file di intestazione sql.h, sqlext.h e sqltypes.h. Per eseguire chiamate alle funzioni API del programma di installazione ODBC, un'applicazione deve includere il file di intestazione odbcinst.h. Un'applicazione ODBC Unicode deve includere il file di intestazione sqlucode.h. Le applicazioni ODBC devono essere collegate con il file odbc32.lib. Le applicazioni ODBC che chiamano funzioni API del programma di installazione ODBC devono essere collegate con il file odbccp32.lib. Tali file sono inclusi in Windows Platform SDK.  
   
- Molti driver ODBC, incluso il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native client, offrono estensioni ODBC specifiche del driver. Per sfruttare i vantaggi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] delle estensioni specifiche del driver ODBC di Native client, un'applicazione deve includere il file di intestazione sqlncli. h. Questo file di intestazione contiene gli elementi seguenti:  
+ Molti driver ODBC, incluso il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native client, offrono estensioni ODBC specifiche del driver. Per sfruttare i vantaggi delle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estensioni specifiche del driver ODBC di Native client, un'applicazione deve includere il file di intestazione sqlncli. h. Questo file di intestazione contiene gli elementi seguenti:  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Attributi di connessione specifici del driver ODBC di Native Client.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "81388393"
   
 -   Chiamata delle funzioni API dei metadati delle query distribuite per ottenere elenchi di server collegati e dei relativi cataloghi.  
   
- Qualsiasi applicazione ODBC C o C++ che utilizza la funzionalità di copia bulk del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native client deve essere collegata con il file sqlncli11. lib. Le applicazioni che chiamano le funzioni API dei metadati delle query distribuite devono anch'esse essere collegate con sqlncli11.lib. I file sqlncli. h e sqlncli11. lib vengono distribuiti come parte degli strumenti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di sviluppo. Le directory Include e Lib di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devono essere incluse nei percorsi INCLUDE e LIB del compilatore, come illustrato di seguito:  
+ Qualsiasi applicazione ODBC C o C++ che utilizza la funzionalità di copia bulk del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native client deve essere collegata con il file sqlncli11. lib. Le applicazioni che chiamano le funzioni API dei metadati delle query distribuite devono anch'esse essere collegate con sqlncli11.lib. I file sqlncli. h e sqlncli11. lib vengono distribuiti come parte degli [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] strumenti di sviluppo. Le directory Include e Lib di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devono essere incluse nei percorsi INCLUDE e LIB del compilatore, come illustrato di seguito:  
   
 ```  
 LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Lib;  

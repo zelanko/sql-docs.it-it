@@ -13,19 +13,19 @@ ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f8161ea07e394192e972caf4f772d9e7def36e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97867fb2debffab4684aaef302773ebe531d820b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301782"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719013"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>Conversioni dei tipi di dati datetime da C a SQL
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Questo argomento elenca i problemi da considerare quando si esegue la conversione da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi C a tipi di data/ora.  
+  Questo argomento elenca i problemi da considerare quando si esegue la conversione da tipi C a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di data/ora.  
   
- Le conversioni descritte nella tabella seguente sono valide se effettuate sul client. Nei casi in cui il client specifica la precisione in secondi frazionari per un parametro che differisce da quello definito nel server, la conversione client potrebbe avere esito positivo, ma il server restituirà un errore quando viene chiamato **SQLExecute** o **SQLExecuteDirect** . In particolare, ODBC considera il troncamento dei secondi frazionari come un errore, mentre il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportamento è arrotondato; ad esempio, l'arrotondamento si verifica quando si passa da **datetime2 (6)** a **datetime2 (2)**. I valori della colonna di tipo datetime vengono arrotondati a 1/300° di un secondo e le colonne smalldatetime contengono secondi impostati su zero dal server.  
+ Le conversioni descritte nella tabella seguente sono valide se effettuate sul client. Nei casi in cui il client specifica la precisione in secondi frazionari per un parametro che differisce da quello definito nel server, la conversione client potrebbe avere esito positivo, ma il server restituirà un errore quando viene chiamato **SQLExecute** o **SQLExecuteDirect** . In particolare, ODBC considera il troncamento dei secondi frazionari come un errore, mentre il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportamento viene arrotondato. ad esempio, l'arrotondamento si verifica quando si passa da **datetime2 (6)** a **datetime2 (2)**. I valori della colonna di tipo datetime vengono arrotondati a 1/300° di un secondo e le colonne smalldatetime contengono secondi impostati su zero dal server.  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -90,7 +90,7 @@ ms.locfileid: "81301782"
   
      Una dimensione della colonna pari a zero implica una dimensione illimitata per i tipi di carattere a lunghezza variabile in ODBC (9 cifre, a meno che non si applichi la regola delle 3 cifre per SQL_C_TYPE_TIMESTAMP). La specifica di una dimensione della colonna pari a zero con un tipo di carattere a lunghezza fissa è un errore.  
   
--   **N/A**: viene [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] mantenuto il comportamento esistente e quello precedente.  
+-   **N/A**: [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] viene mantenuto il comportamento esistente e quello precedente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Miglioramenti di data e ora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

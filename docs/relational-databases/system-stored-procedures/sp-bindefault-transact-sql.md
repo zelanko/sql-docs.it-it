@@ -18,15 +18,15 @@ ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1552f566852f90b3526645313a160f2446b868e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e886acbd91ff2882c7dd304227ae0b7f1d6afd9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716119"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Associa un valore predefinito a una colonna o a un tipo di dati alias.  
   
@@ -59,7 +59,7 @@ sp_bindefault [ @defname = ] 'default' ,
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  È possibile utilizzare **sp_bindefault** per associare un nuovo valore predefinito a una colonna, sebbene sia preferibile utilizzare il vincolo predefinito oppure a un tipo di dati alias senza disassociare un valore predefinito esistente. Il valore predefinito esistente viene ignorato. Non è possibile associare un valore predefinito a un tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a un tipo CLR definito dall'utente. Se il valore predefinito non è compatibile con la colonna a cui è stato associato, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] restituisce un messaggio di errore quando si tenta di inserire il valore predefinito, non in fase di associazione.  
   
  Le colonne esistenti del tipo di dati alias ereditano il nuovo valore predefinito, a meno che non sia associato un valore predefinito direttamente a tali colonne o *futureonly_flag* sia specificato come **futureonly**. Le nuove colonne del tipo di dati alias ereditano sempre il valore predefinito.  

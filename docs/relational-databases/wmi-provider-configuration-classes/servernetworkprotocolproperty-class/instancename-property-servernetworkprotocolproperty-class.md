@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b3f24bf0-6b02-496b-b08e-327f7b320bc5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c2b86b50b6792cf8a2c921dd0e61826282cee74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b933588a8d58b2f48c95e5bb0c2f1ede47944bbc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660622"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717214"
 ---
 # <a name="instancename-property-servernetworkprotocolproperty-class"></a>Proprietà InstanceName (classe ServerNetworkProtocolProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Ottiene il nome di un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui è installato il protocollo di rete del server.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,7 +36,7 @@ object.InstanceName [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe ServerNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) che rappresenta un attributo del protocollo di rete nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  

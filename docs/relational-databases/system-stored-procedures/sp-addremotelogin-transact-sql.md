@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: eb45ce1c3e1786eb5a9a3cd630741dd4df773c40
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b4a3586625fa0a20d59ca0222ea1abbde6a6fef5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030966"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716436"
 ---
 # <a name="sp_addremotelogin-transact-sql"></a>sp_addremotelogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Aggiunge un nuovo ID di accesso remoto nel server locale. Ciò consente ai server remoti di connettersi ed eseguire chiamate di procedure remote.  
   
@@ -45,10 +45,10 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
   
 ## <a name="arguments"></a>Argomenti  
  [ @remoteserver **=** ] **'**_RemoteServer_**'**  
- Nome del server remoto a cui fa riferimento l'account di accesso remoto. *RemoteServer* è di **tipo sysname**e non prevede alcun valore predefinito. Se si specifica solo *RemoteServer* , viene eseguito il mapping di tutti gli utenti in *RemoteServer* a account di accesso esistenti con lo stesso nome nel server locale. Il server deve essere noto al server locale. Il server viene aggiunto tramite sp_addserver. Quando gli utenti di *RemoteServer* si connettono al server locale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che esegue per eseguire una stored procedure remota, si connettono come account di accesso locale corrispondente al proprio account di accesso in *RemoteServer*. *RemoteServer* è il server che avvia la chiamata RPC.  
+ Nome del server remoto a cui fa riferimento l'account di accesso remoto. *RemoteServer* è di **tipo sysname**e non prevede alcun valore predefinito. Se si specifica solo *RemoteServer* , viene eseguito il mapping di tutti gli utenti in *RemoteServer* a account di accesso esistenti con lo stesso nome nel server locale. Il server deve essere noto al server locale. Il server viene aggiunto tramite sp_addserver. Quando gli utenti di *RemoteServer* si connettono al server locale che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire una stored procedure remota, si connettono come account di accesso locale corrispondente al proprio account di accesso in *RemoteServer*. *RemoteServer* è il server che avvia la chiamata RPC.  
   
  [ @loginame **=** ] **'**_login_**'**  
- ID dell'account di accesso dell'utente nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* è di tipo **sysname** e il valore predefinito è NULL. l' *account di accesso*deve esistere già nell'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]locale di. Se si specifica *login* , viene eseguito il mapping di tutti gli utenti in *RemoteServer* a tale account di accesso locale specifico. Quando gli utenti di *RemoteServer* si connettono all' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza locale di per eseguire una stored procedure remota, si connettono come *account di accesso*.  
+ ID dell'account di accesso dell'utente nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* è di tipo **sysname** e il valore predefinito è NULL. l' *account di accesso*deve esistere già nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si specifica *login* , viene eseguito il mapping di tutti gli utenti in *RemoteServer* a tale account di accesso locale specifico. Quando gli utenti di *RemoteServer* si connettono all'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire una stored procedure remota, si connettono come *account di accesso*.  
   
  [ @remotename **=** ] **'**_remote_name_**'**  
  ID dell'account di accesso dell'utente nel server remoto. *remote_name* è di **tipo sysname**e il valore predefinito è null. *remote_name* deve esistere in *RemoteServer*. Se *remote_name* viene specificato, viene eseguito il mapping del *remote_name* utente specifico all' *account di accesso* nel server locale. Quando *remote_name* su *RemoteServer* si connette all'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire una stored procedure remota, si connette come *account di accesso*. L'ID di accesso di *remote_name* può essere diverso dall'ID di accesso nel server remoto, *login*.  

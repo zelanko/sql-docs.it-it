@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 804e5723732f4879451c885a0aa719d6822925a1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b84eb615704799d0e63aa139b28356203512ea28
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716285"
 ---
 # <a name="sp_altermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Modifica lo stato dei messaggi di sistema o definiti dall'utente in un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. I messaggi definiti dall'utente possono essere visualizzati utilizzando la vista del catalogo **sys. messages** .  
 
@@ -65,7 +65,7 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **serveradmin** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene registrato il messaggio `55001` esistente nel registro applicazioni di Windows.  
   
 ```  

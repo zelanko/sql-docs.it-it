@@ -21,15 +21,15 @@ ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e91971d13b26d6a156307b2a0288de236456c880
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2879f5678c315d3e3921813a5d26a6c6034aa05f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828099"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718813"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Restituisce informazioni di riepilogo su gruppi di indici mancanti, escludendo gli indici spaziali.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "82828099"
 |**avg_total_system_cost**|**float**|Costo medio delle query di sistema che potrebbe essere ridotto dall'indice del gruppo.|  
 |**avg_system_impact**|**float**|Vantaggio percentuale medio che potrebbe essere garantito alle query di sistema con l'implementazione del gruppo di indici mancanti. Questo valore indica la percentuale di riduzione media del costo delle query in caso di implementazione del gruppo di indici mancanti.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Le informazioni restituite da **sys.dm_db_missing_index_group_stats** vengono aggiornate ogni volta che viene eseguita una query, non ad ogni compilazione o ricompilazione di query. Le statistiche di utilizzo non sono persistenti e vengono mantenute soltanto fino al riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per mantenere le statistiche di utilizzo anche dopo il riciclo del server, gli amministratori di database devono eseguire periodicamente copie di backup delle informazioni relative agli indici mancanti.  
 
   >[!NOTE]
@@ -61,7 +61,7 @@ ms.locfileid: "82828099"
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire query su questa vista a gestione dinamica, è necessario che agli utenti sia stata concessa l'autorizzazione VIEW SERVER STATE o qualsiasi autorizzazione che include l'autorizzazione VIEW SERVER STATE.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Negli esempi seguenti viene illustrato l'utilizzo della vista a gestione dinamica **sys.dm_db_missing_index_group_stats**.  
   
 ### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>R. Trovare i 10 indici mancanti con il massimo miglioramento previsto per le query utente  
@@ -86,7 +86,7 @@ INNER JOIN sys.dm_db_missing_index_details AS mid
 WHERE migs.group_handle = 24;  
 ```  
   
- Questa query indica il nome del database, dello schema e della tabella in cui un indice risulta mancante, nonché i nomi delle colonne da utilizzare per la chiave di indice. Quando si scrive l'istruzione DDL CREATE INDEX per implementare indici mancanti, nella clausola ON \< *table_name*> dell'istruzione create index elencare innanzitutto le colonne di uguaglianza e quindi le colonne di disuguaglianza. Le colonne incluse devono essere elencate nella clausola INCLUDE dell'istruzione CREATE INDEX. Per determinare un ordine efficiente per le colonne di uguaglianza, ordinarle in base alla selettività a partire dalle colonne più selettive, all'estrema sinistra nell'elenco di colonne.  
+ Questa query indica il nome del database, dello schema e della tabella in cui un indice risulta mancante, nonché i nomi delle colonne da utilizzare per la chiave di indice. Quando si scrive l'istruzione DDL CREATE INDEX per implementare indici mancanti, nella \<*table_name*> clausola on dell'istruzione create index elencare innanzitutto le colonne di uguaglianza e quindi le colonne di disuguaglianza. Le colonne incluse devono essere elencate nella clausola INCLUDE dell'istruzione CREATE INDEX. Per determinare un ordine efficiente per le colonne di uguaglianza, ordinarle in base alla selettività a partire dalle colonne più selettive, all'estrema sinistra nell'elenco di colonne.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sys. dm_db_missing_index_columns &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   

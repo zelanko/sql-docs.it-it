@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 25d292ed7f45d921d2fc9eafbc1d2d5fe5912dbe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d9eaae9a00a125a2ffe2f290e2bd772eb40d84c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830228"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717355"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Scollega un database attualmente non in uso da un'istanza del server e, facoltativamente, esegue UPDATE STATISTICS su tutte le tabelle prima dello scollegamento.  
   
@@ -120,7 +120,7 @@ GO
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo **db_owner** del database.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente il database viene scollegato [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] con *skipchecks* impostato su true.  
   
 ```  

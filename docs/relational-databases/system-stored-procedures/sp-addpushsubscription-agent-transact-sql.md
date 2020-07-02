@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 22957ce497f47c56ace0f264cc2068014a2f43af
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: f9ff6619109e198a50d15c21aecbe958a6183d2d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627375"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716463"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Aggiunge un nuovo processo di agente pianificato per sincronizzare una sottoscrizione push di una pubblicazione transazionale. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -107,7 +107,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**2**|On demand|  
 |**4**|Ogni giorno|  
 |**8**|Settimanale|  
-|**16**|Ogni mese|  
+|**16**|Mensile|  
 |**32**|Mensile relativa|  
 |**64** (impostazione predefinita)|Avvio automatico|  
 |**128**|Periodica|  
@@ -176,7 +176,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_addpushsubscription_agent** viene utilizzata nella replica snapshot e nella replica transazionale.  
   
 ## <a name="example"></a>Esempio  

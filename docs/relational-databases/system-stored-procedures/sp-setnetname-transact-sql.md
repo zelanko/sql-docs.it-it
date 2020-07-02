@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e75d1d43c37d0e758b02025df4f601c87f44f2e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 140765eacad1d035f9e8640330701711a358991b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816741"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719202"
 ---
 # <a name="sp_setnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Imposta i nomi di rete in **sys. Servers** sui nomi dei computer di rete effettivi per le istanze remote di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa stored procedure può essere utilizzata per abilitare l'esecuzione di chiamate a stored procedure remote in computer il cui nome di rete contiene identificatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non validi.  
   
@@ -76,7 +76,7 @@ EXEC sp_setnetname 'rpcserv2', 'sqlserv2';
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza ai ruoli predefiniti del server **sysadmin** e **setupadmin** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrata una tipica sequenza di amministrazione utilizzata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire la chiamata a una stored procedure remota.  
   
 ```  

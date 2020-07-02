@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d4502a64a3822741c1928fcf6faee69d80d893d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9dc40928fddda2708a23a7fc927627cf0e9450d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112409"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718573"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catalogo di database WideWorldImporters
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Il database WideWorldImporters contiene tutte le informazioni sulle transazioni e i dati giornalieri per le vendite e gli acquisti, oltre ai dati dei sensori per i veicoli e le stanze fredde.
 
 ## <a name="schemas"></a>Schemi
@@ -68,7 +68,7 @@ Dettagli dei parametri e delle persone (utenti e contatti), insieme alle tabelle
 |Tabella|Descrizione|
 |-----------------------------|---------------------|
 |SystemParameters|Contiene parametri configurabili a livello di sistema.|
-|Persone|Contiene i nomi utente, le informazioni di contatto, per tutti gli utenti che usano l'applicazione e per gli utenti che hanno a che fare con le organizzazioni del cliente. Sono inclusi il personale, i clienti, i fornitori e altri contatti. Per gli utenti a cui è stata concessa l'autorizzazione a utilizzare il sistema o il sito Web, le informazioni includono i dettagli di accesso.|
+|People|Contiene i nomi utente, le informazioni di contatto, per tutti gli utenti che usano l'applicazione e per gli utenti che hanno a che fare con le organizzazioni del cliente. Sono inclusi il personale, i clienti, i fornitori e altri contatti. Per gli utenti a cui è stata concessa l'autorizzazione a utilizzare il sistema o il sito Web, le informazioni includono i dettagli di accesso.|
 |Cities|Nel sistema sono archiviati molti indirizzi, per gli utenti, per gli indirizzi di recapito dell'organizzazione cliente, per gli indirizzi di ritiro dei fornitori e così via. Ogni volta che viene archiviato un indirizzo, in questa tabella è presente un riferimento a una città. Esiste anche una posizione spaziale per ogni città.|
 |StateProvinces|Le città fanno parte di Stati o province. Questa tabella contiene i dettagli di questi elementi, inclusi i dati spaziali che descrivono i limiti di ogni stato o provincia.|
 |Paesi|Stati o province fanno parte di paesi. Questa tabella contiene i dettagli di questi elementi, inclusi i dati spaziali che descrivono i limiti di ogni paese.|
@@ -82,7 +82,7 @@ Dettagli dei fornitori e degli acquisti di articoli azionari.
 
 |Tabella|Descrizione|
 |-----------------------------|---------------------|
-|Suppliers|Tabella principale delle entità per i fornitori (organizzazioni)|
+|Fornitori|Tabella principale delle entità per i fornitori (organizzazioni)|
 |SupplierCategories|Categorie per i fornitori (ad esempio, novità, giocattoli, abbigliamento, creazione di pacchetti e così via)|
 |SupplierTransactions|Tutte le transazioni finanziarie correlate ai fornitori (fatture, pagamenti)|
 |PurchaseOrders|Dettagli degli ordini di acquisto del fornitore|
@@ -155,7 +155,7 @@ Le stored procedure sono organizzate in schemi. La maggior parte degli schemi vi
 
 Lo `Website` schema contiene le stored procedure che possono essere utilizzate da un front-end Web.
 
-Gli `Reports` schemi `PowerBI` e sono destinati a Reporting Services e a scopi Power bi. Tutte le estensioni dell'esempio sono consigliate per l'utilizzo di questi schemi per la creazione di report.
+Gli `Reports` `PowerBI` schemi e sono destinati a Reporting Services e a scopi Power bi. Tutte le estensioni dell'esempio sono consigliate per l'utilizzo di questi schemi per la creazione di report.
 
 ### <a name="website-schema"></a>Schema sito Web
 
@@ -163,12 +163,12 @@ Queste sono le procedure usate da un'applicazione client, ad esempio un front-en
 
 |Procedura|Scopo|
 |-----------------------------|---------------------|
-|ActivateWebsiteLogon|Consente a una persona ( `Application.People`da) di accedere al sito Web.|
+|ActivateWebsiteLogon|Consente a una persona (da `Application.People` ) di accedere al sito Web.|
 |ChangePassword|Modifica la password di un utente (per gli utenti che non usano meccanismi di autenticazione esterni).|
 |InsertCustomerOrders|Consente l'inserimento di uno o più ordini cliente (incluse le righe di ordine).|
 |InvoiceCustomerOrders|Accetta un elenco di ordini per la fatturazione ed elabora le fatture.|
-|RecordColdRoomTemperatures|Accetta un elenco di dati del sensore come parametro con valori di tabella (TVP) e applica i dati alla tabella `Warehouse.ColdRoomTemperatures` temporale.|
-|RecordVehicleTemperature|Accetta una matrice JSON e la usa per aggiornare `Warehouse.VehicleTemperatures`.|
+|RecordColdRoomTemperatures|Accetta un elenco di dati del sensore come parametro con valori di tabella (TVP) e applica i dati alla `Warehouse.ColdRoomTemperatures` tabella temporale.|
+|RecordVehicleTemperature|Accetta una matrice JSON e la usa per aggiornare `Warehouse.VehicleTemperatures` .|
 |SearchForCustomers|Cerca i clienti in base al nome o a una parte del nome, ovvero il nome della società o il nome della persona.|
 |SearchForPeople|Cerca persone per nome o parte del nome.|
 |SearchForStockItems|Cerca gli elementi azionari per nome o parte del nome o dei commenti di marketing.|
@@ -181,7 +181,7 @@ Le stored procedure in questo schema vengono utilizzate dal processo ETL. Otteng
 
 ### <a name="dataloadsimulation-schema"></a>Schema DataLoadSimulation
 
-Simula un carico di lavoro che inserisce vendite e acquisti. Il stored procedure principale è `PopulateDataToCurrentDate`, utilizzato per inserire i dati di esempio fino alla data corrente.
+Simula un carico di lavoro che inserisce vendite e acquisti. Il stored procedure principale è `PopulateDataToCurrentDate` , utilizzato per inserire i dati di esempio fino alla data corrente.
 
 |Procedura|Scopo|
 |-----------------------------|---------------------|
@@ -200,12 +200,12 @@ Queste procedure vengono utilizzate per configurare l'esempio. Vengono utilizzat
 |-----------------------------|---------------------|
 |AddRoleMemberIfNonexistant|Aggiunge un membro a un ruolo se il membro non è già incluso nel ruolo|
 |Configuration_ApplyAuditing|Aggiunge il controllo. Il controllo del server viene applicato per i database Standard Edition; per Enterprise Edition è stato aggiunto il controllo aggiuntivo del database.|
-|Configuration_ApplyColumnstoreIndexing|Applica l'indicizzazione `Sales.OrderLines` columnstore a e `Sales.InvoiceLines` e reindicizzare in modo appropriato.|
-|Configuration_ApplyFullTextIndexing|Applica indici full `Application.People`- `Sales.Customers`Text `Purchasing.Suppliers`a, `Warehouse.StockItems`, e. Sostituisce `Website.SearchForPeople`, `Website.SearchForSuppliers`, `Website.SearchForCustomers`, `Website.SearchForStockItems`, `Website.SearchForStockItemsByTags` con procedure di sostituzione che utilizzano l'indicizzazione full-text.|
-|Configuration_ApplyPartitioning|Applica il partizionamento delle `Sales.CustomerTransactions` tabelle `Purchasing.SupplierTransactions`a e e riorganizza gli indici da adattare.|
+|Configuration_ApplyColumnstoreIndexing|Applica l'indicizzazione columnstore a `Sales.OrderLines` e `Sales.InvoiceLines` e reindicizzare in modo appropriato.|
+|Configuration_ApplyFullTextIndexing|Applica indici full-text a `Application.People` , `Sales.Customers` , `Purchasing.Suppliers` e `Warehouse.StockItems` . Sostituisce `Website.SearchForPeople` , `Website.SearchForSuppliers` , `Website.SearchForCustomers` , `Website.SearchForStockItems` , `Website.SearchForStockItemsByTags` con procedure di sostituzione che utilizzano l'indicizzazione full-text.|
+|Configuration_ApplyPartitioning|Applica il partizionamento delle tabelle a `Sales.CustomerTransactions` e `Purchasing.SupplierTransactions` e riorganizza gli indici da adattare.|
 |Configuration_ApplyRowLevelSecurity|Applica la sicurezza a livello di riga per filtrare i clienti in base ai ruoli correlati al territorio di vendita.|
 |Configuration_ConfigureForEnterpriseEdition|Applica indicizzazione columnstore, full-text, in memoria, polibase e partizionamento.|
-|Configuration_EnableInMemory|Aggiunge un filegroup ottimizzato per la memoria (quando non funziona in Azure) `Warehouse.ColdRoomTemperatures`, `Warehouse.VehicleTemperatures` sostituisce con gli equivalenti in memoria ed esegue la migrazione dei dati, `Website.OrderIDList`ricrea i tipi di `Website.OrderList` `Website.OrderLineList` `Website.SensorDataList` tabella,, e con equivalenti ottimizzati per la memoria, Elimina e ricrea le routine `Website.InvoiceCustomerOrders`, `Website.InsertCustomerOrders`e `Website.RecordColdRoomTemperatures` che utilizzano questi tipi di tabella.|
+|Configuration_EnableInMemory|Aggiunge un filegroup ottimizzato per la memoria (quando non funziona in Azure), sostituisce `Warehouse.ColdRoomTemperatures` `Warehouse.VehicleTemperatures` con gli equivalenti in memoria ed esegue la migrazione dei dati, ricrea i `Website.OrderIDList` tipi di `Website.OrderList` tabella,, e `Website.OrderLineList` `Website.SensorDataList` con equivalenti ottimizzati per la memoria, Elimina e ricrea le routine `Website.InvoiceCustomerOrders` , `Website.InsertCustomerOrders` e `Website.RecordColdRoomTemperatures` che utilizzano questi tipi di tabella.|
 |Configuration_RemoveAuditing|Rimuove la configurazione di controllo.|
 |Configuration_RemoveRowLevelSecurity|Rimuove la configurazione di sicurezza a livello di riga, necessaria per le modifiche alle tabelle associate.|
 |CreateRoleIfNonExistant|Crea un ruolo del database, se non esiste già.|

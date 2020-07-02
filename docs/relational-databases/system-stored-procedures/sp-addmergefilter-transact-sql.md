@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 76b5b8b5aa9f867c1dcf4b47940fce117c35bc69
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0ac36d85a08763903cb42a5b48d0280a6366a1e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831820"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716577"
 ---
 # <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Aggiunge un nuovo filtro di merge per la creazione di una partizione in base a un join con un'altra tabella. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   

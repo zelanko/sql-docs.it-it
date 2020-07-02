@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cbf1658fd1567d9cdd3c35e02195435b6e86adcc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bc56f1434c0b1670495d30accdb70e0456295b01
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830402"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717438"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Forza il Garbage Collector di FILESTREAM all'esecuzione, eliminando qualsiasi file FILESTREAM non necessario.  
   
@@ -85,7 +85,7 @@ Garbage Collection (GC) si basa sul troncamento del log. Di conseguenza, se i fi
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo del database db_owner.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Negli esempi seguenti viene eseguito il Garbage Collector per i contenitori FILESTREAM nel database `FSDB`.  
   
 ### <a name="a-specifying-no-container"></a>R. Specifica di nessun contenitore  
@@ -106,7 +106,7 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[FileStream](../../relational-databases/blob/filestream-sql-server.md)
+[Filestream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Tabelle FileTable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[DMV per FILESTREAM e tabelle FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Viste del catalogo Filestream e FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)

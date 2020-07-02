@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b375c1861d532445cd39d42f59f0a8d753e53b85
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1db9dfdcb7941db0c253bf0b1c3f65b767a5cdec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828836"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719254"
 ---
 # <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Questa stored procedure aggiorna le tabelle di monitoraggio remote in base alle informazioni più recenti recuperate da un server primario o secondario specificato per l'agente di log shipping specificato. La procedura viene richiamata dal server primario o secondario.  
   
@@ -69,7 +69,7 @@ sp_refresh_log_shipping_monitor
 ## <a name="result-sets"></a>Set di risultati  
  No.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_refresh_log_shipping_monitor** aggiorna le tabelle **log_shipping_monitor_primary**, **log_shipping_monitor_secondary**, **log_shipping_monitor_history_detail**e **log_shipping_monitor_error_detail** con le informazioni di sessione che non sono già state trasferite. Ciò consente di sincronizzare il server di monitoraggio con il server primario o secondario nel caso in cui il server di monitoraggio non sia più in sincronia. Consente inoltre di eliminare le informazioni di monitoraggio nel server di monitoraggio, se necessario.  
   
  **sp_refresh_log_shipping_monitor** deve essere eseguito dal database **Master** nel server primario o secondario.  
@@ -78,7 +78,7 @@ sp_refresh_log_shipping_monitor
  Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul &#40;di log shipping SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

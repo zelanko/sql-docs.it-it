@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e186b87680ec0592f5c69ee5659c3b9c74f680b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b905d3f362aa16e36caa0795357c1ec1619d5ec7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826050"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715845"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni sulle entità a livello di database nel database corrente.  
   
@@ -76,13 +76,13 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**Users_in_role**|**sysname**|Membro del ruolo nel database corrente.|  
 |**UserID**|**smallint**|ID utente del membro del ruolo.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Per visualizzare informazioni sull'appartenenza dei ruoli del database, utilizzare [sys. database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Per visualizzare informazioni sui membri del ruolo del server, utilizzare [sys. server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)e per visualizzare informazioni sulle entità a livello di server, utilizzare [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
- Le informazioni restituite sono soggette a limitazioni di accesso ai metadati. Non vengono visualizzate le entità per le quali l'entità di database non dispone dell'autorizzazione.  Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Le informazioni restituite sono soggette a limitazioni di accesso ai metadati. Non vengono visualizzate le entità per le quali l'entità di database non dispone dell'autorizzazione. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Esempi  
   

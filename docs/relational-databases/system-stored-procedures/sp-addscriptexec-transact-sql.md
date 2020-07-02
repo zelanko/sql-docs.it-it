@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6e3c380f5508897a25327be20e05b22984d3bd4e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 145afa1da7ae19e480588ecbea28c389350de480
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716405"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Invia uno script SQL (file con estensione sql) a tutti i Sottoscrittori di una pubblicazione. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   

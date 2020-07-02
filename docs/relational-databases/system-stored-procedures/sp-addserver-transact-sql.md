@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8578cccba27f38999ef786e1fb48b46445ad682c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 73f9bb5e2201b9c8b7577c54228e038310e7a141
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833657"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716382"
 ---
 # <a name="sp_addserver-transact-sql"></a>sp_addserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Definisce il nome dell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando il computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita viene rinominato, utilizzare **sp_addserver** per informare l'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] del nuovo nome del computer. Questa routine deve essere eseguita in tutte le istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)] ospitate nel computer. Non è possibile modificare il nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Per modificare il nome di un'istanza denominata, installare una nuova istanza con il nome desiderato, scollegare i file di database dall'istanza precedente, collegare i database alla nuova istanza ed eliminare l'istanza precedente. In alternativa, è possibile creare un nome alias del client nel computer client, reindirizzando la connessione a una combinazione diversa di server e nome di istanza o **server:port** senza modificare il nome dell'istanza nel computer server.
 
@@ -69,7 +69,7 @@ sp_addserver [ @server = ] 'server' ,
 ## <a name="permissions"></a>Autorizzazioni
  È richiesta l'appartenenza al ruolo predefinito del server **setupadmin** .
 
-## <a name="examples"></a>Esempio
+## <a name="examples"></a>Esempi
  Nell'esempio seguente la voce del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per il nome del computer che ospita [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene modificata in `ACCOUNTS`.
 
 ```

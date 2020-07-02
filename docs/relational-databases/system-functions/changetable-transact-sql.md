@@ -19,15 +19,15 @@ ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11295f953e2f3e4e237838dfdb158fd01c9fa645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1a5d247ae5e8e4cceb53bd3a093cabdff399d509
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042906"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718711"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Vengono restituite informazioni sul rilevamento delle modifiche per una tabella. È possibile utilizzare questa istruzione per restituire tutte le modifiche per una tabella o informazioni sul rilevamento delle modifiche per una riga specifica.  
   
@@ -68,7 +68,7 @@ CHANGETABLE (
  *Tabella*della versione, {<primary_key_values>}  
  Restituisce le informazioni più recenti sul rilevamento delle modifiche per una riga specificata. I valori della chiave primaria devono consentire di identificare la riga. <primary_key_values> identifica le colonne chiave primaria e specifica i valori. I nomi delle colonne chiave primaria possono essere specificati in qualsiasi ordine.  
   
- *tavolo*  
+ *Tabella*  
  Tabella definita dall'utente di cui ottenere le informazioni sul rilevamento delle modifiche. Il rilevamento delle modifiche deve essere abilitato per la tabella. È possibile utilizzare un nome di tabella composto da una, due, tre o quattro parti. Il nome della tabella può esserne un sinonimo.  
   
  *column_name*  
@@ -101,7 +101,7 @@ CHANGETABLE (
 |SYS_CHANGE_OPERATION|**nchar(1)**|Specifica il tipo di modifica:<br /><br /> **U** = aggiornamento<br /><br /> **I** = inserimento<br /><br /> **D** = Elimina|  
 |SYS_CHANGE_COLUMNS|**varbinary(4100)**|Vengono elencate le colonne modificate a partire da last_sync_version (versione di riferimento). Si noti che le colonne calcolate non vengono mai elencate come modificate.<br /><br /> Il valore è NULL quando viene soddisfatta una o più delle condizioni seguenti:<br /><br /> Il rilevamento delle modifiche per le colonne non è abilitato.<br /><br /> L'operazione è di inserimento o di eliminazione.<br /><br /> Tutte le colonne chiave non primaria sono state aggiornate in un'unica operazione. Questo valore binario non deve essere interpretato direttamente. Per interpretarlo, usare invece [CHANGE_TRACKING_IS_COLUMN_IN_MASK ()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md).|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Modificare le informazioni di contesto che è possibile specificare facoltativamente utilizzando la clausola [with](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) come parte di un'istruzione INSERT, Update o DELETE.|  
-|\<valore della colonna chiave primaria>|Come per le colonne della tabella utente|Valori della chiave primaria per la tabella rilevata. Questi valori identificano in modo univoco ogni riga nella tabella utente.|  
+|\<primary key column value>|Come per le colonne della tabella utente|Valori della chiave primaria per la tabella rilevata. Questi valori identificano in modo univoco ogni riga nella tabella utente.|  
   
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
  Quando si specifica VERSION, viene restituita una riga con le colonne seguenti.  
@@ -110,7 +110,7 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Il valore della versione corrente associato alla riga.<br /><br /> Il valore è NULL se non è stata effettuata alcuna modifica per un periodo superiore a quello di memorizzazione del rilevamento delle modifiche, oppure se la riga non è stata modificata a partire dall'abilitazione del rilevamento delle modifiche.|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Modificare le informazioni di contesto specificabili liberamente utilizzando la clausola WITH come parte di un'istruzione INSERT, UPDATE o DELETE.|  
-|\<valore della colonna chiave primaria>|Come per le colonne della tabella utente|Valori della chiave primaria per la tabella rilevata. Questi valori identificano in modo univoco ogni riga nella tabella utente.|  
+|\<primary key column value>|Come per le colonne della tabella utente|Valori della chiave primaria per la tabella rilevata. Questi valori identificano in modo univoco ogni riga nella tabella utente.|  
   
 ## <a name="remarks"></a>Osservazioni  
  La funzione CHANGETABLE è in genere utilizzata nella clausola FROM di una query come se si trattasse di una tabella.  

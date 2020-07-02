@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ad89d48f90ee82e8ae7c30728a50378f9f2cc521
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1f58c1a212c722873f66d940de691c89d13d08f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833568"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716305"
 ---
 # <a name="sp_adjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Regola l'intervallo di valori Identity in una pubblicazione e riassegna nuovi intervalli in base al valore soglia previsto per la pubblicazione. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   

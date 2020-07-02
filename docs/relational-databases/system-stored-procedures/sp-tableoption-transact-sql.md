@@ -18,15 +18,15 @@ ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2e822d1ca6aff1e91a848f839b824bb4476fc5a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 84e6c530b4887502346b69adcf2590bce9d0e8fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834209"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718689"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Imposta i valori delle opzioni per le tabelle definite dall'utente. sp_tableoption può essere utilizzato per controllare il comportamento all'interno di righe delle tabelle con colonne di tipo **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **Text**, **ntext**, **Image**o di grandi dimensioni definite dall'utente.  
   

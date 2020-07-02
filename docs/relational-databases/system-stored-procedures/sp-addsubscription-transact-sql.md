@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a87ba30f69027849ea5444163291465dec00d9be
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 4ff31939ce763f91ca706dfe9e7966b2a7b42f7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627616"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716357"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
 
   Aggiunge una sottoscrizione a una pubblicazione e imposta lo stato del Sottoscrittore. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -150,7 +150,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |2|On demand|  
 |4|Ogni giorno|  
 |8|Settimanale|  
-|16|Ogni mese|  
+|16|Mensile|  
 |32|Mensile relativa|  
 |64 (impostazione predefinita)|Avvio automatico|  
 |128|Periodica|  
@@ -292,7 +292,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  La stored procedure sp_addsubscription viene utilizzata per la replica snapshot e transazionale.  
   
  Se la stored procedure sp_addsubscription viene eseguita da un membro del ruolo predefinito del server sysadmin per creare una sottoscrizione push, il processo dell'agente di distribuzione viene creato in modo implicito e viene eseguito utilizzando l'account del servizio SQL Server Agent. Si consiglia di eseguire [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) e specificare le credenziali di un account di Windows diverso da quello specifico dell'agente per @job_login e @job_password . Per ulteriori informazioni, vedere [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  

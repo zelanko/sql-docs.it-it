@@ -18,15 +18,15 @@ ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c89b2cb803df80872d82f18b5f26b207e9e4bc38
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f2d068c18f692009f29ee7e8d6450c4f013c6906
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828488"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716125"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Associa una regola a una colonna o a un tipo di dati alias.  
   
@@ -62,7 +62,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  È possibile associare una nuova regola a una colonna (sebbene sia preferibile usare un vincolo CHECK) o a un tipo di dati alias con **sp_bindrule** senza annullare l'associazione di una regola esistente. La regola precedente verrà infatti ignorata. Se una regola viene associata a una colonna con un vincolo CHECK esistente, vengono valutate tutte le restrizioni. Non è possibile associare una regola a un tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  La regola viene applicata quando si esegue un'istruzione INSERT, non in fase di associazione. È possibile associare una regola carattere a una colonna di tipo di dati **numeric** , sebbene tale operazione di inserimento non sia valida.  

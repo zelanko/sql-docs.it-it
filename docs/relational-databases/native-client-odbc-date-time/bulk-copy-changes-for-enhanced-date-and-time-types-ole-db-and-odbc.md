@@ -13,22 +13,22 @@ ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fa94f57a783fc4bdb12f17baa0dbbcb54f61ee4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 571affb61db00386bc7e325c5491e5364d526ee2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301832"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719001"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Modifiche della copia bulk per i tipi di data e ora migliorati (OLE DB e ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   In questo argomento vengono descritti i miglioramenti apportati ai tipi di data/ora per supportare la funzionalità di copia bulk. Le informazioni incluse in questo argomento sono valide sia per OLE DB sia per ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="format-files"></a>File di formato  
  Nella tabella seguente viene descritto l'input utilizzato per specificare i tipi di data/ora e i nomi dei tipi di dati del file host corrispondenti quando si compilano file di formato in modo interattivo.  
   
-|tipo di archiviazione di file|Tipo di dati del file host|Risposta alla richiesta: "Specificare il tipo di archiviazione di file del campo <nome_campo> [\<impostazione predefinita>]:"|  
+|tipo di archiviazione di file|Tipo di dati del file host|Risposta al messaggio di richiesta: "immettere il tipo di archiviazione di file del campo <field_name> [ \<default> ]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
@@ -66,7 +66,7 @@ ms.locfileid: "81301832"
 ## <a name="character-data-files"></a>File di dati di tipo carattere  
  Nei file di dati di tipo carattere i valori di data e ora vengono rappresentati come descritto nella sezione "formati di dati: stringhe e valori letterali" del [supporto dei tipi di dati](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md) per i miglioramenti di data e ora ODBC per ODBC oppure del supporto dei tipi di [dati per OLE DB miglioramenti di data e ora](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) per OLE DB.  
   
- Nei dati nativi nativi, i valori di data e ora per i quattro nuovi tipi sono rappresentati come rappresentazioni TDS con scala 7 (poiché si tratta del valore massimo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportato da e i file di dati bcp non archiviano la scala di queste colonne). Non è stata apportata alcuna modifica all'archiviazione dei tipi **datetime** e **smalldatetime** esistenti o delle rispettive rappresentazioni TDS.  
+ Nei dati nativi nativi, i valori di data e ora per i quattro nuovi tipi sono rappresentati come rappresentazioni TDS con scala 7 (poiché si tratta del valore massimo supportato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i file di dati bcp non archiviano la scala di queste colonne). Non è stata apportata alcuna modifica all'archiviazione dei tipi **datetime** e **smalldatetime** esistenti o delle rispettive rappresentazioni TDS.  
   
  Di seguito vengono indicate le dimensioni dello spazio di archiviazione per i diversi tipi di archiviazione per OLE DB:  
   
@@ -95,7 +95,7 @@ ms.locfileid: "81301832"
 ## <a name="bcp-types-in-sqlnclih"></a>Tipi BCP in sqlncli.h  
  Di seguito vengono indicati i tipi definiti in sqlncli.h per l'utilizzo con le estensioni API BCP in ODBC. Questi tipi vengono passati con il parametro *eUserDataType* di IBCPSession::BCPColFmt in OLE DB.  
   
-|tipo di archiviazione di file|Tipo di dati del file host|Digitare sqlncli. h per l'utilizzo con IBCPSession:: BCPColFmt|valore|  
+|tipo di archiviazione di file|Tipo di dati del file host|Digitare sqlncli. h per l'utilizzo con IBCPSession:: BCPColFmt|Valore|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  

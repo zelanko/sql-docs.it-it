@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 664f503aa6d3c6d3d0f8c32d83fc2ea9f238ff3b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 223f1feb346a48a2afaae9e89437ba1b06bcd2c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829713"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717395"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifica le proprietà di un articolo in una pubblicazione transazionale o snapshot. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -67,7 +67,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**identity_range**||Controlla le dimensioni degli intervalli di valori Identity assegnati nel Sottoscrittore. Non supportato per la replica peer-to-peer.|  
 |**ins_cmd**||Istruzione INSERT da eseguire. In alternativa, viene creata dal log.|  
 |**pre_creation_cmd**||Comando preliminare per eliminare, rimuovere o troncare la tabella di destinazione prima della sincronizzazione.|  
-||**nessuno**|Non utilizza alcun comando.|  
+||**nessuna**|Non utilizza alcun comando.|  
 ||**goccia**|Rimuove la tabella di destinazione.|  
 ||**delete**|Elimina la tabella di destinazione.|  
 ||**troncare**|Tronca la tabella di destinazione.|  
@@ -123,12 +123,12 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**include column names**|I nomi delle colonne sono inclusi nell'istruzione INSERT replicata.|  
 ||**no column names**|I nomi delle colonne non sono inclusi nell'istruzione INSERT replicata.|  
 ||**no dts horizontal partitions**|La partizione orizzontale per l'articolo non è definita da una sottoscrizione trasformabile.|  
-||**nessuno**|Cancella tutte le opzioni di stato nella tabella [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) e contrassegna l'articolo come inattivo.|  
-||**parametri**|Le modifiche vengono propagate al Sottoscrittore tramite i comandi con parametri. Questa è l'impostazione predefinita per un nuovo articolo.|  
+||**nessuna**|Cancella tutte le opzioni di stato nella tabella [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) e contrassegna l'articolo come inattivo.|  
+||**parameters**|Le modifiche vengono propagate al Sottoscrittore tramite i comandi con parametri. Questa è l'impostazione predefinita per un nuovo articolo.|  
 ||**valori letterali stringa**|Le modifiche vengono propagate al Sottoscrittore tramite i valori letterali stringa.|  
 |**sync_object**||Nome della tabella o vista utilizzata per generare un file di output di sincronizzazione. Il valore predefinito è NULL. Questa proprietà non è supportata per server di pubblicazione Oracle.|  
 |**tablespace**||Identifica lo spazio tabella utilizzato dalla tabella di registrazione per un articolo pubblicato da un database Oracle. Per altre informazioni, vedere [Gestire spazi di tabella Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
-|**soglia**||Valore percentuale che controlla quando l'agente di distribuzione assegna un nuovo intervallo di valori Identity. Non supportato per la replica peer-to-peer.|  
+|**threshold**||Valore percentuale che controlla quando l'agente di distribuzione assegna un nuovo intervallo di valori Identity. Non supportato per la replica peer-to-peer.|  
 |**type**||Questa proprietà non è supportata per server di pubblicazione Oracle.|  
 ||**logbased**|Articolo basato su un log.|  
 ||**logbased manualboth**|Articolo basato su log con filtro manuale e vista manuale. Questa opzione richiede che vengano impostate anche le proprietà *sync_object* e *filtro* . Questa proprietà non è supportata per server di pubblicazione Oracle.|  
@@ -165,7 +165,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_changearticle** viene utilizzata nella replica snapshot e nella replica transazionale.  
   
  Quando un articolo appartiene a una pubblicazione che supporta la replica transazionale peer-to-peer, è possibile modificare solo le proprietà **Description**, **ins_cmd**, **upd_cmd**e **del_cmd** .  

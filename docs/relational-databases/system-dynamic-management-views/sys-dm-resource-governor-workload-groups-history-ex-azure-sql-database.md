@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: 5fea5badf14ce9863f07dff189f1665788ec5fb6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41378ba13c6c85059313595161aeeb4226c6731e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70873775"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718732"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (database SQL di Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Restituisce lo snapshot con intervallo di 20 secondi per gli ultimi 32 minuti (128 RECS in totale) delle statistiche dei pool di risorse per un database SQL di Azure.
   
@@ -34,7 +34,7 @@ Restituisce lo snapshot con intervallo di 20 secondi per gli ultimi 32 minuti (1
 |-----------------|---------------|-----------------|  
 |**pool_id**| INT |ID del pool di risorse. Non ammette i valori Null.|
 |**group_id**| INT |ID del gruppo del carico di lavoro. Non ammette i valori Null.|
-|**name**| nvarchar(256) |Nome del gruppo del carico di lavoro. Non ammette i valori Null.|
+|**nome**| nvarchar(256) |Nome del gruppo del carico di lavoro. Non ammette i valori Null.|
 |**snapshot_time**| Datetime |Data/ora dello snapshot delle statistiche del gruppo di risorse.|
 |**duration_ms**| INT |Durata tra lo snapshot corrente e quello precedente.|
 |**active_worker_count**| INT |Totale ruoli di lavoro nello snapshot corrente.|
@@ -68,8 +68,8 @@ Restituisce lo snapshot con intervallo di 20 secondi per gli ultimi 32 minuti (1
 |**max_request_cpu_msec**| bigint |Limite massimo di utilizzo della CPU, in millisecondi, per una singola richiesta. Non ammette i valori Null.|
 |**max_concurrent_request**| INT |Impostazione corrente per il numero massimo di richieste simultanee. Non ammette i valori Null.|
 |**max_io**| INT |Limite massimo di i/o per il gruppo.|
-|**max_global_io**| INT |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.
-|**max_queued_io**| INT |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.|
+|**max_global_io**| INT |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.
+|**max_queued_io**| INT |Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.|
 |**max_log_rate_kb**| bigint |Frequenza massima di log (kilo-byte al sec) a livello di gruppo di risorse.|
 |**max_session**| INT |Limite della sessione per il gruppo.|
 |**max_worker**| INT |Limite di lavoro per il gruppo.|

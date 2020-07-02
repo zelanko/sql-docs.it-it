@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0347a7346e42e212775267fc5849360abaa75423
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1758f6cd269c911ea582577721d29e6534910e91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820646"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716451"
 ---
 # <a name="sp_addqreader_agent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Aggiunge un agente di lettura coda per un server di distribuzione specificato. Questa stored procedure viene eseguita nel database di distribuzione del server di distribuzione o nel database di pubblicazione del server di pubblicazione.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d752015dab48058af18cb981a009691f407da171
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 387761d2275025f70a769cf3068693d08dbecc58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814385"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718622"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Concede l'autorizzazione a un'entità di database msdb per l'utilizzo di un profilo di Posta elettronica database. È necessario eseguire il mapping dell'entità di database a un utente di SQL Server Authentication, a un utente di Windows o a un gruppo di Windows.
   
@@ -54,7 +54,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Per rendere pubblico un profilo, specificare un ** \@ principal_id** **0** o un ** \@ principal_name** di **public**. Un profilo pubblico è disponibile per tutti gli utenti nel database **msdb** , anche se gli utenti devono essere anche membri di **DatabaseMailUserRole** per eseguire **sp_send_dbmail**.  
   
  A un utente del database può essere associato un solo profilo predefinito. Quando ** \@ is_default** è'**1**' e l'utente è già associato a uno o più profili, il profilo specificato diventa il profilo predefinito per l'utente. Il profilo che in precedenza era il profilo predefinito è tuttora associato all'utente, ma non è più il profilo predefinito.  
@@ -66,7 +66,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  **A. Creazione di un'associazione e impostazione del profilo predefinito**  
   
  Nell'esempio seguente viene creata un'associazione tra il profilo denominato `AdventureWorks Administrator Profile` e l'utente del database **msdb** `ApplicationUser` . Il profilo è il profilo predefinito per l'utente.  

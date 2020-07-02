@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 511276581464f366214bfd9bdd8543e3fb339ab8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 35943489c707d5a1b84313bb7ef6eca9113e36ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828455"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715903"
 ---
 # <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Aggiorna le informazioni per le sottoscrizioni pull. Questa stored procedure viene eseguita nel database di sottoscrizione del Sottoscrittore.  
   
@@ -102,7 +102,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_change_subscription_properties** viene utilizzato in tutti i tipi di replica.  
   
  **sp_change_subscription_properties** viene utilizzata per le sottoscrizioni pull.  

@@ -20,15 +20,15 @@ ms.assetid: a69b06c4-28f0-4535-8fa1-9f132db4d916
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2db6fb4245b98abe36ec4b2813fe6fbc366e7046
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 869ebff08a3bb20ea531f3a1bdcdf59eafdcdceb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824534"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718755"
 ---
 # <a name="sysdm_os_stacks-transact-sql"></a>sys.dm_os_stacks (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Questa vista a gestione dinamica viene utilizzata internamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per:  
   
@@ -42,7 +42,7 @@ ms.locfileid: "82824534"
 |**frame_index**|**int**|Ogni riga rappresenta una chiamata di funzione che, se ordinata in ordine crescente in base all'indice del frame per una particolare **stack_address**, restituisce lo stack di chiamate completo. Non ammette i valori Null.|  
 |**frame_address**|**varbinary (8)**|Indirizzo della chiamata di funzione. Non ammette i valori Null.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sys. dm_os_stacks** richiede che i simboli del server e di altri componenti siano presenti nel server per visualizzare correttamente le informazioni.  
   
 ## <a name="permissions"></a>Autorizzazioni

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 7e82023ed750c77d87a2536debfb5fceb7321db4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c9a025beaf1d9701411668a13fa78273105d30c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67911949"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717330"
 ---
 # <a name="sp_dropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Elimina dal server di pubblicazione un agente anonimo per il monitoraggio della replica nel server di distribuzione. Questa stored procedure viene eseguita in qualsiasi database del server di pubblicazione.  
   
@@ -52,7 +52,7 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del database **db_owner** nel database di distribuzione possono eseguire **sp_dropanonymousagent**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

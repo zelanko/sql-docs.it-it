@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 796f3093-6a3e-4d67-8da6-b9810ae9ef5b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0867820ddc410295bfb6ce137c32b0f7fce1b43c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 22c26bd691fc12c492ab03fc073b12f02ba9adb1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832737"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717512"
 ---
 # <a name="sysserver_event_sessions-transact-sql"></a>sys.server_event_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Elenca tutte le definizioni di sessione dell'evento che esistono in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

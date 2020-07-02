@@ -21,21 +21,21 @@ ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5afddee7cf2d8d5e61db8833df45b839e6f70eca
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4a6588e142fb17f0b90dfb302dda242255513ed3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815827"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717563"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Contiene una riga per ogni oggetto sequenza di un database.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|\<colonne ereditate>||Eredita tutte le colonne da [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|\<inherited columns>||Eredita tutte le colonne da [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**start_value**|**sql_variant non NULL**|Valore iniziale per l'oggetto sequenza. Se l'oggetto sequenza viene riavviato tramite ALTER SEQUENCE verrà riavviato con questo valore. Quando l'oggetto sequenza esegue il ciclo, procede al **minimum_value** o **maximum_value**, non al **start_value**.|  
 |**increment**|**sql_variant non NULL**|Valore utilizzato per incrementare l'oggetto sequenza dopo ogni valore generato.|  
 |**minimum_value**|**sql_variant NULL**|Valore minimo che può essere generato dall'oggetto sequenza. Una volta raggiunto questo valore, l'oggetto sequenza restituirà un errore durante il tentativo di generazione di più valori o di riavvio se viene specificata l'opzione CYCLE. Se non è stato specificato alcun valore MINVALUE, questa colonna restituisce il valore minimo supportato dal tipo di dati del generatore di sequenza.|  
@@ -52,7 +52,7 @@ ms.locfileid: "82815827"
 |**last_used_value**|**sql_variant NULL**|Restituisce l'ultimo valore generato dalla funzione [Next Value for](../../t-sql/functions/next-value-for-transact-sql.md) . Si applica a SQL Server 2017 e versioni successive.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e nelle versioni successive, la visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni.  Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e nelle versioni successive, la visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Numeri di sequenza](../../relational-databases/sequence-numbers/sequence-numbers.md)   

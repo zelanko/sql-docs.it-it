@@ -21,15 +21,15 @@ ms.assetid: 9cc00acd-d83d-49f8-be72-5b2aebed246b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c92162cb78043b078e38dac63e22a3ca3267251c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a5ca04c0774e639edb06edac4762ed6beeb7af58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828079"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718803"
 ---
 # <a name="sysdm_db_missing_index_groups-transact-sql"></a>sys.dm_db_missing_index_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Questa DMV restituisce informazioni sugli indici mancanti in un gruppo di indici specifico, ad eccezione degli indici spaziali. 
   
@@ -40,7 +40,7 @@ ms.locfileid: "82828079"
 |**index_group_handle**|**int**|Identifica un gruppo di indici mancanti.|  
 |**index_handle**|**int**|Identifica un indice mancante appartenente al gruppo specificato da **index_group_handle**.<br /><br /> Un gruppo di indici contiene un solo indice.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Le informazioni restituite da **sys.dm_db_missing_index_groups** vengono aggiornate in caso di ottimizzazione di una query tramite Query Optimizer e non sono persistenti. Le informazioni relative agli indici mancanti vengono mantenute solo fino al riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per mantenere tali informazioni anche dopo il riciclo del server, gli amministratori di database devono eseguirne periodicamente copie di backup.  
   
  Nessuna delle colonne del set di risultati di output è una chiave, ma la relativa combinazione costituisce una chiave di indice.  

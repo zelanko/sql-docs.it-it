@@ -18,15 +18,15 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad5239e2761ed1cc788f7826a054ac0e038d9e79
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7b90b91773ab0497452e0c12c5f485a36f81b6e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824296"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719187"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Specifica il primo o l'ultimo trigger AFTER attivato. I trigger AFTER compresi fra il primo e l'ultimo vengono eseguiti in base a un ordine non definito.  
   
@@ -53,7 +53,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |Valore|Descrizione|  
 |-----------|-----------------|  
 |**Prima**|Trigger avviato per primo.|  
-|**Last (Ultimo)**|Trigger avviato per ultimo.|  
+|**Ultima**|Trigger avviato per ultimo.|  
 |**Nessuno**|Il trigger viene attivato in base a un ordine non definito.|  
   
 `[ @stmttype = ] 'statement_type'`Specifica l'istruzione SQL che attiva il trigger. *statement_type* è di tipo **varchar (50)** ed è possibile inserire, aggiornare, eliminare, accedere o qualsiasi [!INCLUDE[tsql](../../includes/tsql-md.md)] evento di istruzione elencato negli [eventi DDL](../../relational-databases/triggers/ddl-events.md). Non è possibile specificare gruppi di eventi.  
@@ -70,7 +70,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="dml-triggers"></a>Trigger DML  
  Può essere presente un solo **primo** e un **ultimo** trigger per ogni istruzione in una singola tabella.  

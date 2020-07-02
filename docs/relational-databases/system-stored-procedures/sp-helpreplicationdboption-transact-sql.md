@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84f009a2f2184ce2974f837006471d2b9bb97346
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0376653d2466bf756ba76575f90841f78956ade7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824443"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718676"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Indica se i database nel server di pubblicazione sono abilitati per la replica. Questa stored procedure viene eseguita in qualsiasi database del server di pubblicazione. *Questa proprietà non è supportata per server di pubblicazione Oracle.*  
   
@@ -43,7 +43,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 `[ @type = ] 'type'`Limita il set di risultati in modo che contenga solo i database in cui è stato abilitato il valore del *tipo* di opzione di replica specificato. *Type* è di tipo **sysname**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |**pubblicare**|È consentita la replica transazionale.|  
 |**pubblicazione di tipo merge**|È consentita la replica di tipo merge.|  
@@ -67,7 +67,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_helpreplicationdboption** viene utilizzata per la replica snapshot, transazionale e di tipo merge.  
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 660e0d836a10ef248f2afa3f44b9aa3451f5d572
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4a20968cb7ee9c46c8c30c4ff635d307c91b7edd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831760"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715982"
 ---
 # <a name="sp_can_tlog_be_applied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Verifica se è possibile applicare un backup del log delle transazioni a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **sp_can_tlog_be_applied** richiede che il database sia in stato di ripristino.  
   
@@ -57,7 +57,7 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_can_tlog_be_applied**.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene dichiarata una variabile locale, `@MyBitVar`, per archiviare il risultato.  
   
 ```  

@@ -20,21 +20,21 @@ ms.assetid: 940ebc5e-44ba-4dae-8b29-da94f2d1d6c4
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2212ebe8551f27c880ebf0c674f4b8d134617b07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af931a3ac76186b0ac583155b0d45e4dbe7ed055
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942502"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718876"
 ---
 # <a name="syscheck_constraints-transact-sql"></a>sys.check_constraints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Contiene una riga per ogni oggetto che rappresenta un vincolo CHECK, con **sys. Objects. Type** =' c'.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**\<Colonne ereditate da sys. Objects>**||Per un elenco di colonne ereditate da questa vista, vedere [sys. objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**\<Columns inherited from sys.objects>**||Per un elenco di colonne ereditate da questa vista, vedere [sys. objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**is_disabled**|**bit**|Il vincolo CHECK è disabilitato.|  
 |**is_not_for_replication**|**bit**|Il vincolo CHECK è stato creato con l'opzione NOT FOR REPLICATION.|  
 |**is_not_trusted**|**bit**|Il vincolo CHECK non è stato verificato dal sistema per tutte le righe.|  

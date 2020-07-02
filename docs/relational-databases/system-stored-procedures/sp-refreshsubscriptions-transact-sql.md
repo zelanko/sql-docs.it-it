@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 33e9094a7f08cc6b4929b36b2739aa4dda026e07
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a2a0c662d74e99a9d8151026dd514a39dd0e7c70
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828801"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719234"
 ---
 # <a name="sp_refreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Aggiungere sottoscrizioni a nuovi articoli per tutti i sottoscrittori esistenti a una pubblicazione con aggiornamento immediato. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   

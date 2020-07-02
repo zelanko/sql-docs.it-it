@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1acd5a12274c00bf2829b2219055d5a1ecf9eff
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 65728d55db4202fa979f4b7c8cbce5b1718d7660
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824311"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719200"
 ---
 # <a name="sp_setdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contrassegna come predefinito un mapping del tipo di dati esistente tra [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sistema di gestione di database (DBMS) non. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   
@@ -109,7 +109,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_setdefaultdatatypemapping** viene utilizzato in tutti i tipi di replica tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e un non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS.  
   
  I mapping dei tipi di dati predefiniti vengono applicati a tutte le topologie di replica che includono il sistema DBMS specificato.  

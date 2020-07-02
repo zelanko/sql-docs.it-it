@@ -20,15 +20,15 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3557f9f77a310a9e72e8a9fb1e11a6976256d2d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9d0c2366e0d05fb7d3abe6488d8a2f8ff969f011
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811422"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717449"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Restituisce una riga per ogni entità nel database corrente che fa riferimento a un'altra entità definita dall'utente in base al nome. Una dipendenza tra due entità viene creata quando un'entità, denominata *entità a cui si fa riferimento*, viene visualizzata in base al nome in un'espressione SQL permanente di un'altra entità, detta *entità di riferimento*. Ad esempio, se un tipo definito dall'utente (UDT) è specificato come entità con riferimenti, questa funzione restituisce ogni entità definita dall'utente che nella propria definizione fa riferimento a quel tipo in base al nome. La funzione non restituisce entità negli altri database che possono fare riferimento all'entità specificata. Questa funzione deve essere eseguita nel contesto del database master perché restituisca un trigger DDL a livello di server come entità di riferimento.  
   
@@ -96,13 +96,13 @@ sys.dm_sql_referencing_entities (
   
  Restituisce un errore quando l'entità a cui si fa riferimento specificata è una stored procedure numerata.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente sono elencati i tipi di entità per i quali vengono create e gestite le informazioni sulle dipendenze. Le informazioni sulle dipendenze non vengono create né gestite per regole, impostazioni predefinite, tabelle temporanee, stored procedure temporanee o oggetti di sistema.  
   
 |Tipo di entità|Entità di riferimento|Entità con riferimenti|  
 |-----------------|------------------------|-----------------------|  
 |Tabella|Sì*|Sì|  
-|Visualizzazione|Sì|Sì|  
+|Visualizza|Sì|Sì|  
 |Stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sì|Sì|  
 |stored procedure CLR|No|Sì|  
 |Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Sì|Sì|  

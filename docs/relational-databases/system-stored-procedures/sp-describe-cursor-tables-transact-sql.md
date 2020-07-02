@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9af57e2f3a3bcf6554e88d8c6f9d54b8ec069009
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 845fe5389792dbe4c1df7bb9cf3e920073cd23ac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827815"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717390"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Crea un report degli oggetti o delle tabelle di base a cui fa riferimento un cursore del server.  
   
@@ -64,7 +64,7 @@ sp_describe_cursor_tables
  Nome di una variabile di cursore associata a un cursore aperto. *input_cursor_variable* è di **tipo nvarchar (128)**.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- Nessuno  
+ nessuno  
   
 ## <a name="cursors-returned"></a>Cursori restituiti  
  sp_describe_cursor_tables incapsula il report come parametro di [!INCLUDE[tsql](../../includes/tsql-md.md)] output del **cursore** . In questo modo i batch, le stored procedure e i trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] possono elaborare l'output una riga alla volta. Ciò significa inoltre che non è possibile chiamare direttamente la procedura da funzioni API. Il parametro di output del **cursore** deve essere associato a una variabile di programma, ma le API non supportano i parametri o le variabili del **cursore** di binding.  
@@ -76,19 +76,19 @@ sp_describe_cursor_tables
 |table owner|**sysname**|ID utente del proprietario della tabella.|  
 |Table_name|**sysname**|Nome dell'oggetto o della tabella di base. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i cursori del server restituiscono sempre l'oggetto specificato dall'utente e non le tabelle di base.|  
 |Optimizer_hints|**smallint**|Mappa di bit composta da uno o più dei valori seguenti:<br /><br /> 1 = Blocco a livello di riga (ROWLOCK)<br /><br /> 4 = Blocco a livello di pagina (PAGELOCK)<br /><br /> 8 = Blocco a livello di tabella (TABLOCK)<br /><br /> 16 = Blocco esclusivo a livello di tabella (TABLOCKX)<br /><br /> 32 = Blocco di aggiornamento (UPDLOCK)<br /><br /> 64 = Nessun blocco (NOLOCK)<br /><br /> 128 = Opzione recupero rapido prime n righe (FASTFIRSTROW)<br /><br /> 4096 = Semantica di lettura ripetibile se utilizzata con DECLARE CURSOR (HOLDLOCK)<br /><br /> Se si specificano più opzioni, il sistema utilizza l'opzione più restrittiva. La stored procedure sp_describe_cursor_tables, tuttavia, visualizza i flag specificati nella query.|  
-|lock_type|**smallint**|Tipo di blocco di scorrimento richiesto in modo esplicito o implicito per ogni tabella di base sottostante del cursore. I possibili valori sono i seguenti:<br /><br /> 0 = Nessuno<br /><br /> 1 = Condiviso<br /><br /> 3 = Aggiornamento|  
+|lock_type|**smallint**|Tipo di blocco di scorrimento richiesto in modo esplicito o implicito per ogni tabella di base sottostante del cursore. I possibili valori sono i seguenti:<br /><br /> 0 = Nessuna<br /><br /> 1 = Condiviso<br /><br /> 3 = Aggiornamento|  
 |server_name|**sysname, Nullable**|Nome del server collegato contenente la tabella. NULL se si utilizza OPENQUERY o OPENROWSET.|  
 |Objectid|**int**|ID di oggetto della tabella. 0 se si utilizza OPENQUERY o OPENROWSET.|  
 |dbid|**int**|ID del database contenente la tabella specificata. 0 se si utilizza OPENQUERY o OPENROWSET.|  
 |dbname|**sysname**, **Nullable**|Nome del database contenente la tabella specificata. NULL se si utilizza OPENQUERY o OPENROWSET.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  La stored procedure sp_describe_cursor_tables descrive le tabelle di base a cui fa riferimento un cursore del server. Utilizzare sp_describe_cursor_columns per ottenere una descrizione degli attributi del set dei risultati restituito dal cursore. Utilizzare sp_describe_cursor per ottenere una descrizione delle caratteristiche globali del cursore, come il supporto dello scorrimento e degli aggiornamenti. Utilizzare sp_cursor_list per ottenere un report dei cursori del server [!INCLUDE[tsql](../../includes/tsql-md.md)] visibili nella connessione.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo public.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene aperto un cursore globale ed eseguita la stored procedure `sp_describe_cursor_tables` per creare un report sulle tabelle a cui fa riferimento il cursore.  
   
 ```  

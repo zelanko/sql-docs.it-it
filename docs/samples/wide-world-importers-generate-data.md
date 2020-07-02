@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 01bca0b4e0c8d98d0a31451686f0396af99ed430
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af15f93b869fed56bed19a495c64810b0f2436c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112319"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718598"
 ---
 # <a name="wideworldimporters-data-generation"></a>Generazione di dati WideWorldImporters
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Le versioni rilasciate dei database WideWorldImporters e WideWorldImportersDW hanno dati del 1 ° gennaio 2013, fino al giorno in cui i database sono stati generati.
 
 Quando si usano questi database di esempio, potrebbe essere necessario includere dati di esempio più recenti.
@@ -41,7 +41,7 @@ Per generare dati di esempio fino alla data corrente:
 
     Questa istruzione consente di aggiungere al database i dati di esempio relativi a vendite e acquisti, fino alla data corrente. Visualizza lo stato di avanzamento della generazione dei dati in base al giorno. La generazione dei dati può richiedere circa 10 minuti per ogni anno che necessita di dati. A causa di un fattore casuale nella generazione dei dati, esistono alcune differenze nei dati generati tra le esecuzioni.
 
-    Per aumentare o ridurre la quantità di dati generati per gli ordini al giorno, modificare il valore per il `@AverageNumberOfCustomerOrdersPerDay`parametro. Usare i parametri `@SaturdayPercentageOfNormalWorkDay` e `@SundayPercentageOfNormalWorkDay` per determinare il volume dell'ordine per i giorni del fine settimana.
+    Per aumentare o ridurre la quantità di dati generati per gli ordini al giorno, modificare il valore per il parametro `@AverageNumberOfCustomerOrdersPerDay` . Usare i parametri `@SaturdayPercentageOfNormalWorkDay` e `@SundayPercentageOfNormalWorkDay` per determinare il volume dell'ordine per i giorni del fine settimana.
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>Importare i dati generati in WideWorldImportersDW
 
@@ -67,7 +67,7 @@ Una delle difficoltà consiste nel ridurre le dimensioni del download abbastanza
 
 ### <a name="procedure-details"></a>Dettagli procedura
 
-#### <a name="name"></a>Nome
+#### <a name="name"></a>Name
 
     Application.Configuration_PopulateLargeSaleTable
 

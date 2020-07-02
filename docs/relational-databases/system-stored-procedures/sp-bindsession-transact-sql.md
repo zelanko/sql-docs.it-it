@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9a079a279c9d342033086c565203f85ad360e753
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ec133e7424a6c2a947b5f0f7a6ed52505c37fb1d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828496"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716074"
 ---
 # <a name="sp_bindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Associa o Annulla l'associazione di una sessione ad altre sessioni nella stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] . L'associazione di sessioni consente a due o più sessioni di partecipare alla stessa transazione e condividere i blocchi fino a quando non viene eseguita un'istruzione ROLLBACK TRANSACTION o COMMIT TRANSACTION.  
   
@@ -48,7 +48,7 @@ sp_bindsession { 'bind_token' | NULL }
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Due sessioni associate condividono esclusivamente la transazione e i blocchi. Ogni sessione mantiene il livello di isolamento specifico impostato e se si imposta un diverso livello di isolamento per una sessione, tale modifica non influisce sul livello di isolamento dell'altra sessione. Ogni sessione è identificata da un account di sicurezza specifico e consente l'accesso solo alle risorse del database per cui l'account in questione dispone delle autorizzazioni.  
   
  **sp_bindsession** utilizza un token di associazione per associare due o più sessioni client esistenti. Tali sessioni devono essere incluse nella stessa istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] da cui è stato ottenuto il token di associazione. Una sessione è un client che esegue un comando. Le sessioni di database associate condividono una transazione e uno spazio di blocco.  
@@ -76,7 +76,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_getbindtoken &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
+ [sp_getbindtoken &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
  [srv_getbindtoken &#40;API stored procedure estesa&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

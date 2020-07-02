@@ -20,15 +20,15 @@ ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a947396f3706c877770a10259838f6b860ab34b9
-ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
+ms.openlocfilehash: e1bf6607cd049e589e5050e111052723bbdb38e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454424"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718791"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Restituisce informazioni relative al conteggio di pagine e righe per ogni partizione nel database corrente.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "84454424"
 |**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
 |**distribution_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> ID numerico univoco associato alla distribuzione.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sys.dm_db_partition_stats** visualizza informazioni sullo spazio utilizzato per archiviare e gestire i dati LOB all'interno delle righe e i dati di overflow delle righe per tutte le partizioni in un database. Viene visualizzata una riga per partizione.  
   
  I conteggi su cui si basa l'output vengono inseriti nella cache in memoria oppure archiviati su disco in varie tabelle di sistema.  

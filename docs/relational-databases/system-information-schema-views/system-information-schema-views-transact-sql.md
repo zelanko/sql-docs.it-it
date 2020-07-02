@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9767c68f80c133a31c5ca33053731a399f1048db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3df27d1211807f1863ac40859a833d570191c7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68670567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716604"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>Viste degli schemi delle informazioni di sistema (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Una vista dello schema delle informazioni rappresenta uno dei metodi disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ottenere metadati. Le viste degli schemi delle informazioni offrono una panoramica interna dei metadati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indipendente dalle tabelle di sistema, nonché garantiscono il corretto funzionamento delle applicazioni anche se sono state apportate modifiche significative alle tabelle di sistema sottostanti. Le viste degli schemi delle informazioni incluse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono conformi alla definizione dello standard ISO per INFORMATION_SCHEMA.
 
@@ -53,10 +53,10 @@ Questa convenzione di mapping dei nomi è valida per le viste di [!INCLUDE[ssNoV
 |[COLUMNS](../../relational-databases/system-information-schema-views/columns-transact-sql.md)|[SCHEMATA](../../relational-databases/system-information-schema-views/schemata-transact-sql.md)|
 |[CONSTRAINT_COLUMN_USAGE](../../relational-databases/system-information-schema-views/constraint-column-usage-transact-sql.md)|[TABLE_CONSTRAINTS](../../relational-databases/system-information-schema-views/table-constraints-transact-sql.md)|
 |[CONSTRAINT_TABLE_USAGE](../../relational-databases/system-information-schema-views/constraint-table-usage-transact-sql.md)|[TABLE_PRIVILEGES](../../relational-databases/system-information-schema-views/table-privileges-transact-sql.md)|
-|[DOMAIN_CONSTRAINTS](../../relational-databases/system-information-schema-views/domain-constraints-transact-sql.md)|[TABELLE](../../relational-databases/system-information-schema-views/tables-transact-sql.md)|
+|[DOMAIN_CONSTRAINTS](../../relational-databases/system-information-schema-views/domain-constraints-transact-sql.md)|[TABLES](../../relational-databases/system-information-schema-views/tables-transact-sql.md)|
 |[DOMINI](../../relational-databases/system-information-schema-views/domains-transact-sql.md)|[VIEW_COLUMN_USAGE](../../relational-databases/system-information-schema-views/view-column-usage-transact-sql.md)|
 |[KEY_COLUMN_USAGE](../../relational-databases/system-information-schema-views/key-column-usage-transact-sql.md)|[VIEW_TABLE_USAGE](../../relational-databases/system-information-schema-views/view-table-usage-transact-sql.md)|
-|[PARAMETRI](../../relational-databases/system-information-schema-views/parameters-transact-sql.md)|[Visualizzazioni](../../relational-databases/system-information-schema-views/views-transact-sql.md)|
+|[PARAMETERS](../../relational-databases/system-information-schema-views/parameters-transact-sql.md)|[VIEWS](../../relational-databases/system-information-schema-views/views-transact-sql.md)|
 
 Alcune viste contengono inoltre riferimenti a classi di dati diverse, ad esempio dati di tipo carattere o dati binari.
 
