@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ba2cebf6c4b779119696f19ee78b7ce8ec1cf66
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ebb47597b5d08e0f14d37490304001811d0b33e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831888"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786273"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Aggiunge un articolo a una pubblicazione di tipo merge esistente. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -103,7 +103,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|**nessuno**|Se la tabella esiste già nel Sottoscrittore, non viene eseguita alcuna azione.|  
+|**nessuna**|Se la tabella esiste già nel Sottoscrittore, non viene eseguita alcuna azione.|  
 |**delete**|Esegue un'operazione di eliminazione in base alla clausola WHERE del filtro di subset.|  
 |**Drop** (impostazione predefinita)|Elimina la tabella prima di ricrearla. Necessario per supportare i [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori.|  
 |**troncare**|Tronca la tabella di destinazione.|  
@@ -282,9 +282,9 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|**nessuno**|Disabilita la gestione degli intervalli di valori Identity.|  
+|**nessuna**|Disabilita la gestione degli intervalli di valori Identity.|  
 |**Manuale**|Contrassegna la colonna Identity con NOT FOR REPLICATION per consentire la gestione manuale degli intervalli di valori Identity.|  
-|**auto**|Imposta la gestione automatica degli intervalli di valori Identity.|  
+|**Automatico**|Imposta la gestione automatica degli intervalli di valori Identity.|  
 |NULL (impostazione predefinita)|Il valore predefinito è **None**quando il valore di *auto_identity_range* non è **true**.|  
   
  Per compatibilità con le versioni precedenti, quando il valore di *identityrangemanagementoption* è null, viene verificato il valore di *auto_identity_range* . Tuttavia, quando il valore di *identityrangemanagementoption* non è null, il valore di *auto_identity_range* viene ignorato. Per altre informazioni, vedere [Replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).  

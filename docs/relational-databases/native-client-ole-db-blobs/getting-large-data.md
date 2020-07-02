@@ -16,17 +16,17 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ba1762bdc54c5ffe3e3879d21edd5e48c096f03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4927ffc7ded9a291e5910cd359cb59edea0bf3bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303622"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785563"
 ---
 # <a name="getting-large-data"></a>Recupero di dati di grandi dimensioni
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  In generale, i consumer devono isolare il codice [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che crea un oggetto di archiviazione del provider OLE DB di Native Client da altro codice che gestisce i dati a cui non viene fatto riferimento tramite un puntatore a interfaccia **ISequentialStream** .  
+  In generale, i consumer devono isolare il codice che crea un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetto di archiviazione del provider OLE DB di Native Client da altro codice che gestisce i dati a cui non viene fatto riferimento tramite un puntatore a interfaccia **ISequentialStream** .  
   
  In questo argomento vengono descritte le funzionalità disponibili con le funzioni seguenti:  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81303622"
   
  Se la proprietà DBPROP_ACCESSORDER (nel gruppo di proprietà del set di righe) è impostata su uno dei valori DBPROPVAL_AO_SEQUENTIAL o DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, il consumer deve recuperare solo una singola riga di dati in una chiamata al metodo **GetNextRows** perché i dati BLOB non vengono memorizzati nel buffer. Se il valore di DBPROP_ACCESSORDER è impostato su DBPROPVAL_AO_RANDOM, il consumer può recuperare più righe di dati in **GetNextRows**.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non recupera dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] grandi dimensioni da fino a quando non viene richiesto dal consumer. Il consumer deve associare tutti i dati di tipo short in una funzione di accesso e quindi utilizzare una o più funzioni di accesso temporanee per recuperare valori di dati di grandi dimensioni come richiesto.  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non recupera dati di grandi dimensioni da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fino a quando non viene richiesto dal consumer. Il consumer deve associare tutti i dati di tipo short in una funzione di accesso e quindi utilizzare una o più funzioni di accesso temporanee per recuperare valori di dati di grandi dimensioni come richiesto.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene recuperato un valore di dati di grandi dimensioni da una singola colonna:  

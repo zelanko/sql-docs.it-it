@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69b751dc93ad4512498530ddd99cf4fc8edee62a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b9af4f3564c5834b856632db70bd6b12368a22c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826299"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786239"
 ---
 # <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Aggiunge un nuovo processo agente utilizzato per pianificare la sincronizzazione di una sottoscrizione pull con una pubblicazione di tipo merge. Questa stored procedure viene eseguita nel database di sottoscrizione del Sottoscrittore.  
   
@@ -155,7 +155,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**2**|On demand|  
 |**4**|Ogni giorno|  
 |**8**|Settimanale|  
-|**16**|Ogni mese|  
+|**16**|Mensile|  
 |**32**|Mensile relativa|  
 |**64**|Avvio automatico|  
 |**128**|Periodica|  
@@ -255,7 +255,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @use_web_sync = ] use_web_sync`Indica che la sincronizzazione Web è abilitata. *use_web_sync* è di **bit**e il valore predefinito è 0. **1** specifica che la sottoscrizione pull può essere sincronizzata tramite Internet tramite http.  
   
-`[ @internet_url = ] 'internet_url'`Percorso del listener per la replica (REPLISAPI. DLL) per la sincronizzazione Web. *internet_url* è di **tipo nvarchar (260)** e il valore predefinito è null. *internet_url* è un URL completo nel formato `http://server.domain.com/directory/replisapi.dll` . Se il server è configurato per l'attesa su una porta diversa dalla porta 80, è necessario specificare anche il numero di porta nel formato `http://server.domain.com:portnumber/directory/replisapi.dll`, dove `portnumber` rappresenta la porta.  
+`[ @internet_url = ] 'internet_url'`Posizione del listener per la replica (REPLISAPI.DLL) per la sincronizzazione Web. *internet_url* è di **tipo nvarchar (260)** e il valore predefinito è null. *internet_url* è un URL completo nel formato `http://server.domain.com/directory/replisapi.dll` . Se il server è configurato per l'attesa su una porta diversa dalla porta 80, è necessario specificare anche il numero di porta nel formato `http://server.domain.com:portnumber/directory/replisapi.dll`, dove `portnumber` rappresenta la porta.  
   
 `[ @internet_login = ] 'internet_login'`Account di accesso utilizzato dal agente di merge per la connessione al server Web che ospita la sincronizzazione Web tramite l'autenticazione di base HTTP. *internet_login* è di **tipo sysname**e il valore predefinito è null.  
   
@@ -288,7 +288,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_addmergepullsubscription_agent** viene utilizzata nella replica di tipo merge e utilizza funzionalità simili a [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
   
  Per un esempio di come specificare correttamente le impostazioni di sicurezza durante l'esecuzione di **sp_addmergepullsubscription_agent**, vedere [creare una sottoscrizione pull](../../relational-databases/replication/create-a-pull-subscription.md).  

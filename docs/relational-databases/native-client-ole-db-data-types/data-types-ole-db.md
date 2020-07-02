@@ -16,17 +16,17 @@ ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 501e73cd5db2fbf79cd84c0184161f0c6ec6a341
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2813653f46573ad0e5b1db558fbc31de50e1071d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304442"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785478"
 ---
 # <a name="data-types-ole-db"></a>Tipi di dati (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Per eseguire istruzioni ed [!INCLUDE[tsql](../../includes/tsql-md.md)] elaborare i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risultati utilizzando il provider di OLE DB di Native client, è necessario essere in grado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di eseguire il mapping [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tra i tipi di dati del provider di OLE DB di Native client e i tipi di dati OLE DB quando si associano parametri o colonne di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]set di righe e quando si utilizza l'interfaccia **ITableDefinition** per creare una tabella in.  
+  Per eseguire [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni ed elaborare i risultati utilizzando il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client, è necessario essere in grado di eseguire il mapping tra i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati del provider di OLE DB di Native client e i tipi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di dati OLE DB quando si associano parametri o colonne di un set di righe e quando si utilizza l'interfaccia **ITableDefinition** per creare una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   

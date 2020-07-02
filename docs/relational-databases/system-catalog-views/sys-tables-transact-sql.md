@@ -20,21 +20,21 @@ ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25661cc9d9166da61bd7cef8e3368c2a393a931e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fc6b21029c829194c5287b450e266119b08a934f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821289"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787094"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Restituisce una riga per ogni tabella utente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|\<colonne ereditate>||Per un elenco di colonne ereditate da questa vista, vedere [sys. objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|\<inherited columns>||Per un elenco di colonne ereditate da questa vista, vedere [sys. objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |lob_data_space_id|**int**|Un valore diverso da zero corrisponde all'ID dello spazio dati (filegroup o schema di partizione) in cui sono inclusi dati LOB (large object binary) per la tabella. Esempi di tipi di dati LOB includono **varbinary (max)**, **varchar (max)**, **geography**o **XML**.<br /><br /> 0 = nella tabella non sono presenti dati LOB.|  
 |filestream_data_space_id|**int**|ID dello spazio dati per un filegroup FILESTREAM o schema di partizione costituito da filegroup FILESTREAM.<br /><br /> Per segnalare il nome di un filegroup FILESTREAM, eseguire la query `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables` .<br /><br /> È possibile aggiungere sys.tables alle viste seguenti in filestream_data_space_id = data_space_id.<br /><br /> -sys. FileGroups<br /><br /> -sys. partition_schemes<br /><br /> -sys. Indexes<br /><br /> -sys. allocation_units<br /><br /> -sys. fulltext_catalogs<br /><br /> -sys. data_spaces<br /><br /> -sys. destination_data_spaces<br /><br /> -sys. master_files<br /><br /> -sys. database_files<br /><br /> -backupfilegroup (partecipa a filegroup_id)|  
 |max_column_id_used|**int**|ID di colonna massimo utilizzato dalla tabella.|  
@@ -68,7 +68,7 @@ ms.locfileid: "82821289"
 ## <a name="permissions"></a>Autorizzazioni  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite tutte le tabelle utente che non dispongono di una chiave primaria.  
   
 ```  

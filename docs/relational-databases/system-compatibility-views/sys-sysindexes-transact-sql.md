@@ -1,5 +1,5 @@
 ---
-title: sys. sysindexes (Transact-SQL) | Microsoft Docs
+title: Indici sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 560b5ab5d85c7f2a69fb5062a6eacc6e5c85ee1d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8ae519a06d98c3c70cdd01064c220e5f2e4ed424
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053440"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786324"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Include una riga per ogni indice e tabella del database corrente. Gli indici XML non sono supportati in questa vista. Le tabelle e gli indici partizionati non sono completamente supportati in questa visualizzazione. utilizzare invece la vista del catalogo [sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) .  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68053440"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID della tabella alla quale appartiene l'indice.|  
 |**Stato**|**int**|Informazioni sullo stato del sistema.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**prima**|**binary(6)**|Puntatore alla prima pagina o alla pagina radice.<br /><br /> Non usato quando **indid** = 0.<br /><br /> NULL = l'indice viene partizionato quando **indid** > 1.<br /><br /> NULL = la tabella viene partizionata quando **indid** è 0 o 1.|  
+|**first**|**binary(6)**|Puntatore alla prima pagina o alla pagina radice.<br /><br /> Non usato quando **indid** = 0.<br /><br /> NULL = l'indice viene partizionato quando **indid** > 1.<br /><br /> NULL = la tabella viene partizionata quando **indid** è 0 o 1.|  
 |**indid**|**smallint**|ID dell'indice:<br /><br /> 0 = heap<br /><br /> 1 = indice cluster<br /><br /> >1 = indice non cluster|  
 |**radice**|**binary(6)**|Per **indid** >= 1, **root** è il puntatore alla pagina radice.<br /><br /> Non usato quando **indid** = 0.<br /><br /> NULL = l'indice viene partizionato quando **indid** > 1.<br /><br /> NULL = la tabella viene partizionata quando **indid** è 0 o 1.|  
 |**minlen**|**smallint**|Dimensioni minime di una riga.|  
@@ -61,8 +61,8 @@ ms.locfileid: "68053440"
 |**impid**|**smallint**|Flag di implementazione dell'indice.<br /><br /> Viene restituito 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**lockflags**|**smallint**|Utilizzata per vincolare le granularità dei blocchi considerati per un indice. Per ridurre al minimo il costo di blocco, è possibile ad esempio impostare una tabella di ricerca essenzialmente di sola lettura per l'esecuzione del blocco solo a livello di tabella.|  
 |**pgmodctr**|**int**|Viene restituito 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**chiavi**|**varbinary(816)**|Elenco degli ID delle colonne che costituiscono la chiave dell'indice.<br /><br /> Restituisce NULL.<br /><br /> Per visualizzare le colonne chiave dell'indice, utilizzare [sys. sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
-|**name**|**sysname**|Nome dell'indice o della statistica. Restituisce NULL quando **indid** = 0. Modificare l'applicazione in uso in modo da eseguire la ricerca di un nome di heap NULL.|  
+|**chiavi**|**varbinary(816)**|Elenco degli ID delle colonne che costituiscono la chiave dell'indice.<br /><br /> Restituisce NULL.<br /><br /> Per visualizzare le colonne chiave dell'indice, utilizzare [sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
+|**nome**|**sysname**|Nome dell'indice o della statistica. Restituisce NULL quando **indid** = 0. Modificare l'applicazione in uso in modo da eseguire la ricerca di un nome di heap NULL.|  
 |**statblob**|**image**|BLOB (Binary Large Object) per statistiche.<br /><br /> Restituisce NULL.|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**righe**|**int**|Conteggio delle righe a livello di dati basato su **indid** = 0 e **indid** = 1 e il valore viene ripetuto per **indid** >1.|  

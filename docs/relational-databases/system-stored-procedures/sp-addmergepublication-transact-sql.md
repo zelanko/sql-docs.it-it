@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d5b7870faed5423d4b12861d18f9bdb85e40c68
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 09e3c873ecdab8f967fb454854ae66b3a367ab87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826311"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786251"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Viene creata una nuova pubblicazione di tipo merge. Questa stored procedure viene eseguita nel server di pubblicazione nel database in fase di pubblicazione.  
   
@@ -172,7 +172,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @publication_compatibility_level = ] backward_comp_level`Indica la compatibilità con le versioni precedenti della pubblicazione. *backward_comp_level* è di **tipo nvarchar (6)**. i possibili valori sono i seguenti:  
   
-|Valore|Versione|  
+|Valore|Version|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
@@ -200,7 +200,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @retention_period_unit = ] 'retention_period_unit'`Specifica le unità per il periodo di memorizzazione impostato dalla *conservazione*. *retention_period_unit* è di **tipo nvarchar (10)**. i possibili valori sono i seguenti.  
   
-|Valore|Versione|  
+|Valore|Version|  
 |-----------|-------------|  
 |**giorno** (impostazione predefinita)|Il periodo di memorizzazione è specificato in giorni.|  
 |**week**|Il periodo di memorizzazione è specificato in settimane.|  
@@ -226,7 +226,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_addmergepublication** viene utilizzata nella replica di tipo merge.  
   
  Per elencare gli oggetti di pubblicazione nel Active Directory utilizzando il parametro ** \@ add_to_active_directory** , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario che l'oggetto sia già stato creato nella Active Directory.  

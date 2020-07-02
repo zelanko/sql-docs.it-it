@@ -19,15 +19,15 @@ ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 9ff85273a1e970b3bb891d1816a96019dd4f3ae5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 55bb26edf9d51731a4a5986a8a6063f6214df1f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135185"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787080"
 ---
 # <a name="sysselective_xml_index_paths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Disponibili a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1, ogni riga in sys.selective_xml_index_paths rappresenta un percorso promosso per un determinato indice XML selettivo.  
   
@@ -49,7 +49,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**index_id**|**int**|ID univoco dell'indice XML selettivo.|  
 |**path_id**|**int**|ID del percorso XML promosso|  
 |**path**|**nvarchar(4000)**|Percorso promosso. Ad esempio, '/a/b/c/d/e'.|  
-|**name**|**sysname**|Nome del percorso.|  
+|**nome**|**sysname**|Nome del percorso.|  
 |**path_type**|**tinyint**|0 = XQUERY<br /><br /> 1 = SQL|  
 |**path_type_desc**|**sysname**|Basato sul valore **path_type** ' XQuery ' o ' SQL '.|  
 |**xml_component_id**|**int**|ID univoco del componente di XML Schema nel database.|  

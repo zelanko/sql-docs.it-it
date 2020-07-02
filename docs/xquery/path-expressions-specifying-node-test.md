@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dba7904f4e28b6bea50c802fd83b9c24c147defb
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: bc2d295f43dfab4327ac1b0ea47382324a22db41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84524491"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786519"
 ---
 # <a name="path-expressions---specifying-node-test"></a>Espressioni di percorso - Specifica test di nodo
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   Ogni passo dell'asse in un'espressione di percorso include i componenti seguenti:  
   
@@ -108,10 +108,10 @@ child::comment()
   
  Analogamente, `/child::ProductDescription/child::Features/child::comment()` Recupera i nodi di commento figlio del nodo \<Features> elemento figlio del \<ProductDescription> nodo elemento.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Negli esempi seguenti vengono confrontati il nome di nodo e il tipo di nodo.  
   
-### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>A. Risultati della definizione del nome di nodo e del tipo di nodo come test di nodo in un'espressione di percorso  
+### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>R. Risultati della definizione del nome di nodo e del tipo di nodo come test di nodo in un'espressione di percorso  
  Nell'esempio seguente viene assegnato un semplice documento XML a una variabile di tipo **XML** . Vengono eseguite query sul documento tramite espressioni di percorso diverse. Successivamente, vengono confrontati i risultati.  
   
 ```  

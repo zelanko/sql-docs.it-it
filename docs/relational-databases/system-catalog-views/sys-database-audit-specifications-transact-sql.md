@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2fc5e725a86f974c14922d620c2a55af1340409f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4ef58ef70135368bd6a87c24a6157086e0e914d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832020"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787156"
 ---
 # <a name="sysdatabase_audit_specifications-transact-sql"></a>sys.database_audit_specifications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene informazioni sulle specifiche del controllo del database in un controllo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza del server. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|Nome|**sysname**|Nome della specifica del controllo.|  
+|Name|**sysname**|Nome della specifica del controllo.|  
 |database_specification_id|**int**|ID della specifica del database.|  
 |create_date|**datetime**|Data di creazione della specifica del controllo.|  
 |modified_date|**datetime**|Data dell'ultima modifica della specifica del controllo.|  
@@ -46,7 +46,7 @@ ms.locfileid: "82832020"
 ## <a name="permissions"></a>Autorizzazioni  
  Le entità con autorizzazioni **ALTER ANY database audit** o **View definition** , il ruolo dbo e i membri del ruolo predefinito del database db_owners possono accedere a questa vista del catalogo. Inoltre, all'entità non deve essere negata l'autorizzazione **View definition** .  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)].  Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

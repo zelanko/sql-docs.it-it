@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: f9c182cb-386f-4e72-859f-9f1115b389f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5d928926294bb3e80f860a535a266b5c106e3f18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c163fb545c5eef4b1d4e10a7dcf0bfea79f3b4a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053503"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786392"
 ---
 # <a name="syssysdepends-transact-sql"></a>sys.sysdepends (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene informazioni sulle dipendenze tra oggetti (viste, procedure e trigger) nel database e oggetti (tabelle, viste e procedure) inclusi nella relativa definizione.  
   

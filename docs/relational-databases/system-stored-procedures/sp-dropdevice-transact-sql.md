@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8d9176624f661cb012fe8ed3124a1b868ec72195
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b7b68a7497dc3ed64eaf1b9047d1489e38f99be6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830202"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786961"
 ---
 # <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Elimina un dispositivo di database o un dispositivo di backup da un'istanza del [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] , eliminando la voce da **master. dbo. sysdevices**.  
+  Elimina un dispositivo di database o un dispositivo di backup da un'istanza del [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] , eliminando la voce da **master.dbo.sysdispositivi**.  
    
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,7 +41,7 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @logicalname = ] 'device'`Nome logico del dispositivo di database o del dispositivo di backup elencato in **master.dbo.sysdevices.Name**. il *dispositivo* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @logicalname = ] 'device'`Nome logico del dispositivo di database o del dispositivo di backup elencato in **master.dbo.sysDevices.Name**. il *dispositivo* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 `[ @delfile = ] 'delfile'`Specifica se il file del dispositivo di backup fisico deve essere eliminato. *delfile* è di tipo **varchar (7)**. Se specificato come **delfile**, il file su disco del dispositivo di backup fisico viene eliminato.  
   
@@ -57,7 +57,7 @@ sp_dropdevice [ @logicalname = ] 'device'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **diskadmin** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente il dispositivo di dump su nastro `tapedump1` viene eliminato da [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ```  

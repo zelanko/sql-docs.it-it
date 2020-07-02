@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c12e117682fe2e5286a6f4a1c650878ae0827010
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c31df96682d2d1413094572a2b1fab94cfbe54b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831636"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786181"
 ---
 # <a name="sp_dbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Aggiunge o modifica la soglia di avviso per una misurazione delle prestazioni di mirroring specificata.  
 
@@ -78,7 +78,7 @@ sp_dbmmonitorchangealert database_name
 >  Il periodo di memorizzazione è sempre abilitato.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- Nessuno  
+ nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
  nessuno  
@@ -86,7 +86,7 @@ sp_dbmmonitorchangealert database_name
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono impostati i valori soglia per ogni metrica delle prestazioni e il periodo di memorizzazione per il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Nella tabella seguente vengono riportati i valori utilizzati nell'esempio.  
   
 |*alert_id*|Misurazione delle prestazioni|Valore soglia avvisi|Specifica se l'avviso è abilitato.|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e214f2247009af8e43aefd9cb3274ea59332bcd5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a644e06ca84bbc4ae5d4da6c9620c4afe1aeccba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820557"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786992"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce gli attributi dei cursori del server aperti per la connessione corrente.  
   
@@ -54,7 +54,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |3|Restituisce i cursori locali e quelli globali.|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- Nessuno  
+ nessuno  
   
 ## <a name="cursors-returned"></a>Cursori restituiti  
  sp_cursor_list restituisce un report come parametro di output di un cursore [!INCLUDE[tsql](../../includes/tsql-md.md)], anziché come set di risultati. In questo modo i batch, le stored procedure e i trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] possono elaborare l'output una riga alla volta. Non è possibile richiamare direttamente la procedura da funzioni API del database. Il parametro di output del cursore deve essere associato a una variabile di programma, ma le API del database non supportano l'associazione di parametri o variabili del cursore.  
@@ -90,7 +90,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione vengono assegnate per impostazione predefinita al ruolo public.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene aperto un cursore globale e viene utilizzata la stored procedure `sp_cursor_list` per creare un report degli attributi del cursore.  
   
 ```  

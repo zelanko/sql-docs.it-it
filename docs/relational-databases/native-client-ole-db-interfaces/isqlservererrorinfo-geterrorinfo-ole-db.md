@@ -16,17 +16,17 @@ ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69ba76725f5a5d3b21224495554cc2a419265f7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36d143c70c4d81577213a93deb942abb9d1b4c4b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299921"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785359"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Restituisce un puntatore a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] struttura SSERRORINFO del provider OLE DB di Native client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenente i dettagli dell'errore.  
+  Restituisce un puntatore a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] struttura SSERRORINFO del provider OLE DB di Native Client contenente i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dettagli dell'errore.  
   
  Il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client definisce l'interfaccia degli errori **ISQLServerErrorInfo** . Questa interfaccia restituisce i dettagli di un errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], inclusi la gravità e lo stato.  
 

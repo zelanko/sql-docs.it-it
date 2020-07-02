@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab1630f6dd172410d26f48d0485b23d257c6d408
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3131a5e0a44cf0ccbdb4537dc8e409cc8b56be39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825995"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786111"
 ---
 # <a name="sp_table_privileges_ex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni sui privilegi per la tabella specificata nel server collegato specificato.  
   
@@ -54,7 +54,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 `[ @fUsePattern = ] 'fUsePattern'`Determina se i caratteri ' _', '%',' [' è]' sono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* è di **bit**e il valore predefinito è 1.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- Nessuno  
+ nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -68,13 +68,13 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 |**PRIVILEGE**|**varchar (** 32 **)**|Una delle autorizzazioni di tabella disponibili. I possibili valori delle autorizzazioni di tabella sono i seguenti. È inoltre possibile utilizzare altri valori supportati dall'origine dei dati al momento della definizione dell'implementazione.<br /><br /> SELECT = l' **utente GRANTEE** può recuperare i dati per una o più colonne.<br /><br /> INSERT = l' **utente GRANTEE** può fornire dati per le nuove righe di una o più colonne.<br /><br /> UPDATE = l' **utente GRANTEE** può modificare i dati esistenti per una o più colonne.<br /><br /> DELETE = l' **utente GRANTEE** può rimuovere righe dalla tabella.<br /><br /> REFERENCEs = l' **utente GRANTEE** può fare riferimento a una colonna di una tabella esterna in una relazione di chiave primaria/chiave esterna. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le relazioni tra chiave primaria e chiave esterna vengono definite tramite l'utilizzo di vincoli di tabella.<br /><br /> L'ambito di azione fornito all' **utente autorizzato** da un privilegio di tabella specifico dipende dall'origine dati. Ad esempio, l'autorizzazione UPDATE potrebbe consentire all' **utente autorizzato** di aggiornare tutte le colonne di una tabella in un'origine dati e solo le colonne per le quali l' **utente autorizzato** dispone dell'autorizzazione Update per un'altra origine dati.|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|Indica se l' **utente autorizzato** è autorizzato a concedere autorizzazioni ad altri utenti. Questa autorizzazione spesso viene denominata "autorizzazione per la concessione di autorizzazioni". I possibili valori sono YES, NO e NULL. Il valore sconosciuto, o NULL, indica un'origine dei dati per la quale l'autorizzazione per la concessione di autorizzazioni non è applicabile.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  I risultati restituiti vengono ordinati in base **TABLE_QUALIFIER**, **TABLE_OWNER**, **table_name**e **Privilege**.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite informazioni sui privilegi per le tabelle il cui nome inizia con `Product` incluse nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] disponibile nel server collegato `Seattle1`. ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si presuppone come server collegato).  
   
 ```  

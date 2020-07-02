@@ -1,5 +1,5 @@
 ---
-title: sys. sysprocesses (Transact-SQL) | Microsoft Docs
+title: Processi di sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6aa40d6a7363dd991dc37ed5c619b656e74f0eed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9e90b22dc5542d83533bff584af326abdcc4902
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78866370"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787050"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene informazioni sui processi in esecuzione in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questi processi possono essere processi client o di sistema. Per accedere a sysprocesses, è necessario trovarsi nel contesto del database master oppure utilizzare il nome in tre parti master.dbo.sysprocesses.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "78866370"
 |last_batch|**datetime**|Ora dell'ultima esecuzione di una chiamata a una stored procedure remota o di un'istruzione EXECUTE da parte di un processo client.|  
 |ecid|**smallint**|ID del contesto di esecuzione utilizzato per identificare in modo univoco i thread secondari utilizzati per conto di un unico processo.|  
 |open_tran|**smallint**|Numero di transazioni aperte per il processo.|  
-|status|**nchar(30)**|Stato dell'ID del processo. I valori possibili sono:<br /><br /> **inattivo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sta reimpostando la sessione. = <br /><br /> **Running** = la sessione sta eseguendo uno o più batch. Se si abilita la funzionalità MARS (Multiple Active Result Sets), una sessione può eseguire più batch. Per altre informazioni vedere [Uso di MARS &#40;Multiple Active Result Set&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **background** = la sessione sta eseguendo un'attività in background, ad esempio il rilevamento dei deadlock.<br /><br /> **rollback** = per la sessione è in corso il rollback di una transazione.<br /><br /> **in sospeso** = la sessione è in attesa che un thread di lavoro diventi disponibile.<br /><br /> **eseguibile** = l'attività della sessione si trova nella coda eseguibile di un'utilità di pianificazione in attesa di ottenere un quantum temporale.<br /><br /> **Spinloop** = l'attività della sessione è in attesa che uno spinlock diventi disponibile.<br /><br /> **suspended** = la sessione è in attesa del completamento di un evento, ad esempio l'i/O.|  
+|status|**nchar(30)**|Stato dell'ID del processo. I valori possibili sono:<br /><br /> **inattivo**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sta reimpostando la sessione.<br /><br /> **Running** = la sessione sta eseguendo uno o più batch. Se si abilita la funzionalità MARS (Multiple Active Result Sets), una sessione può eseguire più batch. Per altre informazioni vedere [Uso di MARS &#40;Multiple Active Result Set&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **background** = la sessione sta eseguendo un'attività in background, ad esempio il rilevamento dei deadlock.<br /><br /> **rollback** = per la sessione è in corso il rollback di una transazione.<br /><br /> **in sospeso** = la sessione è in attesa che un thread di lavoro diventi disponibile.<br /><br /> **eseguibile** = l'attività della sessione si trova nella coda eseguibile di un'utilità di pianificazione in attesa di ottenere un quantum temporale.<br /><br /> **Spinloop** = l'attività della sessione è in attesa che uno spinlock diventi disponibile.<br /><br /> **suspended** = la sessione è in attesa del completamento di un evento, ad esempio l'i/O.|  
 |sid|**binary(86)**|Identificatore univoco globale (GUID, Globally Unique Identifier) per l'utente.|  
 |hostname|**nchar (128)**|Nome della workstation.|  
 |program_name|**nchar (128)**|Nome dell'applicazione.|  

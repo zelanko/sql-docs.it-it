@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ff09552fcc8a79abcae877191b4456c0958d1ea2
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 9d9290b02c149889a488452d71ae800134d38f00
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807757"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786971"
 ---
 # <a name="sp_dropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Elimina un database di distribuzione. Rimuove i file fisici utilizzati dal database se non sono utilizzati da un altro database. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   
@@ -43,7 +43,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_dropdistributiondb** viene utilizzato in tutti i tipi di replica.  
   
  È necessario eseguire questa stored procedure prima di eliminare il server di distribuzione eseguendo **sp_dropdistributor**.  

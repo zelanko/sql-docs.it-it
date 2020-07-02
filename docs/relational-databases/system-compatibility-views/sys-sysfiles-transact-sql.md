@@ -1,5 +1,5 @@
 ---
-title: sys. sysfiles (Transact-SQL) | Microsoft Docs
+title: File di sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a3554e254be0623e36719fe76b2d811908a939d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 23f0a88653887177a84da079d00550dc9915f0d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053473"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786386"
 ---
 # <a name="syssysfiles-transact-sql"></a>sys.sysfiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una riga per ogni file di un database.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68053473"
 |**growth**|**int**|Aumento delle dimensioni del database. Può essere il numero di pagine o la percentuale di dimensioni del file, a seconda del valore dello **stato**.<br /><br /> 0 = Nessun aumento.|  
 |**Stato**|**int**|Bit di stato per il valore di **crescita** in megabyte (MB) o KILOBYTE (KB).<br /><br /> 0x2 = File del disco.<br /><br /> 0x40 = File di log.<br /><br /> 0x100000 = Aumento. Questo valore indica una percentuale e non il numero di pagine.|  
 |**perf**|**int**|Riservato.|  
-|**name**|**sysname**|Nome logico del file.|  
+|**nome**|**sysname**|Nome logico del file.|  
 |**filename**|**nvarchar(260)**|Nome del dispositivo fisico, incluso il percorso completo del file.|  
   
 ## <a name="see-also"></a>Vedere anche  

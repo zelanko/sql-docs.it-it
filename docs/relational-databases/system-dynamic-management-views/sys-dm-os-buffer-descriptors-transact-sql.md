@@ -20,15 +20,15 @@ ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2b1ed24045f609b2feff1bfef6f288cd97047cf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61a84a655bced5a053f47d0aae1493ec80dd9ff8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827898"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787021"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Restituisce informazioni relative a tutte le pagine di dati incluse nel pool di buffer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'output di questa vista può essere utilizzato per determinare la distribuzione delle pagine del database nel pool di buffer in base al database, all'oggetto o al tipo. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] questa DMV restituisce inoltre informazioni sulle pagine di dati nel file di estensione del pool di buffer. Per altre informazioni, vedere [estensione del pool di buffer](../../database-engine/configure-windows/buffer-pool-extension.md).  
   
@@ -57,14 +57,14 @@ ms.locfileid: "82827898"
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
    
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  sys. dm_os_buffer_descriptors restituisce le pagine utilizzate dal database Resource. sys. dm_os_buffer_descriptors non restituisce informazioni sulle pagine libere o rubate oppure sulle pagine che contengono errori durante la lettura.  
   
 |From|A|On|Relazione|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|molti-a-uno|  
-|sys.dm_os_buffer_descriptors|\<userdb al>. sys. allocation_units|allocation_unit_id|molti-a-uno|  
-|sys.dm_os_buffer_descriptors|\<userdb al>. sys. database_files|file_id|molti-a-uno|  
+|sys.dm_os_buffer_descriptors|\<userdb>. sys. allocation_units|allocation_unit_id|molti-a-uno|  
+|sys.dm_os_buffer_descriptors|\<userdb>. sys. database_files|file_id|molti-a-uno|  
 |sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|molti-a-uno|  
   
 ## <a name="examples"></a>Esempi  
