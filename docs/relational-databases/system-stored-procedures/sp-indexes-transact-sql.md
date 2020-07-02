@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d678b5643c4288c07ff7576bfced5cd9f0655d1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 77cace048b83ff3d4d93b4cc536dbc2c68415d98
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817861"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772944"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni sugli indici per la tabella remota specificata.  
   
@@ -89,7 +89,7 @@ sp_indexes [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite tutte le informazioni sugli indici dalla tabella `Employees` del database `AdventureWorks2012` nel server collegato `Seattle1`.  
   
 ```  

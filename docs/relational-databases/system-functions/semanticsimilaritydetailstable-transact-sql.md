@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 34473e6eb173a0aabc5c2067e50aeeec27ce5636
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b264f5276ad9d9f411fcdd14550130eb412a1b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68067745"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771553"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una tabella di zero, una o più righe di frasi chiave comuni in due documenti (un documento di origine e un documento corrispondente) il cui contenuto è semanticamente simile.  
   
@@ -74,7 +74,7 @@ SEMANTICSIMILARITYDETAILSTABLE
 |Nome della colonna|Type|Descrizione|  
 |------------------|----------|-----------------|  
 |**frase chiave**|**NVARCHAR**|Frase chiave che contribuisce alla somiglianza tra documento di origine e il documento corrispondente.|  
-|**Punteggio**|**real**|Valore relativo per la frase chiave nella relazione con tutte le altre frasi chiave analoghe nei due documenti.<br /><br /> Il valore è un valore decimale frazionario compreso nell'intervallo [0.0, 1.0], dove un punteggio maggiore rappresenta un peso maggiore e 1.0 costituisce il punteggio perfetto.|  
+|**Punteggio**|**REALE**|Valore relativo per la frase chiave nella relazione con tutte le altre frasi chiave analoghe nei due documenti.<br /><br /> Il valore è un valore decimale frazionario compreso nell'intervallo [0.0, 1.0], dove un punteggio maggiore rappresenta un peso maggiore e 1.0 costituisce il punteggio perfetto.|  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Per altre informazioni, vedere [trovare documenti simili e correlati con la ricerca semantica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
@@ -92,7 +92,7 @@ SEMANTICSIMILARITYDETAILSTABLE
  Sono necessarie autorizzazioni SELECT per la tabella di base in cui sono stati creati gli indici full-text e semantico.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente vengono recuperate le 5 frasi chiave con il Punteggio di somiglianza più elevato tra i candidati specificati nella tabella **HumanResources. JobCandidate** del database di esempio AdventureWorks2012. Le @CandidateId variabili @MatchedID e rappresentano i valori della colonna chiave dell'indice full-text.  
+ Nell'esempio seguente vengono recuperate le 5 frasi chiave con il Punteggio di somiglianza più elevato tra i candidati specificati nella tabella **HumanResources. JobCandidate** del database di esempio AdventureWorks2012. Le @CandidateId @MatchedID variabili e rappresentano i valori della colonna chiave dell'indice full-text.  
   
 ```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  

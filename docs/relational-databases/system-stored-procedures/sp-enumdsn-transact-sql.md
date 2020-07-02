@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 151b0f504080523e99fad839c17e02b786b619c0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b7b69de24d9b92e82d624a694800988cdf74180c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831114"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771104"
 ---
 # <a name="sp_enumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce un elenco di tutti i nomi di origini dei dati ODBC e OLE DB definiti per un server in esecuzione con un account utente specifico di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Questa stored procedure viene eseguita in qualsiasi database del server di pubblicazione.  
   
@@ -45,7 +45,7 @@ sp_enumdsn
 |-----------------|---------------|-----------------|  
 |**Nome origine dati**|**sysname**|Nome dell'origine dei dati.|  
 |**Descrizione**|**varchar(255)**|Descrizione dell'origine dei dati.|  
-|**Type**|**int**|Tipo di origine dei dati:<br /><br /> **1** = DSN ODBC<br /><br /> **3** = origine dati OLE DB|  
+|**Tipo**|**int**|Tipo di origine dei dati:<br /><br /> **1** = DSN ODBC<br /><br /> **3** = origine dati OLE DB|  
 |**Nome provider**|**varchar(255)**|Nome del provider OLE DB. Il valore è NULL per DSN ODBC.|  
   
 ## <a name="remarks"></a>Osservazioni  

@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: c7b83833-6d2a-4a06-9cb7-42767bed52c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8fd4d94debcaaaa90447b3bc85621ae973d7f70d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ece276dca136aaa5f21f9fdc1ab16ffad9ba2d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022075"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765215"
 ---
 # <a name="localdbstarttracing-function"></a>Funzione LocalDBStartTracing
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Viene abilitata la traccia delle chiamate API per tutte le istanze del database locale di SQL Server Express di proprietà dell'utente di Windows corrente.  
   
  **File di intestazione:** sqlncli. h  
@@ -34,7 +34,7 @@ ms.locfileid: "68022075"
 HRESULT LocalDBStartTracing();  
 ```  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  S_OK  
  Funzione completata.  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9a3b575b39055976262858fcf527d1b892790a02
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2cd1e4126c1a9da57a6bda6195be78d996e101d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833401"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771373"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Consente di modificare le opzioni di un Sottoscrittore. Verranno aggiornate tutte le attività di distribuzione per i Sottoscrittori di questo server di pubblicazione. Questo stored procedure scrive nella tabella **MSsubscriber_info** del database di distribuzione. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -78,7 +78,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**2**|On demand|  
 |**4**|Ogni giorno|  
 |**8**|Settimanale|  
-|**16**|Ogni mese|  
+|**16**|Mensile|  
 |**32**|Mensile relativa|  
 |**64**|Avvio automatico|  
 |**128**|Periodica|  

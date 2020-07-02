@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd6d3091b155ae829e368bdd182b3da8286c7194
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc3dc5787693345c531e7afb3384bf093dc17aa6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487538"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765446"
 ---
 # <a name="sqlcontext-object"></a>Oggetto SqlContext
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   È possibile richiamare il codice gestito nel server quando si chiama una routine o una funzione, quando si chiama un metodo su un tipo CLR definito dall'utente o quando l'azione genera un trigger definito in uno dei linguaggi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Dal momento che l'esecuzione di questo codice viene richiesta come parte di una connessione utente, è necessario l'accesso al contesto del chiamante dal codice in esecuzione sul server. Determinate operazioni di accesso ai dati potrebbero inoltre essere valide solo se eseguite nel contesto del chiamante. L'accesso alle pseudotabelle inserite ed eliminate utilizzate nelle operazioni del trigger, ad esempio, è valido solo nel contesto del chiamante.  
   
  Il contesto del chiamante viene astratto in un oggetto **SqlContext** . Per ulteriori informazioni sui metodi e le proprietà di **SqlTriggerContext** , vedere la documentazione di riferimento della classe **Microsoft. SqlServer. Server. SqlTriggerContext** in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
@@ -42,7 +42,7 @@ ms.locfileid: "81487538"
  Eseguire una query sulla classe **SqlContext** per verificare se il codice attualmente in esecuzione è in esecuzione in-process. A tale scopo, controllare la proprietà di **disponibilità** dell'oggetto **SqlContext** . La proprietà **disavailable** è di sola lettura e restituisce **true** se il codice chiamante viene eseguito all'interno [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di e se è possibile accedere ad altri membri **SqlContext** . Se la **Proprietà** IsSynchronized restituisce **false**, tutti gli altri membri **SqlContext** generano un' **eccezione InvalidOperationException**, se utilizzata. Se **viene** restituito **false**, qualsiasi tentativo di aprire un oggetto connessione con "context connection = true" nella stringa di connessione ha esito negativo.  
   
 ## <a name="retrieving-windows-identity"></a>Recupero dell'identità di Windows  
- Il codice CLR in esecuzione all'interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene sempre richiamato nel contesto dell'account del processo. Se il codice deve eseguire determinate azioni utilizzando l'identità dell'utente chiamante, anziché l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identità del processo, è necessario ottenere un token di rappresentazione tramite la proprietà **WindowsIdentity** dell'oggetto **SqlContext** . La proprietà **WindowsIdentity** restituisce un'istanza **WindowsIdentity** che rappresenta [!INCLUDE[msCoName](../../includes/msconame-md.md)] l'identità Windows del chiamante o null se il client è stato autenticato tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di. Solo gli assembly contrassegnati con **EXTERNAL_ACCESS** o le autorizzazioni **unsafe** possono accedere a questa proprietà.  
+ Il codice CLR in esecuzione all'interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene sempre richiamato nel contesto dell'account del processo. Se il codice deve eseguire determinate azioni utilizzando l'identità dell'utente chiamante, anziché l'identità del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo, è necessario ottenere un token di rappresentazione tramite la proprietà **WindowsIdentity** dell'oggetto **SqlContext** . La proprietà **WindowsIdentity** restituisce un'istanza **WindowsIdentity** che rappresenta l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] identità Windows del chiamante o null se il client è stato autenticato tramite l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Solo gli assembly contrassegnati con **EXTERNAL_ACCESS** o le autorizzazioni **unsafe** possono accedere a questa proprietà.  
   
  Una volta ottenuto l'oggetto **WindowsIdentity** , i chiamanti possono rappresentare l'account client ed eseguire azioni per loro conto.  
   

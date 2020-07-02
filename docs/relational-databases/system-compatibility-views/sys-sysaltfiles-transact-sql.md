@@ -1,5 +1,5 @@
 ---
-title: sys. sysaltfiles (Transact-SQL) | Microsoft Docs
+title: sys.sysaltfiles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 698dec23-5336-4108-87a5-f8e407f8da09
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 891e88761cac47be83fb69debbbc5e4cb6c401c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c79b582eaf6ba6f4fef568af11110fcb6ea17c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006966"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764400"
 ---
 # <a name="syssysaltfiles-transact-sql"></a>sys.sysaltfiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   In casi particolari contiene le righe corrispondenti ai file di un database.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68006966"
 |**Stato**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**perf**|**int**|Riservato.|  
 |**dbid**|**smallint**|Numero di identificazione del database a cui appartiene il file.|  
-|**name**|**sysname**|Nome logico del file.|  
+|**nome**|**sysname**|Nome logico del file.|  
 |**filename**|**nvarchar(260)**|Nome del dispositivo fisico, incluso il percorso completo del file.|  
   
 ## <a name="see-also"></a>Vedere anche  

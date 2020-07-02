@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fe4c8864856ef9b324a5f44b4811cfff4e8de218
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 52aeca25fd6fcf112adcb2410269fdcb1c049a52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831685"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771145"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Visualizza le autorizzazioni di un ruolo predefinito del database. **sp_dbfixedrolepermission** restituisce informazioni corrette in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . L'output non riflette le modifiche alla gerarchia di autorizzazioni implementate in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per ulteriori informazioni, vedere [ruoli a livello di database](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles), che visualizza un elenco di ruoli predefiniti del database e le relative autorizzazioni.  
   

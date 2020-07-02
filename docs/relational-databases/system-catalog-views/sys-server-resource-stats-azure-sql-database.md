@@ -19,15 +19,15 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e85a74b203d270223d215ace08a58a0eea980fa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133065"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772985"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats (database SQL di Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Restituisce l'utilizzo della CPU, l'i/o e i dati di archiviazione per un Istanza gestita SQL di Azure. I dati vengono raccolti e aggregati in intervalli di cinque minuti. Una riga viene segnalata ogni 15 secondi. I dati restituiti includono l'utilizzo della CPU, le dimensioni di archiviazione, l'utilizzo di IO e lo SKU dell'istanza gestita. I dati cronologici vengono mantenuti per circa 14 giorni.
 

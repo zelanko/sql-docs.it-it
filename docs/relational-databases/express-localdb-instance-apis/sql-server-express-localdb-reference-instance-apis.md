@@ -10,15 +10,15 @@ ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a9290e2b9b64c04545c833a2d04620d87564026e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2122ff4cddd045b3d73567af660ddc925d4152ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68021955"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767783"
 ---
 # <a name="sql-server-express-localdb-reference---instance-apis"></a>Informazioni di riferimento su SQL Server Express LocalDB - API dell'istanza
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In SQL Server basato su servizi, tradizionale, le singole istanze di SQL Server installate in un solo computer sono separate fisicamente; ovvero, ogni istanza deve essere installata e rimossa separatamente. Inoltre, ciascuna istanza dispone di un set separato di file binari e si esegue in un processo del servizio separato. Il nome dell'istanza di SQL Server viene utilizzato per specificare l'istanza di SQL Server a cui l'utente desidera effettuare la connessione.  
   
  Nell'API dell'istanza di SQL Server Express database locale viene utilizzato un modello di istanza semplificato, "Light". Anche se le istanze del database locale singole sono separate sul disco e nel Registro di sistema, in esse viene utilizzato lo stesso set di file binari condivisi del database locale. Inoltre, nel database locale non vengono utilizzati servizi. Le istanze del database locale vengono avviate su richiesta tramite le chiamate API dell'istanza del database locale. Nel database locale il nome dell'istanza viene utilizzato per specificare quali delle istanze del database locale l'utente desideri utilizzare.  
@@ -65,7 +65,7 @@ ms.locfileid: "68021955"
 ### <a name="named-instance-naming-rules"></a>Regole di denominazione dell'istanza denominata  
  Il nome di un'istanza del database locale può avere un totale di 128 caratteri (il limite viene imposto dal tipo di dati **sysname** ). Si tratta di una differenza significativa rispetto ai nomi di istanze di SQL Server tradizionali, che sono limitati a nomi NetBIOS di 16 caratteri ASCII. Il motivo di questa differenza è che il database locale considera i database come file e pertanto implica la semantica basata su file, pertanto è intuitivo per gli utenti avere più libertà nella scelta dei nomi di istanza.  
   
- Nel nome di un'istanza del database locale può essere incluso qualsiasi carattere Unicode che sia valido all'interno del componente del nome del file. I caratteri non validi in un componente filename includono in genere i caratteri seguenti: caratteri ASCII/Unicode da 1 a 31, nonché virgolette ("),\<minore di (), maggiore di (>), pipe (|), BACKSPACE (\b), Tab (\t), due punti (:), asterisco (*), punto interrogativo (\\?), barra rovesciata () e barra (/). Si noti che il carattere Null (\0) è consentito perché utilizzato per la chiusura della stringa. Tutti i caratteri successivi al primo carattere Null verranno ignorati.  
+ Nel nome di un'istanza del database locale può essere incluso qualsiasi carattere Unicode che sia valido all'interno del componente del nome del file. I caratteri non validi in un componente filename includono generalmente i caratteri seguenti: caratteri ASCII/Unicode da 1 a 31, nonché virgolette ("), minore di ( \<), greater than (> ), pipe (|), BACKSPACE (\b), Tab (\t), due punti (:), asterisco (*), punto interrogativo (?), barra rovesciata ( \\ ) e barra (/). Si noti che il carattere Null (\0) è consentito perché utilizzato per la chiusura della stringa. Tutti i caratteri successivi al primo carattere Null verranno ignorati.  
   
 > [!NOTE]  
 >  L'elenco di caratteri non consentiti può dipendere dal sistema operativo e può essere modificato nelle versioni successive.  

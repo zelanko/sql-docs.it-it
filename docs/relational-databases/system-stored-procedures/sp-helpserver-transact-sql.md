@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e965a11708b2d4bbb72903a05846cb14300a5c6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6fa9117891f9d9350e58a2c8233dcffe05c8cfc8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826100"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772127"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni su un particolare server remoto o di replica oppure su tutti i server di entrambi i tipi. Specifica il nome del server, il nome di rete del server, lo stato di replica del server, il numero di identificazione del server e il nome delle regole di confronto nonché i valori di timeout per la connessione a server collegati o l'esecuzione di query su server collegati.  
   
@@ -41,11 +41,11 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @server = ] 'server'`È il server in cui vengono segnalate le informazioni. Quando il *Server* non è specificato, segnala tutti i server in **master. sys. Servers**. il *Server* è di **tipo sysname**e il valore predefinito è null.  
+`[ @server = ] 'server'`È il server in cui vengono segnalate le informazioni. Quando il *Server* non è specificato, segnala tutti i server in **master.sys. Servers**. il *Server* è di **tipo sysname**e il valore predefinito è null.  
   
 `[ @optname = ] 'option'`Opzione che descrive il server. *Option* è di tipo **varchar (** 35 **)** e il valore predefinito è null. i valori possibili sono i seguenti.  
   
-|Valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |**regole di confronto compatibili**|L'utilizzo di questa opzione influisce sull'esecuzione delle query distribuite in server collegati. Se questa opzione è impostata su true,|  
 |**accesso ai dati**|Consente di attivare e disabilitare un server collegato per l'accesso a query distribuite.|  
@@ -55,7 +55,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**pub**|Server di pubblicazione.|  
 |**RPC**|Attiva l'esecuzione di chiamate RPC dal server specificato.|  
 |**RPC in uscita**|Viene abilitata l'esecuzione di chiamate RPC al server specificato.|  
-|**Sub**|Sottoscrittore.|  
+|**sub**|Sottoscrittore.|  
 |**sistema**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Usa regole di confronto remote**|Consente di utilizzare le regole di confronto di una colonna remota anziché quelle del server locale.|  
   
@@ -76,7 +76,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**connect_timeout**|**int**|Valore di timeout per la connessione al server collegato.|  
 |**query_timeout**|**int**|Valore di timeout per le query eseguite sul server collegato.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  A un server possono essere associati più stati.  
   
 ## <a name="permissions"></a>Autorizzazioni  

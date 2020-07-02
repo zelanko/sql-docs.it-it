@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 17be755b-673d-4cd4-9544-6ecb4220bed3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eaabc73c78b16a2babac681c87504da8d38a935a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b208b33cba633a168c9a0c2d77f71ae84d592ff2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826203"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772264"
 ---
 # <a name="sp_dbmmonitorchangemonitoring-transact-sql"></a>sp_dbmmonitorchangemonitoring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Cambia il valore di un parametro del monitoraggio di mirroring del database.  
   
@@ -56,7 +56,7 @@ sp_dbmmonitorchangemonitoring parameter
 |1|Valore intero compreso nell'intervallo da 1 a 120 che specifica un nuovo periodo di aggiornamento in minuti.|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- Nessuno  
+ nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
  nessuno  
@@ -64,7 +64,7 @@ sp_dbmmonitorchangemonitoring parameter
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente il periodo di aggiornamento viene modificato in 5 minuti.  
   
 ```  

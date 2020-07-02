@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: efa06923eeceff312def44ff13ab12b8371439c7
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 6c1186623b334d3eea465c632bc23ec58ba231ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529780"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765612"
 ---
 # <a name="primary-expressions-xquery"></a>Espressioni primarie (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Le espressioni primarie XQuery includono valori letterali, riferimenti a variabili, espressioni per elementi di contesto, costruttori e chiamate di funzioni.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "84529780"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza XML versione 1.0 come base per l'analisi.  
   
-### <a name="examples"></a>Esempio  
+### <a name="examples"></a>Esempi  
  Negli esempi seguenti viene illustrato l'utilizzo dei valori letterali, nonché dei riferimenti a entità e di carattere.  
   
  Il codice restituisce un errore, in quanto i caratteri `<'` e `'>` hanno un significato speciale:  

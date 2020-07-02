@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6f00b788ecf6b6e4c02d4b8343ba14fa2c345e6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e6f664cc763e56135ddf1c35f5f0057d97ec2d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056586"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771456"
 ---
 # <a name="sp_changeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Modifica il proprietario di un oggetto del database corrente.  
   
 > [!IMPORTANT]
->  Questo stored procedure funziona solo con gli oggetti disponibili in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]In alternativa, utilizzare [ALTER schema](../../t-sql/statements/alter-schema-transact-sql.md) o [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) . **sp_changeobjectowner** modifica lo schema e il proprietario. Per mantenere la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa stored procedure modifica i proprietari degli oggetti solo quando sia il proprietario corrente che il nuovo proprietario possiedono schemi il cui nome corrisponde al relativo nome utente di database.  
+>  Questo stored procedure funziona solo con gli oggetti disponibili in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]In alternativa, utilizzare [ALTER schema](../../t-sql/statements/alter-schema-transact-sql.md) o [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) . **sp_changeobjectowner** modifica lo schema e il proprietario. Per mantenere la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa stored procedure modifica i proprietari degli oggetti solo quando sia il proprietario corrente che il nuovo proprietario possiedono schemi il cui nome corrisponde al relativo nome utente di database.  
 > 
 > [!IMPORTANT]
 >  A questa stored procedure è stato aggiunto un nuovo requisito di autorizzazione.  
@@ -47,7 +47,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ## <a name="arguments"></a>Argomenti  
 `[ @objname = ] 'object'`Nome di una tabella, vista, funzione definita dall'utente o stored procedure esistente nel database corrente. l' *oggetto* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito. l' *oggetto* può essere qualificato con il proprietario dell'oggetto esistente, nel formato _existing_owner_**.** _oggetto_ se lo schema e il relativo proprietario hanno lo stesso nome.  
   
-`[ @newowner = ] 'owner_ '`Nome dell'account di sicurezza che sarà il nuovo proprietario dell'oggetto. *owner* è di **tipo sysname**e non prevede alcun valore predefinito. il *proprietario* deve essere un utente del database, un ruolo [!INCLUDE[msCoName](../../includes/msconame-md.md)] del server, un account di accesso di Windows o un gruppo di Windows valido con accesso al database corrente. Se il nuovo proprietario è un utente di Windows o un gruppo di Windows per cui non esiste un'entità corrispondente a livello di database, verrà creato un utente di database.  
+`[ @newowner = ] 'owner_ '`Nome dell'account di sicurezza che sarà il nuovo proprietario dell'oggetto. *owner* è di **tipo sysname**e non prevede alcun valore predefinito. il *proprietario* deve essere un utente del database, un ruolo del server, un [!INCLUDE[msCoName](../../includes/msconame-md.md)] account di accesso di Windows o un gruppo di Windows valido con accesso al database corrente. Se il nuovo proprietario è un utente di Windows o un gruppo di Windows per cui non esiste un'entità corrispondente a livello di database, verrà creato un utente di database.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

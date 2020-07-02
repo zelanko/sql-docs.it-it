@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b41ca3a5-7222-4c22-a012-e66a577a82f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f951aaee96bccf0c2876c781aaebdd2a009b51d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11af27e5b94f7fa95c66e13b198ff6134df23912
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140481"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772272"
 ---
 # <a name="sp_add_log_file_recover_suspect_db-transact-sql"></a>sp_add_log_file_recover_suspect_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Aggiunge un file di log a un filegroup quando non è possibile completare il recupero di un database a causa di spazio del log insufficiente (errore 9002). Una volta aggiunto il file, **sp_add_log_file_recover_suspect_db** disattiva l'impostazione sospetta e completa il ripristino del database. I parametri sono gli stessi di quelli per ALTER DATABASE *database_name* aggiungere il file di log.  
   
@@ -46,7 +46,7 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
 ## <a name="arguments"></a>Argomenti  
 `[ @dbName = ] 'database'`Nome del database. il *database* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @name = ] 'logical_file_name'`Nome utilizzato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per fare riferimento al file. Deve essere un nome univoco nel server. *logical_file_name* è di **tipo nvarchar (260)** e non prevede alcun valore predefinito.  
+`[ @name = ] 'logical_file_name'`Nome utilizzato in per fare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riferimento al file. Deve essere un nome univoco nel server. *logical_file_name* è di **tipo nvarchar (260)** e non prevede alcun valore predefinito.  
   
 `[ @filename = ] 'os_file_name'`È il percorso e il nome file usati dal sistema operativo per il file. Il file deve essere disponibile nel server in cui è installato [!INCLUDE[ssDE](../../includes/ssde-md.md)]. *os_file_name* è di **tipo nvarchar (260)** e non prevede alcun valore predefinito.  
   

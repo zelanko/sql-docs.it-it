@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9feddab12ea972ea4d7764fccfdd91a7f9b89cec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3f992fefc04de89fcfa9e077d01641fa538ea40
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762247"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771408"
 ---
 # <a name="sp_changereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Modifica le password archiviate [!INCLUDE[msCoName](../../includes/msconame-md.md)] per l'account [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di Windows o l'account di accesso utilizzato dagli agenti di replica durante la connessione ai server in una topologia di replica. Di norma sarebbe necessario modificare la password per ogni singolo agente in esecuzione nel server, anche se tutti utilizzano lo stesso account o lo stesso account di accesso. Questa stored procedure consente di modificare la password per tutte le istanze di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un account di Windows specifico utilizzato da tutti gli agenti di replica in esecuzione in un server. Questa stored procedure viene eseguita in qualsiasi server della topologia di replica nel database master.  
+  Modifica le password archiviate per l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] account di Windows o l'account [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di accesso utilizzato dagli agenti di replica durante la connessione ai server in una topologia di replica. Di norma sarebbe necessario modificare la password per ogni singolo agente in esecuzione nel server, anche se tutti utilizzano lo stesso account o lo stesso account di accesso. Questa stored procedure consente di modificare la password per tutte le istanze di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un account di Windows specifico utilizzato da tutti gli agenti di replica in esecuzione in un server. Questa stored procedure viene eseguita in qualsiasi server della topologia di replica nel database master.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,9 +44,9 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
  **1** = autenticazione integrata di Windows  
   
- **autenticazione 0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione 0  
   
-`[ @login = ] 'login'`Nome dell'account di Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dell'account di accesso da modificare. *login* è di **tipo nvarchar (257)** e non prevede alcun valore predefinito  
+`[ @login = ] 'login'`Nome dell'account di Windows o dell'account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso da modificare. *login* è di **tipo nvarchar (257)** e non prevede alcun valore predefinito  
   
 `[ @password = ] 'password'`Nuova password da archiviare per l' *account di accesso*specificato. *password* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
@@ -55,7 +55,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
 `[ @server = ] 'server'`Connessione al server per cui viene modificata la password archiviata. il *Server* è di **tipo sysname**. i possibili valori sono i seguenti:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**distribuzione**|Tutte le connessioni di agenti al server di distribuzione.|  
 |**pubblicazione**|Tutte le connessioni di agenti al server di pubblicazione.|  

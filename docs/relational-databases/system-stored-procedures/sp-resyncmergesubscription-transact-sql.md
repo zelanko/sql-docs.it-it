@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a20fd73874ddb93af5224c3ce6c86383c0e15ace
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: eb9512bcf60d7a82d19cb383a87618c7d4c30393
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816841"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767478"
 ---
 # <a name="sp_resyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Risincronizza una sottoscrizione di tipo merge in base a uno stato di convalida noto specificato. In questo modo è possibile forzare la convergenza oppure sincronizzare il database di sottoscrizione fino a un momento specifico, ad esempio fino all'ultima convalida riuscita oppure fino a una data specificata. Quando si risincronizza una sottoscrizione in base a questa modalità, lo snapshot non viene riapplicato. Questa stored procedure non viene utilizzata per sottoscrizioni di replica snapshot o transazionali. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione o nel database di sottoscrizione del Sottoscrittore.  
   
@@ -66,7 +66,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_resyncmergesubscription** viene utilizzata nella replica di tipo merge.  
   
  Il valore **0** per il parametro *resync_type* , che riapplica tutte le modifiche apportate dopo lo snapshot iniziale, può richiedere un utilizzo intensivo delle risorse, ma probabilmente molto inferiore a una reinizializzazione completa. Se, ad esempio, lo snapshot iniziale è stato recapitato un mese fa, vengono riapplicati i dati relativi all'ultimo mese. Se lo snapshot iniziale contiene 1 gigabyte (GB) di dati, ma i dati modificati nell'ultimo mese corrispondono a 2 megabyte (MB), risulta più efficiente riapplicare i dati anziché l'intero snapshot da 1 GB.  

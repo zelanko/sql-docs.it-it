@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6c59b4ba84981ff4cb1240d78e1d6d472be61289
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 97c6a7d309578ebe0cc6e93b5408ad6d9fad6296
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829649"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771504"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Vengono modificate le proprietà di un articolo di tipo merge. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -72,7 +72,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**destination_owner**||Nome del proprietario dell'oggetto nel database di sottoscrizione, se diverso da **dbo**.|  
 |**identity_range**||**bigint** che specifica la dimensione dell'intervallo da usare per l'assegnazione di nuovi valori Identity se l'articolo ha **identityrangemanagementoption** impostato su **auto** o **auto_identity_range** impostato su **true**. Proprietà valida solo per gli articoli di tabelle. Per ulteriori informazioni, vedere la sezione relativa alla replica di tipo merge in [replicare le colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**identityrangemanagementoption**|**Manuale**|Disabilita la gestione automatica degli intervalli di valori Identity. Contrassegna le colonne Identity con NOT FOR REPLICATION per consentire la gestione manuale degli intervalli di valori Identity. Per altre informazioni, vedere [Replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
-||**nessuno**|Disabilita tutti i tipi di gestione degli intervalli di valori Identity.|  
+||**nessuna**|Disabilita tutti i tipi di gestione degli intervalli di valori Identity.|  
 |**logical_record_level_conflict_detection**|**true**|Viene rilevato un conflitto in presenza di modifiche apportate in qualsiasi posizione del record logico. Richiede che **logical_record_level_conflict_resolution** sia impostato su **true**.|  
 ||**false**|Il rilevamento dei conflitti predefinito viene usato come specificato da **column_tracking**.|  
 |**logical_record_level_conflict_resolution**|**true**|L'intero record logico prevalente sovrascrive il record logico perdente.|  
@@ -81,7 +81,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**1**|Le partizioni sono sovrapposte e gli aggiornamenti DML eseguiti nel Sottoscrittore non possono modificare la partizione a cui appartiene una riga.|  
 ||**2**|Il filtro applicato all'articolo restituisce partizioni non sovrapposte, ma più Sottoscrittori possono ricevere la stessa partizione.|  
 ||**3**|Il filtro applicato all'articolo restituisce partizioni non sovrapposte univoche per ogni sottoscrizione.<br /><br /> Nota: se si specifica un valore pari a **3** per **partition_options**, può essere presente una sola sottoscrizione per ogni partizione di dati nell'articolo. Se si crea una seconda sottoscrizione nella quale il criterio di filtro porta alla restituzione della stessa partizione della sottoscrizione esistente, quest'ultima viene eliminata.|  
-|**pre_creation_command**|**nessuno**|Se la tabella esiste già nel Sottoscrittore, non viene eseguita alcuna azione.|  
+|**pre_creation_command**|**nessuna**|Se la tabella esiste già nel Sottoscrittore, non viene eseguita alcuna azione.|  
 ||**delete**|Esegue un'operazione di eliminazione in base alla clausola WHERE del filtro di subset.|  
 ||**goccia**|Elimina la tabella prima di ricrearla.|  
 ||**troncare**|Tronca la tabella di destinazione.|  
@@ -139,7 +139,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**1**|Sono consentite modifiche in un Sottoscrittore con una sottoscrizione client, ma tali modifiche non vengono caricate nel server di pubblicazione.|  
 ||**2**|Non sono consentite modifiche in un Sottoscrittore con una sottoscrizione client.|  
 |**subset_filterclause**||Clausola WHERE che specifica il filtro orizzontale. Proprietà valida solo per gli articoli di tabelle.<br /><br /> Importante per motivi di prestazioni, è consigliabile non applicare funzioni ai nomi di colonna nelle clausole di filtro di riga con parametri, ad esempio. ** \* \* \* \* ** `LEFT([MyColumn]) = SUSER_SNAME()` Se si usa [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) in una clausola di filtro e si sostituisce il valore di HOST_NAME, potrebbe essere necessario convertire i tipi di dati tramite [Convert](../../t-sql/functions/cast-and-convert-transact-sql.md). Per ulteriori informazioni sulle procedure consigliate in questo caso, vedere la sezione "override del valore HOST_NAME ()" nei [filtri di riga con parametri](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).|  
-|**soglia**||Valore percentuale utilizzato per i Sottoscrittori che eseguono [!INCLUDE[ssEW](../../includes/ssew-md.md)] o versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **soglia** controlla quando il agente di merge assegna un nuovo intervallo di valori Identity. Quando viene utilizzata la percentuale di valori specificata in threshold, l'agente di merge crea un nuovo intervallo di valori Identity. Utilizzato quando **identityrangemanagementoption** è impostato su **auto** o **auto_identity_range** è impostato su **true**. Proprietà valida solo per gli articoli di tabelle. Per ulteriori informazioni, vedere la sezione relativa alla replica di tipo merge in [replicare le colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+|**threshold**||Valore percentuale utilizzato per i Sottoscrittori che eseguono [!INCLUDE[ssEW](../../includes/ssew-md.md)] o versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **soglia** controlla quando il agente di merge assegna un nuovo intervallo di valori Identity. Quando viene utilizzata la percentuale di valori specificata in threshold, l'agente di merge crea un nuovo intervallo di valori Identity. Utilizzato quando **identityrangemanagementoption** è impostato su **auto** o **auto_identity_range** è impostato su **true**. Proprietà valida solo per gli articoli di tabelle. Per ulteriori informazioni, vedere la sezione relativa alla replica di tipo merge in [replicare le colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**verify_resolver_signature**|**1**|La firma digitale di un sistema di risoluzione personalizzato viene verificata per stabilire se l'origine è attendibile.|  
 ||**0**|La firma digitale di un sistema di risoluzione personalizzato non viene verificata per stabilire se l'origine è attendibile.|  
 |NULL (predefinito)||Restituisce l'elenco dei valori supportati per la *Proprietà*.|  
@@ -163,7 +163,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_changemergearticle** viene utilizzata nella replica di tipo merge.  
   
  Poiché **sp_changemergearticle** viene utilizzato per modificare le proprietà degli articoli specificate inizialmente tramite [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), vedere [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) per ulteriori informazioni su queste proprietà.  

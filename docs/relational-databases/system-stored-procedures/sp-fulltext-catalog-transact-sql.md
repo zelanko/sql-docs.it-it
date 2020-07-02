@@ -18,15 +18,15 @@ ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a180f10f0b0ac4bb1836d529ac437d917b559e16
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 42985c60b7057904291bbf196e3faae27e77ae68
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820532"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771081"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Consente di creare ed eliminare un catalogo full-text e di avviare e arrestare l'azione di indicizzazione per un catalogo. È possibile creare più cataloghi full-text per ogni database.  
   
@@ -54,7 +54,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|**Crea**|Crea un nuovo catalogo full-text vuoto nel file system e aggiunge una riga associata in **sysfulltextcatalogs** con i valori *fulltext_catalog_name* e *root_directory*, se presenti. *fulltext_catalog_name* deve essere univoco all'interno del database.|  
+|**Creare**|Crea un nuovo catalogo full-text vuoto nel file system e aggiunge una riga associata in **sysfulltextcatalogs** con i valori *fulltext_catalog_name* e *root_directory*, se presenti. *fulltext_catalog_name* deve essere univoco all'interno del database.|  
 |**Goccia**|Elimina *fulltext_catalog_name* rimuovendo dalla file System ed eliminando la riga associata in **sysfulltextcatalogs**. Questa azione non viene completata se nel catalogo sono inclusi indici per una o più tabelle. **sp_fulltext_table** per eliminare le tabelle dal catalogo, è necessario eseguire '*table_name*',' drop '.<br /><br /> Se il catalogo non esiste, viene visualizzato un errore.|  
 |**start_incremental**|Avvia un popolamento incrementale per *fulltext_catalog_name*. Se il catalogo non esiste, viene visualizzato un errore. Se è già attivo il popolamento di un indice full-text, viene visualizzato un avviso e il popolamento non viene eseguito. Con il popolamento incrementale vengono recuperate solo le righe modificate per l'indicizzazione full-text, purché sia presente una colonna **timestamp** nella tabella da indicizzare full-text.|  
 |**start_full**|Avvia un popolamento completo per *fulltext_catalog_name*. Per l'indicizzazione full-text viene recuperata ogni riga di ogni tabella associata al catalogo, anche se è già stata indicizzata.|  

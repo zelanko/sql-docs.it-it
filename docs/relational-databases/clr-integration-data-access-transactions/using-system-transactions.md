@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fa98e9e13062d358a6a1810485d45c8d9d3e911
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1fed4e8106fc5348c94a3c7afda0ec903f570eff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488497"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765366"
 ---
 # <a name="using-systemtransactions"></a>Utilizzo di System.Transactions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Lo spazio dei nomi **System. Transactions** fornisce un Framework di transazione completamente integrato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con ADO.NET e l'integrazione con Common Language Runtime (CLR). La classe **System. Transactions. TransactionScope** rende un blocco di codice transazionale, integrando in modo implicito le connessioni in una transazione distribuita. È necessario chiamare il metodo **complete** alla fine del blocco di codice contrassegnato da **TransactionScope**. Il metodo **Dispose** viene richiamato quando l'esecuzione del programma lascia un blocco di codice, facendo in modo che la transazione venga sospesa se non viene chiamato il metodo **completo** . Se è stata generata un'eccezione che determina l'uscita del codice dall'ambito, la transazione non viene più utilizzata.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  Lo spazio dei nomi **System. Transactions** fornisce un Framework di transazione completamente integrato con ADO.NET e l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrazione con Common Language Runtime (CLR). La classe **System. Transactions. TransactionScope** rende un blocco di codice transazionale, integrando in modo implicito le connessioni in una transazione distribuita. È necessario chiamare il metodo **complete** alla fine del blocco di codice contrassegnato da **TransactionScope**. Il metodo **Dispose** viene richiamato quando l'esecuzione del programma lascia un blocco di codice, facendo in modo che la transazione venga sospesa se non viene chiamato il metodo **completo** . Se è stata generata un'eccezione che determina l'uscita del codice dall'ambito, la transazione non viene più utilizzata.  
   
  Si consiglia di utilizzare un blocco **using** per garantire che il metodo **Dispose** venga chiamato sull'oggetto **TransactionScope** quando viene terminato il blocco **using** . L'impossibilità di eseguire il commit o il rollback delle transazioni in sospeso può causare un grave peggioramento delle prestazioni perché il timeout predefinito per **TransactionScope** è un minuto. Se non si usa un'istruzione **using** , è necessario eseguire tutte le operazioni in un blocco **try** e chiamare in modo esplicito il metodo **Dispose** nel blocco **finally** .  
   
@@ -41,7 +41,7 @@ ms.locfileid: "81488497"
 >  È consigliabile eseguire solo aggiornamenti, inserimenti ed eliminazioni all'interno di transazioni distribuite sui server remoti in quanto tali operazioni comportano un notevole consumo di risorse del database. Se l'operazione viene effettuata sul server locale, non è necessario eseguire una transazione distribuita ed è sufficiente una transazione locale. Le istruzioni SELECT potrebbero bloccare inutilmente risorse del database e in alcuni scenari può essere necessario utilizzare le transazioni per le operazioni di selezione. Tutto il lavoro che non riguarda il database deve essere svolto all'esterno dell'ambito della transazione, a meno che non coinvolga altri gestori di risorse inclusi nella transazione. Sebbene un'eccezione nell'ambito della transazione impedisca l'esecuzione del commit della transazione, la classe **TransactionScope** non dispone di alcun provisioning per eseguire il rollback di tutte le modifiche apportate dal codice al di fuori dell'ambito della transazione stessa. Se è necessario eseguire un'azione quando viene eseguito il rollback della transazione, è necessario scrivere un'implementazione personalizzata dell'interfaccia **System. Transactions. IEnlistmentNotification** e integrarla in modo esplicito nella transazione.  
   
 ## <a name="example"></a>Esempio  
- Per utilizzare **System. Transactions**, è necessario disporre di un riferimento al file System. Transactions. dll.  
+ Per utilizzare **System. Transactions**, è necessario disporre di un riferimento al file di System.Transactions.dll.  
   
  Nel codice seguente viene illustrato come creare una transazione che può essere promossa su due istanze diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Queste istanze sono rappresentate da due oggetti **System. Data. SqlClient. SqlConnection** diversi, di cui viene eseguito il wrapper in un blocco **TransactionScope** . Il codice crea il blocco **TransactionScope** con un'istruzione **using** e apre la prima connessione, che la integra automaticamente in **TransactionScope**. La transazione viene integrata inizialmente come transazione lightweight, non come transazione completamente distribuita. Il codice presuppone l'esistenza della logica condizionale, omessa per brevità. Viene aperta la seconda connessione solo se necessaria, che viene integrata in **TransactionScope**. Quando la connessione è aperta, la transazione viene promossa automaticamente a una transazione completamente distribuita. Il codice richiama quindi **TransactionScope. complete**, che consente di eseguire il commit della transazione. Il codice elimina le due connessioni quando si esce dalle istruzioni **using** per le connessioni. Il metodo **TransactionScope. Dispose** per **TransactionScope** viene chiamato automaticamente alla chiusura del blocco **using** per **TransactionScope**. Se è stata generata un'eccezione in qualsiasi punto del blocco **TransactionScope** , **complete** non viene chiamato e viene eseguito il rollback della transazione distribuita quando **TransactionScope** viene eliminato.  
   

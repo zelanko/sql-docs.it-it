@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ac28ef48-f4f4-4bf2-ba22-d44e1be88172
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a85a911d4c9f5cd4565e9839f3be44a4e2366079
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f342fd9dcf89b5d9862a2ed51718b09aae2e991
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68067748"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771530"
 ---
 # <a name="snapshotsfn_trace_getdata-transact-sql"></a>snapshots.fn_trace_getdata (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Questa funzione restituisce tutti gli eventi acquisiti per la traccia specificata.  
   
@@ -51,12 +51,12 @@ snapshots.fn_trace_gettable ( trace_info_id, start_time, end_time )
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|\<Tutte le colonne di traccia>|\<Varia>|Dati di traccia della tabella snapshots.trace_data nel database del data warehouse di gestione.<br /><br /> È possibile ottenere un elenco di colonne per la traccia specificata mediante la query seguente:<br /><br /> `SELECT * FROM sys.trace_columns`<br /><br /> **Nota:** Le colonne restituite dalla funzione Snapshots. fn_trace_gettable corrispondono ai valori nella colonna Name della vista di sistema sys. trace_columns. L'unica differenza è che la colonna GroupID non viene restituita dalla funzione.|  
+|\<All trace columns>|\<Varies>|Dati di traccia della tabella snapshots.trace_data nel database del data warehouse di gestione.<br /><br /> È possibile ottenere un elenco di colonne per la traccia specificata mediante la query seguente:<br /><br /> `SELECT * FROM sys.trace_columns`<br /><br /> **Nota:** Le colonne restituite dalla funzione Snapshots. fn_trace_gettable corrispondono ai valori nella colonna Name della vista di sistema sys. trace_columns. L'unica differenza è che la colonna GroupID non viene restituita dalla funzione.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione SELECT per mdw_reader.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)  
   
   

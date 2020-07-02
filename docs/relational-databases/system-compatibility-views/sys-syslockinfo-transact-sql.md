@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 90573a28292ac4f4de973dc2a5a0c5e1f331d2f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053345"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764384"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene informazioni su tutte le richieste di blocco concesse, in fase di conversione e in attesa.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68053345"
 |**req_refcnt**|**smallint**|Numero dei riferimenti di blocco. Ogni volta che una transazione richiede un blocco su una determinata risorsa, il numero dei riferimenti viene incrementato. Il blocco può essere rilasciato solo quando il numero dei riferimenti è uguale a 0.|  
 |**req_cryrefcnt**|**smallint**|Riservata per utilizzi futuri. È sempre impostata su 0.|  
 |**req_lifetime**|**int**|Mappa di bit del ciclo di vita dei blocchi. Durante determinati processi di elaborazione delle query, è necessario mantenere i blocchi sulle risorse fino a quando in Query Processor non è stata completata una particolare fase della query. La mappa di bit del ciclo di vita dei blocchi viene utilizzata da Query Processor e dallo strumento di gestione delle transazioni per indicare i gruppi di blocchi che è possibile rilasciare quando una determinata fase di una query viene completata. Alcuni bit della mappa vengono utilizzati per indicare i blocchi che vengono mantenuti attivi fino al termine di una transazione, anche se il relativo numero di riferimenti è uguale a 0.|  
-|**req_spid**|**int**|ID [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] processo interno della sessione che richiede il blocco.|  
+|**req_spid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ID processo interno della sessione che richiede il blocco.|  
 |**req_ecid**|**int**|ID del contesto di esecuzione (ECID). Viene utilizzato per indicare il thread di un'operazione parallela che è il proprietario di un determinato blocco.|  
 |**req_ownertype**|**smallint**|Tipo di oggetto associato al blocco:<br /><br /> 1 = Transazione<br /><br /> 2 = Cursore<br /><br /> 3 = Sessione<br /><br /> 4 = Sessione esclusiva<br /><br /> I tipi di oggetto 3 e 4 rappresentano versioni particolari di blocchi di sessione che consentono di tenere traccia rispettivamente di blocchi a livello di database e di filegroup.|  
 |**req_transactionID**|**bigint**|ID di transazione univoco usato in **syslockinfo** e nell'evento del profiler|  

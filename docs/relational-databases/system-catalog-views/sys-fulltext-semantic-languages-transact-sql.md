@@ -19,15 +19,15 @@ ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: c060f08ff70e04a22af1eb9de09aeb1e3bf4ff71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a345e41f42cc70e941e4a87e3510312313d4dc03
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133781"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764667"
 ---
 # <a name="sysfulltext_semantic_languages-transact-sql"></a>sys.fulltext_semantic_languages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per ogni lingua il cui modello delle statistiche è registrato con l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando un modello di lingua è registrato, la lingua è abilitata per l'indicizzazione semantica.  
   
@@ -35,9 +35,9 @@ ms.locfileid: "68133781"
     
 ||||  
 |-|-|-|  
-|**Nome colonna**|**Type**|**Descrizione**|  
+|**Nome colonna**|**Tipo**|**Descrizione**|  
 |lcid|INT|ID delle impostazioni locali (LCID) di Microsoft Windows per la lingua.|  
-|name|sysname|Valore dell'alias in [sys. syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corrispondente al valore di **LCID**o alla rappresentazione di stringa dell'identificatore LCID numerico.|  
+|name|sysname|Valore dell'alias in [sys.syslanguages &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corrispondenti al valore **LCID**o alla rappresentazione di stringa dell'identificatore LCID numerico.|  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Per altre informazioni, vedere [Installazione e configurazione della ricerca semantica](../../relational-databases/search/install-and-configure-semantic-search.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "68133781"
  La visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene illustrato come eseguire una query su **sys. fulltext_semantic_languages** per ottenere informazioni su tutti i modelli di lingua registrati per l'indicizzazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]semantica nell'istanza corrente di.  
+ Nell'esempio seguente viene illustrato come eseguire una query su **sys. fulltext_semantic_languages** per ottenere informazioni su tutti i modelli di lingua registrati per l'indicizzazione semantica nell'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ```  
 SELECT * FROM sys.fulltext_semantic_languages;  

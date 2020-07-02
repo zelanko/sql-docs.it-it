@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12ee833860c4131b6dc9634d7f1da926968c1e14
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2daa7d007783434e0994846e41300c31b3e35162
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824056"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771354"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifica lo stato di un Sottoscrittore esistente. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -75,7 +75,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |Valore|Descrizione|  
 |-----------|-----------------|  
 |**active**|Il Sottoscrittore è sincronizzato e in fase di ricezione dei dati.|  
-|**inattivo**|Alla voce relativa al Sottoscrittore non è associata alcuna sottoscrizione.|  
+|**inactive**|Alla voce relativa al Sottoscrittore non è associata alcuna sottoscrizione.|  
 |**subscribed**|Il Sottoscrittore richiede dati, ma non è ancora sincronizzato.|  
   
 `[ @previous_status = ] 'previous_status'`Stato precedente della sottoscrizione. *previous_status* è di **tipo sysname**e il valore predefinito è null. Questo parametro consente di modificare le sottoscrizioni che hanno attualmente tale stato, consentendo così le funzioni di gruppo in un set specifico di sottoscrizioni, ad esempio impostando tutte le sottoscrizioni attive su **sottoscritte**.  
@@ -156,7 +156,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_changesubstatus** viene utilizzata nella replica snapshot e nella replica transazionale.  
   
  **sp_changesubstatus** modifica lo stato del Sottoscrittore nella tabella **syssubscriptions** con lo stato modificato. Se necessario, aggiorna lo stato dell'articolo nella tabella **sysarticles** per indicare attivo o inattivo. Se necessario, il flag di replica viene impostato su on o off nella tabella **sysobjects** per la tabella replicata.  

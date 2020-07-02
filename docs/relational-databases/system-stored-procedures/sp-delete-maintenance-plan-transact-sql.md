@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6f36b63f-3d18-4d42-9469-2febb6926530
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d878c1ece7139cd582aeaca39100c0719005ac5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b47506b193f2ec6a813aa4bfd97eabf81fcf3745
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830335"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772214"
 ---
 # <a name="sp_delete_maintenance_plan-transact-sql"></a>sp_delete_maintenance_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Elimina il piano di manutenzione specificato.  
   
@@ -55,7 +55,7 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_delete_maintenance_plan**.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Elimina il piano di manutenzione creato utilizzando **sp_add_maintenance_plan**.  
   
 ```  

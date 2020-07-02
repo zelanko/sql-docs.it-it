@@ -21,22 +21,22 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5af224150508f048d91345cba595517209f824d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 545b729a5d89a258c38d7eb180ee2f3400ebd67c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73981770"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764705"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  In questa vista del catalogo è contenuta una riga per ogni lingua i cui word breaker sono registrati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In ogni riga è visualizzato l'identificatore LCID e il nome della lingua. Quando i Word breaker sono registrati per una lingua, le altre risorse linguistiche, ovvero stemmer, parole non significative (parole non significative) e file del thesaurus, diventano disponibili per le operazioni di indicizzazione e query full-text. È possibile specificare il valore di **Name** o **LCID** nelle istruzioni per le query full-text e per gli [!INCLUDE[tsql](../../includes/tsql-md.md)] indici full-text.  
+  In questa vista del catalogo è contenuta una riga per ogni lingua i cui word breaker sono registrati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In ogni riga è visualizzato l'identificatore LCID e il nome della lingua. Quando i Word breaker sono registrati per una lingua, le altre risorse linguistiche, ovvero stemmer, parole non significative (parole non significative) e file del thesaurus, diventano disponibili per le operazioni di indicizzazione e query full-text. È possibile specificare il valore di **Name** o **LCID** nelle istruzioni per le query full-text e per gli indici full-text [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
    
 |Colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
 |**lcid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Identificatore delle impostazioni locali (LCID) di Windows per la lingua.|  
-|**name**|**sysname**|Valore dell'alias in [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corrispondente al valore di **LCID** o alla rappresentazione di stringa dell'identificatore LCID numerico.|  
+|**nome**|**sysname**|Valore dell'alias in [sys.syslingue](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corrispondenti al valore **LCID** o alla rappresentazione di stringa dell'identificatore LCID numerico.|  
   
 ## <a name="values-returned-for-default-languages"></a>Valori restituiti per le lingue predefinite  
  Nella tabella seguente sono mostrati i valori per le lingue i cui word breaker sono registrati per impostazione predefinita.  
@@ -79,7 +79,7 @@ ms.locfileid: "73981770"
 |Portoghese (Brasile)|1046|  
 |Portoghese (Portogallo)|2070|  
 |Punjabi|1094|  
-|Rumeno|1048|  
+|Romeno|1048|  
 |Russo|1049|  
 |Serbo (alfabeto cirillico)|3098|  
 |Serbo (alfabeto latino)|2074|  

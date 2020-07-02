@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0bc087c6e55418a501459076a1f3f7862112a056
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5f7f5bfc20effb8e70168bc8375d3744f16fb8d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808294"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769428"
 ---
 # <a name="syssp_cdc_get_captured_columns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce le informazioni sui metadati di Change Data Capture per le colonne di origine acquisite registrate dall'istanza di acquisizione specificata. Change Data Capture non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
@@ -69,7 +69,7 @@ sys.sp_cdc_get_captured_columns
 |numeric_scale|**int**|Scala della colonna se questa è basata su valori numerici. In caso contrario il valore è NULL.|  
 |datetime_precision|**smallint**|Precisione della colonna se questa è basata su valori datetime. In caso contrario il valore è NULL.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare sys. sp_cdc_get_captured_columns per ottenere informazioni sulle colonne acquisite restituite eseguendo una query sulle funzioni di query dell'istanza di acquisizione [CDC. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) o [CDC. fn_cdc_get_net_changes_ ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance>. I nomi di colonna, gli ID e la posizione rimangono costanti per tutta la durata dell'istanza di acquisizione. Solo il tipo di dati delle colonne cambia quando cambia il tipo di dati delle colonne di origine sottostanti nella tabella registrata. Le colonne aggiunte o eliminate da una tabella di origine non influiscono sulle colonne acquisite di istanze di acquisizione esistenti.  
   
  Utilizzare [sys. sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) per ottenere informazioni sulle istruzioni Data Definition Language (DDL) applicate a una tabella di origine. Le modifiche DDL che influiscono sulla struttura di una colonna di origine registrata vengono restituite nel set di risultati.  
@@ -77,7 +77,7 @@ sys.sp_cdc_get_captured_columns
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'appartenenza al ruolo predefinito del database db_owner. Per tutti gli altri utenti, è richiesta l'autorizzazione SELECT su tutte le colonne acquisite nella tabella di origine e, se è stato definito un ruolo di controllo per l'istanza di acquisizione, l'appartenenza a tale ruolo del database. Se il chiamante non dispone delle autorizzazioni per visualizzare i dati di origine, la funzione restituisce l'errore 22981 (Oggetto inesistente o accesso negato).  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente sono restituite le informazioni sulle colonne acquisite nell'istanza di acquisizione `HumanResources_Employee`.  
   
 ```  

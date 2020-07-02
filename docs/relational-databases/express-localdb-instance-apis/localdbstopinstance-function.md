@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 89db6e2a85e502b675db2006a682ff6b35fb4491
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b37d78138a3bea5abdffc9acdd8ea9b1ba392262
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022065"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765201"
 ---
 # <a name="localdbstopinstance-function"></a>Funzione LocalDBStopInstance
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Viene arrestata l'esecuzione dell'istanza del database locale di SQL Server Express specificata.  
   
  **File di intestazione:** sqlncli. h  
@@ -58,7 +58,7 @@ HRESULT LocalDBStopInstance(
  *ulTimeout*  
  [Input] Ora in secondi di attesa per il completamento di questa operazione. Se questo valore è 0, verrà restituito immediatamente un valore senza attendere l'arresto dell'istanza del database locale.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  S_OK  
  Funzione completata.  
   

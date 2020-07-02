@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b95788d37fa8f8c2e57c2b20aa222938c65dc6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 17a26c5897ff10ce636297151cef9f300f4f3056
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487533"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765423"
 ---
 # <a name="sqlpipe-object"></a>Oggetto SqlPipe
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è molto comune scrivere una stored procedure (o una stored procedure estesa) per l'invio di risultati o parametri di output al client chiamante.  
   
  In una [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, tutte le istruzioni **SELECT** che restituiscono zero o più righe inviano i risultati alla "pipe" del chiamante connesso.  
   
- Per gli oggetti di database Common Language Runtime (CLR) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in esecuzione in, è possibile inviare risultati alla pipe connessa utilizzando i metodi **Send** dell'oggetto **SqlPipe** . Accedere alla proprietà **pipe** dell'oggetto **SqlContext** per ottenere l'oggetto **SqlPipe** . La classe **SqlPipe** è concettualmente simile alla classe **Response** disponibile in ASP.NET. Per ulteriori informazioni, vedere documentazione di riferimento per la classe SqlPipe in .NET Framework SDK (Software Development Kit).  
+ Per gli oggetti di database Common Language Runtime (CLR) in esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è possibile inviare risultati alla pipe connessa utilizzando i metodi **Send** dell'oggetto **SqlPipe** . Accedere alla proprietà **pipe** dell'oggetto **SqlContext** per ottenere l'oggetto **SqlPipe** . La classe **SqlPipe** è concettualmente simile alla classe **Response** disponibile in ASP.NET. Per ulteriori informazioni, vedere documentazione di riferimento per la classe SqlPipe in .NET Framework SDK (Software Development Kit).  
   
 ## <a name="returning-tabular-results-and-messages"></a>Restituzione di risultati tabulari e messaggi  
  **SqlPipe** ha un metodo **Send** , che presenta tre overload. ovvero:  
@@ -41,7 +41,7 @@ ms.locfileid: "81487533"
   
  Il metodo **Send** invia i dati direttamente al client o al chiamante. Si tratta in genere del client che utilizza l'output di **SqlPipe**, ma nel caso di stored procedure CLR nidificate, il consumer di output può essere anche un stored procedure. Procedure1 chiama ad esempio SqlCommand.ExecuteReader() con il testo del comando "EXEC Procedure2". Procedure2 è anche una stored procedure gestita. Se Procedure2 chiama il metodo SqlPipe.Send(SqlDataRecord), la riga verrà inviata al lettore di Procedure1, non al client.  
   
- Il metodo **Send** Invia un messaggio stringa che viene visualizzato sul client come messaggio informativo, equivalente a Print [!INCLUDE[tsql](../../includes/tsql-md.md)]in. Può inoltre inviare un set di risultati a riga singola utilizzando **SqlDataRecord**o un set di risultati con più righe utilizzando un oggetto **SqlDataReader**.  
+ Il metodo **Send** Invia un messaggio stringa che viene visualizzato sul client come messaggio informativo, equivalente a Print in [!INCLUDE[tsql](../../includes/tsql-md.md)] . Può inoltre inviare un set di risultati a riga singola utilizzando **SqlDataRecord**o un set di risultati con più righe utilizzando un oggetto **SqlDataReader**.  
   
  L'oggetto **SqlPipe** dispone anche di un metodo **ExecuteAndSend** . Questo metodo può essere utilizzato per eseguire un comando (passato come oggetto **SqlCommand** ) e restituire i risultati direttamente al chiamante. Se sono presenti errori nel comando inviato, le eccezioni vengono inviate alla pipe, ma una copia viene inviata anche al codice gestito chiamante. Se il codice chiamante non rileva l'eccezione, lo stack verrà propagato al codice [!INCLUDE[tsql](../../includes/tsql-md.md)] e verrà visualizzato due volte nell'output. Se il codice chiamante rileva l'eccezione, il consumer della pipe visualizzerà l'errore, ma questo non verrà duplicato.  
   
@@ -134,7 +134,7 @@ End Sub
 End Class  
 ```  
   
- Nell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente viene eseguita la procedura **uspGetProduct** , che restituisce un elenco di prodotti Touring bike.  
+ Nell' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione seguente viene eseguita la procedura **uspGetProduct** , che restituisce un elenco di prodotti Touring bike.  
   
 ```  
 EXEC uspGetProductLineVB 'T';  

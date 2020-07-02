@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 8baa3c5a-cb40-42d0-b966-00e6d55368e8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85afab7ff3183953da0a4655c98733dd66fb138a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0bf08fc60ba8573fbaa80d12a2d93e03cbf9ee1d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827251"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768401"
 ---
 # <a name="mslogreader_agents-transact-sql"></a>MSlogreader_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabella **MSlogreader_agents** contiene una riga per ogni agente di lettura log in esecuzione nel server di distribuzione locale. Questa tabella è archiviata nel database di distribuzione.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID dell'agente di lettura log.|  
-|**name**|**nvarchar (100)**|Nome dell'agente di lettura log.|  
+|**nome**|**nvarchar (100)**|Nome dell'agente di lettura log.|  
 |**publisher_id**|**smallint**|ID del server di pubblicazione.|  
 |**publisher_db**|**sysname**|Nome del database del server di pubblicazione.|  
 |**pubblicazione**|**sysname**|Nome della pubblicazione.|  

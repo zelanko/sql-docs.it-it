@@ -23,22 +23,22 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c165ca271c3230399d54363f22d2b220e5427830
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6567b5dfa6a6b83298793c9e5f2962d9c1bdb878
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388651"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764832"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>Introduzione agli schemi XSD con annotazioni (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   È possibile creare viste XML di dati relazionali mediante il linguaggio di definizione di XML Schema (XSD). In tali viste è possibile eseguire query utilizzando le query XPath (XML Path language). La procedura è simile a quella utilizzata per creare viste mediante le istruzioni CREATE VIEW e quindi specificare query SQL in tali viste.  
   
  Un elemento XML Schema descrive la struttura di un documento XML e i vari vincoli presenti sui dati del documento. Quando si specificano query XPath nello schema, la struttura del documento XML restituita è determinata dallo schema nel quale viene eseguita la query XPath.  
   
- In uno schema XSD l' ** \<elemento xsd: schema>** racchiude l'intero schema. tutte le dichiarazioni di elemento devono essere contenute all'interno dell' ** \<elemento xsd: schema>** . È possibile descrivere gli attributi che definiscono lo spazio dei nomi in cui si trova lo schema e gli spazi dei nomi utilizzati nello schema come proprietà dell'elemento ** \<xsd: schema>** .  
+ In uno schema XSD l' **\<xsd:schema>** elemento racchiude l'intero schema. tutte le dichiarazioni di elemento devono essere contenute all'interno dell' **\<xsd:schema>** elemento. È possibile descrivere gli attributi che definiscono lo spazio dei nomi in cui si trova lo schema e gli spazi dei nomi utilizzati nello schema come proprietà dell' **\<xsd:schema>** elemento.  
   
- Uno schema XSD valido deve contenere l' ** \<elemento xsd: schema>** definito come segue:  
+ Uno schema XSD valido deve contenere l' **\<xsd:schema>** elemento definito come segue:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -47,7 +47,7 @@ ms.locfileid: "81388651"
 </xsd:schema>  
 ```  
   
- L' ** \<elemento xsd: schema>** deriva dalla specifica dello spazio dei nomi XML schema http://www.w3.org/2001/XMLSchemain.  
+ L' **\<xsd:schema>** elemento è derivato dalla specifica dello spazio dei nomi XML Schema in http://www.w3.org/2001/XMLSchema .  
   
 ## <a name="annotations-to-the-xsd-schema"></a>Annotazioni dello schema XSD  
  È possibile utilizzare uno schema XSD con annotazioni che descrivono il mapping a un database, eseguire query nel database e restituire i risultati nel formato di un documento XML. Le annotazioni vengono fornite per eseguire il mapping di uno schema XSD a colonne e tabelle di database. È possibile specificare le query XPath nella vista XML creata dallo schema XSD per eseguire query nel database e ottenere risultati in formato XML.  
@@ -58,7 +58,7 @@ ms.locfileid: "81388651"
  Nel contesto del database relazionale risulta utile per eseguire il mapping dello schema XSD arbitrario a un archivio relazionale. Un modo per ottenere questo risultato è annotare lo schema XSD. Uno schema XSD con annotazioni viene definito *schema di mapping*, che fornisce informazioni relative alla modalità di mapping dei dati XML all'archivio relazionale. Uno schema di mapping è, di fatto, una vista XML dei dati relazionali. I mapping possono essere utilizzati per recuperare dati relazionali come documento XML.  
   
 ## <a name="namespace-for-annotations"></a>Spazio dei nomi per le annotazioni  
- In uno schema XSD le annotazioni vengono specificate tramite lo spazio dei nomi **urn: schemas-microsoft-com: mapping-schema**. Come illustrato nell'esempio seguente, il modo più semplice per specificare lo spazio dei nomi consiste nel specificarlo nel tag ** \<xsd: schema>** .  
+ In uno schema XSD le annotazioni vengono specificate tramite lo spazio dei nomi **urn: schemas-microsoft-com: mapping-schema**. Come illustrato nell'esempio seguente, il modo più semplice per specificare lo spazio dei nomi consiste nel specificarlo nel **\<xsd:schema>** tag.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -70,7 +70,7 @@ ms.locfileid: "81388651"
  Il prefisso dello spazio dei nomi utilizzato è arbitrario. In questa documentazione viene usato il prefisso **SQL** per indicare lo spazio dei nomi di annotazione e per distinguere le annotazioni in questo spazio dei nomi da quelle di altri spazi dei nomi.  
   
 ## <a name="example-of-an-annotated-xsd-schema"></a>Esempio di schema XSD con annotazioni  
- Nell'esempio seguente lo schema XSD è costituito da un ** \<elemento Person. Contact>** . L' ** \<elemento Employee>** ha un attributo **ContactID** e ** \<FirstName>** e ** \<LastName>** elementi figlio:  
+ Nell'esempio seguente lo schema XSD è costituito da un **\<Person.Contact>** elemento. L' **\<Employee>** elemento ha un attributo **ContactID** e **\<FirstName>** **\<LastName>** gli elementi figlio:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -111,7 +111,7 @@ ms.locfileid: "81388651"
 </xsd:schema>  
 ```  
   
- Nello schema di mapping, l' ** \<elemento Contact>** viene mappato alla tabella Person. Contact nel database AdventureWorks di esempio tramite l'annotazione **SQL: relation** . Gli attributi ConId, FName e LName vengono mappati alle colonne ContactID, FirstName e LastName nella tabella Person. Contact usando le annotazioni **SQL: Field** .  
+ Nello schema di mapping **\<Contact>** viene eseguito il mapping dell'elemento alla tabella Person. Contact nel database AdventureWorks di esempio tramite l'annotazione **SQL: relation** . Gli attributi ConId, FName e LName vengono mappati alle colonne ContactID, FirstName e LastName nella tabella Person. Contact usando le annotazioni **SQL: Field** .  
   
  Questo schema XSD con annotazioni fornisce la vista XML dei dati relazionali. In questa vista XML possono essere eseguite query mediante il linguaggio XPath. Una query XPath restituisce come risultato un documento XML anziché il set di righe restituito dalle query SQL.  
   

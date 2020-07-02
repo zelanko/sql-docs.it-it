@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80cb0fbbd3c6052ebe2d129a31f582c4aa1ee1ef
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e4cdea3abd58e6eb9d61eeec3e7bba91e80c97db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824046"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771342"
 ---
 # <a name="sp_check_dynamic_filters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Visualizza informazioni sulle proprietà dei filtri di riga con parametri per una pubblicazione, specificando in particolare le funzioni utilizzate per generare una partizione di dati filtrati per una pubblicazione e se la pubblicazione consente l'utilizzo di partizioni pre-calcolate. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -64,7 +64,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_check_dynamic_filters** viene utilizzata nella replica di tipo merge.  
   
  Se è stata definita una pubblicazione per l'utilizzo di partizioni pre-calcolate, **sp_check_dynamic_filters** verifica eventuali violazioni delle restrizioni delle partizioni pre-calcolate. Se viene rilevata una qualsiasi violazione, viene restituito un errore. Per altre informazioni, vedere [Ottimizzare le prestazioni dei filtri con parametri con le partizioni pre-calcolate](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  

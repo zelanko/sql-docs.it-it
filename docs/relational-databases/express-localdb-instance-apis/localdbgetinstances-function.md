@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 04554c7aa9f891aab414ae5ae77f3c92bb86ac4b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b7804207c887d95a719575406cfc85ae78d1bd7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036055"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765236"
 ---
 # <a name="localdbgetinstances-function"></a>Funzione LocalDBGetInstances
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Vengono restituite tutte le istanze del database locale di SQL Server Express con la versione specificata.  
   
  **File di intestazione:** sqlncli. h  
@@ -45,7 +45,7 @@ HRESULT LocalDBGetInstances(
  *lpdwNumberOfInstances*  
  [Input/output] In input, contiene il numero di slot per i nomi di istanza nel buffer *pInstanceNames* . Nell'output, contiene il numero di istanze del database locale trovate nella workstation dell'utente.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  S_OK  
  Funzione completata.  
   

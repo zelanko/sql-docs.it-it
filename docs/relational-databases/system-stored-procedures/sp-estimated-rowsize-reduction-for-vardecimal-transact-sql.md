@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 292bd66b8c30cec9bc55442a3ab768dd23b731ff
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4c25e061e8eb303f936cc129efc6e630e7be5933
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831075"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772149"
 ---
 # <a name="sp_estimated_rowsize_reduction_for_vardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Stima la riduzione delle dimensioni medie delle righe se in una tabella viene abilitato il formato di archiviazione vardecimal. Utilizzare questo numero per stimare la riduzione complessiva delle dimensioni della tabella. Poiché per calcolare la riduzione media delle dimensioni delle righe viene utilizzato il campionamento statistico, i risultati ottenuti devono essere considerati esclusivamente come una stima. In rari casi è possibile che le dimensioni delle righe aumentino dopo l'abilitazione del formato di archiviazione vardecimal.  
   
@@ -70,7 +70,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per la tabella.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene stimata la riduzione delle dimensioni delle righe in caso di compressione della tabella `Production.WorkOrderRouting` del database `AdventureWorks2012`.  
   
 ```  

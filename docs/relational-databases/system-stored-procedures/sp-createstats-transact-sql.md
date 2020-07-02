@@ -18,15 +18,15 @@ ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0cc6ff854079b740279127000a9edb04552245e1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 608f969ab70a0bd9a35b64918a29053caf26c385
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820554"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771153"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Chiama l'istruzione [Create Statistics](../../t-sql/statements/create-statistics-transact-sql.md) per creare statistiche a colonna singola su colonne che non sono già la prima colonna in un oggetto statistiche. La creazione di statistiche di colonna singola aumenta il numero di istogrammi, con un conseguente miglioramento delle stime della cardinalità, dei piani di query e delle prestazioni di esecuzione delle query. La prima colonna di un oggetto statistiche include un istogramma, mentre le altre colonne non dispongono istogrammi.  
   
@@ -62,7 +62,7 @@ sp_createstats
 ## <a name="result-sets"></a>Set di risultati  
  Il nome dei nuovi oggetti statistiche corrisponde a quello delle colonne su cui sono stati creati.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  sp_createstats non crea o Aggiorna statistiche sulle colonne che sono la prima colonna di un oggetto statistiche esistente.  Include la prima colonna di statistiche create per gli indici, le colonne con statistiche a colonna singola generate con AUTO_CREATE_STATISTICS opzione e la prima colonna di statistiche create con l'istruzione CREATE STATISTICs. sp_createstats non crea statistiche sulle prime colonne degli indici disabilitati, a meno che tale colonna non venga utilizzata in un altro indice attivato. sp_createstats non crea statistiche sulle tabelle con un indice cluster disabilitato.  
   
  Quando la tabella contiene un set di colonne, sp_createstats non crea statistiche sulle colonne di tipo sparse. Per ulteriori informazioni sui set di colonne e sulle colonne di tipo sparse, vedere [utilizzare set di colonne](../../relational-databases/tables/use-column-sets.md) e [utilizzare colonne di tipo sparse](../../relational-databases/tables/use-sparse-columns.md).  

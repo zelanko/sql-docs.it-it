@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3cc0e6bb77c49b7eefc17e5d1f16a185834f2061
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8f9260aad5b07e57ff3d95b8943d85a15756077d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829605"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771480"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Modifica le proprietà di una pubblicazione di tipo merge. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -111,7 +111,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**snapshot_ready**|**true**|Lo snapshot della pubblicazione è disponibile.|  
 ||**false**|Lo snapshot della pubblicazione non è disponibile.|  
 |**Stato**|**active**|La pubblicazione è in uno stato attivo.|  
-||**inattivo**|La pubblicazione è in uno stato inattivo.|  
+||**inactive**|La pubblicazione è in uno stato inattivo.|  
 |**sync_mode**|**nativo** o<br /><br /> **BCP nativo**|L'output del programma di copia bulk in modalità nativa di tutte le tabelle viene utilizzato per lo snapshot iniziale.|  
 ||**carattere**<br /><br /> o **carattere BCP**|L'output del programma di copia bulk in modalità carattere di tutte le tabelle viene utilizzato per lo snapshot iniziale, che è obbligatorio per tutti i Sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**use_partition_groups**<br /><br /> Nota: dopo aver usato partition_groups, se si ripristina l'uso di **SetupBelongs**e si imposta **use_partition_groups = false** in **changemergearticle**, questo potrebbe non essere riflesso correttamente dopo che è stato creato uno snapshot. I trigger generati dallo snapshot sono conformi ai gruppi di partizioni.<br /><br /> La soluzione alternativa a questo scenario consiste nell'impostare lo stato su inattivo, modificare il **use_partition_groups**, quindi impostare stato su attivo.|**true**|La pubblicazione utilizza partizioni pre-calcolate.|  
@@ -139,7 +139,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_changemergepublication** viene utilizzata nella replica di tipo merge.  
   
  La modifica delle proprietà seguenti richiede la generazione di un nuovo snapshot. È necessario specificare il valore **1** per il parametro *force_invalidate_snapshot* .  

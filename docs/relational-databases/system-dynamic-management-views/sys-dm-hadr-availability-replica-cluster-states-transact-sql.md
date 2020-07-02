@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cdc5edf1c752478c96cd0f7e4cb3eef441bd078c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0d228cb59a2bd0bff98715e0ae273217c8b57b30
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811906"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764355"
 ---
 # <a name="sysdm_hadr_availability_replica_cluster_states-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per ogni replica di disponibilità Always On, indipendentemente dallo stato del join, di tutti i gruppi di disponibilità Always On, indipendentemente dal percorso della replica, nel cluster WSFC (Windows Server Failover Clustering).  
   

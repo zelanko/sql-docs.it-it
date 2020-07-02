@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0261465c04ad7f56dc14ca7e5530e23d8eac4a54
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 52fcf5c739ad5312aef89586e78454652df93f2f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829645"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771544"
 ---
 # <a name="sp_changedistributor_password-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifica la password per un server di distribuzione. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   
@@ -42,7 +42,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_changedistributor_password** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="example"></a>Esempio  
