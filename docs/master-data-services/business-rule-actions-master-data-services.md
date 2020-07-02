@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: adb0a6798291148cc03c7e9a0a80ca8a59f3952f
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 056335a32c0e7f1ae02979190cdf64b0829177df
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796548"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813685"
 ---
 # <a name="business-rule-actions-master-data-services"></a>Azioni Regola business (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], le azioni della regola business sono la conseguenza delle valutazioni sulle condizioni della regola business. Se una condizione è vera, l'azione viene avviata.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "84796548"
   
 |Nome del valore|Descrizione|  
 |----------------|-----------------|  
-|**È uguale a**|L'attributo selezionato viene modificato in un valore di attributo definito, in un altro attributo o in un valore vuoto.<br /><br /> Questa azione è valida per valori di testo, numerici, di data e di collegamento.|  
+|**Uguale a**|L'attributo selezionato viene modificato in un valore di attributo definito, in un altro attributo o in un valore vuoto.<br /><br /> Questa azione è valida per valori di testo, numerici, di data e di collegamento.|  
 |**uguale a un valore concatenato**|L'attributo selezionato viene modificato in un valore concatenato determinato mediante la specifica di più attributi.<br /><br /> Questa azione è valida per valori di testo e di collegamento.|  
   
 ## <a name="validation-actions"></a>Azioni Convalida  

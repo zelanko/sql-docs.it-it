@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a43ffa259fd30d7aeaf4e2336780a2b92b2ef289
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 8618b0dfc4488f3862366ac873e8cd38e1086e51
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796397"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813367"
 ---
 # <a name="create-an-entity-master-data-services"></a>Creare un'entità (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare un'entità in cui siano contenuti i membri e i relativi attributi.  
   
@@ -70,10 +70,10 @@ ms.locfileid: "84796397"
 ## <a name="grid-columns"></a>Colonne della griglia  
  Per ogni entità creata, viene aggiunta alla griglia una riga con tredici colonne. Di seguito sono elencate le colonne.  
   
-|Nome|Descrizione|  
+|Name|Descrizione|  
 |----------|-----------------|  
 |Stato|Stato dell'entità. Quando si fa clic su **Salva** , viene visualizzata l'immagine seguente che indica che l'entità è in fase di aggiornamento.<br /><br /> ![Icona per lo stato di aggiornamento](../master-data-services/media/mds-statusicon-updating.png "Icona per lo stato di aggiornamento")<br /><br /> Se si verificano errori durante la creazione o la modifica di un'entità, viene visualizzata l'immagine seguente.<br /><br /> ![Icona per lo stato di errore](../master-data-services/media/mds-statusicon-error.png "Icona per lo stato di errore")<br /><br /> Se lo stato è OK, viene visualizzata l'immagine seguente.<br /><br /> ![Icona per lo stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona per lo stato OK")|  
-|Nome|Nome dell'entità.|  
+|Name|Nome dell'entità.|  
 |Descrizione|Descrizione dell'entità.|  
 |Tabella di gestione temporanea|Nome di prefisso della tabella usata per l'archiviazione dei dati.|  
 |Tipo di log delle transazioni|Tipo di log delle transazioni dell'entità.|  
@@ -81,7 +81,7 @@ ms.locfileid: "84796397"
 |Compressione dei dati|Specifica se la compressione dei dati è abilitata per l'entità.|  
 |Destinazione di sincronizzazione|Specifica se l'entità rappresenta la destinazione di una relazione di sincronizzazione.|  
 |Abilitata per le gerarchie|Specifica se l'entità è abilitata per le operazioni con le gerarchie esplicite. Questa colonna mostra Sì se almeno una gerarchia esplicita viene creata per l'entità.|  
-|Autore|Nome utente dell'utente che ha creato l'entità.|  
+|Created By (Creato da)|Nome utente dell'utente che ha creato l'entità.|  
 |Data creazione|Data e ora di creazione dell'entità.|  
 |Aggiornato da|Nome utente dell'ultimo utente che ha aggiornato l'entità.|  
 |Aggiornato il|Data e ora dell'ultimo aggiornamento dell'entità.|  

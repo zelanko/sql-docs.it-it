@@ -1,7 +1,7 @@
 ---
 title: PERCORSO più breve (grafo SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 18527b8a6d64a3dca27a0c5e8a99d36bf1d6d45a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b959348aaf7ca293a9d475a8b4eb6cb5cfdee7aa
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753249"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834635"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
@@ -62,7 +62,7 @@ L'ordine del percorso del grafo si riferisce all'ordine dei dati nel percorso di
 ## <a name="graph-path-aggregate-functions"></a>Funzioni di aggregazione percorso grafico
 Poiché i nodi e i bordi che coinvolgono il modello di lunghezza arbitraria restituiscono una raccolta (dei nodi e dei bordi attraversati in tale percorso), gli utenti non possono proiettare gli attributi direttamente usando la sintassi tablename. AttributeName convenzionale. Per le query in cui è necessario per proiettare i valori di attributo dalle tabelle dei nodi intermedi o dei bordi, nel percorso attraversato usare le funzioni di aggregazione del percorso grafico seguenti: STRING_AGG, LAST_VALUE, SUM, AVG, MIN, MAX e COUNT. La sintassi generale per utilizzare queste funzioni di aggregazione nella clausola SELECT è la seguente:
 
-```
+```syntaxsql
 <GRAPH_PATH_AGGREGATE_FUNCTION>(<expression> , <separator>)  <order_clause>
 
     <order_clause> ::=
@@ -95,8 +95,9 @@ Questa funzione restituisce la somma dei valori dell'attributo node/Edge forniti
 ### <a name="count"></a>COUNT
 Questa funzione restituisce il numero di valori non null dell'attributo node/Edge desiderato nel percorso. La funzione COUNT supporta l' \* operatore '' con un alias di tabella Node o Edge. Senza l'alias della tabella Node o Edge, l'utilizzo di \* è ambiguo e verrà generato un errore.
 
-    {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
-
+```syntaxsql
+{  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
+```
 
 ### <a name="avg"></a>MEDIA
 Restituisce la media dei valori dell'attributo node/Edge forniti o dell'espressione che è stata visualizzata nel percorso attraversato.
@@ -120,7 +121,7 @@ Per le query di esempio illustrate di seguito, verrà usato il nodo e le tabelle
 ### <a name="a--find-shortest-path-between-2-people"></a>R.  Trova il percorso più breve tra due persone
  Nell'esempio seguente viene trovato il percorso più breve tra Jacob e Alice. Sono necessari il nodo Person e amica Edge creati dallo script di esempio Graph. 
 
- ```
+```sql
 SELECT PersonName, Friends
 FROM (  
     SELECT
@@ -135,12 +136,12 @@ FROM (
     AND Person1.name = 'Jacob'
 ) AS Q
 WHERE Q.LastNode = 'Alice'
- ```
+```
 
  ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>B.  Trova il percorso più breve da un nodo specificato a tutti gli altri nodi del grafico. 
  Nell'esempio seguente vengono individuate tutte le persone a cui Giacobbe è connesso nel grafico e il percorso più breve che inizia da Jacob a tutti gli utenti. 
 
- ```
+```sql
 SELECT
     Person1.name AS PersonName, 
     STRING_AGG(Person2.name, '->') WITHIN GROUP (GRAPH PATH) AS Friends
@@ -150,12 +151,12 @@ FROM
     Person FOR PATH  AS Person2
 WHERE MATCH(SHORTEST_PATH(Person1(-(fo)->Person2)+))
 AND Person1.name = 'Jacob'
- ```
+```
 
 ### <a name="c--count-the-number-of-hopslevels-traversed-to-go-from-one-person-to-another-in-the-graph"></a>C.  Contare il numero di hop/livelli attraversati per passare da una persona a un'altra nel grafico.
  Nell'esempio seguente viene individuato il percorso più breve tra Jacob e Alice e viene stampato il numero di hop necessari per passare da Jacob ad Alice. 
 
- ```
+```sql
  SELECT PersonName, Friends, levels
 FROM (  
     SELECT
@@ -171,12 +172,12 @@ FROM (
     AND Person1.name = 'Jacob'
 ) AS Q
 WHERE Q.LastNode = 'Alice'
- ```
+```
 
 ### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D. Trova persone 1-3 hop lontani da un determinato utente
 Nell'esempio seguente viene individuato il percorso più breve tra Giacobbe e tutte le persone a cui è connesso nel grafico 1-3 hop a distanza. 
 
-```
+```sql
 SELECT
     Person1.name AS PersonName, 
     STRING_AGG(Person2.name, '->') WITHIN GROUP (GRAPH PATH) AS Friends
@@ -191,7 +192,7 @@ AND Person1.name = 'Jacob'
 ### <a name="e-find-people-exactly-2-hops-away-from-a-given-person"></a>E. Trovare persone esattamente 2 hop da una determinata persona
 Nell'esempio seguente viene individuato il percorso più breve tra Giacobbe e le persone che sono esattamente 2 hop a distanza dal grafico. 
 
-```
+```sql
 SELECT PersonName, Friends
 FROM (
     SELECT

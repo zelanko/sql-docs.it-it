@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e651a31bc37de8f90ecf18615c761100dbdfff2d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1e4c41bd4edd55fea00d20d89c7d1b944a868d8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727819"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813203"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>Area funzionale Autorizzazioni utenti e gruppi (Gestione dati master)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Nell'area funzionale Autorizzazioni utenti e gruppi, gli amministratori possono concedere l'autorizzazione ad aree funzionali, ad attributi (nella scheda Modelli) e a membri (nella scheda Membri gerarchia). Le autorizzazioni sovrapposte vengono risolte per determinare l'autorizzazione di un utente a ogni singolo valore di attributo.  
   

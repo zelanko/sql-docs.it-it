@@ -18,12 +18,12 @@ ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d214cd21d5e94097164a8b5ede9252a59c552f4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5082230054064f41134f553660999314b5b51897
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85656998"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834752"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>Utilizzo delle parole chiave delle stringhe di connessione con SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
@@ -199,7 +199,8 @@ ms.locfileid: "85656998"
 |Parola chiave|Proprietà di inizializzazione|Descrizione|  
 |-------------|-----------------------------|-----------------|  
 |**Nome dell'applicazione**|SSPROP_INIT_APPNAME|Stringa che identifica l'applicazione.|  
-|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. I valori possibili sono **ReadOnly** e **ReadWrite**.<br /><br /> Il valore predefinito è **ReadWrite**. Per ulteriori informazioni sul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporto di Native Client per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , vedere [SQL Server Native client supporto per la disponibilità elevata e il ripristino di emergenza](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).|  
+|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|Sinonimo di "ApplicationIntent".|
+|**ApplicationIntent**|SSPROP_INIT_APPLICATIONINTENT|Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. I valori possibili sono **ReadOnly** e **ReadWrite**.<br /><br /> Il valore predefinito è **ReadWrite**. Per ulteriori informazioni sul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporto di Native Client per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , vedere [SQL Server Native client supporto per la disponibilità elevata e il ripristino di emergenza](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).|  
 |**Conversione automatica**|SSPROP_INIT_AUTOTRANSLATE|Sinonimo di "AutoTranslate".|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|Configura la conversione dei caratteri OEM/ANSI. I valori riconosciuti sono "true" e "false".|  
 |**Connect Timeout**|DBPROP_INIT_TIMEOUT|Tempo di attesa in secondi per il completamento dell'inizializzazione dell'origine dati.|  
@@ -249,7 +250,8 @@ ms.locfileid: "85656998"
   
 |Parola chiave|Proprietà di inizializzazione|Descrizione|  
 |-------------|-----------------------------|-----------------|  
-|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. I valori possibili sono **ReadOnly** e **ReadWrite**.<br /><br /> Il valore predefinito è **ReadWrite**. Per ulteriori informazioni sul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporto di Native Client per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , vedere [SQL Server Native client supporto per la disponibilità elevata e il ripristino di emergenza](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).|  
+|**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|Sinonimo di "ApplicationIntent".|
+|**ApplicationIntent**|SSPROP_INIT_APPLICATIONINTENT|Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. I valori possibili sono **ReadOnly** e **ReadWrite**.<br /><br /> Il valore predefinito è **ReadWrite**. Per ulteriori informazioni sul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporto di Native Client per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , vedere [SQL Server Native client supporto per la disponibilità elevata e il ripristino di emergenza](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).|  
 |**Nome dell'applicazione**|SSPROP_INIT_APPNAME|Stringa che identifica l'applicazione.|  
 |**Conversione automatica**|SSPROP_INIT_AUTOTRANSLATE|Sinonimo di "AutoTranslate".|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|Configura la conversione dei caratteri OEM/ANSI. I valori riconosciuti sono "true" e "false".|  

@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ac272f3087d970c22d30fd3d4b9f105855d783f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4437060371cb15daa68df439b9fe4d679710f8f
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728658"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813655"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>Modificare il nome di una gerarchia derivata (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile modificare il nome di una gerarchia derivata.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "73728658"
   
 4.  Selezionare la riga della gerarchia derivata che si desidera rinominare.  
   
-5.  Fare clic su **Edit**.  
+5.  Fare clic su **Modifica**.  
   
 6.  Nella pagina **Modifica gerarchia derivata** fare clic sull'icona a forma di matita accanto al nome della gerarchia derivata.  
   

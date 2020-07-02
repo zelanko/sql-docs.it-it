@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a5ed33054cc497761775a83eba8d023fe215fcd9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5379610bd7ca41f2648654eb3e3eaf27bf7dbae9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729422"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813032"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>Procedura guidata Crea database (Gestione configurazione Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Usare la procedura guidata **Crea database** per creare un database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
@@ -30,7 +30,7 @@ ms.locfileid: "73729422"
   
 |Nome del controllo|Descrizione|  
 |------------------|-----------------|  
-|**Istanza di SQL Server**|Specificare il nome dell'istanza del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] in cui si vuole ospitare il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Può corrispondere a un'istanza predefinita o denominata in un computer locale o remoto. Specificare le informazioni digitando quanto segue:<br /><br /> Un punto (.) per connettersi all'istanza predefinita nel computer locale.<br /><br /> Il nome server o l'indirizzo IP per connettersi all'istanza predefinita nel computer locale o remoto specificato.<br /><br /> Il nome server o l'indirizzo IP, nonché il nome dell'istanza per la connessione all'istanza denominata nel computer locale o remoto specificato. Specificare queste informazioni nel formato *server_name*\\*instance_name*.|  
+|**Istanza di SQL Server**|Specificare il nome dell'istanza del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] in cui si vuole ospitare il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Può corrispondere a un'istanza predefinita o denominata in un computer locale o remoto. Specificare le informazioni digitando quanto segue:<br /><br /> Un punto (.) per connettersi all'istanza predefinita nel computer locale.<br /><br /> Il nome server o l'indirizzo IP per connettersi all'istanza predefinita nel computer locale o remoto specificato.<br /><br /> Il nome server o l'indirizzo IP, nonché il nome dell'istanza per la connessione all'istanza denominata nel computer locale o remoto specificato. Specificare queste informazioni nel formato *server_name* \\ *instance_name*.|  
 |**Tipo di autenticazione**|Selezionare il tipo di autenticazione da utilizzare per la connessione all'istanza di SQL Server specificata. Le credenziali usate per connettersi devono far parte del ruolo del server **sysadmin** per l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specificata. Per altre informazioni sul ruolo sysadmin , vedere [Ruoli a livello di server](../relational-databases/security/authentication-access/server-level-roles.md).<br /><br /> Nei tipi di autenticazione sono inclusi:<br /><br /> **Sicurezza integrata dell'utente corrente**: usa l'autenticazione integrata di Windows per la connessione utilizzando le credenziali dell'account utente di Windows corrente. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] usa le credenziali di Windows dell'utente che ha eseguito l'accesso al computer e ha aperto l'applicazione. Non è possibile specificare credenziali di Windows diverse nell'applicazione. Se si desidera connettersi con credenziali di Windows diverse, sarà necessario accedere al computer con il nome utente desiderato, quindi aprire [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)].<br /><br /> **Account di SQL Server**: usa un account di SQL Server per la connessione. Quando si seleziona questa opzione, i campi **Nome utente** e **Password** sono abilitati ed è necessario specificare le credenziali per un account di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specificata.|  
 |**Nome utente**|Specificare il nome dell'account utente che verrà usato per connettersi all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specificata. L'account deve far parte del ruolo **sysadmin** nell'istanza di specificata [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .<br /><br /> Quando il **tipo di autenticazione** è **sicurezza integrata dall'utente corrente**, la casella **nome utente** è di sola lettura e visualizza il nome dell'account utente di Windows che ha eseguito l'accesso al computer.<br /><br /> Quando l'opzione **Tipo di autenticazione** è impostata su **Account di SQL Server**, la casella **Nome utente** è abilitata ed è necessario specificare le credenziali per un account di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specificata.|  
 |**Password**|Specificare la password associata all'account utente:<br /><br /> Quando il **tipo di autenticazione** è **sicurezza integrata dall'utente corrente**, la casella **password** è di sola lettura e per la connessione vengono utilizzate le credenziali dell'account utente di Windows specificato.<br /><br /> Quando l'opzione **Tipo di autenticazione** è impostata su **Account di SQL Server**, la casella **Password** è abilitata ed è necessario specificare la password associata all'account utente specificato.|  
@@ -51,7 +51,7 @@ ms.locfileid: "73729422"
 |------------------|-----------------|  
 |**Nome utente**|Specificare l'utente con privilegi avanzati predefinito per [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. L'utente con privilegi avanzati ha accesso a tutte le aree funzionali e può aggiungere, eliminare e aggiornare tutti i modelli. Per informazioni sull'autorizzazione dell'utente con privilegi avanzati e sugli altri tipi di amministratori in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).|  
   
-## <a name="summary"></a>Summary  
+## <a name="summary"></a>Riepilogo  
  Consente di visualizzare un riepilogo delle opzioni selezionate. Esaminare le selezioni e quindi fare clic su **Avanti** per iniziare a creare il database con le impostazioni specificate.  
   
 ## <a name="progress-and-finish"></a>Continua e termina  
