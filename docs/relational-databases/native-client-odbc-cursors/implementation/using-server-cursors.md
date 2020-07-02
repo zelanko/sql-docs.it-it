@@ -16,17 +16,17 @@ ms.assetid: 8a6d99b7-10b8-4474-8639-4914b25ba170
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ede31d9d59ef7d01dfd7e7b610edae273cbc5d64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 962a8879d53f9cf7f0f59ba4c79ba63063f79ecc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730376"
 ---
 # <a name="using-server-cursors"></a>Utilizzo dei cursori del server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Se un'applicazione ODBC imposta uno qualsiasi degli attributi del cursore ODBC su un valore diverso da quello predefinito, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il driver ODBC di Native Client richiede al server di implementare un cursore API del server dello stesso tipo. L'utilizzo di cursori API del server libera memoria sul client e può ridurre in modo significativo il traffico di rete tra il client e il server.  
+  Se un'applicazione ODBC imposta uno qualsiasi degli attributi del cursore ODBC su un valore diverso da quello predefinito, il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client richiede al server di implementare un cursore API del server dello stesso tipo. L'utilizzo di cursori API del server libera memoria sul client e può ridurre in modo significativo il traffico di rete tra il client e il server.  
   
  Uno dei possibili svantaggi dei cursori API del server è attualmente il mancato supporto di tutte le istruzioni SQL. I cursori API del server non possono essere utilizzati per eseguire:  
   

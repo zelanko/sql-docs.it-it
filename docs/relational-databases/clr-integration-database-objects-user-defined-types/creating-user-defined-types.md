@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 09480763fe03e5191fdaaf778e2490988a3e334e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4a3b9a924292152fbe049e42624f60a554bd6ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486955"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727792"
 ---
 # <a name="creating-user-defined-types"></a>Creazione di tipi definiti dall'utente
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Per creare un tipo definito dall'utente (UDT) che possa essere installato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario prima creare una classe in uno dei linguaggi di programmazione di .NET Framework supportati, ad esempio Visual C# o Visual Basic che sia conforme alle specifiche per la creazione di tipi definiti dall'utente. La classe può quindi essere compilata come DLL che può essere caricata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È inoltre possibile creare e distribuire tipi definiti dall'utente utilizzando Visual Studio.  
   
- L'esecuzione di codice CLR (Common Language Runtime) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disattivata per impostazione predefinita. Per abilitare CLR, è possibile usare l' **sp_configure** stored procedure di sistema, come illustrato nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti:  
+ L'esecuzione di codice CLR (Common Language Runtime) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disattivata per impostazione predefinita. Per abilitare CLR, è possibile usare l' **sp_configure** stored procedure di sistema, come illustrato nelle [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni seguenti:  
   
 ```  
 sp_configure 'clr enabled', 1  

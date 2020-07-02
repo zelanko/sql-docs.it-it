@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e1360140898495518485394878cc74f04ee35923
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 35aa02236cf3e8a11d03539042ccdaf9049dd8f9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807592"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731706"
 ---
 # <a name="sp_addarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Viene creato un articolo che viene aggiunto a una pubblicazione. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -152,7 +152,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|**nessuno**|Non utilizza alcun comando.|  
+|**nessuna**|Non utilizza alcun comando.|  
 |**delete**|Elimina i dati dalla tabella di destinazione prima di applicare lo snapshot. Se l'articolo è filtrato in modo orizzontale, vengono eliminati solo i dati nelle colonne specificate dalla clausola di filtro. Valore non supportato per i server di pubblicazione Oracle quando è definito un filtro orizzontale.|  
 |**Drop** (impostazione predefinita)|Rimuove la tabella di destinazione.|  
 |**troncare**|Tronca la tabella di destinazione. Questo valore non è valido per i Sottoscrittori ODBC o OLE DB.|  
@@ -287,7 +287,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|**nessuno**|La replica non esegue la gestione degli intervalli dei valori Identity espliciti. Questa opzione è consigliabile solo per compatibilità con versioni precedenti di SQL Server. Non consentito per la replica peer-to-peer.|  
+|**nessuna**|La replica non esegue la gestione degli intervalli dei valori Identity espliciti. Questa opzione è consigliabile solo per compatibilità con versioni precedenti di SQL Server. Non consentito per la replica peer-to-peer.|  
 |**Manuale**|Contrassegna la colonna Identity con NOT FOR REPLICATION per consentire la gestione manuale degli intervalli di valori Identity.|  
 |**Automatico**|Imposta la gestione automatica degli intervalli di valori Identity.|  
 |NULL (impostazione predefinita)|Il valore predefinito è **None** quando il valore di *auto_identity_range* non è **true**. L'impostazione predefinita è **manuale** in una topologia peer-to-peer predefinita (*auto_identity_range* viene ignorata).|  
@@ -306,7 +306,7 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_addarticle** viene utilizzata per la replica snapshot o transazionale.  
   
  Per impostazione predefinita, vengono escluse dalla pubblicazione le colonne della tabella di origine con tipo di dati non supportato dalla replica. Se è necessario pubblicare una colonna di questo tipo, è necessario eseguire [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) per aggiungere la colonna.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7a656644-2154-419f-9787-99877f597770
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 48f81c86a823d75d501187ef953930ec92083d27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1ac43527155e4dfe4439f86d9b628ed68cfa9ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659121"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731455"
 ---
 # <a name="numberofflags-property-clientnetworkprotocol-class"></a>Proprietà NumberOfFlags (classe ClientNetworkProtocol)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Ottiene il numero di opzioni del flag richieste dal protocollo di rete del client specificato dal [Metodo SetOrderValue (classe ClientNetworkProtocol)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md).  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,7 +36,7 @@ object.NumberofFlags [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) che rappresenta il protocollo di rete utilizzato dal client di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5692aa5b46d79c68165fa6f1320034fdb7e03b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3fc0fece7f57957f38344a557c88fbedb908090
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388307"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730947"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>Operatori di XQuery per il tipo di dati xml
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   XQuery supporta gli operatori seguenti:  
   
@@ -33,7 +33,7 @@ ms.locfileid: "81388307"
   
 -   Operatori di confronto per i valori (eq, ne, lt, gt, le, ge)  
   
--   Operatori per il confronto generale (=,! = \<,, > \<, =, >=)  
+-   Operatori per il confronto generale (=,! =, \<, > , \<=, > =)  
   
  Per ulteriori informazioni su questi operatori, vedere [espressioni di confronto &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)  
   
@@ -79,7 +79,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-using-a-value-operator"></a>C. Utilizzo di un operatore per valori  
- La query seguente recupera gli elementi `Picture`> <per un modello di prodotto in cui le dimensioni dell'immagine sono "Small":  
+ La query seguente recupera gli `Picture` elementi> <per un modello di prodotto in cui le dimensioni dell'immagine sono "Small":  
   
 ```sql
 SELECT CatalogDescription.query('  

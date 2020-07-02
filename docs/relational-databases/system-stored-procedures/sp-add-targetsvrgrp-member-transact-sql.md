@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5021ed5b-acca-4f8b-b9db-18733059c359
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb35ca1a700390b51776333e5a62280d5de842ff
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5d93ac0966b0c843c219c029d4db1e7fa9462b77
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826286"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731727"
 ---
 # <a name="sp_add_targetsvrgrp_member-transact-sql"></a>sp_add_targetsvrgrp_member (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Aggiunge il server di destinazione specificato a un determinato gruppo di server di destinazione.  
    
@@ -55,7 +55,7 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
 ## <a name="permissions"></a>Autorizzazioni  
  Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene aggiunto il gruppo `Servers Maintaining Customer Information` e viene aggiunto il server `LONDON1` al gruppo specificato.  
   
 ```  

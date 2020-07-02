@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: a32826266a9e844b01b455116e18ae821f71e9c5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3f605d17348c651ef0fbc58ebd52b422bdba1896
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055313"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728190"
 ---
 # <a name="sp_grantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Crea un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -42,7 +42,7 @@ sp_grantlogin [@loginame=] 'login'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @loginame = ] 'login'`Nome di un utente o di un gruppo di Windows. L'utente o il gruppo di Windows deve essere qualificato con un nome di dominio Windows nel formato*utente* *dominio*\\; ad esempio, **London\JoeB**. *login* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @loginame = ] 'login'`Nome di un utente o di un gruppo di Windows. L'utente o il gruppo di Windows deve essere qualificato con un nome di dominio Windows *Domain*nel formato \\ *utente*dominio, ad esempio **London\JoeB**. *login* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

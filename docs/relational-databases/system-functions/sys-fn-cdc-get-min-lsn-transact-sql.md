@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52c6b8d2db395560524c2a9fa46aca680ca9eea2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2a78a6d30b9e79364178401f4d9d2ef52aceace
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046397"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728245"
 ---
 # <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce il valore della colonna start_lsn per l'istanza di acquisizione specificata dalla tabella di sistema [CDC. change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) . Questo valore rappresenta l'endpoint inferiore dell'intervallo di validità per l'istanza di acquisizione.  
   
@@ -94,7 +94,7 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sys. fn_cdc_get_max_lsn &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   

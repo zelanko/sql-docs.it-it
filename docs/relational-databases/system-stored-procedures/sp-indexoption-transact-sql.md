@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 17189e3acebd81e977b02b1b1b235f8e300e5e9c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2dc82e34234082013b1c590008ef610f1492f9a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826028"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733068"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Imposta i valori dell'opzione di blocco per gli indici cluster e non cluster e per le tabelle senza indici cluster.  
   
@@ -62,7 +62,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o maggiore di 0 (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Gli indici XML non sono supportati. Se si specifica un indice XML oppure un nome di tabella senza un nome di indice e la tabella include un indice XML, l'esecuzione dell'istruzione ha esito negativo. Per impostare queste opzioni, utilizzare [alter index](../../t-sql/statements/alter-index-transact-sql.md) .  
   
  Per visualizzare le proprietà del blocco di riga e di pagina correnti, utilizzare [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) o la vista del catalogo [sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) .  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2567640f49beb0c1921811a9d04671833dca11be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c471e1bf5c2e3eac60d47418dc3957cef2209b02
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827583"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730018"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce le informazioni sui processi ai quali è associata una pianificazione specifica.  
   
@@ -55,7 +55,7 @@ sp_help_jobs_in_schedule
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|ID univoco del processo.|  
 |**originating_server**|**nvarchar(30)**|Nome del server di provenienza del processo.|  
-|**name**|**sysname**|Nome del processo.|  
+|**nome**|**sysname**|Nome del processo.|  
 |**abilitato**|**tinyint**|Indica se il processo è abilitato per l'esecuzione.|  
 |**Descrizione**|**nvarchar(512)**|Descrizione del processo.|  
 |**start_step_id**|**int**|ID del passaggio del processo da cui deve iniziare l'esecuzione.|  
@@ -86,7 +86,7 @@ sp_help_jobs_in_schedule
 |**has_target**|**int**|Numero di server di destinazione del processo.|  
 |**type**|**int**|Tipo del processo:<br /><br /> **1** = processo locale.<br /><br /> **2** = processo multiserver.<br /><br /> **0** = il processo non dispone di server di destinazione.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Questa stored procedure visualizza le informazioni sui processi associati alla pianificazione specificata.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -102,7 +102,7 @@ sp_help_jobs_in_schedule
   
  I membri di **SQLAgentUserRole** possono solo visualizzare lo stato dei processi di cui sono proprietari.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono visualizzati i processi associati alla pianificazione `NightlyJobs`.  
   
 ```  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 20809f5f-941d-427f-8f0c-de7a6c487584
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a95b0ac89751e284537eda5e44ec9a7bb0efe712
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: eb038176fb0a2d81f2c643e9e21cc336c97d48ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825982"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725727"
 ---
 # <a name="sp_replflush-transact-sql"></a>sp_replflush (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Scarica la cache degli articoli. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -42,7 +42,7 @@ sp_replflush
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_replflush** viene utilizzata nella replica transazionale.  
   
  Le definizioni degli articoli vengono archiviate nella cache per migliorare il grado di efficienza. **sp_replflush** viene utilizzata da altre stored procedure di replica ogni volta che la definizione di un articolo viene modificata o eliminata.  

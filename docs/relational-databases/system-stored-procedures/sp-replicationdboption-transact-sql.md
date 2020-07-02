@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4c0837db9666ab6b49aee30b81b5585cbf5d5ee0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 819c6c91b2fc57ca077b82797626cf255dcc6357
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056768"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725698"
 ---
 # <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Imposta un'opzione del database di replica per il database specificato. Questa stored procedure viene eseguita in qualsiasi database del server di pubblicazione o del Sottoscrittore.  
   
@@ -45,11 +45,11 @@ sp_replicationdboption [ @dbname= ] 'db_name'
   
 `[ @optname = ] 'optname'`Opzione del database di replica da abilitare o disabilitare. *optname* è di **tipo sysname**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**pubblicazione di tipo merge**|Specifica se il database può essere utilizzato per pubblicazioni di tipo merge.|  
 |**pubblicare**|Specifica se il database può essere utilizzato per altri tipi di pubblicazione.|  
-|**subscribe**|Specifica se si tratta di un database di sottoscrizione.|  
+|**sottoscrivere**|Specifica se si tratta di un database di sottoscrizione.|  
 |**sync with backup**|Specifica se il database è abilitato per il backup coordinato. Per ulteriori informazioni, vedere [abilitare backup coordinati per la replica transazionale &#40;&#41;di programmazione Transact-SQL della replica ](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
 `[ @value = ] 'value'`Indica se abilitare o disabilitare l'opzione del database di replica specificata. *value* è di **tipo sysname**e può essere **true** o **false**. Se questo valore è **false** e *optname* è **merge publish**, vengono eliminate anche le sottoscrizioni del database di pubblicazione di tipo merge.  

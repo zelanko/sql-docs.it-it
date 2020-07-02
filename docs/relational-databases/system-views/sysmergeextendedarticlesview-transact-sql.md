@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 576fe599772454cb0cc8a01bf28c530f5cdfb13b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb2b30da196f79fc10905ffb3ead95f8b5fca4d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278177"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733047"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La vista **sysmergeextendedarticlesview** espone informazioni sugli articoli. Questa vista è archiviata nel database di pubblicazione del server di pubblicazione e nel database di sottoscrizione del Sottoscrittore.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "72278177"
 |**identity_support**|**int**|Specifica se è abilitata la gestione automatica degli intervalli di valori Identity. **1** indica che la gestione degli intervalli di valori Identity è abilitata e **0** indica che non è disponibile alcun supporto per l'intervallo di valori Identity.|  
 |**destination_owner**|**sysname**|Nome del proprietario dell'oggetto di destinazione.|  
 |**before_image_objid**|**int**|ID dell'oggetto tabella di rilevamento. La tabella di rilevamento include valori di colonna chiave specifici se una pubblicazione è configurata in modo da abilitare le ottimizzazioni delle modifiche delle partizioni.|  
-|**before_view_objid**|**int**|ID di oggetto di una tabella di vista. La vista è relativa a una tabella in cui viene tenuto traccia se una riga appartiene a un Sottoscrittore specifico prima di essere eliminata o aggiornata. Si applica solo quando viene creata una pubblicazione con * \@keep_partition_changes* = **true**.|  
+|**before_view_objid**|**int**|ID di oggetto di una tabella di vista. La vista è relativa a una tabella in cui viene tenuto traccia se una riga appartiene a un Sottoscrittore specifico prima di essere eliminata o aggiornata. Si applica solo quando viene creata una pubblicazione con * \@ keep_partition_changes*  =  **true**.|  
 |**verify_resolver_signature**|**int**|Specifica se una firma digitale viene verificata o meno prima dell'utilizzo di un sistema di risoluzione dei conflitti in una replica di tipo merge:<br /><br /> **0** = la firma non viene verificata.<br /><br /> **1** = la firma viene verificata per verificare se si tratta di una fonte attendibile.|  
 |**allow_interactive_resolver**|**bit**|Specifica se per un articolo l'utilizzo del sistema di risoluzione dei conflitti interattivo è attivato. **1** specifica che l'articolo usa il sistema di risoluzione interattivo.|  
 |**fast_multicol_updateproc**|**bit**|Specifica se l'agente di merge è stato attivato per l'applicazione di modifiche a più colonne della stessa riga tramite una sola istruzione UPDATE:<br /><br /> **0** = genera un aggiornamento separato per ogni colonna modificata.<br /><br /> **1** = emesso sull'istruzione Update che fa sì che gli aggiornamenti vengano eseguiti in più colonne in un'unica istruzione.|  
@@ -82,8 +82,8 @@ ms.locfileid: "72278177"
 |**delete_tracking**|**bit**|Specifica se le eliminazioni vengono replicate.<br /><br /> **0** = le eliminazioni non vengono replicate.<br /><br /> **1** = le eliminazioni vengono replicate, ovvero il comportamento predefinito per la replica di tipo merge.<br /><br /> Quando il valore di *delete_tracking* è **0**, le righe eliminate nel Sottoscrittore devono essere rimosse manualmente nel server di pubblicazione e le righe eliminate nel server di pubblicazione devono essere rimosse manualmente nel Sottoscrittore.<br /><br /> Nota: un valore pari a **0** comporta la non convergenza.|  
 |**compensate_for_errors**|**bit**|Specifica se devono essere eseguite azioni di compensazione quando vengono rilevati errori durante la sincronizzazione.<br /><br /> **0** = le azioni di compensazione sono disabilitate.<br /><br /> **1** = le modifiche che non possono essere applicate a un Sottoscrittore o a un server di pubblicazione comportano sempre azioni di compensazione per annullare queste modifiche, che è il comportamento predefinito per la replica di tipo merge.<br /><br /> Nota: un valore pari a **0** comporta la non convergenza.|  
 |**pub_range**|**bigint**|Dimensioni dell'intervallo di valori Identity del server di pubblicazione.|  
-|**intervallo**|**bigint**|Dimensioni dei valori Identity consecutivi che verrebbero assegnati nei Sottoscrittori durante un intervento di regolazione.|  
-|**soglia**|**int**|Percentuale di soglia dell'intervallo di valori Identity.|  
+|**range**|**bigint**|Dimensioni dei valori Identity consecutivi che verrebbero assegnati nei Sottoscrittori durante un intervento di regolazione.|  
+|**threshold**|**int**|Percentuale di soglia dell'intervallo di valori Identity.|  
 |**metadata_select_proc**|**sysname**|Nome della stored procedure generata automaticamente utilizzata per accedere a metadati nelle tabelle del sistema di replica di tipo merge.|  
 |**stream_blob_columns**|**bit**|Specifica se viene utilizzata l'ottimizzazione del flusso di dati per la replica di colonne BLOB (Binary Large Object). **1** indica che verrà tentata l'ottimizzazione.|  
 |**preserve_rowguidcol**|**bit**|Specifica se per la replica viene utilizzata una colonna rowguid esistente. Il valore **1** indica che viene utilizzata una colonna ROWGUIDCOL esistente. **0** indica che la replica ha aggiunto la colonna ROWGUIDCOL.|  

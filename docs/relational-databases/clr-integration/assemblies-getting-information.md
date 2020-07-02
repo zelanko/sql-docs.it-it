@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fcdd4c8c834d8c250716b6c887c3b08248fac67d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a26ef36810a1c3ed188d6457ecb02e7e0411c9d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028020"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727659"
 ---
 # <a name="assemblies---getting-information"></a>Assembly - Recupero di informazioni
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   È possibile recuperare metadati sugli assembly eseguendo query sulle funzioni e sulle viste del catalogo seguenti.  
   
  **Per ottenere informazioni su singoli assembly**  

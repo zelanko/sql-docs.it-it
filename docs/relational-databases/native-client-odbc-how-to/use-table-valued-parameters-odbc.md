@@ -11,15 +11,15 @@ ms.assetid: 6f8da6ab-9de6-4d0a-9b7e-acb76a50a2e7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1572330ee537976f32e4cca082f46d9e451189d4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ab5d4766132d194d7f675f02a0aa0af4c54dda64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298041"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730390"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>Utilizzare parametri con valori di tabella (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   In questo esempio viene illustrata la modalità di utilizzo di parametri con valori di tabella per inserire più righe con più colonne e una chiamata al server.  
   

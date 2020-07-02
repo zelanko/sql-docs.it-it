@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f9303801527b3154585034e1097623ce073fb91f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: be1bfbea0d6681a2fd22eb0e26991f3622f18d70
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834400"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730794"
 ---
 # <a name="sp_helppeerresponses-transact-sql"></a>sp_helppeerresponses (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce tutte le risposte a una specifica richiesta di stato ricevuta da un partecipante in una topologia di replica peer-to-peer, in cui la richiesta è stata avviata tramite l'esecuzione di [sp_helppeerrequests](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) in qualsiasi database pubblicato nella topologia. Questa stored procedure viene eseguita nel database di pubblicazione di un server di pubblicazione che partecipa a una topologia di replica peer-to-peer. Per altre informazioni, vedere [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   

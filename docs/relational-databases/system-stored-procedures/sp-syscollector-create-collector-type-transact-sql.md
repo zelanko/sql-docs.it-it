@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4290d2ecff4b76675f464c5e2a396703e7fc370c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4db22cb0d886a4b0ed1213998d334d4b20ce90f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824286"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725599"
 ---
 # <a name="sp_syscollector_create_collector_type-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Crea un tipo di agente di raccolta per l'agente di raccolta dati. Un tipo di agente di raccolta è un wrapper logico intorno ai [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacchetti che fornisce il meccanismo effettivo per raccogliere dati e caricarli nel data warehouse di gestione.  
   

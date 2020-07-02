@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b1162939039470cdf8e7283950c342e1555c5c78
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2e969e33c42348aabcd46f1c51d56c1329669820
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824469"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729203"
 ---
 # <a name="sp_helpqreader_agent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Restituisce le proprietà dell'agente di lettura coda. Questa stored procedure viene eseguita nel database di distribuzione del server di distribuzione oppure in qualsiasi database del server di pubblicazione.  
   
@@ -44,7 +44,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID dell'agente.|  
-|**name**|**nvarchar (100)**|Nome dell'agente.|  
+|**nome**|**nvarchar (100)**|Nome dell'agente.|  
 |**job_id**|**uniqueidentifier**|ID univoco del processo dell'agente.|  
 |**job_login**|**nvarchar(512)**|Account di Windows utilizzato per l'esecuzione dell'agente di distribuzione, restituito nel formato *dominio* \\ *nomeutente*.|  
 |**job_password**|**sysname**|Per motivi di sicurezza, **\*\*\*\*\*\*\*\*\*\*** viene sempre restituito un valore.|  
@@ -52,7 +52,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_helpqreader_agent** viene utilizzata nella replica transazionale.  
   
 ## <a name="permissions"></a>Autorizzazioni  

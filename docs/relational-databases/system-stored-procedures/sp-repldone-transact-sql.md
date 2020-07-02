@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b89dcde2aab76fcb6760f2788503485ef42182ac
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: e627296cecad35b21c84b928f4474f6302e9214d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807890"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725745"
 ---
 # <a name="sp_repldone-transact-sql"></a>sp_repldone (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Aggiorna il record che identifica l'ultima transazione distribuita del server. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -57,7 +57,7 @@ sp_repldone [ @xactid= ] xactid
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_repldone** viene utilizzata nella replica transazionale.  
   
  **sp_repldone** viene utilizzato dal processo di lettura log per tenere traccia delle transazioni distribuite.  
@@ -69,7 +69,7 @@ sp_repldone [ @xactid= ] xactid
 ## <a name="permissions"></a>Autorizzazioni  
  I membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_repldone**.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Quando *xactid* è null, *xact_seqno* è null e *Reset* è **1**, tutte le transazioni replicate nel log vengono contrassegnate come distribuite. Ciò risulta utile quando nel log delle transazioni sono presenti transazioni replicate non più valide e si desidera troncare il log, ad esempio:  
   
 ```sql

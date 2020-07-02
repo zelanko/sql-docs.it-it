@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: bad9b7e8-5967-4afa-8dc8-6d840faf9372
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9267e1e1e0b051dbbd8581b694aafacd2e5ce8a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6775e9f4bda98f970fd5cdb666fb0bfdb8c1ac10
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488292"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727867"
 ---
 # <a name="clr-user-defined-aggregates"></a>Aggregazioni CLR definite dall'utente
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Le funzioni di aggregazione eseguono un calcolo su un set di valori e restituiscono un singolo valore. Tradizionalmente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ha supportato solo funzioni di aggregazione predefinite, ad esempio **Sum** o **Max**, che operano su un set di valori scalari di input e generano un singolo valore di aggregazione da tale set. L'integrazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con il CLR [!INCLUDE[msCoName](../../includes/msconame-md.md)] di .NET Framework consente ora agli sviluppatori di creare funzioni di aggregazione personalizzate in codice gestito e di rendere accessibili queste funzioni a [!INCLUDE[tsql](../../includes/tsql-md.md)] o all'altro codice gestito.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  Le funzioni di aggregazione eseguono un calcolo su un set di valori e restituiscono un singolo valore. Tradizionalmente, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha supportato solo funzioni di aggregazione predefinite, ad esempio **Sum** o **Max**, che operano su un set di valori scalari di input e generano un singolo valore di aggregazione da tale set. L'integrazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con il CLR [!INCLUDE[msCoName](../../includes/msconame-md.md)] di .NET Framework consente ora agli sviluppatori di creare funzioni di aggregazione personalizzate in codice gestito e di rendere accessibili queste funzioni a [!INCLUDE[tsql](../../includes/tsql-md.md)] o all'altro codice gestito.  
   
  Nella tabella seguente vengono elencati gli argomenti disponibili in questa sezione.  
   

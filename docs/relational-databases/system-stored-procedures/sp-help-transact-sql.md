@@ -18,17 +18,17 @@ ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac6e69db443bd23c3e9b1119b21d8fd98ebe39c4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 57a435db1aca6c2ab9f093792e26f7e88dcbf21a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815726"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727178"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Restituisce informazioni su un oggetto di database (qualsiasi oggetto elencato nella vista di compatibilità **sys. sysobjects** ), un tipo di dati definito dall'utente o un tipo di dati.  
+  Restituisce informazioni su un oggetto di database (qualsiasi oggetto elencato nella visualizzazione di compatibilità **degli oggettisys.sys** ), un tipo di dati definito dall'utente o un tipo di dati.  
   
  
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -78,7 +78,7 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**Nome**|**nvarchar (** 128 **)**|Nome tabella|  
     |**Proprietario**|**nvarchar (** 128 **)**|Proprietario della tabella.|  
-    |**Type**|**nvarchar (** 31 **)**|Tipo di tabella.|  
+    |**Tipo**|**nvarchar (** 31 **)**|Tipo di tabella.|  
     |**Created_datetime**|**datetime**|Data di creazione della tabella.|  
   
      A seconda dell'oggetto di database specificato, **sp_help** restituisce set di risultati aggiuntivi.  
@@ -90,7 +90,7 @@ sp_help [ [ @objname = ] 'name' ]
         |Nome colonna|Tipo di dati|Descrizione|  
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar (** 128 **)**|Nome colonna.|  
-        |**Type**|**nvarchar (** 128 **)**|Tipo di dati della colonna.|  
+        |**Tipo**|**nvarchar (** 128 **)**|Tipo di dati della colonna.|  
         |**Calcolata**|**varchar (** 35 **)**|Indica se i valori della colonna sono calcolati (Yes o No).|  
         |**Lunghezza**|**int**|Lunghezza della colonna in byte.<br /><br /> Nota: se il tipo di dati della colonna è un tipo di valore di grandi dimensioni (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** o **XML**), il valore verrà visualizzato come-1.|  
         |**Prec**|**char (** 5 **)**|Precisione della colonna.|  
@@ -105,7 +105,7 @@ sp_help [ [ @objname = ] 'name' ]
         |Nome colonna|Tipo di dati|Descrizione|  
         |-----------------|---------------|-----------------|  
         |**Identità**|**nvarchar (** 128 **)**|Nome della colonna il cui tipo di dati viene dichiarato come Identity.|  
-        |**Seed**|**numeric**|Valore iniziale per la colonna Identity.|  
+        |**Inizializzazione**|**numeric**|Valore iniziale per la colonna Identity.|  
         |**Incremento**|**numeric**|Incremento da utilizzare per i valori della colonna.|  
         |**Non per la replica**|**int**|La proprietà IDENTITY non viene applicata quando un account di accesso per la replica, ad esempio **sqlrepl**, inserisce i dati nella tabella:<br /><br /> 1 = True<br /><br /> 0 = False|  
   
@@ -152,13 +152,13 @@ sp_help [ [ @objname = ] 'name' ]
         |Nome colonna|Tipo di dati|Descrizione|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar (** 128 **)**|Nome del parametro della stored procedure.|  
-        |**Type**|**nvarchar (** 128 **)**|Tipo di dati del parametro della stored procedure.|  
+        |**Tipo**|**nvarchar (** 128 **)**|Tipo di dati del parametro della stored procedure.|  
         |**Lunghezza**|**smallint**|Capacità massima di archiviazione fisica in byte.|  
         |**Prec**|**int**|Precisione, ovvero il numero totale di cifre.|  
         |**Ridimensionamento**|**int**|Numero di cifre a destra del separatore decimale.|  
         |**Param_order**|**smallint**|Ordine del parametro.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  La routine **sp_help** Cerca un oggetto solo nel database corrente.  
   
  Quando il *nome* non è specificato, **sp_help** elenca i nomi di oggetto, i proprietari e i tipi di oggetto per tutti gli oggetti nel database corrente. **sp_helptrigger** fornisce informazioni sui trigger.  
@@ -198,6 +198,6 @@ GO
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helpuser &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys. sysobjects &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
+ [Oggettisys.sys&#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

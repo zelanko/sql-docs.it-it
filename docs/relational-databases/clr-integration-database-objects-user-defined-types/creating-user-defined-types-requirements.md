@@ -20,29 +20,29 @@ helpviewer_keywords:
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b19a9179cba2225a2209255ce48220669e4bbef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b20192a3804dfba713b04706d528738ceb8768c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486970"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727808"
 ---
 # <a name="creating-user-defined-types---requirements"></a>Creazione di tipi definiti dall'utente - Requisiti
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Quando si crea un tipo definito dall'utente (UDT) da installare in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario prendere alcune importanti decisioni di progettazione. Benché nella maggior parte dei casi sia consigliabile creare il tipo definito dall'utente come struttura, la creazione come classe rappresenta un'altra opzione valida. Perché il tipo venga registrato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la definizione del tipo definito dall'utente deve essere conforme alle specifiche relative alla creazione di tali tipi.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  Quando si crea un tipo definito dall'utente (UDT) da installare in, è necessario prendere alcune importanti decisioni di progettazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Benché nella maggior parte dei casi sia consigliabile creare il tipo definito dall'utente come struttura, la creazione come classe rappresenta un'altra opzione valida. Perché il tipo venga registrato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la definizione del tipo definito dall'utente deve essere conforme alle specifiche relative alla creazione di tali tipi.  
   
 ## <a name="requirements-for-implementing-udts"></a>Requisiti per l'implementazione di tipi definiti dall'utente  
  Ai fini dell'esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il tipo definito dall'utente deve implementare i requisiti seguenti nella relativa definizione:  
   
  Il tipo definito dall'utente deve specificare **Microsoft. SqlServer. Server. SqlUserDefinedTypeAttribute**. L'uso di **System. SerializableAttribute** è facoltativo, ma consigliato.  
   
--   Il tipo definito dall'utente deve implementare l'interfaccia **System. Data. SqlTypes. INullable** nella classe o nella struttura creando un metodo **null** pubblico [!INCLUDE[msCoName](../../includes/msconame-md.md)] **statico** (**Shared** in Visual Basic). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il valore null per impostazione predefinita. Questa condizione è necessaria affinché il codice in esecuzione nel tipo definito dall'utente sia in grado di riconoscere un valore Null.  
+-   Il tipo definito dall'utente deve implementare l'interfaccia **System. Data. SqlTypes. INullable** nella classe o nella struttura creando un metodo null pubblico **statico** (**Shared** in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic). **Null** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il valore null per impostazione predefinita. Questa condizione è necessaria affinché il codice in esecuzione nel tipo definito dall'utente sia in grado di riconoscere un valore Null.  
   
 -   Il tipo definito dall'utente deve contenere un metodo di **analisi** **statico** pubblico (o **condiviso**) che supporta l'analisi da e un metodo **ToString** pubblico per la conversione in una rappresentazione di stringa dell'oggetto.  
   
 -   Un tipo definito dall'utente con un formato di serializzazione definito dall'utente deve implementare l'interfaccia **System. Data. IBinarySerialize** e fornire un metodo **Read** e **Write** .  
   
--   Il tipo definito dall'utente deve implementare **System. XML. Serialization. IXmlSerializable**oppure tutti i campi e le proprietà pubblici devono essere di tipi XML serializzabili o decorati con l'attributo **XmlIgnore** se è necessario eseguire l'override della serializzazione standard.  
+-   Il tipo definito dall'utente deve implementare **System.Xml. La serializzazione. IXmlSerializable**o tutti i campi e le proprietà pubblici devono essere di tipi XML serializzabili o decorati con l'attributo **XmlIgnore** se è necessario eseguire l'override della serializzazione standard.  
   
 -   È necessario che sia presente solo una serializzazione di un oggetto del tipo definito dall'utente. La convalida ha esito negativo se le routine di serializzazione e deserializzazione riconoscono più di una rappresentazione di un oggetto specifico.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "81486970"
   
 -   Il tipo definito dall'utente deve esporre elementi dati come campi pubblici o routine di proprietà.  
   
--   I nomi pubblici non possono contenere più di 128 caratteri e devono essere conformi alle regole di denominazione per gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificatori come definito negli [identificatori del database](../../relational-databases/databases/database-identifiers.md).  
+-   I nomi pubblici non possono contenere più di 128 caratteri e devono essere conformi alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] regole di denominazione per gli identificatori come definito negli [identificatori del database](../../relational-databases/databases/database-identifiers.md).  
   
 -   **sql_variant** colonne non possono contenere istanze di un tipo definito dall'utente.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "81486970"
 >  Sebbene non venga utilizzato dal server per l'esecuzione di confronti, è possibile implementare facoltativamente l'interfaccia **System. IComparable** , che espone un singolo metodo, **CompareTo**. Tale metodo viene utilizzato sul lato client in situazioni in cui è preferibile confrontare o ordinare in modo accurato i valori del tipo definito dall'utente.  
   
 ## <a name="native-serialization"></a>Serializzazione nativa  
- La scelta degli attributi di serializzazione corretti per il tipo definito dall'utente dipende dal tipo definito dall'utente che si desidera creare. Il formato di serializzazione **nativo** utilizza una struttura molto semplice che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente a di archiviare una rappresentazione nativa efficiente del tipo definito dall'utente su disco. Il formato **nativo** è consigliato se il tipo definito dall'utente è semplice e contiene solo campi dei tipi seguenti:  
+ La scelta degli attributi di serializzazione corretti per il tipo definito dall'utente dipende dal tipo definito dall'utente che si desidera creare. Il formato di serializzazione **nativo** utilizza una struttura molto semplice che consente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a di archiviare una rappresentazione nativa efficiente del tipo definito dall'utente su disco. Il formato **nativo** è consigliato se il tipo definito dall'utente è semplice e contiene solo campi dei tipi seguenti:  
   
  **bool**, **byte**, **SByte**, **short**, **ushort**, **int**, **uint**, **Long**, **ULONG**, **float**, **Double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
@@ -99,15 +99,15 @@ ms.locfileid: "81486970"
 >  Ai fini dell'indicizzazione, i campi con tipo definito dall'utente devono utilizzare la serializzazione nativa o essere resi persistenti.  
   
 ## <a name="serialization-attributes"></a>Attributi di serializzazione  
- Gli attributi consentono di determinare la modalità di utilizzo della serializzazione per costruire la rappresentazione di archiviazione dei tipi definiti dall'utente e per trasmettere tali tipi al client in base al valore. Quando si crea il tipo definito dall'utente, è necessario specificare **Microsoft. SqlServer. Server. SqlUserDefinedTypeAttribute** . L'attributo **Microsoft. SqlServer. Server. SqlUserDefinedTypeAttribute** indica che la classe è un tipo definito dall'utente e specifica lo spazio di archiviazione per il tipo definito dall'utente. Facoltativamente, è possibile specificare l'attributo **Serializable** , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sebbene non lo richieda.  
+ Gli attributi consentono di determinare la modalità di utilizzo della serializzazione per costruire la rappresentazione di archiviazione dei tipi definiti dall'utente e per trasmettere tali tipi al client in base al valore. Quando si crea il tipo definito dall'utente, è necessario specificare **Microsoft. SqlServer. Server. SqlUserDefinedTypeAttribute** . L'attributo **Microsoft. SqlServer. Server. SqlUserDefinedTypeAttribute** indica che la classe è un tipo definito dall'utente e specifica lo spazio di archiviazione per il tipo definito dall'utente. Facoltativamente, è possibile specificare l'attributo **Serializable** , sebbene non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo richieda.  
   
  **Microsoft. SqlServer. Server. SqlUserDefinedTypeAttribute** dispone delle proprietà seguenti.  
   
- **Format**  
+ **Formato**  
  Specifica il formato di serializzazione, che può essere **native** o **UserDefined**, a seconda dei tipi di dati del tipo definito dall'utente.  
   
  **IsByteOrdered**  
- Valore **booleano** che determina il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modo in cui esegue i confronti binari nel tipo definito dall'utente.  
+ Valore **booleano** che determina il modo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui esegue i confronti binari nel tipo definito dall'utente.  
   
  **Impossibile IsFixedLength**  
  Indica se tutte le istanze del tipo definito dall'utente sono della stessa lunghezza.  
@@ -146,13 +146,13 @@ ms.locfileid: "81486970"
 -   Minore o uguale a (&lt;=)  
   
 ### <a name="implementing-nullability"></a>Implementazione del supporto dei valori Null  
- Oltre a specificare correttamente gli attributi per gli assembly, la classe deve inoltre supportare i valori Null. I tipi definiti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dall'utente caricati in sono compatibili con i valori null, ma per consentire al tipo definito dall'utente di riconoscere un valore null, la classe deve implementare l'interfaccia **INullable** . Per ulteriori informazioni e un esempio di come implementare il supporto di valori null in un tipo definito dall'utente, vedere [codifica di tipi definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
+ Oltre a specificare correttamente gli attributi per gli assembly, la classe deve inoltre supportare i valori Null. I tipi definiti dall'utente caricati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono compatibili con i valori null, ma per consentire al tipo definito dall'utente di riconoscere un valore null, la classe deve implementare l'interfaccia **INullable** . Per ulteriori informazioni e un esempio di come implementare il supporto di valori null in un tipo definito dall'utente, vedere [codifica di tipi definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
 ### <a name="string-conversions"></a>Conversioni di stringhe  
  Per supportare la conversione di stringhe da e verso il tipo definito dall'utente, è necessario fornire un metodo **Parse** e un metodo **ToString** nella classe. Il metodo **Parse** consente la conversione di una stringa in un tipo definito dall'utente. Deve essere dichiarato come **static** (o **Shared** in Visual Basic) e accetta un parametro di tipo **System. Data. SqlTypes. SqlString**. Per ulteriori informazioni e un esempio di come implementare i metodi **Parse** e **ToString** , vedere [codifica di tipi definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
 ## <a name="xml-serialization"></a>Serializzazione XML  
- I tipi definiti dall'utente devono supportare la conversione da e verso il tipo di dati **XML** conformi al contratto per la serializzazione XML. Lo spazio dei nomi **System. XML. Serialization** contiene le classi utilizzate per serializzare oggetti in flussi o documenti in formato XML. È possibile scegliere di implementare la serializzazione **XML** utilizzando l'interfaccia **IXmlSerializable** , che fornisce la formattazione personalizzata per la serializzazione e la deserializzazione XML.  
+ I tipi definiti dall'utente devono supportare la conversione da e verso il tipo di dati **XML** conformi al contratto per la serializzazione XML. **System.Xml. **Lo spazio dei nomi di serializzazione contiene le classi utilizzate per serializzare oggetti in flussi o documenti in formato XML. È possibile scegliere di implementare la serializzazione **XML** utilizzando l'interfaccia **IXmlSerializable** , che fornisce la formattazione personalizzata per la serializzazione e la deserializzazione XML.  
   
  Oltre a eseguire conversioni esplicite da UDT a **XML**, la serializzazione XML consente di:  
   

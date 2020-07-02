@@ -20,15 +20,15 @@ ms.assetid: d5684f5a-30b1-418e-ae4d-ab040db9257e
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9655866d4fd2d6f98b38532f77f94bc12f16f9b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a4c03687f6adac3f67f3e6aa231c384a6d5e009
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68109479"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725799"
 ---
 # <a name="syscrypt_properties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Restituisce una riga per ogni proprietà crittografica associata all'entità a protezione diretta.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68109479"
 |**classe**|**tinyint**|Identifica la classe dell'elemento in cui esiste la proprietà.<br /><br /> 1 = Oggetto o colonna<br /> 5 = Assembly|  
 |**class_desc**|**nvarchar(60)**|Descrizione della classe dell'elemento in cui esiste la proprietà.<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
 |**major_id**|**int**|ID dell'elemento in cui esiste la proprietà, interpretato in base alla classe.|  
-|**thumbprint**|**varbinary(32)**|Hash SHA-1 del certificato o chiave asimmetrica utilizzata.|  
+|**Thumbprint**|**varbinary(32)**|Hash SHA-1 del certificato o chiave asimmetrica utilizzata.|  
 |**crypt_type**|**char (4)**|Tipo di crittografia.<br /><br /> SPVC = chiave privata con firma mediante certificato<br /><br /> SPVA = chiave privata asimmetrica firmata<br /><br /> CPVC = Controfirma tramite la chiave privata del certificato<br /><br /> CPVA = Controfirma tramite la chiave asimmetrica|  
 |**crypt_type_desc**|**nvarchar(60)**|Descrizione del tipo di crittografia.<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY<br /><br /> COUNTER SIGNATURE BY CERTIFICATE<br /><br /> COUNTER SIGNATURE BY ASYMMETRIC KEY|  
 |**crypt_property**|**varbinary(max)**|Bit firmati o crittografati. Per un modulo firmato si tratta dei bit di firma del modulo.|  
@@ -49,7 +49,7 @@ ms.locfileid: "68109479"
  [Viste del catalogo di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [Oggetti proteggibili](../../relational-databases/security/securables.md)   
- [CREAZIONE di un certificato &#40;&#41;Transact-SQL](../../t-sql/statements/create-certificate-transact-sql.md)   
+ [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREAZIONE di una chiave simmetrica &#40;&#41;Transact-SQL](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [CREAZIONE di una chiave asimmetrica &#40;&#41;Transact-SQL](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  

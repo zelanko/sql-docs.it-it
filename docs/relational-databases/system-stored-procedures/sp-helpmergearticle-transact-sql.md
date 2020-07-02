@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e01a1c9c96813c14827ca2f941c84d151c147195
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 04d1397494aec0d35e0ecfa9debcb6f844e6ebc2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818116"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733129"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni su un articolo. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione o nel database di sottoscrizione di un Sottoscrittore di ripubblicazione.  
   
@@ -47,7 +47,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identificatore dell'articolo.|  
-|**name**|**sysname**|Nome dell'articolo.|  
+|**nome**|**sysname**|Nome dell'articolo.|  
 |**source_owner**|**sysname**|Nome del proprietario dell'oggetto di origine.|  
 |**source_object**|**sysname**|Nome dell'oggetto di origine da cui aggiungere l'articolo.|  
 |**sync_object_owner**|**sysname**|Nome del proprietario della vista che definisce l'articolo pubblicato.|  
@@ -68,7 +68,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**identity_support**|**int**|Se è abilitata la gestione automatica degli intervalli di valori Identity. dove **1** è abilitato e **0** è disabilitato.|  
 |**pub_identity_range**|**bigint**|Dimensioni di intervallo da utilizzare per l'assegnazione di nuovi valori Identity. Per ulteriori informazioni, vedere la sezione relativa alla replica di tipo merge in [replicare le colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**identity_range**|**bigint**|Dimensioni di intervallo da utilizzare per l'assegnazione di nuovi valori Identity. Per ulteriori informazioni, vedere la sezione relativa alla replica di tipo merge in [replicare le colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
-|**soglia**|**int**|Valore percentuale utilizzato per i Sottoscrittori che eseguono [!INCLUDE[ssEW](../../includes/ssew-md.md)] o versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **soglia** controlla quando il agente di merge assegna un nuovo intervallo di valori Identity. Quando viene utilizzata la percentuale di valori specificata in threshold, l'agente di merge crea un nuovo intervallo di valori Identity. Per ulteriori informazioni, vedere la sezione relativa alla replica di tipo merge in [replicare le colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+|**threshold**|**int**|Valore percentuale utilizzato per i Sottoscrittori che eseguono [!INCLUDE[ssEW](../../includes/ssew-md.md)] o versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **soglia** controlla quando il agente di merge assegna un nuovo intervallo di valori Identity. Quando viene utilizzata la percentuale di valori specificata in threshold, l'agente di merge crea un nuovo intervallo di valori Identity. Per ulteriori informazioni, vedere la sezione relativa alla replica di tipo merge in [replicare le colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**verify_resolver_signature**|**int**|Se una firma digitale viene verificata prima dell'utilizzo di un sistema di risoluzione nella replica di tipo merge; dove **0** indica che la firma non viene verificata e **1** indica che la firma viene verificata per verificare se si tratta di una fonte attendibile.|  
 |**destination_object**|**sysname**|Nome dell'oggetto di destinazione. È applicabile solo per gli articoli di schema di tipo merge per stored procedure, viste e funzioni definite dall'utente.|  
 |**allow_interactive_resolver**|**int**|Se il sistema di risoluzione interattivo viene utilizzato in un articolo; dove **1** indica che questo resolver viene utilizzato e **0** indica che non viene utilizzato.|  

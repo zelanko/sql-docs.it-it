@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d597436277255441ad893215a3581580264d99a3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c5973cd5560f9c12bc38f58002cd6707fe71c714
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810158"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725606"
 ---
 # <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Crea un elemento della raccolta in un set di raccolta definito dall'utente. Un elemento della raccolta definisce i dati da raccogliere e la frequenza di raccolta.  
   
@@ -71,7 +71,7 @@ sp_syscollector_create_collection_item
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  È necessario eseguire sp_syscollector_create_collection_item nel contesto del database di sistema msdb.  
   
  Il set di raccolta al quale viene aggiunto l'elemento deve essere arrestato prima della creazione dell'elemento della raccolta. Non è possibile aggiungere elementi della raccolta ai set di raccolta di sistema.  
@@ -79,7 +79,7 @@ sp_syscollector_create_collection_item
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa procedura, è richiesta l'appartenenza al ruolo predefinito del database dc_admin (con autorizzazione EXECUTE) .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creato un elemento della raccolta basato sul tipo di raccolta `Generic T-SQL Query Collector Type` e successivamente tale elemento viene aggiunto al set di raccolta denominato `Simple collection set test 2`. Per creare il set di raccolta specificato, eseguire l'esempio B in [sp_syscollector_create_collection_set &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
 ```  

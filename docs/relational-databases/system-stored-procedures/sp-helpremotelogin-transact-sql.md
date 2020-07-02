@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d37cae4776a5a5fe67ed7e2265d9a23a28a725e8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3e277954a16e1e63d55e54b1eadb157c7f74a667
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824472"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729189"
 ---
 # <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni sugli account di accesso remoti per un determinato server remoto o per tutti i server remoti definiti nel server locale.  
   
@@ -61,7 +61,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 |remote_user_name|**sysname**|Account di accesso nel server remoto sul quale viene eseguito il mapping a local_user_name.|  
 |opzioni|**sysname**|Trusted = Quando l'account di accesso remoto si connette al server locale dal server remoto, non viene richiesta alcuna password.<br /><br /> Untrusted (o vuoto) = Quando l'account di accesso remoto si connette al server locale dal server remoto, viene sempre richiesta una password.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Per recuperare un elenco dei nomi dei server remoti definiti nel server locale, eseguire sp_helpserver.  
   
 ## <a name="permissions"></a>Autorizzazioni  

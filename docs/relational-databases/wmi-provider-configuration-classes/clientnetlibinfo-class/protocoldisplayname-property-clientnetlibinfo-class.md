@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b90755fd-7cac-4bdb-8e45-e95119a7665c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 32f13ed373bb13b05040bcda3f68cb9890e2d301
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2d628032b2016c7bfb321566132dd6af4ca5ded
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659409"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731479"
 ---
 # <a name="protocoldisplayname-property-clientnetlibinfo-class"></a>Proprietà ProtocolDisplayName (classe ClientNetLibInfo)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Ottiene o imposta il nome utilizzato per visualizzare il protocollo.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,7 +36,7 @@ object.ProtocolDisplayName [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe ClientNetLibInfo](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) che rappresenta le informazioni sulla libreria di rete del client.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  

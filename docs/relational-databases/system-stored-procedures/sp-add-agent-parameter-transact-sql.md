@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: c1aafa1736ff626f7b0bea9bea8753ae2c509ac4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf8704f4106cd701c5c5d2bbeab324ed2f75e731
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770956"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731758"
 ---
 # <a name="sp_add_agent_parameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Aggiunge un nuovo parametro e il relativo valore a un profilo agente. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   
@@ -43,7 +43,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
  Per individuare il tipo di agente rappresentato da questo *profile_id* , trovare il *profile_id* nella [MSAGENT_PROFILES &#40;tabella Transact-SQL&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) e prendere nota del valore del campo *agent_type* . Sono disponibili i valori seguenti:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|agente snapshot|  
 |**2**|Agente di lettura log|  
@@ -53,11 +53,11 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 `[ @parameter_name = ] 'parameter_name'`Nome del parametro. *parameter_name* è di **tipo sysname**e non prevede alcun valore predefinito. Per un elenco dei parametri già definiti nei profili di sistema, vedere [profili degli agenti di replica](../../relational-databases/replication/agents/replication-agent-profiles.md). Per un elenco completo dei parametri validi per ogni agente, vedere gli argomenti seguenti:  
   
--   [Agente snapshot repliche](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+-   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
 -   [Agente lettura log repliche](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
--   [Agente distribuzione repliche](../../relational-databases/replication/agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
 -   [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)  
   

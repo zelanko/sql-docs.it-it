@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e31f785d1b1fa205a9498889f814a0a0bc32e9a8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 305b7a0e2c9d83fe33a6d571198b205f7452ba44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834337"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725686"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Restituisce informazioni sulle sessioni passate per un agente di merge specifico. Viene restituita una riga per ogni sessione che soddisfa i criteri del filtro. Questa stored procedure, utilizzata per il monitoraggio della replica di tipo merge, viene eseguita nel database di distribuzione del server di distribuzione o nel database di sottoscrizione del Sottoscrittore.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 74860a8f4c8dee263ea7ee0eea75679c721d1fa5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28eb993cc6755d596d49e7930a3fd68b884b8f29
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68032984"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731724"
 ---
 # <a name="sp_addapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Aggiunge un ruolo applicazione al database corrente.  
   
@@ -44,7 +44,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ## <a name="arguments"></a>Argomenti  
 `[ @rolename = ] 'role'`Nome del nuovo ruolo applicazione. *Role* è di **tipo sysname**e non prevede alcun valore predefinito. *Role* deve essere un identificatore valido e non può essere già presente nel database corrente.  
   
- I nomi dei ruoli applicazione possono includere da 1 a 128 caratteri, compresi lettere, simboli e numeri. I nomi dei ruoli non possono contenere\\una barra rovesciata () né essere null o una stringa vuota ('').  
+ I nomi dei ruoli applicazione possono includere da 1 a 128 caratteri, compresi lettere, simboli e numeri. I nomi dei ruoli non possono contenere una barra rovesciata ( \\ ) né essere null o una stringa vuota ('').  
   
 `[ @password = ] 'password'`Password necessaria per attivare il ruolo applicazione. *password* è di **tipo sysname**e non prevede alcun valore predefinito. la *password* non può essere null.  
   
@@ -54,7 +54,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ## <a name="remarks"></a>Osservazioni  
  Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli utenti (e i ruoli) non si diversificano completamente dagli schemi. A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], gli schemi sono completamente distinti dai ruoli. Questa nuova architettura si riflette nel funzionamento dell'istruzione CREATE APPLICATION ROLE. Questa istruzione sostituisce **sp_addapprole**.  
   
- Per mantenere la compatibilità con le versioni precedenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di, **sp_addapprole** eseguirà le operazioni seguenti:  
+ Per mantenere la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **sp_addapprole** eseguirà le operazioni seguenti:  
   
 -   Se uno schema con lo stesso nome del ruolo applicazione non esiste, tale schema verrà creato. Il nuovo schema sarà di proprietà del ruolo applicazione e sarà lo schema predefinito del ruolo applicazione.  
   
@@ -73,14 +73,14 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
  È richiesta l'autorizzazione ALTER ANY APPLICATION ROLE nel database. Se uno schema con lo stesso nome e lo stesso proprietario del nuovo ruolo non esiste, è richiesta anche l'autorizzazione CREATE SCHEMA nel database.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente il nuovo ruolo `SalesApp` applicazione con la password `x97898jLJfcooFUYLKm387gf3` viene aggiunto al database corrente.  
+ Nell'esempio seguente il nuovo ruolo applicazione `SalesApp` con la password viene aggiunto `x97898jLJfcooFUYLKm387gf3` al database corrente.  
   
 ```  
 EXEC sp_addapprole 'SalesApp', 'x97898jLJfcooFUYLKm387gf3' ;  
 GO  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)  
   
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 577d84c1-9285-4580-b6f5-86fbc4827547
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 35569b5e27b058ae3f43a3e7db8b1a3e2455449b
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: bacbbf8314f52276a6859b1a75da1d3f6bf23899
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689605"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726767"
 ---
 # <a name="boolean-constructor-functions---false-xquery"></a>Funzioni costruttore booleane - false (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Restituisce il valore di tipo xs:boolean False, che equivale a `xs:boolean("0")`.  
   
@@ -34,10 +34,10 @@ ms.locfileid: "83689605"
 fn:false() as xs:boolean  
 ```  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
-### <a name="a-using-the-false-xquery-boolean-function"></a>A. Utilizzo della funzione booleana XQuery false()  
+### <a name="a-using-the-false-xquery-boolean-function"></a>R. Utilizzo della funzione booleana XQuery false()  
  Per un esempio funzionante, vedere [true Function &#40;XQuery&#41;](../xquery/boolean-constructor-functions-true-xquery.md).  
   
 ## <a name="see-also"></a>Vedere anche  

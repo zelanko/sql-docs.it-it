@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e3d14c6d24d6db5d27b12bcc3f28c1b6ba383442
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ab209dccc53db8f1c90a5b25c6372be4af71025
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488223"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727844"
 ---
 # <a name="accessing-user-defined-types---retrieving-udt-data"></a>Accesso ai tipi definiti dall'utente - Recupero di dati UDT
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Per creare un tipo definito dall'utente (UDT) nel client, l'assembly registrato come tipo definito dall'utente in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere disponibile per l'applicazione client. L'assembly UDT può essere posizionato nella stessa directory dell'applicazione oppure nella Global Assembly Cache (GAC). È inoltre possibile impostare un riferimento all'assembly nel progetto.  
   
 ## <a name="requirements-for-using-udts-in-adonet"></a>Requisiti per l'utilizzo di tipi definiti dall'utente in ADO.NET  

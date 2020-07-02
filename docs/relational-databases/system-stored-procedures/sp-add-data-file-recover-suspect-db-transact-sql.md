@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2c95b74b5c1875f2a1f1db40ec42e3f3ada87a63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 144d563bf27f0d6133da0ab4facb26edd3a23d44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942366"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731749"
 ---
 # <a name="sp_add_data_file_recover_suspect_db-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Aggiunge un file di dati a un filegroup quando non è possibile completare l'operazione di recupero di un database a causa di spazio insufficiente nel filegroup (errore 1105). Dopo l'aggiunta del file, la stored procedure disabilita l'impostazione sospetta e completa il recupero del database. I parametri sono gli stessi di quelli per ALTER DATABASE *database_name* Add file.  
   

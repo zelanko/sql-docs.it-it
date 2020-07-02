@@ -22,18 +22,18 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe5409120a3d0c5df3cf05318b0b85fd22d07bdf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bf9f98482ad83d1cf5104f9379ac294f2064c62
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388098"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725884"
 ---
 # <a name="specifying-the-sqlinverse-attribute-on-sqlrelationship-sqlxml-40"></a>Specifica dell'attributo sql:inverse in sql:relationship (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  L'attributo **SQL: inverse** è utile solo quando lo schema XSD viene utilizzato per il caricamento bulk o per un updategram. L'attributo **SQL: inverse** può essere specificato nell'elemento ** \<SQL: Relationship>** . Negli updategram la relativa logica interpreta lo schema nella determinazione delle tabelle e delle colonne aggiornate dall'operazione dell'updategram. Le relazioni padre-figlio specificate nello schema determinano l'ordine di modifica (inserimento o eliminazione) dei record.  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  L'attributo **SQL: inverse** è utile solo quando lo schema XSD viene utilizzato per il caricamento bulk o per un updategram. L'attributo **SQL: inverse** può essere specificato nell' **\<sql:relationship>** elemento. Negli updategram la relativa logica interpreta lo schema nella determinazione delle tabelle e delle colonne aggiornate dall'operazione dell'updategram. Le relazioni padre-figlio specificate nello schema determinano l'ordine di modifica (inserimento o eliminazione) dei record.  
   
- Nel caso di uno schema XSD in cui la relazione padre-figlio viene specificata nell'ordine inverso a quello della relazione chiave primaria/chiave esterna tra le colonne del database corrispondenti, l'operazione di inserimento o eliminazione dell'updategram non riuscirà a causa della violazione della relazione chiave primaria/chiave esterna. In questi casi, l'attributo **SQL: inverse** viene specificato (**SQL: inverse = "true"**) nell'elemento ** \<SQL: Relationship>** e la logica dell'updategram inverte l'interpretazione della relazione padre-figlio specificata nello schema.  
+ Nel caso di uno schema XSD in cui la relazione padre-figlio viene specificata nell'ordine inverso a quello della relazione chiave primaria/chiave esterna tra le colonne del database corrispondenti, l'operazione di inserimento o eliminazione dell'updategram non riuscirà a causa della violazione della relazione chiave primaria/chiave esterna. In questi casi, l'attributo **SQL: inverse** viene specificato (**SQL: inverse = "true"**) nell' **\<sql:relationship>** elemento e la logica dell'updategram inverte l'interpretazione della relazione padre-figlio specificata nello schema.  
   
  L'attributo **SQL: inverse** accetta un valore booleano (0 = false, 1 = true). I valori possibili sono 0, 1, true e false.  
   

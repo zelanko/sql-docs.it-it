@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e85eb432123c30338b15528edcb7c301e2dc458b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e8011f6faabdea72054e6bd1b0258019428a0d8a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833179"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731674"
 ---
 # <a name="sp_getdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni sul mapping predefinito per il tipo di dati specificato tra [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e un sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestione non di database (DBMS). Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   

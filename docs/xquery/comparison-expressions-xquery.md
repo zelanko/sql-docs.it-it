@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 082fb2d1afdfa8824ea6f3d6e7bd3e4c484e281e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db27f240030115ea24d8d32e2ffa1d5e4bf8921e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388162"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729508"
 ---
 # <a name="comparison-expressions-xquery"></a>Espressioni di confronto (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   XQuery include i tipi di operatori di confronto seguenti:  
   
@@ -80,7 +80,7 @@ set @x='<a>6</a>'
 select @x.query('/a[1] < "17"')  
 ```  
   
- La query seguente restituisce foto di piccole dimensioni di un modello di prodotto derivato dal catalogo prodotti disponibile nel database di esempio AdventureWorks. La query confronta una sequenza di valori atomici restituiti da `PD:ProductDescription/PD:Picture/PD:Size` con la sequenza singleton "small". Se il confronto è true, restituisce l'elemento immagine\> <.  
+ La query seguente restituisce foto di piccole dimensioni di un modello di prodotto derivato dal catalogo prodotti disponibile nel database di esempio AdventureWorks. La query confronta una sequenza di valori atomici restituiti da `PD:ProductDescription/PD:Picture/PD:Size` con la sequenza singleton "small". Se il confronto è true, restituisce l'elemento immagine <\> .  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -91,7 +91,7 @@ FROM   Production.ProductModel
 WHERE  ProductModelID=19         
 ```  
   
- Nella query seguente viene confrontata una sequenza di numeri di telefono\> negli elementi <numero al valore letterale stringa "112-111-1111". La query confronta la sequenza di elementi dei numeri di telefono nella colonna AdditionalContactInfo per determinare se il documento include un numero di telefono specifico di un determinato cliente.  
+ Nella query seguente viene confrontata una sequenza di numeri di telefono negli elementi <numero \> al valore letterale stringa "112-111-1111". La query confronta la sequenza di elementi dei numeri di telefono nella colonna AdditionalContactInfo per determinare se il documento include un numero di telefono specifico di un determinato cliente.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -104,7 +104,7 @@ FROM Person.Contact
 WHERE ContactID=1         
 ```  
   
- La query restituisce True. Questo valore indica che il documento contiene tale numero. La query seguente è una versione leggermente modificata della query precedente. In questa query, i valori dei numeri di telefono recuperati dal documento vengono confrontati con una sequenza costituita da due numeri telefonici. Se il confronto è true, viene restituito l'\> elemento <Number.  
+ La query restituisce True. Questo valore indica che il documento contiene tale numero. La query seguente è una versione leggermente modificata della query precedente. In questa query, i valori dei numeri di telefono recuperati dal documento vengono confrontati con una sequenza costituita da due numeri telefonici. Se il confronto è true, \> viene restituito l'elemento <Number.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -153,7 +153,7 @@ WHERE ContactID=1
   
  È possibile utilizzare questi operatori solo su valori atomici singleton. Pertanto, non è possibile specificare una sequenza come uno degli operandi.  
   
- Ad esempio, la query seguente recupera \<gli elementi immagine> per un modello di prodotto in cui le dimensioni dell'immagine sono "Small:  
+ Ad esempio, la query seguente recupera \<Picture> gli elementi per un modello di prodotto in cui le dimensioni dell'immagine sono "Small":  
   
 ```  
 SELECT CatalogDescription.query('         
@@ -170,7 +170,7 @@ WHERE ProductModelID=19
   
 -   `declare namespace` definisce il prefisso dello spazio dei nomi utilizzato successivamente nella query.  
   
--   La \<dimensione> valore dell'elemento viene confrontato con il valore atomico specificato, ovvero "Small".  
+-   Il \<Size> valore dell'elemento viene confrontato con il valore atomico specificato, ovvero "Small".  
   
 -   Si noti che poiché gli operatori value funzionano solo su valori atomici, la funzione **Data ()** viene utilizzata in modo implicito per recuperare il valore del nodo. Pertanto, `data($P/PD:Size) eq "small"` restituisce lo stesso risultato.  
   
@@ -225,7 +225,7 @@ ProductModelID       Result
   
 -   `>>`: L' **operando 1** segue l' **operando 2** nell'ordine del documento.  
   
- La query seguente restituisce true se la descrizione del catalogo dei prodotti \<contiene la garanzia> elemento visualizzato prima \<dell'elemento> di manutenzione nell'ordine del documento per un determinato prodotto.  
+ La query seguente restituisce true se la descrizione del catalogo dei prodotti ha l' \<Warranty> elemento visualizzato prima dell' \<Maintenance> elemento nell'ordine del documento per un determinato prodotto.  
   
 ```  
 WITH XMLNAMESPACES (  

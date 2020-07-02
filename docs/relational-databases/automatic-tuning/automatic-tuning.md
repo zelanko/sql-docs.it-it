@@ -14,15 +14,15 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c76481db7044deb3cc7f9c4e1c99230ef16ea3a3
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 5617630853a700c906949cfa9a9bc2acf719c2ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669325"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727907"
 ---
 # <a name="automatic-tuning"></a>Ottimizzazione automatica
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 L'ottimizzazione automatica è una funzionalità di database che offre informazioni su potenziali problemi di prestazioni delle query, suggerisce soluzioni e corregge automaticamente i problemi rilevati.
 
@@ -90,7 +90,7 @@ Senza l'ottimizzazione automatica, gli utenti devono monitorare periodicamente i
 
 In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] è possibile trovare regressioni della scelta del piano usando le viste di sistema query Store. In [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] , il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] rileva e Mostra le potenziali regressioni della scelta del piano e le azioni consigliate da applicare nella vista [&#41;Transact-SQL di sys. dm_db_tuning_recommendations &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) . La visualizzazione Mostra le informazioni sul problema, l'importanza del problema e i dettagli, ad esempio la query identificata, l'ID del piano regressione, l'ID del piano usato come baseline per il confronto e l' [!INCLUDE[tsql_md](../../includes/tsql-md.md)] istruzione che può essere eseguita per risolvere il problema.
 
-| tipo | description | Datetime | score | dettagli | ... |
+| type | description | Datetime | score | dettagli | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | Tempo CPU modificato da 4 ms a 14 ms | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | Tempo CPU modificato da 37 MS a 84 ms | 16/03/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |

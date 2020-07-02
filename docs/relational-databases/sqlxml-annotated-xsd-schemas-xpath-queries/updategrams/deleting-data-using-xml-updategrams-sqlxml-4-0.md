@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f32c1107d886b7bc84590abbd6bab5343d2a2b8b
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 7f0b469e9fb07a0cf250feefa67b85b09627ddd1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529826"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730163"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>Eliminazione di dati mediante updategram XML (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Un updategram indica un'operazione di eliminazione quando un'istanza di record viene visualizzata nel **\<before>** blocco senza record corrispondenti nel **\<after>** blocco. In questo caso, l'updategram elimina il record nel **\<before>** blocco dal database.  
   
  Di seguito viene illustrato il formato dell'updategram per un'operazione di eliminazione:  
@@ -48,12 +48,12 @@ ms.locfileid: "84529826"
   
  Se un elemento specificato nell'updategram corrisponde a più di una riga nella tabella o non corrisponde ad alcuna riga, l'updategram restituisce un errore e Annulla l'intero **\<sync>** blocco. Un elemento dell'updategram può eliminare un solo record per volta.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Negli esempi presentati in questa sezione viene utilizzato il mapping predefinito, ovvero non viene specificato alcuno schema di mapping nell'updategram. Per ulteriori esempi di updategram che utilizzano schemi di mapping, vedere [specifica di uno schema di mapping con annotazioni in un Updategram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
  Per creare esempi funzionanti utilizzando gli esempi seguenti, è necessario soddisfare i requisiti specificati nei [requisiti per l'esecuzione di esempi SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-deleting-a-record-by-using-an-updategram"></a>A. Eliminazione di un record mediante un updategram  
+### <a name="a-deleting-a-record-by-using-an-updategram"></a>R. Eliminazione di un record mediante un updategram  
  Negli updategram seguenti vengono eliminati due record dalla tabella HumanResources.Shift.  
   
  In questi esempi l'updategram non specifica uno schema di mapping, pertanto utilizza il mapping predefinito nel quale il nome dell'elemento esegue il mapping a un nome di tabella e gli attributi o i sottoelementi eseguono il mapping alle colonne.  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d275b0666ae80ff933d7d236d0d04f2648b744fd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6e128b63ebe77467e7c3fd6ea2486f3fdc043334
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834285"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725724"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Restituisce informazioni dettagliate a livello di articolo su una specifica sessione di replica dell'agente di merge, utilizzato per monitorare la replica di tipo merge. Il set di risultati include una riga di dettaglio per ogni articolo sincronizzato durante la sessione, nonché una riga che rappresenta l'inizializzazione della sessione e righe che riepilogano le fasi di caricamento e scaricamento della sessione. Questa stored procedure viene eseguita nel database di distribuzione del server di distribuzione oppure nel database di sottoscrizione del Sottoscrittore.  
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac12bf75588d70f12b4550260f9911796c1c3a56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8199df81aca3688855b771923f6fa19a0e4f33db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488154"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727627"
 ---
 # <a name="clr-integration-architecture----performance"></a>Architettura di integrazione CLR - Prestazioni
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   In questo argomento vengono illustrate alcune delle scelte di progettazione che migliorano le prestazioni dell' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrazione con il [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Common Language Runtime (CLR).  
   
 ## <a name="the-compilation-process"></a>Processo di compilazione  
@@ -56,9 +56,9 @@ ms.locfileid: "81488154"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]i dati di tipo carattere, ad esempio **varchar**, possono essere di tipo SqlString o SqlChars nelle funzioni gestite. Le variabili SqlString creano un'istanza dell'intero valore in memoria. Le variabili SqlChars forniscono un'interfaccia di flusso che può essere utilizzata per ottenere prestazioni migliori e una maggiore scalabilità creando un'istanza dell'intero valore in memoria. Questo diventa particolarmente importante per i dati di tipo LOB. Inoltre, è possibile accedere ai dati XML del server tramite un'interfaccia di flusso restituita da **SQLXML. CreateReader ()**.  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>Confronto tra CLR e stored procedure estese  
- Le API Microsoft.SqlServer.Server che consentono alle procedure gestite di inviare di nuovo i set di risultati al client offrono prestazioni migliori rispetto alle API ODS (Open Data Services) utilizzate dalle stored procedure estese. Inoltre, le API System. Data. SqlServer supportano tipi di dati quali **XML**, **varchar (max)**, **nvarchar (max)** e **varbinary (max)**, introdotti in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], mentre le API ODS non sono state estese per supportare i nuovi tipi di dati.  
+ Le API Microsoft.SqlServer.Server che consentono alle procedure gestite di inviare di nuovo i set di risultati al client offrono prestazioni migliori rispetto alle API ODS (Open Data Services) utilizzate dalle stored procedure estese. Inoltre, le API System. Data. SqlServer supportano tipi di dati quali **XML**, **varchar (max)**, **nvarchar (max)** e **varbinary (max)**, introdotti in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , mentre le API ODS non sono state estese per supportare i nuovi tipi di dati.  
   
- Con il codice gestito, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestisce l'utilizzo di risorse come la memoria, i thread e la sincronizzazione. Questo accade in quanto le API gestite che espongono queste risorse vengono implementate nello strumento di gestione delle risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Viceversa, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dispone di una vista o di un controllo sull'utilizzo delle risorse della stored procedure estesa. Se, ad esempio, un stored procedure esteso utilizza una quantità eccessiva di risorse di CPU o di memoria, non è possibile rilevare o controllare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]questa operazione con. Il codice gestito consente tuttavia a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di rilevare che un determinato thread non è stato prodotto per un lungo periodo di tempo e quindi imporre l'esecuzione dell'attività in modo da poter pianificare altro lavoro. Di conseguenza, l'utilizzo di codice gestito offre una maggiore scalabilità e un miglior utilizzo delle risorse di sistema.  
+ Con il codice gestito, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestisce l'utilizzo di risorse come la memoria, i thread e la sincronizzazione. Questo accade in quanto le API gestite che espongono queste risorse vengono implementate nello strumento di gestione delle risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Viceversa, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dispone di una vista o di un controllo sull'utilizzo delle risorse della stored procedure estesa. Se, ad esempio, un stored procedure esteso utilizza una quantità eccessiva di risorse di CPU o di memoria, non è possibile rilevare o controllare questa operazione con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il codice gestito consente tuttavia a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di rilevare che un determinato thread non è stato prodotto per un lungo periodo di tempo e quindi imporre l'esecuzione dell'attività in modo da poter pianificare altro lavoro. Di conseguenza, l'utilizzo di codice gestito offre una maggiore scalabilità e un miglior utilizzo delle risorse di sistema.  
   
  Il codice gestito può determinare un overhead aggiuntivo, necessario per gestire l'ambiente di esecuzione ed eseguire controlli di sicurezza. Ciò avviene, ad esempio, qualora siano necessarie l'esecuzione all'interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e numerose transizioni da codice gestito a codice nativo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiede infatti l'esecuzione di una manutenzione aggiuntiva sulle impostazioni specifiche del thread se si passa dal codice nativo a un altro tipo di codice, quindi si utilizza di nuovo il codice nativo. Di conseguenza, le stored procedure estese possono offrire prestazioni nettamente superiori rispetto al codice gestito in esecuzione all'interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nelle situazioni in cui le transizioni tra codice gestito e codice nativo sono frequenti.  
   

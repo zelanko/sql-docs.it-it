@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08c36963088684d415534e091a2764f576a86d22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07b1dc9d3f7beca9f048ec0e367c33922e388f32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488226"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727835"
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Accesso ai tipi definiti dall'utente - Aggiornamento di colonne UDT con DataAdapter
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   I tipi definiti dall'utente (UDT) sono supportati usando **System. Data. DataSet** e **System. Data. SqlClient. SqlDataAdapter** per recuperare e modificare i dati.  
   
 ## <a name="populating-a-dataset"></a>Popolamento di set di dati  
- È possibile utilizzare un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT per selezionare i valori delle colonne con tipo definito dall'utente per popolare un set di dati utilizzando un adattatore dati. Nell'esempio seguente si presuppone che sia stata definita una tabella **Points** con la struttura seguente e alcuni dati di esempio. Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti creano la tabella **Points** e inseriscono alcune righe.  
+ È possibile utilizzare un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT per selezionare i valori delle colonne con tipo definito dall'utente per popolare un set di dati utilizzando un adattatore dati. Nell'esempio seguente si presuppone che sia stata definita una tabella **Points** con la struttura seguente e alcuni dati di esempio. Le [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni seguenti creano la tabella **Points** e inseriscono alcune righe.  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -68,7 +68,7 @@ da.Fill(datTable);
   
 -   Fornire oggetti **InsertCommand**, **UpdateCommand** e **DeleteCommand** personalizzati per un oggetto **SqlDataAdapter** .  
   
--   Usare il generatore di comandi (**System. Data. SqlClient. SqlCommandBuilder**) per creare automaticamente i comandi INSERT, Update e DELETE. Per consentire il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rilevamento dei conflitti, aggiungere una colonna **timestamp** (alias **rowversion**) alla tabella che contiene il tipo definito dall'utente. Il tipo di dati **timestamp** consente di contrassegnare la versione delle righe di una tabella ed è sicuramente univoco all'interno di un database. Quando un valore della tabella viene modificato, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene automaticamente aggiornato il numero binario di otto byte per la riga interessata dalla modifica.  
+-   Usare il generatore di comandi (**System. Data. SqlClient. SqlCommandBuilder**) per creare automaticamente i comandi INSERT, Update e DELETE. Per consentire il rilevamento dei conflitti, aggiungere una colonna **timestamp** (alias **rowversion**) alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella che contiene il tipo definito dall'utente. Il tipo di dati **timestamp** consente di contrassegnare la versione delle righe di una tabella ed è sicuramente univoco all'interno di un database. Quando un valore della tabella viene modificato, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene automaticamente aggiornato il numero binario di otto byte per la riga interessata dalla modifica.  
   
  Si noti che **SqlCommandBuilder** non considera il tipo definito dall'utente per il rilevamento dei conflitti, a meno che non esista una colonna **timestamp** nella tabella sottostante. Dal momento che non è certa la comparabilità dei tipi definiti dall'utente, essi non vengono inclusi nella clausola WHERE quando viene utilizzata l'opzione per il confronto dei valori originali per generare un comando.  
   

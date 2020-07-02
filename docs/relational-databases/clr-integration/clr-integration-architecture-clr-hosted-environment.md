@@ -27,20 +27,20 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 108698da668928d4412eb7ba42621b539850b26c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04e60b218439a67e0fd0d57f6c36cc725217931b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488156"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727639"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Architettura di integrazione CLR - Ambiente ospitato in CLR
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   L'integrazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con CLR (Common Language Runtime) di .NET Framework consente ai programmatori di database di utilizzare linguaggi come Visual C#, Visual Basic .NET e Visual C++. Tra i tipi di logica di business che i programmatori possono scrivere con tali linguaggi figurano le funzioni, le stored procedure, i trigger, i tipi di dati e le aggregazioni.  
   
   CLR include la memoria sottoposta a Garbage Collection, il threading preemptive, i servizi metadati (Reflection del tipo), la verificabilità del codice e la sicurezza dall'accesso di codice. CLR utilizza metadati per individuare e caricare classi, disporre istanze in memoria, risolvere chiamate a metodi, generare codice nativo, implementare la sicurezza e impostare limiti di contesto per la fase di esecuzione.  
   
- CLR e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] differiscono come ambienti di esecuzione nelle modalità di gestione di memoria, thread e sincronizzazione. Questo articolo descrive il modo in cui questi due tempi di esecuzione sono integrati, in modo che tutte le risorse di sistema siano gestite in modo uniforme. Questo articolo descrive anche il modo in cui la sicurezza dall'accesso di codice CLR ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CAS) e la protezione sono integrate per fornire un ambiente di esecuzione affidabile e sicuro per il codice utente.  
+ CLR e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] differiscono come ambienti di esecuzione nelle modalità di gestione di memoria, thread e sincronizzazione. Questo articolo descrive il modo in cui questi due tempi di esecuzione sono integrati, in modo che tutte le risorse di sistema siano gestite in modo uniforme. Questo articolo descrive anche il modo in cui la sicurezza dall'accesso di codice CLR (CAS) e la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] protezione sono integrate per fornire un ambiente di esecuzione affidabile e sicuro per il codice utente.  
   
 ## <a name="basic-concepts-of-clr-architecture"></a>Concetti di base dell'architettura CLR  
  In .NET Framework un programmatore scrive in un linguaggio di alto livello che implementa una classe definendone la struttura, ad esempio i campi o le proprietà della classe, e i metodi. Alcuni di questi metodi possono essere funzioni statiche. La compilazione del programma produce un file denominato assembly che contiene il codice compilato in MSIL ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Intermediate Language) e un manifesto che contiene tutti i riferimenti agli assembly dipendenti.  

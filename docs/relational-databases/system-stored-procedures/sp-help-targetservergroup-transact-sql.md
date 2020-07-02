@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3329efc6ecb0ed19788138987a0f88210abeaaa3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bebc3fb183072976a35e4d4fc1cb06ce82fb3113
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728157"
 ---
 # <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Visualizza un elenco di tutti i server di destinazione del gruppo specificato. Se non viene specificato alcun gruppo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce informazioni su tutti i gruppi di server di destinazione.  
   
@@ -50,7 +50,7 @@ sp_help_targetservergroup
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**servergroup_id**|**int**|Numero di identificazione del gruppo di server.|  
-|**name**|**sysname**|Nome del gruppo di server.|  
+|**nome**|**sysname**|Nome del gruppo di server.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni per eseguire questa procedura vengono assegnate per impostazione predefinita al ruolo predefinito del server **sysadmin** .  

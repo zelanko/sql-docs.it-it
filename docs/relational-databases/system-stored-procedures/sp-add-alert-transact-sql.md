@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 848f3cffb3c05f16b339233c89892396b5443e4f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e917afd75495ed2e6c2506bc0c012d4bfa7a8e4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71174264"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727218"
 ---
 # <a name="sp_add_alert-transact-sql"></a>sp_add_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Crea un avviso.  
   
@@ -53,14 +53,14 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name = ] 'name'`Nome dell'avviso. Tale nome viene visualizzato nel messaggio di posta elettronica o di cercapersone inviato in risposta all'avviso. Deve essere univoco e può contenere il carattere di percentuale**%**(). *Name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @name = ] 'name'`Nome dell'avviso. Tale nome viene visualizzato nel messaggio di posta elettronica o di cercapersone inviato in risposta all'avviso. Deve essere univoco e può contenere il carattere di percentuale ( **%** ). *Name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 `[ @message_id = ] message_id`Numero di errore del messaggio che definisce l'avviso. Corrisponde in genere a un numero di errore nella tabella **sysmessages** . *message_id* è di **tipo int**e il valore predefinito è **0**. Se per la definizione dell'avviso viene utilizzata la *gravità* , *message_id* deve essere **0** o null.  
   
 > [!NOTE]  
 >  Solo gli errori **sysmessages** scritti nel registro applicazioni di Microsoft Windows possono causare l'invio di un avviso.  
   
-`[ @severity = ] severity`Livello di gravità (da **1** a **25**) che definisce l'avviso. Qualsiasi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] messaggio archiviato nella tabella **sysmessages** inviato al registro applicazioni [!INCLUDE[msCoName](../../includes/msconame-md.md)] di Windows con la gravità indicata comporta l'invio dell'avviso. *gravità* è di **tipo int**e il valore predefinito è 0. Se *message_id* viene utilizzato per definire l'avviso, la *gravità* deve essere **0**.  
+`[ @severity = ] severity`Livello di gravità (da **1** a **25**) che definisce l'avviso. Qualsiasi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] messaggio archiviato nella tabella **sysmessages** inviato al [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro applicazioni di Windows con la gravità indicata comporta l'invio dell'avviso. *gravità* è di **tipo int**e il valore predefinito è 0. Se *message_id* viene utilizzato per definire l'avviso, la *gravità* deve essere **0**.  
   
 `[ @enabled = ] enabled`Indica lo stato corrente dell'avviso. *Enabled* è di **tinyint**e il valore predefinito è 1 (abilitato). Se è **0**, l'avviso non è abilitato e non viene attivato.  
   
@@ -77,9 +77,9 @@ sp_add_alert [ @name = ] 'name'
 `[ @include_event_description_in = ] include_event_description_in`Indica se la descrizione dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] errore deve essere inclusa come parte del messaggio di notifica. *include_event_description_in*è di **tinyint**e il valore predefinito è **5** (posta elettronica e **net send**) e può includere uno o più di questi valori combinati con un operatore logico **or** .  
   
 > [!IMPORTANT]
->  Le opzioni Cercapersone e **net send** verranno rimosse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarle in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui sono state implementate.  
+>  Le opzioni Cercapersone e **net send** verranno rimosse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Evitare pertanto di utilizzarle in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui sono state implementate.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|nessuno|  
 |**1**|Posta elettronica|  
@@ -88,7 +88,7 @@ sp_add_alert [ @name = ] 'name'
   
 `[ @database_name = ] 'database'`Database in cui deve verificarsi l'errore affinché l'avviso venga generato. Se il *database*non viene specificato, l'avviso viene attivato indipendentemente dalla posizione in cui si è verificato l'errore. il *database* è di **tipo sysname**. I nomi racchiusi tra parentesi quadre ([ ]) non sono ammessi. Il valore predefinito è NULL.  
   
-`[ @event_description_keyword = ] 'event_description_keyword_pattern'`Sequenza di caratteri che deve essere simile alla descrizione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dell'errore. È possibile utilizzare i caratteri dei criteri di ricerca dell'espressione LIKE [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword_pattern* è di **tipo nvarchar (100)** e il valore predefinito è null. Questo parametro è utile per filtrare i nomi degli oggetti (ad esempio, **% customer_table%**).  
+`[ @event_description_keyword = ] 'event_description_keyword_pattern'`Sequenza di caratteri che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere simile alla descrizione dell'errore. È possibile utilizzare i caratteri dei criteri di ricerca dell'espressione LIKE [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword_pattern* è di **tipo nvarchar (100)** e il valore predefinito è null. Questo parametro è utile per filtrare i nomi degli oggetti (ad esempio, **% customer_table%**).  
   
 `[ @job_id = ] job_id`Numero di identificazione del processo da eseguire in risposta a questo avviso. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
   
@@ -103,7 +103,7 @@ sp_add_alert [ @name = ] 'name'
   
 |Componente del formato|Descrizione|  
 |--------------------|-----------------|  
-|*Item*|Oggetto prestazioni, contatore delle prestazioni o istanza denominata del contatore|  
+|*Elemento*|Oggetto prestazioni, contatore delle prestazioni o istanza denominata del contatore|  
 |*Confronto*|Uno di questi operatori: >, < o =|  
 |*Valore*|Valore numerico del contatore|  
   
@@ -172,7 +172,7 @@ GO
  [sp_delete_alert &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
  [sp_help_alert &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [sp_update_alert &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
- [sys. sysperfinfo &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
+ [sys.sysPerfInfo &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

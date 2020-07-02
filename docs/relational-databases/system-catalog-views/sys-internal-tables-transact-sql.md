@@ -20,24 +20,24 @@ helpviewer_keywords:
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a5878b5f1e52241a8d733bd6414d73db4e7e7cb8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bf1406488424febe0ea98a686b91068fe2d07eda
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725770"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per ogni oggetto che rappresenta una tabella interna. Le tabelle interne vengono generate automaticamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per supportare varie funzionalità. Quando ad esempio si crea un indice XML primario, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea automaticamente una tabella interna per rendere persistenti i dati del documento XML suddiviso. Le tabelle interne vengono visualizzate nello schema **sys** di ogni database e dispongono di nomi univoci generati dal sistema che ne indicano la funzione, ad esempio **xml_index_nodes_2021582240_32001** o **queue_messages_1977058079**  
   
- Le tabelle interne non includono dati accessibili all'utente e i loro schemi sono fissi e non modificabili. Non è possibile fare riferimento ai nomi delle tabelle interne nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Non è ad esempio possibile eseguire un'istruzione come SELECT \* from * \< sys. internal_table_name>*. È tuttavia possibile eseguire query sulle viste del catalogo per vedere i metadati delle tabelle interne.  
+ Le tabelle interne non includono dati accessibili all'utente e i loro schemi sono fissi e non modificabili. Non è possibile fare riferimento ai nomi delle tabelle interne nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Non è ad esempio possibile eseguire un'istruzione come SELECT \* from *\<sys.internal_table_name>* . È tuttavia possibile eseguire query sulle viste del catalogo per vedere i metadati delle tabelle interne.  
   
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**\<Colonne ereditate da sys. Objects>**||Per un elenco di colonne ereditate da questa vista, vedere [sys. objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**\<Columns inherited from sys.objects>**||Per un elenco di colonne ereditate da questa vista, vedere [sys. objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**internal_type**|**tinyint**|Tipo di tabella interna:<br /><br /> 3 = **query_disk_store_query_hints**<br /><br /> 4 = **query_disk_store_query_template_parameterization**<br /><br /> 6 = **query_disk_store_wait_stats**<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** (ad esempio un indice spaziale)<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **CHANGE_TRACKING**<br /><br /> 210 = **tracked_committed_transactions**<br /><br /> 220 = **contained_features**<br /><br /> 225 = **filetable_updates**<br /><br /> 236 = **selective_xml_index_node_table**<br /><br /> 240 = **query_disk_store_query_text**<br /><br /> 241 = **query_disk_store_query**<br /><br /> 242 = **query_disk_store_plan**<br /><br /> 243 = **query_disk_store_runtime_stats**<br /><br /> 244 = **query_disk_store_runtime_stats_interval**<br /><br /> 245 = **query_context_settings**|  
 |**internal_type_desc**|**nvarchar(60)**|Descrizione del tipo di tabella interna:<br /><br /> QUERY_DISK_STORE_QUERY_HINTS<br /><br /> QUERY_DISK_STORE_QUERY_TEMPLATE_PARAMETERIZATION<br /><br /> QUERY_DISK_STORE_WAIT_STATS<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> CONTAINED_FEATURES<br /><br /> FILETABLE_UPDATES<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE<br /><br /> QUERY_DISK_STORE_QUERY_TEXT<br /><br /> QUERY_DISK_STORE_QUERY<br /><br /> QUERY_DISK_STORE_PLAN<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS_INTERVAL<br /><br /> QUERY_CONTEXT_SETTINGS|  
 |**parent_id**|**int**|ID del padre, indipendentemente dal fatto che sia definito o meno a livello di ambito dello schema. 0 in assenza del padre.<br /><br /> **queue_messages**  =  **object_id** della coda<br /><br /> **xml_index_nodes**  =  **object_id** dell'indice XML<br /><br /> **fulltext_catalog_freelist**  =  **fulltext_catalog_id** del catalogo full-text<br /><br /> **fulltext_index_map**  =  **object_id** dell'indice full-text<br /><br /> **query_notification**o **service_broker_map** = 0<br /><br /> **extended_indexes**  =  **object_id** di un indice esteso, ad esempio un indice spaziale<br /><br /> **object_id** della tabella per cui è abilitato il rilevamento della tabella = **CHANGE_TRACKING**|  
@@ -48,7 +48,7 @@ ms.locfileid: "82825384"
 ## <a name="permissions"></a>Autorizzazioni  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Le tabelle interne sono collocate nello stesso filegroup dell'entità padre. È possibile utilizzare la query del catalogo illustrata nell'esempio F seguente per restituire il numero di pagine utilizzate dalle tabelle interne per i dati all'interno di righe, all'esterno di righe e LOB (Large Object).  
   
  È possibile utilizzare la procedura di sistema [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) per restituire i dati di utilizzo dello spazio per le tabelle interne. **sp_spaceused** segnala lo spazio interno della tabella nei modi seguenti:  
@@ -57,7 +57,7 @@ ms.locfileid: "82825384"
   
 -   Le pagine utilizzate dalle tabelle interne di indici XML, indici spaziali e indici full-text sono incluse nella colonna **index_size** . Quando viene specificato un nome di tabella o vista indicizzata, le pagine per gli indici XML, spaziali e full-text per tale oggetto vengono incluse nelle colonne **riservate** e **index_size**.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Negli esempi seguenti viene illustrato come eseguire query sui metadati delle tabelle interne utilizzando le viste del catalogo.  
   
 ### <a name="a-show-internal-tables-that-inherit-columns-from-the-sysobjects-catalog-view"></a>R. Visualizzazione delle tabelle interne che ereditano le colonne dalla vista del catalogo sys.objects  

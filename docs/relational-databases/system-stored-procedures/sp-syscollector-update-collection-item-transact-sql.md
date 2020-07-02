@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e14f60cb3e1a4493e58968913a3ae840625e190f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 786f2d3aa1b0f415ea349e9196082f305e904db8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828217"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725520"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Consente di rinominare un elemento della raccolta definito dall'utente o di modificarne le proprietà.  
   
@@ -66,7 +66,7 @@ sp_syscollector_update_collection_item
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se il set di raccolta è impostato sulla modalità non in cache, la modifica della frequenza viene ignorata in quanto in questa modalità la raccolta e il caricamento dei dati vengono eseguiti in base alla pianificazione specificata per il set di raccolta. Per visualizzare lo stato del set di raccolta, eseguire la query seguente. Sostituire `<collection_item_id>` con l'ID dell'elemento della raccolta da aggiornare.  
   
 ```  
@@ -88,7 +88,7 @@ WHERE collection_item_id = <collection_item_id>;
   
 -   @parameters  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Gli esempi seguenti sono basati sull'elemento della raccolta creato nell'esempio definito in [sp_syscollector_create_collection_item &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md).  
   
 ### <a name="a-changing-the-collection-frequency"></a>R. Modifica della frequenza di raccolta  

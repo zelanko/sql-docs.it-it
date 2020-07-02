@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9ef4c85d-cca6-452d-94be-2be6f616c3d8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d9d3bfdc83b14e02d4eba5a32fdcaf95f1151ec
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 394f114fb6ddc2c1cddd76efe958ee4efab359a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815026"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725547"
 ---
 # <a name="sp_syscollector_disable_collector-transact-sql"></a>sp_syscollector_disable_collector (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Disabilita l'agente di raccolta dati. Poiché è disponibile solo un agente di raccolta dati per server, non sono richiesti parametri.  
   
@@ -40,18 +40,18 @@ dbo.sp_syscollector_disable_collector
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- Nessuno  
+ nessuno  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Il valore predefinito è l'agente di raccolta dati del server.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa procedura, è necessaria l'appartenenza al ruolo predefinito del database **dc_admin** o **dc_operator** (con autorizzazione EXECUTE).  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene disabilitato l'agente di raccolta dati.  
   
 ```  

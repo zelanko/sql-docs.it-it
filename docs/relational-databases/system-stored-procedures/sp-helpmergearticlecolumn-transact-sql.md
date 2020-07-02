@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c0090d721c0367ab4e4ca5395c1032693624ad07
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1094ce4844686a6d0bebb11e6c95830dd783a843
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818003"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733118"
 ---
 # <a name="sp_helpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce l'elenco di colonne dell'articolo della tabella o vista specificato per una pubblicazione di tipo merge. Poiché le stored procedure non includono colonne, questa procedura restituisce un errore se, come articolo, viene specificata una stored procedure. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -48,7 +48,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|Identificatore della colonna.|  
 |**column_name**|**sysname**|Nome della colonna di una tabella o vista.|  
-|**published**|**bit**|Specifica se pubblicare il nome della colonna.<br /><br /> **1** specifica che la colonna è in fase di pubblicazione.<br /><br /> **0** indica che non è pubblicato.|  
+|**Pubblicato**|**bit**|Specifica se pubblicare il nome della colonna.<br /><br /> **1** specifica che la colonna è in fase di pubblicazione.<br /><br /> **0** indica che non è pubblicato.|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  

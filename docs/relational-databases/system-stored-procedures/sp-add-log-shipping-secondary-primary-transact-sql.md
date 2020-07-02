@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 155f59426e8167d5d888f3890089dd4b2ea3bf7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 87c243c1eaffdcbf471347a677bb7e5d9c9ffbb6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909690"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731736"
 ---
 # <a name="sp_add_log_shipping_secondary_primary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Imposta le informazioni primarie, aggiunge collegamenti di monitoraggio locale e remoto e crea processi di copia e di ripristino nel server secondario per il database primario specificato.  
   
@@ -63,7 +63,7 @@ sp_add_log_shipping_secondary_primary
   
 `[ @copy_job_name = ] 'copy_job_name'`Nome da utilizzare per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo di Agent creato per copiare i backup del log delle transazioni nel server secondario. *copy_job_name* è di **tipo sysname** e non può essere null.  
   
-`[ @restore_job_name = ] 'restore_job_name'`Nome del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent nel server secondario in cui vengono ripristinati i backup del database secondario. *restore_job_name* è di **tipo sysname** e non può essere null.  
+`[ @restore_job_name = ] 'restore_job_name'`Nome del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo di Agent nel server secondario in cui vengono ripristinati i backup del database secondario. *restore_job_name* è di **tipo sysname** e non può essere null.  
   
 `[ @file_retention_period = ] 'file_retention_period'`Periodo di tempo, in minuti, durante il quale un file di backup viene mantenuto nel server secondario nel percorso specificato dal @backup_destination_directory parametro prima di essere eliminato. *history_retention_period* è di **tipo int**e il valore predefinito è null. Se non si specifica un valore, verrà utilizzato il valore 14420.  
   
@@ -114,7 +114,7 @@ sp_add_log_shipping_secondary_primary
  Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
- Questo esempio illustra l'uso della stored procedure **sp_add_log_shipping_secondary_primary** per configurare le informazioni per il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] primario nel server secondario.  
+ Questo esempio illustra l'uso della stored procedure **sp_add_log_shipping_secondary_primary** per configurare le informazioni per il database primario [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] nel server secondario.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_primary   
@@ -134,7 +134,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul &#40;di log shipping SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

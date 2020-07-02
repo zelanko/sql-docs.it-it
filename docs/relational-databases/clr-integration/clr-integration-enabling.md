@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: eb3e9c64-7486-42e7-baf6-c956fb311a2c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d161135c8c8b0c7d7932eb08aa98509efc4bc45
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0200cec59d12f8311a280bd16b3cb1c5b0eb5374
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488108"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727624"
 ---
 # <a name="clr-integration---enabling"></a>Integrazione CLR - Abilitazione
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Per impostazione predefinita, la funzionalità di integrazione con Common Language Runtime (CLR) è disabilitata e deve essere abilitata per poter utilizzare gli oggetti implementati mediante l'integrazione con CLR. Per abilitare l'integrazione con CLR, utilizzare l'opzione **clr enabled** del stored procedure **sp_configure** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+  Per impostazione predefinita, la funzionalità di integrazione con Common Language Runtime (CLR) è disabilitata e deve essere abilitata per poter utilizzare gli oggetti implementati mediante l'integrazione con CLR. Per abilitare l'integrazione con CLR, utilizzare l'opzione **clr enabled** del stored procedure **sp_configure** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] :  
   
 ```sql  
 EXEC sp_configure 'clr enabled', 1;  
@@ -30,7 +30,7 @@ RECONFIGURE;
 GO  
 ```  
   
- È possibile disabilitare l'integrazione CLR impostando l'opzione **clr enabled** su 0. Quando si disabilita l'integrazione con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR, interrompe l'esecuzione di tutte le routine CLR definite dall'utente e Scarica tutti i domini applicazione. Le funzionalità che si basano su CLR, ad **hierarchyid** esempio il tipo di dati `FORMAT` hierarchyid, la funzione, la replica e la gestione basata su criteri, non sono interessate da questa impostazione e continueranno a funzionare.
+ È possibile disabilitare l'integrazione CLR impostando l'opzione **clr enabled** su 0. Quando si disabilita l'integrazione con CLR, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interrompe l'esecuzione di tutte le routine CLR definite dall'utente e Scarica tutti i domini applicazione. Le funzionalità che si basano su CLR, ad esempio il tipo di dati **hierarchyid** , la `FORMAT` funzione, la replica e la gestione basata su criteri, non sono interessate da questa impostazione e continueranno a funzionare.
   
 > [!NOTE]  
 >  Per abilitare l'integrazione con CLR, è necessario disporre dell'autorizzazione ALTER SETTINGS a livello di server, che viene utilizzata in modo implicito dai membri dei ruoli predefiniti del server **sysadmin** e **serveradmin** .  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9c2b0990-1d3d-4a59-94a0-3cca6fef4681
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ecf578b1ce23aa47e9bf71360f1211b5667c08c5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 67cc7e66d775ba162ad5b6c6baea70b583a97670
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826531"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725576"
 ---
 # <a name="sp_syscollector_delete_collection_item-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Elimina un elemento della raccolta da un set di raccolta  
   
@@ -50,7 +50,7 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  È necessario eseguire sp_syscollector_delete_collection_item nel contesto del database di sistema msdb. Non è possibile eliminare elementi della raccolta dai set di raccolta di sistema.  
   
  Durante questa operazione, il set di raccolta che contiene l'elemento della raccolta viene arrestato e riavviato.  
@@ -58,7 +58,7 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa procedura, è richiesta l'appartenenza al ruolo predefinito del database dc_admin (con autorizzazione EXECUTE) .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene eliminato un elemento della raccolta denominato `MyCollectionItem1`.  
   
 ```  

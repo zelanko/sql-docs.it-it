@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1678379c2120ba4f2edbc2868d5651cbf403587
-ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
+ms.openlocfilehash: ab9035a4dd0885149749f67e9edf2b23d273edfc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85295414"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733023"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>Esempio: Creazione di un avviso di SQL Server Agent con il provider WMI
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   Un utilizzo comune del provider di eventi WMI consiste nel creare avvisi di SQL Server Agent in risposta a eventi specifici. Nell'esempio seguente viene presentato un avviso semplice che salva eventi Deadlock Graph XML in una tabella per l'analisi successiva. SQL Server Agent invia una richiesta WQL, riceve eventi WMI ed esegue un processo in risposta all'evento. Si noti che benché diversi oggetti di Service Broker siano interessati dall'elaborazione del messaggio di notifica, il provider di eventi WMI gestisce i dettagli della creazione e della gestione di tali oggetti.  
   
 ## <a name="example"></a>Esempio  

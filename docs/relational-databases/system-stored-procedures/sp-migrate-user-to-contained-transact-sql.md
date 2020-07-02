@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a641f363b4a39b28b7a7ea767914d952c83d697e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d3faf15999e0c157859e3d2eee9c4119ab344844
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828290"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727148"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Converte un utente del database di cui è stato eseguito il mapping a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un utente del database indipendente con password. In un database indipendente, utilizzare questa procedura per rimuovere le dipendenze nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene installato il database. **sp_migrate_user_to_contained** separa l'utente dall' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso originale, in modo che sia possibile amministrare separatamente impostazioni quali password e lingua predefinita per il database indipendente. **sp_migrate_user_to_contained** possibile utilizzare prima di trasferire il database indipendente in un'istanza diversa di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] per eliminare le dipendenze dagli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso dell'istanza corrente.  
   
@@ -54,7 +54,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_migrate_user_to_contained** crea l'utente del database indipendente con password, indipendentemente dalle proprietà o dalle autorizzazioni dell'account di accesso. Ad esempio, la procedura può avere esito positivo se l'account di accesso è disabilitato o se all'utente viene negata l'autorizzazione **Connect** per il database.  
   
  **sp_migrate_user_to_contained** presenta le restrizioni seguenti.  

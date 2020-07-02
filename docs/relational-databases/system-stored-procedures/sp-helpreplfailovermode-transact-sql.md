@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 93793b697ea2e59f4725cf61d2d3fcec4ebdf579
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0b80121d920458bc097140d93c1f664ddf84ef2d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824461"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729178"
 ---
 # <a name="sp_helpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Visualizza la modalità di failover corrente di una sottoscrizione. Questa stored procedure viene eseguita in qualsiasi database del Sottoscrittore. Per ulteriori informazioni sulle modalità di failover, vedere [sottoscrizioni aggiornabili per la replica transazionale](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
@@ -59,7 +59,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_helpreplfailovermode** viene utilizzata per la replica snapshot o transazionale per le quali le sottoscrizioni sono abilitate per l'aggiornamento immediato con aggiornamento in coda come failover, in caso di errore.  
   
 ## <a name="permissions"></a>Autorizzazioni  

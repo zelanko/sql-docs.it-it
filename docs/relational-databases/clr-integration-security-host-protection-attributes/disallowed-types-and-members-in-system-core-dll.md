@@ -1,6 +1,6 @@
 ---
-title: Tipi e membri non consentiti in System. Core. dll | Microsoft Docs
-description: SQL Server programmazione CLR non consente un tipo o un membro con alcuni valori per l'enumerazione HostProtectionResource. Questo articolo elenca i valori di System. Core. dll non consentiti.
+title: Tipi e membri non consentiti in System.Core.dll | Microsoft Docs
+description: SQL Server programmazione CLR non consente un tipo o un membro con alcuni valori per l'enumerazione HostProtectionResource. Questo articolo elenca System.Core.dll valori non consentiti.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 ms.assetid: dcd24cd6-f4ab-42cc-9786-a1604e8a4b4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e89af3c6f93fb6c8576a6e627eed8e984fb0f0ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7b4daca2ced1378057002e40146568a63e3aec39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486861"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727723"
 ---
 # <a name="disallowed-types-and-members-in-systemcoredll"></a>Tipi e membri non consentiti in System.Core.dll
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la programmazione Common Language Integration (CLR) non consente l'utilizzo di un tipo o di un membro con **HostProtectionAttribute** che specifica un'enumerazione **System. Security. Permissions. HostProtectionResource** con il valore **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronization**o **UI**. Nella tabella seguente sono elencati i membri e i tipi degli assembly System.Core.dll i cui valori degli attributi di protezione host non sono consentiti.  
   
 > [!NOTE]  
@@ -130,9 +130,9 @@ ms.locfileid: "81486861"
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi di protezione host e programmazione dell'integrazione con CLR](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
- [Tipi e membri non consentiti in Microsoft. VisualBasic. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [Tipi e membri non consentiti in mscorlib. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
- [Tipi e membri non consentiti in System. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
+ [Tipi e membri non consentiti in Microsoft.VisualBasic.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [Tipi e membri non consentiti in mscorlib.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
+ [Tipi e membri non consentiti in System.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
  [Tipi e membri non consentiti in System.Data.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)  
   
   

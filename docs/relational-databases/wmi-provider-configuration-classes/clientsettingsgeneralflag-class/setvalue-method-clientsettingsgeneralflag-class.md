@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a3f5fce9c795591ca7f8af41762fc9e9438aba2b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 21b9bdf459f9a1c4c1042533309595375cccba3d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660114"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731434"
 ---
 # <a name="setvalue-method-clientsettingsgeneralflag-class"></a>Metodo SetValue (classe ClientSettingsGeneralFlag)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Imposta tutti i valori del flag a cui si fa riferimento.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,7 +36,7 @@ object.SetValue(Value)
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe ClientSettingsGeneralFlag](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md) che rappresenta un flag generale per le impostazioni del server.  
   
 #### <a name="parameters"></a>Parametri  

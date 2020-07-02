@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5af11c14c7b0bf3b8e32d503c4b77e59623ce9ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee4fd4f6b8ea67fd9e1b973fd2b283a10d525437
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140452"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731779"
 ---
 # <a name="sp_add_log_shipping_primary_database-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Imposta il database primario per una configurazione di log shipping, inclusi il processo di backup, il record di monitoraggio locale e il record di monitoraggio remoto.  
   
@@ -85,7 +85,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 `[ @history_retention_period = ] history_retention_period`Periodo di tempo in minuti in cui la cronologia verrà mantenuta. *history_retention_period* è di **tipo int**e il valore predefinito è null. Se non si specifica un valore, verrà utilizzato il valore 14420.  
   
-`[ @backup_job_id = ] backup_job_id OUTPUT`ID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del processo di Agent associato al processo di backup nel server primario. *backup_job_id* è di tipo **uniqueidentifier** e non può essere null.  
+`[ @backup_job_id = ] backup_job_id OUTPUT`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ID del processo di Agent associato al processo di backup nel server primario. *backup_job_id* è di tipo **uniqueidentifier** e non può essere null.  
   
 `[ @primary_id = ] primary_id OUTPUT`ID del database primario per la configurazione del log shipping. *primary_id* è di tipo **uniqueidentifier** e non può essere null.  
   
@@ -95,7 +95,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
  1 = abilitati. I backup del log vengono sempre compressi.  
   
- 2 = utilizzare l'impostazione dell' [opzione di configurazione del server visualizzazione o configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Questo è il valore predefinito.  
+ 2 = utilizzare l'impostazione dell' [opzione di configurazione del server visualizzazione o configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Si tratta del valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -146,7 +146,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul &#40;di log shipping SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

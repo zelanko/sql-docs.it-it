@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c26bf0ff225a593a6427402fc15543edbfc15637
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 188013bc5566ea0423d4e395354b4cdfc2465fd0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818217"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733149"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni sugli account di accesso e sugli utenti corrispondenti in ogni database.  
   
@@ -65,7 +65,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |**Nome utente**|**sysname**|Account utente a cui è stato eseguito il mapping di **LoginName** in **dbname**e i ruoli di cui è membro **LoginName** in **dbname**.|  
 |**UserOrAlias**|**carattere (8)**|Membro = **username** è un ruolo.<br /><br /> User = **username** è un account utente.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Prima di rimuovere un account di accesso, utilizzare **sp_helplogins** per identificare gli account utente di cui è stato eseguito il mapping all'account di accesso.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -79,7 +79,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
   
  Se **sp_helplogins** non è in grado di accedere a un database, **sp_helplogins** restituirà quante più informazioni possibile e visualizzerà il messaggio di errore 15622.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite informazioni sull'account di accesso `John`.  
   
 ```  

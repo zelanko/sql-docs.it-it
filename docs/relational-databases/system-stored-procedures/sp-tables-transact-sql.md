@@ -18,15 +18,15 @@ ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14c618ef31562f6e6af70a569e21fdd4105d663e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 03a1d909dc1d3a89b68895e05953cc0ed0da2a7b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834216"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725512"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Viene restituito un elenco di oggetti su cui è possibile eseguire una query nell'ambiente corrente, ovvero qualsiasi tabella o vista eccetto gli oggetti sinonimo.  
   
@@ -64,7 +64,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 `[ @fUsePattern = ] 'fUsePattern'`Determina se i caratteri di sottolineatura (_), percentuale (%) e parentesi quadra ([o]) vengono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* è di **bit**e il valore predefinito è 1.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- Nessuno  
+ nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -73,7 +73,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_QUALIFIER**|**sysname**|Nome del qualificatore della tabella. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. Questo campo può essere NULL.|  
 |**TABLE_OWNER**|**sysname**|Nome del proprietario della tabella. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome dell'utente del database che ha creato la tabella. Questo campo restituisce sempre un valore.|  
 |**TABLE_NAME**|**sysname**|Nome della tabella. Questo campo restituisce sempre un valore.|  
-|**TABLE_TYPE**|**varchar (32)**|Tabella, tabella di sistema o vista.|  
+|**TABLE_TYPE**|**varchar(32)**|Tabella, tabella di sistema o vista.|  
 |**COMMENTI**|**varchar (254)**|In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene restituito alcun valore per questa colonna.|  
   
 ## <a name="remarks"></a>Osservazioni  

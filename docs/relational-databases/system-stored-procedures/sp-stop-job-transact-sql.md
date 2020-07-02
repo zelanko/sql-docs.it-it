@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 88ec07ae0655f6a4617f15ed5f486a8fbb1b61d4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 66a4d334719707d8f906b6026737037d7ea28175
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725651"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Richiede a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent di arrestare l'esecuzione di un processo.  
 
@@ -64,7 +64,7 @@ sp_stop_job
 ## <a name="remarks"></a>Osservazioni  
  **sp_stop_job** Invia un segnale di arresto al database. Alcuni processi possono essere interrotti immediatamente e alcuni devono raggiungere un punto stabile (o un punto di ingresso al percorso del codice) prima di potersi arrestare. Alcune istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] con esecuzione prolungata, ad esempio BACKUP, RESTORE e alcuni comandi DBCC, possono richiedere un'elevata quantità di tempo per essere completate. Quando sono in esecuzione, l'operazione potrebbe richiedere alcuni minuti prima che il processo venga annullato. L'arresto di un processo comporta la registrazione di una voce relativa all'annullamento nella cronologia processo.  
   
- Se un processo è attualmente in esecuzione un passaggio di tipo **CmdExec** o **PowerShell**, il processo in esecuzione (ad esempio, programma. exe) viene forzato a terminare in modo anomalo. Tale interruzione può causare comportamenti imprevisti, ad esempio i file utilizzati dal processo potrebbero restare aperti. Di conseguenza, **sp_stop_job** deve essere usato solo in casi estremi se il processo contiene passaggi di tipo **CmdExec** o **PowerShell**.  
+ Se un processo è attualmente in esecuzione un passaggio di tipo **CmdExec** o **PowerShell**, il processo in esecuzione (ad esempio, MyProgram.exe) viene forzato a terminare in modo anomalo. Tale interruzione può causare comportamenti imprevisti, ad esempio i file utilizzati dal processo potrebbero restare aperti. Di conseguenza, **sp_stop_job** deve essere usato solo in casi estremi se il processo contiene passaggi di tipo **CmdExec** o **PowerShell**.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
@@ -79,7 +79,7 @@ sp_stop_job
   
  I membri di **SQLAgentUserRole** e **SQLAgentReaderRole** possono arrestare solo i processi di cui sono proprietari. I membri di **SQLAgentOperatorRole** possono arrestare tutti i processi locali, inclusi quelli di proprietà di altri utenti. I membri di **sysadmin** possono arrestare tutti i processi locali e multiserver.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene arrestato un processo denominato `Weekly Sales Data Backup`.  
   
 ```  

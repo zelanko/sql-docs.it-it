@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c9ad27602bbaa537fd74b1c6c730675c904f0b7e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2229da0158f746928be16ac190ecae2e36726da5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827613"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730054"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni sui processi per i server del dominio di amministrazione multiserver.  
   
@@ -116,9 +116,9 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**operator_netsent**|**nvarchar (20)**|Operatore che ha ricevuto la notifica relativa al processo tramite un messaggio di rete (è NULL per la cronologia dei passaggi).|  
 |**operator_paged**|**nvarchar (20)**|Operatore che ha ricevuto la notifica relativa al processo tramite cercapersone (è NULL per la cronologia dei passaggi).|  
 |**retries_attempted**|**int**|Numero di tentativi di esecuzione del passaggio (è sempre 0 per la cronologia dei processi).|  
-|**Server**|**nvarchar(30)**|Server in cui viene eseguito il processo o il passaggio. È sempre (**locale**).|  
+|**server**|**nvarchar(30)**|Server in cui viene eseguito il processo o il passaggio. È sempre (**locale**).|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_help_jobhistory** restituisce un report con la cronologia dei processi pianificati specificati. Se non viene specificato alcun parametro, il report include la cronologia di tutti i processi pianificati.  
   
 ## <a name="permissions"></a>Autorizzazioni  

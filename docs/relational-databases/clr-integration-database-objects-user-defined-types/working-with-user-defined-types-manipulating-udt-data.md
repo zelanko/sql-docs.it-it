@@ -29,19 +29,19 @@ helpviewer_keywords:
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ff4b620f2f06243b23b4c540f4c99b3c3cafa41
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 17913dab743f1aaaa7672ce855aa85ce8434f3c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486922"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727746"
 ---
 # <a name="working-with-user-defined-types---manipulating-udt-data"></a>Uso di tipi definiti dall'utente (UDT) - Modifica di dati UDT
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[tsql](../../includes/tsql-md.md)] non fornisce una sintassi specifica per l'istruzione INSERT, UPDATE o DELETE quando si modificano i dati nelle colonne con tipo definito dall'utente (UDT). Le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST o CONVERT vengono utilizzate per eseguire il cast dei tipi di dati nativi al tipo UDT.  
   
 ## <a name="inserting-data-in-a-udt-column"></a>Inserimento di dati in una colonna con tipo definito dall'utente  
- Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti consentono di inserire tre righe di dati di esempio nella tabella **Points** . Il tipo di dati **Point** è costituito da valori integer X e Y esposti come proprietà del tipo definito dall'utente. È necessario utilizzare la funzione CAST o CONVERT per eseguire il cast dei valori X e Y delimitati da virgole al tipo di **punto** . Le prime due istruzioni utilizzano la funzione CONVERT per convertire un valore stringa nel tipo **Point** e la terza istruzione utilizza la funzione cast:  
+ Le istruzioni seguenti consentono [!INCLUDE[tsql](../../includes/tsql-md.md)] di inserire tre righe di dati di esempio nella tabella **Points** . Il tipo di dati **Point** è costituito da valori integer X e Y esposti come proprietà del tipo definito dall'utente. È necessario utilizzare la funzione CAST o CONVERT per eseguire il cast dei valori X e Y delimitati da virgole al tipo di **punto** . Le prime due istruzioni utilizzano la funzione CONVERT per convertire un valore stringa nel tipo **Point** e la terza istruzione utilizza la funzione cast:  
   
 ```sql  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -101,7 +101,7 @@ ID xVal yVal
 ```  
   
 ## <a name="working-with-variables"></a>Gestione delle variabili  
- È possibile utilizzare le variabili specificando l'istruzione DECLARE per assegnare una variabile a un tipo definito dall'utente. Le istruzioni seguenti assegnano un valore usando [!INCLUDE[tsql](../../includes/tsql-md.md)] l'istruzione set e visualizzano i risultati chiamando il metodo **ToString** del tipo definito dall'utente sulla variabile:  
+ È possibile utilizzare le variabili specificando l'istruzione DECLARE per assegnare una variabile a un tipo definito dall'utente. Le istruzioni seguenti assegnano un valore usando l' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione set e visualizzano i risultati chiamando il metodo **ToString** del tipo definito dall'utente sulla variabile:  
   
 ```sql  
 DECLARE @PointValue Point;  
@@ -159,7 +159,7 @@ WHERE PointValue = @ComparePoint;
 ## <a name="invoking-udt-methods"></a>Chiamata dei metodi UDT  
  È anche possibile richiamare i metodi definiti nel tipo definito dall'utente in [!INCLUDE[tsql](../../includes/tsql-md.md)]. La classe **Point** contiene tre metodi, **distance**, **DistanceFrom**e **DistanceFromXY**. Per gli elenchi di codice che definiscono questi tre metodi, vedere [codifica di tipi definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
- L'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente chiama il metodo **PointValue. distance** :  
+ L' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione seguente chiama il metodo **PointValue. distance** :  
   
 ```sql  
 SELECT ID, PointValue.X AS [Point.X],   
@@ -223,7 +223,7 @@ SET PointValue.Y = 99
 WHERE ID = 3  
 ```  
   
- Se il tipo definito dall'utente è stato definito con ordinamento **true**dei byte [!INCLUDE[tsql](../../includes/tsql-md.md)] impostato su true, può valutare la colonna con tipo definito dall'utente in una clausola WHERE.  
+ Se il tipo definito dall'utente è stato definito con ordinamento dei byte impostato su **true**, [!INCLUDE[tsql](../../includes/tsql-md.md)] può valutare la colonna con tipo definito dall'utente in una clausola WHERE.  
   
 ```sql  
 UPDATE dbo.Points  
