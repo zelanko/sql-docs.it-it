@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e46961fa67492667a697c34f727ae068744e5e63
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 381d089aa124f44161b3fd5f1102f7377719f142
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796421"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812766"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Creare una vista sottoscrizioni per esportare i dati (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Creare una vista sottoscrizioni per esportare dati di Master Data Services nei sistemi di sottoscrizione Si sta creando una vista dei dati nel database di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
@@ -69,9 +69,9 @@ ms.locfileid: "84796421"
 |Colonna|Descrizione|  
 |------------|-----------------|  
 |Stato|Stato della vista.<br /><br /> Quando si fa clic su **Salva**, viene visualizzata l' ![icona di aggiornamento dell'immagine di stato](../master-data-services/media/mds-statusicon-updating.png "Icona per lo stato di aggiornamento") , che indica che la vista è in fase di aggiornamento.<br /><br /> Se si verificano errori durante la creazione o la modifica di una visualizzazione, viene visualizzata l'immagine ![icona di stato errore](../master-data-services/media/mds-statusicon-error.png "Icona per lo stato di errore") .<br /><br /> In caso contrario, lo stato è OK e viene visualizzata l'immagine ![icona di stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona per lo stato OK") .|  
-|Nome|Nome della vista sottoscrizioni.|  
+|Name|Nome della vista sottoscrizioni.|  
 |Modello|Nome del modello.|  
-|Versione|Nome della versione.|  
+|Version|Nome della versione.|  
 |Flag versione|Nome del flag di versione.|  
 |Gerarchia derivata|Nome della gerarchia derivata.|  
 |Entità|Nome dell'entità.|  

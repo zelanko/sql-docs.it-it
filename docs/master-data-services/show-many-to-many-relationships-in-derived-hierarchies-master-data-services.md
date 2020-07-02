@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8f0a7536605af05457de13ebcd2011083386010
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289889"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811396"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Mostrare le relazioni molti-a-molti nelle gerarchie derivate (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Le gerarchie derivate (DH), che già mostravano le relazioni uno-a-molti, ora possono mostrare anche le relazioni molti-a-molti.  
   

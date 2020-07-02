@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4645b9faca312eb5bee12eef1130893785c327d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6c70b57cb50ae8134fa04f2bab4073dced40091
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728562"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812026"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>Configurare regole business per l'invio di notifiche (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile configurare le regole di business per inviare notifiche agli utenti relative alle modifiche dei valori di attributo.  
   

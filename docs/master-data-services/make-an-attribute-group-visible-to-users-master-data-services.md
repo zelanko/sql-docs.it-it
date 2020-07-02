@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 26ad0e3d481b5d09a3105645af5705a3bd99cdbf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 998eed940f93c90974848812e0e6dabf7cf9ca91
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729074"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811743"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>Rendere visibile un gruppo di attributi per gli utenti (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]rendere visibile un gruppo di attributi a utenti o gruppi quando si vuole che gli utenti dispongano di schede sopra alla griglia nell'area funzionale **Visualizzatore** .  
   

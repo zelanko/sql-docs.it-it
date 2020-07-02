@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: f0a79169b3ee192af278aeb4465fb13d7a311783
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 03f43c756ab01874042f38ea2e06c83bf7ac1e51
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251583"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812156"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importazione di un dominio da un file DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In questo argomento viene descritto come importare un dominio da un file DQS in una Knowledge Base esistente in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un file di dati DQS viene creato esportando un dominio o una Knowledge Base dall'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . I file di dati DQS sono crittografati, pertanto non è possibile visualizzarne il contenuto.  
   

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7e41af6f7b5f1d2a770400ab66191f7957937659
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 16e1ff64a2c5178eda70fb681c11a7d7a1b79bc0
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729401"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811780"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>Distribuire un pacchetto di distribuzione di modelli tramite la procedura guidata
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Utilizzare Distribuzione guidata modello [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] per distribuire pacchetti contenenti solo oggetti modello. Se è necessario distribuire un pacchetto con i dati, vedere [Distribuire un pacchetto di distribuzione di modelli tramite MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
@@ -75,7 +75,7 @@ ms.locfileid: "73729401"
      Quando si aggiorna un modello, se si verifica un errore durante uno dei primi tre passaggi, l'operazione viene interrotta; tuttavia il rollback delle modifiche già effettuate non viene eseguito.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- Gli attributi file e le autorizzazioni di utenti e gruppi non sono inclusi nei pacchetti di distribuzione dei modelli. Dopo avere distribuito un modello, è necessario aggiornare questi elementi manualmente. Per altre informazioni, vedi:  
+ Gli attributi file e le autorizzazioni di utenti e gruppi non sono inclusi nei pacchetti di distribuzione dei modelli. Dopo avere distribuito un modello, è necessario aggiornare questi elementi manualmente. Per altre informazioni, vedere:  
   
 -   [Assegnare autorizzazioni per oggetti modello &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   

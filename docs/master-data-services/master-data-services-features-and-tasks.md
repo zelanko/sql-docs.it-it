@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 95c29509d9b08390a21598c94cdb64ccdd92cf36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a89ed871f18f52efa32b088e02d4432166866cb
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728025"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812907"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Caratteristiche e attività di Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Vengono fornite informazioni su come usare [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] per gestire i dati master dell'organizzazione, come creare e gestire oggetti modello che rappresentano i contenitori per i dati, come organizzare e gestire i dati master stessi, come importare ed esportare i dati master, nonché condividere i modelli tra ambienti di test e di produzione e infine come sviluppare applicazioni personalizzate che accedono al servizio Web [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   

@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 1e5c51996ba85b9645650f453a0e4ed18478ccf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ab254c9deaee5a9e31a89d2a44d281e83a2beead
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80607830"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812559"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Profiling di dati e notifiche in DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Il profiling dei dati in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) è il processo di analisi dei dati in un'origine dati esistente e la visualizzazione di statistiche sui dati nelle attività DQS. L'attività consente di eseguire la misurazione automatizzata della qualità dei dati. Il profiling in DQS è integrato nei progetti di gestione e di qualità dei dati di DQS è dinamico e regolabile. Gli obiettivi principali del profiling sono due: semplificare l'esecuzione dei processi relativi alla qualità dei dati, supportando il processo decisionale, e valutare l'efficacia di tali processi. Il profiling DQS offre i vantaggi seguenti:  
   
@@ -77,7 +77,7 @@ ms.locfileid: "80607830"
 ##  <a name="profiling-data-in-activity-monitoring"></a><a name="Monitoring"></a>Profiling dei dati nel monitoraggio delle attività  
  Le informazioni di profilatura per le attività Individuazione informazioni, criteri di corrispondenza, corrispondenza e pulizia sono disponibili non solo nelle pagine attività del client Data Quality, ma anche nel monitoraggio delle attività. Il monitoraggio delle attività fornisce una panoramica sulle attività correnti e precedenti. Oltre alle proprietà e ai processi di calcolo correlati delle attività, è possibile visualizzare le informazioni di profiling generate per ogni attività in una data posizione. Selezionare un'attività nella tabella delle attività per visualizzare i risultati del profiling in una tabella sottostante. È inoltre possibile esportare i risultati del profiling. Per altre informazioni, vedere [DQS Administration](../data-quality-services/dqs-administration.md).  
   
-##  <a name="notifications"></a><a name="Notifications"></a>Notifiche  
+##  <a name="notifications"></a><a name="Notifications"></a> Notifiche  
  Oltre ad effettuare la raccolta e la visualizzazione di importanti statistiche e metriche tramite il profiling, DQS genererà notifiche (se abilitate) per indicare quando potrebbe essere necessario intraprendere azioni in base alle statistiche di profiling visualizzate. DQS utilizza le notifiche per evidenziare i fatti importanti sull'origine dati e per mostrare l'efficacia dell'attività corrente rispetto allo scopo per il quale è stata eseguita. Le notifiche forniscono suggerimenti e raccomandazioni che indicano una condizione e forniscono consigli su come migliorare un'attività di individuazione di informazioni, di pulizia dei dati o di individuazione di corrispondenze.  
   
  Le notifiche di DQS vengono utilizzate per generare avvisi che potrebbero interessare l'operatore o indicare la soluzione a un potenziale problema. Il fatto di agire sulla notifica dipende dal fatto che sia pertinente per i propri scopi. Si supponga ad esempio che DQS generi una notifica quando la pulizia dei dati non produce valori corretti o suggeriti, mentre la completezza e l'accuratezza sono entrambe del 100%. Questa notifica indicherebbe che potrebbe non essere necessario eseguire l'attività. L'esecuzione o meno dell'attività rimane tuttavia una decisione che prenderà l'utente.  

@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b718cd04b5c6133d931a9bea03de0a78ebc7a886
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae84775172f7595adcb3e5de612ed74f4ccf45d9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258839"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812584"
 ---
 # <a name="building-a-knowledge-base"></a>Compilazione di una Knowledge Base
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) è un repository di informazioni sui dati che consente di comprenderli e mantenerne l'integrità. Una Knowledge Base è costituita da domini ognuno dei quali rappresenta i dati in un campo dati. La Knowledge Base viene utilizzata da DQS per eseguire la pulizia dei dati e la deduplicazione su un database. Per preparare la Knowledge Base per la pulizia dei dati, è possibile eseguire un'analisi computerizzata di un campione di dati e gestire in modo interattivo i valori nei domini. DQS consente di importare informazioni, creare regole e relazioni, modificare direttamente valori di dati e sfruttare un database predefinito.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "75258839"
   
 |||  
 |-|-|  
-|Creare una nuova Knowledge Base da zero, da una Knowledge Base esistente o da un file di dati DQS.|[Creare una Knowledge Base](../data-quality-services/create-a-knowledge-base.md)|  
+|Creare una nuova Knowledge Base da zero, da una Knowledge Base esistente o da un file di dati DQS.|[Creare una Knowledge base](../data-quality-services/create-a-knowledge-base.md)|  
 |Aprire una Knowledge Base esistente per eseguire l'individuazione delle informazioni e la gestione del dominio o per aggiungere i criteri di corrispondenza.|[Apertura di una Knowledge Base](../data-quality-services/open-a-knowledge-base.md)|  
 |Eseguire azioni di gestione su una Knowledge Base, tra cui l'apertura, lo sblocco, l'annullamento delle modifiche apportatevi, la ridenominazione, l'eliminazione o la visualizzazione delle relative proprietà.|[Gestire una Knowledge Base](../data-quality-services/manage-a-knowledge-base.md)|  
 |Aggiungere informazioni a una Knowledge Base tramite l'individuazione delle informazioni, la gestione dei valori di dominio, l'aggiunta di criteri di corrispondenza, l'importazione di informazioni, di un dominio o di valori oppure l'utilizzo della Knowledge Base predefinita, Dati DQS.|[Aggiunta di informazioni a una Knowledge Base](../data-quality-services/adding-knowledge-to-a-knowledge-base.md)|  

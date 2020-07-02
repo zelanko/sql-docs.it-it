@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5771fb5db586726d19d965ca18aa27f3dab16bd8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d754308b968d5222704eb1264da71d0efbeb39b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729597"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811807"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Creare un pacchetto di distribuzione di modelli tramite la procedura guidata
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Utilizzare Distribuzione guidata modello [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] per creare un pacchetto contenente solo oggetti modello. Se è necessario includere dati nel pacchetto, vedere [Creare un pacchetto di distribuzione di modelli tramite MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   

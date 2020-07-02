@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3a50b48b4c498020b3428af2eca2c9d045187682
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de3733023aef2975b2276e2a804e0eec503a0930
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251789"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811340"
 ---
 # <a name="create-a-matching-policy"></a>Creazione di criteri di corrispondenza
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In questo argomento viene descritto come creare dei criteri di corrispondenza in una Knowledge Base di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). La preparazione del processo di corrispondenza in DQS si effettua eseguendo l'attività dei criteri di corrispondenza su dati di esempio. In tale attività vengono create e testate una o più regole di corrispondenza nei criteri, quindi viene pubblicata la Knowledge Base per rendere le regole di corrispondenza pubblicamente disponibili per l'uso. In una Knowledge Base può essere presente solo un set di criteri di corrispondenza, ma tali criteri possono contenere più regole di corrispondenza.  
   

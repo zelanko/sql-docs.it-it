@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 50f301dd0c64b75deb12706b6364b72744e22c34
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1bc67db4ebfe6d72b466562e7075fb93489ba29
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81728452"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812426"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>Finestra di dialogo Crea account e profili di Posta elettronica database
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Usare la finestra di dialogo **Crea account e profilo di Posta elettronica database** per creare un profilo di Posta elettronica database e un account di Posta elettronica database per il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Questo profilo verrà utilizzato per avvisare utenti e gruppi tramite posta elettronica quando la convalida delle regole business ha esito negativo.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "81728452"
   
 |Nome del controllo|Descrizione|  
 |------------------|-----------------|  
-|**Indirizzo di posta elettronica**|Digitare il nome associato all'indirizzo di posta elettronica relativo all'account. Si tratta dell'indirizzo di posta elettronica da cui viene inviato il messaggio di posta elettronica e deve essere nel formato *email_name*@*Domain_name*. Un esempio di indirizzo di posta elettronica è sales@contoso.com.|  
+|**Indirizzo di posta elettronica**|Digitare il nome associato all'indirizzo di posta elettronica relativo all'account. Si tratta dell'indirizzo di posta elettronica da cui viene inviato il messaggio di posta elettronica e deve essere nel formato *email_name* @ *Domain_name*. Un esempio di indirizzo di posta elettronica è sales@contoso.com.|  
 |**Nome visualizzato**|Impostazione facoltativa. Digitare il nome da visualizzare nei messaggi di posta elettronica inviati dall'account. Un esempio di nome visualizzato è Contoso Sales Group.|  
 |**Indirizzo di posta elettronica risposte**|Impostazione facoltativa. Digitare l'indirizzo di posta elettronica da utilizzare per le risposte ai messaggi inviati dall'account. Un esempio di indirizzo di posta elettronica per le risposte è admin@contoso.com.|  
 |**Server SMTP**|Digitare il nome o l'indirizzo IP del server SMTP utilizzato dall'account per l'invio della posta. Un esempio di formato del server SMTP è **smtp.***<nome_società>***.com**. Per informazioni, rivolgersi all'amministratore del sistema di posta.|  
@@ -52,7 +52,7 @@ ms.locfileid: "81728452"
   
 |Nome del controllo|Descrizione|  
 |------------------|-----------------|  
-|**Autenticazione di Windows con credenziali del servizio Motore di database**|Consente di specificare che posta elettronica database deve utilizzare le credenziali [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] dell'account del servizio Windows per l'autenticazione nel server SMTP.|  
+|**Autenticazione di Windows con credenziali del servizio Motore di database**|Consente di specificare che Posta elettronica database deve utilizzare le credenziali dell' [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] account del servizio Windows per l'autenticazione nel server SMTP.|  
 |**Autenticazione di base**|Specificare che Posta elettronica database deve utilizzare un nome utente e una password specifici per l'autenticazione nel server SMTP. Queste informazioni vengono utilizzate solo per l'autenticazione con il server di posta elettronica e non è necessario che l'account corrisponda a un utente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o a un utente nel computer che esegue [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |**Nome utente**|Digitare il nome dell'account utente utilizzato da Posta elettronica database per accedere al server SMTP. È necessario un nome utente quando il server SMTP richiede l'autenticazione di base.|  
 |**Password**|Digitare la password utilizzata da Posta elettronica database per accedere al server SMTP. È necessaria una password quando il server SMTP richiede l'autenticazione di base.|  

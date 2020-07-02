@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 5e792a15670c50b918eabbf371258aa9b62cab82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0f9b77a5df341bbf57d103797d5808b8b7a5d511
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242126"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812204"
 ---
 # <a name="change-domain-values"></a>Modificare i valori di dominio
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In questo argomento viene descritto come modificare e aumentare i metadati in una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Dopo avere generato le informazioni mediante l'individuazione delle informazioni, importato le informazioni nella Knowledge Base o nei domini oppure basato una Knowledge Base su un'altra Knowledge Base, è possibile modificare in modo interattivo i valori dei dati. La generazione della Knowledge Base non solo sfrutta i processi computerizzati, ma consente di utilizzare informazioni personalizzate per verificare i valori dei dati e modificarli nei modi seguenti:  
   

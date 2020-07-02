@@ -13,18 +13,18 @@ keywords:
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 19b4cc9cc9282fff784059e6ac39bf74792f95a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 76ef4f409fd5a4072d27cdfa3e4180896534eaa0
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727874"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811380"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>Esempi di SQL Server: pacchetti di distribuzione di modelli (MDS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  Quando viene installato [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]vengono inclusi anche pacchetti di modelli di esempio. Il percorso predefinito dei pacchetti di modelli di esempio è unità\<>\Programmi\Microsoft SQL Server\130\Master Data Services\Samples\Packages.  
+  Quando viene installato [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]vengono inclusi anche pacchetti di modelli di esempio. Il percorso predefinito per questi file del pacchetto è \<drive> \Programmi\Microsoft SQL Server\130\Master Data Services\Samples\Packages.  
   
  Per istruzioni su come distribuire i pacchetti di modelli di esempio, vedere [Distribuzione di modelli di esempio e dati](../master-data-services/master-data-services-installation-and-configuration.md#deploySample). I pacchetti di modelli di esempio vengono distribuiti con lo [strumento MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   

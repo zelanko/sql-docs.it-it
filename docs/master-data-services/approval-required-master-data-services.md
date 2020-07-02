@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 61d03410e5217175335caf0ca37241b28c887989
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 448a8174acef464fa1badb5a25d019891dd53bc6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729752"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812060"
 ---
 # <a name="approval-required-master-data-services"></a>Approvazione necessaria (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]l'amministratore può impostare un'entità su Approvazione necessaria. Tutte le modifiche all'entità richiedono l'esame e l'approvazione delle modifiche da parte di uno degli amministratori dell'entità.  
   

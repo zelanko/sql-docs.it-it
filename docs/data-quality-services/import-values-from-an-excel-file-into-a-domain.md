@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 144a2b57fa671842f284445dee859e689e8adbe1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ff2e139b9cbb1a4711873ae1cc5e9b3f0ac28e41
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75254823"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812092"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importare i valori da un file di Excel in un dominio
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In questo argomento viene descritto come importare i valori da un file di Excel in un dominio in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). L'utilizzo di un file di Excel per importare valori di dominio nell'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] semplifica il processo della generazione delle informazioni, risparmiando tempo e fatica. In questo modo è possibile di importare un elenco di valori di dati validi da un file di Excel o un file di testo in un dominio. Da un file di Excel è possibile importare i valori di dominio in uno o più domini in una Knowledge Base. Per ulteriori informazioni sull'importazione di domini in una Knowledge base, vedere l'articolo relativo all' [importazione di domini da un file di Excel in individuazione](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) informazioni. L'esportazione in un file di Excel non è supportata.  
   

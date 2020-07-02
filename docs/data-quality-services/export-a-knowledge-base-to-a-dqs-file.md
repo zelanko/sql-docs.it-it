@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 1462fe698ada4786bd0c252f33c8c19e0c5bae7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e04a6947d1c754587bfa6003a2c5c329508f14a9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251603"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812116"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>Esportazione di una Knowledge Base in un file DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In questo argomento viene descritto come esportare un'intera Knowledge Base in un file di dati con estensione DQS in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). È possibile esportare un dominio o una Knowledge Base intera in un file di dati. Per informazioni sull'esportazione di un dominio, vedere [Esportare un dominio in un file DQS](../data-quality-services/export-a-domain-to-a-dqs-file.md).  
   

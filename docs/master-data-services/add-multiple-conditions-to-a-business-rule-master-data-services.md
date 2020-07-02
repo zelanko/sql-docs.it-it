@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4b85846202ef1cd8a30012dddb2c88803c901d16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dca2f4877a172b7fd75025e226459c699ea7d13b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728804"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812076"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Aggiungere più condizioni a una regola business (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]aggiungere più condizioni **AND** o **OR** a una regola di business quando si vuole creare una regola più complessa.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "73728804"
   
 6.  Fare clic sulla riga della regola business che si desidera modificare.  
   
-7.  Fare clic su **Edit**.  
+7.  Fare clic su **Modifica**.  
   
 8.  Nel blocco **If** a sinistra dell'elenco a discesa dell'operatore logico selezionare **AND/OR/ NOT**.  
   
-9. Fare clic su **Aggiungi**. Viene visualizzato un pannello.  
+9. Scegliere **Aggiungi**. Viene visualizzato un pannello.  
   
 10. Nell'elenco a discesa **Attributo** selezionare un attributo.  
   

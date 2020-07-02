@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: db9187a5a30a740e8d790a8b84b5dae597de8bfd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a0ca2773d513137adeb9e803b66930536e3a28a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728177"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811952"
 ---
 # <a name="entity-permissions-master-data-services"></a>Autorizzazioni per le entità (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Le autorizzazioni per le entità si applicano a:  
   
@@ -40,14 +40,14 @@ ms.locfileid: "73728177"
 |Autorizzazione|Descrizione|  
 |----------------|-----------------|  
 |**Lettura**|L'utente può leggere i membri, gli attributi, le appartenenze a gerarchie o le appartenenze a raccolte.|  
-|**Crea**|L'utente può creare i membri e assegnare i valori di attributo durante la creazione.|  
-|**Aggiornamento**|L'utente può aggiornare i membri, gli attributi, le appartenenze a gerarchie o le appartenenze a raccolte.|  
-|**Elimina**|L'utente può eliminare i membri.|  
-|**Negare**|Nega ogni accesso all'entità.|  
+|**Creare**|L'utente può creare i membri e assegnare i valori di attributo durante la creazione.|  
+|**Update**|L'utente può aggiornare i membri, gli attributi, le appartenenze a gerarchie o le appartenenze a raccolte.|  
+|**Eliminazione**|L'utente può eliminare i membri.|  
+|**Nega**|Nega ogni accesso all'entità.|  
   
  Le autorizzazioni di lettura, creazione, aggiornamento ed eliminazione possono essere combinate. Quando vengono assegnate le autorizzazioni di creazione, aggiornamento ed eliminazione, l'autorizzazione di lettura viene assegnata automaticamente.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Assegnare autorizzazioni per oggetti modello &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Autorizzazioni per oggetti modello &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [Entità &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  

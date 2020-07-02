@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3bb5b27d8a164eb98dc3e2180fd32c81fda0d471
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a934bdcd73fc7b879da4e76525481103fd187a98
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252821"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812104"
 ---
 # <a name="introduction-to-data-quality-services"></a>Introduzione a Data Quality Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   La soluzione per la qualità dei dati fornita da [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) consente a un amministratore dei dati o un professionista IT di mantenere la qualità dei dati gestiti e assicurarne l'appropriatezza per l'utilizzo aziendale. DQS è una soluzione basata sulle informazioni che offre modalità assistite da computer e interattive per gestire l'integrità e la qualità delle origini dati. DQS consente di individuare, compilare e gestire informazioni sui dati. È quindi possibile utilizzare tali informazioni per eseguire la pulizia, la corrispondenza e il profiling dei dati. È inoltre possibile utilizzare i servizi basati su cloud di provider di dati di riferimento in un progetto Data Quality DQS.  
   

@@ -12,16 +12,16 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: 0af3075f66eefff2de2199d18710de0bf7e62e71
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: e471a3ab0f6d2ce120ae5b20cd07ef71891dadc9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796478"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812686"
 ---
 # <a name="tracing-master-data-services"></a>Traccia (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Il file Web.config contiene una sezione di traccia, come illustrato di seguito. Questa sezione è nuova in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]  
   
@@ -63,7 +63,7 @@ ms.locfileid: "84796478"
   
     |Elemento|Descrizione|  
     |-------------|-----------------|  
-    |Ora|La data e l'ora della voce di traccia.|  
+    |Tempo|La data e l'ora della voce di traccia.|  
     |CorrelationID|Per ogni richiesta viene assegnato un ID di correlazione. Tutte le tracce attivate dalla richiesta condividono lo stesso ID di correlazione.<br /><br /> Quando si verifica un errore nell'interfaccia utente, l'ID di correlazione viene visualizzato nel messaggio di errore.|  
     |Operazione|Nome dell'operazione di richiesta. Se la richiesta è una richiesta dell'interfaccia utente Web, il nome dell'operazione è l'URL. Se la richiesta è una richiesta API, il nome dell'operazione è il nome del servizio.|  
     |Level|Livello di questa voce di traccia.|  

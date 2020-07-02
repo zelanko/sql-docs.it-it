@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7e9e36545c9d9e99f627cc8f4a1f0a92d50af5de
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 93e9a09dd93fc8da3d62840fd2b7463c48c4ece1
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728370"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811580"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>Eliminare una gerarchia derivata (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]eliminare una gerarchia derivata quando si è certi che non è più necessaria.  
   

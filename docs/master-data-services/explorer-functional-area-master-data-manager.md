@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7ea15c85d3591bf573945d06c49903ee2869aaa0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da27d391ac6f0a77f839e60b439c4b195f6a5b5a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729463"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811516"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>Area funzionale Esplora risorse (Gestione dati master)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Nell'area funzionale Esplora risorse, è possibile aggiornare dati e utilizzare gerarchie e raccolte.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "73729463"
   
  [Riattivare un membro o una raccolta &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Applicazione Web Gestione dati master](../master-data-services/master-data-manager-web-application.md)  
   
   

@@ -11,20 +11,20 @@ f1_keywords:
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 8aaf6c9cb9f4c7ed0f006492e6e11ce82ef333f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1645b1f7ab0cd470d5cb51a5b1a10394dcc5115b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251723"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812537"
 ---
 # <a name="data-quality-client-home-screen"></a>Schermata iniziale del client Data Quality
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Questa schermata consente di accedere alle interfacce utente per ciascuno dei tre gruppi principali di attività [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): gestione della Knowledge Base, progetti Data Quality e amministrazione.  
   
-## <a name="options"></a>Opzioni  
+## <a name="options"></a>Options  
   
 ### <a name="knowledge-base-management"></a>Gestione Knowledge Base  
  Una Knowledge Base DQS è un repository di metadati utilizzati da DQS per migliorare la qualità dei dati. Questi metadati vengono creati sia dalla piattaforma DQS in un processo computerizzato di individuazione delle informazioni che dall'amministratore dei dati in un processo interattivo di gestione del dominio.  
@@ -58,7 +58,7 @@ ms.locfileid: "75251723"
  **Monitoraggio attività**  
  Consente di visualizzare lo stato di tutte le attività (sia correnti che passate) correlate al [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]connesso. I tipi di attività monitorati includono Gestione informazioni, Progetto Data Quality e la correzione dei dati basata su SSIS.  
   
- **Configurazione**  
+ **Configuration**  
  Visualizzare le proprietà di configurazione per gli account del servizio dati di riferimento (sia tramite Azure Marketplace che direttamente ai servizi dati di riferimento), le impostazioni generali (pulizia interattiva, corrispondenza e profiling) e le impostazioni di gravità del log.  
   
 ## <a name="see-also"></a>Vedere anche  

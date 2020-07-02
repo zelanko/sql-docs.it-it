@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 6d8bdf65a4225bbb915c5596db641f4635775953
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07879417c216e6d66085539ed6c177891a4e8bfb
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811350"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Pulire i dati in un dominio composito
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In questo argomento vengono fornite informazioni sulla pulizia dei domini compositi in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio composito è costituito da due o più singoli domini di cui viene eseguito il mapping a un campo dati costituito da più termini correlati. I singoli domini in un dominio composito devono contenere un'area delle informazioni in comune. Per informazioni dettagliate sui domini compositi, vedere [Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "75255683"
   
  Quando questa regola tra domini viene eseguita, i dati di origine (ProductName) verranno corretti come segue dopo l'attività di pulizia:  
   
- **Origine dati**  
+ **Dati di origine**  
   
 |ProductName|CompanyName|ProductVersion|  
 |-----------------|-----------------|--------------------|  
@@ -56,7 +56,7 @@ ms.locfileid: "75255683"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- Quando viene eseguito il test della regola definitiva tra domini *Then* , **Il valore è uguale a**, la finestra di dialogo **Test regola dominio composito** conterrà una nuova colonna, **Correggi in**, in cui vengono visualizzati i dati corretti. In un progetto Data Quality per la pulizia dei dati, questa regola definitiva tra domini modifica i dati con una confidenza del 100% e nella colonna **motivo** viene visualizzato il messaggio seguente: con correzione in base alla regola "*\<nome regola tra domini>*". Per ulteriori informazioni sulle regole tra domini, vedere [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md).  
+ Quando viene eseguito il test della regola definitiva tra domini *Then* , **Il valore è uguale a**, la finestra di dialogo **Test regola dominio composito** conterrà una nuova colonna, **Correggi in**, in cui vengono visualizzati i dati corretti. In un progetto Data Quality per la pulizia dei dati, questa regola definitiva tra domini modifica i dati con una confidenza del 100% e nella colonna **motivo** viene visualizzato il messaggio seguente: con correzione in base alla regola ' *\<Cross-Domain Rule Name>* '. Per ulteriori informazioni sulle regole tra domini, vedere [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  La regola definitiva tra domini non funziona per i domini compositi associati al servizio dati di riferimento.  

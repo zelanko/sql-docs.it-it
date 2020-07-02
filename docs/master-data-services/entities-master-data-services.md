@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1b3f7a2645af68f6470aa971feef46fa103556a0
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 5c40c4cd565d01e7918cecd7c2dc89015f13c9f9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796331"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811971"
 ---
 # <a name="entities-master-data-services"></a>Entità (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Le entità sono oggetti contenuti nei modelli [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Ogni entità contiene membri che sono le righe dei dati master gestiti.  
   

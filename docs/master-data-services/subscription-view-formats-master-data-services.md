@@ -10,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7c5adbd91f713fabe1e185c51adb28350035bb20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc0fc6dad3771b051859130f13a9b0f3bab54389
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728893"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812318"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Formati di vista sottoscrizioni [Master Data Services]
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In base all'entità o alla gerarchia derivata selezionata, i formati seguenti sono disponibili per la vista delle sottoscrizioni.  
   
 ## <a name="subscription-view-formats"></a>Formati di vista sottoscrizioni  
   
-|Nome|Descrizione|  
+|Name|Descrizione|  
 |----------|-----------------|  
 |**Membri foglia**|Contiene i membri foglia e i relativi valori di attributo associati.|  
 |**Cronologia dei membri foglia**|Contiene i dati cronologici dei membri foglia e i valori di attributo associati. Il formato di visualizzazione è lo stile 4 di tipo Dimensione a modifica lenta.|  
@@ -34,7 +34,7 @@ ms.locfileid: "73728893"
 |**Cronologia dei membri consolidati**|Contiene i dati cronologici dei membri consolidati e i valori di attributo associati. Il formato di visualizzazione è lo stile 4 di tipo Dimensione a modifica lenta.|  
 |**Dimensione a modifica lenta dei membri consolidati di tipo 2**|Contiene i dati cronologici e correnti dei membri consolidati e i valori di attributo associati. Il formato di visualizzazione è lo stile 2 di tipo Dimensione a modifica lenta.|  
 |**Appartenenze a raccolte**|Contiene un elenco di raccolte e dei relativi valori di attributo associati.|  
-|**Raccolte**|Contiene un elenco di raccolte e dei membri in ognuno, insieme a valori di peso e ordinamento.|  
+|**raccolte**|Contiene un elenco di raccolte e dei membri in ognuno, insieme a valori di peso e ordinamento.|  
 |**Cronologia dei membri raccolta**|Contiene i dati cronologici dei membri raccolta e i valori di attributo associati. Il formato di visualizzazione è lo stile 4 di tipo Dimensione a modifica lenta.|  
 |**Dimensione a modifica lenta dei membri raccolta di tipo 2**|Contiene i dati cronologici e correnti dei membri raccolta e i valori di attributo associati. Il formato di visualizzazione è lo stile 2 di tipo Dimensione a modifica lenta.|  
 |**Figlio/padre espliciti**|Contiene le strutture delle gerarchie esplicite per un'entità in un formato figlio/padre.|  

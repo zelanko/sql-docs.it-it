@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f4855daea163d799d8f880dc74e5fee8d2a50c93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a543cc6c153af6cd40617d4fe7699ccabad8f9a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728221"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812366"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>Modificare ed eliminare un indice (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   È possibile modificare ed eliminare un indice creato in base agli attributi.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "73728221"
   
 8.  Modificare l'elenco di attributi assegnati aggiungendo e rimuovendo gli attributi dall'elenco.  
   
-9. Fare clic su **Save**.  
+9. Fare clic su **Salva**.  
   
  **Per eliminare un indice**  
   
@@ -62,7 +62,7 @@ ms.locfileid: "73728221"
   
 5.  Nelle finestre di messaggio relative alla conferma fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creare un indice &#40;Master Data Services&#41;](../master-data-services/create-an-index-master-data-services.md)   
  [Indice personalizzato &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)  
   

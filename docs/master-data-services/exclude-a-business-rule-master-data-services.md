@@ -12,25 +12,25 @@ helpviewer_keywords:
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 30088b6964ae8120bc5aa3c1cb401ec3d9bd1149
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7bad539d25afec6da4a706e0986bfd9f4770c899
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73728172"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811918"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>Escludere una regola business (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]escludere una regola di business quando non si vuole eliminarla in modo permanente, ma non si vuole convalidare i dati rispetto a essa.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
--   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
+-   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per ulteriori informazioni, vedere [amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-exclude-a-business-rule"></a>Per escludere una regola business  
   
@@ -38,11 +38,11 @@ ms.locfileid: "73728172"
   
 2.  Dalla barra dei menu scegliere **Gestisci** e fare clic su **Regole business**.  
   
-3.  Nella pagina **Regole business** selezionare un modello nell'elenco a discesa **Modello** .  
+3.  Nella pagina **regole business** selezionare un modello nell'elenco a discesa **modello** .  
   
 4.  Nell'elenco a discesa **Entità** selezionare un'entità.  
   
-5.  Nell'elenco a discesa **Tipo di membro** selezionare un tipo di membro.  
+5.  Nell'elenco a discesa **Tipi di membri** selezionare un tipo di membro.  
   
 6.  Nella griglia selezionare la riga per la regola di business che si vuole escludere e quindi fare clic su **Modifica**.  
   
@@ -57,6 +57,6 @@ ms.locfileid: "73728172"
 ## <a name="see-also"></a>Vedere anche  
  [Eliminare una regola business &#40;Master Data Services&#41;](../master-data-services/delete-a-business-rule-master-data-services.md)   
  [Creare e pubblicare una regola business &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
- [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+ [Regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

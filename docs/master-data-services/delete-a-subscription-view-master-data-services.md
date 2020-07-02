@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2805e1c9faafa24b78b64a2fcc6082010099429f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44ee02d2397f0f17573e48ccf056b3e768b15240
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729385"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811567"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>Eliminare una vista sottoscrizioni (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]eliminare una vista sottoscrizioni quando non è più necessaria. L'eliminazione di una vista sottoscrizioni in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ne determina la rimozione dal database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . È anche possibile modificare una vista sottoscrizoni.  
   

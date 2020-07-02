@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2e125f1dc6b4cb9f30a69c7410c5c404b38d42ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4183f8be34e7322af72a76297631df2b4060421c
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728194"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811506"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>Autorizzazioni per file e cartelle [Master Data Services]
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Quando si installa [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cartelle e file vengono installati nel file system nel percorso di installazione specificato per le funzionalità condivise di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Se si usa il percorso di installazione predefinito per le funzionalità condivise di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , il percorso di installazione per [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] è *unità*:\Programmi\Microsoft SQL Server\130\Master Data Services. Sebbene sia possibile modificare il percorso di installazione delle funzionalità condivise, è necessario considerare le autorizzazioni ereditate dalla cartella padre e quelle impostate in modo esplicito per [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   

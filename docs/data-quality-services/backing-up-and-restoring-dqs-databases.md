@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 94b2529323e5a075b6fd423fd8c69ece7a0535c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ce0686211440291711815fa3b1d76641a374da8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258853"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812606"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Backup e ripristino di database DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In questo argomento viene descritto come eseguire il backup e il ripristino dei database DQS.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "75258853"
   
 10. In Esplora oggetti fare clic con il pulsante destro del mouse sul server, quindi fare clic su **Nuova query**.  
   
-11. Nella finestra dell'editor di query copiare le istruzioni SQL seguenti e sostituire * \<>password* con la password specificata durante l'installazione di DQS per la chiave master del database:  
+11. Nella finestra dell'editor di query copiare le istruzioni SQL seguenti e sostituire *\<PASSWORD>* con la password specificata durante l'installazione di DQS per la chiave master del database:  
   
     ```  
     USE [DQS_MAIN]  

@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: df671e83d80175f154a4008270c3b68dc2581b59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0287c29e66711724b725689d578a498f0537600a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75557916"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812628"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data---data-quality-services-dqs"></a>Connessione di un dominio o di un dominio composito ai dati di riferimento-Data Quality Services (DQS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In questo argomento viene descritto come aggiungere domini/domini compositi in una Knowledge Base Data Quality a un servizio dati di riferimento in Azure Marketplace per creare informazioni rispetto ai dati di riferimento di alta qualità. Ogni servizio dati di riferimento contiene uno schema (colonne di dati). Dopo aver collegato un dominio o un dominio composito a un servizio dati di riferimento, è necessario eseguire il mapping del dominio collegato o i singoli domini all'interno del dominio composito collegato alle colonne appropriate in uno schema del servizio dati di riferimento. Il collegamento di un dominio composito a un servizio dati di riferimento consente di collegare solo un dominio a un servizio dati di riferimento e quindi di eseguire il mapping dei singoli domini all'interno del dominio composito alle colonne appropriate nello schema del servizio dati di riferimento.  
 

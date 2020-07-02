@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 82b068612f0699cdba3788e4931fb6bdfe8c7e69
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 20d82b7a57f6a7779a12d0ae9c8b9963fdba238b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796502"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812867"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>Stored procedure di gestione temporanea (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Quando si inizia il processo di gestione temporanea da [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], viene usata una delle tre stored procedure seguenti.  
   
@@ -37,8 +37,8 @@ ms.locfileid: "84796502"
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|**VersionName**<br /><br /> Obbligatoria|Il nome della versione. Può supportare o non supportare la distinzione tra maiuscole e minuscole, a seconda dell'impostazione delle regole di confronto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
-|**LogFlag**<br /><br /> Obbligatoria|Determina se le transazioni sono registrate durante il processo di gestione temporanea. I valori possibili sono:<br /><br /> **0**: le transazioni non vengono registrate.<br /><br /> **1**: le transazioni vengono registrate.<br /><br /> <br /><br /> Per altre informazioni sulle transazioni, vedere [Transazioni &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md).|  
+|**VersionName**<br /><br /> Richiesto|Il nome della versione. Può supportare o non supportare la distinzione tra maiuscole e minuscole, a seconda dell'impostazione delle regole di confronto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
+|**LogFlag**<br /><br /> Richiesto|Determina se le transazioni sono registrate durante il processo di gestione temporanea. I valori possibili sono:<br /><br /> **0**: le transazioni non vengono registrate.<br /><br /> **1**: le transazioni vengono registrate.<br /><br /> <br /><br /> Per altre informazioni sulle transazioni, vedere [Transazioni &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md).|  
 |**BatchTag**<br /><br /> Richiesto, salvo che dal servizio Web|Il valore **BatchTag** come specificato nella tabella di staging.|  
 |**Batch_ID**<br /><br /> Richiesto solo dal servizio Web|Il valore **Batch_ID** come specificato nella tabella di staging.|  
 |**Nome utente**|Parametro facoltativo|  

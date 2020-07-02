@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 789b372660e7df5282c700f57654162288dabb78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 613fa319c00ab100e52835faab1eafc33c07c9be
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729372"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811552"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>Eliminare un membro o una raccolta (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]eliminare un membro o una raccolta quando non è più necessaria. Per eliminare i membri in blocco, usare invece le tabelle di staging. Per altre informazioni, vedere [importare dati da tabelle &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
   

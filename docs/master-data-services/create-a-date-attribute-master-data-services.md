@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8ffc7c1e901e3c93701c4e94ed62b8e70dbb7c0a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbf5182a41c9b5c52a73e9d005c768b48cc1fae4
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728511"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811833"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>Creare un attributo di data (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare un attributo date quando si desidera che gli utenti inseriscano una data come valore di attributo.  
   

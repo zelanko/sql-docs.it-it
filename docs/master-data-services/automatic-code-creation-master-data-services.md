@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: abf900f8eea0e64ed8e541ee7cd94c63834fbb48
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 057162b74045ac32a8f4504496417f274a02b423
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729750"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812056"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>Creazione di codice automatica (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile generare automaticamente valori numerici per l'attributo Code o per qualsiasi altro attributo numerico. Quando i codici vengono generati automaticamente, è possibile immettere altri valori per i codici anche se un valore iniziale viene impostato automaticamente.  
   

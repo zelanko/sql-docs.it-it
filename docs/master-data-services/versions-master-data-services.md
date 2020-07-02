@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d30880029a9bb8fba85466d28f8b002b0f044ec3
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 985714657ef87050b6273599013f0dbc5db83196
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796477"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811712"
 ---
 # <a name="versions-master-data-services"></a>Versioni (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile creare più versioni dei dati master all'interno di un modello. È possibile bloccare le versioni mentre si convalidano i dati ed è possibile eseguire il commit dopo la convalida dei dati. Le versioni di cui si è eseguito il commit costituiscono un record controllabile di modifiche. Ogni versione creata contiene tutti i membri, i valori di attributo, i membri della gerarchia, le relazioni della gerarchia e le raccolte per il modello.  
   

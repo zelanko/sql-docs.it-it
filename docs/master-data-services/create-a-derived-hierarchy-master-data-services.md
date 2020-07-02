@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b0bedc60665318e2ffd89ebfc6387bbb0432989f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a2ff6e7eed27cd3482aa6acc7a6609562e8d3ea6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729580"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812786"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>Creare una gerarchia derivata (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare una gerarchia derivata quando si desidera una gerarchia basata su livelli tramite cui viene assicurato il posizionamento dei membri al corretto livello. Le gerarchie derivate sono basate sulle relazioni tra attributi basati su dominio che esistono in un modello.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73729580"
   
 3.  Nella pagina **Gestione gerarchia derivata** selezionare un modello dall'elenco **Modello** .  
   
-4.  Fare clic su **Aggiungi**.  
+4.  Scegliere **Aggiungi**.  
   
 5.  Nella pagina **Aggiungi gerarchia derivata** digitare un nome per la gerarchia nella casella **Nome gerarchia derivata** .  
   

@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: bd627a2d-dc64-47e9-9a71-2d0ad04b4962
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a8072ca35b1676a5bace4fe60f70e7cfdbc0778b
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 0dac91e4f43d244e133511e792f29770949da905
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796311"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811942"
 ---
 # <a name="entity-sync-relationship-master-data-services"></a>Relazione di sincronizzazione delle entità (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   La sincronizzazione delle entità è una sincronizzazione unidirezionale e ripetibile tra le versioni dell'entità. Consente di condividere i dati dell'entità tra i vari modelli. È possibile mantenere un'unica origine in un modello e riusare questi dati master in altri modelli. Ad esempio, è possibile archiviare i dati sullo stato per gli Stati Uniti in un'entità di modello e riusare i dati in altri modelli.  
   

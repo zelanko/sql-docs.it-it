@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9a725ec385d72ea3719e215ea9b01c1565aadecc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 02b84362699375c82b4e7eead7ad632c03a76c87
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729778"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812460"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>Assegnare autorizzazioni membri gerarchia (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Assegnare autorizzazioni ai membri della gerarchia per consentire a utenti o gruppi di accedere e visualizzare i dati nell'area funzionale **Visualizzatore** di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73729778"
   
 7.  Selezionare una gerarchia dall'elenco **Gerarchia** .  
   
-8.  Fare clic su **Edit**.  
+8.  Fare clic su **Modifica**.  
   
 9. Espandere l'albero e selezionare il nodo della gerarchia al quale si desidera assegnare le autorizzazioni.  
   

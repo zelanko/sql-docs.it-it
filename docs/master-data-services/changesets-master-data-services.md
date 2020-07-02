@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6d8c277796f743b31dfb5df349352bb6c7470421
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c6b91f1d0b4fbfff3294502b0953462f97efc707
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728623"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811622"
 ---
 # <a name="changesets-master-data-services"></a>Insiemi di modifiche (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] supporta ora la funzionalità di salvataggio delle modifiche in sospeso per un'entità come insiemi di modifiche. Esistono due scenari di utilizzo per questa funzionalità.  
   

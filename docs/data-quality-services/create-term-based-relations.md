@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: a982279e06a1968cf80335cd16dd9eb74e458c3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3f747839945d8f2ea4c6960d8a8c594f64777040
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251775"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811652"
 ---
 # <a name="create-term-based-relations"></a>Creare relazioni basate su termini
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In questo argomento viene descritto come creare relazioni basate su termini per un dominio in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una relazione basata su termini (TRB) consente di effettuare una correzione a un termine che fa parte di un valore in un dominio, consentendo in questo modo a più valori identici ad eccezione dell'ortografia di una parte in comune tra essi di essere considerati sinonimi identici. È possibile, ad esempio, configurare una relazione basata su termini che modifica il termine "Inc." in "Incorporated". Il termine "Inc." verrà modificato ogni volta che viene trovato nel dominio. Le istanze di "Contoso, Inc." verranno modificate in "Contoso, Incorporated" e i due valori saranno considerati sinonimi esatti.  
   

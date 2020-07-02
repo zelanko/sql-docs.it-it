@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 75250b32-3384-43c2-9b5c-1607cc3aa7b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fde8e314462846088c7c673524d6e6d8d29ee631
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af42a3c638155ab07b77a2c21fff95ba87cc265b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729669"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811848"
 ---
 # <a name="change-the-entity-transaction-log-type-master-data-services"></a>Modificare il tipo di log delle transazioni dell'entità (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   È possibile modificare il tipo di log delle transazioni di un'entità in attributo, membro o nessuno.  
   

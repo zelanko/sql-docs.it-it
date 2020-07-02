@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 22a92035ea26a4341d4f912c3e6b5cdfaef75efa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6deb778d5b15ed76256fa0d22366f0be9eb25b02
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251705"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812531"
 ---
 # <a name="data-quality-projects-dqs"></a>Progetti Data Quality (DQS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Un progetto di qualità dei dati in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) consiste nell'utilizzo di una Knowledge Base per migliorare la qualità dei dati di origine eseguendo attività di *pulizia dei dati* e di *individuazione di corrispondenze tra dati* ed esportando quindi i dati risultanti in un database SQL Server o in un file csv. È possibile creare un progetto di qualità dei dati come progetto di pulizia o come progetto di corrispondenza per eseguire le rispettive attività. È possibile eseguire progetti di pulizia e di individuazione delle corrispondenze utilizzando la stessa Knowledge Base, poiché le informazioni per la pulizia e per l'individuazione di corrispondenze possono essere inserite all'interno della stessa Knowledge Base.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75251705"
  Per informazioni dettagliate sull'attività di pulizia in un progetto di qualità dei dati, vedere [Data Cleansing](../data-quality-services/data-cleansing.md).  
   
 ##  <a name="data-quality-project-matching-activity"></a><a name="Matching"></a>Progetto Data Quality: attività corrispondente  
- Un progetto Data Quality di corrispondenza tra dati consente di eseguire l'attività di individuazione di corrispondenze in base ai criteri di corrispondenza in una Knowledge Base per impedire la duplicazione dei dati mediante l'identificazione di corrispondenze esatte e approssimative e permettendo quindi la rimozione dei dati duplicati. Si consiglia di pulire i dati prima di eseguire su questi l'individuazione di corrispondenze. A tale scopo:  
+ Un progetto Data Quality di corrispondenza tra dati consente di eseguire l'attività di individuazione di corrispondenze in base ai criteri di corrispondenza in una Knowledge Base per impedire la duplicazione dei dati mediante l'identificazione di corrispondenze esatte e approssimative e permettendo quindi la rimozione dei dati duplicati. Si consiglia di pulire i dati prima di eseguire su questi l'individuazione di corrispondenze. A tale scopo, procedere come indicato di seguito:  
   
 1.  Creare un progetto Data Quality, selezionare l'attività **Pulizia** , completare l'attività di pulizia sui dati di origine, quindi esportarli in una tabella di un database di SQL Server.  
   

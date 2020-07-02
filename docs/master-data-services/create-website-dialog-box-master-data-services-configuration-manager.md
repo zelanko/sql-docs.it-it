@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dea7da40c1c82b855f4290f104c0b2d4f8462a38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c3d4063404a121c889dbbfd930429a586bf8969a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81728277"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812007"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>Finestra di dialogo Crea sito Web (Gestione configurazione Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Usare la finestra di dialogo **Crea sito Web** per creare un nuovo sito Web nel computer locale. Quando si crea un sito Web in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], il sito viene aggiunto a Internet Information Services (IIS) nel computer locale con un'applicazione radice configurata come applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Viene inoltre creato un nuovo pool di applicazioni in cui viene inserita l'applicazione Web.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "81728277"
   
 |Nome del controllo|Descrizione|  
 |------------------|-----------------|  
-|**Nome del sito Web**|Digitare un nome per il sito Web oppure utilizzare il nome predefinito. Si tratta di un nome descrittivo utilizzato solo per identificare il sito in IIS. Non viene utilizzato per accedere al sito da un Web browser.<br /><br /> Il nome deve essere univoco in tutti i siti inclusi in IIS nel computer locale.|  
+|**Nome sito Web**|Digitare un nome per il sito Web oppure utilizzare il nome predefinito. Si tratta di un nome descrittivo utilizzato solo per identificare il sito in IIS. Non viene utilizzato per accedere al sito da un Web browser.<br /><br /> Il nome deve essere univoco in tutti i siti inclusi in IIS nel computer locale.|  
 |**Protocollo**|Consente di visualizzare **http**. Utilizzare il protocollo HTTP (Hypertext Transfer Protocol) quando non è necessario che la comunicazione tra client e server avvenga su un canale crittografato.<br /><br /> **Nota**: non è possibile creare un sito HTTPS in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. HTTPS è il protocollo HTTP che utilizza Transport Layer Security (TLS), precedentemente noto come Secure Sockets Layer (SSL), ed è utile quando si scambiano dati riservati o personali oppure quando si desidera che gli utenti confermino l'identità del server prima di trasmettere informazioni personali. Se è necessario trasferire informazioni tra il server e un client su un canale crittografato, è necessario utilizzare un strumento IIS, ad esempio Gestione IIS, configurare il sito con un'associazione HTTPS e associare l'associazione del sito Web a un certificato server. È necessario effettuare queste operazioni prima che sia possibile aprire correttamente il sito Web in un Web browser. Per altre informazioni sui certificati server, vedere [Configuring Server Certificates in IIS 7](https://go.microsoft.com/fwlink/?LinkId=163220) (Configurazione dei certificati server in IIS 7) nel sito [!INCLUDE[msCoName](../includes/msconame-md.md)] TechNet.|  
 |**Indirizzo IP**|Selezionare un indirizzo IP che può essere utilizzato dagli utenti per accedere al sito. Per impostazione predefinita, è selezionata l'opzione **Non assegnati** . A meno che non esista un motivo particolare per utilizzare un indirizzo IPv4 o un indirizzo IPv6 specifico, è consigliabile utilizzare il valore predefinito.<br /><br /> Con l'opzione **Non assegnati**, il sito risponde alle richieste per tutti gli indirizzi IP sulla porta e il nome host facoltativo specificato. Se un altro sito nel server ha un'associazione sulla stessa porta ma con un indirizzo IP specifico, il sito riceverà le richieste HTTP sulla porta e all'indirizzo IP specifico, mentre il sito con l'indirizzo IP impostato su **Non assegnati** riceverà tutte le altre richieste HTTP sulla porta e sugli altri indirizzi IP.|  
 |**Porta**|Digitare la porta per le richieste effettuate al sito Web. Se si seleziona il protocollo HTTP, la porta predefinita è 80. Se si specifica una porta diversa dalle porte predefinite, per connettersi al sito Web è necessario che i client specifichino il numero di porta.<br /><br /> **Nota**: l'opzione **Sito Web predefinito** in IIS viene configurata per l'utilizzo del protocollo HTTP sulla porta 80 con tutti gli indirizzi IP non assegnati. Se si tenta di creare il sito Web in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] con le informazioni di associazione predefinite, si riceve un errore di associazione duplicata esistente. In tal caso, è necessario modificare le informazioni di associazione per il sito in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]oppure modificare le informazioni di associazione per il sito Web predefinito tramite uno strumento di IIS, ad esempio Gestione IIS. In alternativa, è possibile specificare un'intestazione host per consentire a IIS di identificare in modo univoco il sito Web. Assicurarsi di configurare il firewall in modo che il traffico venga accettato sulla porta specificata.|  

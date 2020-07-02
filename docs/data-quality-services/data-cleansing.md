@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 46ca0fe453548cab780d1e2b32c6a8d98a32de11
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82d3464e3e5b75f350efa0478e9ad2a7a68a947b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251769"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811670"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   La pulizia dei dati è il processo di analisi della qualità dei dati in un'origine dati, con l'approvazione o il rifiuto manuale dei suggerimenti del sistema e la conseguente modifica dei dati. La pulizia dei dati in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) include un processo assistito da computer, che analizza la conformità dei dati alle informazioni in una Knowledge Base, e un processo interattivo, che consente all'amministratore dei dati di rivedere e modificare i risultati del processo assistito da computer per assicurarsi che la pulizia dei dati risponda esattamente alle aspettative.  
   
