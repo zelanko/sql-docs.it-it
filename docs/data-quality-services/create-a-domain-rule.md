@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: c6a73d3f0dca65d0feb74cf572754351ccf86c7a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2615b71c19011b42bb8497ef07096cc27084409b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245476"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85810640"
 ---
 # <a name="create-a-domain-rule"></a>Creare una regola di dominio
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In questo argomento viene descritto come creare una regola di dominio in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una regola di dominio è una condizione utilizzata per convalidare, correggere e standardizzare i valori di dominio. Una regola di dominio deve rimanere valida in tutto il dominio affinché i valori di dominio vengano considerati accurati e conformi ai requisiti aziendali. Le regole di dominio possono includere le regole di convalida utilizzate per convalidare i valori di dominio, ma non per correggere i dati in un progetto Data Quality. Le regole includono anche le regole di standardizzazione applicate ai dati validi e utilizzate per la correzione dei dati.  
   

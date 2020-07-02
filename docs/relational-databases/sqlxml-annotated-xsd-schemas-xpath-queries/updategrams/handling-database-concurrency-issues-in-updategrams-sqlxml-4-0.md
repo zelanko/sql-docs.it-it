@@ -22,15 +22,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbb10145e8d660fa02ebefefc09da4aa04eb1778
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 11e4a7a875dd2c9b9450619f389b2f082136c536
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215273"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790589"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Gestione dei problemi di concorrenza di database negli updategram (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Analogamente ad altri meccanismi di aggiornamento del database, gli updategram devono gestire aggiornamenti simultanei ai dati in un ambiente multiutente. Gli updategram utilizzano il controllo della concorrenza ottimistica, che esegue il confronto dei dati di campo come snapshot per garantire che i dati da aggiornare non siano già stati modificati da un'altra applicazione utente dal momento in cui sono stati letti dal database. Gli updategram includono questi valori di snapshot nel **\<before>** blocco degli updategram. Prima di aggiornare il database, l'updategram controlla i valori specificati nel **\<before>** blocco rispetto ai valori attualmente presenti nel database per garantire che l'aggiornamento sia valido.  
   
  Il controllo della concorrenza ottimistica offre tre livelli di protezione in un updategram: basso (nessuno), intermedio ed elevato. È possibile stabilire il livello di protezione necessario specificando l'updategram di conseguenza.  

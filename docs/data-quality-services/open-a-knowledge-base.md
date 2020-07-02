@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 91f5e7effe54b9955537d90d639a820b5428a5c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9d6eebcf079fbb509838e2a3c08efbee5340c4ff
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246014"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85809862"
 ---
 # <a name="open-a-knowledge-base"></a>Apertura di una Knowledge Base
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In questo argomento viene descritto come aprire una Knowledge Base esistente in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) e prepararla per le attività di gestione del dominio, individuazione delle informazioni o aggiunta di criteri di corrispondenza.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "75246014"
 ##  <a name="state-of-a-knowledge-base"></a><a name="State"></a>Stato di una Knowledge base  
  Nel campo Stato viene indicata la fase di un'attività a cui si trova la Knowledge Base. Se si apre la Knowledge Base, verrà aperta in quella fase.  
   
--   >vuota: il campo stato è vuoto per una Knowledge base se la Knowledge base è stata pubblicata facendo clic su **pubblica** nell'attività Gestione dominio e quindi su **Sì-pubblica la Knowledge base e Chiudi**. ** \< **  
+-   **\<Empty>**: Il campo stato è vuoto per una Knowledge base se la Knowledge base è stata pubblicata facendo clic su **pubblica** nell'attività Gestione dominio e quindi su **Sì-pubblica la Knowledge base e Chiudi**.  
   
 -   **In lavorazione**: il lavoro sulla Knowledge base è stato salvato facendo clic su **pubblica** nell'attività Gestione dominio e quindi su **No-Salva il lavoro sulla Knowledge base e Chiudi**.  
   

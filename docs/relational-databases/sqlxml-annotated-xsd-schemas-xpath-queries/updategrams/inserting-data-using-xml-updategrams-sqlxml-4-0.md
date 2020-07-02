@@ -35,15 +35,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 305a167d233ee5a11348b0cc8a050dc2f61548ae
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 88e1f334629482182fb182dde60f715c0d122d25
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84883213"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790598"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Inserimento di dati mediante updategram XML (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Un updategram indica un'operazione di inserimento quando un'istanza di record viene visualizzata nel **\<after>** blocco ma non nel **\<before>** blocco corrispondente. In questo caso, l'updategram inserisce il record nel **\<after>** blocco nel database.  
   
  Il formato dell'updategram per un'operazione di inserimento è il seguente:  

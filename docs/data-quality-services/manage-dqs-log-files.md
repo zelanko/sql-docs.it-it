@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 6edcf577b7783662a02efc3531ac02c2535ef078
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3e3de142823ebe0749e350c93b4891e20838ad5d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245422"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808794"
 ---
 # <a name="manage-dqs-log-files"></a>Gestire i file di log DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   I file di log di[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) consentono di diagnosticare e risolvere i problemi con il [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]e il [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]. Vengono generati file di log separati per il [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], il [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]e il [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)].  
   
@@ -31,7 +31,7 @@ ms.locfileid: "75245422"
 ##  <a name="data-quality-server-log-file"></a><a name="DQSServer"></a>File di log del server Data Quality  
  Il file di log del [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , DQServerLog.DQS_MAIN.log, include i log delle attività eseguite nel [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. Se è stata installata l'istanza predefinita di SQL Server, il file DQServerLog.DQS_MAIN.log è disponibile in C:\Programmi\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log. Il file di log del [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] contiene le informazioni seguenti, ognuna delimitata da una pipe (|):  
   
--   Date e Time  
+-   Data e ora  
   
 -   Nome del thread  
   

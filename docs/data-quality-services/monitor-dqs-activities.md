@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: d9926eb251d109eb8ed9529a4ae739e8a1915b07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ba2bfe0a9979d94df43b923b7eff2ed68750e19a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245460"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85809910"
 ---
 # <a name="monitor-dqs-activities"></a>Monitorare le attività DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In questo argomento viene descritto come monitorare a livello centrale le attività seguenti in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): individuazione delle informazioni, gestione del dominio, criteri di corrispondenza, pulizia dei dati, corrispondenza dei dati e pulizia SSIS.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "75245460"
   
         -   **Pulizia**  
   
-        -   **Corrispondenza**  
+        -   **Matching**  
   
     -   Sottotipi di**Pulizia SSIS** :  
   
@@ -116,7 +116,7 @@ ms.locfileid: "75245460"
 2.  Fare clic sull'icona **Aggiorna l'elenco di attività** per applicare il filtro e visualizzare solo le attività DQS filtrate.  
   
 ##  <a name="view-dqs-activity-details"></a><a name="ActivityDetails"></a> Visualizzare i dettagli delle attività DQS  
- È possibile visualizzare le informazioni dettagliate di un'attività DQS, ad esempio le fasi dell'attività e le informazioni sul profiler, nella schermata Monitoraggio attività. A tale scopo:  
+ È possibile visualizzare le informazioni dettagliate di un'attività DQS, ad esempio le fasi dell'attività e le informazioni sul profiler, nella schermata Monitoraggio attività. A tale scopo, procedere come indicato di seguito:  
   
 1.  Selezionare un'attività DQS nella griglia di attività (nel riquadro superiore).  
   
@@ -127,7 +127,7 @@ ms.locfileid: "75245460"
     -   **Profiler**: vengono visualizzate le informazioni di profiling per le attività correnti e passate. Per le attività correnti, contiene informazioni parziali ma coerenti. Le informazioni di profiling di un'attività vengono esportate in un file di Excel quando si esportano i dettagli dell'attività corrispondenti in un file di Excel. Le informazioni sono disponibili nei fogli **Profiler-origine** e **Profiler-campi** del file di Excel esportato.  
   
 ##  <a name="export-dqs-activity-details"></a><a name="Export"></a> Esportare i dettagli delle attività DQS  
- È possibile esportare in un file di Excel le proprietà, i processi e le informazioni di profiling di un'attività presenti nella schermata Monitoraggio attività. A tale scopo:  
+ È possibile esportare in un file di Excel le proprietà, i processi e le informazioni di profiling di un'attività presenti nella schermata Monitoraggio attività. A tale scopo, procedere come indicato di seguito:  
   
 1.  Selezionare un'attività nella griglia di attività (nel riquadro superiore).  
   

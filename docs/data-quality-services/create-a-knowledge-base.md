@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 20421ab3584eac51feb09ba717f293449825574c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eead2ec7e87b11c742adbcf35c681d2645211077
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247329"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85810641"
 ---
 # <a name="create-a-knowledge-base"></a>Creare una Knowledge Base
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In questo argomento viene descritto come creare una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) e prepararla per le attività di gestione del dominio, individuazione delle informazioni o aggiunta di criteri di corrispondenza.  
   

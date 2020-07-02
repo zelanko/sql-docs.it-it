@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 462b9b2b8cd5239e6185b59dfabc028c4d7d8d6a
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: ce7be0a6f01ac92f13f35e4410dc59601fdbdc01
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529804"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790564"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Passaggio di parametri agli updategram (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Gli updategram sono modelli e in quanto tali è possibile passare loro parametri. Per ulteriori informazioni sul passaggio di parametri ai modelli, vedere [considerazioni sulla sicurezza degli Updategram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md).  
   
  Gli updategram consentono di passare NULL come valore di parametro. Per passare il valore del parametro NULL, è necessario specificare l'attributo **NullValue** . Il valore assegnato all'attributo **NullValue** viene quindi fornito come valore del parametro. e considerato come NULL dagli updategram.  
@@ -34,14 +34,14 @@ ms.locfileid: "84529804"
 > [!NOTE]  
 >  In **\<sql:header>** e **\<updg:header>** , è necessario specificare la **NullValue** come non qualificata, mentre in **\<updg:sync>** si specifica **NullValue** come qualificato (ad esempio, **attributo updg: NullValue**).  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Per creare esempi funzionanti utilizzando gli esempi seguenti, è necessario soddisfare i requisiti specificati nei [requisiti per l'esecuzione di esempi SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
  Prima di utilizzare gli esempi dell'updategram, si tenga presente quanto segue:  
   
 -   Negli esempi viene utilizzato il mapping predefinito, ovvero non viene specificato alcuno schema di mapping nell'updategram. Per ulteriori esempi di updategram che utilizzano schemi di mapping, vedere [specifica di uno schema di mapping con annotazioni in un Updategram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
-### <a name="a-passing-parameters-to-an-updategram"></a>A. Passaggio di parametri a un updategram  
+### <a name="a-passing-parameters-to-an-updategram"></a>R. Passaggio di parametri a un updategram  
  In questo esempio l'updategram modifica il cognome di un dipendente nella tabella HumanResources.Shift. All'updategram vengono passati due parametri: ShiftID, utilizzato per identificare in modo univoco un turno, e Name.  
   
 ```  
