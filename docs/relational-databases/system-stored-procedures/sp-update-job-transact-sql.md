@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 35653ce883733b7e1b3c2969fc4e62c61ad12eb9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e92590c819e33511b00071ee8d7e7aadd5efc1d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820206"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762700"
 ---
 # <a name="sp_update_job-transact-sql"></a>sp_update_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Modifica gli attributi di un processo.  
   
@@ -102,7 +102,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_update_job** deve essere eseguito dal database **msdb** .  
   
  **sp_update_job** modifica solo le impostazioni per le quali vengono forniti i valori dei parametri. Se si omette un parametro, viene mantenuta l'impostazione corrente.  
@@ -120,7 +120,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
  Solo i membri di **sysadmin** possono utilizzare questa stored procedure per modificare gli attributi dei processi di proprietà di altri utenti.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono modificati il nome, la descrizione e lo stato di attivazione del processo `NightlyBackups`.  
   
 ```  

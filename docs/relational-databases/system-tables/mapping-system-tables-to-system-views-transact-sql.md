@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a616fce9-b4c1-49da-87a7-9d6f74911d8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 140e11158b8564d65dff1c6b620b90dc6133ff97
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1585a22b52af00fa1f852d1be14acbf6216e5b22
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832400"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762599"
 ---
 # <a name="mapping-system-tables-to-system-views-transact-sql"></a>Mapping di tabelle di sistema a viste di sistema (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   In questo argomento viene illustrato il mapping tra le tabelle e le funzioni di sistema e le viste e funzioni di sistema.  
   

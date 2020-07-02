@@ -23,15 +23,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa89a799711c354da1ba61b27653ad25c046200a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1123009c0bfd73b1012476d30b6d633ee038f18c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070447"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760371"
 ---
 # <a name="sysfulltext_stopwords-transact-sql"></a>sys.fulltext_stopwords (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Contiene una riga per ogni parola non significativa per tutti gli elenchi di parole non significative nel database.  
  
@@ -39,7 +39,7 @@ ms.locfileid: "68070447"
 |-----------------|---------------|-----------------|  
 |**stoplist_id**|**int**|ID dell'elenco di parole non significative cui **stopword** appartiene. Tale ID è univoco all'interno del database.|  
 |**parola non significativa**|**nvarchar (64)**|Termine da considerare per una corrispondenza della parola non significativa.|  
-|**linguaggio**|**sysname**|Valore dell'alias in [sys. fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)corrispondente al valore dell'identificatore delle impostazioni locali (**LCID**) oppure è la rappresentazione di stringa dell'identificatore LCID numerico.|  
+|**lingua**|**sysname**|Valore dell'alias in [sys. fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)corrispondente al valore dell'identificatore delle impostazioni locali (**LCID**) oppure è la rappresentazione di stringa dell'identificatore LCID numerico.|  
 |**language_id**|**int**|Identificatore LCID utilizzato per il word breaking.|  
   
 ## <a name="permissions"></a>Autorizzazioni  

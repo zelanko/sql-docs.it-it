@@ -17,15 +17,15 @@ ms.assetid: 072ead49-ebaf-41eb-9a0f-613e9d990f26
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5db24ee3b68d1a8989200479a3ce4018e63a5177
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a04f29a980355b1cb9f3ef00a40cae8b3d883021
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304515"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760589"
 ---
 # <a name="command-parameters"></a>Parametri dei comandi
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   I parametri sono contrassegnati nel testo dei comandi dal carattere del punto interrogativo. L'istruzione SQL seguente è ad esempio contrassegnata per un solo parametro di input:  
   
@@ -33,7 +33,7 @@ ms.locfileid: "81304515"
 {call SalesByCategory('Produce', ?)}  
 ```  
   
- Per migliorare le prestazioni riducendo il traffico di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rete, il provider di OLE DB di Native client non deriva automaticamente le informazioni sui parametri, a meno che non venga chiamato **ICommandWithParameters:: GetParameterInfo** o **ICommandPrepare::P repare** prima di eseguire un comando. Ciò significa che il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non esegue automaticamente le operazioni seguenti:  
+ Per migliorare le prestazioni riducendo il traffico di rete, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non deriva automaticamente le informazioni sui parametri, a meno che non venga chiamato **ICommandWithParameters:: GetParameterInfo** o **ICommandPrepare::P repare** prima di eseguire un comando. Ciò significa che il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non esegue automaticamente le operazioni seguenti:  
   
 -   Verificare la correttezza del tipo di dati specificato con **ICommandWithParameters::SetParameterInfo**.  
   
@@ -56,12 +56,12 @@ ms.locfileid: "81304515"
   
  I nomi dei parametri delle stored procedure non devono essere specificati in una struttura DBPARAMBINDINFO. Utilizzare NULL per il valore del membro *pwszName* per indicare che il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client deve ignorare il nome del parametro e utilizzare solo l'ordinale specificato nel membro *rgParamOrdinals* di **ICommandWithParameters::** SetValue. Se il testo del comando contiene parametri denominati e senza nome, tutti i parametri senza nome devono essere specificati prima di quelli denominati.  
   
- Se viene specificato il nome di un parametro di stored procedure, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il provider OLE DB di Native Client verifica il nome per verificare che sia valido. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client restituisce un errore quando riceve un nome di parametro errato dal consumer.  
+ Se viene specificato il nome di un parametro di stored procedure, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB di Native Client verifica il nome per verificare che sia valido. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client restituisce un errore quando riceve un nome di parametro errato dal consumer.  
   
 > [!NOTE]  
->  Per esporre il supporto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i tipi XML e definiti dall'utente (UDT) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il provider di OLE DB di Native Client implementa una nuova interfaccia [ISSCommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) .  
+>  Per esporre il supporto per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi XML e definiti dall'utente (UDT), il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client implementa una nuova interfaccia [ISSCommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Comandi:](../../relational-databases/native-client-ole-db-commands/commands.md)  
+ [Comandi](../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

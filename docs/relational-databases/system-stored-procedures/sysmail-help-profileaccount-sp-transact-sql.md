@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ea49facab2c91961a49fbb0c4d04ddc30e6253cb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 810a509248e57344dc095395e1a6766d74355681
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807515"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762667"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Elenca gli account associati a uno o più profili di Posta elettronica database.  
     
@@ -66,7 +66,7 @@ sysmail_help_profileaccount_sp
 |**account_name**|**sysname**|Nome dell'account.|  
 |**sequence_number**|**int**|Numero di sequenza dell'account all'interno del profilo.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Quando non viene specificato alcun *profile_id* o *profile_name* , questo stored procedure restituisce informazioni per ogni profilo nell'istanza.  
   
  Il stored procedure **sysmail_help_profileaccount_sp** si trova nel database **msdb** ed è di proprietà dello schema **dbo** . La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
@@ -74,7 +74,7 @@ sysmail_help_profileaccount_sp
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  **A. Visualizzazione di un elenco degli account per un profilo specifico in base al nome**  
   
  Nell'esempio seguente viene visualizzato un elenco di informazioni per il profilo `AdventureWorks Administrator` specificando il nome del profilo.  

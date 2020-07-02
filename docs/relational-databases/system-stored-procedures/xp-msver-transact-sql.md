@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85552daa2dda14c6a7516c96f0f9fe6566f31111
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 385bae0bd40fd392f038ef4dd85204c853a81773
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73843903"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762625"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Restituisce le informazioni sulla [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]versione di. **xp_msver** restituisce inoltre informazioni sul numero di build effettivo del server e le informazioni sull'ambiente server. Le informazioni restituite da **xp_msver** possono essere utilizzate [!INCLUDE[tsql](../../includes/tsql-md.md)] all'interno di istruzioni, batch, stored procedure e così via, per migliorare la logica per il codice indipendente dalla piattaforma.  
+  Restituisce le informazioni sulla versione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **xp_msver** restituisce inoltre informazioni sul numero di build effettivo del server e le informazioni sull'ambiente server. Le informazioni restituite da **xp_msver** possono essere utilizzate all'interno [!INCLUDE[tsql](../../includes/tsql-md.md)] di istruzioni, batch, stored procedure e così via, per migliorare la logica per il codice indipendente dalla piattaforma.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +44,7 @@ xp_msver [ optname ]
   
 |Opzione/nome colonna|Descrizione|  
 |-------------------------|-----------------|  
-|**ProductName**|Nome prodotto; ad esempio, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**ProductName**|Nome prodotto; ad esempio, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**ProductVersion**|Versione del prodotto.|  
 |**Lingua**|Lingua della versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Platform**|Nome del sistema operativo, del produttore e del tipo di chip del computer che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

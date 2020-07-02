@@ -19,15 +19,15 @@ ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f88a966e2095f527f36c84498e026c1e23aaa2ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b22b180eb2467455e4dce34906ab7481801c139d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73785221"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760739"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Copia bulk da variabili di programma
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   È possibile eseguire una copia bulk direttamente dalle variabili di programma. Dopo aver allocato le variabili in modo che contengano i dati per una riga e chiamando [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) per avviare la copia bulk, chiamare [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) per ogni colonna per specificare il percorso e il formato della variabile di programma da associare alla colonna. Riempire ogni variabile con i dati, quindi chiamare [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) per inviare una riga di dati al server. Ripetere il processo di riempimento delle variabili e chiamando **bcp_sendrow** fino a quando tutte le righe non sono state inviate al server, quindi chiamare [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) per specificare che l'operazione è stata completata.  
   
@@ -107,7 +107,7 @@ GO
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta direttamente i tipi di dati intervallo. Tuttavia, un'applicazione può archiviare le sequenze di escape dell'intervallo come stringhe di caratteri in una colonna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di tipo carattere. Tali valori potranno essere letti dall'applicazione per un utilizzo futuro ma non potranno essere utilizzati nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
- Le funzioni di copia bulk possono essere utilizzate per caricare rapidamente i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] letti da un'origine dati ODBC. Utilizzare [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) per associare le colonne di un set di risultati alle variabili di programma, quindi utilizzare **bcp_bind** per associare le stesse variabili di programma a un'operazione di copia bulk. Se si chiama [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) o **SQLFetch** , viene recuperata una riga di dati dall'origine dati ODBC nelle variabili di programma e viene chiamato [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) esegue la copia bulk dei dati dalle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] variabili di programma a.  
+ Le funzioni di copia bulk possono essere utilizzate per caricare rapidamente i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] letti da un'origine dati ODBC. Utilizzare [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) per associare le colonne di un set di risultati alle variabili di programma, quindi utilizzare **bcp_bind** per associare le stesse variabili di programma a un'operazione di copia bulk. Se si chiama [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) o **SQLFetch** , viene recuperata una riga di dati dall'origine dati ODBC nelle variabili di programma e viene chiamato [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) esegue la copia bulk dei dati dalle variabili di programma a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Un'applicazione può utilizzare la funzione [bcp_colptr](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) ogni volta che è necessario modificare l'indirizzo della variabile di dati originariamente specificata nel parametro **bcp_bind** _pData_ . Un'applicazione può utilizzare la funzione [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) ogni volta che è necessario modificare la lunghezza dei dati specificata originariamente nel parametro **bcp_bind**_cbData_ .  
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e7b22c489c7237bd9793aa590e92c1145f071b1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61306f3ec3141d9e1b73f41c6b71c6b32779454a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808083"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762686"
 ---
 # <a name="syssp_cdc_get_ddl_history-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce la cronologia delle modifiche Data Definition Language (DDL) associata all'istanza di acquisizione specificata a partire dall'abilitazione di Change Data Capture per l'istanza di acquisizione. Change Data Capture non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
@@ -61,13 +61,13 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |ddl_lsn|**binary(10)**|Numero di sequenza del file di log (LSN) associato alla modifica DDL.|  
 |ddl_time|**datetime**|Ora associata alla modifica DDL.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Le modifiche DDL apportate alla tabella di origine che modificano la struttura della colonna della tabella di origine, ad esempio l'aggiunta o l'eliminazione di una colonna o la modifica del tipo di dati di una colonna esistente, vengono mantenute nella tabella [CDC. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) . È possibile creare un report su queste modifiche utilizzando questa stored procedure. Le voci di cdc.ddl_history vengono create quando il processo di acquisizione legge la transazione DDL nel log.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'appartenenza al ruolo predefinito del database db_owner per la restituzione delle righe relative a tutte le istanze di acquisizione del database. Per tutti gli altri utenti, è richiesta l'autorizzazione SELECT su tutte le colonne acquisite nella tabella di origine e, se è stato definito un ruolo di controllo per l'istanza di acquisizione, l'appartenenza a tale ruolo del database.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene aggiunta una colonna alla tabella di origine `HumanResources.Employee` e viene eseguita la stored procedure `sys.sp_cdc_get_ddl_history` per creare un report sulle modifiche DDL che si applicano alla tabella di origine associata all'istanza di acquisizione `HumanResources_Employee`.  
   
 ```  

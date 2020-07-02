@@ -21,22 +21,22 @@ ms.assetid: 24e2764b-c8e5-4322-97a4-7407d8b8a92b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b478dcb30bbe95c9c8f3aa6256330634bbc0c1b3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 377c3f0c569815dbd348020610a6dddb7f01d745
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825006"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760308"
 ---
 # <a name="sysparameters-transact-sql"></a>sys.parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Include una riga per ogni parametro di un oggetto che accetta i parametri. Se l'oggetto è una funzione scalare, è presente anche una riga singola che descrive il valore restituito. La riga avrà un valore di **parameter_id** pari a 0.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID dell'oggetto a cui appartiene il parametro.|  
-|**name**|**sysname**|Nome del parametro. Valore univoco all'interno dell'oggetto.<br /><br /> Se l'oggetto è una funzione scalare, il nome del parametro è una stringa vuota nella riga che rappresenta il valore restituito.|  
+|**nome**|**sysname**|Nome del parametro. Valore univoco all'interno dell'oggetto.<br /><br /> Se l'oggetto è una funzione scalare, il nome del parametro è una stringa vuota nella riga che rappresenta il valore restituito.|  
 |**parameter_id**|**int**|ID del parametro. Valore univoco all'interno dell'oggetto.<br /><br /> Se l'oggetto è una funzione scalare, **parameter_id** = 0 rappresenta il valore restituito.|  
 |**system_type_id**|**tinyint**|ID del tipo di sistema del parametro.|  
 |**user_type_id**|**int**|ID del tipo di parametro definito dall'utente.<br /><br /> Per restituire il nome del tipo, eseguire il join alla vista del catalogo [sys. Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) in questa colonna.|  
@@ -60,6 +60,6 @@ ms.locfileid: "82825006"
  [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Domande frequenti sull'esecuzione di query sul catalogo di sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys. all_parameters &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-all-parameters-transact-sql.md)   
- [sys. system_parameters &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md)  
+ [sys.system_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md)  
   
   

@@ -19,15 +19,15 @@ ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e302d454ba0bf243f702b90b24cf7076ed97cb6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 68df5b4d0191fc0d6a21471cf209177f0ce0e1b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669460"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762802"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Restituisce una riga per ogni stored procedure e funzione accessibile dall'utente corrente nel database corrente. Le colonne in cui viene descritto il valore restituito sono valide solo per le funzioni. Per le stored procedure in queste colonne viene restituito NULL.  
   

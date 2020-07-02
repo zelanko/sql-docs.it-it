@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5c69ac9d3169b3cb407c98c76b1890c5a35188b4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bc41c237e81c943dacd5d0ecdfe4b9f7eec56d36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813204"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764214"
 ---
 # <a name="log_shipping_monitor_error_detail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Archivia i dettagli relativi agli errori per processi di log shipping. Questa tabella è archiviata nel database **msdb** .  
   
@@ -41,10 +41,10 @@ ms.locfileid: "82813204"
 |**log_time**|**datetime**|Data e ora di creazione del record.|  
 |**log_time_utc**|**datetime**|Data e ora UTC (Coordinated Universal Time o ora di Greenwich) di creazione del record.|  
 |**message**|**nvarchar**|Testo del messaggio.|  
-|**origine**|**nvarchar**|Origine del messaggio di errore o dell'evento.|  
+|**source**|**nvarchar**|Origine del messaggio di errore o dell'evento.|  
 |**help_url**|**nvarchar**|URL, se disponibile, in cui sono disponibili informazioni aggiuntive sull'errore.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Questa tabella include i dettagli degli errori relativi ai processi di log shipping. Ogni errore viene registrato come una sequenza di eccezioni. Per ogni sessione dell'agente possono essere disponibili più errori (sequenze).  
   
  Oltre a essere archiviate sul server di monitoraggio remoto, le informazioni relative al server primario vengono archiviate nel server primario nella tabella **log_shipping_monitor_error_detail** e le informazioni relative a un server secondario vengono inoltre archiviate nel server secondario nella tabella **log_shipping_monitor_error_detail** .  
@@ -52,9 +52,9 @@ ms.locfileid: "82813204"
  Per identificare una sessione di Agent, utilizzare le colonne **agent_id**, **agent_type**e **session_id**. Ordina per **log_time** per visualizzare gli errori nell'ordine in cui sono stati registrati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul &#40;di log shipping SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [log_shipping_monitor_history_detail &#40;&#41;Transact-SQL](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)   
- [sp_cleanup_log_shipping_history &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
+ [sp_cleanup_log_shipping_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
  [sp_delete_log_shipping_primary_database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
  [sp_delete_log_shipping_secondary_database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
  [sp_refresh_log_shipping_monitor &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   

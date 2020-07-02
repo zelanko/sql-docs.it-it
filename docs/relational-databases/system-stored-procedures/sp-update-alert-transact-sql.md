@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a63a5e34ac0331bfe879814e4d503c4d57cc3208
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6559be1c680c45b75154cea222ddfece355f49cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832545"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762749"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Aggiorna le impostazioni di un avviso esistente.  
   
@@ -80,7 +80,7 @@ sp_update_alert
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|**0**|Nessuno|  
+|**0**|nessuno|  
 |**1**|Posta elettronica|  
 |**2**|Cercapersone|  
 |**4**|**net send**|  
@@ -112,9 +112,9 @@ sp_update_alert
   
 `[ @performance_condition = ] 'performance_condition'`Valore espresso nel formato **'**_itemcomparatorvalue_**'**. *performance_condition* è di **tipo nvarchar (512)** e il valore predefinito è null ed è costituito da questi elementi.  
   
-|Componente del formato|Description|  
+|Componente del formato|Descrizione|  
 |--------------------|-----------------|  
-|*Item*|Oggetto prestazioni, contatore delle prestazioni o istanza denominata del contatore|  
+|*Elemento*|Oggetto prestazioni, contatore delle prestazioni o istanza denominata del contatore|  
 |*Confronto*|Uno di questi operatori: **>** , **<** ,**=**|  
 |*Valore*|Valore numerico del contatore|  
   
@@ -135,7 +135,7 @@ sp_update_alert
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa stored procedure, gli utenti devono essere membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente l'impostazione di abilitazione di `Test Alert` viene sostituita con `0`.  
   
 ```  

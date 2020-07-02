@@ -23,22 +23,22 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88f4354a343e9748e1111d26c3ce8c248431b1be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2514fed43b764b51806b78db68e1ae6840059ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133767"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760393"
 ---
 # <a name="sysfulltext_stoplists-transact-sql"></a>sys.fulltext_stoplists (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Contiene una riga per ogni elenco di parole non significative full-text del database.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**stoplist_id**|**int**|ID dell'elenco di parole non significative, univoco all'interno del database.|  
-|**name**|**sysname**|Nome dell'elenco di parole non significative.|  
+|**nome**|**sysname**|Nome dell'elenco di parole non significative.|  
 |**create_date**|**datetime**|Data di creazione dell'elenco di parole non significative.|  
 |**modify_date**|**datetime**|Data dell'ultima modifica apportata all'elenco di parole non significative mediante un'istruzione ALTER.|  
 |**Principal_id**|**int**|ID dell'entità di database proprietaria dell'elenco di parole non significative.|  

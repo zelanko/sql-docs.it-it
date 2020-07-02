@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f862824d6fe4e35eef25cbca949971276f1d0acd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 47fcad03fb8329c3d39150aa0aaf9b5688e0456f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827297"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764247"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabella di sistema **IHcolumns** contiene una riga per ogni colonna pubblicata. Questa tabella viene utilizzata per definire la modalità di rappresentazione dei tipi di dati delle colonne dal server di pubblicazione non SQL Server quando vengono pubblicati, ovvero viene essenzialmente eseguito il mapping dei tipi di dati tra i sistemi di gestione DBMS (Database Management System, sistema di gestione di database) non SQL Server e SQL Server. Questa tabella è archiviata nel database di distribuzione.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "82827297"
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|Identifica una colonna pubblicata.|  
 |**publishercolumn_id**|**int**|Associa una colonna pubblicata con i metadati della colonna archiviati nella tabella di sistema [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) .|  
-|**name**|**sysname**|Specifica il nome della colonna.|  
+|**nome**|**sysname**|Specifica il nome della colonna.|  
 |**article_id**|**int**|Identifica l'articolo al quale appartiene la colonna.|  
 |**column_ordinal**|**int**|Identifica la colonna in base all'ordine.|  
 |**mapped_type**|**tinyint**|Tipo di dati della colonna di destinazione nel Sottoscrittore.|  

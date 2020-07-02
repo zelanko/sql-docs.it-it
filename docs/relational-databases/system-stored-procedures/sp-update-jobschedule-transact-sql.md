@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4df02594-4cd1-49a9-8d97-37c44e4d5423
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6aa385b753dcdb2ceefce47950be9d41c8074770
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7f18b3e05b08b43333dfcd676e746e1684647510
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820195"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762713"
 ---
 # <a name="sp_update_jobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Modifica le impostazioni di pianificazione del processo specificato.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82820195"
 > [!IMPORTANT]
 >  Per ulteriori informazioni sulla sintassi utilizzata nelle versioni precedenti di Microsoft SQL Server, vedere Transact-SQL Referencefor Microsoft SQL Server 2000 *.*  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  È possibile gestire le pianificazioni dei processi in modo indipendente dai processi. Per aggiornare una pianificazione, utilizzare **sp_update_schedule**.  
   
 ## <a name="permissions"></a>Autorizzazioni  

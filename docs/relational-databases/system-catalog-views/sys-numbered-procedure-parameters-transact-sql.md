@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 420fc9d8de1197e28f4d1e55e2de59abcd2f4218
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 91deff0aa45038c22ece0f34b02314c2bf8e4d14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825082"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760336"
 ---
 # <a name="sysnumbered_procedure_parameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una riga per ogni parametro di una stored procedure numerata. Quando si crea una stored procedure numerata, alla procedura di base è associato il numero 1. Alle successive procedure sono associati i numeri 2, 3 e così via. **sys. numbered_procedure_parameters** contiene le definizioni dei parametri per tutte le procedure successive, numerate 2 e successive. In questa vista non sono visualizzati i parametri per la stored procedure di base (numero 1). La stored procedure di base è simile a una stored procedure non numerata. I relativi parametri sono pertanto rappresentati in [sys. Parameters (Transact-SQL)](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md).  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82825082"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID dell'oggetto a cui appartiene il parametro.|  
 |**procedure_number**|**smallint**|Numero della procedura nell'oggetto, maggiore o uguale a 2.|  
-|**name**|**sysname**|Nome del parametro. È univoco all'interno **procedure_number**.|  
+|**nome**|**sysname**|Nome del parametro. È univoco all'interno **procedure_number**.|  
 |**parameter_id**|**int**|ID del parametro. È univoco all'interno del **procedure_number**.|  
 |**system_type_id**|**tinyint**|ID del tipo di sistema del parametro|  
 |**user_type_id**|**int**|ID del tipo di parametro, come definito dall'utente.|  
