@@ -20,21 +20,21 @@ ms.assetid: d8829213-fce2-41c6-9ab2-aaab5836c941
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 202bc71241082047a2f406a9575ada8601cf09c2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 655d3874f65f6ad6f81b660d6ee6569e4fd08dfe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82822029"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649402"
 ---
 # <a name="sysall_views-transact-sql"></a>sys.all_views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Visualizza tutte viste di sistema e definite dall'utente combinate tramite l'operatore UNION.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**\<colonne ereditate>**||Per un elenco di colonne ereditate da questa vista, vedere [sys. objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**\<inherited columns>**||Per un elenco di colonne ereditate da questa vista, vedere [sys. objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**is_replicated**|**bit**|1 = la vista viene replicata.|  
 |**has_replication_filter**|**bit**|1 = la vista dispone di un filtro di replica.|  
 |**has_opaque_metadata**|**bit**|1 = per la vista è specificata l'opzione VIEW_METADATA. Per altre informazioni, vedere [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).|  

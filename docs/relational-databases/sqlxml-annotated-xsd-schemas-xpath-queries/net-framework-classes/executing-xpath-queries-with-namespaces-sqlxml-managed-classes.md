@@ -20,15 +20,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee37e30506eb9b41d3b94b2f76f1cf6a5149e6a2
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 74f829c7db7ee5c4c0c848c69b9cc447c3bff506
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83688733"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649389"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>Esecuzione di query XPath con spazi dei nomi (classi gestite SQLXML)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Le query XPath possono includere spazi dei nomi. Se gli elementi dello schema sono qualificati con spazio dei nomi, ovvero utilizzano uno spazio dei nomi di destinazione, le query XPath sullo schema devono specificare lo spazio dei nomi.  
   
  Poiché l'utilizzo del carattere jolly (*) non è supportato in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, è necessario specificare la query XPath utilizzando un prefisso di spazio dei nomi. Per risolvere il prefisso, utilizzare la proprietà Namespaces per specificare l'associazione dello spazio dei nomi.  

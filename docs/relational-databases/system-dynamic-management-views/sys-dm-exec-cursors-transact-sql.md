@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 79959d61b1753d833523e0618a41eef89dcb5e58
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5769ffe206c1fc84107707acc980ab94c51ac932
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830645"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676606"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni sui cursori aperti in vari database.  
   
@@ -49,7 +49,7 @@ dm_exec_cursors (session_id | 0 )
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|ID della sessione che include il cursore.|  
 |**cursor_id**|**int**|ID dell'oggetto cursore.|  
-|**name**|**nvarchar(256)**|Nome del cursore definito dall'utente.|  
+|**nome**|**nvarchar(256)**|Nome del cursore definito dall'utente.|  
 |**properties**|**nvarchar(256)**|Specifica le proprietà del cursore. I valori delle proprietà seguenti vengono concatenati per comporre il valore di questa colonna:<br />Interfaccia di dichiarazione<br />Tipo di cursore <br />Concorrenza dei cursori<br />Scopo del cursore<br />Livello di nidificazione del cursore<br /><br /> Il valore restituito in questa colonna, ad esempio, potrebbe essere "TSQL &#124; Dynamic &#124; ottimistica &#124; globale (0)".|  
 |**sql_handle**|**varbinary(64)**|Handle per il testo del batch che ha dichiarato il cursore.|  
 |**statement_start_offset**|**int**|Numero di caratteri nella stored procedure o nel batch attualmente in esecuzione in cui inizia l'istruzione in esecuzione. Può essere utilizzato in combinazione con il **sql_handle**, **statement_end_offset**e la funzione a gestione dinamica [sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) per recuperare l'istruzione attualmente in esecuzione per la richiesta.|  
@@ -74,14 +74,14 @@ dm_exec_cursors (session_id | 0 )
 ## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente vengono fornite informazioni sull'interfaccia di dichiarazione del cursore e vengono indicati i possibili valori per la colonna delle proprietà.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |API|Il cursore è stato dichiarato tramite una delle API di accesso ai dati (ODBC, OLEDB).|  
 |TSQL|Il cursore è stato dichiarato tramite la sintassi Transact-SQL DECLARE CURSOR.|  
   
  Nella tabella seguente vengono fornite informazioni sul tipo di cursore e vengono inclusi i possibili valori per la colonna delle proprietà.  
   
-|Tipo|Description|  
+|Type|Description|  
 |----------|-----------------|  
 |Keyset|Il cursore è stato dichiarato come Keyset.|  
 |Dinamico|Il cursore è stato dichiarato come Dynamic.|  
@@ -90,7 +90,7 @@ dm_exec_cursors (session_id | 0 )
   
  Nella tabella seguente vengono fornite informazioni sulla concorrenza dei cursori e vengono inclusi i possibili valori per la colonna delle proprietà.  
   
-|Concorrenza|Description|  
+|Concorrenza|Descrizione|  
 |-----------------|-----------------|  
 |Sola lettura|Il cursore è stato dichiarato come di sola lettura.|  
 |Scroll Locks|Il cursore utilizza i blocchi di scorrimento.|  
@@ -100,7 +100,7 @@ dm_exec_cursors (session_id | 0 )
   
 |Scope|Descrizione|  
 |-----------|-----------------|  
-|Locale|Specifica che l'ambito del cursore è locale rispetto al batch, alla stored procedure o al trigger in cui il cursore è stato creato.|  
+|Local|Specifica che l'ambito del cursore è locale rispetto al batch, alla stored procedure o al trigger in cui il cursore è stato creato.|  
 |Globale|Specifica che l'ambito del cursore è globale rispetto alla connessione.|  
   
 ## <a name="examples"></a>Esempi  

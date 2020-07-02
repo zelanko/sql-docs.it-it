@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d9aaa6550c34518c0c153dfa91cf3a5e8b8c0be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251956"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662882"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce il percorso di un oggetto binario di grandi dimensioni (BLOB) FILESTREAM. L'API OpenSqlFilestream usa questo percorso per restituire un handle che un'applicazione può usare per lavorare con i dati BLOB usando le API Win32. PathName è un valore di sola lettura.  
   
@@ -45,9 +45,9 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  La richiesta del percorso per una colonna con qualsiasi altro tipo di dati o per un columnthat **varbinary (max)** non dispone dell'attributo di archiviazione FILESTREAM provocherà un errore in fase di compilazione della query.  
   
  *\@opzione*  
- [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) integer che definisce il modo in cui deve essere formattato il componente server del percorso. l'opzione può essere uno dei valori seguenti. * \@* Il valore predefinito è 0.  
+ [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) integer che definisce il modo in cui deve essere formattato il componente server del percorso. l' * \@ opzione* può essere uno dei valori seguenti. Il valore predefinito è 0.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |0|Restituisce il nome del server convertito in formato BIOS, ad esempio `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|Restituisce il nome del server senza conversione, ad esempio `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -60,7 +60,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Quando il database appartiene a un gruppo di disponibilità Always On, il valore di *use_replica_computer_name* ha l'effetto seguente sull'output della funzione **pathname** :  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |Non specificato.|La funzione restituisce il nome di rete virtuale nel percorso.|  
 |0|La funzione restituisce il nome di rete virtuale nel percorso.|  

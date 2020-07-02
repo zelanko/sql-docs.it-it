@@ -1,5 +1,5 @@
 ---
-title: sys. system_parameters (Transact-SQL) | Microsoft Docs
+title: sys.system_parameters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,22 +20,22 @@ ms.assetid: 0d135c5f-68b5-4009-a0da-35e6abfee0ff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc4c95926f066fbf99bd6975b80c99c1438d8396
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fb412eaaa2efc36c80e16183e7e55bfe48f765a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821321"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664400"
 ---
 # <a name="syssystem_parameters-transact-sql"></a>sys.system_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Contiene una riga per ogni oggetto di sistema con parametri.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID dell'oggetto a cui appartiene il parametro.|  
-|**name**|**sysname**|Nome del parametro. Valore univoco all'interno dell'oggetto.<br /><br /> Se l'oggetto è una funzione scalare, il nome del parametro è una stringa vuota nella riga che rappresenta il valore restituito.|  
+|**nome**|**sysname**|Nome del parametro. Valore univoco all'interno dell'oggetto.<br /><br /> Se l'oggetto è una funzione scalare, il nome del parametro è una stringa vuota nella riga che rappresenta il valore restituito.|  
 |**parameter_id**|**int**|ID del parametro. Valore univoco all'interno dell'oggetto. Se l'oggetto è una funzione scalare, **parameter_id** = 0 rappresenta il valore restituito.|  
 |**system_type_id**|**tinyint**|ID del tipo di sistema del parametro.|  
 |**user_type_id**|**int**|ID del tipo di parametro definito dall'utente.<br /><br /> Per restituire il nome del tipo, eseguire il join alla vista del catalogo [sys. Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) in questa colonna.|  

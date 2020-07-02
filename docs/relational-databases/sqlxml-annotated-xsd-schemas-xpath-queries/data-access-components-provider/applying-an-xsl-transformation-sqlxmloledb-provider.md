@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c02c5f41ec11ec15d849e5b7fc6897ee0c798d01
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 567eb423d4def73169fc8d06828af1c34e536136
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882702"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650420"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Applicazione di una trasformazione XSL (provider SQLXMLOLEDB)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   In questa applicazione ADO di esempio viene eseguita una query SQL e viene applicata una trasformazione XSL al risultato. L'impostazione della proprietà ClientSideXML su true impone l'elaborazione del set di righe sul lato client. Il sottolinguaggio del comando è impostato su {5d531cb2-e6ed-11d2-b252-00c04f681b71}, in quanto la query SQL è specificata in un modello e questo sottolinguaggio deve essere specificato per l'esecuzione di un modello. La proprietà XSL specifica il file XSL da usare per applicare la trasformazione. Il valore della proprietà percorso di base viene utilizzato per cercare il file XSL. Se si specifica un percorso nel valore della proprietà XSL, il percorso è relativo al percorso specificato nella proprietà del percorso di base.  
   
  In questo esempio viene illustrato come utilizzare le proprietà specifiche del provider SQLXMLOLEDB seguenti:  

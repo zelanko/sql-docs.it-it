@@ -19,15 +19,15 @@ ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 56dd563d63518c18db6448d2c86f21e6ad676144
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7b770e22ccf2da14d0ad88d6f93725ef93410c84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830855"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677588"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Database di SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Restituisce informazioni su tutte le attese rilevate dai thread eseguiti durante l'operazione. È possibile usare questa visualizzazione aggregata per diagnosticare problemi a livello di prestazioni in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e anche in query e batch specifici.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "82830855"
   
  Nella tabella seguente sono elencati i tipi di attesa rilevati dalle attività.  
   
-|Tipo di attesa|Description|  
+|Tipo di attesa|Descrizione|  
 |---------------|-----------------|  
 |ABR|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |ASSEMBLY_LOAD|Si verifica durante l'accesso esclusivo al caricamento di assembly.|  
@@ -168,7 +168,7 @@ ms.locfileid: "82830855"
 |FSAGENT|Si verifica quando un'operazione di I/O del file FILESTREAM attende una risorsa dell'agente di FILESTREAM usata da un'altra operazione di I/O di file.|  
 |FSTR_CONFIG_MUTEX|Si verifica in caso di attesa per il completamento di un'altra riconfigurazione di funzionalità di FILESTREAM.|  
 |FSTR_CONFIG_RWLOCK|Si verifica in caso di attesa per serializzare l'accesso ai parametri di configurazione di FILESTREAM.|  
-|FT_METADATA_MUTEX|Documentato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.|  
+|FT_METADATA_MUTEX|Documentato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.|  
 |FT_RESTART_CRAWL|Si verifica quando è necessario riavviare una ricerca per indicizzazione full-text dall'ultimo punto valido noto per correggere un errore temporaneo. L'attesa consente alle attività di lavoro usate per il popolamento di completare il passaggio corrente o uscirne.|  
 |FULLTEXT GATHERER|Si verifica durante la sincronizzazione delle operazioni full-text.|  
 |GUARDIAN|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -379,11 +379,11 @@ ms.locfileid: "82830855"
 |XE_MODULEMGR_SYNC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_OLS_LOCK|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_PACKAGE_LOCK_BACKOFF|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|FT_COMPROWSET_RWLOCK|Full-text è in attesa di un'operazione di metadati di frammenti. Documentato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.|  
-|FT_IFTS_RWLOCK|Full-text è in attesa di sincronizzazione interna. Documentato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.|  
+|FT_COMPROWSET_RWLOCK|Full-text è in attesa di un'operazione di metadati di frammenti. Documentato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.|  
+|FT_IFTS_RWLOCK|Full-text è in attesa di sincronizzazione interna. Documentato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.|  
 |FT_IFTS_SCHEDULER_IDLE_WAIT|Tipo di attesa sospensione dell'utilità di pianificazione full-text. L'utilità di pianificazione è inattiva.|  
-|FT_IFTSHC_MUTEX|Full-text è in attesa di un'operazione di controllo fdhost. Documentato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.|  
-|FT_IFTSISM_MUTEX|Full-text è in attesa di un'operazione di comunicazione. Documentato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.|  
-|FT_MASTER_MERGE|Full-text è in attesa di un'operazione di unione nell'indice master. Documentato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.|  
+|FT_IFTSHC_MUTEX|Full-text è in attesa di un'operazione di controllo fdhost. Documentato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.|  
+|FT_IFTSISM_MUTEX|Full-text è in attesa di un'operazione di comunicazione. Documentato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.|  
+|FT_MASTER_MERGE|Full-text è in attesa di un'operazione di unione nell'indice master. Documentato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.|  
   
   

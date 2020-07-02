@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 807ed6a6f0d59444cd38f7fdf902a7c3fc1b47d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d97ef8c7dfc617cb6cd56dbcc6d83e0540051d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488046"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85695364"
 ---
 # <a name="assemblies---implementing"></a>Assembly - Implementazione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In questo argomento vengono fornite informazioni sull'implementazione e l'utilizzo degli assembly nei database, suddivise nelle sezioni seguenti:  
   
 -   Creazione di assembly  
@@ -32,7 +32,7 @@ ms.locfileid: "81488046"
 -   Gestione delle versioni degli assembly  
   
 ## <a name="creating-assemblies"></a>Creazione di assembly  
- Gli assembly vengono creati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY, oppure in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] utilizzando l'editor di assembly assistito. Inoltre, la distribuzione di un progetto [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] di SQL Server in registra un assembly nel database specificato per il progetto. Per altre informazioni, vedere [Distribuzione di oggetti di database CLR](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
+ Gli assembly vengono creati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY, oppure in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] utilizzando l'editor di assembly assistito. Inoltre, la distribuzione di un progetto di SQL Server in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] registra un assembly nel database specificato per il progetto. Per altre informazioni, vedere [Distribuzione di oggetti di database CLR](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
   
  **Per creare un assembly utilizzando Transact-SQL**  
   
@@ -72,7 +72,7 @@ ms.locfileid: "81488046"
   
 -   [Elimina oggetti](../../ssms/object/delete-objects.md)  
   
- Per impostazione predefinita, l'esecuzione di tutti gli assembly creati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disabilitata. È possibile utilizzare l'opzione **clr enabled** del sistema **sp_configure** stored procedure per disabilitare o abilitare l'esecuzione di tutti gli assembly caricati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La disabilitazione dell'esecuzione degli assembly impedisce l'esecuzione di funzioni CRL (Common Language Runtime), stored procedure, trigger, funzioni di aggregazione e tipi definiti dall'utente e arresta le funzioni attualmente in esecuzione. La disabilitazione dell'esecuzione degli assembly non ne impedisce la creazione, la modifica o l'eliminazione. Per ulteriori informazioni, vedere [opzione di configurazione del server clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
+ Per impostazione predefinita, l'esecuzione di tutti gli assembly creati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disabilitata. È possibile utilizzare l'opzione **clr enabled** del sistema **sp_configure** stored procedure per disabilitare o abilitare l'esecuzione di tutti gli assembly caricati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La disabilitazione dell'esecuzione degli assembly impedisce l'esecuzione di funzioni CRL (Common Language Runtime), stored procedure, trigger, funzioni di aggregazione e tipi definiti dall'utente e arresta le funzioni attualmente in esecuzione. La disabilitazione dell'esecuzione degli assembly non ne impedisce la creazione, la modifica o l'eliminazione. Per ulteriori informazioni, vedere [opzione di configurazione del server clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
   
  **Per abilitare e disabilitare l'esecuzione degli assembly**  
   

@@ -23,21 +23,21 @@ ms.assetid: c05fd873-aff2-4a89-9936-a54c2ea09996
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e000d4e4f7f46d57bb1ae9a4e5c370169eb1227f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c8faf838b12c82fd2dff25db87dbae96ff891e81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821320"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664039"
 ---
 # <a name="systable_types-transact-sql"></a>sys.table_types (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Visualizza le proprietà dei tipi di tabella definiti dall'utente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un tipo di tabella è un tipo dal quale potrebbero essere dichiarati variabili della tabella o parametri con valori di tabella. Ogni tipo di tabella dispone di un **type_table_object_id** che rappresenta una chiave esterna nella vista del catalogo [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) . È possibile utilizzare questa colonna ID per eseguire query su varie viste del catalogo, in modo analogo a una colonna **object_id** di una normale tabella, per individuare la struttura del tipo di tabella, ad esempio le colonne e i vincoli.    
  
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|*\<colonne ereditate>*||Per un elenco delle colonne ereditate da questa vista, vedere [sys. types &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-types-transact-sql.md).|  
+|*\<inherited columns>*||Per un elenco delle colonne ereditate da questa vista, vedere [sys. types &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-types-transact-sql.md).|  
 |**type_table_object_id**|**int**|Numero di identificazione dell'oggetto. Numero univoco all'interno di un database.|  
 |**is_memory_optimized**|**bit**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.<br /><br /> Di seguito sono indicati i valori possibili:<br /><br /> 0 = senza ottimizzazione per la memoria<br /><br /> 1 = con ottimizzazione per la memoria<br /><br /> Il valore predefinito è 0.<br /><br /> I tipi di tabella vengono sempre creati con DURABILITY = SCHEMA_ONLY. Solo lo schema è persistente su disco.|  
   

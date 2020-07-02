@@ -16,15 +16,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca7eb937f75575dd34e1857209605aeb74a2d1d6
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: b1ba196b9184a0ec5a32efd5a09c54eb47924471
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215797"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650485"
 ---
 # <a name="schema-caching-sqlxml-40"></a>Memorizzazione nella cache degli schemi (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Con un'installazione side-by-side di XML per Microsoft SQL Server 2000 Web Release 1, Microsoft SQLXML 2.0 e SQLXML 3.0, è possibile controllare in modo esplicito la memorizzazione degli schemi nella cache in tutte le versioni attraverso le chiavi del Registro di sistema seguenti:  
   
  Web Release 1:  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 767dd410-6bc9-4c4a-ab0f-6d2cf6163426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 183fa2fc1a674ec1cc987c265f5a0d4c399e27cc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a121794c98b41cea7db6357e703a7993d9188699
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010753"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663368"
 ---
 # <a name="syssyscomments-transact-sql"></a>sys.syscomments (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene voci per ogni vista, regola, valore predefinito, trigger, vincolo CHECK, vincolo DEFAULT e stored procedure all'interno di un database. La colonna di **testo** contiene le istruzioni di definizione SQL originali.  
   
@@ -43,10 +43,10 @@ ms.locfileid: "68010753"
 |**Stato**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**ctext**|**varbinary(8000)**|Byte non elaborati dell'istruzione di definizione SQL.|  
 |**texttype**|**smallint**|0 = Commento fornito dall'utente.<br /><br /> 1 = Commento fornito dal sistema.<br /><br /> 4 = Commento crittografato.|  
-|**linguaggio**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**encrypted**|**bit**|Indica se la definizione della stored procedure è offuscata.<br /><br /> 0 = Non offuscata<br /><br /> 1 = Offuscata<br /><br /> ** \* Importante \* \* ** Per offuscare le definizioni di stored procedure, utilizzare CREATE PROCEDURE con la parola chiave ENCRYPTION.|  
+|**lingua**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**crittografati**|**bit**|Indica se la definizione della stored procedure è offuscata.<br /><br /> 0 = Non offuscata<br /><br /> 1 = Offuscata<br /><br /> Importante per offuscare le definizioni di stored procedure, utilizzare create procedure con la parola chiave Encryption. ** \* \* \* \* **|  
 |**compressed**|**bit**|Restituisce sempre 0. Indica che la procedura è compressa.|  
-|**text**|**nvarchar(4000)**|Testo effettivo dell'istruzione di definizione SQL.<br /><br /> La semantica dell'espressione decodificata è equivalente al testo originale, tuttavia non è garantito che la sintassi venga mantenuta. Gli spazi vuoti vengono ad esempio eliminati dall'espressione decodificata.<br /><br /> Questa [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]vista compatibile con ottiene informazioni dalle strutture correnti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e può restituire più caratteri della definizione **nvarchar (4000)** . **sp_help** restituisce **nvarchar (4000)** come tipo di dati della colonna di testo. Quando si lavora con **syscomments** , è consigliabile usare **nvarchar (max)**. Per le nuove attività di sviluppo, non usare **syscomments**.|  
+|**text**|**nvarchar(4000)**|Testo effettivo dell'istruzione di definizione SQL.<br /><br /> La semantica dell'espressione decodificata è equivalente al testo originale, tuttavia non è garantito che la sintassi venga mantenuta. Gli spazi vuoti vengono ad esempio eliminati dall'espressione decodificata.<br /><br /> Questa [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] vista compatibile con ottiene informazioni dalle strutture correnti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e può restituire più caratteri della definizione **nvarchar (4000)** . **sp_help** restituisce **nvarchar (4000)** come tipo di dati della colonna di testo. Quando si lavora con **syscomments** , è consigliabile usare **nvarchar (max)**. Per le nuove attività di sviluppo, non usare **syscomments**.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Mapping di tabelle di sistema a viste di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

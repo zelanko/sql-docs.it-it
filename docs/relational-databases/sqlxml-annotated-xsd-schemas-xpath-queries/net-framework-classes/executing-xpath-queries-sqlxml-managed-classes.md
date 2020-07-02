@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 338cea48f1f123f296b280bc55cfa14beb7ff0f8
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 139ebeadb8ea481180aa97df600bfc9d3280d20f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84884933"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649360"
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>Esecuzione di query XPath (classi gestite SQLXML)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   In questo esempio viene illustrato come vengono eseguite le query XPath su uno schema di mapping.  
   
  Si consideri lo schema seguente:  

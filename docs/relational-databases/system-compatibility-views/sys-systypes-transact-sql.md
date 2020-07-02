@@ -1,5 +1,5 @@
 ---
-title: sys. systypes (Transact-SQL) | Microsoft Docs
+title: Tipi di sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5533e521ba28c0190a5be57ed7637632213d7447
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 99a970b5be9f28569942b4378c488b710b13cd32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018086"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652337"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Restituisce una riga per ogni tipo di dati di sistema o definito dall'utente nel database.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68018086"
 |**xscale**|**tinyint**|Scala interna utilizzata dal server, da non utilizzare nelle query.|  
 |**tdefault**|**int**|ID della stored procedure che include i controlli di integrità per questo tipo di dati.|  
 |**dominio**|**int**|ID della stored procedure che include i controlli di integrità per questo tipo di dati.|  
-|**UID**|**smallint**|ID dello schema del proprietario del tipo.<br /><br /> Per i database aggiornati da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'ID dello schema corrisponde all'ID utente del proprietario.<br /><br /> ** \* Importante \* \* ** Se si utilizza una delle istruzioni DDL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seguenti, è necessario utilizzare la vista del catalogo [sys. Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) anziché **sys. systypes**.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Causa un errore di overflow o restituisce NULL se il numero di utenti e ruoli è maggiore di 32.767.|  
+|**uid**|**smallint**|ID dello schema del proprietario del tipo.<br /><br /> Per i database aggiornati da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'ID dello schema corrisponde all'ID utente del proprietario.<br /><br /> Importante se si utilizza una delle istruzioni DDL seguenti, è necessario utilizzare la vista del catalogo ** \* sys. Types anziché \*sys.systipi. \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) **sys.systypes**<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Causa un errore di overflow o restituisce NULL se il numero di utenti e ruoli è maggiore di 32.767.|  
 |**riservati**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**CollationID**|**int**|Se è basato su caratteri, **CollationID** è l'ID delle regole di confronto del database corrente. in caso contrario, è NULL.|  
 |**UserType**|**smallint**|ID tipo utente. Causa un errore di overflow o restituisce NULL se il numero di tipi di dati è maggiore di 32.767.|  

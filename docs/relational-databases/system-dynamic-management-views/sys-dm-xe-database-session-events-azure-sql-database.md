@@ -11,15 +11,15 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c51b1098584b17640f0ba26d36952078c45d420c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 92db79c57390b039fa7f5b4a88c83405c11fb2c1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826713"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676004"
 ---
 # <a name="sysdm_xe_database_session_events-azure-sql-database"></a>sys.dm_xe_database_session_events (database SQL di Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Restituisce informazioni sugli eventi di sessione. Gli eventi sono punti di esecuzione discreti. I predicati possono essere applicati agli eventi per arrestarne la generazione se l'evento non contiene le informazioni necessarie.  
   

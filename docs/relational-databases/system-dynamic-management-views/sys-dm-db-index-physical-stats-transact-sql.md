@@ -21,15 +21,15 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 97339050b2bb6b81945b6bc7604befdfd45f360b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8dcde5de27764979cf2258d3d1895574a4ca4e54
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829534"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677916"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Restituisce le informazioni sulle dimensioni e sulla frammentazione per i dati e gli indici della tabella o della vista specificata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un indice, viene restituita una riga per ogni livello dell'albero B in ogni partizione. Per un heap, viene restituita una riga per l'unità di allocazione IN_ROW_DATA di ogni partizione. Per i dati LOB (Large Object), viene restituita una riga per l'unità di allocazione LOB_DATA di ogni partizione. Se nella tabella esistono dati di overflow della riga, viene restituita una riga per l'unità di allocazione ROW_OVERFLOW_DATA in ogni partizione. Non restituisce informazioni sugli indici columnstore con ottimizzazione per la memoria xVelocity.  
   
@@ -114,7 +114,7 @@ sys.dm_db_index_physical_stats (
 |column_store_delete_buffer_state|TINYINT|**Si applica a: (da alla** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = SVUOTAMENTO<br /><br /> 3 = SCARICAMENTO<br /><br /> 4 = RITIRO<br /><br /> 5 = PRONTO|  
 |column_store_delete_buff_state_desc||**Si applica a: (da alla** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> NON valido: l'indice padre non è un indice columnstore.<br /><br /> Gli scanner e gli eliminatori utilizzano questa operazione.<br /><br /> SVUOTAMENTO: gli eliminatori si svuotano, ma gli scanner lo usano ancora.<br /><br /> Il buffer di SCARICAmento viene chiuso e le righe nel buffer vengono scritte nella bitmap Delete.<br /><br /> Il ritiro delle righe nel buffer di eliminazione chiuso è stato scritto nella bitmap di eliminazione, ma il buffer non è stato troncato perché gli scanner lo usano ancora. I nuovi scanner non devono usare il buffer di ritiro perché il buffer aperto è sufficiente.<br /><br /> PRONTO: il buffer di eliminazione è pronto per l'uso.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  La funzione a gestione dinamica sys.dm_db_index_physical_stats sostituisce l'istruzione DBCC SHOWCONTIG.  
   
 ## <a name="scanning-modes"></a>Modalità di analisi  
@@ -425,7 +425,7 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Funzioni e viste a gestione dinamica relative agli indici &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Funzioni a gestione dinamica e DMV correlate all'indice &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_db_index_operational_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [sys. dm_db_index_usage_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys. dm_db_partition_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   

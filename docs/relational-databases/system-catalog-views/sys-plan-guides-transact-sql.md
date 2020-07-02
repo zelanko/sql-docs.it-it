@@ -20,22 +20,22 @@ ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb6f8c3efcf1f4ac84e521c323933c491c40a63c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 390b7d0c1fd34827580562b16074028465cb8ae3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831455"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85678409"
 ---
 # <a name="sysplan_guides-transact-sql"></a>sys.plan_guides (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Contiene una riga per ogni guida di piano nel database.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**plan_guide_id**|**int**|Identificatore univoco della guida di piano nel database.|  
-|**name**|**sysname**|Nome della guida di piano.|  
+|**nome**|**sysname**|Nome della guida di piano.|  
 |**create_date**|**datetime**|Data e ora di creazione della guida di piano.|  
 |**modify_date**|**DateTime**|Data dell'ultima modifica della guida di piano.|  
 |**is_disabled**|**bit**|1 = La guida di piano è disabilitata.<br /><br /> 0 = La guida di piano è abilitata.|  
@@ -44,7 +44,7 @@ ms.locfileid: "82831455"
 |**scope_type_desc**|**nvarchar(60)**|Descrizione dell'ambito della guida di piano.<br /><br /> OBJECT<br /><br /> SQL<br /><br /> TEMPLATE|  
 |**scope_object_id**|**Int**|object_id dell'oggetto che definisce l'ambito della guida di piano, se l'ambito è OBJECT.<br /><br /> NULL se la guida di piano non è definita a livello di ambito di OBJECT.|  
 |**scope_batch**|**nvarchar(max)**|Testo del batch, se **scope_type** è SQL.<br /><br /> NULL se il tipo di batch non è SQL.<br /><br /> Se NULL e **scope_type** è SQL, viene applicato il valore di **query_text** .|  
-|**parametri**|**nvarchar(max)**|Stringa che definisce l'elenco dei parametri associati alla guida di piano.<br /><br /> NULL = Nessun elenco di parametri è associato alla guida di piano.|  
+|**parameters**|**nvarchar(max)**|Stringa che definisce l'elenco dei parametri associati alla guida di piano.<br /><br /> NULL = Nessun elenco di parametri è associato alla guida di piano.|  
 |**hint**|**nvarchar(max)**|Hint della clausola OPTION associati alla guida di piano.|  
   
 ## <a name="permissions"></a>Autorizzazioni  

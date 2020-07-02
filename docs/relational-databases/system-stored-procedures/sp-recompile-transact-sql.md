@@ -18,15 +18,15 @@ ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 241a0594f3487d47c49a96fb2539b660b294b8a4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4537cdca0d9d0b64d7c7b75f57d0c4eb39836097
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827515"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651920"
 ---
 # <a name="sp_recompile-transact-sql"></a>sp_recompile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Causa la ricompilazione di stored procedure, trigger e funzioni definite dall'utente alla successiva esecuzione degli stessi. Ciò avviene tramite l'eliminazione del piano esistente dalla cache delle procedure e la creazione forzata di un nuovo piano alla successiva esecuzione della stored procedure o del trigger. In una raccolta [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], viene registrato l'evento SP:CacheInsert anziché l'evento SP:Recompile.  
   
@@ -46,7 +46,7 @@ sp_recompile [ @objname = ] 'object'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o un numero diverso da zero (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  La stored procedure sp_recompile esegue la ricerca di un oggetto solo nel database corrente.  
   
  Le query usate da stored procedure, trigger e funzioni definite dall'utente vengono ottimizzate solo in fase di compilazione. Poiché le indicizzazioni o le altre modifiche che hanno effetto sulle statistiche vengono effettuate nel database, il livello di efficienza di stored procedure, trigger e funzioni definite dall'utente dopo la compilazione potrebbe risultare minore. Tramite la ricompilazione delle stored procedure e dei trigger che modificano una tabella, è possibile riottimizzare le query.  
@@ -57,7 +57,7 @@ sp_recompile [ @objname = ] 'object'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER per l'oggetto specificato.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene definita la ricompilazione delle stored procedure, dei trigger e delle funzioni definite dall'utente che modificano la tabella `Customer` alla loro successiva esecuzione.  
   
 ```  

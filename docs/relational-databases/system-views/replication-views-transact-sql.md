@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ae0c1245bdf9ff7fe1d1eb712745cbc15d2479af
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 01c5c21ef7886773e162fe1f17cbcbaae177075b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807934"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692660"
 ---
 # <a name="replication-views-transact-sql"></a>Viste della replica (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Queste viste contengono informazioni utilizzate dalla replica in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le visualizzazioni consentono un accesso più semplice ai dati nelle [tabelle del sistema di replica](../../relational-databases/system-tables/replication-tables-transact-sql.md). Le viste vengono create in un database utente quando questo viene abilitato come database di pubblicazione o sottoscrizione. Tutti gli oggetti di replica vengono rimossi da un database utente quando questo viene rimosso dalla topologia di replica. Il metodo preferito per accedere ai metadati di replica consiste nell'utilizzare [le stored procedure di replica](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).  
   

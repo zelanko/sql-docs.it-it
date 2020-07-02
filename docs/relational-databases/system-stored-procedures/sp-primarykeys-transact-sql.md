@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7b4abd30b4fb62a6f9983fc0dd12348cca52467
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 05a1563188b5a8332c547901247ef43e07b1efa5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830968"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646131"
 ---
 # <a name="sp_primarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce le colonne chiave primaria (una riga per ogni colonna chiave) per la tabella remota specificata.  
   
@@ -51,7 +51,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 `[ @table_catalog = ] 'table_catalog'`Nome del catalogo in cui risiede il *table_name* specificato. In ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrisponde al nome del database. *TABLE_CATALOG* è di **tipo sysname**e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- Nessuno  
+ nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -72,7 +72,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite le colonne chiave primaria dal server `LONDON1` per la tabella `HumanResources.JobCandidate` nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  

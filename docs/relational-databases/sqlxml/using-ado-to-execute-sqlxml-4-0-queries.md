@@ -18,15 +18,15 @@ ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e0a26c534aeb25bd445deb087bef06a2137bfa3
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: f7c2db9cc01bfa50092e5849d869d43da8a622e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882099"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665541"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Utilizzo di ADO per eseguire query SQLXML 4.0
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Nelle versioni precedenti di SQLXML viene fornito il supporto per l'esecuzione di query basate su HTTP mediante le directory virtuali IIS e il filtro ISAPI SQLXML. In SQLXML 4.0 questi componenti sono stati rimossi in quanto simili e, a partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], è stata fornita una funzionalità sostitutiva con i servizi Web XML nativi.  
   
  In alternativa, è possibile eseguire query e utilizzare SQLXML 4.0 con le applicazioni basate su COM sfruttando le estensioni SQLXML di ActiveX Data Objects (ADO), introdotte per la prima volta in Microsoft Data Access Components (MDAC) 2.6 e versioni successive.  

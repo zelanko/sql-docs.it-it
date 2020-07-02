@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ae3e555f48958aec87ed012244fae9775fae1619
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 24a95d193d483c35dac0f94a839555fecb52afca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826101"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662450"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Visualizza il profilo di un agente specificato. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   
@@ -57,14 +57,14 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**profile_id**|**int**|ID del profilo.|  
 |**profile_name**|**sysname**|Nome univoco per il tipo di agente.|  
 |**agent_type**|**int**|**1** = agente di snapshot<br /><br /> **2** = agente di lettura log<br /><br /> **3** = agente di distribuzione<br /><br /> **4** = agente di merge<br /><br /> **9** = agente di lettura coda|  
-|**Type**|**int**|**0** = sistema<br /><br /> **1** = personalizzato|  
+|**Tipo**|**int**|**0** = sistema<br /><br /> **1** = personalizzato|  
 |**Descrizione**|**varchar (3000)**|Descrizione del profilo.|  
 |**def_profile**|**bit**|Indica se il profilo corrisponde al profilo predefinito per il tipo di agente specificato.|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_help_agent_profile** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="permissions"></a>Autorizzazioni  

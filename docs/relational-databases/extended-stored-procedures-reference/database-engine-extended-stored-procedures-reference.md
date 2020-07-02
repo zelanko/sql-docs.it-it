@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 4e9d0374-0927-4f17-bab9-2215b1b8fea8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 013ca0abae914b511a564ee4d67bd01d398f8bb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 61755c4b360332042721ccd7ec9213a727ee4ad9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064198"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85679107"
 ---
 # <a name="database-engine-extended-stored-procedures---reference"></a>Stored procedure estese del motore di database - Informazioni di riferimento
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
- L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] API stored procedure estesa, inclusa in precedenza in Open Data Services, fornisce un'Application Programming Interface basata su server (API) per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'estensione della funzionalità. L'API è costituita dalle macro e dalle funzioni C e C++ utilizzate per compilare applicazioni.  
+ L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] API stored procedure estesa, inclusa in precedenza in Open Data Services, fornisce un'Application Programming Interface basata su server (API) per l'estensione della [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funzionalità. L'API è costituita dalle macro e dalle funzioni C e C++ utilizzate per compilare applicazioni.  
   
  Con la comparsa delle più recenti e avanzate tecnologie, ad esempio l'integrazione con CLR, la necessità di ricorrere alle stored procedure estese è stata ampiamente soppiantata.  
   

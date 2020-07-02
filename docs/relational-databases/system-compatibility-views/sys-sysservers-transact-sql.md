@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 333be9cb6c86c1db3801ac50159610c6d19d1611
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5406f97a14d92aed63e60e946da9f16bd183d611
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68941105"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652235"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una riga per ogni server accessibile come origine dati OLE DB da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -54,18 +54,18 @@ ms.locfileid: "68941105"
 |**QueryTimeout**|**int**|Impostazione del timeout per le query eseguite sul server.|  
 |**srvnetname**|**char(30)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**IsRemote**|**bit**|1 = Server remoto.<br /><br /> 0 = Server collegato.|  
-|**RPC**|**bit**|1 = **sp_serveroption\@RPC** è impostata su **true** o **on**.<br /><br /> 0 = **sp_serveroption\@RPC** è impostata su **false** o **off**.|  
-|**pub**|**bit**|1 = **sp_serveroption\@pubblicazione** è impostata su **true** o **on**.<br /><br /> 0 = **sp_serveroption\@pubblicazione** è impostata su **false** o **off**.|  
-|**Sub**|**bit**|1 = **sp_serveroption\@Sub** impostato su **true** o **on**.<br /><br /> 0 = **sp_serveroption\@Sub** impostato su **false** o **off**.|  
-|**dist**|**bit**|1 = **sp_serveroption\@dist** è impostata su **true** o **on**.<br /><br /> 0 = **sp_serveroption\@dist** è impostata su **false** o **off**.|  
-|**dpub**|**bit**|1 = **sp_serveroption\@dpub** impostato su **true** o **on**.<br /><br /> 0 = **sp_serveroption\@dpub** è impostato su **false** o **off**.|  
-|**rpcout**|**bit**|1 = **sp_serveroption\@RPC out** impostata su **true** o **on**.<br /><br /> 0 = **sp_serveroption\@RPC out** è impostata su **false** o **off**.|  
-|**DataAccess**|**bit**|1 = **sp_serveroption\@accesso ai dati** impostato su **true** o **on**.<br /><br /> 0 = **sp_serveroption\@l'accesso ai dati** è impostato su **false** o **off**.|  
-|**collationcompatible**|**bit**|1 = **sp_serveroption\@la compatibilità delle regole di confronto** è impostata su **true** o **on**.<br /><br /> 0 = **sp_serveroption\@la compatibilità delle regole di confronto** è impostata su **false** o **off**.|  
-|**sistema**|**bit**|1 = **sp_serveroption\@sistema** impostato su **true** o **on**.<br /><br /> 0 = **sp_serveroption\@sistema** è impostato su **false** o **off**.|  
-|**useremotecollation**|**bit**|1 = **sp_serveroption\@regole di confronto remote** impostate su **true** o **on**.<br /><br /> 0 = **sp_serveroption\@regole di confronto remote** impostate su **false** o **off**.|  
-|**lazyschemavalidation**|**bit**|1 = **sp_serveroption\@convalida dello schema lazy** impostata su **true** o **on**.<br /><br /> 0 = **sp_serveroption\@la convalida dello schema lazy** è impostata su **false** o **off**.|  
-|**confronto**|**sysname**|Regole di confronto del server impostate **per\@sp_serveroption nome delle regole di confronto**.|  
+|**RPC**|**bit**|1 = **sp_serveroption \@ RPC** è impostata su **true** o **on**.<br /><br /> 0 = **sp_serveroption \@ RPC** è impostata su **false** o **off**.|  
+|**pub**|**bit**|1 = **sp_serveroption \@ pubblicazione** è impostata su **true** o **on**.<br /><br /> 0 = **sp_serveroption \@ pubblicazione** è impostata su **false** o **off**.|  
+|**sub**|**bit**|1 = **sp_serveroption \@ Sub** impostato su **true** o **on**.<br /><br /> 0 = **sp_serveroption \@ Sub** impostato su **false** o **off**.|  
+|**dist**|**bit**|1 = **sp_serveroption \@ dist** è impostata su **true** o **on**.<br /><br /> 0 = **sp_serveroption \@ dist** è impostata su **false** o **off**.|  
+|**dpub**|**bit**|1 = **sp_serveroption \@ dpub** impostato su **true** o **on**.<br /><br /> 0 = **sp_serveroption \@ dpub** è impostato su **false** o **off**.|  
+|**rpcout**|**bit**|1 = **sp_serveroption \@ RPC out** impostata su **true** o **on**.<br /><br /> 0 = **sp_serveroption \@ RPC out** è impostata su **false** o **off**.|  
+|**DataAccess**|**bit**|1 = **sp_serveroption \@ accesso ai dati** impostato su **true** o **on**.<br /><br /> 0 = **sp_serveroption \@ l'accesso ai dati** è impostato su **false** o **off**.|  
+|**collationcompatible**|**bit**|1 = **sp_serveroption la \@ compatibilità delle regole di confronto** è impostata su **true** o **on**.<br /><br /> 0 = **sp_serveroption la \@ compatibilità delle regole di confronto** è impostata su **false** o **off**.|  
+|**sistema**|**bit**|1 = **sp_serveroption \@ sistema** impostato su **true** o **on**.<br /><br /> 0 = **sp_serveroption \@ sistema** è impostato su **false** o **off**.|  
+|**useremotecollation**|**bit**|1 = **sp_serveroption \@ regole di confronto remote** impostate su **true** o **on**.<br /><br /> 0 = **sp_serveroption \@ regole di confronto remote** impostate su **false** o **off**.|  
+|**lazyschemavalidation**|**bit**|1 = **sp_serveroption \@ convalida dello schema lazy** impostata su **true** o **on**.<br /><br /> 0 = **sp_serveroption la \@ convalida dello schema lazy** è impostata su **false** o **off**.|  
+|**confronto**|**sysname**|Regole di confronto del server impostate per **sp_serveroption \@ nome delle regole di confronto**.|  
 |**nonsqlsub**|bit|0 = il server è un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 1 = il server non è un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
 ## <a name="see-also"></a>Vedere anche  

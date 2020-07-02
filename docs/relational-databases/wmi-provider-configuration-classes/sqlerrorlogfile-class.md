@@ -10,15 +10,15 @@ ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0dd923f17fe0267edf40d07da982d0856ec4ba06
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 616fa99a342c33bf36df41d858a0b37b027ce2fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659058"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662395"
 ---
 # <a name="sqlerrorlogfile-class"></a>Classe SqlErrorLogFile
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   Fornisce proprietà per la visualizzazione delle informazioni relative a un file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintassi  
@@ -45,7 +45,7 @@ class SQLErrorLogFile
 |InstanceName|Tipo di dati: **String**<br /><br /> Tipo di accesso: sola lettura<br /><br /> Qualificatori: chiave<br /><br /> <br /><br /> Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si trova il file di log.|  
 |LastModified|Tipo di dati: **DateTime**<br /><br /> Tipo di accesso: sola lettura<br /><br /> <br /><br /> Data dell'ultima modifica apportata al file di log.|  
 |LogFileSize|Tipo di dati: **UInt32**<br /><br /> Tipo di accesso: sola lettura<br /><br /> <br /><br /> Dimensione del file di log, in byte.|  
-|Nome|Tipo di dati: **String**<br /><br /> Tipo di accesso: sola lettura<br /><br /> Qualificatori: chiave<br /><br /> <br /><br /> Nome del file di log.|  
+|Name|Tipo di dati: **String**<br /><br /> Tipo di accesso: sola lettura<br /><br /> Qualificatori: chiave<br /><br /> <br /><br /> Nome del file di log.|  
   
 ## <a name="remarks"></a>Osservazioni  
   
@@ -56,7 +56,7 @@ class SQLErrorLogFile
 |Spazio dei nomi|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come recuperare informazioni su tutti i file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per eseguire l'esempio, sostituire \< *Instance_Name*> con il nome dell'istanza, ad esempio, "instance1".  
+ Nell'esempio seguente viene illustrato come recuperare informazioni su tutti i file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per eseguire l'esempio, sostituire \<*Instance_Name*> con il nome dell'istanza, ad esempio,' Instance1'.  
   
 ```  
 on error resume next  
@@ -90,9 +90,9 @@ Next
     > [!NOTE]  
     >  Per informazioni su come verificare le autorizzazioni WMI, vedere la sezione relativa alla sicurezza nell'argomento [visualizzare i file di log offline](../../relational-databases/logs/view-offline-log-files.md).  
   
--   Autorizzazione di lettura per la cartella che contiene i log degli errori. Per impostazione predefinita, i log degli errori si trovano nel percorso seguente, dove \< *unità>* rappresenta l'unità in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cui \<è stato installato e *NomeIstanza*> è il nome [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dell'istanza di:  
+-   Autorizzazione di lettura per la cartella che contiene i log degli errori. Per impostazione predefinita, i log degli errori si trovano nel percorso seguente \<*Drive> , dove * rappresenta l'unità in cui è stato installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e \<*InstanceName*> è il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-     **Unità>: \Programmi\Microsoft SQL Server\MSSQL11. \<** **\< Nomeistanza> \MSSQL\Log**  
+     ** \<Drive> : \Programmi\microsoft SQL Server\MSSQL11** **. \<InstanceName> \MSSQL\Log**  
   
  Se si sta eseguendo la connessione attraverso un firewall, assicurarsi che sia impostata un'eccezione nel firewall per WMI nei computer di destinazione remoti. Per ulteriori informazioni, vedere [connessione a WMI in modalità remota a partire da Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
   

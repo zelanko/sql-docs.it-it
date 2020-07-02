@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 79d26f8ff6a04953f6312ba8749371f6d269b912
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e22206711380f5b8b74d939b0cca361ec3fbaa91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826669"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85675608"
 ---
 # <a name="sysdm_xe_map_values-transact-sql"></a>sys.dm_xe_map_values (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce un mapping di chiavi numeriche interne in un testo leggibile.  
  

@@ -1,5 +1,5 @@
 ---
-title: sys. sysconfigures (Transact-SQL) | Microsoft Docs
+title: sys.sysconfigura (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c785ee1c4d3c5382aa42adf48ad9880f00297137
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e0e65f06ccecd01ae9396b2c64962040a446aeb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089198"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663344"
 ---
 # <a name="syssysconfigures-transact-sql"></a>sys.sysconfigures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Contiene una riga per ogni opzione di configurazione impostata da un utente. **sysconfigures** contiene le opzioni di configurazione definite prima dell'avvio più recente di, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oltre a tutte le opzioni di configurazione dinamiche impostate da quel momento.  
+  Contiene una riga per ogni opzione di configurazione impostata da un utente. **sysconfigures** contiene le opzioni di configurazione definite prima dell'avvio più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , oltre a tutte le opzioni di configurazione dinamiche impostate da quel momento.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  

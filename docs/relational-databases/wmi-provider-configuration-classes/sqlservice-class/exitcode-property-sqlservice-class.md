@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e6b8bff2-946f-4abe-bd50-1f7bb11fdddf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 392fc529b10e79d96a83ccd896733d14d0b8b4dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0183882ae3544ffe23b14a848067465924748ca3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659680"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662270"
 ---
 # <a name="exitcode-property-sqlservice-class"></a>Proprietà ExitCode (classe SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Ottiene o imposta il codice di errore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Win 32 che definisce i problemi verificatisi durante l'avvio e l'arresto del servizio.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,7 +36,7 @@ object.ExitCode [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) che rappresenta il servizio.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  

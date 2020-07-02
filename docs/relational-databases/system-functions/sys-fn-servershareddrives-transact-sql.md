@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71858ee3c57af8d94bdf4ef4addad720655942f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce7301325f8cf6ec782b9c9850399617171146f7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68122545"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652010"
 ---
 # <a name="sysfn_servershareddrives-transact-sql"></a>sys.fn_servershareddrives (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce i nomi delle unità condivise utilizzate dal server del cluster.  
   
@@ -74,7 +74,7 @@ SELECT * FROM fn_servershareddrives();
   
  n  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sys. dm_io_cluster_valid_path_names &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)   
  [sys. dm_io_cluster_shared_drives &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
  [sys.fn_virtualservernodes &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)  

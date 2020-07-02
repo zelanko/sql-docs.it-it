@@ -20,22 +20,22 @@ ms.assetid: ec9de780-68fd-4551-b70b-2d3ab3709b3e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c996a258ae9f0dacec09fc58b3f433e620b6d663
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 58ae604f06e97e07560d55bc8eea103b27002aaa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82822094"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652854"
 ---
 # <a name="sysallocation_units-transact-sql"></a>sys.allocation_units (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Contiene una riga per ogni unità di allocazione nel database.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |allocation_unit_id|**bigint**|ID dell'unità di allocazione. Valore univoco all'interno di un database.|  
-|tipo|**tinyint**|Tipo di unità di allocazione:<br /><br /> 0 = Rimossa<br /><br /> 1 = Dati all'interno di righe (tutti i tipi di dati, eccetto i tipi di dati LOB)<br /><br /> 2 = dati LOB (Large Object) (**Text**, **ntext**, **Image**, **XML**, tipi di valore di grandi dimensioni e tipi CLR definiti dall'utente)<br /><br /> 3 = Dati di overflow della riga|  
+|type|**tinyint**|Tipo di unità di allocazione:<br /><br /> 0 = Rimossa<br /><br /> 1 = Dati all'interno di righe (tutti i tipi di dati, eccetto i tipi di dati LOB)<br /><br /> 2 = dati LOB (Large Object) (**Text**, **ntext**, **Image**, **XML**, tipi di valore di grandi dimensioni e tipi CLR definiti dall'utente)<br /><br /> 3 = Dati di overflow della riga|  
 |type_desc|**nvarchar(60)**|Descrizione del tipo dell'unità di allocazione:<br /><br /> **ELIMINATO**<br /><br /> **IN_ROW_DATA**<br /><br /> **LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
 |container_id|**bigint**|ID del contenitore di archiviazione associato all'unità di allocazione.<br /><br /> Se type = 1 o 3, container_id = sys.partitions.hobt_id.<br /><br /> Se type è 2, allora container_id = sys.partitions.partition_id.<br /><br /> 0 = Unità di allocazione contrassegnata per la rimozione posticipata|  
 |data_space_id|**int**|ID del filegroup contenente l'unità di allocazione.|  
@@ -47,7 +47,7 @@ ms.locfileid: "82822094"
 >  In caso di eliminazione o ricompilazione di indici di grandi dimensioni oppure di eliminazione o troncamento di tabelle di grandi dimensioni, in [!INCLUDE[ssDE](../../includes/ssde-md.md)] le deallocazioni di pagine effettive e i relativi blocchi associati vengono posticipati fino all'esecuzione del commit della transazione. Le operazioni di eliminazione posticipate non rendono immediatamente disponibile lo spazio allocato. Pertanto, i valori restituiti da sys.allocation_units subito dopo l'eliminazione o il troncamento di un oggetto di grandi dimensioni potrebbero non corrispondere allo spazio su disco effettivamente disponibile.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza al ruolo **public** .  Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ È richiesta l'appartenenza al ruolo **public** . Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [sys. partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   

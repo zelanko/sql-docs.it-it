@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d75a202b368df339b97a4a9588ad3ac073429c6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 99512ce28daae39df9484ea554ba81b23d99e05f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659636"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85675108"
 ---
 # <a name="cinstance-class---setdefaults-method"></a>Classe CInstance - Metodo SetDefaults
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   Imposta tutti i valori predefiniti per l'istanza del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client con l'opzione per sovrascrivere i dati esistenti.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,7 +36,7 @@ object.SetDefaults(OverwriteAll)
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe CInstance](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md) che rappresenta un'istanza del client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Parametri  

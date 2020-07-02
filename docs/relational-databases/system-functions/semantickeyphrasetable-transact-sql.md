@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bfde3ee5d26557759bd881bce34a69b6ecf98dd1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3782b8139b84d87a30ac575476f5535173cdc66a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140566"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662575"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una tabella con zero, una o più righe per le frasi chiave associate alle colonne indicate nella tabella specificata.  
   
@@ -50,7 +50,7 @@ SEMANTICKEYPHRASETABLE
   
  Questo nome può essere costituito da una a quattro parti, ma non è consentito un nome di server remoto.  
   
- **colonna**  
+ **column**  
  Nome della colonna indicizzata per cui restituire risultati. Per la colonna deve essere abilitata l'indicizzazione semantica.  
   
  **column_list**  
@@ -72,7 +72,7 @@ SEMANTICKEYPHRASETABLE
 |**column_id**|**int**|ID della colonna da cui è stata estratta e indicizzata la frase chiave corrente.<br /><br /> Vedere le funzioni COL_NAME e COLUMNPROPERTY per informazioni dettagliate su come recuperare il nome di colonna da column_id e viceversa.|  
 |**document_key**|**\***<br /><br /> Questa chiave corrisponde al tipo della chiave univoca nella tabella di origine.|Valore della chiave univoca del documento o della riga da cui è stata indicizzata la frase chiave corrente.|  
 |**frase chiave**|**NVARCHAR**|Frase chiave trovata nella colonna identificata da column_id e associato con il documento specificato da document_key.|  
-|**Punteggio**|**real**|Valore relativo per la frase chiave nella sua relazione con tutte le altre frasi chiave nello stesso documento presente nella colonna indicizzata.<br /><br /> Il valore è un valore decimale frazionario compreso nell'intervallo [0.0, 1.0], dove un punteggio maggiore rappresenta un peso maggiore e 1.0 costituisce il punteggio perfetto.|  
+|**Punteggio**|**REALE**|Valore relativo per la frase chiave nella sua relazione con tutte le altre frasi chiave nello stesso documento presente nella colonna indicizzata.<br /><br /> Il valore è un valore decimale frazionario compreso nell'intervallo [0.0, 1.0], dove un punteggio maggiore rappresenta un peso maggiore e 1.0 costituisce il punteggio perfetto.|  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Per altre informazioni, vedere [trovare frasi chiave nei documenti con la ricerca semantica](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md).  

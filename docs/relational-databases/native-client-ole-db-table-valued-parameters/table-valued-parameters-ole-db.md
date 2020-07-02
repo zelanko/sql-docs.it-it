@@ -14,22 +14,22 @@ ms.assetid: 4298b73d-615b-4d28-9843-03b4d5fc489e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15055f582d7add6194753e2743d63b5e082318b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 030cb2816d30f7f728c5bc6b6dbdff60702d6125
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300232"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659022"
 ---
 # <a name="table-valued-parameters-ole-db"></a>Parametri con valori di tabella (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   In questa sezione viene illustrato il supporto per i parametri con valori di tabella nel provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Per ulteriori informazioni sulla panoramica, vedere [parametri con valori di tabella &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md). Per un esempio, vedere [Usare parametri con valori di tabella &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md).  
   
 ## <a name="remarks"></a>Osservazioni  
  Attualmente, è possibile inviare al server dati a più righe come parametri di una procedura con set di parametri (parametro DBPARAMS in **ICommand::Execute**). Con i set di parametri, ogni elemento del set deve essere inviato al server in una richiesta di chiamata di procedura remota (RPC) separata. I parametri con valori di tabella forniscono funzionalità simili, ma offrono una maggiore integrazione con il server. Questa caratteristica determina la riduzione del numero di richieste RPC e l'abilitazione delle operazioni basate sul set nel server.  
   
- I parametri con valori di tabella sono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportati nel Provider di OLE DB di Native Client come OLE DB oggetti **set di righe** . Qualsiasi oggetto **set di righe** può essere fornito dal consumer (ovvero l'applicazione client che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza il provider di OLE DB di Native Client) come segnaposto per i parametri con valori di tabella. I parametri con valori di tabella vengono considerati come gli altri tipi di parametro di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client fornisce interfacce per gli schemi, l'associazione, la specifica, l'individuazione e la creazione.  
+ I parametri con valori di tabella sono supportati nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client come OLE DB oggetti **set di righe** . Qualsiasi oggetto **set di righe** può essere fornito dal consumer (ovvero l'applicazione client che utilizza il Provider di OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) come segnaposto per i parametri con valori di tabella. I parametri con valori di tabella vengono considerati come gli altri tipi di parametro di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client fornisce interfacce per gli schemi, l'associazione, la specifica, l'individuazione e la creazione.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   

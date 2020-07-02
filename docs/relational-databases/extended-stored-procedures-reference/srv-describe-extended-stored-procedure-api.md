@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8904e3c08789eb0cb50b0f5a20b66c851578ac5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d6c181ad19d3027c5262b988a8c32fdcff52e901
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064117"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85678591"
 ---
 # <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (API Stored procedure estesa)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
@@ -98,7 +98,7 @@ srcdata
   
  Se *desttype* è SRVDECIMAL o SRVNUMERIC, il parametro *srcdata* deve essere un puntatore a una struttura DBNUMERIC o DBDECIMAL con i campi della precisione e della scala della struttura già impostati sui valori desiderati. È possibile utilizzare DEFAULTPRECISION per specificare una precisione predefinita e DEFAULTSCALE per specificare una scala predefinita.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  Il numero della colonna descritta. La prima colonna è la colonna 1. Se si verifica un errore, viene restituito 0.  
   
 ## <a name="remarks"></a>Osservazioni  

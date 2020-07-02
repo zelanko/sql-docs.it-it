@@ -16,15 +16,15 @@ ms.assetid: 118a7cac-4c0d-44fd-b63e-3d542932d239
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 47a7021093710c8ebb4e300880ea58af037dcd70
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 618fabb71d61aeee4543f7c2c869aa02f7b3e987
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84949579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85657100"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>Utilizzo di ADO con SQL Server Native Client
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Per sfruttare i vantaggi delle nuove funzionalità introdotte in, [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ad esempio Mars (Multiple Active Result Set), notifiche delle query, tipi definiti dall'utente (UDT) o il nuovo tipo di dati **XML** , le applicazioni esistenti che utilizzano ActiveX Data Objects (ADO) utilizzano il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB di Native client come provider di accesso ai dati.  
   

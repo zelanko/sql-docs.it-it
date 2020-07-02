@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c92a9271575a725aef6981b97cb9b35c81829044
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a779585dedcfa5fef86d7c3db4543b9ec74df7bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828060"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677777"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Alcune funzionalità del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] comportano una modifica del metodo di archiviazione delle informazioni nei file di database da parte del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Queste funzionalità sono disponibili solo in edizioni specifiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un database che contiene queste funzionalità non può essere spostato a un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che non le supporta. Utilizzare la vista a gestione dinamica sys. dm_db_persisted_sku_features per elencare le funzionalità specifiche dell'edizione abilitate nel database corrente.
   
@@ -41,7 +41,7 @@ ms.locfileid: "82828060"
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE per il database.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se nel database non sono utilizzate funzionalità che possono essere limitate da un'edizione specifica, la vista non restituisce alcuna riga.  
   
  sys. dm_db_persisted_sku_features possibile elencare le funzionalità di modifica del database seguenti come limitate a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edizioni specifiche:  

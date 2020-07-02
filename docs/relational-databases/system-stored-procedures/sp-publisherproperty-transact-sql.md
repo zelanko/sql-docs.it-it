@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf03396170972cf1e0c44a7a668e3651385579fc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1a4bfcd7d9f03e41e32551653788386612a43835
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820378"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715152"
 ---
 # <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Consente di visualizzare o modificare le proprietà del server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. Questa stored procedure viene eseguita nel database di distribuzione.  
   
@@ -43,7 +43,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
 `[ @propertyname = ] 'propertyname'`Nome della proprietà da impostare. *PropertyName* è di **tipo sysname**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |**xactsetbatching**|Indica se le transazioni nel server di pubblicazione sono raggruppate in set con consistenza transazionale per elaborazioni successive, noti come Xactset. Il valore **Enabled** indica che è possibile creare Xactset, che è l'impostazione predefinita. Il valore **disabled** indica che i Xactset esistenti vengono elaborati da non vengono creati nuovi Xactset.|  
 |**xactsetjob**|Indica se è attivo il processo Xactset per la creazione di Xactset. Il valore **Enabled** indica che il processo Xactset viene eseguito periodicamente per creare Xactset nel server di pubblicazione. Il valore **disabled** indica che i Xactset vengono creati solo dal agente di lettura log quando esegue il polling del server di pubblicazione per le modifiche.|  
@@ -64,7 +64,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_publisherproperty** viene utilizzata per la replica transazionale per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher non.  
   
  Quando viene specificato solo *Publisher* , il set di risultati include le impostazioni correnti per tutte le proprietà che è possibile impostare.  

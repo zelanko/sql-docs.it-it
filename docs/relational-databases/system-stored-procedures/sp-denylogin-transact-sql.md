@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 07bc4084e96a6164fe6f057d49593499c4f69f44
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4a902cc7ad691da5159dc3308aa69045fdc2f169
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830256"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692693"
 ---
 # <a name="sp_denylogin-transact-sql"></a>sp_denylogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Impedisce a un utente o un gruppo di Windows di connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -55,7 +55,7 @@ sp_denylogin [ @loginame = ] 'login'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato come utilizzare **sp_denylogin** per impedire che l'utente di Windows `CORPORATE\GeorgeV` si connetta al server.  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: dbo. sysalerts (Transact-SQL) | Microsoft Docs
+title: Avvisi di dbo.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 277cd9ae3fdbe2414c9c3eb96208e79730ebdde6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6169691af84576e37a8f4b5a7cfc09757305c95b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813925"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85675326"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una riga per ogni avviso. Un avviso è un messaggio inviato in risposta a un evento con cui è possibile inoltrare messaggi all'esterno dell'ambiente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite posta elettronica o cercapersone. Un avviso può generare inoltre un'attività.  Questa tabella è archiviata nel database **msdb** .
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID dell'avviso.|  
-|**name**|**sysname**|Nome dell'avviso.|  
+|**nome**|**sysname**|Nome dell'avviso.|  
 |**event_source**|**nvarchar (100)**|Origine dell'evento: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**event_category_id**|**int**|Riservato per utilizzi futuri.|  
 |**event_id**|**int**|Riservato per utilizzi futuri.|  
@@ -59,14 +59,14 @@ ms.locfileid: "82813925"
 |**performance_condition**|**nvarchar(512)**|Riservato.|  
 |**category_id**|**int**|Riservato.|  
   
- ## <a name="remarks"></a>Commenti
+ ## <a name="remarks"></a>Osservazioni
 
-Nella tabella seguente vengono illustrati i valori per la maschera di maschera include_event_description. Il valore decimale viene restituito da dbo. sysalerts. 
+Nella tabella seguente vengono illustrati i valori per la maschera di maschera include_event_description. Il valore decimale viene restituito da dbo.sysavvisi. 
 
 |decimal | BINARY | significato |
 |------|------|------|
 |0 |0000 |Nessun messaggio |
-|1 |0001 |posta elettronica |
+|1 |0001 |email |
 |2 |0010 |pager |
 |3 |0011 |cercapersone e messaggi di posta elettronica |
 |4 |0100 |Net send |

@@ -20,15 +20,15 @@ ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df28b48c6a25d7d5661e46cbd06ce70029f1c677
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 948feee2b133f7135f753d789cca119af60bd8b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830675"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676666"
 ---
 # <a name="sysdm_exec_connections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Restituisce informazioni sulle connessioni stabilite per questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i dettagli di ogni connessione. Restituisce informazioni di connessione a livello di server per SQL Server. Restituisce le informazioni di connessione al database corrente per il database SQL.  
   
@@ -77,7 +77,7 @@ Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l
 |dm_exec_requests.connection_id|dm_exec_connections.connection_id|Molti-a-uno|  
 |dm_broker_connections.connection_id|dm_exec_connections.connection_id|Uno-a-uno|  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Query tipica per raccogliere informazioni su una connessione query personalizzata.  
   
 ```sql  

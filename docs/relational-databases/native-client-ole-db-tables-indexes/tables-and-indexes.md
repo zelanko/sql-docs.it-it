@@ -20,27 +20,27 @@ ms.assetid: 4217c6d8-8cd2-43dc-b36f-3cfd8a58fabc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83757abfc78b5ffbee7a46a9f7c49c89daae7118
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc28a9df9b5f065314a8cd2f96a54457fa3c4b14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305628"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85658512"
 ---
 # <a name="tables-and-indexes"></a>Tabelle e indici
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client espone le interfacce **IIndexDefinition** e **ITableDefinition** , consentendo agli utenti di creare, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modificare ed eliminare tabelle e indici. La validità delle definizioni di tabelle e indici dipende dalla versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client espone le interfacce **IIndexDefinition** e **ITableDefinition** , consentendo agli utenti di creare, modificare ed eliminare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelle e indici. La validità delle definizioni di tabelle e indici dipende dalla versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  La possibilità di creare o eliminare tabelle e indici dipende dai diritti di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di cui dispone l'utente dell'applicazione consumer. L'eliminazione di una tabella può essere vincolata ulteriormente dalla presenza di vincoli di integrità referenziale dichiarativa o da altri fattori.  
   
- La maggior parte delle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applicazioni destinate a usano SQL- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DMO invece di queste interfacce del provider OLE DB Native Client. SQL-DMO è una raccolta di oggetti di automazione OLE che supportano tutte le funzioni amministrative di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le applicazioni destinate a più provider OLE DB utilizzano queste interfacce OLE DB generiche supportate dai diversi provider OLE DB.  
+ La maggior parte delle applicazioni destinate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a usano SQL-DMO invece di queste [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interfacce del provider OLE DB Native Client. SQL-DMO è una raccolta di oggetti di automazione OLE che supportano tutte le funzioni amministrative di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le applicazioni destinate a più provider OLE DB utilizzano queste interfacce OLE DB generiche supportate dai diversi provider OLE DB.  
   
  Nel set di proprietà DBPROPSET_SQLSERVERCOLUMN specifico del provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definisce la proprietà seguente.  
   
 |ID proprietà|Descrizione|  
 |-----------------|-----------------|  
-|SSPROP_COL_COLLATIONNAME|Tipo: VT_BSTR<br /><br /> L/S: Scrittura<br /><br /> Valore predefinito: Null<br /><br /> Descrizione: questa proprietà viene utilizzata solo in **ITableDefinition**. La stringa specificata in questa proprietà viene utilizzata per la creazione di un'istruzione [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)<br /><br /> .|  
+|SSPROP_COL_COLLATIONNAME|Digitare: VT_BSTR<br /><br /> L/S: Scrittura<br /><br /> Valore predefinito: Null<br /><br /> Descrizione: questa proprietà viene utilizzata solo in **ITableDefinition**. La stringa specificata in questa proprietà viene utilizzata per la creazione di un'istruzione [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)<br /><br /> .|  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   

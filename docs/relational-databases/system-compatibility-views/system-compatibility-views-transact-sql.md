@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 466dc68da1c5cef56a7debe3953ba38956bb2993
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9eb123194e6ea69a6260f9eed4f02a07a9e819ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018030"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652204"
 ---
 # <a name="system-compatibility-views-transact-sql"></a>Viste di compatibilità del sistema (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Molte delle tabelle di sistema incluse nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono implementate come set di viste. Queste viste sono note come viste di compatibilità e sono disponibili solo per compatibilità con le versioni precedenti. Le viste di compatibilità espongono gli stessi metadati disponibili in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], ma non espongono i metadati correlati a funzionalità introdotte in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Quando si utilizzano nuove funzionalità, ad esempio [!INCLUDE[ssSB](../../includes/sssb-md.md)] o il partizionamento, è pertanto necessario passare all'utilizzo delle viste del catalogo.  
   
@@ -45,20 +45,20 @@ ms.locfileid: "68018030"
 |**UserType**|**syscolumns**|**sys.columns**|  
 |**memberuid**|**sysmembers**|**sys.database_role_members**|  
 |**groupuid**|**sysmembers**|**sys.database_role_members**|  
-|**UID**|**sysobjects**|**sys.objects**|  
-|**UID**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
+|**uid**|**sysobjects**|**sys.objects**|  
+|**uid**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
 |**concedente**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
 |**xusertype**|**systypes**|**sys.types**|  
-|**UID**|**systypes**|**sys.types**|  
-|**UID**|**sysusers**|**sys.database_principals**|  
+|**uid**|**systypes**|**sys.types**|  
+|**uid**|**sysusers**|**sys.database_principals**|  
 |**altuid**|**sysusers**|**sys.database_principals**|  
 |**gid**|**sysusers**|**sys.database_principals**|  
-|**UID**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
-|**UID**|**sysprocesses**|**sys.dm_exec_requests**|  
+|**uid**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
+|**uid**|**sysprocesses**|**sys.dm_exec_requests**|  
   
  Quando si fa riferimento a un database utente, le tabelle di sistema che sono state annunciate come deprecate in SQL Server 2000 (ad esempio **syslanguages** o **syscacheobjects**) vengono ora associate alla vista di compatibilità back nello schema **sys** . Poiché le tabelle di sistema di SQL Server 2000 sono state deprecate per più versioni, tale modifica non viene considerata una modifica di rilievo.  
   
- Esempio: se un utente crea una tabella utente denominata **syslanguages** in un database utente, in SQL Server 2008, l'istruzione `SELECT * from dbo.syslanguages;` in tale database restituirà i valori della tabella utente. A partire da SQL Server 2012, questa procedura restituirà i dati dalla vista di sistema **sys. syslanguages**.  
+ Esempio: se un utente crea una tabella utente denominata **syslanguages** in un database utente, in SQL Server 2008, l'istruzione `SELECT * from dbo.syslanguages;` in tale database restituirà i valori della tabella utente. A partire da SQL Server 2012, questa procedura restituirà i dati della vista di sistema **sys.sysle lingue**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

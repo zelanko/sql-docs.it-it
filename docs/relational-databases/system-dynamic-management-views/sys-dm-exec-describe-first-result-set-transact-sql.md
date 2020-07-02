@@ -18,15 +18,15 @@ ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1591c84de006308e96a3b8079ea05ef9ad6802b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a9597d1852cb16c4f212989d42b1b614f0e5e8fd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830615"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676478"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Questa funzione a gestione dinamica accetta un' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione come parametro e descrive i metadati del primo set di risultati per l'istruzione.  
   
@@ -61,7 +61,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|Specifica che la colonna è una colonna aggiuntiva inserita a scopo informativo e di esplorazione che non compare effettivamente nel set di risultati.|  
 |**column_ordinal**|**int**|Contiene la posizione ordinale della colonna nel set di risultati. La posizione della prima colonna viene specificata come 1.|  
-|**name**|**sysname**|Contiene il nome della colonna se è possibile determinare un nome. In caso contrario, conterrà NULL.|  
+|**nome**|**sysname**|Contiene il nome della colonna se è possibile determinare un nome. In caso contrario, conterrà NULL.|  
 |**is_nullable**|**bit**|Contiene i valori seguenti:<br /><br /> Valore 1 se la colonna ammette valori NULL.<br /><br /> Valore 0 se la colonna non ammette valori NULL.<br /><br /> Valore 1 se non è possibile determinare se la colonna ammette valori NULL.|  
 |**system_type_id**|**int**|Contiene la system_type_id del tipo di dati della colonna come specificato in sys. Types. Per i tipi CLR, anche se la colonna system_type_name restituisce NULL, in questa colonna viene restituito il valore 240.|  
 |**system_type_name**|**nvarchar(256)**|Contiene il nome e gli argomenti, ad esempio lunghezza, precisione e scala, specificati per il tipo di dati della colonna.<br /><br /> Se il tipo di dati è un tipo di alias definito dall'utente, il tipo di sistema sottostante viene specificato qui.<br /><br /> Se il tipo di dati è un tipo CLR definito dall'utente, in questa colonna viene restituito NULL.|  
@@ -125,7 +125,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione per eseguire l' \@ argomento TSQL.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Esempi aggiuntivi nell'argomento [sp_describe_first_result_set &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) possono essere adattati per l'utilizzo di **sys. dm_exec_describe_first_result_set**.  
   
 ### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>R. Restituzione di informazioni su una sola istruzione Transact-SQL  

@@ -18,15 +18,15 @@ ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bf2dff5e5d7a3cb1581de9c0b15ff8a58dc6be7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d0c08c6e0d41781783cf7aaffd1f26d6e7b4e417
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827989"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676762"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Questa funzione a gestione dinamica accetta @object_id come parametro e descrive i metadati del primo risultato per il modulo con tale ID. Il valore @object_id specificato può essere l'ID di un [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure o di un [!INCLUDE[tsql](../../includes/tsql-md.md)] trigger. Se è l'ID di qualsiasi altro oggetto, ad esempio una vista, una tabella, una funzione o una procedura CLR, viene specificato un errore nelle colonne degli errori del risultato.  
   
@@ -56,7 +56,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|Specifica se la colonna è una colonna aggiuntiva inserita per informazioni di esplorazione che non compare effettivamente nel set di risultati.|  
 |**column_ordinal**|**int**|Contiene la posizione ordinale della colonna nel set di risultati. La posizione della prima colonna viene specificata come 1.|  
-|**name**|**sysname**|Contiene il nome della colonna se è possibile determinare un nome. In caso contrario, è NULL.|  
+|**nome**|**sysname**|Contiene il nome della colonna se è possibile determinare un nome. In caso contrario, è NULL.|  
 |**is_nullable**|**bit**|Contiene il valore 1 se la colonna ammette valori Null, 0 se la colonna non ammette valori Null e 1 se non è possibile determinare se la colonna ammette valori Null.|  
 |**system_type_id**|**int**|Contiene la system_type_id del tipo di dati della colonna come specificato in sys. Types. Per i tipi CLR, anche se la colonna system_type_name restituisce NULL, in questa colonna viene restituito il valore 240.|  
 |**system_type_name**|**nvarchar(256)**|Contiene il nome del tipo di dati. Include gli argomenti (quali lunghezza, precisione, scala) specificati per il tipo di dati della colonna. Se il tipo di dati è un tipo di alias definito dall'utente, il tipo di sistema sottostante viene specificato qui. Se è un tipo CLR definito dall'utente, in questa colonna viene restituito NULL.|  
@@ -96,7 +96,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_type**|**int**|Contiene un numero intero che rappresenta l'errore restituito. Viene eseguito il mapping a error_type_desc. Vedere l'elenco nelle osservazioni.|  
 |**error_type_desc**|**nvarchar(60)**|Contiene una breve stringa in caratteri maiuscoli che rappresenta l'errore restituito. Viene eseguito il mapping a error_type. Vedere l'elenco nelle osservazioni.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Questa funzione utilizza lo stesso algoritmo di **sp_describe_first_result_set**. Per ulteriori informazioni, vedere [sp_describe_first_result_set &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  Nella tabella seguente vengono elencati i tipi di errore con le relative descrizioni  

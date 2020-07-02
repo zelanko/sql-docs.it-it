@@ -11,15 +11,15 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c6e9cacb9f6249f98f1481049c3b55b58a247fdb
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 3c3fca29f39ec4d80a6690b813b0d2047407f173
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627391"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85675881"
 ---
 # <a name="sysdm_xe_database_session_event_actions-azure-sql-database"></a>sys.dm_xe_database_session_event_actions (database SQL di Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Restituisce informazioni sulle azioni di sessione di evento. Le azioni vengono eseguite quando vengono generati gli eventi. Questa vista di gestione aggrega le statistiche sul numero di volte che viene eseguita un'azione e la fase di esecuzione totale dell'azione.  
   

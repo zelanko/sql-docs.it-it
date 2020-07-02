@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6ba4c356411800dc7c5e52907b0baccd5682f09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60acbb6044842c097aa222b7a831addac7cf11d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064138"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85678701"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (API Stored procedure estesa)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
@@ -86,7 +86,7 @@ destlen
  *destlen*  
  Specifica la lunghezza, espressa in byte, della variabile di destinazione. Questo parametro viene ignorato per i tipi di dati a lunghezza fissa. Per una variabile di destinazione di tipo SRVCHAR, il valore di *destlen* deve essere la lunghezza totale dello spazio del buffer di destinazione. Una lunghezza di -1 per una variabile di destinazione di tipo SRVCHAR o SRVBINARY indica che lo spazio disponibile è sufficiente. Per una variabile di destinazione di tipo *srvchar*, se la lunghezza è pari a -1 la stringa di caratteri include una terminazione Null.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  La lunghezza dei dati convertiti, espressa in byte, se la conversione del tipo di dati viene eseguita correttamente. Quando **srv_convert** rileva una richiesta di conversione non supportata, chiama il gestore degli errori specificato dallo sviluppatore, se disponibile, imposta un numero di errore globale e restituisce -1.  
   
 ## <a name="remarks"></a>Osservazioni  

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 2624ed4800a247b0847adc5839346758aa50f140
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 213b8301a471e00107ce7d3ac6bf493e6aea87c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67463567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662463"
 ---
 # <a name="sp_dropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Rimuove un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure un utente o un gruppo di Windows da un ruolo predefinito del server.
 
@@ -43,10 +43,10 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 
 ## <a name="arguments"></a>Argomenti
 
-**[ @loginame = ]** '_login_'  
+**[ @loginame =]** '_login_'  
 Nome di un account di accesso che si desidera rimuovere dal ruolo predefinito del server. *login* è di **tipo sysname**e non prevede alcun valore predefinito. l' *account di accesso* deve esistere.  
 
-**[ @rolename = ]** '_Role_'  
+**[ @rolename =]** '_Role_'  
 Nome di un ruolo del server. *Role* è di **tipo sysname**e il valore predefinito è null. *Role* deve essere uno dei valori seguenti:  
 
 -   sysadmin  
@@ -85,7 +85,7 @@ Nome di un ruolo del server. *Role* è di **tipo sysname**e il valore predefinit
 EXEC sp_dropsrvrolemember 'JackO', 'sysadmin';  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [CREAZIONE del ruolo del SERVER &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
  [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
  [Stored procedure di sicurezza &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   

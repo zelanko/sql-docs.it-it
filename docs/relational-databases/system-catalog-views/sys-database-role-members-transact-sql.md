@@ -20,17 +20,17 @@ ms.assetid: ed1b019d-ca48-4db3-85df-cf6d2db591cf
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bbbcf04cdb141cff25565360d82714eed1e98f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f41a5cc500ef8d893180804091e5f905961aa637
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079472"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665358"
 ---
 # <a name="sysdatabase_role_members-transact-sql"></a>sys.database_role_members (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Restituisce una riga per ogni membro di ogni ruolo del database.  Gli utenti del database, i ruoli applicazione e altri ruoli del database possono essere membri di un ruolo del database. Per aggiungere membri a un ruolo, utilizzare l'istruzione [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) con l' `ADD MEMBER` opzione. Eseguire il join con [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) per restituire i nomi `principal_id` dei valori.
+  Restituisce una riga per ogni membro di ogni ruolo del database.  Gli utenti del database, i ruoli applicazione e altri ruoli del database possono essere membri di un ruolo del database. Per aggiungere membri a un ruolo, utilizzare l'istruzione [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) con l' `ADD MEMBER` opzione. Eseguire il join con [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) per restituire i nomi dei `principal_id` valori.
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "68079472"
 |**member_principal_id**|**int**|ID dell'entità di database del membro.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Qualsiasi utente può visualizzare la propria appartenenza al ruolo. Per visualizzare altre appartenenze ai ruoli, è richiesta `db_securityadmin` l'appartenenza al ruolo `VIEW DEFINITION` predefinito del database o al database.  
+ Qualsiasi utente può visualizzare la propria appartenenza al ruolo. Per visualizzare altre appartenenze ai ruoli, è richiesta l'appartenenza al `db_securityadmin` ruolo predefinito del database o al `VIEW DEFINITION` database.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

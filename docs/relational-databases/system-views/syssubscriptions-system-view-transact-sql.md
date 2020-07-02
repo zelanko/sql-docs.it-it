@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c9613858-9512-43a9-aa53-7ee8064f064c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 517d9359085f7cb4bc4c94eb941981a09ca06eef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8162726591f08329ddfc5cb800adece8bfd1fd59
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304783"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692717"
 ---
 # <a name="syssubscriptions-system-view-transact-sql"></a>syssubscriptions (vista di sistema) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La vista **syssubscriptions** espone informazioni sulla sottoscrizione. Questa vista è archiviata nel database di distribuzione.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "72304783"
 |**update_mode**|**tinyint**|Modalità di aggiornamento:<br /><br /> **0** = sola lettura.<br /><br /> **1** = aggiornamento immediato.|  
 |**loopback_detection**|**bit**|Si applica alle sottoscrizioni che fanno parte di una topologia di replica transazionale bidirezionale. Il rilevamento di loopback determina se l'agente di distribuzione deve inviare nuovamente al Sottoscrittore le transazioni provenienti dal Sottoscrittore:<br /><br /> **0** = restituisce.<br /><br /> **1** = non viene restituito.|  
 |**queued_reinit**|**bit**|Specifica se l'articolo è contrassegnato per l'inizializzazione o la reinizializzazione. Il valore **1** indica che l'articolo sottoscritto è contrassegnato per l'inizializzazione o la reinizializzazione.|  
-|**nosync_type**|**tinyint**|Tipo di inizializzazione della sottoscrizione:<br /><br /> **0** = automatico (snapshot)<br /><br /> **1** = solo supporto replica<br /><br /> **2** = inizializzazione con backup<br /><br /> **3** = inizializzazione dal numero di sequenza del file di log (LSN)<br /><br /> Per ulteriori informazioni, vedere il ** \@parametro sync_type** di [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).<br /><br /> **3** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**nosync_type**|**tinyint**|Tipo di inizializzazione della sottoscrizione:<br /><br /> **0** = automatico (snapshot)<br /><br /> **1** = solo supporto replica<br /><br /> **2** = inizializzazione con backup<br /><br /> **3** = inizializzazione dal numero di sequenza del file di log (LSN)<br /><br /> Per ulteriori informazioni, vedere il parametro ** \@ sync_type** di [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).<br /><br /> **3** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**srvname**|**sysname**|Nome del Sottoscrittore.|  
   
 ## <a name="see-also"></a>Vedere anche  

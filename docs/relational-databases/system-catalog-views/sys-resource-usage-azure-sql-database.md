@@ -19,15 +19,15 @@ ms.assetid: b90147a3-fd8e-408e-961d-5c7000e068ad
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 3be4ff07923759af53b929852d4dbaa4088a77f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ac9473dbdcc51a4c5313b27596ce38d0607d336
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67904426"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665268"
 ---
 # <a name="sysresource_usage-azure-sql-database"></a>sys.resource_usage (Database di SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
     
 > [!IMPORTANT]

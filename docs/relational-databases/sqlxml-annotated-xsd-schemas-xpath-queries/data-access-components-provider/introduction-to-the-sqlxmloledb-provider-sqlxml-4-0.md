@@ -16,15 +16,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15375e7aaf860c5419e68cc64bb8e6e2cac125c1
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: aafc93dd9cf83a648cc4eecfe9301ad6e3ab24c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215900"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650082"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Introduzione al provider SQLXMLOLEDB (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Il provider SQLXMLOLEDB è un provider OLE DB che espone la funzionalità [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML tramite gli oggetti ADO (ActiveX Data Objects). Il provider può tuttavia eseguire i comandi solo nella modalità di scrittura in un flusso di output di ADO. Il provider SQLXMLOLEDB non è un provider di set di righe. Quando si esegue un comando, è necessario specificare il flag adExecuteStream, che indica a ADO di usare il flusso di output specificato.  
   
  Nell'esempio seguente viene illustrata la sintassi per il comando Execute in cui è specificato il flag adExecuteStream:  
