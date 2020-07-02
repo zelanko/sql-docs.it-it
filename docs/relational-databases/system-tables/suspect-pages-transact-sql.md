@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f90f0f9ca490cc2adfeb2768b9d1dfe9f072eb39
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: aa9acc4c79d513392ecd85f7c667452fd5a108e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834145"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753847"
 ---
 # <a name="suspect_pages-transact-sql"></a>suspect_pages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una riga per pagina in cui si è verificato un errore 823 secondario o un errore 824. Le pagine sono elencate in questa tabella perché è possibile che siano errate. Quando viene ripristinata una pagina sospetta, il relativo stato viene aggiornato nella colonna **event_type** .  
   

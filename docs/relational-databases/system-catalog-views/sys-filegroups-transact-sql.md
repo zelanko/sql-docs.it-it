@@ -20,28 +20,28 @@ ms.assetid: 9e851f72-1f8e-4515-a25d-152ebc12ed56
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e143c5f995c05b7bf23f62f36ea5681621cccab
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6b676878f0e42e57d5a6081ce927ca9892e3e62c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828150"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754463"
 ---
 # <a name="sysfilegroups-transact-sql"></a>sys.filegroups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Contiene una riga per ogni spazio dei dati che costituisce un filegroup.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**\<colonne ereditate>**|--|Per un elenco delle colonne ereditate da questa vista, vedere [sys. data_spaces &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md).|  
+|**\<inherited columns>**|--|Per un elenco delle colonne ereditate da questa vista, vedere [sys. data_spaces &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md).|  
 |**filegroup_guid**|**uniqueidentifier**|GUID del filegroup.<br /><br /> NULL = Filegroup PRIMARY|  
 |**log_filegroup_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo valore è NULL.|  
 |**is_read_only**|**bit**|1 = Il filegroup è di sola lettura.<br /><br /> 0 = Il filegroup è di lettura/scrittura.|  
 |**is_autogrow_all_files**|**bit**|**Si applica a**: (da alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> 1 = quando un file del filegroup soddisfa la soglia di aumento automatico delle dimensioni, tutti i file nel filegroup aumentano.<br /><br /> 0 = quando un file del filegroup soddisfa la soglia di aumento automatico delle dimensioni, solo quel file aumenta. Questo è il valore predefinito.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza al ruolo **public** .  Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ È richiesta l'appartenenza al ruolo **public** . Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

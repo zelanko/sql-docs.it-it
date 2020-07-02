@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b5fcc3527880383e6a42a4c5530e2e1aeacc055b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5f83ff6b805692867760cc1e692abd292f88aea1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807212"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755491"
 ---
 # <a name="data-tier-application-tables---sysdac_instances_internal"></a>Tabelle applicazioni livello dati - sysdac_instances_internal
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Consente di visualizzare una riga per ogni istanza di applicazione livello dati distribuita in un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Questa tabella è archiviata nello schema dbo del database msdb.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82807212"
 |date_created|**datetime**|Data e ora di creazione dell'istanza di applicazione livello dati.|  
 |created_by|**sysname**|Account di accesso utilizzato per la creazione dell'istanza di applicazione livello dati.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  L'accesso in sola lettura a questa vista è disponibile per tutti gli utenti che dispongono delle autorizzazioni per connettersi al database master.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -48,6 +48,6 @@ ms.locfileid: "82807212"
   
 ## <a name="see-also"></a>Vedere anche  
  [Applicazioni livello dati](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [dbo. sysdac_instances &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)  
+ [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)  
   
   

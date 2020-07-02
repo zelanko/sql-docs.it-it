@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ca7b6c657170c4e1afe5792d6e58a8e2a4aab277
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1da39966fe7c11a4c4685d40b6cc762e14bf2b2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830550"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754206"
 ---
 # <a name="sysdm_os_cluster_properties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga con le impostazioni correnti per le proprietà delle risorse cluster di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificate in questo argomento. Non verrà restituito alcun dato se questa vista viene eseguita in un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -46,7 +46,7 @@ ms.locfileid: "82830550"
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede le autorizzazioni VIEW SERVER STATE sull'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato sys.dm_os_cluster_properties per restituire le impostazioni della proprietà per la risorsa cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  

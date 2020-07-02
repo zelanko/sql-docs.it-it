@@ -21,15 +21,15 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77b3faae57764a936e6115d22ac00ca855d3acb9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 159390f64b00aa8bd72478552e37ceaaf26566bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829437"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754234"
 ---
 # <a name="sysdm_db_missing_index_details-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Restituisce informazioni dettagliate sugli indici mancanti, escludendo gli indici spaziali.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "82829437"
 |**included_columns**|**nvarchar(4000)**|Elenco delimitato da virgole delle colonne necessarie come colonne di copertura per la query. Per altre informazioni sulle colonne di copertura o incluse, vedere [creare indici con colonne incluse](../../relational-databases/indexes/create-indexes-with-included-columns.md).<br /><br /> Per gli indici ottimizzati per la memoria (hash e non cluster ottimizzati per la memoria), ignorare **included_columns**. Tutte le colonne della tabella vengono incluse in ogni indice ottimizzato per la memoria.|  
 |**istruzione**|**nvarchar(4000)**|Nome della tabella in cui l'indice risulta mancante.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Le informazioni restituite da **sys.dm_db_missing_index_details** vengono aggiornate in caso di ottimizzazione di una query tramite Query Optimizer e non sono persistenti. Le informazioni relative agli indici mancanti vengono mantenute solo fino al riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per mantenere tali informazioni anche dopo il riciclo del server, gli amministratori di database devono eseguirne periodicamente copie di backup.  
   
  Per determinare il gruppo di indici mancanti a cui appartiene un determinato indice mancante, è possibile eseguire query sulla DMV **sys.dm_db_missing_index_groups** eseguendone l'equijoin con **sys.dm_db_missing_index_details** in base alla colonna **index_handle**.  

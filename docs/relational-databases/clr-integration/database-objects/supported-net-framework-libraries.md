@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a676688176e164736552460667432919250f8e99
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 610dcca5103e4a819b0e6c59629ddd4d510f5469
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82261846"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756353"
 ---
 # <a name="supported-net-framework-libraries"></a>Librerie .NET Framework supportate
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Grazie all'integrazione di CLR in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è possibile creare stored procedure, trigger, funzioni definite dall'utente, tipi definiti dall'utente e aggregazioni definite dall'utente nel codice gestito. Con le librerie di classi .NET Framework è possibile accedere alle classi preesistenti che offrono funzionalità per manipolazione delle stringhe, operazioni matematiche avanzate, accesso ai file, crittografia e così via. A queste classi è possibile accedere da stored procedure gestite, tipi definiti dall'utente, trigger, funzioni definite dall'utente o funzioni di aggregazione definite dall'utente.  
   
 > [!NOTE]  
@@ -36,7 +36,7 @@ ms.locfileid: "82261846"
 -   Microsoft.VisualBasic  
 -   Microsoft.VisualC  
 -   mscorlib  
--   Sistema  
+-   System  
 -   System.Configuration  
 -   System.Core  
 -   System.Data  
@@ -57,7 +57,7 @@ https://docs.microsoft.com/sql/relational-databases/clr-integration/assemblies-d
 ## <a name="unsupported-libraries"></a>Librerie non supportate  
  Le librerie non supportate possono essere comunque chiamate da stored procedure gestite, trigger, funzioni definite dall'utente, tipi definiti dall'utente e funzioni di aggregazione definite dall'utente. La libreria non supportata deve prima essere registrata nel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, utilizzando l'istruzione **create assembly** , prima di poterla utilizzare nel codice. È necessario verificare e testare la sicurezza e l'affidabilità delle librerie non supportate registrate ed eseguite nel server.  
   
- Lo spazio dei nomi **System. DirectoryServices** , ad esempio, non è supportato. È necessario registrare l'assembly System. DirectoryServices. dll con autorizzazioni non **sicure** prima che sia possibile chiamarlo dal codice. L'autorizzazione **unsafe** è necessaria perché le classi nello spazio dei nomi **System. DirectoryServices** non soddisfano i requisiti per **Safe** o **EXTERNAL_ACCESS**. Per altre informazioni, vedere [restrizioni del modello di programmazione dell'integrazione CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md) e [sicurezza dall'accesso di codice per l'integrazione con CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
+ Lo spazio dei nomi **System. DirectoryServices** , ad esempio, non è supportato. È necessario registrare l'assembly System.DirectoryServices.dll con autorizzazioni non **sicure** prima che sia possibile chiamarlo dal codice. L'autorizzazione **unsafe** è necessaria perché le classi nello spazio dei nomi **System. DirectoryServices** non soddisfano i requisiti per **Safe** o **EXTERNAL_ACCESS**. Per altre informazioni, vedere [restrizioni del modello di programmazione dell'integrazione CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md) e [sicurezza dall'accesso di codice per l'integrazione con CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di un assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   

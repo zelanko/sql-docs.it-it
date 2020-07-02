@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58f0258843995acc82e84d69a4d2d101594fc313
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 30aa54e93b30d2067e2ab02ba8d264920724cead
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820818"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754137"
 ---
 # <a name="sysdm_os_loaded_modules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per ogni modulo caricato nello spazio degli indirizzi del server.  
   
@@ -43,10 +43,10 @@ ms.locfileid: "82820818"
 |**prerelease**|**bit**|1 = Il modulo è una versione non finale del modulo caricato.|  
 |**private_build**|**bit**|1 = Il modulo è una build privata del modulo caricato.|  
 |**special_build**|**bit**|1 = Il modulo è una build speciale del modulo caricato.|  
-|**linguaggio**|**int**|Lingua delle informazioni sulla versione del modulo.|  
-|**company**|**nvarchar(256)**|Nome della società che ha creato il modulo.|  
+|**lingua**|**int**|Lingua delle informazioni sulla versione del modulo.|  
+|**azienda**|**nvarchar(256)**|Nome della società che ha creato il modulo.|  
 |**Descrizione**|**nvarchar(256)**|Descrizione del modulo.|  
-|**name**|**nvarchar(255)**|Nome del modulo. Include il percorso completo del modulo.|  
+|**nome**|**nvarchar(255)**|Nome del modulo. Include il percorso completo del modulo.|  
 |**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
 ## <a name="permissions"></a>Autorizzazioni  

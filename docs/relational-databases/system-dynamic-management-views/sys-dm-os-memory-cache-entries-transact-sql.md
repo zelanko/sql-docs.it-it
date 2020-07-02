@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1cce4ad93181b86570da066093efc9f75e3fc9d6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2fa8a3f309ada4334ea759bd7bb46d4b3c6a4233
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820843"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754087"
 ---
 # <a name="sysdm_os_memory_cache_entries-transact-sql"></a>sys.dm_os_memory_cache_entries (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Vengono restituite informazioni su tutte le voci nelle cache di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilizzare questa vista per tracciare le informazioni relative alle voci della cache e agli oggetti associati. È anche possibile utilizzare la vista per ottenere le statistiche relative alle voci di cache.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82820843"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary (8)**|Indirizzo della cache. Non ammette i valori Null.|  
-|**name**|**nvarchar(256)**|Nome della cache. Non ammette i valori Null.|  
+|**nome**|**nvarchar(256)**|Nome della cache. Non ammette i valori Null.|  
 |**type**|**varchar(60)**|Tipo di cache. Non ammette i valori Null.|  
 |**entry_address**|**varbinary (8)**|Indirizzo del descrittore della voce di cache. Non ammette i valori Null.|  
 |**entry_data_address**|**varbinary (8)**|Indirizzo dei dati utente nella voce di cache.<br /><br /> 0x00000000 = Indirizzo dei dati della voce non disponibile.<br /><br /> Non ammette i valori Null.|  

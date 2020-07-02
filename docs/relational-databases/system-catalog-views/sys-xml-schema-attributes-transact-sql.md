@@ -1,5 +1,5 @@
 ---
-title: sys. xml_schema_attributes (Transact-SQL) | Microsoft Docs
+title: sys.xml_schema_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: dd0c98aa-5e72-4df6-96d9-482786c8dbb1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4af723da42b93b3a5a656c2f00f65d94ca1fb184
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 89a8a1f8ccd6458937de3266ec8c7bce58b73a17
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832684"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754351"
 ---
 # <a name="sysxml_schema_attributes-transact-sql"></a>sys.xml_schema_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per XML Schema componente che è un attributo **symbol_space** di **un oggetto**.  
 
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**\<colonne ereditate>**|--|Eredita da [sys. xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
+|**\<inherited columns>**|--|Eredita da [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
 |**is_default_fixed**|**bit**|1 = Il valore predefinito è un valore fisso. Questo valore non può essere sostituito in un'istanza XML.<br /><br /> 0 = Il valore predefinito non è un valore fisso per l'attributo. (predefinito)|  
 |**must_be_qualified**|**bit**|1 = L'attributo deve essere qualificato come spazio dei nomi in modo esplicito.<br /><br /> 0 = L'attributo può essere qualificato come spazio dei nomi in modo implicito. (predefinito)|  
 |**default_value**|**nvarchar**<br /><br /> **(4000)**|Valore predefinito dell'attributo. È NULL se non viene specificato un valore predefinito.|  

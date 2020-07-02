@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a76835272ed86faeab807f97f6e8801985062733
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7e0d440a453b0481a4440ec432669d3981b9da8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059181"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753999"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Verifica la validità della guida di piano specificata. La funzione sys.fn_validate_plan_guide restituisce il primo messaggio di errore rilevato quando la guida di piano viene applicata alla query. Se la guida di piano è valida viene restituito un set di righe vuoto. Le guide di piano possono diventare non valide dopo aver apportato modifiche alla progettazione fisica del database. Ad esempio, se una guida di piano specifica un particolare indice che viene successivamente eliminato, la query non sarà più in grado di utilizzare la guida di piano.  
   
@@ -75,7 +75,7 @@ GO
 ```  
   
 ### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>B. Test della convalida della guida di piano prima di implementare una modifica nel database  
- Nell'esempio seguente viene utilizzata una transazione esplicita per eliminare un indice. Viene `sys.fn_validate_plan_guide` eseguita la funzione per determinare se questa azione invalida le guide di piano nel database. In base ai risultati della funzione, viene eseguito il commit dell'istruzione `DROP INDEX` o il rollback della transazione, l'indice non viene eliminato.  
+ Nell'esempio seguente viene utilizzata una transazione esplicita per eliminare un indice. `sys.fn_validate_plan_guide`Viene eseguita la funzione per determinare se questa azione invalida le guide di piano nel database. In base ai risultati della funzione, viene eseguito il commit dell'istruzione `DROP INDEX` o il rollback della transazione, l'indice non viene eliminato.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -92,9 +92,9 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guide di piano](../../relational-databases/performance/plan-guides.md)   
- [sp_create_plan_guide &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  
   
   

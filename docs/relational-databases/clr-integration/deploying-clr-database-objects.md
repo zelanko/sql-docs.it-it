@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 26253e3a19b31dce94249a09dcf7cee71fbffeeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c69f0ed73b638fd17183c5efba1c1f5e8e3c74f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488210"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756307"
 ---
 # <a name="deploying-clr-database-objects"></a>Distribuzione di oggetti di database CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La distribuzione rappresenta il processo tramite il quale si mette a disposizione un'applicazione o un modulo pronto per l'utilizzo perché venga installato ed eseguito in altri computer. L'uso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio consente di sviluppare oggetti di database CLR (Common Language Runtime) e di distribuirli a un server di prova. In alternativa, è possibile compilare gli oggetti di database gestiti con i file di ridistribuzione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Una volta compilati, gli assembly contenenti gli oggetti di database CLR possono essere distribuiti a un server di prova utilizzando Visual Studio o le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Notare che Visual Studio .NET 2003 non può essere utilizzato per la programmazione o la distribuzione dell'integrazione CLR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene fornito con .NET Framework preinstallato e non è possibile utilizzare assembly di .NET Framework 2.0 in Visual Studio .NET 2003.  
   
  Dopo aver testato e verificato i metodi CLR sul server di prova, sarà possibile distribuirli a server di produzione utilizzando uno script di distribuzione che può essere generato manualmente o tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (vedere la procedura riportata più avanti in questo argomento).  
@@ -40,7 +40,7 @@ ms.locfileid: "81488210"
   
 #### <a name="to-deploy-the-assembly-using-visual-studio"></a>Per distribuire l'assembly utilizzando Visual Studio  
   
-1.  Compilare il progetto selezionando **Compila** \<nome progetto> dal menu **Compila** .  
+1.  Compilare il progetto scegliendo **Compila** \<project name> dal menu **Compila** .  
   
 2.  Risolvere tutti gli avvisi e gli errori di compilazione prima di distribuire l'assembly al server di prova.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "81488210"
   
  `CREATE ASSEMBLY HelloWorld from 'c:\helloworld.dll' WITH PERMISSION_SET = SAFE;`  
   
-1.  La procedura, la funzione, l'aggregazione, il tipo definito dall'utente o il trigger deve essere quindi creato nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'assembly **HelloWorld** contiene un metodo denominato **HelloWorld** nella classe **Procedures** , è possibile aggiungere [!INCLUDE[tsql](../../includes/tsql-md.md)] alla query quanto segue per creare una routine denominata **Hello** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  La procedura, la funzione, l'aggregazione, il tipo definito dall'utente o il trigger deve essere quindi creato nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'assembly **HelloWorld** contiene un metodo denominato **HelloWorld** nella classe **Procedures** , [!INCLUDE[tsql](../../includes/tsql-md.md)] è possibile aggiungere alla query quanto segue per creare una routine denominata **Hello** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  `CREATE PROCEDURE hello`  
   
@@ -76,7 +76,7 @@ ms.locfileid: "81488210"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- Per ulteriori informazioni sulla creazione di diversi tipi di oggetti di database gestiti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in, [vedere funzioni CLR definite](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)dall'utente, [aggregazioni CLR definite](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)dall'utente, [tipi CLR definiti dall'](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)utente, [stored procedure CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)e [trigger CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
+ Per ulteriori informazioni sulla creazione di diversi tipi di oggetti di database gestiti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in, vedere [funzioni CLR definite](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)dall'utente, [aggregazioni CLR definite](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)dall'utente, [tipi CLR definiti dall'](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)utente, [stored procedure CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)e [trigger CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>Distribuzione dell'assembly a server di produzione  
  Dopo aver testato e verificato gli oggetti di database CLR sul server di prova, sarà possibile distribuirli a server di produzione. Per ulteriori informazioni sul debug di oggetti di database gestiti, vedere [debug di oggetti di database CLR](../../relational-databases/clr-integration/debugging-clr-database-objects.md).  
@@ -87,7 +87,7 @@ ms.locfileid: "81488210"
   
 1.  Aprire [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui è stato registrato l'oggetto di database o l'assembly gestito da distribuire.  
   
-2.  Nella **Esplora oggetti**espandere il nome del ** \<server>** e gli alberi dei **database** . Fare clic con il pulsante destro del mouse sul database in cui è registrato l'oggetto di database gestito, selezionare **attività**, quindi selezionare **Genera script**. Verrà avviata la Generazione guidata script.  
+2.  Nella **Esplora oggetti**espandere gli **\<server name>** alberi **database** e. Fare clic con il pulsante destro del mouse sul database in cui è registrato l'oggetto di database gestito, selezionare **attività**, quindi selezionare **Genera script**. Verrà avviata la Generazione guidata script.  
   
 3.  Selezionare il database nella casella di riepilogo e fare clic su **Avanti**.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "81488210"
   
 5.  Nel riquadro **Selezione tipi di oggetti** scegliere il tipo di oggetto di database da distribuire. Fare clic su **Avanti**.  
   
-6.  Per ogni tipo di oggetto selezionato nel riquadro **Selezione tipi di oggetti** , viene visualizzato un riquadro ** \<Scegli tipo>** . In questo riquadro è possibile scegliere tra tutte le istanze del tipo di oggetto di database registrato nel database specificato. Selezionare uno o più oggetti, quindi fare clic su **Avanti**.  
+6.  Per ogni tipo di oggetto selezionato nel riquadro **Selezione tipi di oggetti** , viene visualizzato un riquadro **Scegli \<type> ** . In questo riquadro è possibile scegliere tra tutte le istanze del tipo di oggetto di database registrato nel database specificato. Selezionare uno o più oggetti, quindi fare clic su **Avanti**.  
   
 7.  Il riquadro **Opzioni di output** viene visualizzato quando tutti i tipi di oggetto di database desiderati sono stati selezionati. Selezionare **script nel file** e specificare un percorso di file per lo script. Selezionare **Avanti**. Verificare le selezioni e fare clic su **fine**. Lo script di distribuzione verrà salvato nel percorso di file specificato.  
   

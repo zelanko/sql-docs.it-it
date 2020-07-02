@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8cb43ad9128160dfbd8e943ec3db02930eb3ac53
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2711fa3c1e7035b75228b02e9d52de8fd3dcd6d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68131577"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755936"
 ---
 # <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (API della stored procedure estesa)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
@@ -57,7 +57,7 @@ len
  *campo*  
  Specifica i dati nella connessione da restituire.  
   
-|valore|Valori di codice restituiti|  
+|Valore|Restituisce|  
 |-----------|-------------|  
 |SRV_APPLNAME|Nome dell'applicazione fornito dal client quando ha stabilito la connessione.|  
 |SRV_BCPFLAG|Flag impostato su TRUE se il client si prepara per un'operazione di copia bulk; in caso contrario, è impostato su FALSE.|  
@@ -82,7 +82,7 @@ len
  *Len*  
  Puntatore a una variabile **int** che contiene la lunghezza del valore *field* restituito. Se *len* è NULL, la lunghezza della stringa non viene restituita.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  Un puntatore a una stringa con terminazione Null che contiene il valore corrente per il campo specificato nella struttura SRV_PROC. Se il campo è vuoto, viene restituito un puntatore valido a una stringa vuota e *len* contiene 0. Se il campo non è noto, viene restituito NULL e *len* contiene il valore -1.  
   
 > [!IMPORTANT]  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9898dbde804b0c4615a5dc4ad6b8fefa79000ccb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fcf1c5ea6db06072aff5075b42a1dde18ad00640
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005578"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755968"
 ---
 # <a name="srv_paramstatus-extended-stored-procedure-api"></a>srv_paramstatus (API Stored procedure estesa)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
@@ -54,7 +54,7 @@ n
  *n*  
  Indica il numero del parametro. Il primo parametro è 1.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  **int** contenente flag di stato per il parametro. Attualmente è disponibile un solo flag: se il bit 0 è impostato su 1, il parametro è un parametro restituito. Se non è presente nessun parametro *n* o nessuna stored procedure remota, restituisce -1.  
   
 ## <a name="remarks"></a>Osservazioni  

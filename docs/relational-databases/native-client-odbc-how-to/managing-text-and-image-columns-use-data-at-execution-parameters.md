@@ -13,15 +13,15 @@ ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 957a46b2a93013305e8642d4b311c22c9ec16d6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df8b2579ea846663a36cec4290d67fa407468282
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298841"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755669"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>Gestione di colonne di tipo text e image - Usare parametri data-at-execution
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
     
 ### <a name="to-use-data-at-execution-text-ntext-or-image-parameters"></a>Per utilizzare i parametri data-at-execution di tipo text, ntext o image  
@@ -49,11 +49,11 @@ ms.locfileid: "81298841"
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
- Eseguire il primo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) per creare la tabella utilizzata dall'esempio.  
+ Eseguire il primo [!INCLUDE[tsql](../../includes/tsql-md.md)] Listato di codice () per creare la tabella utilizzata dall'esempio.  
   
  Compilare il secondo listato di codice (C++) con odbc32.lib. Eseguire quindi il programma.  
   
- Eseguire il terzo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) per eliminare la tabella utilizzata dall'esempio.  
+ Eseguire il terzo [!INCLUDE[tsql](../../includes/tsql-md.md)] Listato di codice () per eliminare la tabella utilizzata dall'esempio.  
   
 ```  
 use AdventureWorks  

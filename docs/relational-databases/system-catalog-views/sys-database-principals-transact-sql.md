@@ -20,15 +20,15 @@ ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: feed483cf3ee08c0652e55de51b1f73fc087ed39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 634d0d69698503a4bc483c9803858e5cda4b515d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80873117"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754470"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Viene restituita una riga per ogni entità di sicurezza in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -48,7 +48,7 @@ ms.locfileid: "80873117"
 |**authentication_type_desc**|**nvarchar(60)**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Descrizione del tipo di autenticazione. Di seguito sono riportati i valori possibili e le relative descrizioni.<br /><br /> NONE: nessuna autenticazione<br />ISTANZA: autenticazione dell'istanza<br />DATABASE: autenticazione del database<br />WINDOWS: autenticazione di Windows<br />ESTERNO: autenticazione Azure Active Directory|  
 |**default_language_name**|**sysname**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Indica la lingua predefinita per questa entità.|  
 |**default_language_lcid**|**int**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Indica l'identificatore LCID predefinito per questa entità.|  
-|**allow_encrypted_value_modifications**|**bit**|**Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e versioni [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]successive.<br /><br /> Elimina i controlli sui metadati di crittografia nel server nelle operazioni di copia bulk. Ciò consente all'utente di eseguire la copia bulk dei dati crittografati tramite Always Encrypted, tra tabelle o database, senza decrittografare i dati. Il valore predefinito è OFF. |      
+|**allow_encrypted_value_modifications**|**bit**|**Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Elimina i controlli sui metadati di crittografia nel server nelle operazioni di copia bulk. Ciò consente all'utente di eseguire la copia bulk dei dati crittografati tramite Always Encrypted, tra tabelle o database, senza decrittografare i dati. Il valore predefinito è OFF. |      
   
 ## <a name="remarks"></a>Osservazioni  
  Le proprietà di *PasswordLastSetTime* sono disponibili in tutte le configurazioni supportate di SQL Server, ma le altre proprietà sono disponibili solo quando SQL Server è in esecuzione in Windows Server 2003 o versioni successive e sono abilitati sia CHECK_POLICY che CHECK_EXPIRATION. Per ulteriori informazioni, vedere [criteri password](../../relational-databases/security/password-policy.md) .
@@ -95,7 +95,7 @@ JOIN sys.schemas AS s
  Nella query seguente vengono elencate le autorizzazioni concesse o negate in modo esplicito alle entità di database.  
   
 > [!IMPORTANT]  
->  Le autorizzazioni dei ruoli predefiniti del database non vengono visualizzate `sys.database_permissions`in. Pertanto, le entità di database potrebbero contenere ulteriori autorizzazioni non presenti in questo elenco.  
+>  Le autorizzazioni dei ruoli predefiniti del database non vengono visualizzate in `sys.database_permissions` . Pertanto, le entità di database potrebbero contenere ulteriori autorizzazioni non presenti in questo elenco.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   
@@ -106,7 +106,7 @@ JOIN sys.database_permissions AS pe
 ```  
   
 ### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>D: elenco delle autorizzazioni per gli oggetti dello schema all'interno di un database  
- La query seguente `sys.database_principals` unisce e `sys.database_permissions` a `sys.objects` e `sys.schemas` per elencare le autorizzazioni concesse o negate a specifici oggetti dello schema.  
+ La query seguente unisce `sys.database_principals` e `sys.database_permissions` a `sys.objects` e `sys.schemas` per elencare le autorizzazioni concesse o negate a specifici oggetti dello schema.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

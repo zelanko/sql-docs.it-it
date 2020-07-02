@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3a10ab445bfcf9f61b7eb6c952100af9b6fadbb
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 4c634614b6cfad036146081436ce31efcf1cd464
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753615"
 ---
 # <a name="functions-on-nodes---local-name"></a>Funzioni su nodi - local-name
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Restituisce la parte locale del nome di *$arg* come xs: String che sarà la stringa di lunghezza zero o avrà il formato lessicale di XS: NCName. Se non si specifica l'argomento, il valore predefinito è il nodo di contesto.  
   
@@ -39,7 +39,7 @@ fn:local-name($arg as node()?) as xs:string
  *$arg*  
  Nome del nodo di cui verrà recuperata la parte local-name.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
   
 -   In SQL Server, **FN: local-name ()** senza un argomento può essere usato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi (`[ ]`).  
   
@@ -47,10 +47,10 @@ fn:local-name($arg as node()?) as xs:string
   
 -   Se il nodo di destinazione non dispone di un nome specifico, in quanto è un nodo di documento, un nodo di commento o un nodo di testo, la funzione restituisce la stringa di lunghezza zero.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
-### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. Recupero del nome locale di un nodo specifico  
+### <a name="a-retrieve-local-name-of-a-specific-node"></a>R. Recupero del nome locale di un nodo specifico  
  La query seguente viene eseguita su un'istanza XML non tipizzata. L'espressione della query, `local-name(/ROOT[1])`, recupera la parte del nome locale del nodo specificato.  
   
 ```  

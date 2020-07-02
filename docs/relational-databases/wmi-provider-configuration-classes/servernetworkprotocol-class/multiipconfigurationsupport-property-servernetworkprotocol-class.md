@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ed53a60bd0ef285468d71c4018ba7a4ed9cd8c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3f5b42276204441d4abe3eac5d10737a5a89a6b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660376"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755380"
 ---
 # <a name="multiipconfigurationsupport-property-servernetworkprotocol-class"></a>Proprietà MultiIpConfigurationSupport (classe ServerNetworkProtocol)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Ottiene la proprietà booleana che specifica se più indirizzi IP sono supportati da un protocollo di rete del server.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,8 +36,8 @@ object.MultiIpConfigurationSupport [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
- Oggetto della [Proprietà ProtocolName (classe ServerNetworkProtocol)](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/protocolname-property-servernetworkprotocol-class.md) che rappresenta il protocollo di rete utilizzato dall'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ *object*  
+ Oggetto della [Proprietà ProtocolName (classe ServerNetworkProtocol)](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/protocolname-property-servernetworkprotocol-class.md) che rappresenta il protocollo di rete utilizzato dall'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore booleano che specifica se più indirizzi IP sono supportati dal protocollo di rete del server: **true** se più indirizzi IP sono supportati dal protocollo di rete del server oppure **false** se più indirizzi IP non sono supportati dal protocollo di rete del server.  

@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71a766dc473c1bef47a8104ae76c0e70bd8b31b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7af58a109a658a4af60ca49ad6eea401284782ac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488397"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756313"
 ---
 # <a name="debugging-clr-database-objects"></a>Debug di oggetti di database CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre il supporto per il debug di oggetti CLR (Common Language Runtime) e [!INCLUDE[tsql](../../includes/tsql-md.md)] nel database. Gli aspetti principali del debug in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono la facilità di installazione e utilizzo e l'integrazione del debugger di SQL Server con il debugger di Microsoft Visual Studio. Inoltre, il debug funziona tra linguaggi diversi. Gli utenti possono passare senza problemi agli oggetti CLR da [!INCLUDE[tsql](../../includes/tsql-md.md)] e viceversa. Il debugger Transact-SQL in SQL Server Management Studio non può essere utilizzato per eseguire il debug di oggetti di database gestiti, ma è possibile eseguire il debug degli oggetti tramite i debugger disponibili in Visual Studio. Il debug di oggetti di database gestiti in Visual Studio supporta tutte le caratteristiche di debug comuni, ad esempio l'esecuzione di istruzioni e routine all'interno di routine in esecuzione nel server. Tramite i debugger è possibile impostare punti di interruzione, controllare lo stack di chiamate, controllare le variabili e modificarne i valori durante il debug. Notare che Visual Studio .NET 2003 non può essere utilizzato per la programmazione o il debug dell'integrazione CLR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene fornito con .NET Framework preinstallato e non è possibile utilizzare assembly di .NET Framework 2.0 in Visual Studio .NET 2003.  
   
  Per altre informazioni sul debug del codice gestito con Visual Studio, vedere l'argomento relativo al[debug del codice gestito](https://go.microsoft.com/fwlink/?LinkId=120377)nella documentazione di Visual Studio.  
   
 ## <a name="debugging-permissions-and-restrictions"></a>Debug di autorizzazioni e restrizioni  
- Il debug è un'operazione con privilegi elevati e pertanto solo i membri del ruolo predefinito del server **sysadmin** possono eseguire questa operazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in.  
+ Il debug è un'operazione con privilegi elevati e pertanto solo i membri del ruolo predefinito del server **sysadmin** possono eseguire questa operazione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Durante il debug vengono applicate le restrizioni seguenti:  
   

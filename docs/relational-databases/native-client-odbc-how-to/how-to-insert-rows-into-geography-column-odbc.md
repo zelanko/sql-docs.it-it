@@ -11,15 +11,15 @@ ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3693a2f38542b0ae8c12d0634a9784a00340ba73
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0fd5b0eeb1190becf95a7119ed35a51d01a55c37
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81293881"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755715"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>Procedura: Inserire righe in colonne geografiche (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   In questo esempio vengono inserite due righe in una tabella con colonna geografica da un input WKB (Well-Known Binary) utilizzando 2 associazioni diverse, SQLCCHAR e SQLCBINARY. Viene quindi selezionata una riga dalla tabella e viene utilizzato ::STAsText() per visualizzarla. Il valore di WKB è 0x01010000000700ECFAD03A4C4001008000B5DF07C0 e tramite l'applicazione viene visualizzato nella console l'output: POINT(56.4595 -2.9842).  
   
@@ -30,7 +30,7 @@ ms.locfileid: "81293881"
  Per ulteriori informazioni sull'archiviazione spaziale, vedere [dati spaziali &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
 ## <a name="example"></a>Esempio  
- Il primo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di creare una tabella utilizzata da questo esempio.  
+ Il primo [!INCLUDE[tsql](../../includes/tsql-md.md)] Listato di codice () consente di creare una tabella utilizzata da questo esempio.  
   
  Compilare il secondo listato di codice (C++) con odbc32.lib e user32.lib. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81293881"
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
- Il terzo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di eliminare la tabella utilizzata dall'esempio.  
+ Il terzo [!INCLUDE[tsql](../../includes/tsql-md.md)] Listato di codice () consente di eliminare la tabella utilizzata dall'esempio.  
   
 ```sql
 use tempdb  

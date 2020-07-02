@@ -13,15 +13,15 @@ ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52c744a096ea55a98aa00a1471f816a93f59c6b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 23d2a9c63416eee53e7f873b36ea9bd284af9b80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300411"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755660"
 ---
 # <a name="process-odbc-errors-odbc"></a>Elaborare errori ODBC (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   È possibile usare due chiamate di funzione ODBC per recuperare messaggi ODBC: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) e [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Per ottenere informazioni correlate a ODBC nei campi di diagnostica **SQLState**, **pfNative** e **ErrorMessage**, chiamare [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) fino a quando no viene restituito SQL_NO_DATA. Per ogni record di diagnostica, è possibile chiamare [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) per recuperare i singoli campi. Tutti i campi specifici del driver devono essere recuperati usando **SQLGetDiagField**.  
   
@@ -41,11 +41,11 @@ ms.locfileid: "81300411"
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
- Eseguire il primo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) per creare la stored procedure utilizzata da questo esempio.  
+ Eseguire il primo [!INCLUDE[tsql](../../includes/tsql-md.md)] Listato di codice () per creare la stored procedure utilizzata da questo esempio.  
   
  Compilare il secondo listato di codice (C++) con odbc32.lib. Eseguire quindi il programma.  
   
- Eseguire il terzo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) per eliminare il stored procedure usato da questo esempio.  
+ Eseguire il terzo [!INCLUDE[tsql](../../includes/tsql-md.md)] Listato di codice () per eliminare il stored procedure usato da questo esempio.  
   
 ### <a name="code"></a>Codice  
   

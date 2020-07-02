@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a87e6108e68c3b9a2648abf7394f03f7e5c8d1ea
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: e22aadcb6da106c28ff38fc5b9d455f04152d0ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306060"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753597"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Funzioni su nodi - namespace-uri
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   Restituisce l'URI dello spazio dei nomi del QName specificato in *$arg* come xs: String.  
   
@@ -39,7 +39,7 @@ fn:namespace-uri($arg as node()?) as xs:string
  *$arg*  
  Nome del nodo di cui verrà recuperata la parte relativa all'URI dello spazio dei nomi.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
   
 -   Se l'argomento viene omesso, l'impostazione predefinita è il nodo di contesto.  
   
@@ -49,10 +49,10 @@ fn:namespace-uri($arg as node()?) as xs:string
   
 -   Se *$arg* è un nodo elemento o attributo il cui expanded-QName non è in uno spazio dei nomi, la funzione restituisce la stringa di lunghezza zero  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
-### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>A. Recupero dell'URI dello spazio dei nomi di un nodo specifico  
+### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>R. Recupero dell'URI dello spazio dei nomi di un nodo specifico  
  La query seguente viene eseguita su un'istanza XML non tipizzata. L'espressione di query `namespace-uri(/ROOT[1])` recupera la parte relativa all'URI dello spazio dei nomi del nodo specificato.  
   
 ```  

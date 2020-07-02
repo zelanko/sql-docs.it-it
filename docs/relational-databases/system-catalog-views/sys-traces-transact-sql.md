@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 4a03be22-b7da-4e2a-97ff-94bed890a620
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1a135dfd0f633858d828a476899094cb2f0409ed
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 612097238e75fd1f811050b2bba2dfb773695797
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821215"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754402"
 ---
 # <a name="systraces-transact-sql"></a>sys.traces (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La vista del catalogo **sys. Traces** contiene le tracce correnti in esecuzione nel sistema. Questa vista è concepita come sostituzione per la funzione **fn_trace_getinfo** .  
   

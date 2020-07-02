@@ -19,15 +19,15 @@ ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8275ed39d49c8fdb64c1d2f26cc1d218c525500c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a504416014d9e3a0cb25972ab624fc720a26bef3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830511"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754161"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>sys. dm_os_host_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 Restituisce una riga in cui sono visualizzate le informazioni sulla versione del sistema operativo.  
   
@@ -52,7 +52,7 @@ Questa visualizzazione è simile a [sys. dm_os_windows_info](../../relational-da
 >  A partire dalla versione [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1,3, la [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] versione 17 richiede l'autorizzazione per la `SELECT` `sys.dm_os_host_info` connessione a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] . Se `SELECT` l'autorizzazione viene revocata da `public` , solo gli account di accesso con `VIEW SERVER STATE` autorizzazione possono connettersi con la versione più recente di SSMS. Altri strumenti, ad esempio, `sqlcmd.exe` possono connettersi senza `SELECT` autorizzazione `sys.dm_os_host_info` .
 
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite tutte le colonne della vista **sys. dm_os_host_info** .  
   
 ```  

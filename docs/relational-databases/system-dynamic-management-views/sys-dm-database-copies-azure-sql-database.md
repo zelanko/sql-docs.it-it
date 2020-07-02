@@ -19,22 +19,22 @@ ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f63469fb4955895b1eb1e3e8466dfbce6306e502
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d4371de1240e64aa5465f6f2d58f5e2eef029acf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824629"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754267"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Database di SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Restituisce informazioni sulla copia del database.  
   
 Per restituire informazioni sui collegamenti di replica geografica, usare le viste [sys. geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) o [sys. dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (disponibili nel database SQL V12).
   
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID del database corrente nella vista `sys.databases`.|  
 |**start_date**|**datetimeoffset**|Ora UTC in un data center del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] regionale in cui è stata avviata la copia del database.|  

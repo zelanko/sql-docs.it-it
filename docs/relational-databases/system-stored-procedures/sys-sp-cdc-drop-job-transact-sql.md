@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: e8265846-8051-4848-b28e-fac27c10bdeb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7429f2c375daa12035e0734cf7a205f03f9be765
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: aa882aed655b2627206f8a50a9d2ff9bcd6b8bb0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808296"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755582"
 ---
 # <a name="syssp_cdc_drop_job-transact-sql"></a>sys.sp_cdc_drop_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Rimuove un processo di pulizia o di acquisizione di Change Data Capture per il database corrente da msdb.  
   
@@ -50,13 +50,13 @@ sys.sp_cdc_drop_job [ [ @job_type = ] 'job_type' ]
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  sp_cdc_drop_job viene chiamato internamente da [sys. sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'appartenenza al ruolo predefinito del database db_owner.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene rimosso il processo di pulizia per il database `AdventureWorks2012`.  
   
 ```  

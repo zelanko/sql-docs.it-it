@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2b3af47a1c09160faab97494d9749fd67c051cd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f5a3e93ed2ae3b64828a3260743410b6d007560
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67898406"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755548"
 ---
 # <a name="xp_logininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni su utenti e gruppi di Windows.  
   
@@ -41,10 +41,10 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @acctname = ] 'account_name'`Nome di un utente o gruppo di Windows a cui è stato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]concesso l'accesso a. *account_name* è di **tipo sysname**e il valore predefinito è null. Se *account_name* non è specificato, vengono restituiti tutti i gruppi di Windows e gli utenti di Windows a cui sono state concesse in modo esplicito le autorizzazioni di accesso. *account_name* deve essere completo. ad esempio ADVWKS4\macraes o BUILTIN\Administrators.  
+`[ @acctname = ] 'account_name'`Nome di un utente o gruppo di Windows a cui è stato concesso l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *account_name* è di **tipo sysname**e il valore predefinito è null. Se *account_name* non è specificato, vengono restituiti tutti i gruppi di Windows e gli utenti di Windows a cui sono state concesse in modo esplicito le autorizzazioni di accesso. *account_name* deve essere completo. ad esempio ADVWKS4\macraes o BUILTIN\Administrators.  
   
- **' tutti** | '**membri** '  
- Specifica se devono essere restituite informazioni su tutti i percorsi di autorizzazione per l'account oppure sui membri del gruppo di Windows. Option è di tipo **varchar (10)** e il valore predefinito è null. ** \@** A meno che non sia specificato **All** , viene visualizzato solo il primo percorso di autorizzazione.  
+ **' all'**  |  **' members '**  
+ Specifica se devono essere restituite informazioni su tutti i percorsi di autorizzazione per l'account oppure sui membri del gruppo di Windows. ** \@ Option** è di tipo **varchar (10)** e il valore predefinito è null. A meno che non sia specificato **All** , viene visualizzato solo il primo percorso di autorizzazione.  
   
 `[ @privilege = ] variable_name`Parametro di output che restituisce il livello di privilegio dell'account di Windows specificato. *variable_name* è di tipo **varchar (10)** e il valore predefinito è "not wanted". Il livello di privilegio restituito è **User**, **admin**o **null**.  
   
@@ -61,15 +61,15 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |**nome account**|**sysname**|Nome completo dell'account di Windows.|  
 |**type**|**carattere (8)**|Tipo di account di Windows. I valori validi sono **utente** o **gruppo**.|  
 |**privilegio**|**char(9)**|Privilegio di accesso per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I valori validi sono **admin**, **User**o **null**.|  
-|**mapped login name**|**sysname**|Per gli account utente con privilegi utente, il nome dell'account di **accesso mappato** Mostra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il nome dell'account di accesso con mapping che tenta di usare quando si accede con questo account usando le regole mappate con il nome di dominio aggiunto prima.|  
+|**mapped login name**|**sysname**|Per gli account utente con privilegi utente, il nome dell'account di **accesso mappato** Mostra il nome dell'account di accesso con mapping che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di usare quando si accede con questo account usando le regole mappate con il nome di dominio aggiunto prima.|  
 |**permission path**|**sysname**|Appartenenza al gruppo che ha permesso all'account di ottenere l'accesso.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Se viene specificato *account_name* , **xp_logininfo** segnala il livello di privilegio più elevato del gruppo o dell'utente di Windows specificato. Se un utente di Windows può accedere sia come amministratore di sistema che come utente di dominio, verrà restituito come amministratore di sistema. Se l'utente è membro di più gruppi di Windows con livello di privilegio uguale, viene restituito soltanto il gruppo a cui è stato concesso per primo l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Se *account_name* è un utente o un gruppo di Windows valido che non è associato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un account di accesso, viene restituito un set di risultati vuoto. Se non è possibile identificare *account_name* come un utente o un gruppo di Windows valido, viene restituito un messaggio di errore.  
+ Se *account_name* è un utente o un gruppo di Windows valido che non è associato a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso, viene restituito un set di risultati vuoto. Se non è possibile identificare *account_name* come un utente o un gruppo di Windows valido, viene restituito un messaggio di errore.  
   
- Se vengono specificati *account_name* e **tutti** , vengono restituiti tutti i percorsi di autorizzazione per l'utente o il gruppo di Windows. Se *account_name* è un membro di più gruppi a cui è stato concesso l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vengono restituite più righe. Le righe dei privilegi di **amministratore** vengono restituite prima delle righe dei privilegi **utente** e all'interno di un livello di privilegio le righe vengono restituite nell'ordine in cui sono stati creati gli account di accesso corrispondenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Se vengono specificati *account_name* e **tutti** , vengono restituiti tutti i percorsi di autorizzazione per l'utente o il gruppo di Windows. Se *account_name* è un membro di più gruppi a cui è stato concesso l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vengono restituite più righe. Le righe dei privilegi di **amministratore** vengono restituite prima delle righe dei privilegi **utente** e all'interno di un livello di privilegio le righe vengono restituite nell'ordine in cui sono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stati creati gli account di accesso corrispondenti.  
   
  Se vengono specificati *account_name* e **i membri** , viene restituito un elenco di membri di livello successivo del gruppo. Se *account_name* è un gruppo locale, l'elenco può includere utenti locali, utenti di dominio e gruppi. Se *account_name* è un account di dominio, l'elenco è costituito da utenti di dominio. Per recuperare informazioni sull'appartenenza ai gruppi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere connesso al controller di dominio. Se il server non può contenere il controller di dominio, non verranno restituite informazioni.  
   
@@ -85,7 +85,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 EXEC xp_logininfo 'BUILTIN\Administrators';  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_denylogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_grantlogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   

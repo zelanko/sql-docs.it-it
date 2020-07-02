@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 0a1424e4-3319-4836-b8d8-5e0344cc683f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 48ff48b18cc945754b91dc14294569040b1e73fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 999f949466efe5ed39fe20534f99138d5013f588
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005531"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755921"
 ---
 # <a name="srv_rpcname-extended-stored-procedure-api"></a>srv_rpcname (API Stored procedure estesa)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
@@ -54,7 +54,7 @@ len
  *Len*  
  Puntatore a una variabile di tipo integer che riceve la lunghezza del nome del database. Se *len* è NULL, la lunghezza del nome della stored procedure remota non viene restituita.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  Puntatore DBCHAR alla stringa con terminazione Null per il componente del nome della stored procedure remota della stored procedure remota corrente. Se non è presente alcuna stored procedure remota corrente, viene restituito NULL e *len* viene impostato su -1.  
   
 ## <a name="remarks"></a>Osservazioni  

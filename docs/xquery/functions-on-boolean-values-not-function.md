@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24235099ec742d4c6d62e3d97ee1f551af24f7d4
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: db4fbd8e78827ff8818f74e83bf9f2d8ca8d0d39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84524410"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753599"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>Funzioni su valori booleani - not 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Restituisce TRUE se il valore booleano effettivo di *$arg* è false e restituisce false se il valore booleano effettivo di *$arg* è true.  
   
@@ -41,10 +41,10 @@ fn:not($arg as item()*) as xs:boolean
  *$arg*  
  Una sequenza di elementi per i quali esiste un valore booleano effettivo.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
-### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Utilizzo della funzione XQuery not () per individuare i modelli di prodotto le cui descrizioni del catalogo non includono l' \<Specifications> elemento.  
+### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>R. Utilizzo della funzione XQuery not () per individuare i modelli di prodotto le cui descrizioni del catalogo non includono l' \<Specifications> elemento.  
  La query seguente costruisce codice XML contenente gli ID del modello di prodotto per i quali le descrizioni del catalogo non includono l' `Specifications` elemento <>.  
   
 ```  

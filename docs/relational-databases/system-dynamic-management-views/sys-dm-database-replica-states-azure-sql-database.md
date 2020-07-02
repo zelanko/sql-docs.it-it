@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.dm_database_replica_states dynamic management view
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3a9bf27341663de266b0b45f003fd5fdb4a1a79
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dc81d2f5754052ae9fec57d7bd9d64b5337fdaba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824623"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754276"
 ---
 # <a name="sysdm_database_replica_states-azure-sql-database"></a>sys.dm_database_replica_states (database SQL di Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Restituisce una riga per il database, esponendo lo stato per la replica locale.  
   
@@ -71,8 +71,8 @@ ms.locfileid: "82824623"
 |**last_commit_time**|**datetime**|Ora che corrisponde all'ultimo record di commit.<br /><br /> Sul database secondario, l'ora equivale a quella sul database primario.<br /><br /> Sulla replica primaria ogni riga del database secondario contiene l'ora in cui la replica secondaria che ospita il database secondario ha riferito alla replica primaria. La differenza di tempo tra la riga database primario e una determinata riga del database secondario rappresenta approssimativamente l'obiettivo del punto di ripristino (RPO), presupponendo che il processo di rollforward venga aggiornato e che lo stato di avanzamento sia stato segnalato alla replica primaria dalla replica secondaria.|  
 |**low_water_mark_for_ghosts**|**bigint**|Numero a incremento progressivo costante per il database che indica un limite minimo usato dall'attività di pulizia dei record fantasma sul database primario. Se questo numero non aumenta nel tempo, implica che la pulizia dei record fantasma potrebbe non avvenire. Per decidere quali righe fantasma pulire, la replica primaria utilizza il valore minimo di questa colonna per questo database in tutte le repliche di disponibilità, inclusa quella primaria.|  
 |**secondary_lag_seconds**|**bigint**|Numero di secondi durante i quali la replica secondaria è dietro la replica primaria durante la sincronizzazione.<br /><br />**Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.|  
-|**quorum_commit_lsn**|**numeric(25,0)**|Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.|
-|**quorum_commit_time**|**datetime**|Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.|
+|**quorum_commit_lsn**|**numeric(25,0)**|Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.|
+|**quorum_commit_time**|**datetime**|Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.|
 
 
 ## <a name="permissions"></a>Autorizzazioni
