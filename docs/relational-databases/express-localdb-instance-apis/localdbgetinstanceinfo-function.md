@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c10fcf4f0a57eef5e2f4f33d699c4ed7d4d350e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b392098091a3a439271a6f01a28ae152405e17b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022078"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789504"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>Funzione LocalDBGetInstanceInfo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Vengono restituite le informazioni per l'istanza del database locale di SQL Server Express specificata, se esistente, la versione del database locale utilizzata dall'istanza, se quest'ultima è in esecuzione e così via.  
   
  Le informazioni vengono restituite in uno **struct** denominato **dello structLocalDBInstanceInfo**, che presenta la definizione seguente.  
@@ -95,7 +95,7 @@ HRESULT LocalDBGetInstanceInfo(
  *dwInstanceInfoSize*  
  Input Include le dimensioni del buffer *InstanceInfo* .  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  S_OK  
  Funzione completata.  
   

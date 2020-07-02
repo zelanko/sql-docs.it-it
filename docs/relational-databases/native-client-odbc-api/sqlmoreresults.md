@@ -14,15 +14,15 @@ ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f22112f57bbb38873956f17189169a4d66efe019
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: add522996d247b41f46fb975fc06eab0ddbe1806
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81289211"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85788058"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **SQLMoreResults** consente all'applicazione di recuperare più set di righe di risultati. Un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT contenente una clausola COMPUTE, o un batch inviato di istruzioni ODBC o [!INCLUDE[tsql](../../includes/tsql-md.md)] , comporta la generazione di più set di risultati da parte del driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente la creazione di un cursore server per elaborare i risultati in entrambi i casi. Pertanto, lo sviluppatore deve assicurarsi che l'istruzione ODBC sia bloccata. Lo sviluppatore deve esaurire i dati restituiti o annullare l'istruzione ODBC prima di elaborare i dati di altre istruzioni attive nella connessione.  
   

@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 37cb2a7e-672a-4223-b6f3-a94d7b8d58cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b96875c1e8f105cbda0298c5b058e21913a8c8c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70e6244254c221ff12c37c04d83bf294b41acfec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68091278"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789487"
 ---
 # <a name="localdbdeleteinstance-function"></a>Funzione LocalDBDeleteInstance
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Rimuove l'istanza specificata del database locale di SQL Server Express.  
   
  **File di intestazione:** sqlncli. h  
@@ -44,7 +44,7 @@ HRESULT LocalDBDeleteInstance(
  *dwFlags*  
  [Input] Riservato per utilizzi futuri. Deve essere impostato attualmente su 0.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  S_OK  
  Funzione completata.  
   

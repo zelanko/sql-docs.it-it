@@ -14,19 +14,19 @@ ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ebda3de96cbd9a4a1ceadd62093420cc372a169
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b351ded757bc424b5ae37459ce14fd3f1bd45f73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302155"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789185"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **SQLGetData** viene utilizzato per recuperare i dati del set di risultati senza associare i valori della colonna. **SQLGetData** può essere chiamato successivamente nella stessa colonna per recuperare grandi quantità di dati da una colonna con un tipo di dati **Text**, **ntext**o **Image** .  
   
- Non è necessario che un'applicazione associ le variabili per recuperare i dati del set di risultati. È possibile recuperare i dati di qualsiasi colonna dal driver [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC di Native client utilizzando **SQLGetData**.  
+ Non è necessario che un'applicazione associ le variabili per recuperare i dati del set di risultati. È possibile recuperare i dati di qualsiasi colonna dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client utilizzando **SQLGetData**.  
   
  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client non supporta l'utilizzo di **SQLGetData** per recuperare dati in ordine di colonna casuale. Tutte le colonne non associate elaborate con **SQLGetData** devono avere un numero ordinale di colonna maggiore rispetto alle colonne associate nel set di risultati. L'applicazione deve elaborare i dati dal valore della colonna dell'ordinale non associato più basso al più elevato. Il tentativo di recuperare dati dalla colonna con una numerazione di ordinali più bassa genera un errore. Se l'applicazione sta utilizzando i cursori del server per indicare le righe del set di risultati, può recuperare nuovamente la riga corrente e quindi recuperare il valore di una colonna. Se un'istruzione viene eseguita sul cursore di sola lettura predefinito, è necessario eseguire di nuovo l'istruzione per eseguire il backup di **SQLGetData**.  
   

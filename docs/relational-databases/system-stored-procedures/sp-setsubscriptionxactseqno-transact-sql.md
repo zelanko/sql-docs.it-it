@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60d27260378a8f0d6706b85ea02232ffca6a05c8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8cce1f1fd046d2b93f41f010b82a067c5a936670
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827495"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790365"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Utilizzato durante la risoluzione dei problemi per specificare l'ultima transazione recapitata utilizzando il numero di sequenza del file di log (LSN), consentendo all'agente di distribuzione di iniziare a recapitare alla transazione successiva. Al riavvio, il agente di distribuzione restituisce transazioni maggiori di questo limite (LSN) dalla cache del database di distribuzione (msrepl_commands). Questa stored procedure viene eseguita nel database di sottoscrizione del Sottoscrittore. e non è supportata per Sottoscrittori non SQL Server.  
   
@@ -62,7 +62,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_setsubscriptionxactseqno** viene utilizzata nella replica transazionale.  
   
  Impossibile utilizzare **sp_setsubscriptionxactseqno** in una topologia di replica transazionale peer-to-peer.  
@@ -78,6 +78,6 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_setsubscriptionxactseqno**.  
   
-## <a name="see-more"></a>Vedi altro
+## <a name="see-more"></a>Altre informazioni
 
 [Blog: come ignorare una transazione](https://repltalk.com/2019/05/28/how-to-skip-a-transaction/)  

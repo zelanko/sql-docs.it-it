@@ -14,19 +14,19 @@ ms.assetid: 003e75b1-54e5-4b36-a6f7-11e1f14cf98f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 816ce460d140ddbdd1c018092cb0c3b0857355b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d4b28165bdc854f2aec72ef56b9f85eb326c0f88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302562"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789357"
 ---
 # <a name="sqlconfigdatasource"></a>SQLConfigDataSource
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client supporta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]varie coppie parola chiave/valore specifiche per le stringhe degli attributi di configurazione dell'origine dati.  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client supporta varie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coppie parola chiave/valore specifiche per le stringhe degli attributi di configurazione dell'origine dati.  
   
- Per un elenco delle parole chiave disponibili nel driver [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC di Native client, vedere [utilizzo delle parole chiave delle stringhe di connessione con SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Per un elenco delle parole chiave disponibili nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client, vedere [utilizzo delle parole chiave delle stringhe di connessione con SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQLConfigDataSource (funzione)](https://go.microsoft.com/fwlink/?LinkId=59337)   

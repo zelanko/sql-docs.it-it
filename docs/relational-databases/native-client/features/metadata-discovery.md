@@ -10,21 +10,21 @@ ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d822362e9f9f7e70e4421056383aae8ddef03dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 924ded48601e114ee2a04baead304721903954d4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303362"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787882"
 ---
 # <a name="metadata-discovery"></a>Individuazione dei metadati
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Il miglioramento dell'individuazione dei [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] metadati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in consente alle applicazioni client native di garantire che i metadati delle colonne o dei parametri restituiti dall'esecuzione di una query siano identici o compatibili con il formato dei metadati specificato prima di eseguire la query. Se i metadati restituiti dopo l'esecuzione di una query non sono compatibili con il formato dei metadati specificato prima dell'esecuzione della query, viene generato un errore.  
+  Il miglioramento dell'individuazione dei metadati in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] consente alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] applicazioni client native di garantire che i metadati delle colonne o dei parametri restituiti dall'esecuzione di una query siano identici o compatibili con il formato dei metadati specificato prima di eseguire la query. Se i metadati restituiti dopo l'esecuzione di una query non sono compatibili con il formato dei metadati specificato prima dell'esecuzione della query, viene generato un errore.  
   
  Nelle funzioni ODBC e bcp, nonché nelle interfacce IBCPSession e IBCPSession2, è ora possibile specificare una lettura ritardata (individuazione dei metadati ritardata) per evitare l'individuazione dei metadati per le operazioni di esportazione di query. In questo modo, è possibile migliorare le prestazioni ed eliminare gli errori di individuazione dei metadati.  
   
- Se si sviluppa un'applicazione utilizzando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ma si esegue la connessione a una versione [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]del server precedente a, la funzionalità di individuazione dei metadati corrisponderà alla versione del server.  
+ Se si sviluppa un'applicazione utilizzando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ma si esegue la connessione a una versione del server precedente a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] , la funzionalità di individuazione dei metadati corrisponderà alla versione del server.  
   
 ## <a name="remarks"></a>Osservazioni  
  Le funzioni bcp seguenti sono state migliorate in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] per garantire una migliore individuazione dei metadati:  

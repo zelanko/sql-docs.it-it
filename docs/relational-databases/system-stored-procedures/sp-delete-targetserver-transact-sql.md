@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0ccefc43c687c60d1dee030bf5f16a4b138224dd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4dc25d35d1037b3fae934ab6112ea2afdf40ca7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833295"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790380"
 ---
 # <a name="sp_delete_targetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Rimuove il server specificato dall'elenco dei server di destinazione disponibili.  
    
@@ -59,7 +59,7 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa stored procedure, è necessario che agli utenti venga concesso il ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente il server `LONDON1` viene rimosso dall'elenco dei server di processo disponibili.  
   
 ```  

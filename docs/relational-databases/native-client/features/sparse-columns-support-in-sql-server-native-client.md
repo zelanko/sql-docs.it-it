@@ -14,19 +14,19 @@ ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54fe59caad74c856ef7a548fb54433f66c216a2c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bfabd9ad0a5ff9e59e8e7f91f1fc9709abef17f7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388450"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787895"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>Supporto per colonne di tipo sparse in SQL Server Native Client
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta le colonne di tipo sparse. Per altre informazioni sulle colonne di tipo sparse in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Usare le colonne di tipo sparse ](../../../relational-databases/tables/use-sparse-columns.md)e [Usare set di colonne](../../../relational-databases/tables/use-column-sets.md).  
   
- Per ulteriori informazioni sul supporto delle colonne di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo sparse in native client, vedere [supporto delle colonne di tipo sparse &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md) e [colonne di tipo sparse supportano &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md).  
+ Per ulteriori informazioni sul supporto delle colonne di tipo sparse in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client, vedere [supporto delle colonne di tipo sparse &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md) e [colonne di tipo sparse supportano &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md).  
   
  Per informazioni sulle applicazioni di esempio in cui viene illustrata questa funzionalità, vedere la [pagina relativa agli esempi di programmazione dati di SQL Server](https://msftdpprodsamples.codeplex.com/).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "81388450"
 |Comportamento di **queryout** per BCP.|Nessuna modifica nella gestione di colonne denominate in modo esplicito rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.<br /><br /> Gli scenari che comportano l'importazione e l'esportazione tra tabelle con schemi diversi possono richiedere una gestione speciale.<br /><br /> Per ulteriori informazioni su BCP, vedere Supporto per la copia bulk (BCP) per colonne di tipo sparse più avanti in questo argomento.|  
   
 ## <a name="down-level-client-behavior"></a>Comportamento dei client legacy  
- I client restituiscono metadati solo per le colonne che non sono membri del set di colonne **column_set** di tipo sparse per SQLColumns e DBSCHMA_COLUMNS. I set di righe dello schema aggiuntivi OLE DB [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] introdotti in native client non saranno disponibili, né verranno apportate modifiche a SQLColumns in ODBC tramite SQL_SOPT_SS_NAME_SCOPE.  
+ I client restituiscono metadati solo per le colonne che non sono membri del set di colonne **column_set** di tipo sparse per SQLColumns e DBSCHMA_COLUMNS. I set di righe dello schema aggiuntivi OLE DB introdotti in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] native client non saranno disponibili, né verranno apportate modifiche a SQLColumns in ODBC tramite SQL_SOPT_SS_NAME_SCOPE.  
   
  I client legacy possono accedere per nome alle colonne che sono membri del set di colonne **column_set** di tipo sparse e la colonna **column_set** sarà accessibile come colonna XML per i client e come colonna per i client [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   

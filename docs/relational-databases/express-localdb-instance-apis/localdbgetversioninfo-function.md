@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7030f26cb95b78a3cd2dde8520876f13acc4bc46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 23b5c34bf378254e097a3f9c80417d8f96eac0c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68091199"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789475"
 ---
 # <a name="localdbgetversioninfo-function"></a>Funzione LocalDBGetVersionInfo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Vengono restituite le informazioni per la versione del database locale di SQL Server Express specificata, se esistente, e il numero completo della versione del database locale, ovvero con i numeri di compilazione e della versione inclusi.  
   
  Le informazioni vengono restituite sotto forma di uno **struct** denominato **LocalDBVersionInfostruct**, che presenta la definizione seguente.  
@@ -68,7 +68,7 @@ HRESULT LocalDBGetVersionInfo(
  *dwVersionInfoSize*  
  Input Include le dimensioni del buffer *VERSIONINFO* .  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  S_OK  
  Funzione completata.  
   

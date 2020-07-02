@@ -11,15 +11,15 @@ ms.assetid: 11ae959f-2fb6-4b85-ac5d-1476a82136d4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2dd987453202af2d7761e70193f8a0968f4ad38d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5724a0d0a083477c8f148fb80851ad8358dff2f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303705"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787765"
 ---
 # <a name="sparse-columns-support-odbc"></a>Supporto per colonne di tipo sparse (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   In questo argomento viene descritto il supporto ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client per le colonne di tipo sparse. Per un esempio che illustra il supporto ODBC per le colonne di tipo sparse, vedere [chiamare SQLColumns in una tabella con colonne di tipo sparse](../../../relational-databases/native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md). Per ulteriori informazioni sulle colonne di tipo sparse, vedere [supporto di colonne di tipo sparse in SQL Server Native Client](../../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
   
@@ -29,7 +29,7 @@ ms.locfileid: "81303705"
  Un nuovo descrittore della riga di implementazione (IRD), un campo SQLSMALLINT di sola lettura denominato SQL_CA_SS_IS_COLUMN_SET, può essere utilizzato per determinare se una colonna è un valore di **column_set** XML. SQL_CA_SS_IS_COLUMN_SET accetta i valori SQL_TRUE e SQL_FALSE.  
   
 ## <a name="catalog-metadata"></a>Metadati del catalogo  
- Sono [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] state aggiunte due colonne specifiche (SS_IS_SPARSE e SS_IS_COLUMN_SET) al set di risultati per [SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Sono state aggiunte due colonne specifiche (SS_IS_SPARSE e SS_IS_COLUMN_SET) al set di risultati per [SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md).  
   
 ## <a name="odbc-function-support-for-sparse-columns"></a>Supporto della funzione ODBC per colonne di tipo sparse  
  Sono state aggiornate le funzioni ODBC seguenti per supportare colonne di tipo sparse in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  

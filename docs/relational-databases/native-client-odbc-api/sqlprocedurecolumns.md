@@ -14,23 +14,23 @@ ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b942126a5ad73d5c41f28f60a63d22ef8584f24
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 96c68eac12677109975fce5beea04eec071e70b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280058"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787979"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  **SQLProcedureColumns** restituisce una riga che riporta gli attributi del valore restituito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di tutte le stored procedure.  
+  **SQLProcedureColumns** restituisce una riga che riporta gli attributi del valore restituito di tutte le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure.  
   
  **SQLProcedureColumns** restituisce SQL_SUCCESS se sono presenti o meno valori per i parametri *CatalogName*, *SchemaName*, *ProcName*o *ColumnName* . **SQLFetch** restituisce SQL_NO_DATA quando in questi parametri vengono utilizzati valori non validi.  
   
  **SQLProcedureColumns** può essere eseguito su un cursore del server statico. Il tentativo di eseguire **SQLProcedureColumns** su un cursore aggiornabile (dinamico o keyset) restituirà SQL_SUCCESS_WITH_INFO indicante che il tipo di cursore è stato modificato.  
   
- Nella tabella seguente sono elencate le colonne restituite dal set di risultati e il modo in cui sono state estese **xml** per gestire i tipi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati **UDT** e XML tramite il driver ODBC di Native Client:  
+ Nella tabella seguente sono elencate le colonne restituite dal set di risultati e il modo in cui sono state estese per gestire i tipi di dati **UDT** e **XML** tramite il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client:  
   
 |Nome colonna|Descrizione|  
 |-----------------|-----------------|  

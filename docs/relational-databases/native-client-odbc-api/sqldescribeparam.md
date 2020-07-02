@@ -14,21 +14,21 @@ ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efe1fdccbef4f5c4a393083f6eb81efee759be5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7612fc4da7cb12b4e38f20404cbf9481d610877c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302583"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789333"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Per descrivere i parametri di qualsiasi istruzione SQL, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client compila ed esegue un' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione SELECT quando SQLDescribeParam viene chiamato su un handle di istruzione ODBC preparata. I metadati del set di risultati determinano le caratteristiche dei parametri dell'istruzione preparata. SQLDescribeParam può restituire qualsiasi codice di errore che SQLExecute o SQLExecDirect può restituire.  
   
- I miglioramenti apportati al motore [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] di database a partire da consentono a SQLDescribeParam di ottenere descrizioni più accurate dei risultati previsti. Questi risultati più accurati possono essere diversi dai valori restituiti da SQLDescribeParam nelle versioni precedenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di. Per altre informazioni, vedere [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
+ I miglioramenti apportati al motore di database a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] consentono a SQLDescribeParam di ottenere descrizioni più accurate dei risultati previsti. Questi risultati più accurati possono essere diversi dai valori restituiti da SQLDescribeParam nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   
- Inoltre [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], una novità di, *ParameterSizePtr* restituisce ora un valore che viene allineato alla definizione per la dimensione, in caratteri, della colonna o dell'espressione del marcatore di parametro corrispondente come definito nella [specifica ODBC](https://go.microsoft.com/fwlink/?LinkId=207044). Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client, *ParameterSizePtr* potrebbe essere il valore corrispondente di **SQL_DESC_OCTET_LENGTH** per il tipo o un valore di dimensione della colonna irrilevante fornito a SQLBindParameter per un tipo, il cui valore deve essere ignorato (ad esempio**SQL_INTEGER**).  
+ Inoltre [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , una novità di, *ParameterSizePtr* restituisce ora un valore che viene allineato alla definizione per la dimensione, in caratteri, della colonna o dell'espressione del marcatore di parametro corrispondente come definito nella [specifica ODBC](https://go.microsoft.com/fwlink/?LinkId=207044). Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client, *ParameterSizePtr* potrebbe essere il valore corrispondente di **SQL_DESC_OCTET_LENGTH** per il tipo o un valore di dimensione della colonna irrilevante fornito a SQLBindParameter per un tipo, il cui valore deve essere ignorato (ad esempio**SQL_INTEGER**).  
   
  Il driver non supporta la chiamata a SQLDescribeParam nelle situazioni seguenti:  
   
@@ -42,9 +42,9 @@ ms.locfileid: "81302583"
   
 -   Per qualsiasi query in cui uno dei parametri è il parametro di una funzione.  
   
--   Quando sono presenti commenti (/* \*/) nel [!INCLUDE[tsql](../../includes/tsql-md.md)] comando.  
+-   Quando sono presenti commenti (/* \* /) nel [!INCLUDE[tsql](../../includes/tsql-md.md)] comando.  
   
- Quando si elabora un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] di istruzioni, il driver non supporta inoltre la chiamata a SQLDescribeParam per i marcatori di parametro nelle istruzioni dopo la prima istruzione nel batch.  
+ Quando si elabora un batch di [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni, il driver non supporta inoltre la chiamata a SQLDescribeParam per i marcatori di parametro nelle istruzioni dopo la prima istruzione nel batch.  
   
  Quando si descrivono i parametri delle stored procedure preparate, SQLDescribeParam usa il [sp_sproc_columns](../../relational-databases/system-stored-procedures/sp-sproc-columns-transact-sql.md) di stored procedure di sistema per recuperare le caratteristiche dei parametri. sp_sproc_columns possibile segnalare i dati per le stored procedure all'interno del database utente corrente. La preparazione di un nome completo stored procedure consente l'esecuzione di SQLDescribeParam tra database. Ad esempio, il [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) di stored procedure di sistema può essere preparato ed eseguito in qualsiasi database come:  
   
@@ -58,7 +58,7 @@ SQLPrepare(hstmt, "{call sp_who(?)}", SQL_NTS);
 SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);  
 ```  
   
- Per i tipi di dati con valori di grandi dimensioni, il valore restituito in *DataTypePTR* è SQL_VARCHAR, SQL_VARBINARY o SQL_NVARCHAR. Per indicare che la dimensione del parametro del tipo di dati per valori di grandi dimensioni è " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] illimitata", il driver ODBC di Native Client imposta *ParameterSizePtr* su 0. I valori delle dimensioni effettive vengono restituiti per i parametri **varchar** standard.  
+ Per i tipi di dati con valori di grandi dimensioni, il valore restituito in *DataTypePTR* è SQL_VARCHAR, SQL_VARBINARY o SQL_NVARCHAR. Per indicare che la dimensione del parametro del tipo di dati per valori di grandi dimensioni è "illimitata", il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client imposta *ParameterSizePtr* su 0. I valori delle dimensioni effettive vengono restituiti per i parametri **varchar** standard.  
   
 > [!NOTE]  
 >  Se il parametro è già stato associato alle dimensioni massime del parametro SQL_VARCHAR, SQL_VARBINARY o SQL_WVARCHAR, vengono restituite le dimensioni associate limitate del parametro.  

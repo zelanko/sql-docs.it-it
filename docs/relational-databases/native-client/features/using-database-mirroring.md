@@ -18,15 +18,15 @@ ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9c702d8d0508dcb64090f0b753da64019736ceb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 40879f902b6d014f90e6e2493b1761018c29ce40
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303217"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787840"
 ---
 # <a name="using-database-mirroring"></a>Utilizzo del mirroring del database
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
     
 > [!NOTE]  
@@ -62,9 +62,9 @@ ms.locfileid: "81303217"
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provider OLE DB di SQL Server Native Client  
  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta il mirroring del database tramite gli attributi della stringa di connessione e connessione. La proprietà SSPROP_INIT_FAILOVERPARTNER è stata aggiunta al set di proprietà DBPROPSET_SQLSERVERDBINIT e la parola chiave **FailoverPartner** è un nuovo attributo di stringa di connessione per DBPROP_INIT_PROVIDERSTRING. Per ulteriori informazioni, vedere [utilizzo delle parole chiave delle stringhe di connessione con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- La cache di failover viene mantenuta fino a quando il provider viene caricato, ovvero fino a quando non viene chiamato **CoUninitialize** o a condizione che l'applicazione disponga di un riferimento a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] un oggetto gestito da Native client OLE DB provider, ad esempio un oggetto origine dati.  
+ La cache di failover viene mantenuta fino a quando il provider viene caricato, ovvero fino a quando non viene chiamato **CoUninitialize** o a condizione che l'applicazione disponga di un riferimento a un oggetto gestito da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client OLE DB provider, ad esempio un oggetto origine dati.  
   
- Per informazioni dettagliate [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sul supporto del provider OLE DB Native Client per il mirroring del database, vedere [proprietà di inizializzazione e autorizzazione](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Per informazioni dettagliate sul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporto del provider OLE DB Native Client per il mirroring del database, vedere [proprietà di inizializzazione e autorizzazione](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Driver ODBC di SQL Server Native Client  
  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client supporta il mirroring del database tramite gli attributi della stringa di connessione e connessione. In particolare, l'attributo SQL_COPT_SS_FAILOVER_PARTNER è stato aggiunto per l'utilizzo con le funzioni [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) e [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) . e la parola chiave **Failover_Partner** è stata aggiunta come nuovo attributo della stringa di connessione.  

@@ -25,17 +25,17 @@ helpviewer_keywords:
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 6d8203979a0afdca1ae78b9bd51723c906c40ea2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 460f1990a7020d7a57ea7ad543f3253576756d05
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68267067"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790435"
 ---
 # <a name="sysfn_pagerescracker-transact-sql"></a>sys. fn_PageResCracker (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
-Restituisce `db_id`, `file_id`e `page_id` per il valore specificato. `page_resource` 
+Restituisce `db_id` , `file_id` e `page_id` per il `page_resource` valore specificato. 
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,14 +59,14 @@ Formato esadecimale a 8 byte di una risorsa della pagina del database.
 ## <a name="remarks"></a>Osservazioni  
 `sys.fn_PageResCracker`viene utilizzato per convertire la rappresentazione esadecimale a 8 byte di una pagina di database in un set di righe che contiene l'ID del database, l'ID file e l'ID pagina della pagina.   
 
-È possibile ottenere una risorsa di pagina valida dalla `page_resource` colonna della vista a gestione dinamica [sys. dm_exec_requests &#40;transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) o [sys. sysprocesses &#40;vista di sistema Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) . Se viene usata una risorsa di pagina non valida, il valore restituito è NULL.  
-L'utilizzo principale di `sys.fn_PageResCracker` consiste nel semplificare i join tra queste viste e [sys. dm_db_page_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) funzione a gestione dinamica per ottenere informazioni sulla pagina, ad esempio l'oggetto a cui appartiene.
+È possibile ottenere una risorsa di pagina valida dalla `page_resource` colonna della vista a gestione dinamica [sys. Dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) o dai [processisys.sys&#40;vista di sistema Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) . Se viene usata una risorsa di pagina non valida, il valore restituito è NULL.  
+L'utilizzo principale di `sys.fn_PageResCracker` consiste nel semplificare i join tra queste viste e [sys. Dm_db_page_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) funzione a gestione dinamica per ottenere informazioni sulla pagina, ad esempio l'oggetto a cui appartiene.
   
 ## <a name="permissions"></a>Autorizzazioni  
-L'utente deve `VIEW SERVER STATE` disporre dell'autorizzazione per il server.  
+L'utente deve disporre dell' `VIEW SERVER STATE` autorizzazione per il server.  
   
 ## <a name="examples"></a>Esempi  
-La `sys.fn_PageResCracker` funzione può essere utilizzata insieme a [sys. Dm_db_page_info &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) per risolvere i problemi relativi alle attese e al blocco [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]correlati alle pagine.  Lo script seguente è un esempio di come è possibile usare queste funzioni per raccogliere informazioni sulla pagina del database per tutte le richieste attive attualmente in attesa di un tipo di risorsa di pagina. 
+La `sys.fn_PageResCracker` funzione può essere utilizzata insieme a [sys. dm_db_page_info &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) per risolvere i problemi relativi alle attese e al blocco correlati alle pagine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  Lo script seguente è un esempio di come è possibile usare queste funzioni per raccogliere informazioni sulla pagina del database per tutte le richieste attive attualmente in attesa di un tipo di risorsa di pagina. 
   
 ```sql  
 SELECT page_info.* 
@@ -75,9 +75,9 @@ CROSS APPLY sys.fn_PageResCracker (d.page_resource) AS r
 CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 1) AS page_info
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sys. dm_db_page_info &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)  
- [sys. sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [Processi disys.sys&#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

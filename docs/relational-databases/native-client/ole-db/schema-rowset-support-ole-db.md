@@ -17,22 +17,22 @@ ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e54a81cf47804e1cf4568e739bb2c4cf83b9fe25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 20aa929844dd7b5605672c1d103f807bc7d4147b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288611"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787719"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Supporto dei set di righe dello schema (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta inoltre la restituzione di informazioni sullo schema [!INCLUDE[tsql](../../../includes/tsql-md.md)] da un server collegato durante l'elaborazione di query distribuite.  
+  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta inoltre la restituzione di informazioni sullo schema da un server collegato durante l'elaborazione di [!INCLUDE[tsql](../../../includes/tsql-md.md)] query distribuite.  
   
 > [!NOTE]  
 >  Benché [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporti i sinonimi, non vengono restituiti metadati per i sinonimi da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- Nelle tabelle seguenti sono elencati i set di righe dello schema e le colonne [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di restrizione supportate dal provider OLE DB di Native Client.  
+ Nelle tabelle seguenti sono elencati i set di righe dello schema e le colonne di restrizione supportate dal [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB di Native Client.  
   
 |Set di righe dello schema|Colonne di restrizione|  
 |-------------------|-------------------------|  

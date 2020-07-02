@@ -14,17 +14,17 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6113316f3be68ca03b5c107ed54965577b6963c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b539e532d6de43bf646652a1d4845eaf38d8bd2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302628"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789386"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  È possibile utilizzare **SQLColAttribute** per recuperare un attributo di una colonna del set di risultati per istruzioni ODBC preparate o eseguite. La chiamata di **SQLColAttribute** sulle istruzioni preparate causa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]un round trip a. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client riceve i dati della colonna del set di risultati come parte dell'esecuzione dell'istruzione, quindi la chiamata di **SQLColAttribute** dopo il completamento di **SQLExecute** o **SQLExecDirect** non comporta un round trip del server.  
+  È possibile utilizzare **SQLColAttribute** per recuperare un attributo di una colonna del set di risultati per istruzioni ODBC preparate o eseguite. La chiamata di **SQLColAttribute** sulle istruzioni preparate causa un round trip a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client riceve i dati della colonna del set di risultati come parte dell'esecuzione dell'istruzione, quindi la chiamata di **SQLColAttribute** dopo il completamento di **SQLExecute** o **SQLExecDirect** non comporta un round trip del server.  
   
 > [!NOTE]  
 >  Gli attributi di identificazione di colonna ODBC non sono disponibili in tutti i set di risultati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "81302628"
   
  Per tutte le versioni, gli attributi di colonna vengono indicati solo per il primo set di risultati quando più set di risultati vengono generati da un batch preparato di istruzioni SQL.  
   
- Gli attributi di colonna seguenti sono estensioni esposte dal driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client restituisce tutti i valori nel parametro *NumericAttrPtr* . I valori vengono restituiti come SDWORD (signed long) ad eccezione di SQL_CA_SS_COMPUTE_BYLIST, che è un puntatore a una matrice di WORD.  
+ Gli attributi di colonna seguenti sono estensioni esposte dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client restituisce tutti i valori nel parametro *NumericAttrPtr* . I valori vengono restituiti come SDWORD (signed long) ad eccezione di SQL_CA_SS_COMPUTE_BYLIST, che è un puntatore a una matrice di WORD.  
   
 |Identificatore del campo|Valore restituito|  
 |----------------------|--------------------|  
