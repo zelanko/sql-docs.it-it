@@ -13,15 +13,15 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0d1e6e4fa9c88fc67b15a076a6c96a742fd7fdc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c4f0ff3a5cc18845bc2fcc2bec682c6bd8e2db4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304815"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724658"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>sys. internal_partitions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Restituisce una riga per ogni set di righe che tiene traccia dei dati interni per gli indici columnstore nelle tabelle basate su disco. Questi set di righe sono interni agli indici columnstore e tengono traccia delle righe eliminate, dei mapping rowgroup e dei RowGroups di archiviazione Delta. Consentono di tenere traccia dei dati per ogni partizione della tabella. ogni tabella include almeno una partizione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ricrea i set di righe ogni volta che viene ricompilato l'indice columnstore.   
   
@@ -41,7 +41,7 @@ ms.locfileid: "72304815"
 |optimize_for_sequential_key|**bit**|1 = per la partizione è abilitata l'ottimizzazione dell'inserimento dell'ultima pagina.<br><br>0 = valore predefinito. Per la partizione è stata disabilitata l'ottimizzazione dell'inserimento dell'ultima pagina.|
   
 ## <a name="permissions"></a>Autorizzazioni  
- Richiede l'appartenenza al ruolo `public`.  Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Richiede l'appartenenza al ruolo `public`. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ricrea nuovi indici interni columnstore ogni volta che crea o ricompila un indice columnstore.  

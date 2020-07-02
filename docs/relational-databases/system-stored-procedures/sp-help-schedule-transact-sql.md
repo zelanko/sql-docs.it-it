@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ce8c1514a0c62eeb11743d86dd6922cf4995c63c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2b14900e32c32a5de50998580a8d0de9ed7eacfb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720310"
 ---
 # <a name="sp_help_schedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce un elenco di informazioni relative alle pianificazioni.  
   
@@ -77,7 +77,7 @@ sp_help_schedule
 |**schedule_description**|**nvarchar(4000)**|Descrizione in inglese della pianificazione, se richiesta.|  
 |**job_count**|**int**|Restituisce il numero di processi che fanno riferimento a questa pianificazione.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se non vengono specificati parametri, **sp_help_schedule** elenca le informazioni per tutte le pianificazioni nell'istanza di.  
   
 ## <a name="permissions"></a>Autorizzazioni  

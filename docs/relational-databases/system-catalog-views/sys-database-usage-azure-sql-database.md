@@ -20,19 +20,19 @@ ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0a0789ebd9a5aa4bd10605d69afa59a586ce75b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b68fbc20fb220af49036890edc2b67d1a4f7b65
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155539"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724681"
 ---
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (Database di SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   **Nota: questa opzione si applica solo al database SQL di Azure V11.**  
   
- Elenca il numero, il tipo e la durata dei database nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server.  
+ Elenca il numero, il tipo e la durata dei database nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Server.  
   
  La vista **sys. database_usage** contiene le colonne seguenti.  
   

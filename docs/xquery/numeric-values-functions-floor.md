@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4ace57dd-b66e-4b60-a2b9-a1b0f1a0831d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 15bdca46fc62832ecd97932b1b71f999f1f80324
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: cf7943cbcef462dbdf73e72357f28e4f4e3eb20d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84524478"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724207"
 ---
 # <a name="numeric-values-functions---floor"></a>Funzioni per valori numerici - floor
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Restituisce il numero più alto senza nessuna frazione, maggiore del valore del relativo argomento. Se l'argomento è una sequenza vuota, restituisce la sequenza vuota.  
   
@@ -39,12 +39,12 @@ fn:floor ($arg as numeric?) as numeric?
  *$arg*  
  Numero al quale viene applicata la funzione.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se il tipo di *$arg* è uno dei tre tipi numerici di base, **xs: float**, **xs: Double**o **xs: Decimal**, il tipo restituito è uguale al tipo di *$arg* . Se il tipo di *$arg* è un tipo derivato da uno dei tipi numerici, il tipo restituito è il tipo numerico di base.  
   
  Se l'input per le funzioni FN: floor, FN: Ceiling o FN: round è **xdt: untypedAtomic**, dati non tipizzati, viene eseguito il cast implicito a **xs: Double**. Qualsiasi altro tipo di dati genera un errore statico.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database di esempio AdventureWorks.  
   
  È possibile utilizzare l'esempio funzionante nella [funzione ceiling (XQuery)](../xquery/numeric-values-functions-ceiling.md) per la funzione XQuery **Floor ()** . È sufficiente sostituire la funzione **Ceiling ()** nella query con la funzione **Floor ()** .  

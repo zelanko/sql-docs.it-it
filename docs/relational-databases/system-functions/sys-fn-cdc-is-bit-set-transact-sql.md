@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d14e4e85d6ee52955ba17f42d288e0c770a183a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b9de9ca9259ed89e4965a1659f46031e74cac3d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046350"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724609"
 ---
 # <a name="sysfn_cdc_is_bit_set-transact-sql"></a>sys.fn_cdc_is_bit_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Indica se una colonna acquisita è stata aggiornata controllando se la posizione ordinale è impostata all'interno di una maschera di bit specificata.  
   
@@ -42,7 +42,7 @@ sys.fn_cdc_is_bit_set ( position , update_mask )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *posizione*  
+ *position*  
  Posizione ordinale da controllare nella maschera. *position* è di **tipo int**.  
   
  *update_mask*  
@@ -76,7 +76,7 @@ WHERE __$operation = 4;
 GO  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzioni Change Data Capture &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
  [sys. fn_cdc_get_column_ordinal &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)   
  [sys. fn_cdc_has_column_changed &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md)   

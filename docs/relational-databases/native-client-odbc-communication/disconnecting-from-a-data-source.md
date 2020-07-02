@@ -24,15 +24,15 @@ ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de6722994ca31af3fef9a359f4bb01b5f1fc64c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2a949cbd38229abda7c604f70fd58d5b5cee3b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305502"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719827"
 ---
 # <a name="disconnecting-from-a-data-source"></a>Disconnessione da un'origine dati
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Quando un'applicazione ha terminato di usare un'origine dati, chiama **SQLConnect**. **SQLConnect** libera tutte le istruzioni allocate sulla connessione e disconnette il driver dall'origine dati. Dopo la disconnessione, l'applicazione può chiamare [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) per liberare l'handle di connessione. Prima di uscire, un'applicazione chiama anche **SQLFreeHandle** per liberare l'handle di ambiente.  
   

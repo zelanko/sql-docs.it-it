@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4c9f5fe3a3fa9a58b8c1a103bcb2cf359d842190
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: e69f48867cc5dd66d72d30f6fa72b2d44d5fc54c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83806764"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719893"
 ---
 # <a name="clr-scalar-valued-functions"></a>Funzioni a valori scalari CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Una funzione a valori scalari restituisce un solo valore, ad esempio un valore string, integer o bit. È possibile creare funzioni definite dall'utente a valori scalari nel codice gestito utilizzando qualsiasi linguaggio di programmazione .NET Framework. Queste funzioni sono accessibili a [!INCLUDE[tsql](../../includes/tsql-md.md)] o ad altro codice gestito. Per informazioni sui vantaggi dell'integrazione con CLR e sulla scelta tra codice gestito e [!INCLUDE[tsql](../../includes/tsql-md.md)] , vedere [Cenni preliminari sull'integrazione con CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>Requisiti per le funzioni a valori scalari CLR  

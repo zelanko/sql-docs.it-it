@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ee01092f-9caf-4e88-888b-ec7b84223705
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e96326c97dde209f37104e66e562b66e96c8acd3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9fb4347ca545a695f2ab1f223f564ca152ba8d0f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809070"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723054"
 ---
 # <a name="sp_upgrade_log_shipping-transact-sql"></a>sp_upgrade_log_shipping (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Il sp_upgrade_log_shipping stored procedure viene richiamato automaticamente per l'aggiornamento dei metadati specifici per log shipping.  
   
@@ -47,7 +47,7 @@ sp_upgrade_log_shipping
 ## <a name="result-sets"></a>Set di risultati  
  No.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Questa stored procedure viene richiamata automaticamente durante l'aggiornamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire l'aggiornamento dei metadati specifici per il log shipping. Non è necessario eseguire questa procedura in modo esplicito, a meno che non si verifichino problemi a livello dei metadati durante l'aggiornamento.  
   
  La stored procedure sp_upgrade_log_shipping deve essere eseguita dal database master nel server primario, secondario o di monitoraggio.  
@@ -56,7 +56,7 @@ sp_upgrade_log_shipping
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul &#40;di log shipping SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

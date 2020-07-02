@@ -18,15 +18,15 @@ ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d2bab967400244e35ac33bf96a1be72ae21e375
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 4449e2a518ab1bfd12563070a80514d890eae48c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83806847"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723060"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Viene eseguito `UPDATE STATISTICS` su tutte le tabelle interne e definite dall'utente nel database corrente.  
   
@@ -46,7 +46,7 @@ sp_updatestats [ [ @resample = ] 'resample']
 ## <a name="arguments"></a>Argomenti  
 `[ @resample = ] 'resample'`Specifica che **sp_updatestats** utilizzerà l'opzione RESAMPLE dell'istruzione [Update Statistics](../../t-sql/statements/update-statistics-transact-sql.md) . Se **' resample '** non è specificato, **sp_updatestats** aggiorna le statistiche usando il campionamento predefinito. il **ricampionamento** è **varchar (8)** e il valore predefinito è no.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_updatestats** viene eseguito `UPDATE STATISTICS` , specificando la `ALL` parola chiave, in tutte le tabelle interne e definite dall'utente nel database. sp_updatestats Visualizza i messaggi che indicano lo stato di avanzamento. Al termine dell'aggiornamento, viene segnalato che sono state aggiornate le statistiche di tutte le tabelle.  
   
 **sp_updatestats** aggiorna le statistiche per gli indici non cluster disabilitati e non aggiorna le statistiche sugli indici cluster disabilitati.  
@@ -61,7 +61,7 @@ Per i database con un livello di compatibilità inferiore a 90, l'esecuzione di 
 
 Per eseguire **sp_updatestats**, l'utente deve essere il proprietario del database ( `dbo` , non solo membro del ruolo `db_owner` ) o essere membro del ruolo predefinito del server sysadmin.
 
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
 Nell'esempio seguente vengono aggiornate le statistiche per le tabelle del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  

@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7c949e62261e710854aefda9b83a7ca20c222b78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b46db697c7f8d6a7f402d98093323f47ece47d69
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78866481"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722954"
 ---
 # <a name="sp_who-transact-sql"></a>sp_who (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Fornisce informazioni sugli utenti, le sessioni e i processi correnti in un'istanza del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. È possibile filtrare tali informazioni in modo da ottenere solo i processi che non sono inattivi, che appartengono a un utente specifico o che sono associati a una determinata sessione.  
+  Fornisce informazioni sugli utenti, le sessioni e i processi correnti in un'istanza del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . È possibile filtrare tali informazioni in modo da ottenere solo i processi che non sono inattivi, che appartengono a un utente specifico o che sono associati a una determinata sessione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
  *login* è di **tipo sysname** che identifica i processi appartenenti a un determinato account di accesso.  
   
- *ID sessione* è un numero di identificazione della [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sessione appartenente all'istanza. l' *ID sessione* è **smallint**.  
+ *ID sessione* è un numero di identificazione della sessione appartenente all' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza. l' *ID sessione* è **smallint**.  
   
  **Active** esclude le sessioni in attesa del comando successivo da parte dell'utente.  
   
@@ -67,7 +67,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 |**cmd**|**nchar(16)**|Comando [!INCLUDE[ssDE](../../includes/ssde-md.md)] (istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)], processo interno [!INCLUDE[ssDE](../../includes/ssde-md.md)] e così via) in esecuzione per il processo. In SQL Server 2019, il tipo di dati è stato modificato in **nchar (26)**.|  
 |**request_id**|**int**|ID per le richieste in esecuzione in una sessione specifica.|  
   
- In caso di elaborazione parallela, vengono creati thread secondari per l'ID di sessione specifico. Il thread principale è indicato da `spid = <xxx>` e `ecid =0`. Gli altri sottothread hanno lo stesso `spid = <xxx>`, ma con **ECID** > 0.  
+ In caso di elaborazione parallela, vengono creati thread secondari per l'ID di sessione specifico. Il thread principale è indicato da `spid = <xxx>` e `ecid =0`. Gli altri sottothread hanno lo stesso `spid = <xxx>` , ma con **ECID** > 0.  
   
 ## <a name="remarks"></a>Osservazioni  
  Con il termine processo di blocco si indica un processo che mantiene bloccate, potenzialmente con un blocco esclusivo, risorse necessarie per un altro processo.  
@@ -121,7 +121,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_lock &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [sys. sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [Processi disys.sys&#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

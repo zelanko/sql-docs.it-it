@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55b69995dc6fb639acad84c561ce3530af991c6e
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: dd6f2d08b44a8e3a3b99dcd3fdc8484e2d0f5b04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872735"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720357"
 ---
 # <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>Change Data Capture-sys. dm_cdc_log_scan_sessions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per ogni sessione di analisi dei log nel database corrente. L'ultima riga restituita rappresenta la sessione corrente. È possibile utilizzare questa vista per restituire le informazioni sullo stato relative alla sessione di analisi dei log corrente o informazioni aggregate relative a tutte le sessioni dall'ultimo avvio dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
    
@@ -61,7 +61,7 @@ ms.locfileid: "82872735"
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE per eseguire una query sulla vista a gestione dinamica **sys. dm_cdc_log_scan_sessions** . Per ulteriori informazioni sulle autorizzazioni per le viste a gestione dinamica, vedere [funzioni e viste a gestione dinamica &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite informazioni relative alla sessione più recente.  
   
 ```  

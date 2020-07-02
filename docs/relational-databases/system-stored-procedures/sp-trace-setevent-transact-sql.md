@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b8c58657eda708965821c4739f76b49c558c8e76
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 387e4a0a30f5681391bb5891dc772f7c9f04790c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832580"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723076"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Aggiunge o rimuove un evento o colonna di evento in una traccia. **sp_trace_setevent** possono essere eseguite solo su tracce esistenti interrotte (*lo stato* è **0**). Viene restituito un errore se questa stored procedure viene eseguita su una traccia che non esiste o il cui *stato* è diverso da **0**.  
   
@@ -51,7 +51,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Nella tabella seguente vengono descritti gli eventi che è possibile aggiungere o rimuovere in una traccia.  
   
-|Numero evento|Nome evento|Description|  
+|Numero evento|Nome evento|Descrizione|  
 |------------------|----------------|-----------------|  
 |0-9|Riservato|Riservato|  
 |10|RPC:Completed|Viene generato al completamento di una chiamata di procedura remota (RPC).|  
@@ -264,7 +264,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |20|**Gravità**|Livello di gravità di un'eccezione.|  
 |21|**EventSubClass**|Tipo di sottoclasse di evento. Questa colonna di dati non viene popolata per tutte le classi di evento.|  
 |22|**ObjectID**|ID dell'oggetto assegnato dal sistema.|  
-|23|**Operazione completata**|Esito del tentativo di utilizzo delle autorizzazioni; valore utilizzato per il controllo.<br /><br /> **1** = esito positivo**0** = esito negativo|  
+|23|**Success**|Esito del tentativo di utilizzo delle autorizzazioni; valore utilizzato per il controllo.<br /><br /> **1** = esito positivo**0** = esito negativo|  
 |24|**IndexID**|ID dell'indice dell'oggetto interessato dall'evento. Per determinare l'ID di indice di un oggetto, utilizzare la colonna **indid** della tabella di sistema **sysindexes** .|  
 |25|**IntegerData**|Valore integer che dipende dalla classe di evento acquisita nella traccia.|  
 |26|**ServerName**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ovvero *ServerName* o *nomeserver\nomeistanza*, tracciata.|  
@@ -272,7 +272,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |28|**ObjectType**|Tipo di oggetto, ad esempio tabella, funzione o stored procedure.|  
 |29|**NestLevel**|Livello di nidificazione in cui viene eseguita la stored procedure. Vedere [@ @NESTLEVEL &#40;&#41;Transact-SQL ](../../t-sql/functions/nestlevel-transact-sql.md).|  
 |30|**State**|Stato del server in caso di errore.|  
-|31|**Erroree**|Numero di errore.|  
+|31|**Errore**|Numero di errore.|  
 |32|**Modalità**|Modalità del blocco acquisito. Questa colonna non viene popolata dall'evento **Lock: Released** .|  
 |33|**Handle**|Handle dell'oggetto a cui si fa riferimento nell'evento.|  
 |34|**ObjectName**|Nome dell'oggetto a cui si accede.|  
@@ -298,7 +298,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |54|**GUID**|Valore GUID che dipende dalla classe di evento acquisita nella traccia.|  
 |55|**IntegerData2**|Valore intero che dipende dalla classe di evento acquisita nella traccia.|  
 |56|**ObjectID2**|ID dell'entità o dell'oggetto correlato, se disponibile.|  
-|57|**Type**|Valore intero che dipende dalla classe di evento acquisita nella traccia.|  
+|57|**Tipo**|Valore intero che dipende dalla classe di evento acquisita nella traccia.|  
 |58|**OwnerID**|Tipo di oggetto proprietario del blocco. Solo per gli eventi di blocco.|  
 |59|**ParentName**|Nome dello schema in cui è incluso l'oggetto.|  
 |60|**IsSystem**|Indica se l'evento è stato generato per un processo di sistema o un processo utente.<br /><br /> **1** = sistema<br /><br /> **0** = utente.|  
@@ -360,7 +360,7 @@ sp_trace_setevent [ @traceid = ] trace_id
  [sys. fn_trace_geteventinfo &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys. fn_trace_getinfo &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [sp_trace_generateevent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [SQL Server riferimento alla classe di evento](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
+ [Guida di riferimento alle classi di evento SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [Traccia SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

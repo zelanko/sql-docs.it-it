@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4fcbbe40247742a1a5a1eda5e6f501aae279a12a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c93ec3ae4986be248107769940142c7b34ab647d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821080"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722922"
 ---
 # <a name="mssnapshot_agents-transact-sql"></a>MSsnapshot_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabella **MSsnapshot_agents** contiene una riga per ogni agente di snapshot associata al server di distribuzione locale. Questa tabella è archiviata nel database di distribuzione.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID dell'agente snapshot.|  
-|**name**|**nvarchar (100)**|Nome dell'agente snapshot.|  
+|**nome**|**nvarchar (100)**|Nome dell'agente snapshot.|  
 |**publisher_id**|**smallint**|ID del server di pubblicazione.|  
 |**publisher_db**|**sysname**|Nome del database del server di pubblicazione.|  
 |**pubblicazione**|**sysname**|Nome della pubblicazione.|  

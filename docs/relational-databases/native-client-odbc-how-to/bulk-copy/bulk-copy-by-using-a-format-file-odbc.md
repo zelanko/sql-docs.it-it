@@ -14,15 +14,15 @@ ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46639c02c606ed317d0d0bfe94bcf0ae9734a62b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 01221bcb23dea7dc78777620fe580bcf0e1287c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299621"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725148"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>Eseguire una copia bulk utilizzando un file di formato (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   In questo esempio viene illustrato come utilizzare la funzione ODBC bcp_init con un file di formato.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "81299621"
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
- Eseguire il primo listato di codice ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) per creare la tabella che verrà utilizzata dall'esempio.  
+ Eseguire il primo [!INCLUDE[tsql](../../../includes/tsql-md.md)] Listato di codice () per creare la tabella che verrà utilizzata dall'esempio.  
   
  Copiare il secondo listato di codice e incollarlo in un file denominato Bcpfmt.fmt. Ogni colonna nella tabella è separata da un carattere di tabulazione.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "81299621"
   
  Compilare il quarto listato di codice (C++) con odbc32.lib e odbcbcp.lib. Se è stata eseguita la compilazione con MSBuild.exe, copiare Bcpfmt.fmt e Bcpodbc.bcp dalla directory del progetto in quella contenente il file con estensione exe e quindi richiamare tale file.  
   
- Eseguire il quinto listato di codice ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) per eliminare la tabella utilizzata dall'esempio.  
+ Eseguire il quinto [!INCLUDE[tsql](../../../includes/tsql-md.md)] Listato di codice () per eliminare la tabella utilizzata dall'esempio.  
   
 ```  
 use AdventureWorks  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4fd1c7bf329334bee0d8b3c29ba5d1d97909818e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: db8a79e723d76cdf54377618cc94cb6a4b5431d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826008"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715183"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Inizializza una richiesta di convalida per ogni articolo nella pubblicazione specificata. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -56,7 +56,7 @@ sp_publication_validation [ @publication = ] 'publication'
 |Valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Esegue un conteggio completo con COUNT(*).|  
-|**1**|Esegue un conteggio rapido da **sysindexes. Rows**. Il conteggio delle righe in [sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) è molto più rapido rispetto al conteggio delle righe nella tabella effettiva. Tuttavia, poiché [sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) viene aggiornato in modo differito, il conteggio delle righe potrebbe non essere accurato.|  
+|**1**|Esegue un conteggio rapido da **sysindexes. Rows**. Il conteggio delle righe negli [indicisys.sys](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) è molto più veloce rispetto al conteggio delle righe nella tabella effettiva. Tuttavia, poiché gli [indicisys.sys](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) vengono aggiornati in modo differito, il conteggio delle righe potrebbe non essere accurato.|  
 |**2** (impostazione predefinita)|Esegue un conteggio rapido condizionale eseguendo innanzitutto un tentativo con il metodo rapido. Se il metodo rapido evidenzia delle differenze, viene applicato il metodo completo. Se *expected_rowcount* è null e il stored procedure viene usato per ottenere il valore, viene sempre usato un conteggio completo (*).|  
   
 `[ @shutdown_agent = ] 'shutdown_agent'`Indica se il agente di distribuzione deve essere arrestato immediatamente dopo il completamento della convalida. *shutdown_agent* è di **bit**e il valore predefinito è **0**. Se è **0**, l'agente di replica non viene arrestato. Se è **1**, l'agente di replica si arresta dopo la convalida dell'ultimo articolo.  
@@ -69,7 +69,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_publication_validation** viene utilizzata nella replica transazionale.  
   
  **sp_publication_validation** possibile chiamare in qualsiasi momento dopo l'attivazione degli articoli associati alla pubblicazione. Questa procedura può essere eseguita in modo manuale una sola volta oppure nell'ambito di un processo con pianificazione periodica per la convalida dei dati.  

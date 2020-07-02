@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ed45ac6fd511d2024cc11916fe70980a7a6a065
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f1b75961f4d41a87e86c9a103a62ca128ce443e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816072"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720426"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>Viste del catalogo per i messaggi (di errore) - Sys.messages
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una riga per ogni **message_id** o **language_id** dei messaggi di errore nel sistema, per i messaggi definiti dall'utente e definiti dal sistema. Per altre informazioni, vedere [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md).  
    
@@ -42,7 +42,7 @@ ms.locfileid: "82816072"
 |**text**|**nvarchar(2048)**|Testo del messaggio utilizzato quando è attiva la **language_id** corrispondente.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza al ruolo **public** .  Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ È richiesta l'appartenenza al ruolo **public** . Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   

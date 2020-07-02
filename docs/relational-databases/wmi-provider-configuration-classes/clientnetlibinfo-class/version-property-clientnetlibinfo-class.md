@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d795f4f76f58829c9c52a6ba3e28f3afa7103080
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d9bb861dc061b5a2049e6b0bc2fa5fa737ae6c70
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659159"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722839"
 ---
 # <a name="version-property-clientnetlibinfo-class"></a>Proprietà Version (classe ClientNetLibInfo)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Ottiene la versione del file della libreria di rete del client.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,7 +36,7 @@ object.Version [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe ClientNetLibInfo](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) che rappresenta le informazioni sulla libreria di rete del client.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  

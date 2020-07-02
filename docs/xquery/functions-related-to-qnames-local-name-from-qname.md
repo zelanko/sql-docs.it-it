@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 26cee403b1ded39555662009fc0273a40f8bd644
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 78511d83ad75df4fe458bb5a5b3d2d59a8636c7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689366"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720013"
 ---
 # <a name="functions-related-to-qnames---local-name-from-qname"></a>Funzioni correlate a elementi QName - local-name-from-QName
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   Restituisce XS: NCNAME che rappresenta la parte locale di QName specificata da *$arg*. Se *$arg* è una sequenza vuota, il risultato è una sequenza vuota.  
   
@@ -38,7 +38,7 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
  *$arg*  
  QName da cui deve essere estratto il nome locale.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
  Nell'esempio seguente viene usata la funzione **local-name-from-QName ()** per recuperare le parti del nome locale e dell'URI dello spazio dei nomi da un valore di tipo QName. Nell'esempio vengono eseguite le operazioni seguenti:  

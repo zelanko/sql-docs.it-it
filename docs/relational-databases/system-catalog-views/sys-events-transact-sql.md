@@ -20,15 +20,15 @@ ms.assetid: f245a97a-80fc-43fb-a6e4-139420c9a47a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17c8ab2013a1ad36d298039c5706bd518765dd3b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2c6c0fcffae318e13025d63c7a244f44de8689f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831956"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724668"
 ---
 # <a name="sysevents-transact-sql"></a>sys.events (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Contiene una riga per ogni evento per il quale si verifica l'attivazione di un trigger o di una notifica degli eventi. Questi eventi rappresentano i tipi di evento specificati quando viene creato il trigger o la notifica degli eventi utilizzando [Crea trigger](../../t-sql/statements/create-trigger-transact-sql.md) o [Crea notifica evento](../../t-sql/statements/create-event-notification-transact-sql.md).  
   

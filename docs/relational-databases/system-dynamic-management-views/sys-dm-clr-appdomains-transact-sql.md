@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d374b244b265d6bc46ca9e6073f9a688fcd2b4a5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c6a542e44f33a64b5cdd4727aab891592338b880
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824763"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724625"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per ogni dominio dell'applicazione nel server. Il dominio applicazione (**AppDomain**) è un costrutto nella [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) che rappresenta l'unità di isolamento per un'applicazione. È possibile utilizzare questa visualizzazione per comprendere e risolvere i problemi relativi agli oggetti di integrazione CLR in esecuzione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -51,7 +51,7 @@ ms.locfileid: "82824763"
 |**total_allocated_memory_kb**|**bigint**|Dimensioni totali, in kilobyte, di tutte le allocazioni di memoria eseguite dal dominio dell'applicazione dalla sua creazione, senza sottrarre la memoria raccolta. Equivale a **System. AppDomain. MonitoringTotalAllocatedMemorySize**.|  
 |**survived_memory_kb**|**bigint**|Numero di kilobyte rimanenti dall'ultima raccolta di blocco completa e a cui fa riferimento il dominio dell'applicazione corrente. Equivale a **System. AppDomain. MonitoringSurvivedMemorySize**.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Esiste una relazione uno-a-uno tra **dm_clr_appdomains. appdomain_address** e **dm_clr_loaded_assemblies. appdomain_address**.  
   
  Le tabelle seguenti elencano i valori di **stato** possibili, le relative descrizioni e quando si verificano nel ciclo di vita dell' **AppDomain** . È possibile usare queste informazioni per seguire la vita di un **AppDomain** e per controllare lo scaricamento di istanze di **AppDomain** sospette o ripetitive, senza dover analizzare il registro eventi di Windows.  
@@ -83,7 +83,7 @@ ms.locfileid: "82824763"
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE nel database.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato come visualizzare i dettagli di un **AppDomain** per un determinato assembly:  
   
 ```  

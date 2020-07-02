@@ -17,25 +17,25 @@ helpviewer_keywords:
 ms.assetid: 68746eef-32e1-42bc-aff0-9798cd0e88b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 733fac032af45eb81b50bae4b20316d04234223e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: df899a146a8cf2c797f980baec1bb1792a8f2b6f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812511"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725437"
 ---
 # <a name="mspub_identity_range-transact-sql"></a>MSpub_identity_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabella **MSpub_identity_range** fornisce supporto per la gestione degli intervalli di valori Identity. Questa tabella è archiviata nei database di pubblicazione e di sottoscrizione.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**objid**|**int**|ID della tabella la cui colonna Identity è gestita dalla replica.|  
-|**intervallo**|**bigint**|Controlla le dimensioni dell'intervallo di valori Identity consecutivi che verrebbe assegnato nella sottoscrizione durante un intervento di regolazione.|  
+|**range**|**bigint**|Controlla le dimensioni dell'intervallo di valori Identity consecutivi che verrebbe assegnato nella sottoscrizione durante un intervento di regolazione.|  
 |**pub_range**|**bigint**|Controlla le dimensioni dell'intervallo di valori Identity consecutivi che verrebbe assegnato nella pubblicazione durante un intervento di regolazione.|  
 |**current_pub_range**|**bigint**|Intervallo corrente utilizzato dalla pubblicazione. Può essere diverso da *pub_range* se visualizzato dopo essere stato modificato da **sp_changearticle** e prima della regolazione dell'intervallo successivo.|  
-|**soglia**|**int**|Valore percentuale che controlla quando l'agente di distribuzione assegna un nuovo intervallo di valori Identity. Quando viene utilizzata la percentuale di valori specificata in *Threshold* , il agente di distribuzione crea un nuovo intervallo di valori Identity.|  
+|**threshold**|**int**|Valore percentuale che controlla quando l'agente di distribuzione assegna un nuovo intervallo di valori Identity. Quando viene utilizzata la percentuale di valori specificata in *Threshold* , il agente di distribuzione crea un nuovo intervallo di valori Identity.|  
 |**last_seed**|**bigint**|Limite inferiore dell'intervallo corrente.|  
   
 ## <a name="see-also"></a>Vedere anche  

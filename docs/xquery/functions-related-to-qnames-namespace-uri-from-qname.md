@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4ab3f003-2a3b-4268-9e88-b615e35701b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0967e9dfd9392513da3925725930111a97da0c9
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 91174fa3ef113a7944ef02bb62e7088acd344f3e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689551"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720039"
 ---
 # <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>Funzioni correlate a elementi QName - namespace-uri-from-QName
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una stringa che rappresenta l'URI dello spazio dei nomi del QName specificato da *$arg*. Se *$arg* è la sequenza vuota, il risultato è la sequenza vuota.  
   
@@ -38,10 +38,10 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
  *$arg*  
  QName per il quale viene restituito l'URI dello spazio dei nomi.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
-### <a name="a-retrieve-the-namespace-uri-from-a-qname"></a>A. Recuperare l'URI dello spazio dei nomi per un QName  
+### <a name="a-retrieve-the-namespace-uri-from-a-qname"></a>R. Recuperare l'URI dello spazio dei nomi per un QName  
  Per un esempio funzionante, vedere [local-name-from-QName &#40;XQuery&#41;](../xquery/functions-related-to-qnames-local-name-from-qname.md).  
   
 ### <a name="implementation-limitations"></a>Limitazioni di implementazione  

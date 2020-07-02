@@ -13,15 +13,15 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e5147a8eef08c70605bf13f6c1cb04887d0d926
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a73fbe7709e30156f198205a21644153fad10240
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301895"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725177"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Comportamento dei tipi di data e ora migliorati con le versioni di SQL Server precedenti (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   In questo argomento viene descritto il comportamento previsto quando un'applicazione client che utilizza caratteristiche avanzate di data e ora comunica con una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e quando un'applicazione client che utilizza Microsoft Data Access Components, Windows Data Access Components o una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] invia comandi a un server che supporta le caratteristiche avanzate di data e ora.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "81301895"
   
  I metadati dell'istruzione restituiti da SQLDescribeCol, SQLDescribeParam, SQGetDescField e SQLColAttribute restituiranno metadati coerenti con il tipo di livello inferiore, incluso il nome del tipo. Un esempio di un tipo di livello inferiore è **nvarchar**.  
   
- Quando un'applicazione client legacy viene eseguita in un [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Server (o versioni successive) in cui sono state apportate modifiche dello schema ai tipi di data/ora, il comportamento previsto è il seguente:  
+ Quando un'applicazione client legacy viene eseguita [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] in un server (o versioni successive) in cui sono state apportate modifiche dello schema ai tipi di data/ora, il comportamento previsto è il seguente:  
   
 |Tipo di SQL Server 2005|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]Tipo di  (o versioni successive)|Tipo del client ODBC|Conversione risultati (da SQL a C)|Conversione parametri (da C a SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  

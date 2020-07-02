@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e7eb2e007191088a0259360924b2f5f931dec0a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f29fd66b10c9e1f18203693a2b1474781e8065a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304892"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720272"
 ---
 # <a name="sp_help_spatial_geometry_index_xml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce i nomi e i valori per un set specificato di proprietà relative a un indice spaziale di **geometria** . È possibile scegliere di restituire un set principale di proprietà oppure tutte le proprietà dell'indice.  
   
@@ -57,7 +57,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  Le proprietà che contengono valori NULL non sono incluse nel set XML restituito.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene `sp_help_spatial_geometry_index_xml` usato per esaminare l'indice spaziale **SIndx_SpatialTable_geometry_col2** definito nella tabella **geometry_col** per l'esempio di query specificato in ** \@QS**. L'esempio restituisce le proprietà principali dell'indice specificato in un frammento XML in cui vengono visualizzati il nome e il valore delle proprietà selezionate.  
+ Nell'esempio seguente viene usato `sp_help_spatial_geometry_index_xml` per esaminare l'indice spaziale **SIndx_SpatialTable_geometry_col2** definito nella tabella **geometry_col** per l'esempio di query specificato in ** \@ QS**. L'esempio restituisce le proprietà principali dell'indice specificato in un frammento XML in cui vengono visualizzati il nome e il valore delle proprietà selezionate.  
   
  Viene quindi eseguita una [query XQuery](../../xquery/xquery-basics.md) sul set di risultati, restituendo una proprietà specifica.  
   

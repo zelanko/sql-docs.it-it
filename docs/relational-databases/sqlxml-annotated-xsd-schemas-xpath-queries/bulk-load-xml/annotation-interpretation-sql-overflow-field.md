@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8909a0eee54667ea74af44e774bb5262599084b
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 3b6ba41157e7e13651eb5810502a41e7c8abde67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689233"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724705"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>Interpretazione delle annotazioni - sql:overflow-field
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   In uno schema è possibile identificare una colonna come colonna di overflow per ricevere tutti i dati non utilizzati dal documento XML. Questa colonna viene specificata nello schema utilizzando l'annotazione **SQL: overflow-field** . È possibile avere più colonne di overflow.  
   
  Ogni volta che un nodo XML (elemento o attributo) per il quale è presente un'annotazione **SQL: overflow-field** definito entra nell'ambito, la colonna di overflow viene attivata e riceve dati non utilizzati. Quando il nodo non è più in ambito, la colonna di overflow non è più attiva e il caricamento bulk XML rende attivo il campo di overflow precedente, se presente.  
   
  Mentre archivia i dati nella colonna di overflow, il caricamento bulk XML archivia anche i tag di apertura e chiusura dell'elemento padre per cui è definito **SQL: overflow-field** .  
   
- Nello schema seguente, ad esempio, vengono descritti gli elementi ** \< customers>** e ** \< CustOrder>** . Ognuno di questi elementi identifica una colonna di overflow:  
+ Lo schema seguente, ad esempio, descrive **\<Customers>** gli **\<CustOrder>** elementi e. Ognuno di questi elementi identifica una colonna di overflow:  
   
 ```  
 <?xml version="1.0" ?>  
@@ -76,9 +76,9 @@ ms.locfileid: "83689233"
 </xsd:schema>  
 ```  
   
- Nello schema, l'elemento ** \< Customer>** viene mappato alla tabella Cust e l'elemento ** \< Order>** viene mappato alla tabella CustOrder.  
+ Nello schema viene eseguito il **\<Customer>** mapping dell'elemento alla tabella Cust e l' **\<Order>** elemento viene mappato alla tabella CustOrder.  
   
- Gli elementi ** \< Customer>** e ** \< Order>** identificano una colonna di overflow. Pertanto, il caricamento bulk XML salva tutti gli attributi e gli elementi figlio non utilizzati dell'elemento ** \< Customer>** nella colonna di overflow della tabella Cust e tutti gli attributi e gli elementi figlio non utilizzati dell'elemento ** \< Order>** nella colonna di overflow della tabella CustOrder.  
+ Entrambi gli **\<Customer>** **\<Order>** elementi e identificano una colonna di overflow. Pertanto, il caricamento bulk XML salva tutti gli attributi e gli elementi figlio non utilizzati dell' **\<Customer>** elemento nella colonna di overflow della tabella Cust e tutti gli attributi e gli elementi figlio non utilizzati dell' **\<Order>** elemento nella colonna di overflow della tabella CustOrder.  
   
 ### <a name="to-test-a-working-sample"></a>Per testare un esempio reale  
   

@@ -16,15 +16,15 @@ ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f2f1115971df37fe12177ec805898eea79744e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a37c345f3d643a031bb53bad453268b45bd0258c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299593"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725134"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>Eseguire una copia bulk senza un file di formato (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   In questo esempio viene illustrato come utilizzare le funzioni di copia bulk per creare un file di dati in modalità nativa senza un file di formato. L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
   

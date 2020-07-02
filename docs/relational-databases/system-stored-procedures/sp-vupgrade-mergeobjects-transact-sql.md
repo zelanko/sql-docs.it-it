@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ec503a73e6600674e997e47670f84973236a59c2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1341450581e420e87a4f68e35613587afb9d3ac9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808689"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722990"
 ---
 # <a name="sp_vupgrade_mergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Rigenera stored procedure, viste e trigger specifici dell'articolo che vengono utilizzati per il rilevamento e l'applicazione delle modifiche dei dati per la replica di tipo merge. Eseguire questa stored procedure nelle situazioni seguenti:  
   
@@ -54,7 +54,7 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_vupgrade_mergeobjects** viene utilizzata solo per la replica di tipo merge.  
   
 ## <a name="permissions"></a>Autorizzazioni  

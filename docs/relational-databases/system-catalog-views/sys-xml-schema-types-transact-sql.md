@@ -1,5 +1,5 @@
 ---
-title: sys. xml_schema_types (Transact-SQL) | Microsoft Docs
+title: sys.xml_schema_types (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,27 +19,27 @@ helpviewer_keywords:
 ms.assetid: 441ba49d-f778-4fa1-98c4-ced375a01a34
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 356e73e2b90d059117cadef436bcea27498c9871
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 04bf8e407315c98d6db6583e1403e939a9489aea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824966"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720383"
 ---
 # <a name="sysxml_schema_types-transact-sql"></a>sys.xml_schema_types (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per ogni componente XML Schema che è un tipo **symbol_space** di **T**.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**\<colonne ereditate>**||Eredita le colonne da [sys. xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
+|**\<inherited columns>**||Eredita le colonne da [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
 |**is_abstract**|**bit**|1 = Il tipo è un tipo abstract. Tutte le istanze di un elemento di questo tipo devono utilizzare **xsi: Type** per indicare un tipo derivato non astratto.<br /><br /> 0 = Il tipo non è abstract (predefinito)|  
 |**allows_mixed_content**|**bit**|1 = Il contenuto misto è consentito.<br /><br /> 0 = Il contenuto misto non è consentito (predefinito)|  
-|**is_extension_blocked**|**bit**|1 = la sostituzione con un'estensione del tipo è bloccata nelle istanze quando l'attributo block nella definizione **complexType** o l'attributo **blockDefault** dello schema predecessore \<> elemento informazioni elemento è impostato su "extension" o "#all".<br /><br /> 0 = La sostituzione con l'estensione non è bloccata.|  
-|**is_restriction_blocked**|**bit**|1 = la sostituzione con una restrizione del tipo è bloccata nelle istanze quando l'attributo block nella definizione **complexType** o l'attributo **blockDefault** dello schema predecessore \<> elemento informazioni elemento è impostato su "restriction" o "#all".<br /><br /> 0 = La sostituzione con la restrizione non è bloccata (predefinito)|  
-|**is_final_extension**|**bit**|1 = la derivazione per estensione del tipo è bloccata quando l'attributo final nella definizione **complexType** o l'attributo **finalDefault** dello schema predecessore \<> elemento informazioni sugli elementi è impostato su "extension" o "#all".<br /><br /> 0 = L'estensione è consentita (predefinito)|  
-|**is_final_restriction**|**bit**|1 = la derivazione per restrizione del tipo è bloccata quando l'attributo final nella definizione semplice o **complexType** o l'attributo **finalDefault** dello schema predecessore \<> elemento informazioni sugli elementi è impostato su "restriction" o "#all".<br /><br /> 0 = La restrizione è consentita (predefinito)|  
+|**is_extension_blocked**|**bit**|1 = la sostituzione con un'estensione del tipo è bloccata nelle istanze quando l'attributo block nella definizione **complexType** o l'attributo **blockDefault** dell' \<schema> elemento informazioni sull'elemento predecessore è impostato su "extension" o "#all".<br /><br /> 0 = La sostituzione con l'estensione non è bloccata.|  
+|**is_restriction_blocked**|**bit**|1 = la sostituzione con una restrizione del tipo è bloccata nelle istanze quando l'attributo block nella definizione **complexType** o l'attributo **blockDefault** dell'elemento informazioni sull'elemento predecessore \<schema> è impostato su "restriction" o "#all".<br /><br /> 0 = La sostituzione con la restrizione non è bloccata (predefinito)|  
+|**is_final_extension**|**bit**|1 = la derivazione per estensione del tipo è bloccata quando l'attributo final nella definizione **complexType** o l'attributo **finalDefault** dell'elemento informazioni sull'elemento predecessore \<schema> è impostato su "extension" o "#all".<br /><br /> 0 = L'estensione è consentita (predefinito)|  
+|**is_final_restriction**|**bit**|1 = la derivazione per restrizione del tipo è bloccata quando l'attributo final nella definizione semplice o **complexType** o l'attributo **finalDefault** dell'elemento informazioni sull'elemento predecessore \<schema> è impostato su "restriction" o "#all".<br /><br /> 0 = La restrizione è consentita (predefinito)|  
 |**is_final_list_member**|**bit**|1 = Questo tipo semplice non può essere utilizzato come tipo di elemento in un elenco.<br /><br /> 0 = Questo è un tipo complesso oppure il tipo può essere utilizzato come tipo di elemento (predefinito)|  
 |**is_final_union_member**|**bit**|1 = Questo tipo semplice non può essere utilizzato come tipo di membro di Tipo unione.<br /><br /> 0 = Questo è un tipo complesso oppure il tipo può essere utilizzato come tipo di membro unione. (predefinito)|  
   

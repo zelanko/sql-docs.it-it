@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40cd82dac9c33e6718e4f3bf3270a065af824115
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 2987001d2163340d9734a9cf606dfbe009901de3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689244"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720055"
 ---
 # <a name="functions-on-string-values---string-length"></a>Funzioni su valori stringa - string-length
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Restituisce la lunghezza della stringa in caratteri.  
   
@@ -40,7 +40,7 @@ fn:string-length($arg as xs:string?) as xs:integer
  *$arg*  
  Stringa di origine di cui calcolare la lunghezza.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se il valore di *$arg* è una sequenza vuota, viene restituito un valore **xs: integer** pari a 0.  
   
  Il comportamento delle coppie di surrogati nelle funzioni XQuery dipende dal livello di compatibilità del database. Se il livello di compatibilità è 110 o maggiore, ogni coppia di surrogati viene conteggiata come singolo carattere. Per i livelli di compatibilità inferiori, ogni coppia viene conteggiata come due caratteri. Per ulteriori informazioni, vedere [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [regole di confronto e supporto Unicode](../relational-databases/collations/collation-and-unicode-support.md).  
@@ -58,10 +58,10 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caratteri supplementari (coppie di surrogati)  
  Il comportamento delle coppie di surrogati nelle funzioni XQuery dipende dal livello di compatibilità del database e, in alcuni casi, dall'URI dello spazio dei nomi predefinito per le funzioni. Per ulteriori informazioni, vedere la sezione "funzioni XQuery sono compatibili con i surrogati" nell'argomento [modifiche di rilievo apportate alle funzionalità di motore di database in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Vedere anche [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [regole di confronto e supporto Unicode](../relational-databases/collations/collation-and-unicode-support.md).  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
-### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. Utilizzo della funzione XQuery string-length() per il recupero di prodotti con descrizioni di riepilogo lunghe  
+### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>R. Utilizzo della funzione XQuery string-length() per il recupero di prodotti con descrizioni di riepilogo lunghe  
  Per i prodotti la cui descrizione di riepilogo è maggiore di 50 caratteri, la query seguente recupera l'ID prodotto, la lunghezza della descrizione di riepilogo e il riepilogo stesso, l' `Summary` elemento <>.  
   
 ```  

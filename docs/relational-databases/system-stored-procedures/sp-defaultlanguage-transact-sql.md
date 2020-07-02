@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7c06f03af5ab9cc8d06b8d7d0f87208895c1fc33
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 761579b7b1c068fe241933533cf73bb41036d9d1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826151"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724567"
 ---
 # <a name="sp_defaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Modifica la lingua predefinita di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -50,19 +50,19 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_defaultlanguage** chiama ALTER LOGIN, che supporta opzioni aggiuntive. Per informazioni sulla modifica delle impostazioni predefinite degli account di accesso, vedere [ALTER login &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
   
  Per modificare la lingua della sessione corrente, eseguire l'istruzione SET LANGUAGE. Utilizzare la @LANGUAGE funzione @ per visualizzare l'impostazione della lingua corrente.  
   
  Se la lingua predefinita di un account di accesso viene eliminata dal server, l'account di accesso acquisisce la lingua predefinita del server. Impossibile eseguire **sp_defaultlanguage** in una transazione definita dall'utente.  
   
- Le informazioni sulle lingue installate nel server sono visibili nella vista del catalogo **sys. syslanguages** .  
+ Le informazioni sulle lingue installate nel server sono visibili nella vista del catalogo **sys.syslinguaggi** .  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY LOGIN.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente l'istruzione `ALTER LOGIN` viene utilizzata per modificare la lingua predefinita dell'account di accesso `Fathima` e impostarla sull'arabo. Questo è il metodo preferito.  
   
 ```  
@@ -75,7 +75,7 @@ GO
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
  [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [sys. syslanguages &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
+ [Linguaggisys.sys&#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

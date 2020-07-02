@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a32f0ef0-f5f6-4e71-96c7-7d4617dedf0e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5c3c329474b27507b3e2a3bf0796c66025391ffa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6cb5dc5eea2070d394c227c741991c92a86e6661
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660294"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722753"
 ---
 # <a name="flagvalue-property-serversettingsgeneralflag-class"></a>Proprietà FlagValue (classe ServerSettingsGeneralFlag)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Ottiene il valore del flag.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,7 +36,7 @@ object.FlagValue [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe ServerSettingsGeneralFlag](../../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md) che rappresenta un flag generale per le impostazioni del server.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  

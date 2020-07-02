@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 561ba77b01af31c30341c5af7fa22b68ede413f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c81f513b40945e3c535d16c822016f24a0cfaa62
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487120"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723864"
 ---
 # <a name="clr-integration-security"></a>Sicurezza per l'integrazione con CLR
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Il modello di sicurezza dell'integrazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con CLR (Common Language Runtime) di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] gestisce e protegge l'accesso tra i diversi tipi di oggetti CLR e non CLR in esecuzione in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Tali oggetti possono essere chiamati dall'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] o da un altro oggetto CLR in esecuzione nel server. Le chiamate tra gli oggetti vengono definite collegamenti. I tipi di controllo della sicurezza eseguiti su questi oggetti dipendono dai tipi di collegamento utilizzati.  
   
  Il modello di sicurezza dell'integrazione con CLR presenta gli obiettivi seguenti:  

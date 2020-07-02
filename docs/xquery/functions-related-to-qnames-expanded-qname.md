@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 295427f0b5b7dc9fe42ad363bb95ebab0a1be1eb
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 88bbf5697112fd80f8ffea629a1ad2b9e99977fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689339"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720041"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Funzioni correlate a elementi QName - expanded-QName
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Restituisce un valore del tipo xs: QName con l'URI dello spazio dei nomi specificato nell' *$paramURI* e il nome locale specificato nell' *$paramLocal*. Se *$paramURI* è la stringa vuota o la sequenza vuota, non rappresenta alcuno spazio dei nomi.  
   
@@ -41,7 +41,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  *$paramLocal*  
  Parte dell'elemento QName che rappresenta il nome locale.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Per la funzione **expanded-QName ()** si applica quanto segue:  
   
 -   Se il valore *$paramLocal* specificato non è nel formato lessicale corretto per il tipo xs: NCName, viene restituita la sequenza vuota e viene rappresentato un errore dinamico.  
@@ -50,10 +50,10 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   È possibile modificare o confrontare i valori di tipo QName esistenti. Confronta, ad esempio, `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` il valore dell'elemento <`e`> con il QName restituito dalla funzione **expanded-QName ()** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
-### <a name="a-replacing-a-qname-type-node-value"></a>A. Sostituzione di un valore di nodo di tipo QName  
+### <a name="a-replacing-a-qname-type-node-value"></a>R. Sostituzione di un valore di nodo di tipo QName  
  Nell'esempio seguente viene illustrata la procedura per modificare il valore di un nodo elemento di tipo QName. Nell'esempio vengono eseguite le operazioni seguenti:  
   
 -   Crea una raccolta di XML Schema che definisce un elemento di tipo QName.  

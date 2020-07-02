@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c757e46f861d6652b3c8c151c3e002dba13e84ef
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 9fa783dfb2ac1d7e3cbca735c9f2a2cbca19dbda
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689483"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720023"
 ---
 # <a name="functions-on-string-values---upper-case"></a>Funzioni su valori stringa - upper-case
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Questa funzione converte ogni carattere in *$arg* nell'equivalente maiuscolo. La modalità di conversione dei caratteri nell'equivalente maiuscolo viene specificata dalla conversione binaria di maiuscole e minuscole di Microsoft Windows per i punti di codice Unicode. Questo standard è diverso dal mapping per lo standard dei punti di codice Unicode.  
   
@@ -42,7 +42,7 @@ fn:upper-case($arg as xs:string?) as xs:string
 |Termine|Definizione|  
 |*$arg*|Valore della stringa da convertire in lettere maiuscole.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se il valore di *$arg* è vuoto, viene restituita una stringa di lunghezza zero.  
   
 ## <a name="examples"></a>Esempi  

@@ -14,15 +14,15 @@ ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a696107a82b5f64109b115e3e1c360d81117344
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9634cf553750045c6c773ee9f804dc5358883852
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298341"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725111"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Creare un file di formato per la copia bulk (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   In questo esempio viene illustrato come utilizzare le funzioni di copia bulk per creare un file di dati e un file di formato. L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "81298341"
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
- Eseguire il primo listato di codice ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) per creare la tabella che verrà utilizzata dall'esempio.  
+ Eseguire il primo [!INCLUDE[tsql](../../../includes/tsql-md.md)] Listato di codice () per creare la tabella che verrà utilizzata dall'esempio.  
   
  Compilare il secondo listato di codice (C++) con odbc32.lib e odbcbcp.lib.  
   
- Eseguire il terzo listato di codice ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) per eliminare la tabella utilizzata dall'esempio.  
+ Eseguire il terzo [!INCLUDE[tsql](../../../includes/tsql-md.md)] Listato di codice () per eliminare la tabella utilizzata dall'esempio.  
   
 ```  
 use AdventureWorks  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c09dfe73df914a38e53a39b99c99388590c8d9c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8d34f37256e36049b4766a4059068a2e7bd6cfd3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827753"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724582"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni sulle classi di processi, avvisi o operatori specificate.  
    
@@ -44,7 +44,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>Argomenti  
 `[ @class = ] 'class'`Classe su cui vengono richieste informazioni. la classe è di *tipo* **varchar (8)** e il valore predefinito è **Job**. la *classe* può essere uno di questi valori.  
   
-|Valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |**PROCESSO**|Restituisce informazioni su una categoria di processi.|  
 |**AVVISO**|Restituisce informazioni su una categoria di avvisi.|  
@@ -52,7 +52,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 `[ @type = ] 'type'`Tipo di categoria per cui vengono richieste informazioni. il *tipo* è **varchar (12)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |**LOCALE**|Categoria di processi locali.|  
 |**MULTI -SERVER**|Categoria di processi multiserver.|  
@@ -72,7 +72,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|ID della categoria|  
 |**category_type**|**tinyint**|Tipo di categoria:<br /><br /> **1** = locale<br /><br /> **2** = multiserver<br /><br /> **3** = nessuna|  
-|**name**|**sysname**|Nome della categoria|  
+|**nome**|**sysname**|Nome della categoria|  
   
  Quando il ** \@ suffisso** è **1**, **sp_help_category** restituisce il set di risultati seguente:  
   
@@ -80,9 +80,9 @@ sp_help_category [ [ @class = ] 'class' ]
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|ID della categoria|  
 |**category_type**|**sysname**|Tipo di categoria: Uno dei sistemi **locali**, **multiserver**o **None**|  
-|**name**|**sysname**|Nome della categoria|  
+|**nome**|**sysname**|Nome della categoria|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_help_category** deve essere eseguito dal database **msdb** .  
   
  Se non viene specificato alcun parametro, il set di risultati include informazioni su tutte le categorie dei processi.  

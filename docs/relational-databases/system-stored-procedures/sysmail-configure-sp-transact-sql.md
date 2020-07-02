@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6e0f410a73d010d2931cfda2e87a4a4b4cbc1c64
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e3ca89ab5974dbe53b12a2b5b369958ab38755c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832506"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720169"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Modifica le impostazioni di configurazione per Posta elettronica database. Le impostazioni di configurazione specificate con **sysmail_configure_sp** si applicano all'intera [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza.  
   
@@ -75,7 +75,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  **A.  Impostazione di Posta elettronica database per eseguire il tentativo con ogni account 10 volte**  
   
  Nell'esempio seguente viene illustrato come impostare Posta elettronica database per ritentare ogni account dieci volte prima di considerare l'account irraggiungibile.  

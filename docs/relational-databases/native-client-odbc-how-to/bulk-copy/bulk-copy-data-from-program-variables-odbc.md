@@ -14,15 +14,15 @@ ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ebabedb2c801881a4dc908ead93515dc9119fc3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62951ec956282201ae2b61a82c6a72dcd2831307
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299609"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725137"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Eseguire una copia bulk di dati da variabili di programma (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   In questo esempio viene illustrato come utilizzare le funzioni di copia bulk per eseguire una copia bulk dei dati dalle variabili di programma a SQL Server utilizzando **bcp_bind** e **bcp_sendrow**. Per semplificare questo esempio, è stato rimosso il codice per il controllo degli errori.  
   
@@ -65,11 +65,11 @@ ms.locfileid: "81299609"
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
- Eseguire il primo listato di codice ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) per creare tabelle che verrà utilizzato dall'esempio.  
+ Eseguire il primo [!INCLUDE[tsql](../../../includes/tsql-md.md)] Listato di codice () per creare tabelle che verrà utilizzato dall'esempio.  
   
  Compilare il secondo listato di codice (C++) con odbc32.lib e odbcbcp.lib. Se è stata eseguita la compilazione con MSBuild.exe, copiare Bcpfmt.fmt e Bcpodbc.bcp dalla directory del progetto in quella contenente il file con estensione exe e quindi richiamare tale file.  
   
- Eseguire il terzo listato di codice ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) per eliminare le tabelle utilizzate dall'esempio.  
+ Eseguire il terzo [!INCLUDE[tsql](../../../includes/tsql-md.md)] Listato di codice () per eliminare le tabelle utilizzate dall'esempio.  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  

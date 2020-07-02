@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 45837533806f2294665abbb242627a39d041e6d6
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: a0945ffa8845c901662acb29c3ed04826870d0ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529797"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722605"
 ---
 # <a name="path-expressions---specifying-predicates"></a>Espressioni di percorso - Specifica predicati
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Come descritto nell'argomento relativo alle [espressioni di percorso in XQuery](../xquery/path-expressions-xquery.md), un passaggio dell'asse in un'espressione di percorso include i componenti seguenti:  
   

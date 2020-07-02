@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6ac52e21-e20d-469b-ad40-5aa091e06b61
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bd29100f8f7c54906b8aeafa98a7cf67f526db8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 149831d9926161f697c69a893c00784230480940
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68021061"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723019"
 ---
 # <a name="sp_validatelogins-transact-sql"></a>sp_validatelogins (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni sugli utenti e i gruppi di Windows di cui è stato eseguito il mapping a entità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che non esistono più nell'ambiente Windows.  
   

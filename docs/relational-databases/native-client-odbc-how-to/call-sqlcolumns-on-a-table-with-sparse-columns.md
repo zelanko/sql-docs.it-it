@@ -12,15 +12,15 @@ ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57dc76c3373623ac133b0911e37ac4298682fa92
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e0cf7dd86775187f88c7ce07047ea38434e64ce2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298316"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725104"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Chiamare SQLColumns su un tabella con colonne di tipo sparse
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   In questo esempio viene illustrato come chiamare SQLColumns in una tabella con colonne di tipo sparse definite tramite ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "81298316"
   
  Eseguire la compilazione con /EHsc /D, "UNICODE" e odbc32.lib.  
   
- Il secondo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di eliminare la tabella creata dall'esempio.  
+ Il secondo [!INCLUDE[tsql](../../includes/tsql-md.md)] Listato di codice () consente di eliminare la tabella creata dall'esempio.  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

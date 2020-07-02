@@ -25,16 +25,16 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f581c1a5c0d925d48df5a16d95cdb141e2d48f83
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2d1d8c72851c945f178bb9e206ad536a23f24891
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388101"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724759"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>Utilizzo delle annotazioni sql:identity e sql:guid
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  È possibile specificare le annotazioni **SQL: Identity** e **SQL: GUID** in uno schema XSD su qualsiasi nodo che esegue il mapping a una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]colonna del database in. Mentre il formato dell'updategram supporta gli attributi **attributo updg: at-identity** e **attributo updg: GUID** , il formato DiffGram non è supportato. L'attributo **attributo updg: at-identity** definisce il comportamento nell'aggiornamento di una colonna di tipo Identity. L'attributo **attributo updg: GUID** consente di ottenere un valore GUID da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di utilizzarlo nell'updategram. Per ulteriori informazioni ed esempi reali, vedere [inserimento di dati mediante UPDATEGRAM XML &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  È possibile specificare le annotazioni **SQL: Identity** e **SQL: GUID** in uno schema XSD su qualsiasi nodo che esegue il mapping a una colonna del database in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Mentre il formato dell'updategram supporta gli attributi **attributo updg: at-identity** e **attributo updg: GUID** , il formato DiffGram non è supportato. L'attributo **attributo updg: at-identity** definisce il comportamento nell'aggiornamento di una colonna di tipo Identity. L'attributo **attributo updg: GUID** consente di ottenere un valore GUID da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di utilizzarlo nell'updategram. Per ulteriori informazioni ed esempi reali, vedere [inserimento di dati mediante UPDATEGRAM XML &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
  Le annotazioni **SQL: Identity** e **SQL: GUID** estendono questa funzionalità a DiffGram.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "81388101"
  Le annotazioni **SQL: Identity** e **SQL: GUID** possono essere definite su un elemento di contenuto complesso.  
   
 ## <a name="sqlidentity-annotation"></a>Annotazione sql:identity  
- È possibile specificare l'annotazione **SQL: Identity** nello schema XSD su qualsiasi nodo che esegue il mapping a una colonna di database di tipo Identity. Il valore specificato per questa annotazione definisce il modo in cui viene aggiornata la colonna di tipo IDENTITY, usando il valore fornito nell'updategram per modificare la colonna o ignorando il valore, nel qual caso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]viene usato un valore generato da per questa colonna.  
+ È possibile specificare l'annotazione **SQL: Identity** nello schema XSD su qualsiasi nodo che esegue il mapping a una colonna di database di tipo Identity. Il valore specificato per questa annotazione definisce il modo in cui viene aggiornata la colonna di tipo IDENTITY, usando il valore fornito nell'updategram per modificare la colonna o ignorando il valore, nel qual caso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene usato un valore generato da per questa colonna.  
   
  All'annotazione **SQL: Identity** possono essere assegnati due valori:  
   
@@ -64,6 +64,6 @@ ms.locfileid: "81388101"
  Specifica che il valore GUID generato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere utilizzato per la colonna specifica nell'operazione di aggiornamento.  
   
  useValue  
- Specifica che per la colonna deve essere utilizzato il valore specificato nell'updategram. Questo è il valore predefinito.  
+ Specifica che per la colonna deve essere utilizzato il valore specificato nell'updategram. Si tratta del valore predefinito.  
   
   

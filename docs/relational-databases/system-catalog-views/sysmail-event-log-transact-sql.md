@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cfca5caa10e36196f38817c828cbd4d062763107
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e80d631e4470e04d0ab5ab7edf6883350335586e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824916"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724644"
 ---
 # <a name="sysmail_event_log-transact-sql"></a>sysmail_event_log (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una riga per ogni messaggio di Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito dal sistema di Posta elettronica database. Il messaggio in questo contesto si riferisce a un messaggio, ad esempio un messaggio di errore e non un messaggio di posta elettronica. Configurare il parametro del **livello di registrazione** utilizzando la finestra di dialogo **Configura parametri di sistema** della configurazione guidata di Posta elettronica database o il stored procedure [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md) per determinare quali messaggi vengono restituiti.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82824916"
 |**last_mod_date**|**datetime**|Data e ora dell'ultima modifica della riga.|  
 |**last_mod_user**|**sysname**|Autore dell'ultima modifica della riga. Per i messaggi di posta elettronica corrisponde all'utente che ha inviato il messaggio. Per i messaggi generati dal programma esterno Posta elettronica database corrisponde al contesto utente del programma.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Per la risoluzione dei problemi Posta elettronica database, cercare gli eventi relativi agli errori di posta elettronica nella visualizzazione **sysmail_event_log** . Alcuni messaggi, ad esempio quelli relativi agli errori del programma esterno Posta elettronica database, non sono associati a messaggi di posta elettronica specifici. Per cercare gli errori relativi a messaggi di posta elettronica specifici, cercare l' **mailitem_id** del messaggio di posta elettronica non riuscito nella visualizzazione **sysmail_faileditems** e quindi cercare nei **sysmail_event_log** i messaggi correlati a tale **mailitem_id**. Quando viene restituito un errore da **sp_send_dbmail**, il messaggio di posta elettronica non viene inviato al sistema posta elettronica database e l'errore non viene visualizzato in questa vista.  
   
  Quando i tentativi di recapito con singoli account hanno esito negativo, i messaggi di errore rimangono visualizzati durante i successivi tentativi di invio fino a quando il recapito dell'elemento di posta non ha definitivamente esito positivo o negativo. In caso di esito positivo, tutti gli errori accumulati vengono registrati come avvisi distinti, inclusa la **account_id**. Pertanto, è possibile che vengano visualizzati messaggi di avviso anche se il messaggio di posta elettronica è stato inviato. In caso di errore di recapito finale, tutti gli avvisi precedenti vengono registrati come un messaggio di errore senza una **account_id**, perché tutti gli account hanno avuto esito negativo.  

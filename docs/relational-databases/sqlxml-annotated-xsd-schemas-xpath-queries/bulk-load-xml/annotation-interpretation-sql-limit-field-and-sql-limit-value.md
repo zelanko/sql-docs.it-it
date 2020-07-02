@@ -19,15 +19,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e4936f662e5b557ee8ab44962c2b1fcde761d74
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 211e14cbc8f965a660a087346a437d814489b7c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84884751"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724716"
 ---
 # <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>Interpretazione delle annotazioni - sql:limit-field e sql:limit-value
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Il caricamento bulk XML elabora le annotazioni **SQL: limit-field** e **SQL: limit-value** per la definizione. Per ulteriori informazioni, vedere [filtro di valori tramite SQL: limit-field e SQL: limit-value &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md).  
   
  Si supponga, ad esempio, un database contenente le tabelle seguenti:  
