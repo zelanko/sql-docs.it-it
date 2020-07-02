@@ -13,22 +13,22 @@ ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 74ecd20f28e58e133b5710d3cbd9d18b27ca7756
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d991dbdf8029a6021f4cf27a9010dec83b94a5ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095981"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758123"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>Caratteristiche dell'esecuzione di stored procedure estese
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilizzare invece la funzionalità di integrazione con CLR.  
   
  L'esecuzione di una stored procedure estesa presenta tre caratteristiche:  
   
--   La funzione stored procedure estesa viene eseguita nel contesto di sicurezza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   La funzione stored procedure estesa viene eseguita nel contesto di sicurezza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   La funzione della stored procedure estesa viene eseguita nello spazio di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -39,7 +39,7 @@ ms.locfileid: "74095981"
   
 -  
   
- Una volta caricata la DLL di stored procedure estesa, la DLL rimane caricata nello spazio degli indirizzi del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server fino a quando non viene arrestato o l'amministratore Scarica in modo esplicito la dll tramite DBCC *Dll_Name* (free).  
+ Una volta caricata la DLL di stored procedure estesa, la DLL rimane caricata nello spazio degli indirizzi del server fino a quando non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene arrestato o l'amministratore Scarica in modo esplicito la dll tramite DBCC *Dll_Name* (free).  
   
  La stored procedure estesa può essere eseguita da [!INCLUDE[tsql](../../includes/tsql-md.md)] come stored procedure mediante l'istruzione EXECUTE:  
   
@@ -48,7 +48,7 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 ```  
   
 ## <a name="parameters"></a>Parametri  
- \@*retval*  
+ \@ *retval*  
  È un valore restituito.  
   
  \@*param1*  

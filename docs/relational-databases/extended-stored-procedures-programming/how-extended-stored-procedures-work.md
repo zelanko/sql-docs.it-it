@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 42aad667b6081e79b4b7897d4dd1f354a6148e8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 02a1c64974fdcab5a686a61ac35a3a2175e16314
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72904043"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758085"
 ---
 # <a name="how-extended-stored-procedures-work"></a>Funzionamento delle stored procedure estese
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilizzare invece la funzionalità di integrazione con CLR.  
   
  Il funzionamento di una stored procedure estesa è il seguente:  
   
-1.  Quando un client esegue una stored procedure estesa, la richiesta viene trasmessa nel formato TDS (Tabular Data Stream) o Simple Object Access Protocol (SOAP) dall'applicazione client a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Quando un client esegue una stored procedure estesa, la richiesta viene trasmessa nel formato TDS (Tabular Data Stream) o Simple Object Access Protocol (SOAP) dall'applicazione client a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue la ricerca della DLL associata alla stored procedure estesa e, se non è già caricata, la carica.  
   

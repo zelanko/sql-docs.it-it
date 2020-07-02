@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b93fa36c-bf69-46b9-b137-f597d66fd0c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e4c87a0695c57461f444c8be4318bcd06cfdefe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d1eccee8a5acfbb810ed7636f5d073c2644f0342
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388063"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759483"
 ---
 # <a name="path-expressions-xquery"></a>Espressioni di percorso (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Le espressioni di percorso XQuery consentono di individuare nodi, ad esempio di testo, attributo o elemento, all'interno di un documento. Il risultato di un'espressione di percorso è sempre nell'ordine del documento, senza nodi duplicati nella sequenza risultante. Nello specificare un percorso è possibile utilizzare la sintassi abbreviata o non abbreviata. Le informazioni seguenti sono relative alla sintassi non abbreviata. La sintassi abbreviata è descritta di seguito in questo argomento.  
   
@@ -34,17 +34,17 @@ ms.locfileid: "81388063"
   
  Esistono espressioni di percorso relativo ed espressioni di percorso assoluto. Di seguito vengono descritti ambedue i tipi di espressione:  
   
--   Un'espressione di percorso relativo è costituita da uno o più passi separati da una o due barre (/ o //). Ad esempio, `child::Features` è un'espressione di percorso relativo in cui `Child` si riferisce solo ai nodi figlio del nodo di contesto attualmente elaborato. L'espressione recupera le \<funzionalità> nodi elemento figlio del nodo di contesto.  
+-   Un'espressione di percorso relativo è costituita da uno o più passi separati da una o due barre (/ o //). Ad esempio, `child::Features` è un'espressione di percorso relativo in cui `Child` si riferisce solo ai nodi figlio del nodo di contesto attualmente elaborato. L'espressione recupera gli \<Features> elementi figlio del nodo di contesto.  
   
--   Un'espressione di percorso assoluto inizia con una o due barre (/ o //), seguite da un percorso relativo facoltativo. Ad esempio, la barra iniziale nell'espressione `/child::ProductDescription` indica che si tratta di un'espressione di percorso assoluto. Poiché una barra all'inizio di un'espressione restituisce il nodo radice del documento del nodo di contesto, l'espressione restituisce tutti i \<nodi ProductDescription> elemento figlio della radice del documento.  
+-   Un'espressione di percorso assoluto inizia con una o due barre (/ o //), seguite da un percorso relativo facoltativo. Ad esempio, la barra iniziale nell'espressione `/child::ProductDescription` indica che si tratta di un'espressione di percorso assoluto. Poiché una barra all'inizio di un'espressione restituisce il nodo radice del documento del nodo di contesto, l'espressione restituisce tutti i \<ProductDescription> nodi elemento figlio della radice del documento.  
   
      Se un percorso assoluto inizia con una sola barra, può essere o meno seguito da un percorso relativo. Se si specifica una sola barra, l'espressione restituisce il nodo radice del nodo di contesto. Per un tipo di dati XML, si tratta del nodo del documento.  
   
- Una tipica espressione di percorso è costituita da passi. Ad esempio, l'espressione di percorso assoluto `/child::ProductDescription/child::Summary`,, contiene due passi separati da una barra.  
+ Una tipica espressione di percorso è costituita da passi. Ad esempio, l'espressione di percorso assoluto, `/child::ProductDescription/child::Summary` , contiene due passi separati da una barra.  
   
--   Il primo passaggio recupera gli \<elementi figlio del nodo elemento> ProductDescription della radice del documento.  
+-   Il primo passaggio recupera gli elementi \<ProductDescription> figlio del nodo elemento della radice del documento.  
   
--   Il secondo passaggio recupera il \<Riepilogo> nodo figlio per ogni nodo elemento \<ProductDescription> recuperato, che a sua volta diventa il nodo di contesto.  
+-   Il secondo passaggio recupera gli elementi \<Summary> figlio del nodo elemento per ogni \<ProductDescription> nodo elemento recuperato, che a sua volta diventa il nodo di contesto.  
   
  Un passo in un'espressione di percorso può essere un passo dell'asse o un passo generale.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "81388063"
   
 -   L'espressione di percorso relativo `child::ProductDescription/child::Features` contiene due passi separati da una barra. Entrambi i passi specificano un asse child. ProductDescription e Features sono test di nodo.  
   
--   L'espressione `child::root/child::Location[attribute::LocationID=10]`di percorso relativo contiene due passi separati da una barra. Il primo passo specifica un asse (`child`) e un test di nodo (`root`). Il secondo passo specifica tutti e tre i componenti di un passo dell'asse: un asse (child), un test di nodo (`Location`) e un predicato (`[attribute::LocationID=10]`).  
+-   L'espressione di percorso relativo `child::root/child::Location[attribute::LocationID=10]` contiene due passi separati da una barra. Il primo passo specifica un asse (`child`) e un test di nodo (`root`). Il secondo passo specifica tutti e tre i componenti di un passo dell'asse: un asse (child), un test di nodo (`Location`) e un predicato (`[attribute::LocationID=10]`).  
   
  Per ulteriori informazioni sui componenti di un passaggio dell'asse, vedere [specifica dell'asse in un passaggio dell'espressione di percorso](../xquery/path-expressions-specifying-axis.md), [specifica del test di nodo in un passaggio](../xquery/path-expressions-specifying-node-test.md)dell'espressione di percorso e [specifica dei predicati in un passaggio dell'espressione di percorso](../xquery/path-expressions-specifying-predicates.md).  
   

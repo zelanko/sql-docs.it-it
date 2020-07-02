@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3d58525ec4bcedc4249466be93628a7c1baa21bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a60a558b94b80ac09c752ca6ae2f2afd5b0ef05
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910144"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758591"
 ---
 # <a name="sysdatatypemappings-transact-sql"></a>sysdatatypemappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La vista **sysdatatypemappings** viene utilizzata per visualizzare il mapping tra SQL Server tipi di dati e i tipi di dati di un sistema di gestione di database non SQL Server (DBMS). Questa vista è archiviata nel database **msdb** .  
   
@@ -54,7 +54,7 @@ ms.locfileid: "67910144"
 |**perdita**|**bit**|Indica se si verifica perdita dei dati durante l'esecuzione del mapping del tipo di dati tra il sistema DBMS di origine e quello di destinazione.|  
 |**is_default**|**bit**|Indica se il mapping dei tipi di dati viene utilizzato per impostazione predefinita.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Replica di database eterogenei](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste di replica &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   

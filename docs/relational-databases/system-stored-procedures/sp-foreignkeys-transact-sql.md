@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0951bd857b6fbf2e3bdc8f5bc1ff850f80c43bcd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 99e2db4ca29fc39a4cebbd0b2dfb0564a5837e80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820486"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760051"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce le chiavi esterne che fanno riferimento alle chiavi primarie nella tabella del server collegato.  
   
@@ -60,7 +60,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 `[ @fktab_catalog = ] 'fktab_catalog'`Nome del catalogo con una chiave esterna. *fktab_catalog*è di **tipo sysname**e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- Nessuno  
+ nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
  Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle (_Catalog_**.** _schema_**.** _Table_), rappresentata nel set di risultati.  
@@ -84,13 +84,13 @@ sp_foreignkeys [ @table_server = ] 'table_server'
   
  Nel set di risultati le colonne FK_NAME e PK_NAME restituiscono sempre NULL.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_foreignkeys** esegue una query sul set di righe FOREIGN_KEYS dell'interfaccia **IDBSchemaRowset** del provider OLE DB che corrisponde a *table_server*. I parametri *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG*e *Column* vengono passati a questa interfaccia per limitare le righe restituite.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite informazioni relative alla chiave esterna per la tabella `Department` del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] presente nel server collegato `Seattle1`.  
   
 ```  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a6e8adb5-2ffd-4c49-b9e4-9a1e459ff7b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dd96072358100583689cd00b218d578180940de3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04cbf4401b8e97b549d52ff88ca1f304d585cc2c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660197"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758550"
 ---
 # <a name="clientnetworkprotocolproperty-class"></a>Classe ClientNetworkProtocolProperty
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   La [classe ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) rappresenta le proprietà di un protocollo di rete del client.  
   
  Con la [classe ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)è possibile effettuare le attività seguenti:  

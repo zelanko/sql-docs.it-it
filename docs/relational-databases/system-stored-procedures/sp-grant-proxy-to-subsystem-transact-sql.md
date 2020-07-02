@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4dfb2dba5ac59cae919a0153d41cbf7c15f660e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123816"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757884"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Concede a un proxy l'accesso a un sottosistema.  
   
@@ -47,9 +47,9 @@ sp_grant_proxy_to_subsystem
   
 `[ @subsystem_id = ] id`Numero ID del sottosistema a cui concedere l'accesso. Il *subsystem_id* è di **tipo int**e il valore predefinito è null. È necessario specificare *subsystem_id* o *subsystem_name* , ma non è possibile specificarli entrambi. Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
-|**2**|Script [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX<br /><br /> ** \* Importante \* \* ** Il sottosistema di scripting ActiveX verrà rimosso da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
+|**2**|Script [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX<br /><br /> Importante il sottosistema di scripting ActiveX verrà rimosso da Agent in una versione futura di ** \* . \* \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
 |**3**|Sistema operativo (**CmdExec**)|  
 |**4**|Agente snapshot repliche|  
 |**5**|Agente lettura log repliche|  
@@ -64,14 +64,14 @@ sp_grant_proxy_to_subsystem
   
 `[ @subsystem_name = ] 'subsystem_name'`Nome del sottosistema a cui concedere l'accesso. Il **subsystem_name** è di **tipo sysname**e il valore predefinito è null. È necessario specificare *subsystem_id* o *subsystem_name* , ma non è possibile specificarli entrambi. Nella tabella seguente vengono elencati i valori disponibili per ogni sottosistema.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**ActiveScripting**|Script ActiveX|  
 |**CmdExec**|Sistema operativo (**CmdExec**)|  
 |**Snapshot**|Agente snapshot repliche|  
 |**LogReader**|Agente lettura log repliche|  
 |**Distribuzione**|agente di distribuzione di replica|  
-|**Merge**|Agente merge repliche|  
+|**Unione**|Agente merge repliche|  
 |**QueueReader**|Agente di lettura coda repliche|  
 |**ANALYSISQUERY**|Query di Analysis Services|  
 |**ANALYSISCOMMAND**|Comando di Analysis Services|  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8904ab2ea9e8f78037b03f886e6b61d692b65e60
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: 9d2163610d1ea537301ec61e1a34c8b6e727d6e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306070"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759458"
 ---
 # <a name="type-system---sequence-type-matching"></a>Sistema di tipi - Corrispondenza per il tipo di sequenza
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Il valore di un'espressione XQuery è sempre rappresentato da una sequenza di zero o più elementi, che possono essere valori atomici o nodi. Il tipo di sequenza fa riferimento alla capacità di stabilire una corrispondenza tra il tipo di sequenza restituito da un'espressione di query e un tipo specifico. Ad esempio:  
   

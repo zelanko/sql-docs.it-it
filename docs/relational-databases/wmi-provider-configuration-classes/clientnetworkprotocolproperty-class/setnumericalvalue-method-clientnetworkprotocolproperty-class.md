@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d4d6df52-9e68-4003-9e28-ece6716ba7f1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0c1c9ffc6ad69515d6e7b7cd291a2a5501980b8c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41f4a3bb859f585944bd22f8ddd9721a376e9d57
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660724"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759926"
 ---
 # <a name="setnumericalvalue-method-clientnetworkprotocolproperty-class"></a>Metodo SetNumericalValue (classe ClientNetworkProtocolProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Imposta il valore numerico della proprietà corrente a cui fa riferimento il valore della [proprietà PropertyIdx (classe ClientNetworkProtocolProperty)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) .  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,7 +36,7 @@ object.SetNumericalValue [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  A [classe ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) che rappresenta un attributo del protocollo di rete utilizzato dal client di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Parametri  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8fe57e26392a2a01c7074d7d019baa20c4b9cb5f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 11571a7a3fb97a164291a3f3949d30205305daf7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815810"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758803"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Restituisce un elenco di tutti gli account di accesso a cui sono state concesse autorizzazioni per una pubblicazione. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -63,7 +63,7 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_help_publication_access** viene utilizzato in tutti i tipi di replica.  
   
  Quando **Isntname** e **Isntgroup** nel set di risultati sono **0**, si presuppone che l'account di accesso sia un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso.  

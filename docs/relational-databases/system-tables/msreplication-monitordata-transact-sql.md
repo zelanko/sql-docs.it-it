@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 118602eadf5dc1f23aa811d9a295fae351f54f36
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d247bd0fa935e11f6d6ca57cad393cfddabb6b2d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829869"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757848"
 ---
 # <a name="msreplication_monitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabella **MSreplication_monitordata** contiene i dati memorizzati nella cache utilizzati da monitoraggio replica, con una riga per ogni sottoscrizione monitorata. Questa tabella è archiviata nel database di distribuzione.  
   

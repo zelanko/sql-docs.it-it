@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 91667feca7974f66233b7549af9f75838d2ce32d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 431572ccdb71cbad37708932a3313a543026272c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831707"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757961"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce lo stato corrente del formato di archiviazione vardecimal di un database oppure abilita il formato di archiviazione vardecimal per un database.  A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], i database utente sono sempre abilitati. L'abilitazione del formato di archiviazione vardecimal per i database è necessaria solo in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
@@ -86,7 +86,7 @@ FROM sys.objects
 GO  
 ```  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Tramite il codice seguente viene abilitata la compressione nel database `AdventureWorks2012`, viene verificato lo stato e quindi vengono compresse le colonne decimal e numeric della tabella `Sales.SalesOrderDetail`.  
   
 ```  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: ef595adcf3772dcac92c58764d99bca4374aeb0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13ba20770fd97d0db193ab492ae0958cf4c7ad35
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771346"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758029"
 ---
 # <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crea un nuovo database di distribuzione e installa lo schema del server di distribuzione. Nel database di distribuzione vengono archiviate le procedure, lo schema e i metadati utilizzati nella replica. Questa stored procedure viene eseguita nel database master del server di distribuzione per la creazione del database di distribuzione e per l'installazione delle tabelle e delle stored procedure necessarie per la distribuzione della replica.  
   
@@ -55,7 +55,7 @@ sp_adddistributiondb [ @database= ] 'database'
 ## <a name="arguments"></a>Argomenti  
 `[ @database = ] database'`Nome del database di distribuzione da creare. il *database* è di **tipo sysname**e non prevede alcun valore predefinito. Se il database specificato esiste già e non è contrassegnato come database di distribuzione, vengono installati gli oggetti necessari per consentire la distribuzione e il database viene contrassegnato come database di distribuzione. Se il database specificato è già abilitato come database di distribuzione, viene restituito un errore.  
   
-`[ @data_folder = ] 'data_folder'_`Nome della directory utilizzata per archiviare il file di dati del database di distribuzione. *data_folder* è di **tipo nvarchar (255)** e il valore predefinito è null. Se è null, viene utilizzata la directory dei dati [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'istanza di, ad `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`esempio.  
+`[ @data_folder = ] 'data_folder'_`Nome della directory utilizzata per archiviare il file di dati del database di distribuzione. *data_folder* è di **tipo nvarchar (255)** e il valore predefinito è null. Se è NULL, viene utilizzata la directory dei dati per l'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` .  
   
 `[ @data_file = ] 'data_file'`Nome del file di database. *data_file* è di **tipo nvarchar (255)** e il valore predefinito è **database**. Se il valore è NULL, la stored procedure crea il nome del nuovo file in base al nome del database.  
   
@@ -65,7 +65,7 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @log_file = ] 'log_file'`Nome del file di log. *log_file* è di **tipo nvarchar (255)** e il valore predefinito è null. Se il valore è NULL, la stored procedure crea il nome del nuovo file in base al nome del database.  
   
-`[ @log_file_size = ] log_file_size`Dimensioni iniziali del file di log in megabyte (MB). *log_file_size* è di **tipo int**e il valore predefinito è 0 MB, che indica che le dimensioni del file vengono create utilizzando le dimensioni del file [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di log più piccole consentite da.  
+`[ @log_file_size = ] log_file_size`Dimensioni iniziali del file di log in megabyte (MB). *log_file_size* è di **tipo int**e il valore predefinito è 0 MB, che indica che le dimensioni del file vengono create utilizzando le dimensioni del file di log più piccole consentite da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 `[ @min_distretention = ] min_distretention`Periodo di memorizzazione minimo, in ore, prima dell'eliminazione delle transazioni dal database di distribuzione. *min_distretention* è di **tipo int**e il valore predefinito è 0 ore.  
   
@@ -81,7 +81,7 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @createmode = ] createmode`*createmode* è di **tipo int**e il valore predefinito è 1. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**1** (impostazione predefinita)|CREARE il DATABASE o utilizzare il database esistente, quindi applicare il file **Instdist. SQL** per creare oggetti di replica nel database di distribuzione.|  
@@ -163,7 +163,7 @@ GO
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_adddistributiondb**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurare la pubblicazione e la distribuzione](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistributiondb &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   

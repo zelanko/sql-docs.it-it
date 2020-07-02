@@ -18,15 +18,15 @@ ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd18fe45b25f4537c06de46c612f0508f9f86f9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072694"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758012"
 ---
 # <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Aggiunge una nuova proprietà estesa a un oggetto di database.  
   
@@ -56,10 +56,10 @@ sp_addextendedproperty
  [ @name ] = {'*property_name*'}  
  Nome della proprietà che si desidera aggiungere. *property_name* è di **tipo sysname** e non può essere null. I nomi possono includere inoltre stringhe vuote o di caratteri non alfanumerici, nonché valori binary.  
   
- [ @value= ] {'*value*'}  
+ [ @value =] {'*valore*'}  
  Valore da associare alla proprietà. il valore è **sql_variant**e il *valore* predefinito è null. La dimensione di *value* non può superare 7.500 byte.  
   
- [ @level0type= ] {'*level0_object_type*'}  
+ [ @level0type =] {'*level0_object_type*'}  
  Tipo di oggetto di livello 0. *level0_object_type* è di tipo **varchar (128)** e il valore predefinito è null.  
   
  I possibili valori sono ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE, PLAN GUIDE e NULL.  
@@ -67,18 +67,18 @@ sp_addextendedproperty
 > [!IMPORTANT]  
 >  La possibilità di specificare USER come tipo di livello 0 in una proprietà estesa di un oggetto di tipo di livello 1 verrà rimossa in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In alternativa, utilizzare SCHEMA come tipo di livello 0. Quando, ad esempio, si definisce una proprietà estesa in una tabella, specificare lo schema della tabella anziché un nome utente. La possibilità di specificare TYPE come tipo di livello 0 verrà rimossa in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per TYPE utilizzare SCHEMA come tipo di livello 0 e TYPE come tipo di livello 1.  
   
- [ @level0name= ] {'*level0_object_name*'}  
+ [ @level0name =] {'*level0_object_name*'}  
  Nome del tipo di oggetto di livello 0 specificato. *level0_object_name* è di **tipo sysname** e il valore predefinito è null.  
   
- [ @level1type= ] {'*level1_object_type*'}  
+ [ @level1type =] {'*level1_object_type*'}  
  Tipo di oggetto di livello 1. *level1_object_type* è di tipo **varchar (128)** e il valore predefinito è null. GLI input validi sono AGGREGAte, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SEQUENCE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION e NULL.    
- [ @level1name= ] {'*level1_object_name*'}  
+ [ @level1name =] {'*level1_object_name*'}  
  Nome del tipo di oggetto di livello 1 specificato. *level1_object_name* è di **tipo sysname**e il valore predefinito è null.  
   
- [ @level2type= ] {'*level2_object_type*'}  
+ [ @level2type =] {'*level2_object_type*'}  
  Tipo di oggetto di livello 2. *level2_object_type* è di tipo **varchar (128)** e il valore predefinito è null. I possibili valori sono COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER e NULL.  
   
- [ @level2name= ] {'*level2_object_name*'}  
+ [ @level2name =] {'*level2_object_name*'}  
  Nome del tipo di oggetto di livello 2 specificato. *level2_object_name* è di **tipo sysname**e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
@@ -235,7 +235,7 @@ EXEC sys.sp_addextendedproperty
 @level0name = N'CustomApp';  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sys. fn_listextendedproperty &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   

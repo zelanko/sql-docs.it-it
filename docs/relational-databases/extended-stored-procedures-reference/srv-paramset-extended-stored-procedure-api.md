@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3ec0de44aacbcfb2d4e6b96d7525da900017e01
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8a2f3caa15eeb6e7ff25f511b4a0e92de68b383
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253547"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756679"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset (API Stored procedure estesa)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
@@ -66,7 +66,7 @@ len
  *Len*  
  Specifica la lunghezza effettiva dei dati da restituire. Se il tipo di dati del parametro ha una lunghezza costante e non consente valori Null (ad esempio, *srvbit* o *srvint1*), *len* viene ignorato.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SUCCEED se il valore del parametro è stato impostato correttamente; in caso contrario, FAIL. Restituisce FAIL se non esiste una stored procedure remota corrente, se non è presente il parametro *n* della stored procedure remota, se il parametro non è un parametro restituito o se l'argomento *len* non è valido.  
   
  Se *len* è 0, restituisce NULL. L'impostazione di *len* su 0 è l'unico modo per restituire NULL al client.  
@@ -82,7 +82,7 @@ len
 |**BIGVARBINARY**|**NULL:** _len_ = 0, data = IG, RET = 1<br /><br /> **ZERO:** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255:** _len_ = max8k, data = valid, RET = 0<br /><br /> **<255:** _len_ = <8k, data = valid, RET = 1|  
 |NCHAR|**NULL:** _len_ = 0, data = IG, RET = 1<br /><br /> **ZERO:** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255:** _len_ = max8k, data = valid, RET = 0<br /><br /> **<255:** _len_ = <8k, data = valid, RET = 1|  
 |NVARCHAR|**NULL:** _len_ = 0, data = IG, RET = 1<br /><br /> **ZERO:** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255:** _len_ = max8k, data = valid, RET = 0<br /><br /> **<255:** _len_ = <8k, data = valid, RET = 1|  
-|**NTEXT**|**NULL:** _len_ = IG, data = IG, RET = 0<br /><br /> **ZERO:** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255:** _len_ = IG, data = IG, RET = 0<br /><br /> 255: _Len_ = IG, data = IG, RET = 0 ** \<**|  
+|**NTEXT**|**NULL:** _len_ = IG, data = IG, RET = 0<br /><br /> **ZERO:** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255:** _len_ = IG, data = IG, RET = 0<br /><br /> ** \< 255:** _Len_ = IG, data = IG, RET = 0|  
 |RET = valore restituito di srv_paramset||  
 |IG = il valore verrà ignorato||  
 |valid = qualsiasi puntatore valido ai dati||  

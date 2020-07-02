@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 680a21141e459656e0bec19ca8417483a9024088
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c19cef2ed170dc8e40b8f1c10c16a4068d718005
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834360"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758760"
 ---
 # <a name="sp_oasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Imposta una proprietà di un oggetto OLE su un nuovo valore.  
   
@@ -64,7 +64,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o l'autorizzazione Execute direttamente in questa stored procedure. `Ole Automation Procedures`la configurazione deve essere **abilitata** per l'utilizzo di qualsiasi procedura di sistema correlata all'automazione OLE.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente la `HostName` Proprietà (dell'oggetto **SqlServer** creato in precedenza) viene impostata su un nuovo valore.  
   
 ```  

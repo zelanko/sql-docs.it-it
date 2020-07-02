@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7cff85a61d7483be34852a79dfb8f3590eff0d4a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f94e292f9376abe583cc16ecef93437192d9568d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832425"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758700"
 ---
 # <a name="cdcddl_history-transact-sql"></a>cdc.ddl_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per ogni modifica DDL (Data Definition Language) apportata a tabelle abilitate per l'acquisizione dei dati delle modifiche. È possibile utilizzare questa tabella per determinare quando si è verificata una modifica DDL su una tabella di origine e la modifica effettuata. Per le tabelle di origine per cui non sono state eseguite modifiche DDL non esistono voci in questa tabella.  
   

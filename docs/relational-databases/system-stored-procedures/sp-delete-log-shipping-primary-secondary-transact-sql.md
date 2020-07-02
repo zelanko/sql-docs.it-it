@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d6f71a12-f7b1-4a1c-9639-a533b8287b0c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8276a23224495b7bcc69721fd5317d0b2b87821a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3dfcffef20ba6caf1217d4b445b85109b9667ad6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68009175"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760077"
 ---
 # <a name="sp_delete_log_shipping_primary_secondary-transact-sql"></a>sp_delete_log_shipping_primary_secondary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Rimuove una voce per un database secondario nel server primario.  
   
@@ -52,7 +52,7 @@ sp_delete_log_shipping_primary_secondary
  0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno.  
+ No.  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_delete_log_shipping_primary_secondary** deve essere eseguito dal database **Master** nel server primario. Questo stored procedure rimuove la voce per un database secondario da **log_shipping_primary_secondaries** sul server primario.  
@@ -72,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul &#40;di log shipping SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

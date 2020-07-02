@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7bb4d408-d764-4ef6-802c-f271c8d39c2a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1a635ab2284a413fb3a4cf9e11b9f40e0369f958
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b4bfba2f8a8512926a42c12236e5baf0d07ceda9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832443"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758721"
 ---
 # <a name="cdccaptured_columns-transact-sql"></a>cdc.captured_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per ogni colonna registrata in un'istanza di acquisizione. Per impostazione predefinita, sono acquisite tutte le colonne della tabella di origine. Tuttavia, le colonne possono essere incluse o escluse quando la tabella di origine è abilitata per l'acquisizione dei dati delle modifiche specificando un elenco di colonne. Per ulteriori informazioni, vedere [sys. sp_cdc_enable_table &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
   

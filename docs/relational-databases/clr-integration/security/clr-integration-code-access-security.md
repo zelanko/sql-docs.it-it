@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 912db3acb6f6dc21952e99da31a1484a9745ed0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f28692cd1a5c3f60e823d6071244ae822fc557a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488312"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759048"
 ---
 # <a name="clr-integration-code-access-security"></a>Sicurezza da accesso di codice dell'integrazione con CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Common Language Runtime (CLR) supporta un modello di sicurezza definito sicurezza dall'accesso di codice per il codice gestito che prevede che le autorizzazioni vengano concesse agli assembly in base all'identità del codice. Per ulteriori informazioni, vedere la sezione relativa alla sicurezza da accesso di codice in .NET Framework SDK (Software Development Kit).  
   
  I criteri di sicurezza che determinano le autorizzazioni concesse agli assembly vengono definiti in tre punti diversi:  
@@ -89,10 +89,10 @@ ms.locfileid: "81488312"
  Agli assembly **unsafe** viene assegnato un **FullTrust**.  
   
 > [!IMPORTANT]  
->  **Safe** è l'impostazione di autorizzazione consigliata per gli assembly che eseguono attività di calcolo e di gestione dei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]dati senza accedere alle risorse all'esterno di. **EXTERNAL_ACCESS** è consigliata per gli assembly che accedono a risorse esterne [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]a. Per impostazione predefinita, **EXTERNAL_ACCESS** assembly vengono [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eseguiti come account del servizio. Per **EXTERNAL_ACCESS** codice è possibile rappresentare in modo esplicito il contesto di sicurezza dell'autenticazione di Windows del chiamante. Poiché per impostazione predefinita viene eseguito come account [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del servizio, l'autorizzazione per l'esecuzione di **EXTERNAL_ACCESS** deve essere assegnata solo agli account di accesso attendibili per l'esecuzione come account del servizio. Dal punto di vista della sicurezza, gli assembly **EXTERNAL_ACCESS** e **unsafe** sono identici. Tuttavia, **EXTERNAL_ACCESS** assembly forniscono diverse protezioni di affidabilità e robustezza che non si trovano in assembly non **sicuri** . Se si specifica **unsafe** , il codice nell'assembly può eseguire operazioni non valide [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sullo spazio di processo e pertanto può compromettere l'affidabilità e la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]scalabilità di. Per ulteriori informazioni sulla creazione di assembly CLR [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]in, vedere [gestione degli assembly di integrazione CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md).  
+>  **Safe** è l'impostazione di autorizzazione consigliata per gli assembly che eseguono attività di calcolo e di gestione dei dati senza accedere alle risorse all'esterno di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . **EXTERNAL_ACCESS** è consigliata per gli assembly che accedono a risorse esterne a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per impostazione predefinita, **EXTERNAL_ACCESS** assembly vengono eseguiti come [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] account del servizio. Per **EXTERNAL_ACCESS** codice è possibile rappresentare in modo esplicito il contesto di sicurezza dell'autenticazione di Windows del chiamante. Poiché per impostazione predefinita viene eseguito come [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] account del servizio, l'autorizzazione per l'esecuzione di **EXTERNAL_ACCESS** deve essere assegnata solo agli account di accesso attendibili per l'esecuzione come account del servizio. Dal punto di vista della sicurezza, gli assembly **EXTERNAL_ACCESS** e **unsafe** sono identici. Tuttavia, **EXTERNAL_ACCESS** assembly forniscono diverse protezioni di affidabilità e robustezza che non si trovano in assembly non **sicuri** . Se si specifica **unsafe** , il codice nell'assembly può eseguire operazioni non valide sullo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] spazio di processo e pertanto può compromettere l'affidabilità e la scalabilità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ulteriori informazioni sulla creazione di assembly CLR in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vedere [gestione degli assembly di integrazione CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md).  
   
 ## <a name="accessing-external-resources"></a>Accesso a risorse esterne  
- Se un tipo definito dall'utente (UDT), un stored procedure o un altro tipo di assembly di costrutto viene registrato con il set di autorizzazioni **Safe** , il codice gestito eseguito nel costrutto non è in grado di accedere alle risorse esterne. Tuttavia, se vengono specificati i set di autorizzazioni **EXTERNAL_ACCESS** o **unsafe** e il codice gestito tenta di accedere alle risorse esterne [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , applica le regole seguenti:  
+ Se un tipo definito dall'utente (UDT), un stored procedure o un altro tipo di assembly di costrutto viene registrato con il set di autorizzazioni **Safe** , il codice gestito eseguito nel costrutto non è in grado di accedere alle risorse esterne. Tuttavia, se vengono specificati i set di autorizzazioni **EXTERNAL_ACCESS** o **unsafe** e il codice gestito tenta di accedere alle risorse esterne, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] applica le regole seguenti:  
   
 |Se|Risultato|  
 |--------|----------|  

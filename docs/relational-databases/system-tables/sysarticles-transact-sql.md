@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9d9d5d51-6d8f-4e42-84a9-82e58eb0301e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 240fe92693fcd811c1f87744cb9a60dddda16369
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5cf27f5335cf0eb098c505ca6872564c172cf610
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833065"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758648"
 ---
 # <a name="sysarticles-transact-sql"></a>sysarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una riga per ogni articolo definito nel database locale. Questa tabella è archiviata nel database pubblicato.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82833065"
 |**filtro**|**int**|ID della stored procedure, utilizzato per il partizionamento orizzontale.|  
 |**filter_clause**|**ntext**|Clausola WHERE dell'articolo, utilizzata per il filtro orizzontale.|  
 |**ins_cmd**|**nvarchar(255)**|Tipo di comando di replica utilizzato per la replica degli inserimenti con articoli di tabella. Per altre informazioni, vedere [Specificare la modalità di propagazione delle modifiche per gli articoli transazionali](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
-|**name**|**sysname**|Nome associato all'articolo, univoco all'interno della pubblicazione.|  
+|**nome**|**sysname**|Nome associato all'articolo, univoco all'interno della pubblicazione.|  
 |**objid**|**int**|ID dell'oggetto di tabella pubblicato.|  
 |**pubid**|**int**|ID della pubblicazione a cui appartiene l'articolo.|  
 |**pre_creation_cmd**|**tinyint**|Comando preliminare per l'istruzione DROP TABLE, DELETE TABLE o TRUNCATE:<br /><br /> **0** = nessuna.<br /><br /> **1** = Elimina.<br /><br /> **2** = Delete.<br /><br /> **3** = troncamento.|  

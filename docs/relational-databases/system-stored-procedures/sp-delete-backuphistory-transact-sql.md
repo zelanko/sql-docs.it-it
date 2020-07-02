@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: afaf4166facc16e7582f3978f3806d8d5a68fb0e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 64fef5a7f6d135961a6757a92d734e75f2114273
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831275"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760104"
 ---
 # <a name="sp_delete_backuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Riduce le dimensioni delle tabelle di cronologia di backup e ripristino eliminando le voci per set di backup precedenti alla data specificata. Vengono aggiunte righe aggiuntive alle tabelle di cronologia di backup e ripristino dopo l'esecuzione di ogni operazione di backup o ripristino. è pertanto consigliabile eseguire periodicamente **sp_delete_backuphistory**.  
   
@@ -74,7 +74,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** , ma è possibile concedere le autorizzazioni ad altri utenti.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono eliminate dalle tabelle di cronologia di backup e ripristino tutte le voci create prima delle ore 0.00 del 14 gennaio 2010.  
   
 ```  

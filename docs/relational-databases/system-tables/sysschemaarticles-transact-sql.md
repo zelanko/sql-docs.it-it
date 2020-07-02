@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 67a1c039-c283-4a9c-bacc-b9b3973590c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 44b95598af67b4842595d9570bcd57135924d6ad
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0276cc54809643ed53bd2ae30813e925b4d84475
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819785"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757732"
 ---
 # <a name="sysschemaarticles-transact-sql"></a>sysschemaarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Tiene traccia degli articoli relativi solo allo schema per pubblicazioni transazionali e snapshot. Questa tabella è archiviata nel database di pubblicazione.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "82819785"
 |**creation_script**|**nvarchar(255)**|Percorso e nome di uno script di schema dell'articolo utilizzato per la creazione della tabella di destinazione.|  
 |**Descrizione**|**nvarchar(255)**|Voce descrittiva per l'articolo.|  
 |**dest_object**|**sysname**|Nome dell'oggetto del database di sottoscrizione se l'articolo è relativo solo allo schema, quali articoli di stored procedure, viste e funzioni definite dall'utente.|  
-|**name**|**sysname**|Nome dell'articolo relativo solo allo schema in una pubblicazione.|  
+|**nome**|**sysname**|Nome dell'articolo relativo solo allo schema in una pubblicazione.|  
 |**objid**|**int**|Identificatore dell'oggetto di base dell'articolo. Può corrispondere all'identificatore di oggetto di una procedura, vista, vista indicizzata o funzione definita dall'utente.|  
 |**pubid**|**int**|ID della pubblicazione.|  
 |**pre_creation_cmd**|**tinyint**|Specifica l'azione eseguita dal sistema se nel Sottoscrittore viene rilevato un oggetto esistente avente lo stesso nome durante l'applicazione dello snapshot per l'articolo:<br /><br /> **0** = niente.<br /><br /> **1** = Elimina tabella di destinazione.<br /><br /> **2** = Elimina tabella di destinazione.<br /><br /> **3** = troncamento della tabella di destinazione.|  

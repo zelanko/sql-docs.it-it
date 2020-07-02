@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0438ea784bc8d1521455e0d5e7b9970dafe02fd4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6ee8f5897a8a5e1fed47005220321be98eca92ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660093"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756593"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>Metodo SetOrderValue (classe ClientNetworkProtocol)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Seleziona il protocollo con il valore dell'ordine specificato dall'elenco di protocolli del client.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,7 +36,7 @@ object.SetOrderValue(OrderValue)
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) che rappresenta il protocollo di rete utilizzato dal client di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Parametri  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c3348590b002bb0ff5f154d983a56e3b66885073
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2e64d2f053696c16acbd72782501487adb726675
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828861"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756627"
 ---
 # <a name="sp_mschange_snapshot_agent_properties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Modifica le proprietà di un processo di agente di snapshot eseguito in un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] server di distribuzione o versione successiva. Questa stored procedure viene utilizzata per modificare le proprietà quando il server di pubblicazione viene eseguito in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. La stored procedure viene eseguita nel database di distribuzione del server di distribuzione.  
   
@@ -71,7 +71,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**2**|On demand|  
 |**4**|Ogni giorno|  
 |**8**|Settimanale|  
-|**10**|Ogni mese|  
+|**10**|Mensile|  
 |**20**|Mensile, in base all'intervallo di frequenza|  
 |**40**|All'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|  
   
@@ -131,7 +131,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_MSchange_snapshot_agent_properties** viene utilizzata per la replica snapshot, la replica transazionale e la replica di tipo merge.  
   
  È necessario specificare tutti i parametri quando si esegue **sp_MSchange_snapshot_agent_properties**. Eseguire [sp_helppublication_snapshot](../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md) per restituire le proprietà correnti del processo agente di snapshot.  

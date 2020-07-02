@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c89a9ddc1020f29bbcd661ec4c9672ba37f7770
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 55d9c6bf2e64509872faf02fa653499a28efb300
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756721"
 ---
 # <a name="srv_paramlen-extended-stored-procedure-api"></a>srv_paramlen (API delle stored procedure estese)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
@@ -54,7 +54,7 @@ n
  *n*  
  Indica il numero del parametro. Il primo parametro è 1.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  Lunghezza effettiva in byte dei dati del parametro. Se non è presente nessun parametro *n* o nessuna stored procedure remota, restituisce -1. Se il parametro *n* è NULL, restituisce 0.  
   
  Questa funzione restituisce i valori seguenti, se il parametro è uno dei tipi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] dati di sistema seguenti.  
@@ -68,7 +68,7 @@ n
 |**BIGVARBINARY**|**NULL:** 0<br /><br /> **Zero:** 1<br /><br /> **>= 255:** 255<br /><br /> **<255:** valore *len* effettivo|  
 |**NCHAR**|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
 |**NVARCHAR**|**NULL:** 0<br /><br /> **Zero:** 1<br /><br /> **>= 255:** 255<br /><br /> **<255:** valore *len* effettivo|  
-|**NTEXT**|**Null:** -1<br /><br /> **ZERO:** -1<br /><br /> **>=255:** -1<br /><br /> 255:-1 ** \<**|  
+|**NTEXT**|**Null:** -1<br /><br /> **ZERO:** -1<br /><br /> **>=255:** -1<br /><br /> ** \< 255:** -1|  
   
  \*   Valore *len* effettivo = Lunghezza della stringa di carattere multibyte (cch)  
   

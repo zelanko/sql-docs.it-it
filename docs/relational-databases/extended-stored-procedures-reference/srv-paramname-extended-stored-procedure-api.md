@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1a53d707-7b06-49cc-a0df-ac727cfe953f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f44209b2fb700bf885575f2ed4c0d2c65b82329b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9905b5f148ccbf94bb4ca85f85164b5289d0dcec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005661"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756697"
 ---
 # <a name="srv_paramname-extended-stored-procedure-api"></a>srv_paramname (API Stored procedure estesa)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
@@ -52,7 +52,7 @@ SRV_PROC * srvproc,intn, int *len );
  *Len*  
  Specifica un puntatore a una variabile **int** che contiene la lunghezza, espressa in byte, del nome del parametro. Se *len* è NULL, la lunghezza del nome del parametro della stored procedure remota non viene restituita.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  Puntatore a una stringa di caratteri con terminazione di tipo Null che contiene il nome del parametro. La lunghezza del nome del parametro viene archiviata in *len*. Se non è presente nessun parametro *n* o nessuna stored procedure remota, restituisce NULL, imposta *len* su -1 e invia un messaggio di errore informativo. Se il nome del parametro è NULL, *len* viene impostato su 0 e viene restituita una stringa vuota con terminazione di tipo Null.  
   
 ## <a name="remarks"></a>Osservazioni  

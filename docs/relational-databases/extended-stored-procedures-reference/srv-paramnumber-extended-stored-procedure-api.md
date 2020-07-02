@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d7a6dbff-71d9-4297-8a4f-bfd2876fe204
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 564326044c2fe0f00a26d3c32c5ad3d36d0b6b85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f10d4a1bdfb2e3e7165596e5f3041c27440223bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005639"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756678"
 ---
 # <a name="srv_paramnumber-extended-stored-procedure-api"></a>srv_paramnumber (API delle stored procedure estese)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
@@ -54,13 +54,13 @@ namelen
  *srvproc*  
  Puntatore alla struttura SRV_PROC che rappresenta l'handle di una determinata connessione client. In questo caso, l'handle che ha ricevuto la chiamata alla stored procedure remota. La struttura contiene informazioni utilizzate dalla libreria dell'API Stored procedure estesa per gestire le comunicazioni e i dati tra l'applicazione e il client.  
   
- *name*  
+ *nome*  
  Puntatore al parametro *name*.  
   
  *namelen*  
  Lunghezza di *name*. Se *name* è con terminazione Null, impostare *namelen* su SRV_NULLTERM.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  Numero di parametro del parametro denominato. Il primo parametro è 1. Se non è presente alcun parametro denominato *name* o alcuna stored procedure remota, viene restituito 0 e viene generato un messaggio.  
   
 ## <a name="remarks"></a>Osservazioni  

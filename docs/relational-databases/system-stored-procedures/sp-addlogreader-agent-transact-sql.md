@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: a50b989afef382a8315c29ea5257ad9b103e124c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b22bb48cd5bc48a3b1812dfd97fc2b56df8ba11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68769219"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757981"
 ---
 # <a name="sp_addlogreader_agent-transact-sql"></a>sp_addlogreader_agent (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Aggiunge un agente di lettura log per un database specificato. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -46,10 +46,10 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_login = ] 'job_login'`Account di accesso per l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] account di Windows utilizzato per l'esecuzione dell'agente. *job_login* è di **tipo nvarchar (257)** e il valore predefinito è null. Questo account di Windows viene sempre utilizzato per le connessioni dell'agente al server di distribuzione.  
+`[ @job_login = ] 'job_login'`Account di accesso per l'account di Windows utilizzato per l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] esecuzione dell'agente. *job_login* è di **tipo nvarchar (257)** e il valore predefinito è null. Questo account di Windows viene sempre utilizzato per le connessioni dell'agente al server di distribuzione.  
   
 > [!NOTE]
->  Per i [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher non è necessario che sia lo stesso account di accesso specificato in [sp_adddistpublisher &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
+>  Per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i Publisher non è necessario che sia lo stesso account di accesso specificato in [Sp_adddistpublisher &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
   
 `[ @job_password = ] 'job_password'`Password per l'account di Windows utilizzato per l'esecuzione dell'agente. *job_password* è di **tipo sysname**e il valore predefinito è null.  
   
@@ -58,7 +58,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
   
 `[ @job_name = ] 'job_name'`Nome di un processo di Agent esistente. *job_name* è di **tipo sysname**e il valore predefinito è null. Questo parametro viene specificato solo quando l'agente viene avviato con un processo esistente anziché con un nuovo processo creato (impostazione predefinita).  
   
-`[ @publisher_security_mode = ] publisher_security_mode`Modalità di sicurezza utilizzata dall'agente per la connessione al server di pubblicazione. *publisher_security_mode* è di **smallint**e il valore predefinito è **1**. **0** specifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione e **1** specifica l'autenticazione di Windows. Per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher non è necessario specificare un valore pari a **0** .  
+`[ @publisher_security_mode = ] publisher_security_mode`Modalità di sicurezza utilizzata dall'agente per la connessione al server di pubblicazione. *publisher_security_mode* è di **smallint**e il valore predefinito è **1**. **0** specifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione e **1** specifica l'autenticazione di Windows. Per i Publisher non è necessario specificare un valore pari a **0** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 `[ @publisher_login = ] 'publisher_login'`Account di accesso utilizzato per la connessione al server di pubblicazione. *publisher_login* è di **tipo sysname**e il valore predefinito è null. Quando *publisher_security_mode* è **0**, è necessario specificare *publisher_login* . Se *publisher_login* è NULL e *publisher_security_mode* è **1**, verrà usato l'account di Windows specificato in *Job_login* durante la connessione al server di pubblicazione.  
   
@@ -78,7 +78,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ## <a name="remarks"></a>Osservazioni  
  **sp_addlogreader_agent** viene utilizzata nella replica transazionale.  
   
- È necessario eseguire **sp_addlogreader_agent** per aggiungere un agente di lettura log se è stato eseguito l'aggiornamento di un database abilitato per la replica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a questa versione di prima della creazione di una pubblicazione che utilizza il database.  
+ È necessario eseguire **sp_addlogreader_agent** per aggiungere un agente di lettura log se è stato eseguito l'aggiornamento di un database abilitato per la replica a questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prima della creazione di una pubblicazione che utilizza il database.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_addlogreader_agent**.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1bf39a9a1262f30e3c0bbd6fd2ea5892a55540dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ee38ac3c19c9f5d5b36f896c1018a16e98e37cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072674"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758001"
 ---
 # <a name="sp_addlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Crea o aggiorna un mapping tra un account di accesso nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e un account di sicurezza in un server remoto.  
   
@@ -51,10 +51,10 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  Il valore TRUE indica che gli account di accesso utilizzano le proprie credenziali per connettersi a *rmtsrvname*, con gli argomenti *rmtuser* e *rmtpassword* ignorati. FALSE specifica che gli argomenti *rmtuser* e *rmtpassword* vengono usati per connettersi a *rmtsrvname* per il *locallogin*specificato. Se anche *rmtuser* e *rmtpassword* sono impostati su null, per la connessione al server collegato non viene utilizzato alcun account di accesso o password.  
   
  `[ @locallogin = ] 'locallogin'`  
- Account di accesso per il server locale. *locallogin* è di **tipo sysname**e il valore predefinito è null. NULL specifica che questa voce si applica a tutti gli account di accesso locali che si connettono a *rmtsrvname*. Se non è NULL, *locallogin* può essere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un account di accesso di o un account di accesso di Windows. È necessario che l'account di accesso di Windows disponga dell'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ottenuto tramite concessione diretta o in seguito all'appartenenza a un gruppo di Windows che dispone dell'accesso.  
+ Account di accesso per il server locale. *locallogin* è di **tipo sysname**e il valore predefinito è null. NULL specifica che questa voce si applica a tutti gli account di accesso locali che si connettono a *rmtsrvname*. Se non è NULL, *locallogin* può essere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso di o un account di accesso di Windows. È necessario che l'account di accesso di Windows disponga dell'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ottenuto tramite concessione diretta o in seguito all'appartenenza a un gruppo di Windows che dispone dell'accesso.  
   
  `[ @rmtuser = ] 'rmtuser'`  
- Account di accesso remoto utilizzato per connettersi a *rmtsrvname* quando @useself è false. Quando il server remoto è un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che non utilizza l'autenticazione di Windows, *rmtuser* è [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un account di accesso. *rmtuser* è di **tipo sysname**e il valore predefinito è null.  
+ Account di accesso remoto utilizzato per connettersi a *rmtsrvname* quando @useself è false. Quando il server remoto è un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che non utilizza l'autenticazione di Windows, *rmtuser* è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso. *rmtuser* è di **tipo sysname**e il valore predefinito è null.  
   
  `[ @rmtpassword = ] 'rmtpassword'`  
  Password associata a *rmtuser*. *rmtpassword* è di **tipo sysname**e il valore predefinito è null.  
@@ -116,7 +116,7 @@ EXEC sp_addlinkedsrvlogin 'Accounts', 'false', 'Domain\Mary', 'MaryP', 'd89q3w4u
 > [!IMPORTANT]  
 >  In questo esempio non viene utilizzata l'autenticazione di Windows. Le password verranno trasmesse senza essere crittografate. Le password possono essere visibili nelle definizioni delle origini dei dati e negli script salvati su disco, in copie di backup e in file di log. Non utilizzare mai una password di amministratore per questo tipo di connessioni. Per ulteriori informazioni sulla sicurezza specifiche al proprio ambiente, consultare l'amministratore di rete.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo di server collegati &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [sp_addlinkedserver &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_droplinkedsrvlogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   

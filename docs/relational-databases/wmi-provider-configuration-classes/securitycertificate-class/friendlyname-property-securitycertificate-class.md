@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ae3f26f9-141c-47cf-afe4-14f99b6b9567
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c57c6457f22cd54b85b7523a5641ab776ccfd1a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 004743a1992b2862dc55428fca87c152ce914cc7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660152"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757546"
 ---
 # <a name="friendlyname-property-securitycertificate-class"></a>Proprietà FriendlyName (classe SecurityCertificate)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Ottiene o imposta un nome descrittivo alternativo per il certificato di sicurezza.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,7 +36,7 @@ object.FriendlyName [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) che rappresenta un certificato di sicurezza.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  

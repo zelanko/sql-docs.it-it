@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac698d7fa655e47459b9de3af0f5896e038c0c0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee4fec9752a83fdda757b6ac50f5afddcdcb1efa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73657630"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759890"
 ---
 # <a name="clientsettings-class---setdefaults-method"></a>Classe ClientSettings - Metodo SetDefaults
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   Imposta tutti i valori predefiniti per l'istanza del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client con l'opzione per sovrascrivere i dati esistenti.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,7 +36,7 @@ object.SetDefaults(OverwriteAll)
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto **ClientSettings** che rappresenta un'istanza del client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Parametri  

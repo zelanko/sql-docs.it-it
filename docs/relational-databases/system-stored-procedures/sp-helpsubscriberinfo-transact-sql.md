@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fdb8e596405c9e205ec7a8cd907569644f8c9c5c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d843ff86e221a3e007d68f6f6d130f4fceb82f3f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820397"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756657"
 ---
 # <a name="sp_helpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Visualizza informazioni su un Sottoscrittore. Questa stored procedure viene eseguita in qualsiasi database del server di pubblicazione.  
   
@@ -54,9 +54,9 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**type**|**tinyint**|Tipo di Sottoscrittore:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database **1** = origine dati ODBC|  
 |**accesso**|**sysname**|ID dell'account di accesso per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password**|**sysname**|Password per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**commit_batch_size**|**int**|Non supportato.|  
-|**status_batch_size**|**int**|Non supportato.|  
-|**flush_frequency**|**int**|Non supportato.|  
+|**commit_batch_size**|**int**|Non supportata.|  
+|**status_batch_size**|**int**|Non supportata.|  
+|**flush_frequency**|**int**|Non supportata.|  
 |**frequency_type**|**int**|Frequenza di esecuzione dell'agente di distribuzione:<br /><br /> **1** = una volta<br /><br /> **2** = su richiesta<br /><br /> **4** = giornaliero<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativo<br /><br /> **64** = avvio automatico<br /><br /> **128** = ricorrente|  
 |**frequency_interval**|**int**|Valore applicato alla frequenza impostata da *frequency_type*.|  
 |**frequency_relative_interval**|**int**|Data di agente di distribuzione utilizzata quando *frequency_type* è impostato su **32** (mensile relativo):<br /><br /> **1** = prima<br /><br /> **2** = secondo<br /><br /> **4** = terzo<br /><br /> **8** = quarto<br /><br /> **16** = Ultima|  
@@ -67,8 +67,8 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**active_end_time_of_day**|**int**|Ora del giorno in cui viene arrestata la pianificazione dell'agente di distribuzione nel formato HHMMSS.|  
 |**active_start_date**|**int**|Data della prima esecuzione pianificata dell'agente di distribuzione nel formato AAAAMMGG.|  
 |**active_end_date**|**int**|Data in cui viene arrestata la pianificazione dell'agente di distribuzione nel formato AAAAMMGG.|  
-|**retryattempt**|**int**|Non supportato.|  
-|**retrydelay**|**int**|Non supportato.|  
+|**retryattempt**|**int**|Non supportata.|  
+|**retrydelay**|**int**|Non supportata.|  
 |**Descrizione**|**nvarchar(255)**|Descrizione in formato testo del Sottoscrittore.|  
 |**security_mode**|**int**|Modalità di sicurezza implementata:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione 0<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticazione di Windows|  
 |**frequency_type2**|**int**|Frequenza di esecuzione dell'agente di merge:<br /><br /> **1** = una volta<br /><br /> **2** = su richiesta<br /><br /> **4** = giornaliero<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativo<br /><br /> **64** = avvio automatico<br /><br /> **128** = ricorrente|  
@@ -85,7 +85,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_helpsubscriberinfo** viene utilizzata per la replica snapshot, la replica transazionale e la replica di tipo merge.  
   
 ## <a name="permissions"></a>Autorizzazioni  

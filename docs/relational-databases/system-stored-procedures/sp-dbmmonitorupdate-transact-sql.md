@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f847881fa57735a09945d47d446949db3443b3e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5b9c53913cc6f399109da7a84cd8ec7f68957a8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826178"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760145"
 ---
 # <a name="sp_dbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Aggiorna la tabella di stato di Monitoraggio mirroring del database inserendo una nuova riga di tabella per ogni database con mirroring e tronca le righe precedenti al periodo di memorizzazione corrente. Il periodo di memorizzazione predefinito è 7 giorni (168 ore). Quando si aggiorna la tabella, **sp_dbmmonitorupdate** valuta le metriche delle prestazioni.  
   
@@ -47,7 +47,7 @@ sp_dbmmonitorupdate [ database_name ]
  Nome del database per cui aggiornare lo stato di mirroring. Se *database_name* non viene specificato, la stored procedure aggiorna la tabella di stato per ogni database con mirroring nell'istanza del server.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- Nessuno  
+ nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
  nessuno  
@@ -64,7 +64,7 @@ sp_dbmmonitorupdate [ database_name ]
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene aggiornato lo stato di mirroring solo per il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  

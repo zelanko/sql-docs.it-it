@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 97237a0c-d574-4b17-8a94-1a8730b31d98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 214cc8070a7a7a8659ca6d6e9b84bdd18afa9847
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 82b0bf1e251d1a2a8b900845b93001296f814e80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758651"
 ---
 # <a name="mstracer_history-transact-sql"></a>MStracer_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabella **MStracer_history** mantiene un record di tutti i token di traccia ricevuti nel Sottoscrittore. Questa tabella è archiviata nel database di distribuzione e viene utilizzata dalla replica per il monitoraggio delle prestazioni.  
   

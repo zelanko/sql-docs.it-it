@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 42e3cd2c0431a1d23f3d67f7f1e983421b9b1e9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43b89ff4421f7e015ae2320aca94b0c19d5dde52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "72278338"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760262"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce il percorso UNC per un file o una directory in una tabella FileTable.  
   
@@ -45,17 +45,17 @@ ms.locfileid: "72278338"
  *is_full_path*  
  Espressione Integer che specifica se restituire un percorso relativo o assoluto. *is_full_path* possibile avere uno dei valori seguenti:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Restituisce il percorso relativo all'interno della directory a livello di database.<br /><br /> Si tratta del valore predefinito.|  
 |**1**|Restituisce il percorso UNC completo, che inizia con `\\computer_name`.|  
   
  *\@opzione*  
- Espressione Integer che definisce la formattazione del componente server del percorso. l'opzione può avere uno dei valori seguenti: * \@*  
+ Espressione Integer che definisce la formattazione del componente server del percorso. l' * \@ opzione* può avere uno dei valori seguenti:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
-|**0**|Restituisce il nome del server convertito in formato NetBIOS, ad esempio:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Questo è il valore predefinito.|  
+|**0**|Restituisce il nome del server convertito in formato NetBIOS, ad esempio:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Si tratta del valore predefinito.|  
 |**1**|Restituisce il nome del server senza conversione, ad esempio:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
 |**2**|Restituisce il percorso completo del server, ad esempio:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
@@ -101,7 +101,7 @@ SELECT file_stream.GetFileNamespacePath(1, Null) AS FilePath FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilizzare directory e percorsi in FileTable](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

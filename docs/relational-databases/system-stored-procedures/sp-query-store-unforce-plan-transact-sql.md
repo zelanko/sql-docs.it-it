@@ -21,15 +21,15 @@ ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 594f274ab1958f23115c96737b2bd3b1f1dc7d4b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f119ac8f18ae5f9f5b869f237eda27e887e78f15
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826599"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758730"
 ---
 # <a name="sp_query_store_unforce_plan-transact-sql"></a>sp_query_store_unforce_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Consente di forzare un piano precedentemente forzato per una query specifica.  
   
@@ -49,12 +49,12 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione **ALTER** per il database.
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite informazioni sulle query nell'archivio query.  
   
 ```sql  

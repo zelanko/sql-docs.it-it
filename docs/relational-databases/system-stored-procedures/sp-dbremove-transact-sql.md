@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 20941c190dc2de90821e1e03a2dc3268dde20e8d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4aea3e333c2f47b8c2c949f93bf4f1adc773a8df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826130"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760122"
 ---
 # <a name="sp_dbremove-transact-sql"></a>sp_dbremove (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Rimuove un database e tutti i file associati.  
   
@@ -55,7 +55,7 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene rimosso il database `sales` e tutti i file associati.  
   
 ```  

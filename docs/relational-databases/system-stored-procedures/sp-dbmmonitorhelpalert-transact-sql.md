@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f4d6cb60ab7da7caaed5e0e91859f4bb083b191e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 40fe5e8e82d1a4e7b4f2f32d55f27b191d9aee8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826184"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760150"
 ---
 # <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni sulle soglie di avviso su una o tutte le misurazioni delle prestazioni di monitoraggio del mirroring del database.  
  
@@ -60,7 +60,7 @@ sp_dbmmonitorhelpalert database_name
  Per informazioni sugli ID evento corrispondenti agli avvisi, vedere [usare valori di soglia avvisi e avvisi sulle metriche delle prestazioni di mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- Nessuno  
+ nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
  Per ogni avviso restituito, restituisce una riga contenente le colonne seguenti:  
@@ -68,7 +68,7 @@ sp_dbmmonitorhelpalert database_name
 |Colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
 |**alert_id**|**int**|Nella tabella seguente sono elencati i valori **alert_id** per ogni metrica delle prestazioni e l'unità di misura della metrica visualizzata nel set di risultati della **sp_dbmmonitorresults** :|  
-|**soglia**|**int**|Valore soglia per l'avviso. Se quando si aggiorna lo stato di mirroring viene restituito un valore che supera tale soglia, viene immessa una voce nel registro eventi di Windows. Questo valore è espresso in kilobyte, minuti o millisecondi, a seconda dell'avviso. Se la soglia non è impostata, il valore è NULL.<br /><br /> **Nota:** Per visualizzare i valori correnti, eseguire il [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) stored procedure.|  
+|**threshold**|**int**|Valore soglia per l'avviso. Se quando si aggiorna lo stato di mirroring viene restituito un valore che supera tale soglia, viene immessa una voce nel registro eventi di Windows. Questo valore è espresso in kilobyte, minuti o millisecondi, a seconda dell'avviso. Se la soglia non è impostata, il valore è NULL.<br /><br /> **Nota:** Per visualizzare i valori correnti, eseguire il [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) stored procedure.|  
 |**abilitato**|**bit**|0 = L'evento è disabilitato.<br /><br /> 1 = L'evento è abilitato.<br /><br /> **Nota:** Il periodo di memorizzazione è sempre abilitato.|  
   
 |Valore|Misurazione delle prestazioni|Unità|  
@@ -82,7 +82,7 @@ sp_dbmmonitorhelpalert database_name
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituita una riga tramite cui viene indicato se è abilitato un avviso per la metrica delle prestazioni della transazione non inviata meno recente nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4ff80124-6e2e-4d96-a692-57c17b53c55e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 07cc2bfc18ebbb6d2ddafa94bc29b14144f27c01
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1a08c38a074c573bbeda77180399dca1f0267ae1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660703"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759903"
 ---
 # <a name="setstrvalue-method-clientnetworkprotocolproperty-class"></a>Metodo SetStrValue (classe ClientNetworkProtocolProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Imposta il valore string della proprietà corrente a cui fa riferimento il valore della [proprietà PropertyIdx (classe ClientNetworkProtocolProperty)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) .  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,7 +36,7 @@ object.SetStrValue(StrValue)
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  A [classe ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) che rappresenta un attributo del protocollo di rete utilizzato dal client di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Parametri  

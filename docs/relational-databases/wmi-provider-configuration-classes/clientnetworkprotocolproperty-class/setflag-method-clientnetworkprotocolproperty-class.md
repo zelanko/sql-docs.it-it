@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0407520f-2f84-4f68-b2b7-429697286c1b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0f5c4e9c6e153a548b00e4c273936eea018b316b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 609bfb541789bc0a11bf0d9a56f417a65008f361
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660720"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759929"
 ---
 # <a name="setflag-method-clientnetworkprotocolproperty-class"></a>Metodo SetFlag (classe ClientNetworkProtocolProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Imposta il flag della proprietà corrente a cui fa riferimento il valore della [proprietà PropertyIdx (classe ClientNetworkProtocolProperty)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) .  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,7 +36,7 @@ object.SetFlag(BoolValue) [=]
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  A [classe ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) che rappresenta un attributo del protocollo di rete utilizzato dal client di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Parametri  

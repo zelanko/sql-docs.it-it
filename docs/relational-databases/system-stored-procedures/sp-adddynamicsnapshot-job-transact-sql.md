@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 48f94f7fcf823a9ed9acc519e393369e44b45302
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53af39302f88f88633896e54301501ead8ff6f9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771339"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760209"
 ---
 # <a name="sp_adddynamicsnapshot_job-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crea un processo di agente che genera uno snapshot dei dati filtrati per una pubblicazione con filtri di riga con parametri. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione. Questa stored procedure viene utilizzata da un amministratore per creare in modo manuale processi di snapshot dei dati filtrati per Sottoscrittori.  
   
@@ -75,13 +75,13 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Frequenza con cui pianificare il processo di snapshot dei dati filtrati. *frequency_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Singola occorrenza|  
 |**2**|On demand|  
-|**4** (impostazione predefinita)|Giornaliera|  
+|**4** (impostazione predefinita)|Ogni giorno|  
 |**8**|Settimanale|  
-|**16**|Ogni mese|  
+|**16**|Mensile|  
 |**32**|Mensile relativa|  
 |**64**|Avvio automatico|  
 |**128**|Periodica|  
@@ -100,7 +100,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_subday = ] frequency_subday`Specifica le unità per *frequency_subday_interval*. *frequency_subday* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una sola volta|  
 |**2**|Second|  
@@ -111,7 +111,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Occorrenza del processo di snapshot dei dati filtrati in ogni mese. Questo parametro viene usato quando *frequency_type* è impostato su **32** (mensile relativo). *frequency_relative_interval* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1** (impostazione predefinita)|First (Primo)|  
 |**2**|Second|  
@@ -135,7 +135,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identifica il processo di snapshot dei dati filtrati nella tabella di sistema [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) .|  
 |**dynamic_snapshot_jobname**|**sysname**|Nome del processo di snapshot dei dati filtrati.|  
-|**dynamic_snapshot_jobid**|**uniqueidentifier**|Identifica in modo univoco [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il processo di Agent nel server di distribuzione.|  
+|**dynamic_snapshot_jobid**|**uniqueidentifier**|Identifica in modo univoco il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo di Agent nel server di distribuzione.|  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -149,7 +149,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_adddynamicsnapshot_job**.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di uno snapshot per una pubblicazione di tipo merge con filtri con parametri](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
  [Filtri di riga con parametri](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [sp_dropdynamicsnapshot_job &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   

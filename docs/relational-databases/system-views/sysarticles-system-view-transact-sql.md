@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 18f8c9b3-cab7-4e8f-8754-11ac38c3f789
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f0d1f6c1036d946088e2cc1aa91c08f620c3f597
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d947bdcf0e777d96c18551fafae61d3db9a930b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68129543"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759981"
 ---
 # <a name="sysarticles-system-view-transact-sql"></a>sysarticles (vista di sistema) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La vista **sysarticles** espone le proprietà degli articoli. Questa vista è archiviata nel database di distribuzione.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68129543"
 |**filtro**|**int**|ID della stored procedure, utilizzato per il partizionamento orizzontale.|  
 |**filter_clause**|**ntext**|Clausola WHERE dell'articolo, utilizzata per il filtro orizzontale.|  
 |**ins_cmd**|**nvarchar(255)**|Comando da eseguire a seguito di un'istruzione INSERT; in caso contrario il comando viene ricostruito dal log.|  
-|**name**|**sysname**|Nome associato all'articolo, univoco all'interno della pubblicazione.|  
+|**nome**|**sysname**|Nome associato all'articolo, univoco all'interno della pubblicazione.|  
 |**objid**|**int**|ID dell'oggetto di tabella pubblicato.|  
 |**pubid**|**int**|ID della pubblicazione a cui appartiene l'articolo.|  
 |**pre_creation_cmd**|**tinyint**|Comando preliminare per l'istruzione DROP TABLE, DELETE TABLE o TRUNCATE:<br /><br /> **0** = nessuna.<br /><br /> **1** = Elimina.<br /><br /> **2** = Delete.<br /><br /> **3** = troncamento.|  

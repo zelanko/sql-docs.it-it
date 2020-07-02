@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 053a53cff621cedc29e8583ebca354c9c067774a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3451e3dc1998de6357d7320a49f4d1bae721f0fd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659071"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759821"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>Proprietà NumberOfFlags (classe SInstance)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Ottiene il numero di flag per l'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  Ottiene il numero di flag per l'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,11 +36,11 @@ object.NumberOfFlags [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe SInstance](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) che rappresenta un'istanza del server.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
- Valore **UInt32** che specifica il numero di flag per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Valore **UInt32** che specifica il numero di flag per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="remarks"></a>Osservazioni  
   

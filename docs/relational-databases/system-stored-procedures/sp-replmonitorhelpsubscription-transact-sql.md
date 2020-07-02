@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c3eaaeb7715086bf5b411a016239bb24d147fcda
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 70b85170ec4b7cf56028b2cea6d643d5e72dfd0f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817347"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760032"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Restituisce informazioni sullo stato corrente delle sottoscrizioni appartenenti a una o più pubblicazioni nel server di pubblicazione e restituisce una riga per ogni sottoscrizione restituita. Questa stored procedure, utilizzata per il monitoraggio della replica, viene eseguita nel database di distribuzione del server di distribuzione.  
   

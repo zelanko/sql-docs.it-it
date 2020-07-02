@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4bca86b00ca5b2d84cc1c737ecf9d253a0451ea9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 084063f7209692bdf3ffd124b8e2b73194068686
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68126455"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760193"
 ---
 # <a name="sp_changedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Modifica il proprietario del database corrente.  
   
@@ -43,11 +43,11 @@ sp_changedbowner [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @loginame= ] '*login*'  
- ID di accesso del nuovo proprietario del database corrente. *login* è di **tipo sysname**e non prevede alcun valore predefinito. l' *account di accesso* deve essere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un account di accesso o un utente di Windows già esistente. l' *account di accesso* non può diventare il proprietario del database corrente se dispone già dell'accesso al database tramite un account di sicurezza utente esistente all'interno del database. Per evitare questa situazione, rimuovere l'utente dal database corrente.  
+ [ @loginame =]'*login*'  
+ ID di accesso del nuovo proprietario del database corrente. *login* è di **tipo sysname**e non prevede alcun valore predefinito. l' *account di accesso* deve essere un account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso o un utente di Windows già esistente. l' *account di accesso* non può diventare il proprietario del database corrente se dispone già dell'accesso al database tramite un account di sicurezza utente esistente all'interno del database. Per evitare questa situazione, rimuovere l'utente dal database corrente.  
   
- [ @map= ] *remap_alias_flag*  
- Il parametro *remap_alias_flag* è deprecato perché gli alias di accesso sono stati rimossi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]da. L'uso del parametro *remap_alias_flag* non genera un errore, ma non ha alcun effetto.  
+ [ @map =] *remap_alias_flag*  
+ Il parametro *remap_alias_flag* è deprecato perché gli alias di accesso sono stati rimossi da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'uso del parametro *remap_alias_flag* non genera un errore, ma non ha alcun effetto.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fc35a4c163642f711810f49a816e6c553855b6d9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a26ca71a9db5d85f79787f19563e87ee7e49b78d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826152"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760138"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce le righe di stato per un database monitorato dalla tabella di stato in cui è archiviata la cronologia di Monitoraggio mirroring del database e consente di scegliere in anticipo se lo stato della procedura verrà aggiornato.  
   
@@ -76,7 +76,7 @@ sp_dbmmonitorresults database_name
  1 = aggiorna lo stato del database chiamando **sp_dbmmonitorupdate** prima di calcolare i risultati. Tuttavia, se la tabella dello stato è stata aggiornata entro i 15 secondi precedenti o se l'utente non è un membro del ruolo predefinito del server **sysadmin** , **sp_dbmmonitorresults** viene eseguito senza aggiornare lo stato.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- Nessuno  
+ nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
  Restituisce il numero richiesto di righe dello stato della cronologia per il database specificato. Ogni riga contiene le informazioni seguenti:  
@@ -99,7 +99,7 @@ sp_dbmmonitorresults database_name
 |**time_behind**|**datetime**|Ora approssimativa dell'orologio di sistema del database principale rispetto al quale è aggiornato il database mirror. Questo valore è significativo solo nell'istanza del server principale.|  
 |**local_time**|**datetime**|Ora dell'orologio di sistema nell'istanza locale del server al momento dell'aggiornamento della riga.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_dbmmonitorresults** possono essere eseguite solo nel contesto del database **msdb** .  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -108,7 +108,7 @@ sp_dbmmonitorresults database_name
 > [!NOTE]  
 >  La prima volta che si esegue **sp_dbmmonitorupdate** , viene creato il ruolo predefinito del database **dbm_monitor** nel database **msdb** . I membri del ruolo predefinito del server **sysadmin** possono aggiungere qualsiasi utente al ruolo predefinito del database **dbm_monitor** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite le righe registrate nelle due ore precedenti senza aggiornare lo stato del database.  
   
 ```  

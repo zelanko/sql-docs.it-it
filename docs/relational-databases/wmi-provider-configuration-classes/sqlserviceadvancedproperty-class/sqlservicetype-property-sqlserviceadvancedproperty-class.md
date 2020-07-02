@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 20f1663a-9a14-4f14-8c1b-8aa133e272c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 59c42bdb98d5ed19ea2d415a85e9d2ccb4aeb8b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b604f9e653f114879979ea3ad6546a201d090d38
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658961"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759807"
 ---
 # <a name="sqlservicetype-property-sqlserviceadvancedproperty-class"></a>Proprietà SqlServiceType (classe SqlServiceAdvancedProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Ottiene il tipo del servizio gestito associato alla proprietà avanzata.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,7 +36,7 @@ object.SetBoolValue(NumValue)
 ```  
   
 ## <a name="parts"></a>Parti  
- *oggetto*  
+ *object*  
  Oggetto della [classe SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) che rappresenta una proprietà avanzata.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  

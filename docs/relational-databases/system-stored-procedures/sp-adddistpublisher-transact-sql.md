@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2f341a881ca33c66121d6b87ee30d437c621f973
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: ba76aefe1b3b4f18a596c25d136c4ec6914ce5a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627153"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760223"
 ---
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Configura un server di pubblicazione per l'utilizzo del database di distribuzione specificato. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione. Si noti che è necessario eseguire le stored procedure [sp_adddistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) e [sp_adddistributiondb &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) prima di utilizzare questa stored procedure.  
   
@@ -100,7 +100,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_adddistpublisher** viene utilizzata per la replica snapshot, la replica transazionale e la replica di tipo merge.  
   
 ## <a name="example"></a>Esempio  

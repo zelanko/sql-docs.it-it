@@ -19,20 +19,20 @@ helpviewer_keywords:
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5a5aba02a9aaead76e7c9c3340de4f568160b307
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5841cdb3f57c0c4b6e33737d8c08b3ff0437e800
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74119392"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756735"
 ---
 # <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler (API Stored procedure estesa)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
- Chiama il gestore dei messaggi dell'API Stored procedure estesa installato. Questa funzione viene in genere utilizzata per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chiamare da un stored procedure esteso per registrare un errore (definito dalla stored procedure estesa) nel file [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di log degli errori o [!INCLUDE[msCoName](../../includes/msconame-md.md)] nel registro applicazioni di Windows.  
+ Chiama il gestore dei messaggi dell'API Stored procedure estesa installato. Questa funzione viene in genere utilizzata per chiamare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un stored procedure esteso per registrare un errore (definito dalla stored procedure estesa) nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file di log degli errori o nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro applicazioni di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -96,7 +96,7 @@ oserrtextlen
  *oserrtextlen*  
  Lunghezza della stringa dell'errore del sistema operativo *oserrtext*.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SUCCEED o FAIL.  
   
 ## <a name="remarks"></a>Osservazioni  
