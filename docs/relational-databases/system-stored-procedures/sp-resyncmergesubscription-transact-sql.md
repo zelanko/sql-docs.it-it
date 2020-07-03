@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eb9512bcf60d7a82d19cb383a87618c7d4c30393
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 48dac5345df6d9e963f3601741aa93a68e2dfa3f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767478"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899220"
 ---
 # <a name="sp_resyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Risincronizza una sottoscrizione di tipo merge in base a uno stato di convalida noto specificato. In questo modo è possibile forzare la convergenza oppure sincronizzare il database di sottoscrizione fino a un momento specifico, ad esempio fino all'ultima convalida riuscita oppure fino a una data specificata. Quando si risincronizza una sottoscrizione in base a questa modalità, lo snapshot non viene riapplicato. Questa stored procedure non viene utilizzata per sottoscrizioni di replica snapshot o transazionali. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione o nel database di sottoscrizione del Sottoscrittore.  
   
@@ -55,7 +55,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
   
 `[ @resync_type = ] resync_type`Definisce quando deve iniziare la risincronizzazione. *resync_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|La sincronizzazione ha inizio dopo lo snapshot iniziale. Questa opzione comporta il maggior utilizzo di risorse, in quanto tutte le modifiche apportate dopo lo snapshot iniziale vengono riapplicate nel Sottoscrittore.|  
 |**1**|La sincronizzazione ha inizio dopo l'ultima convalida riuscita. Tutte le generazioni nuove o incomplete eseguite dopo l'ultima convalida riuscita vengono riapplicate nel Sottoscrittore.|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4d5cf1bf-09a7-4ee0-9dbb-5c584750fc67
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c56c8c2ca36eb0f1622f7d616d5d6eb93bdb600d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4282a2f5ac1e312eac7c60df0397e684956fe448
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787199"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897108"
 ---
 # <a name="security-catalog-views-transact-sql"></a>Viste del catalogo relative alla sicurezza (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Le informazioni sulla sicurezza vengono esposte nelle viste del catalogo ottimizzate a livello di prestazioni e utilità. Se possibile, utilizzare le viste del catalogo seguenti per accedere ai metadati del catalogo.  
   

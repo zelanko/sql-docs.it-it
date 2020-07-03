@@ -18,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: acb5726d9309a93e389e22a57d4be54cf03dbe24
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 982ebf62124a392c98ea2357e112cdb8bb56d45b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830423"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898669"
 ---
 # <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Restituisce una riga per ogni controllo del server che indica lo stato corrente del controllo. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|ID del controllo. Esegue il mapping al campo **Audit_ID** nella vista del catalogo **sys. Audits** .|  
-|**name**|**sysname**|Nome del controllo. Uguale al campo **Name** nella vista del catalogo **sys. server_audits** .|  
+|**nome**|**sysname**|Nome del controllo. Uguale al campo **Name** nella vista del catalogo **sys. server_audits** .|  
 |**Stato**|**smallint**|Stato numerico del controllo del server:<br /><br /> 0 = non avviata<br /><br /> 1 =<br />        Avviato<br /><br /> 2 =<br />      Errore di runtime<br /><br /> 3 = creazione destinazione non riuscita<br /><br /> 4 = chiusura in corso|  
 |**status_desc**|**nvarchar(256)**|Stringa che visualizza lo stato del controllo del server:<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Timestamp in UTC dell'ultima modifica dello stato per il controllo.|  

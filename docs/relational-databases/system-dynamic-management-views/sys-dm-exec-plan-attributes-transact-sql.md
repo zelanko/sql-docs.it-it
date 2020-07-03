@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ffabc2f8bb48b006ec1224a3ae81ac49d6c21f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9b616e6186e9d5e19f353df1053d479e0d0afdd6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734792"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898892"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per ogni attributo del piano specificato dall'handle di piano. È possibile utilizzare questa funzione con valori di tabella per recuperare informazioni dettagliate su un particolare piano, come i valori di chiave nella cache o il numero corrente di esecuzioni simultanee del piano.  
   
@@ -91,7 +91,7 @@ Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l
 ### <a name="evaluating-set-options"></a>Valutazione delle opzioni SET  
  Per convertire il valore restituito in **set_options** alle opzioni con cui è stato compilato il piano, sottrarre i valori dal valore **set_options** , iniziando con il valore massimo possibile, fino a quando non si raggiunge 0. Ogni valore sottratto corrisponde a un'opzione utilizzata nel piano di query. Se, ad esempio, il valore in **set_options** è 251, le opzioni con cui è stato compilato il piano sono ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS (32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), piano parallelo (2) e ANSI_PADDING (1).  
   
-|Opzione|Valore|  
+|Opzione|valore|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |Parallel Plan|2|  
@@ -119,7 +119,7 @@ Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l
 ### <a name="evaluating-cursor-options"></a>Valutazione delle opzioni di cursore  
  Per convertire il valore restituito in **required_cursor_options** e **acceptable_cursor_options** alle opzioni con cui è stato compilato il piano, sottrarre i valori dal valore della colonna, iniziando con il valore massimo possibile, fino a quando non si raggiunge 0. Ogni valore sottratto corrisponde a un'opzione di cursore utilizzata nel piano di query.  
   
-|Opzione|Valore|  
+|Opzione|valore|  
 |------------|-----------|  
 |nessuno|0|  
 |INSENSITIVE|1|  

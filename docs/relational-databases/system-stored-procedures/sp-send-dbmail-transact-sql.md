@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42dbd7a5bf6e1bc7b705bcf017987da959faa114
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 63b7029c69fff73615d34bd723b97290b2557afb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827525"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899207"
 ---
 # <a name="sp_send_dbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Invia un messaggio di posta elettronica ai destinatari specificati. Il messaggio può includere il set dei risultati di una query, file allegati o entrambi. Quando la posta elettronica viene inserita correttamente nella coda di Posta elettronica database, **sp_send_dbmail** restituisce la **mailitem_id** del messaggio. Questo stored procedure si trova nel database **msdb** .  
   
@@ -161,7 +161,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 ## <a name="result-sets"></a>Set di risultati  
  In caso di esito positivo, viene restituito il messaggio "Posta elettronica accodata".  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Prima di utilizzare, è necessario abilitare Posta elettronica database utilizzando la configurazione guidata Posta elettronica database o **sp_configure**.  
   
  **sysmail_stop_sp** interrompe posta elettronica database arrestando gli oggetti Service Broker utilizzati dal programma esterno. **sp_send_dbmail** accetta comunque la posta quando posta elettronica database viene interrotto utilizzando **sysmail_stop_sp**. Per avviare Posta elettronica database, utilizzare **sysmail_start_sp**.  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 976109aa0ef09575f818ff6daf82e742626dede7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c3c414507b0dfe58cc4b13bc18c992e3a46bea9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756648"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899417"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Imposta le informazioni di configurazione e sicurezza utilizzate dai trigger di sincronizzazione dei server di sottoscrizione ad aggiornamento immediato durante la connessione al server di pubblicazione. Questa stored procedure viene eseguita nel database di sottoscrizione del Sottoscrittore.  
   
@@ -57,7 +57,7 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 `[ @security_mode = ] security_mode`Modalità di sicurezza utilizzata dal Sottoscrittore per la connessione a un server di pubblicazione remoto per l'aggiornamento immediato. *security_mode* è di **tipo int**. i possibili valori sono i seguenti. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Usa l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione di con l'account di accesso specificato in questo stored procedure come *account di accesso* e *password*.<br /><br /> Nota: nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa opzione è stata usata per specificare una chiamata di procedura remota (RPC) dinamica.|  
 |**1**|Utilizza il contesto di sicurezza (autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o autenticazione di Windows) dell'utente che esegue la modifica nel Sottoscrittore.<br /><br /> Nota: questo account deve esistere anche nel server di pubblicazione con privilegi sufficienti. Se si utilizza l'autenticazione di Windows è necessario che sia supportata la delega degli account di sicurezza.|  

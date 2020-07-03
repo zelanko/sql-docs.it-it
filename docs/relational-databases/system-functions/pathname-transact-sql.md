@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d9aaa6550c34518c0c153dfa91cf3a5e8b8c0be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 348069dcab86747bccd179f85fd343e5c9d2c47f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662882"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898450"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce il percorso di un oggetto binario di grandi dimensioni (BLOB) FILESTREAM. L'API OpenSqlFilestream usa questo percorso per restituire un handle che un'applicazione può usare per lavorare con i dati BLOB usando le API Win32. PathName è un valore di sola lettura.  
   
@@ -47,7 +47,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *\@opzione*  
  [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) integer che definisce il modo in cui deve essere formattato il componente server del percorso. l' * \@ opzione* può essere uno dei valori seguenti. Il valore predefinito è 0.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |0|Restituisce il nome del server convertito in formato BIOS, ad esempio `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|Restituisce il nome del server senza conversione, ad esempio `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -60,7 +60,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Quando il database appartiene a un gruppo di disponibilità Always On, il valore di *use_replica_computer_name* ha l'effetto seguente sull'output della funzione **pathname** :  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |Non specificato.|La funzione restituisce il nome di rete virtuale nel percorso.|  
 |0|La funzione restituisce il nome di rete virtuale nel percorso.|  

@@ -17,22 +17,22 @@ ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a7d7e7dd9bf7e6d5ad6dfa5776d76892f96ad05
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42f1adda80e8b47e2cea7faebdc374df29d29a39
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148664"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895975"
 ---
 # <a name="files-and-version-numbers"></a>File e numeri di versione
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   Tutti i componenti SMO (SQL Server Management Object) necessari sono inclusi nel pacchetto NuGet Microsoft. SqlServer. SqlManagementObjects. SMO viene implementato in diversi assembly gestiti. È possibile sviluppare applicazioni SMO in un client o in un server.  
 
 > > [!Important]
 > > La versione del file degli assembly SMO viene visualizzata come principale. **0**. Build. Revision. La versione dell'assembly incorporato è però principale. **100**. Build. Revision. Questa operazione viene eseguita per garantire che la versione di SMO utilizzata in ogni applicazione sia separata, in modo che gli aggiornamenti a uno non influiscano su altri.
 > > 
-> > Per questo motivo, è consigliabile **non** installare queste versioni degli assembly nella global assembly cache (GAC). Questa operazione potrebbe causare l'interruzioni di altre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applicazioni, ad esempio Management Studio. 
+> > Per questo motivo, è consigliabile **non** installare queste versioni degli assembly nella global assembly cache (GAC). Questa operazione potrebbe causare l'interruzioni di altre applicazioni, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio. 
   
 |File|Descrizione|  
 |-----------|-----------------|  

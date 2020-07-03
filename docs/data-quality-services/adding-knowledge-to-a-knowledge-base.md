@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: c9f50c8c2518aaa863a14bad4a56b24693b362b7
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 69785485b74333e5ebe3aa37ce6a23abf89cf612
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812236"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896218"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Aggiunta di informazioni a una Knowledge Base
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   In questo argomento vengono descritte le modalità mediante cui è possibile aggiungere informazioni a una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Prima che sia possibile eseguire operazioni relative alla qualità dei dati, è necessario disporre di informazioni in relazione ai dati stessi. Tali informazioni si acquisiscono compilando e gestendo una Data Quality Knowledge Base e aggiungendovi informazioni correlate a un tipo specifico di origine dati. La Knowledge Base è un repository di informazioni sui dati che consente di comprenderli e mantenerne l'integrità.  
   

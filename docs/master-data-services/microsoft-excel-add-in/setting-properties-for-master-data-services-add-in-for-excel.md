@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6f3c303697ec3233935ec5c7743dcce0f18bfa01
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 21166512c691f8d50d19816afc7a0247a6c09782
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727991"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895270"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Impostazione delle proprietà per il componente aggiuntivo Master Data Services per Excel
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Le impostazioni del componente aggiuntivo Master Data Services per Excel determinano il modo in cui i dati vengono caricati da MDS nel componente aggiuntivo di Excel e in che modo i dati vengono pubblicati dal componente aggiuntivo per Excel in MDS.  
   

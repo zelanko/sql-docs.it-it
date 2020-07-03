@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 13713bb4f3c5cc3f68903ffd1a22480e2922de37
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1732e5817ed3c92abdd54942aabe2e2ad2bc0266
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85664884"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895248"
 ---
 # <a name="sysserver_audit_specifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene informazioni sulle specifiche del controllo del server in un controllo di SQL Server in un'istanza del server. Per altre informazioni su SQL Server Audit, vedere [SQL Server Audit &#40;motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   

@@ -1,6 +1,6 @@
 ---
 title: Aggiornare lo schema dei database DQS dopo l'installazione di SQL Server aggiornamento
-description: Informazioni su come aggiornare l'istanza di Data Quality Services (DQS) utilizzando DQSInstaller. exe dopo che SQL Server è stato aggiornato da una patch, un hotfix o un aggiornamento cumulativo.
+description: Informazioni su come aggiornare l'istanza di Data Quality Services (DQS) utilizzando DQSInstaller.exe dopo che SQL Server è stato aggiornato da una patch, un hotfix o un aggiornamento cumulativo.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: db5009ef7f5c9ff2a57022d30b2eb9f009fb6ab8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2491a46bb4c0e07c61b5c827a7b8f666d09d94c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75558064"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897807"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>Aggiornare lo schema dei database DQS dopo l'installazione di SQL Server aggiornamento
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dopo aver installato un aggiornamento di SQL Server (patch, hotfix o aggiornamento cumulativo) in un'istanza di DQS configurata precedentemente, potrebbe essere necessario aggiornare lo schema dei database DQS eseguendo il file DQSInstaller.exe con il parametro della riga di comando **upgrade** . In caso contrario, potrebbe essere visualizzato l'errore seguente durante il tentativo di connessione al server Data Quality utilizzando il client Data Quality:  
   

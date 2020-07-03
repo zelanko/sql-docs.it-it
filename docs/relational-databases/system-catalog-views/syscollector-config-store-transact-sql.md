@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3484bef3a7af5048e5023957a5b1aaa7355fafc8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ccdb22362e8e52fe58aca8b7430d5329400a4908
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734806"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896744"
 ---
 # <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce le proprietà che si applicano all'intero agente di raccolta dati, a differenza di un'istanza di un set di raccolta. Ogni riga in questa vista descrive una specifica proprietà dell'agente di raccolta dati, ad esempio il nome del data warehouse di gestione e il nome dell'istanza in cui si trova il data warehouse di gestione.  
   
-|Nome colonna|Tipo di dati|Descrizione|  
+|Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |parameter_name|**nvarchar(128)**|Nome della proprietà. Non ammette i valori Null.|  
 |parameter_value|**sql_variant**|Valore effettivo della proprietà. Ammette i valori Null.|  

@@ -1,6 +1,6 @@
 ---
-title: Esportare e importare le Knowledge base di DQS utilizzando DQSInstaller. exe
-description: Informazioni su come utilizzare DQSInstaller. exe per esportare e importare le Knowledge base di DQS per SQL Server Data Quality Services (DQS).
+title: Esportare e importare le Knowledge base di DQS utilizzando DQSInstaller.exe
+description: Viene illustrato come utilizzare il DQSInstaller.exe per esportare e importare le Knowledge base di DQS per SQL Server Data Quality Services (DQS).
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ae87b9daebdef6b81c4d96abc253820cf7cb8228
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81308fb45447a87a349e0fbbd50c56f2f6237228
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75558144"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895190"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Esportare e importare le Knowledge Base di DQS con DQSInstaller.exe
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Per un'installazione esistente di DQS, è possibile esportare contemporaneamente tutte le Knowledge Base presenti in [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] in un file di backup DQS (con estensione dqsb) e quindi utilizzare successivamente il file con estensione dqsb per importare contemporaneamente tutte le Knowledge Base presenti in un'istanza diversa di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] eseguendo il file DQSInstaller.exe dal prompt dei comandi. Per ulteriori informazioni sull'esecuzione di DQSInstaller.exe dal prompt dei comandi, vedere [Eseguire DQSInstaller.exe dal prompt dei comandi](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) in [Eseguire DQSInstaller.exe per completare l'installazione del server DQS](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
@@ -59,7 +59,7 @@ dqsinstaller.exe -importkbs c:\DQSBackup.dqsb
  Se vi sono Knowledge Base in [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] con lo stesso nome di quelle che si stanno importando, i nomi delle Knowledge Base importate saranno accodati con un carattere di sottolineatura (_) seguito da un valore intero che inizia con 1. Ad esempio, se il dominio "CompanyName" è duplicato, il nome di dominio importato sarà "CompanyName_1".  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eseguire DQSInstaller. exe per completare l'installazione del server Data Quality](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
+ [Eseguire DQSInstaller.exe per completare l'installazione del server Data Quality](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Installare Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Esportare una Knowledge base in un file DQS](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   
  [Importazione di una Knowledge Base da un file DQS](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  

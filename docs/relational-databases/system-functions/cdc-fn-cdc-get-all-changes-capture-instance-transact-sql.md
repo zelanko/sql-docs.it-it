@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e05ef7753ae6375382bfd2bd6e199b6cabffd63
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4946bff122f64da126291bb797effe60c361663f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648000"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898541"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per ciascuna modifica applicata alla tabella di origine all'interno dell'intervallo del numero di sequenza del file di log (LSN) specificato. Se a una riga di origine vengono applicate più modifiche durante l'intervallo, ogni modifica è riportata nel set di risultati restituito. Oltre alla restituzione dei dati delle modifiche, quattro colonne di metadati forniscono le informazioni necessarie per applicare le modifiche a un'altra origine dati. Al contenuto delle colonne dei metadati e alle righe restituite nel set di risultati vengono applicate le opzioni di filtro di riga. Quando è specificata l'opzione di filtro di riga 'all', per l'identificazione di ogni modifica è disponibile esattamente una riga. Quando è specificata l'opzione 'all update old', le operazioni di aggiornamento sono rappresentate su due righe: una contiene i valori delle colonne acquisite prima dell'aggiornamento e l'altra contiene i valori delle colonne acquisite dopo l'aggiornamento.  
   

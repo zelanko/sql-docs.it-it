@@ -19,16 +19,16 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 0552dbdce5da12db4fedadecb5a4bd7e9c55c278
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 171d63913c0d46b1d344082a5784c7507111a39b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738655"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898847"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce il risultato della suddivisione in token finale dopo aver applicato una determinata combinazione di [Word breaker](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md), [Thesaurus](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)ed elementi di parole non [significative](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) all'input di una stringa di query. Il risultato della tokenizzazione è equivalente all'output del motore di ricerca full-text per la stringa di query specificata.  
   
@@ -55,7 +55,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  *accent_sensitivity*  
  Valore booleano che controlla se la ricerca full-text supporta o meno la distinzione relativa ai segni diacritici. *accent_sensitivity* è di **bit**, con uno dei valori seguenti:  
   
-|Valore|Distinzione tra caratteri accentati...|  
+|valore|Distinzione tra caratteri accentati...|  
 |-----------|----------------------------|  
 |0|Non attiva<br /><br /> Parole del tipo "café" e "cafe" vengono considerate in modo identico.|  
 |1|Sensibili<br /><br /> Parole del tipo "café" e "cafe" vengono considerate in modo diverso.|  

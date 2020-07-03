@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2a78a6d30b9e79364178401f4d9d2ef52aceace
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c6a777b64fbebc9a97762949ccbd895d052c6260
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728245"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898400"
 ---
 # <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce il valore della colonna start_lsn per l'istanza di acquisizione specificata dalla tabella di sistema [CDC. change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) . Questo valore rappresenta l'endpoint inferiore dell'intervallo di validità per l'istanza di acquisizione.  
   

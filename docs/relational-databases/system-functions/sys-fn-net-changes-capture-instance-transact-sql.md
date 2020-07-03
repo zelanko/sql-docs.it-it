@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: add3f81793b2dc21c08ca601bb1c48cc7d4588be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f000c8d2dc4f0f2adc95814ba9ef687602403dc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783078"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898321"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Wrapper per le funzioni di query di **net changes** . Gli script necessari per creare queste funzioni vengono generati dalla stored procedure sys.sp_cdc_generate_wrapper_function.  
   
@@ -93,7 +93,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>Tabella restituita  
   
-|Nome colonna|Tipo di colonna|Descrizione|  
+|Nome colonna|Tipo di colonna|Description|  
 |-----------------|-----------------|-----------------|  
 |\<columns from @column_list>|**varia**|Le colonne identificate nell'argomento **column_list** per la sp_cdc_generate_wrapper_function quando viene chiamata per generare lo script per creare il wrapper. Se *column_list* è null, tutte le colonne di origine rilevate verranno visualizzate nel set di risultati.|  
 |__CDC_OPERATION|**nvarchar(2)**|Codice operativo che indica che l'operazione è necessaria per applicare la riga all'ambiente di destinazione. L'operazione può variare in base al valore dell'argomento *row_filter_option* fornito nella chiamata seguente:<br /><br /> *row_filter_option* =' all',' all with mask '<br /><br /> 'D' - operazione di eliminazione<br /><br /> 'I' - operazione di inserimento<br /><br /> 'UN' - operazione di aggiornamento<br /><br /> *row_filter_option* =' all with merge '<br /><br /> 'D' - operazione di eliminazione<br /><br /> 'M' - operazione di inserimento oppure di aggiornamento|  

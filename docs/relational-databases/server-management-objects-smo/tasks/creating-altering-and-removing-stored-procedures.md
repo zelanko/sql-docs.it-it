@@ -13,19 +13,19 @@ ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff489b218f783201d5ea3bd0a0165951f51ff4e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d62d3e7314f2ea9a7cbc5e2412a010b98c99fb89
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095499"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896360"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>Creazione, modifica e rimozione di stored procedure
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   In SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects) le stored procedure sono rappresentate dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  
   
- La creazione di un oggetto <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> in SMO richiede l'impostazione della proprietà <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> sullo script [!INCLUDE[tsql](../../../includes/tsql-md.md)] che definisce la stored procedure. I parametri richiedono \@ il prefisso e devono essere creati singolarmente <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> utilizzando oggetti e aggiungendo alla <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> raccolta dell' <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> oggetto.  
+ La creazione di un oggetto <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> in SMO richiede l'impostazione della proprietà <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> sullo script [!INCLUDE[tsql](../../../includes/tsql-md.md)] che definisce la stored procedure. I parametri richiedono il \@ prefisso e devono essere creati singolarmente utilizzando <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> oggetti e aggiungendo alla <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> raccolta dell' <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> oggetto.  
   
 ## <a name="example"></a>Esempio  
  Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual C&#35; SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

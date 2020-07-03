@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3698431316b86a40e70e144bfac23d81678db45c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9bb57e2d01c4942955e838cf358444636bf7aedb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783088"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898343"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce un elenco delle autorizzazioni valide concesse all'entità per un'entità a protezione diretta. Una funzione correlata è [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md).  
   
@@ -51,7 +51,7 @@ fn_my_permissions ( securable , 'securable_class' )
 ## <a name="columns-returned"></a>Colonne restituite  
  Nella tabella seguente sono elencate le colonne restituite da **fn_my_permissions** . Ogni riga restituita descrive un'autorizzazione assegnata al contesto di sicurezza corrente per l'entità a protezione diretta. Restituisce NULL se la query non viene eseguita correttamente.  
   
-|Nome colonna|Type|Descrizione|  
+|Nome colonna|Type|Description|  
 |-----------------|----------|-----------------|  
 |nome_entità|**sysname**|Nome dell'entità a sicurezza diretta per la quale sono state concesse le autorizzazioni valide elencate.|  
 |subentity_name|**sysname**|Nome della colonna nel caso in cui l'entità a sicurezza diretta contenga colonne. In caso contrario, NULL.|  

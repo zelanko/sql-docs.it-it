@@ -10,16 +10,16 @@ ms.topic: reference
 ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d0313c5dd8fcb1dd8dac5bc436bdf024d044dd5a
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: 50cfe08b70fbc1c1b8d8a3f092234d8b712a2deb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83730520"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897408"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>Creare le classi proxy del servizio Web Gestione dati master
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Il servizio Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] consente di utilizzare a livello di codice le caratteristiche di [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] da qualsiasi computer che può accedere al sito Web di [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Prima di iniziare a scrivere il codice per accedere al servizio Web, è necessario generare le classi proxy. La classe proxy principale utilizzata per eseguire le operazioni del servizio Web è la classe <xref:Microsoft.MasterDataServices.ServiceClient>, che implementa l'interfaccia <xref:Microsoft.MasterDataServices.IService>.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "83730520"
   
 1.  Aprire il file Web.config di [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] in un editor di testo. Il file Web.config si trova nella cartella WebApplication del percorso di installazione di [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
-2.  Trovare la sezione **mdsWsHttpBehavior** in **\<serviceBehaviors>**. Per l'elemento ** \<>serviceMetadata** , impostare **HttpGetEnabled** su **true**.  
+2.  Trovare la sezione **mdsWsHttpBehavior** in **\<serviceBehaviors>** . Per l' **\<serviceMetadata>** elemento, impostare **HttpGetEnabled** su **true**.  
   
     > [!NOTE]  
     >  Se si desidera abilitare i servizi Web tramite Transport Layer Security (TLS), precedentemente noti come Secure Sockets Layer (SSL), impostare **HttpsGetEnabled** su **true** nella sezione **mdsWsHttpBehavior** del file web.config. È anche necessario modificare **mdsWsHTTPBinding** in modo che sia configurato anche per TLS e impostare come commento la sezione non TLS.  
