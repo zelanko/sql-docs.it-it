@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d7ffa9df-bf1d-41b8-837e-b762c17c2764
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9f7fbc3827a7859cfbd4b38d90860e43560d8ad5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fde8c78cb37b84ae897e2b12bba6049da8ddc4fa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753904"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889957"
 ---
 # <a name="msdistributiondbs-transact-sql"></a>MSdistributiondbs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La tabella **MSdistributiondbs** contiene una riga per ogni database di distribuzione definito nel server di distribuzione locale. Questa tabella è archiviata nel database **msdb** .  
   

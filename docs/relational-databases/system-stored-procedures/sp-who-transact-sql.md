@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b46db697c7f8d6a7f402d98093323f47ece47d69
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bfcf04c0f6dd7455bac9beaa65b29eb1b2a8f9cc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722954"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891208"
 ---
 # <a name="sp_who-transact-sql"></a>sp_who (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Fornisce informazioni sugli utenti, le sessioni e i processi correnti in un'istanza del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . È possibile filtrare tali informazioni in modo da ottenere solo i processi che non sono inattivi, che appartengono a un utente specifico o che sono associati a una determinata sessione.  
   

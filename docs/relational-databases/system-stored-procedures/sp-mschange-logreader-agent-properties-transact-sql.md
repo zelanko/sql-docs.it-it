@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 925df9d3-a041-4046-8e17-c47f40edb86d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 852346183f56901e1cee32e3bb8d21d0ea24beb8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 76a3f657600ed2f8f545dd95c1ba85fa682d51c4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786143"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891559"
 ---
 # <a name="sp_mschange_logreader_agent_properties-transact-sql"></a>sp_MSchange_logreader_agent_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Modifica le proprietà di un processo di agente di lettura log eseguito in un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] server di distribuzione o versione successiva. Questa stored procedure viene utilizzata per modificare le proprietà quando il server di pubblicazione viene eseguito in un'istanza di [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. La stored procedure viene eseguita nel database di distribuzione del server di distribuzione.  
   
@@ -65,7 +65,7 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
 `[ @publisher_type = ] 'publisher_type'`Specifica il tipo di server di pubblicazione quando il server di pubblicazione non è in esecuzione in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher_type* è di **tipo sysname**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Specifica un server di pubblicazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|Specifica un server di pubblicazione Oracle standard.|  

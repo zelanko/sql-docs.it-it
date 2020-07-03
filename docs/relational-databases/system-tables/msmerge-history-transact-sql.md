@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 936195ad-ca07-41a8-a1a0-6699b6e63403
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9ca908d080a77eb580f945856c3bc2a28a066f4a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4a67943dd52f12fac1d7afa3d25e58ccaa85d79f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736717"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889788"
 ---
 # <a name="msmerge_history-transact-sql"></a>MSmerge_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La tabella **MSmerge_history** contiene righe di cronologia con descrizioni dettagliate dei risultati delle sessioni di processo agente di merge precedenti. Questa tabella contiene una riga per ogni riga dell'output dell'agente. Questa tabella viene utilizzata nel database di distribuzione e in ogni database di sottoscrizione. Nel database di distribuzione contiene la cronologia per tutte le pubblicazioni di tipo merge e le sottoscrizioni che utilizzano il server di distribuzione. In ogni database di sottoscrizione contiene la cronologia per le pubblicazioni sottoscritte dal Sottoscrittore.  
   

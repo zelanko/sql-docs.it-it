@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a707a2dc0f7e4350e4447550d218f243ed07f8da
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a947bd670e57660f1f523c56f7422a28eacc39e0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826548"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891479"
 ---
 # <a name="sp_renamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifica il nome di un database.  
   
@@ -52,7 +52,7 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza ai ruoli predefiniti del server **sysadmin** o **dbcreator** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creato il database `Accounting` e quindi il nome viene modificato in `Financial`. Viene quindi eseguita una query sulla vista del catalogo `sys.databases` per verificare il nuovo nome del database.  
   
 ```  

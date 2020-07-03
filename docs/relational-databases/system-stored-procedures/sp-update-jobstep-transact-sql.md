@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 02697937d5a0402edbaf959ed52731010eab1ce6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a81a0f6b79cdf2f2975372dc4bbefc02ae6c4cbe
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723069"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891317"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Modifica l'impostazione di un passaggio in un processo utilizzato per l'esecuzione di operazioni automatizzate.  
   
@@ -79,7 +79,7 @@ sp_update_jobstep
   
 `[ @on_success_action = ] success_action`Azione da eseguire se il passaggio ha esito positivo. *success_action* è di **tinyint**e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione (azione)|  
+|valore|Descrizione (azione)|  
 |-----------|----------------------------|  
 |**1**|Uscita in caso di esito positivo|  
 |**2**|Uscita in caso di esito negativo|  
@@ -90,7 +90,7 @@ sp_update_jobstep
   
 `[ @on_fail_action = ] fail_action`Azione da eseguire se il passaggio ha esito negativo. *fail_action* è di **tinyint**e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione (azione)|  
+|valore|Descrizione (azione)|  
 |-----------|----------------------------|  
 |**1**|Uscita in caso di esito positivo|  
 |**2**|Uscita in caso di esito negativo|  
@@ -119,7 +119,7 @@ sp_update_jobstep
   
 `[ @flags = ] flags`Opzione che controlla il comportamento. *Flags* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0** (predefinito)|L'output sovrascrive il contenuto del file di output.|  
 |**2**|L'output viene aggiunto alla fine del file di output.|  

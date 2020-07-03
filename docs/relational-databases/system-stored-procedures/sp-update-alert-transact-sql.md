@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6559be1c680c45b75154cea222ddfece355f49cb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36b04c00625792fc34b3fc833ea07a3ea2e71dab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762749"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891371"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Aggiorna le impostazioni di un avviso esistente.  
   
@@ -78,7 +78,7 @@ sp_update_alert
   
 `[ @include_event_description_in = ] include_event_description_in`Specifica se la descrizione dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] errore dal registro applicazioni di Windows deve essere inclusa nel messaggio di notifica. *include_event_description_in* è di **tinyint**e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|nessuno|  
 |**1**|Posta elettronica|  
@@ -112,7 +112,7 @@ sp_update_alert
   
 `[ @performance_condition = ] 'performance_condition'`Valore espresso nel formato **'**_itemcomparatorvalue_**'**. *performance_condition* è di **tipo nvarchar (512)** e il valore predefinito è null ed è costituito da questi elementi.  
   
-|Componente del formato|Descrizione|  
+|Componente del formato|Description|  
 |--------------------|-----------------|  
 |*Elemento*|Oggetto prestazioni, contatore delle prestazioni o istanza denominata del contatore|  
 |*Confronto*|Uno di questi operatori: **>** , **<** ,**=**|  

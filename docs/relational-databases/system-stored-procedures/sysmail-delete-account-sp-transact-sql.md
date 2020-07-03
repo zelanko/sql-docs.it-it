@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 823f6abad57e057bf6682f3daa6a282f8726fd88
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9b49f1b42a1484ca5449c3e65e274a3626b62809
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820123"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890981"
 ---
 # <a name="sysmail_delete_account_sp-transact-sql"></a>sysmail_delete_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Elimina un account SMTP di Posta elettronica database. Per eliminare un account, è inoltre possibile utilizzare Configurazione guidata posta elettronica database.  
   
@@ -57,7 +57,7 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrata un'operazione di eliminazione dell'account di Posta elettronica database denominato `AdventureWorks Administrator`.  
   
 ```  

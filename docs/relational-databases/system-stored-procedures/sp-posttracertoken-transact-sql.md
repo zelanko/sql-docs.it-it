@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0f5bc0b6e7960faac9d68469750c445e469896e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1354645781d4d6207311349689fb8431e3cb7912
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720220"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891542"
 ---
 # <a name="sp_posttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Questa procedura consente di inserire un token di traccia nel log delle transazioni nel server di pubblicazione e di avviare il processo di traccia delle statistiche di latenza. Le informazioni vengono registrate quando il token di traccia viene scritto nel log delle transazioni, quando viene prelevato dall'agente di lettura log e quando viene applicato dall'agente di distribuzione. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione. Per altre informazioni, vedere [Misurazione della latenza e convalida delle connessioni per la replica transazionale](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   

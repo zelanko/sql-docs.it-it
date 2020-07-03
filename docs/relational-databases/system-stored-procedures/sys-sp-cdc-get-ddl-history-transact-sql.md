@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 61306f3ec3141d9e1b73f41c6b71c6b32779454a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c72e4a325c8374c3d08ae00cc5af6898d5e206f2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762686"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891107"
 ---
 # <a name="syssp_cdc_get_ddl_history-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce la cronologia delle modifiche Data Definition Language (DDL) associata all'istanza di acquisizione specificata a partire dall'abilitazione di Change Data Capture per l'istanza di acquisizione. Change Data Capture non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   

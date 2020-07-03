@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af2feda317d3cbcbf7391179c0797291644eca26
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 80736db0e2356d3592744393ff8964ac6f6073c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719211"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891506"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La replica consente di sostituire una o più stored procedure predefinite utilizzate per la replica transazionale con stored procedure personalizzate definite dall'utente. Quando viene apportata una modifica dello schema a una tabella replicata, queste stored procedure vengono ricreate. **sp_register_custom_scripting** registra un stored procedure o un [!INCLUDE[tsql](../../includes/tsql-md.md)] file di script che viene eseguito quando si verifica una modifica dello schema per inserire nello script la definizione per un nuovo stored procedure personalizzato definito dall'utente. Questa nuova stored procedure personalizzata definita dall'utente deve riflettere il nuovo schema della tabella. **sp_register_custom_scripting** viene eseguita nel database di pubblicazione del server di pubblicazione e il file di script o stored procedure registrato viene eseguito nel Sottoscrittore quando si verifica una modifica dello schema.  
   
@@ -42,7 +42,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="arguments"></a>Argomenti  
 `[ @type = ] 'type'`Tipo di stored procedure o script personalizzato da registrare. il *tipo* è **varchar (16)** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**inserire**|La stored procedure personalizzata registrata viene eseguita quando viene replicata un'istruzione INSERT.|  
 |**update**|La stored procedure personalizzata registrata viene eseguita quando viene replicata un'istruzione UPDATE.|  

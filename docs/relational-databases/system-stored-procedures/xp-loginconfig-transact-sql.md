@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ac7a3e57c18f6ce4ea73415224aabc3843488cf9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: afef091db5038a6ca302c07a6171557577d46797
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755551"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890746"
 ---
 # <a name="xp_loginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce la configurazione di sicurezza dell'account di accesso di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -45,7 +45,7 @@ xp_loginconfig ['config_name']
  **'** *config_name* **'**  
  Valore di configurazione da visualizzare. Se *config_name* viene omesso, vengono restituiti tutti i valori di configurazione. *config_name* è di **tipo sysname**e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**login mode**|Modalità di sicurezza dell'account di accesso. I valori possibili sono **mixed** e **l'autenticazione di Windows**.<br /><br /> Sostituito da:<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
 |**default login**|Nome dell'ID di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito per gli utenti autorizzati su connessioni trusted (ovvero gli utenti che non dispongono di un nome di account di accesso corrispondente). L'account di accesso predefinito è **Guest**. Questo valore è disponibile per compatibilità con le versioni precedenti.|  

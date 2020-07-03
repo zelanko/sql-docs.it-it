@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab7241fe17306fedf25c1562bcabe366d7754e84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4194de86ec5ba51455f37d75bccf574d4316762f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749294"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891289"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Modifica le impostazioni per una pianificazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
@@ -65,7 +65,7 @@ sp_update_schedule
   
 `[ @freq_type = ] freq_type`Valore che indica quando deve essere eseguito un processo. *freq_type*è di **tipo int**e il valore predefinito è **0**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una sola volta|  
 |**4**|Ogni giorno|  
@@ -89,7 +89,7 @@ sp_update_schedule
   
 `[ @freq_subday_type = ] freq_subday_type`Specifica le unità per *freq_subday_interval * *.* *freq_subday_type*è di **tipo int**e il valore predefinito è **0**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione (unità)|  
+|valore|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**0x1**|All'ora specificata|  
 |**0x2**|Secondi|  
@@ -100,7 +100,7 @@ sp_update_schedule
   
 `[ @freq_relative_interval = ] freq_relative_interval`Occorrenza di un processo di *freq_interval* ogni mese, se *freq_interval* è **32** (mensile relativo). *freq_relative_interval*è di **tipo int**e il valore predefinito è **0**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione (unità)|  
+|valore|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**1**|First (Primo)|  
 |**2**|Second|  

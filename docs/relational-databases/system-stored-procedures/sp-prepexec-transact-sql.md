@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab7c13befad3c1780e067639838efa7434c57f53
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3bc3e9a74a29564ad8c531223be371f47fd09662
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645902"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891536"
 ---
 # <a name="sp_prepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Prepara ed esegue un'istruzione con parametri [!INCLUDE[tsql](../../includes/tsql-md.md)] . sp_prepexec combina le funzioni di sp_prepare e sp_execute. Questa azione viene richiamata da ID = 13 in un pacchetto TDS (Tabular Data Stream).  
   

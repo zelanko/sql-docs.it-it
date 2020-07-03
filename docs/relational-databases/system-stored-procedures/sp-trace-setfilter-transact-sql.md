@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eeb6fd370bfd107864845439086138fff3d379c2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36cb1003bcb0884bce069a7f41b3264d045e86e1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85644850"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891453"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Applica un filtro a una traccia. **sp_trace_setfilter** possono essere eseguite solo su tracce esistenti interrotte (*lo stato* è **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Restituisce un errore se questa stored procedure viene eseguita su una traccia che non esiste o il cui *stato* è diverso da **0**.  
   
@@ -54,7 +54,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
   
 `[ @comparison_operator = ] comparison_operator`Specifica il tipo di confronto da effettuare. *comparison_operator* è di **tipo int**e non prevede alcun valore predefinito. Nella tabella seguente vengono descritti gli operatori di confronto e i valori che li rappresentano.  
   
-|Valore|Operatore di confronto|  
+|valore|Operatore di confronto|  
 |-----------|-------------------------|  
 |**0**|= (uguaglianza)|  
 |**1**|<>  (non uguale a)|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef8a263edfb6902cd4f050cbe27b99062e5b5c20
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b295105b76711e0e7305374cdd0ce380cd3abea
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750139"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890117"
 ---
 # <a name="logmarkhistory-transact-sql"></a>logmarkhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una riga per ogni transazione contrassegnata di cui è stato eseguito il commit. Questa tabella è archiviata nel database **msdb** .  
   

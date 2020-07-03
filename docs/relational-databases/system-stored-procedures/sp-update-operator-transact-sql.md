@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b8075648f4f3ce87b0ee34ba28479d1f8e20cd50
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8966e5d423a24be8c7d7329f270368ea20e9ef7b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775162"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891307"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Aggiorna le informazioni relative a un operatore (destinatario di notifiche) utilizzate in avvisi e processi.  
   
@@ -89,7 +89,7 @@ sp_update_operator
  [ @pager_days =] *pager_days*  
  Indica i giorni in cui l'operatore può essere rintracciato tramite cercapersone (in base all'ora di inizio e fine specificata). *pager_days*è di **tinyint**e il valore predefinito è null. deve essere un valore **compreso tra 0** e **127**. *pager_days* viene calcolato aggiungendo i singoli valori per i giorni richiesti. Ad esempio, da lunedì a venerdì sono **2** + **4** + **8** + **16** + **32**  =  **64**.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Sunday|  
 |**2**|Monday|  

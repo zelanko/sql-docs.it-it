@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c49356c35c963501450490dfaa6fc89c77e62f40
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 72e364d451a78726c1ac98c42659db9c8f6034b0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85625743"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890587"
 ---
 # <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>conflict_ &lt; schema &gt; _ &lt; Table &gt; (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La \<schema> tabella conflict_ _ \<table> contiene informazioni sulle righe in conflitto nella replica peer-to-peer. Per ogni tabella replicata di una pubblicazione è disponibile una tabella dei conflitti, il cui nome è seguito dai nomi dello schema e dell'articolo. Queste tabelle dei conflitti specifiche dell'articolo sono presenti in ogni database di pubblicazione.  
   
