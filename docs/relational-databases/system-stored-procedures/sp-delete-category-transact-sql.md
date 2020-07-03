@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cea339352a983028c161cef6fec8643955457b55
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6962e4bb4387cad22e16d62176ced10ad8e82205
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750659"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85864353"
 ---
 # <a name="sp_delete_category-transact-sql"></a>sp_delete_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Rimuove dal server corrente la categoria di processi, avvisi o operatori specificata.  
   
@@ -42,7 +42,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ## <a name="arguments"></a>Argomenti  
 `[ @class = ] 'class'`Classe della categoria. la classe è di *tipo* **varchar (8)** e non prevede alcun valore predefinito e deve avere uno di questi valori.  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**PROCESSO**|Elimina una categoria di processi.|  
 |**AVVISO**|Elimina una categoria di avvisi.|  
