@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 482b9af4ee76e6f8aea185440924eb579fabd71c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad631a10998f3628084581ea25faa53151f12af0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733307"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85868261"
 ---
 # <a name="sp_cycle_errorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Chiude il log degli errori corrente e rinumera le estensioni del log degli errori, esattamente come quando si riavvia il server. Il nuovo log degli errori contiene informazioni sulla versione e il copyright. Include inoltre una riga in cui è registrata l'operazione di creazione di un nuovo log.  
   

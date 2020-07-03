@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: fe4a134b-25bf-464e-a5c4-358de215b65a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 96aafc2638de738db36a19d48e2ce963af0af702
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 00841f918a5b93b0ae27f907bff263f4c0a0174a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772253"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85866380"
 ---
 # <a name="sp_dbmmonitordropalert-transact-sql"></a>sp_dbmmonitordropalert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Elimina l'avviso per una metrica delle prestazioni specificata tramite l'impostazione della soglia su NULL.  
   
@@ -47,7 +47,7 @@ sp_dbmmonitordropalert database_name
  *alert_id*  
  Valore intero che identifica l'avviso da eliminare. Se questo argomento viene omesso, vengono eliminati tutti gli avvisi nel database. Per eliminare l'avviso per una determinata misurazione delle prestazioni, specificare uno dei valori seguenti:  
   
-|Valore|Misurazione delle prestazioni|Valore soglia avvisi|  
+|valore|Misurazione delle prestazioni|Valore soglia avvisi|  
 |-----------|------------------------|-----------------------|  
 |1|Transazione non inviata meno recente|Specifica la quantità di transazioni, espressa in minuti, che può accumularsi nella coda di invio prima che venga generato un avviso nell'istanza del server principale. Questo avviso consente di quantificare il rischio potenziale di perdita dei dati in termini di tempo ed è particolarmente rilevante per la modalità a prestazioni elevate. L'avviso risulta tuttavia utile anche per la modalità a sicurezza elevata quando il mirroring viene sospeso in seguito alla disconnessione dei partner.|  
 |2|Log non inviato|Specifica la quantità di log non inviati, espressa in kilobyte (KB), che può accumularsi prima che venga generato un avviso nell'istanza del server principale. Questo avviso consente di quantificare il rischio potenziale di perdita dei dati in termini di KB ed è particolarmente rilevante per la modalità a prestazioni elevate. L'avviso risulta tuttavia utile anche per la modalità a sicurezza elevata quando il mirroring viene sospeso in seguito alla disconnessione dei partner.|  

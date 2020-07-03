@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3da197547fcc0b08cb1154c6f32b11a65247304e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 800e70591e4ebb508bd5edd6426d43bdc3a16987
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646264"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85869740"
 ---
 # <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crea e popola un cursore in base al piano di esecuzione creato da sp_cursorprepare. Questa procedura, associata a sp_cursorprepare, ha la stessa funzione di sp_cursoropen, ma è suddivisa in due fasi. sp_cursorexecute viene richiamato specificando ID = 4 in un pacchetto del flusso TDS (Tabular Data Stream).  
   
@@ -79,7 +79,7 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="code-return-value"></a>Valore restituito del codice  
  *RowCount* può restituire i valori seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |-1|Numero di righe non note.|  
 |-n|Un popolamento asincrono è attivo.|  

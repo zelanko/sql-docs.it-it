@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4a20968cb7ee9c46c8c30c4ff635d307c91b7edd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2369c2db6003229ee54f9d7ef04784a470493faf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715982"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85873822"
 ---
 # <a name="sp_can_tlog_be_applied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Verifica se è possibile applicare un backup del log delle transazioni a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **sp_can_tlog_be_applied** richiede che il database sia in stato di ripristino.  
   

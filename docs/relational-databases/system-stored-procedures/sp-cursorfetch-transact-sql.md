@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6accbb03bf4ed06f84f67263e89ab9c6bfa7654
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3729587261ab090548ad93f5a1000f621239557
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646050"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85868955"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Recupera un buffer di una o più righe dal database. Il gruppo di righe in questo buffer viene denominato *buffer di recupero*del cursore. sp_cursorfetch viene richiamato specificando ID = 7 in un pacchetto del flusso TDS (Tabular Data Stream).  
   
@@ -46,7 +46,7 @@ sp_cursorfetch cursor
  *FetchType*  
  Specifica il buffer del cursore da recuperare. *FetchType* è un parametro facoltativo che richiede uno dei valori di input Integer seguenti.  
   
-|valore|Nome|Descrizione|  
+|valore|Nome|Description|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|Recupera il primo buffer delle righe *nrows* . Se *nrows* è uguale a 0, il cursore viene posizionato prima del set di risultati e non viene restituita alcuna riga.|  
 |0x0002|NEXT|Recupera il buffer successivo di righe *nrows* .|  
@@ -133,7 +133,7 @@ sp_cursorfetch cursor
   
  Il parametro di stato di RPC viene impostato su uno dei valori mostrati nella tabella seguente.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |0|La routine è stata eseguita correttamente.|  
 |0x0001|La routine non è riuscita.|  
@@ -142,7 +142,7 @@ sp_cursorfetch cursor
   
  Le righe vengono restituite come set tipico di risultati, ovvero il formato della colonna (0x2a), le righe (0xd1), infine done (0xfd). I token dei metadati vengono inviati nello stesso formato specificato per sp_cursoropen, ovvero: 0x81, 0xa5 e 0xa4 per gli utenti di SQL Server 7.0 e così via. Gli indicatori di stato delle righe vengono inviati come colonne nascoste, analogamente alla modalità BROWSE, alla fine di ogni riga con nome di colonna rowstat e tipo di dati INT4. La colonna rowstat può avere uno dei valori mostrati nella tabella seguente:  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  

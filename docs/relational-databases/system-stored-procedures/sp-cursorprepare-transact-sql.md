@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 21710c1cda732c09eed0a71da2286a12b8496783
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 130446e1f92fd735c3ab83a8f515fcf36fb63948
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733328"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85868814"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Compila il batch o l'istruzione del cursore in un piano di esecuzione, ma non crea il cursore. L'istruzione compilata può essere utilizzata in un secondo momento da sp_cursorexecute. Questa procedura, associata a sp_cursorexecute, ha la stessa funzione di sp_cursoropen, ma è suddivisa in due fasi. sp_cursorprepare viene richiamato specificando ID = 3 in un pacchetto del flusso TDS (Tabular Data Stream).  
   
@@ -61,14 +61,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *options*  
  Parametro facoltativo tramite cui viene restituita una descrizione delle colonne dei set di risultati del cursore. *options* richiede il valore di input **int** seguente.  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  Opzione di scorrimento. *scrollopt* è un parametro facoltativo che richiede uno dei valori di input **int** seguenti.  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -90,7 +90,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *ccopt*  
  Opzioni del controllo della concorrenza. *ccopt* è un parametro facoltativo che richiede uno dei valori di input **int** seguenti.  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (precedentemente noto come LOCKCC)|  
@@ -109,7 +109,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 ## <a name="remarks"></a>Osservazioni  
  Il parametro di stato RPC è uno degli elementi seguenti:  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |0|Operazione completata|  
 |0x0001|Operazioni non riuscite|  

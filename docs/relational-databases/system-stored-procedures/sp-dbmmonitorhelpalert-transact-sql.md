@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 40fe5e8e82d1a4e7b4f2f32d55f27b191d9aee8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab1a8338a25394b3a750e09e0b0da6c6099c97ee
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760150"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85865846"
 ---
 # <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni sulle soglie di avviso su una o tutte le misurazioni delle prestazioni di monitoraggio del mirroring del database.  
  
@@ -49,7 +49,7 @@ sp_dbmmonitorhelpalert database_name
   
  Per restituire un avviso specifico, specificare uno dei valori seguenti:  
   
-|Valore|Misurazione delle prestazioni|Valore soglia avvisi|  
+|valore|Misurazione delle prestazioni|Valore soglia avvisi|  
 |-----------|------------------------|-----------------------|  
 |1|Transazione non inviata meno recente|Specifica la quantità di transazioni, espressa in minuti, che può accumularsi nella coda di invio prima che venga generato un avviso nell'istanza del server principale. Questo avviso consente di quantificare il rischio potenziale di perdita dei dati in termini di tempo ed è particolarmente rilevante per la modalità a prestazioni elevate. L'avviso risulta tuttavia utile anche per la modalità a sicurezza elevata quando il mirroring viene sospeso in seguito alla disconnessione dei partner.|  
 |2|Log non inviato|Specifica la quantità di log non inviati, espressa in kilobyte (KB), che può accumularsi prima che venga generato un avviso nell'istanza del server principale. Questo avviso consente di quantificare il rischio potenziale di perdita dei dati in termini di KB ed è particolarmente rilevante per la modalità a prestazioni elevate. L'avviso risulta tuttavia utile anche per la modalità a sicurezza elevata quando il mirroring viene sospeso in seguito alla disconnessione dei partner.|  
@@ -71,7 +71,7 @@ sp_dbmmonitorhelpalert database_name
 |**threshold**|**int**|Valore soglia per l'avviso. Se quando si aggiorna lo stato di mirroring viene restituito un valore che supera tale soglia, viene immessa una voce nel registro eventi di Windows. Questo valore è espresso in kilobyte, minuti o millisecondi, a seconda dell'avviso. Se la soglia non è impostata, il valore è NULL.<br /><br /> **Nota:** Per visualizzare i valori correnti, eseguire il [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) stored procedure.|  
 |**abilitato**|**bit**|0 = L'evento è disabilitato.<br /><br /> 1 = L'evento è abilitato.<br /><br /> **Nota:** Il periodo di memorizzazione è sempre abilitato.|  
   
-|Valore|Misurazione delle prestazioni|Unità|  
+|valore|Misurazione delle prestazioni|Unità|  
 |-----------|------------------------|----------|  
 |1|Transazione non inviata meno recente|Minuti|  
 |2|Log non inviato|KB|  

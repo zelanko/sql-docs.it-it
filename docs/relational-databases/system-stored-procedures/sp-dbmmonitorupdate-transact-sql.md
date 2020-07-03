@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5b9c53913cc6f399109da7a84cd8ec7f68957a8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e7247f5357ae02e0a81f3682d5d952d01584473
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760145"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85865608"
 ---
 # <a name="sp_dbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Aggiorna la tabella di stato di Monitoraggio mirroring del database inserendo una nuova riga di tabella per ogni database con mirroring e tronca le righe precedenti al periodo di memorizzazione corrente. Il periodo di memorizzazione predefinito è 7 giorni (168 ore). Quando si aggiorna la tabella, **sp_dbmmonitorupdate** valuta le metriche delle prestazioni.  
   

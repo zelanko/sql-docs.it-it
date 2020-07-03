@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 64fef5a7f6d135961a6757a92d734e75f2114273
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 172d50a126ff0c12d55e9566e5bb7b9213c38fe8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760104"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85865016"
 ---
 # <a name="sp_delete_backuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Riduce le dimensioni delle tabelle di cronologia di backup e ripristino eliminando le voci per set di backup precedenti alla data specificata. Vengono aggiunte righe aggiuntive alle tabelle di cronologia di backup e ripristino dopo l'esecuzione di ogni operazione di backup o ripristino. è pertanto consigliabile eseguire periodicamente **sp_delete_backuphistory**.  
   

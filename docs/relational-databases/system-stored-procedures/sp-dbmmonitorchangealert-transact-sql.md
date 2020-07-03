@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c31df96682d2d1413094572a2b1fab94cfbe54b5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c5c520ff4b3e54f027f6afa5ca203c412f3f6291
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786181"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85866622"
 ---
 # <a name="sp_dbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Aggiunge o modifica la soglia di avviso per una misurazione delle prestazioni di mirroring specificata.  
 
@@ -51,7 +51,7 @@ sp_dbmmonitorchangealert database_name
  *alert_id*  
  Valore intero che identifica l'avviso da aggiungere o modificare. Specificare uno dei valori seguenti:  
   
-|Valore|Misurazione delle prestazioni|Valore soglia avvisi|  
+|valore|Misurazione delle prestazioni|Valore soglia avvisi|  
 |-----------|------------------------|-----------------------|  
 |1|Transazione non inviata meno recente|Specifica la quantità di transazioni, espressa in minuti, che può accumularsi nella coda di invio prima che venga generato un avviso nell'istanza del server principale. Questo avviso consente di quantificare il rischio potenziale di perdita dei dati in termini di tempo ed è particolarmente rilevante per la modalità a prestazioni elevate. L'avviso risulta tuttavia utile anche per la modalità a sicurezza elevata quando il mirroring viene sospeso in seguito alla disconnessione dei partner.|  
 |2|Log non inviato|Specifica la quantità di log non inviati, espressa in kilobyte (KB), che può accumularsi prima che venga generato un avviso nell'istanza del server principale. Questo avviso consente di quantificare il rischio potenziale di perdita dei dati in termini di KB ed è particolarmente rilevante per la modalità a prestazioni elevate. L'avviso risulta tuttavia utile anche per la modalità a sicurezza elevata quando il mirroring viene sospeso in seguito alla disconnessione dei partner.|  

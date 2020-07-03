@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 620a174f50d133c4a1dd34ed54c74abb7ee06a71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b30529fbb5d4b80b0835ddb502c9a2c964ca8776
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81012447"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85870628"
 ---
 # <a name="sp_control_dbmasterkey_password-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Aggiunge o rimuove una credenziale contenente la password necessaria per aprire una chiave master del database.  
   
@@ -82,7 +82,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>R. Creazione di una credenziale per la chiave master di AdventureWorks2012  
- Nell'esempio seguente viene creata una credenziale per la chiave master del database `AdventureWorks2012` e la password della chiave master viene salvata come segreto nella credenziale. Poiché tutti i parametri passati a `sp_control_dbmasterkey_password` devono essere di tipo di dati **nvarchar**, le stringhe di testo vengono convertite con l' `N`operatore di cast.  
+ Nell'esempio seguente viene creata una credenziale per la chiave master del database `AdventureWorks2012` e la password della chiave master viene salvata come segreto nella credenziale. Poiché tutti i parametri passati a `sp_control_dbmasterkey_password` devono essere di tipo di dati **nvarchar**, le stringhe di testo vengono convertite con l'operatore di Cast `N` .  
   
 ```  
 EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',   
