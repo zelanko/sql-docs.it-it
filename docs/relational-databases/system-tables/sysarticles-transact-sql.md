@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9d9d5d51-6d8f-4e42-84a9-82e58eb0301e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5cf27f5335cf0eb098c505ca6872564c172cf610
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 055e2c7999b2dddf7bb0561e912652ad9046b53e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758648"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889293"
 ---
 # <a name="sysarticles-transact-sql"></a>sysarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una riga per ogni articolo definito nel database locale. Questa tabella è archiviata nel database pubblicato.  
   

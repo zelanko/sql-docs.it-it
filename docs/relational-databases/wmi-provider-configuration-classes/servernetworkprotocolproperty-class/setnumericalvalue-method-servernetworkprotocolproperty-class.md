@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b3b4bce8-9d9e-4ccb-a223-0454281353b0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7fc7a294b963e0e18fd3cf5b7c4c330c1ac1e83e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c01e449e0e22fe63f2073e9bbc58ee3092678322
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775686"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888636"
 ---
 # <a name="setnumericalvalue-method-servernetworkprotocolproperty-class"></a>Metodo SetNumericalValue (classe ServerNetworkProtocolProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Imposta il valore numerico della proprietà a cui si fa riferimento.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -41,7 +41,7 @@ object.SetNumericalValue(NumValue)
   
 #### <a name="parameters"></a>Parametri  
   
-|Parametro|Descrizione|  
+|Parametro|Description|  
 |---------------|-----------------|  
 |*NumValue*|Valore **uint32** che specifica il nuovo valore della proprietà corrente.|  
   

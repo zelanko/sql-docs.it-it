@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e4396000a80305429ded759b964c1533d9ebc460
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6afe910bc5e758a0003bd15c9376d4d50583eb38
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85633422"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889502"
 ---
 # <a name="msrepl_originators-transact-sql"></a>MSrepl_originators (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La tabella **MSrepl_originators** contiene una riga per ogni Sottoscrittore aggiornabile da cui ha avuto origine la transazione. Questa tabella è archiviata nel database di distribuzione.  
   

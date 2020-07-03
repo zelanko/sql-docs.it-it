@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 740610a9fa20d3c47472f3737548a4c22fe20a19
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7b70a0b6356a4b9a862c2a89178068ef6ec2c4af
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757772"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889356"
 ---
 # <a name="mssubscription_agents-transact-sql"></a>MSsubscription_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La tabella **MSsubscription_agents** viene utilizzata da agente di distribuzione e trigger di sottoscrizioni aggiornabili per tenere traccia delle proprietà della sottoscrizione. Questa tabella è archiviata nel database di sottoscrizione.  
   

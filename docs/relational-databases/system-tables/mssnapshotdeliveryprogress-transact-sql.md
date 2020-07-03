@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a94f45171d54d7abb4a81c0bf55ff35b2511a6bc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f4cd21fcc026e48c0e0f4ca68ada16bf55855662
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722903"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889397"
 ---
 # <a name="mssnapshotdeliveryprogress-transact-sql"></a>MSsnapshotdeliveryprogress (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La tabella **MSsnapshotdeliveryprogress** viene utilizzata per tenere traccia dei file che sono stati recapitati correttamente al Sottoscrittore durante l'applicazione di uno snapshot. Questi dati vengono utilizzati per riprendere il recapito di file nel caso in cui l'agente di merge non sia in grado di recapitare tutti i file durante la sessione e pertanto per evitare di recapitare gli stessi file alla successiva esecuzione dell'agente di merge. Questa tabella è archiviata nel database di sottoscrizione del Sottoscrittore.  
   

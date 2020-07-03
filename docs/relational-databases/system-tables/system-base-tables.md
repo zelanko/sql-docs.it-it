@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3336905579401f17a5c3afa2509e64670e5ea1ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cd89fffb6513306c8877ce6b02a3fadfceb6f1cf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752640"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889229"
 ---
 # <a name="system-base-tables"></a>Tabelle di base di sistema
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Le tabelle di base di sistema sono le tabelle sottostanti in cui vengono effettivamente archiviati i metadati per un database specifico. Il database **Master** è particolarmente speciale in quanto contiene alcune tabelle aggiuntive non disponibili in nessuno degli altri database. Queste tabelle contengono metadati persistenti il cui ambito è esteso all'intero server.  
   
@@ -42,10 +42,10 @@ ms.locfileid: "85752640"
 ## <a name="system-base-tables"></a>Tabelle di base di sistema  
  Nella tabella seguente viene indicata e descritta ogni un tabella di base sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Tabella di base|Descrizione|  
+|Tabella di base|Description|  
 |----------------|-----------------|  
 |**sys.sysschobjs**|Esiste in ogni database. Ogni riga rappresenta un oggetto del database.|  
-|**sys.sysbinobjs**|Esiste in ogni database. Contiene una riga per ogni entità Service Broker del database. Le entità Service Broker includono gli elementi seguenti:<br /><br /> Tipo di messaggio<br /><br /> Contratto servizio<br /><br /> Servizio<br /><br /> I nomi e i tipi utilizzano regole di confronto binarie predefinite.|  
+|**sys.sysbinobjs**|Esiste in ogni database. Contiene una riga per ogni entità Service Broker del database. Le entità Service Broker includono gli elementi seguenti:<br /><br /> Tipo di messaggio<br /><br /> Contratto servizio<br /><br /> Service<br /><br /> I nomi e i tipi utilizzano regole di confronto binarie predefinite.|  
 |**sys.sysclsobjs**|Esiste in ogni database. Contiene una riga per ogni entità classificata che condivide le stesse proprietà comuni che includono gli elementi seguenti:<br /><br /> Assembly<br /><br /> Dispositivo di backup<br /><br /> Catalogo full-text<br /><br /> Funzione di partizione<br /><br /> Schema di partizione<br /><br /> Filegroup<br /><br /> Chiave di offuscamento|  
 |**sys.sysnsobjs**|Esiste in ogni database. Contiene una riga per ogni entità dell'ambito dello spazio dei nomi. Questa tabella viene utilizzata per archiviare le entità di raccolta XML.|  
 |**sys.syscolpars**|Esiste in ogni database. Contiene una riga per ogni colonna di una tabella, vista o funzione con valori di tabella. Contiene anche righe per ogni parametro di una procedura o funzione.|  

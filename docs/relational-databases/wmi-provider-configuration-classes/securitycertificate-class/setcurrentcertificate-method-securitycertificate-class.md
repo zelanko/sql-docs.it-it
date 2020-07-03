@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de53ad9b1159428bf2695b6322a97ed83b3adeaa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7997103a062ac796ead5694befd1d9cebb600c95
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736628"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888790"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>Metodo SetCurrentCertificate (classe SecurityCertificate)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Imposta il certificato di sicurezza corrente.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -41,7 +41,7 @@ object.SetCurrentCertificate(SHA , SQLInstance)
   
 #### <a name="parameters"></a>Parametri  
   
-|Parametro|Descrizione|  
+|Parametro|Description|  
 |---------------|-----------------|  
 |*SHA*|Valore string che specifica l'identificazione digitale dell'algoritmo hash di protezione (SHA, Secure Hash Algorithm) per il certificato di sicurezza richiesto.|  
 |*SQLInstance*|Valore string che specifica l'istanza per la quale viene richiesto il certificato.|  
