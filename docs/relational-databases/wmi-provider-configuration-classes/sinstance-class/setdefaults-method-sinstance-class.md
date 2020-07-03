@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dc3c6a85-0711-4688-bf4f-91168c57af28
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b29cf5b1f0b10965c0545c91b84d13a8caea361c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 346c714dea89d171431527dfa42e8503aa30e5f4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731413"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888516"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>Metodo SetDefaults (classe SInstance)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Imposta tutti i valori predefiniti per l'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con l'opzione per sovrascrivere i dati esistenti.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -41,7 +41,7 @@ object.SetDefaults(OverwriteAll)
   
 #### <a name="parameters"></a>Parametri  
   
-|Parametro|Descrizione|  
+|Parametro|Description|  
 |---------------|-----------------|  
 |*OverwriteAll*|Valore booleano che specifica se sovrascrivere il valore esistente nell'istanza del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client: **true** se i dati esistenti vengono sovrascritti oppure **false** se i dati esistenti non vengono sovrascritti.|  
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5769ffe206c1fc84107707acc980ab94c51ac932
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f2482e9af7451463c03bb5deb2e63c7261ec5361
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85676606"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882043"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni sui cursori aperti in vari database.  
   
@@ -74,7 +74,7 @@ dm_exec_cursors (session_id | 0 )
 ## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente vengono fornite informazioni sull'interfaccia di dichiarazione del cursore e vengono indicati i possibili valori per la colonna delle proprietà.  
   
-|Proprietà|Descrizione|  
+|Proprietà|Description|  
 |--------------|-----------------|  
 |API|Il cursore è stato dichiarato tramite una delle API di accesso ai dati (ODBC, OLEDB).|  
 |TSQL|Il cursore è stato dichiarato tramite la sintassi Transact-SQL DECLARE CURSOR.|  
@@ -90,7 +90,7 @@ dm_exec_cursors (session_id | 0 )
   
  Nella tabella seguente vengono fornite informazioni sulla concorrenza dei cursori e vengono inclusi i possibili valori per la colonna delle proprietà.  
   
-|Concorrenza|Descrizione|  
+|Concorrenza|Description|  
 |-----------------|-----------------|  
 |Sola lettura|Il cursore è stato dichiarato come di sola lettura.|  
 |Scroll Locks|Il cursore utilizza i blocchi di scorrimento.|  

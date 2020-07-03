@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1adda63135bc85ae2d8a84a8e8744b04144781de
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c6aab858d98baa0404e4ef5f33adc16ece687d8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662114"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888321"
 ---
 # <a name="startmode-property-sqlservice-class"></a>Proprietà StartMode (classe SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Ottiene la modalità di avvio del servizio.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -56,7 +56,7 @@ object.StartMode [= value]
  Manuale  
  Valore = 3. Servizio da avviare da Gestione computer quando un processo chiama il metodo **StartService** .  
   
- Disabled  
+ Disabilitata  
  Valore = 4. Impossibile avviare il servizio.  
   
 ## <a name="remarks"></a>Osservazioni  

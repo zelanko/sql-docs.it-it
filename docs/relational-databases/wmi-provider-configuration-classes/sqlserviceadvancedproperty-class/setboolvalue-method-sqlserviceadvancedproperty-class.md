@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5252b439-fce5-446a-8e57-99e3054bee69
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc9a2599daef295a8e326f19efa6f151685a050c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e7d3363794d6e5a5a9a261df0eb4223073ca1ae
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731388"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888298"
 ---
 # <a name="setboolvalue-method-sqlserviceadvancedproperty-class"></a>Metodo SetBoolValue (classe SqlServiceAdvancedProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Imposta il valore booleano di una proprietà.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -41,7 +41,7 @@ object.SetBoolValue [= value]
   
 #### <a name="parameters"></a>Parametri  
   
-|Parametro|Descrizione|  
+|Parametro|Description|  
 |---------------|-----------------|  
 |*BoolValue*|Valore booleano che specifica il valore della proprietà avanzata.|  
   

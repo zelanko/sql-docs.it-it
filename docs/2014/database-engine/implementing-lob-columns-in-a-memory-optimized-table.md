@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2ff0439ff6b418006f3da5f0356169574509ebb7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: 0e6ca6b5ed0eb94b7293dfd5aab6623ea2a61454
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84932832"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885992"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Implementazione di colonne LOB in una tabella con ottimizzazione per la memoria
   Le tabelle con ottimizzazione per la memoria non dispongono di archiviazione all'esterno di righe o LOB (Large Object) (questa limitazione è stata rimossa in SQL Server 2016 e versioni successive. vedere [tipi di dati supportati per OLTP in memoria](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)) e il limite delle dimensioni delle righe è 8060 byte. L'archiviazione dei valori elevati di stringa di caratteri o binaria può essere eseguita in due modi:  
@@ -25,7 +25,7 @@ ms.locfileid: "84932832"
   
  Nell'esempio seguente il valore LOB binario viene suddiviso in più righe e le righe vengono inserite in una tabella ottimizzata per la memoria:  
   
-<pre><code>tsql  
+```sql  
 create table BlobTable_inmem (  
    BlobId binary(16) not null,  
    SegmentationId int not null,  
@@ -75,7 +75,8 @@ where BlobId = @BlobId
 order by SegmentationId  
   
 select @Blob  
-go</code></pre>  
+go
+```
   
  In alternativa, è possibile definire una tabella basata su disco per le colonne LOB. Ogni riga della tabella ottimizzata per la memoria avrebbe una riga corrispondente nella tabella basata su disco con tutti i valori LOB per tale riga. Nell'esempio seguente, i dati relativi ai dipendenti vengono archiviati in una tabella ottimizzata per la memoria, mentre la foto di ogni dipendente viene archiviata in una tabella basata su disco.  
   

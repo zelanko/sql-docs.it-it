@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: d3bd6b89713edad4429dc0a93aa96cf041a9562a
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 79765f589dcc649bdb2d12bd9dda0d4c955ae916
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84539683"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883934"
 ---
 # <a name="relational-query-designer-ssas"></a>Progettazione query relazionale (SSAS)
   La finestra Progettazione query relazionale consente di creare una query che specifica i dati da recuperare dai [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] database relazionali di e e da [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] . Utilizzare Progettazione query con interfaccia grafica per esplorare i metadati, compilare in modo interattivo la query e visualizzarne i risultati.  Utilizzare Progettazione query basata su testo per visualizzare la query compilata nella finestra Progettazione query con interfaccia grafica o per modificare una query. È inoltre possibile importare una query esistente da un file o un report.  
@@ -85,7 +85,7 @@ ms.locfileid: "84539683"
   
  Nella tabella seguente sono elencate le aggregazioni per le quali vengono fornite brevi descrizioni.  
   
-|Aggregate|Descrizione|  
+|Aggregate|Description|  
 |---------------|-----------------|  
 |Avg|Restituisce la media dei valori di un gruppo. Implementa l'aggregazione SQL AVG.|  
 |Conteggio|Restituisce il numero degli elementi contenuti in un gruppo. Implementa l'aggregazione SQL COUNT.|  
@@ -174,7 +174,7 @@ ms.locfileid: "84539683"
 ### <a name="graphical-query-designer-toolbar"></a>Barra degli strumenti della finestra Progettazione query con interfaccia grafica  
  La barra degli strumenti della finestra Progettazione query con interfaccia grafica dispone dei pulsanti seguenti per specificare o visualizzare i risultati di una query.  
   
-|Button|Descrizione|  
+|Button|Description|  
 |------------|-----------------|  
 |**Modifica come testo**|Consente di passare alla finestra Progettazione query basata su testo per visualizzare la query generata automaticamente o per modificare la query.|  
 |**Importa**|Consente di importare una query esistente da un file o un report. Sono supportati i tipi di file con estensione sql e rdl.|  
@@ -197,7 +197,7 @@ ms.locfileid: "84539683"
 ### <a name="text-based-query-designer-toolbar"></a>Barra degli strumenti di Progettazione query basata su testo  
  La finestra Progettazione query basata su testo include una sola barra degli strumenti per tutti i tipi di comandi. Nella tabella seguente sono elencati tutti i pulsanti contenuti nella barra degli strumenti con la rispettiva funzione.  
   
-|Button|Descrizione|  
+|Button|Description|  
 |------------|-----------------|  
 |**Modifica come testo**|Consente di passare dalla finestra Progettazione query basata su testo alla finestra Progettazione query con interfaccia grafica e viceversa. Le finestre Progettazione query con interfaccia grafica non sono supportate da tutti i tipi di origine dati.|  
 |**Importa**|Consente di importare una query esistente da un file o un report. Sono supportati solo i tipi di file con estensione sql e rdl.|  
@@ -219,7 +219,7 @@ ms.locfileid: "84539683"
 #### <a name="example"></a>Esempio  
  La query seguente restituisce l'elenco di nomi da una tabella denominata `ContactType`.  
   
-```  
+```sql  
 SELECT Name FROM ContactType  
 ```  
   
@@ -242,7 +242,7 @@ SELECT Name FROM ContactType
 #### <a name="example"></a>Esempio  
  La query seguente chiama la stored procedure denominata `uspGetWhereUsedProductID`. Quando la stored procedure dispone di parametri di input è necessario fornire dei valori di parametro quando si esegue la query.  
   
-```  
+```sql  
 uspGetWhereUsedProductID  
 ```  
   

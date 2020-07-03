@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a5e1056b-0b75-4ad6-99c1-89246010d815
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a3bf50a8a44f70f39cbd09fc44637478c68a1eb9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 619b06f1279c36716538535050b4e2795724dad7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717194"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888296"
 ---
 # <a name="setnumvalue-method-sqlserviceadvancedproperty-class"></a>Metodo SetNumValue (classe SqlServiceAdvancedProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Imposta il valore numerico di una proprietà.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -41,7 +41,7 @@ object.SetNumValue(NumValue)
   
 #### <a name="parameters"></a>Parametri  
   
-|Parametro|Descrizione|  
+|Parametro|Description|  
 |---------------|-----------------|  
 |*NumValue*|Valore **uint32** che specifica il valore della proprietà avanzata.|  
   

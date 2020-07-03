@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5b098d42c8e770496b67f365dd8ccd7bd8ad640
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 3405cf5aaf6e25c8d2efc3c0e4753b52e63f2372
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84528417"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882118"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>Guida per il controllo delle versioni delle righe e il blocco della transazione di SQL Server
 
@@ -231,7 +231,7 @@ GO
   
      Una lettura fantasma è una situazione che si verifica quando vengono eseguite due query identiche e la raccolta di righe restituite dalla seconda query è diversa. Nell'esempio seguente viene illustrato come può verificarsi questa condizione. Si supponga che le due transazioni seguenti vengano eseguite contemporaneamente. Le due istruzioni SELECT nella prima transazione possono restituire risultati diversi perché l'istruzione INSERT nella seconda transazione modifica i dati utilizzati da entrambe.  
   
-    ```  
+    ```sql  
     --Transaction 1  
     BEGIN TRAN;  
     SELECT ID FROM dbo.employee  
@@ -240,10 +240,9 @@ GO
     SELECT ID FROM dbo.employee  
     WHERE ID > 5 and ID < 10;  
     COMMIT;  
-  
     ```  
   
-    ```  
+    ```sql  
     --Transaction 2  
     BEGIN TRAN;  
     INSERT INTO dbo.employee  
@@ -371,7 +370,7 @@ GO
   
  Nella tabella seguente sono illustrate le risorse che il [!INCLUDE[ssDE](../includes/ssde-md.md)] può bloccare.  
   
-|Risorsa|Descrizione|  
+|Risorsa|Description|  
 |--------------|-----------------|  
 |RID|ID di riga utilizzato per bloccare una singola riga all'interno di un heap.|  
 |KEY|Blocco di riga all'interno di un indice utilizzato per proteggere intervalli di chiavi nelle transazioni serializzabili.|  
@@ -394,7 +393,7 @@ GO
   
  Nella tabella seguente sono incluse le modalità blocco delle risorse utilizzate in [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
-|Modalità blocco|Descrizione|  
+|Modalità blocco|Description|  
 |---------------|-----------------|  
 |Condiviso (S)|Blocco utilizzato per operazioni di lettura che non comportano la modifica o l'aggiornamento dei dati, ad esempio l'istruzione SELECT.|  
 |Aggiornamento (U)|Blocco utilizzato per risorse che possono essere aggiornate. Impedisce un tipo comune di deadlock che si verifica quando più sessioni leggono e bloccano le risorse ed eventualmente ne eseguono l'aggiornamento in un momento successivo.|  
@@ -434,7 +433,7 @@ GO
   
  Tra i blocchi preventivi sono inclusi i blocchi preventivi condivisi (IS), i blocchi preventivi esclusivi (IX) e i blocchi preventivi esclusivi condivisi (SIX).  
   
-|Modalità blocco|Descrizione|  
+|Modalità blocco|Description|  
 |---------------|-----------------|  
 |Blocco preventivo condiviso (IS)|Consente di proteggere i blocchi condivisi richiesti o acquisiti su alcune risorse, ma non tutte, di livello inferiore nella gerarchia.|  
 |Blocco preventivo esclusivo (IX)|Consente di proteggere i blocchi esclusivi richiesti o acquisiti su alcune risorse, ma non tutte, di livello inferiore nella gerarchia. IX rappresenta un superset di IS e consente inoltre di proteggere la richiesta di blocchi condivisi sulle risorse di livello inferiore.|  
@@ -474,7 +473,7 @@ GO
   
 ||Modalità concessa esistente||||||  
 |------|---------------------------|------|------|------|------|------|  
-|**Modalità richiesta**|**È**|**S**|**U**|**IX**|**SIX**|**X**|  
+|**Modalità richiesta**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
 |**Blocco preventivo condiviso (IS)**|Sì|Sì|Sì|Sì|Sì|No|  
 |**Condiviso (S)**|Sì|Sì|Sì|No|No|No|  
 |**Aggiornamento (U)**|Sì|Sì|No|No|No|No|  
@@ -507,7 +506,7 @@ GO
   
 -   Modalità indica la modalità di blocco combinato utilizzata. Le modalità di blocco di intervalli di chiavi sono composte da due parti: La prima parte rappresenta il tipo di blocco usato per bloccare l'intervallo di indici (Range*T*), mentre la seconda rappresenta il tipo di blocco usato per bloccare una chiave specifica (*K*). Le due parti sono connesse a un trattino (-), ad esempio intervallo*T* - *K*.  
   
-    |Range|Riga|Modalità|Descrizione|  
+    |Range|Riga|Mode|Description|  
     |-----------|---------|----------|-----------------|  
     |RangeS|S|RangeS-S|Intervallo condiviso, blocco di risorsa condiviso, analisi intervallo serializzabile.|  
     |RangeS|U|RangeS-U|Intervallo condiviso, blocco di risorsa di aggiornamento; analisi aggiornamento serializzabile.|  
@@ -562,7 +561,7 @@ GO
   
 -   Query Processor deve utilizzare un indice per implementare il predicato di filtro dell'intervallo. Ad esempio, la clausola WHERE in un'istruzione SELECT può stabilire una condizione di intervallo con il predicato seguente: ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'**. Un blocco di intervalli di chiavi può essere acquisito solo se **ColumnX** è coperto da una chiave di indice.  
   
-#### <a name="examples"></a>Esempio  
+#### <a name="examples"></a>Esempi  
 
  Gli esempi di blocco di intervalli di chiavi illustrati si basano sulla tabella e sull'indice seguenti.  
   
@@ -572,7 +571,7 @@ GO
 
  Per assicurare che una query per l'analisi di intervalli sia serializzabile, è necessario che la query restituisca gli stessi risultati a ogni esecuzione all'interno della stessa transazione. Altre transazioni non devono inserire nuove righe nella query per l'analisi di intervalli in quanto le righe potrebbero diventare inserimenti fantasma. Nella query seguente vengono ad esempio utilizzati la tabella e l'indice illustrati nella figura precedente:  
   
-```  
+```sql  
 SELECT name  
     FROM mytable  
     WHERE name BETWEEN 'A' AND 'C';  
@@ -587,7 +586,7 @@ SELECT name
 
  Se una query di una transazione tenta di selezionare una riga inesistente, la successiva esecuzione della query all'interno della stessa transazione deve restituire il medesimo risultato. A nessun'altra transazione è consentito inserire la riga inesistente. Si consideri ad esempio la query seguente:  
   
-```  
+```sql 
 SELECT name  
     FROM mytable  
     WHERE name = 'Bill';  
@@ -599,7 +598,7 @@ SELECT name
 
  Quando viene eliminato un valore in una transazione, l'intervallo a cui appartiene tale valore non deve necessariamente rimanere bloccato per l'intera durata della transazione che esegue l'eliminazione. Per mantenere la serializzabilità è infatti sufficiente bloccare il valore della chiave eliminata fino al termine della transazione. Si consideri ad esempio l'istruzione DELETE seguente:  
   
-```  
+```sql  
 DELETE mytable  
     WHERE name = 'Bob';  
 ```  
@@ -612,7 +611,7 @@ DELETE mytable
 
  Quando si inserisce un valore in una transazione, l'intervallo in cui è compreso non deve essere bloccato per l'intera durata della transazione che esegue l'operazione di inserimento. Per mantenere la serializzabilità è infatti sufficiente bloccare il valore della chiave inserita fino al termine della transazione. Si consideri ad esempio l'istruzione INSERT seguente:  
   
-```  
+```sql  
 INSERT mytable VALUES ('Dan');  
 ```  
   
@@ -976,7 +975,7 @@ deadlock-list
   
  Le istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] seguenti creano gli oggetti di prova utilizzati negli esempi successivi.  
   
-```  
+```sql  
 -- Create a test table.  
 CREATE TABLE TestTable  
     (col1        int);  
@@ -998,7 +997,7 @@ GO
   
  Un'istruzione `SELECT` viene eseguita in una transazione. A causa dell'hint di blocco `HOLDLOCK`, l'istruzione acquisisce e mantiene un blocco preventivo condiviso (IS) sulla tabella. Nell'esempio, i blocchi di riga e di pagina vengono ignorati. Il blocco IS viene acquisito solo nella partizione assegnata alla transazione. In questo esempio si presume che il blocco IS venga acquisito nell'ID partizione 7.  
   
-```  
+```sql  
 -- Start a transaction.  
 BEGIN TRANSACTION  
     -- This SELECT statement will acquire an IS lock on the table.  
@@ -1011,7 +1010,7 @@ BEGIN TRANSACTION
   
  Viene avviata una transazione e l'istruzione `SELECT` eseguita nella transazione acquisisce e mantiene un blocco condiviso (S) sulla tabella. Il blocco S viene acquisito in tutte le partizioni e pertanto si ottengono più blocchi di tabella, uno per ogni partizione. Ad esempio, in un sistema con 16 CPU verranno applicati 16 blocchi S negli ID di partizione di blocco da 0 a 15. Il blocco S è compatibile con il blocco IS mantenuto dalla transazione sull'ID di partizione 7 nella sessione 1 e pertanto non si verifica alcun blocco tra le transazioni.  
   
-```  
+```sql  
 BEGIN TRANSACTION  
     SELECT col1  
         FROM TestTable  
@@ -1022,7 +1021,7 @@ BEGIN TRANSACTION
   
  L'istruzione `SELECT` seguente viene eseguita nella transazione ancora attiva nella sessione 1. A causa dell'hint di blocco della tabella esclusivo (X), la transazione tenta di acquisire un blocco X sulla tabella. Il blocco S mantenuto dalla transazione nella sessione 2 blocca tuttavia il blocco X in corrispondenza dell'ID di partizione 0.  
   
-```  
+```sql  
 SELECT col1  
     FROM TestTable  
     WITH (TABLOCKX);  
@@ -1034,7 +1033,7 @@ SELECT col1
   
  Un'istruzione `SELECT` viene eseguita in una transazione. A causa dell'hint di blocco `HOLDLOCK`, l'istruzione acquisisce e mantiene un blocco preventivo condiviso (IS) sulla tabella. Nell'esempio, i blocchi di riga e di pagina vengono ignorati. Il blocco IS viene acquisito solo nella partizione assegnata alla transazione. In questo esempio si presume che il blocco IS venga acquisito nell'ID di partizione 6.  
   
-```  
+```sql  
 -- Start a transaction.  
 BEGIN TRANSACTION  
     -- This SELECT statement will acquire an IS lock on the table.  
@@ -1049,7 +1048,7 @@ BEGIN TRANSACTION
   
  Negli ID di partizione da 7 a 15 che non sono stati ancora raggiunti dal blocco X, le altre transazioni possono continuare ad acquisire blocchi.  
   
-```  
+```sql  
 BEGIN TRANSACTION  
     SELECT col1  
         FROM TestTable  
@@ -1308,13 +1307,13 @@ BEGIN TRANSACTION
 
  Nell'esempio seguente vengono illustrate le differenze di comportamento tra le transazioni di isolamento dello snapshot e le transazioni Read Committed che utilizzano il controllo delle versioni delle righe.  
   
-#### <a name="a-working-with-snapshot-isolation"></a>A. Utilizzo dell'isolamento dello snapshot  
+#### <a name="a-working-with-snapshot-isolation"></a>R. Utilizzo dell'isolamento dello snapshot  
 
  In questo esempio una transazione di isolamento dello snapshot legge dati che verranno successivamente modificati da un'altra transazione. La transazione snapshot non blocca l'operazione di aggiornamento eseguita dall'altra transazione e continua a leggere dati dalla riga con versione, ignorando la modifica dei dati. Quando, tuttavia, la transazione snapshot tenta di modificare dati che sono già stati modificati da un'altra transazione, viene generato un errore e la transazione snapshot termina.  
   
  Nella sessione 1:  
   
-```  
+```sql  
 USE AdventureWorks2012;  -- Or the 2008 or 2008R2 version of the AdventureWorks database.  
 GO  
   
@@ -1337,7 +1336,7 @@ BEGIN TRANSACTION;
   
  Nella sessione 2:  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -1359,7 +1358,7 @@ BEGIN TRANSACTION;
   
  Nella sessione 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this shows  
     -- the employee having 48 vacation hours.  The  
     -- snapshot transaction is still reading data from  
@@ -1371,7 +1370,7 @@ BEGIN TRANSACTION;
   
  Nella sessione 2:  
   
-```  
+```sql  
 -- Commit the transaction; this commits the data  
 -- modification.  
 COMMIT TRANSACTION;  
@@ -1380,7 +1379,7 @@ GO
   
  Nella sessione 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this still   
     -- shows the employee having 48 vacation hours  
     -- even after the other transaction has committed  
@@ -1415,7 +1414,7 @@ GO
   
  Nella sessione 1:  
   
-```  
+```sql  
 USE AdventureWorks2012;  -- Or any earlier version of the AdventureWorks database.  
 GO  
   
@@ -1442,7 +1441,7 @@ BEGIN TRANSACTION;
   
  Nella sessione 2:  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -1465,7 +1464,7 @@ BEGIN TRANSACTION;
   
  Nella sessione 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this still shows  
     -- the employee having 48 vacation hours.  The  
     -- read-committed transaction is still reading data   
@@ -1479,7 +1478,7 @@ BEGIN TRANSACTION;
   
  Nella sessione 2:  
   
-```  
+```sql  
 -- Commit the transaction.  
 COMMIT TRANSACTION;  
 GO  
@@ -1488,7 +1487,7 @@ GO
   
  Nella sessione 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement which now shows the   
     -- employee having 40 vacation hours.  Being   
     -- read-committed, this transaction is reading the   
@@ -1518,7 +1517,7 @@ GO
   
  L'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] seguente consente di attivare l'opzione READ_COMMITTED_SNAPSHOT:  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorks2012  
     SET READ_COMMITTED_SNAPSHOT ON;  
 ```  
@@ -1527,7 +1526,7 @@ ALTER DATABASE AdventureWorks2012
   
  L'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] seguente consente di attivare l'opzione ALLOW_SNAPSHOT_ISOLATION:  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorks2012  
     SET ALLOW_SNAPSHOT_ISOLATION ON;  
 ```  
@@ -1557,7 +1556,7 @@ ALTER DATABASE AdventureWorks2012
   
 -   Read Committed, che utilizza il controllo delle versioni delle righe mediante l'impostazione dell'opzione di database `READ_COMMITTED_SNAPSHOT` su `ON`, come illustrato nell'esempio di codice seguente:  
   
-    ```  
+    ```sql  
     ALTER DATABASE AdventureWorks2012  
         SET READ_COMMITTED_SNAPSHOT ON;  
     ```  
@@ -1566,14 +1565,14 @@ ALTER DATABASE AdventureWorks2012
   
 -   Isolamento dello snapshot, mediante l'impostazione dell'opzione di database `ALLOW_SNAPSHOT_ISOLATION` su `ON`, come illustrato nell'esempio di codice seguente:  
   
-    ```  
+    ```sql  
     ALTER DATABASE AdventureWorks2012  
         SET ALLOW_SNAPSHOT_ISOLATION ON;  
     ```  
   
      Una transazione in esecuzione in un livello di isolamento dello snapshot può accedere alle tabelle nel database abilitate per lo snapshot. Per consentire l'accesso alle tabelle non abilitate per lo snapshot, è necessario modificare il livello di isolamento. Nell'esempio di codice seguente viene ad esempio illustrata un'istruzione `SELECT` che unisce in join due tabelle mentre è in esecuzione in una transazione snapshot. Una tabella appartiene a un database in cui non è stato attivato l'isolamento dello snapshot. Quando l'istruzione `SELECT` viene eseguita nel livello di isolamento dello snapshot, l'esecuzione non avviene correttamente.  
   
-    ```  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
     BEGIN TRAN  
         SELECT t1.col5, t2.col5  
@@ -1584,7 +1583,7 @@ ALTER DATABASE AdventureWorks2012
   
      Nell'esempio di codice seguente viene illustrata la stessa istruzione `SELECT` modificata in modo che il livello di isolamento della transazione sia Read Committed. Grazie a questa modifica, l'istruzione `SELECT` viene eseguita correttamente.  
   
-    ```  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
     BEGIN TRAN  
         SELECT t1.col5, t2.col5  
@@ -1618,7 +1617,7 @@ ALTER DATABASE AdventureWorks2012
   
      Un amministratore del database esegue, ad esempio, l'istruzione `ALTER INDEX` seguente.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     ALTER INDEX AK_Employee_LoginID  
@@ -1648,7 +1647,7 @@ ALTER DATABASE AdventureWorks2012
   
  Per determinare l'impostazione del LOCK_TIMEOUT corrente, eseguire la @LOCK_TIMEOUT funzione @:  
   
-```  
+```sql  
 SELECT @@lock_timeout;  
 GO  
 ```  
@@ -1671,7 +1670,7 @@ GO
   
  Nell'esempio seguente viene impostato il livello di isolamento di `SERIALIZABLE`:  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;  
@@ -1688,7 +1687,7 @@ GO
   
  Per determinare il livello di isolamento attualmente impostato, utilizzare l'istruzione `DBCC USEROPTIONS` come illustrato nell'esempio seguente. Il set di risultati può variare rispetto a quello del sistema.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;  
@@ -1736,7 +1735,7 @@ GO
   
  Come illustrato nell'esempio seguente, se il livello di isolamento della transazione è impostato su `SERIALIZABLE` e l'hint di blocco a livello di tabella `NOLOCK` viene utilizzato con l'istruzione `SELECT`, i blocchi intervalli di chiavi in genere utilizzati per mantenere le transazioni serializzabili non vengono accettati.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;  
@@ -1793,7 +1792,7 @@ GO
   
  Nell'esempio seguente viene illustrato l'utilizzo delle transazioni nidificate. La procedura `TransProc` applica la rispettiva transazione indipendentemente dalla modalità impostata in ogni processo da cui viene eseguita. Se la procedura `TransProc` viene richiamata quando una transazione è attiva, la transazione nidificata in `TransProc` viene ignorata e, a seconda dell'azione finale eseguita per la transazione esterna, viene eseguito il commit o il rollback delle relative istruzioni INSERT. Se la procedura `TransProc` viene eseguita da un processo privo di transazione attiva, l'istruzione COMMIT TRANSACTION alla fine della procedura esegue correttamente il commit delle istruzioni INSERT.  
   
-```  
+```sql  
 SET QUOTED_IDENTIFIER OFF;  
 GO  
 SET NOCOUNT OFF;  

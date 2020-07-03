@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6b4054be2d956bccecd1d64dc807671caf8f980f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: 998f1079044f530a824600fede88c99ca91f793e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84937992"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886047"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configurare le impostazioni avanzate per i file di log DQS
   In questo argomento viene descritto come configurare le impostazioni avanzate per i file di log del [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] e del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , ad esempio come impostare il limite delle dimensioni dei file mobili per i file di log, il modello del timestamp degli eventi e così via.  
@@ -38,8 +38,8 @@ ms.locfileid: "84937992"
 ##  <a name="configure-data-quality-server-log-settings"></a><a name="DQSServer"></a>Configurare le impostazioni del log del server Data Quality  
  Le impostazioni di log del [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] sono presenti in formato XML nella colonna **VALUE** della riga **ServerLogging** nella tabella A_CONFIGURATION del database DQS_MAIN. Per visualizzare le informazioni di configurazione, è possibile eseguire la query SQL seguente:  
   
-```  
-select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'  
+```sql  
+select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'; 
 ```  
   
  È necessario aggiornare le informazioni appropriate nella colonna **VALUE** della riga **ServerLogging** per modificare le impostazioni di configurazione per la registrazione del [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . In questo esempio verranno aggiornate le impostazioni di log del [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] per impostare il limite delle dimensioni dei file mobili su 25000 KB (il valore predefinito è 20000 KB).  
@@ -50,7 +50,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 3.  Nella finestra dell'editor di query copiare le istruzioni SQL seguenti:  
   
-    ```  
+    ```sql  
     -- Begin the transaction.  
     BEGIN TRAN  
     GO  
@@ -96,14 +96,13 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 5.  Per applicare le modifiche apportate alla configurazione della registrazione del [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , è necessario eseguire le istruzioni Transact-SQL seguenti. Aprire una nuova finestra dell'editor di query e incollare le istruzioni Transact-SQL seguenti:  
   
-    ```  
+    ```sql  
     USE [DQS_MAIN]  
     GO  
     DECLARE @return_value int  
     EXEC @return_value = [internal_core].[RefreshLogSettings]  
     SELECT 'Return Value' = @return_value  
     GO  
-  
     ```  
   
 6.  Premere F5 per eseguire le istruzioni. Esaminare il riquadro **Risultati** per verificare che le istruzioni siano state eseguite correttamente.  

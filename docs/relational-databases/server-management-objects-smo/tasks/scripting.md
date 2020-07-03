@@ -14,17 +14,17 @@ ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 63f6e86f08ea93525704159483b939c79c6575d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 59574cdd08b519704d94aa0303b30f2428036157
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909033"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884769"
 ---
 # <a name="scripting"></a>Scripting
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  Gli script in SMO sono controllati dall' <xref:Microsoft.SqlServer.Management.Smo.Scripter> oggetto e dai relativi oggetti figlio oppure dal metodo **script** per i singoli oggetti. L' <xref:Microsoft.SqlServer.Management.Smo.Scripter> oggetto controlla il mapping tra le relazioni di dipendenza per gli oggetti in un' [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]istanza di.  
+  Gli script in SMO sono controllati dall' <xref:Microsoft.SqlServer.Management.Smo.Scripter> oggetto e dai relativi oggetti figlio oppure dal metodo **script** per i singoli oggetti. L' <xref:Microsoft.SqlServer.Management.Smo.Scripter> oggetto controlla il mapping tra le relazioni di dipendenza per gli oggetti in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  La generazione di script avanzata tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Scripter> e i relativi oggetti figlio è un processo a tre fasi:  
   

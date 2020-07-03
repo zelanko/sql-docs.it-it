@@ -16,15 +16,15 @@ ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 893fb08f2d32c7ae9d80321c1d849010660cc308
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 155bcf3e74e08d63aa714282aba42de3f6784e54
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148719"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883026"
 ---
 # <a name="handling-smo-events"></a>Gestione degli eventi SMO
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   Vi sono tipi di eventi del server che possono essere sottoscritti tramite un gestore di eventi e l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "70148719"
   
  Per gestire gli eventi, è necessario scrivere una classe del gestore evento. La classe del gestore evento può contenere più di una funzione del gestore evento e deve essere installata per poter gestire gli eventi. Le funzioni del gestore eventi ricevono informazioni sull'evento dal parametro *ServerEventNotificatificationArgs* che può essere usato per segnalare le informazioni relative all'evento.  
   
- I tipi di eventi del database e del server che possono essere gestiti sono elencati <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> nella classe e <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>nella classe.  
+ I tipi di eventi del database e del server che possono essere gestiti sono elencati nella <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> classe e nella <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet> classe.  
   
 ## <a name="example"></a>Esempio  
 Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual C&#35; SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

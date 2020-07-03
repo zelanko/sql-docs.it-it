@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 760b2ebef2163dce2ea41fb41b93e6213d03c7d8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8b7e2ffa75190d8699e0110664dd179ab3f096ae
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85692342"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888285"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>Metodo SetStrValue (classe SqlServiceAdvancedProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Imposta il valore string di una proprietà.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -41,7 +41,7 @@ object.SetStrValue(StrValue)
   
 #### <a name="parameters"></a>Parametri  
   
-|Parametro|Descrizione|  
+|Parametro|Description|  
 |---------------|-----------------|  
 |*StrValue*|Valore string che specifica il valore della proprietà avanzata.|  
   

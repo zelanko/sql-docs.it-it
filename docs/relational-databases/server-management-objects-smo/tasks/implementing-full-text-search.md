@@ -13,15 +13,15 @@ ms.assetid: 9ce9ad9c-f671-4760-90b5-e0c8ca051473
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94605728f89483048ad35b3ec3247810bff70c57
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 03a04246f32dc867befa258ad07e0198213501e2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095190"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885117"
 ---
 # <a name="implementing-full-text-search"></a>Implementazione della ricerca full-text
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   La ricerca full-text è disponibile per istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed è rappresentata in SMO dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A>. L' <xref:Microsoft.SqlServer.Management.Smo.FullTextService> oggetto risiede nell'oggetto **Server** . Viene utilizzato per gestire le opzioni di configurazione per il servizio di ricerca full-text di [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> appartiene all'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database> e si tratta di una raccolta di oggetti <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> che rappresentano cataloghi full-text definiti per il database. È possibile disporre di un solo indice full-text definito per ogni tabella, a differenza degli indici normali. Questo indice è rappresentato da un oggetto <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> nell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Table>.  
   

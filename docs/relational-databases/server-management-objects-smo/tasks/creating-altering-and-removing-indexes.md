@@ -13,16 +13,16 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42acad11884fa9edc779d6aa52a94ccf38ee5444
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 577b6e8dfcf74407f4c233f4330e9f653de7e4d1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095512"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882994"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Creazione, modifica e rimozione di indici
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   Nella gerarchia SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects) gli indici sono rappresentati dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Index>. Le colonne indicizzate sono rappresentate da una raccolta di oggetti <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> rappresentati dalla proprietà <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A>.  
   
