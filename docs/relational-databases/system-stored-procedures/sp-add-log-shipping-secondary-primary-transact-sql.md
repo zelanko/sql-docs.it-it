@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 87c243c1eaffdcbf471347a677bb7e5d9c9ffbb6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1768b25ccb4f0e4ad2e75f3d667123d082dd4237
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731736"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879776"
 ---
 # <a name="sp_add_log_shipping_secondary_primary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Imposta le informazioni primarie, aggiunge collegamenti di monitoraggio locale e remoto e crea processi di copia e di ripristino nel server secondario per il database primario specificato.  
   

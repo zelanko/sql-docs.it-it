@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 06629b059afffe3baa0a34caec1337d7bc3f2517
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 477393f34743ba0643384762164697b845cadde4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757998"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85877379"
 ---
 # <a name="sp_addlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crea un nuovo account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consente a un utente di connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -72,7 +72,7 @@ sp_addlogin [ @loginame = ] 'login'
  [ @encryptopt =]'*encryption_option*'  
  Specifica se la password viene passata in forma non crittografata o come hash della password non crittografata. Si noti che non viene applicata alcuna crittografia. Le parole "crittografia" ed "encryption" vengono utilizzate in questa descrizione per compatibilità con le versioni precedenti. Se la password viene passata in forma non crittografata, per la password viene eseguito l'hashing. Il valore hash viene archiviato. *encryption_option* è di tipo **varchar (20)**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |NULL|La password viene passata in forma non crittografata. Questo è il valore predefinito.|  
 |**skip_encryption**|Per la password è già stato eseguito l'hashing. [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve archiviare il valore senza ripetere l'hashing.|  
@@ -96,7 +96,7 @@ sp_addlogin [ @loginame = ] 'login'
   
  Nella tabella seguente sono elencate varie stored procedure utilizzate in combinazione con sp_addlogin.  
   
-|Stored procedure|Descrizione|  
+|Stored procedure|Description|  
 |----------------------|-----------------|  
 |[sp_grantlogin](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)|Aggiunge un utente o un gruppo di Windows.|  
 |[sp_password](../../relational-databases/system-stored-procedures/sp-password-transact-sql.md)|Modifica la password di un utente.|  

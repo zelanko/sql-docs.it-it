@@ -15,16 +15,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 03/15/2017
-ms.openlocfilehash: db755e9587c88b224a7eb14c5259202fbce978f0
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: 292e2e14f8837aefb076256ec9d61ab7e2cf4032
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779473"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879953"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Aggiunge un passaggio (operazione) a un processo di SQL Agent.
 
@@ -74,7 +74,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 
 `[ @subsystem = ] 'subsystem'`Sottosistema utilizzato dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio Agent per eseguire il *comando*. il *sottosistema* è di **tipo nvarchar (40)**. i possibili valori sono i seguenti.
 
-|Valore|Descrizione|
+|valore|Description|
 |-----------|-----------------|
 |'**ActiveScripting**'|Script ActiveX<br /><br /> ** \* \* \* Importante \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|
 |'**CmdExec**'|Comando del sistema operativo o programma eseguibile|
@@ -109,7 +109,7 @@ Per altre informazioni su questi token e sull'aggiornamento dei passaggi di proc
 
 `[ @on_success_action = ] success_action`Azione da eseguire se il passaggio ha esito positivo. *success_action* è di **tinyint**. i possibili valori sono i seguenti.
   
-|Valore|Descrizione (azione)|  
+|valore|Descrizione (azione)|  
 |-----------|----------------------------|  
 |**1** (impostazione predefinita)|Uscita in caso di esito positivo|  
 |**2**|Uscita in caso di esito negativo|  
@@ -120,7 +120,7 @@ Per altre informazioni su questi token e sull'aggiornamento dei passaggi di proc
 
 `[ @on_fail_action = ] fail_action`Azione da eseguire se il passaggio ha esito negativo. *fail_action* è di **tinyint**. i possibili valori sono i seguenti.
 
-|Valore|Descrizione (azione)|  
+|valore|Descrizione (azione)|  
 |-----------|----------------------------|  
 |**1**|Uscita in caso di esito positivo|  
 |**2** (impostazione predefinita)|Uscita in caso di esito negativo|  
@@ -145,7 +145,7 @@ Per altre informazioni su questi token e sull'aggiornamento dei passaggi di proc
 
 `[ @flags = ] flags`È un'opzione che controlla il comportamento. *Flags* è di **tipo int**. i possibili valori sono i seguenti.  
 
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0** (predefinito)|Il file di output viene sovrascritto|  
 |**2**|L'output viene aggiunto alla fine del file di output.|  

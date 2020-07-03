@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 080933e13c2f72deef536885b9d3b5c1c4c7593b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 466cff492c5547357409cee1b11c7a6542971ae5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821083"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85878688"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crea un operatore (destinatario delle notifiche) da utilizzare con avvisi e processi.  
   
@@ -81,7 +81,7 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @pager_days = ] pager_days`Numero che indica i giorni in cui l'operatore è disponibile per le pagine (in base alle ore di inizio e di fine specificate). *pager_days*è di **tinyint**e il valore predefinito è **0** che indica che l'operatore non è mai disponibile per la ricezione di una pagina. I valori validi sono compresi tra **0** e **127**. *pager_days*viene calcolato aggiungendo i singoli valori per i giorni richiesti. Ad esempio, da lunedì a venerdì sono **2** + **4** + **8** + **16** + **32**  =  **62**. Nella tabella seguente vengono elencati i valori disponibili per ogni giorno della settimana.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Sunday|  
 |**2**|Monday|  
@@ -111,7 +111,7 @@ sp_add_operator [ @name = ] 'name'
 ## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_add_operator**.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono impostate e attivate le informazioni per l'operatore `danwi`. L'operatore è abilitato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent invia notifiche tramite cercapersone da lunedì a venerdì, dalle 8.00 alle 17.00.  
   
 ```  

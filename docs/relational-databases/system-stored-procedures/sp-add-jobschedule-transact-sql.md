@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 11aa73828caba66637d5d5b87a478dca851bdaf9
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 7c7f644b94c405fa4072ecd7d7c448f6ea865404
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151958"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879967"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crea una pianificazione per un processo di SQL Agent.  
   
@@ -68,19 +68,19 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_type = ] frequency_type`Valore che indica quando deve essere eseguito il processo. *frequency_type* è di **tipo int**e il valore predefinito è **0**. i possibili valori sono i seguenti:  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una sola volta|  
 |**4**|Ogni giorno|  
 |**8**|Settimanale|  
-|**16**|Ogni mese|  
+|**16**|Mensile|  
 |**32**|Mensile rispetto a *frequency_interval.*|  
 |**64**|All'avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|  
 |**128**|Quando il computer è inattivo|  
   
 `[ @freq_interval = ] frequency_interval`Giorno in cui viene eseguito il processo. *frequency_interval* è di **tipo int**e il valore predefinito è 0 e dipende dal valore di *frequency_type* , come indicato nella tabella seguente:  
   
-|Valore|Effetto|  
+|valore|Effetto|  
 |-----------|------------|  
 |**1** (una volta)|*frequency_interval* non è utilizzato.|  
 |**4** (giornaliera)|Ogni *frequency_interval* giorni.|  
@@ -92,7 +92,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_subday_type = ] frequency_subday_type`Specifica le unità per *frequency_subday_interval*. *frequency_subday_type* è di **tipo int**e non prevede alcun valore predefinito. i possibili valori sono i seguenti:  
   
-|Valore|Descrizione (unità)|  
+|valore|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**0x1**|All'ora specificata|  
 |**0x4**|Minuti|  
@@ -104,7 +104,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval* è di **tipo int**e non prevede alcun valore predefinito. i possibili valori sono i seguenti:  
   
-|Valore|Descrizione (unità)|  
+|valore|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**1**|First (Primo)|  
 |**2**|Second|  

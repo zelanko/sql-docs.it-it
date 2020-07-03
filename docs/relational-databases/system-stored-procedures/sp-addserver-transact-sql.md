@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73f9bb5e2201b9c8b7577c54228e038310e7a141
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d6040c3806723d07396fe7af3a0d50f49bb7e9a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716382"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85876332"
 ---
 # <a name="sp_addserver-transact-sql"></a>sp_addserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Definisce il nome dell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando il computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita viene rinominato, utilizzare **sp_addserver** per informare l'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] del nuovo nome del computer. Questa routine deve essere eseguita in tutte le istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)] ospitate nel computer. Non è possibile modificare il nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Per modificare il nome di un'istanza denominata, installare una nuova istanza con il nome desiderato, scollegare i file di database dall'istanza precedente, collegare i database alla nuova istanza ed eliminare l'istanza precedente. In alternativa, è possibile creare un nome alias del client nel computer client, reindirizzando la connessione a una combinazione diversa di server e nome di istanza o **server:port** senza modificare il nome dell'istanza nel computer server.
 

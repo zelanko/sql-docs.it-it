@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ad62613462575fb1bb33bf472e367d8f7640b03
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 928d601fe544432b669b84b8d8a819405bcfbc7e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716328"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85876037"
 ---
 # <a name="sp_addtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Inserisce riferimenti nelle tabelle di rilevamento per le operazioni di merge per tutte le righe di una tabella di origine non incluse nelle tabelle di rilevamento. Utilizzare questa opzione se è stata caricata in blocco una grande quantità di dati utilizzando **bcp**, che non attiverà i trigger di rilevamento di tipo merge. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   

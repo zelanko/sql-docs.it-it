@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fcf55efd5b50f73d15e0fc488cfe4298b99d9eb7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7492c9cd086d63a00909fc64bde87c39aaf2c096
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646484"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879387"
 ---
 # <a name="sp_add_notification-transact-sql"></a>sp_add_notification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Imposta una notifica per un avviso.  
   
@@ -46,7 +46,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
   
 `[ @notification_method = ] notification_method`Metodo con cui l'operatore riceve una notifica. *notification_method* è di **tinyint**e non prevede alcun valore predefinito. *notification_method* possono essere uno o più di questi valori combinati con un operatore logico **or** .  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Posta elettronica|  
 |**2**|Cercapersone|  
