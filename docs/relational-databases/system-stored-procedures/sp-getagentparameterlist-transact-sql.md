@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0ceb3178f8ee200b88bcb5968c110a72a7434320
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9b4239fafd6ec4ecbda7d89dd143b70a4dccb7eb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662413"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881628"
 ---
 # <a name="sp_getagentparameterlist-transact-sql"></a>sp_getagentparameterlist (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce l'elenco di tutti i parametri dell'agente di replica che possono essere impostati in un profilo agente per il tipo di agente specificato. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione in cui l'agente è in esecuzione.  
   
@@ -39,7 +39,7 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
 ## <a name="arguments"></a>Argomenti  
 `[ @agent_type = ] 'agent_type'`Agente di replica per il quale viene aggiunto il parametro. *agent_type* è di **tipo int**. i possibili valori sono i seguenti:  
   
-|Valore|Agente|  
+|valore|Agente|  
 |-----------|-----------|  
 |**1**|Snapshot|  
 |**2**|Agente di lettura log|  

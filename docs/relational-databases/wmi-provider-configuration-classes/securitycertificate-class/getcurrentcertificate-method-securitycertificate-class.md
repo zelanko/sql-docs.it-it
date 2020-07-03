@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 987a2671-1801-45c4-93e6-29f883c58720
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7934cc4888cc12c49c20fc9f69939c728efd15c4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f849a8ea6734a6e65aa0ea62b9569e4297bf3613
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731424"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880961"
 ---
 # <a name="getcurrentcertificate-method-securitycertificate-class"></a>Metodo GetCurrentCertificate (classe SecurityCertificate)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Ottiene il certificato di sicurezza corrente.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -41,7 +41,7 @@ object.GetCurrentCertificate(SHA , SQLInstance)
   
 #### <a name="parameters"></a>Parametri  
   
-|Parametro|Descrizione|  
+|Parametro|Description|  
 |---------------|-----------------|  
 |*SHA*|Valore string (parametro di output) che specifica l'identificazione digitale SHA del certificato di sicurezza corrente dopo il completamento del metodo.|  
 |*SQLInstance*|Valore string che specifica l'istanza per la quale viene richiesto il certificato.|  

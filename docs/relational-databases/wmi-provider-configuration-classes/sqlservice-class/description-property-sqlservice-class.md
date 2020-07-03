@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0baf050e-7dde-496e-a8b6-da43e6448a09
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8230816110d207e61d1c77bb74f7c90421b75b93
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: af8cfff1bc0fe3d62792eab95134915f76d638d2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733044"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880620"
 ---
 # <a name="description-property-sqlservice-class"></a>Proprietà Description (classe SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Ottiene una descrizione del servizio a cui si fa riferimento.  
   
 ## <a name="syntax"></a>Sintassi  
