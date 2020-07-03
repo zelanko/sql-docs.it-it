@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e869cd092dd242caff859298b97502693abe2116
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 382be73e4047c1d75b5ab95d1b3959cb05af68c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812102"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901188"
 ---
 # <a name="sysmail_sentitems-transact-sql"></a>sysmail_sentitems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contiene una riga per ogni messaggio inviato da Posta elettronica database. Utilizzare **sysmail_sentitems** quando si desidera visualizzare i messaggi inviati correttamente.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "82812102"
 |**last_mod_date**|**datetime**|Data e ora dell'ultima modifica della riga.|  
 |**last_mod_user**|**sysname**|Autore dell'ultima modifica della riga.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Quando si risolvono i problemi relativi a Posta elettronica database, questa vista può consentire di identificare la natura del problema in quanto indica gli attributi dei messaggi che sono stati inviati. Posta elettronica database contrassegna i messaggi come inviati quando sono stati inoltrati correttamente a un server di posta elettronica SMTP. In genere, il recapito di un messaggio di posta elettronica richiede alcuni minuti, ma può essere ritardato a causa di problemi del server SMTP. Posta elettronica database contrassegna il messaggio come inviato quando viene accettato dal server di posta elettronica SMTP. Gli errori dei messaggi di posta elettronica che si verificano nel server di posta elettronica SMTP, ad esempio un indirizzo di posta elettronica errato per un destinatario, non vengono restituiti a Posta elettronica database. Questi messaggi di posta elettronica risultano pertanto inviati anche se non sono stati recapitati. Questo tipo di errore deve essere risolto nel server SMTP. Inoltre, il server di posta elettronica SMTP può inviare una notifica per segnalare il mancato recapito di un messaggio all'indirizzo di posta elettronica per le risposte di un account di Posta elettronica database.  
   
 ## <a name="permissions"></a>Autorizzazioni  

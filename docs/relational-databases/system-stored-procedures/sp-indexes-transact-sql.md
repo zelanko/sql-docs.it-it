@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 77cace048b83ff3d4d93b4cc536dbc2c68415d98
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f7c88013f59e256c6b41aa392adb08f5fcdb495
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772944"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899450"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni sugli indici per la tabella remota specificata.  
   
@@ -62,7 +62,7 @@ sp_indexes [ @table_server = ] 'table_server'
  [ @is_unique =]'*is_unique*'  
  Tipo di indice per cui si desidera ottenere informazioni. *is_unique* è di **bit**e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |1|Restituisce informazioni sugli indici univoci.|  
 |0|Restituisce informazioni sugli indici non univoci.|  

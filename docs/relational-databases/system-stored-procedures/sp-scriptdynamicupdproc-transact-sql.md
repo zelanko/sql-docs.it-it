@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c46a7e30f6f5163fba7b630e365f90e521a96e0c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c6d6639f22963c1b058a1b9a20ed5758c00c417
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645306"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901321"
 ---
 # <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Genera l'istruzione CREATE PROCEDURE, che crea una stored procedure ad aggiornamento dinamico. L'istruzione UPDATE all'interno della stored procedure personalizzata viene compilata in modo dinamico in base alla sintassi MCALL che indica le colonne da modificare. Utilizzare questa stored procedure se il numero di indici nella tabella di sottoscrizione è in aumento e il numero di colonne in fase di modifica è ridotto. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f3f7c55d0a4cf165b5ff77e51f1fe7bb861abc7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3f1fd96f8a9809f102bfb8fe8650513fd8eb01e5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828102"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900987"
 ---
 # <a name="sysmail_unsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contiene una riga per ogni messaggio di Posta elettronica database con stato non **inviato** o nuovo **tentativo** . I messaggi con uno di questi due stati si trovano ancora nella coda della posta e potrebbero essere inviati in qualsiasi momento. Per i messaggi è possibile che lo stato non sia **inviato** per i motivi seguenti:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "82828102"
 |**last_mod_date**|**datetime**|Data e ora dell'ultima modifica della riga.|  
 |**last_mod_user**|**sysname**|Autore dell'ultima modifica della riga.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Quando si risolvono i problemi relativi a Posta elettronica database, questa vista può consentire di identificare la natura del problema in quanto indica il numero di messaggi in attesa di essere inviati e il tempo di attesa nella coda. Se nessun messaggio viene inviato, è possibile che il programma esterno Posta elettronica database non sia in esecuzione oppure che esista un problema di rete che impedisce a Posta elettronica database di contattare i server SMTP. Se molti dei messaggi non inviati hanno lo stesso **profile_id**, potrebbe essersi verificato un problema con il server SMTP. Considerare l'opportunità di aggiungere altri account al profilo. Se i messaggi vengono inviati ma il tempo di attesa nella coda è eccessivo, è possibile che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necessiti di un maggior numero di risorse per l'elaborazione del volume di messaggi scambiati.  
   
 ## <a name="permissions"></a>Autorizzazioni  
