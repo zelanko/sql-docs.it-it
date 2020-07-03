@@ -20,15 +20,15 @@ ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fceb0baa62b7998534a5b7620d2c99fd1afc1f8f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8d59db8fbc621d70c4a933c7e0ae2b0afbe475a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148320"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894967"
 ---
 # <a name="using-encryption"></a>Uso della crittografia
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   In SMO la chiave master del servizio è rappresentata dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey>. A questo oggetto fa riferimento la proprietà <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server>. La chiave può essere rigenerata tramite il metodo <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A>.  
   

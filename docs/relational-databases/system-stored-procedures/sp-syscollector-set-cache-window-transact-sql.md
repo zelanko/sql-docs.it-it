@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 660f2749-392f-46bf-89f3-27764d848507
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e4e37e40aea88ec90da7c95065f33f2becfe2b5f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab32a3bad6b394932ccf5e48200b7da40ee5d32f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760027"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892830"
 ---
 # <a name="sp_syscollector_set_cache_window-transact-sql"></a>sp_syscollector_set_cache_window (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Imposta il numero di nuovi tentativi di caricamento dei dati in caso di esito negativo. Se si ritenta il caricamento in caso di esito negativo, è possibile ridurre il rischio di perdita dei dati raccolti.  
 
@@ -44,7 +44,7 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
  [ @cache_window =] *cache_window*  
  Numero di volte in cui viene eseguito un tentativo di caricamento dati nel data warehouse di gestione in caso di errore, senza perdita dei dati. *cache_window* è di **tipo int** e il valore predefinito è 1. *cache_window* possibile avere uno dei valori seguenti:  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |-1|Vengono memorizzati nella cache tutti i dati di caricamento dei precedenti tentativi di caricamento non riusciti.|  
 |0|Non vengono memorizzati nella cache dati dei tentativi di caricamento non riusciti.|  

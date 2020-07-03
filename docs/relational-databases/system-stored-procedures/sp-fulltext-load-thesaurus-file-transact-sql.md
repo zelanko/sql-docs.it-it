@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b13792fb7a5d151987983a959751dd94f12e0a9b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 105ce6682e17e30e010c4ab7c78aa078048609b8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731683"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891875"
 ---
 # <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Fa in modo che l'istanza del server analizzi e carichi i dati dal file del thesaurus che corrisponde alla lingua per cui è specificato l'identificatore LCID. Questa stored procedure risulta utile dopo avere eseguito l'aggiornamento di un file del thesaurus. L'esecuzione di **sp_fulltext_load_thesaurus_file** comporta la ricompilazione di query full-text che utilizzano il thesaurus dell'LCID specificato.  
   
@@ -47,7 +47,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  ** \@ **  =  *azione* loadOnlyIfNotLoaded  
  Specifica se il file del thesaurus viene caricato nelle tabelle interne del thesaurus anche se è già stato caricato. *Action* è uno dei seguenti:  
   
-|Valore|Definizione|  
+|valore|Definizione|  
 |-----------|----------------|  
 |**0**|Il file del thesaurus viene caricato indipendentemente dal fatto che sia già caricato. Questo è il comportamento predefinito di **sp_fulltext_load_thesaurus_file**.|  
 |1|Il file del thesaurus viene caricato solo se non è ancora caricato.|  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3670565137456fe32206072ac91fa0b5f90b410c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 385176695fe9600250eaa5b6a839ebd833910618
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640364"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891620"
 ---
 # <a name="sp_mergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deve essere utilizzato solo nelle topologie di replica che includono server che eseguono versioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti al [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1.** sp_mergecleanupmetadata** consente agli amministratori di eliminare i metadati nelle tabelle di sistema **MSmerge_genhistory**, **MSmerge_contents** e **MSmerge_tombstone** . Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   

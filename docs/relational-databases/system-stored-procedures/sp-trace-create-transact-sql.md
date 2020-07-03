@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4e21038736343ecce98ded93d87f32d64b7ebe4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8327dc8beafb5d4e219cdaf25c44c75af3e85e5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750402"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892605"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crea la definizione di una nuova traccia nello stato arrestato.  
   
@@ -53,7 +53,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  Nella tabella seguente sono incluse le opzioni e le descrizioni, accompagnate dai relativi valori.  
   
-|Nome opzione|Valore opzione|Descrizione|  
+|Nome opzione|Valore opzione|Description|  
 |-----------------|------------------|-----------------|  
 |TRACE_FILE_ROLLOVER|**2**|Specifica che quando viene raggiunto il *max_file_size* , il file di traccia corrente viene chiuso e viene creato un nuovo file. in cui verranno scritti tutti i nuovi record. Il nome del nuovo file è uguale a quello del file precedente, ma è seguito da un numero intero a indicare la sequenza. Se, ad esempio, il nome del file di traccia originale è nomefile.trc, i successivi file di traccia verranno denominati nomefile_1.trc, nomefile_2.trc e così via.<br /><br /> Man mano che vengono creati nuovi file di traccia di rollover, viene incrementato in modo sequenziale il numero aggiunto nel nome del file.<br /><br /> SQL Server usa il valore predefinito di *max_file_size* (5 MB) se questa opzione viene specificata senza specificare un valore per *max_file_size*.|  
 |SHUTDOWN_ON_ERROR|**4**|Specifica che se non è possibile scrivere nel file per un qualsiasi motivo, SQL Server viene arrestato. Questa opzione risulta utile quando si eseguono tracce di controllo della sicurezza.|  

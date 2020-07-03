@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d7086db16eab9935624546965652834313a467db
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: afc7da4e28ef7f32ca4a2b4ea762e5a5af442471
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84927875"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891970"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Utilizzo di indici columnstore cluster
   Attività per l'utilizzo di indici columnstore cluster in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -88,8 +88,8 @@ GO
 
  Nell'esempio seguente vengono illustrati i risultati del caricamento di 1.048.577 righe in una partizione. I risultati mostrano che esiste un rowgroup COMPRESSED nel columnstore (come segmenti di colonna compressi) e 1 riga nel deltastore.
 
-```
-SELECT * FROM sys.column_store_row_groups
+```sql
+SELECT * FROM sys.column_store_row_groups;
 ```
 
  ![Rowgroup e deltastore per un carico batch](../../2014/database-engine/media/sql-server-pdw-columnstore-batchload.gif "Rowgroup e deltastore per un carico batch")

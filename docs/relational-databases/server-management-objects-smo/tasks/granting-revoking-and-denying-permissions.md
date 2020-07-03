@@ -16,15 +16,15 @@ ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15b5e67dcb5d272eacec84f83734a5db667be975
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 40b45a3b761a2846df714b6d93ed928839cad865
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095162"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894103"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Concessione, revoca e negazione delle autorizzazioni
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   L'oggetto <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> viene utilizzato per assegnare un set di autorizzazioni o una singola autorizzazione del server all'oggetto <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet>. Per le autorizzazioni al livello del server, l'utente autorizzato fa riferimento a un account di accesso. Gli account di accesso autenticati da Windows sono elencati come nomi utente di Windows. Quando viene eseguito questo esempio di codice, l'autorizzazione viene revocata all'utente autorizzato e ne viene verificata la rimozione con il metodo <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A>.  
   

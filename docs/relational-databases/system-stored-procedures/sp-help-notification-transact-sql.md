@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3fe885be9072f24c18e6115efcf511faea2d8908
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b9fad9d93a1c0d4781f792fedfe3fe7649e17c98
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634363"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891734"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce un elenco di avvisi per un determinato operatore o un elenco di operatori per un determinato avviso.  
   
@@ -50,7 +50,7 @@ sp_help_notification
   
 `[ @enum_type = ] 'enum_type'`Informazioni *object_type*restituite. nella maggior parte dei casi *enum_type* è effettivo. *enum_type*è di **carattere (10)** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |ACTUAL|Elenca solo le *object_types* associate al *nome*.|  
 |ALL|Elenca tutti i*object_types* inclusi quelli non associati al *nome*.|  
@@ -58,7 +58,7 @@ sp_help_notification
   
 `[ @notification_method = ] notification_method`Valore numerico che determina le colonne del metodo di notifica da restituire. *notification_method* è di **tinyint**. i possibili valori sono i seguenti.  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**1**|Posta elettronica: restituisce solo la colonna **use_email** .|  
 |**2**|Cercapersone: restituisce solo la colonna **use_pager** .|  

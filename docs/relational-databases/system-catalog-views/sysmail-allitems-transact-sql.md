@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0ba144f6cf06104f406545e3c7651072784de3c3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4ba169522f0deac50dd840a5eeceff63c9eb178e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824889"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891958"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contiene una riga per ogni messaggio elaborato da Posta elettronica database. Utilizzare questa vista quando si desidera controllare lo stato di tutti i messaggi.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "82824889"
 |**last_mod_date**|**datetime**|Data e ora dell'ultima modifica della riga.|  
 |**last_mod_user**|**sysname**|Autore dell'ultima modifica della riga.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare la vista **sysmail_allitems** per visualizzare lo stato di tutti i messaggi elaborati da posta elettronica database. Quando si risolvono i problemi relativi a Posta elettronica database, questa vista può consentire di identificare la natura del problema in quanto indica gli attributi dei messaggi che sono stati inviati e gli attributi dei messaggi che non sono stati inviati.  
   
  Le tabelle di sistema esposte da questa vista contengono tutti i messaggi e possono causare l'aumento delle dimensioni del database **msdb** . Eliminare periodicamente i messaggi meno recenti da questa vista al fine di limitare le dimensioni delle tabelle. Per ulteriori informazioni, vedere [la pagina relativa alla creazione di un processo di SQL Server Agent per l'archiviazione di messaggi posta elettronica database e log eventi](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  

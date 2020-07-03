@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fc69a273dfa331e558f076429be95c2462b551d8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6fe10c33c617833754ac23592528519aeabec1d5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730037"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893710"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce informazioni sui processi utilizzati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per l'esecuzione di attività automatizzate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -61,7 +61,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @job_aspect = ] 'job_aspect'`Attributo del processo da visualizzare. *job_aspect* è di tipo **varchar (9)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**ALL**|Informazioni sugli attributi del processo|  
 |**PROCESSO**|Informazioni sul processo|  
@@ -81,7 +81,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @execution_status = ] status`Stato di esecuzione dei processi. *status* è di **tipo int**e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**0**|Restituisce solo i processi non inattivi o sospesi.|  
 |**1**|In esecuzione.|  

@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b74bcf3ceb8105da7515a227e76fd9cd992ebbb2
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 1270595171ef164f29409f55a0083fa4f1afa49d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813901"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894241"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Pulizia dei dati mediante le informazioni interne di DQS
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   In questo argomento viene descritto come eseguire la pulizia dei dati utilizzando un progetto Data Quality in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). La pulizia dei dati viene eseguita sui dati di origine utilizzando una Knowledge Base incorporata in DQS e confrontando tali dati con un set di dati di alta qualità. Per altre informazioni, vedere [Compilazione di una Knowledge Base](../data-quality-services/building-a-knowledge-base.md).  
   
@@ -105,7 +105,7 @@ ms.locfileid: "85813901"
   
  In base al livello di confidenza, i valori vengono visualizzati nelle cinque schede seguenti:  
   
-|Scheda|Descrizione|  
+|Scheda|Description|  
 |---------|-----------------|  
 |**Suggerito**|Mostra i valori del dominio per il quale tramite DQS sono stati trovati valori suggeriti che dispongono di un livello di confidenza più elevato del valore *soglia di suggerimento automatico* , ma inferiore al valore *soglia di correzione automatica* .<br /><br /> Nella colonna **Correggi in** vengono visualizzati i valori suggeriti rispetto al valore originale. È possibile fare clic sul pulsante di opzione nella colonna **Approva** o **Rifiuta** rispetto a un valore nella griglia superiore per accettare o rifiutare il suggerimento per tutte le istanze di tale valore. In questo caso, il valore accettato viene spostato nella scheda **Con correzione** e il valore respinto viene spostato nella scheda **Non validi** .|  
 |**Nuove**|Consente di visualizzare il dominio valido per il quale DQS non dispone di informazioni sufficienti e pertanto non è possibile eseguirne il mapping a qualsiasi altra scheda. Inoltre, questa scheda contiene anche valori con un livello di confidenza inferiore al valore *soglia di suggerimento automatico* , ma sufficientemente elevato per essere contrassegnati come validi.<br /><br /> Se il valore è ritenuto corretto, fare clic sul pulsante di opzione nella colonna **Approva** . Altrimenti, fare clic sul pulsante di opzione nella colonna **Rifiuta** . Il valore accettato viene spostato nella scheda **corretti** e il valore rifiutato passa alla scheda **non valida** . È anche possibile digitare manualmente il valore corretto come sostituzione del valore originale nella colonna **Correggi** in rispetto al valore, quindi fare clic sul pulsante di opzione nella colonna **approva** per accettare la modifica. In questo caso, il valore viene spostato nella scheda **Con correzione** .|  

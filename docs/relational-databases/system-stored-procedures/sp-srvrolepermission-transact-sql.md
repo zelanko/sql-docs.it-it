@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7f158839f45b3b890c0ae46aee1d74f4e6a3e59b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 930b5ae195ab917faf5425bd2084314a633318b3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772955"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893029"
 ---
 # <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Visualizza le autorizzazioni di un ruolo predefinito del server.  
   
@@ -44,7 +44,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ## <a name="arguments"></a>Argomenti  
 `[ @srvrolename = ] 'role'`Nome del ruolo predefinito del server per il quale vengono restituite le autorizzazioni. *Role* è di **tipo sysname**e il valore predefinito è null. Se il ruolo viene omesso, vengono restituite le autorizzazioni di tutti i ruoli predefiniti del server. il *ruolo* può avere uno dei valori seguenti.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**sysadmin**|Amministratori di sistema|  
 |**securityadmin**|Amministratori di sicurezza|  

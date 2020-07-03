@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3253bf60-5ea6-4525-8744-c21070c4df0e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f586cfb2556d863680d8513e8266761debac3255
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 29394cb39aa6fc69d00486b528d050f13b21f741
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784906"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894649"
 ---
 # <a name="service-broker-related-dynamic-management-views-transact-sql"></a>Viste a gestione dinamica relative a Service Broker (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   In questa sezione sono contenute le viste a gestione dinamica seguenti.  
   

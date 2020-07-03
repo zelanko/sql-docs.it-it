@@ -9,15 +9,15 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2299b7c281183998ec36bd14b82af1fb2dde7c95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 370316f6f2c77a270117aca3f59d42c11914175c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75238648"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894975"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server Shared Management Objects (SMO) License Terms (Condizioni di licenza di SQL Server Shared Management Objects (SMO))
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
 ## <a name="microsoft-software-license-terms"></a>CONDIZIONI DI LICENZA SOFTWARE MICROSOFT
 **OGGETTI DI GESTIONE CONDIVISA DI MICROSOFT SQL SERVER 2017**
@@ -77,7 +77,7 @@ per il presente software, a meno che a tali prodotti non siano associate condizi
 
 **6.    DOCUMENTAZIONE.** Qualsiasi persona che disponga di accesso valido al computer o alla rete interna del licenziatario può duplicare e utilizzare la documentazione per fini di riferimento interno.
 
-**7.    RESTRIZIONI ALL'ESPORTAZIONE.** Il software è soggetto alle leggi e alle disposizioni in vigore negli Stati Uniti in materia di controllo dell'esportazione. Il licenziatario dovrà attenersi a tutte le leggi e le disposizioni locali e internazionali applicabili al software in materia di controllo delle esportazioni. Queste leggi includono limitazioni circa le destinazioni, gli utenti finali e l'utilizzo finale. Per ulteriori informazioni, vedere [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting).
+**7.    RESTRIZIONI ALL'ESPORTAZIONE.** Il software è soggetto alle leggi e alle disposizioni in vigore negli Stati Uniti in materia di controllo dell'esportazione. Il licenziatario dovrà attenersi a tutte le leggi e le disposizioni locali e internazionali applicabili al software in materia di controllo delle esportazioni. Queste leggi includono limitazioni circa le destinazioni, gli utenti finali e l'utilizzo finale. Per ulteriori informazioni, vedere [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting) .
 
 **8.    SERVIZI DI SUPPORTO TECNICO.** Poiché il presente software viene fornito "così com’è", non è prevista la fornitura di servizi di supporto tecnico da parte di Microsoft.
 

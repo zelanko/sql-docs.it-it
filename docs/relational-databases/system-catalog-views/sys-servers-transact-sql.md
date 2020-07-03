@@ -20,15 +20,15 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 89e8424532f12a4111e5a535a8016f3a4fe5ac6a
-ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
+ms.openlocfilehash: c4ebbcdb8fa1f13d7c0d40c4ac66ac1d3453dffb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85196034"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894932"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contiene una riga per ogni server collegato o remoto registrato e una riga per il server locale con **server_id** = 0.  
 

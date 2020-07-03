@@ -23,15 +23,15 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e9b8f6bf20fa02981e3275299849d1cb04036dfa
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: 6fb0669f2dc631981145061f240d69fa16e4e674
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939042"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892195"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
 Restituisce una riga per ogni elemento classificato nel database.
 
@@ -49,7 +49,7 @@ Restituisce una riga per ogni elemento classificato nel database.
 |**rank_desc**|**sysname**|Rappresentazione testuale del rango:  <br><br>NONE, LOW, MEDIUM, HIGH, CRITICAL|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
 
 - Questa visualizzazione fornisce visibilità sullo stato di classificazione del database. Può essere utilizzato per la gestione delle classificazioni dei database, nonché per la generazione di report.
 - Attualmente è supportata solo la classificazione delle colonne del database.

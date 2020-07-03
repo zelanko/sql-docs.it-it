@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 387e4a0a30f5681391bb5891dc772f7c9f04790c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7d1f047fed74a212358ef7c1af61034d021661ef
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723076"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892593"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Aggiunge o rimuove un evento o colonna di evento in una traccia. **sp_trace_setevent** possono essere eseguite solo su tracce esistenti interrotte (*lo stato* è **0**). Viene restituito un errore se questa stored procedure viene eseguita su una traccia che non esiste o il cui *stato* è diverso da **0**.  
   
@@ -51,7 +51,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Nella tabella seguente vengono descritti gli eventi che è possibile aggiungere o rimuovere in una traccia.  
   
-|Numero evento|Nome evento|Descrizione|  
+|Numero evento|Nome evento|Description|  
 |------------------|----------------|-----------------|  
 |0-9|Riservato|Riservato|  
 |10|RPC:Completed|Viene generato al completamento di una chiamata di procedura remota (RPC).|  

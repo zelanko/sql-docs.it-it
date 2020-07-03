@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c6a542e44f33a64b5cdd4727aab891592338b880
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c3c0351bd541738e2540cc1a0624cf0ca9836c5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724625"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893979"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per ogni dominio dell'applicazione nel server. Il dominio applicazione (**AppDomain**) è un costrutto nella [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) che rappresenta l'unità di isolamento per un'applicazione. È possibile utilizzare questa visualizzazione per comprendere e risolvere i problemi relativi agli oggetti di integrazione CLR in esecuzione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -34,7 +34,7 @@ ms.locfileid: "85724625"
   
  Per ulteriori informazioni, vedere [domini applicazione](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
-|Nome colonna|Tipo di dati|Descrizione|  
+|Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**appdomain_address**|**varbinary (8)**|Indirizzo del **dominio applicazione**. Tutti gli oggetti di database gestiti di proprietà di un utente vengono sempre caricati nello stesso **AppDomain**. È possibile utilizzare questa colonna per cercare tutti gli assembly attualmente caricati in questo **AppDomain** in **sys. dm_clr_loaded_assemblies**.|  
 |**appdomain_id**|**int**|ID del **dominio AppDomain**. Ogni **AppDomain** ha un ID univoco.|  

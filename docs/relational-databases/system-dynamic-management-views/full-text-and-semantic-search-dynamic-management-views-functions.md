@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: fc289d99e2af7c8bd2f95da742deaf50af128e3a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 21b65e4d9f12457c0291c5b43b24924b94c289f1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787032"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894676"
 ---
 # <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>Viste a gestione dinamica per la ricerca full-text e semantica-funzioni
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   In questa sezione sono contenute le funzioni e le DMV relative alla ricerca full-text e semantica riportate di seguito.  
   
