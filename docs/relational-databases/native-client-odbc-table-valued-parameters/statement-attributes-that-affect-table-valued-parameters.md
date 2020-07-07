@@ -14,15 +14,14 @@ ms.assetid: 089213b0-d368-4332-b2e5-b2bd8770c64f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b4a6bfc8209946f6d550f243cc21a027c1f9fd6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 71f43396dee59a62b68c774533340d86da0fe9f4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760669"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998377"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>Attributi dell'istruzione che influiscono sui parametri con valori di tabella
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Nella tabella seguente vengono illustrati gli attributi di un campo di descrizione.  
   
