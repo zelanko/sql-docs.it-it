@@ -14,15 +14,14 @@ ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faa45c1e7de48eb7b4387a8c639e625cecee8abf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 0bdf96d5f352f4b35f45112e86e16fa09a28a90a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724947"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006440"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Eseguire la stored procedure con RPC e l'output del processo
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Le stored procedure di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono includere parametri di output e codici restituiti di tipo integer. I codici restituiti e i parametri di output vengono inviati nell'ultimo pacchetto dal server e non sono pertanto disponibili all'applicazione fino al completo rilascio del set di righe. Se il comando restituisce più risultati, i dati dei parametri di output sono disponibili quando **IMultipleResults::GetResult** restituisce DB_S_NORESULT o l'interfaccia **IMultipleResults** viene completamente rilasciata, a seconda dell'evento che si verifica per primo.  
   

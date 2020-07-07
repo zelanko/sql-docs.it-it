@@ -16,15 +16,14 @@ ms.assetid: 6bae29c4-7f49-419c-8712-90db734f992e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b50c8dc19d61511222949844459ad9c276faef28
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: a095cecfc790dc98edf2de174a3d492b25683db5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783462"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006579"
 ---
 # <a name="cursor-programming-details-odbc"></a>Informazioni sulla programmazione dei cursori (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   La scelta del tipo di cursore più appropriato può migliorare le prestazioni dell'applicazione. In determinate condizioni [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] può convertire implicitamente un tipo di cursore quando si esegue un'istruzione SQL che non è supportata dal tipo di cursore richiesto.  
   

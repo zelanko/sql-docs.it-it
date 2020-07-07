@@ -16,15 +16,14 @@ ms.assetid: 583096d7-da34-49be-87fd-31210aac81aa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7145641c3b8e89836a3c5761647cf0fbe75db60e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 8707ad2b00a11e0e681c3b5a3a73cbbe82a2c1fa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762895"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008476"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Inizializza la struttura della copia bulk, esegue alcune operazioni di controllo degli errori, verifica che i dati e i nomi dei file di formato siano corretti, quindi li apre.  
   
@@ -59,7 +58,7 @@ HRESULT BCPInit(
   
  Le copie bulk in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere ottimizzate per le tabelle che non contengono indici impostando l'opzione del database **select into/bulkcopy**.  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>Arguments  
  *pwszTable*[in]  
  Nome della tabella di database per la copia interna o esterna. Il nome può includere il nome del database o del proprietario, ad esempio "pubs.username.titles", "pubs..titles", "username.titles".  
   

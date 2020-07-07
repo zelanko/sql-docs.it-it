@@ -11,15 +11,14 @@ ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3655c567081538c957af1b3d646e683867097dd2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 9866c13f2a7385c008cc8fd98455e371ebd6f250
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755688"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007908"
 ---
 # <a name="odbc-how-to-topics"></a>Procedure per l'utilizzo di ODBC
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Per utilizzare il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario essere in grado di creare origini dati ODBC e assicurarsi che nel server sia presente la versione corretta delle stored procedure di catalogo. Per codificare un'applicazione ODBC che utilizza SQL Server, è necessario sapere come allocare gli handle ODBC, impostare gli attributi, eseguire la connessione a un'istanza di SQL Server, eseguire query ed elaborare risultati.  
   

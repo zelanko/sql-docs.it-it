@@ -11,15 +11,14 @@ ms.assetid: e35d37ed-dd9b-4a34-a76a-bc9251f06c4f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 388ba06ae72fd6e7d9ced8de50cf2af2af9d0cf3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 1a94ec212e869fb6807a59db10b50388d55b2b7b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785439"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008401"
 ---
 # <a name="icolumnsrowset"></a>IColumnsRowset
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client viene aggiunta la colonna DBCOLUMN_BASETABLEINSTANCE a IColumnsRowset::GetColumnRowset. Questa colonna restituisce DBTYPE_I2 ed è riservata per l'uso da parte di Microsoft. Le informazioni in questa colonna sono soggette a modifiche nelle versioni future.  
   

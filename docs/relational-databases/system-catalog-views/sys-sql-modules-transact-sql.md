@@ -20,15 +20,14 @@ ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd05afece6814beb84e3fa079b02f661f14990bd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 35364b70b54c0837f5cdbcc3b747a6c066c7beb9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783946"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008349"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Restituisce una riga per ogni oggetto che è un modulo definito dal linguaggio SQL in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , inclusa la funzione scalare definita dall'utente compilata in modo nativo. Agli oggetti di tipo P, RF, V, TR, FN, IF, TF e R è associato un modulo SQL. In questa vista anche agli oggetti predefiniti autonomi, ovvero gli oggetti di tipo D, sono associati a una definizione di modulo SQL. Per una descrizione di questi tipi, vedere la colonna **Type** nella vista del catalogo [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) .  
   

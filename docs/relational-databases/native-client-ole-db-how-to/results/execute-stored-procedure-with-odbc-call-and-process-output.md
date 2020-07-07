@@ -14,15 +14,14 @@ ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf8ead74810e079a4c247fcfe2841a595b10868d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: c674c515bd07f50e067ae25152702c5e6529033c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771681"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006449"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Eseguire la stored procedure con la chiamata ODBC e l'output del processo
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Le stored procedure di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono includere parametri di output e codici restituiti di tipo integer. I codici restituiti e i parametri di output vengono inviati nell'ultimo pacchetto dal server e non sono pertanto disponibili all'applicazione fino al completo rilascio del set di righe. Se il comando restituisce più risultati, i dati dei parametri di output sono disponibili quando **IMultipleResults::GetResult** restituisce DB_S_NORESULT o l'interfaccia **IMultipleResults** viene completamente rilasciata, a seconda dell'evento che si verifica per primo.  
   
