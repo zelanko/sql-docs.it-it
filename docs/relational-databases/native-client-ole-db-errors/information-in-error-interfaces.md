@@ -18,15 +18,14 @@ ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcbdaa46ab388bc641120bdcccb454468d102eb2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b548a1ee0edd7bbd5b83fd3692937ac349a2d540
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773359"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010546"
 ---
 # <a name="information-in-error-interfaces"></a>Informazioni nelle interfacce di errore
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client segnala alcune informazioni sugli errori e sullo stato nelle interfacce di errore definite dall'OLE DB **IErrorInfo**, **IErrorRecords**e **ISQLErrorInfo**.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "85773359"
 |---------------------|-----------------|  
 |**GetDescription**|Stringa descrittiva del messaggio di errore.|  
 |**GetGUID**|GUID dell'interfaccia che ha definito l'errore.|  
-|**GetHelpContext**|Non supportata. Restituisce sempre zero.|  
+|**GetHelpContext**|Non supportato. Restituisce sempre zero.|  
 |**GetHelpFile**|Non supportato. Viene restituito sempre NULL.|  
 |**GetSource**|Stringa "Microsoft SQL Server Native Client".|  
   
