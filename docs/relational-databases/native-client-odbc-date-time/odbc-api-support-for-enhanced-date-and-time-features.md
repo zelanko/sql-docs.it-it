@@ -13,15 +13,14 @@ ms.assetid: 430c029d-f8c1-4de7-a9dd-330e9b6bfc20
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8b6c0077bfc59a05a044dde85cd676a2f8e1c06
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: abc3d2ad07703d6c3fa2792b7dbb4136f8c6074b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774366"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010696"
 ---
 # <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>Supporto delle API ODBC per le funzionalità avanzate di data e ora
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Le funzionalità avanzate di data e ora sono supportate dalle API ODBC seguenti.  
   
