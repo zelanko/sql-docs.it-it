@@ -4,22 +4,27 @@ description: Scopri le modifiche apportate a SQL Server Migration Assistant (SSM
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 6/2/2020
+ms.date: 7/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: ce77e0e9a3421fab7f1fc031bbf55e8a84c235df
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
-ms.translationtype: MT
+ms.openlocfilehash: 1c0292d05624e2d3cb8640d719fc2c0e29474cb0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84778063"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000373"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Novità di SSMA per MySQL (MySQLToSql)
 
 Questo articolo elenca SQL Server Migration Assistant (SSMA) per le modifiche di MySQL in ogni versione.
+
+## <a name="ssma-v811"></a>SSMA v 8.11
+
+La versione v 8.11 di SSMA per MySQL contiene le modifiche seguenti:
+
+* Usare la libreria MSAL.NET per l'autenticazione Azure Active Directory interattiva
 
 ## <a name="ssma-v810"></a>SSMA v 8.10
 
