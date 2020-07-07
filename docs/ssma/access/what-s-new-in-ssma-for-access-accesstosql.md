@@ -4,22 +4,27 @@ description: Scopri le modifiche apportate a SQL Server Migration Assistant (SSM
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 6/2/2020
+ms.date: 7/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: 7aa805b018517860e925ebf52048a20cc257a9af
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
-ms.translationtype: MT
+ms.openlocfilehash: e2c45c4aea17448af7ed496c1c56b8629c30e429
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779403"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85978843"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Novità di SSMA per Access (AccessToSQL)
 
 Questo articolo elenca SQL Server Migration Assistant (SSMA) per le modifiche di accesso in ogni versione.
+
+## <a name="ssma-v811"></a>SSMA v 8.11
+
+La versione v 8.11 di SSMA per Access contiene le modifiche seguenti:
+
+* Usare la libreria MSAL.NET per l'autenticazione Azure Active Directory interattiva
 
 ## <a name="ssma-v810"></a>SSMA v 8.10
 
