@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6d793f394b9ffdf329eefbd73889d3233476372b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8da7a2f89bbe0a63cb438b464a217805cfa97db6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68129814"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719508"
 ---
 # <a name="topologies-for-web-synchronization"></a>Topologie per la sincronizzazione tramite il Web
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   È possibile scegliere tra diverse topologie di replica di sincronizzazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite il Web. Le modalità comuni di configurazione della sincronizzazione tramite il Web includono:  
   
 -   Server singolo  

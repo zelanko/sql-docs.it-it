@@ -12,15 +12,15 @@ ms.assetid: 34055a2f-7d0f-4e13-a62e-7ee5b6c23b86
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 174cd2a4bc07d5de1cd664f715b9442846073502
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4748a1232f22f41f3ed079d90c980d7476f595e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68092942"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719847"
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe di evento **CursorUnprepare** offre informazioni sugli eventi relativi al cursore non preparato che vengono generati nei cursori API. Gli eventi relativi al cursore non preparato vengono generati quando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] elimina un piano di esecuzione.  
   
  Includere la classe di evento **CursorUnprepare** nelle tracce in cui vengono registrate le prestazioni dei cursori. Quando la classe di evento **CursorUnprepare** viene inclusa in una traccia, la quantità di overhead dipende dalla frequenza di utilizzo dei cursori nel database durante la traccia. Se si utilizzano diffusamente i cursori, l'esecuzione della traccia potrebbe ridurre in modo significativo le prestazioni.  

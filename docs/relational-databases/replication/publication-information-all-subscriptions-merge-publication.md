@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 619406c884ec5067f569178094f9a3a0c05634e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 939a1a18c0be61c63a1d176d4294c289ec827531
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321419"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720965"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>Informazioni sulla pubblicazione, Tutte le sottoscrizioni (Pubblicazione di tipo merge)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Nella scheda **Tutte le sottoscrizioni** vengono visualizzate informazioni relative a tutte le sottoscrizioni della pubblicazione di tipo merge selezionata.  
   
 ## <a name="options"></a>Opzioni  

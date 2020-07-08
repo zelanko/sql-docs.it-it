@@ -12,15 +12,15 @@ ms.assetid: ea02b01e-9f87-47ca-9117-afadc382fb45
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ef73ccd2c51a7c7b79209f5728feaaf36f8a566
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a70af7f66197bb4c9ee2df82fbf95c99a3fe31cf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68009586"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719813"
 ---
 # <a name="data-file-auto-shrink-event-class"></a>Data File Auto Shrink - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe di evento **Data File Auto Shrink** indica che il file di dati è stato compattato. Questo evento non viene generato se il file di dati viene compattato a causa di un'istruzione ALTER DATABASE esplicita. Includere la classe di evento **Data File Auto Shrink** nelle tracce che eseguono il monitoraggio delle modifiche alle dimensioni del file di dati.  
   
  Se la classe di evento **Data File Auto Shrink** viene inclusa in una traccia, l'overhead generato sarà ridotto a meno che il file di dati venga compattato di frequente.  

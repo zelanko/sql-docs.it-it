@@ -17,15 +17,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: e4c2a2e56f9dab75bfe3873e721ccfca0bd16df3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: add476168eabf5255bb4cbdce59bd763d05faf4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77705906"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719551"
 ---
 # <a name="query-profiling-infrastructure"></a>Infrastruttura di profilatura delle query
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] offre la possibilità di accedere alle informazioni di runtime nei piani di esecuzione delle query. Una delle azioni più importanti quando si verifica un problema di prestazioni consiste nell'individuare in modo preciso il carico di lavoro in esecuzione e la modalità di gestione delle risorse. Per questa ragione, è necessario accedere al [piano di esecuzione effettivo](../../relational-databases/performance/display-an-actual-execution-plan.md).
 

@@ -1,8 +1,7 @@
 ---
 title: Formattare i risultati delle query in formato JSON con FOR JSON
-ms.date: 06/06/2019
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,18 +11,19 @@ helpviewer_keywords:
 ms.assetid: 15b56365-58c2-496c-9d4b-aa2600eab09a
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43e9b416885a5cbd1239b0694ffc3613b7509186
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4e9aee7c2c8de20c50c101e3573e4d3d9259b661
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095818"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722275"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Formattare i risultati delle query in formato JSON con FOR JSON (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 È possibile formattare i risultati delle query come JSON o esportare i dati da SQL Server in formato JSON aggiungendo la clausola **FOR JSON** a un'istruzione **SELECT** . Usare la clausola **FOR JSON** per semplificare le applicazioni client delegando la formattazione dell'output JSON dell'app a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
@@ -199,15 +199,14 @@ L'output della clausola **FOR JSON** ha le caratteristiche seguenti:
 Ecco un esempio che illustra come la clausola **FOR JSON** formatta l'output JSON.  
   
 **Risultati query**  
-  
-|||||  
-|-|-|-|-|  
-|**A**|**B**|**C**|**D**|  
+
+|Una|b|C|D|
+|-|-|-|-|
 |10|11|12|X|  
 |20|21|22|S|  
 |30|31|32|Z|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-  
+
  **Output JSON**  
   
 ```json  

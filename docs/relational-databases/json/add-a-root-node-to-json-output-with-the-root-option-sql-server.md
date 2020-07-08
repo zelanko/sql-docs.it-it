@@ -1,8 +1,7 @@
 ---
 title: Aggiungere un nodo radice all'output JSON con l'opzione ROOT
-ms.date: 06/02/2016
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,17 +9,18 @@ helpviewer_keywords:
 ms.assetid: b9afa74a-f59f-483e-a178-42be2e9882c9
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 482b098d253d078f57c26a482584c2863266a16a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 801fd50761c561db67405c5cc47210ba43facdf2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095839"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722309"
 ---
 # <a name="add-a-root-node-to-json-output-with-the-root-option-sql-server"></a>Aggiungere un nodo radice all'output JSON con l'opzione ROOT (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Per aggiungere un unico elemento di primo livello all'output JSON della clausola **FOR JSON** , specificare l'opzione **ROOT** .  
   
