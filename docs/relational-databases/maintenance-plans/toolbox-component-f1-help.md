@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c71cc0537f79330742282e7a0389187c8424d1f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67681c110015ae119c9f5a28812f9fba68f968a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115525"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715331"
 ---
 # <a name="toolbox-component-f1-help"></a>Guida sensibile al contesto del componente Casella degli strumenti
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La **Casella degli strumenti** include numerosi elementi utilizzabili nei progetti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile accedere alla **Casella degli strumenti** dal menu **Visualizza** e ancorare la finestra nel modo desiderato. Se ancorata, la finestra **Casella degli strumenti** può essere bloccata in posizione aperta o impostata su **Nascondi automaticamente** quando non in uso.  
   
  Le icone della**Casella degli strumenti** possono essere trascinate con il mouse oppure copiate e incollate nell'area di visualizzazione della finestra di progettazione all'interno di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

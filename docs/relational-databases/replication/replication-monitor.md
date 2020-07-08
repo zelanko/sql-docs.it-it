@@ -15,15 +15,15 @@ ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8993d0512f4809302b2d4ac8193971decc2e0566
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ecf9c330ef81a37a70237061f039db29b17576d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287382"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716739"
 ---
 # <a name="replication-monitor"></a>Monitoraggio replica
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   In questa sezione della documentazione vengono fornite informazioni su Monitoraggio replica. Le pagine e le finestre di dialogo visualizzate dipendono dal tipo di replica e dalla versione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] monitorata.  
   
 -   [Monitoraggio replica, pagina principale](../../relational-databases/replication/replication-monitor-main-page.md)  

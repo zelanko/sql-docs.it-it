@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 7773a87d-2f1b-4951-a225-baf159a7291b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ad3ad143a6c1f8b786f2054b1537d393afc49e13
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 494212a1a203bebf2ab37252ae00781648e68627
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68111322"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714974"
 ---
 # <a name="security-functions-transact-sql"></a>Funzioni di sicurezza (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Tramite le funzioni seguenti vengono restituite informazioni utili per la gestione della sicurezza. Ulteriori funzioni sono elencate in [Funzioni di crittografia &#40;Transact-SQL&#41;](../../t-sql/functions/cryptographic-functions-transact-sql.md).  
   

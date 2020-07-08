@@ -13,15 +13,15 @@ ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c1f01d9a51a46090237a609cab538ea1ea92841
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b5c9f0878d2a35dc82565a799b3c09725b65dd4a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089620"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716979"
 ---
 # <a name="deprecation-final-support-event-class"></a>Deprecation Final Support - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe di evento **Deprecation Final Support** viene generata quando si utilizza una caratteristica che verrà rimossa dalla successiva versione principale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per garantire la massima durata delle applicazioni, non utilizzare caratteristiche da cui viene generata la classe di evento **Deprecation Announcement** o **Deprecation Final Support** . Modificare le applicazioni che utilizzano le caratteristiche deprecate finali il prima possibile.  
   
 ## <a name="deprecation-final-support-event-class-data-columns"></a>Colonne di dati della classe di evento Deprecation Final Support  

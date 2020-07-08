@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 88386ec0aa476901708ccaed10b235bdab04fe1e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3f267e998b0bd9693c821000cd51a044326e9161
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180805"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718010"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Ripristinare un database fino a una transazione contrassegnata (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Quando un database è in stato di ripristino, è possibile usare la finestra di dialogo **Ripristina log delle transazioni** per ripristinare il database a una transazione contrassegnata nei backup del log disponibili.  
   
 > [!NOTE]  
@@ -49,7 +49,7 @@ ms.locfileid: "82180805"
   
     |Intestazione|valore|  
     |------------|-----------|  
-    |\<vuoto>|Consente di visualizzare una casella di controllo per selezionare il contrassegno.|  
+    |\<blank>|Consente di visualizzare una casella di controllo per selezionare il contrassegno.|  
     |**Contrassegno transazione**|Nome della transazione contrassegnata specificato dall'utente durante l'esecuzione del commit della transazione.|  
     |**Data**|Data e ora assegnate alla transazione quando ne è stato eseguito il commit. Vengono visualizzate la data e l'ora della transazione registrate nella tabella **msdbgmarkhistory** , non nella data e ora del computer client.|  
     |**Descrizione**|Eventuale descrizione della transazione contrassegnata specificata dall'utente quando è stato eseguito il commit della transazione.|  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 63000023-54fc-4efc-a30f-fb4d4db73aae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e24efe4204d9117af0d3743f91fe028b305a36d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 25ed0a2ce97310389f53238e81f16ab8b1482b3a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68138305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706541"
 ---
 # <a name="cursors-transact-sql"></a>Cursori (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Le istruzioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generano un set di risultati completo, ma in alcuni casi è preferibile elaborare i risultati una riga alla volta. Se si apre un cursore su un set di risultati, il set potrà essere elaborato una riga alla volta. È possibile assegnare un cursore a una variabile o un parametro con il tipo di dati **cursor**.  
   

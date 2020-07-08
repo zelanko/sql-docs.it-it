@@ -17,17 +17,17 @@ helpviewer_keywords:
 - number of triggers
 - TRIGGER_NESTLEVEL function
 ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6215824f230001cb9d7add20d32c85780a65ede6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 3d4300f1a9d5e31751201bd17f2448eac6c37424
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68098811"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714574"
 ---
 # <a name="trigger_nestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Restituisce il numero di trigger eseguiti per l'istruzione che ha attivato il trigger. TRIGGER_NESTLEVEL viene utilizzata nei trigger DML e DDL per determinare il livello di nidificazione.  
   
