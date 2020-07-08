@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7101d77a-84ca-4c00-af1c-17679234e9fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6ab246e886e4f439fbf1dca600372a6816bc198b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2dd7ec5d8c7c321887d2553690e80dda12156203
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940450"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85654590"
 ---
 # <a name="device-driver-control-error"></a>Errore di verifica driver dispositivo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Questa regola consente di controllare l'evento con ID 11 nel registro eventi di sistema. L'errore può essere provocato da un driver di dispositivo danneggiato, da un problema hardware, da uno o più cavi collegati in modo non corretto o da problemi di connettività.  
   
 ## <a name="best-practices-recommendations"></a>Procedure consigliate  

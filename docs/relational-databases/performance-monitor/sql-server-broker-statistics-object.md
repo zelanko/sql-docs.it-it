@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 77a6174931924c30b8d482c0bd5d3f4a358f4a10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6dd7b9d542bb72b570a59244639685d3e56d6377
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85657033"
 ---
 # <a name="sql-server-broker-statistics-object"></a>Oggetto Statistiche Broker di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Nell'oggetto prestazione SQLServer:Statistiche Broker sono inclusi contatori delle prestazioni che contengono informazioni generali su [!INCLUDE[ssSB](../../includes/sssb-md.md)] per un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Nella tabella seguente sono elencati i contatori inclusi nell'oggetto:  
   
 |Contatori dell'oggetto Statistiche Broker di SQL Server|Descrizione|  

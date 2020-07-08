@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4084b87320da45e4cff3aa37ba852f708da8976c
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: 17174d9fc10ad522e006c6a90936341856be52df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388482"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633160"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>Negazione delle autorizzazioni per una raccolta di XML Schema
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   È possibile negare l'autorizzazione per la creazione di una nuova raccolta di XML Schema o per l'utilizzo di una raccolta esistente.  
   
 ## <a name="denying-permission-to-create-an-xml-schema-collection"></a>Negazione dell'autorizzazione per la creazione di una raccolta di XML Schema  

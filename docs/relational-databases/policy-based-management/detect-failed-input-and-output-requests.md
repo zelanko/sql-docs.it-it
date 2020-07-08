@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 85373b2e-d9fe-42ef-9653-6e22fe5ecab0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 40a651dc1fd89488d536b8e3c6d8959004424866
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 85e59881bd28aae9a5245aa71fbec5eea234966a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940413"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85654531"
 ---
 # <a name="detect-failed-input-and-output-requests"></a>Rilevare richieste di I/O non riuscite
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Questa regola consente di controllare l'evento con ID 50 nel registro eventi di sistema. Questo errore è provocato da una richiesta di I/O non riuscita.  
   
 ## <a name="best-practices-recommendations"></a>Procedure consigliate  

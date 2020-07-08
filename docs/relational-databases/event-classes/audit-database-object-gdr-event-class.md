@@ -12,15 +12,15 @@ ms.assetid: 2289aab5-e048-4288-bcae-aaf768ca014a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 754b0d65a4d6e643a15c2eb555dfe5f423c701cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b75ca42a906069969527d0803699e4c04b372dbb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109146"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635635"
 ---
 # <a name="audit-database-object-gdr-event-class"></a>Audit Database Object GDR - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe di evento **Audit Database Object GDR** viene generata in presenza di un evento GRANT, REVOKE o DENY per oggetti di database, ad esempio assembly e schemi.  
   
 ## <a name="audit-database-object-gdr-event-class-data-columns"></a>Colonne di dati della classe di evento Audit Database Object GDR  

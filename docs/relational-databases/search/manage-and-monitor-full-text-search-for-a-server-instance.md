@@ -14,15 +14,15 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 72b34355a11e87540bc8a298d0144988cdbeb17c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e638dfe871d2ba4582228c097291d7f118fa47d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056178"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629462"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Gestione e monitoraggio della ricerca full-text per un'istanza del server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   L'amministrazione full-text per un'istanza del server include:  
   
 -   Attività di gestione del sistema quali la gestione del servizio dell'utilità di avvio di FDHOST (MSSQLFDLauncher), il riavvio del processo host del daemon di filtri se si modificano le credenziali dell'account del servizio, la configurazione delle proprietà full-text del server e il backup dei cataloghi full-text. A livello di server, ad esempio, è possibile specificare un linguaggio full-text predefinito che differisce dal linguaggio predefinito dell'istanza del server nel suo complesso.  

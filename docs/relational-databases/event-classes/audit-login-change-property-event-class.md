@@ -12,15 +12,15 @@ ms.assetid: 47c8f045-37e5-471e-bf01-55d988ed47c1
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 858a796eb524f097816687b4e14ae3c048577a5b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0414c9f2b1dddced46581d69c9b90a4174345fd3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897565"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629962"
 ---
 # <a name="audit-login-change-property-event-class"></a>Audit Login Change Property - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe di evento **Audit Login Change Property** viene generata quando si usa la stored procedure **sp_defaultdb** o **sp_defaultlanguage** oppure l'istruzione ALTER LOGIN per modificare una proprietà di un account di accesso.  
   
 ## <a name="audit-login-change-property-event-class-data-columns"></a>Colonne di dati della classe di evento Audit Login Change Property  

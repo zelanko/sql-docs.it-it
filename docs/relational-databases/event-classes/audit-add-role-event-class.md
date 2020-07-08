@@ -12,15 +12,15 @@ ms.assetid: 4ea55922-608c-4db2-8b3f-873862755bba
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e90b642014b823750810ef6956cb1e849427b002
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6cccc2d27ad65278a0c229992c138e8321a626d1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903631"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630515"
 ---
 # <a name="audit-add-role-event-class"></a>Audit Add Role - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe di evento **Audit Add Role** viene generata quando un ruolo di database viene aggiunto a o rimosso da un database. Questa classe di evento è usata dalle stored procedure **sp_addrole** e **sp_droprole** .  
   
  Questa classe di evento verrà probabilmente rimossa a partire da una delle prossime versioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È consigliabile usare invece la classe di evento **Audit Database Principal Management** .  

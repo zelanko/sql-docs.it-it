@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e19b164b0efe6d92a9bae0e6f7362ac5fd56f202
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b2f0434041b7573bc8c32e2618a64a0f900561fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165989"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655751"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>Configurazione di spazi di archiviazione con una cache write-back NVDIMM-N
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Windows Server 2016 supporta i dispositivi NVDIMM N che consentono operazioni di input/output (I/O) estremamente veloci. Un uso interessante di tali dispositivi è come cache write-back per ottenere latenze di scrittura ridotte. Questo argomento illustra come configurare uno spazio di archiviazione con mirroring con una cache write-back NVDIMM-N con mirroring come unità virtuale per archiviare il log delle transazioni di SQL Server. Se si vuole usare lo spazio anche per archiviare tabelle di dati o altri dati, è possibile includere più dischi nel pool di archiviazione o creare più pool, se l'isolamento è importante.  
   
  Per un video di Channel 9 sull'uso di questa tecnica, vedere [Using Non-volatile Memory (NVDIMM-N) as Block Storage in Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P466)(Uso di memoria non volatile (NVDIMM-N) come archiviazione a blocchi in Windows Server 2016).  

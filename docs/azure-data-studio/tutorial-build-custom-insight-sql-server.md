@@ -1,21 +1,20 @@
 ---
 title: 'Esercitazione: Creare un widget di informazioni dettagliate personalizzato'
-titleSuffix: Azure Data Studio
 description: Questa esercitazione illustra come creare widget di informazioni dettagliate personalizzati e aggiungerli ai dashboard di server e database in Azure Data Studio.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 34ee9c23569897247f05d6b9b5f9f2610f5d68fc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 14f3e502c3370056515f17915a370473d10b3b2b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959093"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85661143"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>Esercitazione: Creare un widget di informazioni dettagliate personalizzato
 
