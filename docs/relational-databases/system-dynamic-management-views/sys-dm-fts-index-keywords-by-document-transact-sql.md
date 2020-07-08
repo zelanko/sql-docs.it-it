@@ -22,15 +22,14 @@ ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86ab3a31f53f480713ae27a70bfe59d3817af017
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: b1517198208c6282aabd29e39d425dc8ae5afb9e
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078565"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091585"
 ---
 # <a name="sysdm_fts_index_keywords_by_document-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Restituisce informazioni sul contenuto a livello di documento di un indice full-text associato alla tabella specificata.  
   
@@ -80,7 +79,7 @@ sys.dm_fts_index_keywords_by_document
   
 -   Numero di volte in cui una parola chiave è presente nell'indice full-text intero, ovvero:  
   
-     ([Sum](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) dove **parola chiave**=*keyword_value* )  
+     ([Sum](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) ( **parola chiave** = ) *keyword_value* )  
   
 -   Numero di volte in cui una parola chiave è presente in una riga oppure in un documento specificato.  
   
@@ -90,7 +89,7 @@ sys.dm_fts_index_keywords_by_document
   
  Quando la colonna chiave full-text è, come consigliato, un tipo di dati integer, viene eseguito il mapping diretto di document_id al valore della chiave full-text nella tabella di base.  
   
- Quando invece la colonna chiave full-text utilizza un tipo di dati diverso da integer, document_id non rappresenta la chiave full-text della tabella di base. In questo caso, per identificare la riga nella tabella di base restituita da dm_fts_index_keywords_by_document, è necessario unire in join questa visualizzazione con i risultati restituiti da [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Prima di poter eseguire il join, è necessario archiviare l'output della stored procedure in una tabella temporanea e unire in join la colonna document_id di dm_fts_index_keywords_by_document alla colonna DocId restituita da questa stored procedure. Si noti che una colonna **timestamp** non può ricevere valori in fase di inserimento, perché vengono generati automaticamente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]da. La colonna **timestamp** deve pertanto essere convertita in colonne **varbinary (8)** . Nell'esempio seguente sono illustrati i passaggi per l'operazione. In questo esempio *table_id* è l'ID della tabella, *database_name* è il nome del database e *table_name* è il nome della tabella.  
+ Quando invece la colonna chiave full-text utilizza un tipo di dati diverso da integer, document_id non rappresenta la chiave full-text della tabella di base. In questo caso, per identificare la riga nella tabella di base restituita da dm_fts_index_keywords_by_document, è necessario unire in join questa visualizzazione con i risultati restituiti da [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Prima di poter eseguire il join, è necessario archiviare l'output della stored procedure in una tabella temporanea e unire in join la colonna document_id di dm_fts_index_keywords_by_document alla colonna DocId restituita da questa stored procedure. Si noti che una colonna **timestamp** non può ricevere valori in fase di inserimento, perché vengono generati automaticamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La colonna **timestamp** deve pertanto essere convertita in colonne **varbinary (8)** . Nell'esempio seguente sono illustrati i passaggi per l'operazione. In questo esempio *table_id* è l'ID della tabella, *database_name* è il nome del database e *table_name* è il nome della tabella.  
   
 ```  
 USE database_name;  
@@ -119,7 +118,7 @@ GO
  Nell'esempio seguente viene visualizzato il contenuto dell'indice full-text a livello di documento nella tabella `HumanResources.JobCandidate` del database di esempio `AdventureWorks2012`.  
   
 > [!NOTE]  
->  È possibile creare questo indice eseguendo l'esempio fornito per la `HumanResources.JobCandidate` tabella in [create fulltext index &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
+>  È possibile creare questo indice eseguendo l'esempio fornito per la `HumanResources.JobCandidate` tabella in [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
 ```  
 SELECT * FROM sys.dm_fts_index_keywords_by_document(db_id('AdventureWorks'),   

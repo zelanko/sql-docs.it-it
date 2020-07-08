@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: 75cc9f52-3b1f-4754-b1e7-ce0dd3323bc9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 61c4cceab6c816d63226216a54d4f647e92e592d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
-ms.translationtype: MT
+ms.openlocfilehash: cbcb731a4396829b38596619e4b52babcb6f9425
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066679"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052721"
 ---
 # <a name="syssp_flush_log-transact-sql"></a>sys.sp_flush_log (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Scarica su disco il log delle transazioni del database corrente, finalizzando in questo modo tutte le transazioni durevoli posticipate sottoposte a commit in precedenza.  
   
@@ -46,13 +45,13 @@ sys.sp_flush_log
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Nessuno.  
+ No.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  Un codice restituito pari a 1 indica esito positivo.  Qualsiasi altro valore indica esito negativo.  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno.  
+ No.  
   
 ## <a name="sample-code"></a>Codice di esempio  
   

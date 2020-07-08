@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cbfc2cb7419f05884a80244445c6ce418576a402
-ms.sourcegitcommit: a0ebbcb717f09d3614de5ce9eb9f3c00f0a45f81
-ms.translationtype: MT
+ms.openlocfilehash: 8c9cbad2124420f62f50c8497fcc5baa21720634
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409350"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052887"
 ---
 # <a name="managed_backupfn_available_backups-transact-sql"></a>managed_backup. fn_available_backups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Restituisce una tabella di 0, una o più righe dei file di backup disponibili per il database specificato. I file di backup restituiti sono backup creati dal [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
@@ -73,7 +72,7 @@ Se sono presenti gap in LSN significa che è presente un'interruzione nella cate
 ### <a name="permissions"></a>Autorizzazioni  
  Sono richieste le autorizzazioni **Select** per questa funzione.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono elencati tutti i backup disponibili di cui è stato eseguito il backup [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per il database ' MyDB '  
   
 ```  

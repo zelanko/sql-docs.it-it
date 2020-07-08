@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d107b78c9b982285c19b678bebbc027facebe1e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 572cc4eb126114697d4fc4ecfeb9589458c46baa
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830411"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053497"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Restituisce gli eventi estesi registrati da Smart Admin.  
   
@@ -59,9 +58,9 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ||||  
 |-|-|-|  
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |event_type|NVARCHAR (512)|Tipo di evento esteso.|  
-|Evento|NVARCHAR (512)|Riepilogo dei registri eventi.|  
+|Event|NVARCHAR (512)|Riepilogo dei registri eventi.|  
 |Timestamp|timestamp|Timestamp dell'evento che mostra quando è stato generato l'evento.|  
   
 ## <a name="security"></a>Sicurezza  
@@ -69,7 +68,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 ### <a name="permissions"></a>Autorizzazioni  
  Sono necessarie le autorizzazioni **Execute** per la stored procedure. Sono inoltre necessarie le autorizzazioni **View Server state** , poiché vengono chiamati internamente altri oggetti di sistema che richiedono questa autorizzazione.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituiti tutti gli eventi registrati per i 30 minuti precedenti.  
   
 ```  

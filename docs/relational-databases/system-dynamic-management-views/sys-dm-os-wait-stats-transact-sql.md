@@ -20,11 +20,11 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee313bdcda6b005a3f3a80725908244d3a496b67
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d4a381c891c7cab2f4c14baaf87e9c5108cea714
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011600"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091545"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -166,8 +166,8 @@ Questo comando reimposta tutti i contatori su 0.
 |CONNECTION_ENDPOINT_LOCK |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e versioni successive.| 
 |COUNTRECOVERYMGR |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |CREATE_DATINISERVICE |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
-|CXCONSUMER |Si verifica con piani di query paralleli quando un thread consumer attende che un thread producer invii righe. Si tratta di una parte normale dell'esecuzione di query parallele. <br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3),[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |Si verifica con piani di query paralleli quando si sincronizza l'iteratore di scambio di query processor e durante la produzione e l'utilizzo di righe. Se l'attesa è eccessiva e non è possibile ridurla ottimizzando la query (ad esempio aggiungendo indici), regolare l'opzione Cost threshold for parallelism o abbassare il grado di parallelismo.<br /> **Nota:** A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] CXPACKET si riferiscono solo alla sincronizzazione dell'iteratore di scambio di query processor e alla produzione di righe per i thread consumer. I thread consumer vengono rilevati separatamente nel tipo di attesa CXCONSUMER.| 
+|CXCONSUMER<a name="cxconsumer"></a>|Si verifica con piani di query paralleli quando un thread consumer (padre) attende che un thread producer invii righe. Le attese CXCONSUMER sono causate da un iteratore di scambio che esaurisce le righe dal thread producer. Si tratta di una parte normale dell'esecuzione di query parallele. <br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3),[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET<a name="cxpacket"></a>|Si verifica con piani di query paralleli quando si sincronizza l'iteratore di scambio di query processor e durante la produzione e l'utilizzo di righe. Se l'attesa è eccessiva e non può essere ridotta ottimizzando la query, ad esempio aggiungendo indici, è consigliabile modificare la soglia dei costi per il parallelismo o abbassare il grado massimo di parallelismo (MaxDOP).<br /> **Nota:** A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] CXPACKET si riferiscono solo alla sincronizzazione dell'iteratore di scambio di query processor e alla produzione di righe. Se i thread consumer sono troppo lenti, il buffer dell'iteratore di Exchange potrebbe essere pieno e causare CXPACKET attese. I thread consumer vengono rilevati separatamente nel tipo di attesa CXCONSUMER.| 
 |CXROWSET_SYNC |Si verifica durante un'analisi di intervalli parallela.| 
 |DAC_INIT |Si verifica durante l'inizializzazione della connessione amministrativa dedicata.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 

@@ -10,11 +10,11 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a2332a81105124d9060b2416ae1c9b8699376393
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 316c3c95e0928fc4b1ed0c0d4235220c527e68f6
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004763"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052760"
 ---
 # <a name="adventureworks-sample-databases"></a>Database di esempio AdventureWorks
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,21 +58,6 @@ Usare questi collegamenti per scaricare il database di esempio appropriato per l
 
 È possibile usare il `.bak` file per ripristinare il database di esempio nell'istanza di SQL Server. Questa operazione può essere eseguita tramite il comando [Restore (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) o mediante l'interfaccia grafica (GUI) in [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) o [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md).
 
-# <a name="transact-sql-t-sql"></a>[Transact-SQL (T-SQL)](#tab/tsql)
-
-È possibile ripristinare il database di esempio tramite Transact-SQL (T-SQL). Di seguito viene fornito un esempio di ripristino di AdventureWorks2019, ma il nome del database e il percorso del file di installazione possono variare a seconda dell'ambiente. 
-
-Per ripristinare AdventureWorks2019, modificare i valori nel modo appropriato per l'ambiente in uso e quindi eseguire il comando Transact-SQL (T-SQL) seguente:
-
-```sql
-USE [master]
-RESTORE DATABASE [AdventureWorks2019] 
-FROM  DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\AdventureWorks2019.bak' 
-WITH  FILE = 1,  NOUNLOAD,  STATS = 5
-GO
-
-```
-
 # <a name="sql-server-management-studio-ssms"></a>[SQL Server Management Studio (SSMS)](#tab/ssms)
 
 Se non si ha familiarità con SQL Server Management Studio (SSMS), è possibile vedere [connetti & query](../ssms/tutorials/connect-query-sql-server.md) per iniziare. 
@@ -99,6 +84,21 @@ Per ripristinare il database in SQL Server Management Studio, attenersi alla pro
    :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="Per ripristinare il database, fare clic con il pulsante destro del mouse su database in Esplora oggetti, quindi scegliere Ripristina database.":::
 
 Per altre informazioni sul ripristino di un database di SQL Server, vedere [ripristinare un backup del database tramite SSMS](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).
+
+# <a name="transact-sql-t-sql"></a>[Transact-SQL (T-SQL)](#tab/tsql)
+
+È possibile ripristinare il database di esempio tramite Transact-SQL (T-SQL). Di seguito viene fornito un esempio di ripristino di AdventureWorks2019, ma il nome del database e il percorso del file di installazione possono variare a seconda dell'ambiente. 
+
+Per ripristinare AdventureWorks2019, modificare i valori nel modo appropriato per l'ambiente in uso e quindi eseguire il comando Transact-SQL (T-SQL) seguente:
+
+```sql
+USE [master]
+RESTORE DATABASE [AdventureWorks2019] 
+FROM  DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\AdventureWorks2019.bak' 
+WITH  FILE = 1,  NOUNLOAD,  STATS = 5
+GO
+
+```
 
 # <a name="azure-data-studio"></a>[Azure Data Studio](#tab/data-studio)
 

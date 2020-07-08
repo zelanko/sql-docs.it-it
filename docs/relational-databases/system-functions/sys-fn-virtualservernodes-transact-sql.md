@@ -23,15 +23,14 @@ ms.assetid: 257f3b8d-93c0-4444-87f1-ea211bd8cad0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da218e1afeec389d69b1727160a420c889225783
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
-ms.translationtype: MT
+ms.openlocfilehash: 0ec290179cdbf3e61f0e5033acbf3156dbc6441a
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059177"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091665"
 ---
 # <a name="sysfn_virtualservernodes-transact-sql"></a>sys.fn_virtualservernodes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Restituisce un elenco di nodi di istanze cluster di failover in cui è possibile eseguire un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tali informazioni risultano utili in ambienti con clustering di failover.  
   
@@ -48,7 +47,7 @@ fn_virtualservernodes()
 ```  
   
 ## <a name="tables-returned"></a>Tabelle restituite  
- Se il server corrente è un server in cluster, **fn_virtualservernodes** restituisce un elenco di nodi di istanze cluster di failover in cui è stata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definita questa istanza di.  
+ Se il server corrente è un server in cluster, **fn_virtualservernodes** restituisce un elenco di nodi di istanze cluster di failover in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stata definita questa istanza di.  
   
  Se l'istanza del server corrente non è un server cluster, **fn_virtualservernodes** restituisce un set di righe vuoto.  
   
@@ -72,7 +71,7 @@ SELECT * FROM fn_virtualservernodes();
   
  SS3-CLUSN2  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sys. dm_os_cluster_nodes &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
  [sys.fn_servershareddrives &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)  
   

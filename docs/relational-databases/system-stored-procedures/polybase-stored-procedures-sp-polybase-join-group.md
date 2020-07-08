@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa3b52dbc2f08e9cb504263afeb672956e4972d2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: bc4a9d78289f6d3fdf3272c6581d9baab586122f
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826372"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052720"
 ---
 # <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Aggiunge un'istanza di SQL Server come nodo di calcolo a un gruppo di base per il calcolo con scalabilità orizzontale.  
   
@@ -55,7 +54,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL SERVER.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Dopo aver eseguito il stored procedure, arrestare il motore di base e riavviare il servizio PolyBase Data Movement nel computer. Per verificare, eseguire la DMV seguente sul nodo head: **sys. dm_exec_compute_nodes**.  
   
 ## <a name="example"></a>Esempio  

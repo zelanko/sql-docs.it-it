@@ -20,17 +20,16 @@ helpviewer_keywords:
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e7bb477901dee22c70bb47cd0eaf7da5eb163b7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 04e152b8ae15e4e0a810fb5ed945b4c8c69afe5b
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77507534"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053463"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup. sp_backup_config_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  Configura le opzioni di pianificazione automatizzate o personalizzate [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]per.  
+  Configura le opzioni di pianificazione automatizzate o personalizzate per [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .  
     
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,16 +60,16 @@ EXEC managed_backup.sp_backup_config_schedule
  I giorni della settimana per i backup quando @full_backup_freq_type è impostato su settimanale. Specificare nomi di stringa completi, ad esempio ' Monday '.  È anche possibile specificare più di un nome di giorno, separati dalla pipe. Ad esempio N'Monday | Mercoledì | Venerdì.  
   
  @backup_begin_time  
- Ora di inizio della finestra di backup. I backup non verranno avviati al di fuori dell'intervallo di tempo, definito da una combinazione di @backup_begin_time e @backup_duration.  
+ Ora di inizio della finestra di backup. I backup non verranno avviati al di fuori dell'intervallo di tempo, definito da una combinazione di @backup_begin_time e @backup_duration .  
   
  @backup_duration  
- Durata dell'intervallo di tempo di backup. Si noti che non esiste alcuna garanzia che i backup vengano completati durante l'intervallo di tempo @backup_begin_time definito @backup_durationda e. Le operazioni di backup avviate in questo intervallo di tempo ma che superano la durata della finestra non verranno annullate.  
+ Durata dell'intervallo di tempo di backup. Si noti che non esiste alcuna garanzia che i backup vengano completati durante l'intervallo di tempo definito da @backup_begin_time e @backup_duration . Le operazioni di backup avviate in questo intervallo di tempo ma che superano la durata della finestra non verranno annullate.  
   
  @log_backup_freq  
  Ciò determina la frequenza dei backup del log delle transazioni. Questi backup avvengono a intervalli regolari anziché alla pianificazione specificata per i backup del database. @log_backup_freqpuò essere in minuti o ore ed `0:00` è valido, che indica nessun backup del log. La disabilitazione dei backup del log è appropriata solo per i database con un modello di recupero con registrazione minima.  
   
 > [!NOTE]  
->  Se il modello di recupero viene modificato da semplice a completo, è necessario riconfigurare il log_backup_freq `0:00` da a un valore diverso da zero.  
+>  Se il modello di recupero viene modificato da semplice a completo, è necessario riconfigurare il log_backup_freq da `0:00` a un valore diverso da zero.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

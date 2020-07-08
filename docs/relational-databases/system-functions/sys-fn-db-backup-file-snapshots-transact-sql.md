@@ -12,15 +12,14 @@ dev_langs:
 ms.assetid: 45010ff2-219f-4086-9ea4-016a6c17cddd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5159b72cb91cfdcf21129c6216cab4cf0e8d4dea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
-ms.translationtype: MT
+ms.openlocfilehash: d6944817524a339eb8e48aa223c291cef1de1879
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68120268"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052753"
 ---
 # <a name="sysfn_db_backup_file_snapshots-transact-sql"></a>sys.fn_db_backup_file_snapshots (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Restituisce gli snapshot di Azure associati ai file di database. Se il database specificato non viene trovato o se i file di database non vengono archiviati nel servizio di archiviazione BLOB di Microsoft Azure, non viene restituita alcuna riga. Utilizzare questa funzione di sistema insieme al stored procedure **sys. sp_delete_backup_file_snapshot** System per identificare ed eliminare gli snapshot di backup orfani. Per altre informazioni, vedere [Backup di snapshot di file per i file di database in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
@@ -49,7 +48,7 @@ sys.fn_db_backup_file_snapshots
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE per il database.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sp_delete_backup_file_snapshot &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)   
  [sp_delete_backup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
   

@@ -18,21 +18,20 @@ helpviewer_keywords:
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 21e5230e4f3efd86fe90382202f0b21a0187a214
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 1e383b01ce40dbb03f5134bf5374b9b39bc2a99e
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937069"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053487"
 ---
 # <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database-sys. dm_db_rda_migration_status
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  Contiene una riga per ogni batch di dati migrati da ogni tabella abilitata per l'estensione nell'istanza locale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di. I batch sono identificati in base all'ora di inizio e all'ora di fine.  
+  Contiene una riga per ogni batch di dati migrati da ogni tabella abilitata per l'estensione nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I batch sono identificati in base all'ora di inizio e all'ora di fine.  
   
  **sys. dm_db_rda_migration_status** ha come ambito il contesto di database corrente. Assicurarsi di trovarsi nel contesto del database delle tabelle abilitate per l'estensione per le quali si desidera visualizzare lo stato di migrazione.  
   
- In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], l'output di **sys. dm_db_rda_migration_status** è limitato a 200 righe.  
+ In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , l'output di **sys. dm_db_rda_migration_status** è limitato a 200 righe.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  

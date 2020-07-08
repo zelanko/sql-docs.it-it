@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 684a538030aae91cd50125c82d4a5aee401764eb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 67ed480e1d34e688413cd7242bd25501dcd3074a
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830378"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052937"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Configura le [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] impostazioni di base per un database specifico o per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -75,7 +74,7 @@ EXEC managed_backup.sp_backup_config_basic
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **db_backupoperator** database, con autorizzazioni **ALTER ANY CREDENTIAL** e autorizzazioni **Execute** per **sp_delete_backuphistory** stored procedure.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  È possibile creare il contenitore dell'account di archiviazione e l'URL della firma di accesso condiviso usando i comandi di Azure PowerShell più recenti. Nell'esempio seguente viene creato un nuovo contenitore, contenitore, nell'account di archiviazione mystorageaccount, quindi viene ottenuto un URL di firma di accesso condiviso con autorizzazioni complete.  
   
 ```powershell  

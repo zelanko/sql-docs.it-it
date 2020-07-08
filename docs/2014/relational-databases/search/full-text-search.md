@@ -11,12 +11,11 @@ helpviewer_keywords:
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 49751128273fd052dd0ecd9423238f6c71a15925
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
-ms.translationtype: MT
+ms.openlocfilehash: 16303c34d44a056f1f505a2d1876b2ee23df994c
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85063323"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091893"
 ---
 # <a name="full-text-search"></a>Ricerca full-text
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] la ricerca full-text consente a utenti e applicazioni di eseguire query full-text su dati di tipo carattere in tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Affinché le query full-text possano essere eseguite in una determinata tabella, l'amministratore del database deve prima creare un indice full-text nella tabella in questione. L'indice full-text include una o più colonne basate su caratteri nella tabella. In queste colonne possono essere presenti i seguenti tipi di dati: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, o `varbinary(max)` e FILESTREAM. Ogni indice full-text consente di indicizzare una o più colonne della tabella e ciascuna colonna può essere utilizzata con una lingua specifica.
@@ -149,7 +148,7 @@ ms.locfileid: "85063323"
  [Contenuto dell'articolo](#top)
 
 ##  <a name="linguistic-components-and-language-support-in-full-text-search"></a><a name="components"></a>Componenti linguistici e supporto per la lingua nella ricerca full-text
- La ricerca full-text supporta quasi 50 lingue, tra cui inglese, spagnolo, cinese, giapponese, arabo, bengali e hindi. Per un elenco completo delle lingue full-text supportate, vedere [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql). A ognuna delle colonne contenute nell'indice full-text è associato un identificatore delle impostazioni locali (LCID) di Microsoft Windows che corrisponde a una lingua supportata dalla ricerca full-text. L'identificatore LCID 1033, ad esempio, corrisponde all'inglese americano, mentre l'identificatore LCID 2057 corrisponde all'inglese britannico. Per ogni lingua full-text supportata, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono forniti componenti linguistici che supportano l'indicizzazione e l'esecuzione di query su dati full-text archiviati in quella lingua.
+ La ricerca full-text supporta quasi 50 lingue diverse, ad esempio inglese, spagnolo, cinese, giapponese, arabo, Bangla e Hindi. Per un elenco completo delle lingue full-text supportate, vedere [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql). A ognuna delle colonne contenute nell'indice full-text è associato un identificatore delle impostazioni locali (LCID) di Microsoft Windows che corrisponde a una lingua supportata dalla ricerca full-text. L'identificatore LCID 1033, ad esempio, corrisponde all'inglese americano, mentre l'identificatore LCID 2057 corrisponde all'inglese britannico. Per ogni lingua full-text supportata, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono forniti componenti linguistici che supportano l'indicizzazione e l'esecuzione di query su dati full-text archiviati in quella lingua.
 
  Tra i componenti specifici della lingua sono inclusi gli elementi seguenti:
 
@@ -234,5 +233,3 @@ ms.locfileid: "85063323"
 -   [DDL di ricerca full-text, funzioni, stored procedure e viste](../views/views.md)
 
  [Contenuto dell'articolo](#top)
-
-

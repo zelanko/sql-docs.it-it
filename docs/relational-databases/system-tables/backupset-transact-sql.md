@@ -20,15 +20,14 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0eb367dd29a96f5819563f0b10e036b7274c4303
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 5cd91cd99d70a90e3aaec5972ddcdccf472a18f1
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827368"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091859"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Contiene una riga per ogni set di backup. Un *set di backup* contiene il backup di una singola operazione di backup riuscita. Le istruzioni RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY e RESTORE VERIFYONLY operano in un singolo set di backup all'interno del set di supporti nei dispositivi di backup specificati.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "82827368"
 |**posizione**|**int**|Posizione del set di backup utilizzata nell'operazione di ripristino per individuare il set e i file di backup appropriati. Può essere NULL. Per ulteriori informazioni, vedere FILE in [BACKUP &#40;&#41;Transact-SQL ](../../t-sql/statements/backup-transact-sql.md).|  
 |**expiration_date**|**datetime**|Data e ora di scadenza del set di backup. Può essere NULL.|  
 |**software_vendor_id**|**int**|Numero di identificazione del produttore del software con cui viene scritta l'intestazione supporto di backup. Può essere NULL.|  
-|**name**|**nvarchar(128)**|Nome del set di backup. Può essere NULL.|  
+|**nome**|**nvarchar(128)**|Nome del set di backup. Può essere NULL.|  
 |**Descrizione**|**nvarchar(255)**|Descrizione del set di backup. Può essere NULL.|  
 |**user_name**|**nvarchar(128)**|Nome dell'utente che esegue l'operazione di backup. Può essere NULL.|  
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]numero di versione principale. Può essere NULL.|  
@@ -101,7 +100,7 @@ ms.locfileid: "82827368"
 |**encryptor_thumbprint**|**varbinary(20)**|L'identificazione digitale del componente di crittografia che può essere utilizzato per trovare il certificato o la chiave asimmetrica nel database. Nel caso in cui il backup non è stato crittografato, questo valore è NULL.|  
 |**encryptor_type**|**nvarchar(32)**|Tipo di componente di crittografia: certificato o chiave asimmetrica. . Nel caso in cui il backup non è stato crittografato, questo valore è NULL.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  RESTOre VERIFYONLY FROM *backup_device* with LOADHISTORY popola la colonna della tabella **BackupMediaSet** con i valori appropriati dell'intestazione del set di supporti.  
   
  Per ridurre il numero di righe in questa tabella e in altre tabelle di backup e di cronologia, eseguire la [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) stored procedure.  

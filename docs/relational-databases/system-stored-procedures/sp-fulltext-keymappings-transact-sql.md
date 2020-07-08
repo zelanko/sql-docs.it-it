@@ -20,15 +20,14 @@ ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc68be51382b72dee1b143a3535d631ae93dbb7c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 2281586bfe77b7cadaa2b3a8f7ae7a9b18c655ab
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833277"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091790"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Restituisce i mapping tra gli identificatori del documento (DocIds) e i valori della chiave full-text. La colonna DocId contiene valori per un intero **bigint** mappato a un particolare valore della chiave full-text in una tabella con indicizzazione full-text. I valori DocId che soddisfano una condizione di ricerca vengono passati dal motore di ricerca full-text al Motore di database dove vengono sottoposti al mapping ai valori della chiave full-text della tabella di base su cui viene eseguita la query. La colonna chiave full-text rappresenta l'indice univoco necessario in una colonna della tabella.  
   
@@ -86,7 +85,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 -   Viene rilevato il valore NULL per un parametro che può essere diverso da NULL.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
   
 > [!NOTE]  
 >  Negli esempi riportati in questa sezione utilizzare la tabella `Production.ProductReview` del database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . È possibile creare questo indice eseguendo l'esempio fornito per la `ProductReview` tabella in [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  

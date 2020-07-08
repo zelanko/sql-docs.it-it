@@ -20,15 +20,14 @@ ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cb9cfc6e645e9777a697e62183db874c47cfeb4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: a61484691e4e5a2ea5ca4c08b6382b501f1cc851
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824725"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091865"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Restituisce una riga per ogni proprietà associata all'integrazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con Common Language Runtime (CLR), inclusi la versione e lo stato del CLR hosted. Il CLR hosted viene inizializzato eseguendo le istruzioni [create assembly](../../t-sql/statements/create-assembly-transact-sql.md), [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md)o [Drop assembly](../../t-sql/statements/drop-assembly-transact-sql.md) oppure eseguendo qualsiasi routine, tipo o trigger CLR. La vista **sys. dm_clr_properties** non specifica se l'esecuzione del codice CLR utente è stata abilitata nel server. L'esecuzione del codice CLR utente viene abilitata utilizzando la [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) stored procedure con l'opzione [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) impostata su 1.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "82824725"
   
  Lo **stato di CLR arrestato** viene visualizzato solo quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in corso l'arresto.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Le proprietà e i valori di questa visualizzazione potrebbero cambiare in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a causa dei miglioramenti della funzionalità di integrazione con CLR.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -76,7 +75,7 @@ ms.locfileid: "82824725"
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
 
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  L'esempio seguente recupera informazioni relative al CLR hosted:  
   
 ```  
