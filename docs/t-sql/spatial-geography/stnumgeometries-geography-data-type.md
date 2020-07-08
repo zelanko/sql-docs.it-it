@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6ae7fac2-62f1-420f-9fc9-a09606be9605
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7a1150128c281be485ca23dab65db3d82b88e1f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7b327c6f053e7a124462dc7d2243cdecb8799c84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68120911"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85702483"
 ---
 # <a name="stnumgeometries-geography-data-type"></a>STNumGeometries (tipo di dati geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Restituisce il numero di **geometrie** che costituiscono un'istanza **geography**.  
   

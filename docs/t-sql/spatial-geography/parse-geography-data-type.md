@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 209186cf3756c0bfb9b572a33ba470a83e0cd493
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 75e5083f3009a09e7b0ba347ab2a9982c852593f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68051445"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705846"
 ---
 # <a name="parse-geography-data-type"></a>Parse (tipo di dati geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Restituisce un'istanza **geography** da una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium). Parse() è equivalente a [STGeomFromText](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md), con l'eccezione che presuppone un ID di riferimento spaziale (SRID) di 4326 come parametro. All'input possono appartenere valori Z (innalzamento) e M (misura) facoltativi.
   

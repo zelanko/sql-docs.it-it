@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5651f61f33d598930aff2fb482b415e9749f6d44
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 366cd986b9c707c6cef6d8b814204ce506afb601
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042534"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85704963"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (tipo di dati geography)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Restituisce un oggetto geografico che rappresenta l'unione di tutti i punti la cui distanza da un'istanza **geography** è minore o uguale a un valore specificato.  
   
