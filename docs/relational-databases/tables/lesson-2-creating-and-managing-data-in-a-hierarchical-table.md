@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 657dedcf4944a2540d1237b53fa8ea822c31ae3f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b54f60e71344bc04271378fbd84214b31bd9503c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68031639"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692499"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>Lezione 2: Creare e gestire dati in una tabella gerarchica
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Nella Lezione 1 è stata modificata una tabella esistente per usare il tipo di dati **hierarchyid** ed è stata popolata la colonna **hierarchyid** con la rappresentazione dei dati esistenti. In questa lezione, verrà generata una nuova tabella e verranno inseriti i dati utilizzando i metodi gerarchici. Pertanto, verrà eseguita una query e verranno modificati i dati utilizzando i metodi gerarchici. 
 
 ## <a name="prerequisites"></a>Prerequisites  
@@ -289,7 +289,7 @@ Ora che la tabella HumanResources.EmployeeOrg è completamente popolata, in ques
    
   
 ## <a name="reorder-data-in-a-hierarchical-table-using-hierarchical-methods"></a>Riordinare dati in una tabella gerarchica usando metodi gerarchici
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 La riorganizzazione di una gerarchia è un'attività di manutenzione comune. In questa attività verrà usata un'istruzione UPDATE con il metodo [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) per spostare innanzitutto una singola riga in un percorso nuovo della gerarchia. Verrà quindi spostato un sottoalbero intero in un nuovo percorso.  
   
 Il metodo `GetReparentedValue` utilizza due argomenti. Nel primo argomento viene descritta la parte della gerarchia da modificare. Ad esempio, se una gerarchia è **/1/4/2/3/** e si vuole modificare la sezione **/1/4/** , la gerarchia diventa **/2/1/2/3/** , lasciando gli ultimi due nodi (**2/3/** ) inalterati, è necessario specificare i nodi modificati ( **/1/4/** ) come primo argomento. Il secondo argomento specifica il nuovo livello della gerarchia, nell'esempio **/2/1/** . Non è necessario che i due argomenti contengano lo stesso numero di livelli.  

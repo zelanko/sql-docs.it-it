@@ -1,9 +1,7 @@
 ---
 title: Aggiornare un database usando le operazioni di scollegamento e collegamento (Transact-SQL)
-ms.custom: seo-dt-2019
-ms.date: 11/26/2018
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
@@ -17,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8e26f678ae13fac11c39569d15e26c0e79e46deb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-dt-2019
+ms.openlocfilehash: cbaa67dbde197e1e59df92380945a0d969180add
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095531"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85694727"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Aggiornare un database usando le operazioni di scollegamento e collegamento (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 In questo argomento si illustra come utilizzare le operazioni di collegamento e scollegamento per aggiornare un database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Dopo essere stato collegato a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database è immediatamente disponibile e viene aggiornato automaticamente. Questo impedisce l'uso del database con una versione precedente di [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Tuttavia l'aggiornamento dei metadati non interessa l'impostazione [Livello di compatibilità database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) per un database. Per altre informazioni, vedere [Livello di compatibilità del database dopo l'aggiornamento](#dbcompat) più avanti in questo argomento.  
   
  **Contenuto dell'argomento**  
