@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d5d371a8d94b49a40fa105f06457519a03ed7ac5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6579e091911dc5e6a6c41bc27a567300f6fe2390
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829792"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670446"
 ---
 # <a name="online-restore-sql-server"></a>Ripristino in linea (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Il ripristino in linea è supportato solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition. In questa edizione un ripristino di file, pagina o a fasi viene eseguito online per impostazione predefinita. Le informazioni contenute in questo argomento sono importanti per i database che includono più file o filegroup e, in base al modello di recupero con registrazione minima, solo per i filegroup di sola lettura.  
   
  Il ripristino di dati mentre il database è online è denominato *ripristino online*. Un database viene considerato online quando il filegroup primario è online, anche se uno o più filegroup secondari sono offline. Tutti i modelli di recupero consentono di ripristinare un file offline mentre il database è online. Il modello di recupero con registrazione completa consente inoltre di ripristinare pagine mentre il database è online.  

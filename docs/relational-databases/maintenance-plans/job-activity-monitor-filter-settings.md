@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2532ca83c063d029015560b22e1a89317b90b5b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d143c4c52c122c159e7c80dd58d8cee847849360
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115813"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666932"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Monitoraggio attività processi (Impostazioni filtro)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilizzare questa pagina per ridurre il numero di righe visualizzate in Monitoraggio attività processi. Immettere i criteri in una o più caselle disponibili per visualizzare solo le righe che soddisfano i valori specificati. Alcune caselle, ad esempio **Stato** o **Tipo blocco** , consentono di immettere un numero finito di valori possibili, disponibili in un elenco a discesa. In altre caselle, ad esempio **Applicazione** , è invece possibile immettere qualsiasi tipo e numero di valori sotto forma di elenco delimitato da virgole. Le icone sulla barra degli strumenti possono essere utilizzate per ordinare le caselle disponibili alfabeticamente o in base alla categoria. Fare clic sui criteri per visualizzarne una breve descrizione.  
   
  Per filtrare il Monitoraggio attività processi, specificare un numero qualsiasi di criteri di filtro, fare clic su **Applica filtro**e quindi su **OK**.  

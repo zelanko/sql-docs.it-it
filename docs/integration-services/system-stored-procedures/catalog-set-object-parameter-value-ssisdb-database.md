@@ -10,32 +10,32 @@ ms.topic: language-reference
 ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 36d73a0248be0bd8f9a0873e5ae8445ee68af2e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8c9263e3855fcb9617baf3d9d3d7e0a55d079316
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295277"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85674537"
 ---
 # <a name="catalogset_object_parameter_value-ssisdb-database"></a>catalog.set_object_parameter_value (database SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Viene impostato il valore di un parametro nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Viene associato il valore a una variabile di ambiente o viene assegnato un valore letterale che viene usato per impostazione predefinita nel caso non siano assegnati altri valori.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```sql  
-catalog.set_object_parameter_value [@object_type =] object_type   
-    , [@folder_name =] folder_name   
-    , [@project_name =] project_name   
-    , [@parameter_name =] parameter_name   
-    , [@parameter_value =] parameter_value   
- [  , [@object_name =] object_name ]  
- [  , [@value_type =] value_type ]  
+catalog.set_object_parameter_value [ @object_type = ] object_type   
+    , [ @folder_name = ] folder_name   
+    , [ @project_name = ] project_name   
+    , [ @parameter_name = ] parameter_name   
+    , [ @parameter_value = ] parameter_value   
+ [  , [ @object_name = ] object_name ]  
+ [  , [ @value_type = ] value_type ]  
 ```  
   
 ## <a name="arguments"></a>Argomenti  

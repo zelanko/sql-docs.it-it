@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 85b6077e5dfa2d70ecbbe6aead13fd02dbdf43b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c364c7dca1e8ea7a74a526bdb69dc8a7b3cf296d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180156"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670106"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Possibili errori relativi ai supporti durante il backup e il ripristino (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] includono un'opzione che permette di recuperare un database anche in presenza di errori. Un importante e nuovo meccanismo di rilevazione degli errori prevede l'utilizzo facoltativo di un checksum del backup, creato durante un'operazione di backup e convalidato durante un'operazione di ripristino. È quindi possibile controllare se un'operazione verifica la presenza di errori e se ne deve essere o meno arrestata l'esecuzione quando viene rilevato un errore. Se un backup contiene un checksum, le istruzioni RESTORE e RESTORE VERIFYONLY verificano la presenza di errori.  
   
 > [!NOTE]  

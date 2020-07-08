@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 4cc3498d-5449-4c4e-b1f9-3271831c725a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 01573bcf745efcdc1f4865ac9157c71ef65cb9bf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7a28655b2f86c02b1985196c05c16b866e3e0897
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907697"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637128"
 ---
 # <a name="mssqlserver_8651"></a>MSSQLSERVER_8651
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Dettagli  
   
-|||  
-|-|-|  
+| Attributo | valore |  
+| :-------- | :---- |  
 |Nome prodotto|SQL Server|  
 |ID evento|8651|  
 |Origine evento|MSSQLSERVER|  
@@ -42,7 +42,7 @@ Nell'elenco seguente viene illustrata la procedura generale per la risoluzione d
   
 1.  Verificare se altre applicazioni o servizi utilizzano la memoria nel server specificato. Riconfigurare le applicazioni o i servizi meno critici per utilizzare una quantità di memoria inferiore.  
   
-2.  Iniziare a raccogliere i dati dei contatori di monitoraggio delle prestazioni per **SQL Server: Gestione buffer** e **SQL Server: Gestione memoria**.  
+2.  Iniziare a raccogliere i dati dei contatori di Performance Monitor per **SQL Server: Gestione buffer**, **SQL Server: Memory Manager**.  
   
 3.  Verificare i seguenti parametri di configurazione della memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   

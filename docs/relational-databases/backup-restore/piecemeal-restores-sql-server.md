@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 9fb2e77a9d32e48965e491a2bc0549fb7c9ad400
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61054ac32e13c16a77c1ad27400be6b978cebe7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824096"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670234"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Ripristini a fasi (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Le informazioni contenute in questo argomento sono rilevanti solo per i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition (ripristino in linea) o Standard Edition (ripristino non in linea) che contengono più file o filegroup e, nel modello semplice, solo per i filegroup di sola lettura.  
   
  Per informazioni sui ripristini a fasi e tabelle ottimizzate per la memoria, vedere [Backup e ripristino a fasi di database con tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  

@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dd28690296697c256dcdde832517d9713e611184
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f959ddb388be7f0f21441629239a3d479a0c711
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180874"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669812"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recupero di database correlati che contengono transazioni contrassegnate
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Le informazioni contenute in questo argomento sono rilevanti solo per i database che includono transazioni contrassegnate e utilizzano il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk.  
   
  Per informazioni sui requisiti per il ripristino fino a un punto di recupero specifico, vedere [Ripristinare un database di SQL Server fino a un punto specifico &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  

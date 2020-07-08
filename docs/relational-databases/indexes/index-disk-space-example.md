@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 099f8e4bfb71dbf3d9dda385d6981985197756e2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d85fecce4c5b97154312922ed96f988754f88e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71816690"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668285"
 ---
 # <a name="index-disk-space-example"></a>Esempio di spazio su disco per gli indici
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Ogni volta che viene creato, ricompilato o eliminato un indice, nei file e nei filegroup appropriati è necessario spazio su disco per le strutture di origine (vecchie) e di destinazione (nuove). La struttura di origine non viene deallocata finché non viene eseguito il commit della transazione di creazione dell'indice. Potrebbe essere necessario spazio su disco temporaneo aggiuntivo per le operazioni di ordinamento. Per altre informazioni, vedere [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
  In questo esempio vengono determinati i requisiti di spazio su disco per la creazione di un indice cluster.  

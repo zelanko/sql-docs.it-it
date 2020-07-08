@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 055f9c6a-5c18-4942-98e7-ec918f0ff975
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 229cdab61cfc574896422848c9790e5e3d75b2c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d26bb97408fa1a4118705bd60f0cd0ef10707722
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180902"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669728"
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>Rimozione di filegroup inattivi (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In questo argomento viene descritto come rimuovere filegroup inattivi in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'articolo**  

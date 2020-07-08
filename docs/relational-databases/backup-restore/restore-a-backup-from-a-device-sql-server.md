@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6e139de7-7de2-4d18-9df0-beac31ba7ff1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b99f82e4642346bc30f57f38d4d940cb83773de0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca37f8761ad2559cf5381e0d80cd6e30d003d13d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180860"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669529"
 ---
 # <a name="restore-a-backup-from-a-device-sql-server"></a>Ripristino di un backup da un dispositivo (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In questo argomento viene descritto il ripristino di un backup da un dispositivo in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  

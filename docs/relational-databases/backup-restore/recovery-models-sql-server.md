@@ -29,15 +29,15 @@ helpviewer_keywords:
 ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c7d04f6a6ed9a1e09c3ca278e1481000abc6cab8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 884477b0b1d62d7616448645cb740cc99e329c53
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180882"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669774"
 ---
 # <a name="recovery-models-sql-server"></a>Modelli di recupero (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le operazioni di backup e ripristino vengono eseguite nel contesto di un modello di recupero del database. I modelli di recupero sono progettati per controllare la manutenzione del log delle transazioni. Un *modello di recupero* è una proprietà del database che determina la modalità di registrazione delle transazioni, se è necessario e possibile eseguire il backup del log delle transazioni e quali tipi di operazioni di ripristino sono disponibili. Sono tre i modelli di recupero disponibili: con registrazione minima, con registrazione completa e con registrazione minima delle operazioni bulk. In genere, un database utilizza il modello di recupero con registrazione completa o con registrazione minima. In un database è possibile passare a un modello di recupero diverso in qualsiasi momento.  
   
  **Contenuto dell'argomento**  

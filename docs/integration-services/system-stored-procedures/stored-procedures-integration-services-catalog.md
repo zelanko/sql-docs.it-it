@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e1eea2f9e83069b18b47b1563e60a0c31c0bfcb0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba8d5f185968cc46809e03654f6fe4c0f8b4f6de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296685"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85673617"
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>Stored procedure (catalogo di Integration Services)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   In questa sezione vengono descritte le stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] disponibili per l'amministrazione di progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] distribuiti in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

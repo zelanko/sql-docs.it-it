@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fe6b6bb1-38d0-46c4-bab8-31df14e8999c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7f37c55278762a30314d2ece3c631c84f0ab777a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5781f32050dc2afe09bd5c0b2f1c11b9d818022
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180168"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670508"
 ---
 # <a name="partial-backups-sql-server"></a>Backup parziali (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Tutti i modelli di recupero di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportano backup parziali, pertanto questo argomento è attinente per tutti i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I backup parziali sono tuttavia progettati per l'utilizzo con il modello di recupero con registrazione minima e consentono di migliorare la flessibilità per i backup di database di dimensioni molto grandi contenenti uno o più filegroup di sola lettura.  
   
  I backup parziali sono utili quando si desidera escludere i filegroup di sola lettura. Un *backup parziale* è simile a un backup completo del database, ma non contiene tutti i filegroup. Per un database di lettura/scrittura, un backup parziale contiene invece i dati del filegroup primario, tutti i filegroup di lettura/scrittura e uno o più file di sola lettura specificati facoltativamente. Il backup parziale di un database di sola lettura contiene esclusivamente il filegroup primario.  

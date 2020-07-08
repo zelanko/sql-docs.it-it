@@ -20,17 +20,17 @@ helpviewer_keywords:
 - ERROR_LINE function
 - CATCH block
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 247cb52aefba41df8a4d0becc1428e12acd4d377
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d9d1c16c94f51bdfd961c0173bea635e38da3acb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82804491"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682019"
 ---
 # <a name="error_line-transact-sql"></a>ERROR_LINE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Questa funzione restituisce il numero di riga dell'occorrenza di un errore che ha causato l'esecuzione del blocco CATCH di un costrutto TRY...CATCH.  
   

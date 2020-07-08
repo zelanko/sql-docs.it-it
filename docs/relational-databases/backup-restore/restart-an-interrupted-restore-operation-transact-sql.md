@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6413a07d-fd90-448d-8f29-12c5a1972618
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4eb0e80201694ca6bb6109cc4013500f31a8bf2a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bfe32215d30b6722a621b0ebb3f0f556a34ddf26
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180849"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669591"
 ---
 # <a name="restart-an-interrupted-restore-operation-transact-sql"></a>Riavvio di un'operazione di ripristino interrotta (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In questo argomento viene descritta la procedura per il riavvio di un'operazione di ripristino interrotta.  
   
 ### <a name="to-restart-an-interrupted-restore-operation"></a>Per riavviare un'operazione di ripristino interrotta  

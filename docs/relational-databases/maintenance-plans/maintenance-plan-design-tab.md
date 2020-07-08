@@ -14,15 +14,15 @@ f1_keywords:
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e4de9bbecbd7c473780d8baa598246f732b0ebcd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1bffeed97e9c56420750ce022c4fa5ec0a56f574
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115735"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666979"
 ---
 # <a name="maintenance-plan-design-tab"></a>Piano di manutenzione (scheda Progettazione)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Usare la finestra di dialogo **Piano di manutenzione (scheda Progettazione)** per specificare le proprietà di un piano di manutenzione e dei relativi sottopiani. Trascinare le attività dalla casella degli strumenti nella finestra di progettazione dei piani di manutenzione. Fare clic con il pulsante destro del mouse su gruppi di attività per creare percorsi di esecuzione con diramazioni. I piani di manutenzione vengono salvati come pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] eseguiti da processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opzioni  

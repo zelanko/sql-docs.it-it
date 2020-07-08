@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 9638a764-4ac1-40ae-a614-2726ebcc6ba4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0320795493df3c4d0283e3d82a2235e9f1f08914
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 25966577f568b6b807e6039a951300368b0ad971
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951430"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637231"
 ---
 # <a name="mssqlserver_7906"></a>MSSQLSERVER_7906
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Dettagli  
   
-|||  
-|-|-|  
+| Attributo | valore |  
+| :-------- | :---- |  
 |Nome prodotto|SQL Server|  
 |ID evento|7906|  
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_FS_INVALID_TOP_LEVEL_FILE|  
-|Testo del messaggio|Errore di database: il file "FILE" non è un file FileStream valido.|  
+|Testo del messaggio|Errore di database: il file 'FILE' non è un file FILESTREAM valido.|  
   
 ## <a name="explanation"></a>Spiegazione  
 Ad eccezione di alcuni file speciali, ad esempio 'filestream.hdr', nessun file deve trovarsi direttamente nello spazio dati FileStream.  

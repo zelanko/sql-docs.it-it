@@ -12,16 +12,16 @@ ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0cd8504379475bd14e873c0d499a0c2c64d17928
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 89e0683676a34393b787e1a2ee57069fb8939dbf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67999740"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85679250"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message - classe di evento
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un evento **Broker:Corrupted Message** quando Service Broker riceve un messaggio danneggiato.  
   
