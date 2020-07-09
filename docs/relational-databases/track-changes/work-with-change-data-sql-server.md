@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f68227bb3f88996ee8a4f5ea60c9cdd88f4f765a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 18002782d7d34b88706b227cf8ac828f9da4976a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095410"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889095"
 ---
 # <a name="work-with-change-data-sql-server"></a>Utilizzare i dati delle modifiche (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
   I dati delle modifiche vengono resi disponibili ai consumer della funzionalità Change Data Capture tramite funzioni con valori di tabella. Per tutte le query di queste funzioni sono necessari due parametri che definiscono l'intervallo di numeri di sequenza del file di log (LSN) idonei durante lo sviluppo del set di risultati restituito. Entrambi i valori LSN che rappresentano il limite inferiore e quello superiore dell'intervallo sono inclusi nell'intervallo stesso.  
   
  Per stabilire i valori LSN appropriati da utilizzare per l'esecuzione di query su una funzione con valori di tabella, sono disponibili numerose funzioni. La funzione [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) restituisce il valore LSN meno elevato associato a un intervallo di validità di un'istanza di acquisizione, ovvero all'intervallo di tempo durante il quale i dati delle modifiche rimangono disponibili per le relative istanze di acquisizione. La funzione [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) restituisce il valore LSN più elevato nell'intervallo di validità. Le funzioni [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) e [sys.fn_cdc_map_lsn_to_time](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) possono essere usate per includere i valori LSN in una cronologia convenzionale. Poiché in Change Data Capture vengono utilizzati intervalli di query chiusi, talvolta risulta necessario generare il valore LSN successivo in una sequenza per garantire che le modifiche non vengano duplicate in finestre di query consecutive. Le funzioni [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) e [sys.fn_cdc_decrement_lsn](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md) sono utili quando è necessario modificare in modo incrementale un valore LSN.  

@@ -9,16 +9,16 @@ ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1ce63521989edfccc1fc9fc085b0a9c476cde2ee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 332160202b3972339c2d9c668f31e373443d5217
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558403"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892288"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Configurare un gruppo di disponibilità di SQL Server con scalabilità in lettura in Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 È possibile configurare un gruppo di disponibilità Always On SQL Server per i carichi di lavoro con scalabilità in lettura in Linux. Esistono due tipi di architetture per i gruppi di disponibilità. L'architettura per la disponibilità elevata usa un modulo di gestione cluster per garantire la continuità operativa in modo più efficace. Questa architettura può includere anche repliche con scalabilità in lettura. Per creare un'architettura per la disponibilità elevata, vedere [Configurare un gruppo di disponibilità Always On di SQL Server per la disponibilità elevata in Linux](sql-server-linux-availability-group-configure-ha.md). L'altra architettura supporta solo i carichi di lavoro di scalabilità in lettura. Questo articolo illustra come creare un gruppo di disponibilità senza una Gestione cluster per i carichi di lavoro di scalabilità in lettura. Questa architettura fornisce solo la scalabilità in lettura. Non fornisce la disponibilità elevata.
 

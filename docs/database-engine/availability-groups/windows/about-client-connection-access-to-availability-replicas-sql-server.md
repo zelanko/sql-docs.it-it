@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a47e3c79bacbd75ca6761bdb250b05084caf2832
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4154b9194c1c4a0160a7ac118f9e8aca59a9de2d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67991734"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895411"
 ---
 # <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Tipi di connessioni client alle repliche all'interno di un gruppo di disponibilità Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   In un gruppo di disponibilità AlwaysOn è possibile configurare una o più repliche di disponibilità per consentire connessioni di sola lettura quando in esecuzione nel ruolo secondario, ovvero quando in esecuzione come replica secondaria. È inoltre possibile configurare ogni replica di disponibilità per consentire o escludere le connessioni di sola lettura quando l'esecuzione avviene nel ruolo primario, ossia come replica primaria.  
   
  Per facilitare l'accesso client ai database primari o secondari di un determinato gruppo di disponibilità, è necessario definire un listener del gruppo di disponibilità. Per impostazione predefinita, il listener del gruppo di disponibilità instrada le connessioni in ingresso alla replica primaria. Tuttavia, è possibile configurare un gruppo di disponibilità per supportare il routing di sola lettura che consente al listener del gruppo di disponibilità di reinstradare le richieste di connessione di applicazioni con finalità di lettura a una replica secondaria leggibile. Per altre informazioni, vedere [Configurare il routing di sola lettura per un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).  

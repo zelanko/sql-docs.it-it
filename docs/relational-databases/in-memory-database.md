@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: briancarrig
 ms.author: brcarrig
-manager: amitban
-ms.openlocfilehash: df8bb9e603d5455a2e42393df4c40956000cb037
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c71bda5a459c7993de824cdb6665978ba57166f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76831590"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892458"
 ---
 # <a name="in-memory-database-systems-and-technologies"></a>Tecnologie e sistemi di database in memoria
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 Questa pagina è stata progettata come documento di riferimento per le tecnologie e le funzionalità in memoria disponibili in SQL Server. Il concetto di sistema di database in memoria si riferisce a un sistema di database progettato per sfruttare le maggiori capacità di memoria disponibili nei sistemi di database moderni. Un database in memoria può essere di natura relazionale o non relazionale.
 
@@ -37,25 +36,25 @@ Una cache volatile veloce di fronte a un supporto notevolmente più lento ma dur
 
 ## <a name="hybrid-buffer-pool"></a>Pool di buffer ibrido
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 Il [pool di buffer ibrido](../database-engine/configure-windows/hybrid-buffer-pool.md) espande il pool di buffer per i file di database che risiedono in dispositivi di archiviazione con memoria persistente indirizzabili a byte per entrambe le piattaforme Windows e Linux con [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Metadati `tempdb` ottimizzati per la memoria
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduce una nuova funzionalità, ovvero i [metadati tempdb ottimizzati per la memoria](./databases/tempdb-database.md#memory-optimized-tempdb-metadata) che rimuove in modo efficace i colli di bottiglia dovuti alla contesa e sblocca un nuovo livello di scalabilità per i carichi di lavoro tempdb elevati.
 
 ## <a name="in-memory-oltp"></a>OLTP in memoria
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 [OLTP in memoria](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) è una tecnologia di database disponibile in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../includes/sssds-md.md)] per ottimizzare le prestazioni di elaborazione delle transazioni, l'inserimento di dati, il caricamento di dati e gli scenari di dati temporanei.
 
 ## <a name="configuring-persistent-memory-support-for-linux"></a>Configurazione del supporto della memoria persistente per Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] descrive come configurare la memoria persistente (PMEM) usando la [memoria persistente](../linux/sql-server-linux-configure-pmem.md) dell'utilità `ndctl`.
 

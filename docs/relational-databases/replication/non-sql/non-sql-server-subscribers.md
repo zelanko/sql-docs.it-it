@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 26bda5e190f18469948f935302ee2cbf9ddd121c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 25073bd212ec8b468c0388d11d7701744998d036
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940409"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883636"
 ---
 # <a name="non-sql-server-subscribers"></a>Sottoscrittori non SQL Server  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Tramite i Sottoscrittori non [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] riportati di seguito è possibile eseguire la sottoscrizione di pubblicazioni snapshot e transazionali utilizzando sottoscrizioni push. Le sottoscrizioni sono supportate per le due versioni più recenti di ogni database elencato utilizzando la versione più recente del provider OLE DB elencato.  
   

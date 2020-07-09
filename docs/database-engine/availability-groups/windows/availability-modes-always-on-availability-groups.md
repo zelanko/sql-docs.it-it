@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: df39ac4151bb5860db970d423edcbe7064178a08
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 08d214086ad32891c44bf5e6344a88196e705df2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75241776"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883588"
 ---
 # <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Differenze tra le modalità di disponibilità per un gruppo di disponibilità Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   In [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]la *modalità di disponibilità* è una proprietà della replica tramite cui viene determinato se una replica di disponibilità specificata può essere eseguita in modalità con commit sincrono. La modalità di disponibilità per ogni replica di disponibilità deve essere configurata per la modalità con commit sincrono, quella con commit asincrono o per la modalità di sola configurazione.  Se la replica primaria è configurata per la *modalità con commit asincrono*, non attende che una replica secondaria scriva su disco dei record del log delle transazioni in entrata per *finalizzare il log*. Se una replica secondaria specificata viene configurata per la modalità con commit asincrono, tramite la replica primaria non viene attesa la finalizzazione del log da parte della replica secondaria. Se la replica primaria e una replica secondaria specifica vengono entrambe configurate per la *modalità con commit sincrono*, la replica primaria attende la conferma della finalizzazione del log da parte della replica secondaria, a meno che la replica secondaria non sia in grado di eseguire il ping alla replica primaria entro il *periodo di timeout della sessione*della replica primaria. 
   

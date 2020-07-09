@@ -22,15 +22,15 @@ ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1e05ad220147e7f46bfaa66127fcc492aaeae6a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b6aef8ae36dc8cb571c4ae1993df1a7b3a81f130
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67927182"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895611"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifica le informazioni relative a una route esistente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
@@ -39,7 +39,7 @@ ms.locfileid: "67927182"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
   
 ALTER ROUTE route_name  
 WITH    
@@ -60,7 +60,7 @@ WITH
  Introduce le clausole che definiscono la route da modificare.  
   
  SERVICE_NAME **='** _service\_name_ **'**  
- Specifica il nome del servizio remoto a cui la route fa riferimento. *service_name* deve corrispondere esattamente al nome usato dal servizio remoto. Per creare corrispondenza con *service_name*, [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa un confronto byte per byte. In altre parole, nel confronto viene fatta distinzione tra maiuscole e minuscole e non vengono considerate le regole di confronto correnti. Una route con nome di servizio **'SQL/ServiceBroker/BrokerConfiguration'** è una route per un servizio di configurazione di Service Broker. Per una route per questo servizio non è necessario specificare un'istanza di Service Broker.  
+ Specifica il nome del servizio remoto a cui la route fa riferimento. *service_name* deve corrispondere esattamente al nome usato dal servizio remoto. Per creare corrispondenza con [!INCLUDE[ssSB](../../includes/sssb-md.md)]service_name *,*  usa un confronto byte per byte. In altre parole, nel confronto viene fatta distinzione tra maiuscole e minuscole e non vengono considerate le regole di confronto correnti. Una route con nome di servizio **'SQL/ServiceBroker/BrokerConfiguration'** è una route per un servizio di configurazione di Service Broker. Per una route per questo servizio non è necessario specificare un'istanza di Service Broker.  
   
  Se la clausola SERVICE_NAME viene omessa, il nome del servizio per la route rimane invariato.  
   
@@ -99,9 +99,9 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- Se per il parametro *next_hop_address* di una route viene specificato il valore **'LOCAL'** , il messaggio viene recapitato a un servizio nell'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Se per il parametro **next_hop_address** di una route viene specificato il valore *'LOCAL'* , il messaggio viene recapitato a un servizio nell'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Se per il parametro *next_hop_address* di una route viene specificato il valore **'TRANSPORT'** , l'indirizzo di rete viene determinato in base all'indirizzo di rete nel nome del servizio. Per una route con valore **'TRANSPORT'** è possibile specificare un nome di servizio o un'istanza di Service Broker.  
+ Se per il parametro **next_hop_address** di una route viene specificato il valore *'TRANSPORT'* , l'indirizzo di rete viene determinato in base all'indirizzo di rete nel nome del servizio. Per una route con valore **'TRANSPORT'** è possibile specificare un nome di servizio o un'istanza di Service Broker.  
   
  Se il parametro *next_hop_address* corrisponde al server principale per un database mirror, è necessario specificare anche MIRROR_ADDRESS per il server mirror. In caso contrario non può venire eseguito il failover automatico della route al server mirror.  
   
@@ -133,7 +133,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Le clausole che non sono specificate nel comando ALTER ROUTE rimangono invariate. Non è possibile pertanto eseguire il comando ALTER per specificare che la route non scade, che corrisponde a un nome di servizio o che corrisponde a un'istanza di Service Broker. Per modificare queste caratteristiche di una route è necessario eliminare la route esistente e creare una nuova route con le nuove informazioni.  
   
- Se per il parametro *next_hop_address* di una route viene specificato il valore **'TRANSPORT'** , l'indirizzo di rete viene determinato in base all'indirizzo di rete nel nome del servizio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elabora correttamente i nomi di servizi che iniziano con un indirizzo di rete in un formato valido per *next_hop_address*. I servizi con nomi che contengono indirizzi di rete validi verranno indirizzati all'indirizzo di rete indicato nel nome del servizio.  
+ Se per il parametro **next_hop_address** di una route viene specificato il valore *'TRANSPORT'* , l'indirizzo di rete viene determinato in base all'indirizzo di rete nel nome del servizio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elabora correttamente i nomi di servizi che iniziano con un indirizzo di rete in un formato valido per *next_hop_address*. I servizi con nomi che contengono indirizzi di rete validi verranno indirizzati all'indirizzo di rete indicato nel nome del servizio.  
   
  La tabella di routing può includere qualsiasi numero di route che specificano lo stesso servizio, indirizzo di rete e/o identificatore dell'istanza di Service Broker. In questo caso, [!INCLUDE[ssSB](../../includes/sssb-md.md)] sceglie una route utilizzando una procedura progettata in modo da individuare la corrispondenza più esatta tra le informazioni specificate nella conversazione e le informazioni della tabella di routing.  
   

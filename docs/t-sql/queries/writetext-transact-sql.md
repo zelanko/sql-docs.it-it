@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f991913ca75c9f310c6b176edac7056457232b47
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2646b37d4f8dfd344df916f3f47540890c41dc12
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632880"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892101"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Consente di eseguire l'aggiornamento interattivo con registrazione minima di una colonna di tipo **text**, **ntext** o **image** esistente. WRITETEXT sovrascrive completamente tutti i dati esistenti nella colonna interessata. Non è possibile usare WRITETEXT nelle colonne di tipo **text**, **ntext** e **image** di una vista.  
   

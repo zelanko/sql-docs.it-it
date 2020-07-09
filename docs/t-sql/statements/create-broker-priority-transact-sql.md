@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 77f2af888488531d6ce472a2358c59b8ecf78e58
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8624eb00f1d3822b2e3e0f857c4d07eb36c2bcad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633326"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895495"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Definisce un livello di priorità e il set di criteri da utilizzare per determinare a quali conversazioni di [!INCLUDE[ssSB](../../includes/sssb-md.md)] deve essere assegnato il livello di priorità. Il livello di priorità è assegnato a qualsiasi endpoint di conversazione che usa la stessa combinazione di contratti e servizi specificata nella priorità di conversazione. Il valore delle priorità va da 1 (basso) a 10 (alto). Il valore predefinito è 5.  
   

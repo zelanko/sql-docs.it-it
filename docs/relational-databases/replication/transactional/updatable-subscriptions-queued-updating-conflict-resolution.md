@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b2bc4cf6348180e52dea28698e90cafda4f32f79
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9364de40aed4218d1abf73dac1502413c3509edf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67895488"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883207"
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>Sottoscrizioni aggiornabili - Risoluzione dei conflitti per l'aggiornamento in coda
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Dato che le sottoscrizioni ad aggiornamento in coda consentono la modifica degli stessi dati in più posizioni, è possibile che durante la sincronizzazione dei dati nel server di pubblicazione si verifichino conflitti. I conflitti vengono rilevati quando le modifiche vengono sincronizzate con il server di pubblicazione e vengono risolti in base ai criteri di risoluzione selezionati durante la creazione della pubblicazione. È possibile che si verifichino i conflitti seguenti:  
   
 -   Conflitti di aggiornamento e inserimento. Questo tipo di conflitti si verifica quando gli stessi dati vengono modificati in due posizioni diverse. In questo caso, vengono confermate solo le modifiche apportate in una posizione.  

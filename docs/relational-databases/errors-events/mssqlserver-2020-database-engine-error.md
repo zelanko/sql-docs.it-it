@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 4a8bf90f-a083-4c53-84f0-d23c711c8081
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 112ba12a568190967a31789ca6cd69d2056d9e8c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 60736413f572f997bdad1e10eb1fdf79b612aa48
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67896754"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893059"
 ---
 # <a name="mssqlserver_2020"></a>MSSQLSERVER_2020
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Dettagli  
   
-|||  
-|-|-|  
+| Attributo | valore |  
+| :-------- | :---- |  
 |Nome prodotto|SQL Server|  
 |ID evento|2020|  
 |Origine evento|MSSQLSERVER|  
@@ -38,7 +38,8 @@ La funzione di sistema **sys.dm_sql_referenced_entities** segnalerà tutte le di
 ## <a name="user-action"></a>Azione dell'utente  
 Correggere tutti gli errori identificati nel messaggio prima dell'errore 2020. Nell'esempio di codice seguente viene definita la vista `Production.ApprovedDocuments` nelle colonne `Title`, `ChangeNumber` e `Status` della tabella `Production.Document`. Viene eseguita una query sulla funzione di sistema **sys.dm_sql_referenced_entities** per gli oggetti e le colonne da cui dipende la vista `ApprovedDocuments`. Poiché la vista non viene creata utilizzando la clausola WITH SCHEMA_BINDING, è possibile modificare le colonne con riferimenti nella vista della tabella a cui si fa riferimento. Nell'esempio viene modificata la colonna `ChangeNumber` della tabella `Production.Document` rinominandola con `TrackingNumber`. Viene eseguita di nuovo una query sulla vista del catalogo per la vista `ApprovedDocuments`. Non è però possibile eseguire l'associazione a tutte le colonne definite nella vista. Vengono restituiti gli errori 207 e 2020 identificando il problema. Per risolvere il problema, è necessario modificare la vista in modo da riflettere il nuovo nome della colonna.  
   
-<pre>USE AdventureWorks2012;  
+```sql
+USE AdventureWorks2012;  
 GO  
 CREATE VIEW Production.ApprovedDocuments  
 AS  
@@ -57,11 +58,13 @@ SELECT referenced_schema_name AS schema_name
 ,referenced_entity_name AS table_name  
 ,referenced_minor_name AS referenced_column  
 FROM sys.dm_sql_referenced_entities ('Production.ApprovedDocuments', 'OBJECT');  
-GO</pre>  
+GO
+```
   
 La query restituisce i messaggi di errore seguenti:  
   
-<pre>Msg 207, Level 16, State 1, Procedure ApprovedDocuments, Line 3  
+```
+Msg 207, Level 16, State 1, Procedure ApprovedDocuments, Line 3  
 Invalid column name 'ChangeNumber'.  
 Msg 2020, Level 16, State 1, Line 1  
 The dependencies reported for entity  
@@ -70,18 +73,21 @@ columns. This is either because the entity references an
 object that does not exist or because of an error in one or  
 more statements in the entity. Before rerunning the query,  
 ensure that there are no errors in the entity and that all  
-objects referenced by the entity exist.</pre>  
+objects referenced by the entity exist.
+```
   
 Nell'esempio seguente viene corretto il nome della colonna nella vista.  
   
-<pre>USE AdventureWorks2012;  
+```sql
+USE AdventureWorks2012;  
 GO  
 ALTER VIEW Production.ApprovedDocuments  
 AS  
 SELECT Title,TrackingNumber, Status  
 FROM Production.Document  
 WHERE Status = 2;  
-GO</pre>  
+GO
+```
   
 ## <a name="see-also"></a>Vedere anche  
 [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)  

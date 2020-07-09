@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f2dfa25c21592affd2b348b14c32c12d7751aeb9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 9dac7df96ce86dc83959a6dcbde2383a0db5907c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626171"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895481"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crea un nuovo contratto. Un contratto definisce i tipi di messaggio utilizzati in una conversazione di [!INCLUDE[ssSB](../../includes/sssb-md.md)], nonché il lato della conversazione che può inviare messaggi di tale tipo. Ogni conversazione viene eseguita in base a un contratto. Il servizio di origine specifica il contratto per la conversazione all'avvio della conversazione stessa, mentre il servizio Target specifica i contratti accettati per le conversazioni.  
   

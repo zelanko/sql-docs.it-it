@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 864ed8080c3978ec272f5212fa0a5e8dc40c2350
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 43ed11aebf0114334ce57ed251187912bd43c18c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822487"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888079"
 ---
 # <a name="use-remote-blob-store-rbs-with-always-on-availability-groups"></a>Usare Archivio BLOB remoto (RBS) con i gruppi di disponibilità Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] offre una soluzione di disponibilità elevata e di ripristino di emergenza per gli oggetti BLOB dell'[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][archivio BLOB remoto](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) (RBS, Remote Blob Store). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] protegge tutti i metadati e gli schemi di RBS archiviati in un database di disponibilità replicandoli nelle repliche secondarie. Questo è il database del contenuto di SharePoint. In generale, tramite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] questi metadati di RBS vengono archiviati in modo indipendente dal BLOB.  
   

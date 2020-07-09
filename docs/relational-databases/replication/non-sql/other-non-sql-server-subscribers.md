@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dce8d383ca01fd205645a18f7aa181d12cff4675
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7f6a8e580d89b9364d6c141dbacac8a405a0667
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68110964"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892226"
 ---
 # <a name="other-non-sql-server-subscribers"></a>Altri Sottoscrittori non SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Per un elenco di Sottoscrittori non [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supportati da [!INCLUDE[msCoName](../../../includes/msconame-md.md)], vedere [Sottoscrittori non SQL Server](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). In questo argomento vengono fornite informazioni sui requisiti per i driver ODBC e i provider OLE DB.  
   
 ## <a name="odbc-driver-requirements"></a>Requisiti per i driver ODBC  

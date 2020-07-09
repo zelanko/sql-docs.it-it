@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9e62710d28b9b7e0ad66ff157b841f939d6dfaf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da4d35ec8647ba799986cc696a89718870dfb253
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041095"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887776"
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>Peer-to-peer - Rilevamento dei conflitti nella replica
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   La replica transazionale peer-to-peer consente di inserire, aggiornare o eliminare dati in qualsiasi nodo di una topologia e di propagare le modifiche agli altri nodi. Poiché è possibile modificare i dati in qualsiasi nodo, si potrebbe verificare un conflitto tra le modifiche apportate ai dati in nodi diversi. Se una riga viene modificata in più nodi, può causare un conflitto o persino la perdita di un aggiornamento quando viene propagata in altri nodi.  
   
  Con la replica peer-to-peer in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] e versioni successive, viene introdotta l'opzione che consente di abilitare il rilevamento dei conflitti in una topologia peer-to-peer. Questa opzione consente di evitare problemi causati da conflitti non rilevati, tra cui il comportamento incoerente dell'applicazione e la perdita di aggiornamenti. Se questa opzione è abilitata, per impostazione predefinita una modifica in conflitto viene considerata come un errore critico che impedisce il corretto funzionamento dell'agente di distribuzione. In caso di conflitto, la topologia rimane in uno stato incoerente finché il conflitto non viene risolto e i dati non vengono resi coerenti nell'intera topologia.  

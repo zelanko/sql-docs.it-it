@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2b4556734044ad5bd688f8d5b286885450897b42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0bacc2d49424aa9f8266a993a58546a80385aced
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70847152"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893079"
 ---
 # <a name="virtual-device-interface-vdi-reference"></a>Informazioni di riferimento sull'interfaccia dispositivo virtuale (VDI, Virtual Device Interface)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Questa sezione include le specifiche per le API di SQL Server destinate all'uso da parte di fornitori di software di backup di terze parti.
 

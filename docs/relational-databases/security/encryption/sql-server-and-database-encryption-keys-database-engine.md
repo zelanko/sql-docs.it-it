@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 1c5e618d1116dfc464bcea781cdab8469e735b32
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bd4a4e98f464c56e5c46c669b7ca26e5db5c814e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558109"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883077"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Chiavi di crittografia del database e di SQL Server (Motore di database)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa le chiavi di crittografia per la protezione di dati, credenziali e informazioni di connessione archiviate in un database del server. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dispone di due tipi di chiavi: *simmetrica* e *asimmetrica*. Le chiavi simmetriche utilizzano la stessa password per crittografare e decrittografare i dati. Le chiavi asimmetriche usano una password per crittografare i dati (chiave *pubblica* ) e un'altra per decrittografare i dati (chiave *privata* ).  
   
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], le chiavi di crittografia sono costituite da una combinazione di chiavi pubbliche, private e simmetriche utilizzate per proteggere dati riservati. La chiave simmetrica viene creata durante l'inizializzazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando si avvia per la prima volta l'istanza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La chiave è utilizzata da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per crittografare dati riservati archiviati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le chiavi pubblica e privata vengono create dal sistema operativo e sono utilizzate per proteggere la chiave simmetrica. Per ogni istanza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che contiene dati riservati in un database viene creata una coppia di chiavi pubblica e privata.  

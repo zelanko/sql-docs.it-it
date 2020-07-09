@@ -9,16 +9,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: fc70544fdb0bb79ef97d5026ad8b985ad8add2ba
-ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
+ms.openlocfilehash: c7e36c968a11b3aaa1e30b39ab120ffbac9bb08f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80443373"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892056"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Configurare gruppi con scalabilità orizzontale PolyBase in Windows
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Questo articolo descrive come configurare un [gruppo con scalabilità orizzontale PolyBase](polybase-scale-out-groups.md) in Windows. Questa funzionalità consente di creare un cluster di istanze di SQL Server per elaborare set di dati di grandi dimensioni da origini dati esterne, ad esempio Hadoop o Archiviazione BLOB di Azure, in una soluzione di scalabilità orizzontale che consente di migliorare le prestazioni delle query.
 

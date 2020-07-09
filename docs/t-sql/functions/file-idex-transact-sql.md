@@ -20,17 +20,17 @@ helpviewer_keywords:
 - identification numbers [SQL Server], files
 - file names [SQL Server], FILE_IDEX
 ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: e44198f33bb837d7199a86643a60fbf59e84f0f6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e369ae57024b88ee65c4a81217661314e5533d47
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827006"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895785"
 ---
 # <a name="file_idex-transact-sql"></a>FILE_IDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Questa funzione restituisce il numero di identificazione (ID) del file per il nome logico specificato del file di dati, file di log o file full-text nel database corrente. 
   

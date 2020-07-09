@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 19d9171278bac69eb8b092d6bc7ec69dcbcb71ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e17ac9823d0c8c0425f7a5c7dbdb550431374c78
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68023715"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896075"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Preparare un database secondario per un gruppo di disponibilità Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 Questo argomento illustra come preparare un database per un gruppo di disponibilità Always On in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell. La preparazione di un database richiede due passaggi: 
 
 1. Ripristinare un back recente del database primario e backup di log successivi in ogni istanza del server in cui viene ospitata la replica secondaria, usando RESTORE WITH NORECOVERY
