@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 91db0303326c74b710e7755de5a9573539e61425
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdeda1e81df8914dee4bdb6303c2dec778bb2ab1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68082978"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882255"
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>Monitoraggio della replica con Monitor di sistema
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Monitor di sistema di[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows consente di utilizzare grafici e report per valutare l'efficienza del computer, identificare e risolvere eventuali problemi, ad esempio un utilizzo non equilibrato delle risorse, componenti hardware inadeguati e configurazioni di programmi insufficienti, nonché pianificare risorse hardware aggiuntive. Per altre informazioni, vedere [Monitoraggio dell'utilizzo delle risorse&#40;Monitor di sistema&#41;](../../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md).  
   
  In Monitor di sistema vengono utilizzati oggetti e contatori delle prestazioni che forniscono informazioni sulle prestazioni dei vari processi. È possibile misurare le prestazioni della replica mediante contatori associati agli agenti di replica:  

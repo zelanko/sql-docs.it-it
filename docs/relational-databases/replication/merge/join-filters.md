@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 712665d24946c2826e4ab6c5e53bb853b07642b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e6c68c2b2b2af6f32bcec900211b9185004caaa8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033239"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882471"
 ---
 # <a name="join-filters"></a>filtri di join
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Un filtro di join consente di filtrare una tabella in base al tipo di filtro applicato a una tabella correlata nella pubblicazione Viene in genere filtrata una tabella padre mediante un filtro con parametri, quindi vengono definiti uno o più filtri di join così come si definisce un join tra tabelle. I filtri di join estendono il filtro con parametri affinché i dati nelle tabelle correlate vengano replicati solo se corrispondenti alla clausola di filtro di join.  
   
  I filtri join seguono in genere le relazioni tra chiavi primarie e chiavi esterne definite per le tabelle alle quali vengono applicati, ma non sono necessariamente limitati a tali relazioni. Il filtro di join può essere basato su qualsiasi logica di confronto tra i dati correlati di due tabelle.  

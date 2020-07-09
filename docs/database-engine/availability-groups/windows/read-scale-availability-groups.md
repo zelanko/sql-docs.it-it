@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2decc7e78b599ebcd0c16e3373a0b62401d09428
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28d9540c331ac5a250acc24abbd173f7ddf87e5f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75720842"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882573"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Usare gruppi di disponibilità Always On con scalabilità in lettura
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Un gruppo di disponibilità è una soluzione completa che offre funzionalità a disponibilità elevata per SQL Server e anche soluzioni di scalabilità integrate. In un'applicazione di database tipica, diversi client eseguono vari tipi di carichi di lavoro. In alcuni casi a causa dei vincoli di risorse possono verificarsi dei colli di bottiglia. 
 

@@ -2,7 +2,7 @@
 title: Trovare errori con la replica transazionale
 description: Viene descritto come individuare e identificare gli errori con la replica transazionale, nonché la metodologia di risoluzione dei problemi per risolvere i problemi relativi alla replica.
 ms.custom: seo-lt-2019
-ms.date: 04/27/2018
+ms.date: 07/01/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -12,15 +12,15 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9a079838d343ba8de93e270d01d704eb32219ee9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7c818e48c916a8ad3da7dfda7eaad6230c16ebd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286989"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882285"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Risoluzione dei problemi: Trovare gli errori con la replica transazionale di SQL Server 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 La risoluzione degli errori di replica può risultare frustrante senza una conoscenza di base del funzionamento della replica transazionale. Il primo passaggio per la creazione di una pubblicazione prevede che l'agente di snapshot crei lo snapshot e lo salvi nella cartella degli snapshot. Successivamente, l'agente di distribuzione applica lo snapshot al sottoscrittore. 
 
@@ -77,8 +77,10 @@ L'agente di snapshot genera lo snapshot e lo scrive nella cartella degli snapsho
 
     ![Errore dell'agente di snapshot per accesso negato](media/troubleshooting-tran-repl-errors/snapshot-access-denied.png)
 
-        The replication agent had encountered an exception.
-        Exception Message: Access to path '\\node1\repldata.....' is denied.
+    ```console
+    The replication agent had encountered an exception.
+    Exception Message: Access to path '\\node1\repldata.....' is denied.
+    ```
 
 Se le autorizzazioni di Windows dell'utente per la cartella degli snapshot non sono configurate correttamente, verrà visualizzato l'errore "accesso negato" per l'agente di snapshot. È necessario verificare le autorizzazioni per la cartella in cui viene archiviato lo snapshot e assicurarsi che l'account usato per eseguire l'agente di snapshot abbia le autorizzazioni per accedere alla condivisione.  
 
@@ -108,10 +110,12 @@ L'agente di lettura log si connette al database del server di pubblicazione e an
     
     ![Dettagli dell'errore per l'agente di lettura log](media/troubleshooting-tran-repl-errors/log-reader-error.png)
 
-       Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.
-       The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.
-       Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
-       Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
+    ```console
+    Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.
+    The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.
+    Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
+    Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
+    ```
 
 6. L'errore si verifica in genere quando il proprietario del server di pubblicazione non è impostato correttamente. Questa situazione può verificarsi quando un database viene ripristinato. Per verificare ciò:
 
@@ -127,7 +131,7 @@ L'agente di lettura log si connette al database del server di pubblicazione e an
 
     ```sql
     -- set the owner of the database to 'sa' or a specific user account, without the brackets. 
-    EXEC sp_changedbowner '<useraccount>'
+    EXECUTE sp_changedbowner '<useraccount>'
     -- example for sa: exec sp_changedbowner 'sa'
     -- example for user account: exec sp_changedbowner 'sqlrepro\administrator' 
     ```
@@ -158,9 +162,11 @@ L'agente di distribuzione trova i dati nel database di distribuzione e quindi li
 2. Verrà visualizzata la finestra di dialogo **Cronologia database di distribuzione - Sottoscrittore** con chiarimenti sull'errore riscontrato dall'agente: 
 
      ![Dettagli dell'errore per l'agente di distribuzione](media/troubleshooting-tran-repl-errors/dist-history-error.png)
-    
-        Error messages:
-        Agent 'NODE1\SQL2016-AdventureWorks2012-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
+
+    ```console
+    Error messages:
+    Agent 'NODE1\SQL2016-AdventureWorks2012-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
+    ```
 
 3. L'errore indica che l'agente di distribuzione esegue nuovi tentativi. Per trovare altre informazioni, controllare la cronologia processo dell'agente di distribuzione: 
 
@@ -175,9 +181,11 @@ L'agente di distribuzione trova i dati nel database di distribuzione e quindi li
 5. Selezionare una delle voci dell'errore e visualizzare il testo corrispondente nella parte inferiore della finestra:  
 
     ![Testo dell'errore che indica una password errata per l'agente di distribuzione](media/troubleshooting-tran-repl-errors/dist-pw-wrong.png)
-    
-        Message:
-        Unable to start execution of step 2 (reason: Error authenticating proxy NODE1\repl_distribution, system error: The user name or password is incorrect.)
+
+    ```console
+    Message:
+    Unable to start execution of step 2 (reason: Error authenticating proxy NODE1\repl_distribution, system error: The user name or password is incorrect.)
+    ```
 
 6. Questo errore indica che la password usata dall'agente di distribuzione non è corretta. Per risolvere questo errore:
 
@@ -194,11 +202,13 @@ L'agente di distribuzione trova i dati nel database di distribuzione e quindi li
     Aprire la cronologia **Da database di distribuzione a Sottoscrittore** facendo clic con il pulsante destro del mouse sulla sottoscrizione in **Monitoraggio replica** > **Visualizza dettagli**. In questo caso, l'errore è diverso: 
 
     ![Errore che indica che l'agente di distribuzione non può connettersi](media/troubleshooting-tran-repl-errors/dist-agent-cant-connect.png)
-           
-        Connecting to Subscriber 'NODE2\SQL2016'        
-        Agent message code 20084. The process could not connect to Subscriber 'NODE2\SQL2016'.
-        Number:  18456
-        Message: Login failed for user 'NODE2\repl_distribution'.
+
+    ```console
+    Connecting to Subscriber 'NODE2\SQL2016'        
+    Agent message code 20084. The process could not connect to Subscriber 'NODE2\SQL2016'.
+    Number:  18456
+    Message: Login failed for user 'NODE2\repl_distribution'.
+    ```
 
 8. Questo errore indica che l'agente di distribuzione non è in grado di connettersi al sottoscrittore, perché l'accesso non è riuscito per l'utente **NODE2\repl_distribution**. Per analizzare ulteriormente il problema, connettersi al sottoscrittore e aprire il log degli errori di SQL Server *corrente* nel nodo **Gestione** in Esplora oggetti: 
 
@@ -234,8 +244,10 @@ L'agente di distribuzione trova i dati nel database di distribuzione e quindi li
 
 1. Nella casella **Comando** iniziare una nuova riga, immettere il testo seguente e selezionare **OK**: 
 
-       -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
-    
+    ```console
+    -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
+    ```
+
     È possibile modificare il percorso e il livello di dettaglio in base alle proprie preferenze.
 
     ![Output dettagliato nelle proprietà per il passaggio del processo](media/troubleshooting-tran-repl-errors/verbose.png)

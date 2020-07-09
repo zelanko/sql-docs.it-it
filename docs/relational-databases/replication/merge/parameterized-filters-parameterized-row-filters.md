@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3dee5b4c6522afd93591d1e8aa0c94052d41d9bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8e7d5eae242525d57618050516f6368f016e3d89
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71711060"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882301"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtri con parametri - Filtri di riga con parametri
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   I filtri di riga con parametri consentono l'invio di partizioni di dati diverse a Sottoscrittori diversi senza che sia necessario creare più pubblicazioni. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], i filtri con parametri vengono definiti filtri dinamici. Una partizione è un subset delle righe di una tabella. In base alle impostazioni scelte durante la creazione di un filtro di riga con parametri, ogni riga di una tabella pubblicata può appartenere a un'unica partizione, con la conseguente produzione di partizioni non sovrapposte, o a due o più partizioni, con la conseguente produzione di partizioni sovrapposte.  
   
  È possibile condividere le partizioni non sovrapposte tra sottoscrizioni oppure limitarle in modo che solo una sottoscrizione riceva una determinata partizione. Le impostazioni che controllano il comportamento delle partizioni vengono descritte nella sezione "Utilizzo delle opzioni di filtro appropriate" di seguito in questo argomento. L'utilizzo di tali impostazioni consente di personalizzare il filtro con parametri in base ai requisiti dell'applicazione e delle prestazioni. In generale, le partizioni sovrapposte offrono maggiore flessibilità, mentre le partizioni non sovrapposte replicate in una singola sottoscrizione garantiscono prestazioni superiori.  

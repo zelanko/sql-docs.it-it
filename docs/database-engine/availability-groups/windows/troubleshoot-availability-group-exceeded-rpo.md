@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d8ae9d5fee06ae9db1415b53c41a1d1d23633824
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822188"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882359"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RPO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Dopo aver eseguito un failover manuale forzato su un gruppo di disponibilità a una replica secondaria con commit asincrono, è possibile che la perdita di dati sia maggiore dell'obiettivo punto di ripristino (RPO, Recovery Point Objective). Oppure, quando si calcola la perdita di dati potenziale di una replica secondaria con commit asincrono tramite il metodo in [Monitor Performance for Always On Availability Groups](monitor-performance-for-always-on-availability-groups.md) (Monitorare le prestazioni per i gruppi di disponibilità Always On), è possibile scoprire che supera l'obiettivo RPO.  
   
  Una replica secondaria con commit sincrono garantisce la totale assenza di perdite di dati, ma la perdita di dati potenziale di una replica secondaria con commit asincrono dipende dalla dimensione di log ancora in attesa di finalizzazione nella replica secondaria.  

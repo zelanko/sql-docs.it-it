@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ab9ed7c6c404f9e8f57dd658f20e9e5b8f0d34f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 132e991a0418155ed6d0d1db2eca2945dab3e307
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321465"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882288"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>Filtri con parametri - Ottimizzare per le partizioni pre-calcolate
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Le partizioni pre-calcolate consentono di ottimizzare le prestazioni e possono essere utilizzate con le pubblicazioni di tipo merge filtrate. Rappresentano inoltre un requisito per l'utilizzo dei record logici sulle pubblicazioni filtrate. Per altre informazioni sui record logici, vedere [Raggruppare modifiche alle righe correlate con record logici](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
  Quando viene eseguita la sincronizzazione tra un Sottoscrittore e un server di pubblicazione, quest'ultimo deve valutare i filtri del Sottoscrittore per stabilire quali righe appartengono alla partizione o al set di dati di tale Sottoscrittore. Questo processo di determinazione dell'appartenenza alla partizione delle modifiche del server di pubblicazione per ogni Sottoscrittore che riceve un set di dati filtrato viene definita *valutazione della partizione*. In assenza di partizioni pre-calcolate, la valutazione della partizione deve essere eseguita per ogni modifica apportata a una colonna filtrata nel server di pubblicazione dall'ultima esecuzione dell'agente di merge per uno specifico Sottoscrittore e questo processo deve essere ripetuto per ogni Sottoscrittore sincronizzato con il server di pubblicazione.  

@@ -8,16 +8,16 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0f400667e73effb73ff41c3c7270e3f89a2ca0da
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 681ba70f94819d9e7d4f129cfaf409a968e80bca
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76162642"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882516"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Installare SQL Server Integration Services (SSIS) in Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Per installare SQL Server Integration Services (**mssql-server-is**) in Linux, seguire le procedure descritte in questo articolo. Per informazioni sulle funzionalità supportate in questa versione di Integration Services per Linux, vedere le [note sulla versione](sql-server-linux-release-notes.md).
 
