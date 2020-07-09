@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 501ec8bc3e7ad039e3864ce8a9a1767c6961848c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d39284d132610e1ab68312823ca1d06d540bc492
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75235649"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896999"
 ---
 # <a name="determine-possible-reason-for-connectivity-failures-between-availability-replicas"></a>"Determinare le cause possibili degli errori di connessione tra le repliche di disponibilità
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 Gli errori in una sessione tra due repliche di disponibilità possono essere causati da problemi di tipo fisico, del sistema operativo o di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Una replica di disponibilità non controlla regolarmente i componenti sui quali Sqlservr.exe si basa per verificare se stiano funzionando correttamente o abbiano generato un errore. In alcuni casi, tuttavia, il componente interessato invia una segnalazione di errore a Sqlservr.exe. Un errore segnalato da un altro componente è denominato *errore hardware*. Per rilevare altri errori che altrimenti non verrebbero rilevati, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implementa un proprio meccanismo di timeout della sessione. Specifica il periodo di timeout della sessione in secondi. Il periodo di timeout indica l'intervallo di attesa massimo rispettato dall'istanza del server per la ricezione di un messaggio PING da un'altra istanza, prima che l'altra istanza venga considerata disconnessa. Quando si verifica un timeout della sessione tra due repliche di disponibilità, le repliche di disponibilità presuppongono che si sia verificato un errore e viene dichiarato un *errore software*.  
   
 > [!IMPORTANT]  

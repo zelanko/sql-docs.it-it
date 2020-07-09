@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bf826a833238db33e313c401e4ff60c201a98ed3
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 43786561a88d970cc89587ed5a37adcc45c646d5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632891"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900108"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Aggiorna un campo **text**, **ntext**, o **image** esistente. Usare UPDATETEXT per modificare solo una parte di una colonna esistente di tipo **text**, **ntext** o **image**. Usare WRITETEXT per aggiornare e sostituire un intero campo di tipo **text**, **ntext**, o **image**.  
   

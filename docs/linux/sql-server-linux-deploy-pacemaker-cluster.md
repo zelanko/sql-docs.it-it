@@ -8,16 +8,16 @@ ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ee3b4aac2e1bcdcc37de17a569f080d3b9bc87cc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da852f20d9109c5c4e2988cbdfc3915fe226718f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077468"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896519"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Distribuire un cluster Pacemaker per SQL Server in Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Questa esercitazione illustra le attività necessarie per distribuire un cluster Pacemaker in Linux per un gruppo di disponibilità Always On o un'istanza del cluster di failover di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Diversamente da quanto avviene per lo stack Windows Server/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] strettamente associato, la creazione di un cluster Pacemaker e la configurazione di un gruppo di disponibilità in Linux possono essere eseguite prima o dopo l'installazione di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. L'integrazione e la configurazione delle risorse per la parte Pacemaker di una distribuzione di un gruppo di disponibilità o di un'istanza del cluster di failover vengono eseguite dopo la configurazione del cluster.
 > [!IMPORTANT]

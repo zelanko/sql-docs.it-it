@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
-ms.openlocfilehash: e7affa88f1856571d0b2142f7dcfdf762ed79197
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 185d62a67309f9e76e5f738494ee2137e2ef4a73
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68129346"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897765"
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>Eseguire la migrazione di database e dati strutturati a SQL Server in Linux 
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 È possibile eseguire la migrazione di database e dati a SQL Server in esecuzione in Linux. Il metodo che si sceglie di usare dipende dai dati di origine e dallo scenario specifico. Le sezioni seguenti presentano le procedure consigliate per diversi scenari di migrazione.
 

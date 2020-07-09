@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ff31579a425f9e86fed11811c9d0a42c3113ee15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 662fcb31c7a633be5186f93943af318316e7ff8d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288135"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900967"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lezione 1: Creare un progetto e un pacchetto di base con SSIS
 
@@ -50,7 +50,8 @@ In questa esercitazione i dati di origine sono costituiti da dati valutari crono
   
 Ecco un esempio dei dati di origine presenti nel file SampleCurrencyData.txt:  
   
-<pre>1.00070049USD9/3/05 0:001.001201442  
+```
+1.00070049USD9/3/05 0:001.001201442  
 1.00020004USD9/4/05 0:001  
 1.00020004USD9/5/05 0:001.001201442  
 1.00020004USD9/6/05 0:001  
@@ -59,7 +60,8 @@ Ecco un esempio dei dati di origine presenti nel file SampleCurrencyData.txt:
 1.00070049USD9/9/05 0:001.001502253  
 1.00070049USD9/10/05 0:000.99990001  
 1.00020004USD9/11/05 0:001.001101211  
-1.00020004USD9/12/05 0:000.99970009</pre>  
+1.00020004USD9/12/05 0:000.99970009
+```
   
 Quando si usano dati di origine file flat, è importante capire in che modo Gestione connessione file flat interpreta i dati dei file di questo tipo. Se l'origine del file flat è Unicode, tutte le colonne vengono definite nella gestione connessione file flat come [DT_WSTR] con una larghezza predefinita di 50. Se la codifica dell'origine file flat è ANSI, le colonne sono definite come [DT_STR] con una larghezza predefinita pari a 50. Sarà probabilmente necessario cambiare le impostazioni predefinite per adattare meglio i tipi di colonna stringa ai dati. È necessario esaminare il tipo di dati della destinazione e quindi scegliere il tipo corrispondente all'interno di Gestione connessione file flat.  
   

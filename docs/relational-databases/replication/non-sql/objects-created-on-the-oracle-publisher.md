@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b0bc02a31bcfd4cd4baef19a89b6f658195a24f5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 405deb86567c596372777dff5e6ccb9dd2e95fb1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940313"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901231"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Oggetti creati nel server di pubblicazione Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   La replica di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installa oggetti di database nel server di pubblicazione Oracle in modo da abilitare il rilevamento e l'inoltro delle modifiche. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non installa file binari nel server di pubblicazione Oracle. Nella tabella seguente vengono elencati gli oggetti creati nel server di pubblicazione Oracle quando viene identificato come server di pubblicazione nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Le descrizioni degli oggetti hanno esclusivamente scopo informativo. Non modificare tali oggetti.  
   
 |Nome oggetto|Tipo di oggetto|Descrizione|  

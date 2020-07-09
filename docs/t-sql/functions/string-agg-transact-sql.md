@@ -16,15 +16,18 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 122502b112fd250fa93461b19fabe6793a9410f0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 34af1cc4319135e7f2e30ed0c287a6567e420f64
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824202"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85995371"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
+
+<!--[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]-->
+
+[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
 
 Concatena i valori delle espressioni della stringa e inserisce i valori dei separatori tra di essi. Il separatore non viene aggiunto alla fine della stringa. 
  

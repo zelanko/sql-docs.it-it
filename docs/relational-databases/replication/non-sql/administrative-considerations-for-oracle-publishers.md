@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8f8a436035c18f7bd6e5a1867ebe92433e4e5951
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8cde9d19b4f8b1c04290f6b36006b83aadc0e5ea
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321899"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900792"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Considerazioni amministrative per i server di pubblicazione Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Dopo la configurazione di un server di pubblicazione Oracle e l'implementazione dei meccanismi di rilevamento delle modifiche della replica, gli amministratori del sistema di database Oracle possono utilizzare utilità di database Oracle standard ed eseguire attività tipiche di amministrazione dei sistemi. È tuttavia opportuno considerare gli effetti sui dati pubblicati di determinate attività amministrative.  
   
  Ad eccezione dell'eliminazione o della modifica di una colonna pubblicata per la replica oppure dell'eliminazione o della modifica di oggetti di replica, queste considerazioni non sono applicabili alle pubblicazioni snapshot.  

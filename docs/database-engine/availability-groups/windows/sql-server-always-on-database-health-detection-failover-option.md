@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6fa77fa3ac4733d9672b5bc72523d72abe640fc8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 287e6cd2fd4f1004aaa79a69ec7388eb3b695a68
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251260"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898060"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Opzione di failover di rilevamento dell'integrità a livello di database di un gruppo di disponibilità
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 A partire da SQL Server 2016, quando si configura un gruppo di disponibilità Always On è disponibile l'opzione di rilevamento dell'integrità a livello di database (DB_FAILOVER). Il rilevamento dell'integrità a livello di database avvisa quando un database non è più nello stato online, quando si verifica un errore, e attiverà il failover automatico del gruppo di disponibilità.
 
 Il rilevamento dell'integrità a livello di database è abilitato per il gruppo di disponibilità nel suo complesso, pertanto il rilevamento dell'integrità a livello database consente di monitorare ogni database nel gruppo di disponibilità. Non può essere abilitato in modo selettivo per database specifici nel gruppo di disponibilità.

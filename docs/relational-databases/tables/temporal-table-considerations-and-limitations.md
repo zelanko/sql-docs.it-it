@@ -11,16 +11,16 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f63d1c3c416859cab9ace87ad62e87b45c08a567
-ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
+ms.openlocfilehash: eca3bf60c94386f2177769d05099f7ae92c1bb4c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82784487"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85983406"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Considerazioni e limitazioni delle tabelle temporali
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Esistono alcune considerazioni e limitazioni da tenere presenti quando si lavora con le tabelle temporali, a causa della natura del controllo delle versioni di sistema.
 

@@ -24,15 +24,15 @@ ms.assetid: f14fc2cd-9ea8-4daf-88f4-418cf523ab55
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6e1237744b7c29c0beced8d01f7ddabc5374cb7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 27c2ab86d376e9fd2753c4c9fca3c51d5886ec8e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82803020"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85993439"
 ---
 # <a name="sysutcdatetime-transact-sql"></a>SYSUTCDATETIME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Restituisce il valore **datetime2** che contiene la data e l'ora del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La data e l'ora vengono restituite in formato ora UTC (Coordinated Universal Time). La precisione frazionaria dei secondi può essere specificata in un intervallo da 1 a 7 cifre. La precisione predefinita è 7 cifre.  
   

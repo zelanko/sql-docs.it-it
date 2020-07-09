@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 70701d5c0103da089444177db1143066d0c862cd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d2032c14f435b48fa181f2fcab388d417ebea7d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68032228"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897247"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configurare il cluster di dischi condivisi SLES per SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Questa guida fornisce istruzioni per la creazione di un cluster di dischi condivisi a due nodi per SQL Server in SLES (SUSE Linux Enterprise Server). Il livello di clustering si basa su SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability), a sua volta basato su [Pacemaker](https://clusterlabs.org/). 
 

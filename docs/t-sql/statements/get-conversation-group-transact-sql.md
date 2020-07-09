@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 828f51e5b619a9ba52fcbb4bc60b2c300c94cb01
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3fe4dd0be7b453bfa01feac2b60f1ec6a915320b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633798"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899174"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Restituisce l'identificatore del gruppo di conversazioni per il messaggio successivo da ricevere e blocca il gruppo di conversazioni per la conversazione contenente il messaggio. L'identificatore del gruppo di conversazioni può essere utilizzato per recuperare le informazioni sullo stato della conversazione prima di recuperare il messaggio stesso.  
   

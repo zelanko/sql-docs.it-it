@@ -9,16 +9,16 @@ ms.date: 12/01/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: af017cf5d36075fdba6de31aa841e980cc20e175
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d6cd6b4cdd25c6da0a7d034e2f980ad583a6561b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76911019"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901558"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurare gruppi di disponibilità Always On e istanze del cluster di failover con più subnet
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Quando un gruppo di disponibilità Always On o un'istanza del cluster di failover si estende su più di un sito, in genere ogni sito ha una propria rete. Questo spesso significa che ogni sito dispone di specifici indirizzi IP. Ad esempio, gli indirizzi del sito A iniziano con 192.168.1.*x* e gli indirizzi del sito B iniziano con 192.168.2.*x*, dove *x* è la parte dell'indirizzo IP univoca per il server. Senza un qualche tipo di routing a livello di rete, questi server non saranno in grado di comunicare tra loro. Esistono due modi per gestire questo scenario: configurare una rete che colleghi le due diverse subnet, nota come VLAN, o configurare il routing tra le subnet.
 

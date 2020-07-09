@@ -1,6 +1,6 @@
 ---
 title: Configurare e gestire i file del thesaurus per la ricerca full-text
-ms.date: 12/04/2017
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -14,15 +14,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d97b66622254ad911cb7bf557c1a7368b4f3d40
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056197"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897989"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurare e gestire i file del thesaurus per la ricerca full-text
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le query di ricerca full-text consentono di eseguire una ricerca di sinonimi dei termini specificati dall'utente usando un *thesaurus* della ricerca full-text. Ogni theasurus definisce un set di sinonimi per una lingua specifica. Sviluppando un thesaurus basato sui dati full-text in uso, è possibile ampliare in modo efficace l'ambito delle query full-text su tali dati.
 
 La corrispondenza con il thesaurus si verifica per tutte le query [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) e [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) e per tutte le query [CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) che specificano la clausola `FORMSOF THESAURUS`.
@@ -52,30 +52,30 @@ Un thesaurus di ricerca full-text è un file di testo XML.
 ##  <a name="location-of-thesaurus-files"></a><a name="location"></a> Posizione dei file del thesaurus  
  Il percorso predefinito dei file del thesaurus è il seguente:  
   
-     <SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\  
+`<SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\`
   
- Tale percorso predefinito contiene i file seguenti:  
+Tale percorso predefinito contiene i file seguenti:  
   
 -   File del thesaurus **specifici della lingua**  
 
     Il programma di installazione installa file del thesaurus vuoti nel percorso sopra indicato, uno per ogni lingua supportata. Tali file possono essere personalizzati da un amministratore di sistema.  
   
-     Per i nomi predefiniti dei file del thesaurus viene usato il formato seguente:  
+    Per i nomi predefiniti dei file del thesaurus viene usato il formato seguente:  
   
-         'ts' + <three-letter language-abbreviation> + '.xml'  
+    `'ts' + <three-letter language-abbreviation> + '.xml'`
   
-     Il nome del file del thesaurus per ogni lingua viene specificato nel valore seguente del Registro di sistema:
+    Il nome del file del thesaurus per ogni lingua viene specificato nel valore seguente del Registro di sistema:
      
-        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>  
+    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>`
   
 -   File del thesaurus **globale**  
   
-     File del thesaurus globale vuoto denominato tsGlobal.xml.  
+    File del thesaurus globale vuoto denominato tsGlobal.xml.  
 
 ### <a name="change-the-location-of-a-thesaurus-file"></a>Modificare il percorso di un file del thesaurus 
 È possibile modificare il percorso e il nome di un file del thesaurus modificando la relativa chiave del Registro di sistema. Per ogni lingua, il percorso del file del thesaurus viene specificato nel seguente valore del Registro di sistema:  
   
-    HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance name>\MSSearch\Language\<language-abbreviation>\TsaurusFile  
+`HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance name>\MSSearch\Language\<language-abbreviation>\TsaurusFile`
   
  Il file del thesaurus globale corrisponde alla lingua neutra con LCID 0. Questo valore può essere modificato solo dagli amministratori.  
 

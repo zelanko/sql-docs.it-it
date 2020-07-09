@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 3ff0c862e93cd3b552b29c4eec8ab91931c809c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 493239906f83b74735f9fcd4b6673fb2748abfff
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75656628"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897289"
 ---
 # <a name="configure-rhel-failover-cluster-instance-fci-cluster-for-sql-server"></a>Configurare un cluster dell'istanza del cluster di failover RHEL per SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Questa guida contiene istruzioni per la creazione di un cluster di failover di dischi condivisi a due nodi per SQL Server in Red Hat Enterprise Linux. Il livello di clustering si basa sul [componente aggiuntivo a disponibilità elevata](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) di Red Hat Enterprise Linux (RHEL), basato a sua volta su [Pacemaker](https://clusterlabs.org/). L'istanza di SQL Server è attiva in un nodo o nell'altro.
 
@@ -373,7 +373,7 @@ Un dispositivo STONITH fornisce un agente di isolamento. La [configurazione di P
    mssqlha  (ocf::mssql:fci): Started sqlfcivm1
    
    PCSD Status:
-    slqfcivm1: Online
+    sqlfcivm1: Online
     sqlfcivm2: Online
    
    Daemon Status:

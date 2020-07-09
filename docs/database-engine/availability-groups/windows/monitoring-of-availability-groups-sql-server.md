@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 31cf3fcc59ad9dbe694b7a11f6b90981f37fc78b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 238c31cf94df05dfb172695d2984df8f3b815342
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68014676"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900371"
 ---
 # <a name="tools-to-monitor-always-on-availability-groups"></a>"Strumenti per il monitoraggio dei gruppi di disponibilità Always On"
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Per monitorare le proprietà e lo stato di un gruppo di disponibilità AlwaysOn, è possibile usare gli strumenti descritti di seguito.  
   
 |Strumento|Breve descrizione|Collegamenti|  

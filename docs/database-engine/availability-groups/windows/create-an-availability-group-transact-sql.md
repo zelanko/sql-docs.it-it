@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 44e05f6f4e2210ee6dcb70d9c272e3144c245e14
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 99e3ea99dc2cd41e6bd818a50c32944b07bc4996
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925185"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901019"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Creare un gruppo di disponibilità Always On con Transact-SQL (T-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   In questo argomento viene descritto come utilizzare [!INCLUDE[tsql](../../../includes/tsql-md.md)] per creare e configurare un gruppo di disponibilità su istanze di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] nelle quali è abilitata la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Tramite un *gruppo di disponibilità* vengono definiti un set di database utente di cui verrà eseguito il failover come unità singola e un set di partner di failover, noti come *repliche di disponibilità*, che supportano il failover.  
   
 > [!NOTE]  

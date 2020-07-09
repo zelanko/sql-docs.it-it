@@ -9,16 +9,16 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c787409d4e8772d89fc748d39c605506f5dcb520
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff058b2e326399fa6d04503d984d540fba8efc1b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216202"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896977"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Aggiungere un host di SQL Server in Linux a un dominio di Active Directory
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Questo articolo fornisce indicazioni generali su come aggiungere un computer host di SQL Server in Linux a un dominio di Active Directory (AD). Sono disponibili due metodi: usare un pacchetto SSSD incorporato o usare provider Active Directory di terze parti. Esempi di prodotti di terze parti per l'aggiunta a un dominio sono [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/), [One Identity](https://www.oneidentity.com/products/authentication-services/) e [Centrify](https://www.centrify.com/). Questa guida include i passaggi per verificare la configurazione di Active Directory. Non ha tuttavia lo scopo di fornire istruzioni su come aggiungere un computer a un dominio quando si usano utilità di terze parti.
 

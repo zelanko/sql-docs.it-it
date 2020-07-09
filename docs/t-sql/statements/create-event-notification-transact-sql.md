@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4724a5f91b3832ba6c2f9a95986259f5f75394c8
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f996ed5d086d263499214321c3f73bff39b805cd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632159"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902281"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crea un oggetto che invia a un servizio di Service Broker informazioni relative a un evento di un database o un server. Le notifiche degli eventi possono essere create solo mediante istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

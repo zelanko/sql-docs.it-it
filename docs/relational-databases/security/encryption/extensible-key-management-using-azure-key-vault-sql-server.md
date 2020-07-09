@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: df42a2d0f7dea2e32df61670aff88374a6fcff54
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 71145a184d13ad4ca4393cd1468293e40f0ad594
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558054"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896851"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per Insieme credenziali chiavi [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure consente alla crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di usare il servizio dell'insieme di credenziali delle chiavi di Azure come provider di [Extensible Key Management &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md) per proteggere le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] chiavi di crittografia.  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ee9873d8-dd3a-4bff-a10c-68bbadbdf1a6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: bb3b19e67a4a85ef3f7a26d7ad792e7e39459302
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c5749c942f5da62dee1cc1f4bb0345c6165bd649
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67948012"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902209"
 ---
 # <a name="xml_schema_namespace"></a>xml_schema_namespace
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ricostruisce tutti gli schemi o uno schema specifico nella raccolta di XML Schema specificata. Questa funzione restituisce un'istanza del tipo di dati **xml** .  
   
@@ -55,7 +55,7 @@ xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespa
  **xml**  
   
 ## <a name="remarks"></a>Osservazioni  
- Quando si importano i componenti di XML Schema nel database tramite [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) o [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md), vengono preservati aspetti dello schema usati per la convalida. Pertanto, lo schema ricostruito può non corrispondere al documento dello schema originale dal punto di vista lessicale. Più specificamente, vengono persi i commenti, gli spazi vuoti e le annotazioni, mentre le informazioni implicite sui tipi vengono rese esplicite. Ad esempio, \<xs:element name="e1" /> diventa \<xs:element name="e1" type="xs:anyType"/>. Inoltre, non vengono mantenuti i prefissi degli spazi dei nomi.  
+ Quando si importano i componenti di XML Schema nel database tramite [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) o [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md), vengono preservati aspetti dello schema usati per la convalida. Pertanto, lo schema ricostruito può non corrispondere al documento dello schema originale dal punto di vista lessicale. Più specificamente, vengono persi i commenti, gli spazi vuoti e le annotazioni, mentre le informazioni implicite sui tipi vengono rese esplicite. Ad esempio \<xs:element name="e1" /> diventa \<xs:element name="e1" type="xs:anyType"/>. Inoltre, non vengono mantenuti i prefissi degli spazi dei nomi.  
   
  Se si specifica un parametro relativo allo spazio dei nomi, il documento dello schema risultante conterrà le definizioni per tutti i componenti degli schemi in quello spazio dei nomi, anche se erano state aggiunte in passaggi DDL o documenti di schemi diversi, o in entrambi.  
   

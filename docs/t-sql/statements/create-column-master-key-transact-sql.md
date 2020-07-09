@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: d4a1fdec3f27d8086da02b5269c1240c40bc89d0
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 9b76f2e0287526d9d67dfa878446ce68410e0300
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633293"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999174"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Crea un oggetto metadati chiave master della colonna nel database. Una voce di metadati della chiave master di colonna rappresenta una chiave archiviata in un archivio chiavi esterno. Questa chiave protegge (crittografa) le chiavi di crittografia della colonna quando si usa [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) o [Always Encrypted con enclavi sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Più chiavi master di colonna consentono la rotazione periodica delle chiavi per migliorare la sicurezza. Creare una chiave master di colonna in un archivio chiavi e l'oggetto metadati correlato nel database usando Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o PowerShell. Per i dettagli, vedere [Panoramica della gestione delle chiavi per Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   

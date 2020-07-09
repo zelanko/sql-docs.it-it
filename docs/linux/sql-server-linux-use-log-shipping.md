@@ -3,20 +3,20 @@ title: Configurare il log shipping per SQL Server in Linux
 description: Questa esercitazione illustra un esempio di base su come replicare un'istanza di SQL Server in Linux in un'istanza secondaria usando il log shipping.
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/19/2017
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8bc7fa51eeb5d02400b15556a3bec06ce721c1de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d32d85ef52ac5e6dc687ed32e7283540240ce2b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73240704"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897199"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Introduzione al log shipping in Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Il log shipping SQL Server è una configurazione a disponibilità elevata in cui un database di un server primario viene replicato in uno o più server secondari. In breve, un backup del database di origine viene ripristinato nel server secondario. Il server primario crea quindi periodicamente backup del log delle transazioni e i server secondari li ripristinano, aggiornando la copia secondaria del database. 
 
@@ -85,11 +85,13 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
 
 -   Creare un file per archiviare le credenziali personali. Usare la password impostata di recente per l'account mssql per Samba 
 
+    ```console
         vim /var/opt/mssql/.tlogcreds
         #Paste the following in .tlogcreds
         username=mssql
         domain=<domain>
         password=<password>
+    ```
 
 -   Eseguire i comandi seguenti per creare una directory vuota per il montaggio e impostare correttamente le autorizzazioni e la proprietà
     ```bash   
@@ -102,8 +104,10 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
 
 -   Aggiungere a etc/fstab la riga per il salvataggio permanente della condivisione 
 
+    ```console
         //<ip_address_of_primary_server>/tlogs /var/opt/mssql/tlogs cifs credentials=/var/opt/mssql/.tlogcreds,ro,uid=mssql,gid=mssql 0 0
-        
+    ```
+
 -   Montare le condivisioni
     ```bash   
     sudo mount -a
@@ -118,11 +122,12 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
     TO DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
     GO
     ```
+
     ```sql
     DECLARE @LS_BackupJobId AS uniqueidentifier 
     DECLARE @LS_PrimaryId   AS uniqueidentifier 
     DECLARE @SP_Add_RetCode As int 
-    EXEC @SP_Add_RetCode = master.dbo.sp_add_log_shipping_primary_database 
+    EXECUTE @SP_Add_RetCode = master.dbo.sp_add_log_shipping_primary_database 
              @database = N'SampleDB' 
             ,@backup_directory = N'/var/opt/mssql/tlogs' 
             ,@backup_share = N'/var/opt/mssql/tlogs' 
@@ -142,7 +147,7 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
     DECLARE @LS_BackUpScheduleUID   As uniqueidentifier 
     DECLARE @LS_BackUpScheduleID    AS int 
 
-    EXEC msdb.dbo.sp_add_schedule 
+    EXECUTE msdb.dbo.sp_add_schedule 
             @schedule_name =N'LSBackupSchedule' 
             ,@enabled = 1 
             ,@freq_type = 4 
@@ -157,19 +162,19 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
             ,@schedule_uid = @LS_BackUpScheduleUID OUTPUT 
             ,@schedule_id = @LS_BackUpScheduleID OUTPUT 
 
-    EXEC msdb.dbo.sp_attach_schedule 
+    EXECUTE msdb.dbo.sp_attach_schedule 
             @job_id = @LS_BackupJobId 
             ,@schedule_id = @LS_BackUpScheduleID  
 
-    EXEC msdb.dbo.sp_update_job 
+    EXECUTE msdb.dbo.sp_update_job 
             @job_id = @LS_BackupJobId 
             ,@enabled = 1 
             
     END 
 
-    EXEC master.dbo.sp_add_log_shipping_alert_job 
+    EXECUTE master.dbo.sp_add_log_shipping_alert_job 
 
-    EXEC master.dbo.sp_add_log_shipping_primary_secondary 
+    EXECUTE master.dbo.sp_add_log_shipping_primary_secondary 
             @primary_database = N'SampleDB' 
             ,@secondary_server = N'<ip_address_of_secondary_server>' 
             ,@secondary_database = N'SampleDB' 
@@ -190,7 +195,7 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
     DECLARE @LS_Secondary__SecondaryId  AS uniqueidentifier 
     DECLARE @LS_Add_RetCode As int 
 
-    EXEC @LS_Add_RetCode = master.dbo.sp_add_log_shipping_secondary_primary 
+    EXECUTE @LS_Add_RetCode = master.dbo.sp_add_log_shipping_secondary_primary 
             @primary_server = N'<ip_address_of_primary_server>' 
             ,@primary_database = N'SampleDB' 
             ,@backup_source_directory = N'/var/opt/mssql/tlogs/' 
@@ -209,7 +214,7 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
     DECLARE @LS_SecondaryCopyJobScheduleUID As uniqueidentifier 
     DECLARE @LS_SecondaryCopyJobScheduleID  AS int 
 
-    EXEC msdb.dbo.sp_add_schedule 
+    EXECUTE msdb.dbo.sp_add_schedule 
             @schedule_name =N'DefaultCopyJobSchedule' 
             ,@enabled = 1 
             ,@freq_type = 4 
@@ -224,14 +229,14 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
             ,@schedule_uid = @LS_SecondaryCopyJobScheduleUID OUTPUT 
             ,@schedule_id = @LS_SecondaryCopyJobScheduleID OUTPUT 
 
-    EXEC msdb.dbo.sp_attach_schedule 
+    EXECUTE msdb.dbo.sp_attach_schedule 
             @job_id = @LS_Secondary__CopyJobId 
             ,@schedule_id = @LS_SecondaryCopyJobScheduleID  
 
     DECLARE @LS_SecondaryRestoreJobScheduleUID  As uniqueidentifier 
     DECLARE @LS_SecondaryRestoreJobScheduleID   AS int 
 
-    EXEC msdb.dbo.sp_add_schedule 
+    EXECUTE msdb.dbo.sp_add_schedule 
             @schedule_name =N'DefaultRestoreJobSchedule' 
             ,@enabled = 1 
             ,@freq_type = 4 
@@ -246,7 +251,7 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
             ,@schedule_uid = @LS_SecondaryRestoreJobScheduleUID OUTPUT 
             ,@schedule_id = @LS_SecondaryRestoreJobScheduleID OUTPUT 
 
-    EXEC msdb.dbo.sp_attach_schedule 
+    EXECUTE msdb.dbo.sp_attach_schedule 
             @job_id = @LS_Secondary__RestoreJobId 
             ,@schedule_id = @LS_SecondaryRestoreJobScheduleID  
             
@@ -255,7 +260,7 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
     IF (@@ERROR = 0 AND @LS_Add_RetCode = 0) 
     BEGIN 
 
-    EXEC @LS_Add_RetCode2 = master.dbo.sp_add_log_shipping_secondary_database 
+    EXECUTE @LS_Add_RetCode2 = master.dbo.sp_add_log_shipping_secondary_database 
             @secondary_database = N'SampleDB' 
             ,@primary_server = N'<ip_address_of_primary_server>' 
             ,@primary_database = N'SampleDB' 
@@ -272,11 +277,11 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
     IF (@@error = 0 AND @LS_Add_RetCode = 0) 
     BEGIN 
 
-    EXEC msdb.dbo.sp_update_job 
+    EXECUTE msdb.dbo.sp_update_job 
             @job_id = @LS_Secondary__CopyJobId 
             ,@enabled = 1 
 
-    EXEC msdb.dbo.sp_update_job 
+    EXECUTE msdb.dbo.sp_update_job 
             @job_id = @LS_Secondary__RestoreJobId 
             ,@enabled = 1 
 
@@ -291,7 +296,7 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
     USE msdb ;  
     GO  
 
-    EXEC dbo.sp_start_job N'LSBackup_SampleDB' ;  
+    EXECUTE dbo.sp_start_job N'LSBackup_SampleDB' ;  
     GO  
     ```
 
@@ -301,9 +306,9 @@ Come descritto in questa immagine, una sessione di log shipping prevede i passag
     USE msdb ;  
     GO  
 
-    EXEC dbo.sp_start_job N'LSCopy_SampleDB' ;  
+    EXECUTE dbo.sp_start_job N'LSCopy_SampleDB' ;  
     GO  
-    EXEC dbo.sp_start_job N'LSRestore_SampleDB' ;  
+    EXECUTE dbo.sp_start_job N'LSRestore_SampleDB' ;  
     GO  
     ```
  - Verificare il funzionamento del failover del log shipping eseguendo il comando seguente

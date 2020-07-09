@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c52e0bcb34c93bb3c973caae53d3983db3660e24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed2db8f5d02174b41d6084d3d7593c7c8775ad16
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822110"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897496"
 ---
 # <a name="use-ring-buffers-to-obtain-health-information-about-always-on-availability-groups"></a>Usare buffer circolari per ottenere informazioni sull'integrità dei gruppi di disponibilità Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Alcune informazioni diagnostiche sui gruppi di disponibilità Always On possono essere ottenute dai buffer circolari di SQL Server o dalla vista a gestione dinamica (DMV) sys.dm_os_ring_buffers. I buffer circolari vengono creati all'avvio di SQL Server e registrano gli avvisi all'interno del sistema SQL Server per la diagnostica interna. Nonostante non siano supportati, è comunque possibile estrarre informazioni utili da essi durante le attività risoluzione dei problemi. I buffer circolari rappresentano un'altra origine di dati diagnostici a cui ricorrere quando SQL Server si blocca o si arresta in modo anomalo.  
   
  La query Transact-SQL (T-SQL) seguente recupera tutti i record degli eventi dai buffer circolari dei gruppi di disponibilità.  

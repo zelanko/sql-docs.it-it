@@ -13,15 +13,15 @@ ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9eea6c5cbc995cd73a9f799124772d2be396a9f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c5ffdb81cd5c1242a6a97dcb978683488c5a755b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095477"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998302"
 ---
 # <a name="writing-pages"></a>Scrittura di pagine
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 L'I/O di un'istanza di [!INCLUDE[ssDE](../includes/ssde-md.md)] include scritture logiche e fisiche. La scrittura logica viene eseguita quando vengono modificati i dati di una pagina nella cache del buffer. La scrittura fisica viene eseguita quando la pagina viene scritta dalla [cache del buffer](../relational-databases/memory-management-architecture-guide.md) nel disco.
 

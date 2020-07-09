@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3730a4a6cff31098df9d081457fb233727096de5
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 951a6967e51d877efdd68b4f4a6f118c5ec1e6e7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922359"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897341"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorare le prestazioni di gruppi di disponibilità Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Le prestazioni di Gruppi di disponibilità Always On sono un aspetto importante per garantire il contratto di servizio per i database cruciali. Conoscere come i gruppi di disponibilità inviano i log alle repliche secondarie può aiutare a stimare l'obiettivo del tempo di ripristino (RTO, recovery time objective) e l'obiettivo del punto di ripristino (RPO, recovery point objective) dell'implementazione della disponibilità e identificare i colli di bottiglia in gruppi o repliche di disponibilità le cui prestazioni risultano scarse. In questo articolo viene descritto il processo di sincronizzazione, viene illustrato come calcolare alcune delle metriche chiave e vengono specificati i collegamenti ad alcuni scenari comuni per la risoluzione dei problemi relativi alle prestazioni.  
    
 ##  <a name="data-synchronization-process"></a>Processo di sincronizzazione dei dati  

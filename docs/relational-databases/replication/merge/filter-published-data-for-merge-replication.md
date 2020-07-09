@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1e0d157b6a4f7f08d068dc8da75c42f4ad924044
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdfd7525ade2500ee144bb57c030350a532ded64
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033265"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901251"
 ---
 # <a name="filter-published-data-for-merge-replication"></a>Filtro dei dati pubblicati per la replica di tipo merge
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Oltre ai filtri di riga e di colonna statici che è possibile definire con altri tipi di replica, la replica di tipo merge offre filtri di riga con parametri e filtri join. Per altre informazioni sui filtri di riga e di colonna statici, vedere [Filtrare i dati pubblicati](../../../relational-databases/replication/publish/filter-published-data.md).  
   
  La replica di tipo merge viene utilizzata in molte applicazioni che supportano gli utenti mobili. Tali applicazioni hanno in genere un gran numero di sottoscrizioni ognuna delle quali riceve un set di dati univoco. I filtri con parametri combinati con i filtri join consentono a un amministratore di impostare una pubblicazione (o un numero limitato di pubblicazioni) e di fornire set di dati diversi agli utenti, riducendo l'overhead di gestione introdotto con la creazione di più pubblicazioni.  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2346c770c5fec742d7c5805f028bd87bebaf71b1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 646db60d22175c298a686bed903fdd9246c2a59f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287205"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897021"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Eseguire un failover manuale pianificato di un gruppo di disponibilità Always On (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 In questo argomento viene illustrato come eseguire un failover manuale senza perdite di dati ( *failover manuale pianificato*) in un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per un gruppo di disponibilità il failover si verifica al livello di una replica di disponibilità. Un failover manuale pianificato, ad esempio un failover del gruppo di disponibilità AlwaysOn, comporta il passaggio della replica primaria precedente al ruolo secondario. Il failover attualmente comporta il passaggio della replica primaria precedente al ruolo secondario.  
   
 Un failover manuale pianificato è supportato solo quando la replica principale e la replica secondaria di destinazione sono in esecuzione in modalità commit sincrono e sono attualmente sincronizzate. Un failover manuale pianificato mantiene tutti i dati presenti nei database secondari associati al gruppo di disponibilità nella replica secondaria di destinazione. Dopo che la replica primaria precedente è passata al ruolo secondario, i relativi database diventano database secondari. Iniziano quindi a eseguire la sincronizzazione con i nuovi database primari. Dopo la transizione di tutti i database allo stato SYNCHRONIZED, la nuova replica secondaria diventa idonea a fungere da destinazione di un futuro failover manuale pianificato.  
