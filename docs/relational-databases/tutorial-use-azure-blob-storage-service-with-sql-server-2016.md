@@ -14,16 +14,16 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aba8d7e3dc7aaf48523303ad6f63682c888b3c46
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4143785a4789dd2f9dd2510b96bcc4de3a21c82e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286975"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753772"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Esercitazione: Uso del servizio di archiviazione BLOB di Azure con SQL Server 2016
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 Benvenuti nell'esercitazione sull'uso di SQL Server 2016 nel servizio di archiviazione BLOB di Microsoft Azure. Questa esercitazione descrive come usare il servizio di archiviazione BLOB di Microsoft Azure per i file di dati e i backup di SQL Server.  
   
 Il supporto di integrazione di SQL Server per il servizio di archiviazione BLOB di Microsoft Azure è stato per la prima volta incluso come funzionalità avanzata di SQL Server 2012 Service Pack 1 CU2, ulteriormente potenziato in SQL Server 2014 e SQL Server 2016. Per una panoramica delle funzionalità e dei vantaggi offerti dall'uso di questa funzione, vedere [File di dati di SQL Server in Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). Per una dimostrazione dal vivo, vedere la [demo del ripristino temporizzato](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo).  

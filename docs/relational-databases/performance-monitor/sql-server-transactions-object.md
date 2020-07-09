@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 80c62c0048f40ba945d3204c414180be9f8e0d7b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 635bb13a1d6e44f5fc8f694cb2618a19c08831f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67995650"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758952"
 ---
 # <a name="sql-server-transactions-object"></a>Oggetto Transactions di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   L'oggetto **Transactions** , disponibile in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , include i contatori per il monitoraggio del numero di transazioni attive in un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)], nonché per valutare gli effetti di tali transazioni sulle risorse, ad esempio l'archivio delle versioni di riga del livello di isolamento dello snapshot in **tempdb**. Le transazioni sono unità logiche di lavoro. Per salvaguardare l'integrità logica dei dati, l'intero set di operazioni deve essere eseguito correttamente o cancellato da un database. Le transazioni vengono utilizzate per tutte le modifiche apportate ai dati nei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Quando si imposta un database in modo da consentire il livello di isolamento dello snapshot, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve tenere traccia delle modifiche apportate a ciascuna riga del database. A ogni modifica di una riga, una copia della riga precedente alla modifica viene registrata in un archivio delle versioni di riga in **tempdb**. È possibile usare molti dei contatori dell'oggetto **Transaction** per eseguire il monitoraggio delle dimensioni e della percentuale di crescita dell'archivio delle versioni di riga in **tempdb**.  

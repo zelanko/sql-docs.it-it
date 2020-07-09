@@ -14,15 +14,15 @@ ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42c4a2e8ccf9a3ac91aef0d38b64637cb37c95d6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b7453a890fb3b905c025003114c287584fdb35c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68056096"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757570"
 ---
 # <a name="get-information-about-ddl-triggers"></a>Ottieni informazioni sui trigger DDL
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Le viste del catalogo elencate in questa sezione possono essere utilizzate per ottenere informazioni sui trigger DDL.  
   
  **Per ottenere informazioni sugli eventi o sui gruppi di eventi che possono essere attivati da un trigger DDL.**  

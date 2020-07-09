@@ -12,15 +12,15 @@ ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45b71ca895141a2dbef4dd68b13bb505a7ae7c91
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aa80485dc5efa2d03d24a1e119360281928d3c6d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68116276"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755995"
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe di evento Object:Deleted indica che un oggetto è stato eliminato, ad esempio tramite le istruzioni DROP INDEX e DROP TABLE. È possibile utilizzare questa classe di evento per determinare se si sta verificando l'eliminazione di oggetti, ad esempio da parte di applicazioni ODBC che spesso creano stored procedure temporanee.  
   
  Monitorando le colonne di dati predefinite LoginName e NTUserName e le classi di evento Objects è possibile determinare il nome dell'utente che crea, elimina o accede agli oggetti.  

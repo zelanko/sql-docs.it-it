@@ -12,15 +12,15 @@ ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 156d1ab718e88afb7ddb66b4270884065b4e6574
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d25f529ddc0bb4e7bc3add5189a5ee9aadccad2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68064957"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749567"
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe di evento SP:Recompile indica che una stored procedure, una funzione definita dall'utente o un trigger è stato ricompilato. Le ricompilazioni segnalate da questa classe di evento si verificano a livello di istruzione.  
   
  La strategia ottimale per tracciare ricompilazioni a livello di istruzione consiste nell'usare la classe di evento SQL:StmtRecompile. La classe di evento SP:Recompile è deprecata. Per altre informazioni, vedere [Classe di evento SQL:StmtRecompile](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md).  

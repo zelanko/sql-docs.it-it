@@ -13,15 +13,15 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f04842324642c3d24f8b378a3c096e94aa96227c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 88fb60179a5503d3c41bbc253c1f7373c1d97184
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980554"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751219"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Procedura guidata per l'importazione di file flat in SQL
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 > Per i contenuti correlati all'importazione ed esportazione guidata, vedere la pagina relativa all'[Importazione/Esportazione guidata SQL Server](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
 La procedura guidata per l'importazione di file flat consente di copiare facilmente i dati da un file flat (con estensione csv, txt) a una nuova tabella nel database. In questa panoramica vengono descritti i motivi per l'uso di questa procedura guidata, come trovarla e un semplice esempio da seguire.

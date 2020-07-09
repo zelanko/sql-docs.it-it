@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7c1641f0aad5758f709776322e7eb66f93fcca0f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d872268d1ae879f46667f133f184264d9c3b8e49
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909239"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751047"
 ---
 # <a name="create-a-trace-transact-sql"></a>Creare una traccia (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In questo argomento viene descritto come utilizzare stored procedure per creare una traccia.  
   
 ### <a name="to-create-a-trace"></a>Per creare una traccia  

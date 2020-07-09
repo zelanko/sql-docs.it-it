@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d16e3159f3881df1a904e9d3a6c39bc04667ce9d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7444bd163ad453a2aac3c598ab0cc8575c09eb0d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826495"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754580"
 ---
 # <a name="backuprestoresystemdatabases-sql-server"></a>Backup e ripristino: database di sistema (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestisce un set di database a livello di sistema, denominati*database di sistema*, fondamentali per un corretto funzionamento di un'istanza del server. Dopo ogni aggiornamento importante, è necessario eseguire il backup di numerosi database di sistema. Alcuni database di sistema di cui è necessario eseguire sempre il backup sono **msdb**, **master**e **model**. Se un database usa la replica nell'istanza del server, è necessario eseguire il backup anche di un database di sistema **distribution** . I backup di questi database di sistema consentono di ripristinare e recuperare il sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qualora si verifichi un errore a livello di sistema, ad esempio un problema che impedisce di utilizzare un disco rigido.  
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 7841fef89ae4eb0600dcc62c1561bff769500a47
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 42dd497f32dc322a7b7808beca0779292198e5e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67995656"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758939"
 ---
 # <a name="sql-server-sql-statistics-object"></a>Oggetto SQL Statistics di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   L'oggetto **SQLServer:SQL Statistics** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce contatori per il monitoraggio della compilazione e del tipo di richieste inviate a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il monitoraggio del numero di compilazioni e ricompilazioni di query e del numero di batch ricevuti da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di determinare la velocità di elaborazione delle query utente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'efficienza di Query Optmizer.  
   
  La compilazione rappresenta un aspetto fondamentale del processo di elaborazione delle query. Allo scopo di ottimizzare la compilazione, in [!INCLUDE[ssDE](../../includes/ssde-md.md)] il piano di query compilato viene salvato in una query cache. Ciò consente di limitare le operazioni di compilazione e di riutilizzare le query in un momento successivo senza doverle ricompilare. Ogni query tuttavia deve essere compilata almeno una volta. Le ricompilazioni delle query possono essere causate dai seguenti fattori:  

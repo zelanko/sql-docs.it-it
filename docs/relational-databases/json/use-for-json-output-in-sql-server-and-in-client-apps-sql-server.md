@@ -1,8 +1,7 @@
 ---
 title: Usare l'output FOR JSON in SQL Server e nelle app client
-ms.date: 06/02/2016
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +10,18 @@ helpviewer_keywords:
 ms.assetid: 302e5397-b499-4ea3-9a7f-c24ccad698eb
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7b284052b049515aedc1541ae1cab6bf5719afe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 882a5e5aaee3bacf6d27866d388f161a59c0086b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095922"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755747"
 ---
 # <a name="use-for-json-output-in-sql-server-and-in-client-apps-sql-server"></a>Usare l'output FOR JSON in SQL Server e nelle app client (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Gli esempi seguenti illustrano alcuni modi per usare la clausola **FOR JSON** e il relativo output JSON in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o nelle app client.  
   
@@ -29,7 +29,10 @@ Gli esempi seguenti illustrano alcuni modi per usare la clausola **FOR JSON** e 
 L'output della clausola FOR JSON è di tipo NVARCHAR(MAX), quindi può essere assegnato a qualsiasi variabile, come illustrato nell'esempio seguente.  
   
 ```sql  
-DECLARE @x NVARCHAR(MAX) = (SELECT TOP 10 * FROM Sales.SalesOrderHeader FOR JSON AUTO)  
+DECLARE @x NVARCHAR(MAX) =
+  (SELECT TOP 10 *
+     FROM Sales.SalesOrderHeader
+     FOR JSON AUTO)  
 ```  
   
 ## <a name="use-for-json-output-in-sql-server-user-defined-functions"></a>Usare l'output FOR JSON nelle funzioni SQL Server definite dall'utente  

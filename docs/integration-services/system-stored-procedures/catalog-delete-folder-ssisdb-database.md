@@ -10,26 +10,26 @@ ms.topic: language-reference
 ms.assetid: b9c08992-500c-447e-bc19-1eb13c9b0293
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 496de1c9dd7e37542f5d3588a9662948ef8aabd4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4e9986843ce2196cd4450bac806631a862147ef4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71281334"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749607"
 ---
 # <a name="catalogdelete_folder-ssisdb-database"></a>catalog.delete_folder (database SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Viene eliminata una cartella dal catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```sql  
-delete_folder [ @folder_name = ] folder_name  
+catalog.delete_folder [ @folder_name = ] folder_name  
 ```  
   
 ## <a name="arguments"></a>Argomenti  

@@ -17,15 +17,15 @@ ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5e3c8d9876545e1e68a9795b7c327ac1e47e2d6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ce1e904ac0d3d5b329fce676218e3133bda60d81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74096013"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757689"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>Creazione di trigger DML per gestire più righe di dati
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Quando si scrive il codice di un trigger DML, è importante considerare che l'istruzione che attiva il trigger può essere singola e interessare più righe di dati, anziché una sola riga. Questo funzionamento è comune per i trigger UPDATE e DELETE perché queste istruzioni in genere interessano più righe, mentre è meno comune per i trigger INSERT perché l'istruzione INSERT di base aggiunge soltanto una riga singola. Dato però che un trigger INSERT può essere attivato da un'istruzione INSERT INTO (*table_name*) SELECT, l'inserimento di molte righe può causare la chiamata a un unico trigger.  
   
  Queste considerazioni sono di particolare importanza quando la funzione di un trigger DML consiste nel ricalcolare automaticamente i valori di riepilogo di una tabella e archiviare i risultati in un'altra tabella per i conteggi.  

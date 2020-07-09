@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dff35ab1603e3fa1d620914d8ac4afbe669a2be5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd7bdb74f679f32132361aac5c2b751b9bda9494
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252741"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756467"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard"></a>Avviare la Configurazione guidata sicurezza mirroring del database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   È possibile utilizzare la Configurazione guidata sicurezza mirroring del database per eseguire la configurazione iniziale delle impostazioni di sicurezza in tutte o alcune istanze del server coinvolte nel mirroring. Questa procedura guidata viene eseguita insieme alla pagina **Mirroring** della finestra di dialogo **Proprietà database** .  
   
 ### <a name="to-launch-the-configure-database-mirroring-security-wizard"></a>Per avviare Configurazione guidata sicurezza mirroring del database  

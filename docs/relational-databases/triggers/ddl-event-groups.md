@@ -14,15 +14,15 @@ ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 388a9d8e11cc738b13df752868568cd4cea556d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1e4371ed373d7937f177dab5979c3e50fe1096c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68074161"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757658"
 ---
 # <a name="ddl-event-groups"></a>gruppi di eventi DDL
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Nelle tabelle seguenti vengono elencati i gruppi di eventi DLL che è possibile utilizzare per eseguire un trigger DDL o una notifica degli eventi e vengono indicate le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] incluse. Si noti la natura inclusiva dei gruppi di eventi. Ad esempio, un trigger DDL o una notifica degli eventi che specifica FOR DDL_TABLE_EVENTS (10018) include le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE e DROP TABLE. In un trigger DDL o una notifica degli eventi che consente di specificare FOR DDL_TABLE_VIEW_EVENTS (type 10017) sono incluse tutte le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] nei tipi DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS e DDL_STATISTICS_EVENTS.  
   
 > [!NOTE]  

@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 85e5416df62423ddbfaffb3f8490687cda1349eb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 959ac9ec61bc420d67e51b6f6de7733f95036861
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109906"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749521"
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>Finestra di dialogo Modifica avanzata (Condizione)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Usare la finestra di dialogo **Modifica avanzata** per creare espressioni complesse per le condizioni della gestione basata su criteri.  
   
 ## <a name="options"></a>Opzioni  
