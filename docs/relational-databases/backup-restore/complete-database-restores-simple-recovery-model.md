@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 1b95797a5725a620d545b51ac2afb5b55464cbb9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e2ad92efd8a02f783885a72299bae6bfd77b44bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829780"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748495"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>Ripristini di database completi (modello di recupero con registrazione minima)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   L'obiettivo di un ripristino completo del database è il ripristino dell'intero database. L'intero database è offline per la tutta la durata del ripristino. Prima che sia possibile portare online una o più parti del database, tutti i dati vengono recuperati fino a un punto coerente in cui tutte le parti del database sono aggiornate allo stesso punto nel tempo e non sono presenti transazioni di cui non è stato eseguito il commit.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "82829780"
 ##  <a name="overview-of-database-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> Panoramica del ripristino del database nel modello di recupero con registrazione minima  
  Se si utilizza il modello di recupero con registrazione minima, il ripristino completo del database richiede solo una o due istruzioni [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) , a seconda che si desideri o meno ripristinare un backup differenziale del database. Se si utilizza solo un backup di database completo, ripristinare unicamente il backup più recente come illustrato nella figura seguente.  
   
- ![Ripristino solo di un backup completo del database](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "Ripristino solo di un backup completo del database")  
+ ![Ripristino solo di un backup completo del database](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.png "Ripristino solo di un backup completo del database")  
   
  Se si utilizza anche un backup differenziale del database, ripristinare il backup completo del database più recente senza recuperare il database e quindi ripristinare il backup differenziale del database più recente e recuperare il database. Questo processo viene illustrato nella figura seguente.  
   
- ![Ripristino di backup completi e differenziali del database](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.gif "Ripristino di backup completi e differenziali del database")  
+ ![Ripristino di backup completi e differenziali del database](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.png "Ripristino di backup completi e differenziali del database")  
   
 > [!NOTE]  
 >  Se si prevede di ripristinare un backup del database in un'istanza del server diversa, vedere [Copiare database tramite backup e ripristino](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  

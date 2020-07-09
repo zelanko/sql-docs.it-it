@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4abca73a7d1ac259034987a494f5d7395b507a3a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a308c4d7236c7822398cd9c8bf9aee94e0ffc61e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113165"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737135"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Ottimizzazione del database tramite un carico di lavoro dell'archivio query
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
 La funzionalità [Query Store](../../relational-databases/performance/how-query-store-collects-data.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]acquisisce automaticamente una cronologia delle query, dei piani e delle statistiche di runtime e mantiene queste informazioni nel database. [Ottimizzazione guidata motore di database (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) supporta una nuova opzione che consente di usare l'archivio query per selezionare automaticamente un carico di lavoro appropriato per l'ottimizzazione. Per molti utenti, questo può eliminare la necessità di raccogliere esplicitamente un carico di lavoro per l'ottimizzazione. Questa funzionalità è disponibile solo se nel database è attivata la funzionalità Archivio query. 

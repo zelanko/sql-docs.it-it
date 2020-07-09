@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2c806be6b0fa54431243c3062ac12d1d1229c037
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f68337ee44e052c838b29d0051631c7be495a478
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180752"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737721"
 ---
 # <a name="restore-database-options-page"></a>Ripristina database (pagina Opzioni)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Usare la pagina **Opzioni** della finestra di dialogo **Ripristina database** per modificare il comportamento e il risultato dell'operazione di ripristino.  
   
  **Per utilizzare SQL Server Management Studio per il ripristino del backup di un database**  

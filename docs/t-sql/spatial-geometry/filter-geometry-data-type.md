@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 701110865f4cda286c647ef887dba2e29cc5fb42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ef84f7d95644c552d90f137e9f6edab980acfba9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68081161"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736029"
 ---
 # <a name="filter-geometry-data-type"></a>Filter (tipo di dati geometrico)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Metodo di intersezione basato solo su indici che consente di determinare in modo rapido se un'istanza **geometry** interseca un'altra istanza **geometry**, a condizione che sia disponibile un indice.
   

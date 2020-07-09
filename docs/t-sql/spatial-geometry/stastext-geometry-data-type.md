@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e0decf5e-2858-4c56-b61a-6123f47fb51c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1d38aee9c7fdb7f7142af5f5d72b5b08b0e18ccd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f6b3cd7a13c52511b049fd15679f8f32b69daadb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67930199"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748784"
 ---
 # <a name="stastext-geometry-data-type"></a>STAsText (tipo di dati geometry)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Restituisce una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium) di un'istanza **geometry**. Il testo non conterrà alcun valore Z (innalzamento) o M (misura) appartenente all'istanza.
   

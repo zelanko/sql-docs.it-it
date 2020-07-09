@@ -1,7 +1,6 @@
 ---
 title: Visualizzare o modificare le pianificazioni dei set di raccolta
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -18,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e38b03a9e903666593567bf34eaa50c578de6825
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8e72be7c753db0871191e44bbc431d755ddfa193
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055325"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733811"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Visualizzazione o modifica delle pianificazioni dei set di raccolta (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   È possibile visualizzare o modificare le pianificazioni dei set di raccolta utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  La modalità di raccolta, ovvero in cache o non in cache, determina il tipo di modifiche che è possibile apportare a una pianificazione. La modalità cache utilizza pianificazioni separate per la raccolta e il caricamento. La modalità non in cache utilizza la stessa pianificazione per la raccolta e il caricamento. I tipi di modalità di raccolta per ognuno dei set di raccolta dati di sistema sono i seguenti:  
@@ -110,10 +110,11 @@ ms.locfileid: "74055325"
  **Raccolta e caricamento dati**  
  Consente di specificare la modalità di raccolta e caricamento dei dati nel data warehouse di gestione. Selezionare una delle opzioni seguenti:  
   
-|||  
-|-|-|  
+| Opzione | Descrizione |
+| :----- | :---------- |
 |**Non-memorizzato nella cache - Raccogli e carica dati in base alla stessa pianificazione.**|Se viene selezionata questa opzione, specificare uno dei valori seguenti:<br /><br /> **Pianifica** I dati sono raccolti e caricati in base a una pianificazione. Fare clic su **Seleziona** per selezionare da un elenco predefinito di pianificazioni oppure su **Nuovo** per creare una pianificazione nuova.<br /><br /> **Su richiesta**. I dati sono raccolti e caricati su richiesta.|  
 |**Memorizzato nella cache - Raccogli e memorizza nella cache i dati in base a un set di frequenze di raccolta. Carica dati memorizzati nella cache in base a una pianificazione separata.**|I dati sono raccolti e memorizzati nella cache in base alla frequenza di raccolta specificata. I dati raccolti sono caricati in base a una pianificazione separata.|  
+|||
   
  **Elementi della raccolta**  
  Consente di visualizzare gli elementi del set di raccolta. Per ogni elemento della raccolta sono disponibili le seguenti informazioni:  
@@ -133,11 +134,12 @@ ms.locfileid: "74055325"
  **Specificare per quanto tempo mantenere i dati nel data warehouse di gestione.**  
  Consente di specificare per quanto tempo sono mantenuti i dati raccolti. Selezionare una delle opzioni seguenti:  
   
-|||  
-|-|-|  
+| Opzione | Descrizione |
+| :----- | :---------- |
 |**Mantieni dati per**|Questa opzione è selezionata per impostazione predefinita e il periodo di memorizzazione predefinito è 14 giorni.|  
 |**Mantieni i dati per un periodo illimitato**|I dati sono mantenuti senza limiti temporali.|  
-  
+|||
+
  **Pagina Caricamenti**  
   
  Utilizzare questa pagina per configurare la pianificazione di caricamento per i dati raccolti da questo set di raccolta.  

@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 02a90a155bcfcc2ad2294fb03c4e8b832701e36c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e7ccef337d7b693561ec2d328fcc3a2f8afae72c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632403"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748926"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 DBCC OPENTRAN consente di identificare le transazioni attive che potrebbero impedire il troncamento del log. In DBCC OPENTRAN vengono visualizzate informazioni sulle transazioni attive meno recenti e sulle eventuali transazioni di replica meno recenti, distribuite e non, all'interno del log delle transazioni del database specificato, se presenti. I risultati vengono visualizzati solo se nel log è presente una transazione attiva o se il database contiene informazioni di replica. In assenza di transazioni attive nel log, viene visualizzato un messaggio informativo.
   

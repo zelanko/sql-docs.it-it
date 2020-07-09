@@ -1,7 +1,7 @@
 ---
 title: Gestione connessione Hadoop | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5149f7e470720a2efc99c522bd905a4a1a13f2c6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4cf042d2ab9c2d3e7c492fa008282cbcbe730f8e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903788"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735106"
 ---
 # <a name="hadoop-connection-manager"></a>Gestione connessione Hadoop
 
@@ -83,7 +83,7 @@ Nel computer SSIS:
 
     Il computer deve essere configurato come membro di un gruppo di lavoro, perché un'area di distribuzione Kerberos è diversa da un dominio Windows. Impostare l'area di autenticazione Kerberos e aggiungere un server KDC, come illustrato nell'esempio seguente. Sostituire `REALM.COM` con la propria rispettiva area di autenticazione, se necessario.
 
-    ```    
+    ```console
     C:> Ksetup /setdomain REALM.COM`
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
     ```
@@ -92,7 +92,7 @@ Nel computer SSIS:
 
 2.  Verificare la configurazione con il comando **Ksetup**. L'output dovrebbe avere un aspetto simile all'esempio seguente:
 
-    ```
+    ```console
     C:> Ksetup
     default realm = REALM.COM (external)
     REALM.com:
@@ -114,7 +114,7 @@ Nel server KDC:
 
 1.  Modificare la configurazione KDC nel file **krb5.conf**. Consentire a KDC di considerare attendibile il dominio Windows facendo riferimento al modello di configurazione seguente. Per impostazione predefinita, la configurazione si trova in **/etc/krb5.conf**.
 
-    ```
+    ```console
     [logging]
     default = FILE:/var/log/krb5libs.log
     kdc = FILE:/var/log/krb5kdc.log
@@ -162,7 +162,7 @@ Nel controller di dominio:
 
 1.  Eseguire i comandi **Ksetup** seguenti per aggiungere una voce dell'area di autenticazione:
 
-    ```
+    ```console
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
@@ -201,10 +201,10 @@ Nel computer del gateway:
 
 Eseguire i comandi **Ksetup** seguenti per aggiungere una voce dell'area di autenticazione.
 
-    ```
-    C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
-    C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
-    ```
+```console
+C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
+C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
+```
 
 ## <a name="see-also"></a>Vedere anche  
  [Attività Hive Hadoop](../../integration-services/control-flow/hadoop-hive-task.md)   

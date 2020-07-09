@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 39a2d0e4-4f93-4e94-a27e-6ad9537cfe74
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4bb425d07d566f4bb06d18a8f74f493a649fa8b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bd65f185f2fac61c85eb6b21ab22c3d1d9abf622
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101020"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748823"
 ---
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (tipo di dati geometry)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Restituisce un'istanza **LineString** con due punti che rappresentano la distanza più breve tra le due istanze **geometry**. La lunghezza dell'istanza **LineString** restituita è la distanza tra le due istanze **geometry**.
   
