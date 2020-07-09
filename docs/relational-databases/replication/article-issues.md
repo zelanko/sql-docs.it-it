@@ -13,15 +13,15 @@ ms.assetid: bde57da2-dd47-412f-9df7-9224968b2448
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bd9ebe330a4ce1ed10b2e3946513d127b7719a8b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 02f4089ba5f8f9536c3481dbb34bdbbbe8f795ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727247"
 ---
 # <a name="article-issues"></a>Problemi articoli
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Nella pagina **Problemi articoli** sono elencate le condizioni rilevate relative ad articoli e tutte le modifiche che è necessario apportare come risultato di tali condizioni. Nella tabella seguente vengono elencati i possibili problemi e indicate le azioni necessarie per garantire il corretto funzionamento della replica e delle applicazioni esistenti.  
   
 |Problema articolo|Dettagli|Azione richiesta|  

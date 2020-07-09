@@ -1,8 +1,7 @@
 ---
 title: Risolvere i problemi comuni di JSON in SQL Server
-ms.date: 07/07/2016
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,17 +9,18 @@ helpviewer_keywords:
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8dd50c08035690fd932dc717ae08d179b89b4ed2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f0e5a115c8ba86553954ab325651a1bb89cf6c64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325416"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730368"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>Risolvere i problemi comuni di JSON in SQL Server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
  In questo articolo sono contenute le risposte ad alcune domande comuni sul supporto JSON integrato in SQL Server.  
  

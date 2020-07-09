@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e8c1447bfb5a4776430d24959267c7ec29aa48e0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2964e02ad49ef21b61949da7eec2f48ede553b02
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68133598"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728441"
 ---
 # <a name="master-database"></a>Database master
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Nel database **master** vengono registrate tutte le informazioni a livello di sistema relative a un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . inclusi i metadati a livello globale dell'istanza quali gli account di accesso, gli endpoint, i server collegati e le impostazioni di configurazione di sistema. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], gli oggetti di sistema non sono più archiviati nel database **master** , ma sono archiviati nel [database Resource](../../relational-databases/databases/resource-database.md). Nel database **master** vengono inoltre registrate l'esistenza di tutti gli altri database e la posizione dei relativi file di database, nonché le informazioni di inizializzazione per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non è pertanto possibile avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se il database **master** non è disponibile.  
 
 > [!IMPORTANT]

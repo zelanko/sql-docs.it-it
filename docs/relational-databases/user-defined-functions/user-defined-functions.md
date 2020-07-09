@@ -16,15 +16,15 @@ ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09fb423dc4d3685b22c67b2a86a74443633ba74a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 362cb5e43414e6f43453f8efe201d8e4a2369f6d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78370544"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727085"
 ---
 # <a name="user-defined-functions"></a>Funzioni definite dall'utente
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In modo analogo alle funzioni dei linguaggi di programmazione, le funzioni definite dall'utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono routine che accettano parametri, eseguono un'azione (ad esempio un calcolo complesso) e restituiscono il risultato dell'azione sotto forma di valore. Il valore restituito può essere un valore scalare singolo o un set di risultati.  
    
 ##  <a name="user-defined-functions"></a><a name="Benefits"></a> Funzioni definite dall'utente  

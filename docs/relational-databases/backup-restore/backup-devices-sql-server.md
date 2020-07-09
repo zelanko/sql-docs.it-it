@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1e9bd20f7b0176c3d57bdd032f9c7f47d6729ba6
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 79fb6976eb128e31965290df302a222bcf55177e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220570"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728526"
 ---
 # <a name="backup-devices-sql-server"></a>Dispositivi di backup (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Durante un'operazione di backup su un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , i dati sottoposti a *backup*vengono scritti in un dispositivo di backup fisico. Tale dispositivo di backup fisico viene inizializzato quando si scrive su di esso il primo backup di un set di supporti. I backup disponibili in un set di uno o più dispositivi di backup costituiscono un singolo set di supporti.  
    
 ##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Termini e definizioni  

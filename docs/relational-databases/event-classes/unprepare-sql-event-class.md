@@ -12,15 +12,15 @@ ms.assetid: cfcbdd9d-d83b-46ae-9caa-d1833b5913f4
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84721635c30048f4d2d1d963babda9bd7f4d9c3f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eb4deb5d2f316ed0d52f62469cf06129c43bf09e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087655"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728323"
 ---
 # <a name="unprepare-sql-event-class"></a>Unprepare SQL - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe di evento Unprepare SQL indica che una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] preparate sono state convertite in istruzioni non preparate (eliminate) da SqlClient, ODBC, OLE DB o DB-Library.  
   
 ## <a name="unprepare-sql-event-class-data-columns"></a>Colonne di dati della classe di evento Unprepare SQL  

@@ -12,15 +12,15 @@ ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3f3e67ed262cfd83bbbc52174e704bf4cc3d4c3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a84c7f73458264789d7d5043ebaae109a3c03207
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006994"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728306"
 ---
 # <a name="user-configurable-event-class"></a>User-Configurable - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Utilizzare la categoria di eventi User-Configurable per eseguire il monitoraggio di eventi definiti dall'utente. È possibile creare classi di eventi definite dall'utente per monitorare gli eventi che non possono essere monitorati dalle classi di eventi di sistema di altre categorie. Ad esempio, è possibile creare un evento definito dall'utente per monitorare l'avanzamento dell'esecuzione dell'applicazione in fase di verifica. Durante l'esecuzione dell'applicazione vengono generati eventi in determinati punti che consentono di determinare lo stato di avanzamento dell'esecuzione.  
   
 ## <a name="user-configurable-event-class-data-columns"></a>Colonne di dati della classe di evento User-Configurable  

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 89d2da02b841edd85d58798ca4c7c1745332d536
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db892b71ba5e86faf1b45b94cdef12b1850c22a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093642"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730838"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, replica di database
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   L'oggetto prestazioni **SQLServer:Database Replica** contiene contatori delle prestazioni che forniscono informazioni sui database secondari di un gruppo di disponibilità Always On in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Questo oggetto è valido solo su un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita una replica secondaria.  
   
 |Nome contatore|Descrizione|Contenuto in...|  

@@ -12,15 +12,15 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 849cd64d336cf9289e04cd770eb51175c5cbebbc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 49691cea038a121ac27bdea729e3646e3375889f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68082905"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730197"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Abilitare la ricerca semantica in tabelle e colonne
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Viene descritto come abilitare o disabilitare l'indicizzazione semantica statistica in colonne selezionate contenenti documenti o testo.  
   
  Nella ricerca semantica statistica vengono utilizzati gli indici creati dalla ricerca full-text e vengono creati indici aggiuntivi. Come risultato di questa dipendenza dalla ricerca full-text, viene creato un nuovo indice semantico quando si definisce un nuovo indice full-text o si modifica un indice full-text esistente. È possibile creare un nuovo indice semantico utilizzando le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] o l'Indicizzazione guidata full-text e le altre finestre di dialogo di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], come descritto in questo argomento.  

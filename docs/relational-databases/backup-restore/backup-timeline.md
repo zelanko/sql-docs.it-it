@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3a0ebd9b51a28acf77020dccadd5fd509f20c488
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 0918928c8180bffc67476bbbe8f475f9f51a06a3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220486"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728513"
 ---
 # <a name="backup-timeline"></a>Sequenza temporale backup
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Usare la finestra di dialogo **Cronologia di backup** per trovare e specificare backup ed eseguire il ripristino temporizzato di un database. Per accedere alla finestra di dialogo **Cronologia di backup** , fare clic su **Cronologia** nel riquadro **Ripristina database (pagina Generale)** . In questa finestra di dialogo è possibile visualizzare una cronologia delle operazioni di ripristino effettuate nel database.  
   
  Tramite Database Recovery Advisor viene assicurato che vengano selezionati solo i backup necessari per il ripristino a questa temporizzazione. Questi backup selezionati costituiscono il piano di ripristino consigliato per l'operazione di ripristino. È consigliabile utilizzare solo i backup selezionati. Per informazioni su Database Recovery Advisor, vedere [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  

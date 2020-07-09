@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2a0648ea24162f59562f6d7a68dd5007ca78be3b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 65cff00f57d98746c77b51c38ed426a14d1dd066
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68051268"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731048"
 ---
 # <a name="nodes-method-xml-data-type"></a>Metodo nodes() (tipo di dati xml)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 È possibile usare il metodo **nodes()** per suddividere un'istanza del tipo di dati **xml** in un insieme di dati relazionali. Tale metodo consente di identificare i nodi sui quali verrà eseguito il mapping a una nuova riga.  
   

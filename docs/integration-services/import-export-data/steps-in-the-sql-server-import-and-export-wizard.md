@@ -1,7 +1,7 @@
 ---
 title: Passaggi dell'Importazione/Esportazione guidata SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/16/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0a6fb370c80af6221812b88d3694a230dc206f7b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6651bbbe15f994250804753a063bb8e61bb15c09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296210"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731808"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>Passaggi dell'Importazione/Esportazione guidata SQL Server
 
@@ -59,6 +59,6 @@ Ecco alcune altre attività di base.
 
 -   **Avviare la procedura guidata** Se si è pronti per eseguire la procedura guidata e servono solo le istruzioni per iniziare, vedere [Avviare l'Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
--     **Ottenere la procedura guidata.** Se si vuole eseguire la procedura guidata, ma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è disponibile nel computer, è possibile installare l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installando SQL Server Data Tools (SSDT). Per altre informazioni, vedere [Scaricare SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+-   **Ottenere la procedura guidata.** Se si vuole eseguire la procedura guidata, ma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è disponibile nel computer, è possibile installare l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installando SQL Server Data Tools (SSDT). Per altre informazioni, vedere [Scaricare SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 

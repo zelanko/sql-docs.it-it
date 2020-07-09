@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9e939363e2e1df6ea2c7d7e4c47eb69efbaaf016
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 80fe147fcdeb205752429521887d1c0b8f76234f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636167"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731309"
 ---
 # <a name="hints-transact-sql---join"></a>Hint (Transact-SQL) - Join
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gli hint di join specificano che Query Optimizer deve imporre una strategia di join tra due tabelle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per informazioni generali sui join e sulla relativa sintassi, vedere [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   

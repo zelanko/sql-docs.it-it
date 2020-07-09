@@ -18,15 +18,15 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: cc455ce62708f488224c4df6245f14eef8b2053d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c325713cff5ad96d88b2cf3a3e54cc8759fcc968
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76832232"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727592"
 ---
 # <a name="add-persisted-log-buffer-to-a-database"></a>Aggiungere un buffer di log persistente a un database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Questo argomento descrive come aggiungere un buffer di log persistente a un database in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

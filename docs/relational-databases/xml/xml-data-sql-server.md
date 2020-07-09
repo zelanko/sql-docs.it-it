@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
 author: RothJa
 ms.author: jroth
-ms.openlocfilehash: a46dd56f8891235b7caae471bd4801b27bfc4306
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8fed086b5553e8c8f4368f7ef671c074fe342362
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664927"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729810"
 ---
 # <a name="xml-data-sql-server"></a>Dati XML (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre una potente piattaforma per lo sviluppo di applicazioni complete per la gestione di dati semistrutturati. Il supporto per XML è integrato in tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e include i seguenti elementi:  
   
 -   Tipo di dati **xml** . I valori XML possono essere archiviati in modo nativo in una colonna con tipo di dati **xml** che può essere tipizzata in base a una raccolta di XML Schema oppure lasciata non tipizzata. È possibile indicizzare la colonna XML.  

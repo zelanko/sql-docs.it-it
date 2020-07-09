@@ -19,15 +19,15 @@ helpviewer_keywords:
 - file names [SQL Server], FILEPROPERTYEX
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 955cfe87f93bedc41c6aeb29951ee1c81d0a4d6e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d0eb763436bc4dd26815879c33c9a8461d9a38d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68425933"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732324"
 ---
 # <a name="filepropertyex-transact-sql"></a>FILEPROPERTYEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Restituisce il valore della proprietà file estesa specificata quando vengono indicati il nome di un file nel database corrente e il nome di una proprietà. Restituisce NULL per i file che non sono nel database corrente o per le proprietà file estese che non esistono. Attualmente le proprietà file estese si applicano solo ai database nell'archivio BLOB di Azure.  
   

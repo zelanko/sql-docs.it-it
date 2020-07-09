@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - CONNECTIONPROPERTY statement
 ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: a5cf9d02986587ed3e5234343306d6d73c7203a7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 94eb8e6d45606da75c6661a78b5f296940248388
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832249"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732594"
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Per una richiesta in arrivo al server, questa funzione restituisce informazioni sulle proprietà della connessione univoca che supporta tale richiesta.
   
@@ -50,7 +50,7 @@ Proprietà della connessione. *property* può avere uno dei valori seguenti:
 |local_tcp_port|**int**|Restituisce la porta TCP del server che verrebbe impiegata nel caso in cui la connessione usasse il trasporto TCP. Ammette i valori Null.|  
 |client_net_address|**varchar(48)**|Richiede l'indirizzo host del client che prova a connettersi al server. Ammette i valori Null.|  
 |physical_net_transport|**nvarchar(40)**|Restituisce il protocollo di trasporto fisico usato dalla connessione. È accurato quando per una connessione è abilitata la funzionalità MARS (Multiple Active Result Set).|  
-|\<Qualsiasi altra stringa>||Restituisce NULL per l'input non valido.|  
+|\<Any other string>||Restituisce NULL per l'input non valido.|  
   
 ## <a name="remarks"></a>Osservazioni  
 **local_net_address** e **local_tcp_port** restituiscono NULL in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].

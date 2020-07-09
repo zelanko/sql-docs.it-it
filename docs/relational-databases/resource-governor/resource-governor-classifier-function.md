@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 226100ce85527276f2f1f2b67f9ebb5f43a336d8
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 2b96e494e10bb99fa316fa417c16e2f4a7034855
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262106"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729267"
 ---
 # <a name="resource-governor-classifier-function"></a>Funzione di classificazione di Resource Governor
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Il processo di classificazione di Resource Governor in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di assegnare sessioni in ingresso a un gruppo di carico di lavoro in base alle caratteristiche della sessione. È possibile personalizzare la logica di classificazione scrivendo una funzione definita dall'utente, chiamata funzione di classificazione.  
   
 ## <a name="classification"></a>Classificazione  

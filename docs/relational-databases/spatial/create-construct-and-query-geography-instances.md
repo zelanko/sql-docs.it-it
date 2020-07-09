@@ -14,15 +14,15 @@ ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b942e32e78a0a66e2d650ad36202bdf0effebc05
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e2ab74d3cb24118b147743165d6db221ea337629
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730806"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Creare, Costruire e Istanze geografiche di Query
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Il tipo di dati spaziali geografici, **geography**, rappresenta i dati in un sistema di coordinate terrestri. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è implementato come tipo di dati CLR (Common Language Runtime) .NET. Il tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geography**di** consente di archiviare dati ellissoidali (terra rotonda), ad esempio coordinate di latitudine e longitudine GPS.  
   
  Il tipo **geography** è predefinito e disponibile in ogni database. È possibile creare colonne di tabella di tipo **geography** e usare dati **geography** nello stesso modo in cui vengono usati gli altri tipi forniti dal sistema.  

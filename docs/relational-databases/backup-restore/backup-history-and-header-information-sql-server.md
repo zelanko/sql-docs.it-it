@@ -34,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: c9500198b88d9a01317ee82ac652a231d1753309
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3bcec97642ead8a53c0703cdcfafbbe59cc4bbe1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824114"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728485"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Informazioni sulla cronologia e sull'intestazione del backup (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Nel database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **viene archiviata una cronologia completa di tutte le operazioni di backup e ripristino di** eseguite in un'istanza del server. In questo argomento vengono fornite informazioni generali sulle tabelle di cronologia di backup e ripristino e sulle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzate per accedere alla cronologia di backup. L'argomento tratta anche dell'utilità dell'elenco di file del database e del log delle transazioni e di quando utilizzare informazioni sull'intestazione supporto rispetto alle informazioni dell'intestazione del backup.  
   
 > [!IMPORTANT]  

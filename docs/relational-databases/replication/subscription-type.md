@@ -13,15 +13,15 @@ ms.assetid: 9a50f588-ee45-4a87-826f-372ff0798587
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 679dc415500bd1cbf3731ecf7f2bd47d3b577f38
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c8b31b962fed5f250f2c16c74736a1a2061341fd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287044"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729347"
 ---
 # <a name="subscription-type"></a>Tipo di sottoscrizione
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   La replica di tipo merge offre due tipi di sottoscrizioni, ovvero server e client, definiti rispettivamente come globale e locale nelle versioni precedenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I Sottoscrittori con una sottoscrizione di tipo server sono in grado di:  
   
 -   Ripubblicare i dati di altri Sottoscrittori.  

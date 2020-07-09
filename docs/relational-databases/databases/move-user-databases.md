@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b9a43e33b9476c874b2d5a0f64d17d48aec46605
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ae4bcbf6a8fe10fb07d644c697c8d3ac04631555
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71816755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728433"
 ---
 # <a name="move-user-databases"></a>Spostare database utente
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è possibile spostare i file di dati, di log e del catalogo full-text di un database utente specificando il nuovo percorso file nella clausola FILENAME dell'istruzione [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) . Questo metodo è valido per lo spostamento dei file del database all'interno della stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per spostare un database in un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o in un altro server, usare le operazioni di [backup e ripristino](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) o di [collegamento e scollegamento](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md).  
   
 ## <a name="considerations"></a>Considerazioni  

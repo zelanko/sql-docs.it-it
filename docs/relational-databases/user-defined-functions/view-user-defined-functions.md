@@ -19,15 +19,15 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 076fd5f22fb7df7801ce0dacb08126a55a735d40
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 081be4045a04ac665a83d8fabf8f12e6e0abc7c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72905515"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727065"
 ---
 # <a name="view-user-defined-functions"></a>Visualizzare le funzioni definite dall'utente
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   È possibile acquisire informazioni sulla definizione o le proprietà di una funzione definita dall'utente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Potrebbe essere necessario visualizzare la definizione della funzione per determinare come vengono derivati i dati dalle tabelle di origine o per visualizzare i dati definiti dalla funzione.  
   
 > [!IMPORTANT]  

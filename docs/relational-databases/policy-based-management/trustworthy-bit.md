@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 3198188a-2b59-4865-9560-10f760934b8e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c63c98eda9ef0827919bfe36f3a2b14ef717f648
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c0fe0b7b8890b3ef9ee2671b4926c8be99cc679
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021504"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727292"
 ---
 # <a name="trustworthy-bit"></a>Bit relativo alla proprietà trustworthy
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Questa regola consente di determinare se il ruolo dbo per un database è assegnato al ruolo predefinito del server sysadmin e se per il database il bit relativo alla proprietà trustworthy è impostato su ON.  
   
  Se queste condizioni vengono soddisfatte, un utente di database con privilegi potrà elevare il livello di privilegi al ruolo sysadmin. In questo ruolo l'utente può creare ed eseguire assembly non protetti che potrebbero danneggiare il sistema.  

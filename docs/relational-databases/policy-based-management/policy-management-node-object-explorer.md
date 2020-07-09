@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6fc55d4d0e68d83db7c7684d9c0d5cee3982a6c2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7fcd37d6584b38c50b35248124ade0a146af956d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086916"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730264"
 ---
 # <a name="policy-management-node-object-explorer"></a>Nodo Gestione criteri (Esplora oggetti)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Questa sezione contiene gli argomenti della Guida sensibile al contesto seguenti relativi al nodo **Gestione criteri** di Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   [Finestra di dialogo Crea nuova condizione o Apri condizione, pagina Generale](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)  

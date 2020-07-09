@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c10c5b34f7a3364113062821aba99e11536cc2ee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ac83db43e546af3641622d709e1d1a746d3b892
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67948048"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730989"
 ---
 # <a name="xml-data-type-methods"></a>Metodi con tipo di dati XML
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   È possibile usare i metodi con tipo di dati **xml** per eseguire query su un'istanza XML archiviata in una variabile o una colonna di tipo **xml**. Negli argomenti di questa sezione viene descritto come usare i metodi con tipo di dati **xml**.  
   

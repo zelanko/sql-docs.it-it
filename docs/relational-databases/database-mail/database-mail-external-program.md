@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: bc124164-eb6e-4b7f-bf66-98a3113d02f7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 220080e231c63f0224af9054039298fddd83ad96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4821091d350abd3396d524aa7ea3a1b4dd131318
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68134446"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726535"
 ---
 # <a name="database-mail-external-program"></a>Programma esterno di Posta elettronica database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   L'eseguibile esterno di Posta elettronica database è **DatabaseMail.exe**, situato nella **directory MSSQL\Binn** dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Posta elettronica database utilizza l'attivazione di Service Broker per avviare il programma esterno in presenza di messaggi di posta elettronica da elaborare. Posta elettronica database avvia un'istanza del programma esterno. Il programma esterno viene eseguito nel contesto di sicurezza dell'account di servizio per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Contenuto dell'argomento**  

@@ -1,7 +1,7 @@
 ---
 title: 'Passaggio 8: Annotare e formattare il pacchetto della lezione 1 | Microsoft Docs'
 ms.custom: ''
-ms.date: 01/03/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a67d7593ca63a2271fc94fc7203e9bb55d6efcc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fffa5eed608e8cd3faeb13b084e15554e4a8092f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71680972"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729411"
 ---
 # <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>Lezione 1-8: Annotare e formattare il pacchetto della lezione 1 
 
@@ -51,7 +51,7 @@ In questa attività verranno utilizzate le funzionalità di formattazione di [!I
   
 2.  Immettere o incollare il testo seguente nella casella delle annotazioni.  
   
-        The data flow extracts data from a file, looks up values in the CurrencyKey column in the DimCurrency table and the DateKey column in the DimDate table, and writes the data to the NewFactCurrencyRate table.
+    Tramite il flusso di dati vengono estratti dati da un file, vengono cercati valori nella colonna CurrencyKey della tabella DimCurrency e nella colonna DateKey della tabella DimDate e vengono scritti i dati nella tabella NewFactCurrencyRate.
   
     Per eseguire il wrapping del testo nella casella delle annotazioni, inserire il cursore nel punto in cui si desidera iniziare una nuova riga e premere **INVIO**.  
   
