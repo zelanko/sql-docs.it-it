@@ -21,15 +21,15 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82ee5bbda78f41796134a2d1ad3a639f76748bcd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 976fae5e1f906e80248ac11d1f89e889bcbb5e0e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287085"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000522"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guida sull'architettura e gestione del log delle transazioni di SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   In ogni database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è incluso un log delle transazioni in cui vengono registrate tutte le transazioni e le modifiche apportate dalle transazioni stesse al database. Il log delle transazioni è un componente fondamentale del database e, in caso di errore di sistema, può essere necessario per ripristinare la coerenza del database. In questa guida vengono fornite informazioni sull'architettura fisica e logica del log delle transazioni. Le informazioni sull'architettura consentono di gestire più efficacemente i log delle transazioni.  
 

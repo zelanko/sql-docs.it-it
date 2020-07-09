@@ -23,15 +23,15 @@ ms.assetid: 54f50bdd-bb62-4593-9af9-4c49edecab75
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a969af8ae75acb4841c6e4f288e04abf9224ade7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f370e3a5bdefb82f5971c8ffea2a065f2ccfb5a5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68122190"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007304"
 ---
 # <a name="lt-less-than-transact-sql"></a>&lt; (minore di) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Confronta due espressioni (operatore di confronto). Quando si confrontano due espressioni diverse da Null, il risultato è TRUE se il valore dell'operando di sinistra è minore del valore di quello di destra. In caso contrario il risultato è FALSE. Se uno o entrambi gli operandi sono NULL, vedere l'argomento [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
   

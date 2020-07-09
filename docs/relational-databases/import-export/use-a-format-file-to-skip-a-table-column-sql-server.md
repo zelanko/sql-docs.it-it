@@ -2,7 +2,7 @@
 title: Usare un file di formato per ignorare una colonna di una tabella (SQL Server) | Microsoft Docs
 description: Questo articolo descrive come usare un file di formato per evitare di importare la colonna di una tabella quando il dati per la colonna ignorata non esistono nel file di dati di origine.
 ms.custom: ''
-ms.date: 02/15/2018
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a568d1bfbfb461a8749699e0f7e175ed2c002f9e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5a83155dd566812248e37d509e34600a1beeb677
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980416"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007190"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Utilizzo di un file di formato per ignorare una colonna di una tabella (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Questo articolo descrive come usare un file di formato per evitare di importare la colonna di una tabella quando il dati per la colonna ignorata non esistono nel file di dati di origine. Un file di dati può contenere un numero di campi inferiore rispetto al numero di colonne nella tabella di destinazione, ovvero è possibile ignorare l'importazione di una colonna, solo se viene soddisfatta almeno una delle due condizioni seguenti nella tabella di destinazione:
 -   La colonna ignorata ammette i valori Null.
@@ -46,7 +46,7 @@ GO
   
 Gli esempi in questo articolo usano anche un file di dati di esempio, `myTestSkipCol2.dat`. Questo file di dati contiene solo due campi sebbene la tabella di destinazione contenga tre colonne.
 
-```  
+```
 1,DataForColumn3  
 1,DataForColumn3  
 1,DataForColumn3  
@@ -221,9 +221,9 @@ GO
 
 Per usare un file di formato XML per ignorare una colonna di tabella usando `OPENROWSET(BULK...)`, è necessario specificare un elenco esplicito di colonne nell'elenco di selezione e anche nella tabella di destinazione, come illustrato di seguito:  
   
-    ```sql
-    INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...) 
-    ```
+```sql
+INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...) 
+```
 
 Nell'esempio seguente viene utilizzato il provider di set di righe con lettura bulk `OPENROWSET` e il file di formato `myTestSkipCol2.xml` . Nell'esempio viene eseguita l'importazione bulk del file di dati `myTestSkipCol2.dat` nella tabella `myTestSkipCol` . L'istruzione contiene un elenco esplicito di colonne nell'elenco selezionato e nella tabella di destinazione, come richiesto.  
   

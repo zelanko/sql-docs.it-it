@@ -13,15 +13,15 @@ ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f60ded18e88d57c5a2975b567fa246923ece7ebe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 23b3d551d11ee09875f49be1bd553adcb9d9759c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71974358"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005993"
 ---
 # <a name="how-query-store-collects-data"></a>Modalità di raccolta dei dati di Query Store
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 SQL Server Query Store funge da vera e propria scatola nera, raccogliendo costantemente le informazioni di compilazione e runtime relative a query e piani. I dati relativi alle query sono salvati in modo permanente nelle tabelle interne e presentati agli utenti mediante una serie di viste.
   

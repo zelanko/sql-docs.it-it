@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 1a3906278e7d4770fa71a8931b3889f9f03d955a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 43cc2ebbb5b06edda65d841f29da03da9a552280
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629395"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008506"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Modifica una chiave di crittografia della colonna in un database, aggiungendo o eliminando un valore crittografato. A una chiave di crittografia della colonna possono essere associati fino a due valori, in modo da consentire la rotazione della chiave master della colonna corrispondente. Questo tipo di chiave consente di crittografare le colonne usando [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) o [Always Encrypted con enclavi sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Prima di aggiungere un valore per la chiave di crittografia della colonna, è necessario definire la chiave master della colonna usata per crittografare il valore tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o l'istruzione [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
   

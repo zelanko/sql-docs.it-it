@@ -32,16 +32,16 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03690af5e9ec4ce835372378ca3bdf13eff3073a
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: c7694d4675d37045b7b463e950d1811cec197ee4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152039"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011940"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Risolvere la frammentazione degli indici tramite riorganizzazione o ricompilazione di questi
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Questo articolo descrive come si verifica la deframmentazione degli indici e ne illustra l'impatto sulle prestazioni delle query. Dopo aver determinato il [livello di frammentazione esistente per un indice](#detecting-the-amount-of-fragmentation), è possibile deframmentare un indice [riorganizzando un indice](#reorganize-an-index) o [ricompilando un indice](#rebuild-an-index) eseguendo i comandi di Transact-SQL nello strumento preferito o usando SQL Server Management Studio.
 

@@ -18,15 +18,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: db8b4d96fd8ac097f912f535087ca658ca48bcca
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 874326a9eb3673a0b091e06fe5e9ba3f04e1c3b2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980541"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003158"
 ---
 # <a name="specify-file-storage-type-using-bcp-sql-server"></a>Specificare il tipo di archiviazione di file tramite bcp (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Il *tipo di archiviazione di file* indica la modalità con la quale vengono archiviati i dati in un file. I dati possono essere esportati in un file usando il tipo di dati della tabella del database in cui si trovano (formato nativo), come caratteri (formato carattere) oppure usando qualsiasi tipo di dati nel caso in cui sia supportata la conversione implicita. È possibile ad esempio copiare il tipo **smallint** come **int**. I tipi di dati definiti dall'utente vengono esportati utilizzando il tipo di dati di base corrispondente.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>Richiesta del tipo di archiviazione di dati con bcp  

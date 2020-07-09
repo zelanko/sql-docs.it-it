@@ -27,15 +27,15 @@ ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 151ca986f2705479567d8b9d5133ff1ad623a8b9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e0b77901f1a4c625f241c057f22af6b5fd437f10
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635592"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012568"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Nega un'autorizzazione a un'entità. Impedisce a tale entità di ereditare l'autorizzazione tramite l'appartenenza al ruolo o al gruppo. DENY ha la precedenza su tutte le autorizzazioni, ma non si applica ai proprietari di oggetti o ai membri del ruolo predefinito del server sysadmin.
   **Nota sulla sicurezza**: non è possibile negare le autorizzazioni ai membri del ruolo predefinito del server sysadmin e ai proprietari di oggetti.

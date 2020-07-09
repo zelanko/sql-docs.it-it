@@ -1,8 +1,7 @@
 ---
 title: Analizzare e trasformare dati JSON con OPENJSON
-ms.date: 07/18/2017
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,17 +11,18 @@ helpviewer_keywords:
 ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: feac4a3e00164837373f9b3024c322dbf7c49818
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 496e49a866bb477139078b0797c6390b42df3192
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095830"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009598"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>Analizzare e trasformare i dati JSON con OPENJSON (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 La funzione dei set di righe **OPENJSON** consente di convertire testo JSON in un set di righe e colonne. Dopo aver trasformato una raccolta JSON in un set di righe con **OPENJSON**, è possibile eseguire qualsiasi query SQL sui dati restituiti o inserirli in una tabella di SQL Server. 
   

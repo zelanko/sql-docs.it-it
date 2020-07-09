@@ -17,15 +17,15 @@ ms.assetid: b2f99e33-2303-427c-94b9-9d55f8e2a6ab
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eebab07a066192b473aaf0a303515aa894be2aec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b11a58d6b5b838fc5add9f8303be0758a6ce7c31
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68136815"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000957"
 ---
 # <a name="ole-automation-result-sets"></a>Set di risultati di automazione OLE
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Se una proprietà o un metodo di automazione OLE restituisce dati in una matrice a una o a due dimensioni, tale matrice verrà restituita al client come set di risultati:  
   
 -   Una matrice unidimensionale viene restituita al client come set di risultati a riga singola con lo stesso numero di colonne del numero di elementi nella matrice. La matrice (10), ad esempio, viene restituita come singola riga con 10 colonne.  

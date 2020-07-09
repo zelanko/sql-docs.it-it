@@ -22,15 +22,15 @@ ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6deb745331f466a443ebbb7dab041194bfd941dd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0c9599ddcade6c62a21245ef16cc89034df1524c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832945"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003800"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Restituisce la posizione di inizio della prima occorrenza di un modello in un'espressione specificata, oppure zero se il modello non viene trovato, in tutti i dati di tipo carattere e testo validi.  
   
@@ -158,7 +158,7 @@ position
 L'esempio usa una variabile per passare un valore al parametro *pattern*. In questo esempio viene usato il database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  
-DECLARE @MyValue varchar(10) = 'safety';   
+DECLARE @MyValue VARCHAR(10) = 'safety';   
 SELECT position = PATINDEX('%' + @MyValue + '%', DocumentSummary)   
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  

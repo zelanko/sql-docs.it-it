@@ -21,15 +21,15 @@ ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56343f07a4a53b92aa9ab61d99aefd057f9430e4
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2d635f43e607109cd1dc361f8d7252af57daaafe
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631782"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000686"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Specifica le proprietà di una colonna che vengono aggiunte a una tabella tramite [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
@@ -95,7 +95,7 @@ column_name <data_type>
   
 -   Tipo definito dall'utente (UDT) di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e schema a cui appartiene. Per poter essere utilizzato in una definizione di tabella, un tipo definito dall'utente (UDT) di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] deve venire creato tramite CREATE TYPE.  
   
- Se *type_schema_name* non viene specificato, il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] fa riferimento a *type_name* in base all'ordine seguente:  
+ Se *type_schema_name* non viene specificato, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] fa riferimento a *type_name* in base all'ordine seguente:  
   
 -   Tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

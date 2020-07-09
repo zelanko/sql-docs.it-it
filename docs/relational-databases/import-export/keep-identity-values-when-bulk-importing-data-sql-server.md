@@ -16,15 +16,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9dc47ecc9056c2344b64feb4eb0f122e340927b5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3d87bce11cc657ef437a0f57ce07d0eda89bdeb3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980613"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007204"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Mantenere i valori Identity durante l'importazione bulk dei dati (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 È possibile eseguire l'importazione bulk di file di dati contenenti valori Identity in un'istanza di Microsoft SQL Server.  Per impostazione predefinita, i valori per la colonna Identity del file di dati importato vengono ignorati e sostituiti automaticamente da valori univoci assegnati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  I valori univoci si basano sui valori di inizializzazione e incremento specificati durante la creazione della tabella.
 
 Se il file di dati non contiene valori per la colonna dell'identificatore nella tabella, utilizzare un file di formato per specificare di ignorare la colonna dell'identificatore nella tabella durante l'importazione dei dati.  Per altre informazioni, vedere [Utilizzo di un file di formato per ignorare una colonna di una tabella (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md) .

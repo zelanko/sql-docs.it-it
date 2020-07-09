@@ -17,18 +17,18 @@ helpviewer_keywords:
 - SQL tertiary collations
 - TERTIARY_WEIGHTS function
 ms.assetid: 7e1f5350-260b-4c61-8c84-69bb1a214f1f
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c61e2946f5c1260baa091b8539681bd0b5d9b43f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6c7c280036c2877ea70a2f4d71158f2efdce03fa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827092"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011551"
 ---
 # <a name="collation-functions---tertiary_weights-transact-sql"></a>Funzioni delle regole di confronto - TERTIARY_WEIGHTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Questa funzione restituisce una stringa binaria di spessori per ogni carattere in un'espressione stringa non Unicode definita tramite una regola di confronto SQL terziaria.
   

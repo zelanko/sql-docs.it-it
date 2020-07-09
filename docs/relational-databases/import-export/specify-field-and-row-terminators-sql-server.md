@@ -18,15 +18,15 @@ ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 151254168260a2d7a5a48747daee4de662bdfb70
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d36cb40971fc371022eb71dc922eb22a198bab9e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980537"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001713"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Impostazione dei caratteri di terminazione del campo e della riga (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Per i campi dati di tipo carattere è facoltativamente possibile contrassegnare la fine di ogni campo di un file di dati con un *carattere di terminazione del campo* a e la fine di ogni riga con un *carattere di terminazione della riga*. I caratteri di terminazione costituiscono un mezzo per indicare ai programmi che leggono il file di dati dove termina un campo o una riga e dove inizia un altro campo o un'altra riga.  
   
 > [!IMPORTANT]

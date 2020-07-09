@@ -17,15 +17,15 @@ ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0274f5235b51470d31a4904d5230c5b5ca14ecc5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d96dbfc519a831508b7e56fad1b6909a37f672d3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943060"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004000"
 ---
 # <a name="bitwise-operators-transact-sql"></a>Operatori bit per bit (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Gli operatori bit per bit eseguono manipolazioni di bit tra due espressioni di uno dei tipi di dati della categoria integer.  
   Gli operatori bit per bit convertono due valori Integer in bit binari ed eseguono l'operazione AND, OR o NOT su ogni bit, producendo un risultato. Quindi il risultato viene convertito in un valore Integer.  
