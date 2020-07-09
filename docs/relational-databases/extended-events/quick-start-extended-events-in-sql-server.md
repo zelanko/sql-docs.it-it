@@ -11,16 +11,16 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4065dd97c2109a30c90f8de01c50c11894a91f68
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 7b32ac9e1d88953cd8c8fccf3e010d01d5a6bcc5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728427"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783496"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Guida introduttiva: Eventi estesi in SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Gli eventi estesi costituiscono un sistema di monitoraggio delle prestazioni leggero che consente di raccogliere i dati necessari per il monitoraggio e la risoluzione dei problemi in SQL Server. Per altre informazioni sull'architettura degli eventi estesi, vedere [Panoramica degli eventi estesi](extended-events.md).  Questo articolo è destinato agli sviluppatori SQL che non hanno familiarità con gli eventi estesi e vogliono creare una sessione eventi in pochi minuti. Usando gli eventi estesi, è possibile visualizzare i dettagli sulle operazioni interne del sistema e dell'applicazione SQL. Quando si crea una sessione di eventi estesi, si indica al sistema:
 

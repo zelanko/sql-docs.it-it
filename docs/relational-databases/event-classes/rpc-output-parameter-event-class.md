@@ -12,15 +12,15 @@ ms.assetid: 8c830d11-7e88-4c3e-98e9-ba72c8c99b02
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b74cbe8ec74d0ea097693b38b05c87006baf07d7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c520f268443d568e22a9e459b5dd1a14040d322
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67908337"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85791023"
 ---
 # <a name="rpc-output-parameter-event-class"></a>RPC Output Parameter - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe di evento RPC Output Parameter traccia i valori dei parametri di output di chiamate di procedura remota (RPC, Remote Procedure Call) dopo l'esecuzione.  
   
  Questa classe consente di esaminare i valori di output restituiti da stored procedure. Se, ad esempio, un'applicazione non genera i valori di output previsti dopo l'esecuzione di una chiamata di procedura remota, è possibile utilizzare questa classe di evento per isolare il problema tra il codice del client e il codice del server.  

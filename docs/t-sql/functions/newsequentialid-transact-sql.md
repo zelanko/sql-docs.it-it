@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6daa11e30654beed9d4ad4c4d316b075a812b324
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c4daa39922e25c67479ad4f49c28fa860303e6d4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828693"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784387"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Crea un GUID maggiore di qualsiasi GUID generato in precedenza da questa funzione in un computer specificato dall'avvio di Windows. Dopo avere riavviato Windows, è possibile avviare di nuovo il GUID da un intervallo inferiore, ma ancora globalmente univoco. Quando una colonna GUID viene utilizzata come identificatore di riga, l'utilizzo di NEWSEQUENTIALID può essere più veloce rispetto all'utilizzo della funzione NEWID, poiché la funzione NEWID causa un'attività casuale e utilizza un numero inferiore di pagine di dati memorizzate nella cache. L'utilizzo di NEWSEQUENTIALID consente inoltre di completare le pagine di dati e di indice.  
   

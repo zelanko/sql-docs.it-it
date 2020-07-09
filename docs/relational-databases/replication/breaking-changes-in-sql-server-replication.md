@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 156ca6b7c04b8362a15a07f7db7f7aa43b2389a5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cc4feef3b7860dff9fa231cdb5e674443c0ee801
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68085849"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790770"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>Modifiche di rilievo alla replica di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In questo argomento vengono descritte le modifiche di rilievo introdotte nella replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Tali modifiche potrebbero interrompere il funzionamento di applicazioni, funzionalità o script basati su versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile che questi problemi si verifichino quando viene effettuato un aggiornamento.  
   
 ## <a name="breaking-changes-made-in-sssql15"></a>Modifiche di rilievo in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  

@@ -12,15 +12,15 @@ ms.assetid: 3e1ac37e-6093-4dc9-9e5d-4270db18b547
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 715eb611d1228eb5ab08ead6fc84da076bd8bb30
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c77a9dd688178a858167b8810da328a53d7188b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68125136"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790924"
 ---
 # <a name="tm-commit-tran-starting-event-class"></a>TM: Commit Tran Starting - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe di evento TM: Commit Tran Starting indica l'avvio di una richiesta COMMIT TRANSACTION. inviata dal client tramite l'interfaccia di gestione delle transazioni. La colonna EventSubClass indica se, in seguito al commit della transazione corrente, verrà avviata una nuova transazione.  
   
 ## <a name="tm-commit-tran-starting-event-class-data-columns"></a>Colonne di dati della classe di evento TM: Commit Tran Starting  

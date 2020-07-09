@@ -17,15 +17,15 @@ ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 445453f6be42c6015fc3b6728eb12ee9a78f0ef6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3240f9cd3e94418572482a5e73950e2b522ec663
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928169"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786884"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Funzioni deterministiche e non deterministiche
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Le funzioni deterministiche restituiscono sempre lo stesso risultato quando vengono chiamate con un set di valori di input specifico e se lo stato del database rimane invariato. Le funzioni non deterministiche possono restituire risultati diversi quando vengono chiamate con un set di valori di input specifico, anche se lo stato del database a cui accedono rimane invariato. Ad esempio, tramite la funzione AVG viene restituito sempre lo stesso risultato in base alle condizioni indicate in precedenza, ma tramite la funzione GETDATE, mediante la quale viene restituito il valore datetime corrente, viene sempre restituito un risultato diverso.  
   
  Le funzioni definite dall'utente includono diverse proprietà che influiscono sulla capacità del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di indicizzare i risultati della funzione, tramite gli indici nelle colonne calcolate che chiamano la funzione o tramite le viste indicizzate che fanno riferimento alla funzione. Una di queste proprietà è la proprietà deterministica di una funzione. Non è, ad esempio, possibile creare un indice cluster in una vista se la vista fa riferimento a funzioni non deterministiche. Per altre informazioni sulle proprietà delle funzioni, inclusa la proprietà deterministica, vedere [Funzioni definite dall'utente](../../relational-databases/user-defined-functions/user-defined-functions.md).  

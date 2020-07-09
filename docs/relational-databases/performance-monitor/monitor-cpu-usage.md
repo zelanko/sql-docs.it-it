@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: eb73d1b82d1a58a756c2ec6287429cee88315fd7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ba69baf585aca6d6dd30c6a0ab0016a76ef6047
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091028"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787469"
 ---
 # <a name="monitor-cpu-usage"></a>Monitorare l'utilizzo della CPU
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   È opportuno monitorare periodicamente un'istanza di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per verificare che i valori di utilizzo della CPU rientrino nei normali intervalli. Se la frequenza di utilizzo della CPU è costantemente elevata può essere necessario eseguire un aggiornamento della CPU o aggiungere più processori. Una valore costantemente elevato di utilizzo della CPU può inoltre indicare la presenza di un'applicazione non progettata o ottimizzata correttamente. L'ottimizzazione dell'applicazione potrebbe ridurre l'utilizzo della CPU.  
   
  Una soluzione efficiente per determinare l'utilizzo della CPU consiste nell'usare il contatore **Processore:% Tempo processore** in Monitoraggio di sistema. Questo contatore consente di monitorare la quantità di tempo utilizzata dalla CPU per l'esecuzione di un thread non inattivo. Se il valore relativo a tale stato è incluso tra l'80% e il 90%, può essere necessario eseguire un aggiornamento della CPU o aggiungere ulteriori processori. Nel caso dei sistemi multiprocessore, è necessario monitorare un'istanza del contatore per ogni processore. Il valore rappresenta il tempo totale di un processore specifico. Per determinare la media di tutti i processori, usare il contatore **Sistema: % Tempo totale processore** .  

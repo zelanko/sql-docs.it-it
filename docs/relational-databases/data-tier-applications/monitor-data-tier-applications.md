@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: abbd4cd516985dcebd28a5fd2fa28e9d83a413b2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ee30e1ce318276d9cf5bd7af3d13e291bfa2ea06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907773"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781664"
 ---
 # <a name="monitor-data-tier-applications"></a>Monitoraggio delle applicazioni livello dati
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Un'applicazione livello dati (DAC) può essere monitorata da **Gestione Utilità** e **Esplora oggetti** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), insieme alle viste e alle tabelle di sistema. Inoltre, tutti gli oggetti nel database contenuto in DAC possono essere monitorati utilizzando le tecniche di monitoraggio standard del database e del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
