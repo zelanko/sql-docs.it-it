@@ -10,16 +10,16 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 651467463e0563c9da00e23115ffb7bc4f151d23
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2eec1f7f24f8465fb5d2bd4406de4c11aef8a518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77479687"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773589"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Configurare un gruppo di disponibilità Always On di SQL Server in Windows e Linux (multipiattaforma)
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/applies-to-version/sqlserver2017.md)]
 
 Questo articolo illustra la procedura da seguire per creare un gruppo di disponibilità Always On con una replica in un server Windows e l'altra replica in un server Linux. Questa è una configurazione multipiattaforma perché le repliche si trovano in sistemi operativi diversi. Usare questa configurazione per la migrazione da una piattaforma all'altra o per il ripristino di emergenza. Questa configurazione non supporta la disponibilità elevata perché non è disponibile una soluzione cluster per gestire una configurazione multipiattaforma. 
 

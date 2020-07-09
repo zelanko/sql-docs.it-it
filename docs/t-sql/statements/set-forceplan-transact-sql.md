@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af335cdb4342572184a7a6ced846d1792be39d5b
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 02ed9e434ad527fa9e9c6c6ec34b464a522be7ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634377"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765803"
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Quando FORCEPLAN è impostato su ON, Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elabora un join nello stesso ordine delle tabelle nella clausola FROM di una query. L'impostazione di FORCEPLAN su ON determina inoltre l'utilizzo forzato di un nested loop join, a meno che altri tipi di join non siano necessari per la costruzione di un piano per la query o siano richiesti con hint di join o hint per la query.  
   

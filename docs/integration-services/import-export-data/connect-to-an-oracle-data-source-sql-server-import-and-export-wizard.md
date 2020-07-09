@@ -1,7 +1,7 @@
 ---
 title: Connettersi a un'origine dati Oracle (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: faa8517c24a3db78ee7e7b53ff0151be93a87ba2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c114a5e17c95d21d999819e73dcfd53f84179802
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285438"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773557"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati Oracle (Importazione/Esportazione guidata SQL Server)
 
@@ -36,6 +36,7 @@ Dopo aver selezionato **Provider di dati .NET Framework per Oracle** nella pagin
 |---|---|
 |Nome server|**Origine dati**|
 |Informazioni di autenticazione (accesso)|**ID utente** e **Password** oppure **Sicurezza integrata**|
+|||
 
 Non è necessario immettere la stringa di connessione nel campo **ConnectionString** dell'elenco. Dopo avere immesso i singoli valori per il nome del server Oracle (**Origine dati**) e le informazioni di accesso, la procedura guidata assembla la stringa di connessione in base alle singole proprietà e ai relativi valori. 
 
@@ -70,9 +71,9 @@ ID utente e password per la connessione.
 ### <a name="connection-string-format"></a>Formato della stringa di connessione
 Di seguito è riportato il formato di una stringa di connessione tipica.
 
-    ```
-    Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
-    ```
+```console
+Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
+```
 
 ### <a name="enter-the-connection-string"></a>Immettere la stringa di connessione
 Immettere la stringa di connessione nel campo **ConnectionString** oppure il nome DSN nel campo **Dsn** nella pagina **Scelta origine dati** o **Scelta destinazione**. Dopo avere immesso la stringa di connessione, la procedura guidata analizza la stringa e visualizza le singole proprietà e i relativi valori nell'elenco.

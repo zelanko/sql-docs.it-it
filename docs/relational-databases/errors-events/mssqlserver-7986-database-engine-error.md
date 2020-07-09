@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: ae64276c-4e1e-4ef3-9ee9-ebeb2f61e565
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 23772a43a6786f7570542ebd5d11bcfba5e53790
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44d2674361ce631448088fe923576429ca6d7fa4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68007080"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773521"
 ---
 # <a name="mssqlserver_7986"></a>MSSQLSERVER_7986
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Dettagli  
   
-|||  
-|-|-|  
+| Attributo | valore |  
+| :-------- | :---- |  
 |Nome prodotto|SQL Server|  
 |ID evento|7986|  
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_PRE_CHECKS_CROSS_OBJECT_LINKAGE|  
-|Testo del messaggio|Controlli preliminari su tabella di sistema: per l'ID di oggetto ID_O è definito un collegamento a catena tra oggetti. La pagina ID1_P punta a ID2_P nell'ID di unità di allocazione ID1_A (dovrebbe essere ID2_A). Istruzione di controllo interrotta a causa di un errore irreversibile.|  
+|Testo del messaggio|Controlli preliminari su tabella di sistema: per l'ID oggetto O_ID è definito un collegamento a catena tra oggetti. La pagina ID1_P punta a ID2_P nell'ID di unità di allocazione ID1_A (dovrebbe essere ID2_A). Istruzione di controllo interrotta a causa di un errore irreversibile.|  
   
 ## <a name="explanation"></a>Spiegazione  
 La prima fase dell'esecuzione di un comando DBCC CHECKDB consiste nell'eseguire controlli primitivi nelle pagine dei dati delle tabelle di sistema critiche. Non è possibile correggere eventuali errori rilevati. DBCC CHECKDB verrà pertanto terminato immediatamente. Il puntatore di pagina successiva della pagina *P_ID1* nel livello dati dell'oggetto specificato punta alla pagina *P_ID2* di un oggetto diverso.  

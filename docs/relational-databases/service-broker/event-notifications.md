@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f5433d6082f2860805368f636383eb2e17959e77
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: de9035c84862bcde78c3a6f42133d8cbd52ae9b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048865"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764965"
 ---
 # <a name="event-notifications"></a>Notifiche degli eventi
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Le notifiche degli eventi consentono l'invio di informazioni sugli eventi a un servizio di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Le notifiche degli eventi vengono eseguite in risposta a una serie di istruzioni DDL (Data Definition Language) [!INCLUDE[tsql](../../includes/tsql-md.md)] ed eventi di Traccia SQL mediante l'invio di informazioni sugli eventi a un servizio [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
   
  È possibile utilizzare le notifiche degli eventi per eseguire le attività seguenti:  

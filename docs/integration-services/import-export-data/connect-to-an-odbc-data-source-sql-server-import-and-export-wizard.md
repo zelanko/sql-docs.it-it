@@ -2,7 +2,7 @@
 title: Connettersi a un'origine dati ODBC (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 description: Come configurare un DSN ODBC o creare una stringa di connessione ODBC da usare con Importazione ed esportazione guidate di SQL Server
 ms.custom: ''
-ms.date: 12/31/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: integration-services
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73259121c31fcfc74352bf47938fcf28b294b894
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75608030"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773587"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati ODBC (Importazione/Esportazione guidata SQL Server)
 
@@ -93,9 +93,9 @@ Se si vuole specificare le informazioni di connessione con una stringa di connes
 
 L'esempio seguente usa la stringa di connessione seguente che stabilisce la connessione a Microsoft SQL Server. L'esempio di database usato è **WideWorldImporters** e ci si connette a SQL Server sul computer locale.
 
-    ```
-    Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
-    ```
+```console
+Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+```
 
 Immettere la stringa di connessione nel campo **ConnectionString** nella pagina **Scelta origine dati** o **Scelta destinazione**. Dopo avere immesso la stringa di connessione, la procedura guidata analizza la stringa e visualizza le singole proprietà e i relativi valori nell'elenco.
 
@@ -140,7 +140,7 @@ Per compilare e testare la stringa di connessione per il driver ODBC nel compute
 
 10. Aprire il file salvato con Blocco note o un altro editor di testo. Di seguito è riportato il contenuto dell'esempio SQL Server.
 
-    ```   
+    ```console
     [ODBC]  
     DRIVER=ODBC Driver 13 for SQL Server  
     TrustServerCertificate=No  
@@ -155,9 +155,9 @@ Per compilare e testare la stringa di connessione per il driver ODBC nel compute
 
     Dopo aver assemblato i valori necessari del DSN su file di esempio, la stringa di connessione è la seguente.
     
-        ```
-        DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
-        ```
+    ```console
+    DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+    ```
 
     Per creare una stringa di connessione valida non sono in genere necessarie tutte le impostazioni di un DSN creato da Amministrazione origine dati ODBC.  
     -   È sempre necessario specificare il driver ODBC.

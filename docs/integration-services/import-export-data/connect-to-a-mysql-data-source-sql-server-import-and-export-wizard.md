@@ -1,7 +1,7 @@
 ---
 title: Connettersi a un'origine dati MySQL (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/20/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9fc1128ff50a6b5f6fbb459dca23f518cbcd4f26
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdec318d9fdc895470c7dde94e254c2cc164f079
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285688"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768082"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati MySQL (Importazione/Esportazione guidata SQL Server)
 
@@ -40,6 +40,7 @@ Dopo aver selezionato **Provider di dati .NET Framework per MySQL** nella pagina
 |Nome server|**Server**|
 |Nome database|**Database**|
 |Informazioni di autenticazione (accesso)|**ID utente** e **Password**|
+|||
 
 Non è necessario immettere la stringa di connessione nel campo **ConnectionString** dell'elenco. Dopo avere immesso i singoli valori per il nome del server MySQL (**Server**) e le informazioni di accesso, la procedura guidata assembla la stringa di connessione in base alle singole proprietà e ai relativi valori. 
 
@@ -79,18 +80,18 @@ ID utente e password per la connessione.
 ### <a name="connection-string-format"></a>Formato della stringa di connessione
 Di seguito è riportato il formato di una stringa di connessione tipica.
 
-    ```
-    Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
-    ```
+```console
+Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
+```
 
 ### <a name="enter-the-connection-string"></a>Immettere la stringa di connessione
 Immettere la stringa di connessione nel campo **ConnectionString** oppure il nome DSN nel campo **Dsn** nella pagina **Scelta origine dati** o **Scelta destinazione**. Dopo avere immesso la stringa di connessione, la procedura guidata analizza la stringa e visualizza le singole proprietà e i relativi valori nell'elenco.
 
 L'esempio seguente usa questa stringa di connessione.
 
-    ```
-    Driver={MySQL ODBC 5.3 Unicode Driver};Server=127.0.0.1;Database=world;UID=root;PWD=********
-    ```
+```console
+Driver={MySQL ODBC 5.3 Unicode Driver};Server=127.0.0.1;Database=world;UID=root;PWD=********
+```
 
 Di seguito è riportata la schermata che viene visualizzata dopo aver immesso la stringa di connessione.
 

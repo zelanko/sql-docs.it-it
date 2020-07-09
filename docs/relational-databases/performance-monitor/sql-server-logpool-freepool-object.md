@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 8ffd569b-045f-4c3f-a473-4a491d6a1d80
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 508f0cfa001107ad43536525d65311bf3a294f4c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c51fb2a86cb33facfa7b54fe35deb6efe9cdef71
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093418"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775830"
 ---
 # <a name="sql-server-logpool-freepool-object"></a>SQL Server, oggetto LogPool FreePool
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 L'oggetto prestazione **SQLServer:LogPool FreePool** fornisce contatori per le statistiche del pool libero nel pool di log.
 
 La tabella seguente descrive gli oggetti prestazioni **LogPool FreePool** di SQL Server.

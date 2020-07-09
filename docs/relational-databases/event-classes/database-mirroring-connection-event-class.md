@@ -10,15 +10,15 @@ ms.assetid: b59dccc9-f40d-4c82-aa35-ac40acea86ff
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b10bdc5786d87dedb2d4247dbffc6f7f9eda43fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 37f1658a49fa5bc6577e4b7668dc62914aab3aa7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68009557"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765294"
 ---
 # <a name="database-mirroring-connection-event-class"></a>Classe di evento Database Mirroring Connection
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Database Mirroring Connection** per indicare lo stato di una connessione di trasporto gestita dal mirroring del database.  
   
 ## <a name="database-mirroringconnection-event-class-data-columns"></a>Colonne di dati della classe di evento Database Mirroring:Connection  
