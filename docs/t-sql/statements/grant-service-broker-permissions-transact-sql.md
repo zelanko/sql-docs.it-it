@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b93555f32556670909767200cafc34135c4da65e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: eb76fda1e2c94486203d3fb4ac23f13e13475b84
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633646"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880366"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT - autorizzazioni per Service Broker (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Concede le autorizzazioni per un contratto, un tipo di messaggio, un'associazione remota, una route o un servizio di Service Broker.  
   

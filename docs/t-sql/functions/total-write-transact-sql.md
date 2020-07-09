@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: cd528126-51ee-4aa4-a21f-f32ce5c80fac
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a437b16c40aaeab302fbeb29b7d6448e05a96055
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0464eec31fb138fd58f2e3c2a1efd09e2aafc254
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82822373"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85858545"
 ---
 # <a name="x40x40total_write-transact-sql"></a>&#x40;&#x40;TOTAL_WRITE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce il numero di scritture su disco eseguite da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dopo l'ultimo avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

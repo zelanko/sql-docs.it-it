@@ -20,34 +20,36 @@ helpviewer_keywords:
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b365aac0e21261edb3620e1cd58a656747b274a1
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 291c076d78b227487c6c4267343de5cffc7a3d63
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636068"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813893"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Modifica il nome, la password o lo schema predefinito di un ruolo applicazione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Sintassi
   
 ```syntaxsql
   
-ALTER APPLICATION ROLE application_role_name   
+ALTER APPLICATION ROLE application_role_name
     WITH <set_item> [ ,...n ]  
   
-<set_item> ::=   
-    NAME = new_application_role_name   
+<set_item> ::=
+    NAME = new_application_role_name
     | PASSWORD = 'password'  
     | DEFAULT_SCHEMA = schema_name  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>Argomenti
+
  *application_role_name*  
  Nome del ruolo applicazione da modificare.  
   
@@ -60,8 +62,9 @@ ALTER APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA =*schema_name*  
  Viene specificato il primo schema in cui tramite il server verrà eseguita la ricerca per la risoluzione dei nomi degli oggetti. *schema_name* può essere uno schema che non esiste nel database.  
   
-## <a name="remarks"></a>Osservazioni  
- Se il nuovo nome del ruolo applicazione esiste già nel database, l'istruzione non potrà essere completata. Quando si modifica il nome, la password o lo schema predefinito di un ruolo applicazione, l'ID associato al ruolo non viene modificato.  
+## <a name="remarks"></a>Osservazioni
+
+Se il nuovo nome del ruolo applicazione esiste già nel database, l'istruzione non potrà essere completata. Quando si modifica il nome, la password o lo schema predefinito di un ruolo applicazione, l'ID associato al ruolo non viene modificato.  
   
 > [!IMPORTANT]  
 >  I criteri di scadenza per le password non vengono applicati alle password del ruolo applicazione. Per questo motivo, si consiglia di prestare la massima attenzione nella scelta di password complesse. Le applicazioni che richiamano i ruoli applicazione devono archiviare le relative password.  

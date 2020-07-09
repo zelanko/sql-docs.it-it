@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ee52f585af8930afcba301a5aba12df4eb47173
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 240bc2359a3c0c66fc6f95c2392ae78740865a1d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072383"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880407"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Aggiorna il valore attualmente configurato (la colonna **config_value** del set di risultati di **sp_configure**) di un'opzione di configurazione modificata tramite la stored procedure di sistema **sp_configure**. Poiché con alcune opzioni di configurazione è necessario arrestare e riavviare il server per aggiornare il valore corrente, RECONFIGURE non aggiorna sempre il valore corrente (la colonna **run_value** del set di risultati di **sp_configure**) per un valore di configurazione modificato.    
     

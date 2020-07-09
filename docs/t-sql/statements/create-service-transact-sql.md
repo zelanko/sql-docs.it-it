@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf5ed8370550f3c66baa46a7f3c2634a9141ae38
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ade19ba855f4a11bcc354959865f9bc33416240e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633921"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881939"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crea un nuovo servizio. Un servizio di [!INCLUDE[ssSB](../../includes/sssb-md.md)] è un nome per un'attività specifica o per un set di attività. Il nome del servizio viene utilizzato da [!INCLUDE[ssSB](../../includes/sssb-md.md)] per il routing dei messaggi, il recapito dei messaggi alla coda corretta in un database nonché per l'applicazione del contratto per una conversazione.  
   
