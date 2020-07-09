@@ -17,15 +17,15 @@ ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f56e354023c869fb04d296b63ac748abec763e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0fc2167d4dc6179b760cfe03ad380b98d041f7b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68126777"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725907"
 ---
 # <a name="sequence-numbers"></a>Numeri di sequenza
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Una sequenza è un oggetto associato a schema definito dall'utente che genera una sequenza di valori numerici in base alla specifica con la quale è stata creata la sequenza. La sequenza di valori numerici viene generata in ordine crescente o decrescente a un intervallo definito e può essere ripetuta (ciclicamente) in base alle esigenze. Le sequenze, a differenza delle colonne di identità, non sono associate a tabelle. In un'applicazione viene fatto riferimento a un oggetto sequenza per recuperare il relativo valore successivo. La relazione tra sequenze e tabelle è controllata dall'applicazione. È possibile che nelle applicazioni utente si faccia riferimento a un oggetto sequenza e vengano coordinate le chiavi dei valori di più righe e tabelle.  
   
  Una sequenza viene creata indipendentemente delle tabelle usando l'istruzione **CREATE SEQUENCE** . Le opzioni consentono di controllare i valori di incremento, massimo e minimo, il punto iniziale, la funzionalità di riavvio automatico e la memorizzazione nella cache per migliorare le prestazioni. Per informazioni sulle opzioni, vedere [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md).  

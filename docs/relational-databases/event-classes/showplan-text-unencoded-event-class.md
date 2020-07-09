@@ -12,15 +12,15 @@ ms.assetid: 0aad4563-8caf-4971-92af-55992bc5ff2c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f393ab9c995e800772561b093af5947526ee183f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95ed07b8bfc4f59e6c11cac11722a37aa5c565fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911040"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726165"
 ---
 # <a name="showplan-text-unencoded-event-class"></a>Showplan Text (Unencoded) - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe di evento Showplan Text (Unencoded) viene generata quando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue un'istruzione SQL. Questa classe di evento è analoga alla classe di evento Showplan Text, ma le informazioni sull'evento vengono formattate come stringa anziché come dati binari.  
   
  Le informazioni incluse sono un subset delle informazioni disponibili nelle classi di evento Showplan All, Showplan XML o Showplan XML.  

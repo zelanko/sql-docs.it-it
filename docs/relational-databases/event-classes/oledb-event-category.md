@@ -14,15 +14,15 @@ ms.assetid: cf93e424-3dac-462d-b3da-92e7d0b064d4
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e254e09c52bee4adb1a2712857932488f7a0c63
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ca046bacc1a0dff03ddab4d0fc64004c50dc307c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68102541"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726234"
 ---
 # <a name="oledb-event-category"></a>categoria di eventi OLEDB
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La categoria di eventi **OLEDB** contiene eventi OLEDB generali.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  

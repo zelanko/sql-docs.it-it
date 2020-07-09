@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 81f96fac7ea9021c1f5eb39ad186dcdd35c92127
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 04a328034388f5ad305b627106d178b73df040bc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68067370"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726419"
 ---
 # <a name="model-database"></a>Database model
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Il database **model** viene usato come modello per tutti i database creati in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Poiché il database **tempdb** viene creato ogni volta che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviato, il database **model** deve essere sempre presente in un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'intero contenuto del database **model** , incluse le opzioni del database, viene copiato nel nuovo database. Alcune impostazioni del database **model** vengono inoltre usate per la creazione di un nuovo database **tempdb** all'avvio, pertanto in un sistema **il database** model [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere sempre presente.  
   
  I database utente appena creati utilizzano lo stesso [modello di recupero](../../relational-databases/backup-restore/recovery-models-sql-server.md) del database model. La stringa predefinita è configurabile dall'utente. Per informazioni sull'attuale modello di recupero, vedere [Visualizzazione o modifica del modello di recupero di un database &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  

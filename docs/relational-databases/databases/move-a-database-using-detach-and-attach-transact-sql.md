@@ -1,7 +1,6 @@
 ---
 title: Spostare un database tramite la funzionalità di scollegamento e collegamento (Transact-SQL)
-ms.custom: seo-dt-2019
-ms.date: 03/14/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 517814aa9878206fa46c4ce8ea775cda18265ede
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-dt-2019
+ms.openlocfilehash: e26ca45fb3851926959795675e1dd38a7f3f3a14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095258"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726406"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Spostare un database tramite la funzionalità di scollegamento e collegamento (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In questo argomento si illustra come spostare un database scollegato in un'altra posizione e come ricollegarlo alla stessa istanza oppure a un'altra istanza del server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Tuttavia, è consigliabile spostare i database utilizzando la procedura di rilocazione pianificata ALTER DATABASE anziché la funzionalità di scollegamento e collegamento. Per altre informazioni, vedere [Spostare database utente](../../relational-databases/databases/move-user-databases.md).  
   
 > [!IMPORTANT]  
@@ -51,7 +51,7 @@ ms.locfileid: "74095258"
   
 1.  Scollegare il database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] eseguendo le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti:  
   
-    ```  
+    ```sql
     USE master;  
     GO  
     EXEC sp_detach_db @dbname = N'AdventureWorks2012';  
@@ -67,7 +67,7 @@ ms.locfileid: "74095258"
   
 3.  Collegare il database spostato e, facoltativamente, collegare il relativo log tramite l'esecuzione delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti:  
   
-    ```  
+    ```sql
     USE master;  
     GO  
     CREATE DATABASE MyAdventureWorks   

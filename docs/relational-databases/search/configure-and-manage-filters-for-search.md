@@ -13,15 +13,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5dd9719ea0f10b3bbac6aae5171a2c941cdf7e1a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6dc1e17228e9ccf5f4f7bf17d8083ffd7a9f390d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093298"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725988"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Configurazione e gestione di filtri per la ricerca
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   L'indicizzazione di un documento in una colonna con tipo di dati **varbinary**, **varbinary(max)** , **image** o **xml** richiede operazioni di elaborazione aggiuntive. che devono essere eseguite mediante un filtro. Il filtro estrae le informazioni testuali dal documento rimuovendo la formattazione, quindi invia il testo al word breaker per la lingua associata alla colonna della tabella.  
  
 ## <a name="filters-and-document-types"></a>Filtri e tipi di documento

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8eb132920a6b51303e5725ecdb770dd742972f42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9df112777d7005479e515082859375d95d62839c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70809943"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726478"
 ---
 # <a name="database-mail-messaging-objects"></a>Oggetti di messaggistica di Posta elettronica database
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Il database **msdb** funge da host della posta elettronica. Questo database include le stored procedure e gli oggetti di messaggistica per Posta elettronica database. In Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è disponibile la Configurazione guidata posta elettronica database che consente di abilitare questo componente, creare e gestire profili e account e configurare le opzioni di Posta elettronica database.  
   
 ##  <a name="objects-in-msdb-database"></a><a name="ComponentsAndConcepts"></a> Oggetti in un database **msdb**  

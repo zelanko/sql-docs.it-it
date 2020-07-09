@@ -28,16 +28,16 @@ helpviewer_keywords:
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54e1dcd9735610f7cc8f109f00aa56fa7728ce04
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 01221e7bf5ff8b6bc0b8bb1a32f2aca66e8c6ed8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68495439"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706135"
 ---
 # <a name="backslash-line-continuation-transact-sql"></a>Barra rovesciata (continuazione di riga) (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 `\` suddivide una stringa estesa di tipo costante, di caratteri o binaria in due o più righe per una maggiore leggibilità.  
   
@@ -51,10 +51,10 @@ ms.locfileid: "68495439"
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- \<prima sezione di stringa>  
+ \<first section of string>  
  Inizio di una stringa.  
   
- \<sezione successiva di stringa>  
+ \<continued section of string>  
  Continuazione di una stringa.  
   
 ## <a name="remarks"></a>Osservazioni  

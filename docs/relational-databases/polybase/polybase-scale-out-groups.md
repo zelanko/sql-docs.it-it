@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 65e9ae2e44816ca761594acd3e2e907d7bd938a3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ea789049116c79e3242a5d1fed1f1fb8f020d1f
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217093"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818223"
 ---
 # <a name="polybase-scale-out-groups"></a>Gruppi con scalabilità orizzontale di PolyBase
 
@@ -58,10 +58,6 @@ Il motore PolyBase è il componente principale alla base delle query PolyBase. I
   
 Il servizio di spostamento dati di PolyBase riceve istruzioni dal motore PolyBase e trasferisce i dati tra HDFS e SQL Server e tra istanze di SQL Server nei nodi head e di calcolo.
   
-## <a name="editions-availability"></a>Disponibilità delle edizioni  
-
-Dopo l'installazione di SQL Server, l'istanza può essere definita sia come nodo head sia come nodo di calcolo. La scelta dipende dalla versione sulla quale è in esecuzione PolyBase di SQL Server. In un'installazione Enterprise Edition, l'istanza può essere definita sia come nodo head sia come nodo di calcolo. In una Standard Edition, l'istanza può essere definita solo come nodo di calcolo.
-
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per configurare un gruppo con scalabilità orizzontale PolyBase, vedere la guida seguente:

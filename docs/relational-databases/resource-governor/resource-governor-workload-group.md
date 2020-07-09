@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a84c3c3f-55b6-4a30-9c42-13f082d9281e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4f15d4e443f0ffd6df700bff67ed6ba7514e0c90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 805608e50c04f6c602d9efc076840c9e76965a52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68126876"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726007"
 ---
 # <a name="resource-governor-workload-group"></a>Gruppo di carico di lavoro di Resource Governor
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   In Resource Governor in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un gruppo di carico di lavoro viene utilizzato come contenitore per richieste di sessione che presentano criteri di classificazione simili. Un carico di lavoro consente il monitoraggio complessivo delle sessioni e di definire i criteri per le sessioni. Ogni gruppo di carico di lavoro si trova in un pool di risorse che rappresenta un subset delle risorse fisiche di un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Una volta avviata, la sessione viene assegnata a un gruppo di carico di lavoro specifico tramite la funzione di classificazione di Resource Governor e deve essere eseguita utilizzando i criteri assegnati al gruppo di carico di lavoro e alle risorse definite per il pool di risorse.  
   
 ## <a name="workload-group-concepts"></a>Concetti sui gruppi di carico di lavoro  

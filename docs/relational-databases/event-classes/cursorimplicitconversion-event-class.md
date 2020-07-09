@@ -12,15 +12,15 @@ ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f64b5ae594f766b7182bdde427c5138245721a83
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f10d8be98d0eda99da5873f6b8e4799d64d01bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001835"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726291"
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe di evento **CursorImplicitConversion** descrive gli eventi di conversione implicita dei cursori generati nelle API o nei cursori [!INCLUDE[tsql](../../includes/tsql-md.md)] . Gli eventi di conversione implicita dei cursori vengono generati quando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] esegue un'istruzione Transact-SQL non supportata dai cursori del server del tipo richiesto. [!INCLUDE[ssDE](../../includes/ssde-md.md)] restituisce un errore indicante che il tipo di cursore è stato modificato.  
   
  Includere la classe di evento **CursorImplicitConversion** nelle tracce in cui vengono registrate le prestazioni dei cursori.  

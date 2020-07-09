@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e22d0c36c3a5ce614357566079ec81dc54b7c70e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1083504e4b3075a3e3ec8429c1ab0b5a664f2998
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68022206"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714944"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Restituisce le impostazioni delle opzioni SET di una sessione.  
   
@@ -53,7 +53,7 @@ SESSIONPROPERTY (option)
 |CONCAT_NULL_YIELDS_ NULL|Determina se i risultati della concatenazione di valori Null vengono gestiti come valori Null o valori di stringa vuota.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |NUMERIC_ROUNDABORT|Specifica se vengono generati messaggi di errore o avvisi quando si verifica una perdita di precisione in seguito all'arrotondamento di un'espressione.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |QUOTED_IDENTIFIER|Specifica se devono essere seguite le regole ISO sull'utilizzo delle virgolette per delimitare gli identificatori e le stringhe letterali.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
-|\<Qualsiasi altra stringa>|NULL = Input non valido.|  
+|\<Any other string>|NULL = Input non valido.|  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **sql_variant**  

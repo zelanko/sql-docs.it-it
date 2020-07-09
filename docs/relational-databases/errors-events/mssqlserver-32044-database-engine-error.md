@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: f2d073be-d9a1-4837-8a38-028d3e3403bd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d294bb44a5b8fc7ab4d0d9860c8eaf766f6b87b8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 201fa55535c66c25629871d2860f149e78571b2f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67908543"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723644"
 ---
 # <a name="mssqlserver_32044"></a>MSSQLSERVER_32044
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Dettagli  
   
-|||  
-|-|-|  
+| Attributo | valore |  
+| :-------- | :---- |  
 |Nome prodotto|SQL Server|  
 |ID evento|32044|  
 |Origine evento|MSSQLSERVER|  
@@ -33,7 +33,7 @@ ms.locfileid: "67908543"
 |Testo del messaggio|Generato avviso relativo a un overhead di commit del mirror. Il valore corrente di '%d' è maggiore della soglia '%d'.|  
   
 ## <a name="explanation"></a>Spiegazione  
-Questo evento di mirroring del database viene generato nell'istanza del server principale per indicare che il tempo di attesa del commit di aggregazione ha raggiunto o superato un valore soglia specificato dall'utente a causa del mirroring del database. L'intervallo di attesa viene ottenuto moltiplicando il numero di transazioni per la durata di ogni transazione. L'intervallo di attesa sarà ad esempio pari a 1000 millisecondi in entrambi i casi seguenti: 1000 transazioni * 1 millisecondo e 1 transazione \* 1000 millisecondi. L'aumento del tempo di attesa del commit può dipendere da un picco nel numero di transazioni, da ritardi nell'invio del log o da ritardi nello scaricamento del log nell'istanza del server mirror.  
+Questo evento di mirroring del database viene generato nell'istanza del server principale per indicare che il tempo di attesa del commit di aggregazione ha raggiunto o superato un valore soglia specificato dall'utente a causa del mirroring del database. L'intervallo di attesa viene ottenuto moltiplicando il numero di transazioni per la durata di ogni transazione. Ad esempio i casi seguenti richiedono entrambi 1000 millisecondi di tempo di attesa: 1000 transazioni * 1 millisecondo e 1 transazione \* 1000 millisecondi. L'aumento del tempo di attesa del commit può dipendere da un picco nel numero di transazioni, da ritardi nell'invio del log o da ritardi nello scaricamento del log nell'istanza del server mirror.  
   
 La quantità dell'overhead di commit del mirror è una metrica delle prestazioni che consente di valutare l'impatto sulle prestazioni correnti del funzionamento sincrono. Questa metrica è rilevante solo nella modalità a sicurezza elevata. Poiché la modalità a sicurezza elevata è sincrona, prima di eseguire il commit della transazione dopo aver inviato un record di log all'istanza del server mirror, l'istanza del server principale attende la conferma della scrittura del record di log sul disco. Il record di log rimane sul disco dell'istanza del server mirror in attesa di essere ripristinato nel database mirror.  
   

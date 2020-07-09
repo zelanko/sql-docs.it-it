@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: d11b2b2c-3ae4-4023-b82f-05b561bfacce
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f60c9b7f02748e4dcd99e214fcbcd12505f203d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c51f604d4a0d875a0ef4c51ec47106a28b6ca674
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68043599"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723466"
 ---
 # <a name="mssqlserver_3456"></a>MSSQLSERVER_3456
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Dettagli  
   
-|||  
-|-|-|  
+| Attributo | valore |  
+| :-------- | :---- |  
 |Nome prodotto|SQL Server|  
 |ID evento|3456|  
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|REC_REDOLSNMISMATCH|  
-|Testo del messaggio|Impossibile eseguire il rollforward del record di log %S_LSN per l'ID di transazione %S_XID, pagina %S_PGID, database '%.*ls' (ID di database %d). Pagina: LSN = %S_LSN, tipo = %ld. Informazioni sul log: OpCode = %ld, contesto=%d, PrevPageLSN: %S_LSN. Correggere il database oppure ripristinarlo da un backup.|  
+|Testo del messaggio|Impossibile eseguire il rollforward del record di log %S_LSN per l'ID di transazione %S_XID, pagina %S_PGID, database '%.*ls' (ID di database %d). Pagina: LSN = %S_LSN, tipo = %ld. Log: OpCode = %ld, contesto=%d, PrevPageLSN: %S_LSN. Correggere il database oppure ripristinarlo da un backup.|  
   
 ## <a name="explanation"></a>Spiegazione  
 Durante l'operazione di ripristino non è stato possibile eseguire il rollforward del log delle transazioni. Tale errore ha determinato l'impostazione del database sullo stato SUSPECT. Il filegroup primario, e probabilmente altri filegroup, sono sospetti e possono essere danneggiati. Non è possibile recuperare il database durante l'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pertanto non è disponibile. Per risolvere il problema, è necessario l'intervento dell'utente.  

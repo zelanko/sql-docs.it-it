@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 0d9e50da-4f42-4b3a-bc84-daf05cf0e0e5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ebbb795ff7f4a90a99aad21e7435e63c82858409
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 88c53d8a01cc5eac53fdd5e4b2a372a45a995cd1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68122972"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717074"
 ---
 # <a name="mssqlserver_5229"></a>MSSQLSERVER_5229
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Dettagli  
   
-|||  
-|-|-|  
+| Attributo | valore |  
+| :-------- | :---- |  
 |Nome prodotto|SQL Server|  
 |ID evento|5229|  
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC4_ANTIMATTER_IN_HEAP_OR_CLUSTERED_INDEX|  
-|Testo del messaggio|Errore di tabella: ID di oggetto O_ID, ID di indice I_ID, ID di partizione PN_ID, ID di unità di allocazione A_ID (tipo TYPE) contiene una colonna di elenco degli elementi da eliminare ma non è un indice non cluster.|  
+|Testo del messaggio|Errore di tabella: ID oggetto O_ID, ID indice I_ID, ID partizione PN_ID, ID unità di allocazione A_ID (tipo TYPE) contiene una colonna di elenco degli elementi da eliminare ma non è un indice non cluster.|  
   
 ## <a name="explanation"></a>Spiegazione  
 Un heap o un indice cluster contiene una colonna di elenco degli elementi da eliminare non prevista.  

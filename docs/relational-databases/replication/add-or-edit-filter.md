@@ -13,15 +13,15 @@ ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 3f6fc6a82b0559282bf2ae714213bb8434c07bd0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 75b874fe2ded7f6baacdd65dddfd8ea3d371ba7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286892"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726115"
 ---
 # <a name="add-or-edit-filter"></a>Aggiungi filtro o Modifica filtro
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Le finestre di dialogo **Aggiungi filtro** e **Modifica filtro** consentono di aggiungere e modificare i filtri di riga statica o di riga con parametri.  
   
 > [!NOTE]  

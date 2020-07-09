@@ -1,7 +1,7 @@
 ---
 title: SET ANSI_NULLS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/04/2017
+ms.date: 06/24/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -24,33 +24,30 @@ helpviewer_keywords:
 ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
 author: CarlRabeler
 ms.author: carlrab
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 651af5040782bc729d5bca48fa2285e14e709e10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current || azuresqldb-current'
+ms.openlocfilehash: b9f4070d078a389a18ff34785c85464cdf1986da
+ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929171"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353168"
 ---
 # <a name="set-ansi_nulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Specifica il comportamento conforme allo standard ISO degli operatori di confronto Uguale a (=) e Diverso da (<>) quando vengono usati con valori Null in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+Specifica il comportamento conforme allo standard ISO degli operatori di confronto Uguale a (=) e Diverso da (<>) quando vengono usati con valori Null in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-> [!IMPORTANT]  
-> In una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ANSI_NULLS sarà impostata su ON e qualsiasi applicazione che imposta tale opzione in modo esplicito su OFF genererà un errore. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.
-  
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```syntaxsql
 -- Syntax for SQL Server
 
 SET ANSI_NULLS { ON | OFF }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
 
 SET ANSI_NULLS ON

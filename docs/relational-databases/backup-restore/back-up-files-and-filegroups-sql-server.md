@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 48d0581df76c6f6b5c4cd291981cf01e13f5eb79
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: db9345dd3411a28d2bfd72b64b4917c93d6567b4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220603"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725218"
 ---
 # <a name="back-up-files-and-filegroups"></a>Backup di file e filegroup
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In questo argomento viene descritto come eseguire il backup di file e filegroup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell. Quando a causa delle dimensioni del database e dei requisiti relativi alle prestazioni non è consigliabile eseguire un backup completo del database, è possibile creare invece un backup del file. Un *backup del file* contiene tutti i dati inclusi in uno o più file o filegroup.
   
 Per altre informazioni sul backup dei file, vedere [Backup completi del file &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) e [Backup differenziali &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  

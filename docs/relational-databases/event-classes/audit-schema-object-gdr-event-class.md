@@ -12,15 +12,15 @@ ms.assetid: a0187811-dc71-4792-a282-3bfe1ca90c21
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c59785c6ba0fb20949721070008246a3a6bc49e3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3517327e65b50c91ec5d11030c7c1b5d8d08b4dc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897424"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726315"
 ---
 # <a name="audit-schema-object-gdr-event-class"></a>Audit Schema Object GDR - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe di evento **Audit Schema Object GDR** si verifica ogni volta che viene generata un'istruzione GRANT, REVOKE o DENY relativa all'autorizzazione per un oggetto dello schema da uno degli utenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="audit-schema-object-gdr-event-class-data-columns"></a>Colonne di dati della classe di evento Audit Schema Object GDR  

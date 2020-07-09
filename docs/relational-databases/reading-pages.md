@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: f318dcaf176212414ccd0a82c006fa545a8a846f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 710a9796ae2eb68da9d95c7d9a075bba8b7a7482
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929799"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726128"
 ---
 # <a name="reading-pages"></a>Lettura di pagine
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 L'I/O di un'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)] di SQL Server include letture logiche e fisiche. La lettura logica viene eseguita ogni volta che il [!INCLUDE[ssDE](../includes/ssde-md.md)] richiede una pagina dalla [cache del buffer](../relational-databases/memory-management-architecture-guide.md). Se la pagina non si trova nella cache buffer, viene prima eseguita una lettura fisica per copiare la pagina dal disco alla cache.
 

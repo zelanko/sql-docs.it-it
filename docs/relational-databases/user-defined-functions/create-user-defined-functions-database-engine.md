@@ -19,15 +19,15 @@ ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 62d63c65ce1fae63fa9453a0dc37ddc134a87012
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1cd1d720f5f5e9a9896e341a31d604405ae7d0d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287995"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722882"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Creazione di funzioni definite dall'utente (Motore di database)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In questo argomento viene descritto come creare una funzione definita dall'utente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  

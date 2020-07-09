@@ -12,15 +12,15 @@ ms.assetid: b0153a31-5794-410b-8816-d9f1290a5b36
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe3e008c989e530b1b5fbb72bb6422fa3659a433
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 97b8412b0491e99d4449d12b0316ac949b973d62
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089598"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726247"
 ---
 # <a name="errorlog-event-class"></a>ErrorLog - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe di evento ErrorLog indica che nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono stati registrati messaggi.  
   
 ## <a name="errorlog-event-class-data-columns"></a>Colonne di dati della classe di evento ErrorLog  

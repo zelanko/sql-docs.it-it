@@ -15,15 +15,15 @@ ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d84df39c307177dc2e7fcbab9c9cdf177b580a73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bd972c1825deb947537473096653fc33e07a92fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286895"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726095"
 ---
 # <a name="add-publisher"></a>Aggiungi server di pubblicazione
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   La finestra di dialogo **Aggiungi server di pubblicazione** consente di aggiungere uno o più server di pubblicazione al riquadro sinistro di Monitoraggio replica. Dopo l'aggiunta di un server di pubblicazione, selezionare il server nel riquadro sinistro per visualizzare le informazioni relative nel riquadro destro.  
   
 ## <a name="options"></a>Opzioni  

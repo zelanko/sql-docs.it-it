@@ -18,15 +18,15 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 872f5207f673c5047475220b1da01a41678c1c6d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f3274fa08c121fc9dfd3ee4c5268c975eca2661
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056146"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725978"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Per garantire l'efficienza di un indice full-text, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è dotato di un meccanismo che rimuove le stringhe più frequenti, inutili ai fini della ricerca. Queste stringhe scartate vengono denominate *parole non significative*. Durante la creazione dell'indice, il motore di ricerca full-text omette le parole non significative dall'indice full-text, in modo che le query full-text non eseguano ricerche in tali parole.  
    
 **Parole non significative**. Una parola non significativa può essere una parola con un significato in una lingua specifica. Nella lingua italiana, ad esempio, parole quali "circa", "con", "devo" e "cui" vengono escluse dall'indice full-text poiché in pratica risultano inutili ai fini della ricerca. Una parola non significativa può anche essere un *token* che non ha un significato linguistico.  

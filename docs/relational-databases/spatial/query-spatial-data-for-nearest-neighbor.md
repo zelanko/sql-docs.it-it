@@ -10,15 +10,15 @@ ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9463df4f8aeacab50636b6cc6e9c63123b9d7c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 97e87d6590e9a8a79575e51d0a35f5e882ea21a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048537"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725887"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Query dei dati spaziali per Nearest Neighbor
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   La query Nearest Neighbor è una query comune utilizzata con dati spaziali. Le query Nearest Neighbor vengono utilizzate per trovare gli oggetti spaziali più vicini a un oggetto spaziale specifico. Un localizzatore di archivio per un sito Web, ad esempio, deve spesso trovare i percorsi di archivio più vicini alla posizione di un cliente.  
   
  Una query Nearest Neighbor può essere scritta in una varietà di formati di query validi, ma per l'utilizzo di un indice spaziale è necessario utilizzare la sintassi seguente.  

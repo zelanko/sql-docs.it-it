@@ -16,12 +16,12 @@ ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4575c9cbc20faf6afa03201645b736a13325e66b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8f543848759b737892998d913fa87ea6de7c6735
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140296"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858583"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>Visualizzare le dipendenze di una tabella
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "68140296"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Sono richieste l'autorizzazione VIEW DEFINITION sul database e l'autorizzazione SELECT su sys.sql_expression_dependencies per il database. L'autorizzazione SELECT è concessa per impostazione predefinita solo ai membri del ruolo predefinito del database di db_owner. Quando le autorizzazioni SELECT e VIEW DEFINITION vengono concesse a un altro utente, l'utente autorizzato può visualizzare tutte le dipendenze nel database.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
-#### <a name="to-view-the-dependencies-of-a-table"></a>Per visualizzare le dipendenze di una tabella  
+#### <a name="to-view-the-objects-on-which-a-table-depends"></a>Per visualizzare gli oggetti dai quali dipende una tabella.  
   
 1.  In **Esplora oggetti**espandere **Database**, espandere un database e quindi espandere **Tabelle**.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68140296"
   
 4.  Selezionare un oggetto nella griglia **Dipendenze** . Il tipo di oggetto, ad esempio "Trigger" o "Stored procedure", viene visualizzato nella casella **Tipo** .  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-view-the-objects-that-depend-on-a-table"></a>Per visualizzare gli oggetti che dipendono da una tabella.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68140296"
   
     ```  
   
-#### <a name="to-view-the-objects-on-which-a-table-depends"></a>Per visualizzare gli oggetti dai quali dipende una tabella.  
+#### <a name="to-view-the-dependencies-of-a-table"></a>Per visualizzare le dipendenze di una tabella  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

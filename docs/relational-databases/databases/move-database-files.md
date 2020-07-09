@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 89f01b10-5fae-4ed8-b0fb-a4b9f540fd28
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c53e9ee51714ebfcce81a722f78a4f79cbc2530f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b34df711bbe1a80f62bd307ac26e0eee4fa2cbb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68067323"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726385"
 ---
 # <a name="move-database-files"></a>Spostare file del database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è possibile spostare i file di database di sistema e definiti dall'utente specificando la nuova posizione dei file nella clausola FILENAME dell'istruzione [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) . In questo modo è possibile spostare file di dati, di log e del catalogo full-text. Questo può risultare utile nelle situazioni seguenti:  
   
 -   Recupero da errore. Ad esempio, il database è in modalità sospetta oppure viene chiuso, a causa di un errore hardware.  

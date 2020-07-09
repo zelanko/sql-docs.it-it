@@ -12,15 +12,15 @@ ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 480d2d238a82039fd04c1c960e74b0c9da57449e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 582efa7068b9e4ebadc4cdfd9f10ee93eb2774df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911100"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726191"
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe di evento Showplan All for Query Compile viene generata quando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compila un'istruzione SQL. Includere questa classe di evento per identificare gli operatori Showplan. Le informazioni include sono un subset delle informazioni disponibili nella classe di evento Showplan XML For Query Compile.  
   
  Nella classe di evento Showplan All for Query Compile sono visualizzati dati completi relativi alla fase di compilazione e quindi le tracce che includono Showplan All for Query Compile possono determinare significativi overhead delle prestazioni. Per ridurre al minimo tale rischio, limitare l'utilizzo di questa classe di evento alle tracce che consentono di monitorare problemi specifici per brevi periodi di tempo.  
