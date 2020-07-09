@@ -12,15 +12,15 @@ ms.assetid: 654fb295-f0a5-4d66-93e0-5d43e4d7d535
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96dc31f7129caedf65b52a457846dd651b345751
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6737979fc99057e2a85ee6a5494f1c65a5ee7e19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68064825"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85778772"
 ---
 # <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe di evento SQL:FullTextQuery viene generata quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue una query full-text. È consigliabile includere questa classe di evento nelle tracce che eseguono il monitoraggio dei problemi associati ai cataloghi full-text.  
   
  Se viene inclusa la classe di evento SQL:FullTextQuery, l'overhead sarà elevato. Se tali eventi si verificano di frequente, la traccia potrebbe ridurre in modo significativo le prestazioni. Per ridurre questo effetto, è consigliabile limitare l'utilizzo della classe di evento alle tracce che eseguono il monitoraggio di problemi specifici per periodi di tempo brevi.  

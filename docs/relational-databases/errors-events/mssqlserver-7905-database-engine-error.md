@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: cf19fbbb-7158-45f2-8778-8f3cad7f574a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b379a690019121ea98ff8e8b001f18814dbf6ebe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 252415c6bf4ef2dfdfb7ae5c0858b661df546aa8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951509"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780188"
 ---
 # <a name="mssqlserver_7905"></a>MSSQLSERVER_7905
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Dettagli  
   
-|||  
-|-|-|  
+| Attributo | valore |  
+| :-------- | :---- |  
 |Nome prodotto|SQL Server|  
 |ID evento|7905|  
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_FS_INVALID_ROWSET_DIRECTORY|  
-|Testo del messaggio|Errore di database: la directory 'DIRECTORY' non è una directory FileStream valida.|  
+|Testo del messaggio|Errore di database: la directory 'DIRECTORY' non è una directory FILESTREAM valida.|  
   
 ## <a name="explanation"></a>Spiegazione  
 Il nome di una directory di set di righe è l'ID di partizione della partizione, ad eccezione dei nomi di directory di set di righe speciali, ad esempio 'ghost'. Se non è possibile convertire tale nome in un ID di partizione, la directory non verrà considerata una directory di set di righe valida.  
