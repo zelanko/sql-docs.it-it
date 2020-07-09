@@ -18,15 +18,15 @@ ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7129c5feb6bc23a7e72dddfa70a10d4d2bc0811c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f9b897de6d5d833a485e976592f5776972a212f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67898598"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760814"
 ---
 # <a name="create-unique-indexes"></a>Creare indici univoci
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   In questo argomento si illustra come creare un indice univoco per una tabella in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un indice univoco consente di garantire che nella chiave dell'indice non siano contenuti valori duplicati e che pertanto ogni riga della tabella sia univoca. Non vi sono differenze significative tra la creazione di un vincolo UNIQUE e la creazione di un indice univoco indipendente da un vincolo. La convalida dei dati viene eseguita nello stesso modo e da Query Optimizer non viene applicata alcuna distinzione tra un indice univoco creato tramite un vincolo o manualmente. Tuttavia, se si crea un vincolo UNIQUE nella colonna, l'obiettivo dell'indice è chiaro. Per ulteriori informazioni sui vincoli UNIQUE, vedere [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   

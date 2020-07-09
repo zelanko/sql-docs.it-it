@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2845ecc6189b113bc31ae85b869985cf2ddfdb16
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63122ab29322432be181aa162e7727f342470974
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77051681"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762154"
 ---
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference (tipo di dati geometry)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Restituisce un oggetto che rappresenta tutti i punti che si trovano in un'istanza **geometry** o un'altra istanza **geometry**, ma non i punti che si trovano in entrambe le istanze.  
   

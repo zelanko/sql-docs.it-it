@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14edbb22-df7b-4b8a-b16c-ac477a5d32c1
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 46ed6c4f4d01b6c4ce1851c24a678617967560a7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 18c9c3f647bd2121ac7edf65011e0ac6a0038789
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67950057"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762424"
 ---
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed (tipo di dati geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Restituisce 1 se i punti di inizio e di fine dell'istanza **geometry** specificata sono gli stessi. Restituisce 1 per i tipi **geometrycollection** se ogni istanza **geometry** contenuta è chiusa. Restituisce 0 se l'istanza non è chiusa.
   

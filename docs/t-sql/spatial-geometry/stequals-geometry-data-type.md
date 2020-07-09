@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 808f0e25-9e68-4ba7-9329-07ec950698f3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8880c5287d65e91ccca3c223d93c7b7b070a8df3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dfd1140f4d42ccb4f46d2efa6657876a559d72a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68107754"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762535"
 ---
 # <a name="stequals-geometry-data-type"></a>STEquals (tipo di dati geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Restituisce 1 se un'istanza **geometry** rappresenta lo stesso set di punti di un'altra istanza **geometry**. In caso contrario, restituisce 0.
   

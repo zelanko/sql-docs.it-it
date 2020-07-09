@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 8abdc79b-fc26-42e9-8f73-ec6c98713142
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 57f68bea18cfbe8d5718e8b45d5d4a5b443713f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8a9e592f6cf962eadcfb14c9c3a72968187f756a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087208"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760488"
 ---
 # <a name="keep-the-affinity-mask-default-value"></a>Valore predefinito per la maschera di affinità
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Questa regola consente di controllare se l'opzione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la maschera di affinità è impostata su 0, ovvero il valore predefinito. L'opzione relativa alla maschera di affinità determina in modo dinamico l'affinità della CPU.  
   
 ## <a name="for-more-information"></a>Ulteriori informazioni  

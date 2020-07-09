@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0b3214bd-d0ab-45ab-9281-3d95507abe54
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 514fa5c8d6f4af26bba68698a5d0ef42100be670
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28b605b52600fe9855fb9e96f9f2dbc99bbc6a20
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558250"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760536"
 ---
 # <a name="evaluate-a-policy-based-management-policy-from-that-policy"></a>Valutare i criteri della gestione basata su criteri da quei criteri
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In questo argomento verrà descritto come valutare i criteri utilizzandoli in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Contenuto dell'articolo**  

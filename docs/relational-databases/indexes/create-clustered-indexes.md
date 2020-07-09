@@ -17,15 +17,15 @@ ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79ce697e86adcd7a2b11d4ec1d5f4564d51692e5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd2576b845d1cb04d69f2eef2ab32b6289a14480
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68024994"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760838"
 ---
 # <a name="create-clustered-indexes"></a>Creare indici cluster
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   È possibile creare indici cluster nelle tabelle usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A parte poche eccezioni, ogni tabella deve disporre di un indice cluster. Oltre a migliorare le prestazioni di esecuzione delle query, un indice può essere ricompilato o riorganizzato su richiesta per controllare la frammentazione della tabella. È inoltre possibile creare un indice cluster in una vista. Gli indici cluster sono descritti nell'argomento [Descrizione di indici cluster e non cluster](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md).  
   

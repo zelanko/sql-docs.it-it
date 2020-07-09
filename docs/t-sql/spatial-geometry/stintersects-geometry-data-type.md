@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7c18f5be-5a29-422e-8ca7-d8a5f38e03f5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8a01a4ee58b4bca80cba9bfc9a1a094f575c5154
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fd517a8396b9e23eaafa761a7e0511fe6926d21f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67950123"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762425"
 ---
 # <a name="stintersects-geometry-data-type"></a>STIntersects (tipo di dati geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Restituisce 1 se un'istanza **geometry** interseca un'altra istanza **geometry**. In caso contrario, restituisce 0.
   
