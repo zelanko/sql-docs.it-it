@@ -11,17 +11,17 @@ ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 47d7aca62ddbf2637b54d77171a08817b842555c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5f2c4fde17918e148ac26581fcb6f99057e38800
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008907"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197317"
 ---
 # <a name="sp_pdw_database_encryption-sql-data-warehouse"></a>sp_pdw_database_encryption (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Usare **sp_pdw_database_encryption** per abilitare Transparent Data Encryption in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] per un'appliance. Quando **sp_pdw_database_encryption** impostato su 1, utilizzare l'istruzione **ALTER database** per crittografare un database tramite Transparent Data Encryption.  
+  Usare **sp_pdw_database_encryption** per abilitare Transparent Data Encryption in per un' [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Appliance. Quando **sp_pdw_database_encryption** impostato su 1, utilizzare l'istruzione **ALTER database** per crittografare un database tramite Transparent Data Encryption.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,7 +36,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
   
 -   0 = Disabilitato  
   
--   1 = Attivato  
+-   1 = Abilitato  
   
  L'esecuzione di **sp_pdw_database_encryption** senza parametri restituisce lo stato corrente di Transparent Data Encryption nell'appliance come set di risultati scalari: 0 per Disabled o 1 per Enabled.  
   

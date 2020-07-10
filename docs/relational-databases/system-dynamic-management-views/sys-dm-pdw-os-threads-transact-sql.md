@@ -12,19 +12,19 @@ ms.assetid: ddc12f05-edeb-4848-b6d7-e851684cf044
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a4b9028d30db3c36157ef3db628dcb7c1cbeda00
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42cf071ca0f99fee4a5fc5cf4b4d4c7059ea8276
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899232"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197293"
 ---
 # <a name="sysdm_pdw_os_threads-transact-sql"></a>sys. dm_pdw_os_threads (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   
   
-|Nome colonna|Tipo di dati|Descrizione|Range|  
+|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|ID del nodo interessato.<br /><br /> pdw_node_id e thread_id formano la chiave per questa visualizzazione.|Vedere node_id in [sys. dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
 |thread_id|**int**|pdw_node_id e thread_id formano la chiave per questa visualizzazione.||  
@@ -37,7 +37,7 @@ ms.locfileid: "67899232"
 |total_processor_elapsed_time|**bigint**|Tempo totale kernel utilizzato dal thread.||  
 |total_user_elapsed_time|**bigint**|Tempo utente totale utilizzato dal thread||  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Data Warehouse e Parallel data warehouse viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

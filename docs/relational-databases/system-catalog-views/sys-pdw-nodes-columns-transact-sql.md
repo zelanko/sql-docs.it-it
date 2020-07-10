@@ -12,19 +12,19 @@ ms.assetid: 268c77b7-1d71-4197-a2ed-5e2b2b8fc260
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 201af9001703bb8f1dfbdaf2c41151697b945df3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b5e9e05e65a7121f30bfc0fc296229e943a8cd9
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68059400"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197392"
 ---
 # <a name="syspdw_nodes_columns-transact-sql"></a>sys. pdw_nodes_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Mostra le colonne per le tabelle definite dall'utente e le viste definite dall'utente.  
   
-|Nome colonna|Tipo di dati|Descrizione|Range|  
+|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|ID dell'oggetto a cui appartiene la colonna.||  
 |name|**sysname**|Nome della colonna. Univoco nell'oggetto.||  
@@ -32,7 +32,7 @@ ms.locfileid: "68059400"
 |system_type_id|**tinyint**|ID del tipo di sistema della colonna.||  
 |user_type_id|**int**|ID del tipo di colonna definito dall'utente.||  
 |max_length|**smallint**|Lunghezza massima in byte della colonna.|Include-1 (non valido) per i tipi di colonna non supportati.|  
-|precision|**tinyint**|Precisione della colonna se la colonna è di tipo numerico. In caso contrario, 0.||  
+|precisione|**tinyint**|Precisione della colonna se la colonna è di tipo numerico. In caso contrario, 0.||  
 |scala|**tinyint**|Scala della colonna se di tipo numerico, altrimenti 0.||  
 |collation_name|**sysname**|Nome delle regole di confronto della colonna se la colonna è di tipo carattere. In caso contrario, NULL.||  
 |is_nullable|**bit**|1 = La colonna ammette valori Null.||  

@@ -13,15 +13,15 @@ ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1be02aa5a19e49788aafdfdb9b6f818a66968283
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 848893f9e6c7aeb36299037404a88e9b069c012c
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054839"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197033"
 ---
 # <a name="sp_special_columns_100-sql-data-warehouse"></a>sp_special_columns_100 (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Restituisce il set di colonne ottimale per l'identificazione univoca di una riga nella tabella. Restituisce inoltre le colonne che vengono aggiornate automaticamente quando qualsiasi valore della riga viene aggiornato tramite una transazione.  
   
@@ -43,31 +43,31 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @table_name=] '*table_name*'  
+ [ @table_name =]'*table_name*'  
  Nome della tabella utilizzata per restituire informazioni sul catalogo. *Name* è di **tipo sysname**e non prevede alcun valore predefinito. I criteri di ricerca con caratteri jolly non sono supportati.  
   
- [ @table_owner=] '*TABLE_OWNER*'  
+ [ @table_owner =]'*TABLE_OWNER*'  
  Proprietario della tabella utilizzata per restituire informazioni sul catalogo. *owner* è di **tipo sysname**e il valore predefinito è null. I criteri di ricerca con caratteri jolly non sono supportati. Se il *proprietario* non è specificato, vengono applicate le regole di visibilità della tabella predefinite del sistema DBMS sottostante.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se l'utente corrente è il proprietario di una tabella con il nome specificato, vengono restituite le colonne di tale tabella. Se *owner* non è specificato e l'utente corrente non è il proprietario di una tabella con il *nome*specificato, questa procedura cerca una tabella con il *nome* specificato di proprietà del proprietario del database. Se la tabella esiste, vengono restituite le colonne corrispondenti.  
   
- [ @qualifier=] '*Qualifier*'  
+ [ @qualifier =]'*qualificatore*'  
  Nome del qualificatore di tabella. *Qualifier* è di **tipo sysname**e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle (*Qualifier.Owner.Name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
- [ @col_type=] '*col_type*'  
+ [ @col_type =]'*col_type*'  
  Tipo di colonna. *col_type* è di tipo **char (** 1 **)** e il valore predefinito è r. il tipo r restituisce la colonna o il set di colonne ottimale che, tramite il recupero di valori dalla colonna o dalle colonne, consente di identificare in modo univoco ogni riga nella tabella specificata. Una colonna può essere una pseudocolonna progettata a questo scopo oppure la colonna o le colonne di un indice univoco della tabella. Il tipo di colonna V restituisce le eventuali colonne della tabella specificata che vengono aggiornate automaticamente dall'origine dati in corrispondenza dell'aggiornamento di un valore della riga tramite una transazione.  
   
- [ @scope=] '*scope*'  
+ [ @scope =]'*scope*'  
  Ambito minimo richiesto per ROWID. l' *ambito* è **char (** 1 **)** e il valore predefinito è T. Scope C specifica che ROWID è valido solo se posizionato in corrispondenza di tale riga. L'ambito T indica che il valore ROWID è valido per la transazione.  
   
- [ @nullable=] '*Nullable*'  
+ [ @nullable =]'*Nullable*'  
  Indica se le colonne speciali possono accettare un valore null. *Nullable* è **char (** 1 **)** e il valore predefinito è U. O specifica le colonne speciali che non ammettono valori null. mentre U specifica le colonne che ammettono parzialmente valori Null.  
   
- [ @ODBCVer=] '*ODBCVer*'  
+ [ @ODBCVer =]'*ODBCVer*'  
  Versione ODBC utilizzata. *ODBCVer* è di **tipo int (** 4 **)** e il valore predefinito è 2. che indica ODBC versione 2.0. Per ulteriori informazioni sulle differenze tra ODBC versione 2.0 e ODBC versione 3.0, vedere la specifica ODBC SQLSpecialColumns per ODBC versione 3.0.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- nessuno  
+ Nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
   

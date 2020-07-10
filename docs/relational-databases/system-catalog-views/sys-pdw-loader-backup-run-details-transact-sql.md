@@ -12,19 +12,19 @@ ms.assetid: 04fc004f-ee15-4d7a-be08-78357aa99b55
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dead5962987f7fb132f21bb4e3517f7cc9249601
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0a0837b713f5c17f9bfb0357b9b1d999a1338e71
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127654"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197183"
 ---
 # <a name="syspdw_loader_backup_run_details-transact-sql"></a>sys. pdw_loader_backup_run_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Contiene ulteriori informazioni dettagliate, oltre alle informazioni contenute in [sys. pdw_loader_backup_runs &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md), sulle operazioni di backup e ripristino in corso e [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] completate in e sulle operazioni di backup, ripristino e caricamento in corso [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]e completate in. Le informazioni vengono mantenute tra un riavvio di sistema e l'altro.  
+  Contiene ulteriori informazioni dettagliate, oltre alle informazioni contenute in [sys. pdw_loader_backup_runs &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md), sulle operazioni di backup e ripristino in corso e completate in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e sulle operazioni di backup, ripristino e caricamento in corso e completate in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] . Le informazioni vengono mantenute tra un riavvio di sistema e l'altro.  
   
-|Nome colonna|Tipo di dati|Descrizione|Range|  
+|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |run_id|**int**|Identificatore univoco per l'esecuzione di un backup o un ripristino specifico.<br /><br /> run_id e pdw_node_id formano la chiave per questa visualizzazione.||  
 |pdw_node_id|**int**|Identificatore univoco di un nodo Appliance per il quale questo record include i dettagli.<br /><br /> run_id e pdw_node_id formano la chiave per questa visualizzazione.|Vedere node_id in [sys. dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  

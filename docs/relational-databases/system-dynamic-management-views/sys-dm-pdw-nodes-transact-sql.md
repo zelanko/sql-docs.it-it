@@ -12,19 +12,19 @@ ms.assetid: 93966909-d758-4d50-950b-f5066d104fa6
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 61593522e09ed86ec10f08a6ad8ff7a941a2e10e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ba367379795408a79b412c5b4c04097484bfd2b
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899351"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197204"
 ---
 # <a name="sysdm_pdw_nodes-transact-sql"></a>sys. dm_pdw_nodes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Include informazioni su tutti i nodi di [!INCLUDE[ssAPS](../../includes/ssaps-md.md)]. Elenca una riga per nodo nell'appliance.  
+  Include informazioni su tutti i nodi di [!INCLUDE[ssAPS](../../includes/ssaps-md.md)] . Elenca una riga per nodo nell'appliance.  
   
-|Nome colonna|Tipo di dati|Descrizione|Range|  
+|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|ID numerico univoco associato al nodo.<br /><br /> Chiave per questa visualizzazione.|Univoco nell'appliance, indipendentemente dal tipo.|  
 |tipo|**nvarchar(32)**|Tipo del nodo.|' COMPUTE ',' CONTROL ',' MANAGEMENT '|  
@@ -33,7 +33,7 @@ ms.locfileid: "67899351"
 |is_passive|**int**|Indica se la macchina virtuale che esegue il nodo è in esecuzione nel server assegnato oppure è stata sottoposta a failover sul server di riserva.|0-la macchina virtuale del nodo è in esecuzione nel server originale.<br /><br /> una macchina virtuale a 1 nodo è in esecuzione nel server di riserva.|  
 |region|**nvarchar(32)**|Area in cui è in esecuzione il nodo.|' PDW ',' HDINSIGHT '|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Data Warehouse e Parallel data warehouse viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

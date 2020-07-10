@@ -12,19 +12,19 @@ ms.assetid: 572b5187-9753-4063-adf8-65dea87d11f8
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7deddb57cdc02410fe161728f45190492ac18a16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12a3318f88a719ab70043e2685a475e14cf24fdc
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127548"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197400"
 ---
 # <a name="syspdw_distributions-transact-sql"></a>sys. pdw_distributions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Include informazioni sulle distribuzioni nell'appliance. Elenca una riga per ogni distribuzione di appliance.  
   
-|Nome colonna|Tipo di dati|Descrizione|Range|  
+|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |distribution_id|**int**|ID numerico univoco associato alla distribuzione.<br /><br /> Chiave per questa visualizzazione.|1 per il numero di nodi di calcolo nell'appliance moltiplicato per il numero di distribuzioni per ogni nodo di calcolo.|  
 |pdw_node_id|**int**|ID del nodo in cui si trova questa distribuzione.|Vedere pdw_node_id in [sys. dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  

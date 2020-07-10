@@ -12,19 +12,19 @@ ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c8e7826e4dcefdbed65fb0fa1f3368411a9ef12a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6ca5fc44e34153411e32a890b509d86caacbd9db
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127467"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196993"
 ---
 # <a name="syspdw_loader_backup_runs-transact-sql"></a>sys. pdw_loader_backup_runs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Contiene informazioni sulle operazioni di backup e ripristino in corso e completate in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]e sulle operazioni di backup, ripristino e caricamento in corso e completate in. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Le informazioni vengono mantenute tra un riavvio di sistema e l'altro.  
+  Contiene informazioni sulle operazioni di backup e ripristino in corso e completate in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e sulle operazioni di backup, ripristino e caricamento in corso e completate in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] . Le informazioni vengono mantenute tra un riavvio di sistema e l'altro.  
   
-|Nome colonna|Tipo di dati|Descrizione|Range|  
+|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |run_id|**int**|Identificatore univoco per una specifica esecuzione di backup, ripristino o caricamento.<br /><br /> Chiave per questa visualizzazione.||  
 |name|**nvarchar(255)**|Null per Load. Nome facoltativo per il backup o il ripristino.||  
@@ -41,7 +41,7 @@ ms.locfileid: "68127467"
 |request_id|**nvarchar(32)**|ID della richiesta che esegue l'operazione. Per i caricamenti, questa è la richiesta corrente o più recente associata a questo carico.|Vedere request_id in [sys. dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |status|**nvarchar (16)**|Stato dell'esecuzione.|' CANCELLED ',' COMPLETED ',' FAILED ',' QUEUED ',' RUNNING '|  
 |progress|**int**|Percentuale completata.|Da 0 a 100|  
-|command|**nvarchar(4000)**|Testo completo del comando inviato dall'utente.|Verrà troncato se è più lungo di 4000 caratteri (conteggio di spazi).|  
+|.|**nvarchar(4000)**|Testo completo del comando inviato dall'utente.|Verrà troncato se è più lungo di 4000 caratteri (conteggio di spazi).|  
 |rows_processed|**bigint**|Numero di righe elaborate come parte di questa operazione.||  
 |rows_rejected|**bigint**|Numero di righe rifiutate come parte di questa operazione.||  
 |rows_inserted|**bigint**|Numero di righe inserite nella tabella o nelle tabelle di database come parte di questa operazione.||  

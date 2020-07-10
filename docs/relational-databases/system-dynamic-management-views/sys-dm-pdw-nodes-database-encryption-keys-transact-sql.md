@@ -12,15 +12,15 @@ ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2d30ceadf292387900469fe99018ed7e2fdb361d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401644"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196589"
 ---
 # <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys. dm_pdw_nodes_database_encryption_keys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Restituisce informazioni sullo stato di crittografia di un database e sulle chiavi di crittografia a esso associate. **sys. dm_pdw_nodes_database_encryption_keys** fornisce queste informazioni per ogni nodo. Per ulteriori informazioni sulla crittografia del database, vedere [Transparent Data Encryption (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md).  
   

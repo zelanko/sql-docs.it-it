@@ -12,20 +12,20 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 62dfd50adf25d3e203c2bbf50c58579c65332606
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: a377c33424ae589fa796b6f382e936426ead006d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85440808"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197069"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Include informazioni su tutte le richieste attualmente o di recente attive in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . Elenca una riga per ogni richiesta/query.  
   
-|Nome colonna|Tipo di dati|Descrizione|Range|  
+|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Chiave per questa visualizzazione. ID numerico univoco associato alla richiesta.|Univoco tra tutte le richieste nel sistema.|  
 |session_id|**nvarchar(32)**|ID numerico univoco associato alla sessione in cui è stata eseguita la query. Vedere [sys. dm_pdw_exec_sessions &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
@@ -47,7 +47,7 @@ ms.locfileid: "85440808"
 |result_cache_hit|**decimal**|Indica in dettaglio se una query completata ha utilizzato la cache del set di risultati.  </br>Si applica a: Azure SQL Data Warehouse| 1 = riscontri nella cache del set di risultati </br> 0 = mancato riscontro nella cache del set di risultati </br> Valori negativi = motivi per cui la memorizzazione nella cache del set di risultati non è stata usata.  Per informazioni dettagliate, vedere la sezione Osservazioni.|
 ||||
   
-## <a name="remarks"></a>Commenti 
+## <a name="remarks"></a>Osservazioni 
  Per informazioni sul numero massimo di righe mantenute da questa visualizzazione, vedere la sezione metadati nell'argomento [limiti di capacità](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
 
  Il result_cache_hit è una maschera di maschera di utilizzo della cache dei set di risultati di una query.  Questa colonna può essere la [| (OR bit per bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) prodotto di uno o più dei valori seguenti:  

@@ -12,24 +12,25 @@ ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d91fdabce5350614d504b7dfdf990e2dd54b8b48
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 78af01169c643acfc82f7a3db035ae32518695bd
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999120"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196869"
 ---
 # <a name="syspdw_nodes_tables-transact-sql"></a>sys. pdw_nodes_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contiene una riga per ogni oggetto Table a cui appartiene un'entità o a cui l'entità ha concesso un'autorizzazione.  
   
-|Nome colonna|Tipo di dati|Descrizione|Range|  
+|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |\<inherited columns>||Per un elenco di colonne ereditate da questa vista, vedere [sys. Objects](../system-catalog-views/sys-objects-transact-sql.md).||  
 |lob_data_space_id|**int**||Sempre 0.|  
 |filestream_data_space_id|**int**|ID spazio dati per un filegroup FILESTREAM o[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|ID di colonna massimo utilizzato dalla tabella.||  
-|lock_on_bulk_load|**bit**|La tabella è bloccata durante il caricamento bulk.|TBD|  
+|lock_on_bulk_load|**bit**|La tabella è bloccata durante il caricamento bulk.|DA DEFINIRE|  
 |uses_ansi_nulls|**bit**|La tabella è stata creata con l'opzione di database SET ANSI_NULLS impostata su ON.|1|  
 |is_replicated|**bit**|1 = la tabella viene pubblicata utilizzando la replica.|0 la replica non è supportata.|  
 |has_replication_filter|**bit**|1 = La tabella è associata a un filtro di replica.|0|  

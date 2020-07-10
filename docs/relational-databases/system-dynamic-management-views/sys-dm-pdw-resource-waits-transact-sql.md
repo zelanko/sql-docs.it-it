@@ -12,23 +12,23 @@ ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 46b1155878aae6cc7f667965cfae065ed1a9cacc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 83d4fda9c4e2a4d7f9eabd29a101e51a8d5cd8ab
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74564737"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197158"
 ---
 # <a name="sysdm_pdw_resource_waits-transact-sql"></a>sys. dm_pdw_resource_waits (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Visualizza le informazioni di attesa per tutti i [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]tipi di risorsa in.  
+  Visualizza le informazioni di attesa per tutti i tipi di risorsa in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  
   
-|Nome colonna|Tipo di dati|Descrizione|Range|  
+|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|Posizione della richiesta nell'elenco di attesa.|ordinale in base 0. Questa operazione non è univoca in tutte le voci di attesa.|  
 |session_id|**nvarchar(32)**|ID della sessione in cui si è verificato lo stato di attesa.|Vedere session_id in [sys. dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|type|**nvarchar(255)**|Tipo di attesa rappresentata da questa voce.|Valori possibili:<br /><br /> Connessione<br /><br /> Concorrenza di query locali<br /><br /> Concorrenza di query distribuite<br /><br /> Concorrenza DMS<br /><br /> Concorrenza di backup|  
+|tipo|**nvarchar(255)**|Tipo di attesa rappresentata da questa voce.|Valori possibili:<br /><br /> Connessione<br /><br /> Concorrenza di query locali<br /><br /> Concorrenza di query distribuite<br /><br /> Concorrenza DMS<br /><br /> Concorrenza di backup|  
 |object_type|**nvarchar(255)**|Tipo di oggetto interessato dall'attesa.|Valori possibili:<br /><br /> **OGGETTO**<br /><br /> **DATABASE**<br /><br /> **SISTEMA**<br /><br /> **SCHEMA**<br /><br /> **APPLICAZIONE**|  
 |object_name|**nvarchar (386)**|Nome o GUID dell'oggetto specificato interessato dall'attesa.|Le tabelle e le viste vengono visualizzate con nomi in tre parti.<br /><br /> Gli indici e le statistiche vengono visualizzati con nomi in quattro parti.<br /><br /> Nomi, entità e database sono nomi di stringa.|  
 |request_id|**nvarchar(32)**|ID della richiesta in cui si è verificato lo stato di attesa.|Identificatore QID della richiesta.<br /><br /> Identificatore GUID per le richieste di caricamento.|  

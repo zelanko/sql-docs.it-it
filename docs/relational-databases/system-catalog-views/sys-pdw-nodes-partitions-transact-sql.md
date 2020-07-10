@@ -12,15 +12,15 @@ ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d0fc42e1ce8d15498caf89582b66549f4e083130
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 32c64ad5faab1ef262cd754201cac40e4a076619
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305233"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197357"
 ---
 # <a name="syspdw_nodes_partitions-transact-sql"></a>sys. pdw_nodes_partitions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contiene una riga per ogni partizione di tutte le tabelle e la maggior parte dei tipi di indici in un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] database. Tutte le tabelle e gli indici contengono almeno una partizione, indipendentemente dal fatto che siano partizionati in modo esplicito.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "72305233"
 |partition_id|**bigint**|ID della partizione. Valore univoco all'interno di un database.|  
 |object_id|**int**|ID dell'oggetto a cui appartiene la partizione. Ogni tabella o vista è costituita da almeno una partizione.|  
 |index_id|**int**|ID dell'indice all'interno dell'oggetto a cui appartiene la partizione.|  
-|partition_number|**int**|Numero di partizione in base 1 all'interno dell'indice o heap di appartenenza. Per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], il valore di questa colonna è 1.|  
+|partition_number|**int**|Numero di partizione in base 1 all'interno dell'indice o heap di appartenenza. Per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] , il valore di questa colonna è 1.|  
 |hobt_id|**bigint**|ID del heap o albero B dati (HoBT) che contiene le righe per la partizione.|  
 |rows|**bigint**|Numero approssimativo di righe nella partizione. |  
 |data_compression|**int**|Indica lo stato di compressione per ogni partizione:<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
@@ -43,7 +43,7 @@ ms.locfileid: "72305233"
 
 ### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Esempio A: visualizzare le righe in ogni partizione all'interno di ogni distribuzione 
 
-**Si applica a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Si applica a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
 Per visualizzare il numero di righe in ogni partizione all'interno di ogni distribuzione, utilizzare [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) .
 
@@ -51,7 +51,7 @@ Per visualizzare il numero di righe in ogni partizione all'interno di ogni distr
 
 **Si applica a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  
-Questa query restituisce il numero di righe in ogni partizione di ogni distribuzione della tabella `myTable`.  
+Questa query restituisce il numero di righe in ogni partizione di ogni distribuzione della tabella `myTable` .  
  
 ```sql  
 SELECT o.name, pnp.index_id, pnp.partition_id, pnp.rows,   

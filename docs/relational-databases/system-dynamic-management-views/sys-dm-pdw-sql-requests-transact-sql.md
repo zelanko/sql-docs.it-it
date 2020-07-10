@@ -12,19 +12,19 @@ ms.assetid: 44e19609-902c-46cf-acdf-19ea75011365
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: bca9930ef51de28c8059223c93ea0bb2651f971d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 455ccc47d4150211001b0cf715d67827c04376bc
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089152"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196818"
 ---
 # <a name="sysdm_pdw_sql_requests-transact-sql"></a>sys. dm_pdw_sql_requests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Include informazioni su tutte le distribuzioni di query SQL Server come parte di un passaggio SQL della query.  
   
-|Nome colonna|Tipo di dati|Descrizione|Range|  
+|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Identificatore univoco della query a cui appartiene questa distribuzione di query SQL.<br /><br /> request_id, step_index e distribution_id formano la chiave per questa visualizzazione.|Vedere request_id in [sys. dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Indice del passaggio della query di cui fa parte la distribuzione.<br /><br /> request_id, step_index e distribution_id formano la chiave per questa visualizzazione.|Vedere step_index in [sys. dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
@@ -37,7 +37,7 @@ ms.locfileid: "68089152"
 |total_elapsed_time|**int**|Rappresenta l'ora in cui è stata eseguita la distribuzione delle query, in millisecondi.|Maggiore o uguale a 0. Uguale al Delta di start_time e end_time per le distribuzioni di query completate, non riuscite o annullate.<br /><br /> Se total_elapsed_time supera il valore massimo per un numero intero, total_elapsed_time continuerà a essere il valore massimo. Questa condizione genererà l'avviso "è stato superato il valore massimo".<br /><br /> Il valore massimo in millisecondi equivale a 24,8 giorni.|  
 |row_count|**bigint**|Numero di righe modificate o lette dalla distribuzione di query.|-1 per le operazioni che non modificano o restituiscono dati, ad esempio CREATE TABLE e DROP TABLE.|  
 |spid|**int**|ID sessione nell'istanza SQL Server che esegue la distribuzione delle query.||  
-|command|**nvarchar(4000)**|Testo completo del comando per la distribuzione di query.|Qualsiasi stringa di query o richiesta valida.|  
+|.|**nvarchar(4000)**|Testo completo del comando per la distribuzione di query.|Qualsiasi stringa di query o richiesta valida.|  
   
  Per informazioni sul numero massimo di righe mantenute da questa visualizzazione, vedere la sezione metadati nell'argomento [limiti di capacità](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   

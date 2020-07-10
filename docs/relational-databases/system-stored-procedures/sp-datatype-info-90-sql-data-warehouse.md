@@ -11,15 +11,15 @@ ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7919dac422a0033d9bac02a928da2ff7445c6cc9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d19a2ef405fef8b62de96f621ddc13a816b4fc5
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108319"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196925"
 ---
 # <a name="sp_datatype_info_90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Restituisce informazioni sui tipi di dati supportati nell'ambiente corrente.  
   
@@ -40,7 +40,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 `[ @ODBCVer = ] odbc_version`Versione di ODBC utilizzata. *odbc_version* è di **tinyint**e il valore predefinito è 2.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- nessuno  
+ Nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -54,7 +54,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |CREATE_PARAMS|**varchar (** 32 **)**|Descrizione dei parametri di creazione per questo tipo di dati, Ad esempio, **Decimal** è "Precision, scale", **float** è null e **varchar** è "max_length".|  
 |NULLABLE|**smallint**|Specifica se i valori Null sono supportati.<br /><br /> 1 = I valori Null sono supportati.<br /><br /> 0 = I valori Null non sono supportati.|  
 |CASE_SENSITIVE|**smallint**|Specifica se viene rispettata la distinzione tra maiuscole e minuscole.<br /><br /> 1 = In tutte le colonne di questo tipo viene rispettata la distinzione tra maiuscole e minuscole (per le regole di confronto).<br /><br /> 0 = In tutte le colonne di questo tipo non viene rispettata la distinzione tra maiuscole e minuscole.|  
-|SEARCHABLE|**smallint**|Specifica la funzionalità di ricerca del tipo di colonna.<br /><br /> 1 = Non è possibile eseguire ricerche in questo tipo di colonna.<br /><br /> 2 = È possibile eseguire ricerche con LIKE.<br /><br /> 3 = È possibile eseguire ricerche con WHERE.<br /><br /> 4 = È possibile eseguire ricerche con WHERE o LIKE.|  
+|RICERCABILE|**smallint**|Specifica la funzionalità di ricerca del tipo di colonna.<br /><br /> 1 = Non è possibile eseguire ricerche in questo tipo di colonna.<br /><br /> 2 = È possibile eseguire ricerche con LIKE.<br /><br /> 3 = È possibile eseguire ricerche con WHERE.<br /><br /> 4 = È possibile eseguire ricerche con WHERE o LIKE.|  
 |UNSIGNED_ATTRIBUTE|**smallint**|Specifica se il tipo di dati include o meno il segno.<br /><br /> 1 = Tipo di dati senza segno.<br /><br /> 0 = Tipo di dati con segno.|  
 |MONEY|**smallint**|Specifica il tipo di dati **Money** .<br /><br /> 1 = tipo di dati **Money** .<br /><br /> 0 = tipo di dati **Money** non.|  
 |AUTO_INCREMENT|**smallint**|Specifica l'incremento automatico.<br /><br /> 1 = Incremento automatico abilitato.<br /><br /> 0 = Incremento automatico disabilitato.<br /><br /> NULL = Attributo non applicabile.<br /><br /> In un'applicazione è possibile inserire valori in una colonna cui è associato questo attributo, ma non è possibile aggiornare i valori della colonna. Ad eccezione del tipo di dati **bit** , AUTO_INCREMENT è valido solo per i tipi di dati che appartengono alle categorie di tipi di dati numerici esatti e numerici approssimati.|  
@@ -74,7 +74,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
  È richiesta l'appartenenza al ruolo public.  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Nell'esempio seguente vengono recuperate informazioni per i tipi di dati **sysname** e **nvarchar** specificando il `-9`valore *data_type* di.  
+ Nell'esempio seguente vengono recuperate informazioni per i tipi di dati **sysname** e **nvarchar** specificando il valore *data_type* di `-9` .  
   
 ```  
 USE master;  

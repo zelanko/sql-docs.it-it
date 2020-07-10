@@ -12,19 +12,19 @@ ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4d559f7fb03b632fc5cfca573b2fedc72506fead
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e5e3982f0e8a2470878e06cded3f814871cc0aa
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899403"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197085"
 ---
 # <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys. dm_pdw_exec_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Include informazioni su tutte le sessioni attualmente o aperte di recente nell'appliance. Elenca una riga per sessione.  
   
-|Nome colonna|Tipo di dati|Descrizione|Range|  
+|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |session_id|**nvarchar(32)**|ID della query corrente o dell'ultima esecuzione della query (se la sessione viene TERMINAta e la query è stata eseguita al momento della terminazione). Chiave per questa visualizzazione.|Univoco in tutte le sessioni del sistema.|  
 |status|**nvarchar (10)**|Per le sessioni correnti, indica se la sessione è attualmente attiva o inattiva. Per le sessioni passate è possibile che lo stato della sessione venga visualizzato chiuso o terminato (se la sessione è stata chiusa forzatamente).|' ACTIVE ',' CLOSED ',' IDLE ',' TERMINATE '|  
@@ -36,14 +36,14 @@ ms.locfileid: "67899403"
 |is_transactional|**bit**|Acquisisce se una sessione è attualmente all'interno di una transazione.|0 per il commit automatico, 1 per transazionale.|  
 |client_id|**nvarchar(255)**|Acquisisce le informazioni client per la sessione.|Qualsiasi stringa valida.|  
 |app_name|**nvarchar(255)**|Acquisisce le informazioni sul nome dell'applicazione facoltativamente impostate come parte del processo di connessione.|Qualsiasi stringa valida.|  
-|sql_spid|**int**|Numero ID dello SPID. Usare la `session_id` sessione. Utilizzare la `sql_spid` colonna per eseguire il join a **sys. dm_pdw_nodes_exec_sessions**.<br /><br /> ** \* Avviso di \* \* ** Questa colonna contiene SPID chiusi.||  
+|sql_spid|**int**|Numero ID dello SPID. Usare la `session_id` sessione. Utilizzare la `sql_spid` colonna per eseguire il join a **sys. dm_pdw_nodes_exec_sessions**.<br /><br /> Avviso questa colonna contiene SPID chiusi. ** \* \* \* \* **||  
   
  Per informazioni sul numero massimo di righe mantenute da questa visualizzazione, vedere la sezione metadati nell'argomento [limiti di capacità](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È necessaria l'autorizzazione `VIEW SERVER STATE`.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Data Warehouse e Parallel data warehouse viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   
