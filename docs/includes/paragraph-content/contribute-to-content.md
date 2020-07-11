@@ -1,4 +1,4 @@
-## <a name="contribute-to-sql-documentation"></a>Contribuire alla documentazione di SQL
+## <a name="image-typeicon-sourcemediaedit-topic-pencilpng-borderfalse-contribute-to-sql-documentation"></a>:::image type="icon" source="../media/edit-topic-pencil.png" border="false":::Contribuire alla documentazione di SQL
 
 è possibile modificare direttamente il contenuto. In questo modo si contribuirà a migliorare la documentazione e si verrà accreditati come collaboratori per la pagina.
 
