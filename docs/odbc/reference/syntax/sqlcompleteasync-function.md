@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4e09d61ef516e846798dd3af2d07dafa78af4605
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f56def542b71906d1e9432d724fdab8143ccb346
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299656"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279589"
 ---
 # <a name="sqlcompleteasync-function"></a>Funzione SQLCompleteAsync
 **Conformità**  
- Versione introdotta: ODBC 3,8  
-  
- Conformità agli standard: nessuna  
+ Versione introdotta: ODBC 3,8 Standard Compliance: None  
   
  **Riepilogo**  
  È possibile utilizzare **SQLCompleteAsync** per determinare quando una funzione asincrona viene completata utilizzando l'elaborazione basata sulle notifiche o sul polling. Per ulteriori informazioni sulle operazioni asincrone, vedere [esecuzione asincrona](../../../odbc/reference/develop-app/asynchronous-execution.md).  
@@ -58,7 +56,7 @@ SQLRETURN SQLCompleteAsync(
  *AsyncRetCodePtr*  
  Output Puntatore a un buffer che conterrà il codice restituito dell'API asincrona. Se *AsyncRetCodePtr* è null, **SQLCompleteAsync** restituisce SQL_ERROR.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_ERROR, SQL_NO_DATA o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  

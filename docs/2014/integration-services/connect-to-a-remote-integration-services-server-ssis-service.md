@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 48369c2691386bc41675571c892302e3e4b7ece1
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: a106a07f985dcc8d263304f574a911b84222903c
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85434658"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279475"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>Eseguire una connessione a un server Integration Services remoto (servizio SSIS)
     
@@ -46,7 +46,7 @@ ms.locfileid: "85434658"
     > [!NOTE]  
     >  Il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] non è specifico dell'istanza. Connettersi al servizio utilizzando il nome del computer sul quale è in esecuzione Integration Services.  
   
-5.  Fare clic su **Connetti**.  
+5.  Fare clic su **Connect** (Connetti).  
   
 > [!NOTE]  
 >  Nella finestra di dialogo **Cerca server** non vengono visualizzate le istanze remote di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Le opzioni disponibili nella scheda **Opzioni di connessione** della finestra di dialogo **Connetti al server** , visualizzata facendo clic sul pulsante **Opzioni** , non sono inoltre applicabili alle connessioni a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -96,13 +96,6 @@ ms.locfileid: "85434658"
   
 ## <a name="connecting-by-using-a-local-account"></a>Connessione tramite un account locale  
  Se si utilizza un account di Windows locale in un computer client, è possibile connettersi al servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in un computer remoto solo se nel computer remoto è presente un account locale con lo stesso nome, la stessa password e i diritti appropriati.  
-  
-## <a name="by-default-the-ssis-service-does-not-support-delegation"></a>Per impostazione predefinita, il servizio SSIS non supporta la delega  
-Per impostazione predefinita [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , il servizio non supporta la delega delle credenziali o ciò che viene talvolta definito come doppio hop. In questo scenario si usa un computer client, il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è in esecuzione in un secondo computer e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è in esecuzione in un terzo computer. Prima di tutto, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] passa le credenziali dal computer client al secondo computer in cui è in esecuzione il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Dopo, tuttavia, il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] non può delegare le credenziali dal secondo computer al terzo computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .
-
-È possibile abilitare la delega delle credenziali concedendo il diritto **Utente attendibile per la delega a qualsiasi servizio (solo Kerberos)** all'account del servizio SQL Server, che consente di avviare il servizio Integration Services (ISServerExec.exe) come processo figlio. Prima di concedere questo diritto, valutare se soddisfa i requisiti di sicurezza dell'organizzazione.
-
-Per altre informazioni, vedere [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)(Supporto di Kerberos e della delega tra domini con il pacchetto SSIS).
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare un Windows Firewall per l'accesso al servizio SSIS](../../2014/integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7a8839f1ae540ac9e5f29e144f7f57fb754e50ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: abeb377b614619e8c6359db7ae1d5b388cf2dd82
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287331"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279552"
 ---
 # <a name="sqlsetpos-function"></a>Funzione SQLSetPos
 **Conformità**  
@@ -71,7 +71,7 @@ SQLRETURN SQLSetPos(
   
  Per ulteriori informazioni, vedere "Commenti".  
   
- **Restituisce**  
+## <a name="returns"></a>Restituisce  
   
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
@@ -102,7 +102,7 @@ SQLRETURN SQLSetPos(
 |40003|Completamento istruzione sconosciuto|La connessione associata non è riuscita durante l'esecuzione di questa funzione e non è possibile determinare lo stato della transazione.|  
 |42000|Errore di sintassi o violazione di accesso|Il driver non è stato in grado di bloccare la riga in base alle esigenze per eseguire l'operazione richiesta nell' *operazione*dell'argomento.<br /><br /> Il driver non è stato in grado di bloccare la riga come richiesto nell'argomento *LockType*.|  
 |44000|Violazione della clausola WITH CHECK OPTION|L'argomento *Operation* è stato SQL_UPDATE e l'aggiornamento è stato eseguito su una tabella visualizzata o una tabella derivata dalla tabella visualizzata che è stata creata specificando **with check Option**, in modo che una o più righe interessate dall'aggiornamento non siano più presenti nella tabella visualizzata.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *statementHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle*e quindi la funzione è stata chiamata nuovamente su *statementHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle* da un thread diverso in un'applicazione multithread.|  
 |HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stata chiamata la funzione SQLSetPos.<br /><br /> (DM) il *statementHandle* specificato non si trova in uno stato eseguito. La funzione è stata chiamata senza prima chiamare **SQLExecDirect**, **SQLExecute**o una funzione di catalogo.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.<br /><br /> (DM) il driver era un driver ODBC *2. x* ed è stato chiamato **SQLSetPos** per *statementHandle* dopo la chiamata a **SQLFetch** .|  
@@ -222,9 +222,9 @@ SQLRETURN SQLSetPos(
   
 1.  Inserisce i valori nei buffer di dati e di lunghezza/indicatore associati a **SQLBindCol**:  
   
-    -   Per le colonne normali, l'applicazione inserisce il valore della nuova colonna nel buffer * \*TargetValuePtr* e la lunghezza del valore nel buffer * \*StrLen_or_IndPtr* . Se la riga non deve essere aggiornata, l'applicazione inserisce SQL_ROW_IGNORE nell'elemento di tale riga della matrice dell'operazione di riga.  
+    -   Per le colonne normali, l'applicazione inserisce il valore della nuova colonna nel buffer * \* TargetValuePtr* e la lunghezza del valore nel buffer * \* StrLen_or_IndPtr* . Se la riga non deve essere aggiornata, l'applicazione inserisce SQL_ROW_IGNORE nell'elemento di tale riga della matrice dell'operazione di riga.  
   
-    -   Per le colonne data-at-execution, l'applicazione inserisce un valore definito dall'applicazione, ad esempio il numero di colonna, nel buffer di * \*TargetValuePtr* . Il valore può essere utilizzato in un secondo momento per identificare la colonna.  
+    -   Per le colonne data-at-execution, l'applicazione inserisce un valore definito dall'applicazione, ad esempio il numero di colonna, nel buffer di * \* TargetValuePtr* . Il valore può essere utilizzato in un secondo momento per identificare la colonna.  
   
          L'applicazione inserisce il risultato della macro SQL_LEN_DATA_AT_EXEC (*length*) nel buffer **StrLen_or_IndPtr* . Se il tipo di dati SQL della colonna è SQL_LONGVARBINARY, SQL_LONGVARCHAR o un tipo di dati lungo specifico dell'origine dati e il driver restituisce "Y" per il tipo di informazioni SQL_NEED_LONG_DATA_LEN in **SQLGetInfo**, *length* è il numero di byte di dati da inviare per il parametro. in caso contrario, deve essere un valore non negativo e viene ignorato.  
   
@@ -234,7 +234,7 @@ SQLRETURN SQLSetPos(
   
     -   Se sono presenti colonne data-at-execution, la funzione restituisce SQL_NEED_DATA e procede al passaggio 3.  
   
-3.  Chiama **SQLParamData** per recuperare l'indirizzo del buffer * \*TargetValuePtr* per la prima colonna data-at-execution da elaborare. **SQLParamData** restituisce SQL_NEED_DATA. L'applicazione recupera il valore definito dall'applicazione dal buffer * \*TargetValuePtr* .  
+3.  Chiama **SQLParamData** per recuperare l'indirizzo del buffer * \* TargetValuePtr* per la prima colonna data-at-execution da elaborare. **SQLParamData** restituisce SQL_NEED_DATA. L'applicazione recupera il valore definito dall'applicazione dal buffer * \* TargetValuePtr* .  
   
     > [!NOTE]  
     >  Sebbene i parametri data-at-execution siano simili alle colonne data-at-execution, il valore restituito da **SQLParamData** è diverso per ogni oggetto.  
@@ -245,7 +245,7 @@ SQLRETURN SQLSetPos(
     > [!NOTE]  
     >  Le colonne data-at-execution sono colonne di un set di righe per cui i dati verranno inviati con **SQLPutData** quando una riga viene aggiornata con **SQLSetPos**. Sono associati a **SQLBindCol**. Il valore restituito da **SQLParamData** è l'indirizzo della riga nel buffer **TargetValuePtr* in fase di elaborazione.  
   
-4.  Chiama **SQLPutData** una o più volte per inviare i dati per la colonna. È necessaria più di una chiamata se non è possibile restituire tutti i valori dei dati nel buffer * \*TargetValuePtr* specificato in **SQLPutData**; sono consentite più chiamate a **SQLPutData** per la stessa colonna solo quando si inviano dati di tipo carattere c a una colonna con tipo di dati character, Binary o origine dati oppure quando si inviano dati c binari a una colonna con un tipo di dati character, Binary o data source specifico.  
+4.  Chiama **SQLPutData** una o più volte per inviare i dati per la colonna. È necessaria più di una chiamata se non è possibile restituire tutti i valori dei dati nel buffer * \* TargetValuePtr* specificato in **SQLPutData**. sono consentite più chiamate a **SQLPutData** per la stessa colonna solo quando si inviano dati di tipo carattere c a una colonna con tipo di dati character, Binary o origine dati oppure quando si inviano dati binari c a una colonna con tipo di dati character, Binary o data source  
   
 5.  Chiama di nuovo **SQLParamData** per segnalare che tutti i dati sono stati inviati per la colonna.  
   

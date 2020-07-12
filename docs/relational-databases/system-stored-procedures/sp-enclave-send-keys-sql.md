@@ -19,15 +19,15 @@ helpviewer_keywords:
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: ca6e7485e85665f06c2410438b902fa0647418ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57a7af110956bdf557ad751723f2497b6aa3ede0
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73593756"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279562"
 ---
 # <a name="sp_enclave_send_keys-transact-sql"></a>sp_enclave_send_keys (Transact-SQL)
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Invia le chiavi di crittografia delle colonne, definite nel database, all'enclave protetta lato server utilizzata con [Always Encrypted con enclave sicure](../security/encryption/always-encrypted-enclaves.md).
 
@@ -38,7 +38,7 @@ Invia le chiavi di crittografia delle colonne, definite nel database, all'enclav
 - [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]per completare il ripristino degli indici nelle colonne crittografate. Vedere [ripristino del database](../security/encryption/always-encrypted-enclaves.md#database-recovery).
 - Un'applicazione che utilizza .NET Framework provider di dati per SQL Server eseguire il caricamento bulk dei dati nelle colonne crittografate.
 
-Per richiamare `sp_enclave_send_keys`correttamente, è necessario connettersi al database con Always Encrypted e i calcoli dell'enclave abilitati per la connessione al database. È anche necessario avere accesso alle chiavi master della colonna, proteggere le chiavi di crittografia della colonna, si intende inviare ed è necessario disporre delle autorizzazioni per accedere Always Encrypted metadati della chiave nel database. 
+Per richiamare correttamente `sp_enclave_send_keys` , è necessario connettersi al database con Always Encrypted e i calcoli dell'enclave abilitati per la connessione al database. È anche necessario avere accesso alle chiavi master della colonna, proteggere le chiavi di crittografia della colonna, si intende inviare ed è necessario disporre delle autorizzazioni per accedere Always Encrypted metadati della chiave nel database. 
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,7 +61,7 @@ Questa stored procedure non include set di risultati.
   
 ## <a name="permissions"></a>Autorizzazioni
 
- Richiedere le `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` autorizzazioni `VIEW ANY COLUMN MASTER KEY DEFINITION` e nel database.  
+ Richiedere le `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` `VIEW ANY COLUMN MASTER KEY DEFINITION` autorizzazioni e nel database.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -69,7 +69,7 @@ Questa stored procedure non include set di risultati.
 EXEC sp_enclave_send_keys;  
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 - [Always Encrypted con enclave sicuri](../security/encryption/always-encrypted-enclaves.md) 
  
 - [Creare e usare indici in colonne usando Always Encrypted con enclave sicuri](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)

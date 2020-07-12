@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 059ed283032feb96ca5e6b12520682ccb034752a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3f9dcb6ccdef290b937b1317271758dddc0e848
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299666"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279601"
 ---
 # <a name="sqlcancelhandle-function"></a>Funzione SQLCancelHandle
 **Conformità**  
- Versione introdotta: ODBC 3,8  
-  
- Conformità agli standard: nessuna  
+ Versione introdotta: ODBC 3,8 Standard Compliance: None  
   
  Si prevede che la maggior parte dei driver ODBC 3,8 (e versioni successive) implementerà questa funzione. Se non è presente un driver, una chiamata a **SQLCancelHandle** con un handle di connessione nel parametro *handle* restituirà SQL_ERROR con un valore SQLSTATE di IM001 e il driver message ' non supporta questa funzione '' una chiamata a **SQLCancelHandle** con un handle di istruzione perché il parametro *handle* verrà mappato a una chiamata a **SQLCancel** da Gestione driver e può essere elaborato se il driver implementa **SQLCancel**. Un'applicazione può usare **SQLGetFunctions** per determinare se un driver supporta **SQLCancelHandle**.  
   
@@ -50,7 +48,7 @@ SQLRETURN SQLCancelHandle(
   
  Se *handle* non è un handle valido del tipo specificato da *HandleType*, **SQLCancelHandle** restituisce SQL_INVALID_HANDLE.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
@@ -61,7 +59,7 @@ SQLRETURN SQLCancelHandle(
 |SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) nell'argomento * \*buffer MessageText* descrive l'errore e la relativa origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) nell'argomento buffer * \* MessageText* descrive l'errore e la relativa origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY010|Errore sequenza funzione|È stata chiamata una funzione in esecuzione asincrona, correlata all'istruzione per uno degli handle di istruzione associati all' *handle*e *HandleType* è stato impostato su SQL_HANDLE_DBC. La funzione asincrona era ancora in esecuzione quando è stato chiamato **SQLCancelHandle** .<br /><br /> (DM) l'argomento *HandleType* è stato SQL_HANDLE_STMT; una funzione in esecuzione asincrona è stata chiamata sull'handle di connessione associato; e la funzione era ancora in esecuzione quando questa funzione è stata chiamata.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per uno degli handle di istruzione associati all' *handle* e *HandleType* è stato impostato su SQL_HANDLE_DBC e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.<br /><br /> **SQLBrowseConnect** è stato chiamato per *connectionHandle*e ha restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima del completamento del processo di esplorazione.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
