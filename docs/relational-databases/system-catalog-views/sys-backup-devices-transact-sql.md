@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c5f00465f2f907d80472c19465d373a555417329
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f9299bdefc1c0c21d7144719139a0fb5fdd9a7d2
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880030"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279327"
 ---
 # <a name="sysbackup_devices-transact-sql"></a>sys.backup_devices (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "85880030"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**nome**|**sysname**|Nome del dispositivo di backup, univoco nel set.|  
-|**type**|**tinyint**|Tipo di dispositivo di backup:<br /><br /> 2 = Disco<br /><br /> 3 = Disco floppy (obsoleto)<br /><br /> 5 = Nastro<br /><br /> 6 = Pipe (obsoleto)<br /><br /> 7 = Dispositivo virtuale (per l'utilizzo facoltativo da fornitori di terze parti)<br /><br /> In genere, vengono utilizzati solo disco (2) e nastro (5).|  
-|**type_desc**|**nvarchar(60)**|Descrizione del tipo di dispositivo di backup:<br /><br /> DISK<br /><br /> DISKETTE (obsoleto)<br /><br /> TAPE<br /><br /> PIPE (obsoleto)<br /><br /> VIRTUAL_DEVICE (per l'utilizzo facoltativo da fornitori di terze parti)<br /><br /> In genere, vengono utilizzati solo DISK e TAPE.|  
+|**type**|**tinyint**|Tipo di dispositivo di backup:<br /><br /> 2 = Disco<br /><br /> 3 = Disco floppy (obsoleto)<br /><br /> 5 = Nastro<br /><br /> 6 = Pipe (obsoleto)<br /><br /> 7 = Dispositivo virtuale (per l'utilizzo facoltativo da fornitori di terze parti)<br /><br /> 9 = URL<br /><br />In genere, vengono utilizzati solo i dischi (2) e l'URL (9).|  
+|**type_desc**|**nvarchar(60)**|Descrizione del tipo di dispositivo di backup:<br /><br /> DISK<br /><br /> DISKETTE (obsoleto)<br /><br /> TAPE<br /><br /> PIPE (obsoleto)<br /><br /> VIRTUAL_DEVICE (per l'utilizzo facoltativo da fornitori di terze parti)<br /><br /> URL <br /><br /> Vengono in genere utilizzati solo disco e URL.|  
 |**physical_name**|**nvarchar(260)**|Nome o percorso del file fisico del dispositivo di backup.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
