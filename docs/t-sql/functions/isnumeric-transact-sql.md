@@ -20,18 +20,18 @@ helpviewer_keywords:
 - valid numeric type [SQL Server]
 - checking valid numeric type
 ms.assetid: 7aa816de-529a-4f6c-a99f-4d5a9ef599eb
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c637c28f2bd090a47701b2e371fdde5cf4dba74
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 813d2b8be0797e510728e9d61f9e2bb965931e29
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82804188"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012829"
 ---
 # <a name="isnumeric-transact-sql"></a>ISNUMERIC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Determina se il tipo di un'espressione è un tipo numerico valido.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82804188"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+``` 
 ISNUMERIC ( expression )  
 ```  
   
@@ -53,44 +53,41 @@ ISNUMERIC ( expression )
 ## <a name="remarks"></a>Osservazioni  
  ISNUMERIC restituisce 1 quando l'espressione di input restituisce un tipo di dati numerico valido. In caso contrario, restituisce 0. I [tipi di dati numerici validi](../../t-sql/data-types/numeric-types.md) sono:  
 
-|||
+| Area | Tipi di dati numerici |
 |-|-|
 | [Valori numerici esatti](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) | **bigint**, **int**, **smallint**, **tinyint**, **bit** |
 | [Precisione fissa](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) | **decimal**, **numeric** |
 | [Con approssimazione](../../t-sql/data-types/float-and-real-transact-sql.md) | **float**, **real** |
 | [Valori monetari](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) | **money**, **smallmoney** |
 
-  
 > [!NOTE]  
->  ISNUMERIC restituisce 1 per alcuni caratteri non numerici, ad esempio i segni più (+) e meno (-) e i simboli di valuta validi come il segno di dollaro ($). Per un elenco completo di simboli di valuta, vedere [money e smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
+> ISNUMERIC restituisce 1 per alcuni caratteri non numerici, ad esempio i segni più (+) e meno (-) e i simboli di valuta validi come il segno di dollaro ($). Per un elenco completo di simboli di valuta, vedere [money e smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente la funzione `ISNUMERIC` viene utilizzata per restituire tutti i codici postali che non sono valori numerici.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT City, PostalCode  
 FROM Person.Address   
-WHERE ISNUMERIC(PostalCode)<> 1;  
+WHERE ISNUMERIC(PostalCode) <> 1;  
 GO  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Nell'esempio seguente la funzione `ISNUMERIC` viene utilizzata per restituire tutti i codici postali che non sono valori numerici.  
   
-```  
+```sql
 USE master;  
 GO  
-SELECT name, isnumeric(name) AS IsNameANumber, database_id, isnumeric(database_id) AS IsIdANumber   
+SELECT name, ISNUMERIC(name) AS IsNameANumber, database_id, ISNUMERIC(database_id) AS IsIdANumber   
 FROM sys.databases;  
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
- [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>Vedere anche
 
+- [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)
+- [Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
+- [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)

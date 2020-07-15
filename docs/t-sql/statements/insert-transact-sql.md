@@ -32,15 +32,15 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ad386f4137b43746eed82665715e2fef5957a79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: daf046f217c37da8868cce538b4c136f8b782d82
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82181099"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009268"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
 Consente di aggiungere una o più righe a una tabella o a una vista in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per alcuni esempi, vedere [Esempi](#InsertExamples).  
@@ -248,7 +248,7 @@ Clausola OUTPUT
  Il livello di compatibilità del database deve essere impostato su 100 o più. Per altre informazioni, vedere [Clausola OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  \<select_list>  
- Elenco delimitato da virgole che specifica le colonne restituite dalla clausola OUTPUT da inserire. Le colonne in \<select_list> devono essere compatibili con le colonne in cui vengono inseriti i valori. \<select_list> non può fare riferimento a funzioni di aggregazione né a TEXTPTR. 
+ Elenco delimitato da virgole che specifica le colonne restituite dalla clausola OUTPUT da inserire. Le colonne presenti in \<select_list> devono essere compatibili con le colonne in cui vengono inseriti i valori. \<select_list> non può fare riferimento a funzioni di aggregazione né a TEXTPTR. 
   
 > [!NOTE]  
 >  Qualsiasi variabile elencata nell'elenco SELECT fa riferimento ai rispettivi valori originali, indipendentemente da qualsiasi modifica apportata a tali valori in \<dml_statement_with_output_clause>.  

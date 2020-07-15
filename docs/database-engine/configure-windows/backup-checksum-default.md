@@ -1,5 +1,6 @@
 ---
 title: checksum di backup predefinito | Microsoft Docs
+description: Informazioni sull'opzione backup checksum default. Scoprire come usarla per attivare o disattivare il checksum del backup durante le operazioni di backup e ripristino di SQL Server.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: eef42653-85d0-4eaf-94bd-2ea1b024cd23
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: eb631212791a80fbcf32bd461a2ef476eebe8703
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8dc3e92c294b2afd1374af45c51b349443b76828
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013142"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725253"
 ---
 # <a name="backup-checksum-default"></a>checksum di backup predefinito
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Usare l'impostazione del checksum di backup predefinito per abilitare o disabilitare il checksum di backup durante il backup e ripristino.  
   

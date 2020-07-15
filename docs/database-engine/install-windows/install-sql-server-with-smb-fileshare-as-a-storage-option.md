@@ -1,5 +1,6 @@
 ---
 title: Installare SQL Server con l'archiviazione su condivisione file SMB | Microsoft Docs
+description: In SQL Server, i database di sistema e i database utente del motore di database possono essere installati con il file server SMB (Server Message Block) come opzione di archiviazione.
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b1d78acdaee97c38536969481c79fc3a94d6c9e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff25352a7aefe716c66cb01a4abafcfb9742e6ca
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67990933"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883507"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>Installare SQL Server con l'archiviazione su condivisione file SMB
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]i database di sistema (Master, Model, MSDB e TempDB) e i database utente di [!INCLUDE[ssDE](../../includes/ssde-md.md)] possono essere installati con il file server SMB (Server Message Block) come opzione di archiviazione. Questa condizione è valida per le installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome e per le installazioni del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -97,12 +98,12 @@ A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]i database di sist
     > [!NOTE]  
     >  Le autorizzazioni di condivisione Controllo completo e le autorizzazioni NTFS sulle cartelle condivise SMB devono essere limitate a: account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e utenti di Windows con ruoli di amministratore del server.  
   
-     Si consiglia per utilizzare un account di dominio come account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'account di sistema viene usato come account del servizio, concedere le autorizzazioni per l'account del computer nel formato: \<*nome_dominio*>\\<*nome_computer*>\*$*.  
+     Si consiglia per utilizzare un account di dominio come account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'account di sistema viene usato come account del servizio, concedere le autorizzazioni per l'account del computer nel formato: \<*domain_name*>\\<*nome_computer*>\*$*.  
   
     > [!NOTE]  
     >  Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario specificare l'account di dominio come account del servizio se la condivisione file SMB viene specificata come opzione di archiviazione. Con le condivisioni file SMB, è possibile specificare l'account di sistema come account del servizio solo dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
     >   
-    >  Gli account virtuali non possono essere autenticati a un percorso remoto. Per tutti gli account virtuali viene usata l'autorizzazione dell'account del computer. Eseguire il provisioning dell'account del computer nel formato \<*nome_dominio*>\\<*nome_computer*>\*$*.  
+    >  Gli account virtuali non possono essere autenticati a un percorso remoto. Per tutti gli account virtuali viene usata l'autorizzazione dell'account del computer. Eseguire il provisioning dell'account del computer nel formato \<*domain_name*>\\<*nome_computer*>\*$*.  
   
 -   L'account utilizzato per installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve disporre di autorizzazioni FULL CONTROL sulla cartella della condivisione file SMB utilizzata come directory dei dati o su qualsiasi altra cartella dei dati (directory del database utente, directory del log del database utente, directory TempDB, directory del log TempDB, directory di backup) durante l'Installazione del cluster.  
   

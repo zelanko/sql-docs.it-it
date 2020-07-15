@@ -1,5 +1,6 @@
 ---
 title: Configurazione dei protocolli di rete predefiniti di SQL Server | Microsoft Docs
+description: Visualizza i fattori che influiscono sulla possibilità di attivare o disattivare i protocolli di rete durante l'installazione di SQL Server. Scoprire come configurare i protocolli dopo l'installazione.
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - protocols [SQL Server], default settings
 - default protocols, after install
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 218389eaf76336e33d866f16c6b79ef54661be0b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9197a6838b62c970f9c8b9fad624a7229766628c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011955"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772578"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>Configurazione dei protocolli di rete predefiniti di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Per una maggiore sicurezza, per alcune nuove installazioni [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] disabilita la connettività di rete. La connettività di rete che utilizza TCP/IP non viene disabilitata se si utilizza l'edizione Enterprise, Standard, Evaluation o Workgroup oppure se è presente un'installazione precedente di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] . Per tutte le installazioni è attivato il protocollo Shared Memory, che consente le connessioni locali al server. È possibile che il servizio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser venga arrestato, in base alle condizioni e alle opzioni di installazione.
 
 Usare il nodo Configurazione di rete [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] di Gestione configurazione [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] per configurare i protocolli di rete dopo l'installazione. Usare il nodo Servizi di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] di Gestione configurazione [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] per configurare l'avvio automatico del servizio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser. Per altre informazioni, vedere [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).

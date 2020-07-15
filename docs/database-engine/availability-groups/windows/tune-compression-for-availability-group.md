@@ -1,5 +1,6 @@
 ---
 title: Ottimizzare la compressione per un gruppo di disponibilità | Microsoft Docs
+description: Informazioni su come SQL Server comprime i flussi di dati per i gruppi di disponibilità, operazione che riduce il traffico di rete, aumenta il carico della CPU e può indurre latenza.
 ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3891d30ef5bfffb19ca1d4bfcaab290e3903816b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f8af4702abe127dc0bf5b53be7618515c21cd13c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013671"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888015"
 ---
 # <a name="tune-compression-for-availability-group"></a>Ottimizzare la compressione per un gruppo di disponibilità
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 Per impostazione predefinita, SQL Server comprime i flussi di dati quando opportuno per i gruppi di disponibilità. La compressione riduce il traffico di rete, aumenta il carico della CPU e può generare latenza. Per abilitare la compressione, è necessario essere membro del ruolo predefinito del server sysadmin. La tabella seguente illustra i casi in cui SQL Server usa la compressione per i flussi di log dei gruppi di disponibilità.
 
 | Scenario | Impostazione compressione
@@ -24,6 +25,7 @@ Per impostazione predefinita, SQL Server comprime i flussi di dati quando opport
 | Replica con commit sincrono | Nessuna compressione
 | Repliche con commit asincrono | Compresso
 | Durante il seeding automatico | Nessuna compressione
+| TDE abilitato nel database  | Nessuna compressione
 
 ## <a name="trace-flags-for-availability-group-compression"></a>Flag di traccia per la compressione dei gruppi di disponibilità 
 

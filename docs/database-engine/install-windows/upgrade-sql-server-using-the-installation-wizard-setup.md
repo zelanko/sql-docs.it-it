@@ -1,5 +1,6 @@
 ---
 title: 'Aggiornamento: Installazione guidata'
+description: L'installazione guidata di SQL Server rende disponibile un unico albero delle funzionalità per l'aggiornamento sul posto dei componenti di SQL Server alla versione più recente di SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bb468aff505b4b12d2eabd64f9512c5d0a18267e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9535f71c496cdb59120ea95d62f5fa903d57dbde
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258802"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900200"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Aggiornare SQL Server usando l'Installazione guidata (programma di installazione)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 L'installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un singolo albero delle funzionalità per l'aggiornamento sul posto dei componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -97,7 +98,7 @@ L'installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
      I prerequisiti per le funzionalità selezionate vengono visualizzati nel riquadro di destra. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno installati i prerequisiti che non sono stati ancora installati durante la procedura di installazione descritta più avanti in questo argomento.  
   
     > [!NOTE]  
-    >  Se si è scelto di aggiornare le funzionalità condivise selezionando **\<Aggiorna solo le funzionalità condivise>** nella pagina **Seleziona istanza**, tutte le funzionalità condivise sono preselezionate nella pagina Selezione funzionalità. Tutti i componenti condivisi vengono aggiornati contemporaneamente.  
+    >  Se si è scelto di aggiornare le funzionalità condivise selezionando **\<Upgrade shared features only>** nella pagina **Seleziona istanza**, tutte le funzionalità condivise sono preselezionate nella pagina Selezione funzionalità. Tutti i componenti condivisi vengono aggiornati contemporaneamente.  
   
 12. Nella pagina Configurazione istanza specificare l'ID istanza per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

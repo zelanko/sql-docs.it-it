@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 08454c76591d7cfb12eff07d3a05d706bd7bfe44
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ada5b781b129b56aa7b4cee63c6649fa647f9654
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628417"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895676"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Consente di avviare o arrestare una sessione eventi oppure di modificare la configurazione di una sessione eventi.  
   
@@ -130,7 +130,7 @@ ON SERVER
 |[event_module_guid].event_package_name.predicate_source_name|Nome dell'origine del predicato globale dove:<br /><br /> -   *event_module_guid* è l'identificatore univoco globale (GUID) del modulo contenente l'evento.<br />-   *event_package_name* è il pacchetto che contiene l'oggetto del predicato.<br />-   *predicate_source_name* è definito nella vista sys.dm_xe_objects come object_type 'pred_source'.|  
 |[*event_module_guid*].*event_package_name*.*predicate_compare_name*|Nome dell'oggetto del predicato da associare all'evento, dove:<br /><br /> -   *event_module_guid* è l'identificatore univoco globale (GUID) del modulo contenente l'evento.<br />-   *event_package_name* è il pacchetto che contiene l'oggetto del predicato.<br />-   *predicate_compare_name* è un'origine globale definita nella vista sys.dm_xe_objects come object_type 'pred_compare'.|  
 |DROP EVENT \<event_specifier>|Elimina l'evento identificato da *\<event_specifier>* . \<event_specifier> deve essere valido nella sessione eventi.|  
-|ADD TARGET \<event_target_specifier>|Associa la destinazione identificata da \<event_target_specifier> alla sessione dell'evento.|
+|ADD TARGET \<event_target_specifier>|Associa la destinazione identificata da \<event_target_specifier> con la sessione dell'evento.|
 |[*event_module_guid*].*event_package_name*.*target_name*|Nome di una destinazione nella sessione dell'evento dove:<br /><br /> -   *event_module_guid* è l'identificatore univoco globale (GUID) del modulo contenente l'evento.<br />-   *event_package_name* è il pacchetto che contiene l'oggetto dell'azione.<br />-   *target_name* è l'azione. Le azioni vengono visualizzate nella vista sys.dm_xe_objects come object_type "target".|  
 |SET { *target_parameter_name*= \<value> [, ...*n*] }|Imposta un parametro di destinazione. I parametri di destinazione vengono visualizzati nella vista sys.dm_xe_object_columns come column_type 'customizable' e object_name = *target_name*.<br /><br /> **NOTA** Se si utilizza il buffer circolare come destinazione, si consiglia di impostare il parametro di destinazione max_memory su 2048 kilobyte (KB) per evitare il possibile troncamento dei dati dell'output XML. Per altre informazioni sull'uso dei diversi tipi di destinazione, vedere [Destinazioni degli eventi estesi di SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).|  
 |DROP TARGET \<event_target_specifier>|Elimina la destinazione identificata da \<event_target_specifier>. \<event_target_specifier> deve essere valido nella sessione eventi.|  

@@ -1,5 +1,6 @@
 ---
 title: Abilitare l'opzione Blocco di pagine in memoria (Windows) | Microsoft Docs
+description: Informazioni su come attivare l'opzione "Blocco di pagine in memoria". Scoprire come può migliorare le prestazioni mantenendo i dati nella memoria fisica anziché eseguirne il paging su disco.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Lock Pages in Memory option
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 8041f5f057962af79d75f121423233d3d6a3a806
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6390c4a4bb4d8ea2ed9b5e5be1712eb7e782a29b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011770"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772476"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Abilitazione dell'opzione Blocco di pagine in memoria (Windows)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Questi criteri di Windows determinano gli account autorizzati a usare un processo per mantenere i dati nella memoria fisica, impedendo al sistema di eseguire il paging dei dati nella memoria virtuale su disco.  
   
 > [!NOTE]  

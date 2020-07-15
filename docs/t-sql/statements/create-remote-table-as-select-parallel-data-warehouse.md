@@ -4,18 +4,18 @@ ms.custom: seo-dt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: jrasnick
 ms.topic: conceptual
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
 ms.author: rortloff
+ms.reviewer: jrasnick
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f5f8b817d2de14c41c32fc815dc068a7776b54e3
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ab42dfbed020840aeb90042b81266fc58cc74688
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633971"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627412"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -67,7 +67,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
  Nome o indirizzo IPv4 del server remoto. Gli indirizzi IPv6 non sono supportati. È possibile specificare un'istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel formato **Nome_computer\Nome_istanza** o **Indirizzo_IP\Nome_istanza**. Il server deve essere remoto e pertanto non può essere specificato come (local).  
   
  Numero *porta* TCP  
- Numero della porta TCP usata per la connessione. Per un'istanza di SQL Server che non è in ascolto sulla porta predefinita 1433, è possibile specificare un numero di porta TCP compreso tra 0 e 65535. Ad esempio: **ServerA, 1450** o **10.192.14.27,1435**  
+ Numero della porta TCP usata per la connessione. Per un'istanza di SQL Server che non è in ascolto sulla porta predefinita 1433, è possibile specificare un numero di porta TCP compreso tra 0 e 65535. Ad esempio: **ServerA,1450** o **10.192.14.27,1435**  
   
 > [!NOTE]  
 >  È consigliabile connettersi a un server remoto tramite indirizzo IP. A seconda della configurazione di rete, la connessione tramite nome computer potrebbe richiedere passaggi aggiuntivi perché sia possibile usare il server DNS non appliance per risolvere il nome server in modo corretto. Questo passaggio non è necessario se ci si connette con un indirizzo IP. Per altre informazioni, vedere la sezione relativa all'uso di un server d'inoltro DNS per risolvere i nomi DNS non di appliance (piattaforma di strumenti analitici) nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
@@ -123,7 +123,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 ## <a name="metadata"></a>Metadati  
  Usare [sys.dm_pdw_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md) per visualizzare lo stato della copia dei dati selezionati nel server SMP remoto. Queste informazioni sono contenute all'interno di righe di tipo PARALLEL_COPY_READER.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  CREATE REMOTE TABLE usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remota; non usa l'autenticazione di Windows.  
   
  La rete [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] connessa con l'esterno deve essere protetta tramite firewall, ad eccezione delle porte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], delle porte amministrative e delle porte di gestione.  

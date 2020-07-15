@@ -1,5 +1,6 @@
 ---
 title: Opzioni di configurazione del server SMO e DMO XPs | Microsoft Docs
+description: Informazioni su come abilitare le stored procedure estese SMO (SQL Server Management Object) in un server. Visualizzare informazioni sull'opzione di configurazione "SMO and DMO XPs".
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: bcd945ba-5d81-4124-9a2b-d87491c2a369
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a0c867d9acba6542d90f72595fa0f71ab6d62e64
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a636f58ba3f7e9e178489e87af4dc3aa777fdbab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026048"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773614"
 ---
 # <a name="smo-and-dmo-xps-server-configuration-option"></a>Opzioni di configurazione del server SMO e DMO XPs
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   L'opzione SMO and DMO XPs consente di abilitare le stored procedure estese SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object) nel server.  
   

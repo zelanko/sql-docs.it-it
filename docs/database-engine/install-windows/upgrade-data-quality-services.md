@@ -1,7 +1,8 @@
 ---
 title: Aggiornare Data Quality Services | Microsoft Docs
+description: Questo articolo offre informazioni su come aggiornare l'installazione esistente di SQL Server Data Quality Services (DQS).
 ms.custom: ''
-ms.date: 07/24/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,16 +11,16 @@ ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fab545b34f257563466ec2f64911cdfaceca9456
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2ebd08b11c99f8b5de54be9fc882c1fd2751afab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934851"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900254"
 ---
 # <a name="upgrade-data-quality-services"></a>Aggiornare Data Quality Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Questo articolo offre informazioni su come aggiornare l'installazione esistente di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Services (DQS). Come parte dell'aggiornamento di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server, è inoltre necessario aggiornare lo schema dei database DQS.  
   
@@ -58,18 +59,18 @@ Questo articolo offre informazioni su come aggiornare l'installazione esistente 
   
     2.  Al prompt dei comandi impostare la directory sul percorso in cui è disponibile il file DQSInstaller.exe. Per l'istanza predefinita di SQL Server, il file DQSinstaller.exe è disponibile in C:\Programmi\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn:  
 
-      >[!NOTE]
-      >Nel percorso della cartella, sostituire [nn] con il numero della versione di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].
-      >- Per SQL Server 2016: 13
-      >- Per SQL Server 2017: 14
-
-        ```  
+        >[!NOTE]
+        >Nel percorso della cartella, sostituire [nn] con il numero della versione di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].
+        >- Per SQL Server 2016: 13
+        >- Per SQL Server 2017: 14
+    
+        ```console
         cd C:\Program Files\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn  
         ```  
   
     3.  Al prompt dei comandi digitare il comando seguente e premere INVIO:  
   
-        ```  
+        ```console
         dqsinstaller.exe -upgrade  
         ```  
   
@@ -84,7 +85,7 @@ Questo articolo offre informazioni su come aggiornare l'installazione esistente 
   
 2.  Eseguire la query riportata di seguito:  
   
-    ```  
+    ```sql
     SELECT * FROM DQS_MAIN.dbo.A_DB_VERSION WHERE STATUS=2;  
     SELECT * FROM DQS_PROJECTS.dbo.A_DB_VERSION WHERE STATUS=2;  
     ```  
@@ -93,8 +94,8 @@ Questo articolo offre informazioni su come aggiornare l'installazione esistente 
   
     |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATO|ERRORE|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
-    |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMINIO\NomeUtente>|2||  
-    |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMINIO\NomeUtente>|2||  
+    |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMAIN\UserName>|2||  
+    |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMAIN\UserName>|2||  
   
 ## <a name="see-also"></a>Vedere anche  
  [Installare Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   

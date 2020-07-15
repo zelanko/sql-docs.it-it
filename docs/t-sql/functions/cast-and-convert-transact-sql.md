@@ -32,18 +32,18 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c11afeedcc46f53b57b90e7e5b117c13af188da1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1ce067a0ade3a84aed090532a92064db00a8bc9d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823336"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002238"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST e CONVERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Queste funzioni convertono un'espressione da un tipo di dati a un altro.  
 
@@ -165,7 +165,7 @@ Se il tipo di dati di *expression* è **binary(n)** , **char(n)** , **varbinary(
 |valore|Output|  
 |---|---|
 |**0** (predefinito)|Converte caratteri ASCII in byte binari e viceversa. Ogni carattere o byte viene convertito in base allo schema 1:1.<br /><br /> Se *data-type* è binario, a sinistra del risultato vengono aggiunti i caratteri 0x.|  
-|**1**, **2**|Se *data_tye* è binario, l'espressione deve essere un'espressione di caratteri. *expression* deve includere un numero **pari** di cifre esadecimali (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). Se *style* è impostato su 1, i primi due caratteri dell'espressione devono essere 0x. Se l'espressione contiene un numero di caratteri dispari o se un carattere qualsiasi non è valido, viene generato un errore.<br /><br /> Se la lunghezza dell'espressione convertita supera la lunghezza di *data_type*, il risultato viene troncato a destra.<br /><br /> A *data_type* a lunghezza fissa maggiori del risultato convertito vengono aggiunti zeri a destra del risultato.<br /><br /> Un *data_type* di tipo carattere richiede un'espressione binaria. Ogni carattere binario viene convertito in due caratteri esadecimali. Se la lunghezza dell'espressione convertita supera la lunghezza di *data_type*, il risultato viene troncato a destra.<br /><br /> Se *data_type* è un tipo di carattere di dimensioni fisse e la lunghezza del risultato convertito è inferiore a quella di *data_type*, a destra dell'espressione convertita vengono aggiunti spazi per mantenere un numero pari di cifre esadecimali.<br /><br /> Se *style* è uguale a 1, a sinistra del risultato convertito verranno aggiunti i caratteri 0x.|  
+|**1**, **2**|Se *data_tye* è binario, l'espressione deve essere un'espressione di caratteri. *expression* deve includere un numero **pari** di cifre esadecimali (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). Se *style* è impostato su 1, i primi due caratteri dell'espressione devono essere 0x. Se l'espressione contiene un numero di caratteri dispari o se un carattere qualsiasi non è valido, viene generato un errore.<br /><br /> Se la lunghezza dell'espressione convertita supera la lunghezza di *data_type*, il risultato viene troncato a destra.<br /><br /> A *data_type* a lunghezza fissa maggiori del risultato convertito vengono aggiunti zeri a destra del risultato.<br /><br /> Un *data_type* di tipo carattere richiede un'espressione binaria. Ogni carattere binario viene convertito in due caratteri esadecimali. Se la lunghezza dell'espressione convertita supera la lunghezza di *data_type*, il risultato viene troncato a destra.<br /><br /> Se *data_type* è un tipo di carattere di dimensioni fisse e la lunghezza del risultato convertito è inferiore a quella di *data_type*, a destra dell'espressione convertita vengono aggiunti spazi per mantenere un numero pari di cifre esadecimali.<br /><br /> Se *style* è uguale a 2, a sinistra del risultato convertito verranno aggiunti i caratteri 0x.|  
   
 ## <a name="implicit-conversions"></a>Conversioni implicite
 Per le conversioni implicite non è necessario specificare la funzione CAST o la funzione CONVERT. Per le conversioni esplicite è necessario specificare la funzione CAST o la funzione CONVERT. Nella figura seguente vengono illustrate le conversioni di tipi di dati esplicite e implicite consentite per i tipi di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questi includono **bigint**, **sql_variant** e **xml**. Non è possibile eseguire una conversione implicita in un'assegnazione dal tipo di dati **sql_variant**, ma è possibile eseguire una conversione implicita verso il tipo di dati **sql_variant**.
@@ -302,13 +302,15 @@ Se si esegue una conversione di tipi di dati in cui il tipo di destinazione ha u
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un messaggio di errore quando si convertono dati **char**, **nchar**, **varchar** o **nvarchar** non numerici in **int**, **float**, **numeric** o **decimal**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un errore anche quando una stringa vuota (" ") viene convertita in **numeric** o **decimal**.
   
 ## <a name="certain-datetime-conversions-are-nondeterministic"></a>Alcune conversioni di data/ora sono non deterministiche
-Nella tabella seguente vengono elencati gli stili per i quali la conversione da stringa al tipo datetime è di tipo non deterministico.
+
+Gli stili per cui la conversione da stringa al tipo datetime è di tipo non deterministico sono i seguenti:
   
-|||  
-|-|-|  
-|Tutti gli stili inferiori a 100<sup>1</sup>|106|  
-|107|109|  
-|113|130|  
+- Tutti gli stili inferiori a 100<sup>1</sup>
+- 106  
+- 107
+- 109
+- 113
+- 130  
   
 <sup>1</sup> Ad eccezione degli stili 20 e 21
 

@@ -1,5 +1,6 @@
 ---
 title: Opzioni di configurazione del server (SQL Server) | Microsoft Docs
+description: Informazioni su come gestire e ottimizzare le risorse di SQL Server. Scoprire le opzioni di configurazione disponibili, le possibili impostazioni, i valori predefiniti e i requisiti di riavvio.
 ms.custom: ''
 ms.date: 04/13/2017
 ms.prod: sql
@@ -27,17 +28,17 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 - administering SQL Server, configuration options
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c42c9501772972c523d5635a159fcdeb54bf107b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 73a75a500c0833099bc2cdd146fb8f3f9978c42a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75001983"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715574"
 ---
 # <a name="server-configuration-options-sql-server"></a>Opzioni di configurazione del server (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   È possibile gestire e ottimizzare le risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite le opzioni di configurazione, utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oppure la stored procedure di sistema sp_configure. Le opzioni di configurazione del server utilizzate più di frequente sono disponibili in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Tramite la stored procedure sp_configure è possibile accedere a tutte le opzioni di configurazione. Prima di impostare tali opzioni è importante valutare con attenzione i possibili effetti sul sistema. Per altre informazioni, vedere [Visualizzare o modificare le proprietà del server &#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).  
   
@@ -74,6 +75,8 @@ Le opzioni a configurazione automatica sono opzioni che vengono modificate autom
     |[access check cache bucket count](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
     |[access check cache quota](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
     |[ad hoc distributed queries](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md) (A)|0|1|0|  
+    |[ADR cleaner retry timeout (min)](../../database-engine/configure-windows/adr-cleaner-retry-timeout-configuration-option.md)<br><br> Opzione introdotta in SQL Server 2019|0|32767|15|  
+    |[ADR Preallocation Factor](../../database-engine/configure-windows/adr-preallocation-factor-server-configuration-option.md)<br><br> Opzione introdotta in SQL Server 2019|0|32767|4|  
     |[affinity I/O mask](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md) (A, RR)|-2147483648|2147483647|0|  
     |[affinity64 I/O mask](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md) (A, disponibile solo sulla versione a 64 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])|-2147483648|2147483647|0|  
     |[affinity mask](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md) (A)|-2147483648|2147483647|0|  
@@ -83,7 +86,7 @@ Le opzioni a configurazione automatica sono opzioni che vengono modificate autom
     |[automatic soft-NUMA disabled](soft-numa-sql-server.md)|0|1|0|  
     |[checksum di backup predefinito](../../database-engine/configure-windows/backup-checksum-default.md)|0|1|0|  
     |[backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|1|0| 
-    |[blocked process threshold](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
+    |[blocked process threshold](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|5|86400|0|  
     |[c2 audit mode](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md) (A, RR)|0|1|0|  
     |[clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)|0|1|0|  
     |[clr strict security](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] e versioni successive).|0|1|0|  
@@ -114,7 +117,7 @@ Le opzioni a configurazione automatica sono opzioni che vengono modificate autom
     |[max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
     |[max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 1024 è il valore massimo consigliato per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 32 bit, 2048 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 64 bit. **Nota:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] è stata l'ultima versione disponibile per i sistemi operativi a 32 bit.|0<br /><br /> Il valore 0 consente di configurare automaticamente il numero massimo di thread di lavoro in base al numero di processori, secondo la formula (256+( *\<processori>* -4) * 8) per le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 32 bit e (512 + ( *\<processori>* - 4) * 8) per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 64 bit. **Nota:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] è stata l'ultima versione disponibile per i sistemi operativi a 32 bit.|  
+    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 1024 è il valore massimo consigliato per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 32 bit, 2048 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 64 bit. **Nota:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] è stata l'ultima versione disponibile per i sistemi operativi a 32 bit.|0<br /><br /> Il valore 0 consente di configurare automaticamente il valore di max worker threads in base al numero di processori, secondo la formula (256 + ( *\<processors>* -4) * 8) per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 32 bit e (512 + ( *\<processors>* - 4) * 8) per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 64 bit. **Nota:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] è stata l'ultima versione disponibile per i sistemi operativi a 32 bit.|  
     |[media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
     |[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  
@@ -124,6 +127,7 @@ Le opzioni a configurazione automatica sono opzioni che vengono modificate autom
     |[open objects](../../database-engine/configure-windows/open-objects-server-configuration-option.md) (A, RR, obsoleto)|0|2147483647|0|  
     |[optimize for ad hoc workloads](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
     |[PH_timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
+    |[polybase network encryption](../../relational-databases/polybase/polybase-installation.md#enable) | 0|1 |1
     |[polybase enabled](../../relational-databases/polybase/polybase-installation.md#enable) (RR) **Si applica a**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)])|0|1|0|
     |[precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A)|0|1|0|  
     |[priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) (A, RR)|0|1|0|  

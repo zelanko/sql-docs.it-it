@@ -1,6 +1,6 @@
 ---
 title: Reporting Services con i gruppi di disponibilità
-description: Informazioni su come configurare SQL Server Reporting Services (SSRS) con i gruppi di disponibilità Always On.
+description: Informazioni su come configurare Reporting Services con i gruppi di disponibilità Always On in SQL Server. Le funzionalità supportate sono diverse per i diversi scenari.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 09a19680d9fff6a8d907dd17f3399ff632cba19b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2aec52249b366eac2057fe8cde5e3829e5125a5d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243617"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893104"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services con i gruppi di disponibilità AlwaysOn (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   In questo argomento sono contenute informazioni sulla configurazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per l'utilizzo con i [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. I database per le origini dati del report, i database del server di report e la progettazione report rappresentano i tre scenari per l'utilizzo di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . La funzionalità supportata e la configurazione richiesta sono diverse per i tre scenari.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "75243617"
   
 -   **Modalità nativa:** usare [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)] per le origini dati condivise e i report già pubblicati in un server di report in modalità nativa.  
   
--   **Modalità SharePoint:** utilizzare le pagine di configurazione SharePoint all'interno delle librerie del documento per i report già pubblicati in un server SharePoint.  
+-   **Modalità SharePoint:** usare le pagine di configurazione di SharePoint all'interno delle raccolte di documenti per i report già pubblicati in un server SharePoint.  
   
 -   **Progettazione report:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] al momento della creazione di nuovi report. Per altre informazioni, vedere la sezione 'Progettazione report' in questo argomento.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "75243617"
   
 -   Per altre informazioni sui listener del gruppo di continuità, vedere [Creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
- **Considerazioni:** le repliche secondarie subiranno dei ritardi nella ricezione di modifiche di dati rispetto alla replica primaria. I seguenti fattori possono influenzare la latenza di aggiornamento tra la replica primaria e quella secondaria:  
+ **Considerazioni:** le repliche secondarie subiranno ritardi nella ricezione di modifiche di dati dalla replica primaria. I seguenti fattori possono influenzare la latenza di aggiornamento tra la replica primaria e quella secondaria:  
   
 -   Numero di repliche secondarie. Aumenti di ritardo per ogni replica secondaria aggiunta alla configurazione.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "75243617"
   
 -   **Anteprima locale:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] e [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] usano .Net Framework 4.0 e supportano le proprietà della stringa di connessione di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
--   **Anteprima modalità server o remota:** se viene visualizzato un messaggio di errore simile a quello riportato di seguito dopo la pubblicazione dei report nel server di report o dopo l'uso dell'anteprima in [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)], questo significa che si sta visualizzando l'anteprima dei report nel server di report e che l'hotfix di .Net Framework 3.5 SP1 per i [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] non è stato installato nel server di report.  
+-   **Anteprima modalità server o remota:** se viene visualizzato un messaggio di errore simile a quello seguente dopo la pubblicazione dei report nel server di report o dopo l'uso dell'anteprima in [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)], questo significa che si sta visualizzando l'anteprima dei report nel server di report e che l'hotfix di .NET Framework 3.5 SP1 per i [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] non è stato installato nel server di report.  
   
 > **Messaggio di errore:** "Parola chiave non supportata 'applicationintent'"  
   

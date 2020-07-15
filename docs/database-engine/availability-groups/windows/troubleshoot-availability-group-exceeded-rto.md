@@ -1,5 +1,6 @@
 ---
 title: 'Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RTO (SQL Server) | Microsoft Docs'
+description: Informazioni su come risolvere i problemi relativi a un failover in un gruppo di disponibilità Always On quando il failover richiede più tempo dell'obiettivo del tempo di ripristino in SQL Server.
 ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 959361d64316618ce6b7ccc997f7ef958b1259f5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013739"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888026"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RTO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Dopo un failover automatico o un failover manuale pianificato senza perdita di dati in un gruppo di disponibilità, è possibile che il tempo di failover superi l'obiettivo tempo di ripristino (RTO, Recovery Time Objective). Oppure, quando si stima il tempo di failover di una replica secondaria con commit asincrono (ad esempio un partner di failover automatico) tramite il metodo in [Monitor Performance for Always On Availability Groups](monitor-performance-for-always-on-availability-groups.md) (Monitorare le prestazioni per i gruppi di disponibilità Always On), è possibile scoprire che supera l'obiettivo RTO.  
   
  Se il failover automatico non è ancora completato, vedere [Risoluzione dei problemi di failover automatico in ambienti SQL Server 2012 AlwaysOn](https://support.microsoft.com/kb/2833707).  

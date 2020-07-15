@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 61fe5d7ffb5dfc6ec98f6d5350eff396deaa0312
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f468697c165eefca98e5d5d7492b9a3d5eab25e8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558326"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897271"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurare un'istanza del cluster di failover - SQL Server in Linux (RHEL)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Un'istanza del cluster di failover su disco condiviso a due nodi di SQL Server fornisce ridondanza a livello di server per la disponibilità elevata. In questa esercitazione si apprenderà come creare un'istanza del cluster di failover a due nodi di SQL Server in Linux. I passaggi specifici che si completeranno includono:
 
@@ -35,7 +35,7 @@ Questo articolo illustra come creare un'istanza del cluster di failover su disco
 
 Per informazioni di carattere generale, vedere [Istanza del cluster di failover di SQL Server in Linux](sql-server-linux-shared-disk-cluster-concepts.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per completare lo scenario end-to-end seguente, sono necessari due computer per distribuire il cluster a due nodi e un altro server per la risorsa di archiviazione. I passaggi seguenti illustrano come verranno configurati questi server.
 
@@ -184,7 +184,7 @@ Questo esempio creerà un'istanza del cluster di failover nel gruppo NewLinFCIGr
 
     \<LogicalVolumeName> è il nome del volume logico creato  
 
-    \<FolderToMountiSCSIDIsk> è la cartella in cui montare il disco (per i database di sistema e la posizione predefinita, sarà /var/opt/mssql/data)
+    \<FolderToMountiSCSIDIsk> è la cartella in cui montare il disco (per i database di sistema e il percorso predefinito, sarà /var/opt/mssql/data)
 
     \<FileSystemType> sarà EXT4 o XFS a seconda della formattazione scelta e degli elementi supportati dalla distribuzione. 
 
@@ -201,7 +201,7 @@ Questo esempio creerà un'istanza del cluster di failover nel gruppo NewLinFCIGr
 
     \<FolderOnNFSServer> è il nome della condivisione NFS
 
-    \<FolderToMountNFSShare> è la cartella in cui montare il disco (per i database di sistema e la posizione predefinita, sarà /var/opt/mssql/data)
+    \<FolderToMountNFSShare> è la cartella in cui montare il disco (per i database di sistema e il percorso predefinito, sarà /var/opt/mssql/data)
 
     Di seguito è riportato un esempio:
 
@@ -223,13 +223,13 @@ Questo esempio creerà un'istanza del cluster di failover nel gruppo NewLinFCIGr
     
     \<UserName> è il nome dell'utente con cui accedere alla condivisione
 
-    \<Password> è la password associata all'utente
+    \<Password> è la password dell'utente
 
     \<ADDomain> è il dominio Active Directory Domain Services (se applicabile quando si usa una condivisione SMB basata su Windows Server)
 
-    \<mssqlUID> è l'ID dell'utente mssql
+    \<mssqlUID> è l'UID dell'utente mssql
 
-    \<mssqlGID> è l'identificatore di gruppo dell'utente mssql
+    \<mssqlGID> è il GID dell'utente mssql
 
     \<RGName> è il nome del gruppo di risorse
  
@@ -255,7 +255,7 @@ Questo esempio creerà un'istanza del cluster di failover nel gruppo NewLinFCIGr
     sudo pcs resource create FCIResourceName ocf:mssql:fci op defaults timeout=60s --group RGName
     ```
 
-    \<FCIResourceName> non è solo il nome della risorsa, ma anche il nome descrittivo associato all'istanza del cluster di failover, che gli utenti e le applicazioni useranno per connettersi. 
+    \<FCIResourceName> non è solo il nome della risorsa, ma anche il nome descrittivo associato all'istanza del cluster di failover che gli utenti e le applicazioni useranno per connettersi. 
 
     \<RGName> è il nome del gruppo di risorse.
  

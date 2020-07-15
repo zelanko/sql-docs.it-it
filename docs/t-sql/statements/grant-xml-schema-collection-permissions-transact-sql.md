@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2c7e46b1225c63bc0c84b9474abed55a89896571
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c2ad1a4191a1ea3bbba6bcb34ee33dcdc89c94ed
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634173"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897636"
 ---
 # <a name="grant-xml-schema-collection-permissions-transact-sql"></a>GRANT - autorizzazioni per raccolte di XML Schema (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Concede le autorizzazioni per una raccolta di XML Schema.   
   
@@ -62,12 +62,12 @@ GRANT permission  [ ,...n ] ON
  ON XML SCHEMA COLLECTION :: [ *schema_name*. ] *XML_schema_collection_name*  
  Specifica la raccolta di XML Schema per cui viene concessa l'autorizzazione. Il qualificatore di ambito (::) è obbligatorio. Se si omette *schema_name*, verrà usato lo schema predefinito. Se si specifica *schema_name*, il qualificatore di ambito dello schema (.) è obbligatorio.  
   
- \<database_principal> Specifica l'entità di sicurezza a cui viene concessa l'autorizzazione.  
+ \<database_principal> Specifica l'entità a cui viene concessa l'autorizzazione.  
   
  WITH GRANT OPTION  
  Indica che l'entità potrà inoltre concedere l'autorizzazione specificata ad altre entità.  
   
- AS \<database_principal> Specifica un'entità dalla quale l'entità che esegue la query ottiene il diritto di concedere l'autorizzazione.  
+ AS \<database_principal>Specifica un'entità dalla quale l'entità che esegue la query ottiene il diritto di concedere l'autorizzazione.  
   
  *Database_user*  
  Specifica un utente di database.  

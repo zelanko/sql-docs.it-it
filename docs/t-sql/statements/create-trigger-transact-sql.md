@@ -28,15 +28,15 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 ms.reviewer: mathoma
-ms.openlocfilehash: b272bed73c4b51070fd1b5c9840f39db210501ab
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 70a32b0f5c3a80d4d3c5af0cad7adcd1e15f5088
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635537"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766951"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 Crea un trigger DML, DDL o LOGON. Un trigger è una stored procedure di tipo speciale che viene eseguita automaticamente quando si verifica un evento nel server di database. I trigger DML vengono eseguiti quando un utente prova a modificare i dati tramite un evento DML (Data Manipulation Language). Gli eventi DML sono istruzioni INSERT, UPDATE o DELETE eseguite su una tabella o una vista. Questi trigger vengono attivati quando viene generato un evento valido, indipendentemente dal fatto che le righe della tabella siano interessate o meno. Per altre informazioni, vedere [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
@@ -264,7 +264,8 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile aggior
   
 Per i trigger sulle tabelle ottimizzate per la memoria, un blocco ATOMIC è l'unica istruzione *sql_statement* consentita al livello superiore. L'unico codice T-SQL consentito all'interno del blocco ATOMIC è quello consentito nelle procedure native.  
   
-\< method_specifier > **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
+\< method_specifier > 
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
 Per un trigger CLR, specifica il metodo di un assembly da associare al trigger. Il metodo non deve accettare nessun argomento e restituire void. *class_name* deve essere un identificatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido e deve esistere come classe nell'assembly con visibilità dell'assembly. Se alla classe è stato assegnato un nome completo con lo spazio dei nomi le cui parti sono separate da '.', il nome della classe deve essere delimitato tramite [ ] o " ". La classe non può essere nidificata.  
   

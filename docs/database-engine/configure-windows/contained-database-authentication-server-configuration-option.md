@@ -1,5 +1,6 @@
 ---
 title: Opzione di configurazione del server contained database authentication | Microsoft Docs
+description: Informazioni sull'opzione "contained database authentication". Scoprire come attivarla in modo che sia possibile collegare database indipendenti al motore di database di SQL Server.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - contained database, enabling
 - contained database authentication option
 ms.assetid: b80768d2-ac20-4035-a335-d9adb74b3f6e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: f571690b4af27d4099e0750eeacedcafd943f1fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 29439e7957ad9c6563a282e9a4264a5f2d1f5c5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012121"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772606"
 ---
 # <a name="contained-database-authentication-server-configuration-option"></a>Opzione di configurazione del server contained database authentication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Utilizzare l'opzione **contained database authentication** per abilitare database indipendenti nell'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   

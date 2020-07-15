@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2122954c2ce126441eba6d5d05db69e9a8bfa30e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4b4eb7bcfc5711d041a354f4187e506ee130a0ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75952443"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706033"
 ---
 # <a name="output-clause-transact-sql"></a>Clausola OUTPUT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Restituisce le informazioni da (o le espressioni basate su) ogni riga interessata da un'istruzione INSERT, UPDATE, DELETE o MERGE. Questi risultati possono essere restituiti all'applicazione di elaborazione per l'utilizzo nei messaggi di errore, l'archiviazione e altri scopi simili dell'applicazione. I risultati possono anche essere inseriti in una tabella o in una variabile di tabella. Inoltre, è possibile acquisire i risultati di una clausola OUTPUT in un'istruzione nidificata INSERT, UPDATE, DELETE o MERGE e inserire tali risultati in una vista o tabella di destinazione.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75952443"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
   
 <OUTPUT_CLAUSE> ::=  
 {  
@@ -136,7 +136,7 @@ DELETE Sales.ShoppingCartItem
  Riferimento di colonna esplicito. Qualsiasi riferimento alla tabella che viene modificata deve essere qualificato correttamente tramite il prefisso INSERTED o DELETED in base alle esigenze, ad esempio: INSERTED **.** _column\_name_.  
   
  $action  
- È disponibile solo per l'istruzione MERGE. Specifica una colonna di tipo **nvarchar(10)** nella clausola OUTPUT in un'istruzione MERGE che restituisce uno dei tre valori per ogni riga: 'INSERT', 'UPDATE' o 'DELETE', secondo l'azione eseguita sulla riga.  
+ È disponibile solo per l'istruzione MERGE. Specifica una colonna di tipo **nvarchar(10)** nella clausola OUTPUT in un'istruzione MERGE che restituisce uno dei tre valori per ogni riga: 'INSERT', 'UPDATE' o 'DELETE', a seconda dell'azione eseguita su quella riga.  
   
 ## <a name="remarks"></a>Osservazioni  
  La clausola OUTPUT \<dml_select_list> e la clausola OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } possono essere definite in un'unica istruzione INSERT, UPDATE, DELETE o MERGE.  

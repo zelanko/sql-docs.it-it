@@ -5,20 +5,20 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 08/28/2017
+ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e10f354a8f0af2467a9519a794995043864a4cd6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abe2613d421e07107c6ce81b18f5f9f83c8fe66d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558584"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897298"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurare un'istanza del cluster di failover - iSCSI - SQL Server in Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Questo articolo illustra come configurare la risorsa di archiviazione iSCSI per un'istanza del cluster di failover in Linux. 
 
@@ -120,7 +120,7 @@ Per altre informazioni sull'iniziatore iSCSI per le distribuzioni supportate, fa
     sudo lvcreate -Lsize -n <LogicalVolumeName> <VolumeGroupName>
     ```
     
-    \<size> è la dimensione del volume da creare e può essere specificata con G (gigabyte), T (terabyte) e così via,\<LogicalVolumeName> è il nome del volume logico e \<VolumeGroupName> è il nome del gruppo di volumi del passaggio precedente. 
+    \<size> è la dimensione del volume da creare e può essere specificata in G (gigabyte), T (terabyte) e così via. \<LogicalVolumeName> è il nome del volume logico e \<VolumeGroupName> è il nome del gruppo di volumi del passaggio precedente. 
 
     Nell'esempio seguente viene creato un volume da 25 GB.
  
@@ -138,208 +138,209 @@ Per altre informazioni sull'iniziatore iSCSI per le distribuzioni supportate, fa
 
 12. Per i database di sistema o qualsiasi altro elemento archiviato nel percorso dati predefinito, seguire questa procedura. In caso contrario, andare al passaggio 13.
 
-   *    Verificare che SQL Server venga arrestato nel server su cui si sta lavorando.
+   * Verificare che SQL Server venga arrestato nel server su cui si sta lavorando.
 
-    ```bash
-    sudo systemctl stop mssql-server
-    sudo systemctl status mssql-server
-    ```
-
-   *    Eseguire il comando per operare come utente con privilegi avanzati. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
-
-    ```bash
-    sudo -i
-    ```
-
-   *    Eseguire il comando per operare come utente mssql. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
-
-    ```bash
-    su mssql
-    ```
-
-   *    Creare una directory temporanea per archiviare i file di dati e di log di SQL Server. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
-
-    ```bash
-    mkdir <TempDir>
-    ```
-
-    \<TempDir> è il nome della cartella. L'esempio seguente crea una cartella denominata /var/opt/mssql/TempDir.
-
-    ```bash
-    mkdir /var/opt/mssql/TempDir
-    ```
+        ```bash
+        sudo systemctl stop mssql-server
+        sudo systemctl status mssql-server
+        ```
     
-   *    Copiare i file di dati e di log di SQL Server nella directory temporanea. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
+   * Eseguire il comando per operare come utente con privilegi avanzati. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
 
-    ```bash
-    cp /var/opt/mssql/data/* <TempDir>
-    ```
-
-    \<TempDir> è il nome della cartella del passaggio precedente.
+        ```bash
+        sudo -i
+        ```
     
-   *    Verificare che i file si trovino nella directory.
+   * Eseguire il comando per operare come utente mssql. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
 
-    ```bash
-    ls \<TempDir>
-    ```
-    \<TempDir> è il nome della cartella del passaggio d.
+        ```bash
+        su mssql
+        ```
+    
+   * Creare una directory temporanea per archiviare i file di dati e di log di SQL Server. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
 
-   *    Eliminare i file dalla directory di dati di SQL Server esistente. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
+        ```bash
+        mkdir <TempDir>
+        ```
+    
+        \<TempDir> è il nome della cartella. L'esempio seguente crea una cartella denominata /var/opt/mssql/TempDir.
 
-    ```bash
-    rm - f /var/opt/mssql/data/*
-    ```
+        ```bash
+        mkdir /var/opt/mssql/TempDir
+        ```
+        
+   * Copiare i file di dati e di log di SQL Server nella directory temporanea. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
 
-   *    Verificare che i file siano stati eliminati. Nell'immagine seguente viene illustrato un esempio dell'intera sequenza da c a h.
+        ```bash
+        cp /var/opt/mssql/data/* <TempDir>
+        ```
+    
+        \<TempDir> è il nome della cartella del passaggio precedente.
+    
+   * Verificare che i file si trovino nella directory.
 
-    ```bash
-    ls /var/opt/mssql/data
-    ```
-
-    ![45-CopyMove][8]
+        ```bash
+        ls \<TempDir>
+        ```
  
-   *    Digitare `exit` per tornare all'utente ROOT.
+        \<TempDir> è il nome della cartella del passaggio d.
 
-   *    Montare il volume logico iSCSI nella cartella di dati di SQL Server. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
+   * Eliminare i file dalla directory di dati di SQL Server esistente. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
 
-    ```bash
-    mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
-    ``` 
+        ```bash
+        rm - f /var/opt/mssql/data/*
+        ```
+    
+   * Verificare che i file siano stati eliminati. Nell'immagine seguente viene illustrato un esempio dell'intera sequenza da c a h.
 
-    \<VolumeGroupName> è il nome del gruppo di volumi e \<LogicalVolumeName> è il nome del volume logico creato. La sintassi di esempio seguente corrisponde al gruppo di volumi e al volume logico del comando precedente.
+        ```bash
+        ls /var/opt/mssql/data
+        ```
+    
+        ![45-CopyMove][8]
 
-    ```bash
-    mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
-    ``` 
+   * Digitare `exit` per tornare all'utente ROOT.
 
-   *    Modificare il proprietario del montaggio impostandolo su mssql. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
+   * Montare il volume logico iSCSI nella cartella di dati di SQL Server. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
 
-    ```bash
-    chown mssql /var/opt/mssql/data
-    ```
+        ```bash
+        mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
+        ```
 
-   *    Modificare la proprietà del gruppo del montaggio impostandolo su mssql. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
+        \<VolumeGroupName> è il nome del gruppo di volumi e \<LogicalVolumeName> è il nome del volume logico creato. La sintassi di esempio seguente corrisponde al gruppo di volumi e al volume logico del comando precedente.
 
-    ```bash
-    chgrp mssql /var/opt/mssql/data
-    ``` 
+        ```bash
+        mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
+        ```
 
-   *    Eseguire il comando per operare come utente mssql. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
+   * Modificare il proprietario del montaggio impostandolo su mssql. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
 
-    ```bash
-    su mssql
-    ``` 
+        ```bash
+        chown mssql /var/opt/mssql/data
+        ```
 
-   *    Copiare i file dalla directory temporanea /var/opt/mssql/data. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
+   * Modificare la proprietà del gruppo del montaggio impostandolo su mssql. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
 
-    ```bash
-    cp /var/opt/mssql/TempDir/* /var/opt/mssql/data
-    ``` 
+        ```bash
+        chgrp mssql /var/opt/mssql/data
+        ```
 
-   *    Verificare che i file siano presenti.
+   * Eseguire il comando per operare come utente mssql. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
 
-    ```bash
-    ls /var/opt/mssql/data
-    ``` 
- 
+        ```bash
+        su mssql
+        ``` 
+
+   * Copiare i file dalla directory temporanea /var/opt/mssql/data. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
+
+        ```bash
+        cp /var/opt/mssql/TempDir/* /var/opt/mssql/data
+        ``` 
+    
+   * Verificare che i file siano presenti.
+
+        ```bash
+        ls /var/opt/mssql/data
+        ``` 
+
    *    Immettere `exit` per non operare come mssql.
-    
+
    *    Immettere `exit` per non operare come root.
 
    *    Avviare SQL Server. Se tutti gli elementi sono stati copiati correttamente e la sicurezza è applicata correttamente, SQL Server deve risultare avviato.
 
-    ```bash
-    sudo systemctl start mssql-server
-    sudo systemctl status mssql-server
-    ``` 
- 
+        ```bash
+        sudo systemctl start mssql-server
+        sudo systemctl status mssql-server
+        ``` 
+
    *    Arrestare SQL Server e verificare che l'operazione sia stata eseguita.
 
-    ```bash
-    sudo systemctl stop mssql-server
-    sudo systemctl status mssql-server
-    ``` 
+        ```bash
+        sudo systemctl stop mssql-server
+        sudo systemctl status mssql-server
+        ``` 
 
 13. Per elementi diversi dai database di sistema, ad esempio i database utente o i backup, seguire questa procedura. Se si usa solo il percorso predefinito, andare al passaggio 14.
 
    *    Eseguire il comando per operare come utente con privilegi avanzati. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
 
-    ```bash
-    sudo -i
-    ```
+        ```bash
+        sudo -i
+        ```
 
    *    Creare una cartella che verrà usata da SQL Server. 
 
-    ```bash
-    mkdir <FolderName>
-    ```
+        ```bash
+        mkdir <FolderName>
+        ```
 
-    \<FolderName> è il nome della cartella. Se non si trova nella posizione corretta, è necessario specificare il percorso completo della cartella. L'esempio seguente crea una cartella denominata /var/opt/mssql/userdata.
+        \<FolderName> è il nome della cartella. Se non si trova nella posizione corretta, è necessario specificare il percorso completo della cartella. L'esempio seguente crea una cartella denominata /var/opt/mssql/userdata.
 
-    ```bash
-    mkdir /var/opt/mssql/userdata
-    ```
+        ```bash
+        mkdir /var/opt/mssql/userdata
+        ```
 
    *    Montare il volume logico iSCSI nella cartella creata nel passaggio precedente. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
-    
-    ```bash
-    mount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
-    ```
 
-    \<VolumeGroupName> è il nome del gruppo di volumi, \<LogicalVolumeName> è il nome del volume logico creato e \<FolderName> è il nome della cartella. Di seguito è riportata la sintassi di esempio.
+        ```bash
+        mount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
+        ```
 
-    ```bash
-    mount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
-    ```
+        \<VolumeGroupName> è il nome del gruppo di volumi, \<LogicalVolumeName> è il nome del volume logico creato e \<FolderName> è il nome della cartella. Di seguito è riportata la sintassi di esempio.
+
+        ```bash
+        mount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
+        ```
 
    *    Modificare la proprietà della cartella creata impostandola su mssql. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
 
-    ```bash
-    chown mssql <FolderName>
-    ```
+        ```bash
+        chown mssql <FolderName>
+        ```
 
-    \<FolderName> è il nome della cartella creata. Di seguito è illustrato un esempio.
+        \<FolderName> è il nome della cartella creata. Di seguito è illustrato un esempio.
 
-    ```bash
-    chown mssql /var/opt/mssql/userdata
-    ```
-  
+        ```bash
+        chown mssql /var/opt/mssql/userdata
+        ```
+
    *    Modificare il gruppo della cartella creata impostandolo su mssql. Se l'operazione ha esito positivo, non si riceverà alcuna conferma.
 
-    ```bash
-    chown mssql <FolderName>
-    ```
+        ```bash
+        chown mssql <FolderName>
+        ```
 
-    \<FolderName> è il nome della cartella creata. Di seguito è illustrato un esempio.
+        \<FolderName> è il nome della cartella creata. Di seguito è illustrato un esempio.
 
-    ```bash
-    chown mssql /var/opt/mssql/userdata
-    ```
+        ```bash
+        chown mssql /var/opt/mssql/userdata
+        ```
 
    *    Digitare `exit` per non operare più come utente con privilegi avanzati.
 
    *    Per eseguire il test, creare un database in tale cartella. L'esempio illustrato di seguito usa sqlcmd per creare un database, cambiare il contesto e verificare che i file esistano a livello di sistema operativo e quindi elimina il percorso temporaneo. È possibile usare SSMS.
   
-    ![50-ExampleCreateSSMS][9]
+        ![50-ExampleCreateSSMS][9]
 
    *    Smontare la condivisione 
 
-    ```bash
-    sudo umount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
-    ```
+        ```bash
+        sudo umount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
+        ```
 
-    \<VolumeGroupName> è il nome del gruppo di volumi, \<LogicalVolumeName> è il nome del volume logico creato e \<FolderName> è il nome della cartella. Di seguito è riportata la sintassi di esempio.
+        \<VolumeGroupName> è il nome del gruppo di volumi, \<LogicalVolumeName> è il nome del volume logico creato e \<FolderName> è il nome della cartella. Di seguito è riportata la sintassi di esempio.
 
-    ```bash
-    sudo umount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
-    ```
+        ```bash
+        sudo umount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
+        ```
 
 14. Configurare il server in modo che solo Pacemaker possa attivare il gruppo di volumi.
 
     ```bash
     sudo lvmconf --enable-halvm --services -startstopservices
     ```
- 
+
 15. Generare un elenco dei gruppi di volumi nel server. Qualsiasi elemento elencato che non sia il disco iSCSI viene usato dal sistema, ad esempio il disco del sistema operativo.
 
     ```bash
@@ -355,8 +356,7 @@ Per altre informazioni sull'iniziatore iSCSI per le distribuzioni supportate, fa
     \<ListOfVGsNotUsedByPacemaker> è l'elenco dei gruppi di volumi dell'output del passaggio 20 che non verranno usati dall'istanza del cluster di failover. Inserirli ognuno tra virgolette e separarli con una virgola. Di seguito è illustrato un esempio.
 
     ![55-ListOfVGs][11]
- 
- 
+
 17. All'avvio di Linux, il file system verrà montato. Per assicurarsi che solo Pacemaker possa montare il disco iSCSI, ricompilare l'immagine del file system radice. 
 
     Eseguire il comando seguente che può richiedere alcuni minuti per il completamento. Se l'operazione ha esito positivo, non viene restituito alcun messaggio.
@@ -374,6 +374,7 @@ Per altre informazioni sull'iniziatore iSCSI per le distribuzioni supportate, fa
     ```bash
     sudo vgs
     ``` 
+
 23. Avviare SQL Server e verificare che possa essere avviato in questo server.
 
     ```bash
@@ -387,14 +388,15 @@ Per altre informazioni sull'iniziatore iSCSI per le distribuzioni supportate, fa
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
+
 25. Ripetere i passaggi da 1 a 6 in tutti gli altri server che parteciperanno all'istanza del cluster di failover.
 
 A questo punto è possibile configurare l'istanza del cluster di failover.
 
-|Distribuzione |Argomento 
-|----- |-----
-|**Red Hat Enterprise Linux con componente aggiuntivo a disponibilità elevata** |[Configurare](sql-server-linux-shared-disk-cluster-configure.md)<br/>[Gestire](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-|**SUSE Linux Enterprise Server con componente aggiuntivo a disponibilità elevata** |[Configurare](sql-server-linux-shared-disk-cluster-sles-configure.md)
+| Distribuzione | Argomento |
+| :----------- | :---- |
+| Red Hat Enterprise Linux con componente aggiuntivo a disponibilità elevata | [Configurare](sql-server-linux-shared-disk-cluster-configure.md)<br/>[Gestire](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md) |
+| SUSE Linux Enterprise Server con componente aggiuntivo a disponibilità elevata | [Configurare](sql-server-linux-shared-disk-cluster-sles-configure.md) |
 
 ## <a name="next-steps"></a>Passaggi successivi
 

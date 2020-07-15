@@ -1,5 +1,6 @@
 ---
 title: Opzioni di configurazione del server access check cache | Microsoft Docs
+description: Informazioni sulla cache dei risultati del controllo dell'accesso e sulle opzioni che controllano il comportamento della cache. Scoprire quando modificare queste opzioni in SQL Server.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - access check cache option
 ms.assetid: 0a992ea8-3ec6-4a4d-97b5-460ae7326247
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 74b4e43ba9b973f83263ad36aabc859211926ef6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a389b84e673315a3c27f44c68a80092bf739d94b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013319"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751191"
 ---
 # <a name="access-check-cache-server-configuration-options"></a>Opzioni di configurazione del server access check cache
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]accede agli oggetti di database, il controllo dell'accesso viene memorizzato nella cache in una struttura interna denominata **cache dei risultati del controllo dell'accesso**. Le opzioni **access check cache quota** e **access check cache bucket count** determinano il numero di voci e di hash bucket utilizzati per **la cache dei risultati del controllo dell'accesso**. Raramente la modifica di tali opzioni consente di ottenere prestazioni migliori.  
   

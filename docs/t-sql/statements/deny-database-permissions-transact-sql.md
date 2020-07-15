@@ -18,16 +18,16 @@ ms.assetid: 36cc4e2c-5a24-4975-9920-9305f12c6e7c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4d99f732d76bda9f44c20701818e61a2b2af98e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5b33c0e855e093e82a121e689850bfd80e1e6aa7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633182"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010744"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY - autorizzazioni per database (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Nega le autorizzazioni per un database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -58,13 +58,13 @@ DENY <permission> [ ,...n ]
 
 *permission* specifica un'autorizzazione che può essere negata per un database. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.
 
-L'opzione ALL non nega tutte le autorizzazioni possibili. L'impostazione di ALL equivale a negare le autorizzazioni seguenti: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.
+L'opzione ALL non nega tutte le autorizzazioni possibili. La negazione di ALL equivale a negare le autorizzazioni seguenti: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.
 
 PRIVILEGES viene incluso per la conformità allo standard ISO. Non modifica il funzionamento di ALL.
 
 CASCADE indica che l'autorizzazione verrà negata anche alle entità di sicurezza a cui è stata concessa dall'entità di sicurezza specificata.
 
-AS \<database_principal> specifica un'entità di sicurezza da cui l'entità di sicurezza che esegue la query ottiene il diritto di negare l'autorizzazione.
+AS \<database_principal>Specifica un'entità dalla quale l'entità che esegue la query ottiene il diritto di negare l'autorizzazione.
 
 *Database_user* specifica un utente del database.
 
@@ -152,7 +152,7 @@ Un database è un'entità a protezione diretta contenuta nel server padre nella 
 |CREATE TYPE|ALTER|CONTROL SERVER|
 |CREATE VIEW|ALTER|CONTROL SERVER|
 |CREATE XML SCHEMA COLLECTION|ALTER|CONTROL SERVER|
-|Elimina|CONTROL|CONTROL SERVER|
+|DELETE|CONTROL|CONTROL SERVER|
 |EXECUTE|CONTROL|CONTROL SERVER|
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].|CONTROL|CONTROL SERVER|
 |INSERT|CONTROL|CONTROL SERVER|

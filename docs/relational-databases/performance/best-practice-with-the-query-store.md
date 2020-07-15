@@ -13,16 +13,16 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c07131e3991fd7cceb77e1874b7150184345b546
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f304dea7c49965bbb511034c09fb6ef781f2311f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287575"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005999"
 ---
 # <a name="best-practices-with-query-store"></a>Procedure consigliate per Query Store
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Questo articolo descrive le procedure consigliate per l'uso di SQL Server Query Store con un carico di lavoro.
 
@@ -34,9 +34,9 @@ Per una rapida descrizione di come usare Query Store in scenari di risoluzione d
 
 ## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> Usare Informazioni dettagliate prestazioni query nel database SQL di Azure
 
-Se si esegue Query Store nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] di Azure, è possibile usare [Informazioni dettagliate prestazioni query](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) per analizzare il consumo delle risorse nel tempo. Anche se è possibile usare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) per ottenere il consumo dettagliato delle risorse per tutte le query, ad esempio CPU, memoria e I/O, Informazioni dettagliate prestazioni query offre un metodo rapido ed efficace per determinare l'impatto delle query sul consumo di DTU complessivo per il database. Per altre informazioni, vedere l'articolo relativo a [Informazioni dettagliate prestazioni query del database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
+Se si esegue Query Store nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], è possibile usare [Informazioni dettagliate prestazioni query](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) per analizzare il consumo delle risorse nel tempo. Anche se è possibile usare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e [Azure Data Studio](../../azure-data-studio/what-is.md) per ottenere il consumo dettagliato delle risorse per tutte le query, ad esempio CPU, memoria e I/O, Informazioni dettagliate prestazioni query offre un metodo rapido ed efficace per determinare l'impatto delle query sul consumo di DTU complessivo per il database. Per altre informazioni, vedere l'articolo relativo a [Informazioni dettagliate prestazioni query del database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
 
-Questa sezione descrive impostazioni di configurazione predefinite ottimali progettate per garantire un funzionamento affidabile di Query Store e delle funzionalità dipendenti. La configurazione predefinita è ottimizzata per la raccolta di dati continua, ossia per un tempo minimo di OFF/READ_ONLY.
+Questa sezione descrive impostazioni di configurazione predefinite ottimali progettate per garantire un funzionamento affidabile di Query Store e delle funzionalità dipendenti. La configurazione predefinita è ottimizzata per la raccolta di dati continua, ossia per un tempo minimo di OFF/READ_ONLY. Per altre informazioni su tutte le opzioni di Query Store disponibili, vedere [Opzioni ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 
 | Configurazione | Descrizione | Predefinito | Comment |
 | --- | --- | --- | --- |
@@ -49,9 +49,12 @@ Questa sezione descrive impostazioni di configurazione predefinite ottimali prog
 | | | | |
 
 > [!IMPORTANT]
-> I valori predefiniti indicati sopra vengono applicati automaticamente nella fase finale dell'attivazione dell'archivio query in tutti i database SQL di Azure (vedere la precedente nota importante). Dopo questa attivazione, il database SQL di Azure non modificherà i valori di configurazione impostati dai clienti, a meno che non abbiano un impatto negativo sul carico di lavoro primario o sull'affidabilità di funzionamento di Query Store.
+> I valori predefiniti vengono applicati automaticamente nella fase finale dell'attivazione di Query Store in tutti i [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Dopo l'abilitazione, il [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] non modificherà i valori di configurazione impostati dai clienti, a meno che non abbiano un impatto negativo sul carico di lavoro primario o sulle operazioni affidabili di Query Store.
 
-Se si desidera mantenere le impostazioni personalizzate, usare [ALTER DATABASE con le opzioni dell'archivio query](https://msdn.microsoft.com/library/bb522682.aspx) per riportare la configurazione allo stato precedente. Vedere [Procedure consigliate per l'archivio query](https://msdn.microsoft.com/library/mt604821.aspx) per informazioni su come scegliere i parametri di configurazione ottimali.
+> [!NOTE]  
+> Non è possibile disabilitare Query Store in database singolo [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e in un pool elastico. L'esecuzione di `ALTER DATABASE [database] SET QUERY_STORE = OFF` restituirà l'avviso `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
+
+Se si desidera mantenere le impostazioni personalizzate, usare [ALTER DATABASE con le opzioni dell'archivio query](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store) per riportare la configurazione allo stato precedente. Vedere [Procedure consigliate per Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md) per informazioni su come scegliere i parametri di configurazione ottimali.
 
 ## <a name="use-query-store-with-elastic-pool-databases"></a>Usare Query Store con database di pool elastici
 
@@ -345,7 +348,7 @@ GO
 SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
     max_storage_size_mb, readonly_reason, interval_length_minutes,
     stale_query_threshold_days, size_based_cleanup_mode_desc,
-    query_capture_mode_de
+    query_capture_mode_desc
 FROM sys.database_query_store_options;
 ```
 

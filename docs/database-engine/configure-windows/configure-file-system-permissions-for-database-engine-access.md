@@ -1,5 +1,6 @@
 ---
 title: Configurare le autorizzazioni del file system per l'accesso al motore di database | Microsoft Docs
+description: Informazioni sui SID per servizio. Scoprire come concedere loro l'autorizzazione di accesso al percorso dei file di database in modo che il motore di database possa accedere ai file di database.
 ms.custom: ''
 ms.date: 06/06/2016
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - service account [SQL Server], file system permissions
 - permissions [SQL Server], file system
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a42a4a17a1eee9222318e2b508b28d190361d85e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 69eca7c64ddf6f48057b8b1f5fafa34f02434355
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012786"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637758"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Configurare le autorizzazioni del file system per l'accesso al motore di database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In questo argomento viene illustrato come concedere al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]l'accesso al file system nel percorso in cui sono archiviati i file di database. Il servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve disporre dell'autorizzazione del file system di Windows per accedere alla cartella file in cui sono archiviati i file di database. L'autorizzazione per il percorso predefinito viene configurata durante l'installazione. Se si posizionano i file di database in un percorso diverso, potrebbe essere necessario seguire questi passaggi per concedere al [!INCLUDE[ssDE](../../includes/ssde-md.md)] l'autorizzazione di controllo completo per il percorso in questione.  
   
  A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] le autorizzazioni vengono assegnate al SID per servizio per ognuno dei relativi servizi. Tramite questo sistema viene fornito un livello elevato di isolamento e protezione del servizio. Il SID per servizio deriva dal nome del servizio ed è univoco per ogni servizio. L'argomento [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) descrive il SID per servizio e nella sezione **Privilegi e diritti di Windows**specifica i nomi. Si tratta del SID per servizio a cui deve essere assegnata l'autorizzazione di accesso per il percorso del file.  
@@ -38,7 +39,7 @@ ms.locfileid: "68012786"
 4.  Nella casella **Immettere i nomi degli oggetti da selezionare** digitare il nome del SID per servizio elencato nell'argomento [**Configurare account di servizio e autorizzazioni di Windows**](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)della documentazione online. Come nome SID per servizio del [!INCLUDE[ssDE](../../includes/ssde-md.md)] usare **NT SERVICE\MSSQLSERVER** per un'istanza predefinita o **NT SERVICE\MSSQL$InstanceName** per un'istanza denominata.  
   
 5.  Fare clic su **Controlla nomi** per convalidare la voce. Se la convalida ha esito negativo, potrebbe indicare che il nome non è stato trovato. Quando si fa clic su **OK**, viene visualizzata la finestra di dialogo **Trovati più nomi** . A questo punto selezionare il nome SID per servizio, **MSSQLSERVER** o **NT SERVICE\MSSQL$InstanceName**, quindi fare clic su **OK**.  Fare di nuovo clic su **OK** per tornare alla finestra di dialogo **Autorizzazioni** .   
-6.  Nella casella di nomi **Gruppo o utente** selezionare il SID per servizio e quindi nella casella **Autorizzazioni per** \<nome> selezionare la casella di controllo **Consenti** per **Controllo completo**.  
+6.  Nella casella **Nome di gruppi o utenti** selezionare il nome del SID per servizio e quindi nella casella **Autorizzazioni per** \<name> selezionare la casella di controllo **Consenti** per **Controllo completo**.  
   
 7. Fare clic su **Applica**quindi due volte su **OK** per uscire.  
   

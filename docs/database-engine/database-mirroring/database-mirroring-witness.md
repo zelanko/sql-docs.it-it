@@ -1,5 +1,6 @@
 ---
 title: Server di controllo del mirroring del database | Microsoft Docs
+description: Informazioni sulla funzione di un server di controllo del mirroring nel failover automatico nel mirroring del database di SQL Server. A differenza dei partner, il server di controllo del mirroring non serve il database.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4dcb3d5669e62836f859252749469703bf26d29e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e462bc2367d7f5a3112580848b6a32126c604f46
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68043879"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754697"
 ---
 # <a name="database-mirroring-witness"></a>Server di controllo del mirroring del database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Per supportare il failover automatico, è necessario configurare una sessione di mirroring del database in modalità a protezione elevata e usare l'istanza di un terzo server, noto come *server di controllo*. Il server di controllo del mirroring è un'istanza facoltativa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consente al server mirror in una sessione in modalità a protezione elevata di stabilire se avviare un failover automatico. A differenza dei due partner, il server di controllo del mirroring non serve il database, Il supporto del failover automatico è l'unico ruolo del server di controllo del mirroring.  
   
 > [!NOTE]  

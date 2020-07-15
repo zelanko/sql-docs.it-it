@@ -1,7 +1,8 @@
 ---
 title: Guida sull'architettura dei thread e delle attività | Microsoft Docs
+description: Informazioni sull'architettura di thread e attività in SQL Server, incluse la pianificazione delle attività, l'aggiunta di CPU a caldo e le procedure consigliate per l'utilizzo di computer con più di 64 CPU.
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 07/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +15,15 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6e8ee2bd3910f3b7ae4bbdba37b973c095fef00
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287355"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091922"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guida sull'architettura dei thread e delle attività
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
 ## <a name="operating-system-task-scheduling"></a>Pianificazione delle attività del sistema operativo
 I thread sono le unità di elaborazione più piccole che possono essere eseguite da un sistema operativo e consentono la separazione della logica dell'applicazione in diversi percorsi di esecuzione simultanei. I thread sono utili quando in applicazioni complesse è necessario eseguire numerose attività simultaneamente. 
@@ -34,19 +35,114 @@ I thread consentono alle applicazioni complesse di ottimizzare l'utilizzo di un 
 ## <a name="sql-server-task-scheduling"></a>Pianificazione delle attività di SQL Server
 Nell'ambito di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], una **richiesta** è la rappresentazione logica di una query o un batch. Una richiesta rappresenta anche le operazioni richieste dai thread di sistema, ad esempio checkpoint o writer di log. Le richieste sono presenti in vari stati nel corso della loro durata e possono accumulare attese quando le risorse necessarie per eseguire la richiesta non sono disponibili, ad esempio [blocchi](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md#locks) o [latch](../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md#latches). Per altre informazioni sugli stati delle richieste, vedere [sys.dm_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).
 
-Un'**attività** rappresenta l'unità di lavoro che deve essere completata per soddisfare la richiesta. È possibile assegnare una o più attività a una singola richiesta. Le richieste parallele avranno diverse attività attive che vengono eseguite simultaneamente anziché in serie. Una richiesta che viene eseguita in serie avrà una sola attività attiva in un determinato momento. Le attività esistono in vari stati per tutta la loro durata. Per altre informazioni sugli stati delle attività, vedere [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Le attività in stato SOSPESO sono in attesa delle risorse necessarie per eseguire l'attività e diventare disponibili. Per altre informazioni sulle attività in attesa, vedere [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md).
+Un'**attività** rappresenta l'unità di lavoro che deve essere completata per soddisfare la richiesta. È possibile assegnare una o più attività a una singola richiesta. 
+-  Le richieste parallele avranno diverse attività attive che vengono eseguite simultaneamente anziché in sequenza, con una **attività padre** (o attività di coordinamento) e più **attività figlio**. Un piano di esecuzione per una richiesta parallela può includere rami seriali, ovvero aree del piano con operatori che non vengono eseguiti in parallelo. L'attività padre è anche responsabile dell'esecuzione degli operatori seriali.
+-  Le richieste in serie avranno una sola attività attiva in un determinato momento durante l'esecuzione.     
+Le attività esistono in vari stati per tutta la loro durata. Per altre informazioni sugli stati delle attività, vedere [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Le attività in stato SOSPESO sono in attesa delle risorse necessarie per eseguire l'attività e diventare disponibili. Per altre informazioni sulle attività in attesa, vedere [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md).
 
-Un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]thread di lavoro**di**, definito anche ruolo di lavoro o semplicemente thread, è una rappresentazione logica di un thread del sistema operativo. Quando si eseguono le richieste in serie, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] genera un ruolo di lavoro per eseguire l'attività attiva. Se si eseguono richieste parallele in [modalità riga](../relational-databases/query-processing-architecture-guide.md#execution-modes), [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assegna un ruolo di lavoro per coordinare i ruoli di lavoro figlio responsabili del completamento delle attività ad essi assegnate. Il numero di thread di lavoro generati per ogni attività dipende da:
+Un **thread di lavoro** di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], definito anche ruolo di lavoro o semplicemente thread, è una rappresentazione logica di un thread del sistema operativo. Quando si eseguono le **richieste in serie**, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] genera un ruolo di lavoro per eseguire l'attività attiva (1:1). Se si eseguono **richieste parallele** in [modalità riga](../relational-databases/query-processing-architecture-guide.md#execution-modes), [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assegna un ruolo di lavoro per coordinare i ruoli di lavoro figlio responsabili del completamento delle attività ad essi assegnate (1:1) chiamato **thread padre**. Al thread padre è associata un'attività padre. Il numero di thread di lavoro generati per ogni attività dipende da:
 -   Se la richiesta era idonea per il parallelismo secondo quanto determinato da Query Optimizer.
--   Qual è [grado di parallelismo (DOP)](../relational-databases/query-processing-architecture-guide.md#DOP) effettivamente disponibile nel sistema in base al carico corrente. Il valore può essere diverso dal DOP stimato, che si basa sulla configurazione del server per l'opzione MAXDOP (max degree of parallelism). Ad esempio, la configurazione del server per MAXDOP può essere 8 ma il DOP disponibile al momento dell'esecuzione può essere solo 2 e questo influisce negativamente sulle prestazioni delle query. 
+-   Qual è [grado di parallelismo (DOP)](../relational-databases/query-processing-architecture-guide.md#DOP) effettivamente disponibile nel sistema in base al carico corrente. Il valore può essere diverso dal DOP stimato, che si basa sulla configurazione del server per il massimo grado di parallelismo (MAXDOP). Ad esempio, la configurazione del server per MAXDOP può essere 8 ma il DOP disponibile al momento dell'esecuzione può essere solo 2 e questo influisce negativamente sulle prestazioni delle query. 
 
 > [!NOTE]
-> Il limite **MAXDOP (max degree of parallelism)** viene impostato per attività, non per richiesta. Ciò significa che durante l'esecuzione di una query parallela, una singola richiesta può generare più attività e ogni attività può usare più ruoli di lavoro fino al limite MAXDOP. Per altre informazioni su MAXDOP, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+> Il limite **MAXDOP (max degree of parallelism)** viene impostato per attività, non per richiesta. Ciò significa che durante l'esecuzione di una query parallela, una singola richiesta può generare più attività fino al limite MAXDOP e ogni attività userà un solo ruolo di lavoro. Per altre informazioni su MAXDOP, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 Un'**utilità di pianificazione**, nota anche come utilità di pianificazione SOS, gestisce i thread di lavoro che richiedono tempo di elaborazione per svolgere il lavoro per conto delle attività. Ogni utilità di pianificazione viene mappata a un singolo processore (CPU). Il tempo in cui un ruolo di lavoro può rimanere attivo in un'utilità di pianificazione è denominato quantum del sistema operativo, con un massimo di 4 ms. Scaduto il tempo del quantum, un ruolo di lavoro cede il proprio tempo ad altri ruoli di lavoro che devono accedere alle risorse della CPU e modifica il proprio stato. Questa cooperazione tra ruoli di lavoro per ottimizzare l'accesso alle risorse della CPU è denominata **pianificazione cooperativa**, nota anche come pianificazione non preemptive. A sua volta, la modifica dello stato del ruolo di lavoro viene propagata all'attività associata a tale ruolo e alla richiesta associata all'attività. Per altre informazioni sugli stati dei ruoli di lavoro, vedere [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). Per altre informazioni sulle utilità di pianificazione, vedere [sys.dm_os_schedulers](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
 
+In breve, una **richiesta** può generare una o più **attività** per eseguire unità di lavoro. Ogni attività viene assegnata a un **thread di lavoro** responsabile del completamento dell'attività. Ogni thread di lavoro deve essere pianificato (inserito in un'**utilità di pianificazione**) per l'esecuzione attiva dell'attività. 
+
+### <a name="scheduling-parallel-tasks"></a>Pianificazione delle attività in parallelo
+Si supponga che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sia configurato con MaxDOP 8 e l'affinità di CPU sia configurata per 24 CPU (utilità di pianificazione) tra i nodi NUMA 0 e 1. Le utilità di pianificazione da 0 a 11 appartengono al nodo NUMA 0, le utilità di pianificazione da 12 a 23 appartengono al nodo NUMA 1. Un'applicazione invia la query seguente (richiesta) al [!INCLUDE[ssde_md](../includes/ssde_md.md)]:
+
+```sql
+SELECT h.SalesOrderID, h.OrderDate, h.DueDate, h.ShipDate
+FROM Sales.SalesOrderHeaderBulk AS h 
+INNER JOIN Sales.SalesOrderDetailBulk AS d ON h.SalesOrderID = d.SalesOrderID 
+WHERE (h.OrderDate >= '2014-3-28 00:00:00');
+```
+
+> [!TIP]
+> La query di esempio può essere eseguita usando il [database di esempio AdventureWorks2016_EXT](../samples/adventureworks-install-configure.md). Le tabelle `Sales.SalesOrderHeader` e `Sales.SalesOrderDetail` sono state ingrandite 50 volte e rinominate `Sales.SalesOrderHeaderBulk` e `Sales.SalesOrderDetailBulk`.
+
+Il piano di esecuzione mostra un [hash join](../relational-databases/performance/joins.md#hash) tra due tabelle e ognuno degli operatori eseguiti in parallelo, come indicato dal cerchio giallo con due frecce. Ogni operatore Parallelism è un ramo diverso del piano. Di conseguenza, nel piano di esecuzione riportato di seguito sono presenti tre rami. 
+
+![Piano di query parallela](../relational-databases/media/schedule-parallel-query-plan.png)
+
+> [!NOTE]
+> Se si pensa a un piano di esecuzione come a un albero, un **ramo** è un'area del piano che raggruppa uno o più operatori tra gli operatori Parallelism, chiamati anche iteratori di Exchange. Per altre informazioni sugli operatori del piano, vedere [Guida di riferimento a operatori Showplan logici e fisici](../relational-databases/showplan-logical-and-physical-operators-reference.md). 
+
+Sebbene esistano tre rami nel piano di esecuzione, in qualsiasi momento durante l'esecuzione è possibile eseguire contemporaneamente solo due rami nel piano di esecuzione:
+1.  Il ramo in cui viene usato un operatore *Clustered Index Scan* in `Sales.SalesOrderHeaderBulk` (input di compilazione del join) viene eseguito contemporaneamente al ramo in cui è stato usato un *Clustered Index Scan* in `Sales.SalesOrderDetailBulk` (input probe del join).
+2. Il ramo in cui viene usato un operatore *Clustered Index Scan* in `Sales.SalesOrderDetailBulk` (input probe del join) viene eseguito contemporaneamente al ramo in cui è stato creato *Bitmap* e in cui è attualmente in esecuzione *Hash Match*.
+
+Showplan XML mostra che 16 thread di lavoro sono stati prenotati e usati nei nodi NUMA 0 e 1:
+
+```xml
+<ThreadStat Branches="2" UsedThreads="16">
+  <ThreadReservation NodeId="0" ReservedThreads="8" />
+  <ThreadReservation NodeId="1" ReservedThreads="8" />
+</ThreadStat>
+```
+
+La prenotazione dei thread garantisce che [!INCLUDE[ssde_md](../includes/ssde_md.md)] disponga di un numero sufficiente di thread di lavoro per eseguire tutte le attività necessarie per la richiesta. I thread possono essere prenotati in tutti i nodi NUMA oppure in un solo nodo NUMA. La prenotazione del thread viene eseguita durante il runtime prima dell'avvio dell'esecuzione e dipende dal carico dell'utilità di pianificazione. Il numero di thread di lavoro prenotati viene derivato genericamente dalla formula ***rami simultanei* * *DOP del runtime*** ed esclude il thread di lavoro padre. Ogni ramo è limitato a un numero di thread di lavoro uguale a MaxDOP. In questo esempio sono presenti due rami simultanei e MaxDOP è impostato su 8, ovvero **2 * 8 = 16**.
+
+Per riferimento, osservare il piano di esecuzione in tempo reale da [Statistiche query dinamiche](../relational-databases/performance/live-query-statistics.md) dove un ramo è stato completato e due rami sono in esecuzione simultaneamente.
+
+![Piano di query parallela dinamica](../relational-databases/media/schedule-parallel-query-live-plan.png)
+
+Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assegnerà un thread di lavoro per eseguire un'attività attiva (1:1) che può essere osservata durante l'esecuzione di query eseguendo una query nella DMV [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md), come illustrato nell'esempio seguente:
+
+```sql
+SELECT parent_task_address, task_address, 
+       task_state, scheduler_id, worker_address
+FROM sys.dm_os_tasks
+WHERE session_id = <insert_session_id>
+ORDER BY parent_task_address, scheduler_id;
+```
+
+> [!TIP]
+> La colonna `parent_task_address` è sempre NULL per l'attività padre. 
+
+[!INCLUDE[ssResult](../includes/ssresult-md.md)] Si noti che sono presenti 17 attività attive per i rami attualmente in esecuzione: 16 attività figlio corrispondenti ai thread prenotati, a cui si aggiunge l'attività padre o l'attività di coordinamento.
+
+|parent_task_address|task_address|task_state|scheduler_id|worker_address|
+|--------|--------|--------|--------|--------|
+|NULL|**0x000001EF4758ACA8**|SUSPENDED|3|0x000001EFE6CB6160|
+|0x000001EF4758ACA8|0x000001EFE43F3468|SUSPENDED|0|0x000001EF6DB70160|
+|0x000001EF4758ACA8|0x000001EEB243A4E8|SUSPENDED|0|0x000001EF6DB7A160|
+|0x000001EF4758ACA8|0x000001EC86251468|SUSPENDED|5|0x000001EEC05E8160|
+|0x000001EF4758ACA8|0x000001EFE3023468|SUSPENDED|5|0x000001EF6B46A160|
+|0x000001EF4758ACA8|0x000001EFE3AF1468|SUSPENDED|6|0x000001EF6BD38160|
+|0x000001EF4758ACA8|0x000001EFE4AFCCA8|SUSPENDED|6|0x000001EF6ACB4160|
+|0x000001EF4758ACA8|0x000001EFDE043848|SUSPENDED|7|0x000001EEA18C2160|
+|0x000001EF4758ACA8|0x000001EF69038108|SUSPENDED|7|0x000001EF6AEBA160|
+|0x000001EF4758ACA8|0x000001EFCFDD8CA8|SUSPENDED|8|0x000001EFCB6F0160|
+|0x000001EF4758ACA8|0x000001EFCFDD88C8|SUSPENDED|8|0x000001EF6DC46160|
+|0x000001EF4758ACA8|0x000001EFBCC54108|SUSPENDED|9|0x000001EFCB886160|
+|0x000001EF4758ACA8|0x000001EC86279468|SUSPENDED|9|0x000001EF6DE08160|
+|0x000001EF4758ACA8|0x000001EFDE901848|SUSPENDED|10|0x000001EFF56E0160|
+|0x000001EF4758ACA8|0x000001EF6DB32108|SUSPENDED|10|0x000001EFCC3D0160|
+|0x000001EF4758ACA8|0x000001EC8628D468|SUSPENDED|11|0x000001EFBFA4A160|
+|0x000001EF4758ACA8|0x000001EFBD3A1C28|SUSPENDED|11|0x000001EF6BD72160|
+
+> [!TIP]
+> In un [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] occupato è possibile osservare un numero di attività attive che supera il limite impostato dai thread prenotati. Queste attività possono appartenere a un ramo che non viene più usato e si trovano in uno stato temporaneo in attesa della pulizia. 
+
+Osservare che a ognuna delle 16 attività figlio è stato assegnato un thread di lavoro diverso (visibile nella colonna `worker_address`), ma tutti i ruoli di lavoro sono assegnati allo stesso pool di otto utilità di pianificazione (0, 5, 6, 7, 8, 9, 10, 11) e l'attività padre è assegnata a un'utilità di pianificazione all'esterno del pool (3).
+
+> [!IMPORTANT]
+> Dopo aver pianificato il primo set di attività parallele in un determinato ramo, il [!INCLUDE[ssde_md](../includes/ssde_md.md)] userà lo stesso pool di utilità di pianificazione per eventuali attività aggiuntive in altri rami. Ciò significa che lo stesso set di utilità di pianificazione verrà usato per tutte le attività parallele nell'intero piano di esecuzione, limitato solo da MaxDOP.      
+> Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] tenterà sempre di assegnare le utilità di pianificazione dello stesso nodo NUMA per l'esecuzione dell'attività. Tuttavia, il thread di lavoro assegnato all'attività padre può trovarsi in un nodo NUMA diverso rispetto alle altre attività.
+
+Un thread di lavoro può rimanere attivo nell'utilità di pianificazione solo per la durata del quantum (4 ms) e deve restituire l'utilità di pianificazione dopo che il quantum è trascorso, in modo che un thread di lavoro assegnato a un'altra attività possa diventare attivo. Quando il quantum del processo di lavoro scade e non è più attivo, l'attività corrispondente viene inserita in una coda FIFO con stato RUNNABLE fino a quando non torna allo stato RUNNING, a condizione che l'attività non richieda l'accesso a risorse non disponibili, ad esempio un latch o un blocco. In tal caso l'attività passa allo stato SUSPENDED anziché allo stato RUNNABLE fino a quando le risorse non diventano disponibili.  
+
+> [!TIP] 
+> Per l'output della DMV descritto in precedenza, tutte le attività attive hanno lo stato SUSPENDED. Per informazioni dettagliate sulle attività in attesa, è possibile eseguire una query nella DMV [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md). 
+
+In breve, una richiesta parallela genera più attività dove ogni attività deve essere assegnata a un singolo thread di lavoro e ogni thread di lavoro deve essere assegnato a una singola utilità di pianificazione. Pertanto, il numero di utilità di pianificazione in uso non può superare il numero di attività parallele per ramo, impostato tramite MaxDOP. 
+
 ### <a name="allocating-threads-to-a-cpu"></a>Allocazione di thread a una CPU
-Per impostazione predefinita, ogni istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avvia un singolo thread e il sistema operativo distribuisce i thread delle istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tra i processori (CPU) di un computer in base al carico. Se è stata abilitata l'affinità del processo a livello di sistema operativo, il sistema operativo assegna ogni thread a una CPU specifica. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assegna invece [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]thread di lavoro**di** alle **utilità di pianificazione** che distribuiscono uniformemente i thread fra le CPU.
+Per impostazione predefinita, ogni istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avvia un singolo thread e il sistema operativo distribuisce i thread delle istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tra i processori (CPU) di un computer in base al carico. Se è stata abilitata l'affinità del processo a livello di sistema operativo, il sistema operativo assegna ogni thread a una CPU specifica. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assegna invece **thread di lavoro** di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alle **utilità di pianificazione** che distribuiscono uniformemente i thread fra le CPU.
     
 Per eseguire il multitasking, ad esempio quando più applicazioni accedono allo stesso gruppo di CPU, in certi casi il sistema operativo distribuisce i thread di lavoro tra CPU diverse. Sebbene in questo modo venga garantita una maggiore efficienza del sistema operativo, questa attività può comportare una riduzione delle prestazioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel caso di carichi di lavoro elevati, poiché la cache di ogni processore viene ricaricata più volte con dati. L'assegnazione di CPU a thread specifici consente di migliorare le prestazioni, poiché le operazioni di ricaricamento dei processori vengono eliminate e si riduce la migrazione dei thread tra CPU, limitando lo scambio di contesto. Questo tipo di associazione tra un thread e un processore è definito "affinità processori". Se è stata abilitata l'affinità, il sistema operativo assegna ogni thread a una CPU specifica. 
 
@@ -73,7 +169,7 @@ Microsoft Windows utilizza un sistema a priorità numerica che utilizza interval
 
 Per impostazione predefinita, ogni istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ha priorità 7, che è considerata la priorità normale. In questo modo ai thread di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene assegnata una priorità sufficientemente alta per ottenere le risorse della CPU necessarie senza produrre effetti negativi sulle altre applicazioni. 
 
-È possibile usare l'opzione di configurazione [priority boost](../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) per aumentare il livello di priorità dei thread di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fino a 13 (alta priorità). Questa impostazione consente di assegnare ai thread di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] una priorità maggiore di quella della maggior parte delle altre applicazioni. Pertanto, il dispatch dei thread di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene eseguito non appena è possibile eseguire i thread, che non vengono quindi preceduti dai thread di altre applicazioni. Le prestazioni vengono migliorate se nel server sono in esecuzione solo istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e non altre applicazioni. Tuttavia, se in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene eseguita un'operazione che impegna notevolmente la memoria, è probabile che la priorità delle altre applicazioni non sia maggiore di quella del thread di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
+È possibile usare l'opzione di configurazione [priority boost](../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) per aumentare il livello di priorità dei thread di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fino a 13 (alta priorità). Questa impostazione consente di assegnare ai thread di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] una priorità maggiore di quella della maggior parte delle altre applicazioni. Di conseguenza, l'invio dei thread di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene eseguito non appena è possibile eseguire i thread e non sarà preceduto dai thread di altre applicazioni. Le prestazioni vengono migliorate se nel server sono in esecuzione solo istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e non altre applicazioni. Tuttavia, se in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene eseguita un'operazione che impegna notevolmente la memoria, è probabile che la priorità delle altre applicazioni non sia maggiore di quella del thread di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
 
 Se vengono eseguite più istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nello stesso computer e solo per alcune è impostata l'opzione priority boost, le prestazioni delle istanze in esecuzione con priorità normale potrebbero risentirne. Le prestazioni delle altre applicazioni e degli altri componenti sul server possono ridursi se priority boost è abilitato. Pertanto, è consigliabile utilizzarlo solo in condizioni assolutamente controllate.
 
@@ -115,7 +211,7 @@ L'uso di Traccia SQL e SQL Server Profiler in un ambiente di produzione è scons
 > [!IMPORTANT]
 > Traccia SQL e [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] sono deprecati. Anche lo spazio dei nomi *Microsoft.SqlServer.Management.Trace* che contiene gli oggetti Trace e Replay di Microsoft SQL Server è deprecato. 
 > [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] 
-> In alternativa, usare Eventi estesi. Per altre informazioni sugli [eventi estesi](../relational-databases/extended-events/extended-events.md), vedere [Avvio rapido: Eventi estesi in SQL Server](../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) e [Profiler XEvent di SSMS](../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+> In alternativa, usare Eventi estesi. Per altre informazioni sugli [Eventi estesi](../relational-databases/extended-events/extended-events.md), vedere [Avvio rapido: Eventi estesi in SQL Server](../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) e [Profiler XEvent di SQL Server Management Studio](../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
 
 > [!NOTE]
 > [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] per i carichi di lavoro Analysis Services NON è deprecato e continuerà a essere supportato.

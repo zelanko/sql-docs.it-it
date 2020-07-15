@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 48f78d1f064051148a4b7e7a31296b0fe04b8ee7
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2416295cd79ae7b4e4da53ef71bcf7dfbf0702f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633124"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766683"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY - autorizzazioni per oggetti (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Nega le autorizzazioni per un membro della classe OBJECT delle entità a protezione diretta. I membri della classe OBJECT sono costituiti da tabelle, viste, funzioni con valori di tabella, stored procedure, stored procedure estese, funzioni scalari, funzioni di aggregazione, code di servizio e sinonimi.  
 
@@ -120,7 +120,7 @@ PRIVILEGES
 |-----------------------|----------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|Elimina|CONTROL|Elimina|  
+|DELETE|CONTROL|DELETE|  
 |EXECUTE|CONTROL|EXECUTE|  
 |INSERT|CONTROL|INSERT|  
 |RECEIVE|CONTROL|CONTROL|  

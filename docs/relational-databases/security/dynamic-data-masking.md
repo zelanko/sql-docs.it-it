@@ -1,5 +1,6 @@
 ---
 title: Mascheramento dati dinamici | Microsoft Docs
+description: Informazioni sulla maschera dati dinamica che limita l'esposizione dei dati sensibili, nascondendoli agli utenti senza privilegi. La funzione può semplificare notevolmente la sicurezza in SQL Server.
 ms.date: 05/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
@@ -10,15 +11,15 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0f2a5d652b23efec6b4dd1c6d021f85e1155247
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bf3c9a827a4a3318bbee7e550aa8759a8dcc0eb4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997720"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005596"
 ---
 # <a name="dynamic-data-masking"></a>Dynamic Data Masking
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 ![Maschera dati dinamica](../../relational-databases/security/media/dynamic-data-masking.png)
 
@@ -93,7 +94,7 @@ WHERE is_masked = 1;
  Poiché l'aggiunta di una maschera di dati dinamici viene implementata come modifica dello schema nella tabella sottostante, l'operazione non può essere eseguita in una colonna con dipendenze. Per aggirare questa limitazione, è possibile rimuovere la dipendenza, aggiungere la maschera di dati dinamici e quindi ricreare la dipendenza. Ad esempio, se la dipendenza è dovuta a un indice che dipende dalla colonna, è possibile eliminare l'indice, aggiungere la maschera e quindi ricreare l'indice dipendente.
  
 
-## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>Nota sulla sicurezza: Ignorare il mascheramento usando tecniche di attacchi di forza bruta o inferenza
+## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>Nota sulla sicurezza: ignorare il mascheramento usando tecniche di attacchi di forza bruta o inferenza
 
 Il mascheramento dei dati dinamici è progettato per semplificare lo sviluppo di applicazioni, limitando l'esposizione dei dati in un set di query predefinito usato dall'applicazione. Nonostante possa essere utile anche per prevenire l'esposizione accidentale dei dati sensibili durante l'accesso diretto a un database di protezione, è importante notare che gli utenti senza privilegi con autorizzazioni per le query ad hoc possono applicare le tecniche per ottenere l'accesso ai dati effettivi. Se è necessario concedere l'accesso ad hoc, usare il Controllo per monitorare tutte le attività del database e attenuare questo scenario.
  

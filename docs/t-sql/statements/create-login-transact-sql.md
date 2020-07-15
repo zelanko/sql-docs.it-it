@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57639c3705f38396fdc3ebf5dd65b34c145c324d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 57f44934fa5ecfe7c14b4c4b2427656ccd4ef633
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79526796"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255424"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -87,7 +87,7 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 
 ## <a name="arguments"></a>Argomenti
 
-*login_name* specifica il nome dell'account di accesso creato. Esistono quattro tipi di account di accesso: account di accesso di SQL Server, account di accesso di Windows, account di accesso con mapping a un certificato e account di accesso con mapping a una chiave asimmetrica. Quando si creano account di accesso che vengono mappati da un account di dominio di Windows, è necessario usare il nome di accesso utente precedente a Windows 2000 nel formato [\<NomeDominio>\\<nome_account_accesso>]. Non è possibile usare un nome UPN nel formato login_name@DomainName. Vedere l'esempio D più avanti in questo articolo. Gli account di accesso di autenticazione sono di tipo **sysname** e devono essere conformi alle regole per gli [Identificatori](../../relational-databases/databases/database-identifiers.md) e non possono contenere un simbolo " **\\** ". Gli account di accesso di Windows possono contenere un simbolo " **\\** ". I nomi degli account di accesso basati su utenti di Active Directory devono avere un numero di caratteri inferiore a 21.
+*login_name* specifica il nome dell'account di accesso creato. Esistono quattro tipi di account di accesso: account di accesso di SQL Server, account di accesso di Windows, account di accesso con mapping a un certificato e account di accesso con mapping a una chiave asimmetrica. Quando si creano account di accesso che vengono mappati da un account di dominio di Windows, è necessario usare il nome di accesso utente precedente a Windows 2000 nel formato [\<domainName>\\<nome_account_accesso>]. Non è possibile usare un nome UPN nel formato login_name@DomainName. Vedere l'esempio D più avanti in questo articolo. Gli account di accesso di autenticazione sono di tipo **sysname** e devono essere conformi alle regole per gli [Identificatori](../../relational-databases/databases/database-identifiers.md) e non possono contenere un simbolo " **\\** ". Gli account di accesso di Windows possono contenere un simbolo " **\\** ". I nomi degli account di accesso basati su utenti di Active Directory devono avere un numero di caratteri inferiore a 21.
 
 PASSWORD **=** '*password*' Si applica solo agli account di accesso di SQL Server. Specifica la password per l'account di accesso che viene creato. Usare una password complessa. Per altre informazioni, vedere [Password complesse](../../relational-databases/security/strong-passwords.md) e [Criteri password](../../relational-databases/security/password-policy.md). A partire da SQL Server 2012 (11.x), le informazioni relative alle password archiviate vengono calcolate usando l'algoritmo SHA-512 della password con salting.
 
@@ -316,7 +316,7 @@ In alcuni metodi di connessione al database SQL, come ad esempio **sqlcmd**, è 
 
 Nel database SQL è necessario essere connessi al database master con le autorizzazioni appropriate per creare un account di accesso. Per altre informazioni, vedere [Creare ulteriori account di accesso e utenti con autorizzazioni amministrative](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#create-additional-logins-and-users-having-administrative-permissions).
 
-Le regole di SQL Server consentono di creare un account di accesso con autenticazione di SQL Server nel formato \<nomeaccountaccesso>@\<nomeserver>. Se il server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] in uso è **myazureserver** e l'account di accesso è **myemail@live.com** , l'account di accesso deve essere specificato nel formato **myemail@live.com@myazureserver** .
+Le regole di SQL Server consentono di creare un account di accesso con autenticazione di SQL Server nel formato \<loginname>@\<servername>. Se il server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] in uso è **myazureserver** e l'account di accesso è **myemail@live.com** , l'account di accesso deve essere specificato nel formato **myemail@live.com@myazureserver** .
 
 Nel database SQL i dati dell'account di accesso necessari per autenticare una connessione e le regole del firewall a livello di server vengono memorizzati temporaneamente nella cache in ogni database. Questa cache viene aggiornata periodicamente. Per forzare un aggiornamento della cache di autenticazione e assicurarsi che un database abbia la versione più recente della tabella di account di accesso, eseguire [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
@@ -457,6 +457,12 @@ Una volta creato, un account di accesso può connettersi a un'istanza gestita di
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
 - Gli utenti esterni (guest) importati da un'altra directory di Azure AD non possono essere configurati direttamente come amministratori di Azure AD per un'istanza gestita. È possibile invece aggiungere un utente esterno a un gruppo con sicurezza abilitata di Azure AD e configurare il gruppo come amministratore dell'istanza.
+- In un gruppo di failover, l'account di accesso non viene replicato nell'istanza secondaria, ma viene salvato nel database master, un database di sistema e, pertanto, non viene replicato geograficamente. Per risolvere questo problema, è necessario che l'utente crei un account di accesso con lo stesso SID nell'istanza secondaria.
+
+```SQL
+-- Code to create login on the secondary instance
+CREATE LOGIN foo WITH PASSWORD = '<enterStrongPasswordHere>', SID = <login_sid>;
+```
 
 ## <a name="examples"></a>Esempi
 
@@ -597,7 +603,7 @@ Quando si usa uno strumento, ad esempio **sqlcmd**, per la connessione ad Azure 
 
 Per creare un account di accesso, è necessario essere connessi al database master.
 
-Le regole di SQL Server consentono di creare un account di accesso con autenticazione di SQL Server nel formato \<nomeaccountaccesso>@\<nomeserver>. Se il server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] in uso è **myazureserver** e l'account di accesso è **myemail@live.com** , l'account di accesso deve essere specificato nel formato **myemail@live.com@myazureserver** .
+Le regole di SQL Server consentono di creare un account di accesso con autenticazione di SQL Server nel formato \<loginname>@\<servername>. Se il server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] in uso è **myazureserver** e l'account di accesso è **myemail@live.com** , l'account di accesso deve essere specificato nel formato **myemail@live.com@myazureserver** .
 
 I dati dell'account di accesso necessari per autenticare una connessione e le regole del firewall a livello di server sono memorizzati temporaneamente nella cache in ogni database. Questa cache viene aggiornata periodicamente. Per forzare un aggiornamento della cache di autenticazione e assicurarsi che un database abbia la versione più recente della tabella di account di accesso, eseguire [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
@@ -690,7 +696,7 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 
 ## <a name="arguments"></a>Argomenti
 
-*login_name* specifica il nome dell'account di accesso creato. Esistono quattro tipi di account di accesso: account di accesso di SQL Server, account di accesso di Windows, account di accesso con mapping a un certificato e account di accesso con mapping a una chiave asimmetrica. Quando si creano account di accesso che vengono mappati da un account di dominio di Windows, è necessario usare il nome di accesso utente precedente a Windows 2000 nel formato [\<NomeDominio>\\<nome_account_accesso>]. Non è possibile usare un nome UPN nel formato login_name@DomainName. Vedere l'esempio D più avanti in questo articolo. Gli account di accesso di autenticazione sono di tipo **sysname** e devono essere conformi alle regole per gli [Identificatori](../../relational-databases/databases/database-identifiers.md) e non possono contenere un simbolo " **\\** ". Gli account di accesso di Windows possono contenere un simbolo " **\\** ". I nomi degli account di accesso basati su utenti di Active Directory devono avere un numero di caratteri inferiore a 21.
+*login_name* specifica il nome dell'account di accesso creato. Esistono quattro tipi di account di accesso: account di accesso di SQL Server, account di accesso di Windows, account di accesso con mapping a un certificato e account di accesso con mapping a una chiave asimmetrica. Quando si creano account di accesso che vengono mappati da un account di dominio di Windows, è necessario usare il nome di accesso utente precedente a Windows 2000 nel formato [\<domainName>\\<nome_account_accesso>]. Non è possibile usare un nome UPN nel formato login_name@DomainName. Vedere l'esempio D più avanti in questo articolo. Gli account di accesso di autenticazione sono di tipo **sysname** e devono essere conformi alle regole per gli [Identificatori](../../relational-databases/databases/database-identifiers.md) e non possono contenere un simbolo " **\\** ". Gli account di accesso di Windows possono contenere un simbolo " **\\** ". I nomi degli account di accesso basati su utenti di Active Directory devono avere un numero di caratteri inferiore a 21.
 
 PASSWORD **='** _password_' Si applica solo agli account di accesso SQL Server. Specifica la password per l'account di accesso che viene creato. Usare una password complessa. Per altre informazioni, vedere [Password complesse](../../relational-databases/security/strong-passwords.md) e [Criteri password](../../relational-databases/security/password-policy.md). A partire da SQL Server 2012 (11.x), le informazioni relative alle password archiviate vengono calcolate usando l'algoritmo SHA-512 della password con salting.
 

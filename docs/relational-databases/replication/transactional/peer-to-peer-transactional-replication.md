@@ -1,5 +1,6 @@
 ---
 title: Replica transazionale peer-to-peer | Microsoft Docs
+description: In SQL Server la replica peer-to-peer rappresenta una soluzione per la scalabilità orizzontale ad elevata disponibilità in quanto consente di mantenere copie dei dati in più istanze del server.
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4dcb5f8bd05b5cd1b5b68927abfef49576d6b072
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d85b1f3460dc55f7d6cd24420f2d86bb0f9623c2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710726"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901243"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Peer-to-peer - Replica transazionale
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   La replica peer-to-peer rappresenta una soluzione per la scalabilità orizzontale ad elevata disponibilità in quanto consente di gestire copie dei dati in più istanze del server, definite *nodi*. Compilata sulle basi della replica transazionale, la replica peer-to-peer propaga quasi in tempo reale modifiche coerenti dal punto di vista transazionale. In tal modo le applicazioni che richiedono la scalabilità orizzontale delle operazioni di lettura possono distribuire le operazioni di lettura dei client in più nodi. Perché i dati vengono gestiti nei nodi quasi in tempo reale, la replica peer-to-peer offre quella funzionalità di ridondanza dei dati che consente di aumentare la disponibilità dei dati.  
   

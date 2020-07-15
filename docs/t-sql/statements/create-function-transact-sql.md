@@ -40,16 +40,16 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a011f82fc465be79f18a45e71e1dc7e62710d31e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f92ce95ce8427773c57b34511e3ab458e67d8358
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631541"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767093"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Crea una funzione definita dall'utente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Una funzione definita dall'utente è una routine [!INCLUDE[tsql](../../includes/tsql-md.md)] o Common Language Runtime (CLR) tramite cui vengono accettati parametri, viene effettuata un'azione, ad esempio un calcolo complesso, e viene restituito il risultato di tale azione sotto forma di valore. Il valore restituito può essere un valore scalare (singolo) o una tabella. Utilizzare questa istruzione per creare una routine riutilizzabile che può essere utilizzata in queste modalità:
 
@@ -326,7 +326,7 @@ Nelle funzioni inline con valori di tabella il valore restituito TABLE viene def
 
 *select_stmt* Istruzione SELECT che definisce il valore restituito di una funzione inline con valori di tabella.
 
-ORDER (\<order_clause>) specifica l'ordine in base a cui vengono restituiti i risultati dalla funzione con valori di tabella. Per altre informazioni, vedere la sezione "[Uso dell'ordinamento nelle funzioni CLR con valori di tabella](#using-sort-order-in-clr-table-valued-functions)" più avanti in questo argomento.
+ORDER (\<order_clause>) Specifica l'ordine in base a cui vengono restituiti i risultati dalla funzione con valori di tabella. Per altre informazioni, vedere la sezione "[Uso dell'ordinamento nelle funzioni CLR con valori di tabella](#using-sort-order-in-clr-table-valued-functions)" più avanti in questo argomento.
 
 EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 e versioni successive)
@@ -352,7 +352,7 @@ In un tipico esempio di MyFood.DLL, in cui tutti i tipi sono nello spazio dei no
 > - Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può eseguire il codice CLR. È possibile creare, modificare ed eliminare gli oggetti di database che fanno riferimento a moduli CLR; tuttavia non è possibile eseguire questi riferimenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finché non viene abilitata l'opzione [clr enabled option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Per abilitare questa opzione, usare [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).
 > - Questa opzione non è disponibile in un database indipendente.
 
-*\<* table_type_definition *>* ( { \<column_definition> \<column_constraint>| \<computed_column_definition> } [ \<table_constraint> ] [ ,...*n* ] ) Definisce il tipo di dati table per una funzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. La dichiarazione di tabella include definizioni di colonna, nonché vincoli di colonna o tabella. La tabella viene sempre inserita nel filegroup primario.
+*\<*table_type_definition*>* ( { \<column_definition> \<column_constraint>| \<computed_column_definition> } [ \<table_constraint> ] [ ,...*n* ] ) Definisce il tipo di dati tabella per una funzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. La dichiarazione di tabella include definizioni di colonna, nonché vincoli di colonna o tabella. La tabella viene sempre inserita nel filegroup primario.
 
 *\< clr_table_type_definition >* ( { *column_name**data_type* } [ ,...*n* ] ) **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([anteprima in alcune aree](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).
 
@@ -368,7 +368,7 @@ SCHEMABINDING L'argomento SCHEMABINDING è obbligatorio per funzioni definite da
 
 EXECUTE AS EXECUTE AS è obbligatorio per funzioni definite dall'utente scalari compilate in modo nativo.
 
-**\<function_option>::= and \<clr_function_option>::=**
+**\<function_option>::= e \<clr_function_option>::=**
 
 Specifica che la funzione includerà una o più delle opzioni seguenti.
 
@@ -437,7 +437,7 @@ Non è possibile specificare l'opzione IDENTITY per le funzioni CLR con valori d
 
 *increment* Valore intero da aggiungere al valore *seed* per le righe successive della tabella.
 
- **\< column_constraint >::= and \< table_constraint>::=**
+ **\< column_constraint >::= e \< table_constraint>::=**
 
 Definisce il vincolo per una colonna o tabella specificata. Per le funzioni CLR l'unico tipo di vincolo consentito è NULL. I vincoli denominati non sono consentiti.
 

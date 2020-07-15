@@ -20,16 +20,16 @@ ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c150b7ef2aa07da9bc9ba36b663bc3eb644102a9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 185b3e77666739c92239adbb9c569683970b71f0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633770"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006287"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT - autorizzazioni per database (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Concede le autorizzazioni per un database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -67,7 +67,7 @@ PRIVILEGES viene incluso per la conformità allo standard ISO. Non modifica il f
 
 WITH GRANT OPTION indica che l'entità di sicurezza potrà anche concedere l'autorizzazione specificata ad altre entità di sicurezza.
 
-AS \<database_principal> Specifica un'entità dalla quale l'entità che esegue la query ottiene il diritto di concedere l'autorizzazione.
+AS \<database_principal>Specifica un'entità dalla quale l'entità che esegue la query ottiene il diritto di concedere l'autorizzazione.
 
 *Database_user* specifica un utente del database.
 
@@ -103,7 +103,7 @@ Specifica un utente del database sul quale viene eseguito il mapping a una chiav
 ## <a name="remarks"></a>Osservazioni
 
 > [!IMPORTANT]
-> Una combinazione di autorizzazioni ALTER e REFERENCE potrebbe consentire in alcuni casi al beneficiario di visualizzare dati o eseguire funzioni non autorizzate. Un utente con autorizzazione ALTER per una tabella e autorizzazione REFERENCE per una funzione può ad esempio creare una colonna calcolata su una funzione e determinarne l'esecuzione. In questo caso, è inoltre necessario disporre dell'autorizzazione SELECT per la colonna calcolata.
+> Una combinazione di autorizzazioni ALTER e REFERENCE potrebbe consentire in alcuni casi al beneficiario di visualizzare dati o eseguire funzioni non autorizzate. Ad esempio: un utente con autorizzazione ALTER per una tabella e autorizzazione REFERENCE per una funzione può creare una colonna calcolata su una funzione e determinarne l'esecuzione. In questo caso, è inoltre necessario disporre dell'autorizzazione SELECT per la colonna calcolata.
 
 Un database è un'entità a protezione diretta contenuta nel server padre nella gerarchia delle autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile concedere per un database, insieme alle autorizzazioni più generali che le includono in modo implicito.
 
@@ -171,7 +171,7 @@ Un database è un'entità a protezione diretta contenuta nel server padre nella 
 |CREATE TYPE|ALTER|CONTROL SERVER|
 |CREATE VIEW|ALTER|CONTROL SERVER|
 |CREATE XML SCHEMA COLLECTION|ALTER|CONTROL SERVER|
-|Elimina|CONTROL|CONTROL SERVER|
+|DELETE|CONTROL|CONTROL SERVER|
 |EXECUTE|CONTROL|CONTROL SERVER|
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].|CONTROL|CONTROL SERVER|
 |EXECUTE EXTERNAL SCRIPT <br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)].|EXECUTE ANY EXTERNAL SCRIPT|CONTROL SERVER|

@@ -1,5 +1,6 @@
 ---
 title: Autorizzazioni (motore di database) | Microsoft Docs
+description: Consultare l'elenco completo delle autorizzazioni di SQL Server per individuare le autorizzazioni valide per le piattaforme in uso.
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8488462e75a6f836a1b77c49052a9cfdd0c82d2e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f6155dd29c2d4afd5f422ad3499521451ccfc82
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68995857"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009394"
 ---
 # <a name="permissions-database-engine"></a>Autorizzazioni (Motore di database)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Ogni entità a protezione diretta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone di autorizzazioni associate che possono essere concesse a un'entità. Le autorizzazioni in [!INCLUDE[ssDE](../../includes/ssde-md.md)] vengono gestite a livello di server assegnate agli account di accesso e ai ruoli del server e a livello di database assegnate agli utenti e ai ruoli del database. Il modello per il [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ha lo stesso sistema di autorizzazioni del database, ma le autorizzazioni a livello di server non saranno disponibili. Questo argomento contiene l'elenco completo delle autorizzazioni. Per un'implementazione tipica delle autorizzazioni, vedere [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
@@ -51,11 +52,11 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
   
      Conferisce la capacità di modificare le proprietà, eccetto il diritto di proprietà, di una particolare entità a protezione diretta. Quando viene concessa in un ambito, l'autorizzazione ALTER concede la capacità di modificare, creare o eliminare una qualsiasi entità a protezione diretta contenuta in tale ambito. Un'autorizzazione ALTER in uno schema, ad esempio, include la capacità di creare, modificare ed eliminare oggetti contenuti nello schema.  
   
--   ALTER ANY \<*Entità a protezione diretta del server*>, dove *Entità a protezione diretta del server* può essere qualsiasi entità a protezione diretta del server.  
+-   ALTER ANY \<*Server Securable*>, dove *Server Securable* può essere qualsiasi entità a protezione diretta del server.  
   
      Conferisce la capacità di creare, modificare o eliminare singole istanze dell' *Entità a protezione diretta del server*. L'autorizzazione ALTER ANY LOGIN, ad esempio, conferisce la capacità di creare, modificare o eliminare un qualsiasi account di accesso nell'istanza.  
   
--   ALTER ANY \<*Entità a protezione diretta del database*>, dove *Entità a protezione diretta del database* può essere una qualsiasi entità a protezione diretta a livello del database.  
+-   ALTER ANY \<*Database Securable*>, dove *Database Securable* può essere una qualsiasi entità a protezione diretta a livello del database.  
   
      Conferisce la capacità di creare, modificare o eliminare singole istanze dell' *Entità a protezione diretta del database*. L'autorizzazione ALTER ANY SCHEMA, ad esempio, conferisce la capacità di creare, modificare o eliminare un qualsiasi schema contenuto nel database.  
   
@@ -63,23 +64,23 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
   
      Consente al beneficiario di prendere possesso dell'entità a protezione diretta sulla quale viene concessa questa autorizzazione.  
   
--   IMPERSONATE \<*Account di accesso*>  
+-   IMPERSONATE \<*Login*>  
   
      Consente al beneficiario di rappresentare l'account di accesso.  
   
--   IMPERSONATE \<*Utente*>  
+-   IMPERSONATE \<*User*>  
   
      Consente al beneficiario di rappresentare l'utente.  
   
--   CREATE \<*Entità a protezione diretta del server*>  
+-   CREATE \<*Server Securable*>  
   
      Conferisce al beneficiario la capacità di creare l' *Entità a protezione diretta del server*.  
   
--   CREATE \<*Entità a protezione diretta del database*>  
+-   CREATE \<*Database Securable*>  
   
      Conferisce al beneficiario la capacità di creare l' *Entità a protezione diretta del database*.  
   
--   CREATE \<*Entità a protezione diretta contenuta in uno schema*>  
+-   CREATE \<*Schema-contained Securable*>  
   
      Conferisce la capacità di creare un'entità a protezione diretta contenuta in uno schema. Per creare un'entità a protezione diretta in un particolare schema, è però necessario avere un'autorizzazione ALTER sullo schema.  
   
@@ -102,8 +103,8 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |Autorizzazione|Si applica a|  
 |----------------|----------------|  
 |ALTER|Tutte le classi di oggetti ad eccezione di TYPE|  
-|CONTROL|Tutte le classi di oggetti: <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE, USER,<br />VIEW e<br />XML SCHEMA COLLECTION|  
-|Elimina|Tutte le classi di oggetti ad eccezione di DATABASE SCOPED CONFIGURATION e SERVER|  
+|CONTROL|Tutte le classi di oggetti: <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br /> USER,<br />VIEW e<br />XML SCHEMA COLLECTION|  
+|DELETE|Tutte le classi di oggetti ad eccezione di DATABASE SCOPED CONFIGURATION, SERVER e TYPE.|  
 |EXECUTE|Tipi CLR, script esterni, procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR), funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR) e sinonimi|  
 |IMPERSONATE|Account di accesso e utenti|  
 |INSERT|Sinonimi, tabelle e colonne, viste e colonne. L'autorizzazione può essere concesso a livello di database, schema oppure oggetto|  
@@ -129,26 +130,26 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |ASSEMBLY|ALTER|AL|DATABASE|ALTER ANY ASSEMBLY|  
 |ASSEMBLY|CONTROL|CL|DATABASE|CONTROL|  
 |ASSEMBLY|REFERENCES|RF|DATABASE|REFERENCES|  
-|ASSEMBLY|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
+|ASSEMBLY|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |ASSEMBLY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |ASYMMETRIC KEY|ALTER|AL|DATABASE|ALTER ANY ASYMMETRIC KEY|  
 |ASYMMETRIC KEY|CONTROL|CL|DATABASE|CONTROL|  
 |ASYMMETRIC KEY|REFERENCES|RF|DATABASE|REFERENCES|  
-|ASYMMETRIC KEY|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
+|ASYMMETRIC KEY|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |ASYMMETRIC KEY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |AVAILABILITY GROUP|ALTER|AL|SERVER|ALTER ANY AVAILABILITY GROUP|  
 |AVAILABILITY GROUP|CONTROL|CL|SERVER|CONTROL SERVER|  
-|AVAILABILITY GROUP|TAKE OWNERSHIP|A|SERVER|CONTROL SERVER|  
+|AVAILABILITY GROUP|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
 |AVAILABILITY GROUP|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |CERTIFICATE|ALTER|AL|DATABASE|ALTER ANY CERTIFICATE|  
 |CERTIFICATE|CONTROL|CL|DATABASE|CONTROL|  
 |CERTIFICATE|REFERENCES|RF|DATABASE|REFERENCES|  
-|CERTIFICATE|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
+|CERTIFICATE|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |CERTIFICATE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |CONTRACT|ALTER|AL|DATABASE|ALTER ANY CONTRACT|  
 |CONTRACT|CONTROL|CL|DATABASE|CONTROL|  
 |CONTRACT|REFERENCES|RF|DATABASE|REFERENCES|  
-|CONTRACT|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
+|CONTRACT|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |CONTRACT|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |DATABASE|ADMINISTER DATABASE BULK OPERATIONS|DABO|SERVER|CONTROL SERVER|
 |DATABASE|ALTER|AL|SERVER|ALTER ANY DATABASE|  
@@ -211,7 +212,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |DATABASE|CREATE TYPE|CRTY|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
-|DATABASE|Elimina|DL|SERVER|CONTROL SERVER|  
+|DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla versione corrente).|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
@@ -220,7 +221,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
 |DATABASE|SUBSCRIBE QUERY NOTIFICATIONS|SUQN|SERVER|CONTROL SERVER|  
-|DATABASE|TAKE OWNERSHIP|A|SERVER|CONTROL SERVER|  
+|DATABASE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
 |DATABASE|UNMASK|UMSK<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla versione corrente), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|UPDATE|UP|SERVER|CONTROL SERVER|  
 |DATABASE|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|VWCK<br /><br /> Si applica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla versione corrente), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|VIEW SERVER STATE|  
@@ -230,22 +231,22 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |DATABASE SCOPED CREDENTIAL|ALTER|AL|DATABASE|CONTROL|
 |DATABASE SCOPED CREDENTIAL|CONTROL|CL|DATABASE|CONTROL|
 |DATABASE SCOPED CREDENTIAL|REFERENCES|RF|DATABASE|REFERENCES|
-|DATABASE SCOPED CREDENTIAL|TAKE OWNERSHIP|A|DATABASE|CONTROL|
+|DATABASE SCOPED CREDENTIAL|TAKE OWNERSHIP|TO|DATABASE|CONTROL|
 |DATABASE SCOPED CREDENTIAL|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|
 |ENDPOINT|ALTER|AL|SERVER|ALTER ANY ENDPOINT|  
 |ENDPOINT|CONNECT|CO|SERVER|CONTROL SERVER|  
 |ENDPOINT|CONTROL|CL|SERVER|CONTROL SERVER|  
-|ENDPOINT|TAKE OWNERSHIP|A|SERVER|CONTROL SERVER|  
+|ENDPOINT|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
 |ENDPOINT|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |FULLTEXT CATALOG|ALTER|AL|DATABASE|ALTER ANY FULLTEXT CATALOG|  
 |FULLTEXT CATALOG|CONTROL|CL|DATABASE|CONTROL|  
 |FULLTEXT CATALOG|REFERENCES|RF|DATABASE|REFERENCES|  
-|FULLTEXT CATALOG|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
+|FULLTEXT CATALOG|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |FULLTEXT CATALOG|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |FULLTEXT STOPLIST|ALTER|AL|DATABASE|ALTER ANY FULLTEXT CATALOG|  
 |FULLTEXT STOPLIST|CONTROL|CL|DATABASE|CONTROL|  
 |FULLTEXT STOPLIST|REFERENCES|RF|DATABASE|REFERENCES|  
-|FULLTEXT STOPLIST|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
+|FULLTEXT STOPLIST|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |FULLTEXT STOPLIST|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |LOGIN|ALTER|AL|SERVER|ALTER ANY LOGIN|  
 |LOGIN|CONTROL|CL|SERVER|CONTROL SERVER|  
@@ -254,46 +255,46 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |MESSAGE TYPE|ALTER|AL|DATABASE|ALTER ANY MESSAGE TYPE|  
 |MESSAGE TYPE|CONTROL|CL|DATABASE|CONTROL|  
 |MESSAGE TYPE|REFERENCES|RF|DATABASE|REFERENCES|  
-|MESSAGE TYPE|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
+|MESSAGE TYPE|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|Elimina|DL|SCHEMA|Elimina|  
+|OBJECT|DELETE|DL|SCHEMA|DELETE|  
 |OBJECT|EXECUTE|EX|SCHEMA|EXECUTE|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
 |OBJECT|REFERENCES|RF|SCHEMA|REFERENCES|  
 |OBJECT|SELECT|SL|SCHEMA|SELECT|  
-|OBJECT|TAKE OWNERSHIP|A|SCHEMA|CONTROL|  
+|OBJECT|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |OBJECT|UPDATE|UP|SCHEMA|UPDATE|  
 |OBJECT|VIEW CHANGE TRACKING|VWCT|SCHEMA|VIEW CHANGE TRACKING|  
 |OBJECT|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
 |REMOTE SERVICE BINDING|ALTER|AL|DATABASE|ALTER ANY REMOTE SERVICE BINDING|  
 |REMOTE SERVICE BINDING|CONTROL|CL|DATABASE|CONTROL|  
-|REMOTE SERVICE BINDING|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
+|REMOTE SERVICE BINDING|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |REMOTE SERVICE BINDING|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |ROLE|ALTER|AL|DATABASE|ALTER ANY ROLE|  
 |ROLE|CONTROL|CL|DATABASE|CONTROL|  
-|ROLE|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
+|ROLE|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |ROLE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |ROUTE|ALTER|AL|DATABASE|ALTER ANY ROUTE|  
 |ROUTE|CONTROL|CL|DATABASE|CONTROL|  
-|ROUTE|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
+|ROUTE|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |ROUTE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |SEARCH PROPERTY LIST|ALTER|AL|SERVER|ALTER ANY FULLTEXT CATALOG|  
 |SEARCH PROPERTY LIST|CONTROL|CL|SERVER|CONTROL|  
 |SEARCH PROPERTY LIST|REFERENCES|RF|SERVER|REFERENCES|  
-|SEARCH PROPERTY LIST|TAKE OWNERSHIP|A|SERVER|CONTROL|  
+|SEARCH PROPERTY LIST|TAKE OWNERSHIP|TO|SERVER|CONTROL|  
 |SEARCH PROPERTY LIST|VIEW DEFINITION|VW|SERVER|VIEW DEFINITION|  
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|  
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|  
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
-|SCHEMA|Elimina|DL|DATABASE|Elimina|  
+|SCHEMA|DELETE|DL|DATABASE|DELETE|  
 |SCHEMA|EXECUTE|EX|DATABASE|EXECUTE|  
 |SCHEMA|INSERT|IN|DATABASE|INSERT|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
 |SCHEMA|SELECT|SL|DATABASE|SELECT|  
-|SCHEMA|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
+|SCHEMA|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |SCHEMA|UPDATE|UP|DATABASE|UPDATE|  
 |SCHEMA|VIEW CHANGE TRACKING|VWCT|DATABASE|VIEW CHANGE TRACKING|  
 |SCHEMA|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
@@ -333,22 +334,22 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |SERVER|VIEW SERVER STATE|VWSS|Non applicabile|Non applicabile|  
 |SERVER ROLE|ALTER|AL|SERVER|ALTER ANY SERVER ROLE|  
 |SERVER ROLE|CONTROL|CL|SERVER|CONTROL SERVER|  
-|SERVER ROLE|TAKE OWNERSHIP|A|SERVER|CONTROL SERVER|  
+|SERVER ROLE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
 |SERVER ROLE|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |SERVICE|ALTER|AL|DATABASE|ALTER ANY SERVICE|  
 |SERVICE|CONTROL|CL|DATABASE|CONTROL|  
 |SERVICE|SEND|SN|DATABASE|CONTROL|  
-|SERVICE|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
+|SERVICE|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |SERVICE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |SYMMETRIC KEY|ALTER|AL|DATABASE|ALTER ANY SYMMETRIC KEY|  
 |SYMMETRIC KEY|CONTROL|CL|DATABASE|CONTROL|  
 |SYMMETRIC KEY|REFERENCES|RF|DATABASE|REFERENCES|  
-|SYMMETRIC KEY|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
+|SYMMETRIC KEY|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |SYMMETRIC KEY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |TYPE|CONTROL|CL|SCHEMA|CONTROL|  
 |TYPE|EXECUTE|EX|SCHEMA|EXECUTE|  
 |TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
-|TYPE|TAKE OWNERSHIP|A|SCHEMA|CONTROL|  
+|TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
 |USER|ALTER|AL|DATABASE|ALTER ANY USER|  
 |USER|CONTROL|CL|DATABASE|CONTROL|  
@@ -358,7 +359,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|EXECUTE|EX|SCHEMA|EXECUTE|  
 |XML SCHEMA COLLECTION|REFERENCES|RF|SCHEMA|REFERENCES|  
-|XML SCHEMA COLLECTION|TAKE OWNERSHIP|A|SCHEMA|CONTROL|  
+|XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
 ##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> Riepilogo delle informazioni sull'algoritmo di controllo delle autorizzazioni  
@@ -417,7 +418,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 
 ## <a name="special-considerations-for-column-level-permissions"></a>Considerazioni speciali per le autorizzazioni a livello di colonna
 
-Le autorizzazioni a livello di colonna vengono concesse con la sintassi *<NomeTabella>(\<NomeColonna>)* . Ad esempio:
+Le autorizzazioni a livello di colonna vengono concesse con la sintassi *<table_name>(\<column _name>)* . Ad esempio:
 ```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```

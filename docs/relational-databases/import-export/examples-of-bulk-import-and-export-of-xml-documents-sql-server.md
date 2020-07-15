@@ -1,7 +1,6 @@
 ---
 title: Importazione ed esportazione bulk di documenti XML
-description: In questi esempi viene illustrata l'importazione bulk di documenti XML in un database di SQL Server e l'esportazione bulk da un database di SQL Server.
-ms.description: Examples of bulk importing and exporting of XML documents with SQL Server
+description: Esempi di importazione ed esportazione in blocco di documenti XML con SQL Server
 ms.date: 10/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,15 +19,15 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e44f6a80553927b3888d76f53f0570ba5b3b9026
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: babdda8ca6ced94eba21788028d8bf6e6e7eeaae
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980663"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012454"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Esempi di importazione ed esportazione bulk di documenti XML (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
     
 ##  <a name="top"></a>

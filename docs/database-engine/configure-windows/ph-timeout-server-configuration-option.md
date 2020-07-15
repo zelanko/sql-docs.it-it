@@ -1,5 +1,6 @@
 ---
 title: Opzione di configurazione del server Timeout PH | Microsoft Docs
+description: Informazioni sull'opzione "Timeout PH". Scoprire come limita il tempo assegnato dal gestore di protocollo full-text per la connessione a un database di SQL Server.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - protocols [SQL Server], timing out
 - ph timeout option
 ms.assetid: ed19a07c-83fe-4582-9c9e-41b1ce571850
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3d918c816bc4a4053435fcd5d71f94c09f9c4ace
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a0173d6e5c5b10ac05b757f483518999fc526992
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997929"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730963"
 ---
 # <a name="ph-timeout-server-configuration-option"></a>Opzione di configurazione del server PH timeout
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   L'opzione PH timeout consente di specificare l'intervallo di tempo, in secondi, atteso dal gestore di protocollo full-text prima del timeout di una connessione a un database. Il valore predefinito è 60 secondi. Aumentare il valore di ph timeout quando i tentativi di connessione sono in timeout a causa di temporanei problemi di rete.  
   

@@ -1,5 +1,6 @@
 ---
 title: Panoramica di Monitoraggio mirroring del database | Microsoft Docs
+description: Informazioni su come usare Monitoraggio mirroring del database per monitorare i database con mirroring per verificare il flusso di dati nella sessione di mirroring del database e per la risoluzione dei problemi.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 07ad2379f82552a3db0ceee30305f7fdc38003fe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d5dbfd56f461da431843d1788d9226a72448b57
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006412"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730920"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Panoramica di Monitoraggio mirroring del database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Se si dispone delle autorizzazioni corrette, è possibile utilizzare Monitoraggio mirroring del database per monitorare eventuali subset dei database con mirroring su un'istanza del server. Il monitoraggio consente di verificare se e quanto correttamente i dati vengono trasmessi alla sessione di mirroring del database. Monitoraggio mirroring del database è inoltre utile per individuare e risolvere la causa di una riduzione del flusso di dati.  
   
  È possibile registrare uno o più database con mirroring per il monitoraggio singolarmente su ogni partner di failover. Quando si registra un database, Monitoraggio mirroring del database memorizza nella cache le informazioni seguenti relative al database:  
@@ -46,12 +47,12 @@ ms.locfileid: "68006412"
   
  Per ogni database registrato sono visualizzate le informazioni seguenti:  
   
- _<Nome_database>_ **(** _\<Stato>_ **,** _<PRINCIPAL_SERVER>_ **->** _<MIRROR_SERVER>_ **)**  
+ _<Nome_database>_ **(** _\<Status>_ **,** _<PRINCIPAL_SERVER>_ **->** _<MIRROR_SERVER>_ **)**  
   
  *<Nome_database>*  
  Nome di un database con mirroring registrato in Monitoraggio mirroring del database.  
   
- *\<Stato>*  
+ *\<Status>*  
  Gli stati possibili e le relative icone sono indicati di seguito:  
   
 |Icona|Stato|Descrizione|  
@@ -82,7 +83,7 @@ ms.locfileid: "68006412"
   
  Un amministratore di sistema può visualizzare la configurazione corrente degli avvisi per il database selezionando la pagina a schede **Avvisi** . Da questa pagina è possibile accedere alla finestra di dialogo **Imposta valori di soglia avvisi** per abilitare e configurare una o più soglie degli avvisi.  
   
- Nell'intestazione sopra le schede, il riquadro dei dettagli visualizza l'ora dell'ultimo aggiornamento delle informazioni di stato nel monitoraggio nel formato **Ultimo aggiornamento:** _\<data>\<ora>_ . Monitoraggio mirroring del database recupera in genere le informazioni di stato dalle istanze del server principale e mirror in momenti diversi. Viene visualizzato l'orario relativo alla meno recente delle due operazioni.  
+ Nell'intestazione sopra le schede, nel riquadro dei dettagli viene visualizzata l'ora dell'ultimo aggiornamento delle informazioni di stato nel monitoraggio, nel formato **Ultimo aggiornamento:** _\<date>\<time>_ . Monitoraggio mirroring del database recupera in genere le informazioni di stato dalle istanze del server principale e mirror in momenti diversi. Viene visualizzato l'orario relativo alla meno recente delle due operazioni.  
   
 ## <a name="action-menu"></a>Menu Azione  
  Il menu **Azione** include sempre i comandi seguenti:  

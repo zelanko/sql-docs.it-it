@@ -1,8 +1,9 @@
 ---
-title: Opzione di configurazione del server external scripts enabled | Microsoft Docs
-ms.date: 11/13/2017
+title: Opzione di configurazione del server external scripts enabled
+description: Informazioni sull'opzione external scripts enabled in SQL Server. Dopo l'attivazione, è possibile eseguire script esterni nei linguaggi supportati, ad esempio R o Python.
+ms.date: 06/30/2020
 ms.prod: sql
-ms.technology: configuration
+ms.technology: machine-learning-services
 ms.reviewer: ''
 ms.topic: language-reference
 f1_keywords:
@@ -11,20 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - external scripts enabled option
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 14e3d788034fad9e26f8283e5155d29286ad7360
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+author: dphansen
+ms.author: davidph
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3915ca28aa6512c52e2cb465528bb4c04ea8dd21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772490"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>Opzione di configurazione del server external scripts enabled
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-**Si applica a**: [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] e [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Usare l'opzione **external scripts enabled** per abilitare l'esecuzione di script con determinate estensioni del linguaggio remote. Questa proprietà è DISATTIVATA per impostazione predefinita. Quando **Advanced Analytics Services** è installato, il programma di installazione può impostare facoltativamente questa proprietà su true.
+Usare l'opzione **external scripts enabled** per abilitare l'esecuzione di script con determinate estensioni del linguaggio remote. Questa proprietà è DISATTIVATA per impostazione predefinita. Quando **Machine Learning Services** è installato, il programma di installazione può impostare facoltativamente questa proprietà su true.
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -34,13 +35,13 @@ Usare l'opzione **external scripts enabled** per abilitare l'esecuzione di scrip
 
     [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] include il supporto del linguaggio di programmazione R in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], oltre a un set di strumenti per workstation R e librerie di connettività.
 
-    Installare la funzionalità **Advanced Analytics Extensions** durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per abilitare l'esecuzione di script R. Il linguaggio di programmazione R è installato per impostazione predefinita.
+    Installare la funzionalità **R Services** durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per abilitare l'esecuzione di script R.
 
-+ Per [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
++ Per [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] e versioni successive
 
-    [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] usa la stessa architettura di SQL Server 2016, ma supporta in più il linguaggio di programmazione Python.
+    [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] supporta entrambi i linguaggi R e Python.
 
-    Installare la funzionalità **Advanced Analytics Extensions** durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per abilitare l'esecuzione di script esterni. Durante l'installazione iniziale selezionare almeno un linguaggio di programmazione: R o Python oppure entrambi. 
+    Installare la funzionalità **Machine Learning Services** durante il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per abilitare l'esecuzione di script esterni. Durante l'installazione iniziale selezionare almeno un linguaggio di programmazione: R o Python oppure entrambi.
 
 ## <a name="additional-requirements"></a>Requisiti aggiuntivi
 
@@ -51,16 +52,11 @@ sp_configure 'external scripts enabled', 1;
 RECONFIGURE WITH OVERRIDE;  
 ```
 
-È necessario riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per rendere effettiva questa modifica.
-
-Per altre informazioni, vedere [Configurare SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
+Per altre informazioni, vedere [Installare SQL Server Machine Learning Services (Python re R) in Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md) o [Linux](../../linux/sql-server-linux-setup-machine-learning-docker.md?toc=/sql/machine-learning/toc.json).
 
 ## <a name="see-also"></a>Vedere anche
 
-[sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
-
-[RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)
-
-[sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
-
-[SQL Server Machine Learning Services](../../machine-learning/index.yml)
++ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
++ [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)
++ [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
++ [Documentazione per Machine Learning in SQL](../../machine-learning/index.yml)

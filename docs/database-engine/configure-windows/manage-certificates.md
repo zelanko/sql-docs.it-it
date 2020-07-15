@@ -1,5 +1,6 @@
 ---
 title: Gestione dei certificati (Gestione configurazione SQL Server) | Microsoft Docs
+description: Informazioni su come installare i certificati in diverse configurazioni di SQL Server. Gli esempi includono istanze singole, cluster di failover e gruppi di disponibilità Always On.
 ms.custom: ''
 ms.date: 01/16/2019
 ms.prod: sql
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - installing certificates
 - security [SQL Server], encryption
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b98f52d7c8e23530c13da6ad44d90090998ac09e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 835d0b1da11ba014b14ede9637117357e84dc208
+ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68212746"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85196048"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>Gestione dei certificati (Gestione configurazione SQL Server)
 
@@ -35,8 +36,8 @@ I certificati SSL/TLS sono molto usati per proteggere l'accesso a SQL Server. Co
 
 * Visualizzazione e convalida di certificati installati in un'istanza di SQL Server. 
 * Identificazione dei certificati prossimi alla scadenza. 
-* Distribuzione dei certificati ai computer appartenenti a gruppi di disponibilità dal nodo che contiene la replica primaria. 
-* Distribuzione dei certificati ai computer appartenenti a un'istanza del cluster di failover dal nodo attivo.
+* Distribuzione dei certificati ai computer appartenenti a gruppi di disponibilità Always On dal nodo che contiene la replica primaria. 
+* Distribuzione dei certificati ai computer appartenenti a un'istanza del cluster di failover Always On dal nodo attivo.
 
 > [!NOTE]
 > È possibile usare la gestione dei certificati in Gestione configurazione SQL Server con versioni precedenti di SQL Server, a partire da SQL Server 2008.
@@ -54,7 +55,7 @@ I certificati SSL/TLS sono molto usati per proteggere l'accesso a SQL Server. Co
 5. Selezionare **Avanti** per convalidare il certificato. Se non ci sono errori, selezionare **Avanti** per importare il certificato nell'istanza locale.  
   
  
-##  <a name="to-install-a-certificate-in-a-failover-cluster-configuration"></a><a name="provision-failover-cluster-cert"></a> Per installare un certificato in una configurazione cluster di failover  
+##  <a name="to-install-a-certificate-in-a-failover-cluster-instance-configuration"></a><a name="provision-failover-cluster-cert"></a> Per installare un certificato in una configurazione di un'istanza del cluster di failover  
   
 1. Nel riquadro della console di Gestione configurazione SQL Server espandere **Configurazione di rete SQL Server**.
   
@@ -66,7 +67,7 @@ I certificati SSL/TLS sono molto usati per proteggere l'accesso a SQL Server. Co
 
 5. Se l'installazione riguarda un nodo singolo, scegliere **Sfoglia** e selezionare il file del certificato. Andare al passaggio 8.
 
-6. Se l'installazione del certificato riguarda ogni nodo, selezionare **Avanti** per visualizzare l'elenco dei nodi dei possibili proprietari. I possibili proprietari dell'istanza del cluster di failover corrente di SQL Server sono preselezionati.
+6. Se l'installazione del certificato riguarda ogni nodo, selezionare **Avanti** per visualizzare l'elenco dei nodi dei possibili proprietari. I proprietari possibili per l'istanza del cluster di failover corrente sono preselezionati.
 
 7. Scegliere **Avanti** per selezionare il certificato da importare.
 
@@ -75,9 +76,9 @@ I certificati SSL/TLS sono molto usati per proteggere l'accesso a SQL Server. Co
 9. Selezionare **Avanti** per importare i certificati selezionati.
 
 > [!NOTE]
-> Completare questi passaggi nel nodo attivo dell'istanza del cluster di failover di SQL Server. L'utente deve avere autorizzazioni amministratore per tutti i nodi del cluster.
+> Completare questi passaggi nel nodo attivo dell'istanza del cluster di failover Always On. L'utente deve avere autorizzazioni amministratore per tutti i nodi del cluster.
 
-##  <a name="to-install-a-certificate-in-an-availability-group-configuration"></a><a name="provision-availability-group-cert"></a>Per installare un certificato in una configurazione del gruppo di disponibilità  
+##  <a name="to-install-a-certificate-in-an-always-on-availability-group-configuration"></a><a name="provision-availability-group-cert"></a>Per installare un certificato in una configurazione del gruppo di disponibilità Always On  
   
 1. Nel riquadro della console di Gestione configurazione SQL Server espandere **Configurazione di rete SQL Server**.
   

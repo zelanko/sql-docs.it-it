@@ -25,16 +25,16 @@ helpviewer_keywords:
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8247b0fe0e17ae717fddd89ff4a608481e0777ad
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c307a383d97691a49f437822e4a92cf64fcfb832
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634000"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892510"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Crea una nuova coda in un database. Le code vengono utilizzate per archiviare i messaggi. Quando viene recapitato un messaggio per un servizio, esso viene inserito da [!INCLUDE[ssSB](../../includes/sssb-md.md)] nella coda associata al servizio.
 
@@ -86,7 +86,7 @@ ACTIVATION Specifica le informazioni sulla stored procedure da avviare per l'ela
 
 STATUS (attivazione) Specifica se [!INCLUDE[ssSB](../../includes/sssb-md.md)] avvia la stored procedure. Se STATUS = ON, la coda avvia la stored procedure specificata con PROCEDURE_NAME quando il numero di procedure in esecuzione è minore di MAX_QUEUE_READERS e quando i messaggi arrivano nella coda più velocemente di quanto non vengano ricevuti dalle stored procedure. Se STATUS = OFF, la coda non avvia la stored procedure. Se questa clausola viene omessa, il valore predefinito è ON.
 
-PROCEDURE_NAME = \<stored_procedure> Specifica il nome della stored procedure da avviare per l'elaborazione dei messaggi nella coda. Il valore deve essere un identificatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+PROCEDURE_NAME = \<procedure> Specifica il nome della stored procedure da avviare per l'elaborazione dei messaggi nella coda. Il valore deve essere un identificatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 *database_name*(stored_procedure) Nome del database contenente la stored procedure.
 

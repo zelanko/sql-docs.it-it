@@ -1,5 +1,6 @@
 ---
 title: Accedere a SQL Server | Microsoft Docs
+description: Informazioni sulle diverse modalità di accesso a un'istanza di SQL Server. Scoprire quale formato usare per il nome del server in diversi ambienti.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 - logging in [SQL Server]
 - logins [SQL Server]
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d9401f7d1e871b9844642ff39f99d7f19c3f0da4
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ec03d8cd7b6e29bf3241b1646ec7c2e92c41b39a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886248"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789797"
 ---
 # <a name="logging-in-to-sql-server"></a>Accesso a SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   È possibile accedere a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con uno degli strumenti di amministrazione a interfaccia grafica oppure dal prompt dei comandi.  
   
  Se si accede a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con uno strumento di amministrazione a interfaccia grafica, ad esempio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], viene richiesto di specificare il nome del server, un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e una password, se necessario. Se si accede a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'autenticazione di Windows non è necessario specificare un account di accesso di SQL Server ogni volta che si accede a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza infatti l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows dell'utente per eseguire automaticamente l'accesso. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito in modalità mista (modalità di autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows) e si sceglie di eseguire l'accesso usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e una password. Se possibile, usare l'autenticazione di Windows.  

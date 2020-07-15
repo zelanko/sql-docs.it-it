@@ -1,29 +1,28 @@
 ---
 title: Impostazioni utente e dell'area di lavoro
-titleSuffix: Azure Data Studio
 description: Come personalizzare Azure Data Studio modificando le impostazioni utente e dell'area di lavoro.
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: a874aaf9ec136ff9ea27cbeaa92011a07f3718c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 00c7248050d3bf7e0d5d31df6a1e628dbcc03605
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287065"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758382"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Modificare le impostazioni utente e dell'area di lavoro
 
-Le impostazioni consentono di configurare facilmente [!INCLUDE[name-sos](../includes/name-sos-short.md)] in base alle preferenze personali. Sono disponibili opzioni per la modifica di quasi tutti i componenti dell'editor, dell'interfaccia utente e del comportamento funzionale di [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+Le impostazioni consentono di configurare facilmente Azure Data Studio in base alle preferenze personali. Sono disponibili opzioni per la modifica di quasi tutti i componenti dell'editor, dell'interfaccia utente e del comportamento funzionale di Azure Data Studio.
 
-In [!INCLUDE[name-sos](../includes/name-sos-short.md)] sono disponibili due diversi ambiti di impostazioni:
+In Azure Data Studio sono disponibili due ambiti di impostazioni diversi:
 
-* **Utente** Queste impostazioni vengono applicate globalmente a qualsiasi istanza di [!INCLUDE[name-sos](../includes/name-sos-short.md)] aperta.
+* **Utente** Queste impostazioni vengono applicate globalmente a qualsiasi istanza di Azure Data Studio aperta.
 * **Area di lavoro** Le impostazioni dell'area di lavoro sono specifiche di una cartella del computer e sono disponibili solo se la cartella è aperta nella barra laterale Explorer. Le impostazioni definite in questo ambito sostituiscono quelle specificate nell'ambito dell'utente.
 
 ## <a name="creating-user-and-workspace-settings"></a>Creazione di impostazioni utente e dell'area di lavoro
@@ -36,9 +35,10 @@ Nell'esempio seguente vengono disabilitati i numeri di riga nell'editor e vengon
 
 ![Impostazioni di esempio](media/settings/sample-settings.png)
 
-Le modifiche alle impostazioni vengono ricaricate da [!INCLUDE[name-sos](../includes/name-sos-short.md)] dopo il salvataggio del file `settings.json` modificato.
+Le modifiche alle impostazioni vengono ricaricate da Azure Data Studio dopo il salvataggio del file `settings.json` modificato.
 
->**Nota:** Le impostazioni dell'area di lavoro sono particolarmente utili per condividere le impostazioni specifiche di un progetto tra i membri del team.
+> [!NOTE] 
+> Le impostazioni dell'area di lavoro sono particolarmente utili per condividere le impostazioni specifiche di un progetto tra i membri del team.
 
 ## <a name="settings-file-locations"></a>Percorsi del file delle installazioni
 
@@ -48,7 +48,7 @@ A seconda della piattaforma, il file delle impostazioni utente si trova qui:
 * **Mac** `$HOME/Library/Application Support/azuredatastudio/User/settings.json`
 * **Linux** `$HOME/.config/azuredatastudio/User/settings.json`
 
-Il file di impostazioni dell'area di lavoro si trova nella cartella `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` del progetto.
+Il file di impostazioni dell'area di lavoro si trova nella cartella `.Azure Data Studio` del progetto.
 
 ## <a name="hot-exit"></a>Hot Exit
 
@@ -63,4 +63,4 @@ Per semplificare l'identificazione delle connessioni in uso, è possibile impost
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] ha ereditato le funzionalità delle impostazioni utente e dell'area di lavoro da Visual Studio Code e, per informazioni dettagliate sulle impostazioni, è quindi possibile consultare l'articolo [Impostazioni per Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings).
+Azure Data Studio ha ereditato le funzionalità delle impostazioni utente e dell'area di lavoro da Visual Studio Code. Per informazioni dettagliate sulle impostazioni, è quindi possibile vedere l'articolo [Impostazioni per Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings).

@@ -1,5 +1,6 @@
 ---
 title: Configurazione della visibilità dei metadati | Microsoft Docs
+description: Informazioni su come configurare la visibilità dei metadati per le entità a protezione diretta di cui l'utente è proprietario o per le quali dispone dell'autorizzazione in SQL Server.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eba613c3736024de71a67e7cdb749960e91e89ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63c00456e36742d62074a65eb291dc19e23a2863
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68661210"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85979493"
 ---
 # <a name="metadata-visibility-configuration"></a>Configurazione della visibilità dei metadati
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   La visibilità dei metadati è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni. Ad esempio, la query seguente restituisce una riga se all'utente è stata concessa un'autorizzazione SELECT o INSERT per la tabella `myTable`.  
   
 ```  
@@ -45,7 +46,7 @@ GO
   
 |||  
 |-|-|  
-|Viste del catalogo|Stored procedure [!INCLUDE[ssDE](../../includes/ssde-md.md)]sp_help**del**|  
+|Viste del catalogo|Stored procedure **sp_help** del [!INCLUDE[ssDE](../../includes/ssde-md.md)]|  
 |Metadati che espongono funzioni predefinite|Viste degli schemi delle informazioni|  
 |Viste di compatibilità|Proprietà estese|  
   
@@ -65,7 +66,7 @@ GO
   
 -   È possibile che le funzioni predefinite per la creazione di metadati quali OBJECTPROPERTYEX restituiscano NULL.  
   
--   È possibile che le stored procedure [!INCLUDE[ssDE](../../includes/ssde-md.md)]sp_help**del** restituiscano solo un subset di righe o NULL.  
+-   È possibile che le stored procedure **sp_help** del [!INCLUDE[ssDE](../../includes/ssde-md.md)] restituiscano solo un subset di righe o NULL.  
   
  I moduli SQL, ad esempio le stored procedure e i trigger, vengono eseguiti nel contesto di sicurezza del chiamante e pertanto la relativa accessibilità ai metadati è limitata. Nel codice di esempio seguente, quando la stored procedure tenta di accedere ai metadati relativi alla tabella `myTable` per la quale il chiamante non dispone di alcun diritto, viene restituito un set di risultati vuoto. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], viene invece restituita una riga.  
   

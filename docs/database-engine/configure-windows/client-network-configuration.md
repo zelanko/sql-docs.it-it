@@ -1,5 +1,6 @@
 ---
 title: Configurazione di rete dei client | Microsoft Docs
+description: Informazioni sul modo in cui i computer client si connettono a un'istanza di SQL Server in una rete. Informazioni sugli strumenti che è possibile usare per gestire i client.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - client connections [SQL Server]
 - network connections [SQL Server], client configuration
 ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4fcbb9e6ee0f68433034cd2c3a29f565e05359e9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 65e9cff3efd309e25104e0f283a1902d8a0392e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012965"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759176"
 ---
 # <a name="client-network-configuration"></a>Configurazione di rete dei client
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Il software client consente ai computer di connettersi a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibile in rete. Un client è un'applicazione front-end che utilizza i servizi forniti da un server quale [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Il computer nel quale è installata l'applicazione viene definito *computer client*.  
   
  Al livello più semplice, un client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può risiedere nello stesso computer di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In genere tuttavia, un client si connette a uno o più server remoti in rete. L'architettura client/server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di gestire più client e server in una rete. Le configurazioni client predefinite risultano adeguate nella maggior parte dei casi.  
@@ -43,7 +44,7 @@ ms.locfileid: "68012965"
   
 -   Client DB-Library  
   
-     Queste applicazioni includono l'utilità del prompt dei comandi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]isql**di** e client scritti in DB-Library. Il supporto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le applicazioni client che usano DB-Library è limitato alle funzionalità di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.  
+     Queste applicazioni includono l'utilità del prompt dei comandi **isql** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e client scritti in DB-Library. Il supporto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le applicazioni client che usano DB-Library è limitato alle funzionalità di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.  
   
 > [!NOTE]  
 >  Nonostante supporti connessioni da applicazioni esistenti tramite le API DB-Library ed Embedded SQL, il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] non include i file o la documentazione necessari per svolgere attività di programmazione per le applicazioni che utilizzano tali API. In una versione futura del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verrà eliminato il supporto per le connessioni da applicazioni DB-Library o Embedded SQL. Non utilizzare pertanto DB-Library o Embedded SQL per sviluppare nuove applicazioni. Quando si modificano applicazioni esistenti, rimuovere tutte le dipendenze da DB-Library o Embedded SQL. Invece di queste API, usare lo spazio dei nomi SQLClient o un'API, ad esempio OLE DB o ODBC. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è inclusa la DLL DB-Library necessaria per eseguire queste applicazioni. Per eseguire applicazioni DB-Library o Embedded SQL è necessario disporre della DLL DB-Library di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 6.5, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  

@@ -1,5 +1,6 @@
 ---
 title: Extensible Key Management (EKM) | Microsoft Docs
+description: Informazioni su come configurare e usare Extensible Key Management e sull'integrazione con le funzionalità di crittografia dei dati per SQL Server.
 ms.custom: ''
 ms.date: 07/25/2019
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 9115535ecc2569e035f4831589e53191e2634f61
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6421c442c5cbb45b9e076d3353abcbad6217fa53
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957399"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896792"
 ---
 # <a name="extensible-key-management-ekm"></a>Extensible Key Management (EKM)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce funzionalità di crittografia dei dati insieme a *Extensible Key Management* (EKM), l'uso del provider di *API di crittografia Microsoft* (MSCAPI) per la crittografia e la generazione di chiavi. Le chiavi di crittografia per dati e la crittografia delle chiavi vengono create nei contenitori di chiave temporanei e devono essere esportate da un provider prima di essere archiviate nel database. Questo approccio consente la gestione delle chiavi che include una gerarchia delle chiavi di crittografia e un backup delle chiavi, che devono essere gestiti da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Con la crescente richiesta di conformità con le normative e il problema della privacy dei dati, le organizzazioni sfruttano la crittografia come modalità per fornire una soluzione di "difesa approfondita". Questo approccio risulta spesso poco pratico se si utilizzano solo gli strumenti di gestione della crittografia dei database. I produttori di hardware forniscono prodotti che consentono la gestione aziendale delle chiavi usando i *Moduli di sicurezza hardware* (HSM, Hardware Security Modules). I dispositivi HSM consentono di archiviare le chiavi di crittografia su moduli hardware o software. Questa soluzione è più sicura poiché le chiavi di crittografia non risiedono insieme ai dati di crittografia.  
@@ -90,7 +91,7 @@ GO
 #### <a name="ekm-device-specific-basic-authentication-using-usernamepassword"></a>Autenticazione di base specifica del dispositivo EKM utilizzando nome utente/password  
  Per i moduli EKM che supportano l'autenticazione di base usando una coppia *nome utente/password*, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce l'autenticazione trasparente usando le credenziali. Per altre informazioni sulle credenziali, vedere [Credenziali &#40;Motore di database&#41;](../../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
- Una credenziale può essere creata per un provider EKM e sottoposta al mapping a un accesso (sia account Windows che account [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) per accedere a un modulo EKM in base agli accessi. Il campo *Identify* della credenziale contiene il nome utente, il campo *secret* contiene una password per la connessione a un modulo EKM.  
+ Una credenziale può essere creata per un provider EKM e sottoposta al mapping a un accesso (sia account Windows che account [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) per accedere a un modulo EKM in base agli accessi. Il campo *identity* della credenziale contiene il nome utente, il campo *secret* contiene una password per la connessione a un modulo EKM.  
   
  Se non è presente una credenziale su cui eseguire il mapping a un accesso per il provider EKM, viene usata la credenziale su cui è stato eseguito il mapping all'account di servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -102,7 +103,7 @@ GO
 ### <a name="encryption-and-decryption-by-an-ekm-device"></a>Crittografia e decrittografia da un dispositivo EKM  
  È possibile utilizzare le seguenti funzioni e funzionalità per crittografare e decrittografare i dati utilizzando chiavi simmetriche e asimmetriche:  
   
-|Funzione o funzionalità|Riferimento|  
+|Funzione o funzionalità|Informazioni di riferimento|  
 |-------------------------|---------------|  
 |Crittografia con chiave simmetrica|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-symmetric-key-transact-sql.md)|  
 |Crittografia con chiave asimmetrica|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-asymmetric-key-transact-sql.md)|  

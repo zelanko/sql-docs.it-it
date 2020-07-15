@@ -1,25 +1,24 @@
 ---
 title: Creare estensioni
-titleSuffix: Azure Data Studio
 description: Informazioni sulla creazione e l'aggiunta di estensioni in Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: d0c43df8b24a33f3763dc5ff3a80e989b9b85038
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: adfff7f2aa0fbda1b5e8bdacaddfaef36d16342f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959600"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774637"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Estendere le funzionalità creando estensioni per Azure Data Studio
 
-Le estensioni di [!INCLUDE[name-sos](../includes/name-sos-short.md)] consentono di aggiungere facilmente nuove funzionalità all'installazione di base di [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+Le estensioni di Azure Data Studio consentono di aggiungere facilmente nuove funzionalità all'installazione di base di questo strumento.
 
 Le estensioni vengono fornite sia dal team di Azure Data Studio (Microsoft) sia dalla community di terze parti.
 
@@ -43,7 +42,7 @@ Per avviare la nuova estensione, è possibile usare il generatore di estensioni 
 
 **Riferimenti di estendibilità**
 
-Per informazioni sull'estendibilità di Azure Data Studio, vedere [Panoramica dell'estendibilità](extensibility.md). È anche possibile vedere esempi di come usare l'API negli [esempi](https://github.com/Microsoft/azuredatastudio/tree/master/samples) esistenti.
+Per informazioni sull'estendibilità di Azure Data Studio, vedere [Panoramica dell'estendibilità](extensibility.md). È anche possibile vedere esempi di come usare l'API negli [esempi](https://github.com/Microsoft/azuredatastudio/tree/main/samples) esistenti.
 
 
 ## <a name="debug-an-extension"></a>Eseguire il debug di un'estensione

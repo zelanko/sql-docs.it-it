@@ -20,15 +20,15 @@ ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41b887a632d2c24e23b24bbfe5eb50b58f0352d9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 86ec4ba1a3dce9ec818c9756261d19a775d3a1da
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828676"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003710"
 ---
 # <a name="right-transact-sql"></a>RIGHT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Restituisce la parte finale di una stringa di caratteri, di lunghezza pari al numero di caratteri specificato.  
   
@@ -43,6 +43,9 @@ RIGHT ( character_expression , integer_expression )
 ## <a name="arguments"></a>Argomenti  
  *character_expression*  
  [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di dati di tipo carattere o binario. *character_expression* può essere una costante, una variabile o una colonna. *character_expression* può essere di qualsiasi tipo di dati, eccetto **text** o **ntext**, implicitamente convertibile in **varchar** o **nvarchar**. In alternativa usare la funzione [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) per convertire in modo esplicito *character_expression*.  
+   
+> [!NOTE]  
+> Se *string_expression* è di tipo **binary** o **varbinary**, RIGHT eseguirà una conversione implicita in **varchar** e pertanto non manterrà l'input binario.  
   
  *integer_expression*  
  Valore Integer positivo che specifica quanti caratteri di *character_expression* verranno restituiti. Se l'argomento *integer_expression* è negativo, viene restituito un errore. Se *integer_expression* è di tipo **bigint** e contiene un valore elevato, *character_expression* deve essere di un tipo di dati di grandi dimensioni, ad esempio **varchar(max)** .  
@@ -57,7 +60,7 @@ RIGHT ( character_expression , integer_expression )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-right-with-a-column"></a>A. Uso di LEFT con una colonna  
+### <a name="a-using-right-with-a-column"></a>A: Uso di RIGHT con una colonna  
  Nell'esempio seguente vengono restituiti gli ultimi cinque caratteri del nome di ciascuna persona nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6c72c58b0a23f8215d303addfbb2ec9fb65c4489
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 10ef5b2c2e873d3f17085137134aabd8db57b059
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321636"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893792"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>Visualizzare e modificare i parametri del prompt dei comandi dell'agente di replica
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Gli agenti di replica sono file eseguibili che accettano parametri della riga di comando. Per impostazione predefinita, gli agenti vengono eseguiti in passaggi di processi di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent. In questo modo, è possibile visualizzare e modificare tali parametri usando la finestra di dialogo **Proprietà processo - \<Processo>** , accessibile dalla cartella **Processi** di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e dalla scheda **Agenti** di Monitoraggio replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  Gli agenti di replica sono file eseguibili che accettano parametri della riga di comando. Per impostazione predefinita, gli agenti vengono eseguiti in passaggi di processi di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Agent, quindi questi parametri possono essere visualizzati e modificati usando la finestra di dialogo **Proprietà processo - \<Job>** . accessibile dalla cartella **Processi** di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e dalla scheda **Agenti** di Monitoraggio replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 > [!NOTE]  
 >  Le modifiche apportate al parametro dell'agente verranno applicate al successivo avvio dell'agente. Se l'agente viene eseguito in modo continuo, è necessario arrestarlo e riavviarlo.  
@@ -33,19 +33,19 @@ ms.locfileid: "75321636"
   
 |Agente|Nome processo|Per l'elenco dei parametri, vedere...|  
 |-----------|--------------|------------------------------------|  
-|agente snapshot|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<ServerPubblicazione>-\<intero>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
-|Agente snapshot per una partizione di una pubblicazione di tipo merge|**Dyn_\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<GUID>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
-|Agente di lettura log|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<intero>**|[Agente lettura log repliche](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|  
-|Agente di merge per le sottoscrizioni pull|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<Sottoscrittore>-\<DatabaseSottoscrizione>-\<intero>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
-|Agente di merge per le sottoscrizioni push|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<Sottoscrittore>-\<intero>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
-|Agente di distribuzione per le sottoscrizioni push|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<Sottoscrittore>-\<intero>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|Agente di distribuzione per le sottoscrizioni pull|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<Sottoscrittore>-\<DatabaseSottoscrizione>-\<GUID>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|Agente di distribuzione per le sottoscrizioni push di Sottoscrittori non SQL Server|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<Sottoscrittore>-\<intero>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|Agente di lettura coda|**[\<DatabaseDistribuzione>].\<intero>**|[Agente di lettura coda repliche](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
+|agente snapshot|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<integer>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
+|Agente snapshot per una partizione di una pubblicazione di tipo merge|**Dyn_\<Publisher>-\<PublicationDatabase>-\<Publication>-\<GUID>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
+|Agente di lettura log|**\<Publisher>-\<PublicationDatabase>-\<integer>**|[Agente lettura log repliche](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|  
+|Agente di merge per le sottoscrizioni pull|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
+|Agente di merge per le sottoscrizioni push|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
+|Agente di distribuzione per le sottoscrizioni push|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|Agente di distribuzione per le sottoscrizioni pull|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|Agente di distribuzione per le sottoscrizioni push di Sottoscrittori non SQL Server|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|Agente di lettura coda|**[\<Distributor>].\<integer>**|[Agente di lettura coda repliche](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
   
- \*Per le sottoscrizioni push di pubblicazioni Oracle, è **\<ServerPubblicazione>-\<ServerPubblicazione**> invece di **\<ServerPubblicazione>-\<DatabasePubblicazione**  
+ \*Per le sottoscrizioni push di pubblicazioni Oracle, è **\<Publisher>-\<Publisher**> invece di **\<Publisher>-\<PublicationDatabase>**  
   
- \*\*Per le sottoscrizioni pull di pubblicazioni Oracle, è **\<ServerPubblicazione>-\<DatabaseDistribuzione**> invece di **\<ServerPubblicazione>-\<DatabasePubblicazione>**  
+ \*\*Per le sottoscrizioni pull di pubblicazioni Oracle, è **\<Publisher>-\<DistributionDatabase**> invece di **\<Publisher>-\<PublicationDatabase>**  
   
 ### <a name="to-view-and-modify-replication-agent-command-line-parameters-from-management-studio"></a>Per visualizzare e modificare i parametri della riga di comando dell'agente di replica in Management Studio  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75321636"
   
 3.  Fare clic con il pulsante destro del mouse su un processo e scegliere **Proprietà**.  
   
-4.  Nella pagina **Passaggi** della finestra di dialogo **Proprietà processo - \<Processo>** selezionare il passaggio **Esecuzione agente** e quindi fare clic su **Modifica**.  
+4.  Nella pagina **Passaggi** della finestra di dialogo **Proprietà processo - \<Job>** selezionare il passaggio **Esecuzione agente** e quindi fare clic su **Modifica**.  
   
 5.  Nella finestra di dialogo **Proprietà passaggio processo - Esecuzione agente** modificare il campo **Comando** .  
   
@@ -73,9 +73,9 @@ ms.locfileid: "75321636"
   
 3.  Fare clic con il pulsante destro del mouse su una sottoscrizione e quindi scegliere **Visualizza dettagli**.  
   
-4.  Nella finestra **Sottoscrizione <NomeSottoscrizione>** fare clic su **Azione** e quindi su **Proprietà processo - \<NomeAgente>** .  
+4.  Nella finestra **Sottoscrizione < NomeSottoscrizione>** fare clic su **Azione** e quindi su **Proprietà processo - \<AgentName>** .  
   
-5.  Nella pagina **Passaggi** della finestra di dialogo **Proprietà processo - \<Processo>** selezionare il passaggio **Esecuzione agente** e quindi fare clic su **Modifica**.  
+5.  Nella pagina **Passaggi** della finestra di dialogo **Proprietà processo - \<Job>** selezionare il passaggio **Esecuzione agente** e quindi fare clic su **Modifica**.  
   
 6.  Nella finestra di dialogo **Proprietà passaggio processo - Esecuzione agente** modificare il campo **Comando** .  
   
@@ -89,7 +89,7 @@ ms.locfileid: "75321636"
   
 3.  Fare clic con il pulsante destro del mouse su un punto all'interno del riquadro della griglia e quindi scegliere **Proprietà**.  
   
-4.  Nella pagina **Passaggi** della finestra di dialogo **Proprietà processo - \<Processo>** selezionare il passaggio **Esecuzione agente** e quindi fare clic su **Modifica**.  
+4.  Nella pagina **Passaggi** della finestra di dialogo **Proprietà processo - \<Job>** selezionare il passaggio **Esecuzione agente** e quindi fare clic su **Modifica**.  
   
 5.  Nella finestra di dialogo **Proprietà passaggio processo - Esecuzione agente** modificare il campo **Comando** .  
   

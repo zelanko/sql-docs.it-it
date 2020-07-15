@@ -1,5 +1,6 @@
 ---
 title: Configurare le istanze del motore di database (SQL Server) | Microsoft Docs
+description: Acquisire familiarità con le attività di configurazione di SQL Server per poter configurare un'istanza del motore di database per soddisfare i requisiti di prestazioni e disponibilità.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 84e36fcb-2c78-48e8-8e4b-bf784a3ee557
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4eee1bc0ed571516463541fe1fcc38e27dcafd98
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b2b3900c41067e7f46f392ceab913f1d8d096816
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012788"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751935"
 ---
 # <a name="configure-database-engine-instances-sql-server"></a>Configurare le istanze del motore di database (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   È necessario configurare ogni istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] per soddisfare i requisiti di prestazione e disponibilità definiti per i database ospitati dall'istanza. [!INCLUDE[ssDE](../../includes/ssde-md.md)] include opzioni di configurazione che controllano i comportamenti quale utilizzo della risorsa e la disponibilità di funzionalità come il controllo o il trigger recursion.  
   
 ## <a name="instance-configuration"></a>Configurazione istanza  

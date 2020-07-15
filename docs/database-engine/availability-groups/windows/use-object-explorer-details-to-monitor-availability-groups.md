@@ -1,5 +1,6 @@
 ---
 title: Usare Dettagli Esplora oggetti per monitorare i gruppi di disponibilità | Microsoft Docs
+description: Informazioni su come usare SQL Server Management Studio per monitorare e gestire i gruppi di disponibilità Always On, le repliche di disponibilità e i database di disponibilità esistenti.
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d0296e1427d4af206e101513bd54b0d67f7ff46
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e7ee1430cd764c02c05f2bf3f8f935d397a6155a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013634"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894159"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Usare Dettagli Esplora oggetti per monitorare i gruppi di disponibilità
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Questo argomento illustrato come usare il riquadro **Dettagli Esplora oggetti** di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] per monitorare e gestire i database di disponibilità Always On, le repliche di disponibilità e i gruppi di disponibilità esistenti.  
   
 > [!NOTE]  
@@ -33,7 +34,7 @@ ms.locfileid: "68013634"
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
  È necessario essere connessi all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (istanza del server) che ospita la replica primaria o una replica secondaria.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  **Per monitorare i gruppi di disponibilità, le repliche di disponibilità e i database di disponibilità**  
   
 1.  Scegliere **Dettagli Esplora oggetti**dal menu Visualizza o premere **F7** .  

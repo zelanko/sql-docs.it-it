@@ -1,48 +1,55 @@
 ---
-title: Opzione di configurazione del server xp_cmdshell | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2017
+title: Opzione di configurazione del server xp_cmdshell
+description: Informazioni sull'opzione "xp_cmdshell". Scoprire come controlla se SQL Server può eseguire la stored procedure estesa "xp_cmdshell". Informazioni su come attivarla.
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
-dev_langs:
-- TSQL
 helpviewer_keywords:
 - xp_cmdshell
 ms.assetid: c147c9e1-b81d-49c8-b800-3019f4d86a13
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 40efe03850259a3b900375e3a47c12d80a448b39
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.custom: contperfq4
+ms.date: 06/12/2020
+ms.openlocfilehash: b2d4364d01b871364fda3ac42d98536e99269c29
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68040069"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763943"
 ---
 # <a name="xp_cmdshell-server-configuration-option"></a>Opzione di configurazione del server xp_cmdshell
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  L'opzione **xp_cmdshell** è un'opzione di configurazione server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consente agli amministratori di sistema di controllare se la stored procedure estesa **xp_cmdshell** può essere eseguita in un sistema. Per impostazione predefinita, nelle nuove installazioni l'opzione **xp_cmdshell** risulta disabilitata. Prima di abilitarla, è importante considerare le potenziali implicazioni per la sicurezza associate all'uso di questa opzione. Il codice appena sviluppato non deve usare questa opzione perché in genere deve rimanere disabilitata. In alcune applicazioni legacy è necessario che sia abilitata e, se non si possono modificare per evitare di usarla, è possibile abilitarla usando la gestione basata su criteri o eseguendo la stored procedure di sistema **sp_configure**, come illustrato nell'esempio di codice seguente:  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+Questo articolo descrive come abilitare l'opzione di configurazione di SQL Server **xp_cmdshell**. Questa opzione consente agli amministratori di sistema di controllare se la [stored procedure xp_cmdshell](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md) può essere eseguita in un sistema. Per impostazione predefinita, nelle nuove installazioni l'opzione **xp_cmdshell** risulta disabilitata.
+
+Prima di abilitare questa opzione, è importante prendere in considerazione le potenziali implicazioni per la sicurezza.
+
+- Si consiglia di non usare la stored procedure **xp_cmdshell** nel nuovo codice sviluppato e in generale deve essere lasciata disabilitata.
+- Per alcune applicazioni legacy è necessario abilitare **xp_cmdshell**. Se non possono essere modificate per evitare l'uso di questa stored procedure, è possibile abilitarla come descritto di seguito.
+
+Se è necessario abilitare **xp_cmdshell**, è possibile usare la [gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) o eseguire la stored procedure di sistema **sp_configure**, come illustrato nell'esempio di codice seguente:  
   
-```  
+``` sql
 -- To allow advanced options to be changed.  
-EXEC sp_configure 'show advanced options', 1;  
+EXECUTE sp_configure 'show advanced options', 1;  
 GO  
 -- To update the currently configured value for advanced options.  
 RECONFIGURE;  
 GO  
 -- To enable the feature.  
-EXEC sp_configure 'xp_cmdshell', 1;  
+EXECUTE sp_configure 'xp_cmdshell', 1;  
 GO  
 -- To update the currently configured value for this feature.  
 RECONFIGURE;  
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [Amministrazione di server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
-  
-  
+## <a name="next-steps"></a>Passaggi successivi
+
+- [Stored procedure estesa xp_cmdshell](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)
+- [Opzioni di configurazione del server (SQL Server)](server-configuration-options-sql-server.md)
+- [Amministrazione di server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

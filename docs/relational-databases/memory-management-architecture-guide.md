@@ -1,5 +1,6 @@
 ---
 title: Guida sull'architettura di gestione della memoria | Microsoft Docs
+description: Informazioni sull'architettura di gestione della memoria in SQL Server, incluse le modifiche apportate alla gestione della memoria nelle versioni precedenti.
 ms.custom: ''
 ms.date: 01/09/2019
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12dc8a03cbf65a0c07e9a5985f1ffade813a3e5f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287945"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012141"
 ---
 # <a name="memory-management-architecture-guide"></a>guida sull'architettura di gestione della memoria
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 ## <a name="windows-virtual-memory-manager"></a>Virtual Memory Manager di Windows  
 Viene eseguito il mapping delle aree di cui è stato eseguito il commit dello spazio degli indirizzi alla memoria fisica disponibile tramite Virtual Memory Manager (VMM) di Windows.  
@@ -110,7 +111,7 @@ Questo comportamento viene in genere osservato durante le operazioni seguenti:
 ## <a name="changes-to-memory_to_reserve-starting-with-sssql11"></a>Modifiche apportate a "memory_to_reserve" a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 Nelle versioni precedenti di SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) lo strumento di gestione della memoria di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] riserva parte dello spazio indirizzi virtuali del processo per l'**allocatore di più pagine**, l'**allocatore CLR**, le allocazioni di memoria per gli **stack di thread** nel processo di SQL Server e le **allocazioni di Windows dirette**. Questa parte dello spazio indirizzi virtuali è nota anche come area MemToLeave o "pool non di buffer".
 
-Lo spazio indirizzi virtuali riservato per queste allocazioni varia a seconda dell'opzione di configurazione _**memory\_to\_reserve**_ . Il valore predefinito usato da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è 256 MB. Per sostituire il valore predefinito, usare il parametro di avvio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Fare riferimento alla pagina della documentazione [Opzioni di avvio del servizio del motore di database](../database-engine/configure-windows/database-engine-service-startup-options.md) per informazioni sul parametro di avvio *-g*.
+Lo spazio indirizzi virtuali riservato per queste allocazioni varia a seconda dell'opzione di configurazione _**memory\_to\_reserve**_. Il valore predefinito usato da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è 256 MB. Per sostituire il valore predefinito, usare il parametro di avvio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Fare riferimento alla pagina della documentazione [Opzioni di avvio del servizio del motore di database](../database-engine/configure-windows/database-engine-service-startup-options.md) per informazioni sul parametro di avvio *-g*.
 
 Dato che a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] il nuovo allocatore di pagine "di qualsiasi dimensione" gestisce anche le allocazioni di dimensioni superiori a 8 KB, il valore *memory_to_reserve* non include le allocazioni di più pagine. Ad eccezione di questa modifica, non vi sono altre novità per questa opzione di configurazione.
 

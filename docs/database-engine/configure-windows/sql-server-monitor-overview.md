@@ -1,5 +1,6 @@
 ---
 title: Panoramica di Monitoraggio SQL Server | Microsoft Docs
+description: Informazioni su Monitoraggio SQL Server. Scoprire come usare i moduli Monitoraggio replica e Monitoraggio mirroring del database. Visualizzare le autorizzazioni necessarie per l'uso.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Monitor [SQL Server]
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a6f5e2b2bcd92c0a17ccada2ca755cbc14b9d647
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1bb99ef49e22c578ec1ebd8cc715a6e70e5bb6df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68032496"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771794"
 ---
 # <a name="sql-server-monitor-overview"></a>Panoramica di Monitoraggio SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In Monitoraggio SQL Server non sono disponibili funzioni di monitoraggio, ma moduli che consentono di effettuare tale operazione. Nei moduli di Monitoraggio SQL Server sono inclusi Monitoraggio replica e Monitoraggio mirroring del database.  
   
  Per usare uno di questi moduli, selezionarlo dal menu **Go** . Il modulo attualmente selezionato controlla il contenuto dei riquadri di navigazione e dei dettagli, l'interazione dell'utente nei riquadri dei dettagli e le query relative a contenuto e stato.  

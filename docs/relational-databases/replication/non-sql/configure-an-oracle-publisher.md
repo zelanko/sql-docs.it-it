@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d6c0aa05f095907b39cacf39f65dfc3b09d9786e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b2b277707c8da44d141036c7e19055383c6c56a8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907191"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900011"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurazione di un server di pubblicazione Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   La creazione di una pubblicazione nei server di pubblicazione Oracle avviene in maniera analoga al processo di creazione delle comuni pubblicazioni snapshot e transazionali, ma prima di poter effettivamente eseguire questo processo è necessario completare la procedura seguente (i primi quattro passaggi verranno descritti in dettaglio di seguito in questo argomento):  
   
 1.  Creare un utente di amministrazione della replica nel database Oracle utilizzando l'apposito script.  
@@ -56,7 +56,7 @@ ms.locfileid: "72907191"
 > [!NOTE]  
 >  Eliminando il sinonimo pubblico **MSSQLSERVERDISTRIBUTOR** e l’utente della replica Oracle configurato con l’opzione **CASCADE** vengono rimossi tutti gli oggetti di replica dalla pubblicazione Oracle.  
   
- È disponibile uno script di esempio che consente di agevolare la configurazione dello schema utente di replica Oracle. Lo script viene incluso nella directory seguente dopo l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: *\<unità>* :\\\Programmi\Microsoft SQL Server\\ *\<NomeIstanza>* \MSSQL\Install\oracleadmin.sql. È inoltre descritto in [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md).  
+ È disponibile uno script di esempio che consente di agevolare la configurazione dello schema utente di replica Oracle. Dopo l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], lo script è disponibile nella directory *\<drive>* :\\\Programmi\Microsoft SQL Server\\ *\<InstanceName>* \MSSQL\Install\oracleadmin.sql. È inoltre descritto in [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md).  
   
  Connettersi al database Oracle utilizzando un account con privilegi DBA ed eseguire lo script. Lo script richiede l'indicazione del nome utente e della password per lo schema utente di amministrazione della replica e dello spazio tabella in cui creare gli oggetti (lo spazio tabella deve essere già disponibile nel database Oracle). Per informazioni sull'impostazione di altri spazi tabella per gli oggetti, vedere [Gestire spazi di tabella Oracle](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md). Scegliere un nome utente e una password complessa e prenderne nota perché vanno specificati durante la configurazione del database Oracle come server di pubblicazione. È consigliabile utilizzare lo schema solo per gli oggetti necessari alla replica ed evitare di creare tabelle da pubblicare in questo schema.  
   

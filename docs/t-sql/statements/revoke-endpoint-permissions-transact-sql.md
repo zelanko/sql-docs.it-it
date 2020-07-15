@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: db85df99a2b37e2d92997dce579d77d0f31f7c0e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5a8dc7b925b493dda94257e65d21508a1543959e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68082284"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897050"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE - autorizzazioni per endpoint (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Revoca le autorizzazioni concesse o negate per un endpoint.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68082284"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]   
     ON ENDPOINT :: endpoint_name  
@@ -54,7 +54,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  ON ENDPOINT **::** _endpoint_name_  
  Specifica l'endpoint per cui viene concessa l'autorizzazione. Il qualificatore di ambito ( **::** ) è obbligatorio.  
   
- { FROM | TO } \<server_principal> Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da cui viene revocata l'autorizzazione.  
+ { FROM | TO } \<server_principal> Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui viene revocata l'autorizzazione.  
   
  *SQL_Server_login*  
  Specifica il nome di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

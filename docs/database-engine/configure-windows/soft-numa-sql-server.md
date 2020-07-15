@@ -1,5 +1,6 @@
 ---
 title: Soft-NUMA (SQL Server) | Microsoft Docs
+description: Informazioni su soft-NUMA in SQL Server 2014 SP2 e versioni successive. Scoprire come usare soft-NUMA automatico e come configurare manualmente SQL Server per l'uso di soft-NUMA.
 ms.custom: ''
 ms.date: 02/13/2018
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee31095ad1650ce17af6ddaa19237cd3ae73486d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e65fb9a246013c756e5c2642836e57efcb1dd58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288095"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789763"
 ---
 # <a name="soft-numa-sql-server"></a>Soft-NUMA (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 I processori moderni includono più core per socket. Ogni socket è solitamente rappresentato come un unico nodo NUMA. Il motore di database di SQL Server suddivide le varie strutture interne e i thread del servizio per nodo NUMA.  In caso di processori che contengono da 10 a più core per socket, l'uso di soft-NUMA (software non-uniform memory access) per suddividere i nodi NUMA hardware aumenta generalmente la scalabilità e le prestazioni. Nelle versioni precedenti a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 l'architettura NUMA basata su software (soft-NUMA) richiedeva che il Registro di sistema venisse modificato per aggiungere una maschera di affinità di configurazione dei nodi ed era configurata a livello di host e non per istanza. A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], l'architettura soft-NUMA viene configurata automaticamente a livello dell'istanza di database all'avvio del servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   

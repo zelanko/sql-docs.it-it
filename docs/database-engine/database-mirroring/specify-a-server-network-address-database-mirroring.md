@@ -1,6 +1,6 @@
 ---
 title: Specificare un indirizzo di rete del server (mirroring del database)
-description: Specificare l'indirizzo di rete del server per un endpoint del mirroring del database.
+description: Informazioni su come specificare un indirizzo di rete del server per un endpoint del mirroring del database. Per una sessione di mirroring del database è necessario un indirizzo per ogni istanza del server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1fbb4df1ef746c885bb2bec9d4fe815bef8a693d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87872d393af6b9312a3cfc4b33cc39233be3a463
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252757"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789614"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Specificare un indirizzo di rete del server (Mirroring del database)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Per impostare una sessione di mirroring del database, è necessario un indirizzo di rete del server per ogni istanza del server. Tale indirizzo deve identificare in maniera univoca l'istanza includendo un indirizzo di sistema e il numero di porta su cui l'istanza è in attesa.  
   
  Per poter specificare una porta in un indirizzo di rete del server, è necessario che l'endpoint del mirroring del database sia disponibile sull'istanza del server. Per altre informazioni, vedere [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
@@ -33,11 +33,11 @@ ms.locfileid: "75252757"
 ##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a> Sintassi per un indirizzo di rete del server  
  La sintassi per un indirizzo di rete del server presenta la struttura seguente:  
   
- TCP<strong>://</strong> *\<indirizzo_sistema>* <strong>:</strong> *\<porta>*  
+ TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
   
  dove  
   
--   *\<indirizzo-sistema>* è una stringa che identifica in modo univoco il computer di destinazione. In genere, l'indirizzo del server è un nome di sistema, se i sistemi si trovano nello stesso dominio, un nome di dominio completo o un indirizzo IP.  
+-   *\<system-address>* è una stringa che identifica in modo univoco il computer di destinazione. In genere, l'indirizzo del server è un nome di sistema, se i sistemi si trovano nello stesso dominio, un nome di dominio completo o un indirizzo IP.  
   
     -   Se i sistemi si trovano nello stesso dominio, è possibile utilizzare il nome del computer, ad esempio `SYSTEM46`.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "75252757"
         > [!NOTE]  
         >  Per informazioni sull'individuazione di un nome di dominio completo, vedere "Individuazione del nome di dominio completo" di seguito in questo argomento.  
   
--   *\<port>* è il numero di porta utilizzato dall'endpoint del mirroring dell'istanza del server partner. Per informazioni su come specificare un endpoint, vedere [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
+-   *\<port>* è il numero di porta usato dall'endpoint del mirroring dell'istanza del server partner. Per informazioni su come specificare un endpoint, vedere [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
      Un endpoint del mirroring del database può utilizzare qualsiasi porta disponibile nel computer. Ogni numero di porta su un sistema di computer deve essere associato a un solo endpoint e ogni endpoint a una singola istanza del server. In questo modo, istanze del server diverse sullo stesso server restano in attesa su endpoint diversi con porte diverse. Pertanto, la parte specificata nell'indirizzo di rete del server quando si imposta una sessione di mirroring del database dirigerà la sessione sempre all'istanza del server il cui endpoint è associato a tale porta.  
   

@@ -1,5 +1,6 @@
 ---
 title: Monitoraggio del mirroring del database (SQL Server) | Microsoft Docs
+description: Informazioni su Monitoraggio mirroring del database, sulle stored procedure di sistema e sul funzionamento del monitoraggio del mirroring del database, incluso il processo Monitoraggio mirroring del database.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bcc63d87bc71fa2497e1282364f87272438bbf97
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f8479b88d100f9687469ad615d0b92c50aedb6ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70212291"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771824"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Monitoraggio del mirroring del database (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Questa sezione presenta il monitoraggio del mirroring del database e le stored procedure di sistema **sp_dbmmonitor** , descrive il funzionamento del monitoraggio del mirroring del database, incluso il funzionamento del processo **Monitoraggio mirroring del database**, e fornisce un riepilogo delle informazioni che è possibile monitorare sulle sessioni di mirroring del database. Vengono inoltre fornite informazioni generali sulla definizione di valori soglia degli avvisi per un set di eventi di mirroring del database predefiniti e sull'impostazione di avvisi per qualsiasi evento di mirroring del database.  
   
  È possibile monitorare un database con mirroring durante una sessione di mirroring per verificare se i dati fluiscono correttamente. Per impostare e gestire il monitoraggio per uno o più database con mirroring in un'istanza del server, è possibile usare Monitoraggio mirroring del database oppure le stored procedure di sistema **sp_dbmmonitor** .  
@@ -131,7 +132,7 @@ ms.locfileid: "70212291"
      Gli amministratori di sistema possono usare la stored procedure di sistema **sp_dbmmonitorresults** per visualizzare e, facoltativamente, aggiornare la tabella dello stato, se non è stata aggiornata entro i 15 secondi precedenti. Questa stored procedure chiama la stored procedure **sp_dbmmonitorupdate** e restituisce una o più righe di cronologia, in base a quanto richiesto nella chiamata di procedura. Per informazioni sullo stato nel set di risultati, vedere [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md).  
   
 #### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>Monitoraggio dello stato di mirroring del database (membri di dbm_monitor)  
- Come indicato in precedenza, alla prima esecuzione di **sp_dbmmonitorupdate** viene creato il ruolo predefinito del database **dbm_monitor** nel database **msdb** . I membri del ruolo predefinito del database **dbm_monitor** possono visualizzare lo stato di mirroring esistente usando Monitoraggio mirroring del database o la stored procedure **sp_dbmmonitorresults** . Questi utenti non possono tuttavia aggiornare la tabella dello stato. Per conoscere l'ora dello stato visualizzato, osservare l'ora indicata in corrispondenza delle etichette **Log principale (** _\<ora>_ **)** e **Log mirror (** _\<ora>_ **)** nella pagina **Stato**.  
+ Come indicato in precedenza, alla prima esecuzione di **sp_dbmmonitorupdate** viene creato il ruolo predefinito del database **dbm_monitor** nel database **msdb** . I membri del ruolo predefinito del database **dbm_monitor** possono visualizzare lo stato di mirroring esistente usando Monitoraggio mirroring del database o la stored procedure **sp_dbmmonitorresults** . Questi utenti non possono tuttavia aggiornare la tabella dello stato. Per ottenere la durata dello stato visualizzato l'utente può consultare i tempi nelle etichette **Log principale (** _\<time>_ **)** e **Log mirror (** _\<time>_ **)** nella pagina **Stato**.  
   
  I membri del ruolo predefinito del database **dbm_monitor** dipendono dal **Processo di Monitoraggio mirroring del database** per l'aggiornamento della tabella dello stato a intervalli regolari. Se il processo non esiste o se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è stato arrestato, lo stato non è più aggiornato e potrebbe non riflettere più la configurazione della sessione di mirroring. Dopo un failover, ad esempio, può sembrare che i partner condividano lo stesso ruolo, principale o mirror, oppure il server principale corrente può essere indicato come mirror e, viceversa, il server mirror corrente come principale.  
   

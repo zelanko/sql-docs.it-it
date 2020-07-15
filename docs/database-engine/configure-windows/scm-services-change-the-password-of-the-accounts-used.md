@@ -1,5 +1,6 @@
 ---
 title: Gestione configurazione SQL Server - Modificare la password degli account | Microsoft Docs
+description: Informazioni su come modificare la password degli account usati dal motore di database e da SQL Server Agent. Informazioni su quando è importante modificare la password.
 ms.custom: ''
 ms.date: 01/06/2016
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 - changing passwords used by SQL Server
 - modifying passwords
 ms.assetid: 5b6dcc03-6cae-45d3-acef-6f85ca6d615f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 37fd90d37f989fb496b6d9fe1ea1153de25db0d7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fe9c16097b63d9622cd65b5b7d016ef28b2196d1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68024735"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651500"
 ---
 # <a name="scm-services---change-the-password-of-the-accounts-used"></a>Gestione configurazione SQL Server - Modificare la password degli account
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In questo argomento viene illustrato come modificare la password degli account utilizzati dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite Gestione configurazione SQL Server. Il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent vengono eseguiti in un computer come servizi, utilizzando credenziali fornite inizialmente durante l'installazione. Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguita in un account di dominio e la password per tale account viene modificata, è necessario aggiornare la password utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impostando la nuova password. Se la password non viene aggiornata, è possibile che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sia più in grado di accedere a determinate risorse di dominio e se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene arrestato, il servizio non verrà riavviato fino all'aggiornamento della password.  
   
  Per modificare le password di autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Password scaduta](https://msdn.microsoft.com/library/9831b194-9ad5-47b0-8009-59c7aef4319b).  
@@ -52,13 +53,13 @@ ms.locfileid: "68024735"
     >  -   **Windows 10**:  
     >          per aprire Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , nella **pagina iniziale**digitare SQLServerManager13.msc (per [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). Per le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sostituire 13 con un numero inferiore. Se si fa clic su SQLServerManager13.msc, viene aperto Gestione configurazione. Per aggiungere Gestione configurazione alla pagina iniziale o alla barra delle applicazioni, fare clic con il pulsante destro del mouse su SQLServerManager13.msc e quindi scegliere **Apri percorso file**. In Esplora file di Windows fare clic con il pulsante destro del mouse su SQLServerManager13.msc e quindi scegliere **Aggiungi a Start** o **Aggiungi alla barra delle applicazioni**.  
     > -   **Windows 8**:  
-    >          Per aprire Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nell'accesso alla **ricerca** in **App** digitare **SQLServerManager\<versione>.msc**, ad esempio **SQLServerManager13.msc** e quindi premere **INVIO**.  
+    >          Per aprire Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nell'icona promemoria **Cerca** in **App** digitare **SQLServerManage\<version>.msc**, ad esempio **SQLServerManager13.msc**, quindi premere **INVIO**.  
   
 2.  In Gestione configurazione SQL Server fare clic su **Servizi di SQL Server**.  
   
-3.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (** \<nomeistanza> **)** e quindi scegliere **Proprietà**.  
+3.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (** \<instancename> **)** e quindi scegliere **Proprietà**.  
   
-4.  Nella finestra di dialogo **SQL Server (** \<nomeistanza> **) Proprietà**, nella scheda Accesso, per l'account indicato nella casella **Nome account** digitare la nuova password nelle caselle **Password** e **Conferma password** e quindi fare clic su **OK**.  
+4.  Nella finestra di dialogo **SQL Server (** \<instancename> **) Proprietà**, nella scheda Accesso, per l'account indicato nella casella **Nome account** digitare la nuova password nelle caselle **Password** e **Conferma password**, quindi fare clic su **OK**.  
   
      La password diventa immediatamente effettiva e non richiede il riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -68,9 +69,9 @@ ms.locfileid: "68024735"
   
 2.  In Gestione configurazione SQL Server fare clic su **Servizi di SQL Server**.  
   
-3.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server Agent (** \<nomeistanza> **)** e quindi fare clic su **Proprietà**.  
+3.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server Agent (** \<instancename> **)** e quindi scegliere **Proprietà**.  
   
-4.  Nella finestra di dialogo **SQL Server Agent (** \<nomeistanza> **) Proprietà**, nella scheda Accesso, per l'account indicato nella casella **Nome account** digitare la nuova password nelle caselle **Password** e **Conferma password** e quindi fare clic su **OK**.  
+4.  Nella finestra di dialogo **SQL Server Agent (** \<instancename> **) Proprietà**, nella scheda Accesso, per l'account indicato nella casella **Nome account** digitare la nuova password nelle caselle **Password** e **Conferma password**, quindi fare clic su **OK**.  
   
      In un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la password diventa effettiva immediatamente, senza riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In un'istanza cluster, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può portare offline la risorsa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e potrebbe essere necessario un riavvio.  
   

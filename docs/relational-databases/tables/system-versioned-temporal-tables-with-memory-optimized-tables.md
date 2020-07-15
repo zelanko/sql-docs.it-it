@@ -11,16 +11,16 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba6894a7e30c9b5112ced867766598cd62a0552f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99d4cd492ffd35f36a1f44754128ce54f028aaed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165465"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85984555"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tabelle temporali con controllo delle versioni di sistema con tabelle con ottimizzazione per la memoria
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Le tabelle temporali con controllo delle versioni di sistema per [tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) sono progettate per offrire una soluzione economica per scenari in cui sono necessari [controllo dei dati e analisi temporizzate](https://msdn.microsoft.com/library/mt631669.aspx) su dati raccolti con carichi di lavoro OLTP in memoria. Queste tabelle garantiscono elevata velocità effettiva transazionale, concorrenza senza blocco e, allo stesso tempo, possibilità di archiviare grandi quantità di dati cronologici che possono essere facilmente sottoposti a query.
 
@@ -52,9 +52,9 @@ I fattori seguenti sulle tabelle temporali con controllo delle versioni di siste
 
 La tabella di staging interna ottimizzata per la memoria è un oggetto interno creato dal sistema per ottimizzare le operazioni DML.
 
-- Il nome della tabella viene generato nel formato seguente: **Memory_Optimized_History_Table_<object_id>** dove *<object_id>* è l'identificatore della tabella temporale corrente.
+- Il nome della tabella viene generato nel formato seguente: **Memory_Optimized_History_Table_<id_oggetto>** dove *<id_oggetto>* è l'identificatore della tabella temporale corrente.
 - La tabella consente di replicare lo schema della tabella temporale corrente e una colonna di tipo BIGINT. Questa colonna aggiuntiva garantisce l'univocità delle righe spostate nel buffer interno della cronologia.
-- La colonna aggiuntiva presenta il formato nome seguente: **Change_ID[_< suffisso>]** , dove *_\<suffisso>* viene aggiunto facoltativamente nel caso in cui la tabella includa già una colonna *Change_ID*.
+- Il nome della colonna aggiuntiva ha il formato seguente: **Change_ID[_< suffix>]** , dove *_\<suffix>* viene aggiunto facoltativamente nel caso in cui la tabella includa già una colonna *Change_ID*.
 - Le dimensioni massime delle righe per una tabella ottimizzata per la memoria con controllo delle versioni di sistema vengono ridotte di 8 byte a causa della colonna BIGINT aggiuntiva della tabella di staging. La nuova dimensione massima è ora di 8052 byte.
 - La tabella di staging interna ottimizzata per la memoria non è rappresentata in Esplora oggetti di SQL Server Management Studio.
 - I metadati relativi a questa tabella nonché la connessione con la tabella temporale corrente sono disponibili in [sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md).

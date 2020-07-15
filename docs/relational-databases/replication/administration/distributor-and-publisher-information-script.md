@@ -1,5 +1,6 @@
 ---
 title: Script di informazioni su database di distribuzione e server di pubblicazione | Microsoft Docs
+description: Usare questo script per rispondere alle domande frequenti sugli oggetti nel server di distribuzione e nel server di pubblicazione in SQL Server.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 14221eb76ed4c7ec587e493163caa299aa243967
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dba4e3db3c34dd836e92cf3bc33d5a3517d534cf
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288198"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807972"
 ---
 # <a name="distributor-and-publisher-information-script"></a>Script di informazioni sui server di distribuzione e di pubblicazione
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

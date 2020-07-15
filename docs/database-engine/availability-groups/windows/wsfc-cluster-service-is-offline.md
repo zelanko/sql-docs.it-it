@@ -1,5 +1,6 @@
 ---
 title: Il servizio cluster WSFC è offline | Microsoft Docs
+description: Il monitoraggio Stato del cluster WSFC controlla lo stato di WSCF (Windows Server Failover Cluster). Il criterio non è integro quando il cluster è offline o nello stato di quorum forzato.
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c0d069601c36ba46be3c1950300c16b8808c264f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8a5b8b3d7c512ca57cf2bd154f1db6a5d3cc4979
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013350"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439948"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>Il servizio cluster WSFC è offline
 

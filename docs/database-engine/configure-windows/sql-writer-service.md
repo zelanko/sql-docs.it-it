@@ -1,5 +1,6 @@
 ---
 title: Servizio Writer SQL | Microsoft Docs
+description: Informazioni sul servizio writer SQL. Scoprire come fornisce funzionalità di backup e ripristino aggiuntive in SQL Server tramite il framework del Servizio Copia Shadow del volume.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 - MSDE Writer
 - VSS
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 79b0ba2bad207b92e0227ed5c8d3999dab335df6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 940bdce1d104627850aed3532754429c5ceef050
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71816670"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764019"
 ---
 # <a name="sql-writer-service"></a>servizio writer SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Il servizio writer SQL offre funzionalità aggiuntive per il backup e il ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'infrastruttura del Servizio Copia Shadow del volume.  
   
  Il servizio SQL Writer viene installato automaticamente. Il servizio deve essere in esecuzione quando l'applicazione del servizio Copia Shadow del volume (VSS) richiede un backup o un ripristino. Per configurare il servizio, utilizzare l'applet Servizi [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Il servizio writer SQL viene installato in tutti i sistemi operativi.  

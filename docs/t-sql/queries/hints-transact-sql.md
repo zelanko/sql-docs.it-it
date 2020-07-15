@@ -20,20 +20,20 @@ helpviewer_keywords:
 ms.assetid: 99412475-b0df-4264-9938-33a0b302b41a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3f7bc162244e30b2ac48f9b49a6c596268b595c8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ee01e23c544ac01ee9fb85e5b59d31b73088987
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67901972"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731291"
 ---
 # <a name="hints-transact-sql"></a>Hint (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gli hint sono opzioni o strategie che vengono specificati per imporre un comportamento specifico a Query Processor di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'esecuzione di istruzioni SELECT, INSERT, UPDATE o DELETE. Gli hint consentono di ignorare eventuali piani di esecuzione selezionati da Query Optimizer per una query.  
   
 > [!CAUTION]  
->  Dal momento che di norma Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seleziona il miglior piano di esecuzione possibile per una query, \<join_hint>, \<query_hint> e \<table_hint> devono essere usati solo da amministratori di database e sviluppatori esperti in casi di effettiva necessità.
+>  Poiché Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seleziona in genere il piano di esecuzione migliore per una query, gli oggetti \<join_hint>, \<query_hint> e \<table_hint> devono essere usati solo se strettamente necessari ed esclusivamente da sviluppatori e amministratori di database esperti.
   
  In questa sezione vengono descritti gli hint seguenti:  
   

@@ -8,16 +8,16 @@ ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 72d1292b03bc518ec8dfbe7a8f2e5e281bc6978a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077437"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896553"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Creare e configurare un gruppo di disponibilità per SQL Server in Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Questa esercitazione illustra come creare e configurare un gruppo di disponibilità per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] in Linux. A differenza di [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] e versioni precedenti in Windows, è possibile abilitare i gruppi di disponibilità sia che si crei o non si crei prima il cluster Pacemaker sottostante. L'integrazione con il cluster, se necessaria, viene eseguita solo in un momento successivo.
 
@@ -582,7 +582,9 @@ Un cluster a disponibilità elevata Pacemaker sottostante a [!INCLUDE[ssnoversio
 
 Dopo aver creato un gruppo di disponibilità in [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], è necessario creare le risorse corrispondenti in Pacemaker, quando viene specificato un tipo di cluster Esterno. A un gruppo di disponibilità sono associate due risorse: il gruppo di disponibilità stesso e un indirizzo IP. La configurazione della risorsa indirizzo IP è facoltativa se non si usa la funzionalità del listener, ma è tuttavia consigliata.
 
-La risorsa gruppo di disponibilità creata è un tipo speciale di risorsa chiamata clone. Sono presenti copie di questa risorsa in ogni nodo, con una risorsa con funzioni di controllo detta risorsa master. La risorsa master è associata al server che ospita la replica primaria. Le repliche secondarie (normali o di sola configurazione) sono considerate slave e possono essere alzate al livello master in un failover.
+La risorsa gruppo di disponibilità creata è un tipo speciale di risorsa chiamata clone. Sono presenti copie di questa risorsa in ogni nodo, con una risorsa con funzioni di controllo detta risorsa master. La risorsa master è associata al server che ospita la replica primaria. Le altre risorse ospitano le repliche secondarie (normali o di sola configurazione) e possono essere alzate al livello master in un failover.
+
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 1.  Per creare la risorsa gruppo di disponibilità, usare la sintassi seguente:
 

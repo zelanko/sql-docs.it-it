@@ -21,15 +21,15 @@ ms.assetid: 1c364511-d72a-4789-8efa-3cf2a1f6b791
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02da90c14c34dccbc3a195e206d13ba0a371188d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 66841ba6ac7e278cc2353a126675cbb2cc57c48f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82822411"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010849"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Distribuisce le righe di una partizione ordinata in un numero specificato di gruppi. I gruppi sono numerati a partire da 1. Per ogni riga, NTILE restituisce il numero del gruppo a cui appartiene la riga.  
   
@@ -49,7 +49,7 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
  Suddivide il set di risultati generato dalla clausola [FROM](../../t-sql/queries/from-transact-sql.md) in partizioni alle quali viene applicata la funzione. Per la sintassi PARTITION BY, vedere [Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  \<order_by_clause>  
- Determina l'ordine di assegnazione dei valori NTILE alle righe in una partizione. Una colonna non può essere rappresentata da un valore intero quando si usa \<order_by_clause> in una funzione di rango.  
+ Determina l'ordine di assegnazione dei valori NTILE alle righe in una partizione. Una colonna non può essere rappresentata da un valore intero quando \<order_by_clause> viene usato in una funzione di rango.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **bigint**  
@@ -69,7 +69,7 @@ USE AdventureWorks2012;
 GO  
 SELECT p.FirstName, p.LastName  
     ,NTILE(4) OVER(ORDER BY SalesYTD DESC) AS Quartile  
-    ,CONVERT(nvarchar(20),s.SalesYTD,1) AS SalesYTD  
+    ,CONVERT(NVARCHAR(20),s.SalesYTD,1) AS SalesYTD  
     , a.PostalCode  
 FROM Sales.SalesPerson AS s   
 INNER JOIN Person.Person AS p   
@@ -115,7 +115,7 @@ DECLARE @NTILE_Var int = 4;
   
 SELECT p.FirstName, p.LastName  
     ,NTILE(@NTILE_Var) OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS Quartile  
-    ,CONVERT(nvarchar(20),s.SalesYTD,1) AS SalesYTD  
+    ,CONVERT(NVARCHAR(20),s.SalesYTD,1) AS SalesYTD  
     ,a.PostalCode  
 FROM Sales.SalesPerson AS s   
 INNER JOIN Person.Person AS p   
@@ -159,7 +159,7 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 -- Uses AdventureWorks  
   
 SELECT e.LastName, NTILE(4) OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  
-       CONVERT (varchar(13), SUM(SalesAmountQuota), 1) AS SalesQuota  
+       CONVERT (VARCHAR(13), SUM(SalesAmountQuota), 1) AS SalesQuota  
 FROM dbo.DimEmployee AS e   
 INNER JOIN dbo.FactSalesQuota AS sq   
     ON e.EmployeeKey = sq.EmployeeKey  
@@ -199,7 +199,7 @@ Tsoflias          4          867,000.00
 -- Uses AdventureWorks  
   
 SELECT e.LastName, NTILE(2) OVER(PARTITION BY e.SalesTerritoryKey ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  
-       CONVERT (varchar(13), SUM(SalesAmountQuota), 1) AS SalesQuota  
+       CONVERT (VARCHAR(13), SUM(SalesAmountQuota), 1) AS SalesQuota  
    ,st.SalesTerritoryCountry  
 FROM dbo.DimEmployee AS e   
 INNER JOIN dbo.FactSalesQuota AS sq   

@@ -1,5 +1,6 @@
 ---
 title: Informazioni di riferimento sugli oggetti di sistema per il mirroring del database | Microsoft Docs
+description: 'Informazioni sugli oggetti di sistema per il mirroring del database: viste del catalogo di sistema, viste a gestione dinamica del sistema e tabelle di sistema.'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.technology: high-availability
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e61f8d9df3cb6dcaf545819d630c70bc18709d15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c37c75f9824f85705f92d1fabb6519303a76fafb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041781"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754711"
 ---
 # <a name="database-mirroring-system-object-reference"></a>Informazioni di riferimento sugli oggetti di sistema per il mirroring del database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="system-catalog-views"></a>Viste del catalogo di sistema
 

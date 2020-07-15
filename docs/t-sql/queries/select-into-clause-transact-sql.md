@@ -29,15 +29,15 @@ ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c4e7add7cdc8d4dd804c91730db3bb7c121b9df
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981722"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007590"
 ---
 # <a name="select---into-clause-transact-sql"></a>Clausola SELECT - INTO (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SELECT...INTO crea una nuova tabella nel filegroup predefinito e vi inserisce le righe restituite dalla query. Per visualizzare la sintassi SELECT completa, vedere [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
@@ -99,7 +99,9 @@ Il funzionamento dell'istruzione `SELECT...INTO` è costituito da due parti: vie
  Quando nell'elenco di selezione è presente una colonna calcolata, la colonna corrispondente della nuova tabella non è di tipo calcolato. I valori della nuova colonna corrispondono ai valori calcolati quando è stata eseguita l'istruzione `SELECT...INTO`.  
   
 ## <a name="logging-behavior"></a>Comportamento di registrazione  
- La quantità di registrazioni per `SELECT...INTO` dipende dal modello di recupero attivato per il database. Nel modello di recupero con registrazione minima o in quello con registrazione minima delle operazioni bulk, per tali operazioni la registrazione prevista è quella minima. Con la registrazione minima, l'uso dell'istruzione `SELECT...INTO` può essere più efficiente della creazione di una tabella e del popolamento della stessa con un'istruzione INSERT. Per altre informazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ La quantità di registrazioni per `SELECT...INTO` dipende dal modello di recupero attivato per il database. Nel modello di recupero con registrazione minima o in quello con registrazione minima delle operazioni bulk, per tali operazioni la registrazione prevista è quella minima. Con la registrazione minima, l'uso dell'istruzione `SELECT...INTO` può essere più efficiente della creazione di una tabella e del popolamento della stessa con un'istruzione INSERT. Per altre informazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).
+ 
+Le istruzioni `SELECT...INTO` che contengono funzioni definite dall'utente sono operazioni con registrazione completa. Se le funzioni definite dall'utente usate nell'istruzione `SELECT...INTO` non eseguono alcuna operazione di accesso ai dati, per tali funzioni è possibile specificare la clausola SCHEMABINDING, che ne imposta la proprietà UserDataAccess derivata su 0. Dopo questa modifica, per le istruzioni `SELECT...INTO` viene eseguita la registrazione minima. Se l'istruzione `SELECT...INTO` fa ancora riferimento ad almeno una funzione definita dall'utente la cui proprietà è impostata su 1, l'operazione viene registrata completamente.
   
 ## <a name="permissions"></a>Autorizzazioni  
  È necessaria l'autorizzazione CREATE TABLE nel database di destinazione.  

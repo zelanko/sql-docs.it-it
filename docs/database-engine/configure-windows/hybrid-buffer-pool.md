@@ -1,5 +1,6 @@
 ---
 title: Pool di buffer ibrido | Microsoft Docs
+description: Scoprire in che modo il pool di buffer ibridi rende accessibili i dispositivi di memoria permanenti tramite il bus di memoria. Attivare o disattivare questa funzionalità di SQL Server 2019 e visualizzare le procedure consigliate.
 ms.custom: ''
 ms.date: 10/31/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: e2aafb77145fbe22a980ef158cfa7c78db6288d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73f4abc0c1b2a7cd6943ab6b216133812c145d19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216260"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772431"
 ---
 # <a name="hybrid-buffer-pool"></a>Pool di buffer ibrido
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Il pool di buffer ibrido consente agli oggetti del pool di fare riferimento alle pagine dati nei file di database presenti nei dispositivi con memoria persistente, anziché a copie delle pagine dati nella memoria DRAM volatile. Questa funzionalità è stata introdotta in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)].
 
@@ -94,12 +95,12 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 ## <a name="best-practices-for-hybrid-buffer-pool"></a>Procedure consigliate per il pool di buffer ibrido
 
-Quando si formatta un dispositivo PMEM in Windows, usare le dimensioni di unità di allocazione più grandi disponibili per NTFS (2 MB in Windows Server 2019) e assicurarsi che il dispositivo sia stato formattato per DAX (Direct Access).
+ - Quando si formatta un dispositivo PMEM in Windows, usare le dimensioni di unità di allocazione più grandi disponibili per NTFS (2 MB in Windows Server 2019) e assicurarsi che il dispositivo sia stato formattato per DAX (Direct Access).
 
-Usare [Blocco di pagine in memoria](./enable-the-lock-pages-in-memory-option-windows.md) in Windows.
+ - Usare [Blocco di pagine in memoria](./enable-the-lock-pages-in-memory-option-windows.md) in Windows.
 
-Le dimensioni dei file devono essere un multiplo di 2 MB (modulo 2 MB deve essere uguale a zero).
+ - Le dimensioni dei file devono essere un multiplo di 2 MB (modulo 2 MB deve essere uguale a zero).
 
-Se l'impostazione con ambito server per il pool di buffer ibrido è disabilitata, la funzionalità non verrà usata da alcun database utente.
+ - Se l'impostazione con ambito server per il pool di buffer ibrido è disabilitata, la funzionalità non verrà usata da alcun database utente.
 
-Se l'impostazione con ambito server per il pool di buffer ibrido è abilitata, sarà possibile usare l'impostazione con ambito database per disabilitare la funzionalità per i singoli database utente.
+ - Se l'impostazione con ambito server per il pool di buffer ibrido è abilitata, sarà possibile usare l'impostazione con ambito database per disabilitare la funzionalità per i singoli database utente.

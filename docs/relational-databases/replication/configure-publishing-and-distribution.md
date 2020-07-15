@@ -1,5 +1,6 @@
 ---
 title: Configurare la pubblicazione e la distribuzione | Microsoft Docs
+description: Informazioni su come configurare la pubblicazione e la distribuzione in SQL Server tramite SQL Server Management Studio, Transact-SQL o Replication Management Objects.
 ms.custom: ''
 ms.date: 09/23/2018
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f4f51850fe288f2bbbd6d0e70a123a03f84344ac
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0e39946071c85dff0c1e29f6f36e6bafe910f77d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76285058"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773998"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurazione della pubblicazione e della distribuzione
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
  In questo argomento viene descritto come configurare la pubblicazione e la distribuzione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o RMO (Replication Management Objects).
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare 
@@ -31,8 +32,8 @@ ms.locfileid: "76285058"
 ###  <a name="security"></a><a name="Security"></a> Sicurezza 
 Per altre informazioni, vedere [Visualizzare e modificare le impostazioni di sicurezza della replica](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).
 
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio 
-Configurare la distribuzione mediante la Creazione guidata nuova pubblicazione o la Configurazione guidata distribuzione. Dopo la configurazione iniziale del database di distribuzione, è possibile visualizzare e modificare le proprietà nella finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>** . Usare la Configurazione guidata distribuzione se si vuole configurare un database di distribuzione in modo che i membri dei ruoli predefiniti del database `db_owner` possano creare pubblicazioni o per configurare un server di distribuzione remoto che non è un server di pubblicazione.
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio 
+Configurare la distribuzione mediante la Creazione guidata nuova pubblicazione o la Configurazione guidata distribuzione. Dopo la configurazione iniziale del database di distribuzione, è possibile visualizzare e modificare le proprietà nella finestra di dialogo **Proprietà database di distribuzione - \<Distributor>** . Usare la Configurazione guidata distribuzione se si vuole configurare un database di distribuzione in modo che i membri dei ruoli predefiniti del database `db_owner` possano creare pubblicazioni o per configurare un server di distribuzione remoto che non è un server di pubblicazione.
 
 #### <a name="to-configure-distribution"></a>Per configurare la distribuzione 
 
@@ -54,7 +55,7 @@ Configurare la distribuzione mediante la Creazione guidata nuova pubblicazione o
 
   - Facoltativamente, creare lo script delle impostazioni di configurazione. Per altre informazioni, vedere [Scripting Replication](../../relational-databases/replication/scripting-replication.md).
 
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL 
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL 
 La pubblicazione e la distribuzione della replica possono essere configurate a livello di programmazione tramite le stored procedure di replica.
 ### <a name="to-configure-publishing-using-a-local-distributor"></a>Per configurare la pubblicazione utilizzando un server di distribuzione locale
 1. Eseguire [sp_get_distributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md) per determinare se il server è già configurato come database di distribuzione.

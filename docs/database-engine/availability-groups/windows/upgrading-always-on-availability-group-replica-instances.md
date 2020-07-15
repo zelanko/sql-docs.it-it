@@ -1,6 +1,6 @@
 ---
 title: Aggiornare repliche del gruppo di disponibilità
-dsecription: Describes how to upgrade replicas that are participating in an Always On availability group.
+description: Informazioni su come ridurre i tempi di inattività per la replica primaria durante gli aggiornamenti di SQL Server eseguendo un aggiornamento in sequenza.
 ms.custom: seo-lt-2019
 ms.date: 01/10/2018
 ms.prod: sql
@@ -10,33 +10,33 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 77fba513e72982920c399002555e5b96745e8492
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0acb31fb6669213aed14721eb52c55b457ec1f2f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822193"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894195"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Aggiornamento delle istanze di replica dei gruppi di disponibilità AlwaysOn
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Quando si aggiorna un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospita un gruppo di disponibilità AlwaysOn a una nuova versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], a un nuovo Service Pack o aggiornamento cumulativo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oppure quando la si installa su un nuovo Service Pack o aggiornamento cumulativo di Windows, è possibile ridurre i tempi di inattività per la replica primaria a un singolo failover manuale eseguendo un aggiornamento in sequenza (o a due failover manuali in caso di failback sulla replica primaria originale). Durante il processo di aggiornamento, non sarà disponibile una replica secondaria per il failover o le operazioni di sola lettura e, dopo l'aggiornamento, a seconda del volume di attività nel nodo della replica primaria, l'aggiornamento della replica secondaria al nodo della replica primaria potrebbe richiedere un po' di tempo (è dunque prevedibile un traffico di rete elevato). Occorre sapere anche che dopo il failover iniziale in una replica secondaria che esegue una versione più recente di SQL Server, i database di tale gruppo di disponibilità saranno sottoposti a un processo di aggiornamento affinché la versione adottata sia la più recente. Durante questa operazione le repliche non saranno leggibili per nessuno di questi database. Il tempo di inattività dopo il failover iniziale dipenderà dal numero di database contenuti nel gruppo di disponibilità. Se si prevede di eseguire il failback sulla replica primaria originale, questo passaggio non sarà ripetuto durante il failback.
   
 >[!NOTE]  
 >Questo articolo si limita a illustrare l'aggiornamento di SQL Server. Non viene descritto l'aggiornamento del sistema operativo che contiene WSFC (Windows Server Failover Cluster). L'aggiornamento del sistema operativo Windows che ospita il cluster di failover non è supportato per i sistemi operativi precedenti a Windows Server 2012 R2. Per aggiornare un nodo del cluster in esecuzione in Windows Server 2012 R2, vedere [Aggiornamento in sequenza del sistema operativo del cluster](https://docs.microsoft.com/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
 Prima di iniziare, esaminare le informazioni seguenti:  
   
-- [Aggiornamenti di versione ed edizione supportati](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): verificare che sia possibile eseguire l'aggiornamento a SQL Server 2016 dalla versione in uso del sistema operativo Windows e di SQL Server. Ad esempio, non è possibile eseguire l'aggiornamento diretto da un'istanza di SQL Server 2005 a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+- [Aggiornamenti di versione ed edizione supportati](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): verificare che sia possibile eseguire l'aggiornamento a SQL Server 2016 dalla versione del sistema operativo Windows e di SQL Server in uso. Ad esempio, non è possibile eseguire l'aggiornamento diretto da un'istanza di SQL Server 2005 a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-- [Scegliere un metodo di aggiornamento del motore di database](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): per il corretto ordine di aggiornamento, selezionare il metodo e la procedura di aggiornamento appropriati in base alla verifica degli aggiornamenti di versione ed edizione supportati e anche agli altri componenti installati nell'ambiente.  
+- [Scegliere un metodo di aggiornamento del motore di database](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): per l'aggiornamento nell'ordine corretto selezionare il metodo e la procedura di aggiornamento appropriati in base alla verifica degli aggiornamenti di versione ed edizione supportati e anche agli altri componenti installati nell'ambiente.  
   
-- [Pianificare e testare il piano di aggiornamento del motore di database](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): esaminare le note sulla versione, i problemi di aggiornamento noti e l'elenco di controllo pre-aggiornamento e sviluppare e testare il piano di aggiornamento.  
+- [Pianificare e testare il piano di aggiornamento del motore di database](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): esaminare le note sulla versione, i problemi di aggiornamento noti, l'elenco di controllo pre-aggiornamento e sviluppare e testare il piano di aggiornamento.  
   
-- [Requisiti hardware e software per l'installazione di SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): esaminare i requisiti software per l'installazione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Se è necessario software aggiuntivo, installarlo in ogni nodo prima di iniziare il processo di aggiornamento per ridurre al minimo eventuali tempi di inattività.  
+- [Requisiti hardware e software per l'installazione di SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  esaminare i requisiti software per l'installazione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Se è necessario software aggiuntivo, installarlo in ogni nodo prima di iniziare il processo di aggiornamento per ridurre al minimo eventuali tempi di inattività.  
 
-- [Verificare se Change Data Capture o la replica vengono usati per i database del gruppo di disponibilità](#special-steps-for-change-data-capture-or-replication): se un database all'interno del gruppo di disponibilità è abilitato per Change Data Capture (CDC), seguire queste [istruzioni](#special-steps-for-change-data-capture-or-replication).
+- [Verificare se per i database del gruppo di disponibilità siano in uso Change Data Capture o la replica](#special-steps-for-change-data-capture-or-replication): se i database nel gruppo di disponibilità sono abilitati per Change Data Capture (CDC), seguire queste [istruzioni](#special-steps-for-change-data-capture-or-replication).
 
 >[!NOTE]  
 >L'uso di più versioni delle istanze di SQL Server nello stesso gruppo di disponibilità è supportato solo nel contesto di un aggiornamento in sequenza e non deve rimanere in tale stato per periodi di tempo prolungati perché l'aggiornamento deve essere eseguito rapidamente. L'altra opzione per eseguire l'aggiornamento di SQL Server 2016 e versioni successive prevede l'uso di un gruppo di disponibilità distribuito.
@@ -202,7 +202,7 @@ Per eseguire un aggiornamento in sequenza di un gruppo di disponibilità distrib
 
 >[!IMPORTANT]
 >- Verificare sempre il completamento della sincronizzazione tra i singoli passaggi. Prima di procedere con il passaggio seguente, verificare che all'interno del gruppo di disponibilità le repliche con commit sincrono siano sincronizzate e che l'istanza primaria globale sia sincronizzata con l'istanza di inoltro nel gruppo di disponibilità distribuito. 
->- **Consiglio**: durante la verifica della sincronizzazione, aggiornare sia il nodo del database sia il nodo del gruppo di disponibilità distribuito in SQL Server Management Studio. Dopo il completamento della sincronizzazione, salvare uno screenshot degli stati di ogni replica. In tal modo è possibile tenere traccia della fase in corso, garantire che tutto funzioni correttamente prima del passaggio successivo e facilitare la risoluzione dei problemi in caso di errori. 
+>- **Raccomandazione**: ogni volta che si verifica la sincronizzazione, aggiornare sia il nodo del database sia il nodo del gruppo di disponibilità distribuito in SQL Server Management Studio. Dopo il completamento della sincronizzazione, salvare uno screenshot degli stati di ogni replica. In tal modo è possibile tenere traccia della fase in corso, garantire che tutto funzioni correttamente prima del passaggio successivo e facilitare la risoluzione dei problemi in caso di errori. 
 
 
 ### <a name="diagram-example-for-a-rolling-upgrade-of-a-distributed-availability-group"></a>Diagramma di esempio per l'aggiornamento in sequenza di un gruppo di disponibilità distribuito
@@ -234,7 +234,7 @@ Se in ogni gruppo di disponibilità esisteva una terza replica, questa verrà ag
 
 >[!IMPORTANT]
 >- Verificare sempre il completamento della sincronizzazione tra i singoli passaggi. Prima di procedere con il passaggio seguente, verificare che all'interno del gruppo di disponibilità le repliche con commit sincrono siano sincronizzate e che l'istanza primaria globale sia sincronizzata con l'istanza di inoltro nel gruppo di disponibilità distribuito. 
->- Consiglio: ogni volta che si verifica la sincronizzazione, aggiornare sia il nodo del database sia il nodo del gruppo di disponibilità distribuito in SQL Server Management Studio. Dopo il completamento della sincronizzazione, salvare uno screenshot dello stato complessivo. In tal modo è possibile tenere traccia della fase in corso, garantire che tutto funzioni correttamente prima del passaggio successivo e facilitare la risoluzione dei problemi in caso di errori. 
+>- Raccomandazione: ogni volta che si verifica la sincronizzazione, aggiornare sia il nodo del database sia il nodo del gruppo di disponibilità distribuito in SQL Server Management Studio. Dopo il completamento della sincronizzazione, salvare uno screenshot dello stato complessivo. In tal modo è possibile tenere traccia della fase in corso, garantire che tutto funzioni correttamente prima del passaggio successivo e facilitare la risoluzione dei problemi in caso di errori. 
 
 
 ## <a name="special-steps-for-change-data-capture-or-replication"></a>Passaggi speciali per Change Data Capture o la replica

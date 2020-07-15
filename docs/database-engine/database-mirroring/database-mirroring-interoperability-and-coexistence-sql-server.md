@@ -1,6 +1,6 @@
 ---
 title: 'Mirroring del database: Interoperabilità e coesistenza'
-description: Informazioni sull'interoperabilità e la coesistenza del mirroring del database di SQL Servere di altre funzionalità di SQL Server, ad esempio cataloghi full-text, snapshot del database, log shipping, replica e istanze del cluster di failover.
+description: Informazioni sull'interoperabilità e la coesistenza del mirroring del database di SQL Server e di altre funzionalità di SQL Server, ad esempio cataloghi full-text e snapshot del database.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 89fef397-e0cf-4e08-b598-25b8d4170523
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 045aa94292a4633b8d61e95491d603e0d9897d0d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b70007c2beaa26d93107f167013a240fe0fa5864
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254162"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751916"
 ---
 # <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>Mirroring del database: interoperabilità e coesistenza (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   È possibile utilizzare il mirroring del database con i componenti e le funzionalità seguenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   [Istanze del cluster di failover Always On (Clustering di failover SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-sql-server-failover-cluster-instances.md)  

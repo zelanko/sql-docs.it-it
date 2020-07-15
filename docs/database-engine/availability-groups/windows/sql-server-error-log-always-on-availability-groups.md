@@ -1,6 +1,6 @@
 ---
 title: Log degli errori di SQL Server (gruppi di disponibilità)
-description: Descrizione degli eventi del log degli errori segnalati da un gruppi di disponibilità AlwaysOn.
+description: Informazioni sugli eventi del log degli errori di SQL Server che interessano un gruppo di disponibilità Always On e quali sintomi dovrebbero portare alla revisione del log degli errori.
 ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 39d0c98d-75af-4dd1-b908-30d31af56f2a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81d31225838ec029a020af2df25753b26acd2fb1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c44f65761fcb54d8ad9b8eac0fc5e02bce82181
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251254"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898071"
 ---
 # <a name="sql-server-error-log-always-on-availability-groups"></a>Log degli errori di SQL Server (Gruppi di disponibilità Always On)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Il log degli errori di SQL Server segnala gli eventi che interessano Gruppi di disponibilità Always On, ad esempio:  
   
 -   Comunicazione con il cluster WSFC (Windows Server Failover Clustering)    
@@ -27,7 +27,7 @@ ms.locfileid: "75251254"
 -   Stato di connettività dei database di disponibilità tra repliche primarie e secondarie    
 -   Stati degli endpoint del gruppo di disponibilità    
 -   Stati dei listener del gruppo di disponibilità    
--   Stato lease tra la DLL risorse SQL Server (in esecuzione nel cluster WSFC) e l'istanza di SQL Server (per altre informazioni, vedere [How It Works: SQL Server Always On lease timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx) (Funzionamento: timeout lease di SQL Server Always On)    
+-   Stato di lease tra la DLL risorse SQL Server (in esecuzione nel cluster WSFC) e l'istanza di SQL Server (per altre informazioni, vedere [How It Works: SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx) (Funzionamento: timeout lease di SQL Server Always On)    
 -   Eventi di errore nel gruppo di disponibilità  
 
 Esaminare il log degli errori di SQL Server rivedendo i sintomi seguenti:  

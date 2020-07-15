@@ -1,5 +1,6 @@
 ---
 title: Connettersi a un altro computer (Gestione configurazione SQL Server) | Microsoft Docs
+description: Informazioni su come gestire i servizi di un computer remoto. Scoprire come usare Gestione configurazione SQL Server o SQL Server Management Studio per questa attività.
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], other computers
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 03f409e11e037fcc406940d5a97e9934a77b96b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e4a2ca1eea0ec4b42bba65b62525bb6d86e52c88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74249761"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651351"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>Connettersi a un altro computer (Gestione configurazione SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Questo articolo illustra come connettersi a un altro computer in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Attenersi alla prima procedura per aprire Gestione computer di Windows, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC), connettersi al computer ed espandere l'albero Servizi e applicazioni. Seguire la seconda procedura per creare un file con un collegamento a Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer remoto.
 
@@ -38,7 +39,7 @@ Per avviare, arrestare, sospendere o riprendere i servizi in un altro computer, 
 2. Nel menu **Azione** fare clic su **Connetti a un altro computer**.
 3. Nella finestra di dialogo **Seleziona computer** digitare il nome del computer che si vuole gestire nella casella di testo **Altro computer** quindi fare clic su **OK**.
 
-   Gestione computer visualizza i servizi in esecuzione nel computer remoto. Il nodo di primo livello diventa **Gestione computer** \<*computerremoto*>.
+   Gestione computer visualizza i servizi in esecuzione nel computer remoto. Il nodo di primo livello diventa **Gestione computer** \<*remotecomputer*>.
 
 4. Nell'albero della console espandere **Servizi e applicazioni**e quindi espandere **Gestione configurazione SQL Server** per gestire i servizi del computer remoto.
 
@@ -53,7 +54,7 @@ Per avviare, arrestare, sospendere o riprendere i servizi in un altro computer, 
 6. Nella finestra **Gestione computer** fare clic su **Altro computer**, digitare il nome del computer remoto da gestire e quindi fare clic su **Fine**.
 7. Nella finestra **Aggiungi snap-in autonomo** fare clic su **Chiudi**.
 8. Nella finestra **Aggiungi/Rimuovi snap-in** fare clic su **OK**.
-9. Espandere **Gestione computer (** _\<nome computer>_ **)** e **Servizi e applicazioni**.
+9. Espandere **Gestione computer (** _\<computer name>_ **)** e **Servizi e applicazioni**.
 10. Fare clic con il pulsante destro del mouse su **Gestione configurazione SQL Server**e quindi scegliere **Nuova finestra da qui**.
 11. Scegliere **Radice console** dal menu **Finestra** per tornare alla prima finestra ed eliminare la finestra aperta.
 12. Scegliere **Salva con nome** dal menu **File**e salvare il file nella cartella desiderata con un nome appropriato e l'estensione di file **msc** . Chiudere [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.

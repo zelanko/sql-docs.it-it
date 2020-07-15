@@ -54,16 +54,16 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac07912de601370884d818c7d046f5c1f476672c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1cede57088f5d42041b28c00239ba29822f6c401
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632501"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010796"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Crea un indice relazionale per una tabella o una vista. Viene detto anche indice rowstore, perché è un indice ad albero b-tree sia cluster che non cluster. È possibile creare un indice rowstore prima che siano presenti dati nella tabella. Usare un indice rowstore per migliorare le prestazioni delle query, in particolare quando le query effettuano le selezioni da colonne specifiche o richiedono valori da organizzare in base a un ordine particolare.
 
@@ -590,7 +590,7 @@ Specifica le partizioni alle quali si applica l'impostazione DATA_COMPRESSION. S
 - Specificare i numeri di partizione per più partizioni singole separati da virgole, ad esempio ON PARTITIONS (1, 5).
 - Specificare sia intervalli, sia singole partizioni, ad esempio ON PARTITIONS (2, 4, 6 TO 8).
 
-\<range> può essere specificato sotto forma di numeri di partizione separati dalla parola TO, ad esempio: `ON PARTITIONS (6 TO 8)`.
+È possibile specificare \<range> sotto forma di numeri di partizione separati dalla parola TO, ad esempio: `ON PARTITIONS (6 TO 8)`.
 
  Per impostare tipi diversi di compressione dei dati per partizioni diverse, specificare più volte l'opzione DATA_COMPRESSION, ad esempio:
 
@@ -723,9 +723,9 @@ Per altre informazioni, vedere [Indici per le colonne calcolate](../../relationa
 ## <a name="specifying-index-options"></a>Impostazione di opzioni per gli indici
 In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono state introdotte nuove opzioni per gli indici ed è stata modificata la modalità di impostazione di tali opzioni. Per quanto riguarda la sintassi compatibile con le versioni precedenti, WITH *option_name* equivale a WITH **(** \<option_name> **= ON )** . Quando si impostano opzioni per gli indici, è necessario rispettare le regole seguenti:
 
-- Le nuove opzioni per gli indici possono essere specificate solo usando WITH ( **_option\_name_ = ON | OFF**).
+- Le nuove opzioni per gli indici possono essere specificate solo usando WITH (**_option\_name_ = ON | OFF**).
 - Non è possibile specificare opzioni utilizzando in una stessa istruzione sia la sintassi compatibile con le versioni precedenti, sia la nuova sintassi. Se ad esempio si specifica WITH (**DROP_EXISTING, ONLINE = ON**), l'istruzione avrà esito negativo.
-- Quando si crea un indice XML le opzioni devono essere specificate usando WITH ( **_option_name_= ON | OFF**).
+- Quando si crea un indice XML le opzioni devono essere specificate usando WITH (**_option_name_= ON | OFF**).
 
 ## <a name="drop_existing-clause"></a>Clausola DROP_EXISTING
 È possibile utilizzare la clausola DROP_EXISTING per ricompilare l'indice, aggiungere o eliminare colonne, modificare opzioni, modificare il tipo di ordinamento delle colonne oppure cambiare lo schema di partizione o il filegroup.

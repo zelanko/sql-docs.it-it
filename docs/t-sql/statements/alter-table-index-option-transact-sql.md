@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ba0e9f1edc59b6f1b51bff6afa040fa489cd9858
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 054782a6b6dd4ee381c0a70b857a945c72a66372
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760956"
 ---
 # <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Specifica un set di opzioni che possono essere applicate a un indice incluso in una definizione di vincolo creata tramite l'istruzione [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "81631695"
   
  Specifica il riempimento dell'indice. Il valore predefinito è OFF.  
   
- ATTIVA  
+ ON  
  La percentuale di spazio disponibile specificata in FILLFACTOR viene applicata alle pagine di livello intermedio dell'indice.  
   
  OFF o *fillfactor* non è specificato  
@@ -89,7 +89,7 @@ ms.locfileid: "81631695"
  IGNORE_DUP_KEY **=** { ON | **OFF** }  
  Specifica il tipo di risposta quando un'operazione di inserimento tenta di inserire valori di chiave duplicati in un indice univoco. L'opzione IGNORE_DUP_KEY viene applicata solo alle operazioni di inserimento eseguite dopo la creazione o la ricompilazione dell'indice. L'opzione non ha alcun effetto se si esegue [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) o [UPDATE](../../t-sql/queries/update-transact-sql.md). Il valore predefinito è OFF.  
   
- ATTIVA  
+ ON  
  Viene visualizzato un messaggio di avviso quando in un indice univoco vengono inseriti valori chiave duplicati. Vengono considerate errate solo le righe che violano il vincolo di unicità.  
   
  OFF  
@@ -104,7 +104,7 @@ ms.locfileid: "81631695"
  STATISTICS_NORECOMPUTE **=** { ON | **OFF** }  
  Specifica se vengono ricalcolate le statistiche. Il valore predefinito è OFF.  
   
- ATTIVA  
+ ON  
  Le statistiche non aggiornate non vengono ricalcolate automaticamente.  
   
  OFF  
@@ -115,7 +115,7 @@ ms.locfileid: "81631695"
   
  Specifica se sono consentiti blocchi di riga. Il valore predefinito è ON.  
   
- ATTIVA  
+ ON  
  I blocchi di riga sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando usare blocchi di riga.  
   
  OFF  
@@ -126,7 +126,7 @@ ms.locfileid: "81631695"
   
  Specifica se sono consentiti blocchi a livello di pagina. Il valore predefinito è ON.  
   
- ATTIVA  
+ ON  
  I blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi a livello di pagina.  
   
  OFF  
@@ -143,7 +143,7 @@ Specifica se eseguire o meno l'ottimizzazione per la contesa di inserimento dell
   
  Specifica se archiviare i risultati dell'ordinamento in **tempdb**. Il valore predefinito è OFF.  
   
- ATTIVA  
+ ON  
  I risultati intermedi dell'ordinamento usati per la compilazione dell'indice vengono archiviati in **tempdb**. In questo modo si può ridurre il tempo necessario per creare un indice se **tempdb** si trova in un set di dischi diverso rispetto al database utente. La quantità di spazio su disco utilizzata durante la compilazione dell'indice sarà tuttavia maggiore.  
   
  OFF  
@@ -157,7 +157,7 @@ Specifica se eseguire o meno l'ottimizzazione per la contesa di inserimento dell
 > [!NOTE]  
 >  Non è possibile creare online indici non cluster univoci, tra cui gli indici creati a causa di un vincolo UNIQUE o PRIMARY KEY.  
   
- ATTIVA  
+ ON  
  I blocchi di tabella a lungo termine non vengono mantenuti per la durata dell'operazione sugli indici. Durante la fase principale dell'operazione viene mantenuto solo un blocco preventivo condiviso (IS, Intent Shared) sulla tabella di origine. in modo da consentire l'esecuzione di query o l'aggiornamento della tabella sottostante e degli indici. All'inizio dell'operazione viene mantenuto un blocco condiviso (S) sull'oggetto di origine per un periodo molto breve. Al termine dell'operazione, per un breve periodo viene acquisito un blocco condiviso (S) sull'origine, in caso di creazione di un indice non cluster. In caso di creazione o di eliminazione di un indice cluster online o di ricompilazione di un indice cluster o non cluster, viene acquisito un blocco di modifica dello schema (SCH-M). Sebbene i blocchi sull'indice online siano blocchi di metadati brevi, soprattutto il blocco Sch-M deve attendere il completamento di tutte le transazioni bloccanti su questa tabella. Durante il tempo di attesa il blocco Sch-M impedisce tutte le altre transazioni in attesa dietro il blocco stesso per l'accesso alla stessa tabella. L'opzione ONLINE non può essere impostata su ON quando viene creato un indice per una tabella temporanea locale.  
   
 > [!NOTE]  
@@ -192,7 +192,7 @@ Specifica se eseguire o meno l'ottimizzazione per la contesa di inserimento dell
   
  Specifica l'opzione di compressione dei dati per la tabella, il numero di partizione o l'intervallo di partizioni specificato. descritte di seguito:  
   
- Nessuno  
+ NONE  
  La tabella o le partizioni specificate non vengono compresse. Si applica solo alle tabelle rowstore, non si applica alle tabelle columnstore.  
   
  ROW  
@@ -219,11 +219,11 @@ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...*n*
   
 \<partition_number_expression> può essere specificato nei modi seguenti:  
   
--   Fornire il numero di una partizione, ad esempio ON PARTITIONS (2).  
--   Fornire i numeri di partizione per più partizioni singole separati da virgole, ad esempio ON PARTITIONS (1, 5).  
--   Fornire sia intervalli, sia singole partizioni, ad esempio ON PARTITIONS (2, 4, 6 TO 8).  
+-   Fornire il numero di una partizione, ad esempio: ON PARTITIONS (2).  
+-   Specificare i numeri di partizione per più partizioni singole separati da virgole, ad esempio ON PARTITIONS (1, 5).  
+-   Specificare sia intervalli, sia singole partizioni, ad esempio ON PARTITIONS (2, 4, 6 TO 8).  
   
-È possibile specificare \<range> come numeri di partizione separati dalla parola TO, ad esempio ON PARTITIONS (6 TO 8).  
+\<range> può essere specificato sotto forma di numeri di partizione separati dalla parola TO, ad esempio: ON PARTITIONS (6 TO 8).  
   
  Per impostare tipi diversi di compressione dei dati per partizioni diverse, specificare più volte l'opzione DATA_COMPRESSION, ad esempio:  
   
@@ -260,7 +260,7 @@ MAX_DURATION = *time* [**MINUTES** ]
  Tempo (valore intero specificato in minuti) di attesa del blocco dell'operazione **SWITCH** o di ricompilazione dell'indice online che deve essere acquisito durante l'esecuzione del comando DDL. L'operazione SWITCH o di ricompilazione dell'indice online tenta il completamento immediato. Se l'operazione viene bloccata per il tempo specificato in **MAX_DURATION**, una delle azioni **ABORT_AFTER_WAIT** viene eseguita. Il tempo **MAX_DURATION** è sempre espresso in minuti e la parola **MINUTES** può essere omessa.  
   
 ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
- Nessuno  
+ NONE  
  Continua l'operazione **SWITCH** o di ricompilazione dell'indice online senza modificare la priorità dei blocchi (usando la priorità normale).  
   
 SELF  

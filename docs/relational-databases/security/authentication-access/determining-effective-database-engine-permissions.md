@@ -1,5 +1,6 @@
 ---
 title: Determinare le autorizzazioni valide per il motore di database | Microsoft Docs
+description: Informazioni su come individuare gli utenti che hanno le autorizzazioni per i vari oggetti nel motore di database di SQL Server, inclusi i sistemi delle autorizzazioni correnti e precedenti.
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7c27c18cb862a753bc1a71c38d732c72a040a48
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f4e26da02da69955a3bc3f589753efa1007ae3a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488030"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005626"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinare le autorizzazioni valide per il motore di database
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Questo articolo descrive come determinare chi ha le autorizzazioni per i vari oggetti nel motore di database di SQL Server. SQL Server implementa due sistemi di autorizzazione per il motore di database. Nel sistema precedente basato sui ruoli predefiniti esistono autorizzazioni preconfigurate. A partire da SQL Server 2005 è disponibile un sistema più flessibile e preciso. Le informazioni in questo articolo si applicano a SQL Server a partire dalla versione 2005. Alcuni tipi di autorizzazioni non sono disponibili in alcune versioni di SQL Server.
 

@@ -1,5 +1,6 @@
 ---
 title: Certificati SQL Server e chiavi simmetriche | Microsoft Docs
+description: Informazioni su certificati e chiavi asimmetriche in SQL Server, inclusi i certificati generati esternamente o generati da SQL Server, gli strumenti e le attività correlate.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b330e97aa006b223120d13433bf2c317205b96c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f631e55edaacc56c5c8bae3aec3e374824857db4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153120"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001025"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificati SQL Server e chiavi simmetriche
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
  La crittografia a chiave pubblica è un sistema di tutela della segretezza dei messaggi in cui un utente crea una chiave *pubblica* e una chiave *privata*. La chiave privata viene tenuta segreta, mentre la chiave pubblica può essere distribuita ad altri. Sebbene le chiavi siano collegate da una relazione matematica, non è possibile estrapolare facilmente la chiave privata utilizzando la chiave pubblica. La chiave pubblica può essere usata per crittografare dati che potranno essere decrittografati solo dalla chiave privata corrispondente. Questo approccio può essere usato per crittografare messaggi destinati al proprietario della chiave privata. In modo analogo il proprietario di una chiave privata può crittografare dati che possono essere decrittografati solo con la chiave pubblica. Questo approccio costituisce la base dei certificati digitali, in cui le informazioni presenti nel certificato vengono crittografate dal proprietario di una chiave privata, in modo da offrire una garanzia all'autore del contenuto. Poiché le chiavi di crittografia e decrittografia sono diverse, sono note come chiavi *asimmetriche*.
   

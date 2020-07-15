@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5260ccc53fbdba1e0773dc43c021f0ec4f21e255
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 6d4cae8c42f8a29842e62f94cfcd7a87e187b4e0
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151553"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091636"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crea un nuovo gruppo di disponibilità, se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è abilitata per la funzionalità [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
@@ -162,7 +162,7 @@ CREATE AVAILABILITY GROUP group_name
  I valori FAILURE_CONDITION_LEVEL e HEALTH_CHECK_TIMEOUT definiscono *criteri di failover flessibili* per un gruppo specifico, fornendo un controllo granulare sulle condizioni che devono causare un failover automatico. Per altre informazioni, vedere [Criteri di failover flessibili per failover automatico di un gruppo di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
  HEALTH_CHECK_TIMEOUT **=** *milliseconds*  
- Specifica il tempo di attesa, in millisecondi, per la restituzione delle informazioni sull'integrità del server da parte della stored procedure di sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) prima che il cluster WSFC presupponga che l'istanza del server sia lenta o bloccata. HEALTH_CHECK_TIMEOUT viene impostato a livello di gruppo ma è rilevante solo nelle repliche di disponibilità configurate per la modalità di disponibilità con commit sincrono che supportano il failover automatico (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT).  Un timeout del controllo di integrità può anche attivare un failover automatico solo se entrambe le repliche, primaria e secondaria, sono configurate per la modalità di failover automatico (FAILOVER_MODE **=** AUTOMATIC) e la replica secondaria è attualmente sincronizzata con la replica primaria.  
+ Specifica il tempo di attesa in millisecondi per la restituzione delle informazioni sull'integrità del server da parte della stored procedure di sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) prima che il cluster WSFC presupponga che l'istanza del server sia lenta o non risponda. HEALTH_CHECK_TIMEOUT viene impostato a livello di gruppo ma è rilevante solo nelle repliche di disponibilità configurate per la modalità di disponibilità con commit sincrono che supportano il failover automatico (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT).  Un timeout del controllo di integrità può anche attivare un failover automatico solo se entrambe le repliche, primaria e secondaria, sono configurate per la modalità di failover automatico (FAILOVER_MODE **=** AUTOMATIC) e la replica secondaria è attualmente sincronizzata con la replica primaria.  
   
  Il valore predefinito di HEALTH_CHECK_TIMEOUT è 30000 millisecondi (30 secondi). Il valore minimo è 15000 millisecondi (15 secondi) e il valore massimo è 4294967295 millisecondi.  
   
@@ -347,7 +347,7 @@ CREATE AVAILABILITY GROUP group_name
   
  I valori di READ_ONLY_ROUTING_LIST sono i seguenti:  
   
- \<server_instance> Specifica l'indirizzo dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che funge da host per una replica che è una replica secondaria leggibile quando è in esecuzione nel ruolo secondario.  
+ \<server_instance> Specifica l'indirizzo dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che è l'host di una replica che è una replica secondaria leggibile quando è in esecuzione nel ruolo secondario.  
   
  Utilizzare un elenco delimitato da virgole per specificare tutte le istanze del server che potrebbero ospitare una replica secondaria leggibile. Il routing di sola lettura segue l'ordine in cui le istanze del server vengono specificate nell'elenco. Se si include l'istanza del server host di una replica nell'elenco di routing di sola lettura della replica, il posizionamento di questa istanza del server alla fine dell'elenco costituisce in genere buona pratica, poiché le connessioni con finalità di lettura vengono indirizzate a una replica secondaria, se ne è disponibile una.  
   
@@ -356,7 +356,7 @@ CREATE AVAILABILITY GROUP group_name
  NONE  
  Specifica che quando questa replica di disponibilità è la replica primaria, il routing di sola lettura non è supportato. Questo è il comportamento predefinito.  
 
- READ_WRITE_ROUTING_URL **=** { **('** \<istanza_server> **')** }  
+ READ_WRITE_ROUTING_URL **=** { **('** \<server_instance> **')** }  
  Si applica a: SQL Server (a partire da SQL Server 2019 (15.x)) 
 
  Specifica istanze del server in cui sono ospitate repliche di disponibilità per questo gruppo di disponibilità che soddisfano i requisiti seguenti quando vengono eseguite nel ruolo principale:
@@ -378,7 +378,7 @@ Per altre informazioni, vedere [Reindirizzamento della connessione in lettura/sc
   
  Il gruppo di disponibilità secondario deve essere aggiunto al gruppo di disponibilità distribuito. Per altre informazioni, vedere [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
- \<ag_name > specifica il nome del gruppo di disponibilità che costituisce una parte del gruppo di disponibilità distribuito.  
+ \<ag_name> Specifica il nome del gruppo di disponibilità che costituisce una metà del gruppo di disponibilità distribuito.  
   
  LISTENER **='** TCP **://** _system-address_ **:** _port_ **'**  
  Specifica il percorso URL per il listener associato al gruppo di disponibilità.  
@@ -422,7 +422,7 @@ Per altre informazioni, vedere [Reindirizzamento della connessione in lettura/sc
  MANUAL  
  Specifica il seeding manuale (impostazione predefinita). Questo metodo richiede la creazione di un backup del database nella replica primaria e il ripristino manuale del backup nelle repliche del gruppo di disponibilità secondario.  
   
- LISTENER **'** _dns\_name_ **'(** \<listener_option\> **)** Definisce un nuovo listener del gruppo di disponibilità per questo gruppo di disponibilità. LISTENER è un argomento facoltativo.  
+ LISTENER **'** _dns\_name_ **'(** \<listener_option\> **)** Definisce un nuovo listener per il gruppo di disponibilità. LISTENER è un argomento facoltativo.  
   
 > [!IMPORTANT]
 >  Prima di creare il primo listener, è consigliabile leggere l'argomento [Creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
@@ -442,7 +442,7 @@ Per altre informazioni, vedere [Reindirizzamento della connessione in lettura/sc
 > [!IMPORTANT]  
 >  NetBIOS riconosce solo i primi 15 caratteri di dns_name. Se si hanno due cluster WSFC controllati dallo stesso dominio Active Directory e si tenta di creare listener del gruppo di disponibilità in entrambi i cluster usando nomi con più di 15 caratteri e un prefisso a 15 caratteri identico, viene restituito un errore in cui si segnala che non è possibile portare online la risorsa del nome di rete virtuale. Per informazioni sulle regole di denominazione dei prefissi per i nomi DNS, vedere [Assegnare nomi ai domini](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
- \<listener_option> LISTENER accetta una delle seguenti opzioni \<listener_option>: 
+ \<listener_option> LISTENER accetta una delle opzioni \<listener_option> seguenti: 
   
  WITH DHCP [ ON { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')** } ]  
  Specifica che il listener del gruppo di disponibilità deve usare il protocollo DHCP (Dynamic Host Configuration Protocol).  Facoltativamente, usare la clausola ON per identificare la rete in cui viene creato il listener. DHCP è limitato a una sola subnet usata per ogni istanza del server che ospita una replica nel gruppo di disponibilità.  
@@ -496,7 +496,7 @@ Per altre informazioni, vedere [Reindirizzamento della connessione in lettura/sc
 |------------------|-------------|-----------------|  
 |AUTOMATED_BACKUP_PREFERENCE|SECONDARY|Con questa preferenza di backup automatico viene indicato che i backup devono essere eseguiti in una replica secondaria tranne quando la replica primaria è l'unica replica online (comportamento predefinito). Affinché l'impostazione AUTOMATED_BACKUP_PREFERENCE abbia effetto, è necessario generare script di processi di backup sui database di disponibilità per prendere in considerazione la preferenza di backup automatico.|  
 |FAILURE_CONDITION_LEVEL|3|Con questa impostazione del livello della condizione di errore viene specificato che deve essere avviato un failover automatico in caso di errori interni di SQL Server critici, ad esempio spinlock orfani, gravi violazioni dell'accesso in scrittura o dumping eccessivo.|  
-|HEALTH_CHECK_TIMEOUT|600000|Questo valore di timeout del controllo di integrità pari a 60 secondi specifica che il cluster WSFC attende 60.000 millisecondi che la stored procedure di sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) restituisca informazioni sull'integrità del server relativamente a un'istanza del server in cui è ospitata una replica con commit sincrono prima che il cluster presupponga che l'istanza del server host sia lenta o bloccata. Il valore predefinito è 30000 millisecondi.|  
+|HEALTH_CHECK_TIMEOUT|600000|Questo valore di timeout del controllo di integrità pari a 60 secondi specifica che il cluster WSFC attende 60000 millisecondi che la stored procedure di sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) restituisca informazioni sull'integrità del server relativamente a un'istanza del server in cui è ospitata una replica con commit sincrono prima che il cluster presupponga che l'istanza del server host sia lenta o bloccata. Il valore predefinito è 30000 millisecondi.|  
   
  Tre repliche di disponibilità devono essere ospitate dalle istanze predefinite del server in computer denominati `COMPUTER01`, `COMPUTER02` e `COMPUTER03`. Nella tabella seguente si riepilogano i valori specificati per le opzioni di ogni replica.  
   
@@ -584,6 +584,3 @@ GO
  [Risolvere i problemi relativi alla configurazione dei gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
-  
-  
-

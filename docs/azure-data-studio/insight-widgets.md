@@ -1,23 +1,22 @@
 ---
 title: Usare i widget di informazioni dettagliate per monitorare i server e i database
-titleSuffix: Azure Data Studio
 description: Informazioni sui widget di informazioni dettagliate in Azure Data Studio
 ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4edf4003d40da35dcd54b3938e0f318ef8b9440a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1568251dba79998c07e05b78b2d156cebbb0e7fd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957055"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774603"
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-name-sos"></a>Gestire server e database con i widget di informazioni dettagliate in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="manage-servers-and-databases-with-insight-widgets-in-azure-data-studio"></a>Gestire server e database con i widget di informazioni dettagliate in Azure Data Studio
 
 I widget di informazioni dettagliate acquisiscono le query Transact-SQL (T-SQL) usate per monitorare server e database e le trasformano in visualizzazioni dettagliate.
 
@@ -36,7 +35,7 @@ Per iniziare a creare diversi tipi di widget di informazioni dettagliate, seguir
 
 ## <a name="sql-queries"></a>Query SQL
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] tenta di evitare la necessità di introdurre un'altra lingua o un'interfaccia utente complessa e prova quindi a usare quanto più possibile T-SQL con una configurazione JSON minima. La configurazione di widget di informazioni dettagliate con T-SQL sfrutta l'ingente numero di origini esistenti di utili query T-SQL che possono essere convertite in widget dettagliati.
+Azure Data Studio tenta di evitare la necessità di introdurre un'altra lingua o un'interfaccia utente complessa e prova quindi a usare quanto più possibile T-SQL con una configurazione JSON minima. La configurazione di widget di informazioni dettagliate con T-SQL sfrutta l'ingente numero di origini esistenti di utili query T-SQL che possono essere convertite in widget dettagliati.
 
 I widget di informazioni dettagliate sono costituiti da una o due query T-SQL:
 * *La query del widget di informazioni dettagliate* è obbligatoria ed è la query che restituisce i dati visualizzati nel widget.
@@ -44,7 +43,7 @@ I widget di informazioni dettagliate sono costituiti da una o due query T-SQL:
 
 Una query del widget di informazioni dettagliate definisce un set di dati che restituisce un conteggio o un grafico. Le query dei dettagli di informazioni dettagliate vengono usate invece per elencare le informazioni dettagliate rilevanti in un formato tabulare nel pannello dei dettagli di informazioni dettagliate. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] esegue le query del widget di informazioni dettagliate, esegue il mapping del set di risultati di ogni query al set di dati di un grafico e ne esegue il rendering. Quando un utente apre i dettagli delle informazioni dettagliate, viene eseguita la query dei dettagli e il risultato viene visualizzato in una griglia all'interno della finestra di dialogo.
+Azure Data Studio esegue le query del widget di informazioni dettagliate, esegue il mapping del set di risultati di ogni query al set di dati di un grafico e ne esegue il rendering. Quando un utente apre i dettagli delle informazioni dettagliate, viene eseguita la query dei dettagli e il risultato viene visualizzato in una griglia all'interno della finestra di dialogo.
 
 L'idea di base è quella di scrivere una query T-SQL in modo che possa essere usata come set di dati di un widget di conteggio o di grafico. 
 

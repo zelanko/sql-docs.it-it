@@ -21,15 +21,15 @@ ms.assetid: 2d96f6d2-5db7-4b3c-a63e-213c58e4af55
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 986f5149824ab645a1ff383284fccb420b516b8d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1aa1ab1466776af502249c43d005af896827de85
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823746"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003764"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Restituisce il rango di ogni riga all'interno della partizione di un set di risultati. Il valore di rango di una riga è uno più il numero di ranghi che precedono la riga in questione.  
 
@@ -48,7 +48,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
   
 ## <a name="arguments"></a>Argomenti  
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
- *partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni alle quali viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. _order\_by\_clause_ determina l'ordine dei dati prima che venga applicata la funzione. *order_by_clause* è obbligatorio. La clausola \<rows o range/> della clausola OVER non può essere specificata per la funzione RANK. Per altre informazioni, vedere [Clausola OVER - &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ *partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni alle quali viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. _order\_by\_clause_ determina l'ordine dei dati prima che venga applicata la funzione. *order_by_clause* è obbligatorio. \<rows or range clause/> della clausola OVER non può essere specificato per la funzione RANK. Per altre informazioni, vedere [Clausola OVER - &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **bigint**  

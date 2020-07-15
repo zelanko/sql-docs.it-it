@@ -21,15 +21,15 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0aa0779fda49749c2ab3c35cbb5ccc37e94526cd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5197708ff1e12aae5b2df32bc82b08cd48f1222c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636246"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009619"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Aggiorna le statistiche di ottimizzazione query in una tabella o una vista indicizzata. Per impostazione predefinita, Query Optimizer aggiorna già le statistiche come necessario per migliorare il piano di query. In alcuni casi è possibile migliorare le prestazioni di esecuzione delle query usando `UPDATE STATISTICS` o la stored procedure [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) per aggiornare le statistiche più di frequente rispetto agli aggiornamenti predefiniti.  
   

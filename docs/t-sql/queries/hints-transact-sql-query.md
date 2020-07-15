@@ -55,15 +55,15 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 260de27d8a092ceabbf066d1546f471b90aa2c33
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4718bcb629f1aabbc458ac505eab3ae92bab52cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746383"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731304"
 ---
 # <a name="hints-transact-sql---query"></a>Hint (Transact-SQL) - Query
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Gli hint per la query specificano che gli hint indicati devono essere utilizzati in tutta la query e influiscono su tutti gli operatori dell'istruzione. Se la query principale include l'operatore UNION, la clausola OPTION può essere specificata solo nell'ultima query che prevede un'operazione di tipo UNION. Gli hint per la query vengono specificati come parte della [clausola OPTION](../../t-sql/queries/option-clause-transact-sql.md). L'errore 8622 si verifica se in seguito alla presenza di uno o più hint per la query non viene generato un piano valido da Query Optimizer.  
   
@@ -238,7 +238,7 @@ Valore letterale costante a cui assegnare _\@variable\_name_ per l'uso con l'hin
 OPTIMIZE FOR può neutralizzare il comportamento predefinito di rilevamento dei parametri di Query Optimizer. Usare OPTIMIZE FOR anche quando si creano guide di piano. Per altre informazioni, vedere [Ricompilare una stored procedure](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md).  
   
 OPTIMIZE FOR UNKNOWN  
-Indica a Query Optimizer di usare i dati statistici invece dei valori iniziali per tutte le variabili locali quando la query viene compilata e ottimizzata. L'ottimizzazione include i parametri creati con la parametrizzazione forzata.  
+Indica a Query Optimizer di applicare la selettività media del predicato a tutti i valori di colonna, anziché usare il valore del parametro di runtime quando la query viene compilata e ottimizzata.  
   
 Se si usano OPTIMIZE FOR @variable_name = _literal\_constant_ e OPTIMIZE FOR UNKNOWN nello stesso hint per la query, Query Optimizer userà il valore _literal\_constant_ indicato per un valore specifico. Query Optimizer userà UNKNOWN per i restanti valori di variabile. I valori vengono utilizzati durante l'ottimizzazione della query e non durante l'esecuzione di questa.  
 
@@ -404,17 +404,17 @@ GO
 ```  
   
 ### <a name="b-using-optimize-for"></a>B. Utilizzo di OPTIMIZE FOR  
- L'esempio seguente indica a Query Optimizer di usare il valore `'Seattle'` per la variabile locale `@city_name` e di usare dati statistici per determinare il valore per la variabile locale `@postal_code` durante l'ottimizzazione della query. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ Nell'esempio seguente si indica a Query Optimizer di usare il valore `'Seattle'` per `@city_name` e di applicare la selettività media del predicato a tutti i valori di colonna per `@postal_code` durante l'ottimizzazione della query. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  
-DECLARE @city_name nvarchar(30);  
-DECLARE @postal_code nvarchar(15);  
-SET @city_name = 'Ascheim';  
-SET @postal_code = 86171;  
+CREATE PROCEDURE dbo.RetrievePersonAddress
+@city_name nvarchar(30),  
+ @postal_code nvarchar(15)
+AS
 SELECT * FROM Person.Address  
 WHERE City = @city_name AND PostalCode = @postal_code  
 OPTION ( OPTIMIZE FOR (@city_name = 'Seattle', @postal_code UNKNOWN) );  
-GO  
+GO
 ```  
   
 ### <a name="c-using-maxrecursion"></a>C. Utilizzo di MAXRECURSION  

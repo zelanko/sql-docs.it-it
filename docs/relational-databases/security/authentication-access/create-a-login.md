@@ -1,5 +1,6 @@
 ---
 title: Creare un account di accesso | Microsoft Docs
+description: Informazioni su come creare un account di accesso in SQL Server o in un database SQL di Azure usando SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -23,15 +24,15 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00f139a5fa608f40f7979f74b187efcb68bcf2ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 860f4d84084916982fb8328e2fa1cc373d8b3204
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75776395"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005679"
 ---
 # <a name="create-a-login"></a>Creazione di un account di accesso
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Questo argomento illustra come creare un account di accesso in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] o [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un account di accesso è l'identità della persona o del processo che esegue la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

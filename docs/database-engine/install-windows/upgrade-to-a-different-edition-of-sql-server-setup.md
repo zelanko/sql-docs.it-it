@@ -1,5 +1,6 @@
 ---
 title: Eseguire l'aggiornamento a un'edizione diversa
+description: Il programma di installazione di SQL Server supporta l'aggiornamento dell'edizione tra varie edizioni di SQL Server. Prima di iniziare un aggiornamento di edizione, vedere le risorse in questo articolo.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c3de07aaa65e2dac2859aaf5c0be3e63e0f22dcf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67a68c2827fffcfd5be0af38cbc38f33fd9a09dd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79434128"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900197"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Eseguire l'aggiornamento a un'edizione diversa di SQL Server (programma di installazione)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'aggiornamento dell'edizione fra le varie edizioni di [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]. Per informazioni sui percorsi di aggiornamento supportati, vedere [Aggiornamenti di versione ed edizione supportati](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md). Prima di iniziare l'aggiornamento dell'edizione di un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], rivedere gli articoli seguenti:  
 

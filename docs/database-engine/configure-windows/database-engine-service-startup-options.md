@@ -1,5 +1,6 @@
 ---
 title: Opzioni di avvio del servizio del motore di database | Microsoft Docs
+description: Acquisire familiarità con le opzioni di avvio del motore di database di SQL Server. Suggerimenti su come usarle e informazioni sullo scopo di ogni opzione.
 ms.custom: ''
 ms.date: 08/01/2019
 ms.prod: sql
@@ -23,18 +24,18 @@ helpviewer_keywords:
 - startup parameters [SQL Server]
 - starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4518428d6dd583e5d9fe2a4da06f052b8b75da70
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f5cd9b549123545920c890616945156b37fd762b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252865"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772630"
 ---
 # <a name="database-engine-service-startup-options"></a>Opzioni di avvio del servizio del motore di database
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Le opzioni di avvio consentono di designare determinati percorsi di file necessari in fase di avvio e di specificare alcune condizioni a livello di server. Per la maggior parte degli utenti non è necessario specificare opzioni di avvio a meno che non si debbano risolvere problemi del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o si verifichi un problema insolito e si ricevano istruzioni dal servizio di supporto tecnico di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di utilizzare l'opzione di avvio.  
   

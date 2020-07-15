@@ -11,16 +11,16 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7afb01d003e6221b30ea194ff711555b7e982f41
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: 6f8ea5d4b1e91a3f1c3bf66dab4565ab457933c5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80873177"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999854"
 ---
 # <a name="temporal-tables"></a>Tabelle temporali
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 In SQL Server 2016 è stato introdotto il supporto per le tabelle temporali (note anche come tabelle temporali con controllo delle versioni del sistema) come una funzionalità di database, che offre un supporto predefinito per la gestione delle informazioni sui dati archiviati nella tabella in qualsiasi momento anziché solo sui dati che risultano corretti nel momento attuale. Questa funzionalità di database è stata introdotta in SQL ANSI 2011.
 
@@ -106,7 +106,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));
 
 ## <a name="how-do-i-query-temporal-data"></a>Esecuzione di una query su dati temporali
 
-La clausola **FROM** _\<tabella\>_ dell'istruzione **SELECT** usa una nuova clausola **FOR SYSTEM_TIME** con cinque sottoclausole specifiche per i dati temporali per eseguire query sui dati nelle tabelle correnti e di cronologia. La nuova sintassi dell'istruzione **SELECT** è supportata direttamente su una singola tabella, propagata attraverso diversi join e viste su più tabelle temporali.
+La clausola **FROM** _\<table\>_ dell'istruzione **SELECT** ha una nuova clausola **FOR SYSTEM_TIME** con cinque sottoclausole specifiche per i dati temporali per eseguire query sui dati nelle tabelle correnti e di cronologia. La nuova sintassi dell'istruzione **SELECT** è supportata direttamente su una singola tabella, propagata attraverso diversi join e viste su più tabelle temporali.
 
 ![Query temporale](../../relational-databases/tables/media/temporal-querying.PNG "Query temporale")
 
@@ -136,7 +136,7 @@ Nella tabella seguente il valore SysStartTime della colonna delle righe risultan
 |**ALL**|Tutte le righe|Restituisce l'unione di righe che appartengono alla tabella corrente e a quella di cronologia.|
 
 > [!NOTE]
-> Facoltativamente, è possibile scegliere di nascondere le colonne periodo in modo tale che le query che non fanno riferimento in modo esplicito alle colonne periodo non le restituiscano (scenario **SELECT \* FROM** _\<tabella\>_ ). Per restituire una colonna nascosta, basta fare riferimento in modo esplicito alla colonna nella query. Allo stesso modo, le istruzioni **INSERT** e **BULK INSERT** continueranno come se le nuove colonne periodo non fossero presenti (e i valori delle colonne saranno popolati automaticamente). Per altre informazioni sull'uso della clausola **HIDDEN** , vedere [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) e [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).
+> Facoltativamente, è possibile scegliere di nascondere le colonne periodo per fare in modo che le query senza riferimenti espliciti alle colonne non restituiscano le colonne (scenario **SELECT \* FROM** _\<table\>_ ). Per restituire una colonna nascosta, basta fare riferimento in modo esplicito alla colonna nella query. Allo stesso modo, le istruzioni **INSERT** e **BULK INSERT** continueranno come se le nuove colonne periodo non fossero presenti (e i valori delle colonne saranno popolati automaticamente). Per altre informazioni sull'uso della clausola **HIDDEN** , vedere [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) e [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

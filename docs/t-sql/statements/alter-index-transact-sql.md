@@ -46,15 +46,15 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82fb30a374ea9ac4cdabf0ab5f7b4d8eefb8f4c4
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: e8c9b9fb9b58cee42c11e821e940966f2acce498
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588233"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000715"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Consente di modificare un indice di tabella o di vista esistente, di tipo rowstore, columnstore o XML, tramite la disabilitazione, la ricompilazione o la riorganizzazione dell'indice oppure tramite l'impostazione di opzioni per l'indice.  
   
@@ -399,7 +399,7 @@ Se è specificato **ON**, le statistiche create sono statistiche per partizione.
 -   Statistiche create per le tabelle interne  
 -   Statistiche create con indici spaziali o indici XML  
   
- ONLINE **=** { ON | **OFF** } \< come si applica a rebuild_index_option>  
+ ONLINE **=** { ON | **OFF** } \<as applies to rebuild_index_option>  
  Specifica se le tabelle sottostanti e gli indici associati sono disponibili per le query e la modifica dei dati durante l'operazione sugli indici. Il valore predefinito è OFF.  
   
  Per un indice XML o spaziale, è supportata solo l'opzione `ONLINE = OFF` e se ONLINE è impostata su ON viene generato un errore.  
@@ -553,7 +553,7 @@ COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }
 -   Specificare i numeri di partizione per più partizioni singole separati da virgole, ad esempio: `ON PARTITIONS (1, 5)`.  
 -   Specificare sia intervalli che partizioni singole: `ON PARTITIONS (2, 4, 6 TO 8)`.  
   
- \<range> può essere specificato sotto forma di numeri di partizione separati dalla parola TO, ad esempio: `ON PARTITIONS (6 TO 8)`.  
+ È possibile specificare \<range> sotto forma di numeri di partizione separati dalla parola TO, ad esempio: `ON PARTITIONS (6 TO 8)`.  
   
  Per impostare tipi diversi di compressione dei dati per partizioni diverse, specificare più volte l'opzione DATA_COMPRESSION, ad esempio:  
   
@@ -566,7 +566,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );  
 ```  
   
- ONLINE **=** { ON  | **OFF** } \< <come si applica a single_partition_rebuild_index_option  
+ ONLINE **=** { ON  | **OFF** } \<as applies to single_partition_rebuild_index_option>  
  Specifica se un indice o una partizione di indice di una tabella sottostante può essere ricompilata online o offline. Se **REBUILD** viene eseguito online (**ON**), i dati nella tabella sono disponibili per le query e le modifiche durante l'operazione sull'indice.  Il valore predefinito è **OFF**.  
   
  ON  
@@ -704,7 +704,7 @@ La ricompilazione dell'indice online viene specificata come ripristinabile usand
 -  L'opzione RESUMABLE non è persistente nei metadati per un determinato indice e si applica solo alla durata di un'istruzione DDL corrente. Per abilitare la funzione di ripristino, è necessario quindi che la clausola RESUMABLE=ON sia specificata in modo esplicito.
 -  L'opzione MAX_DURATION è supportata per l'opzione RESUMABLE = ON o l'opzione dell'argomento **low_priority_lock_wait**. 
    -  MAX_DURATION per l'opzione RESUMABLE specifica l'intervallo di tempo per la ricompilazione di un indice. Trascorso questo tempo, la ricompilazione dell'indice viene sospesa oppure viene completata. È l'utente a decidere quando riprendere la ricompilazione di un indice che è stata sospesa. Il valore espresso in minuti in **time** per MAX_DURATION deve essere maggiore di 0 e minore o uguale a una settimana (7 \* 24 \* 60 = 10080 minuti). Una sospensione prolungata di un'operazione sull'indice può compromettere le prestazioni DML su una tabella specifica, nonché la capacità del disco del database poiché entrambi gli indici, quello originale e quello appena creato, richiedono spazio su disco e devono essere aggiornati durante le operazioni DML. Se l'opzione MAX_DURATION viene omessa, l'operazione sull'indice continuerà fino al suo completamento o fino a quando non si verificherà un errore. 
-   -  L'opzione dell'argomento \<low_priority_lock_wait > consente di definire il comportamento dell'operazione sull'indice quando è bloccata sul blocco SCH-M.
+   -  L'opzione dell'argomento \<low_priority_lock_wait> consente di definire il comportamento dell'operazione sull'indice quando è bloccata sul blocco SCH-M.
  
 -  Se si esegue nuovamente l'istruzione ALTER INDEX REBUILD originale con gli stessi parametri viene ripresa un'operazione di ricompilazione dell'indice sospesa. È possibile riprendere un'operazione di ricompilazione dell'indice sospesa anche eseguendo l'istruzione ALTER INDEX RESUME.
 -  L'opzione SORT_IN_TEMPDB=ON non è supportata per l'indice ripristinabile 

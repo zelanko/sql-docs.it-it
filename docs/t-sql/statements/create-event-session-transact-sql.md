@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 371657ed68c4b52cbf2cac75569fd8b1ab764e05
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: aa73be808ed074ffcdb412119a676a1a4ce7f8f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632136"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767127"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Crea una sessione degli eventi estesi che identifica l'origine degli eventi, le destinazioni delle sessione degli eventi e le opzioni della sessione degli eventi.
 
@@ -117,7 +117,7 @@ ADD EVENT [ *event_module_guid* ].*event_package_name*.*event_name* Evento da as
 
 Gli eventi vengono visualizzati nella vista sys.dm_xe_objects come object_type "event".
 
-SET { *event_customizable_attribute*= \<value> [ ,...*n*] } Consente gli attributi personalizzabili per l'evento da impostare. Gli attributi personalizzabili vengono visualizzati nella vista sys.dm_xe_object_columns come column_type 'customizable' e object_name = *event_name*.
+SET { *event_customizable_attribute*= \<value> [ ,...*n*] } Consente attributi personalizzabili per l'evento da impostare. Gli attributi personalizzabili vengono visualizzati nella vista sys.dm_xe_object_columns come column_type 'customizable' e object_name = *event_name*.
 
 ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*n*] }) Azione da associare alla sessione eventi, dove:
 
@@ -127,7 +127,7 @@ ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*
 
 Le azioni vengono visualizzate nella vista sys.dm_xe_objects come object_type "action".
 
-WHERE \<predicate_expression> specifica l'espressione del predicato usata per determinare se un evento deve essere elaborato. Se \<predicate_expression> è true l'evento viene elaborato ulteriormente dalle azioni e dalle destinazioni della sessione, mentre se \<predicate_expression> è false l'evento viene eliminato dalla sessione prima di essere elaborato dalle azioni e dalle destinazioni della sessione. Le espressioni del predicato possono essere composte da un massimo di 3000 caratteri, pertanto gli argomenti di tipo stringa risultano limitati.
+WHERE \<predicate_expression> Specifica l'espressione del predicato usata per determinare se un evento deve essere elaborato. Se \<predicate_expression> è true l'evento viene elaborato ulteriormente dalle azioni e dalle destinazioni della sessione, mentre se \<predicate_expression> è false l'evento viene eliminato dalla sessione prima di essere elaborato dalle azioni e dalle destinazioni della sessione. Le espressioni del predicato possono essere composte da un massimo di 3000 caratteri, pertanto gli argomenti di tipo stringa risultano limitati.
 
 *event_field_name* Nome del campo relativo all'evento che consente di identificare l'origine del predicato.
 

@@ -1,37 +1,36 @@
 ---
 title: Abilitare o disabilitare la raccolta dei dati di utilizzo e la segnalazione di arresti anomali
-titleSuffix: Azure Data Studio
 description: Questo articolo illustra come controllare se i dati di utilizzo e di segnalazioni di arresti anomali vengono raccolti e inviati a Microsoft.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: 416c22aa04e289e7959e41924344666e4329ecf1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ad36e319338c90c33e0969f75ee34e980f3d23f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957005"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771933"
 ---
-# <a name="enable-or-disable-usage-data-collection-for-name-sos"></a>Abilitare o disabilitare la raccolta dei dati di utilizzo per [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="enable-or-disable-usage-data-collection-for-azure-data-studio"></a>Abilitare o disabilitare la raccolta dei dati di utilizzo per Azure Data Studio
 
 ## <a name="how-to-disable-telemetry-reporting"></a>Come disabilitare la creazione di report di telemetria
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] raccoglie i dati di utilizzo e li invia a Microsoft per contribuire a migliorare i prodotti e i servizi offerti. Per altre informazioni, leggere l'[informativa sulla privacy](https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409).
+Azure Data Studio raccoglie i dati di utilizzo e li invia a Microsoft per contribuire a migliorare i prodotti e i servizi offerti. Per altre informazioni, leggere l'[informativa sulla privacy](https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409).
 
 Se non si vuole inviare i dati di utilizzo a Microsoft, è possibile impostare l'opzione *telemetry.enableTelemetry* su *false*.
 
-Per disattivare tutti gli eventi di telemetria da [!INCLUDE[name-sos](../includes/name-sos-short.md)], in **File** > **Preferenze** > **Impostazioni** aggiungere l'opzione seguente:
+Per disattivare tutti gli eventi di telemetria da Azure Data Studio, in **File** > **Preferenze** > **Impostazioni** aggiungere l'opzione seguente:
 
 ```json
     "telemetry.enableTelemetry": false
 ```
 
-**Avviso importante**: per rendere effettiva questa opzione, è necessario riavviare [!INCLUDE[name-sos](../includes/name-sos-short.md)]. 
+**Avviso importante**: Per rendere effettiva questa opzione è necessario riavviare Azure Data Studio. 
 
 ## <a name="how-to-disable-crash-reporting"></a>Come disabilitare la segnalazione di arresti anomali
 
@@ -41,7 +40,7 @@ Per disabilitare la segnalazione di arresti anomali, in **File** > **Preferenze*
     "telemetry.enableCrashReporter": false
 ```
 
-**Avviso importante**: per rendere effettiva questa opzione, è necessario riavviare [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+**Avviso importante**: Per rendere effettiva questa opzione è necessario riavviare Azure Data Studio.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 - [Impostazioni utente e dell'area di lavoro](settings.md)

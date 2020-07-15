@@ -1,6 +1,6 @@
 ---
 title: Reindirizzare le connessioni in lettura/scrittura alla replica primaria
-description: Informazioni su come reindirizzare sempre le connessioni in lettura/scrittura alla replica primaria di un gruppo di disponibilità Always On, indipendentemente dal server di destinazione specificato nella stringa di connessione.
+description: Informazioni su come reindirizzare le connessioni in lettura/scrittura alla replica primaria di un gruppo di disponibilità Always On, indipendentemente dal server specificato nella stringa di connessione.
 ms.custom: seo-lt-2019
 ms.date: 01/09/2019
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cb7ac494a8a87b0ac5f2f6692763d526b7f26af6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 794d2f682c5a32ee348d229cfd2413687a57843e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77256664"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637821"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Reindirizzamento della connessione in lettura/scrittura dalla replica secondaria alla primaria (Gruppi di disponibilità AlwaysOn)
 
-[!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto](../../../includes/applies-to-version/sqlserver2019.md)]
 
 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 introduce il *reindirizzamento della connessione in lettura/scrittura dalla replica secondaria alla primaria* per i gruppi di disponibilità AlwaysOn. Il reindirizzamento della connessione di lettura/scrittura è disponibile in qualsiasi piattaforma del sistema operativo. Consente di orientare le connessioni dell'applicazione client alla replica primaria, indipendentemente dal server di destinazione specificato nella stringa di connessione. 
 

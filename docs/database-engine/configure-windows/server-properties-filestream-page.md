@@ -1,5 +1,6 @@
 ---
 title: Proprietà - SQL Server (pagina FILESTREAM) | Microsoft Docs
+description: Acquisire familiarità con le impostazioni FILESTREAM in SQL Server. Informazioni su come attivare FILESTREAM e vedere come configurare l'accesso client remoto e altre proprietà.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,20 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - FILESTREAM [SQL Server], properties page
 ms.assetid: 8a8d38d3-e97a-4b09-a40b-659b2e3a5c47
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d40d7111bf7beac4c8a34f91481368b94f62c519
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 81edbd9bfc913f9d339625a993f866d44e1a313b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025466"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730930"
 ---
 # <a name="server-properties---filestream-page"></a>Proprietà server - pagina FILESTREAM
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilizzare questa pagina per abilitare FILESTREAM per l'installazione corrente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
  **Abilita FILESTREAM per l'accesso Transact-SQL**  
  Selezionare questa opzione per abilitare FILESTREAM per l'accesso [!INCLUDE[tsql](../../includes/tsql-md.md)] . È necessario che questo controllo sia selezionato affinché le altre opzioni di controllo siano disponibili.  
   

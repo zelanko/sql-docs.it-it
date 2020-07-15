@@ -1,5 +1,6 @@
 ---
 title: Opzione di configurazione del server disallow results from triggers | Microsoft Docs
+description: Informazioni sull'opzione 'disallow results from triggers'. Scoprire come può impedire problemi nelle applicazioni che non sono progettate per interagire con i set di risultati.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - result sets [SQL Server], triggers
 - disallow results from triggers option
 ms.assetid: 47149073-307d-47a5-b7d2-66a737d3231d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 28bf3b201d54798f26c9e887e86a9d0bed78ee15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8cbe799b72a88da9785e778cb0688fe3ff1a3f44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011866"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772523"
 ---
 # <a name="disallow-results-from-triggers-server-configuration-option"></a>Impostazione di configurazione del server disallow results from triggers
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   L'opzione **Disallow Results From Triggers** consente di specificare se i trigger debbano o meno restituire set di risultati. I trigger che restituiscono set di risultati possono provocare comportamenti imprevisti nelle applicazioni che non sono state progettate per il loro utilizzo.  
   
@@ -31,7 +32,7 @@ ms.locfileid: "68011866"
   
  Se il valore è 1, l'opzione **Disallow Results From Triggers** è impostata su ON. L'impostazione predefinita per questa opzione è 0 (OFF). Se l'opzione è impostata su 1 (ON), qualsiasi tentativo da parte di un trigger di restituire un set di risultati ha esito negativo e l'utente riceve il messaggio di errore seguente:  
   
- "Msg 524, livello 16, stato 1, procedura \<nome procedura>, riga \<numero riga>  
+ "Msg 524, Livello 16, Stato 1, Procedura \<Procedure Name>, Riga \<Line#>  
   
  "Un trigger ha restituito un set di risultati e l'opzione del server 'disallow_results_from_triggers' è impostata su true".  
   

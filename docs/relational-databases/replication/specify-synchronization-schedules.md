@@ -1,5 +1,6 @@
 ---
 title: Specificare le pianificazioni della sincronizzazione | Microsoft Docs
+description: Informazioni su come specificare le pianificazioni della sincronizzazione in SQL Server tramite SQL Server Management Studio, Transact-SQL o Replication Management Objects.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f240938196d50b76b182e994000727c4f3e30d58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6dbdad85561116fb3dd6a3c003bb7bf9967c00b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287128"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783122"
 ---
 # <a name="specify-synchronization-schedules"></a>Impostazione di pianificazioni della sincronizzazione
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   In questo argomento viene descritto come specificare le pianificazioni di sincronizzazione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o RMO (Replication Management Objects). Quando si crea una sottoscrizione, è possibile definire una pianificazione della sincronizzazione per controllare l'esecuzione dell'agente di replica per la sottoscrizione. Se non si specificano parametri di pianificazione, per la sottoscrizione verrà utilizzata la pianificazione predefinita.  
   
  Le sottoscrizioni vengono sincronizzate dall'agente di distribuzione, per la replica snapshot e transazionale, o dall'agente di merge, per la replica di tipo merge. Gli agenti possono essere in esecuzione continuamente, essere in esecuzione su richiesta o essere in esecuzione su una pianificazione.  
@@ -39,7 +40,7 @@ ms.locfileid: "76287128"
   
      [Oggetti RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  Impostare le pianificazioni della sincronizzazione nella pagina **Pianificazione della sincronizzazione** della Creazione guidata nuova sottoscrizione. Per ulteriori informazioni sull'accesso a questa procedura guidata, vedere [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md) e [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
   
  Modificare le pianificazioni della sincronizzazione nella finestra di dialogo **Proprietà pianificazione processo** , alla quale è possibile accedere dalla cartella **Processi** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e dalle finestre relative ai dettagli dell'agente in Monitoraggio replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
@@ -48,15 +49,15 @@ ms.locfileid: "76287128"
   
 |Agente|Nome processo|  
 |-----------|--------------|  
-|Agente di merge per le sottoscrizioni pull|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<Sottoscrittore>-\<DatabaseSottoscrizione>-\<intero>**|  
-|Agente di merge per le sottoscrizioni push|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<Sottoscrittore>-\<intero>**|  
-|Agente di distribuzione per le sottoscrizioni push|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<Sottoscrittore>-\<intero>** <sup>1</sup>|  
-|Agente di distribuzione per le sottoscrizioni pull|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<Sottoscrittore>-\<DatabaseSottoscrizione>-\<GUID>** <sup>2</sup>|  
-|Agente di distribuzione per le sottoscrizioni push di Sottoscrittori non SQL Server|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<Sottoscrittore>-\<intero>**|  
+|Agente di merge per le sottoscrizioni pull|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|  
+|Agente di merge per le sottoscrizioni push|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
+|Agente di distribuzione per le sottoscrizioni push|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>** <sup>1</sup>|  
+|Agente di distribuzione per le sottoscrizioni pull|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>** <sup>2</sup>|  
+|Agente di distribuzione per le sottoscrizioni push di Sottoscrittori non SQL Server|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
   
- <sup>1</sup> Per le sottoscrizioni push di pubblicazioni Oracle, è **\<ServerPubblicazione>-\<ServerPubblicazione**> invece di **\<ServerPubblicazione>-\<DatabasePubblicazione>**  
+ <sup>1</sup> Per le sottoscrizioni push di pubblicazioni Oracle, è**\<Publisher>-\<Publisher**> invece di **\<Publisher>-\<PublicationDatabase>**  
   
- <sup>2</sup> Per le sottoscrizioni pull di pubblicazioni Oracle, è **\<ServerPubblicazione>-\<DatabaseDistribuzione**> invece di **\<ServerPubblicazione>-\<DatabasePubblicazione>**  
+ <sup>2</sup> Per le sottoscrizioni pull di pubblicazioni Oracle, è **\<Publisher>-\<DistributionDatabase**> invece di **\<Publisher>-\<PublicationDatabase>**  
   
 #### <a name="to-specify-synchronization-schedules"></a>Per impostare le pianificazioni della sincronizzazione  
   
@@ -66,9 +67,9 @@ ms.locfileid: "76287128"
   
     -   **Esecuzione solo su richiesta**  
   
-    -   **\<Definisci pianificazione...>**  
+    -   **\<Define Schedule...>**  
   
-2.  Se si seleziona **\<Definisci pianificazione...>** , specificare una pianificazione nella finestra di dialogo **Proprietà pianificazione processo** e quindi fare clic su **OK**.  
+2.  Se si seleziona **\<Define Schedule...>** , specificare una pianificazione nella finestra di dialogo **Proprietà pianificazione processo** e quindi fare clic su **OK**.  
   
 3.  Completare la procedura guidata.  
 
@@ -80,9 +81,9 @@ ms.locfileid: "76287128"
   
 3.  Fare clic con il pulsante destro del mouse su una sottoscrizione e quindi scegliere **Visualizza dettagli**.  
   
-4.  Nella finestra **Sottoscrizione <NomeSottoscrizione>** fare clic su **Azione** e quindi su **Proprietà processo - \<NomeAgente>** .  
+4.  Nella finestra **Sottoscrizione < NomeSottoscrizione>** fare clic su **Azione** e quindi su **Proprietà processo - \<AgentName>** .  
   
-5.  Nella pagina **Pianificazioni** della finestra di dialogo **Proprietà processo - \<NomeProcesso>** fare clic su **Modifica**.  
+5.  Nella pagina **Pianificazioni** della finestra di dialogo **Proprietà processo - \<JobName>** fare clic su **Modifica**.  
   
 6.  Nella finestra di dialogo **Proprietà pianificazione processo** selezionare un valore nell'elenco a discesa **Tipo pianificazione** :  
   
@@ -104,7 +105,7 @@ ms.locfileid: "76287128"
   
 3.  Fare clic con il pulsante destro del mouse sull'agente di distribuzione o sull'agente di merge associato alla sottoscrizione e quindi scegliere **Proprietà**.  
   
-4.  Nella pagina **Pianificazioni** della finestra di dialogo **Proprietà processo - \<NomeProcesso>** fare clic su **Modifica**.  
+4.  Nella pagina **Pianificazioni** della finestra di dialogo **Proprietà processo - \<JobName>** fare clic su **Modifica**.  
   
 5.  Nella finestra di dialogo **Proprietà pianificazione processo** selezionare un valore nell'elenco a discesa **Tipo pianificazione** :  
   
@@ -126,7 +127,7 @@ ms.locfileid: "76287128"
   
 3.  Fare clic con il pulsante destro del mouse sull'agente di distribuzione o sull'agente di merge associato alla sottoscrizione e quindi scegliere **Proprietà**.  
   
-4.  Nella pagina **Pianificazioni** della finestra di dialogo **Proprietà processo - \<NomeProcesso>** fare clic su **Modifica**.  
+4.  Nella pagina **Pianificazioni** della finestra di dialogo **Proprietà processo - \<JobName>** fare clic su **Modifica**.  
   
 5.  Nella finestra di dialogo **Proprietà pianificazione processo** selezionare un valore nell'elenco a discesa **Tipo pianificazione** :  
   
@@ -140,7 +141,7 @@ ms.locfileid: "76287128"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  È possibile definire pianificazioni della sincronizzazione a livello di programmazione tramite stored procedure di replica. Le stored procedure utilizzate dipendono dal tipo di replica e dal tipo di sottoscrizione (pull o push).  
   
  Una pianificazione è definita dai parametri di programmazione seguenti, i cui comportamenti vengono ereditati da [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md):  

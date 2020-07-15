@@ -1,6 +1,6 @@
 ---
 title: Sospendere un database di disponibilità
-description: Informazioni su come sospendere lo spostamento dei dati per un database all'interno di un gruppo di disponibilità Always On usando SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) o PowerShell.
+description: Informazioni su come sospendere lo spostamento dei dati per un database all'interno di un gruppo di disponibilità Always On usando SQL Server Management Studio, Transact-SQL o PowerShell.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 92f83bb31569a055bf9158a0388d9cb0630e9a1d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b56a461019a7b99bd73db3ed287020f0923b627f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251269"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900718"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Sospendere un database di disponibilità (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   È possibile sospendere un database di disponibilità in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si noti che è necessario eseguire un comando di sospensione nell'istanza del server in cui viene ospitato il database da sospendere o riprendere.  
   
  L'effetto del comando di sospensione dipende dalla scelta di sospendere un database primario o secondario, come segue:  
   
 |Database sospeso|Effetto del comando di sospensione|  
 |------------------------|-------------------------------|  
-|Database secondario|Viene sospeso solo il database secondario locale e il relativo stato di sincronizzazione diventa NOT SYNCHRONIZED. Gli altri database secondari non sono influenzati. Nel database sospeso non vengono più eseguite la ricezione e l'applicazione di dati (record di log) e viene persa la sincronizzazione con il database primario. Le connessioni esistenti nel database secondario leggibile rimangono utilizzabili. Non sono consentite nuove connessioni al database sospeso nel database secondario leggibile finché non viene ripreso lo spostamento di dati.<br /><br /> Il database primario rimane disponibile. Se si sospende ogni database secondario corrispondente, il database primario viene eseguito senza mirroring.<br /><br /> **\*\* Importante \*\*** Durante la fase di sospensione di un database secondario, nella coda di invio del database primario corrispondente verranno accumulati record del log delle transazioni non inviati. Tramite le connessioni alla replica secondaria vengono restituiti i dati disponibili quando lo spostamento di dati è stato sospeso.|  
+|Database secondario|Viene sospeso solo il database secondario locale e il relativo stato di sincronizzazione diventa NOT SYNCHRONIZED. Gli altri database secondari non sono influenzati. Nel database sospeso non vengono più eseguite la ricezione e l'applicazione di dati (record di log) e viene persa la sincronizzazione con il database primario. Le connessioni esistenti nel database secondario leggibile rimangono utilizzabili. Non sono consentite nuove connessioni al database sospeso nel database secondario leggibile finché non viene ripreso lo spostamento di dati. Questo comportamento si applica solo quando le connessioni vengono aperte usando il listener e il routing di sola lettura.<br /><br /> Il database primario rimane disponibile. Se si sospende ogni database secondario corrispondente, il database primario viene eseguito senza mirroring.<br /><br /> **\*\* Importante \*\*** Durante la fase di sospensione di un database secondario, nella coda di invio del database primario corrispondente verranno accumulati record del log delle transazioni non inviati. Tramite le connessioni alla replica secondaria vengono restituiti i dati disponibili quando lo spostamento di dati è stato sospeso.|  
 |Database primario|Nel database primario viene arrestato lo spostamento di dati a ogni database secondario connesso. Il database primario rimane in esecuzione, in modalità senza mirroring. Il database primario rimane disponibile ai client e le connessioni esistenti in un database secondario leggibile rimangono utilizzabili ed è possibile effettuare nuove connessioni.|  
   
 > [!NOTE]  

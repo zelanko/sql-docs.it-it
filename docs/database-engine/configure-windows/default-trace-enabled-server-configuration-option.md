@@ -1,5 +1,6 @@
 ---
 title: Opzione di configurazione server default trace enabled | Microsoft Docs
+description: Informazioni sull'opzione "default trace enabled". Scoprire in che modo la traccia predefinita può essere utile per la risoluzione dei problemi.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - traces [SQL Server], logs
 - default trace enabled option
 ms.assetid: 1322d668-44f4-469e-8fd6-e0d02a81c8f2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 33a04235580d70567b1de09180b10526255811bf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bfeec7df441b841cbbaa5da7c0b693f37749e861
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011939"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772552"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>Opzione di configurazione server default trace enabled
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   L'opzione **Default Trace Enabled** consente di abilitare o disabilitare i file di log della traccia predefinita. Tramite la funzionalità di traccia predefinita è possibile ottenere un log completo e persistente delle attività e delle modifiche correlate principalmente alle opzioni di configurazione.  
   

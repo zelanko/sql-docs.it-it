@@ -1,6 +1,6 @@
 ---
 title: 'Sicurezza del trasporto: Gruppi di disponibilità e mirroring del database'
-description: Informazioni su come proteggere il trasporto dei messaggi scambiati tra database che fanno parte di un gruppo di disponibilità Always On o di una sessione di mirroring del database ospitata in SQL Server.
+description: Informazioni su come proteggere i messaggi scambiati tra i database che fanno parte di un gruppo di disponibilità Always On o di una sessione di mirroring del database ospitata in SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 36c0f0d6ff5e4da43291f27c7f7bd47d1b736d1b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252744"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720000"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Disponibilità Always On per il mirroring dei database con sicurezza del trasporto
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La sicurezza del trasporto implica l'utilizzo dell'autenticazione e, facoltativamente, della crittografia dei messaggi scambiati tra i database. Per il mirroring del database e [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], l'autenticazione e la crittografia devono essere configurate nell'endpoint del mirroring del database. Per un'introduzione agli endpoint del mirroring del database, vedere [Endpoint del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
   

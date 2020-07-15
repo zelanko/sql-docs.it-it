@@ -8,16 +8,16 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 498518fbc119629d2e7da7717b1f6e41c68984ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e386bb61142faca2ce81d2e95a46b3399bce15c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558580"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902347"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configurare un'istanza del cluster di failover - SMB - SQL Server in Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Questo articolo illustra come configurare la risorsa di archiviazione SMB per un'istanza del cluster di failover in Linux. 
  
@@ -124,13 +124,13 @@ Ecco alcuni suggerimenti e diverse note per l'uso corretto di SMB:
       
       \<UserName> è il nome dell'utente con cui accedere alla condivisione
       
-      \<Password> è la password associata all'utente
+      \<Password> è la password dell'utente
       
       \<domain> è il nome di Active Directory
       
-      \<mssqlUID> è l'ID dell'utente mssql 
+      \<mssqlUID> è l'UID dell'utente mssql 
       
-      \<mssqlGID> è l'identificatore di gruppo dell'utente mssql
+      \<mssqlGID> è il GID dell'utente mssql
       
    1. Verificare che il montaggio abbia avuto esito positivo eseguendo mount senza alcuna opzione.
       
@@ -188,7 +188,7 @@ Ecco alcuni suggerimenti e diverse note per l'uso corretto di SMB:
       
       \<ShareName> è il nome della condivisione
       
-      \<FolderMountedIn > è il nome della cartella in cui SMB è montato
+      \<FolderMountedIn> è il nome della cartella in cui SMB è montato
       
 5. Per elementi diversi dai database di sistema, ad esempio i database utente o i backup, seguire questa procedura. Se si usa solo il percorso predefinito, andare al passaggio 14.
    
@@ -224,11 +224,11 @@ Ecco alcuni suggerimenti e diverse note per l'uso corretto di SMB:
       
       \<UserName> è il nome dell'utente con cui accedere alla condivisione
       
-      \<Password> è la password associata all'utente
+      \<Password> è la password dell'utente
       
-      \<mssqlUID> è l'ID dell'utente mssql
+      \<mssqlUID> è l'UID dell'utente mssql
       
-      \<mssqlGID> è l'identificatore di gruppo dell'utente mssql.
+      \<mssqlGID> è il GID dell'utente mssql.
       
    1. Verificare che il montaggio abbia avuto esito positivo eseguendo mount senza alcuna opzione.
    
@@ -246,7 +246,7 @@ Ecco alcuni suggerimenti e diverse note per l'uso corretto di SMB:
       
       \<ShareName> è il nome della condivisione
       
-      \<FolderMountedIn > è il nome della cartella in cui SMB è montato.
+      \<FolderMountedIn> è il nome della cartella in cui SMB è montato.
    
 1. Ripetere la procedura sugli altri nodi.
 

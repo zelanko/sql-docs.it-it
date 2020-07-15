@@ -1,6 +1,6 @@
 ---
 title: Le modifiche non sono visibili nella replica secondaria di un gruppo di disponibilità
-ms.description: Troubleshoot to determine why changes occurring on a primary replica are not reflected on the secondary replica for an Always On availability group.
+description: Informazioni su come determinare il motivo per cui le modifiche apportate alla replica primaria non vengono rispecchiate nella replica secondaria per un gruppo di disponibilità Always On.
 ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 55dc6787960fbb4979bbe0d21f27f0fa43437662
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 67131a066a9885547e04ff58c80cd9f05d365051
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243005"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888006"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>Determinare il motivo per cui le modifiche apportate alla replica primaria non vengono eseguite nella replica secondaria per un gruppo di disponibilità Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   L'applicazione client completa con esito positivo un aggiornamento per la replica primaria, ma l'esecuzione di query sulla replica secondaria rivela che qui la modifica non è stata eseguita. Questo caso presume che lo stato di sincronizzazione della disponibilità sia integro. Nella maggior parte dei casi, questo comportamento si risolve automaticamente dopo pochi minuti.  
   
  Se dopo pochi minuti le modifiche non sono ancora presenti nella replica secondaria, può esserci un collo di bottiglia nel flusso di lavoro di sincronizzazione. La posizione del collo di bottiglia dipende dall'impostazione del commit della replica secondaria (sincrono o asincrono).  
@@ -127,6 +127,6 @@ from sys.dm_hadr_database_replica_states
  Se il thread di rollforward è effettivamente in ritardo, è necessario ricercare la causa radice della riduzione del livello delle prestazioni nella replica secondaria. Se è presente una contesa per le risorse I/O con il carico di lavoro di creazione di report, è possibile usare [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) per controllare i cicli della CPU usati dal carico di lavoro di creazione di report e controllare indirettamente, in una certa misura, i cicli di I/O eseguiti. Se ad esempio il carico di lavoro di creazione di report consuma il 10% della CPU ma il carico di lavoro esegue il binding I/O, è possibile usare Resource Governor per limitare l'utilizzo di risorse della CPU al 5%, limitando il carico di lavoro di lettura e riducendo al minimo l'impatto sull'I/O.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- [Troubleshooting performance problems in SQL Server 2008](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx) (Risoluzione dei problemi relativi alle prestazioni in SQL Server 2008) 
+ [Troubleshooting performance problems in SQL Server 2008](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx) (Risoluzione dei problemi relativi alle prestazioni in SQL Server 2008)
   
   

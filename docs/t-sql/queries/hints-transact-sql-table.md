@@ -36,15 +36,15 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 225a92fc082a2778a7146923a9d138d0ce86aa7b
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: cdc73ac23a6d95d46b6ec02bb1aeb194df96422a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087520"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731326"
 ---
 # <a name="hints-transact-sql---table"></a>Hint (Transact-SQL) - Tabella
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gli hint di tabella consentono di modificare il comportamento predefinito di Query Optimizer per la durata dell'istruzione DML (Data Manipulation Language) specificando un metodo di blocco, uno o più indici, un'operazione di elaborazione di query, ad esempio una scansione di tabella o una ricerca nell'indice, oppure altre opzioni. Gli hint di tabella sono specificati nella clausola FROM dell'istruzione DML e influiscono solo sulla tabella o sulla vista a cui viene fatto riferimento nella clausola.  
   
@@ -121,7 +121,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-WITH **(** \<table_hint> **)** [ [ **,** ]...*n* ]  
+WITH **(** \<table_hint> **)** [[ **,** ]...*n*]  
 Con alcune eccezioni, gli hint di tabella sono supportati nella clausola FROM solo se vengono specificati con la parola chiave WITH. Tali hint devono inoltre essere racchiusi tra parentesi.  
   
 > [!IMPORTANT]  

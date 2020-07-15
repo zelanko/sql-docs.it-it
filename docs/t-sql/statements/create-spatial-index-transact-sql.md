@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 956cdd77674442be8b375772175fdd5fa95b2567
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a1f87c0c69a990ffa98a560998068b95b52df319
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632140"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766990"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Crea un indice spaziale in una tabella e in una colonna specificate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'indice può essere creato prima dell'immissione dei dati nella tabella. È possibile creare indici per tabelle o viste di un altro database specificando un nome di database completo. Per gli indici spaziali è richiesto che nella tabella sia inclusa una chiave primaria cluster. Per informazioni sugli indici spaziali, vedere [Panoramica degli indici spaziali](../../relational-databases/spatial/spatial-indexes-overview.md).  
+  Crea un indice spaziale in una tabella e in una colonna specificate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'indice può essere creato prima dell'immissione dei dati nella tabella. È possibile creare indici per tabelle o viste di un altro database specificando un nome di database completo. Per gli indici spaziali è richiesto che nella tabella sia inclusa una chiave primaria cluster. Non è possibile specificare indici spaziali in viste indicizzate. Per informazioni sugli indici spaziali, vedere [Panoramica degli indici spaziali](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -152,7 +152,7 @@ CREATE SPATIAL INDEX index_name
  *index_name*     
  Nome dell'indice. I nomi degli indici devono essere univoci all'interno di una tabella, ma non all'interno di un database. Devono essere anche conformi alle regole degli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
- ON \<object> ( *spatial_column_name* )     
+ ON \<object> (*spatial_column_name*)     
  Specifica l'oggetto, ovvero database, schema o tabella, in cui deve essere creato l'indice e il nome di una colonna spaziale.  
   
  *spatial_column_name* specifica la colonna spaziale su cui è basato l'indice. È possibile specificare una sola colonna spaziale in una singola definizione di indice spaziale. È invece possibile creare più indici spaziali in una colonna di tipo **geometry** o **geography**.  
@@ -314,7 +314,7 @@ PAD_INDEX = { ON | **OFF** }
   
 Specifica il riempimento dell'indice. Il valore predefinito è OFF.  
   
-ATTIVA     
+ON     
 Indica che la percentuale di spazio disponibile specificata in *fillfactor* viene applicata alle pagine di livello intermedio dell'indice.  
   
 OFF o *fillfactor* non è specificato     
@@ -342,7 +342,7 @@ SORT_IN_TEMPDB = { ON | **OFF** }
   
  Specifica se i risultati temporanei dell'ordinamento devono essere archiviati in tempdb. Il valore predefinito è OFF.  
   
- ATTIVA     
+ ON     
  I risultati intermedi dell'ordinamento utilizzati per la compilazione dell'indice vengono archiviati in tempdb. Questo potrebbe ridurre il tempo necessario per creare un indice se tempdb si trova in un set di dischi diverso rispetto al database utente. La quantità di spazio su disco utilizzata durante la compilazione dell'indice sarà tuttavia maggiore.  
   
  OFF     
@@ -356,7 +356,7 @@ Non ha effetto per gli indici spaziali perché il tipo di indice non è mai univ
 STATISTICS_NORECOMPUTE = { ON | **OFF**}     
 Specifica se le statistiche di distribuzione vengono ricalcolate. Il valore predefinito è OFF.  
   
- ATTIVA    
+ ON    
  Le statistiche non aggiornate non vengono ricalcolate automaticamente.  
   
  OFF    
@@ -372,7 +372,7 @@ DROP_EXISTING = { ON | **OFF** }
   
  Specifica che è necessario eliminare e quindi ricompilare l'indice spaziale denominato preesistente. Il valore predefinito è OFF.  
   
- ATTIVA     
+ ON     
  L'indice esistente deve essere eliminato e ricompilato. Il nome di indice specificato deve corrispondere a quello dell'indice esistente, mentre la definizione dell'indice può essere modificata. È possibile, ad esempio, specificare valori diversi per le colonne, il tipo di ordinamento, lo schema di partizione o le opzioni dell'indice.  
   
  OFF     
@@ -393,7 +393,7 @@ ALLOW_ROW_LOCKS = { **ON** | OFF }
   
  Specifica se sono consentiti blocchi di riga. Il valore predefinito è ON.  
   
- ATTIVA     
+ ON     
  I blocchi di riga sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando usare blocchi di riga.  
   
  OFF     
@@ -404,7 +404,7 @@ ALLOW_PAGE_LOCKS = { **ON** | OFF }
   
  Specifica se sono consentiti blocchi a livello di pagina. Il valore predefinito è ON.  
   
- ATTIVA    
+ ON    
  I blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi a livello di pagina.  
   
  OFF     
@@ -439,7 +439,7 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
   
  Determina il livello di compressione dati utilizzata dall'indice.  
   
- Nessuno     
+ NONE     
  Nessuna compressione utilizzata sui dati dall'indice  
   
  ROW    

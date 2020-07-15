@@ -1,5 +1,6 @@
 ---
 title: Proprietà server (pagina Impostazioni database) | Microsoft Docs
+description: Acquisire familiarità con le impostazioni del database in SQL Server. Informazioni sulle opzioni che controllano il comportamento del backup, i fattori di riempimento, le posizioni dei file e altre proprietà.
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -8,20 +9,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.databasesettings.f1
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: ''
 ms.date: 05/23/2019
-ms.openlocfilehash: d6d7982384d8e83db35e35feb2e106ddae727fac
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: a4f5a0dacaeeeadf0446df9e4d3cdf54fcad7be2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152053"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784131"
 ---
 # <a name="server-properties---database-settings-page"></a>Proprietà server (pagina Impostazioni database)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilizzare questa pagina per visualizzare o modificare le impostazioni del database.  
   
 ## <a name="options"></a>Opzioni
@@ -73,7 +74,7 @@ Questa opzione consente di attivare o disattivare l'impostazione sp_configure pe
 
 Imposta per ogni database il numero massimo di minuti per il recupero dei database. L'impostazione predefinita è 0, che rappresenta la configurazione automatica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In pratica, questa opzione determina un tempo di recupero inferiore a un minuto e un checkpoint a intervalli di circa un minuto per i database attivi. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server recovery interval](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).  
   
-### <a name="data"></a>data
+### <a name="data"></a>Data
 
 Specifica il percorso predefinito dei file di dati. Fare clic sul pulsante Sfoglia per passare a un nuovo percorso predefinito. Le modifiche verranno applicate solo dopo il riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

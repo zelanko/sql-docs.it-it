@@ -1,6 +1,6 @@
 ---
 title: Forzare l'uso del servizio mirroring del database
-description: Se si verifica un errore nel server principale mentre è disponibile il server mirror, rendere disponibile il database forzando il failover del servizio nel database mirror (con possibile perdita di dati)
+description: Se si verifica un errore nel server principale mentre è disponibile il server mirror, rendere disponibile il database forzando il failover del servizio nel database con mirroring.
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8b6ffe77-35f3-4e2a-a658-8a38a8e1c794
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 970f399ab6227fdaf2672bf887c250b6be02de1e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ac9ebf9538ad7800deb5807ac5bb1980b2f472b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822227"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754621"
 ---
 # <a name="force-service-in-a-database-mirroring-session-transact-sql"></a>Utilizzo forzato del servizio in una sessione di mirroring del database (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Nella modalità a prestazioni elevate e in quella a sicurezza elevata senza failover automatico, se si verifica un errore nel server principale mentre è disponibile il server mirror, il proprietario del database può rendere disponibile il database forzando il failover del servizio nel database mirror, sebbene tale operazione implichi la possibile perdita di dati. Questa opzione è disponibile esclusivamente nelle condizioni seguenti:  
   
 -   Il server principale non è disponibile.  

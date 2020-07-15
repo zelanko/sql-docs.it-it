@@ -1,5 +1,6 @@
 ---
 title: Configurare un server per l'attesa su una porta TCP specifica | Microsoft Docs
+description: Informazioni su come usare Gestione configurazione SQL Server per configurare il motore di database per l'ascolto su una porta fissa specifica diversa dalla porta predefinita 1433.
 ms.custom: ''
 ms.date: 04/25/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - dynamic ports [SQL Server]
 - TCP/IP [SQL Server], port numbers
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 48736a721cad475c6956e1715a3912481bc83c40
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 15d1d1ab04adb47772706f8b1495b8ddef8b4fa3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012922"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789843"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Configurare un server per l'attesa su una porta TCP specifica
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   In questo argomento viene descritto come configurare un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] per essere in ascolto su una porta fissa specifica tramite Gestione configurazione SQL Server. Se abilitata, l'istanza predefinita del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] rimane in attesa sulla porta TCP 1433. Le istanze denominate del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e di [!INCLUDE[ssEW](../../includes/ssew-md.md)] sono configurate per le [porte dinamiche](../../tools/configuration-manager/tcp-ip-properties-ip-addresses-tab.md). Questo significa che selezionano una porta disponibile quando viene avviato il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando ci si connette a un'istanza denominata tramite un firewall, configurare [!INCLUDE[ssDE](../../includes/ssde-md.md)] per l'ascolto su una porta specifica, in modo da consentire l'apertura della porta appropriata nel firewall.  
 
@@ -44,7 +45,7 @@ Poiché la porta 1433 è lo standard noto per [!INCLUDE[ssNoVersion](../../inclu
   
 #### <a name="to-assign-a-tcpip-port-number-to-the-sql-server-database-engine"></a>Per assegnare un numero di porta TCP/IP al motore di database di SQL Server  
   
-1.  Nel riquadro della console di Gestione configurazione SQL Server espandere **Configurazione di rete SQL Server** , quindi **Protocolli per \<instance name>** e infine fare doppio clic su **TCP/IP**.  
+1.  Nel riquadro della console di Gestione configurazione SQL Server espandere **Configurazione di rete SQL Server**, quindi **Protocolli per \<instance name>** e infine fare doppio clic su **TCP/IP**.  
   
     > [!NOTE]  
     >  In caso di problemi all'apertura di Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Gestione configurazione SQL Server](../../relational-databases/sql-server-configuration-manager.md).  
@@ -63,7 +64,7 @@ Poiché la porta 1433 è lo standard noto per [!INCLUDE[ssNoVersion](../../inclu
   
 5.  Nel riquadro della console fare clic su **Servizi di SQL Server**.  
   
-6.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (** \<<nome istanza> **)** e scegliere **Riavvia**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà arrestato e riavviato.  
+6.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (** \<instance name> **)** e quindi scegliere **Riavvia** per arrestare e riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="connecting"></a>Connecting  
 Dopo la configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'ascolto su una porta specifica sono disponibili tre soluzioni per connettersi a una porta specifica con un'applicazione client:  

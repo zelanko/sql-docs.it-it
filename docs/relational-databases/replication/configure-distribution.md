@@ -1,5 +1,6 @@
 ---
 title: Configurare la distribuzione | Microsoft Docs
+description: Il server di distribuzione di SQL Server ospita il database di distribuzione, che archivia i metadati e la cronologia per la replica e le transazioni per la replica transazionale.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -21,15 +22,15 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 66e6135ee2144de5936c041c34450d7fd0ce3d62
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 21364f104674ec081da5c49d229a5c04a09af016
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284747"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774028"
 ---
 # <a name="configure-distribution"></a>Configurazione della distribuzione
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Il server di distribuzione contiene il database di distribuzione, in cui vengono archiviati i metadati e i dati cronologici per tutti i tipi di replica e le transazioni per la replica transazionale. Per impostare la replica, è necessario configurare un server di distribuzione. Ogni server di pubblicazione può essere assegnato a una sola istanza del server di distribuzione, ma più server di pubblicazione possono condividere un server di distribuzione. Il server di distribuzione utilizza le risorse aggiuntive seguenti nel server in cui è installato:  
   
 -   Spazio su disco aggiuntivo se i file di snapshot per la pubblicazione sono archiviati nel server di distribuzione, come avviene in genere.  

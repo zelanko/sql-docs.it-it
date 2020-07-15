@@ -14,16 +14,16 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 8142cb9868a1daa8f7c73c6b30da1b29c12bf3bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 010d18fff933ee1bd362d1ebd59ef86905d493ed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816460"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006212"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoraggio delle prestazioni con Query Store
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 La funzionalità Archivio query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra informazioni dettagliate sulle prestazioni e sulla scelta del piano di query. Semplifica la risoluzione dei problemi di prestazioni in quanto consente di individuare rapidamente le variazioni delle prestazioni causate da modifiche nei piani di query. Archivio query acquisisce automaticamente una cronologia delle query, dei piani e delle statistiche di runtime e li conserva per la consultazione. I dati vengono separati in base a intervalli di tempo, consentendo di visualizzare i modelli di utilizzo del database e capire quando sono state apportate modifiche al piano di query nel server. Per configurare l'archivio query, è possibile usare l'opzione [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) .
 
@@ -153,29 +153,11 @@ Di seguito sono descritti alcuni esempi su come ottenere informazioni dettagliat
 
 ## <a name="configuration-options"></a><a name="Options"></a> Opzioni di configurazione
 
-Le opzioni seguenti sono disponibili per la configurazione dei parametri di Query Store.
-
-*OPERATION_MODE* Può essere **READ_WRITE** (impostazione predefinita) o READ_ONLY.
-
-*CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)* Configurare l'argomento `STALE_QUERY_THRESHOLD_DAYS` per specificare il numero di giorni per la conservazione dei dati in Query Store. Il valore predefinito è 30. Per l'edizione [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic, l'impostazione predefinita è **7** giorni.
-
-*DATA_FLUSH_INTERVAL_SECONDS* Determina la frequenza con cui i dati scritti in Query Store vengono salvati in modo permanente nel disco. Per ottimizzare le prestazioni, i dati raccolti dall'archivio query vengono scritti in modo asincrono sul disco. La frequenza con cui si verifica questo trasferimento asincrono è configurabile tramite `DATA_FLUSH_INTERVAL_SECONDS`. Il valore predefinito **900** (15 min).
-
-*MAX_STORAGE_SIZE_MB* Configura le dimensioni massime di Query Store. Se i dati in Query Store raggiungono il limite impostato in `MAX_STORAGE_SIZE_MB`, lo stato di Query Store passa automaticamente da lettura/scrittura a sola lettura e la raccolta di nuovi dati viene interrotta. Il valore predefinito è **100 MB** per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], il valore predefinito è **1 GB**. Per l'edizione [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium, il valore predefinito è **1 GB**, mentre per l'edizione [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic, il valore predefinito è **10 MB**.
-
-*INTERVAL_LENGTH_MINUTES* Determina l'intervallo di tempo in cui vengono aggregati i dati delle statistiche di esecuzione di runtime in Query Store. Per ottimizzare l'utilizzo dello spazio, le statistiche di esecuzione di runtime nell'archivio delle statistiche di runtime vengono aggregate in un intervallo di tempo fisso. L'intervallo di tempo predefinito viene configurato tramite `INTERVAL_LENGTH_MINUTES`. Il valore predefinito è **60**.
-
-*SIZE_BASED_CLEANUP_MODE* Determina se il processo di pulizia verrà attivato automaticamente quando la quantità totale dei dati si avvicina alle dimensioni massime. Può essere **AUTO** (impostazione predefinita) o OFF.
-
-*QUERY_CAPTURE_MODE* Determina se Query Store acquisisce tutte le query oppure le query pertinenti in base a conteggio esecuzioni e consumo delle risorse oppure se interrompe l'aggiunta delle nuove query e tiene semplicemente traccia delle query correnti. Il valore può essere **ALL** (vengono acquisite tutte le query), AUTO (vengono ignorate le query poco frequenti e quelle con una durata di compilazione e di esecuzione non significativa), CUSTOM (vengono applicati criteri di acquisizione definiti dall'utente) o NONE (viene arrestata l'acquisizione di nuove query). Il valore predefinito è **ALL** per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], il valore predefinito è **AUTO**. Il valore predefinito per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] è **AUTO**.
-
-*MAX_PLANS_PER_QUERY* Intero che rappresenta il numero massimo di piani mantenuti per ogni query. Il valore predefinito è **200**.
-
-*WAIT_STATS_CAPTURE_MODE* Controlla se Query Store acquisisce informazioni sulle statistiche relative all'attesa. Può essere OFF o **ON** (impostazione predefinita).
+Per le opzioni disponibili per la configurazione dei parametri di Query Store, vedere [Opzioni ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 
 Per determinare le opzioni correnti di Query Store, eseguire una query sulla vista **sys.database_query_store_options**. Per altre informazioni sui valori, vedere [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).
 
-Per altre informazioni sull'impostazione di opzioni con istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] , vedere [Gestione delle opzioni](#OptionMgmt).
+Per esempi di impostazione delle opzioni di configurazione tramite le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Gestione delle opzioni](#OptionMgmt).
 
 ## <a name="related-views-functions-and-procedures"></a><a name="Related"></a> Viste, funzioni e procedure correlate
 

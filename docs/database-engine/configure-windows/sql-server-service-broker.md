@@ -1,5 +1,6 @@
 ---
 title: SQL Server Service Broker | Microsoft Docs
+description: Informazioni su Service Broker. Scoprire come offre supporto nativo per la messaggistica nel motore di database di SQL Server e in Istanza gestita di database SQL di Azure.
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -20,18 +21,18 @@ helpviewer_keywords:
 - SQL Server Service Broker
 - Service Broker
 ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 99800a06e04d5f5d4f9651e32d0a143e90331b09
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 3e915b46eb89c29d260dc66ad7b73bc0cbc73ebc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528155"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764048"
 ---
 # <a name="service-broker"></a>Broker di servizio
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] offre supporto nativo per la messaggistica e l'accodamento nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e in [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Gli sviluppatori possono creare facilmente applicazioni complesse che usano i componenti del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per la comunicazione tra vari database, nonché compilare applicazioni distribuite e affidabili.  
   

@@ -1,5 +1,6 @@
 ---
 title: Endpoint del mirroring del database (SQL Server) | Microsoft Docs
+description: Informazioni su un endpoint di mirroring del database dedicato, necessario affinché ogni server partecipi a gruppi di disponibilità Always On o al mirroring dei database.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +18,16 @@ ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f8652f227c43354f54e8ec76f9c174f4551dcb2a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd3477fb75040443fdfa56969ba9772baaabb0c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68047995"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896994"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>Endpoint del mirroring del database (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Per fare parte del mirroring del database e di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , un'istanza del server richiede un *endpoint del mirroring del database*dedicato. Si tratta di un endpoint speciale utilizzato solo per ricevere connessioni da altre istanze del server. In un'istanza del server specificata, ogni connessione del mirroring del database o di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] a qualsiasi altra istanza del server utilizza un solo endpoint del mirroring di database.  
   

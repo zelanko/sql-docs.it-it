@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/31/2020
+ms.date: 06/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -59,16 +59,16 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abe671baec987e5fa98528b59671b48f7b0d8180
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 55f3b740365fc3fa20e93538eb3abdd2ca9b0526
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925385"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000666"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Modifica una definizione di tabella tramite la modifica, l'aggiunta o l'eliminazione di colonne e vincoli. ALTER TABLE consente inoltre di riassegnare e ricompilare partizioni, oltre a disabilitare e abilitare vincoli e trigger.
 
@@ -349,6 +349,8 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 
 ```
 
+## <a name="syntax-for-azure-synapse-analytics"></a>Sintassi per Azure Synapse Analytics
+
 ```syntaxsql
 -- Syntax for Azure Synapse Analytics and Analytics Platform System
 
@@ -385,7 +387,7 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
     [ CONSTRAINT constraint_name ] 
     {
         DEFAULT DEFAULT constant_expression
-        | PRIMARY KEY (column_name) NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | PRIMARY KEY NONCLUSTERED (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
         | UNIQUE (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
     }
 <rebuild_option > ::=
@@ -563,7 +565,7 @@ Specifica una maschera dati dinamica. *mask_function* è il nome della funzione 
 
 Per eliminare una maschera, usare `DROP MASKED`. Per i parametri di funzione, vedere [Mascheramento dati dinamici](../../relational-databases/security/dynamic-data-masking.md).
 
-WITH ( ONLINE = ON | OFF) \<come si applica alla modifica di una colonna>  
+WITH ( ONLINE = ON | OFF) \<as applies to altering a column>  
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Consente l'esecuzione di molte azioni di modifica colonna mentre la tabella rimane disponibile. L'impostazione predefinita è OFF. È possibile eseguire l'operazione di modifica colonna online per le modifiche relative al tipo di dati, alla lunghezza o precisione della colonna, al supporto dei valori Null, all'impostazione del tipo sparse e alle regole di confronto.
@@ -685,7 +687,7 @@ Per altre informazioni, vedere [Configurazione di operazioni parallele sugli ind
 > [!NOTE]
 > Le operazioni parallele sugli indici non sono disponibili in tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) e [Edizioni e funzionalità supportate per SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
-ONLINE **=** { ON | **OFF** } \<come si applica a drop_clustered_constraint_option>  
+ONLINE **=** { ON | **OFF** } \<as applies to drop_clustered_constraint_option>  
 Specifica se le tabelle sottostanti e gli indici associati sono disponibili per le query e la modifica dei dati durante l'operazione sugli indici. Il valore predefinito è OFF. È possibile eseguire REBUILD come operazione ONLINE.
 
 ON  
@@ -845,7 +847,7 @@ Si applica solo alle tabelle columnstore, ovvero tabelle archiviate con un indic
 
 Per ricompilare contemporaneamente più partizioni, vedere [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md). Se la tabella non dispone di un indice cluster, la modifica della compressione dei dati comporta la ricompilazione dell'heap e degli indici non cluster. Per altre informazioni sulla compressione, vedere [Compressione dei dati](../../relational-databases/data-compression/data-compression.md).
 
-ONLINE **=** { ON | **OFF** } \<come si applica a single_partition_rebuild_option>  
+ONLINE **=** { ON | **OFF** } \<as applies to single_partition_rebuild_option>  
 Specifica se una singola partizione delle tabelle sottostanti e degli indici associati è disponibile per le query e le modifiche dei dati durante l'operazione sull'indice. Il valore predefinito è OFF. È possibile eseguire REBUILD come operazione ONLINE.
 
 ON  

@@ -1,5 +1,6 @@
 ---
 title: Rimozione di mirroring del database (SQL Server) | Microsoft Docs
+description: Informazioni sugli effetti dell'arresto di una sessione di mirroring del database, che può essere eseguito da un proprietario del database in qualsiasi momento in entrambi i partner in SQL Server.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 40c72091-8f03-4037-8b55-5e95309fe145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ae494ae5b12cf99e836869f65c055803dd9666e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d3da88574635b01afd7f309bb09b8850e072a241
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025265"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735166"
 ---
 # <a name="removing-database-mirroring-sql-server"></a>Rimozione di mirroring del database (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Il proprietario del database può arrestare manualmente una sessione di mirroring del database in qualsiasi momento in uno dei partner.  
   
 ## <a name="impact-of-removing-mirroring"></a>Impatto della rimozione del mirroring  

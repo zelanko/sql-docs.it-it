@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 67a36e80059c58fe1666ba147b0b8a5df94e2044
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 16cd0a4dd5d32d47a471c98392b62989201650d6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922216"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896017"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Istruzioni RESTORE: argomenti (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Questo articolo illustra gli argomenti descritti nelle sezioni "Sintassi" dell'istruzione RESTORE {DATABASE|LOG} e del set di istruzioni ausiliarie associato: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY e RESTORE VERIFYONLY. La maggior parte degli argomenti sono supportati solo da un subset di queste sei istruzioni. Informazioni dettagliate sono contenute nella descrizione dell'argomento.  
   
@@ -120,11 +120,11 @@ FROM { \<backup_device> [ **,** ...*n* ]| \<database_snapshot> } In genere, spec
   
  Se la clausola FROM viene omessa, non viene eseguito il ripristino del backup, ma il recupero del database. Ciò consente di recuperare un database ripristinato con l'opzione NORECOVERY oppure di passare a un server di standby. Se si omette la clausola FROM, è necessario specificare l'opzione NORECOVERY, RECOVERY o STANDBY nella clausola WITH.  
   
- \<backup_device> [ **,** ...*n* ] Specifica i dispositivi di backup logici o fisici da usare per l'operazione di ripristino.  
+ \<backup_device> [ **,** ...*n* ] Specifica i dispositivi di backup logici o fisici da utilizzare per l'operazione di ripristino.  
   
  **Supportato da:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md) e [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
- \<backup_device>::= Specifica il dispositivo di backup logico o fisico da usare per l'operazione di backup, come segue:  
+ \<backup_device>::= Specifica il dispositivo di backup logico o fisico da usare per l'operazione di backup, come indicato di seguito:  
   
  { _logical\_backup\_device\_name_ |  **@** _logical\_backup\_device\_name\_var_ }  
  Nome logico, conforme alle regole per gli identificatori, del o dei dispositivi di backup creati tramite **sp_addumpdevice** da cui viene ripristinato il database. Se indicato in forma di variabile ( **@** _logical\_backup\_device\_name\_var_), il nome del dispositivo di backup può essere specificato come costante stringa ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) o come variabile con tipo di dati stringa di caratteri, ad eccezione dei tipi di dati **ntext** o **text**.  
@@ -469,7 +469,7 @@ Quando si configura la replica per l'uso del log shipping, è consigliabile usar
   
  Per informazioni sull'uso di Change Data Capture con il mirroring del database, vedere [Change Data Capture e altre funzionalità di SQL Server](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md).  
   
-#### <a name="service_broker_with_options"></a>\<service_broker_WITH_options>  
+#### \<service_broker_WITH_options>  
  Attiva o disattiva il recapito dei messaggi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] o imposta un nuovo identificatore di [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Questa opzione è pertinente solo se [!INCLUDE[ssSB](../../includes/sssb-md.md)] è stato abilitato (attivato) per il database al momento della creazione del backup.  
   
  { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
@@ -484,7 +484,7 @@ Quando si configura la replica per l'uso del log shipping, è consigliabile usar
  NEW_BROKER  
  Specifica che al database deve essere assegnato un nuovo identificatore di Service Broker. Poiché il database viene considerato una nuova istanza di Service Broker, tutte le conversazioni esistenti nel database vengono rimosse immediatamente senza generare messaggi di fine dialogo. Tutte le route che fanno riferimento all'identificatore di Service Broker precedente devono essere ricreate con il nuovo identificatore.  
   
-#### <a name="point_in_time_with_options"></a>\<point_in_time_WITH_options>  
+#### \<point_in_time_WITH_options>  
  **Supportato da:**  [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) e solo per i modelli di recupero con registrazione minima delle operazioni bulk o con registrazione completa.  
   
  Per ripristinare un database fino a uno specifico punto nel tempo o fino a una specifica transazione, indicare il punto di recupero di destinazione in una clausola STOPAT, STOPATMARK o STOPBEFOREMARK. Un'ora o una transazione specifica viene sempre ripristinata da un backup del log. In ogni istruzione RESTORE LOG della sequenza di ripristino, è necessario specificare l'ora o la transazione di destinazione in una clausola STOPAT, STOPATMARK o STOPBEFOREMARK identica.  

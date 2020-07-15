@@ -1,5 +1,6 @@
 ---
 title: Entità (motore di database) | Microsoft Docs
+description: Informazioni sulle entità di sicurezza nel motore di database che possono richiedere risorse di SQL Server. Sono presenti entità a livello di SQL Server e a livello di database.
 ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
@@ -29,17 +30,17 @@ ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 213babf7e34fac642bd91374b2f008776dbbd8d1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68344604"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005610"
 ---
 # <a name="principals-database-engine"></a>Entità (Motore di database)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Le*entità* possono richiedere risorse di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Analogamente ad altri componenti del modello di autorizzazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , le entità possono essere organizzate in una gerarchia. Il campo di influenza di un'entità dipende dall'ambito della definizione dell'entità (Windows, server o database) e dal tipo di entità (indivisibile o raccolta). Un account di accesso di Windows è un esempio di entità indivisibile mentre un gruppo di Windows è un esempio di entità costituita da una raccolta. Ogni entità dispone di un ID di sicurezza (SID). Questo argomento si applica a tutte le versioni di SQL Server, ma sono valide alcune restrizioni relative alle entità a livello di server nel database SQL o in SQL Data Warehouse. 
+  Le*entità* possono richiedere risorse di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Analogamente ad altri componenti del modello di autorizzazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , le entità possono essere organizzate in una gerarchia. L'ambito di influenza di un'entità dipende dall'ambito della definizione dell'entità: Windows, server, database e se l'entità è indivisibile o una raccolta. Un account di accesso di Windows è un esempio di entità indivisibile mentre un gruppo di Windows è un esempio di entità costituita da una raccolta. Ogni entità dispone di un ID di sicurezza (SID). Questo argomento si applica a tutte le versioni di SQL Server, ma sono valide alcune restrizioni relative alle entità di livello di server nel database SQL o in SQL Data Warehouse. 
   
 ## <a name="sql-server-level-principals"></a>Entità a livello di SQL Server  
   
@@ -57,7 +58,7 @@ ms.locfileid: "68344604"
 - Ruolo applicazione
   
 ## <a name="sa-login"></a>sa Login  
- L'account di accesso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di `sa` è un'entità a livello di server. Per impostazione predefinita, questo account viene creato durante l'installazione di un'istanza. A partire da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], il database predefinito di sa è il database master. diversamente da quanto consentito nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'account di accesso `sa` è un membro del ruolo predefinito a livello di server `sysadmin`. L'account di accesso `sa` dispone di tutte le autorizzazioni per il server e non può essere limitato. L'account di accesso `sa` non può essere eliminato, ma può essere disabilitato in modo da impedirne l'uso.
+ L'account di accesso `sa` di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è un'entità a livello di server. Per impostazione predefinita, questo account viene creato durante l'installazione di un'istanza. A partire da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], il database predefinito di sa è il database master. diversamente da quanto consentito nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'account di accesso `sa` è un membro del ruolo predefinito a livello di server `sysadmin`. L'account di accesso `sa` dispone di tutte le autorizzazioni per il server e non può essere limitato. L'account di accesso `sa` non può essere eliminato, ma può essere disabilitato in modo da impedirne l'uso.
 
 ## <a name="dbo-user-and-dbo-schema"></a>Utente dbo e schema dbo
 

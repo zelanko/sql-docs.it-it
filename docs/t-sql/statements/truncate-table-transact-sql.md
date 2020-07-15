@@ -25,15 +25,15 @@ ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 078a6b8ebdef8604c4023f6e652f5f431ee59d5b
-ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
+ms.openlocfilehash: 8bed7fa9d84cc3100d5da0f784c9e2551071156e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643370"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012848"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Rimuove tutte le righe da una tabella o da partizioni specificate di una tabella senza registrare le eliminazioni delle singole righe. TRUNCATE TABLE è simile all'istruzione DELETE senza clausola WHERE. L'istruzione TRUNCATE TABLE è tuttavia più rapida e utilizza un numero minore di risorse di sistema e del log delle transazioni.  
   
@@ -84,7 +84,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
 -   Specificare sia intervalli sia singole partizioni, ad esempio: `WITH (PARTITIONS (2, 4, 6 TO 8))`  
   
--   *\<range>* può essere specificato sotto forma di numeri di partizione separati dalla parola **TO**, ad esempio: `WITH (PARTITIONS (6 TO 8))`  
+-   È possibile specificare *\<range>* sotto forma di numeri di partizione separati dalla parola **TO**, ad esempio: `WITH (PARTITIONS (6 TO 8))`  
   
  Per troncare una tabella partizionata, la tabella e gli indici devono essere allineati (partizionati nella stessa funzione di partizione).  
   

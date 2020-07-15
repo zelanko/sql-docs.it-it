@@ -21,21 +21,23 @@ helpviewer_keywords:
 - messages [SQL Server], stored procedure where occurred
 - errors [SQL Server], trigger where occurred
 ms.assetid: b81edbf0-856a-498f-ba87-48ff1426d980
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd619ca33c4f6e77dbd1aa49fe6e81284efe4762
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 087e1cad75702da5b1077fcfaee2ec283074c1e9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823814"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999077"
 ---
 # <a name="error_procedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]  
 
-Questa funzione restituisce il nome della stored procedure o del trigger in cui si verifica un errore se tale errore ha causato l'esecuzione del blocco CATCH di un costrutto TRY...CATCH.  
-  
+Questa funzione restituisce il nome della stored procedure o del trigger in cui si verifica un errore se tale errore ha causato l'esecuzione del blocco CATCH di un costrutto TRY...CATCH. 
+- Dalla versione SQL Server 2017 alla [versione corrente](../../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15) restituisce schema_name.stored_procedure_name
+- SQL Server 2016 restituisce stored_procedure_name
+
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  

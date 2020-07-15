@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b19fa67007f68373d2d24fb1bfdfe1a6709adfd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b778cf08b4d017916ea9249eeddeb1cdf6afb422
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628881"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895659"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>Mirroring del database ALTER DATABASE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!NOTE]
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, usare [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].
 
-Controlla il mirroring del database per un database. I valori specificati per le opzioni di mirroring del database vengono applicati a entrambe le copie del database e alla sessione di mirroring del database nella sua globalità. È consentita una solo occorrenza di \<database_mirroring_option> per ogni istruzione ALTER DATABASE.
+Controlla il mirroring del database per un database. I valori specificati per le opzioni di mirroring del database vengono applicati a entrambe le copie del database e alla sessione di mirroring del database nella sua globalità. È consentita una sola occorrenza di \<database_mirroring_option> per ogni istruzione ALTER DATABASE.
 
 > [!NOTE]
 > È consigliabile configurare il mirroring del database durante le fasce orarie di minore attività, dato che la configurazione può influire sulle prestazioni.
@@ -72,7 +72,7 @@ SET { <partner_option> | <witness_option> }
 
 *database_name* è il nome del database da modificare.
 
-PARTNER \<partner_option> controlla le proprietà del database che definiscono i partner di failover di una sessione di mirroring del database e il relativo comportamento. Alcune opzioni SET PARTNER possono essere impostate indifferentemente in uno dei partner. Altre sono supportate solo nel server principale o nel server mirror. Per ulteriori informazioni, vedere le descrizioni seguenti delle singole opzioni PARTNER. La clausola SET PARTNER influisce su entrambe le copie del database, indipendentemente dal partner in cui viene specificata.
+PARTNER \<partner_option> Controlla le proprietà del database che definiscono i partner di failover di una sessione di mirroring del database e il relativo comportamento. Alcune opzioni SET PARTNER possono essere impostate indifferentemente in uno dei partner. Altre sono supportate solo nel server principale o nel server mirror. Per ulteriori informazioni, vedere le descrizioni seguenti delle singole opzioni PARTNER. La clausola SET PARTNER influisce su entrambe le copie del database, indipendentemente dal partner in cui viene specificata.
 
 Per eseguire un'istruzione SET PARTNER, l'opzione STATE degli endpoint di entrambi i partner deve essere impostata su STARTED. Si noti, inoltre, che l'opzione ROLE dell'endpoint di mirroring del database di ogni istanza del server partner deve essere impostata su PARTNER o su ALL. Per informazioni su come specificare un endpoint, vedere [Creare un endpoint del mirroring del database per l'autenticazione Windows](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md). Per informazioni sul ruolo e sullo stato dell'endpoint di mirroring del database per un'istanza del server, utilizzare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente in tale istanza:
 
@@ -91,7 +91,7 @@ Questa opzione viene specificata una sola volta per sessione in ogni partner. Pe
 
 Il valore di *partner_server* è un indirizzo di rete del server. La sintassi è la seguente:
 
-TCP **://** _\<indirizzo_sistema>_ **:** _\<porta>_
+TCP **://** _\<system-address>_ **:** _\<port>_
 
 dove
 
@@ -159,7 +159,7 @@ TIMEOUT *valore intero* specifica il periodo di timeout in secondi. Il periodo d
 
 Per altre informazioni, vedere [Possibili errori durante il mirroring del database](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md).
 
-WITNESS \<witness_option> controlla le proprietà del database che definiscono un server di controllo del mirroring del database. La clausola SET WITNESS influisce su entrambe le copie del database, ma è possibile specificare SET WITNESS solo nel server principale. Se per una sessione è impostato un server di controllo del mirroring, per l'uso del database è necessaria una relazione di quorum, indipendentemente dall'impostazione di SAFETY. Per altre informazioni, vedere [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database (mirroring del database)](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).
+WITNESS \<witness_option> Controlla le proprietà del database che definiscono un server di controllo del mirroring del database. La clausola SET WITNESS influisce su entrambe le copie del database, ma è possibile specificare SET WITNESS solo nel server principale. Se per una sessione è impostato un server di controllo del mirroring, per l'uso del database è necessaria una relazione di quorum, indipendentemente dall'impostazione di SAFETY. Per altre informazioni, vedere [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database (mirroring del database)](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).
 
 È consigliabile che il server di controllo del mirroring e i partner di failover si trovino in computer diversi. Per informazioni sul server di controllo, vedere [Server di controllo del mirroring del database](../../database-engine/database-mirroring/database-mirroring-witness.md).
 

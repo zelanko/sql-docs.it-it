@@ -20,12 +20,12 @@ ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62b4b1a9d98e289590b35e463add7125f6421cc5
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b9afe006b96d7b447b508d59a55163f8838caa1e
+ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628406"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85195818"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -277,7 +277,7 @@ RETURNS return_data_type
  _\<_table\_type\_definition_\>_ **(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,** ...*n* ] **)**  
  Definisce il tipo di dati della tabella per una funzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. La dichiarazione di tabella include definizioni di colonna, nonché vincoli di colonna o tabella.  
   
-\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ...*n* ] **)** **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([in anteprima in alcune aree](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ...*n* ] **)** **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([in anteprima in alcune aree geografiche](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Definisce i tipi di dati della tabella per una funzione CLR. La dichiarazione di tabella include solo nomi di colonna e tipi di dati.  
   
@@ -295,7 +295,7 @@ RETURNS return_data_type
  SCHEMABINDING  
  L'argomento SCHEMABINDING è obbligatorio per funzioni definite dall'utente scalari compilate in modo nativo.  
   
- **\<function_option>::= and \<clr_function_option>::=**  
+ **\<function_option>::= e \<clr_function_option>::=**  
   
  Specifica che la funzione avrà una o più opzioni seguenti.  
   
@@ -305,7 +305,7 @@ RETURNS return_data_type
  Indica che nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] vengono crittografate le colonne della vista del catalogo contenenti il testo dell'istruzione ALTER FUNCTION. Tramite il parametro ENCRYPTION è possibile evitare la pubblicazione della funzione come parte della replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non è possibile specificare l'opzione ENCRYPTION per le funzioni CLR.  
   
  SCHEMABINDING  
- Specifica che la funzione è associata agli oggetti di database a cui fa riferimento. Questa condizione impedisce la modifica della funzione se altri oggetti associati allo schema vi fanno riferimento.  
+ Specifica che la funzione è associata agli oggetti di database a cui fa riferimento. Quando la clausola SCHEMABINDING viene specificata, non è possibile apportare agli oggetti di base modifiche che hanno effetto sulla definizione della funzione. È necessario prima modificare o eliminare la definizione della funzione per rimuovere le dipendenze dall'oggetto da modificare.  
   
  L'associazione della funzione agli oggetti cui fa riferimento viene rimossa solo quando viene eseguita una delle azioni seguenti:  
   
@@ -364,7 +364,7 @@ Per un elenco delle condizioni che devono essere soddisfatte per consentire l'as
  *increment*  
  Valore intero da aggiungere al valore *seed* per le righe successive della tabella.  
   
-**\< column_constraint >::= and \< table_constraint>::=**
+**\< column_constraint >::= e \< table_constraint>::=**
   
  Definisce il vincolo per una colonna o tabella specificata. Per le funzioni CLR l'unico tipo di vincolo consentito è NULL. I vincoli denominati non sono consentiti.  
   

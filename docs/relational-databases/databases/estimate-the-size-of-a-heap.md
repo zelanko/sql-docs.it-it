@@ -1,5 +1,6 @@
 ---
 title: Stimare le dimensioni di un heap | Microsoft Docs
+description: Usare questa procedura per valutare la quantità di spazio necessaria per l'archiviazione dei dati in un heap in SQL Server.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58d708811825fe42ca64c7e30f7e9ed0d92e62f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a754dd4904cb106fc847beab843abca3837545a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909051"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002961"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Stima delle dimensioni di un heap
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   I seguenti passaggi sono utilizzabili per valutare la quantità di spazio necessaria per l'archiviazione dei dati in un heap:  
   
 1.  Specificare il numero di righe che verranno incluse nella tabella:  
@@ -46,7 +47,7 @@ ms.locfileid: "72909051"
   
 3.  Parte della riga, nota come mappa di bit null, è riservata alla gestione del supporto dei valori Null in una colonna. Calcolarne le dimensioni:  
   
-     **_Null_Bitmap_**  = 2 + (( **_Num_Cols_** + 7) / 8)  
+     **_Null_Bitmap_**  = 2 + ((**_Num_Cols_** + 7) / 8)  
   
      Solo l'integrale di questa espressione dovrebbe essere utilizzato. Eliminare le parti restanti.  
   
@@ -54,7 +55,7 @@ ms.locfileid: "72909051"
   
      Se la tabella include colonne di lunghezza variabile, determinare la quantità di spazio utilizzata per l'archiviazione delle colonne nella riga:  
   
-     **_Variable_Data_Size_**  = 2 + ( **_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
+     **_Variable_Data_Size_**  = 2 + (**_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
   
      I byte aggiunti a **_Max_Var_Size_** servono a tenere traccia di ogni colonna a lunghezza variabile. Questa formula si basa sul presupposto che tutte le colonne a lunghezza variabile siano piene al 100%. Se si prevede che verrà usata una percentuale inferiore dello spazio di archiviazione delle colonne a lunghezza variabile, è possibile modificare il valore di **_Max_Var_Size_** in base a tale percentuale per ottenere una stima più accurata delle dimensioni complessive della tabella.  
   
@@ -65,19 +66,19 @@ ms.locfileid: "72909051"
   
 5.  Calcolare le dimensioni totali della riga:  
   
-     **_Row_Size_**   =  **_Fixed_Data_Size_**  +  **_Variable_Data_Size_**  +  **_Null_Bitmap_** + 4  
+     **_Row_Size_**  = **_Fixed_Data_Size_** + **_Variable_Data_Size_** + **_Null_Bitmap_** + 4  
   
      Il valore 4 nel formula è l'overhead dell'intestazione di riga della riga di dati.  
   
 6.  Calcolare il numero di righe per pagina (8096 byte liberi per pagina):  
   
-     **_Rows_Per_Page_**  = 8096 / ( **_Row_Size_** + 2)  
+     **_Rows_Per_Page_**  = 8096 / (**_Row_Size_** + 2)  
   
      Poiché le righe non si estendono su più pagine, il numero di righe per pagina deve essere arrotondato alla riga completa più vicina. Il valore 2 nella formula è per la voce di riga nella matrice di slot della pagina.  
   
 7.  Calcolare il numero di pagine necessario per archiviare tutte le righe:  
   
-     **_Num_Pages_**   =  **_Num_Rows_**  /  **_Rows_Per_Page_**  
+     **_Num_Pages_**  = **_Num_Rows_** / **_Rows_Per_Page_**  
   
      Il numero di pagine stimato deve essere arrotondato alla pagina intera più vicina.  
   

@@ -16,15 +16,15 @@ ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ad508056c5ba614b92e06ca6453ea87bc4ed730
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f336e026d95db0de5ad40a9fb4ebc90d8165f609
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980374"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998997"
 ---
 # <a name="xml-format-files-sql-server"></a>File in formato XML (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] viene fornito un XML Schema che definisce la sintassi per la scrittura di *file di formato XML* da utilizzare per l'importazione bulk dei dati in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I file di formato XML devono essere conformi a questo schema, definito in XML Schema Definition Language (XSDL). I file di formato XML sono supportati solo quando gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installati insieme a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  È possibile usare un file di formato XML con un comando **bcp**, un'istruzione BULK INSERT o un'istruzione INSERT ... Istruzione SELECT \* FROM OPENROWSET(BULK...). Il comando **bcp** consente di generare automaticamente un file di formato XML per una tabella. Per ulteriori informazioni, vedere [bcp Utility](../../tools/bcp-utility.md).  
@@ -74,7 +74,7 @@ ms.locfileid: "80980374"
   
 -   \<RECORD> descrive i dati archiviati nel file di dati.  
   
-     Ogni elemento \<RECORD> include un set contenente uno o più elementi \<FIELD>. Questi elementi corrispondono ai campi del file di dati. La sintassi di base è la seguente:  
+     Ogni elemento \<RECORD> include un set di uno o più elementi \<FIELD>. Questi elementi corrispondono ai campi del file di dati. La sintassi di base è la seguente:  
   
      \<RECORD>  
   
@@ -96,7 +96,7 @@ ms.locfileid: "80980374"
   
      \</ROW>  
   
-     È possibile eseguire il mapping di ogni elemento \<COLUMN> a un solo campo nel file di dati. L'ordine degli elementi \<COLUMN> nell'elemento \<ROW> definisce l'ordine in cui tali elementi vengono restituiti dall'operazione in blocco. Il file di formato XML assegna ogni elemento \<COLUMN> a un nome locale senza alcuna relazione con la colonna nella tabella di destinazione di un'operazione di importazione in blocco.  
+     È possibile eseguire il mapping di ogni elemento \<COLUMN> a un solo campo nel file di dati. L'ordine degli elementi \<COLUMN> nell'elemento \<ROW> definisce l'ordine in cui gli elementi vengono restituiti dall'operazione in blocco. Il file di formato XML assegna ogni elemento \<COLUMN> a un nome locale senza alcuna relazione con la colonna nella tabella di destinazione di un'operazione di importazione in blocco.  
   
 ##  <a name="schema-syntax-for-xml-format-files"></a><a name="SchemaSyntax"></a> Sintassi dello schema per i file di formato XML  
  In questa sezione è incluso un riepilogo degli elementi e degli attributi di XML Schema per i file di formato XML. La sintassi di un file di formato è indipendente dalla direzione dell'operazione, ovvero è identica sia per l'esportazione bulk che per l'importazione bulk. Questa sezione descrive anche in che modo l'importazione in blocco usa gli elementi \<ROW> e \<COLUMN> e come inserire il valore xsi:type di un elemento in un set di dati.  
@@ -162,7 +162,7 @@ ms.locfileid: "80980374"
  \<FIELD .../>  
  Definisce un campo, contenente dati, nel file di dati.  
   
- Gli attributi di questo elemento vengono discussi in [Attributi dell'elemento \<FIELD>](#AttrOfFieldElement) più avanti in questo argomento.  
+ Gli attributi di questo elemento sono descritti in [Attributi dell'elemento \<FIELD>](#AttrOfFieldElement) più avanti in questo argomento.  
   
  \<ROW .../>  
  Definisce un elemento complesso contenente uno o più elementi \<COLUMN>. L'ordine degli elementi \<COLUMN> è indipendente da quello degli elementi \<FIELD> in una definizione RECORD. L'ordine degli elementi \<COLUMN> in un file di formato determina invece l'ordine delle colonne del set di righe risultante. I campi di dati vengono caricati nell'ordine in cui vengono dichiarati gli elementi \<COLUMN> corrispondenti nell'elemento \<COLUMN>.  
@@ -172,7 +172,7 @@ ms.locfileid: "80980374"
  \<COLUMN>  
  Definisce una colonna come elemento (\<COLUMN>). Ogni elemento \<COLUMN> corrisponde a un elemento \<FIELD>, il cui ID viene specificato nell'attributo SOURCE dell'elemento \<COLUMN>.  
   
- Gli attributi di questo elemento vengono discussi in [Attributi dell'elemento \<COLUMN>](#AttrOfColumnElement) più avanti in questo argomento. Vedere anche [Uso dell'elemento \<COLUMN> nell'importazione in blocco](#HowUsesColumn) più avanti in questo argomento.  
+ Gli attributi di questo elemento sono descritti in [Attributi dell'elemento \<COLUMN>](#AttrOfColumnElement) più avanti in questo argomento. Vedere anche [Uso dell'elemento \<COLUMN> nell'importazione in blocco](#HowUsesColumn) più avanti in questo argomento.  
   
  \</BCPFORMAT>  
  Richiesto per terminare il file di formato.  
@@ -202,7 +202,7 @@ ms.locfileid: "80980374"
   
 |Attributo FIELD|Descrizione|Facoltativo /<br /><br /> Obbligatoria|  
 |---------------------|-----------------|------------------------------|  
-|ID **="** _fieldID_ **"**|Specifica il nome logico del campo nel file di dati. L'ID di un campo rappresenta la chiave utilizzata per fare riferimento al campo.<br /><br /> \<FIELD ID **="** _fieldID_ **"** /> esegue il mapping a \<COLUMN SOURCE **="** _fieldID_ **"** />|Obbligatoria|  
+|ID **="** _fieldID_ **"**|Specifica il nome logico del campo nel file di dati. L'ID di un campo rappresenta la chiave utilizzata per fare riferimento al campo.<br /><br /> \<FIELD ID**="**_fieldID_**"**/> esegue il mapping a \<COLUMN SOURCE**="**_fieldID_**"**/>|Obbligatoria|  
 |xsi:type **="** _fieldType_ **"**|Costrutto XML, utilizzato in modo simile a un attributo, che identifica il tipo dell'istanza dell'elemento. Il valore di *fieldType* determina gli attributi opzionali, riportati di seguito, necessari in un'istanza specifica.|Obbligatorio, a seconda del tipo di dati|  
 |LENGTH **="** _n_ **"**|Definisce la lunghezza per un'istanza di un tipo di dati a lunghezza fissa.<br /><br /> Il valore di *n* deve essere un numero intero positivo.|Facoltativo, a meno che non richiesto dal valore xsi:type|  
 |PREFIX_LENGTH **="** _p_ **"**|Definisce la lunghezza del prefisso per una rappresentazione di dati binary. Il valore PREFIX_LENGTH *p*deve essere uno dei seguenti: 1, 2, 4 o 8.|Facoltativo, a meno che non richiesto dal valore xsi:type|  
@@ -210,7 +210,7 @@ ms.locfileid: "80980374"
 |COLLATION **="** _collationName_ **"**|Questo attributo è consentito solo per i campi di tipo carattere. Per un elenco dei nomi delle regole di confronto SQL, vedere [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).|Facoltativo|  
 |TERMINATOR **= "** _terminator_ **"**|Specifica il carattere di terminazione di un campo di dati. Il carattere di terminazione può essere costituito da un carattere qualsiasi, univoco e non facente parte dei dati.<br /><br /> Per impostazione predefinita, il carattere di terminazione corrisponde al carattere di tabulazione, rappresentato come \t. Per rappresentare un segno di paragrafo, utilizzare \r\n.|Viene utilizzato solo con un valore xsi:type di dati di tipo carattere, per il quale è necessario specificare questo attributo.|  
   
-#####  <a name="xsitype-values-of-the-field-element"></a><a name="XsiTypeValuesOfFIELD"></a> Valori Xsi:type dell'elemento \<FIELD>  
+#####  <a name="xsitype-values-of-the-field-element"></a><a name="XsiTypeValuesOfFIELD"></a> Valori xsi:type dell'elemento \<FIELD>  
  Il valore xsi:type è un costrutto XML, utilizzato in modo simile a un attributo, che identifica il tipo di dati di un'istanza di un elemento. Per informazioni sull'utilizzo di questo valore, vedere "Inserimento del valore xsi:type in un set di dati", più avanti in questa sezione.  
   
  Il valore xsi:type dell'elemento \<FIELD> supporta i tipi di dati seguenti.  
@@ -255,20 +255,20 @@ ms.locfileid: "80980374"
   
 |Attributo COLUMN|Descrizione|Facoltativo /<br /><br /> Obbligatoria|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **="** _fieldID_ **"**|Specifica l'ID del campo di cui eseguire il mapping alla colonna.<br /><br /> \<COLUMN SOURCE **="** _fieldID_ **"** /> esegue il mapping a \<FIELD ID **="** _fieldID_ **"** />|Obbligatoria|  
+|SOURCE **="** _fieldID_ **"**|Specifica l'ID del campo di cui eseguire il mapping alla colonna.<br /><br /> \<COLUMN SOURCE**="**_fieldID_**"**/> esegue il mapping a \<FIELD ID**="**_fieldID_**"**/>|Obbligatoria|  
 |NAME = "*columnName*"|Specifica il nome della colonna del set di righe rappresentato dal file di formato. Viene utilizzato per identificare la colonna nel set dei risultati e non corrisponde necessariamente al nome di colonna utilizzato nella tabella di destinazione.|Obbligatoria|  
-|xsi **:** type **="** _ColumnType_ **"**|Costrutto XML, utilizzato in modo simile a un attributo, che identifica il tipo di dati dell'istanza dell'elemento. Il valore di *ColumnType* determina gli attributi opzionali, riportati di seguito, necessari in un'istanza specifica.<br /><br /> Nota: i valori possibili di *ColumnType* e i relativi attributi associati sono elencati nella tabella dell'elemento \<COLUMN> nella sezione [Valori Xsi:type dell'elemento &lt;COLUMN&gt;](#XsiTypeValuesOfCOLUMN).|Facoltativo|  
+|xsi **:** type **="** _ColumnType_ **"**|Costrutto XML, utilizzato in modo simile a un attributo, che identifica il tipo di dati dell'istanza dell'elemento. Il valore di *ColumnType* determina gli attributi opzionali, riportati di seguito, necessari in un'istanza specifica.<br /><br /> Nota: i valori possibili di *ColumnType* e i relativi attributi associati sono elencati nella tabella dell'elemento \<COLUMN> nella sezione [Valori xsi:type dell'elemento &lt;COLUMN&gt;](#XsiTypeValuesOfCOLUMN).|Facoltativo|  
 |LENGTH **="** _n_ **"**|Definisce la lunghezza per un'istanza di un tipo di dati a lunghezza fissa. Viene utilizzato solo quanto il valore xsi:type corrisponde a un tipo di dati string.<br /><br /> Il valore di *n* deve essere un numero intero positivo.|Facoltativo (disponibile solo se il valore xsi:type corrisponde a un tipo di dati string)|  
 |PRECISION **="** _n_ **"**|Indica il numero di cifre in un numero. Il numero 123,45, ad esempio, ha una precisione di 5.<br /><br /> Il valore deve essere un numero intero positivo.|Facoltativo (disponibile solo se il valore xsi:type corrisponde a un tipo di dati numerico variabile)|  
 |SCALE **="** _int_ **"**|Indica il numero di cifre a destra della virgola decimale in un numero. Il numero 123,45, ad esempio, ha una scala di 2.<br /><br /> Il valore deve essere un numero intero.|Facoltativo (disponibile solo se il valore xsi:type corrisponde a un tipo di dati numerico variabile)|  
 |NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|Indica se una colonna supporta o meno valori NULL. Questo attributo è completamente indipendente da FIELDS. Se, tuttavia, una colonna non ammette valori Null e il valore del campo è NULL, ovvero non è stato specificato alcun valore, verrà restituito un errore di run-time.<br /><br /> L'attributo NULLABLE viene utilizzato solo per un'istruzione SELECT FROM OPENROWSET(BULK...) semplice.|Facoltativo (disponibile per qualsiasi tipo di dati)|  
   
-#####  <a name="xsitype-values-of-the-column-element"></a><a name="XsiTypeValuesOfCOLUMN"></a> Valori Xsi:type dell'elemento \<COLUMN>  
+#####  <a name="xsitype-values-of-the-column-element"></a><a name="XsiTypeValuesOfCOLUMN"></a> Valori xsi:type dell'elemento \<COLUMN>  
  Il valore xsi:type è un costrutto XML, utilizzato in modo simile a un attributo, che identifica il tipo di dati di un'istanza di un elemento. Per informazioni sull'utilizzo di questo valore, vedere "Inserimento del valore xsi:type in un set di dati", più avanti in questa sezione.  
   
  L'elemento \<COLUMN> supporta i tipi di dati SQL nativi, come descritto di seguito:  
   
-|Categoria del tipo|Tipi di dati di \<COLUMN>|Attributi XML obbligatori<br /><br /> per il tipo di dati|Attributi XML facoltativi<br /><br /> per il tipo di dati|  
+|Categoria del tipo|\<COLUMN> Tipi di dati|Attributi XML obbligatori<br /><br /> per il tipo di dati|Attributi XML facoltativi<br /><br /> per il tipo di dati|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
 |Correzione|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT**e **SQLUNIQUEID**|No.|NULLABLE|  
 |Numero variabile|**SQLDECIMAL** e **SQLNUMERIC**|No.|NULLABLE, PRECISION, SCALE|  
@@ -461,7 +461,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 > [!NOTE]  
 >  Per un esempio equivalente di [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , vedere [Usare un file di formato per escludere un campo di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md).  
   
-###  <a name="d-mapping-field-xsitype-to-column-xsitype"></a><a name="MapXSItype"></a> D. Mapping tra il valore xsi:type dell'elemento \<FIELD> e il valore xsi:type dell'elemento \<COLUMN>  
+###  <a name="d-mapping-field-xsitype-to-column-xsitype"></a><a name="MapXSItype"></a> D. Mapping di \<FIELD> xsi:type a \<COLUMN> xsi:type  
  Nell'esempio seguente vengono illustrati tipi diversi di campi e i relativi mapping alle colonne.  
   
 ```xml

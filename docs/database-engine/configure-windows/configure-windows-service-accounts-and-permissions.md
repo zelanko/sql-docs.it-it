@@ -1,12 +1,13 @@
 ---
 title: Configurare account di servizio e autorizzazioni di Windows | Microsoft Docs
-ms.custom: ''
+description: Acquisire familiarità con gli account del servizio usati per avviare ed eseguire i servizi in SQL Server. Scoprire come configurarli e assegnare le autorizzazioni appropriate.
+ms.custom: contperfq4
 ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
 ms.technology: configuration
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - startup service states [SQL Server]
 - Setup [SQL Server], user accounts
@@ -48,18 +49,18 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 93bfa129267ed149ce4d52904a0d5c459b6e87db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d4ef0d67bdb86d08754ed23805b4c04e56cf37a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82178742"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728684"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurare account di servizio e autorizzazioni di Windows
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Ogni servizio in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rappresenta un processo o un set di processi destinato a gestire l'autenticazione delle operazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con Windows. Nel presente argomento viene fornita la descrizione della configurazione predefinita dei servizi disponibili in questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e delle opzioni di configurazione per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che è possibile impostare durante e dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo argomento offre informazioni dettagliate sugli account di servizio destinate agli utenti avanzati.
 
@@ -175,7 +176,7 @@ Gli account dei servizi gestiti, gli account dei servizi gestiti di gruppo e gli
 
 - <a name="VA_Desc"></a>**Virtual Accounts**
 
-  Gli account virtuali a partire da Windows Server 2008 R2 e Windows 7 sono *account locali gestiti* che forniscono le funzionalità seguenti per semplificare l'amministrazione dei servizi. L'account virtuale è gestito automaticamente e consente di accedere alla rete in un ambiente di dominio. Se durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene usato il valore predefinito per gli account di servizio, sarà usato un account virtuale con il nome dell'istanza come nome del servizio, nel formato **NT SERVICE\\** _\<SERVICENAME>_ . I servizi eseguiti come account virtuali consentono di accedere alle risorse di rete usando le credenziali dell'account del computer nel formato *<nome_dominio>* __\\__ *<nome_computer>* __$__ . Quando si specifica un account virtuale per avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], lasciare vuoto il campo della password. Se tramite l'account virtuale non è possibile registrare il nome dell'entità servizio (SPN), registrarlo manualmente. Per altre informazioni sulla registrazione manuale di un SPN, vedere [Registrazione manuale del nome SPN](register-a-service-principal-name-for-kerberos-connections.md).
+  Gli account virtuali a partire da Windows Server 2008 R2 e Windows 7 sono *account locali gestiti* che forniscono le funzionalità seguenti per semplificare l'amministrazione dei servizi. L'account virtuale è gestito automaticamente e consente di accedere alla rete in un ambiente di dominio. Se durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene usato il valore predefinito per gli account di servizio, viene usato un account virtuale con il nome dell'istanza come nome del servizio, nel formato **NT SERVICE\\** _\<SERVICENAME>_ . I servizi eseguiti come account virtuali consentono di accedere alle risorse di rete usando le credenziali dell'account del computer nel formato *<nome_dominio>* __\\__ *<nome_computer>* __$__ . Quando si specifica un account virtuale per avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], lasciare vuoto il campo della password. Se tramite l'account virtuale non è possibile registrare il nome dell'entità servizio (SPN), registrarlo manualmente. Per altre informazioni sulla registrazione manuale di un SPN, vedere [Registrazione manuale del nome SPN](register-a-service-principal-name-for-kerberos-connections.md).
 
   > [!NOTE]
   > Non è possibile usare gli account virtuali per l'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , poiché non dispongono dello stesso SID in ogni nodo del cluster.
@@ -245,7 +246,7 @@ In questa sezione vengono descritte le autorizzazioni configurate dal programma 
 
 ### <a name="service-configuration-and-access-control"></a><a name="Serv_SID"></a> Configurazione e controllo di accesso del servizio
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] abilita SID per servizio per ognuno dei servizi in modo da fornire isolamento e protezione avanzata dei servizi. Il SID per servizio deriva dal nome del servizio ed è univoco per il servizio. Un nome di SID per un servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)] potrebbe ad esempio essere **NT Service\MSSQL$** _\<NomeIstanza>_ . Attraverso l'isolamento, è possibile accedere a oggetti specifici anche se non vengono eseguiti in un account con privilegi elevati e senza indebolire la sicurezza dell'oggetto. Mediante una voce di controllo di accesso contenente un SID del servizio, un servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può limitare l'accesso alle proprie risorse.
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] abilita SID per servizio per ognuno dei servizi in modo da fornire isolamento e protezione avanzata dei servizi. Il SID per servizio deriva dal nome del servizio ed è univoco per il servizio. Un nome SID per il servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)] potrebbe essere ad esempio **NT Service\MSSQL$** _\<InstanceName>_ . Attraverso l'isolamento, è possibile accedere a oggetti specifici anche se non vengono eseguiti in un account con privilegi elevati e senza indebolire la sicurezza dell'oggetto. Mediante una voce di controllo di accesso contenente un SID del servizio, un servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può limitare l'accesso alle proprie risorse.
 
 > [!NOTE]
 > In Windows 7, [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 e versioni successive il SID per servizio può essere l'account virtuale usato dal servizio.
@@ -383,12 +384,12 @@ Potrebbe essere necessario concedere alcune autorizzazioni relative al controllo
 ||Solo Amministratore|\\\\.\root\Microsoft\SqlServer\ServerEvents\\<nome_istanza_sql>\*|Controllo completo|
 ||Administrators, Sistema|\tools\binn\schemas\sqlserver\2004\07\showplan|Controllo completo|
 ||Utenti|\tools\binn\schemas\sqlserver\2004\07\showplan|Lettura, Esecuzione|
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Account del servizio Windows del server di report|*\<installazione>* \Reporting Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|
-||Account del servizio Windows del server di report|*\<installazione>* \Reporting Services\ReportServer|Lettura|
-||Account del servizio Windows del server di report|*\<installazione>* \Reporting Services\ReportServer\global.asax|Full|
-||Account del servizio Windows del server di report|*\<installazione>* \Reporting Services\RSWebApp|Lettura, Esecuzione|
-||Tutti|*\<installazione>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|
-||Account servizi Windows ReportServer|*\<installazione>* \Reporting Services\ReportServer\rsreportserver.config|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Account del servizio Windows del server di report|*\<install>* \Reporting Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|
+||Account del servizio Windows del server di report|*\<install>* \Reporting Services\ReportServer|Lettura|
+||Account del servizio Windows del server di report|*\<install>* \Reporting Services\ReportServer\global.asax|Full|
+||Account del servizio Windows del server di report|*\<install>* \Reporting Services\RSWebApp|Lettura, Esecuzione|
+||Tutti|*\<install>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|
+||Account servizi Windows ReportServer|*\<install>* \Reporting Services\ReportServer\rsreportserver.config|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|
 ||Tutti|Chiavi del server di report (hive Instid)|Richiedi valore<br /><br /> Enumera sottochiavi<br /><br /> Notifica<br /><br /> Controllo in lettura|
 ||Utente di Servizi terminali|Chiavi del server di report (hive Instid)|Richiedi valore<br /><br /> Imposta valore<br /><br /> Creazione sottochiave<br /><br /> Enumerazione sottochiavi<br /><br /> Notifica<br /><br /> Delete<br /><br /> Controllo in lettura|
 ||Power Users|Chiavi del server di report (hive Instid)|Richiedi valore<br /><br /> Imposta valore<br /><br /> Creazione sottochiave<br /><br /> Enumera sottochiavi<br /><br /> Notifica<br /><br /> Delete<br /><br /> Controllo in lettura|

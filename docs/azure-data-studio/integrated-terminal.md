@@ -1,25 +1,24 @@
 ---
 title: Terminale integrato
-titleSuffix: Azure Data Studio
 description: Informazioni sul terminale integrato in Azure Data Studio.
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ecd96299a29619bdf52894b36782f6d71e3a0c19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959530"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774589"
 ---
 # <a name="integrated-terminal"></a>Terminale integrato
 
-In [!INCLUDE[name-sos](../includes/name-sos-short.md)] è possibile aprire un terminale integrato, partendo inizialmente dalla radice dell'area di lavoro. Questo può essere utile perché non è necessario cambiare finestra o modificare lo stato di un terminale esistente per eseguire una rapida attività dalla riga di comando.
+In Azure Data Studio è possibile aprire un terminale integrato, partendo inizialmente dalla radice dell'area di lavoro. Questo può essere utile perché non è necessario cambiare finestra o modificare lo stato di un terminale esistente per eseguire una rapida attività dalla riga di comando.
 
 Per aprire il terminale:
 
@@ -30,7 +29,7 @@ Per aprire il terminale:
 ![Terminale](media/integrated-terminal/terminal-screen.png)
 
 > [!NOTE]
-> È comunque possibile aprire una shell esterna con il comando **Apri nel prompt dei comandi** di Explorer (**Apri nel terminale** in Mac o Linux) se si preferisce lavorare all'esterno di [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+> È comunque possibile aprire una shell esterna con il comando **Apri nel prompt dei comandi** di Explorer (**Apri nel terminale** in Mac o Linux) se si preferisce lavorare all'esterno di Azure Data Studio.
 
 ## <a name="managing-multiple-terminals"></a>Gestione di più terminali
 
@@ -66,7 +65,7 @@ Per configurare correttamente la shell in Windows occorre individuare l'eseguibi
 > Per poter essere usato come terminale integrato, il file eseguibile della shell deve essere un'applicazione console, in modo che sia possibile reindirizzare `stdin/stdout/stderr`.
 
 > [!TIP]
-> La shell del terminale integrato viene eseguita con le autorizzazioni di [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Se è necessario eseguire un comando della shell con privilegi elevati (amministratore) o con autorizzazioni diverse, è possibile servirsi di utilità della piattaforma, ad esempio `runas.exe`, all'interno di un terminale.
+> La shell del terminale integrato viene eseguita con le autorizzazioni di Azure Data Studio. Se è necessario eseguire un comando della shell con privilegi elevati (amministratore) o con autorizzazioni diverse, è possibile servirsi di utilità della piattaforma, ad esempio `runas.exe`, all'interno di un terminale.
 
 ### <a name="shell-arguments"></a>Argomenti della shell
 
@@ -149,5 +148,5 @@ Se si vuole che **CTRL+F** passi alla shell anziché avviare il widget Trova in 
 
 ### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>Imporre ai tasti di scelta rapida l'attraversamento del terminale
 
-Quando lo stato attivo è sul terminale integrato, molti tasti di scelta rapida non funzioneranno perché le pressioni di tasti vengono passate e utilizzate dal terminale stesso. Per aggirare questo problema, è possibile usare l'impostazione `terminal.integrated.commandsToSkipShell`. Contiene una matrice di nomi di comandi i cui tasti di scelta rapida ignorano l'elaborazione da parte della shell e vengono invece elaborati dal sistema dei tasti di scelta rapida di [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Per impostazione predefinita sono inclusi tutti i tasti di scelta del terminale, oltre ad alcuni tasti di scelta rapida di uso frequente.
+Quando lo stato attivo è sul terminale integrato, molti tasti di scelta rapida non funzioneranno perché le pressioni di tasti vengono passate e utilizzate dal terminale stesso. Per aggirare questo problema, è possibile usare l'impostazione `terminal.integrated.commandsToSkipShell`. Contiene una matrice di nomi di comandi i cui tasti di scelta rapida ignorano l'elaborazione da parte della shell e vengono invece elaborati dal sistema dei tasti di scelta rapida di Azure Data Studio. Per impostazione predefinita sono inclusi tutti i tasti di scelta del terminale, oltre ad alcuni tasti di scelta rapida di uso frequente.
 

@@ -1,5 +1,6 @@
 ---
 title: Replicare colonne Identity | Microsoft Docs
+description: In SQL Server la replica gestisce le colonne Identity in tutti i tipi di pubblicazione e sottoscrizione. Gestire le colonne manualmente o automaticamente tramite replica.
 ms.custom: ''
 ms.date: 10/04/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a7feb252e98be7cc820b074bcb3c3b2c6ff4ff5d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8547753f7b00a4bfb057cc3587036022ee4c4e0a
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287588"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807167"
 ---
 # <a name="replicate-identity-columns"></a>Replica di colonne Identity
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

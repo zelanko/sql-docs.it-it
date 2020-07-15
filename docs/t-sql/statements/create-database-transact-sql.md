@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: Sintassi di creazione database per SQL Server, database SQL di Azure, Azure Synapse Analytics e piattaforma di strumenti analitici
 ms.custom: ''
-ms.date: 03/16/2020
+ms.date: 06/10/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 91d278d564ab6647ad1a585c0641dcc17a8dd8f8
-ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
+ms.openlocfilehash: 095e8f93377d75c411c63150203699908dee2d26
+ms.sourcegitcommit: 7679d0c5cc0edd35274a2b29e4d09347bfbefac6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82987447"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84664726"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -195,7 +195,8 @@ Per altre informazioni sui nomi di regole di confronto Windows e SQL, vedere [CO
 > [!NOTE]
 > Le regole di confronto per i database indipendenti sono diverse rispetto a quelle dei database non indipendenti. Per altre informazioni, vedere [Regole di confronto dei database indipendenti](../../relational-databases/databases/contained-database-collations.md).
 
-WITH \<option> **\<filestream_options>**
+WITH \<option>
+ **\<filestream_options>**
 
 NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.
 
@@ -207,7 +208,8 @@ Specifica il livello di accesso FILESTREAM non transazionale al database.
 |READONLY|I dati FILESTREAM di questo database possono essere letti da processi non transazionali.|
 |FULL|L'accesso non transazionale completo a tabelle FileTable FILESTREAM è abilitato.|
 
-DIRECTORY_NAME = \<directory_name> **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
+DIRECTORY_NAME = \<directory_name>
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
 
 Nome di directory compatibile con Windows. Il nome deve essere univoco in tutti i nomi di Database_Directory nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il confronto di univocità non supporta la distinzione tra maiuscole e minuscole, indipendentemente dalle impostazioni delle regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È necessario impostare questa opzione prima di creare una tabella FileTable in questo database.
 
@@ -237,7 +239,7 @@ Le opzioni seguenti sono consentite solo quando CONTAINMENT è stato impostato s
 
   Per una descrizione completa di questa opzione, vedere [Configurare l'opzione di configurazione del server Transform Noise Words](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md).
 
-- **TWO_DIGIT_YEAR_CUTOFF = { 2049 | \<qualsiasi anno compreso tra il 1753 e il 9999> }**
+- **TWO_DIGIT_YEAR_CUTOFF = { 2049 | \<any year between 1753 and 9999> }**
 
   Quattro cifre che rappresentano un anno. Il valore predefinito è 2049. Per una descrizione completa di questa opzione, vedere [Configurare l'opzione di configurazione del server two-digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
 
@@ -266,7 +268,7 @@ Le opzioni seguenti sono consentite solo quando CONTAINMENT è stato impostato s
 
   Quando si specifica questa opzione, il buffer del log delle transazioni viene creato in un volume che si trova in un dispositivo disco con Storage Class Memory (memoria non volatile NVDIMM-N), noto anche come buffer del log persistente. Per altre informazioni, vedere [Transaction Commit latency acceleration using Storage Class Memory](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) (Accelerazione della latenza di commit delle transazioni con Storage Class Memory). **Si applica a** : [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e versioni successive.
 
-FOR ATTACH [ WITH \< attach_database_option > ] Specifica che il database viene creato [collegando](../../relational-databases/databases/database-detach-and-attach-sql-server.md) un set di file esistente del sistema operativo. È necessario che una voce dell'elenco \<filespec> specifichi il file primario. Le altre voci \<filespec> obbligatorie sono quelle relative ai file con percorso diverso rispetto al percorso usato in fase di creazione del database o al momento dell'ultimo collegamento del database stesso. Per questi file è necessario specificare una voce \<filespec>.
+FOR ATTACH [ WITH \< attach_database_option > ] specifica che il database viene creato [collegando](../../relational-databases/databases/database-detach-and-attach-sql-server.md) un set di file del sistema operativo già esistente. È necessario che una voce \<filespec> specifichi il file primario. Le altre voci \<filespec> obbligatorie sono quelle relative ai file con percorso diverso rispetto al percorso usato in fase di creazione del database o al momento dell'ultimo collegamento del database stesso. Per questi file è necessario specificare una voce \<filespec>.
 
 FOR ATTACH richiede le seguenti condizioni:
 
@@ -280,7 +282,7 @@ Se un database in lettura/scrittura contiene un singolo file di log attualmente 
 
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tutti i file full-text inclusi nel database che viene collegato verranno collegati insieme al database. Per specificare un nuovo percorso per il catalogo full-text, specificare la nuova posizione senza il nome del file del sistema operativo full-text. Per altre informazioni, vedere la sezione Esempi.
 
-Il collegamento di un database contenente un'opzione FILESTREAM "directory name" a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiede a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di verificare che il nome Database_Directory sia univoco. Se non lo è, l'operazione di collegamento ha esito negativo e viene restituito l'errore "FILESTREAM Database_Directory name \<name> is not unique in this SQL Server instance" (FILESTREAM con nome Database_Directory <name> non univoco in questa istanza di SQL Server). Per evitare questo errore, è necessario passare il parametro facoltativo *directory_name* a questa operazione.
+Il collegamento di un database contenente un'opzione FILESTREAM "directory name" a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiede a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di verificare che il nome Database_Directory sia univoco. In caso contrario, l'operazione di collegamento ha esito negativo e viene restituito l'errore "Il nome FILESTREAM Database_Directory \<name> non è univoco in questa istanza di SQL Server". Per evitare questo errore, è necessario passare il parametro facoltativo *directory_name* a questa operazione.
 
 Non è possibile specificare FOR ATTACH in uno snapshot del database.
 
@@ -312,7 +314,7 @@ Quando un database viene collegato per la prima volta a una nuova istanza di [!I
 > [!NOTE]
 > Le opzioni **TRUSTWORTHY** e **DB_CHAINING** non hanno effetto quando si collega un database.
 
-FOR ATTACH_REBUILD_LOG specifica che il database viene creato collegando un set di file del sistema operativo già esistente. Questa opzione è limitata ai database in lettura/scrittura. È necessaria una voce *\<filespec>* che specifichi il file primario. Se uno o più file di log delle transazioni sono mancanti, il file di log viene ricostruito. Il log ATTACH_REBUILD_LOG crea automaticamente un nuovo file di log da 1 MB. Questo file viene posizionato nel percorso predefinito del file di log. Per informazioni su questa posizione, vedere [Visualizzare o modificare i percorsi predefiniti per i file di dati e di log - SSMS](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).
+FOR ATTACH_REBUILD_LOG specifica che il database viene creato collegando un set di file del sistema operativo già esistente. Questa opzione è limitata ai database in lettura/scrittura. È necessario che una voce *\<filespec>* specifichi il file primario. Se uno o più file di log delle transazioni sono mancanti, il file di log viene ricostruito. Il log ATTACH_REBUILD_LOG crea automaticamente un nuovo file di log da 1 MB. Questo file viene posizionato nel percorso predefinito del file di log. Per informazioni su questa posizione, vedere [Visualizzare o modificare i percorsi predefiniti per i file di dati e di log - SSMS](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).
 
 > [!NOTE]
 > Se i file di log sono disponibili, [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizza questi file invece di ricompilare i file di log.
@@ -331,7 +333,7 @@ Non è possibile specificare FOR ATTACH_REBUILD_LOG in uno snapshot del database
 
 Per altre informazioni sul collegamento e lo scollegamento di database, vedere [Collegamento e scollegamento di un database](../../relational-databases/databases/database-detach-and-attach-sql-server.md).
 
-\<filespec> controlla le proprietà del file.
+\<filespec> Controlla le proprietà del file.
 
 NAME *logical_file_name* specifica il nome logico del file. Il parametro NAME è necessario quando FILENAME è specificato, eccetto quando viene specificata una delle clausole FOR ATTACH. Non è possibile assegnare il nome PRIMARY a un filegroup FILESTREAM.
 
@@ -388,7 +390,7 @@ Se FILEGROWTH viene omesso, i valori predefiniti sono i seguenti:
 |Inizio [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dati 1 MB. File di log 10%.|
 |Prima di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dati 10%. File di log 10%.|
 
-\<filegroup> controlla le proprietà del filegroup. Non è possibile specificare il filegroup in uno snapshot del database.
+\<filegroup> Controlla le proprietà del filegroup. Non è possibile specificare il filegroup in uno snapshot del database.
 
 FILEGROUP *filegroup_name* è il nome logico del filegroup.
 
@@ -887,6 +889,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
       | 'GP_Fsv2_72'
       | 'GP_S_Gen5_1' | 'GP_S_Gen5_2' | 'GP_S_Gen5_4' | 'GP_S_Gen5_6' | 'GP_S_Gen5_8'
       | 'GP_S_Gen5_10' | 'GP_S_Gen5_12' | 'GP_S_Gen5_14' | 'GP_S_Gen5_16'
+      | 'GP_S_Gen5_18' | 'GP_S_Gen5_20' | 'GP_S_Gen5_24' | 'GP_S_Gen5_32' | 'GP_S_Gen5_40'
       | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6'
       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24'
       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14'
@@ -913,6 +916,7 @@ CREATE DATABASE database_name
       | 'GP_Fsv2_72'
       | 'GP_S_Gen5_1' | 'GP_S_Gen5_2' | 'GP_S_Gen5_4' | 'GP_S_Gen5_6' | 'GP_S_Gen5_8'
       | 'GP_S_Gen5_10' | 'GP_S_Gen5_12' | 'GP_S_Gen5_14' | 'GP_S_Gen5_16'
+      | 'GP_S_Gen5_18' | 'GP_S_Gen5_20' | 'GP_S_Gen5_24' | 'GP_S_Gen5_32' | 'GP_S_Gen5_40'
       | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6'
       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24'
       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14'
@@ -1020,15 +1024,21 @@ Il valore MAXSIZE per il modello DTU, se specificato, deve essere un valore vali
 |:----- | ------: |-------: |-------: |-------: |
 |Numero massimo vCore|10|12|14|16|
 
+**Utilizzo generico - Calcolo serverless - Gen5 (parte 3)**
+
+|MAXSIZE|GP_S_Gen5_18|GP_S_Gen5_20|GP_S_Gen5_24|GP_S_Gen5_32|GP_S_Gen5_40|
+|:----- | ------: |-------: |-------: |-------: |--------: |
+|Numero massimo vCore|18|20|24|32|40|
+
 **Business critical - Calcolo con provisioning - Gen4 (parte 1)**
 
-|Livello di prestazioni|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
+|Dimensioni di calcolo (obiettivo di servizio)|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
 |:--------------- | ------: |-------: |-------: |-------: |-------: |-------: |
 |Dimensioni massime dei dati (GB)|1024|1024|1024|1024|1024|1024|
 
 **Business critical - Calcolo con provisioning - Gen4 (parte 2)**
 
-|Livello di prestazioni|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
+|Dimensioni di calcolo (obiettivo di servizio)|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
 |:--------------- | ------: |-------: |-------: |--------: |--------: |--------: |
 |Dimensioni massime dei dati (GB)|1024|1024|1024|1024|1024|1024|
 
@@ -1061,15 +1071,15 @@ SERVICE_OBJECTIVE
 
 - **Per database singoli e in pool**
 
-  - Specifica il livello di prestazioni. I valori disponibili per l'obiettivo di servizio sono: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_72`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80`, `BC_M_128`.
+  - Specifica le dimensioni di calcolo (obiettivo di servizio). I valori disponibili per l'obiettivo di servizio sono: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_72`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80`, `BC_M_128`.
 
 - **Per database serverless**
 
-  - Specifica il livello di prestazioni. I valori disponibili per l'obiettivo di servizio sono: `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, `GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`.
+  - Specifica le dimensioni di calcolo (obiettivo di servizio). I valori disponibili per l'obiettivo di servizio sono: `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, `GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`, `GP_S_Gen5_18`, `GP_S_Gen5_20`, `GP_S_Gen5_24`, `GP_S_Gen5_32`, `GP_S_Gen5_40`.
 
 - **Per database singoli nel livello di servizio Hyperscale**
 
-  - Specifica il livello di prestazioni. I valori disponibili per l'obiettivo di servizio sono: `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`.
+  - Specifica le dimensioni di calcolo (obiettivo di servizio). I valori disponibili per l'obiettivo di servizio sono: `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`.
 
 Per le descrizioni degli obiettivi di servizio e altre informazioni su dimensioni, edizioni e combinazioni di obiettivi di servizio, vedere [Azure SQL Database Service Tiers](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers) (Livelli di servizio del database SQL di Azure). Se SERVICE_OBJECTIVE non è supportato da EDITION, viene visualizzato un errore. Per cambiare il valore di SERVICE_OBJECTIVE da un livello a un altro (ad esempio da S1 a P1), è necessario modificare anche il valore EDITION. Per le descrizioni degli obiettivi di servizio e altre informazioni su dimensioni, edizioni e combinazioni di obiettivi di servizio, vedere [Azure SQL Database Service Tiers and Performance Levels](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) (Livelli di servizio e livelli di prestazioni del database SQL di Azure), [DTU resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) (Limiti delle risorse DTU) e [vCore resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) (Limiti delle risorse vCore). Il supporto per gli obiettivi di servizio PRS è stato rimosso. In caso di domande, usare l'alias di posta elettronica seguente: premium-rs@microsoft.com.
 
@@ -1180,7 +1190,7 @@ CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;
 
 ### <a name="creating-a-copy-of-a-database-on-another-server"></a>Creazione di una copia di un database in un altro server
 
-L'esempio seguente crea una copia del database db_original denominata db_copy nel livello di prestazioni P2 per un singolo database. Questo vale indipendentemente dal fatto che db_original si trovi in un pool elastico o in un livello di prestazioni per un singolo database.
+L'esempio seguente crea una copia del database db_original denominata db_copy nelle dimensioni di calcolo P2 (obiettivo di servizio) per un singolo database. Questo vale indipendentemente dal fatto che db_original si trovi in un pool elastico o nelle dimensioni di calcolo (obiettivo di servizio) per un singolo database.
 
 **Si applica a:** solo database singoli e in pool.
 
@@ -1189,7 +1199,7 @@ CREATE DATABASE db_copy
   AS COPY OF ozabzw7545.db_original ( SERVICE_OBJECTIVE = 'P2' );
 ```
 
-L'esempio seguente crea una copia del database db_original denominata db_copy in un pool elastico con nome ep1. Questo vale indipendentemente dal fatto che db_original si trovi in un pool elastico o in un livello di prestazioni per un singolo database. Se db_original si trova in un pool elastico con un nome diverso, db_copy viene comunque creato in ep1.
+L'esempio seguente crea una copia del database db_original denominata db_copy in un pool elastico con nome ep1. Questo vale indipendentemente dal fatto che db_original si trovi in un pool elastico o nelle dimensioni di calcolo (obiettivo di servizio) per un singolo database. Se db_original si trova in un pool elastico con un nome diverso, db_copy viene comunque creato in ep1.
 
 **Si applica a:** solo database singoli e in pool.
 
@@ -1341,7 +1351,7 @@ Dimensioni massime consentite per il database. Le dimensioni del database non po
 
 Dimensioni massime consentite per i dati rowstore nel database. Le dimensioni dei dati archiviati nelle tabelle rowstore, nel deltastore di un indice columnstore o in un indice non cluster in un indice columnstore cluster non possono superare MAXSIZE. I dati compressi in formato columnstore non hanno un limite di dimensioni e non sono vincolati dal valore MAXSIZE.
 
-SERVICE_OBJECTIVE specifica il livello di prestazioni. Per altre informazioni sugli obiettivi di servizio per Azure Synapse, vedere [Unità Data Warehouse (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
+SERVICE_OBJECTIVE specifica le dimensioni di calcolo (obiettivo di servizio). Per altre informazioni sugli obiettivi di servizio per Azure Synapse, vedere [Unità Data Warehouse (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## <a name="general-remarks"></a>Osservazioni generali
 

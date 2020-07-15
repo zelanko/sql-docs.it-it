@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9c2ec7cb59dea73647cee47a0f60032afdd5faff
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a0f885f15371460e79df287738fce96ac9ce2d7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634558"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766886"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Crea un indice XML in una tabella specificata. L'indice può essere creato prima dell'immissione dei dati nella tabella. È possibile creare indici XML per tabelle di un altro database specificando un nome di database completo.  
   
@@ -110,7 +110,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  FOR { VALUE | PATH | PROPERTY }  
  Specifica il tipo di indice XML secondario.  
   
- VALORE  
+ VALUE  
  Crea un indice XML secondario su colonne con le colonne chiave (valore di nodo e percorso) dell'indice XML primario.  
   
  PATH  
@@ -139,7 +139,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  PAD_INDEX **=** { ON | **OFF** }  
  Specifica il riempimento dell'indice. Il valore predefinito è OFF.  
   
- ATTIVA  
+ ON  
  La percentuale di spazio disponibile specificata da *fillfactor* viene applicata alle pagine di livello intermedio dell'indice.  
   
  OFF o *fillfactor* non è specificato  
@@ -163,7 +163,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  SORT_IN_TEMPDB **=** { ON | **OFF** }  
  Specifica se i risultati temporanei dell'ordinamento devono essere archiviati in **tempdb**. Il valore predefinito è OFF.  
   
- ATTIVA  
+ ON  
  I risultati intermedi dell'ordinamento usati per la compilazione dell'indice vengono archiviati in **tempdb**. In questo modo si può ridurre il tempo necessario per creare un indice se **tempdb** si trova in un set di dischi diverso rispetto al database utente. La quantità di spazio su disco utilizzata durante la compilazione dell'indice sarà tuttavia maggiore.  
   
  OFF  
@@ -177,7 +177,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  DROP_EXISTING **=** { ON | **OFF** }  
  Specifica che è necessario eliminare e quindi ricompilare l'indice XML denominato preesistente. Il valore predefinito è OFF.  
   
- ATTIVA  
+ ON  
  L'indice esistente deve essere eliminato e ricompilato. Il nome di indice specificato deve corrispondere a quello dell'indice esistente, mentre la definizione dell'indice può essere modificata. È possibile, ad esempio, specificare valori diversi per le colonne, il tipo di ordinamento, lo schema di partizione o le opzioni dell'indice.  
   
  OFF  
@@ -196,7 +196,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
  Specifica se sono consentiti blocchi di riga. Il valore predefinito è ON.  
   
- ATTIVA  
+ ON  
  I blocchi di riga sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando usare blocchi di riga.  
   
  OFF  
@@ -205,7 +205,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
  Specifica se sono consentiti blocchi a livello di pagina. Il valore predefinito è ON.  
   
- ATTIVA  
+ ON  
  I blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi a livello di pagina.  
   
  OFF  

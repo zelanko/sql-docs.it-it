@@ -1,5 +1,6 @@
 ---
 title: Configurare un'installazione Server Core
+description: Questo articolo illustra in dettaglio la configurazione di SQL Server in un'installazione Server Core, inclusi gli strumenti di risoluzione dei problemi.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ce38e546aa77e375d65a9f95f708718d283a53b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1791807519f8e7a6fb47c8ec838f7f9da112a3ed
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251600"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883263"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurare SQL Server in un'installazione Server Core
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Questo articolo descrive i dettagli sulla configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'installazione Server Core.  
 
@@ -109,7 +110,7 @@ Questi passaggi devono essere effettuati in un PC in cui viene eseguita l'edizio
   
 5. Fare doppio clic su **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestione configurazione**.  
   
-6. In **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestione configurazione** fare clic su **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Servizi**, fare clic con il pulsante destro del mouse su **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<nome istanza>), dove \<nome istanza> è il nome di un'istanza locale per cui si vuole abilitare Gruppi di disponibilità AlwaysOn, quindi scegliere Proprietà.  
+6. In **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager** fare clic su **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Servizi**, fare clic con il pulsante destro del mouse su **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<instance name>), dove \<instance name> è il nome di un'istanza server locale per la quale si vuole abilitare Gruppi di disponibilità AlwaysOn, e fare clic su Proprietà.  
   
 7. Selezionare la scheda **Disponibilità elevata AlwaysOn** .  
   
@@ -215,17 +216,17 @@ $Tcp
 |[Utilità dtexec](../../integration-services/packages/dtexec-utility.md)|Utilizzata per configurare ed eseguire un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[Utilità dtutil](../../integration-services/dtutil-utility.md)|Consente di gestire i pacchetti SSIS.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[Utilità osql](../../tools/osql-utility.md)|Consente di immettere istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] , procedure di sistema e file script al prompt dei comandi.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[Applicazione sqlagent90](../../tools/sqlagent90-application.md)|Utilizzata per avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent da un prompt dei comandi.|\<unità>:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*nome_istanza*>\MSSQL\Binn|  
+|[Applicazione sqlagent90](../../tools/sqlagent90-application.md)|Utilizzata per avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent da un prompt dei comandi.|\<drive>:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*nome_istanza*>\MSSQL\Binn|  
 |[Utilità sqlcmd](../../tools/sqlcmd-utility.md)|Consente di immettere istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] , procedure di sistema e file script al prompt dei comandi.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Utilità SQLdiag](../../tools/sqldiag-utility.md)|Utilizzata per raccogliere informazioni di diagnostica per il Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[Utilità sqlmaint](../../tools/sqlmaint-utility.md)|Utilizzata per eseguire i piani di manutenzione dei database creati nelle precedenti versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|\<unità>:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.MSSQLSERVER\MSSQL\Binn|  
+|[Utilità sqlmaint](../../tools/sqlmaint-utility.md)|Utilizzata per eseguire i piani di manutenzione dei database creati nelle precedenti versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|\<drive>:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.MSSQLSERVER\MSSQL\Binn|  
 |[Utilità sqlps](../../tools/sqlps-utility.md)|Consente di eseguire comandi e script di PowerShell, nonché di caricare e registrare il provider e i cmdlet di PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlservr](../../tools/sqlservr-application.md)|Consente di avviare e arrestare un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] dal prompt dei comandi per la risoluzione dei problemi.|\<unità>:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.MSSQLSERVER\MSSQL\Binn|  
+|[sqlservr](../../tools/sqlservr-application.md)|Consente di avviare e arrestare un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] dal prompt dei comandi per la risoluzione dei problemi.|\<drive>:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.MSSQLSERVER\MSSQL\Binn|  
   
 ##  <a name="use-troubleshooting-tools"></a><a name="BKMK_troubleshoot"></a> Utilizzare gli strumenti di risoluzione dei problemi  
  È possibile usare [SQLdiag Utility](../../tools/sqldiag-utility.md) per raccogliere i log e i file di dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e altri tipi di server, nonché per monitorare i server in un intervallo di tempo oppure risolvere problemi specifici dei server. SQLdiag è stata creata per velocizzare e semplificare la raccolta delle informazioni di diagnostica necessarie per il Servizio Supporto Tecnico Clienti Microsoft.  
   
- È possibile avviare l'utilità nel prompt dei comandi dell'amministratore in Server Core, usando la sintassi specificata nell'articolo [Utilità SQLdiag](../../tools/sqldiag-utility.md).  
+ È possibile avviare l'utilità nel prompt dei comandi dell'amministratore in Server Core, usando la sintassi specificata nell'articolo: [Utilità di SQLdiag](../../tools/sqldiag-utility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Installare SQL Server in Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   

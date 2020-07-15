@@ -1,5 +1,6 @@
 ---
 title: Mirroring e replica del database (SQL Server) | Microsoft Docs
+description: Informazioni su come usare il mirroring del database in combinazione con la replica per migliorare la disponibilità del database di pubblicazione in SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e957d0ae199375ffe13a756cc1a8b0872aa962e3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d54e8831218a64d854ae6b42955f59de8728518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68661439"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789692"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Mirroring e replica del database (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Per migliorare la disponibilità del database di pubblicazione è possibile utilizzare il mirroring del database in combinazione con la replica. Il mirroring del database coinvolge due copie di un unico database che in genere risiedono in computer diversi. In un momento dato solo una copia del database risulta disponibile per i client. Questa copia viene definita database principale. Gli aggiornamenti apportati dai client al database principale vengono applicati all'altra copia del database, definita database mirror. Il processo di mirroring prevede l'applicazione nel database mirror del log delle transazioni relativo a ogni operazione di inserimento, aggiornamento o eliminazione eseguita sul database principale.  
   
  Il failover della replica su un server mirror è supportato completamente per i database di pubblicazione e parzialmente per i database di sottoscrizione. Non è supportato l'utilizzo del database di distribuzione con il mirroring del database. Per informazioni sul recupero di un database di distribuzione o di un database di sottoscrizione senza che sia necessario riconfigurare la replica, vedere [Backup e ripristino di database replicati](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cbdf7d05c25aad00e084c15929cce857cb6614d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff824174a3c9f806267e5b2a6a58e056fb57d513
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822297"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643417"
 ---
 # <a name="configure-database-mirroring"></a>Configurare il mirroring del database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, usare [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
@@ -44,7 +44,7 @@ ms.locfileid: "74822297"
      Per ogni istanza del server in una sessione di mirroring del database è necessario un endpoint di mirroring del database. Se l'endpoint non esiste, è necessario crearlo.  
   
     > [!NOTE]  
-    >  La forma di autenticazione utilizzata per il mirroring del database da un'istanza del server corrisponde a una proprietà dell'endpoint del mirroring del database dell'istanza. Per il mirroring del database sono disponibili due tipi di sicurezza del trasporto: l'autenticazione di Windows o l'autenticazione basata sui certificati. Per altre informazioni, vedere [Sicurezza trasporto per il mirroring del database e i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md).  
+    >  La forma di autenticazione utilizzata per il mirroring del database da un'istanza del server corrisponde a una proprietà dell'endpoint del mirroring del database dell'istanza. Per il mirroring del database sono disponibili due tipi di sicurezza del trasporto: autenticazione di Windows o autenticazione basata su certificati. Per altre informazioni, vedere [Sicurezza trasporto per il mirroring del database e i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md).  
   
      Assicurarsi che in ogni server partner server sia disponibile un endpoint per il mirroring del database. Indipendentemente dal numero di sessioni di mirroring da supportare, nell'istanza del server è consentito un solo endpoint del mirroring del database. Se si desidera usare questa istanza del server esclusivamente per i partner di sessioni di mirroring del database, è possibile assegnare il ruolo di partner all'endpoint (ROLE **=** PARTNER). Se si desidera utilizzare questo server anche per il server di controllo del mirroring in altre sessioni di mirroring del database, assegnare il ruolo dell'endpoint come ALL.  
   
@@ -67,13 +67,13 @@ ms.locfileid: "74822297"
   
      ALTER DATABASE *\<database_name\>* SET PARTNER **=** _\<server\_network\_address\>_  
   
-     dove _\<database\_name\>_ è il nome del database di cui eseguire il mirroring (il nome è lo stesso per entrambi i partner) e _\<server\_network\_address\>_ è l'indirizzo di rete del server principale.  
+     dove _\<database\_name\>_ è il nome del database di cui eseguire il mirroring (tale nome è lo stesso per entrambi i partner) e _\<server\_network\_address\>_ è l'indirizzo di rete del server principale.  
   
      La sintassi per un indirizzo di rete del server presenta la seguente struttura:  
   
      TCP<b>\://</b> _\<system-address\>_ <b>\:</b> _\<port\>_  
   
-     dove _\<indirizzo-sistema>_ è una stringa che identifica in maniera univoca il computer di destinazione e _\<porta>_ è il numero di porta usato dall'endpoint del mirroring dell'istanza del server partner. Per altre informazioni, vedere [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
+     dove _\<system-address>_ è una stringa che identifica in maniera univoca il computer di destinazione e _\<port>_ è il numero di porta usato dall'endpoint del mirroring dell'istanza del server partner. Per altre informazioni, vedere [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
      Ad esempio, sull'istanza del server mirror, l'istruzione ALTER DATABASE seguente imposta il partner come istanza del server principale originale. Il nome del database è **AdventureWorks**, l'indirizzo del sistema è DBSERVER1, ovvero il nome del sistema partner, e il numero della porta usata dall'endpoint del mirroring del database del partner è 7022:  
   

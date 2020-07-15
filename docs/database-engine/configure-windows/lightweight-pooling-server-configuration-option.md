@@ -1,5 +1,6 @@
 ---
 title: Opzione di configurazione del server lightweight pooling | Microsoft Docs
+description: Informazioni sull'opzione "lightweight pooling". Scoprire come può offrire una migliore velocità effettiva negli ambienti di multielaborazione simmetrica con un cambio di contesto eccessivo.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 - reducing overhead
 - overhead [SQL Server]
 ms.assetid: 2dc11b61-d065-4126-8e00-acf40390f9fb
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5d18b51a3868534089c88dc1c951148711e0d0c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 13efd00252dac50756a243475816a5a2e4119110
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67998033"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772436"
 ---
 # <a name="lightweight-pooling-server-configuration-option"></a>Opzione di configurazione del server lightweight pooling
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   L'opzione **lightweight pooling** consente di ridurre l'overhead del sistema associato a un'eccessiva attività di scambio del contesto che talvolta si riscontra negli ambienti SMP (multiprocessori simmetrici, Symmetric Multiprocessor). Quando si verifica un'eccessiva attività di cambio del contesto, l'opzione lightweight pooling può assicurare una migliore velocità effettiva eseguendo direttamente il cambio del contesto e quindi riducendo le transizioni utente/kernel ring.  
   

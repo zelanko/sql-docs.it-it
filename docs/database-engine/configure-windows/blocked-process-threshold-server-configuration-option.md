@@ -1,5 +1,6 @@
 ---
 title: Opzione di configurazione del server blocked process threshold | Microsoft Docs
+description: Informazioni su come usare l'opzione blocked process threshold per specificare l'intervallo con cui SQL Server genera i report dei processi bloccati ed emette avvisi.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,19 +12,21 @@ helpviewer_keywords:
 - thresholds [SQL Server]
 - blocked process threshold option
 ms.assetid: 3d46d143-bc6a-4220-8b55-6baa37547c25
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 84a94dc6b1d4f2f6f0c921f81746eb64f41d2f07
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bdd5f7d01e7271609562fb7d42126746d6163de4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013109"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725242"
 ---
 # <a name="blocked-process-threshold-server-configuration-option"></a>Opzione di configurazione del server blocked process threshold
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  L'opzione **blocked process threshold** consente di specificare la soglia, in secondi, superata la quale vengono generati i report relativi ai processi bloccati. La soglia può essere compresa tra 0 e 86.400. Per impostazione predefinita, non vengono generati report relativi ai processi bloccati. L'evento non viene generato per le attività di sistema o le attività in attesa nelle risorse che non comportano la generazione di deadlock rilevabili.  
+ L'opzione **blocked process threshold** consente di specificare la soglia, in secondi, superata la quale vengono generati i report relativi ai processi bloccati. La soglia può essere compresa tra 5 e 86.400.  Il monitoraggio dei blocchi viene attivato solo ogni 5 secondi per rilevare le condizioni di blocco (cerca anche altre condizioni, ad esempio i deadlock). Se imposta il valore 1 per 'blocked process threshold', pertanto, non verrà rilevato alcun processo che è rimasto bloccato per 1 secondo. Il tempo minimo per il rilevamento di un processo bloccato è 5 secondi.
+ 
+ Per impostazione predefinita, non vengono generati report relativi ai processi bloccati. L'evento non viene generato per le attività di sistema o le attività in attesa nelle risorse che non comportano la generazione di deadlock rilevabili.  
   
  È possibile definire l'invio di un [avviso](../../ssms/agent/alerts.md) quando viene generato questo evento. È possibile, ad esempio, scegliere di inviare un avviso nel cercapersone dell'amministratore affinché questi esegua l'azione appropriata per gestire la situazione di blocco.  
   

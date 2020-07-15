@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d7629abf8e458ccbc2cb1b24624d0cbb91918830
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 50f114b01f72f48dd0ebd28123dfabdeef3a4b91
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625690"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896581"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>Istruzioni RESTORE - REWINDONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Riavvolge e chiude i dispositivi nastro specificati lasciati aperti dalle istruzioni BACKUP o RESTORE eseguite con l'opzione NOREWIND. Questo comando è supportato solo per i dispositivi nastro.  
   
@@ -64,7 +64,7 @@ FROM <backup_device> [ ,...n ]
  Nome logico, conforme alle regole per gli identificatori, dei dispositivi di backup creati tramite **sp_addumpdevice** da cui viene ripristinato il database. Se indicato in forma di variabile ( **@** _logical\_backup\_device\_name\_var_), il nome del dispositivo di backup può essere specificato come costante stringa ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) o come variabile con tipo di dati stringa di caratteri, ad eccezione dei tipi di dati **ntext** o **text**.  
   
  {DISK | TAPE } **=** { **'** _physical\_backup\_device\_name_ **'**  |  **@** _physical\_backup\_device\_name\_var_ }  
- Consente di ripristinare i backup dal dispositivo disco o nastro specificato. I tipi di dispositivo disco e nastro devono essere specificati con il nome effettivo del dispositivo, ad esempio il percorso completo e il nome del file: DISK = 'C:\Programmi\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' o TAPE = '\\\\.\TAPE0'. Se indicato come variabile ( **@** _physical\_backup\_device\_name\_var_), il nome del dispositivo può essere specificato come costante stringa ( **@** _physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*') oppure come variabile con tipo di dati stringa di caratteri, ad eccezione dei tipi di dati **ntext** o **text**.  
+ Consente di ripristinare i backup dal dispositivo disco o nastro specificato. I tipi di dispositivo disco e nastro devono essere specificati con il nome effettivo (ad esempio percorso completo e nome di file) del dispositivo: DISK = 'C:\Programmi\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' o TAPE = '\\\\.\TAPE0'. Se indicato come variabile ( **@** _physical\_backup\_device\_name\_var_), il nome del dispositivo può essere specificato come costante stringa ( **@** _physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*') oppure come variabile con tipo di dati stringa di caratteri, ad eccezione dei tipi di dati **ntext** o **text**.  
   
  Se si utilizza un server di rete avente un nome UNC (che deve contenere il nome del server), specificare un dispositivo disco. Per altre informazioni sull'uso dei nomi UNC, vedere [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -91,7 +91,7 @@ FROM <backup_device> [ ,...n ]
 ## <a name="general-remarks"></a>Osservazioni generali  
  RESTORE REWINDONLY è un'alternativa a RESTORE LABELONLY FROM TAPE = \<name> WITH REWIND. È possibile ottenere un elenco di unità nastro aperte dalla DMV [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  Qualsiasi utente può utilizzare RESTORE REWINDONLY.  

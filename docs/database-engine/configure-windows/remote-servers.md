@@ -1,5 +1,6 @@
 ---
 title: Server remoti | Microsoft Docs
+description: Informazioni sui server remoti che sono stati sostituiti con i server collegati in SQL Server. Visualizzare informazioni su funzionalità, configurazione e sicurezza.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - servers [SQL Server], remote
 - remote access option
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2b3c4937d87d166d87711389be7acd0c4ae0f8ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 393688d3ecb5d0e29a1b05aa6f00d7eec7ca7e22
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67938180"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651575"
 ---
 # <a name="remote-servers"></a>Server remoti
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   I server remoti sono supportati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esclusivamente per compatibilità con le versioni precedenti. È opportuno impostare le nuove applicazioni in modo che utilizzino i server collegati. Per altre informazioni, vedere [Server collegati &#40;Motore di database&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
  Tramite la configurazione con server remoto, un client connesso a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può eseguire una stored procedure su un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza stabilire un'ulteriore connessione. Il server al quale il client è connesso accetta la richiesta e la inoltra al server remoto per conto del client. Il server remoto elabora la richiesta e restituisce i risultati al server di origine, che a sua volta li passa al client. Quando si imposta la configurazione con server remoto è bene prestare attenzione alla modalità di impostazione della sicurezza.  
@@ -36,7 +37,7 @@ ms.locfileid: "67938180"
   
  Nella maggior parte dei casi non è necessario impostare opzioni di configurazione per i server remoti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] I valori predefiniti impostati sul computer locale e sul computer remoto consentono le connessioni ai server remoti.  
   
- Per ottenere il corretto funzionamento dell'accesso ai server remoti, è necessario che l'opzione di configurazione **remote access** sia impostata su 1 sia nel computer locale che nel computer remoto Questa è l'impostazione predefinita.  **remote access** controlla gli accessi dai server remoti. È possibile reimpostare questa opzione di configurazione usando la stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]sp_configure**di** oppure [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per impostare l'opzione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], nella pagina **Connessioni** della pagina Proprietà server selezionare l'opzione **Consenti connessioni remote al server**. Per accedere alla pagina **Connessioni** della finestra di dialogo Proprietà server, in Esplora oggetti fare clic con il pulsante destro del mouse sul nome del server e quindi scegliere **Proprietà**. Nella pagina **Proprietà server** fare clic sulla pagina **Connessioni** .  
+ Per ottenere il corretto funzionamento dell'accesso ai server remoti, è necessario che l'opzione di configurazione **remote access** sia impostata su 1 sia nel computer locale che nel computer remoto Questa è l'impostazione predefinita.  **remote access** controlla gli accessi dai server remoti. È possibile reimpostare questa opzione di configurazione usando la stored procedure **sp_configure** di [!INCLUDE[tsql](../../includes/tsql-md.md)] oppure [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per impostare l'opzione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], nella pagina **Connessioni** della pagina Proprietà server selezionare l'opzione **Consenti connessioni remote al server**. Per accedere alla pagina **Connessioni** della finestra di dialogo Proprietà server, in Esplora oggetti fare clic con il pulsante destro del mouse sul nome del server e quindi scegliere **Proprietà**. Nella pagina **Proprietà server** fare clic sulla pagina **Connessioni** .  
   
  Dal server locale è possibile disabilitare una configurazione con server remoto, impedendo l'accesso a tale server locale da parte degli utenti del server remoto a cui è abbinato.  
   

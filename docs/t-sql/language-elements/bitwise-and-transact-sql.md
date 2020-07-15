@@ -21,15 +21,15 @@ ms.assetid: 20275755-4fa7-47b1-a9be-ac85606d63b0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d572117c10673d86c71fb943a3d58cec423618c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bdef927107ea547345d767d088a89b808344d565
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943076"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004017"
 ---
 # <a name="amp-bitwise-and-transact-sql"></a>&amp; (AND bit per bit) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Esegue un'operazione con AND logico bit per bit tra due valori integer.  
   
@@ -58,17 +58,15 @@ expression & expression
 ## <a name="remarks"></a>Osservazioni  
  L'operatore **&** bit per bit esegue un'operazione con AND logico bit per bit tra due espressioni, considerando tutti i bit corrispondenti in entrambe le espressioni. I bit del risultato vengono impostati su 1 se, e solo se, il valore del bit in fase di risoluzione di entrambe le espressioni di input è uguale a 1. In caso contrario, il bit del risultato viene impostato su 0.  
   
- Se alle due espressioni viene applicato un tipo di dati Integer diverso, ad esempio se il tipo *expression* a sinistra è **smallint** e il tipo *expression* a destra è **int**, l'argomento del tipo di dati di livello inferiore viene convertito nel tipo di dati di livello superiore. In questo caso **smallint**_expression_ viene convertito in **int**.  
+ Se alle due espressioni viene applicato un tipo di dati Integer diverso, ad esempio se il tipo *expression* a sinistra è **smallint** e il tipo *expression* a destra è **int**, l'argomento del tipo di dati di livello inferiore viene convertito nel tipo di dati di livello superiore. In questo caso il tipo _expression_ **smallint** viene convertito in **int**.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata una tabella con il tipo di dati **int** per l'archiviazione dei valori e i due valori vengono inseriti in un'unica riga.  
   
 ```  
-CREATE TABLE bitwise  
-(   
-a_int_value int NOT NULL,  
-b_int_value int NOT NULL  
-);  
+CREATE TABLE bitwise (   
+  a_int_value INT NOT NULL,  
+  b_int_value INT NOT NULL);  
 GO  
 INSERT bitwise VALUES (170, 75);  
 GO  

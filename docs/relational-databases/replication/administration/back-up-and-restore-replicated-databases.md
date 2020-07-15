@@ -1,5 +1,6 @@
 ---
 title: Eseguire il backup e ripristino di database replicati | Microsoft Docs
+description: Esaminare informazioni generali e collegamenti a informazioni aggiuntive sulle strategie di backup e ripristino per ogni tipo di replica in SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,12 +27,12 @@ ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0be4de8a2496bfc1c6f08c0207a64d486c9ed9c5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: df0207225a5663675ac65c740a1dd5782775d96e
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286859"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808013"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>Backup e ripristino di database replicati
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

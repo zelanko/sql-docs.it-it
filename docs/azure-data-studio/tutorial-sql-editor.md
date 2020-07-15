@@ -1,23 +1,22 @@
 ---
 title: Usare l'editor Transact-SQL per creare oggetti di database
-titleSuffix: Azure Data Studio
 description: Questa esercitazione illustra le funzionalità principali di Azure Data Studio che semplificano l'uso di T-SQL.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: 65f078c16080f9ae54563acb5bd21c50d2036057
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8e5bd6cb986601baf97a02a3f167432e0c29b95
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957035"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726743"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---name-sos"></a>Esercitazione: Usare l'editor Transact-SQL per creare oggetti di database - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>Esercitazione: Usare l'editor Transact-SQL per creare oggetti di database - Azure Data Studio
 
 La creazione e l'esecuzione di query, stored procedure, script e così via sono le attività principali dei professionisti dei database. Questa esercitazione illustra le funzionalità principali dell'editor T-SQL per la creazione di oggetti di database.
 
@@ -60,7 +59,7 @@ Per questa esercitazione è necessario il database di SQL Server o il database S
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>Usare frammenti di codice T-SQL per creare stored procedure
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] in sono disponibili molti frammenti di codice T-SQL predefiniti per creare rapidamente istruzioni.
+Azure Data Studio offre molti frammenti di codice T-SQL predefiniti per la creazione rapida di istruzioni.
 
 
 1. Aprire un nuovo editor di query premendo **CTRL+N**.
@@ -114,7 +113,7 @@ La stored procedure viene creata e il riquadro **RISULTATI** mostra il cliente r
 
 ## <a name="use-peek-definition"></a>Usare Visualizza definizione 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] consente di vedere la definizione di un oggetto usando la funzionalità di visualizzazione definizione. Questa sezione crea una seconda stored procedure e usa la visualizzazione definizione per vedere le colonne presenti in una tabella e creare rapidamente il corpo della stored procedure.
+Azure Data Studio consente di visualizzare la definizione di un oggetto usando la funzionalità di visualizzazione definizione. Questa sezione crea una seconda stored procedure e usa la visualizzazione definizione per vedere le colonne presenti in una tabella e creare rapidamente il corpo della stored procedure.
 
 1. Aprire un nuovo editor premendo **CTRL+N**. 
 

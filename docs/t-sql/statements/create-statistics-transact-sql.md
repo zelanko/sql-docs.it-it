@@ -26,15 +26,15 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d8240965a5cc057e3c22e8a721a05542aca17db
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3a2d74236b0c58776a43f4f2a56f7f240de72d2c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632124"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002507"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Crea statistiche di ottimizzazione query per una o più colonne di una tabella o di una vista indicizzata o in una tabella esterna. Per la maggior parte delle query, Query Optimizer genera già le statistiche necessarie per un piano di query di alta qualità. In alcuni casi, è necessario creare statistiche aggiuntive con CREATE STATISTICS o modificare la progettazione delle query per ottenere prestazioni migliori di esecuzione delle query.  
   
@@ -243,6 +243,7 @@ MAXDOP = *max_degree_of_parallelism*
 * È possibile elencare fino a 64 colonne per ogni oggetto statistiche.
 * L'opzione MAXDOP non è compatibile con le opzioni STATS_STREAM, ROWCOUNT e PAGECOUNT.
 * L'opzione MAXDOP è limitata dall'impostazione MAX_DOP del gruppo di carico di lavoro di Resource Governor, se in uso.
+* CREATE e DROP STATISTICS su tabelle esterne non sono supportate nel database SQL di Azure.
   
 ## <a name="examples"></a>Esempi  
 
@@ -278,7 +279,7 @@ GO
 ```  
   
 ### <a name="d-create-statistics-on-an-external-table"></a>D. Creare statistiche per una tabella esterna  
- L'unica decisione necessaria quando si creano statistiche per una tabella esterna, oltre a specificare l'elenco delle colonne, è se creare le statistiche tramite campionamento delle righe o tramite l'analisi di tutte le righe.  
+ L'unica decisione necessaria quando si creano statistiche per una tabella esterna, oltre a specificare l'elenco delle colonne, è se creare le statistiche tramite campionamento delle righe o tramite l'analisi di tutte le righe. CREATE e DROP STATISTICS su tabelle esterne non sono supportate nel database SQL di Azure.
   
  Poiché per creare le statistiche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importa i dati dalla tabella esterna in una tabella temporanea, l'opzione di analisi completa richiede molto più tempo. Per una tabella di grandi dimensioni, il metodo predefinito, corrispondente al campionamento, è in genere sufficiente.  
   

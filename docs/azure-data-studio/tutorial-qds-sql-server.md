@@ -1,25 +1,24 @@
 ---
 title: Abilitare il widget di esempio per le cinque query più lente
-titleSuffix: Azure Data Studio
 description: Questa esercitazione illustra come abilitare il widget di esempio per le cinque query più lente nel dashboard del database.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
-ms.date: 08/02/2019
-ms.openlocfilehash: 3f940f0f18df676eae2ca101a2eccaa2be7169e2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.date: 06/01/2020
+ms.openlocfilehash: f4e8e76583a90ce64a9f99ef3c94875b2c1fc6dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957045"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774547"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Esercitazione: Aggiungere il widget di esempio per le *cinque query più lente* al dashboard del database
 
-Questa esercitazione illustra il processo di aggiunta di uno dei widget di esempio incorporati di [!INCLUDE[name-sos](../includes/name-sos-short.md)] al *dashboard del database* per visualizzare rapidamente le cinque query più lente di un database. Si apprenderà anche come visualizzare i dettagli sulle query lente e i piani di query usando le funzionalità di [!INCLUDE[name-sos](../includes/name-sos-short.md)]. In questa esercitazione verranno illustrate le procedure per:
+Questa esercitazione illustra il processo di aggiunta di uno dei widget di esempio incorporati di Azure Data Studio al *dashboard del database* per visualizzare rapidamente le cinque query più lente di un database. Si apprenderà anche come visualizzare i dettagli sulle query lente e i piani di query usando le funzionalità di Azure Data Studio. In questa esercitazione verranno illustrate le procedure per:
 
 > [!div class="checklist"]
 > * Abilitare Query Store in un database
@@ -27,7 +26,7 @@ Questa esercitazione illustra il processo di aggiunta di uno dei widget di esemp
 > * Visualizzare i dettagli sulle query più lente del database
 > * Visualizzare i piani di esecuzione query per le query lente
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] include diversi widget di informazioni dettagliate predefiniti. Questa esercitazione illustra come aggiungere il widget *query-data-store-db-insight*, ma i passaggi sono fondamentalmente gli stessi per aggiungere qualsiasi widget.
+Azure Data Studio include diversi widget di informazioni dettagliate predefiniti. Questa esercitazione illustra come aggiungere il widget *query-data-store-db-insight*, ma i passaggi sono fondamentalmente gli stessi per aggiungere qualsiasi widget.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -117,9 +116,7 @@ Per aggiungere il *widget per le query lente* al dashboard, modificare l'imposta
 
    ![Finestra di dialogo dei dettagli delle informazioni dettagliate](./media/tutorial-qds-sql-server/insight-details-dialog.png)
 
-3. Fare clic con il pulsante destro del mouse sulla cella a destra di **query_sql_txt** in **Dettagli elemento** e scegliere **Copia cella**.
-
-4. Chiudere il riquadro **Informazioni dettagliate**.
+3. Chiudere il riquadro **Informazioni dettagliate**.
 
 ## <a name="view-the-query-plan"></a>Visualizzare il piano di query
 

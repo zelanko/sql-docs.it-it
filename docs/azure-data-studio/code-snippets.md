@@ -1,27 +1,26 @@
 ---
 title: Creare frammenti di codice riutilizzabili
-titleSuffix: Azure Data Studio
 description: Informazioni su come creare e usare frammenti di codice SQL in Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 09a8432d10a70bb8530654d76bce874f735788a6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8e2c6883840513fb9f09f8dc58080d36402bdf9f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959706"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774695"
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-name-sos"></a>Creare e usare frammenti di codice per creare rapidamente script Transact-SQL (T-SQL) in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-azure-data-studio"></a>Creare e usare frammenti di codice per creare rapidamente script Transact-SQL (T-SQL) in Azure Data Studio
 
-In [!INCLUDE[name-sos](../includes/name-sos-short.md)] i frammenti di codice sono modelli che consentono di creare facilmente database e oggetti di database. 
+In Azure Data Studio i frammenti di codice sono modelli che consentono di creare facilmente database e oggetti di database. 
 
-In [!INCLUDE[name-sos](../includes/name-sos-short.md)] sono disponibili vari frammenti di codice T-SQL che consentono di generare rapidamente la sintassi corretta. 
+In Azure Data Studio sono disponibili vari frammenti di codice T-SQL che consentono di generare rapidamente la sintassi corretta. 
 
 È possibile creare anche frammenti di codice definiti dall'utente.
 
@@ -58,7 +57,7 @@ In [!INCLUDE[name-sos](../includes/name-sos-short.md)] sono disponibili vari fra
 1. Selezionare **SQL**:
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] eredita la funzionalità dei frammenti di codice da Visual Studio Code ed è per questo motivo che in questo articolo viene analizzato nello specifico l'uso di frammenti di codice SQL. Per informazioni più dettagliate, vedere [Creazione di frammenti di codice personalizzati](https://code.visualstudio.com/docs/editor/userdefinedsnippets) nella documentazione di Visual Studio Code. 
+   > Azure Data Studio eredita la funzionalità dei frammenti di codice da Visual Studio Code ed è per questo motivo che questo articolo analizza nello specifico l'uso di frammenti di codice SQL. Per informazioni più dettagliate, vedere [Creazione di frammenti di codice personalizzati](https://code.visualstudio.com/docs/editor/userdefinedsnippets) nella documentazione di Visual Studio Code. 
 
    ![sostituzione di un campo del modello](media/code-snippets/select-sql.png)
 

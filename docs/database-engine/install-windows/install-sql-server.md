@@ -1,6 +1,6 @@
 ---
 title: Guida all'installazione di SQL Server
-ms.description: 'An index of content that helps you install SQL Server and associated components through various options such as the installation wizard, command prompt, or sysprep. '
+description: Indice di contenuto che consente di installare SQL Server e i componenti associati usando opzioni quali l'installazione guidata, il prompt dei comandi e sysprep.
 ms.custom: ''
 ms.date: 11/14/2019
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 58773f430fc61a7817d7d3ee7c9e7b597716c438
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e11f2aa1a553933882e844dbf7c9452183c63c28
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79434178"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900351"
 ---
 # <a name="sql-server-installation-guide"></a>Guida all'installazione di SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Questo articolo è un indice dei contenuti che forniscono indicazioni per l'installazione di SQL Server in Windows.
 

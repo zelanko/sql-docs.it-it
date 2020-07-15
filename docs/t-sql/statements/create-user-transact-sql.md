@@ -29,15 +29,15 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 20b7649fe184382fe7a5b1a5f38b28e6b0982284
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b2790ce463d7ff6114bf96726d899cbe5d65f01f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635991"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004737"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Aggiunge un utente al database corrente. Di seguito sono elencati i 12 tipi di utenti con un esempio della sintassi di base:  
   
@@ -176,7 +176,7 @@ CREATE USER user_name
  Specifica il nome con cui viene identificato l'utente all'interno del database. *user_name* è un **sysname**. Non può superare la lunghezza di 128 caratteri. Quando si crea un utente basato su un'entità di Windows, il nome dell'entità di Windows diventa il nome utente, a meno che non ne sia stato specificato un altro.  
   
  LOGIN *login_name*  
- Specifica l'account di accesso per cui viene creato l'utente del database. *login_name* deve essere un account di accesso valido nel server. Può essere un account di accesso basato su un'entità di Windows (utente o gruppo) o un account di accesso che usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando si accede al database tramite questo account di accesso di SQL Server, si acquisisce il nome e l'ID dell'utente del database che si sta creando. Quando si crea un account di accesso con mapping da un'entità di sicurezza di Windows, usare il formato **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** . Per alcuni esempi, vedere [Riepilogo della sintassi](#SyntaxSummary).  
+ Specifica l'account di accesso per cui viene creato l'utente del database. *login_name* deve essere un account di accesso valido nel server. Può essere un account di accesso basato su un'entità di Windows (utente o gruppo) o un account di accesso che usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando si accede al database tramite questo account di accesso di SQL Server, si acquisisce il nome e l'ID dell'utente del database che si sta creando. Quando si crea un account di accesso con mapping da un'entità di Windows, usare il formato **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** . Per alcuni esempi, vedere [Riepilogo della sintassi](#SyntaxSummary).  
   
  Se l'istruzione CREATE USER è l'unica istruzione in un batch SQL, il database SQL di Azure supporta la clausola WITH LOGIN. Se l'istruzione CREATE USER non è l'unica istruzione in un batch SQL o viene eseguita in SQL dinamico, la clausola WITH LOGIN non è supportata.  
   
@@ -184,7 +184,7 @@ CREATE USER user_name
  Specifica il primo schema in cui verrà eseguita una ricerca nel server durante la risoluzione dei nomi di oggetti per l'utente del database.  
   
  '*windows_principal*'  
- Specifica l'entità di Windows per la quale viene creato l'utente del database. The *windows_principal* può essere un utente o un gruppo di Windows. L'utente verrà creato anche se *windows_principal* non ha un account di accesso. Quando si effettua la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se *windows_principal* non ha un account di accesso, l'entità di sicurezza di Windows deve eseguire l'autenticazione a livello del [!INCLUDE[ssDE](../../includes/ssde-md.md)] tramite l'appartenenza a un gruppo di Windows che abbia un account di accesso. In alternativa, la stringa di connessione deve specificare il database indipendente come catalogo iniziale. Quando si crea un utente da un'entità di sicurezza di Windows, usare il formato **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** . Per alcuni esempi, vedere [Riepilogo della sintassi](#SyntaxSummary). I nomi degli utenti basati su utenti di Active Directory devono avere un numero di caratteri inferiore a 21.
+ Specifica l'entità di Windows per la quale viene creato l'utente del database. The *windows_principal* può essere un utente o un gruppo di Windows. L'utente verrà creato anche se *windows_principal* non ha un account di accesso. Quando si effettua la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se *windows_principal* non ha un account di accesso, l'entità di sicurezza di Windows deve eseguire l'autenticazione a livello del [!INCLUDE[ssDE](../../includes/ssde-md.md)] tramite l'appartenenza a un gruppo di Windows che abbia un account di accesso. In alternativa, la stringa di connessione deve specificare il database indipendente come catalogo iniziale. Quando si crea un utente da un'entità di Windows, usare il formato **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** . Per alcuni esempi, vedere [Riepilogo della sintassi](#SyntaxSummary). I nomi degli utenti basati su utenti di Active Directory devono avere un numero di caratteri inferiore a 21.
   
  '*Azure_Active_Directory_principal*'  
  **Si applica a**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
@@ -328,7 +328,7 @@ Quando si crea l'utente nel database dell'istanza gestita di database SQL, login
 -   `CREATE USER KEYUSER FOR ASYMMETRIC KEY SecureKey`  
 -   `CREATE USER KEYUSER FROM ASYMMETRIC KEY SecureKey`  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  Quando si crea un utente si concede l'accesso a un database, ma non si concede automaticamente alcun accesso agli oggetti contenuti in un database. Dopo avere creato un utente, le azioni comuni consistono nell'aggiungere utenti a ruoli del database con autorizzazione ad accedere a oggetti del database o nel concedere autorizzazioni all'utente per gli oggetti. Per informazioni sulla progettazione di un sistema di autorizzazioni, vedere [Introduzione alle autorizzazioni del motore di database](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
 ### <a name="special-considerations-for-contained-databases"></a>Considerazioni speciali relative ai database indipendenti  

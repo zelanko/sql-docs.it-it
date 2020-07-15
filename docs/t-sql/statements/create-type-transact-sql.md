@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6bbe3a4d13aeafe7afeed9263d3a6c2d187a4b32
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 83b5031ac62e79005b4c6fb2d6d3aaf76607444b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634616"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766923"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Crea un tipo di dati alias o un tipo definito dall'utente (UDT) nel database corrente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. L'implementazione di un tipo di dati alias è basata su un tipo di sistema nativo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I tipi definiti dall'utente vengono invece implementati tramite una classe di un assembly CLR (Common Language Runtime) di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Per associare un tipo definito dall'utente alla relativa implementazione, è necessario prima registrare l'assembly CLR che contiene l'implementazione del tipo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
   

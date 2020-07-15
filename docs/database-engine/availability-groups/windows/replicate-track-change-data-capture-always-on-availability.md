@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5f1920374f62f98eed81323eca05ce1e45e66fc6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fbc22ea4b3673d6ed4d0d4ee581da8fadb473fb8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433758"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888048"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replica, rilevamento modifiche e Change Data Capture per i gruppi di disponibilità Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le funzionalità di replica, di rilevamento delle modifiche (CT, Change Tracking) e Change Data Capture (CDC) sono supportate in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] vengono fornite disponibilità elevata e funzionalità aggiuntive di recupero database.  
   
@@ -190,15 +190,15 @@ Se Change Data Capture deve essere disabilitato in un database che fa parte di u
 ##  <a name="prerequisites-restrictions-and-considerations-for-using-replication"></a><a name="Prereqs"></a> Prerequisiti, restrizioni e considerazioni per l'utilizzo della replica  
  In questa sezione vengono descritte le considerazioni per la distribuzione della replica con la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], inclusi prerequisiti, restrizioni e suggerimenti.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Prerequisiti  
   
 -   Quando si usano la replica transazionale e il database di pubblicazione si trova in un gruppo di disponibilità, sia nel server di pubblicazione che nel database di distribuzione deve essere in esecuzione almeno [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Il sottoscrittore può invece usare un livello inferiore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Quando si usano la replica di tipo merge e il database di pubblicazione è in un gruppo di disponibilità:  
   
-    -   Sottoscrizione push: sia nel server di pubblicazione che nel server di distribuzione deve essere in esecuzione [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+    -   Sottoscrizione push: sia nel server di pubblicazione che nel database di distribuzione deve essere in esecuzione almeno [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
-    -   Sottoscrizione pull: il server di pubblicazione, il server di distribuzione e i database sottoscrittore devono essere presenti almeno in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Ciò è dovuto al fatto che l'agente di merge nel sottoscrittore deve comprendere il modo in cui in un gruppo di disponibilità può essere eseguito il failover sul secondario.  
+    -   Sottoscrizione pull: nel server di pubblicazione e nei database di distribuzione e sottoscrittore deve essere in esecuzione almeno [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Ciò è dovuto al fatto che l'agente di merge nel sottoscrittore deve comprendere il modo in cui in un gruppo di disponibilità può essere eseguito il failover sul secondario.  
   
 -   Le istanze del server di pubblicazione soddisfano tutti i prerequisiti richiesti per fare parte di un gruppo di disponibilità AlwaysOn. Per altre informazioni, vedere [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
@@ -217,11 +217,15 @@ Se Change Data Capture deve essere disabilitato in un database che fa parte di u
   
 ### <a name="considerations"></a>Considerazioni  
   
--   Non è supportato l'utilizzo del database di distribuzione con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] o il mirroring del database. La configurazione della replica è associata all'istanza di SQL Server in cui è configurato il database di distribuzione; pertanto non è possibile eseguire il mirroring o la replica del database di distribuzione. Per fornire la disponibilità elevata per il database di distribuzione, usare un cluster di failover di SQL Server. Per altre informazioni, vedere [Istanze del cluster di failover Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   Il database di distribuzione non è supportato per l'uso con il mirroring del database, ma è supportato con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con determinate limitazioni. Vedere [Configurare il gruppo di disponibilità di distribuzione](../../../relational-databases/replication/configure-distribution-availability-group.md#limitations-or-exclusions). La configurazione della replica è associata all'istanza di SQL Server in cui è configurato il database di distribuzione; pertanto non è possibile eseguire il mirroring o la replica del database di distribuzione. Per fornire la disponibilità elevata per il database di distribuzione, è anche possibile usare un cluster di failover di SQL Server. Per altre informazioni, vedere [Istanze del cluster di failover Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 -   Il failover del Sottoscrittore in un database secondario, se supportato, è una procedura manuale per Sottoscrittori della replica di tipo merge. La procedura è essenzialmente identica al metodo usato per il failover a un database sottoscrittore con mirroring. I Sottoscrittori della replica transazionale non necessitano di una gestione speciale durante la partecipazione a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. È necessario che nei Sottoscrittori sia in esecuzione [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o versione successiva perché possano fare parte di un gruppo di disponibilità.  Per altre informazioni, vedere [Sottoscrittori della replica e gruppi di disponibilità AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md).
   
 -   I metadati e gli oggetti esterni al database, ad esempio account di accesso, processi e server collegati, non vengono propagati alle repliche secondarie. Se i metadati e gli oggetti sono necessari nel nuovo database primario dopo il failover, è necessario copiarli manualmente. Per altre informazioni, vedere [Gestione di account di accesso e processi per i database di un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md).  
+
+### <a name="distributed-availability-groups"></a>Gruppi di disponibilità distribuiti
+
+Il server di pubblicazione o il database di distribuzione in un gruppo di disponibilità non può essere configurato come parte di un gruppo di disponibilità distribuito. Il database del server di pubblicazione in un gruppo di disponibilità e il database di distribuzione in un gruppo di disponibilità richiedono entrambi un endpoint listener per la configurazione e l'utilizzo appropriati. Tuttavia, non è possibile configurare un endpoint listener per un gruppo di disponibilità distribuito.
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Attività correlate  
  **Replica**  
@@ -252,7 +256,7 @@ Se Change Data Capture deve essere disabilitato in un database che fa parte di u
  [Sottoscrittori della replica e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Prerequisiti, restrizioni e raccomandazioni per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Gruppi di disponibilità AlwaysOn: interoperabilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Gruppi di disponibilità Always On: Interoperabilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Istanze del cluster di failover AlwaysOn &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [Informazioni su Change Data Capture &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Informazioni sul rilevamento delle modifiche &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   

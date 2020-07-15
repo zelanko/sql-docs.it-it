@@ -1,5 +1,6 @@
 ---
 title: Creazione di un utente di database | Microsoft Docs
+description: Informazioni su come creare i tipi più comuni di utenti di database usando SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql
@@ -24,15 +25,15 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f74a4cb83db387bf0251a3dc6be7c07c06d8dce2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981934"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005698"
 ---
 # <a name="create-a-database-user"></a>Creazione di un utente di database
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Questo argomento descrive come creare i tipi più comuni di utenti di database. Esistono undici tipi di utenti. L'elenco completo è disponibile nell'argomento [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Tutte le varianti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supportano gli utenti di database, ma non necessariamente tutti i tipi di utenti.  
   
@@ -115,7 +116,7 @@ ms.locfileid: "73981934"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opzioni aggiuntive  
- La finestra di dialogo **Utente database - Nuovo** presenta diverse opzioni anche in altre quattro pagine: **Schemi di proprietà**, **Appartenenza**, **Entità a protezione diretta** e **Proprietà estese**.  
+ Nella finestra di dialogo **Utente di database - Nuovo** sono disponibili opzioni anche in altre quattro pagine: **Schemi di proprietà**, **Appartenenza**, **Entità a protezione diretta** e **Proprietà estese**.  
   
 -   Nella pagina **Schemi di proprietà** sono elencati tutti i possibili schemi che possono essere di proprietà del nuovo utente del database. Per aggiungere schemi o rimuoverli da un utente del database, in **Schemi di proprietà di questo utente**selezionare o deselezionare le caselle di controllo accanto agli schemi.  
   

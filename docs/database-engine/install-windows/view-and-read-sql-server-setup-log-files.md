@@ -1,5 +1,6 @@
 ---
 title: Visualizzare e leggere i file di log del programma di installazione di SQL Server | Microsoft Docs
+description: Questo articolo descrive i file di log creati dal programma di installazione di SQL Server. I file di log si trovano in una cartella contrassegnata da data e ora.
 ms.custom: ''
 ms.date: 09/09/2016
 ms.prod: sql
@@ -18,16 +19,16 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b3ddfa9ee8866086fa16a384efb63a5392394d3a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: edeb881f5d589e0a2e09848cc4b4c7f7c958f9ba
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76929129"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900173"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Visualizzare e leggere i file di log del programma di installazione di SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Il programma di installazione di SQL Server crea i file di log in una cartella con data di validità e timestamp entro **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log** per impostazione predefinita, in cui *nnn* sono numeri che corrispondono alla versione di SQL che viene installata. Il formato del nome della cartella dei log con indicazione di data e ora è AAAAMMGG_hhmmss. Se il programma di installazione viene eseguito in modalità automatica i file di log vengono creati nel percorso % temp%\sqlsetup*.log. Tutti i file inclusi nella cartella di log vengono archiviati nel file Log\*.cab nella rispettiva cartella di log.  
 
@@ -37,7 +38,7 @@ Il programma di installazione di SQL Server crea i file di log in una cartella c
    | **Summary_\<MachineName>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\AAAAMMGG_hhmmss |
    | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\AAAAMMGG_hhmmss|
    | **Datastore** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\AAAAMMDD_hhmmss\Datastore
-   | **File di log MSI** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\AAAAMMDD_hhmmss\\\<Name>.log|
+   | **File di log MSI** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\\\<Name>.log|
    | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\AAAAMMGG_hhmmss |
    | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\AAAAMMGG_hhmmss |
    | **Per le installazioni automatiche** | %temp%\sqlsetup*.log |
@@ -82,7 +83,7 @@ Nelle sezioni seguenti vengono illustrati i file di log del programma di install
 
 
   >[!NOTE]
-  > Quando si applicano patch possono essere presenti più sottocartelle (una per ogni istanza di destinazione delle patch e una per le funzionalità condivise) che contengono set di file simili (ad esempio %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<AAAAMMGG_HHMM>\MSSQLSERVER). 
+  > Quando si applicano patch possono essere presenti più sottocartelle (una per ogni istanza di destinazione delle patch e una per le funzionalità condivise) che contengono set di file simili (ad esempio %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM>\MSSQLSERVER). 
   
 ### <a name="location"></a>Location  
  Il file summary.txt si trova nel percorso %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\.
@@ -115,9 +116,9 @@ Nelle sezioni seguenti vengono illustrati i file di log del programma di install
   
  Tipi di file di log MSI:
   
--   \<Funzionalità>_\<Architettura>\_\<Interazione>.log   
--   \<Funzionalità>_\<Architettura>\_\<Linguaggio>\_\<Interazione>.log   
--   \<Funzionalità>_\<Architettura>\_\<Interazione>\_\<flusso di lavoro>.log  
+-   \<Feature>_\<Architecture>\_\<Interaction>.log   
+-   \<Feature>_\<Architecture>\_\<Language>\_\<Interaction>.log   
+-   \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
   
 ### <a name="location"></a>Location  
  I file di log MSI si trovano nel percorso %Programmi%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log.  

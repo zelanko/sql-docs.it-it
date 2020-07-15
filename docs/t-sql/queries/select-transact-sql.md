@@ -25,15 +25,15 @@ ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed3a11090f3430dee630eddb97cdcfa2be7380d7
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: db5b1cc185c4fc3cb4c932867851703d8c134a14
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634224"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999739"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Recupera righe dal database e consente la selezione di una o più righe o colonne da una o più tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La sintassi completa dell'istruzione SELECT è complessa, ma le clausole principali sono le seguenti:  
   
@@ -124,7 +124,7 @@ SELECT <select_criteria>
  Nei passaggi seguenti viene mostrato l'ordine di elaborazione logica, o ordine di associazione, per un'istruzione SELECT. Questo ordine consente di determinare il momento in cui gli oggetti definiti in un passaggio vengono resi disponibili per le clausole nei passaggi successivi. Ad esempio, se Query Processor può essere associato alle tabelle o alle viste definite nella clausola FROM, ovvero gli viene consentito l'accesso, questi oggetti e le relative colonne vengono resi disponibili in tutti i passaggi successivi. Invece, poiché la clausola SELECT si trova al passaggio 8, tramite le clausole precedenti non è possibile fare riferimento a qualsiasi alias di colonna o colonna derivata definito in tale clausola. Tuttavia, è possibile farvi riferimento tramite clausole successive, ad esempio ORDER BY. L'esecuzione fisica effettiva dell'istruzione viene determinata da Query Processor e l'ordine potrebbe essere diverso rispetto a questo elenco.  
   
 1.  FROM  
-2.  ATTIVA  
+2.  ON  
 3.  JOIN  
 4.  WHERE  
 5.  GROUP BY  
@@ -133,7 +133,7 @@ SELECT <select_criteria>
 8.  SELECT  
 9. DISTINCT  
 10. ORDER BY  
-11. Torna all'inizio  
+11. TOP  
 
 > [!WARNING]
 > La sequenza precedente si rivela in genere esatta. Tuttavia, esistono casi non comuni in cui la sequenza può variare.

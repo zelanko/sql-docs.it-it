@@ -1,5 +1,6 @@
 ---
 title: Sicurezza a livello di riga | Microsoft Docs
+description: Informazioni su come la sicurezza a livello di riga usa l'appartenenza a gruppi o il contesto di esecuzione per controllare l'accesso alle righe in una tabella di database in SQL Server.
 ms.custom: ''
 ms.date: 05/14/2019
 ms.prod: sql
@@ -17,16 +18,16 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5573bcc6762e8a03651ba1573bc6254aaa2c80a0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78288979"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000535"
 ---
 # <a name="row-level-security"></a>Sicurezza a livello di riga
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   ![Rappresentazione grafica della sicurezza a livello di riga](../../relational-databases/security/media/row-level-security-graphic.png "Rappresentazione grafica della sicurezza a livello di riga")  
   
@@ -41,7 +42,7 @@ Implementare la sicurezza a livello di riga tramite l'istruzione [CREATE SECURIT
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([fare clic qui per ottenerlo](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
   
 > [!NOTE]
-> Azure SQL Data Warehouse supporta solo predicati di filtro. I predicati di blocco non sono attualmente supportati in Azure SQL Data Warehouse.
+> Azure Synapse supporta solo predicati di filtro. I predicati di blocco non sono attualmente supportati in Azure Synapse.
 
 ## <a name="description"></a><a name="Description"></a> Descrizione
 
@@ -159,7 +160,7 @@ La sicurezza a livello di riga supporta due tipi di predicati di sicurezza.
   
 - **Filestream:** la sicurezza a livello di riga non è compatibile con Filestream.  
   
-- **PolyBase:** la sicurezza a livello di riga è supportata solo con tabelle esterne Polybase per Azure SQL Data Warehouse.
+- **PolyBase:** la sicurezza a livello di riga è supportata solo con tabelle esterne Polybase per Azure Synapse.
 
 - **Tabelle ottimizzate per la memoria:** la funzione inline con valori di tabella usata come predicato di sicurezza in una tabella ottimizzata per la memoria deve essere definita con l'opzione `WITH NATIVE_COMPILATION`. Con questa opzione le funzionalità del linguaggio non supportate dalle tabelle ottimizzate per la memoria verranno escluse e verrà generato l'errore appropriato al momento della creazione. Per altre informazioni, vedere la sezione relativa alla **sicurezza a livello di riga nelle tabelle con ottimizzazione per la memoria** in [Introduzione alle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -185,8 +186,6 @@ La sicurezza a livello di riga supporta due tipi di predicati di sicurezza.
   
  Creare tre account utente per mostrare le diverse capacità di accesso.  
 
-> [!NOTE]
-> Azure SQL Data Warehouse non supporta EXECUTE AS USER, pertanto è necessario eseguire CREATE LOGIN per ogni utente in anticipo. In un secondo momento si accede con le credenziali dell'utente appropriato per eseguire il test di questo comportamento.
 
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
@@ -273,10 +272,6 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;
 REVERT;  
 ```
-
-> [!NOTE]
-> Azure SQL Data Warehouse non supporta l'istruzione EXECUTE AS USER, pertanto accedere con le credenziali utente appropriate per eseguire il test del comportamento precedente.
-
 Il gestore dovrebbe visualizzare tutte e sei le righe. Gli utenti Sales1 e Sales2 dovrebbero visualizzare solo le proprie vendite.
 
 Modificare i criteri di sicurezza per disabilitarli.
@@ -301,7 +296,7 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
-### <a name="b-scenarios-for-using-row-level-security-on-an-azure-sql-data-warehouse-external-table"></a><a name="external"></a> B. Scenari per l'uso della sicurezza a livello di riga in una tabella esterna di Azure SQL Data Warehouse
+### <a name="b-scenarios-for-using-row-level-security-on-an-azure-synapse-external-table"></a><a name="external"></a> B. Scenari per l'uso della sicurezza a livello di riga in una tabella esterna di Azure Synapse
 
 Questo breve esempio crea tre utenti e una tabella esterna con sei righe. Vengono quindi creati una funzione inline con valori di tabella e criteri di sicurezza per la tabella esterna. L'esempio mostra in che modo le istruzioni Select vengono filtrate per i diversi utenti.
 
@@ -345,7 +340,7 @@ INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 SELECT * FROM Sales;
 ```
 
-Creare una tabella esterna di Azure SQL Data Warehouse dalla tabella Sales creata.
+Creare una tabella esterna di Azure Synapse dalla tabella Sales creata.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'somepassword';
@@ -394,7 +389,7 @@ WITH (STATE = OFF);
 
 Ora gli utenti Sales1 e Sales2 possono visualizzare tutte e sei le righe.
 
-Connettersi al database SQL Data Warehouse per pulire le risorse
+Connettersi al database Azure Synapse per pulire le risorse
 
 ```sql
 DROP USER Sales1;
@@ -421,7 +416,7 @@ DROP LOGIN Manager;
 ### <a name="c-scenario-for-users-who-connect-to-the-database-through-a-middle-tier-application"></a><a name="MidTier"></a> C. Scenari per gli utenti che si connettono al database tramite un'applicazione di livello intermedio
 
 > [!NOTE]
-> In questo esempio, la funzionalità di predicati di blocco non è attualmente supportata per Azure SQL Data Warehouse, quindi l'inserimento di righe per l'ID utente errato non viene bloccato con Azure SQL Data Warehouse.
+> In questo esempio poiché la funzionalità di predicati di blocco non è attualmente supportata per Azure Synapse, l'inserimento di righe per l'ID utente errato non viene bloccato con Azure Synapse.
 
 Questo esempio mostra in che modo un'applicazione di livello intermedio può implementare il filtro della connessione, in cui gli utenti dell'applicazione (o i tenant) condividono lo stesso utente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (l'applicazione). L'applicazione imposta l'ID utente dell'applicazione corrente in [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) dopo la connessione al database, quindi i criteri di sicurezza filtrano in modo trasparente le righe che non devono essere visibili a tale ID e impediscono all'utente di inserire righe per l'ID utente errato. Non sono necessarie altre modifiche all'applicazione.  
   

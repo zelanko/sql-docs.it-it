@@ -1,5 +1,6 @@
 ---
 title: Apportare modifiche allo schema nei database di pubblicazione | Microsoft Docs
+description: La replica supporta una vasta gamma di modifiche dello schema negli oggetti pubblicati. Informazioni sulle modifiche dello schema propagate per impostazione predefinita a tutti i Sottoscrittori di SQL Server.
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 79f0e12422f299a78e28c5ca21c370d7a973771a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e0da92258088cde7dec9d4981e270e87e09f67a
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287686"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807622"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Modifiche allo schema nei database di pubblicazione
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

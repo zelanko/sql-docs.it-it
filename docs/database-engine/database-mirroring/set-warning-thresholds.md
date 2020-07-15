@@ -1,5 +1,6 @@
 ---
 title: Imposta valori soglia avvisi | Microsoft Docs
+description: Informazioni su come usare la finestra di dialogo Imposta valori di soglia avvisi per abilitare e configurare soglie di avviso per i database con mirroring selezionati in SQL Server.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13b4922d1fba2d41878217cadc8d47d45928b4ef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d94a2c804f67657581f5ead059e6951f410e05f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025208"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789639"
 ---
 # <a name="set-warning-thresholds"></a>Imposta valori soglia avvisi
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Usare questa finestra di dialogo per abilitare e configurare una o più soglie degli avvisi per il database selezionato nell'albero di navigazione della finestra di dialogo **Monitoraggio mirroring del database** .  
   
  La finestra di dialogo tenta di connettersi a entrambe le istanze del server. Queste connessioni vengono stabilite in modo asincrono. Nella finestra di dialogo viene visualizzato lo stato di connessione di ogni partner. Se il partner non è connesso, fare clic su **Connetti**.  
@@ -73,10 +74,10 @@ ms.locfileid: "68025208"
 |**Avvisa se il tempo di memorizzazione della transazione non inviata meno recente è superiore alla soglia**|La soglia indica il numero di minuti delle transazioni non ancora inviate dalla coda di invio all'istanza del server mirror. Questo valore consente di misurare la potenziale perdita di dati in termini di tempo.|  
 |**Avvisa se l'overhead di commit del mirror supera la soglia**|La soglia indica il numero di millisecondi di ritardo per transazione (rilevante solo in modalità a protezione elevata). Questo ritardo rappresenta la quantità di overhead generato mentre l'istanza del server principale è in attesa che l'istanza del server mirror scriva il record di log della transazione nella coda di rollforward.|  
   
- **Abilitato su '** *\<istanza server>* **'**  
+ **Abilitato su '** *\<server instance>* **'**  
  Una casella di controllo deselezionata indica che l'avviso è attualmente disabilitato sull'istanza del server. Per abilitare un avviso, selezionare la relativa casella di controllo.  
   
- **Valore soglia su '** *\<<istanza server>* **'**  
+ **Valore soglia su '** *\<server instance>* **'**  
  Quando un avviso è abilitato, impostare la soglia nella parte sinistra della colonna. Un evento si verifica se la soglia specificata viene raggiunta all'aggiornamento della tabella dello stato. Se si disabilita una soglia dopo aver configurato un valore, il valore configurato rimane nel campo e verrà utilizzato in caso di riabilitazione dell'avviso.  
   
  Quando un avviso non è abilitato, il campo non è attivo.  

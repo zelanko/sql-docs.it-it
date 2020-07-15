@@ -31,15 +31,15 @@ helpviewer_keywords:
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4352a1b050bc27be18d490c8790f793f57e1839
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7a8290a80438b41a201f268c7388c06d2d7df930
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632185"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902290"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crea gli endpoint e ne definisce le proprietà, inclusi i metodi disponibili alle applicazioni client. Per altre informazioni relative alle autorizzazioni, vedere [GRANT - autorizzazioni per endpoint &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "81632185"
   
      In questa parte viene definito il payload supportato dall'endpoint. I tipi di payload supportati sono [!INCLUDE[tsql](../../includes/tsql-md.md)], SERVICE BROKER e DATABASE MIRRORING. In questa parte è inoltre possibile includere informazioni specifiche della lingua.  
   
-> **Nota:** i servizi Web XML nativi (endpoint SOAP/HTTP) sono stati eliminati in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+> **NOTA** I servizi Web XML nativi (endpoint SOAP/HTTP) sono stati rimossi in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -159,7 +159,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  Per le opzioni specifiche per SERVICE_BROKER, vedere "Opzioni di SERVICE_BROKER" di seguito in questo argomento. Per le opzioni specifiche per DATABASE_MIRRORING, vedere "Opzioni di DATABASE_MIRRORING" di seguito in questo argomento.  
   
- AUTHENTICATION **=** \<authentication_options> Specifica i requisiti di autenticazione TCP/IP relativi alle connessioni per questo endpoint. Il valore predefinito è WINDOWS.  
+ AUTHENTICATION **=** \<authentication_options> Specifica i requisiti di autenticazione TCP/IP per le connessioni relative a questo endpoint. Il valore predefinito è WINDOWS.  
   
  I metodi di autenticazione supportati includono NTLM o Kerberos oppure entrambi.  
   

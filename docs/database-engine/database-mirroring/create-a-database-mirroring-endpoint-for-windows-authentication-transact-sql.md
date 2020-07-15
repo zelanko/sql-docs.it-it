@@ -1,6 +1,6 @@
 ---
 title: Creare un endpoint del mirroring del database (Transact-SQL)
-description: Usare Transact-SQL per creare un endpoint di mirroring del database usando l'autenticazione di Windows.
+description: Usare Transact-SQL per creare un endpoint di mirroring del database usando l'autenticazione di Windows in SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e67682a25768e80469aa13a027099bacc515f8a7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 15b7fe1a4a8ad78402226814e46ffc9d47964439
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448107"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789734"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Creare un endpoint del mirroring del database per l'autenticazione Windows (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In questo argomento si illustra come creare un endpoint del mirroring del database in cui si utilizza l'autenticazione di Windows in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per supportare il mirroring del database o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , per ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario un endpoint del mirroring del database. In un'istanza del server può essere incluso uno solo di questo tipo di endpoint, che a sua volta dispone di una sola porta. Un endpoint del mirroring del database può utilizzare qualsiasi porta disponibile nel sistema locale al momento della creazione dell'endpoint. Tutte le sessioni di mirroring del database in un'istanza del server sono in attesa su quella porta, che viene utilizzata anche per tutte le connessioni in ingresso per il mirroring del database.  
   
 > [!IMPORTANT]  
@@ -97,7 +97,7 @@ ms.locfileid: "79448107"
   
     -   STARTED indica che l'endpoint deve essere avviato e deve rimanere in attesa delle connessioni. Lo stato di un endpoint del mirroring del database creato è in genere STARTED. In alternativa, è possibile avviare una sessione nello stato STOPPED (impostazione predefinita) o DISABLED.  
   
-    -   *\<listenerPortList>* è un solo numero di porta (*nnnn*) su cui il server deve attendere i messaggi di mirroring del database. È consentito solo il protocollo TCP. Tutti gli altri protocolli restituiranno un errore.  
+    -   *\<listenerPortList>* è un singolo numero di porta (*nnn*) su cui si vuole che il server riceva i messaggi di mirroring del database. È consentito solo il protocollo TCP. Tutti gli altri protocolli restituiranno un errore.  
   
          È possibile utilizzare un numero di porta una sola volta per ciascun computer. Un endpoint del mirroring del database può utilizzare qualsiasi porta disponibile nel sistema locale al momento della creazione dell'endpoint. Per identificare le porte attualmente utilizzate dagli endpoint TCP nel sistema, utilizzare l'istruzione Transact-SQL seguente:  
   
@@ -127,7 +127,7 @@ ms.locfileid: "79448107"
         > [!NOTE]  
         >  L'algoritmo RC4 è deprecato. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] È consigliabile utilizzare AES.  
   
-    -   *\<role>* definisce il ruolo o i ruoli che il server può eseguire. Il valore di ROLE deve essere specificato. Tuttavia, il ruolo dell'endpoint è rilevante solo per il mirroring del database. Per [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], viene ignorato il ruolo dell'endpoint.  
+    -   *\<role>* definisce i ruoli eseguibili tramite il server. Il valore di ROLE deve essere specificato. Tuttavia, il ruolo dell'endpoint è rilevante solo per il mirroring del database. Per [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], viene ignorato il ruolo dell'endpoint.  
   
          Per consentire a un'istanza del server di utilizzare un ruolo per una sessione di mirroring del database e un altro ruolo per un'altra sessione, specificare ROLE=ALL. Per limitare un'istanza del server in modo che funga da partner o da server di controllo del mirroring, specificare rispettivamente ROLE=PARTNER o ROLE=WITNESS.  
   

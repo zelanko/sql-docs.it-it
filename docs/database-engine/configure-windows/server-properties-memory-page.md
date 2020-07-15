@@ -1,5 +1,6 @@
 ---
 title: Proprietà server (pagina Memoria) | Microsoft Docs
+description: Acquisire familiarità con le opzioni di memoria del server in SQL Server. Informazioni sulla memoria del server minima e massima, sulla memoria per la creazione degli indici e su altre impostazioni.
 ms.custom: ''
 ms.date: 03/08/2016
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.memory.f1
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6eb32d81ccab79efa044ed4a21798bebe6ee3fd1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 83f8be52af8507203764cab7197359c1c99663a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025469"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726617"
 ---
 # <a name="server-properties---memory-page"></a>Proprietà server (pagina Memoria)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilizzare questa pagina per visualizzare o modificare le opzioni di memoria per il server. Quando l'opzione **Memoria minima per il server** è impostata su 0 e l'opzione **Memoria massima per il server** è impostata su 2147483647 MB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può usare in ogni momento la quantità ottimale di memoria, tenendo tuttavia conto della quantità di memoria attualmente usta dal sistema operativo e da altre applicazioni. Mano a mano che il carico di lavoro del computer e di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cambia, anche la quantità di memoria allocata varia di conseguenza. È possibile limitare ulteriormente questa allocazione dinamica della memoria in base ai valori minimi e massimi specificati di seguito.  
   
 ## <a name="options"></a>Opzioni  

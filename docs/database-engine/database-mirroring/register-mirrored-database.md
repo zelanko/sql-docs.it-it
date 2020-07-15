@@ -1,5 +1,6 @@
 ---
 title: Registra database con mirroring | Microsoft Docs
+description: Informazioni su come registrare i database con mirroring in un'istanza del server aggiungendoli a Monitoraggio mirroring del database, che memorizza nella cache le informazioni sui database.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 19f6a39707ce5615f2a912c5273274d0abb60623
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 23bc66a0c782005a2426ee9fc4e35a237f49cb96
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025399"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789652"
 ---
 # <a name="register-mirrored-database"></a>Registra database con mirroring
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilizzare questa finestra di dialogo per registrare uno o più database con mirroring su una determinata istanza del server aggiungendo il database o i database a Monitoraggio mirroring del database. Quando viene aggiunto un database, Monitoraggio mirroring del database memorizza nella cache le informazioni relative al database, ai suoi partner e alla modalità di connessione a questi ultimi.  
   
 > [!IMPORTANT]  
@@ -47,10 +48,10 @@ ms.locfileid: "68025399"
   
 |Nome colonna|Descrizione|  
 |-----------------|-----------------|  
-|**Registra**|Consente di controllare ogni database da registrare. Se un database è attualmente monitorato, la relativa casella di controllo è selezionata e disabilitata.<br /><br /> Nota: per annullare la registrazione di un database, chiudere la finestra di dialogo **Registra database con mirroring** , selezionare il database nell'albero di navigazione e scegliere **Annulla registrazione** dal menu **Azione** .|  
+|**Registra**|Consente di controllare ogni database da registrare. Se un database è attualmente monitorato, la relativa casella di controllo è selezionata e disabilitata.<br /><br /> Nota: Per annullare la registrazione di un database, chiudere la finestra di dialogo **Registra database con mirroring**, selezionare il database nell'albero di navigazione e scegliere **Annulla registrazione** dal menu **Azione**.|  
 |**Database**|Nome di un database con mirroring sull'istanza del server selezionata.|  
 |**Ruolo corrente**|Ruolo del mirroring corrente del database, Principale o Mirror, sull'istanza del server selezionata.|  
-|**Partner (Connetti come)**|Nome del partner di failover per il database. **Autenticazione di Windows dell'utente della console** o **Autenticazione di SQL Server di '***\<nome account di accesso>***'** sono le stringhe visualizzate tra parentesi. Si tratta delle informazioni di autenticazione attualmente utilizzate, se l'istanza è stata aggiunta in precedenza, o che verranno utilizzate se l'istanza non è stata aggiunta al monitoraggio.|  
+|**Partner (Connetti come)**|Nome del partner di failover per il database. Tra parentesi viene visualizzato **Autenticazione di Windows dell'utente della console** o **Autenticazione di SQL Server di '***\<login name>***'** . Si tratta delle informazioni di autenticazione attualmente utilizzate, se l'istanza è stata aggiunta in precedenza, o che verranno utilizzate se l'istanza non è stata aggiunta al monitoraggio.|  
   
  **Quando viene scelto OK visualizza la finestra di dialogo Gestione connessioni a istanze server.**  
  Per impostazione predefinita, Monitoraggio mirroring del database utilizza le credenziali per l'autenticazione di Windows per le istanze del server partner per le quali le credenziali non siano state specificate in precedenza. Abilitare l'opzione per modificare le credenziali per una o più istanze del server al termine della registrazione dei database.  

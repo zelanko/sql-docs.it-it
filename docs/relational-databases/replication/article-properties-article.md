@@ -15,15 +15,15 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 22410fd71e91084c99823ceba020ed43f54ed75e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 46fbde4be37677cc873089b00b53dd0be706a333
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288268"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722203"
 ---
 # <a name="article-properties---ltarticlegt"></a>Proprietà articolo - &lt;Articolo&gt;
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   È possibile accedere alla finestra **Proprietà articolo** dalla Creazione guidata nuova pubblicazione e dalla finestra di dialogo **Proprietà pubblicazione** . Questa finestra di dialogo consente di visualizzare e impostare le proprietà per tutti i tipi di articoli. Alcune proprietà possono essere impostate solo dopo aver creato la pubblicazione, mentre altre possono essere impostate solo se la pubblicazione non dispone di sottoscrizioni attive. Le proprietà non impostabili vengono visualizzate in sola lettura.  
   
 > [!NOTE]  
@@ -47,7 +47,7 @@ ms.locfileid: "76288268"
  Determina se convertire tipi di dati definiti dall'utente in tipi di dati di base durante la creazione di oggetti nel Sottoscrittore. I tipi di dati definiti dall'utente includono i tipi di dati CLR definiti dall'utente introdotti in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Specificare il valore **True** se questi tipi di dati verranno replicati in versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]per garantire che vengano gestiti correttamente nel Sottoscrittore.  
   
  **Crea schemi nel Sottoscrittore**  
- In[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono stati introdotti gli schemi, che vengono definiti utilizzando l'istruzione CREATE SCHEMA. Uno schema è il proprietario di un oggetto e viene utilizzato in un nome in più parti, ad esempio \<Database>.\<Schema>.\<Oggetto>. Se nel database esistono oggetti di proprietà di schemi diversi da DBO, la replica è in grado di creare tali schemi nel Sottoscrittore in modo che sia possibile creare gli oggetti pubblicati.  
+ In[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono stati introdotti gli schemi, che vengono definiti utilizzando l'istruzione CREATE SCHEMA. Uno schema è il proprietario di un oggetto e viene usato in un nome in più parti, ad esempio \<Database>.\<Schema>.\<Object>. Se nel database esistono oggetti di proprietà di schemi diversi da DBO, la replica è in grado di creare tali schemi nel Sottoscrittore in modo che sia possibile creare gli oggetti pubblicati.  
   
  Se i dati verranno replicati in versioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
   

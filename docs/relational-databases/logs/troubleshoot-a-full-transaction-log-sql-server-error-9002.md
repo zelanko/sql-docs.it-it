@@ -1,6 +1,6 @@
 ---
 title: Risoluzione dell'errore di log delle transazioni pieno 9002
-ms.custom: seo-lt-2019
+description: Informazioni sulle possibili soluzioni per un log delle transazioni completo in SQL Server e su come evitare il problema in futuro.
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,15 +18,16 @@ helpviewer_keywords:
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ad8b68338987256f1c7fa01f1f0d56242cef6a7f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 79e33cb5b5bea6c3eb264052dade0a3906a44efb
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056067"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006542"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Risolvere i problemi relativi a un log delle transazioni completo (Errore di SQL Server 9002)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In questo argomento vengono illustrate le risposte possibili a un log delle transazioni pieno e viene spiegato come evitare tale situazione in futuro. 
   
   Quando il log delle transazioni è pieno, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] genera un **errore 9002**. Il log può riempirsi quando il database è online o in stato di recupero. Se il log si riempie quando il database è online, il database rimane online, ma può solo essere letto, non aggiornato. Se il log si riempie durante il recupero, in [!INCLUDE[ssDE](../../includes/ssde-md.md)] il database viene contrassegnato come RESOURCE PENDING. In entrambi i casi, è richiesto che l'utente intervenga per liberare spazio nel log.  
@@ -111,7 +112,7 @@ Questa istruzione consente di identificare l'ID utente del proprietario della tr
 In alcuni casi è necessario terminare il processo usando l'istruzione [KILL](../../t-sql/language-elements/kill-transact-sql.md) . Usare l'istruzione con cautela, soprattutto quando sono in esecuzione processi importanti che non vanno terminati. Per altre informazioni, vedere [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)
 
 ## <a name="see-also"></a>Vedere anche  
-[Articolo di supporto della Knowledge Base - Il log delle transazioni aumenta in modo imprevisto o diventa pieno in SQL Server](https://support.microsoft.com/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Gestione delle dimensioni del file di log delle transazioni](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [Backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  

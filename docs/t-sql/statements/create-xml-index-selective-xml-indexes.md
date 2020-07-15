@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c63162f11794299e0708c71219a639de9566456e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 902cebc510572b8900acf6f12666398ef9d147b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635468"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766905"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (indici XML selettivi)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Crea un nuovo indice XML selettivo secondario in un unico percorso già indicizzato da un indice XML selettivo esistente. È inoltre possibile creare indici XML selettivi primari. Per informazioni, vedere [Creare, modificare o eliminare indici XML selettivi](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md).  
   
@@ -69,7 +69,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
  *index_name*  
  Nome del nuovo indice che si desidera creare. I nomi degli indici devono essere necessariamente univoci all'interno di una tabella, ma non all'interno di un database. Devono essere anche conformi alle regole degli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
- ON *\<table_object>* Tabella contenente la colonna XML da indicizzare. È possibile usare i formati seguenti:  
+ ON *\<table_object>* Tabella contenente la colonna XML che si vuole indicizzare. È possibile usare i formati seguenti:  
   
 -   `database_name.schema_name.table_name`  
   
@@ -93,7 +93,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  Prima di poter creare indici XML selettivi secondari in una colonna, è necessario che per tale colonna esista un indice XML selettivo.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  

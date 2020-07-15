@@ -1,6 +1,6 @@
 ---
 title: Sospendere e riprendere il mirroring del database
-description: Informazioni su come sospendere una sessione di mirroring del database di SQL Server e riprenderla in qualsiasi momento.
+description: Informazioni su come sospendere e riprendere in seguito una sessione di mirroring del database di SQL Server per mantenere lo stato della sessione durante la sospensione del mirroring.
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b6a46805e9dfe86d7560a2786f10a99b66344a97
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8b71dd9efc29735d618e6cf7cbabab5615f31fb0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254147"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735254"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Sospensione e ripresa del mirroring del database (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Il proprietario del database può sospendere una sessione di mirroring del database, riprenderla in qualsiasi momento e preservare così lo stato della sessione durante la sospensione del mirroring. In caso di colli di bottiglia, la sospensione può essere utile per migliorare le prestazioni del server principale.  
   
  Quando si sospende una sessione, il database principale resta disponibile. In caso di sospensione, lo stato della sessione di mirroring viene impostato su SUSPENDED e il database mirror perde la sincronizzazione con il database principale, che viene quindi eseguito in una condizione nota come esposizione senza mirroring.  

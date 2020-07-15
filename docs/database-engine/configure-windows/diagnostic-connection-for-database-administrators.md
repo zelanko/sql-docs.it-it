@@ -1,5 +1,6 @@
 ---
 title: Connessione di diagnostica per gli amministratori di database | Microsoft Docs
+description: Informazioni sulla connessione amministrativa dedicata (DAC). Visualizzare le restrizioni, le istruzioni per l'attivazione ed esempi che ne dimostrano l'uso.
 ms.custom: ''
 ms.date: 02/27/2019
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 - ports [SQL Server]
 - dedicated administrator connections [SQL Server]
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6123b5259f6927c41281fb99264432062fc252bd
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a7843b981dbad450e49f0c1f5cf27b175ce635e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588117"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772534"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Connessione di diagnostica per gli amministratori di database
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre una speciale connessione di diagnostica a cui possono ricorrere gli amministratori quando non è possibile usare connessioni standard al server. Questa connessione di diagnostica consente a un amministratore di accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire query di diagnostica e risolvere problemi anche quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non risponde alle richieste di connessione standard.  
   
  Questa connessione amministrativa dedicata (DAC, Dedicated Administrator Connection) supporta la crittografia e altre caratteristiche di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La connessione DAC consente solo il cambiamento del contesto utente in un altro utente con privilegi amministrativi.  
@@ -83,7 +84,7 @@ ms.locfileid: "82588117"
   
 - Comandi DBCC di base quali [DBCC FREEPROCCACHE](../..//t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md), [DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md), [DBCC DROPCLEANBUFFERS](../../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md) e [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md). Non eseguire comandi che usano una grande quantità di risorse, ad esempio [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md) o [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
   
-- [!INCLUDE[tsql](../../includes/tsql-md.md)] comando KILL *\<spid>* . In base allo stato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il comando KILL potrebbe non avere sempre esito positivo. In questo caso, l'unica possibilità potrebbe consistere nel riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Di seguito vengono riportate alcune linee guida generali:  
+- Comando [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL *\<spid>* . In base allo stato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il comando KILL potrebbe non avere sempre esito positivo. In questo caso, l'unica possibilità potrebbe consistere nel riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Di seguito vengono riportate alcune linee guida generali:  
   
     - Verificare che lo SPID sia stato effettivamente terminato eseguendo la query `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`. Se non viene restituita alcuna riga, la sessione è stata terminata.  
   
@@ -100,7 +101,7 @@ ms.locfileid: "82588117"
   
  La porta della connessione DAC viene assegnata dinamicamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante l'avvio. Durante la connessione all'istanza predefinita, l'applicazione livello dati evita di usare una richiesta SSRP (Resolution Protocol) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al servizio SQL Server Browser. Essa si connette prima sulla porta TCP 1434. Se questo tentativo di connessione termina con esito negativo, la connessione DAC esegue una chiamata SSRP per ottenere la porta. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser non è in attesa di richieste SSRP, la richiesta di connessione restituisce un errore. Vedere il log degli errori per ottenere il numero di porta su cui è in attesa la connessione DAC. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è configurato per accettare connessioni amministrative remote, è necessario inizializzare l'applicazione livello dati con un numero di porta esplicito:  
   
- **sqlcmd -S tcp:** _\<server>,\<porta>_  
+ **sqlcmd -S tcp:** _\<server>,\<port>_  
   
  Il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elenca il numero di porta relativo all'applicazione livello dati, che per impostazione predefinita è 1434. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è configurato per accettare solo applicazioni livello dati locali, eseguire la connessione utilizzando l'adattatore loopback con il comando seguente:  
   

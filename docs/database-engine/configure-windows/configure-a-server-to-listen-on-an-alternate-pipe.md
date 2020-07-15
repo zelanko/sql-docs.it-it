@@ -1,5 +1,6 @@
 ---
 title: Configurare un server per l'attesa su una pipe alternativa | Microsoft Docs
+description: Informazioni su come configurare la named pipe su cui è in ascolto il motore di database di SQL Server. Scoprire come connettere un'applicazione client a una named pipe specifica.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - pipes [SQL Server], alternate
 - alternate pipes [SQL Server]
 ms.assetid: 914f7491-e2be-4b0d-b3aa-fe5409cdbafa
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fd7a0ebf16733109e59aac74652d90e0b63a1d9d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fb0d7b15cf17ac1af60dbb55382dc1886fcca9a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012916"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789776"
 ---
 # <a name="configure-a-server-to-listen-on-an-alternate-pipe"></a>Configurare un server per l'attesa su una pipe alternativa
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In questo argomento viene illustrato come configurare un server per l'ascolto su una pipe alternativa in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando Gestione configurazione SQL Server. Per impostazione predefinita, l'istanza predefinita di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] è in attesa sulla named pipe \\\\.\pipe\sql\query. Le istanze denominate del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e [!INCLUDE[ssEW](../../includes/ssew-md.md)] sono in attesa su altre pipe.  
   
  È possibile connettersi a una named pipe specifica mediante un'applicazione client in tre modi differenti:  
@@ -38,7 +39,7 @@ ms.locfileid: "68012916"
   
 #### <a name="to-configure-the-named-pipe-used-by-the-sql-server-database-engine"></a>Per configurare l'utilizzo della named pipe mediante il Motore di database di SQL Server  
   
-1.  Nel riquadro della console di Gestione configurazione SQL Server espandere **Configurazione di rete SQL Server** e quindi fare clic per espandere **Protocolli per** *\<nome istanza>* .  
+1.  Nel riquadro della console di Gestione configurazione SQL Server espandere **Configurazione di rete SQL Server** e quindi espandere **Protocolli per**  *\<instance name>* .  
   
 2.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **Named pipe**, quindi scegliere **Proprietà**.  
   
@@ -46,7 +47,7 @@ ms.locfileid: "68012916"
   
 4.  Nel riquadro della console fare clic su **Servizi di SQL Server**.  
   
-5.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (** \<<nome istanza> **)** e scegliere **Riavvia**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà arrestato e riavviato.  
+5.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (** \<instance name> **)** e quindi scegliere **Riavvia** per arrestare e riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in attesa su una pipe alternativa, è possibile connettersi a una named pipe specifica mediante un'applicazione client in tre modi differenti:  
   

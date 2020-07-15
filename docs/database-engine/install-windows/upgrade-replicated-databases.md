@@ -1,5 +1,6 @@
 ---
 title: Aggiornare i database replicati o applicare patch | Microsoft Docs
+description: SQL Server supporta l'aggiornamento di database replicati da versioni precedenti di SQL Server senza interrompere l'attività in altri nodi.
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
@@ -16,16 +17,16 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c2d6d5fc367e66b7a5ca84e2d1c290203f61b8d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72008459"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900219"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>Aggiornare i database replicati o applicare patch
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] supporta l'aggiornamento di database replicati da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza che sia necessario, durante l'aggiornamento di un nodo, arrestare le attività negli altri nodi. Verificare che vengano osservate le regole relative alle versioni supportate in una topologia:  
   

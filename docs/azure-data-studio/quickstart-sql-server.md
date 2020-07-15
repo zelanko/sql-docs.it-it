@@ -1,31 +1,30 @@
 ---
-title: 'Guida introduttiva: Connettersi ed eseguire query in SQL Server'
-titleSuffix: Azure Data Studio
+title: 'Avvio rapido: Connettersi ed eseguire query in SQL Server'
 description: Questo argomento di avvio rapido illustra come usare Azure Data Studio per connettersi a SQL Server ed eseguire una query
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: 7398d918a027b28513b3f12a5101628cf1158e49
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d5fc104e5c4a848c24c6bc45ab09419dc10d1818
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75884056"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764106"
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-name-sos"></a>Guida introduttiva: Connettersi ed eseguire query in SQL Server con [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-sql-server"></a>Avvio rapido: Usare Azure Data Studio per connettersi a SQL Server ed eseguire query
 
-Questo argomento di avvio rapido illustra come usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per connettersi a SQL Server e come usare istruzioni Transact-SQL (T-SQL) per creare il database *TutorialDB* usato nelle esercitazioni di [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+Questo avvio rapido illustra come usare Azure Data Studio per connettersi a SQL Server e quindi usare istruzioni Transact-SQL (T-SQL) per creare il database *TutorialDB* usato nelle esercitazioni di Azure Data Studio.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Per completare questo argomento di avvio rapido, sono necessari [!INCLUDE[name-sos](../includes/name-sos-short.md)] e l'accesso a SQL Server.
+Per completare questo avvio rapido, sono necessari Azure Data Studio e l'accesso a SQL Server.
 
-- [Installare [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
+- [Installare Azure Data Studio](download.md).
 
 Se non si ha accesso a SQL Server, selezionare la piattaforma dai collegamenti seguenti. Assicurarsi di conoscere l'account di accesso e la password SQL:
 
@@ -35,20 +34,20 @@ Se non si ha accesso a SQL Server, selezionare la piattaforma dai collegamenti s
 
 ## <a name="connect-to-a-sql-server"></a>Connettersi a SQL Server
 
-1. Avviare **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
+1. Avviare **Azure Data Studio**.
 
-2. La prima volta che si esegue [!INCLUDE[name-sos](../includes/name-sos-short.md)] viene visualizzata la pagina di **introduzione**. Se la pagina di **introduzione** non viene visualizzata, selezionare **Help** > **Introduzione**. Selezionare **Nuova connessione** per aprire il riquadro **Connessione**:
+2. La prima volta che si esegue Azure Data Studio viene visualizzata la pagina di **introduzione**. Se la pagina di **introduzione** non viene visualizzata, selezionare **Help** > **Introduzione**. Selezionare **Nuova connessione** per aprire il riquadro **Connessione**:
 
    ![Icona Nuova connessione](media/quickstart-sql-server/new-connection-icon.png)
 
 3. Questo articolo usa l'account di *accesso SQL*, ma è supportata anche l'*autenticazione di Windows*. Compilare i campi come indicato di seguito:
 
-- **Nome server:** Immettere il nome del server qui. Ad esempio localhost.
-- **Tipo di autenticazione:** Account di accesso SQL
-- **Nome utente:** Nome utente di SQL Server
-- **Password:** Password di SQL Server
-- **Nome del database:** \<Valore predefinito\>
-- **Gruppo di server:** \<Valore predefinito\>
+   - **Nome server:** Immettere il nome del server qui. Ad esempio localhost.
+   - **Tipo di autenticazione:** Account di accesso SQL
+   - **Nome utente:** Nome utente di SQL Server
+   - **Password:** Password di SQL Server
+   - **Nome database:** \<Default\>
+   - **Gruppo di server:** \<Default\>
 
    ![Nuova schermata di connessione](media/quickstart-sql-server/new-connection-screen.png)
 
@@ -60,22 +59,22 @@ Questa procedura consente di creare un database denominato **TutorialDB**:
 
 2. Incollare il frammento di codice seguente nella finestra di query e quindi selezionare **Esegui**.
 
- ```sql
- USE master
- GO
- IF NOT EXISTS (
-  SELECT name
-  FROM sys.databases
-  WHERE name = N'TutorialDB'
- )
-  CREATE DATABASE [TutorialDB];
- GO
- IF SERVERPROPERTY('ProductVersion') > '12'
-  ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON;
- GO
- ```
+    ```sql
+    USE master
+    GO
+    IF NOT EXISTS (
+     SELECT name
+     FROM sys.databases
+     WHERE name = N'TutorialDB'
+    )
+     CREATE DATABASE [TutorialDB];
+    GO
+    IF SERVERPROPERTY('ProductVersion') > '12'
+     ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON;
+    GO
+    ```
 
-Dopo il completamento della query, nell'elenco di database viene incluso anche il nuovo database **TutorialDB**. Se il database non è visualizzato, fare clic con il pulsante destro del mouse sul nodo **Database** e selezionare **Aggiorna**.
+   Dopo il completamento della query, nell'elenco di database viene incluso anche il nuovo database **TutorialDB**. Se il database non è visualizzato, fare clic con il pulsante destro del mouse sul nodo **Database** e selezionare **Aggiorna**.
 
    ![Creazione del database](media/quickstart-sql-server/create-database.png)
 
@@ -92,22 +91,22 @@ Si vuole creare una tabella nel database *TutorialDB*, ma l'editor di query è a
    > [!NOTE]
    > È possibile aggiungerlo alla query esistente nell'editor oppure sovrascriverla. Facendo clic su **Esegui** viene eseguita solo la query evidenziata. Se nessuna query risulta selezionata, facendo clic su **Esegui** vengono eseguite tutte le query nell'editor.
 
- ```sql
- -- Create a new table called 'Customers' in schema 'dbo'
- -- Drop the table if it already exists
- IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
-  DROP TABLE dbo.Customers;
- GO
- -- Create the table in the specified schema
- CREATE TABLE dbo.Customers
- (
-  CustomerId int NOT NULL PRIMARY KEY, -- primary key column
-  Name nvarchar(50) NOT NULL,
-  Location nvarchar(50) NOT NULL,
-  Email nvarchar(50) NOT NULL
- );
- GO
- ```
+    ```sql
+    -- Create a new table called 'Customers' in schema 'dbo'
+    -- Drop the table if it already exists
+    IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
+     DROP TABLE dbo.Customers;
+    GO
+    -- Create the table in the specified schema
+    CREATE TABLE dbo.Customers
+    (
+     CustomerId int NOT NULL PRIMARY KEY, -- primary key column
+     Name nvarchar(50) NOT NULL,
+     Location nvarchar(50) NOT NULL,
+     Email nvarchar(50) NOT NULL
+    );
+    GO
+    ```
 
 Dopo il completamento della query, nell'elenco di tabelle viene inclusa anche la nuova tabella **Clienti**. Potrebbe essere necessario fare clic con il pulsante destro del mouse sul nodo **TutorialDB > Tabelle** e selezionare **Aggiorna**.
 
@@ -115,26 +114,26 @@ Dopo il completamento della query, nell'elenco di tabelle viene inclusa anche la
 
 - Incollare il frammento di codice seguente nella finestra di query e fare clic su **Esegui**:
 
- ```sql
- -- Insert rows into table 'Customers'
- INSERT INTO dbo.Customers
-  ([CustomerId], [Name], [Location], [Email])
- VALUES
-  ( 1, N'Orlando', N'Australia', N''),
-  ( 2, N'Keith', N'India', N'keith0@adventure-works.com'),
-  ( 3, N'Donna', N'Germany', N'donna0@adventure-works.com'),
-  ( 4, N'Janet', N'United States', N'janet1@adventure-works.com')
- GO
- ```
+    ```sql
+    -- Insert rows into table 'Customers'
+    INSERT INTO dbo.Customers
+     ([CustomerId], [Name], [Location], [Email])
+    VALUES
+     ( 1, N'Orlando', N'Australia', N''),
+     ( 2, N'Keith', N'India', N'keith0@adventure-works.com'),
+     ( 3, N'Donna', N'Germany', N'donna0@adventure-works.com'),
+     ( 4, N'Janet', N'United States', N'janet1@adventure-works.com')
+    GO
+    ```
 
 ## <a name="view-the-data-returned-by-a-query"></a>Visualizzare i dati restituiti da una query
 
-1. Incollare il frammento di codice seguente nella finestra di query e fare clic su **Esegui**:
+ - Incollare il frammento di codice seguente nella finestra di query e fare clic su **Esegui**:
 
- ```sql
- -- Select rows from table 'Customers'
- SELECT * FROM dbo.Customers;
- ```
+   ```sql
+   -- Select rows from table 'Customers'
+   SELECT * FROM dbo.Customers;
+   ```
 
    ![Selezione dei risultati](media/quickstart-sql-server/select-results.png)
 

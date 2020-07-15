@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b43cbcb051a1c6be2d26288a427d7a75e89a7f70
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8da63d8ff15d03b55586a72a578d6074fa2a5473
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258885"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789774"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connessione di client a una sessione di mirroring del database (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Per connettersi a una sessione di mirroring del database un client può utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o il provider di dati .NET Framework per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se configurati per un database [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , questi provider di accesso ai dati supportano entrambi completamente il mirroring del database. Per informazioni relative alle considerazioni di programmazione per l'utilizzo di un database con mirroring, vedere [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). È inoltre necessario che l'istanza del server principale corrente sia disponibile e che l'account di accesso del client sia stato creato nell'istanza del server. Per altre informazioni, vedere [Risolvere i problemi relativi agli utenti isolati &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Le connessioni client a una sessione di mirroring del database non richiedono l'istanza del server di controllo del mirroring, se ne esiste una.  
   
   
@@ -101,7 +101,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  Una query SQL Server Browser è necessaria se la stringa di connessione specifica il nome dell'istanza denominata e non la porta.  
   
- Per specificare l'indirizzo IP e la porta, l'attributo **Server** assume il formato `Server=` *<indirizzo_ip>* `,` *\<porta>* , ad esempio:  
+ Per specificare l'indirizzo IP e la porta, l'attributo **Server** assume il formato `Server=` *<indirizzo_ip>* `,` *\<port>* , ad esempio:  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -121,7 +121,7 @@ Server=123.34.45.56,4724;
 >  Le informazioni sull'autenticazione vengono omesse dalla stringa.  
   
 > [!IMPORTANT]  
->  L'aggiunta al prefisso del protocollo dell'attributo **Server** (`Server=tcp:` *\<nomeserver>* ) non è compatibile con l'attributo **Rete** e l'indicazione del protocollo in entrambe le posizioni determinerà probabilmente un errore. Di conseguenza, è consigliabile che una stringa di connessione specifichi il protocollo tramite l'attributo **Rete** e specifichi solo il nome del server nell'attributo **Server** (`"Network=dbmssocn; Server=` *\<nomeserver>* `"`).  
+>  L'aggiunta al prefisso del protocollo dell'attributo **Server** (`Server=tcp:` *\<servername>* ) non è compatibile con l'attributo **Rete** e l'indicazione del protocollo in entrambe le posizioni determinerà probabilmente un errore. Di conseguenza, è consigliabile che una stringa di connessione specifichi il protocollo tramite l'attributo **Rete** e specifichi solo il nome del server nell'attributo **Server** (`"Network=dbmssocn; Server=` *\<servername>* `"`).  
   
 #### <a name="failover-partner-attribute"></a>Attributo Failover Partner  
  Oltre al nome partner iniziale, il client può anche specificare il nome partner di failover, che identifica l'istanza del server mirror corrente. Il partner di failover viene specificato dalla parola chiave dell'attributo Failover Partner. La parola chiave per questo attributo dipende dall'API utilizzata. Nella seguente tabella vengono elencate le parole chiave:  

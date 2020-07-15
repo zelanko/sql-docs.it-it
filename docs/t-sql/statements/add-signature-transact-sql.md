@@ -1,14 +1,11 @@
 ---
-title: ADD SIGNATURE (Transact-SQL) | Microsoft Docs
-ms.date: 05/15/2017
+title: ADD SIGNATURE (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
 - ADD SIGNATURE
 - ADD_SIGNATURE_TSQL
-dev_langs:
-- TSQL
 helpviewer_keywords:
 - ADD SIGNATURE statement
 - adding digital signatures
@@ -17,39 +14,45 @@ helpviewer_keywords:
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 284f5fb33d8842747805a27c68522929ddfbc59d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/10/2020
+ms.openlocfilehash: 4b5781ba73a340c72befdcde81559ac22d45a6a7
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634917"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813165"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Aggiunge una firma digitale a una stored procedure, una funzione, un assembly o un trigger. Aggiunge inoltre una controfirma a una stored procedure, una funzione, un assembly o un trigger.  
-  
-  
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>Sintassi  
-  
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+
+Aggiunge una firma digitale a una stored procedure, una funzione, un assembly o un trigger. Aggiunge inoltre una controfirma a una stored procedure, una funzione, un assembly o un trigger.
+
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+## <a name="syntax"></a>Sintassi
+
 ```syntaxsql
-ADD [ COUNTER ] SIGNATURE TO module_class::module_name   
-    BY <crypto_list> [ ,...n ]  
+ADD [ COUNTER ] SIGNATURE TO module_class::module_name
+    BY <crypto_list> [ ,...n ]
   
 <crypto_list> ::=  
     CERTIFICATE cert_name  
-    | CERTIFICATE cert_name [ WITH PASSWORD = 'password' ]  
-    | CERTIFICATE cert_name WITH SIGNATURE = signed_blob   
+    | CERTIFICATE cert_name [ WITH PASSWORD = 'password' ]
+    | CERTIFICATE cert_name WITH SIGNATURE = signed_blob
     | ASYMMETRIC KEY Asym_Key_Name  
-    | ASYMMETRIC KEY Asym_Key_Name [ WITH PASSWORD = 'password'.]  
-    | ASYMMETRIC KEY Asym_Key_Name WITH SIGNATURE = signed_blob  
-```  
-  
-## <a name="arguments"></a>Argomenti  
- *module_class*  
- Classe del modulo a cui viene aggiunta la firma. L'impostazione predefinita per i moduli definiti a livello di ambito dello schema è OBJECT.  
+    | ASYMMETRIC KEY Asym_Key_Name [ WITH PASSWORD = 'password'.]
+    | ASYMMETRIC KEY Asym_Key_Name WITH SIGNATURE = signed_blob
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
+
+*module_class*  
+Classe del modulo a cui viene aggiunta la firma. L'impostazione predefinita per i moduli definiti a livello di ambito dello schema è OBJECT.  
   
  *module_name*  
  Nome di una stored procedure, una funzione, un assembly o un trigger da firmare o controfirmare.  
@@ -66,8 +69,9 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  ASYMMETRIC KEY *Asym_Key_Name*  
  Nome di una chiave asimmetrica con cui firmare o controfirmare la stored procedure, la funzione, l'assembly o il trigger.  
   
-## <a name="remarks"></a>Osservazioni  
- Il modulo che viene firmato o controfirmato e il certificato o la chiave asimmetrica utilizzati per la firma devono essere già esistenti. Ogni carattere del modulo è utilizzato nel calcolo della firma, inclusi gli avanzamenti di riga e i ritorni a capo iniziali.  
+## <a name="remarks"></a>Osservazioni
+
+Il modulo che viene firmato o controfirmato e il certificato o la chiave asimmetrica utilizzati per la firma devono essere già esistenti. Ogni carattere del modulo è utilizzato nel calcolo della firma, inclusi gli avanzamenti di riga e i ritorni a capo iniziali.  
   
  Un modulo può essere firmato e controfirmato da un numero qualsiasi di certificati e chiavi simmetriche.  
   
@@ -75,14 +79,14 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
  Se un modulo contiene una clausola EXECUTE AS, nel processo di firma viene incluso anche l'ID di sicurezza (SID) dell'entità.  
   
-> [!CAUTION]  
->  È consigliabile utilizzare la firma del modulo solo per concedere le autorizzazioni, mai per negarle o revocarle.  
+> [!CAUTION]
+> È consigliabile utilizzare la firma del modulo solo per concedere le autorizzazioni, mai per negarle o revocarle.  
   
  Non è possibile firmare funzioni inline con valori di tabella.  
   
  Le informazioni sulle firme sono visibili nella vista di catalogo sys.crypt_properties.  
   
-> [!WARNING]  
+> [!WARNING]
 >  Quando si ricrea una procedura per la firma, tutte le istruzioni del batch originale devono corrispondere al batch di ricreazione. Se una parte del batch è diversa, anche in spazi o commenti, la firma risultante sarà diversa.  
   
 ## <a name="countersignatures"></a>Controfirme  
@@ -92,18 +96,20 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 -   Se si firma procSelectT1, in modo che procSelectT1 possa accedere a T1, Alice può richiamare direttamente procSelectT1 senza dover chiamare ProcSelectT1ForAlice.  
   
--   Si potrebbe negare ad Alice l'autorizzazione EXECUTE su procSelectT1, ma in questo modo non sarebbe in grado di chiamare procSelectT1 tramite ProcSelectT1ForAlice.  
+-   Si potrebbe negare ad Alice l'autorizzazione EXECUTE su procSelectT1, ma in questo modo non sarebbe in grado di chiamare procSelectT1 tramite ProcSelectT1ForAlice.
   
 -   Firmare ProcSelectT1ForAlice non funzionerebbe, in quanto la firma andrebbe persa nella chiamata a procSelectT1.  
   
 Se invece si controfirma procSelectT1 con lo stesso certificato usato per firmare ProcSelectT1ForAlice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrà mantenere la firma attraverso la catena di chiamate e consentirà l'accesso a T1. Se Alice prova a chiamare direttamente procSelectT1, non potrà accedere a T1, poiché la controfirma non concede diritti. Nell'esempio C di seguito viene mostrato l'uso di [!INCLUDE[tsql](../../includes/tsql-md.md)] per l'esempio proposto.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Sono richieste l'autorizzazione ALTER per l'oggetto e l'autorizzazione CONTROL per il certificato o la chiave asimmetrica. Se una chiave privata associata è protetta tramite una password, è necessario che anche l'utente disponga della password.  
+
+Sono richieste l'autorizzazione ALTER per l'oggetto e l'autorizzazione CONTROL per il certificato o la chiave asimmetrica. Se una chiave privata associata è protetta tramite una password, è necessario che anche l'utente disponga della password.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>R. Firma di una stored procedure tramite un certificato  
+### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>R. Firma di una stored procedure tramite un certificato
+
  Nell'esempio seguente la stored procedure `HumanResources.uspUpdateEmployeeLogin` viene firmata tramite il certificato `HumanResourcesDP`.  
   
 ```  
@@ -113,8 +119,9 @@ ADD SIGNATURE TO HumanResources.uspUpdateEmployeeLogin
 GO  
 ```  
   
-### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. Firma di una stored procedure tramite un oggetto BLOB firmato  
- Nell'esempio seguente viene creato un nuovo database e un certificato da utilizzare nell'esempio. Nell'esempio viene creata e firmata una stored procedure semplice e viene recuperato l'oggetto BLOB della firma da `sys.crypt_properties`. La firma viene quindi eliminata e aggiunta nuovamente. Nell'esempio la stored procedure viene firmata tramite la sintassi WITH SIGNATURE.  
+### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. Firma di una stored procedure tramite un oggetto BLOB firmato
+
+Nell'esempio seguente viene creato un nuovo database e un certificato da utilizzare nell'esempio. Nell'esempio viene creata e firmata una stored procedure semplice e viene recuperato l'oggetto BLOB della firma da `sys.crypt_properties`. La firma viene quindi eliminata e aggiunta nuovamente. Nell'esempio la stored procedure viene firmata tramite la sintassi WITH SIGNATURE.  
   
 ```  
 CREATE DATABASE TestSignature ;  
@@ -159,8 +166,9 @@ ADD SIGNATURE TO [sp_signature_demo]
 GO  
 ```  
   
-### <a name="c-accessing-a-procedure-using-a-countersignature"></a>C. Accesso a una procedura mediante una controfirma  
- Nell'esempio seguente viene mostrato come la controfirma può aiutare a controllare l'accesso a un oggetto.  
+### <a name="c-accessing-a-procedure-using-a-countersignature"></a>C. Accesso a una procedura mediante una controfirma
+
+Nell'esempio seguente viene mostrato come la controfirma può aiutare a controllare l'accesso a un oggetto.  
   
 ```  
 -- Create tesT1 database  
@@ -245,8 +253,7 @@ DROP LOGIN Alice;
   
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>Vedere anche
+
+- [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)
+- [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)

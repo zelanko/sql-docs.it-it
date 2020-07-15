@@ -1,22 +1,21 @@
 ---
 title: Estensione di PowerShell
-titleSuffix: Azure Data Studio
 description: Installare e usare PowerShell per Azure Data Studio
 ms.custom: seodec18
 ms.date: 04/19/2019
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: fd5fabd1627968287c60fc8636964f4ac4831004
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 5f30d6078b28026dec2c6a4eef22eb1f3279755d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81484590"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637736"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Supporto dell'editor PowerShell per Azure Data Studio
 
@@ -24,7 +23,6 @@ Questa estensione offre supporto avanzato per l'editor PowerShell in [Azure Data
 È ora possibile scrivere ed eseguire il debug di script di PowerShell usando l'eccellente interfaccia di tipo IDE fornita da Azure Data Studio.
 
 ![Estensione di PowerShell](media/powershell-extension/powershell-extension.png)
-
 
 ## <a name="features"></a>Funzionalità
 
@@ -38,7 +36,6 @@ Questa estensione offre supporto avanzato per l'editor PowerShell in [Azure Data
 - Esecuzione della parte selezionata di codice PowerShell con <kbd>F8</kbd>
 - Avvio della Guida per il simbolo sotto il cursore con <kbd>CTRL</kbd>+<kbd>F1</kbd>
 - Supporto di base della console interattiva
-
 
 ## <a name="installing-the-extension"></a>Installazione dell'estensione
 
@@ -61,10 +58,10 @@ Leggere le [domande frequenti](https://github.com/PowerShell/vscode-powershell/w
 
 ## <a name="installing-powershell-core"></a>Installazione di PowerShell Core
 
-Se si esegue Azure Data Studio in MacOS o Linux, potrebbe essere necessario installare anche PowerShell Core.
+Se si esegue Azure Data Studio in macOS o Linux, può essere necessario installare anche PowerShell Core.
 
 PowerShell Core è un progetto open source in [GitHub](https://github.com/powershell/powershell).
-Per altre informazioni sull'installazione di PowerShell Core in piattaforme MacOS o Linux, vedere gli articoli seguenti:
+Per altre informazioni sull'installazione di PowerShell Core in piattaforme macOS o Linux, vedere gli articoli seguenti:
 
 - [Installazione di PowerShell Core in Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
 - [Installazione di PowerShell Core in macOS](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
@@ -259,7 +256,7 @@ Per altre informazioni su come contribuire a questa estensione, consultare la [d
 
 Questa estensione è [concessa in licenza in base ai termini della licenza MIT](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt). Per informazioni dettagliate sui file binari di terze parti inclusi nelle versioni di questo progetto, vedere il file delle [comunicazioni di terze parti](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt).
 
-## <a name="code-of-conductconduct-md"></a>[Codice di comportamento][conduct-md]
+## <a name="code-of-conduct"></a>Codice di comportamento
 
 Questo progetto ha adottato il [Codice di comportamento di Microsoft per l'open source][conduct-code].
 Per altre informazioni, vedere le [Domande frequenti sul codice di comportamento][conduct-FAQ] o scrivere a [opencode@microsoft.com][conduct-email] per domande aggiuntive o commenti.

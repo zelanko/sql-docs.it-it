@@ -34,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 98fc6b89cfe05b7c03d4d4211bea9387c5ef4e80
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1f0bf0dd95bbb209c0e6320c4ba91eb1bc84ff41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635855"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736318"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
   Cerca corrispondenze precise o fuzzy (meno precise) a singole parole e frasi, parole a una certa distanza una dall'altra o corrispondenze ponderate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS è un predicato usato nella [clausola WHERE](../../t-sql/queries/where-transact-sql.md) di un'istruzione SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] per eseguire una ricerca full-text [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in colonne indicizzate full-text che contengono tipi di dati basati su caratteri.  
@@ -174,7 +174,7 @@ CONTAINS (
  \<*contains_search_condition*>  
  Specifica il testo da cercare in *column_name* e le condizioni della ricerca.  
   
-*\<contains_search_condition>* è di tipo **nvarchar**. Viene eseguita una conversione implicita quando si utilizza come input un tipo di dati character diverso. Non è possibile usare varchar (max) e nvarchar (max) per tipi di dati di stringa di grandi dimensioni. Nell'esempio seguente la variabile `@SearchWord`, definita come `varchar(30)`, causa una conversione implicita nel predicato `CONTAINS`.
+*\<contains_search_condition>* è **nvarchar**. Viene eseguita una conversione implicita quando si utilizza come input un tipo di dati character diverso. Non è possibile usare varchar (max) e nvarchar (max) per tipi di dati di stringa di grandi dimensioni. Nell'esempio seguente la variabile `@SearchWord`, definita come `varchar(30)`, causa una conversione implicita nel predicato `CONTAINS`.
   
 ```sql  
 USE AdventureWorks2012;  
@@ -217,7 +217,7 @@ Specifica che deve essere trovata l'esatta corrispondenza di una parola o di una
  \<prefix_term>  
  Specifica che devono essere trovate parole o frasi che iniziano con il testo specificato. Racchiudere un prefisso tra virgolette doppie ("") e aggiungere un asterisco (\*) prima delle virgolette di chiusura, in modo tale da eseguire la ricerca di tutto il testo che inizia con il termine specificato prima dell'asterisco. La clausola deve essere specificata nel seguente modo: `CONTAINS (column, '"text*"')` L'asterisco corrisponde a zero, uno o più caratteri della parola o delle parole radice della parola o della frase. Se il testo e l'asterisco non sono racchiusi tra virgolette doppie, per cui vengono letti dal predicato come `CONTAINS (column, 'text*')`, nella ricerca full-text l'asterisco viene interpretato come carattere e viene eseguita la ricerca esatta di `text*`. In questo caso, non sarà possibile trovare parole con il carattere asterisco (\*), in quanto i word breaker ignorano in genere tali caratteri.  
   
- Se *\<prefix_term>* è una frase, ogni parola della frase viene considerata un prefisso distinto. Una query che specifica il prefisso "sviluppo foto*", pertanto, consente di individuare tutte le righe che includono il testo "sviluppo fotografie", "sviluppo fotografie e ritocco" e così via.  
+ Se *\<prefix_term>* è una frase, ogni parola della frase verrà considerata un prefisso distinto. Una query che specifica il prefisso "sviluppo foto*", pertanto, consente di individuare tutte le righe che includono il testo "sviluppo fotografie", "sviluppo fotografie e ritocco" e così via.  
   
  \<generation_term>  
  Specifica che devono essere trovate le parole i cui termini semplici includono varianti della parola originale da cercare.  
@@ -225,16 +225,16 @@ Specifica che deve essere trovata l'esatta corrispondenza di una parola o di una
  INFLECTIONAL  
  Specifica che deve essere utilizzato lo stemmer specifico della lingua per il termine semplice specificato. Il comportamento dello stemmer dipende dalle regole di stemming di ogni lingua specifica. Alla lingua neutra non è associato alcuno stemmer. Per individuare lo stemmer corretto, viene utilizzata la lingua delle colonne in cui viene eseguita la ricerca. Se si specifica *language_term*, viene usato lo stemmer corrispondente a tale lingua.  
   
- Un *\<simple_term>* specifico all'interno di un *\<generation_term>* non troverà corrispondenza né tra sostantivi né tra verbi.  
+ Un valore *\<simple_term>* specificato incluso in un valore *\<generation_term>* non potrà restituire sia sostantivi che verbi.  
   
  THESAURUS  
- Specifica che verrà utilizzato il thesaurus corrispondente alla lingua full-text per le colonne oppure alla lingua specificata nella query. Il modello o i modelli più lunghi di *\<simple_term>* vengono confrontati con il thesaurus e vengono generati termini aggiuntivi per espandere o sostituire il modello originale. Se non viene trovata alcuna corrispondenza per il valore *\<simple_term>* o parte di esso, la parte per cui non è stata trovata alcuna corrispondenza viene considerata *simple_term*. Per altre informazioni sul thesaurus di ricerca full-text, vedere [Configurare e gestire i file del thesaurus per la ricerca full-text](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
+ Specifica che verrà utilizzato il thesaurus corrispondente alla lingua full-text per le colonne oppure alla lingua specificata nella query. Il derivato o i derivati più lunghi di *\<simple_term>* vengono confrontati con il thesaurus e vengono generati termini aggiuntivi per espandere o sostituire il modello originale. Se non viene trovata alcuna corrispondenza per il valore *\<simple_term>* o parte di esso, la parte per cui non è stata trovata alcuna corrispondenza viene considerata *simple_term*. Per altre informazioni sul thesaurus di ricerca full-text, vedere [Configurare e gestire i file del thesaurus per la ricerca full-text](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
  \<generic_proximity_term>  
  Specifica che devono essere trovate parole o frasi incluse nel documento in cui viene eseguita la ricerca.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] È consigliabile usare \<custom_proximity_term>.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]È consigliabile usare \<custom_proximity_term>.  
   
  NEAR | ~  
  Indica che le parole o le frasi a sinistra e a destra dell'operatore NEAR o ~ devono essere incluse in un documento in modo che venga restituita una corrispondenza. È necessario specificare due termini di ricerca. Un termine di ricerca può essere una frase o una singola parola delimitata da virgolette doppie ("*phrase*").  
@@ -288,9 +288,9 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  Restituisce le righe che contengono i termini specificati indipendentemente dalla distanza esistente tra di essi. Questa è la modalità predefinita.  
   
  \<match_order>  
- Specifica se i termini devono trovarsi nell'ordine specificato che deve essere restituito da una query di ricerca. Per specificare \<match_order> è anche necessario specificare \<maximum_distance>.  
+ Specifica se i termini devono trovarsi nell'ordine specificato che deve essere restituito da una query di ricerca. Se si specifica \<match_order>, è necessario specificare anche \<maximum_distance>.  
   
- \<match_order> accetta uno dei valori seguenti:  
+ \<match_order> passa uno dei valori seguenti:  
   
  **TRUE**  
  Applica l'ordine specificato all'interno dei termini. Ad esempio, `NEAR(A,B)` corrisponderebbe solo a `A ... B`.  
@@ -312,7 +312,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  Specifica che le righe restituite dalla query corrispondono a un elenco di parole e di frasi, a ognuna delle quali può essere associato un valore di ponderazione facoltativo.  
   
  ISABOUT  
- Specifica la parola chiave *\<weighted_term >* .  
+ Specifica la parola chiave *\<weighted_term>* .  
   
  WEIGHT(*weight_value*)  
  Specifica un valore di ponderazione compreso tra 0.0 e 1.0. Ogni componente di *\<weighted_term>* può includere un valore *weight_value*. *weight_value* consente di modificare l'effetto delle varie parti di una query sul valore di pertinenza assegnato a ogni riga che soddisfa la query. WEIGHT non ha alcun effetto sui risultati delle query CONTAINS, ma ha effetto sul valore di pertinenza nelle query [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).  

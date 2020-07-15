@@ -25,15 +25,15 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ffdfd5662cd8bbfd4b9cd580a4df141a4c5a4bd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cfe397ae8b508e7821af6b3b9d837434129a3e56
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634191"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999762"
 ---
 # <a name="select---over-clause-transact-sql"></a>Clausola SELECT - OVER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Determina il partizionamento e l'ordinamento di un set di righe prima dell'applicazione della funzione finestra associata. In altre parole, la clausola OVER definisce una finestra o un set di righe specificato dall'utente all'interno di un set di risultati della query. Una funzione finestra calcola quindi un valore per ogni riga della finestra. È possibile utilizzare la clausola OVER con le funzioni per calcolare i valori aggregati, ad esempio medie mobili, aggregazioni cumulative, totali parziali o i primi N risultati per gruppo.  
   
@@ -114,7 +114,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  *value_expression*  
  Specifica la colonna in base alla quale viene partizionato il set di righe. *value_expression* può fare riferimento solo alle colonne rese disponibili dalla clausola FROM. *value_expression* non può fare riferimento a espressioni o alias nell'elenco di selezione. *value_expression* può essere un'espressione di colonna, una sottoquery scalare, una funzione scalare o una variabile definita dall'utente.  
   
- \<Clausola ORDER BY>  
+ \<ORDER BY clause>  
  Definisce l'ordine logico delle righe all'interno di ogni partizione del set di risultati. In altre parole, specifica l'ordine logico in cui viene eseguito il calcolo della funzione finestra.  
   
  *order_by_expression*  
@@ -160,7 +160,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Specifica che la finestra termina in corrispondenza dell'ultima riga della partizione. UNBOUNDED FOLLOWING può essere specificato solo come punto finale della finestra. Ad esempio, RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING definisce una finestra che inizia in corrispondenza della riga corrente e termina in corrispondenza dell'ultima riga della partizione.  
   
  \<unsigned value specification> FOLLOWING  
- Specificato con \<unsigned value specification> per indicare il numero di righe o valori che deve seguire la riga corrente. Quando \<unsigned value specification> FOLLOWING viene specificato come punto iniziale della finestra, il punto finale deve essere \<unsigned value specification> FOLLOWING. Ad esempio, ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING definisce una finestra che inizia in corrispondenza della seconda riga successiva alla riga corrente e termina in corrispondenza della decima riga successiva alla riga corrente. Questa specifica non è consentita per RANGE.  
+ Specificato con \<unsigned value specification> per indicare il numero di righe o valori da seguire per la riga corrente. Quando \<unsigned value specification> FOLLOWING viene specificato come punto iniziale della finestra, il punto finale deve essere \<unsigned value specification>FOLLOWING. Ad esempio, ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING definisce una finestra che inizia in corrispondenza della seconda riga successiva alla riga corrente e termina in corrispondenza della decima riga successiva alla riga corrente. Questa specifica non è consentita per RANGE.  
   
  valore letterale integer senza segno  
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
@@ -184,7 +184,7 @@ Se viene specificato ROWS/RANGE e \<window frame preceding> viene usato come \<w
   
  RANGE non può essere usato con \<unsigned value specification> PRECEDING o \<unsigned value specification> FOLLOWING.  
   
- A seconda della funzione analitica, di aggregazione o di rango usata con la clausola OVER, è possibile che la \<clausola ORDER BY> e/o la \<clausola ROWS e RANGE> non siano supportate.  
+ A seconda della funzione analitica, di aggregazione o di rango usata con la clausola OVER, è possibile che la clausola \<ORDER BY clause> e/o la clausola \<ROWS and RANGE clause> non siano supportate.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -323,11 +323,11 @@ USE AdventureWorks2012;
 GO  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS  SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                            ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -360,10 +360,10 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
 WHERE TerritoryID IS NULL OR TerritoryID < 5  
@@ -396,9 +396,9 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
-    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
+    ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
-    ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+    ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                              ORDER BY DATEPART(yy,ModifiedDate)   
                                              ROWS BETWEEN CURRENT ROW AND 1 FOLLOWING ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -426,9 +426,9 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
-    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
+    ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
-    ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+    ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                              ORDER BY DATEPART(yy,ModifiedDate)   
                                              ROWS UNBOUNDED PRECEDING),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -463,7 +463,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS RowNumber,  
     FirstName, LastName,   
-CONVERT(varchar(13), SUM(SalesAmountQuota),1) AS SalesQuota   
+CONVERT(VARCHAR(13), SUM(SalesAmountQuota),1) AS SalesQuota   
 FROM dbo.DimEmployee AS e  
 INNER JOIN dbo.FactSalesQuota AS sq  
     ON e.EmployeeKey = sq.EmployeeKey  

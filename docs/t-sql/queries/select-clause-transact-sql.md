@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 25eefb7a795034893bdf520be7b8645811443b13
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a6c854560982ceddf7d6237d77ba81562e97fc9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635523"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705942"
 ---
 # <a name="select-clause-transact-sql"></a>SELECT Clause (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Specifica le colonne che devono essere restituite dalla query.  
   
@@ -75,7 +75,7 @@ SELECT [ ALL | DISTINCT ]
   
  L'uso di TOP *expression* senza parentesi nelle istruzioni SELECT è supportato per compatibilità con le versioni precedenti, ma non è consigliato. Per altre informazioni, vedere [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
-\< select_list > Colonne che si vuole selezionare per il set di risultati. Tale elenco è una serie di espressioni separate da virgola Il numero massimo di espressioni che è possibile specificare nell'elenco selezionato è 4096.  
+\< select_list > Colonne da selezionare per il set di risultati. Tale elenco è una serie di espressioni separate da virgola Il numero massimo di espressioni che è possibile specificare nell'elenco selezionato è 4096.  
   
  \*  
  Specifica che devono essere restituite tutte le colonne di tutte le tabelle e viste elencate nella clausola FROM. Le colonne vengono restituite in base alla tabella o vista, a seconda di quanto specificato nella clausola FROM, nello stesso ordine in cui sono visualizzate nella tabella o vista.  

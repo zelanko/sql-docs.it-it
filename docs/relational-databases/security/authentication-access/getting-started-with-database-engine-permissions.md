@@ -1,5 +1,6 @@
 ---
 title: Introduzione alle autorizzazioni del motore di database | Microsoft Docs
+description: Esaminare alcuni concetti di base sulla sicurezza in SQL Server e ottenere informazioni su un'implementazione tipica delle autorizzazioni del motore di database.
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0fd86c132a0a51ea6bbba533bc7e8a2ab1083ddc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c5d6f2daf6b37c260b84683e3f85395a88b1f218
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903025"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005656"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introduzione alle autorizzazioni del motore di database
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Le autorizzazioni del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] vengono gestite a livello di server tramite gli account di accesso e i ruoli del server e a livello di database tramite gli utenti e i ruoli del database. Il modello per il [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] espone lo stesso sistema all'interno di ogni database, ma le autorizzazioni a livello di server non saranno disponibili. Questo argomento illustra alcuni concetti di base sulla sicurezza e quindi descrive un'implementazione tipica delle autorizzazioni.  
   
@@ -232,7 +233,7 @@ JOIN sys.database_principals AS dRole
 
 -   [Creazione di un database &#40;esercitazione&#41;](../../../t-sql/lesson-1-creating-database-objects.md)  
   
--   [Esercitazione su SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
+-   [Esercitazione: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
 -   [Esercitazione: Scrittura di istruzioni Transact-SQL](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   

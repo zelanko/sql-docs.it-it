@@ -1,5 +1,6 @@
 ---
 title: Creare la chiave master di un database | Microsoft Docs
+description: Creare la chiave master di un database in SQL Server usando Transact-SQL. Assicurarsi di avere le autorizzazioni necessarie.
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql
@@ -13,19 +14,19 @@ ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb8730a00c09b57fdabf3465b290cd2df63b1bc4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 200f10a76629eb94e1e9fc1b3e1c29811d9e7f67
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79510032"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005569"
 ---
 # <a name="create-a-database-master-key"></a>Creazione della chiave master di un database
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 In questo argomento viene descritto come creare una chiave master del database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)].
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicurezza
 
 ### <a name="permissions"></a>Autorizzazioni
 

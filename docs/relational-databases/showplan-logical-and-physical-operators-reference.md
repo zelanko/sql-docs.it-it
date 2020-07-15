@@ -137,15 +137,15 @@ ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ff043c2b88fd18666dad1bac3e2430e67ad2bce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a3fd29114074ea0e83e04b7c434264d1666efb59
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76037044"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091557"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Guida di riferimento a operatori Showplan logici e fisici
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
   Gli operatori descrivono la modalità di esecuzione di una query o di un'istruzione del linguaggio di manipolazione dei dati (DML, Data Manipulation Language) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . In Query Optimizer gli operatori consentono di compilare un piano di query per ottenere i risultati specificati nella query o per eseguire l'operazione specificata nell'istruzione DML. Il piano di query è un albero composto da operatori fisici che è possibile visualizzare tramite le istruzioni SET SHOWPLAN, le opzioni del piano di esecuzione grafico in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]o le classi di eventi Showplan di SQL Server Profiler.  
   
  Gli operatori sono suddivisi in operatori logici e fisici.  
@@ -164,9 +164,9 @@ ms.locfileid: "76037044"
   
 -   **Close()** : con la chiamata del metodo **Close()** un operatore fisico esegue alcune operazioni di eliminazione e viene quindi chiuso automaticamente. Un operatore fisico riceve una sola chiamata del metodo **Close()** .  
   
-Il metodo **GetNext()** restituisce una riga di dati e il numero di chiamate ricevute viene visualizzato come **ActualRows** nell'output Showplan generato usando SET STATISTICS PROFILE ON o SET STATISTICS XML ON. Per altre informazioni su queste opzioni SET, vedere [SET STATISTICS PROFILE &#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-profile-transact-sql.md) e [SET STATISTICS XML &#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-xml-transact-sql.md).  
+Il metodo **GetNext()** restituisce una riga di dati e il numero di chiamate ricevute viene visualizzato come **ActualRows** nell'output Showplan generato usando `SET STATISTICS PROFILE ON` o `SET STATISTICS XML ON`. Per altre informazioni su queste opzioni SET, vedere [SET STATISTICS PROFILE &#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-profile-transact-sql.md) e [SET STATISTICS XML &#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-xml-transact-sql.md).  
   
-I conteggi **ActualRebinds** e **ActualRewinds** visualizzati nell'output Showplan fanno riferimento al numero di chiamate al metodo **Init()** . A meno che un operatore non sia nel lato interno di un join ciclico, **ActualRebinds** è uguale a uno e **ActualRewinds** è uguale a zero. Se un operatore si trova nel lato interno di un join ciclico, la somma del numero delle associazioni e dei ripristini dovrebbe essere pari al numero delle righe elaborate nel lato esterno del join. Una riassociazione significa che uno o più parametri correlati del join sono stati modificati e che è necessario rivalutare il lato interno. Un ripristino significa che nessuno dei parametri correlati è stato modificato e che è possibile riutilizzare il set di risultati interno precedente.  
+I conteggi **ActualRebinds** e **ActualRewinds** visualizzati nell'output Showplan fanno riferimento al numero di chiamate al metodo **Init()** . A meno che un operatore non sia nel lato interno di un join a cicli annidati, **ActualRebinds** è uguale a uno e **ActualRewinds** è uguale a zero. Se un operatore si trova nel lato interno di un join ciclico, la somma del numero delle associazioni e dei ripristini dovrebbe essere pari al numero delle righe elaborate nel lato esterno del join. Una riassociazione significa che uno o più parametri correlati del join sono stati modificati e che è necessario rivalutare il lato interno. Un ripristino significa che nessuno dei parametri correlati è stato modificato e che è possibile riutilizzare il set di risultati interno precedente.  
   
 **ActualRebinds** e **ActualRewinds** sono inclusi nell'output Showplan XML generato utilizzando SET STATISTICS XML ON. Vengono popolati esclusivamente per gli operatori **Nonclustered Index Spool**, **Remote Query**, **Row Count Spool**, **Sort**, **Table Spool**e **Table-valued Function** . Anche**ActualRebinds** e **ActualRewinds** possono essere popolati per gli operatori **Assert** e **Filter** quando l'attributo **StartupExpression** è impostato su TRUE.  
   
@@ -175,12 +175,15 @@ Quando **ActualRebinds** e **ActualRewinds** sono inclusi in uno Showplan XML, s
 Un contatore correlato, **ActualEndOfScans**, è disponibile solo quando l'output Showplan viene generato utilizzando SET STATISTICS XML ON. Ogni volta che un operatore fisico raggiunge la fine del proprio flusso di dati, il contatore viene incrementato di uno. Un operatore fisico può raggiungere la fine del proprio flusso di dati, zero, una o più volte. Come per riassociazioni e ripristini, il numero di analisi terminate può essere maggiore di uno se l'operatore si trova nel lato interno di un join ciclico. Il numero di analisi terminate dovrebbe essere minore o uguale alla somma del numero di riassociazioni e ripristini.  
   
 ## <a name="mapping-physical-and-logical-operators"></a>Mapping di operatori logici e fisici  
- In Query Optimizer viene creato un piano di query che consiste in un albero di operatori logici. Dopo la creazione del piano, viene scelto l'operatore fisico più efficiente per ogni operatore logico. L'operatore fisico che implementerà un operatore logico viene individuato in base al costo.  
+ Query Optimizer crea un piano di query che consiste in un albero di operatori logici. Dopo la creazione del piano, Query Optimizer sceglie l'operatore fisico più efficiente per ogni operatore logico. L'operatore fisico che implementerà un operatore logico viene individuato in base al costo.  
   
  In genere un'operazione logica può essere implementata da più operatori fisici. In alcuni casi rari tuttavia anche un operatore fisico può implementare più operazioni logiche.  
   
 ## <a name="operator-descriptions"></a>Descrizioni dell'operatore  
  In questa sezione vengono descritti gli operatori fisici e logici.  
+
+ > [!TIP]
+ > Se una determinata icona del piano di esecuzione grafico ha un cerchio giallo con due frecce da destra a sinistra, significa che l'operatore viene eseguito in parallelo. Per altre informazioni sul parallelismo, vedere [Guida sull'architettura dei thread e delle attività](../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling).
   
 |Icona del piano di esecuzione grafico|Operatore Showplan|Descrizione|  
 |-----------------------------------|-----------------------|-----------------|  

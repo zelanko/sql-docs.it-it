@@ -1,7 +1,7 @@
 ---
 title: Statistiche | Microsoft Docs
 ms.custom: ''
-ms.date: 12/18/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -23,15 +23,15 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 371ef48f968bbc6cfd6a99d225dd8edf81cff6ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4cda8a71b0023cfc5cb7e697bf98e06b4e8955f8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286735"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012237"
 ---
 # <a name="statistics"></a>Statistiche
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Query Optimizer usa le statistiche per creare piani di query che consentono di migliorare le prestazioni delle query. Per la maggior parte delle query, Query Optimizer genera già le statistiche necessarie per un piano di query di alta qualità. In alcuni casi, è necessario creare statistiche aggiuntive o modificare la progettazione delle query per ottenere risultati ottimali. In questo argomento vengono illustrati i concetti relativi alle statistiche e vengono fornite linee guida per un utilizzo efficace delle statistiche di ottimizzazione delle query.  
   
 ##  <a name="components-and-concepts"></a><a name="DefinitionQOStatistics"></a> Componenti e concetti  
@@ -52,7 +52,7 @@ Più in dettaglio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cre
 
 - **Inizializzazione dell'istogramma**: nel primo passaggio viene elaborata una sequenza di valori a partire dall'inizio del set ordinato e vengono raccolti fino a 200 valori di *range_high_key*, *equal_rows*, *range_rows* e *distinct_range_rows* (in questo passaggio *range_rows* e *distinct_range_rows* sono sempre pari a zero). Il primo passaggio termina quando è stato esaurito tutto l'input o quando sono stati trovati 200 valori. 
 - **Analisi con unione di bucket**: nel secondo passaggio viene elaborato ogni valore aggiuntivo della colonna iniziale della chiave delle statistiche in base all'ordinamento. Ogni valore successivo viene aggiunto all'ultimo intervallo o viene creato un nuovo intervallo alla fine (questo è possibile perché i valori di input sono ordinati). Se viene creato un nuovo intervallo, una coppia di intervalli esistenti adiacenti viene compressa in un intervallo singolo. Questa coppia di intervalli viene selezionata per ridurre al minimo la perdita di informazioni. Questo metodo usa un algoritmo per il calcolo della *differenza massima*, per ridurre al minimo il numero di intervalli nell'istogramma, aumentando contemporaneamente la differenza tra i valori limite. Durante questa fase il numero di passaggi dopo la compressione degli intervalli rimane 200.
-- **Consolidamento dell'istogramma**: nel terzo passaggio, può essere effettuata la compressione di più intervalli se non viene persa una quantità significativa di informazioni. Il numero di intervalli dell'istogramma può essere minore del numero di valori distinct, anche per le colonne con un numero di punti limite inferiore a 200. Pertanto, anche se la colonna ha più di 200 valori univoci, l'istogramma può avere meno di 200 intervalli. Per una colonna costituita solo da valori univoci, quindi, l'istogramma consolidato ha un minimo di tre intervalli.
+- **Consolidamento dell'istogramma**: nel terzo passaggio, può essere eseguita la compressione di più intervalli se non viene persa una quantità significativa di informazioni. Il numero di intervalli dell'istogramma può essere minore del numero di valori distinct, anche per le colonne con un numero di punti limite inferiore a 200. Pertanto, anche se la colonna ha più di 200 valori univoci, l'istogramma può avere meno di 200 intervalli. Per una colonna costituita solo da valori univoci, quindi, l'istogramma consolidato ha un minimo di tre intervalli.
 
 > [!NOTE]
 > Se l'istogramma è stato creato tramite un campione anziché tramite l'analisi completa, i valori di *equal_rows*, *range_rows*, *distinct_range_rows* e  *average_range_rows* vengono stimati e pertanto non devono necessariamente essere valori integer.
@@ -137,7 +137,11 @@ Per altre informazioni sul controllo di AUTO_UPDATE_STATISTICS, vedere [Controll
 * L'applicazione esegue di frequente la stessa query, query analoghe o piani di query memorizzati nella cache analoghi. È possibile che gli aggiornamenti asincroni delle statistiche consentano di ottenere tempi di risposta alle query più stimabili rispetto agli aggiornamenti sincroni delle statistiche perché Query Optimizer può eseguire le query in entrata senza attendere le statistiche aggiornate. Ciò evita che alcune query vengano eseguite in ritardo rispetto ad altre.  
   
 * Sono stati riscontrati timeout nelle richieste client causati da una o più query in attesa delle statistiche aggiornate. In alcuni casi, l'attesa delle statistiche sincrone può causare errori nelle applicazioni con timeout aggressivi.  
-  
+
+L'aggiornamento asincrono delle statistiche viene eseguito da una richiesta in background. Quando è pronta per scrivere le statistiche aggiornate nel database, la richiesta tenta di acquisire un blocco di modifica dello schema sull'oggetto dei metadati delle statistiche. Se in una sessione diversa è già presente un blocco sullo stesso oggetto, l'aggiornamento asincrono delle statistiche viene bloccato fino a quando non è possibile acquisire il blocco di modifica dello schema. Analogamente, le sessioni che devono acquisire un blocco di stabilità dello schema sull'oggetto dei metadati delle statistiche per compilare una query possono essere bloccate dalla sessione di aggiornamento asincrono delle statistiche in background che include già o è in attesa di acquisire il blocco di modifica dello schema. Pertanto, per i carichi di lavoro con compilazioni di query molto frequenti e aggiornamenti frequenti delle statistiche, l'uso di statistiche asincrone può aumentare la probabilità di problemi di concorrenza dovuti al blocco.
+
+Nel database SQL di Azure è possibile evitare potenziali problemi di concorrenza con l'aggiornamento asincrono delle statistiche se si abilita la [configurazione con ambito di database](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY. Con questa configurazione abilitata, la richiesta in background resterà in attesa di acquisire il blocco di modifica dello schema in una coda separata con priorità bassa, consentendo ad altre richieste di continuare a compilare query con statistiche esistenti. Quando nessun'altra sessione mantiene un blocco sull'oggetto dei metadati delle statistiche, la richiesta in background acquisisce il blocco di modifica dello schema e aggiorna le statistiche. Nel caso improbabile in cui la richiesta in background non possa acquisire il blocco entro un periodo di timeout di diversi minuti, l'aggiornamento asincrono delle statistiche verrà interrotto e le statistiche non verranno aggiornate fino a quando non viene attivato un altro aggiornamento automatico delle statistiche o fino a quando le statistiche non vengono [aggiornate manualmente](update-statistics.md).
+
 #### <a name="incremental"></a>INCREMENTAL  
  Quando l'opzione INCREMENTAL di CREATE STATISTICS è impostata su ON, le statistiche create sono statistiche della partizione. Quando impostata su OFF, l'albero delle statistiche viene eliminato e le statistiche vengono rielaborate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il valore predefinito è OFF. Questa impostazione esegue l'override della proprietà INCREMENTAL a livello di database. Per altre informazioni sulla creazione di statistiche incrementali, vedere [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md). Per altre informazioni sulla creazione automatica di statistiche della partizione, vedere [Proprietà database &#40;pagina Opzioni&#41;](../../relational-databases/databases/database-properties-options-page.md#automatic) e [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). 
   
@@ -202,7 +206,7 @@ In questo esempio, l'oggetto statistiche `LastFirst` dispone delle densità per 
 ### <a name="query-selects-from-a-subset-of-data"></a>La query effettua la selezione da un subset di dati  
 La creazione di statistiche per indici e colonne singole in Query Optimizer implica la creazione di statistiche per i valori in tutte le righe. Quando le query effettuano la selezione da un subset di righe che dispone di una distribuzione dei dati univoca, le statistiche filtrate possono migliorare i piani di query. È possibile creare le statistiche filtrate usando l'istruzione [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) con la clausola [WHERE](../../t-sql/queries/where-transact-sql.md) per definire l'espressione del predicato del filtro.  
   
-Ad esempio, se si usa [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], ogni prodotto nella tabella `Production.Product` appartiene a una delle quattro categorie della tabella `Production.ProductCategory`, ovvero Bikes, Components, Clothing e Accessories. Ogni categoria dispone di una distribuzione dei dati diversa in relazione al peso. I pesi nella categoria Bikes sono compresi tra 13,77 e 30, quelli della categoria Components sono compresi tra 2,12 e 1.050 con alcuni valori NULL e quelli delle categorie Clothing e Accessories sono tutti NULL.  
+Ad esempio, se si usa [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], ogni prodotto nella tabella `Production.Product` appartiene a una delle quattro categorie della tabella `Production.ProductCategory`: Bikes, Components, Clothing e Accessories. Ogni categoria dispone di una distribuzione dei dati diversa in relazione al peso. I pesi nella categoria Bikes sono compresi tra 13,77 e 30, quelli della categoria Components sono compresi tra 2,12 e 1.050 con alcuni valori NULL e quelli delle categorie Clothing e Accessories sono tutti NULL.  
   
 Prendendo come esempio la categoria Bikes, le statistiche filtrate per tutti i pesi consentono di fornire a Query Optimizer statistiche più accurate e di migliorare la qualità del piano di query rispetto alle statistiche di tabella completa o alle statistiche inesistenti nella colonna relativa al peso (Weight). La colonna Weight della categoria Bikes rappresenta un candidato valido per le statistiche filtrate. Nel caso di un numero relativamente ridotto di ricerche correlate al peso, tale colonna non è tuttavia necessariamente un candidato valido per un indice filtrato. È possibile che i vantaggi derivanti dai miglioramenti alle prestazioni delle ricerche offerti da un indice filtrato siano inferiori rispetto agli svantaggi derivanti dai costi di manutenzione e archiviazione supplementari dovuti all'aggiunta di un indice filtrato al database.  
   

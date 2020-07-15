@@ -1,6 +1,6 @@
 ---
 title: Mirroring e snapshot del database
-description: Informazioni sull'interoperabilità dell'uso di snapshot del database e mirroring del database.
+description: Informazioni sull'interoperabilità dell'uso di snapshot del database e mirroring del database per ripartire il carico di lavoro dei report in SQL Server.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a184bdf227b412ea5464c86058d33903fa7d8d7a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b0a3e349633184bf838f2d9dc599d8355db6b100
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258809"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789709"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>Mirroring e snapshot del database (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Per ripartire il carico di lavoro dei report, è possibile avvalersi di un database mirror gestito per scopi di disponibilità. Per utilizzare un database mirror per la gestione dei report, creare nel database mirror uno snapshot del database e indirizzare le richieste di connessione client allo snapshot più recente. Uno snapshot del database è uno snapshot statico, in sola lettura e consistente a livello di transazioni del relativo database di origine nello stato in cui quest'ultimo si trovava al momento della creazione dello snapshot. Per creare uno snapshot del database in un database mirror, è necessario che il database si trovi nello stato di mirroring sincronizzato.  
   
  A differenza del database mirror stesso, uno snapshot del database è accessibile ai client. Fino a quando il server mirror comunica con il server principale, è possibile indirizzare i client di report a uno snapshot. Si noti che poiché uno snapshot del database è statico, i nuovi dati non sono disponibili. Per rendere disponibili agli utenti dati relativamente recenti, è necessario creare periodicamente un nuovo snapshot del database e fare in modo che le applicazioni indirizzino le connessioni client in arrivo allo snapshot più recente.  

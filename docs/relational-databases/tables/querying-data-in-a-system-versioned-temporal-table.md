@@ -1,7 +1,7 @@
 ---
 title: Query sui dati in una tabella temporale con controllo delle versioni di sistema | Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2020
+ms.date: 03/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,16 +11,16 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c64fbfa127f3e5992f2e924d7498fc68fec5db13
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 2ed4bcd1fb72c25520e935879305ff1c7d894707
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402679"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002329"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Query sui dati in una tabella temporale con controllo delle versioni di sistema
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Quando occorre recuperare lo stato (effettivo) più aggiornato dei dati in una tabella temporale, è possibile eseguire query esattamente nello stesso modo valido per l'esecuzione di query in tabelle non temporali. Se le colonne PERIOD non sono nascoste, i rispettivi valori compariranno in una query SELECT \* . Se le colonne **PERIOD** sono state specificate come nascoste, i rispettivi valori non saranno visualizzati in una query SELECT \*. Quando le colonne **PERIOD** sono nascoste, è possibile fare riferimento in modo specifico alle colonne **PERIOD** nella clausola SELECT per restituire i valori per queste colonne.
 
@@ -32,7 +32,7 @@ Per eseguire qualsiasi tipo di analisi basata sul tempo, usare la nuova clausola
 - CONTAINED IN (<data_ora_inizio> , <data_ora_fine>)
 - ALL
 
-È possibile specificare**FOR SYSTEM_TIME** in modo indipendente per ogni tabella in una query. La clausola può essere usata all'interno di espressioni di tabella comuni, funzioni con valore di tabella e stored procedure. Quando si usa alias di tabella con una tabella temporale, la clausola **FOR SYSTEM_TIME** deve essere inclusa tra il nome della tabella temporale e l'alias. Vedere il secondo esempio in [Query per una data/ora specifica con la sottoclausola AS-OF](#query-for-a-specific-time-using-the-as-of-sub-clause).
+È possibile specificare**FOR SYSTEM_TIME** in modo indipendente per ogni tabella in una query. La clausola può essere usata all'interno di espressioni di tabella comuni, funzioni con valore di tabella e stored procedure. Quando si usa un alias di tabella con una tabella temporale, la clausola **FOR SYSTEM_TIME** deve essere inclusa tra il nome della tabella temporale e l'alias. Vedere il secondo esempio in "Query per una data/ora specifica con la sottoclausola AS-OF".
 
 ## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>Query per un data/ora specifica con la sottoclausola AS-OF
 

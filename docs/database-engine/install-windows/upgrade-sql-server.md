@@ -1,5 +1,6 @@
 ---
 title: Eseguire l'aggiornamento di SQL Server | Microsoft Docs
+description: Questo articolo mette a disposizione collegamenti a risorse contenenti informazioni sull'aggiornamento per istanze di versioni diverse di SQL Server.
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a023389a6c3d0ea087d003af09464481af2089c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8689e210cd0faf265fc1dcf96705a87cecccf5ed
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79198318"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900216"
 ---
 # <a name="upgrade-sql-server"></a>Eseguire l'aggiornamento di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
  
  È possibile aggiornare le istanze di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ss2016](../../includes/sssql15-md.md)] o [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] direttamente a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per passare a SQL Server 2019 da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], è necessario eseguire un aggiornamento side-by-side o una migrazione, poiché non esiste un'area di sovrapposizione con un sistema operativo principale supportato. Prima di avviare il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], leggere gli articoli seguenti relativi al processo di aggiornamento e alle note sulla versione.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7433fa5404db80a04f5800faad35dcadffee432e
-ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
+ms.openlocfilehash: 006a18f65350cd94e0070834e21b1ee846883770
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82784641"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883001"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Ripartire il carico di lavoro di sola lettura in una replica secondaria di un gruppo di disponibilità Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Le funzionalità secondarie attive di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] includono il supporto per l'accesso in sola lettura a una o più repliche secondarie (*repliche secondarie leggibili*). Una replica secondaria leggibile può essere in modalità di disponibilità con commit sincrono o asincrono. Una replica secondaria leggibile consente l'accesso in sola lettura a tutti i relativi database secondari. Tuttavia, i database secondari leggibili non sono impostati per la sola lettura. Sono dinamici. Un database secondario viene modificato in base ai cambiamenti apportati al database primario corrispondente. Per una replica secondaria tipica, i dati presenti nel database secondario, comprese le tabelle durevoli con ottimizzazione per la memoria, sono quasi in tempo reale. Inoltre, gli indici full-text sono sincronizzati con i database secondari. In molte circostanze, la latenza dei dati tra un database primario e il database secondario corrispondente è in genere solo di pochi secondi.  
   
@@ -60,9 +60,13 @@ ms.locfileid: "82784641"
      L'amministratore del database deve configurare una o più repliche in modo tale da consentire tutte le connessioni (solo per l'accesso in lettura) o solo le connessioni con finalità di lettura quando vengono eseguite nel ruolo secondario.  
   
     > [!NOTE]  
-    >  Facoltativamente, l'amministratore del database può configurare le repliche di disponibilità per escludere le connessioni in sola lettura quando l'esecuzione avviene nel ruolo primario.  
+    >  Facoltativamente, l'amministratore del database può configurare le repliche di disponibilità per escludere le connessioni in sola lettura quando l'esecuzione avviene nel ruolo primario.
   
      Per altre informazioni, vedere [Informazioni sull'accesso alla connessione client per le repliche di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
+  
+    >[!WARNING]
+    >  Solo le repliche che si trovano nella stessa build principale di SQL Server saranno leggibili. Per altre informazioni, vedere [Informazioni di base sull'aggiornamento in sequenza](upgrading-always-on-availability-group-replica-instances.md#rolling-upgrade-basics-for-always-on-ags).
+  
   
 -   **Listener del gruppo di disponibilità**  
   

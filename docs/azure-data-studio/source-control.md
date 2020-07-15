@@ -1,38 +1,33 @@
 ---
 title: Controllo del codice sorgente
-titleSuffix: Azure Data Studio
 description: Informazioni su come configurare il controllo del codice sorgente in Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: c278bcf6cff451396b3d677b203f207b68fd6dc5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4f586e355ad31422c75a5abb10a4c7e42f5eda6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959282"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758374"
 ---
-#  <a name="using-source-control-in-name-sos"></a>Utilizzo del controllo del codice sorgente in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="source-control-in-azure-data-studio"></a>Controllo del codice sorgente in Azure Data Studio
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] supporta Git per il controllo della versione e del codice sorgente.
+Azure Data Studio supporta Git per il controllo della versione e del codice sorgente.
 
+## <a name="git-support-in-azure-data-studio"></a>Supporto Git in Azure Data Studio
 
-## <a name="git-support-in-name-sos"></a>Supporto Git in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
-
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] viene fornito con Gestione controllo del codice sorgente (SCM) di Git, ma è comunque necessario [installare Git (versione 2.0.0 o successiva)](https://git-scm.com/download) per rendere disponibili queste funzionalità. 
-
-
+Azure Data Studio è in dotazione con Gestione controllo del codice sorgente (SCM) di Git, ma è comunque necessario [installare Git (versione 2.0.0 o successiva)](https://git-scm.com/download) per rendere disponibili queste funzionalità. 
 
 ## <a name="open-an-existing-git-repository"></a>Aprire un repository Git esistente
 
 1. Nel menu **File** selezionare **Apri cartella...**
 2. Passare alla cartella contenente i file registrati da Git e quindi fare clic su **Seleziona cartella**. A questo punto è possibile selezionare le sottocartelle presenti nel repository locale.
-
 
 ## <a name="initialize-a-new-git-repository"></a>Inizializzare un nuovo repository Git
 
@@ -46,8 +41,8 @@ ms.locfileid: "67959282"
 
 ## <a name="working-with-git-repositories"></a>Uso dei repository Git
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] eredita l'implementazione di Git da VS Code ma non supporta attualmente altri provider di strumenti SCM. Per informazioni dettagliate sull'uso di Git dopo l'apertura o l'inizializzazione di un repository, vedere [Supporto di Git in VS Code](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support).
-
+Azure Data Studio eredita l'implementazione di Git da VS Code ma attualmente non supporta altri provider di Gestione controllo servizi. Per informazioni dettagliate sull'uso di Git dopo l'apertura o l'inizializzazione di un repository, vedere [Supporto di Git in VS Code](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support).
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
+
 - [Documentazione di Git](https://git-scm.com/documentation)

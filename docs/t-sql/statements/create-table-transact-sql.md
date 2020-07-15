@@ -46,16 +46,16 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3645b913b4e806d964a2da420d987ca10b2217f0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 384b474180e17eaed9827da2d2e2b2f9157c6f4b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81297321"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766958"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Crea una nuova tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -697,7 +697,7 @@ WITH
 )
 ```
 
-\<index_option> ::= specifica una o più opzioni per l'indice. Per una descrizione completa di queste opzioni, vedere [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md).
+\<index_option> ::= Specifica una o più opzioni per l'indice. Per una descrizione completa di queste opzioni, vedere [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md).
 
 PAD_INDEX = { ON | **OFF** }: se si specifica ON, la percentuale di spazio disponibile specificata da FILLFACTOR viene applicata alle pagine di livello intermedio dell'indice. Se si specifica OFF o se non si specifica un valore FILLFACTOR, le pagine di livello intermedio vengono riempite quasi fino alla capacità massima, lasciando spazio sufficiente per almeno una riga delle dimensioni massime consentite per l'indice, considerando il set di chiavi nelle pagine intermedie. Il valore predefinito è OFF.
 

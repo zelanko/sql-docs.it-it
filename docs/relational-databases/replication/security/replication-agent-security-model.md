@@ -1,5 +1,6 @@
 ---
 title: Modello di sicurezza dell'agente di replica | Microsoft Docs
+description: In SQL Server il modello di sicurezza degli agenti di replica garantisce un controllo dettagliato sugli account usati per eseguire gli agenti e stabilire connessioni.
 ms.custom: ''
 ms.date: 04/26/2018
 ms.prod: sql
@@ -20,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bd0cafe74b558dc86f6709b23e2f1195ecada520
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 59657ae7be557bfd2c9036f2cba84f3019d4cf0a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68768471"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882069"
 ---
 # <a name="replication-agent-security-model"></a>Modello di sicurezza dell'agente di replica
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Il modello di sicurezza dell'agente di replica consente un controllo accurato degli account utilizzati per l'esecuzione e le connessioni degli agenti. È possibile specificare un account diverso per ogni agente. Per altre informazioni su come specificare gli account, vedere [Controllo di identità e accesso (replica)](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  Il modello di sicurezza degli agenti di replica garantisce un controllo dettagliato sugli account usati per eseguire gli agenti e stabilire connessioni: Per ogni agente, è possibile specificare un account diverso. Per altre informazioni su come specificare gli account, vedere [Controllo di identità e accesso (replica)](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
 
 Il modello di sicurezza dell'agente di replica è leggermente diverso per le istanze gestite del database SQL di Azure, in quanto non sono previsti account di Windows con cui verranno eseguiti gli agenti. Al contrario, è necessario eseguire tutte le operazioni tramite l'autenticazione di SQL Server. 
   
@@ -38,11 +39,11 @@ Il modello di sicurezza dell'agente di replica è leggermente diverso per le ist
   
  Gli agenti di replica, come tutti i file eseguibili, vengono eseguiti nel contesto di un account di Windows. Utilizzano tale account per le connessioni con sicurezza integrata di Windows. L'account con il quale viene eseguito l'agente dipende dalla modalità di avvio di quest'ultimo:  
   
--   Avvio dell'agente da un processo predefinito di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent: quando si utilizza un processo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent per avviare un agente di replica, l'agente viene eseguito nel contesto di un account specificato al momento della configurazione della replica. Per ulteriori informazioni su [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent e la replica, vedere la sezione "Sicurezza agente in SQL Server Agent" più avanti in questo argomento. Per altre informazioni sulle autorizzazioni necessarie per l'account usato per l'esecuzione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, vedere [Configurare SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md).  
+-   Avvio dell'agente da un processo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent (impostazione predefinita): quando si utilizza un processo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent per avviare un agente di replica, l'agente viene eseguito nel contesto di un account specificato al momento della configurazione della replica. Per ulteriori informazioni su [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent e la replica, vedere la sezione "Sicurezza agente in SQL Server Agent" più avanti in questo argomento. Per altre informazioni sulle autorizzazioni necessarie per l'account usato per l'esecuzione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, vedere [Configurare SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md).  
   
--   Avvio dell'agente da una riga dei comandi MS-DOS, direttamente o tramite uno script: l'agente viene eseguito nel contesto dell'account dell'utente che esegue l'agente dalla riga di comando.  
+-   Avvio dell'agente da una riga di comando MS-DOS, direttamente o tramite uno script: l'agente viene eseguito nel contesto dell'account dell'utente che esegue l'agente dalla riga di comando.  
   
--   Avvio dell'agente da un'applicazione che utilizza oggetti RMO (Replication Management Objects) o un controllo ActiveX: l'agente viene eseguito nel contesto dell'applicazione che chiama gli oggetti RMO o il controllo ActiveX.  
+-   Avvio dell'agente da un'applicazione che usa Replication Management Objects (RMO) o un controllo ActiveX: l'agente viene eseguito nel contesto dell'applicazione che chiama gli oggetti RMO o il controllo ActiveX.  
   
     > [!NOTE]  
     >  I controlli ActiveX sono deprecati.  
@@ -70,23 +71,23 @@ Il modello di sicurezza dell'agente di replica è leggermente diverso per le ist
   
 |Agente|Nome processo|  
 |-----------|--------------|  
-|agente snapshot|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<ServerPubblicazione>-\<intero>**|  
-|Agente snapshot per una partizione di una pubblicazione di tipo merge|**Dyn_\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<GUID>**|  
-|Agente di lettura log|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<intero>**|  
-|Agente di merge per le sottoscrizioni pull|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<Sottoscrittore>-\<DatabaseSottoscrizione>-\<intero>**|  
-|Agente di merge per le sottoscrizioni push|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<Sottoscrittore>-\<intero>**|  
-|Agente di distribuzione per le sottoscrizioni push|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<Sottoscrittore>-\<intero>**|  
-|Agente di distribuzione per le sottoscrizioni pull|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<Sottoscrittore>-\<DatabaseSottoscrizione>-\<GUID>**|  
-|Agente di distribuzione per le sottoscrizioni push di Sottoscrittori non SQL Server|**\<ServerPubblicazione>-\<DatabasePubblicazione>-\<Pubblicazione>-\<Sottoscrittore>-\<intero>**|  
-|Agente di lettura coda|**[\<DatabaseDistribuzione>].\<intero>**|  
+|agente snapshot|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<integer>**|  
+|Agente snapshot per una partizione di una pubblicazione di tipo merge|**Dyn_\<Publisher>-\<PublicationDatabase>-\<Publication>-\<GUID>**|  
+|Agente di lettura log|**\<Publisher>-\<PublicationDatabase>-\<integer>**|  
+|Agente di merge per le sottoscrizioni pull|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|  
+|Agente di merge per le sottoscrizioni push|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
+|Agente di distribuzione per le sottoscrizioni push|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
+|Agente di distribuzione per le sottoscrizioni pull|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>**|  
+|Agente di distribuzione per le sottoscrizioni push di Sottoscrittori non SQL Server|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
+|Agente di lettura coda|**[\<Distributor>].\<integer>**|  
   
- \*Per le sottoscrizioni push a pubblicazioni Oracle, il nome del processo è **\<ServerPubblicazione>-\<ServerPubblicazione**> anziché **\<ServerPubblicazione>-\<DatabasePubblicazione>** .  
+ \*Per le sottoscrizioni push di pubblicazioni Oracle, il nome del processo è **\<Publisher>-\<Publisher**> invece di **\<Publisher>-\<PublicationDatabase>** .  
   
- \*\*Per le sottoscrizioni pull a pubblicazioni Oracle, il nome del processo è **\<ServerPubblicazione>-\<DatabaseDistribuzione**> anziché **\<ServerPubblicazione>-\<DatabasePubblicazione>** .  
+ \*\*Per le sottoscrizioni push di pubblicazioni Oracle, il nome del processo è **\<Publisher>-\<DistributionDatabase**> invece di **\<Publisher>-\<PublicationDatabase>** .  
   
  Durante la configurazione della replica si specificano gli account utilizzati per l'esecuzione degli agenti. Tutti i passaggi del processo, tuttavia, vengono eseguiti nel contesto di sicurezza di un *proxy*e pertanto la replica esegue internamente i mapping seguenti per gli account dell'agente specificati:  
   
--   Prima di tutto viene eseguito il mapping tra l'account e una credenziale usando l'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)]CREATE CREDENTIAL[ di ](../../../t-sql/statements/create-credential-transact-sql.md). I proxy di[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent utilizzano le credenziali per archiviare le informazioni sugli account utente di Windows.  
+-   Prima di tutto viene eseguito il mapping tra l'account e una credenziale usando l'istruzione [CREATE CREDENTIAL](../../../t-sql/statements/create-credential-transact-sql.md) di [!INCLUDE[tsql](../../../includes/tsql-md.md)]. I proxy di[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent utilizzano le credenziali per archiviare le informazioni sugli account utente di Windows.  
   
 -   Viene chiamata la stored procedure [sp_add_proxy](../../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md) e le credenziali vengono utilizzate per creare un proxy.  
   

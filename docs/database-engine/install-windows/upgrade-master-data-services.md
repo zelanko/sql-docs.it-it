@@ -1,5 +1,6 @@
 ---
 title: Aggiornare Master Data Services | Microsoft Docs
+description: Individuare i quattro scenari per l'aggiornamento di Microsoft SQL Server Master Data Services. Informazioni sulle posizioni dei file e sulla risoluzione dei problemi per gli aggiornamenti.
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1b9131442160969e7511f42b91ed09a3b4001e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e58b0ea07dc97ac7573934112dd3969cadb53c26
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934821"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900278"
 ---
 # <a name="upgrade-master-data-services"></a>Aggiornare Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   Di seguito sono descritti gli scenari di aggiornamento a Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Master Data Services.  
   
@@ -105,7 +106,7 @@ ms.locfileid: "67934821"
   
     2.  Selezionare il database MDS.  
   
-    3.  Fare clic su **Apply**.  
+    3.  Fare clic su **Applica**.  
   
 ##  <a name="upgrade-with-database-engine-upgrade"></a><a name="engine"></a> Aggiornare con l'aggiornamento del motore di database  
  In questo scenario il motore di database e l'applicazione [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] vengono aggiornati da una versione precedente a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] o [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)].  
@@ -148,7 +149,7 @@ ms.locfileid: "67934821"
   
 3.  Aggiornare lo schema del database MDS, creare un'applicazione Web e associare la nuova applicazione Web al database MDS aggiornato. Per le istruzioni, vedere i passaggi da 2 a 4 in [Aggiornare senza aggiornamento del motore di database](#noengine)  
   
-## <a name="troubleshooting"></a>risoluzione dei problemi  
+## <a name="troubleshooting"></a>Risoluzione dei problemi  
  **Problema:** quando si apre l'applicazione Web [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] viene visualizzato un messaggio di errore indicante che la versione del client non è compatibile con quella del database.  
   
  **Soluzione:** questo problema si verifica quando un'applicazione Web Gestione dati master di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] prova ad accedere a un database che è stato aggiornato a [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services. È necessario quindi usare un'applicazione Web [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)].  

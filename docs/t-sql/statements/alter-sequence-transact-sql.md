@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 39a7bb9baed65d136b5c0f1c6bc64159473ca72d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d17c59e38b30ef8492d20348e06cbc9ac75c0c5e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626603"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735956"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Modifica gli argomenti di un oggetto sequenza esistente. Se la sequenza è stata creata con l'opzione **CACHE**, la modifica della sequenza comporta la ricreazione della cache.  
   
@@ -85,7 +85,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
 ## <a name="metadata"></a>Metadati  
  Per informazioni sulle sequenze, eseguire una query su [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È necessaria l'autorizzazione **ALTER** per la sequenza o **ALTER** per lo schema. Per concedere l'autorizzazione **ALTER** per la sequenza, usare **ALTER ON OBJECT** nel formato seguente:  

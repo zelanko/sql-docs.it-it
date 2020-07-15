@@ -1,5 +1,6 @@
 ---
 title: Pagina Autorizzazioni o Entità a sicurezza diretta | Microsoft Docs
+description: Usare la pagina Autorizzazioni o la pagina Entità a protezione diretta per visualizzare o impostare le autorizzazioni per le entità a protezione diretta in SQL Server.
 ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 949e3c3cfc14082ef2093dfdd11baa01218ccb2f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a8109779b1afe4badd7c44bd30b264a07503c5fa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68076626"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000558"
 ---
 # <a name="permissions-or-securables-page"></a>Pagina Autorizzazioni o Entità a sicurezza diretta
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Usare la pagina **Autorizzazioni** o la pagina **Entità a protezione diretta** per visualizzare o impostare le autorizzazioni per le entità a protezione diretta. È possibile accedere a questa pagina da diversi tipi di oggetti. Il contenuto della pagina può modificare leggermente, in base alle modalità in cui la pagina è aperta e al contenuto. Quando la pagina viene visualizzata, la griglia superiore della pagina potrebbe contenere alcuni elementi o potrebbe essere vuota. Per aggiungere elementi alla griglia superiore, fare clic su **Cerca**. Selezionare un elemento in tale griglia, quindi impostare le autorizzazioni appropriate nella scheda **Esplicita** . Per visualizzare autorizzazioni aggregate, usare la scheda **Valide** .  
   
  Per comprendere le possibili combinazioni di entità a protezione diretta ed entità, vedere i collegamenti relativi alla sintassi specifica delle entità a protezione diretta nell'argomento [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md). Per altre informazioni, vedere [Entità a protezione diretta](../../relational-databases/security/securables.md).  

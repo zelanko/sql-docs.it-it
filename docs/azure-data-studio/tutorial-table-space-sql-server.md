@@ -1,23 +1,22 @@
 ---
 title: Abilitare il widget di informazioni dettagliate di esempio sullo spazio usato dalle tabelle
-titleSuffix: Azure Data Studio
 description: Questa esercitazione illustra come abilitare il widget di informazioni dettagliate di esempio sullo spazio usato dalle tabelle nel dashboard del database Azure Data Studio.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
-ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d2be24a72c098c5a6a0b5e3ecefbde9bbe39cd5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957015"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726697"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-name-sos"></a>Esercitazione: Abilitare il widget di informazioni dettagliate di esempio sullo spazio usato dalle tabelle tramite [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-azure-data-studio"></a>Esercitazione: Abilitare il widget di informazioni dettagliate di esempio sull'utilizzo dello spazio da parte delle tabelle tramite Azure Data Studio
 
 Questa esercitazione illustra come abilitare un widget di informazioni dettagliate nel dashboard del database, offrendo una vista immediata dell'uso dello spazio da parte di tutte le tabelle di un database. In questa esercitazione verranno illustrate le procedure per:
 
@@ -33,9 +32,9 @@ Per questa esercitazione è necessario il database di SQL Server o il database S
 * [Connettersi ed eseguire query in SQL Server con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 * [Connettersi ed eseguire query nel database SQL di Azure con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
-## <a name="turn-on-a-management-insight-on-name-soss-database-dashboard"></a>Attivare le informazioni dettagliate sulla gestione nel dashboard del database di [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="turn-on-a-management-insight-on-azure-data-studios-database-dashboard"></a>Attivare le informazioni dettagliate sulla gestione nel dashboard del database di Azure Data Studio
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] include un widget di esempio predefinito per monitorare lo spazio usato dalle tabelle in un database.
+Azure Data Studio include un widget di esempio predefinito per monitorare lo spazio usato dalle tabelle in un database.
 
 1. Aprire le *impostazioni utente* premendo **CTRL+MAIUSC+P** e aprire il *riquadro comandi*.
 
@@ -78,11 +77,11 @@ Per questa esercitazione è necessario il database di SQL Server o il database S
 
 ## <a name="working-with-the-insight-chart"></a>Uso del grafico di informazioni dettagliate
 
-Il grafico di informazioni dettagliate di [!INCLUDE[name-sos](../includes/name-sos-short.md)] fornisce dettagli relativi ai filtri e al passaggio del mouse. Per provare questa procedura:
+Il grafico di informazioni dettagliate di Azure Data Studio fornisce dettagli relativi ai filtri e al passaggio del mouse. Per provare questa procedura:
 
-1. Fare clic e attivare la legenda *row_count* sul grafico. [!INCLUDE[name-sos](../includes/name-sos-short.md)] mostra e nasconde la serie di dati mediante l'attivazione e la disattivazione di una legenda.
+1. Fare clic e attivare la legenda *row_count* sul grafico. Azure Data Studio visualizza e nasconde la serie di dati tramite l'attivazione e la disattivazione di una legenda.
 
-2. Passare il puntatore del mouse sul grafico. [!INCLUDE[name-sos](../includes/name-sos-short.md)] mostra altre informazioni sull'etichetta della serie di dati e il relativo valore, come illustrato nello screenshot seguente.
+2. Passare il puntatore del mouse sul grafico. Azure Data Studio visualizza altre informazioni sull'etichetta della serie di dati e il relativo valore, come illustrato nello screenshot seguente.
 
    ![attivazione e legenda grafico](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
 

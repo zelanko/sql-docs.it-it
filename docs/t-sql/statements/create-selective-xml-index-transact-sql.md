@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7eb8bb64e79fbd575e3b470c8e5312e58c0544ac
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 81bfeb64f7acded533c78d5937160dacb86af652
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633908"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767036"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Crea un nuovo indice XML selettivo nella tabella e nella colonna XML specificate. Gli indici XML selettivi contribuiscono al miglioramento delle prestazioni relative all'indicizzazione e all'esecuzione di query XML indicizzando solo il subset di nodi su cui vengono in genere eseguite query. È inoltre possibile creare indici XML selettivi secondari. Per informazioni, vedere [Creare, modificare o eliminare indici XML selettivi secondari](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
   
@@ -98,7 +98,7 @@ identifier
  *index_name*  
  Nome del nuovo indice che si desidera creare. I nomi degli indici devono essere necessariamente univoci all'interno di una tabella, ma non all'interno di un database. Devono essere anche conformi alle regole degli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
- *\<table_object>* Tabella contenente la colonna XML che si vuole indicizzare. Utilizzare uno dei seguenti formati:  
+ *\<table_object>* Tabella contenente la colonna XML da indicizzare. Utilizzare uno dei seguenti formati:  
   
 -   `database_name.schema_name.table_name`  
   
@@ -113,9 +113,9 @@ identifier
   
  [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)** ] Elenco degli spazi dei nomi usati nei percorsi da indicizzare. Per informazioni sulla sintassi della clausola WITH XMLNAMESPACES, vedere [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md).  
   
- FOR **(** \<promoted_node_path_list> **)** Elenco di percorsi da indicizzare con hint di ottimizzazione facoltativi. Per informazioni sui percorsi e gli hint di ottimizzazione che è possibile specificare nell'istruzione CREATE o ALTER, vedere [Specificare percorsi e hint di ottimizzazione per indici XML selettivi](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
+ FOR **(** \<promoted_node_path_list> **)** Elenco dei percorsi da indicizzare con hint di ottimizzazione facoltativi. Per informazioni sui percorsi e gli hint di ottimizzazione che è possibile specificare nell'istruzione CREATE o ALTER, vedere [Specificare percorsi e hint di ottimizzazione per indici XML selettivi](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
   
- WITH *\<index_options>* Per informazioni sulle opzioni di indicizzazione, vedere [CREATE XML INDEX &#40;Indici XML selettivi&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ WITH *\<index_options>* Per altre informazioni sulle opzioni di indicizzazione, vedere [CREATE XML INDEX &#40;Selective XML Indexes&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
 ## <a name="best-practices"></a>Procedure consigliate  
  Creare un indice XML selettivo anziché un indice XML comune nella maggior parte dei casi per migliorare le prestazioni e usufruire di uno spazio di archiviazione più efficiente. Non è tuttavia consigliabile creare un indice XML selettivo in presenza di una delle condizioni indicate di seguito.  
@@ -127,7 +127,7 @@ identifier
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  Per informazioni sulle limitazioni e restrizioni, vedere [Indici XML selettivi &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  

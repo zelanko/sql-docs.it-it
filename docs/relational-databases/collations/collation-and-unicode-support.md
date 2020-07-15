@@ -32,15 +32,15 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63084232460e60aedb0b0a1abe267caa7687e9dd
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75831819"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091919"
 ---
 # <a name="collation-and-unicode-support"></a>Supporto Unicode e delle regole di confronto
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] forniscono regole di ordinamento e proprietà di distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati per i dati. Le regole di confronto usate con dati di tipo carattere, quali **char** e **varchar**, definiscono la tabella codici e i caratteri corrispondenti che possono essere rappresentati per quel tipo di dati. 
 
 Sia che si installi una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si ripristini il backup di un database o si stabiliscano connessioni tra database server e client, è importante comprendere i requisiti delle impostazioni locali, l'ordinamento e la modalità di distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati dei dati da usare. Per visualizzare l'elenco delle regole di confronto disponibili nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
@@ -178,8 +178,8 @@ La tabella seguente illustra le designazioni delle regole di confronto predefini
 |Arabo (Yemen)|0x2401|0x0401|Arabic_CI_AS|
 |Armeno (Armenia)|0x042b|0x0419|Latin1_General_CI_AS|
 |Assamese (India)|0x044d|0x044d|Non disponibile a livello di server|
-|Azeri (Azerbaigian, alfabeto cirillico)|0x082c|0x082c|Deprecato, non disponibile a livello di server|
-|Azeri (Azerbaigian, alfabeto latino)|0x042c|0x042c|Deprecato, non disponibile a livello di server|
+|Azerbaigiano (Azerbaigian, alfabeto cirillico)|0x082c|0x082c|Deprecato, non disponibile a livello di server|
+|Azerbaigiano (Azerbaigian, alfabeto latino)|0x042c|0x042c|Deprecato, non disponibile a livello di server|
 |Baschiro (Russia)|0x046d|0x046d|Latin1_General_CI_AI|
 |Basco (Basco)|0x042d|0x0409|Latin1_General_CI_AS|
 |Bielorusso (Bielorussia)|0x0423|0x0419|Cyrillic_General_CI_AS|
@@ -235,7 +235,7 @@ La tabella seguente illustra le designazioni delle regole di confronto predefini
 |Francese (Monaco)|0x180c|0x040c|French_CI_AS|
 |Francese (Svizzera)|0x100c|0x040c|French_CI_AS|
 |Frisone (Paesi Bassi)|0x0462|0x0462|Latin1_General_CI_AI|
-|Galiziano (Spagna)|0x0456|0x0409|Latin1_General_CI_AS|
+|Galiziano|0x0456|0x0409|Latin1_General_CI_AS|
 |Georgiano (Georgia)|0x10437|0x10437|Georgian_Modern_Sort_CI_AS|
 |Georgiano (Georgia)|0x0437|0x0419|Latin1_General_CI_AS|
 |Tedesco - ordinamento alfabetico telefonico (DIN)|0x10407|0x10407|German_PhoneBook_CI_AS|
@@ -275,7 +275,7 @@ La tabella seguente illustra le designazioni delle regole di confronto predefini
 |Lituano (Lituania)|0x0427|0x0427|Lithuanian_CI_AS|
 |Basso sorabo (Germania)|0x082e|0x0409|Latin1_General_CI_AS|
 |Lussemburghese (Lussemburgo)|0x046e|0x0409|Latin1_General_CI_AS|
-|Macedone (Macedonia del Nord)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|Macedone (Macedonia del Nord, Ex Rep. Jugoslava di Macedonia)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
 |Malese (Brunei Darussalam)|0x083e|0x0409|Latin1_General_CI_AS|
 |Malese (Malaysia)|0x043e|0x0409|Latin1_General_CI_AS|
 |Malayalam (India)|0x044c|0x0439|Non disponibile a livello di server|
@@ -290,7 +290,7 @@ La tabella seguente illustra le designazioni delle regole di confronto predefini
 |Norvegese (Bokmål, Norvegia)|0x0414|0x0414|Latin1_General_CI_AI|
 |Norvegese (Nynorsk, Norvegia)|0x0814|0x0414|Latin1_General_CI_AI|
 |Occitano (Francia)|0x0482|0x040c|French_CI_AS|
-|Oriya (India)|0x0448|0x0439|Non disponibile a livello di server|
+|Odia (India)|0x0448|0x0439|Non disponibile a livello di server|
 |Pashto (Afghanistan)|0x0463|0x0463|Non disponibile a livello di server|
 |Persiano (Iran)|0x0429|0x0429|Latin1_General_CI_AI|
 |Polacco (Polonia)|0x0415|0x0415|Polish_CI_AS|
@@ -303,6 +303,7 @@ La tabella seguente illustra le designazioni delle regole di confronto predefini
 |Romeno (Romania)|0x0418|0x0418|Romanian_CI_AS|
 |Romancio (Svizzera)|0x0417|0x0417|Latin1_General_CI_AI|
 |Russo (Russia)|0x0419|0x0419|Cyrillic_General_CI_AS|
+|Sacha (Russia)|0x0485|0x0485|Latin1_General_CI_AI|
 |Sami (Inari, Finlandia)|0x243b|0x083b|Latin1_General_CI_AI|
 |Sami (Lule, Norvegia)|0x103b|0x043b|Latin1_General_CI_AI|
 |Sami (Lule, Svezia)|0x143b|0x083b|Latin1_General_CI_AI|
@@ -366,7 +367,6 @@ La tabella seguente illustra le designazioni delle regole di confronto predefini
 |Gallese (Regno Unito)|0x0452|0x0452|Latin1_General_CI_AI|
 |Wolof (Senegal)|0x0488|0x040c|French_CI_AS|
 |Xhosa/isiXhosa (Sudafrica)|0x0434|0x0409|Latin1_General_CI_AS|
-|Jakuto (Russia)|0x0485|0x0485|Latin1_General_CI_AI|
 |Yi (RPC)|0x0478|0x0409|Latin1_General_CI_AS|
 |Yoruba (Nigeria)|0x046a|0x0409|Latin1_General_CI_AS|
 |Zulu/isiZulu (Sudafrica)|0x0435|0x0409|Latin1_General_CI_AS|
@@ -656,4 +656,3 @@ Per altre informazioni, vedere i seguenti contenuti correlati:
 [Scelta di una lingua durante la creazione di un indice full-text](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
 [Set di caratteri a byte singolo e multibyte](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
- 

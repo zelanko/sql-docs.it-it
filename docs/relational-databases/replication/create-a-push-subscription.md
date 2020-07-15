@@ -1,5 +1,6 @@
 ---
 title: Creare una sottoscrizione push | Microsoft Docs
+description: Informazioni su come creare una sottoscrizione push in SQL Server tramite SQL Server Management Studio, Transact-SQL o Replication Management Objects.
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -17,21 +18,21 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 6eca1e80614772a1aa65faa60351fb73f83ba433
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d02267b12a80abb7784b552eb8d71fcca89aa8a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70059290"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773956"
 ---
 # <a name="create-a-push-subscription"></a>Creare una sottoscrizione push
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   In questo argomento viene descritto come creare una sottoscrizione push in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o RMO (Replication Management Objects). Per informazioni sulla creazione di una sottoscrizione push per un Sottoscrittore non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Creare una sottoscrizione per un Sottoscrittore non SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
  
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
 Creare una sottoscrizione push nel server di pubblicazione o nel Sottoscrittore usando la Creazione guidata nuova sottoscrizione. Attenersi alle indicazioni presenti nelle pagine della procedura guidata per:  
   
 - Specificare il server di pubblicazione e la pubblicazione.  
@@ -74,7 +75,7 @@ Creare una sottoscrizione push nel server di pubblicazione o nel Sottoscrittore 
   
 3. Fare clic col pulsante destro del mouse sulla cartella **Sottoscrizioni locali** e quindi scegliere **Nuove sottoscrizioni**.  
   
-4. Nella pagina **Pubblicazione** della Creazione guidata nuova sottoscrizione selezionare **\<Trova server di pubblicazione SQL Server** o **\<Trova server di pubblicazione Oracle>** nell'elenco a discesa **Server di pubblicazione**.  
+4. Nella pagina **Pubblicazione** della Creazione guidata nuova sottoscrizione selezionare **\<Find SQL Server Publisher>** o **\<Find Oracle Publisher>** nell'elenco a discesa **Server di pubblicazione**.  
   
 5. Connettersi al server di pubblicazione nella finestra di dialogo **Connetti a server** .  
   
@@ -82,7 +83,7 @@ Creare una sottoscrizione push nel server di pubblicazione o nel Sottoscrittore 
   
 7. Completare i passaggi della Creazione guidata nuova sottoscrizione.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
 È possibile creare sottoscrizioni push a livello di programmazione tramite le store procedure di replica. Le stored procedure utilizzate dipenderanno dal tipo di pubblicazione a cui appartiene la sottoscrizione.  
   
 > [!IMPORTANT]

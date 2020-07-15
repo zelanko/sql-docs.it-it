@@ -26,16 +26,16 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 953faba1da7f4fbe1283d3aacf74a1c3e902ed2f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d3aded8f578733ac3c6274406dccef235e71c357
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629971"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85978287"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Modifica la proprietà di un'entità a protezione diretta.    
     
@@ -122,7 +122,7 @@ ALTER AUTHORIZATION ON
 ```    
     
 ## <a name="arguments"></a>Argomenti    
-\<class_type> è la classe a protezione diretta dell'entità per la quale viene modificato il proprietario. OBJECT è l'impostazione predefinita.    
+\<class_type> è la classe dell'entità a protezione diretta per la quale viene modificato il proprietario. OBJECT è l'impostazione predefinita.    
     
 |||    
 |-|-|    

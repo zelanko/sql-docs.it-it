@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2881c4ee5145506158585611f61219983b764936
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2424982eebaed7a4d9b3d73ea7d4475b7ec758c2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68066108"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892577"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifica un assembly mediante la modifica delle proprietà di catalogo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di un assembly. ALTER ASSEMBLY esegue un aggiornamento dell'assembly in base alla copia più recente dei moduli [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] che includono la relativa implementazione e aggiunge o rimuove i file a esso associati. Gli assembly vengono creati tramite l'istruzione [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
 
@@ -42,7 +42,7 @@ ms.locfileid: "68066108"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
 ALTER ASSEMBLY assembly_name  
     [ FROM <client_assembly_specifier> | <assembly_bits> ]  
     [ WITH <assembly_option> [ ,...n ] ]  

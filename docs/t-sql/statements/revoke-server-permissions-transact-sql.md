@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 342b7c627d974a2de127a7178a7257de067f9714
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 39617f16278c74f978d604cfee02d01e408c5854
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634117"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894548"
 ---
 # <a name="revoke-server-permissions-transact-sql"></a>REVOKE - autorizzazioni per server (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Rimuove le autorizzazioni GRANT e DENY a livello del server.  
   
@@ -58,7 +58,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Specifica un'autorizzazione che può essere concessa per un server. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- { TO | FROM } \<grantee_principal> Specifica l'entità da cui viene revocata l'autorizzazione.  
+ { TO | FROM } \<grantee_principal>Specifica l'entità da cui viene revocata l'autorizzazione.  
   
  AS \<grantor_principal> Specifica l'entità dalla quale l'entità che esegue la query ottiene il diritto di revocare l'autorizzazione.  
   

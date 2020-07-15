@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8df94f31b6a036677f5d62ae60ffb4cf53a082be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e066a82da2994c14a23ad647c103402232a7d1c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321232"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882092"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Definizione di una relazione tra record logici degli articoli di tabelle di merge
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   In questo argomento viene descritto come definire una relazione tra record logici tra articoli di tabella del merge in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
   
  La replica di tipo merge consente di definire una relazione tra righe correlate in tabelle diverse. Queste righe possono quindi essere elaborate come un'unità transazionale durante la sincronizzazione. È possibile definire un record logico tra due articoli indipendentemente dal fatto che per essi sia stata definita una relazione tra filtri di join. Per altre informazioni, vedere [Raggruppare modifiche alle righe correlate con record logici](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
@@ -51,14 +51,14 @@ ms.locfileid: "75321232"
   
 -   Se si aggiunge, modifica o elimina un record logico dopo che sono state inizializzate sottoscrizioni per la pubblicazione, è necessario generare un nuovo snapshot e reinizializzare tutte le sottoscrizioni in seguito alla modifica. Per altre informazioni sui requisiti per la modifica delle proprietà, vedere [Modificare le proprietà di pubblicazioni e articoli](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
- Definire record logici nella finestra di dialogo **Aggiungi join** disponibile nella Creazione guidata nuova pubblicazione e nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](../../../relational-databases/replication/publish/create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+ Definire record logici nella finestra di dialogo **Aggiungi join** disponibile nella Creazione guidata nuova pubblicazione e nella finestra di dialogo **Proprietà pubblicazione - \<Publication>** . Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](../../../relational-databases/replication/publish/create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
  È possibile definire record logici nella finestra di dialogo **Aggiungi join** solo se vengono applicati a un filtro join di una pubblicazione di tipo merge e la pubblicazione soddisfa i requisiti per l'utilizzo di partizioni pre-calcolate. Per definire record logici che non vengono applicati a filtri di join e per impostare il rilevamento e la risoluzione dei conflitti a livello di record logici, è necessario utilizzare le stored procedure.  
   
 #### <a name="to-define-a-logical-record-relationship"></a>Per definire una relazione tra record logici  
   
-1.  Nella pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione o nella pagina **Filtro righe** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** selezionare un filtro di riga nel riquadro **Tabelle filtrate**.  
+1.  Nella pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione o nella pagina **Filtro righe** della finestra di dialogo **Proprietà pubblicazione - \<Publication>** selezionare un filtro di riga nel riquadro **Tabelle filtrate**.  
   
      A una relazione tra record logici è associato un filtro join che estende un filtro di riga. È pertanto necessario definire un filtro di riga prima di poter estendere il filtro con un join e applicare una relazione tra record logici. Dopo aver definito un filtro join, è possibile estenderlo con un altro filtro join. Per ulteriori informazioni sulla definizione di filtri join, vedere [Definizione e modifica di un filtro di join tra articoli di merge](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75321232"
   
 3.  Nella finestra di dialogo **Aggiungi join** definire un filtro join e quindi selezionare la casella di controllo **Record logico**.  
   
-4.  Se è visualizzata la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** fare clic su **OK** per salvare e chiudere la finestra di dialogo.  
+4.  Se è visualizzata la finestra di dialogo **Proprietà pubblicazione - \<Publication>** fare clic su **OK** per salvare e chiudere la finestra di dialogo.  
   
 #### <a name="to-delete-a-logical-record-relationship"></a>Per eliminare una relazione tra record logici  
   
@@ -74,7 +74,7 @@ ms.locfileid: "75321232"
   
      Per eliminare solo la relazione tra record logici:  
   
-    1.  Nella pagina **Filtro righe** della Creazione guidata nuova pubblicazione o nella pagina **Filtro righe** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** selezionare il filtro join associato alla relazione tra record logici nel riquadro **Tabelle filtrate** e quindi fare clic su **Modifica**.  
+    1.  Nella pagina **Filtro righe** della Creazione guidata nuova pubblicazione o nella pagina **Filtro righe** della finestra di dialogo **Proprietà pubblicazione - \<Publication>** selezionare il filtro join associato alla relazione tra record logici nel riquadro **Tabelle filtrate** e quindi fare clic su **Modifica**.  
   
     2.  Nella finestra di dialogo **Modifica join** deselezionare la casella di controllo **Record logico**.  
   
@@ -82,9 +82,9 @@ ms.locfileid: "75321232"
   
      Per eliminare la relazione tra record logici e il filtro join ad essa associato:  
   
-    -   Nella pagina **Filtro righe** della Creazione guidata nuova pubblicazione o nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** selezionare un filtro nel riquadro **Tabelle filtrate** e quindi fare clic su **Elimina**. Se il filtro di join eliminato è esteso da altri join, anch'essi verranno eliminati.  
+    -   Nella pagina **Filtro righe** della Creazione guidata nuova pubblicazione o nella finestra di dialogo **Proprietà pubblicazione - \<Publication>** selezionare un filtro nel riquadro **Tabelle filtrate** e quindi fare clic su **Elimina**. Se il filtro di join eliminato è esteso da altri join, anch'essi verranno eliminati.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  Per specificare a livello di programmazione relazioni tra record logici tra gli articoli, è possibile utilizzare stored procedure di replica.  
   
 #### <a name="to-define-a-logical-record-relationship-without-an-associated-join-filter"></a>Per definire una relazione tra record logici senza un filtro di join associato  
