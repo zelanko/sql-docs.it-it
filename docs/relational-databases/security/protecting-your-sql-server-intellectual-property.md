@@ -1,5 +1,6 @@
 ---
 title: Protezione della proprietà intellettuale di SQL Server | Microsoft Docs
+description: Informazioni sulle opzioni per la protezione della proprietà intellettuale in un'applicazione dati di SQL Server distribuita ai clienti.
 ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: afe179023f72ec509af5828bb89afb51f93b53a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dc6b2c88fc2405aea99ac8ce7de9c38cf43c99aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67986597"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773878"
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>Protezione della proprietà intellettuale di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Gli sviluppatori di software spesso si interrogano su come distribuire le proprie applicazioni [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] impedendo eventuali operazioni di analisi e decodificazione. Il problema principale è il fatto che la protezione della proprietà intellettuale rappresenta una questione legale molto importante che può essere gestita solo mediante un contratto di licenza. Quando [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] viene installato in un computer amministrato da altri utenti, si perdono intrinsecamente alcuni aspetti del controllo sull'applicazione. 
 

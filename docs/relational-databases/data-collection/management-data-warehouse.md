@@ -1,5 +1,6 @@
 ---
 title: Data warehouse di gestione | Microsoft Docs
+description: Il data warehouse di gestione in SQL Server è un database relazionale che contiene i dati raccolti da un server di destinazione.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8723d9750eb03eda14a7983cba8919ea8e92eb81
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3699812972a7119552a53b76c73a373a89dc0622
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68133616"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758108"
 ---
 # <a name="management-data-warehouse"></a>data warehouse di gestione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Il data warehouse di gestione è un database relazionale che contiene i dati raccolti da un server che costituisce una destinazione di raccolta dati. Questi dati vengono utilizzati per generare report per i set di raccolta dati di sistema e possono essere utilizzati anche per creare report personalizzati.  
   
  L'infrastruttura dell'agente di raccolta dati definisce i processi e piani di manutenzione necessari per implementare i criteri di memorizzazione definiti dall'amministratore del database.  

@@ -1,5 +1,6 @@
 ---
 title: Panoramica della gestione delle chiavi per Always Encrypted | Microsoft Docs
+description: 'Informazioni su come gestire i due tipi di chiavi crittografiche usati da Always Encrypted per proteggere i dati in SQL Server: chiave di crittografia della colonna e chiave master della colonna.'
 ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bfeb8126553a1a5990ed7ccfd8a836117f3328b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288735"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784006"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Panoramica della gestione delle chiavi per Always Encrypted
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 
 Per proteggere i dati,[Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) usa due tipi di chiavi crittografiche: una per crittografare i dati e un'altra per crittografare la chiave che crittografa i dati. La chiave di crittografia della colonna crittografa i dati, la chiave master della colonna crittografa la chiave di crittografia della colonna. Questo articolo offre una panoramica dettagliata della gestione di queste chiavi di crittografia.  

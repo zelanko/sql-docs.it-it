@@ -1,5 +1,6 @@
 ---
 title: Rimuovere un punto di controllo dell'utilità (Utilità SQL Server) | Microsoft Docs
+description: Informazioni su come rimuovere un punto di controllo dell'utilità di SQL Server da Utilità SQL Server. È possibile usare Transact-SQL per eseguire un stored procedure per questa attività.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: c048a416-900e-4c77-8243-e0f0d8b94068
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 34fb18296b176e49220f9566dccaba4bc8d7b34c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b55f0a51738b3c266a1ca088f332a7e13769a914
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115333"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773517"
 ---
 # <a name="remove-a-utility-control-point-sql-server-utility"></a>Rimuovere un punto di controllo dell'utilità (Utilità SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In questo argomento viene illustrato come rimuovere un punto di controllo dell'utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'articolo**  
@@ -49,7 +50,7 @@ ms.locfileid: "68115333"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  La procedura deve essere eseguita da un utente che disponga di autorizzazioni **sysadmin** , le stesse necessarie per la creazione di un punto di controllo dell'utilità.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-remove-a-utility-control-point"></a>Per rimuovere un punto di controllo dell'utilità  
   

@@ -1,5 +1,6 @@
 ---
 title: Proprietà database (pagina Generale) | Microsoft Docs
+description: Informazioni su come usare la scheda Generale della finestra di dialogo Proprietà database per visualizzare o modificare le proprietà di un database.
 ms.custom: ''
 ms.date: 10/27/2015
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7b9ba71d5f7791b442989a5194c9cc6aede98677
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 35ab83fe9c30cd51143f7267a9156d4f95a56236
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099597"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756196"
 ---
 # <a name="database-properties-general-page"></a>Proprietà database (pagina Generale)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilizzare questa pagina per visualizzare o modificare le proprietà per il database selezionato.  
   
 ## <a name="options"></a>Opzioni  

@@ -1,5 +1,6 @@
 ---
 title: Procedure consigliate per la sicurezza in database indipendenti| Microsoft Docs
+description: Comprendere e attenuare le minacce univoche per i database indipendenti, incluse quelle correlate al processo di autenticazione USER WITH PASSWORD in SQL Server.
 ms.custom: ''
 ms.date: 03/14/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: jaszymas
-ms.openlocfilehash: 4d7b428534462779abeb72c65b05f551bfd4b0eb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 20b864e61050b4bd49582d5579f222091e8c7329
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75246134"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759000"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Procedure consigliate per la sicurezza in database indipendenti
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   I database indipendenti sono soggetti ad alcune minacce univoche che devono essere comprese e contrastate dagli amministratori di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . La maggior parte delle minacce è correlata al processo di autenticazione **USER WITH PASSWORD** , che sposta il limite di autenticazione dal livello [!INCLUDE[ssDE](../../includes/ssde-md.md)] al livello di database.  
   
@@ -56,7 +57,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### <a name="creating-a-user-that-duplicates-a-login"></a>Creazione di un utente che duplica un account di accesso  
  Se si crea un utente di database indipendente con password usando lo stesso nome di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e se l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si connette specificando il database indipendente come catalogo iniziale, non sarà possibile stabilire la connessione con l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La connessione sarà valutata come l'entità utente di database indipendente con password nel database indipendente anziché come utente basato sull'accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo approccio potrebbe causare un attacco Denial of Service intenzionale o accidentale per l'accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Come procedura consigliata, è opportuno che i membri del ruolo predefinito del server **sysadmin** considerino la possibilità di connettersi sempre senza usare l'opzione relativa al catalogo iniziale. In questo modo l'account di accesso viene connesso al database master, evitando qualsiasi tentativo da parte del proprietario di un database di utilizzare l'accesso in modo improprio. L'amministratore potrà quindi passare al database indipendente con l'istruzione **USE** _\<database>_ . È anche possibile impostare il database indipendente come database predefinito dell'account di accesso, in modo da consentire il completamento dell'accesso al database **master**e il successivo trasferimento dell'account di accesso al database indipendente.  
+-   Come procedura consigliata, è opportuno che i membri del ruolo predefinito del server **sysadmin** considerino la possibilità di connettersi sempre senza usare l'opzione relativa al catalogo iniziale. In questo modo l'account di accesso viene connesso al database master, evitando qualsiasi tentativo da parte del proprietario di un database di utilizzare l'accesso in modo improprio. L'amministratore potrà quindi passare al database indipendente usando l'istruzione **USE** _\<database>_ . È anche possibile impostare il database indipendente come database predefinito dell'account di accesso, in modo da consentire il completamento dell'accesso al database **master**e il successivo trasferimento dell'account di accesso al database indipendente.  
   
 -   Come procedura consigliata, evitare di creare utenti del database indipendente con password con lo stesso nome degli accessi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

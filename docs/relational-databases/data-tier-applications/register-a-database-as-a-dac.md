@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 726955115dc956f2ad16e39775610deb16c445a1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 431745d461d6977cf873cbdb83eebe5929694043
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68134683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781653"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrare un database come applicazione livello dati
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Usare la procedura guidata **Registra applicazione livello dati** o uno script di Windows PowerShell per compilare una definizione di applicazione livello dati (DAC) che descrive gli oggetti contenuti in un database esistente e registrarla nel database di sistema **msdb** (**master** in [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
   
 -   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
@@ -136,7 +136,7 @@ ms.locfileid: "68134683"
   
  **Registrazione dell'applicazione livello dati** : consente di visualizzare l'esito positivo o negativo di ogni azione eseguita per la registrazione dell'applicazione livello dati. Verificare le informazioni che determinano l'esito positivo o negativo di ciascuna azione. Ogni azione che ha rilevato un errore avrà un collegamento nella colonna **Risultato** . Selezionare il collegamento per visualizzare un report dell'errore per l'azione.  
   
- **Salva report** consente di salvare il report della registrazione come file HTML. Nel file viene riportato lo stato di ogni azione, inclusi tutti gli errori generati da qualsiasi azione. La cartella predefinita, **SQL Server Management Studio\DAC Packages** , si trova all'interno della cartella Documenti dell'account di Windows. Il nome del file è nel formato \<NomePacchettoDAC>_RegisterDACReport_aaaammgg, dove \<*NomePacchettoDAC*> è il nome del pacchetto da distribuire, *aaaa* indica l'anno corrente, *mm* il mese corrente e *gg* il giorno corrente.  
+ **Salva report** consente di salvare il report della registrazione come file HTML. Nel file viene riportato lo stato di ogni azione, inclusi tutti gli errori generati da qualsiasi azione. La cartella predefinita, **SQL Server Management Studio\DAC Packages** , si trova all'interno della cartella Documenti dell'account di Windows. Il nome del file è nel formato \<DACPackageName>_RegisterDACReport_aaaammgg.html, dove \<*DACPackageName*> è il nome del pacchetto da distribuire, *aaaa* indica l'anno corrente, *mm* il mese corrente e *gg* il giorno corrente.  
   
  **Fine** : consente di terminare la procedura guidata.  
   

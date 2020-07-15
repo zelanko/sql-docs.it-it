@@ -1,5 +1,6 @@
 ---
 title: Regole di confronto dei database indipendenti | Microsoft Docs
+description: Informazioni sul funzionamento delle regole di confronto nei database indipendenti e non indipendenti. Vedere i problemi che possono verificarsi quando le sessioni sono una via di mezzo tra contesti indipendenti e non indipendenti.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 1850f5d85baf418e0ce872f641a920514156101f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 054bb22c1dfe2f1497af6e74bea0cfc0bca158b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137376"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763623"
 ---
 # <a name="contained-database-collations"></a>Regole di confronto dei database indipendenti
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Varie proprietà incidono sull'ordinamento e sulla semantica di uguaglianza dei dati testuali, ad esempio distinzione maiuscole/minuscole, distinzione caratteri accentati/non accentati e linguaggio di base utilizzato. Queste qualità vengono espresse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite la scelta di regole di confronto per i dati. Per informazioni dettagliate sulle regole di confronto, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  Le regole di confronto si applicano non solo ai dati archiviati nelle tabelle utente, ma a tutto il testo gestito da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], inclusi metadati, oggetti temporanei, nomi di variabili e così via. La gestione di tali elementi risulta diversa nei database indipendenti rispetto a quelli non indipendenti. Questa modifica non interesserà molti utenti, ma contribuirà ad assicurare uniformità e indipendenza dell'istanza. È tuttavia possibile che sia anche causa di qualche confusione, nonché di problemi per le sessioni che accedono sia a database indipendenti che non indipendenti.  

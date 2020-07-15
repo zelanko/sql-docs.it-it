@@ -1,5 +1,6 @@
 ---
 title: Effettuare la connessione a Utilità SQL Server | Microsoft Docs
+description: Informazioni su come connettersi a Utilità SQL Server in modo che sia possibile gestire l'integrità delle risorse di SQL Server. La connessione può essere eseguita attraverso SQL Server Management Studio (SSMS).
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: b9b90b8d-241f-4b74-ac14-de7b10ea1821
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 08811675cce441406534da3c31e2d01f314a2c20
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d2ea96cc97f84a342c12ea841a263c8bf06adc0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115426"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776016"
 ---
 # <a name="connect-to-a-sql-server-utility"></a>Effettuare la connessione a Utilità SQL Server.
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Prima di connettersi a Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario creare un punto di controllo dell'utilità. Per altre informazioni, vedere [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
  Per visualizzare e gestire l'integrità delle risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) per connettersi a Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

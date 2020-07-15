@@ -1,5 +1,6 @@
 ---
 title: Tipo xs:QName | Microsoft Docs
+description: Informazioni su come usare il tipo xs:QName come elemento di restrizione di XML Schema o come tipo di membro di un'unione.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 72c5bfde-b0b2-4372-bf36-97ba930dea06
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f25b1828191a695b21d733e1304dbaa3177e2a27
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 879ec2e1e4aaebfde4b3597df3d244380f2b4165
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662929"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758509"
 ---
 # <a name="the-xsqname-type"></a>Xs:Tipo QName
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta tipi derivati da **xs:QName** a causa dell'utilizzo di un elemento di restrizione di XML Schema. Attualmente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta tipi unione con **QName** come tipo di membro.  
   
 ## <a name="example"></a>Esempio  

@@ -9,18 +9,18 @@ manager: cgronlun
 ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c5bb573a3d8d5e93b51bb0536b5fc2171987a0ee
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: c07c92b65fe8ebed54ac75f3b9180bbd39534109
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269420"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882508"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-docker"></a>Installare SQL Server Machine Learning Services (Python e R) in Docker
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Questo articolo illustra come installare SQL Server Machine Learning Services in Docker. È possibile usare Machine Learning Services per eseguire gli script Python e R nel database. Non vengono forniti contenitori predefiniti con Machine Learning Services. È possibile crearne uno dai contenitori di SQL Server usando [un modello di esempio disponibile in GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
@@ -36,7 +36,7 @@ Questo articolo illustra come installare SQL Server Machine Learning Services in
 
 Il comando seguente consente di clonare il repository git `mssql-docker` in una directory locale.
 
-1. Aprire un terminale Bash in Linux o Mac oppure un terminale del sottosistema Windows per Linux in Windows.
+1. Aprire un terminale Bash in Linux o Mac.
 
 2. Creare una directory in cui mantenere una copia locale del repository mssql-docker.
 
@@ -65,10 +65,12 @@ Completare i passaggi seguenti per creare l'immagine docker:
 3. Eseguire il comando:
 
     ```bash
-    docker runs -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e SA_PASSWORD=<your_sa_password> -v OS>:/var/opt/mssql -p 1433:1433 mssql-server-mlservices
+    docker run -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e MSSQL_SA_PASSWORD=<password> -v <directory on the host OS>:/var/opt/mssql -p 1433:1433 mssql-server-mlservices
     ```
-
-    Modificare `<your_sa_password>` in `SA_PASSWORD=<your_sa_password>` e modificare il percorso di `-v`. 
+  
+    > [!NOTE]
+    > Tutti i valori seguenti possono essere usati per MSSQL_PID: Developer (gratuito), Express (gratuito), Enterprise (a pagamento), Standard (a pagamento). Se si usa un'edizione a pagamento, assicurarsi di avere acquistato una licenza. Sostituire (password) con la password effettiva. Il montaggio del volume con -v è facoltativo. Sostituire (directory sul sistema operativo host) con una directory effettiva in cui si prevede di montare i file di dati e di log del database.
+    
 
 4. Confermare eseguendo questo comando:
 
@@ -89,30 +91,19 @@ Completare i passaggi seguenti per creare l'immagine docker:
    export ACCEPT_EULA_ML='Y'
    export PATH_TO_MSSQL='/home/mssql/'
    ```
-
-2. Eseguire lo script run.sh:
-
-   ```bash
-   ./run.sh
-   ```
-
-   Questo comando crea un contenitore di SQL Server con Machine Learning Services usando la Developer Edition (impostazione predefinita). La porta **1433** di SQL Server è esposta nell'host come porta **1401**.
-
+  
    > [!NOTE]
    > Il processo di esecuzione delle edizioni di SQL Server di produzione nei contenitori è leggermente diverso. Per altre informazioni, vedere [Configurare immagini dei contenitori SQL Server in Docker](sql-server-linux-configure-docker.md). Se si usano gli stessi nomi di contenitore e le stesse porte, il resto di questa procedura dettagliata funziona comunque con i contenitori di produzione.
 
-3. Per visualizzare i contenitori di Docker, usare il comando `docker ps`:
+2. Per visualizzare i contenitori di Docker, usare il comando `docker ps`:
 
    ```bash
    sudo docker ps -a
    ```
 
-4. Se nella colonna **STATUS** è impostato lo stato **Up**, SQL Server è in esecuzione nel contenitore e in ascolto sulla porta specificata nella colonna **PORTS**. Se la colonna **STATUS** del contenitore di SQL Server è impostata su **Exited**, vedere la [sezione relativa alla risoluzione dei problemi della guida alla configurazione](sql-server-linux-configure-docker.md#troubleshooting).
+3. Se nella colonna **STATUS** è impostato lo stato **Up**, SQL Server è in esecuzione nel contenitore e in ascolto sulla porta specificata nella colonna **PORTS**. Se la colonna **STATUS** del contenitore di SQL Server è impostata su **Exited**, vedere la [sezione relativa alla risoluzione dei problemi della guida alla configurazione](sql-server-linux-configure-docker.md#troubleshooting).
 
-   ```bash
-   $ sudo docker ps -a
-   ```
-
+ 
     Output:
 
     ```

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 8a7c149fbc59691519c1a85afe1ff64cc6da579a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bde2baadb2a7cf5c6a11330443ab8e3c883455a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823676"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759125"
 ---
 # <a name="restore-pages-sql-server"></a>Ripristino di pagine (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   In questo argomento viene descritto come ripristinare le pagine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'obiettivo di un ripristino della pagina è ripristinare una o più pagine danneggiate senza ripristinare l'intero database. In genere, le pagine candidate al ripristino sono state contrassegnate come "sospette" a causa di un errore verificatosi all'accesso alla pagina. Le pagine sospette vengono identificate nella tabella [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) del database **msdb** .  
   
@@ -136,7 +136,7 @@ ms.locfileid: "82823676"
     |Intestazione|Valori|  
     |------------|------------|  
     |**Nome**|Nome del set di backup.|  
-    |**Componente**|Componente di cui è stato eseguito il backup: **Database**, **File** o **\<vuoto>** (per i log delle transazioni).|  
+    |**Componente**|Componente di cui è stato eseguito il backup: **database**, **file** o **\<blank>** , nel caso dei log delle transazioni.|  
     |**Tipo**|Tipo di operazione di backup eseguita: **Completo**, **Differenziale** o **Log delle transazioni**.|  
     |**Server**|Nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ha eseguito l'operazione di backup.|  
     |**Database**|Nome del database interessato dall'operazione di backup.|  

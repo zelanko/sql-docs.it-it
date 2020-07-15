@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bb0dd2a0196fbc832b0d0afeb0f02889ac1369a4
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: c0df880a36a0822c3c397be4f2ed9aa14d47c2bc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000156"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768015"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Creare, modificare e rilasciare FileTables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Viene descritto come creare una nuova tabella FileTable o modificarne o eliminarne una esistente.  
   
 ##  <a name="creating-a-filetable"></a><a name="BasicsCreate"></a> Creazione di una tabella FileTable  
@@ -176,11 +176,11 @@ GO
 |Vincoli CHECK|I vincoli CHECK definiti dal sistema applicano i requisiti seguenti:<br /><br /> Nomi file validi.<br /><br /> Attributi di file validi.<br /><br /> L'oggetto padre deve essere una directory.<br /><br /> La gerarchia dello spazio dei nomi è bloccata durante la modifica dei file.|  
   
  **Convenzione di denominazione per i vincoli definiti dal sistema**  
- I vincoli definiti dal sistema descritti in precedenza vengono denominati usando il formato **\<tipovincolo>_\<nometabella>[\_\<nomecolonna>]\_\<identificatoreunivoco>** , dove:  
+ I vincoli definiti dal sistema descritti in precedenza vengono denominati usando il formato **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** dove:  
   
 -   *<tipovincolo>* è CK (vincolo CHECK), DF (vincolo DEFAULT), FK (chiave esterna), PK (chiave primaria) o UQ (vincolo UNIQUE).  
   
--   *\<identificatoreunivoco* è una stringa generata dal sistema per specificare un nome univoco. È possibile che questa stringa contenga il nome della tabella FileTable e un identificatore univoco.  
+-   *\<uniquifier>* è una stringa generata dal sistema per specificare un nome univoco. È possibile che questa stringa contenga il nome della tabella FileTable e un identificatore univoco.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestire tabelle FileTable](../../relational-databases/blob/manage-filetables.md)  

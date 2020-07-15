@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44fc9e7e1c15ae2bd5eb4471d1ee5e396274faa0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68100459"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763222"
 ---
 # <a name="move-system-databases"></a>Spostare i database di sistema
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   In questo argomento viene descritta la procedura per lo spostamento dei database di sistema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lo spostamento dei database di sistema può risultare utile nelle situazioni seguenti:  
   
@@ -189,7 +189,7 @@ ms.locfileid: "68100459"
 
   
 ##  <a name="moving-the-resource-database"></a><a name="Resource"></a> Spostamento del database delle risorse  
- Il percorso del database delle risorse è \<*unità*>: \Programmi\Microsoft SQL Server\MSSQL\<versione>.\<*nome_istanza*>\MSSQL\Binn\\. Il database non può essere spostato.  
+ Il percorso del database Resource è \<*drive*>:\Programmi\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\. Il database non può essere spostato.  
   
 ##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> Completamento: Dopo lo spostamento di tutti i database di sistema  
  Se tutti i database di sistema sono stati spostati in un nuovo volume o unità oppure in un altro server con una lettera di unità diversa, effettuare gli aggiornamenti riportati di seguito.  
@@ -204,7 +204,7 @@ ms.locfileid: "68100459"
   
 2.  Fare clic con il pulsante destro del mouse su **Log degli errori** e scegliere **Configura**.  
   
-3.  Nella finestra di dialogo **Configura log degli errori di SQL Server Agent** specificare il nuovo percorso del file SQLAGENT.OUT. Il percorso predefinito è C:\Programmi\Microsoft SQL Server\MSSQL\<versione>.<nome_istanza>\MSSQL\Log\\.  
+3.  Nella finestra di dialogo **Configura log degli errori di SQL Server Agent** specificare il nuovo percorso del file SQLAGENT.OUT. Il percorso predefinito è C:\Programmi\Microsoft SQL Server\MSSQL\<version>.<nome_istanza>\MSSQL\Log\\.  
   
 #### <a name="change-the-database-default-location"></a>Modificare il percorso predefinito del database  
   

@@ -1,5 +1,6 @@
 ---
 title: Concedere le autorizzazioni per una raccolta di XML Schema | Microsoft Docs
+description: Informazioni su come concedere autorizzazioni per la creazione di una raccolta di XML Schema, nonché per un oggetto di una raccolta di XML Schema.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6210235ba7f5537732745434878c778733e98370
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e400caa800f4e3dcb38750513216918d2b8b1d3f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665114"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772103"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Concedere autorizzazioni per una raccolta di XML Schema
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   È possibile concedere autorizzazioni per la creazione di una raccolta di XML Schema, nonché per un oggetto di una raccolta di XML Schema.  
   
 ## <a name="granting-permission-to-create-an-xml-schema-collection"></a>Concessione dell'autorizzazione per la creazione di una raccolta di XML Schema  

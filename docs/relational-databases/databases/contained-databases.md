@@ -1,5 +1,6 @@
 ---
 title: Database indipendenti | Microsoft Docs
+description: Informazioni su database indipendenti, vantaggi e limitazioni dei database parzialmente indipendenti e funzionamento di SQL Server 2019 per l'isolamento dei database.
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e42d7dbfe00ff957511d9853e39febd29b7aab66
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ee26ff95b5317d65e71fbdb91e39a2d56e9f5f95
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137332"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756347"
 ---
 # <a name="contained-databases"></a>Database indipendenti
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Un *database indipendente* è un database isolato dagli altri database e dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita il database.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre all'utente quattro modalità per isolare il database dall'istanza.  
   

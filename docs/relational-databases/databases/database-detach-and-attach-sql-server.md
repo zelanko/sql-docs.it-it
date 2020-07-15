@@ -1,8 +1,8 @@
 ---
-title: Collegamento e scollegamento di un database (SQL Server) | Microsoft Docs
+title: Collegamento e scollegamento di un database (SQL Server)
 description: È possibile rimuovere e riallegare i file di dati e di log delle transazioni di un database di SQL Server per modificare l'istanza del database o per spostare il database.
 ms.custom: ''
-ms.date: 11/26/2018
+ms.date: 06/30/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a43fcc0dade0c030546e76bf36f242973f918d2e
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: e9922e70d8ee4327bfb01c9c8657e8fabfe6a28c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138163"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756288"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Collegamento e scollegamento di un database (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 È possibile scollegare i file di dati e di log delle transazioni di un database e, successivamente, ricollegarli alla stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o a un'istanza diversa. Scollegare e collegare un database risulta utile se si desidera assegnare il database a un'istanza diversa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nello stesso computer oppure spostarlo.  
   
   
@@ -63,7 +63,13 @@ Non è possibile scollegare un database quando si verifica una delle condizioni 
   
     > [!NOTE]  
     > Non è possibile scollegare o collegare uno snapshot del database.  
+
+-   Il database fa parte di un gruppo di disponibilità Always On.  
   
+    Non è possibile scollegare il database finché non viene rimosso dal gruppo di disponibilità. Per altre informazioni, vedere [Rimuovere un database primario da un gruppo di disponibilità Always On](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).
+  
+
+
 -   È in corso il mirroring del database in una sessione di mirroring.  
   
     Non è possibile scollegare il database fino al termine della sessione. Per altre informazioni, vedere [Rimozione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  

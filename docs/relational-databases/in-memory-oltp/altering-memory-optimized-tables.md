@@ -1,5 +1,6 @@
 ---
 title: Modifica di tabelle con ottimizzazione per la memoria | Microsoft Docs
+description: Informazioni sul modo in cui l'istruzione ALTER TABLE apporta le modifiche dello schema e dell'indice nelle tabelle ottimizzate per la memoria. Combinare le operazioni ADD, DROP e ALTER in un'unica istruzione.
 ms.custom: ''
 ms.date: 10/22/2018
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d65b6931053c7eccbb96093fb2cd840f8277cb7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db339d9063378b29f6902f7e52e3006ac57295b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951298"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776078"
 ---
 # <a name="altering-memory-optimized-tables"></a>Modifica di tabelle con ottimizzazione per la memoria
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Le modifiche dello schema e dell'indice nelle tabelle ottimizzate per la memoria possono essere eseguite con l'istruzione ALTER TABLE. In SQL Server 2016 e nel database SQL di Azure le operazioni ALTER TABLE su tabelle ottimizzate per la memoria sono OFFLINE, vale a dire che la tabella non è disponibile per eseguire una query mentre è in corso l'operazione. L'applicazione di database può proseguire l'esecuzione e qualsiasi operazione che accede alla tabella viene bloccata fino al termine del processo di modifica. È possibile combinare più operazioni ADD, DROP o ALTER in una singola istruzione ALTER TABLE.
 

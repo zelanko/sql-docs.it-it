@@ -1,5 +1,6 @@
 ---
 title: Nomi di colonna con il percorso specificato come data() | Microsoft Docs
+description: Informazioni sulle query XML contenenti i nomi di colonna con il percorso specificato come data ().
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0b738e44-6108-4417-a9a4-abeb7680d899
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fc2d5d801eb99f2097655c94c15cef16038b3ca4
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 71cddb62a7277d32d9f43f499c83f3df9e9f69d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775593"
 ---
 # <a name="column-names-with-the-path-specified-as-data"></a>Nomi di colonna con il percorso specificato come dati()
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Se il percorso specificato come nome di colonna è "data()", il valore viene gestito nel codice XML generato come valore atomico. Se anche l'elemento successivo nella serializzazione è un valore atomico, al codice XML viene aggiunto uno spazio. Ciò risulta utile quando si creano valori di elementi e di attributi di tipo elenco. La query seguente recupera l'ID del modello di prodotto e l'elenco dei prodotti di quel modello.  
   

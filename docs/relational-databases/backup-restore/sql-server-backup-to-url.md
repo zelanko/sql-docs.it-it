@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1de8413f3888c3fe91f7b8557956490a1065c4fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1409125ca324117a3b7bba1792ff0a3f3361fe05
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180461"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768073"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup di SQL Server nell'URL
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Questo argomento illustra i concetti, i requisiti e i componenti necessari per usare il servizio di archiviazione BLOB di Microsoft Azure come destinazione backup. La funzionalità di backup e ripristino è uguale o simile a quella delle opzioni DISK e TAPE, con alcune differenze. Nell'argomento sono descritte le differenze e sono inclusi alcuni esempi di codice.  
   
@@ -50,7 +50,7 @@ Il backup di un database di grandi dimensioni nell'archiviazione BLOB è soggett
   
  **Contenitore:** un contenitore offre un raggruppamento di un set di BLOB e può archiviare un numero illimitato di BLOB. Per scrivere un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel servizio di archiviazione BLOB di Microsoft Azure, è necessario aver creato almeno il contenitore radice. È possibile generare un token di firma di accesso condiviso in un contenitore e concedere l'accesso agli oggetti in un solo contenitore specifico.  
   
- **BLOB:** file di qualsiasi tipo e dimensioni. Esistono due tipi di BLOB che è possibile archiviare nel servizio di archiviazione BLOB di Microsoft Azure: BLOB in blocchi e di pagine. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il backup può usare l'uno o l'altro dei tipi di BLOB, a seconda della sintassi Transact-SQL usata. I BLOB sono indirizzabili tramite questo formato di URL: https://\<account di archiviazione>.blob.core.windows.net/\<contenitore>/\<blob>. Per altre informazioni sul servizio di archiviazione BLOB di Microsoft Azure, vedere [Introduzione all'archivio BLOB di Azure con .NET](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Per altre informazioni sui BLOB di pagine e in blocco, vedere [Informazioni sui Blob in blocchi, sui BLOB di aggiunta e sui BLOB di pagine](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx).  
+ **BLOB:** file di qualsiasi tipo e dimensioni. Esistono due tipi di BLOB che è possibile archiviare nel servizio di archiviazione BLOB di Microsoft Azure: BLOB in blocchi e di pagine. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il backup può usare l'uno o l'altro dei tipi di BLOB, a seconda della sintassi Transact-SQL usata. I BLOB sono indirizzabili usando il formato URL seguente: https://\<storage account>.blob.core.windows.net/\<container>/\<blob>. Per altre informazioni sul servizio di archiviazione BLOB di Microsoft Azure, vedere [Introduzione all'archivio BLOB di Azure con .NET](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Per altre informazioni sui BLOB di pagine e in blocco, vedere [Informazioni sui Blob in blocchi, sui BLOB di aggiunta e sui BLOB di pagine](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx).  
   
  ![Archiviazione BLOB di Azure](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Archiviazione BLOB di Azure")  
   
@@ -59,7 +59,7 @@ Il backup di un database di grandi dimensioni nell'archiviazione BLOB è soggett
 ###  <a name="ssnoversion-components"></a><a name="sqlserver"></a> Componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  **URL:** un URL specifica un URI (Uniform Resource Identifier) in un file di backup univoco. L'URL viene utilizzato per specificare il percorso e il nome del file di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'URL deve puntare a un BLOB effettivo, non solo a un contenitore. Se il BLOB non è disponibile, viene creato. Se viene specificato un BLOB esistente, l'operazione di backup non viene completata a meno che non sia stata specificata l'opzione "WITH FORMAT" per sovrascrivere il file di backup esistente nel BLOB.  
   
- Questo è un valore URL di esempio: http[s]://NOMEACCOUNT.blob.core.windows.net/\<CONTENITORE>/\<NOMEFILE.bak>. Anche se non richiesto, è consigliabile utilizzare HTTPS.  
+ Di seguito è riportato un valore URL di esempio: http[s]://ACCOUNTNAME.blob.core.windows.net/\<CONTAINER>/\<FILENAME.bak>. Anche se non richiesto, è consigliabile utilizzare HTTPS.  
   
  **Credenziale:** una credenziale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un oggetto usato per archiviare le informazioni di autenticazione necessarie per la connessione a una risorsa all'esterno di SQL Server. In questo caso, nei processi di backup e ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono usate le credenziali per l'autenticazione al servizio di archiviazione BLOB di Microsoft Azure, nonché ai contenitori e agli oggetti dei BLOB relativi. Nelle credenziali sono archiviati il nome dell'account di archiviazione e i valori della **chiave di accesso** dell'account di archiviazione, o l'URL del contenitore e il relativo token di firma di accesso condiviso. Una volta create le credenziali, la sintassi delle istruzioni BACKUP/RESTORE determina il tipo di BLOB e le credenziali necessarie.  
   
@@ -196,7 +196,7 @@ Il backup di un database di grandi dimensioni nell'archiviazione BLOB è soggett
   
  Per altre informazioni sugli argomenti di ripristino, vedere [Argomenti dell'istruzione RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
-##  <a name="back-up-up-with-ssms"></a><a name="BackupTaskSSMS"></a> Eseguire il backup con SSMS  
+##  <a name="back-up-with-ssms"></a><a name="BackupTaskSSMS"></a> Eseguire il backup con SSMS  
 È possibile eseguire il backup di un database in un URL tramite l'attività di backup in SQL Server Management Studio e credenziali SQL Server.  
   
 > [!NOTE]  

@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_208 | Microsoft Docs
+description: Poiché è impossibile trovare l'oggetto specificato, verrà generato un messaggio di nome di oggetto non valido. Vedere la descrizione dell'errore e delle possibili soluzioni.
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 4b1895f5-3197-4da1-af86-954c93507956
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a1b39638bf7ac09cac4a37d948ba13753ffb6d04
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d61a9510e87eff01b33aef43e3b0db2836fb40c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68056797"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780552"
 ---
 # <a name="mssqlserver_208"></a>MSSQLSERVER_208
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Dettagli  
   
-|||  
-|-|-|  
+| Attributo | valore |  
+| :-------- | :---- |  
 |Nome prodotto|SQL Server|  
 |ID evento|208|  
 |Origine evento|MSSQLSERVER|  

@@ -17,15 +17,15 @@ ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64ad4f4ac71b88966f3ff9a963332619d7663917
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abd315f75626b337c2183f34121aeb7660e0ed66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909285"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786874"
 ---
 # <a name="get-information-about-dml-triggers"></a>Ottieni informazioni sui trigger DML
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In questo argomento viene descritto come ottenere informazioni sui trigger DML in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Queste informazioni possono includere i tipi di trigger in una tabella, nonché il nome, il proprietario e la data di creazione o modifica di un trigger. Se il trigger non è stato crittografato al momento della creazione, se ne ottiene la definizione. È possibile utilizzare la definizione per comprendere gli effetti del trigger sulla tabella su cui è stato definito. È inoltre possibile rilevare gli oggetti utilizzati da un trigger specifico. Con queste informazioni, è possibile identificare gli oggetti che influiscono sul trigger qualora vengano modificati o eliminati dal database.  
   
  **Contenuto dell'articolo**  
@@ -49,12 +49,12 @@ ms.locfileid: "72909285"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- È richiesta l'appartenenza al ruolo **public** . La definizione degli oggetti utente è visibile al proprietario degli oggetti o agli utenti autorizzati che dispongono di una delle autorizzazioni seguenti: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION. Queste autorizzazioni sono assegnate implicitamente ai membri dei ruoli predefiniti del database **db_owner**, **db_ddladmin**e **db_securityadmin** .  
+ È richiesta l'appartenenza al ruolo **public** . La definizione degli oggetti utente è visibile al proprietario degli oggetti o agli utenti autorizzati che hanno una delle autorizzazioni seguenti: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION. Queste autorizzazioni sono assegnate implicitamente ai membri dei ruoli predefiniti del database **db_owner**, **db_ddladmin**e **db_securityadmin** .  
   
  **sys.sql_expression_dependencies**  
  Sono richieste l'autorizzazione VIEW DEFINITION sul database e l'autorizzazione SELECT su **sys.sql_expression_dependencies** per il database. L'autorizzazione SELECT è concessa per impostazione predefinita solo ai membri del ruolo predefinito del database **db_owner** . Quando le autorizzazioni SELECT e VIEW DEFINITION vengono concesse a un altro utente, l'utente autorizzato può visualizzare tutte le dipendenze nel database.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-view-the-definition-of-a-dml-trigger"></a>Per visualizzare la definizione di un trigger DML  
   
@@ -72,15 +72,15 @@ ms.locfileid: "72909285"
   
 3.  Espandere **Trigger**, fare clic con il pulsante destro del mouse sul trigger desiderato, quindi scegliere **Visualizza dipendenze**.  
   
-4.  Nella finestra di dialogo **Dipendenze oggetto** selezionare **Oggetti che dipendono da \<nome trigger DML>** per visualizzare gli oggetti che dipendono dal trigger DML. Gli oggetti vengono visualizzati nell'area **Dipendenze** .  
+4.  Nella finestra di dialogo **Dipendenze oggetto** selezionare **Oggetti che dipendono da \<DML trigger name>** per visualizzare gli oggetti che dipendono dal trigger DML. Gli oggetti vengono visualizzati nell'area **Dipendenze** .  
   
-     Per visualizzare gli oggetti da cui dipende il trigger DML, selezionare **Oggetti da cui dipende \<nome trigger DML>** . Gli oggetti vengono visualizzati nell'area **Dipendenze** . Espandere ogni nodo per visualizzare tutti gli oggetti.  
+     Per visualizzare gli oggetti da cui dipende il trigger DML, selezionare **Oggetti da cui dipende \<DML trigger name>** . Gli oggetti vengono visualizzati nell'area **Dipendenze** . Espandere ogni nodo per visualizzare tutti gli oggetti.  
   
 5.  Per ottenere informazioni su un oggetto visualizzato nell'area **Dipendenze** , fare clic sull'oggetto. Nel campo **Oggetto selezionato** le informazioni vengono fornite nelle caselle **Nome**, **Tipo**e **Tipo dipendenza** .  
   
 6.  Per chiudere la finestra **Dipendenze oggetto** fare clic su **OK**.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-view-the-definition-of-a-dml-trigger"></a>Per visualizzare la definizione di un trigger DML  
   

@@ -1,5 +1,6 @@
 ---
 title: Ridurre le segnalazioni non significative nei criteri di utilizzo della CPU (utilità SQL Server) | Microsoft Docs
+description: Visualizzare le strategie per ridurre le segnalazioni non significative e le violazioni indesiderate nei risultati di Utilità SQL Server. Vedere quali opzioni dei criteri influiscono sui report di utilizzo del processore.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a9fc6db57277044267a89cc89e6c196c782ea920
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3617249a1309a86c5ff0a083f3c0db15ee91299d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115347"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773539"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>Riduzione delle segnalazioni non significative nei criteri di utilizzo della CPU (Utilità SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilizzare le strategie seguenti per ridurre le segnalazioni non significative e le violazioni indesiderate dei criteri di utilizzo delle risorse di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-overutilized"></a>Frequenza di violazione dei criteri di utilizzo del processore prima che venga segnalato un sovrautilizzo  

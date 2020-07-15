@@ -1,5 +1,6 @@
 ---
 title: Proprietà database (pagina Rilevamento modifiche) | Microsoft Docs
+description: Informazioni su come usare la scheda ChangeTracking nella finestra di dialogo Proprietà database per visualizzare o modificare le impostazioni del rilevamento delle modifiche per un database.
 ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2661424dcfe87f7151bbd92b2dfbf76861913fbb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b0abdb96d6d01ac1d630e8489013c381518573b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099636"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756231"
 ---
 # <a name="database-properties-changetracking-page"></a>Proprietà database (pagina ChangeTracking)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Utilizzare questa pagina per visualizzare o modificare le impostazioni di rilevamento delle modifiche per il database selezionato. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [Abilitare e disabilitare il rilevamento delle modifiche &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md).  
   
 ## <a name="options"></a>Opzioni  

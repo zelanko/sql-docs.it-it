@@ -19,15 +19,15 @@ ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f9ca6fc85701a0056074d4ce3a1ff76abfe1cfb4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68476297"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760800"
 ---
 # <a name="index-properties-f1-help"></a>Guida sensibile al contesto di Proprietà indice
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Le sezioni in questo argomento fanno riferimento a varie proprietà di indice disponibili tramite le finestre di dialogo di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68476297"
  Consente di visualizzare il nome dell'indice. Per un indice esistente questo campo è di sola lettura. Quando si crea un nuovo indice, digitare il nome dell'indice.  
   
  **Tipo di indice**  
- Indica il tipo di indice. Per i nuovi indici, indica il tipo di indice selezionato all'apertura della finestra di dialogo. Gli indici possono essere: **Cluster**, **Non cluster**, **AML primario**, **XML secondario**, **Spaziale**, **Columnstore cluster**o **Columnstore non cluster**.  
+ Indica il tipo di indice. Per i nuovi indici, indica il tipo di indice selezionato all'apertura della finestra di dialogo. Gli indici possono essere: **Cluster**, **Non cluster**, **XML primario**, **XML secondario**, **Spaziale**, **Columnstore cluster** o **Columnstore non cluster**.  
   
  **Nota** È consentito un solo indice cluster per ogni tabella. È consentito un solo indice columnstore con ottimizzazione per la memoria xVelocity per ogni tabella.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "68476297"
  Indica se la colonna che partecipa alla chiave dell'indice consente l'archiviazione di valori Null nella colonna della tabella o della vista.  
   
  **Aggiungere**  
- Consente di aggiungere una colonna alla chiave dell'indice. Selezionare le colonne della tabella nella finestra di dialogo **Seleziona colonne da** *\<nome tabella>* che viene visualizzata quando si fa clic su **Aggiungi**. In caso di indice spaziale, questo pulsante viene visualizzato in grigio dopo la selezione di una colonna.  
+ Consente di aggiungere una colonna alla chiave dell'indice. Selezionare le colonne della tabella nella finestra di dialogo **Seleziona colonne da** *\<table name>* che viene visualizzata quando si fa clic su **Aggiungi**. In caso di indice spaziale, questo pulsante viene visualizzato in grigio dopo la selezione di una colonna.  
   
  **Rimuovi**  
  Consente di rimuovere la colonna selezionata dalla partecipazione alla chiave dell'indice.  

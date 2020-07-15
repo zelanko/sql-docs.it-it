@@ -1,5 +1,6 @@
 ---
-title: Esempi d'uso della modalità AUTO | Microsoft Docs
+title: 'Esempi: Utilizzo della modalità AUTO | Microsoft Docs'
+description: Visualizzare esempi di query che usano la modalità FOR XML AUTO.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 782da9544dd1cf6e084793754fb31f81109d1810
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 68dfbbf0d1e2a2cf160b728b5f0acd9553be7922
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662942"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775569"
 ---
-# <a name="examples-using-auto-mode"></a>Esempi di utilizzo della modalità AUTO
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="examples-using-auto-mode"></a>Esempi: Uso della modalità AUTO
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Negli esempi seguenti viene illustrato l'utilizzo della modalità AUTO. Molte di queste query vengono eseguite sui documenti XML con istruzioni per la produzione di biciclette, archiviati nella colonna Instructions della tabella ProductModel del database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Esempio: recupero di informazioni sul cliente, l'ordine e i dettagli dell'ordine  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Esempio: Recupero di informazioni sul cliente, l'ordine e i dettagli dell'ordine  
  Questa query recupera informazioni sul cliente, sull'ordine e sui dettagli dell'ordine per un cliente specifico.  
   
 ```  
@@ -94,7 +95,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## <a name="example-specifying-group-by-and-aggregate-functions"></a>Esempio: specifica della clausola GROUP BY e di funzioni di aggregazione  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>Esempio: Specifica della clausola GROUP BY e di funzioni di aggregazione  
  La query seguente restituisce gli ID di singoli clienti e il numero degli ordini effettuati da tali clienti.  
   
 ```  
@@ -114,7 +115,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>Esempio: specifica di colonne calcolate in modalità AUTO  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>Esempio: Specifica di colonne calcolate in modalità AUTO  
  Questa query restituisce i nomi concatenati dei singoli clienti e le informazioni sugli ordini. Poiché la colonna calcolata viene assegnata al livello più interno rilevato fino a quel punto, che in questo esempio è l'elemento <`SOH`>, nel risultato i nomi concatenati dei clienti vengono aggiunti come attributi dell'elemento <`SOH`>.  
   
 ```  
@@ -167,7 +168,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
   
  `...`  
   
-## <a name="example-returning-binary-data"></a>Esempio: recupero di dati binari  
+## <a name="example-returning-binary-data"></a>Esempio: Recupero di dati binari  
  Questa query restituisce una foto del prodotto dalla tabella `ProductPhoto` . `ThumbNailPhoto` è una colonna **varbinary(max)** nella tabella `ProductPhoto` . Per impostazione predefinita, la modalità `AUTO` restituisce ai dati binari un riferimento costituito da un URL relativo alla radice virtuale del database in cui viene eseguita la query. Per identificare l'immagine, è necessario specificare l'attributo chiave `ProductPhotoID` . Per recuperare un riferimento a un'immagine come illustrato nell'esempio seguente, è inoltre necessario specificare la chiave primaria della tabella nella clausola `SELECT` , per identificare una riga in modo univoco.  
   
 ```  
@@ -223,7 +224,7 @@ FOR XML AUTO;
   
  Questo costituisce un problema soprattutto quando si eseguono query dbobject su un database con distinzione tra maiuscole e minuscole. Per evitarlo, è necessario che la combinazione di maiuscole e minuscole nel nome di tabella o colonna specificato nelle query corrisponda a quella del nome della tabella o colonna nel database.  
   
-## <a name="example-understanding-the-encoding"></a>Esempio: informazioni sulla codifica  
+## <a name="example-understanding-the-encoding"></a>Esempio: Informazioni sulla codifica  
  In questo esempio vengono illustrate le varie operazioni di codifica eseguite sul risultato.  
   
  Creare la tabella seguente:  

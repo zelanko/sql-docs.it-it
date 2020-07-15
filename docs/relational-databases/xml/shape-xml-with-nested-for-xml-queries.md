@@ -1,5 +1,6 @@
 ---
 title: Determinare la struttura dei valori XML tramite query FOR XML annidate | Microsoft Docs
+description: Viene visualizzato un esempio di utilizzo delle query FOR XML nidificate per determinare il codice XML risultante.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9d3e3b9e0636e9164e5be3181ee2a24070fc4323
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6fe40251156c3a668a0f5c78c2a8aaddb80322e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664998"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758532"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>Determinare la struttura dei valori XML tramite query nidificate FOR XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Nell'esempio seguente viene eseguita una query sulla tabella `Production.Product` per recuperare i valori di `ListPrice` e `StandardCost` di un prodotto specifico. Per rendere la query più interessante, entrambi i prezzi vengono restituiti in un elemento <`Price`> e ogni elemento <`Price`> include un attributo `PriceType`.  
   
 ## <a name="example"></a>Esempio  

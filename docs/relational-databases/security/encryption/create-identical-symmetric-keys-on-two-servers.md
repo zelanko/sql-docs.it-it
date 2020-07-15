@@ -1,5 +1,6 @@
 ---
 title: Creare chiavi simmetriche identiche su due server | Microsoft Docs
+description: Informazioni su come creare chiavi simmetriche identiche su due server in SQL Server usando Transact-SQL. Questa operazione supporta la crittografia in database o server distinti.
 ms.custom: ''
 ms.date: 05/30/2019
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77707d460262864cafa8884281c69fb957945f20
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6a65944d2ee5e4a3d0844ebb50cdd3d4b6dad135
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80243391"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765043"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>Creare chiavi simmetriche identiche su due server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   In questo argomento viene descritto come creare chiavi simmetriche identiche in due server diversi in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Al fine di decrittografare l'argomento ciphertext, è necessario disporre della chiave usata per crittografarlo. Quando la crittografia e la decrittografia vengono eseguite in un unico database, la chiave viene archiviata nel database ed è disponibile, a seconda delle autorizzazioni, sia per la crittografia che per la decrittografia. Viceversa, quando la crittografia e la decrittografia vengono eseguite in database separati, la chiave archiviata in un database non è disponibile per l'utilizzo nell'altro database.
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
@@ -31,7 +32,7 @@ ms.locfileid: "80243391"
   
 - Se si crittografa una chiave simmetrica con una password anziché con la chiave pubblica della chiave master del database, viene usato l'algoritmo di crittografia TRIPLE DES. Per questo motivo, le chiavi create con un algoritmo di crittografia avanzato, come AES, vengono a loro volta protette con un algoritmo meno avanzato.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY SYMMETRIC KEY per il database. Se si specifica AUTHORIZATION, è richiesta l'autorizzazione IMPERSONATE per l'utente di database o l'autorizzazione ALTER per il ruolo applicazione. Se la crittografia viene applicata con un certificato o una chiave asimmetrica, è richiesta l'autorizzazione VIEW DEFINITION per il certificato o la chiave asimmetrica. Solo gli account di accesso di Windows e di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e i ruoli applicazione possono disporre di chiavi simmetriche. I gruppi e i ruoli non possono disporre di chiavi simmetriche.  

@@ -1,5 +1,6 @@
 ---
 title: Creare uno snapshot del database (Transact-SQL) | Microsoft Docs
+description: Informazioni su come creare uno snapshot del database di SQL Server usando Transact-SQL. Prerequisiti e procedure consigliate per la creazione di snapshot.
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 652ef86f26f92068465668cadeccf8e193db1f90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 232b3af50be2c00cc1685e031b335c1b798a42b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71708282"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763548"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Creare uno snapshot del database (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   L'unico modo per creare uno snapshot del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] non supporta la creazione di snapshot del database.  
   
   
@@ -42,7 +43,7 @@ ms.locfileid: "71708282"
 > [!IMPORTANT]
 > Per informazioni relative ad altre considerazioni rilevanti, vedere [Snapshot del database &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
-##  <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
  In questa sezione vengono illustrate le procedure consigliate seguenti:  
   
 -   [Procedura consigliata: Denominazione degli snapshot del database](#Naming)  
@@ -101,7 +102,7 @@ AdventureWorks_snapshot_evening
 
      CREATE DATABASE *database_snapshot_name*  
   
-     ATTIVA  
+     ON  
   
      (  
   

@@ -17,15 +17,15 @@ ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6aee1619c5abaab84f4b201507c179f3ce7e8d1
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: e186d1da5ab42b25c120303a545c9164d949ad45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220706"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786480"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>Heap (tabelle senza indici cluster)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Un heap è una tabella per cui non è disponibile un indice cluster. Nelle tabelle archiviate come heap è possibile creare uno o più indici non cluster. I dati vengono archiviati nell'heap senza un ordine specificato. In genere i dati vengono inizialmente archiviati nell'ordine in cui le righe vengono inserite nella tabella, tuttavia [!INCLUDE[ssDE](../../includes/ssde-md.md)] può spostare i dati nell'heap in modo da archiviare le righe in modo efficiente, pertanto non è possibile prevedere l'ordine dei dati. Per garantire l'ordine delle righe restituite da un heap, è necessario utilizzare la clausola `ORDER BY`. Per specificare un ordine logico permanente per l'archiviazione delle righe, creare un indice cluster nella tabella, in modo che non sia un heap.  
   
@@ -33,8 +33,15 @@ ms.locfileid: "82220706"
 > Esistono talvolta motivi per i quali è preferibile lasciare una tabella come heap invece di creare un indice cluster, tuttavia l'utilizzo efficiente degli heap richiede competenze avanzate. Alla maggior parte delle tabelle deve essere associato un indice cluster selezionato con attenzione a meno che non sussista un motivo valido per cui la tabella debba rimanere un heap.  
   
 ## <a name="when-to-use-a-heap"></a>Quando utilizzare un heap  
-Quando si archivia una tabella come heap, le singole righe vengono identificate tramite riferimento a un identificatore di riga (RID) di 8 byte costituito da numero del file, numero della pagina di dati e slot nella pagina (FileID:PageID:SlotID). L'ID di riga è una struttura piccola ed efficiente. I professionisti esperti di elaborazione dati usano talvolta gli heap quando l'accesso ai dati avviene sempre tramite indici non cluster e il RID risulta più piccolo di una chiave di indice cluster. Gli heap vengono usati anche per   
- 
+Quando si archivia una tabella come heap, le singole righe vengono identificate tramite riferimento a un identificatore di riga (RID) di 8 byte costituito da numero del file, numero della pagina di dati e slot nella pagina (FileID:PageID:SlotID). L'ID di riga è una struttura piccola ed efficiente. 
+
+Gli heap possono essere usati come tabelle di staging per operazioni di inserimento di grandi dimensioni e non ordinate. Poiché i dati vengono inseriti senza applicare un ordine rigoroso, l'operazione di inserimento è in genere più veloce rispetto all'inserimento equivalente in un indice cluster. Se i dati dell'heap verranno letti ed elaborati in una destinazione finale, può essere utile creare un indice non cluster narrow che copra il predicato di ricerca usato dalla query di lettura. 
+
+> [!NOTE]  
+> I dati vengono recuperati da un heap in ordine di pagine di dati, ma non necessariamente nell'ordine in cui sono stati inseriti i dati. 
+
+A volte i professionisti esperti di elaborazione dati usano gli heap anche quando l'accesso ai dati avviene sempre attraverso indici non cluster e il RID risulta più piccolo di una chiave di indice cluster. 
+
 Se una tabella è un heap e non ha indici non cluster, per individuare qualsiasi riga è necessario leggere l'intera tabella (scansione di tabella). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente di cercare un RID direttamente nell'heap. Questa operazione può essere accettabile quando la tabella è di dimensioni ridotte.  
   
 ## <a name="when-not-to-use-a-heap"></a>Quando non utilizzare un heap  

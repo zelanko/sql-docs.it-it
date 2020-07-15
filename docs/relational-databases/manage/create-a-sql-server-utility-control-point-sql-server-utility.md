@@ -1,5 +1,6 @@
 ---
 title: Creare un punto di controllo di Utilità SQL Server (Utilità SQL Server) | Microsoft Docs
+description: Ottenere supporto per identificare i colli di bottiglia e le opportunità di consolidamento dell'utilizzo delle risorse creando un punto di controllo dell'utilità SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b342e77c542cd9f3357bccd4b97f3a876d1f5f1d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3203785a5850d2ac8a0d635ed9f899daeb2c52fe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115689"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776025"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Creazione di un punto di controllo dell'utilità di SQL Server (Utilità SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Un'organizzazione può avere più istanze di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ogni istanza di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può gestire molte istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e applicazioni livello dati. Ogni istanza di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha soltanto un punto di controllo dell'utilità. È necessario creare un nuovo punto di controllo dell'utilità per Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ogni applicazione livello dati è membro di una sola istanza di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è gestita da un singolo punto di controllo dell'utilità.  
   
  Il punto di controllo dell'utilità raccoglie informazioni sulla configurazione e sulle prestazioni delle istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ogni 15 minuti. Queste informazioni vengono archiviate nel data warehouse di gestione dell'utilità (UMDW) nel punto di controllo dell'utilità; il nome del file UMDW è sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono confrontati con i criteri per consentire l'identificazione di colli di bottiglia nell'utilizzo delle risorse e le possibilità di consolidamento.  

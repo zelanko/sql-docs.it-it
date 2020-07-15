@@ -1,5 +1,6 @@
 ---
 title: Eliminare uno snapshot del database (Transact-SQL) | Microsoft Docs
+description: Informazioni su come eliminare uno snapshot del database usando Transact-SQL, che consente di eliminare lo snapshot da SQL Server e i file sparse usati dallo snapshot.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: ad70ec97-d5fb-41aa-b72a-915e74b61b76
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0738c1e661c679022a6a635af756003fdd98dfe0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ae40c8d9b4a93ff1f035953207caae5addb56b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086019"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756165"
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>Eliminare uno snapshot del database (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La rimozione di uno snapshot del database comporta l'eliminazione dello snapshot da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nonché l'eliminazione dei file sparse da esso utilizzati. Quando si elimina uno snapshot del database, tutte le relative connessioni utente vengono interrotte.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ###  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Uno snapshot del database può essere rimosso da qualsiasi utente che disponga delle autorizzazioni DROP DATABASE.  

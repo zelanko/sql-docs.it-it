@@ -1,5 +1,6 @@
 ---
 title: Impostare l'opzione di database AUTO_CLOSE su OFF | Microsoft Docs
+description: Verificare se l'opzione AUTO_ CLOSE è disattivata. L'opzione AUTO_ CLOSE presenta implicazioni per le prestazioni in SQL Server.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e6b03364-263a-4ec4-9794-de9869d396ce
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: acadbc6e8834c32983ae366133b2fbd5c96a586e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0dbcc137a97af6d447dafd44c71bdb8181c69577
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021702"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774205"
 ---
 # <a name="set-the-auto_close-database-option-to-off"></a>Impostazione dell'opzione di database AUTO_CLOSE su OFF
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Questa regola consente di controllare se l'opzione di database AUTO_ CLOSE è impostata su OFF. Se impostata su ON, l'opzione AUTO_CLOSE può provocare una riduzione delle prestazione nei database cui si accede di frequente a causa dell'aumento di overhead dovuto all'apertura e alla chiusura del database dopo ogni connessione. L'opzione AUTO_CLOSE comporta anche lo scaricamento della cache delle procedure dopo ogni connessione.  
   
 ## <a name="best-practices-recommendations"></a>Procedure consigliate  

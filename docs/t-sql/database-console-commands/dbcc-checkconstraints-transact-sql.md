@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 05039c9634d62366cc8730a90a80bc4c2d3ab76f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1ca0b3f46cba5fc2e64babbba4dd591b8fb0b095
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633528"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786552"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Controlla l'integrità di un vincolo specificato oppure di tutti i vincoli di una tabella specificata nel database corrente.
   
@@ -90,7 +90,7 @@ L'istruzione DBCC CHECKCONSTRAINTS controlla l'integrità dei vincoli FOREIGN KE
   
 **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive
   
-Se si specifica *table_name* o *table_id* e la tabella è abilitata per il controllo delle versioni di sistema, DBCC CHECKCONSTRAINTS esegue anche le verifiche di coerenza dei dati temporali sulla tabella specificata. Se non è stato specificato *NO_INFOMSGS*, questo comando restituirà ogni violazione della coerenza nell'output in una riga separata. Il formato dell'output sarà ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...) AND \<le anomalie riscontrate nel record di tabella temporale>.
+Se si specifica *table_name* o *table_id* e la tabella è abilitata per il controllo delle versioni di sistema, DBCC CHECKCONSTRAINTS esegue anche le verifiche di coerenza dei dati temporali sulla tabella specificata. Se non è stato specificato *NO_INFOMSGS*, questo comando restituirà ogni violazione della coerenza nell'output in una riga separata. Il formato dell'output sarà ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...) AND \<what is wrong with temporal table record>.
   
 |Controllo|Informazioni aggiuntive nell'output in caso di verifica non riuscita|  
 |-----------|-----------------------------------------------|  

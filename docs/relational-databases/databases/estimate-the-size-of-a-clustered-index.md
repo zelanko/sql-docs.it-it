@@ -1,5 +1,6 @@
 ---
 title: Stimare le dimensioni di un indice cluster | Microsoft Docs
+description: Usare questa procedura per valutare la quantità di spazio necessaria per l'archiviazione dei dati in un indice cluster in SQL Server.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -23,16 +24,16 @@ ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8c785e98a06e31448c22422f85f3be34efcffa6f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 986996ff2ec54ce6a7e43924fb94ede81593c212
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68051115"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756156"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Stima delle dimensioni di un indice cluster
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Per stimare la quantità di spazio necessaria per l'archiviazione dati in un indice cluster, è possibile utilizzare la procedura seguente:  
   

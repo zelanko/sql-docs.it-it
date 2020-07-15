@@ -4,30 +4,33 @@ titleSuffix: SQL Server on Linux
 description: Informazioni su come configurare le condivisioni della cartella snapshot con porte non predefinite per la replica di SQL Server in Linux.
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
-ms.author: mikerayW
+ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cb715e2a0a056c18352361b58ce8ffd67e3da78e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cdb90854984c195258891178be8a3fd07345929b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558596"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882682"
 ---
 # <a name="configure-replication-with-non-default-ports-sql-server-linux"></a>Configurare la replica con porte non predefinite (SQL Server in Linux)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 È possibile configurare la replica con istanze di SQL Server in Linux in ascolto su qualsiasi porta configurata con l'impostazione network.tcpport mssql-conf. È necessario accodare la porta al nome del server durante la configurazione se le condizioni seguenti sono soddisfatte:
 
 1. La configurazione della replica interessa un'istanza di SQL Server in Linux
 2. Una qualsiasi istanza (Windows o Linux) è in ascolto su una porta non predefinita. 
 
-Per trovare il nome del server di un'istanza è possibile eseguire @@servername per l'istanza stessa.
+Per trovare il nome del server di un'istanza è possibile eseguire @@servername per l'istanza stessa. Non usare l'indirizzo IP al posto del nome del server. L'uso dell'indirizzo IP per il server di pubblicazione, il server di distribuzione o il sottoscrittore può causare un errore.
+
+> [!NOTE]
+> La creazione della replica di SQL Server in Linux con una porta non predefinita funziona solo con SQL Server 2019 e versioni successive.
 
 ## <a name="examples"></a>Esempi
 

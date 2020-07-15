@@ -1,5 +1,6 @@
 ---
 title: Piani di manutenzione | Microsoft Docs
+description: Informazioni sui piani di manutenzione, che consentono di creare un flusso di lavoro per garantire che il database di SQL Server sia ottimizzato, sottoposto regolarmente a backup e privo di incoerenze.
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f773e5188716e7f74fc75567b0c6e000607d47c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb0036acec4ec0c416f6fa01ccf99663be741514
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115883"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789456"
 ---
 # <a name="maintenance-plans"></a>Piani di manutenzione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Con i piani di manutenzione è possibile creare un flusso di lavoro per le attività necessarie per assicurare prestazioni ottimali del database, eseguire regolarmente il backup del database e verificare che nel database non siano presenti incoerenze. Sebbene sia possibile utilizzare anche Creazione guidata piano di manutenzione per creare i piani di manutenzione principali, la creazione manuale dei piani offre una maggiore flessibilità.  
   
 ## <a name="benefits-of-maintenance-plans"></a>Vantaggi di piani di manutenzione  

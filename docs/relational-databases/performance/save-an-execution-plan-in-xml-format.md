@@ -17,15 +17,15 @@ ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8feec11884ae31e34cbc5497bf818991e59b39dd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dc50eb9e0f045edc0948ce2416625643ce0a8942
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909788"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758853"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Salvataggio di un piano di esecuzione in formato XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per salvare piani di esecuzione come file XML e per aprirli e visualizzarli.  
   
  Per utilizzare la funzionalità dei piani di esecuzione in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], o per utilizzare le opzioni XML Showplan SET, è necessario che gli utenti dispongano delle autorizzazioni appropriate per eseguire la query [!INCLUDE[tsql](../../includes/tsql-md.md)] per la quale un piano di esecuzione è in fase di generazione ed è necessario inoltre che venga loro concessa l'autorizzazione SHOWPLAN per tutti i database cui fa riferimento la query.  
@@ -68,9 +68,9 @@ ms.locfileid: "72909788"
   
 4.  Nel riquadro **Risultati** fare clic con il pulsante destro del mouse sullo **Showplan XML di Microsoft SQL Server** che contiene il piano di query e quindi fare clic su **Salva risultati con nome**.  
   
-5.  Nella finestra di dialogo **Salva** **risultati** \<griglia o testo>, fare clic su **Tutti i file (\*.\*)** nella casella **Salva come tipo**.  
+5.  Nella finestra di dialogo **Salva** \<Grid or Text> **risultati**, nella casella **Salva come tipo**, fare clic su **Tutti i file (\*.\*)** .  
   
-6.  Nella casella **Nome file** immettere un nome nel formato \<nome **>.sqlplan** e quindi fare clic su **Salva**.  
+6.  Nella casella **Nome file** immettere un nome nel formato \<name**>.sqlplan** e quindi fare clic su **Salva**.  
 
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>Per salvare un piano di esecuzione utilizzando le opzioni di SQL Server Management Studio  
   
@@ -82,7 +82,7 @@ ms.locfileid: "72909788"
   
 3.  Nella finestra di dialogo **Salva con nome** assicurarsi che **Salva come** sia impostato su **File piano di esecuzione (\*.sqlplan)** .  
   
-4.  Nella casella **Nome file** immettere un nome nel formato \<nome **>.sqlplan** e quindi fare clic su **Salva**.  
+4.  Nella casella **Nome file** immettere un nome nel formato \<name**>.sqlplan** e quindi fare clic su **Salva**.  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>Per aprire un piano di query XML salvato in SQL Server Management Studio  
   

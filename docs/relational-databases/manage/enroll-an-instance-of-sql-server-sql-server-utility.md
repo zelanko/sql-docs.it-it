@@ -1,5 +1,6 @@
 ---
 title: Registrare un'istanza di SQL Server (Utilità SQL Server) | Microsoft Docs
+description: Avviare il monitoraggio delle prestazioni e della configurazione di un'istanza di SQL Server eseguendo la registrazione in un'utilità SQL Server esistente.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dda51dd5449719aedd7697310c1f7befe3ee1390
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1e3f26672d208d848a2cf76707fb92d7b72d5e11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115423"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776001"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Registrare un'istanza di SQL Server (Utilità SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   È possibile registrare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'utilità esistente di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per monitorarne le prestazioni e la configurazione come istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il punto di controllo dell'utilità raccoglie informazioni sulla configurazione e sulle prestazioni delle istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ogni 15 minuti. Queste informazioni vengono archiviate nel data warehouse di gestione dell'utilità (UMDW) nel punto di controllo dell'utilità; il nome del file UMDW è sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono confrontati con i criteri per consentire l'identificazione di colli di bottiglia nell'utilizzo delle risorse e le possibilità di consolidamento.  
   
  In questa versione il punto di controllo dell'utilità e tutte le istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devono soddisfare i requisiti seguenti:  
@@ -170,7 +171,7 @@ ms.locfileid: "68115423"
 >   
 >  Eccezione durante l'esecuzione di un'istruzione o un batch Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Ulteriori informazioni:  Impossibile ottenere informazioni relative al gruppo/utente di Windows NT '\<NomeDominio\NomeAccount>', codice di errore 0x5. (Microsoft SQL Server, Errore: 15404)  
+>  Ulteriori informazioni:  Impossibile ottenere informazioni relative al gruppo/utente di Windows NT '\<DomainName\AccountName>', codice di errore 0x5. (Microsoft SQL Server, Errore: 15404)  
 >   
 >  Per altre informazioni sulla risoluzione di questo errore, vedere [Attività e funzionalità di Utilità SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
   

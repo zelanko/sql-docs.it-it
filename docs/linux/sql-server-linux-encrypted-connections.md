@@ -1,7 +1,7 @@
 ---
 title: Crittografia delle connessioni a SQL Server in Linux
 description: Questo articolo descrive la crittografia delle connessioni a SQL Server in Linux.
-ms.date: 01/30/2018
+ms.date: 06/29/2020
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
@@ -10,16 +10,16 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 975a312988a7df4bdb4fb2858d7b0fcbe95cea33
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 53da117e95d235b0de22b8265439721b94346024
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71016856"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894014"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Crittografia delle connessioni a SQL Server in Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Linux può usare TLS (Transport Layer Security) per crittografare i dati trasmessi attraverso una rete tra un'applicazione client e un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta gli stessi protocolli TLS sia in Windows che in Linux: TLS 1.2, 1.1 e 1.0. I passaggi per configurare TLS sono tuttavia specifici del sistema operativo in cui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è in esecuzione.  
 
@@ -44,33 +44,37 @@ TLS viene usato per crittografare le connessioni da un'applicazione client a [!I
 > [!NOTE]
 > Per questo esempio viene usato un certificato autofirmato che non deve essere usato per gli scenari di produzione. È consigliabile usare i certificati della CA. 
 
-        openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
-        sudo chown mssql:mssql mssql.pem mssql.key 
-        sudo chmod 600 mssql.pem mssql.key   
-        sudo mv mssql.pem /etc/ssl/certs/ 
-        sudo mv mssql.key /etc/ssl/private/ 
+```bash
+openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
+sudo chown mssql:mssql mssql.pem mssql.key 
+sudo chmod 600 mssql.pem mssql.key   
+sudo mv mssql.pem /etc/ssl/certs/ 
+sudo mv mssql.key /etc/ssl/private/ 
+```
 
 - **Configurare SQL Server**
 
-        systemctl stop mssql-server 
-        cat /var/opt/mssql/mssql.conf 
-        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
-        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
-        sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
-        sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
+```bash
+systemctl stop mssql-server 
+cat /var/opt/mssql/mssql.conf 
+sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
+sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
+sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
+```
 
 - **Registrare il certificato nel computer client (Windows, Linux o macOS)**
 
     -   Se si usa un certificato della CA firmato, è necessario copiare nel computer client il certificato dell'Autorità di certificazione (CA) invece del certificato dell'utente. 
     -   Se si usa il certificato autofirmato, è sufficiente copiare il file PEM nelle cartelle seguenti, a seconda della distribuzione, ed eseguire i comandi per abilitarlo 
-        - **Ubuntu**: copiare il certificato in ```/usr/share/ca-certificates/```. Sostituire l'estensione con CRT. Usare dpkg-reconfigure ca-certificates per abilitarlo come certificato della CA di sistema. 
-        - **RHEL**: copiare il certificato in ```/etc/pki/ca-trust/source/anchors/```. Usare ```update-ca-trust``` per abilitarlo come certificato della CA di sistema.
-        - **SUSE**: copiare il certificato in ```/usr/share/pki/trust/anchors/```. Usare ```update-ca-certificates``` per abilitarlo come certificato della CA di sistema.
+        - **Ubuntu**: copiare il certificato in `/usr/share/ca-certificates/`, rinominare l'estensione in .crt e usare `dpkg-reconfigure ca-certificates` per abilitarlo come certificato della CA di sistema. 
+        - **RHEL**: copiare il certificato in `/etc/pki/ca-trust/source/anchors/` e usare `update-ca-trust` per abilitarlo come certificato della CA di sistema.
+        - **SUSE**: copiare il certificato in `/usr/share/pki/trust/anchors/` e usare `update-ca-certificates` per abilitarlo come certificato della CA di sistema.
         - **Windows**:  importare il file PEM come certificato in utente corrente-> Autorità di certificazione radice attendibili-> Certificati
         - **macOS**: 
-           - Copiare il certificato in ```/usr/local/etc/openssl/certs```
-           - Eseguire il comando seguente per ottenere il valore hash: ```/usr/local/Cellar/openssl/1.0.2l/openssl x509 -hash -in mssql.pem -noout```
-           - Rinominare il certificato con il valore. Ad esempio: ```mv mssql.pem dc2dd900.0```. Verificare che dc2dd900.0 sia in ```/usr/local/etc/openssl/certs```
+           - Copiare il certificato in `/usr/local/etc/openssl/certs`
+           - Eseguire il comando seguente per ottenere il valore hash: `/usr/local/Cellar/openssl/1.0.2l/openssl x509 -hash -in mssql.pem -noout`
+           - Rinominare il certificato con il valore. Ad esempio: `mv mssql.pem dc2dd900.0`. Verificare che dc2dd900.0 sia in `/usr/local/etc/openssl/certs`
     
 -   **Esempi di stringhe di connessione** 
 
@@ -79,51 +83,61 @@ TLS viene usato per crittografare le connessioni da un'applicazione client a [!I
   
     - **SQLCMD** 
 
-            sqlcmd  -S <sqlhostname> -N -U sa -P '<YourPassword>' 
+        `sqlcmd  -S <sqlhostname> -N -U sa -P '<YourPassword>'`
+
     - **ADO.NET** 
 
-            "Encrypt=True; TrustServerCertificate=False;" 
+        `"Encrypt=True; TrustServerCertificate=False;"`
+
     - **ODBC** 
 
-            "Encrypt=Yes; TrustServerCertificate=no;" 
+        `"Encrypt=Yes; TrustServerCertificate=no;"`
+
     - **JDBC** 
-    
-            "encrypt=true; trustServerCertificate=false;" 
+
+        `"encrypt=true; trustServerCertificate=false;"`
 
 ## <a name="server-initiated-encryption"></a>Crittografia avviata dal server 
 
 - **Generare il certificato** (/CN deve corrispondere al nome di dominio completo dell'host di SQL Server)
-        
-        openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
-        sudo chown mssql:mssql mssql.pem mssql.key 
-        sudo chmod 600 mssql.pem mssql.key   
-        sudo mv mssql.pem /etc/ssl/certs/ 
-        sudo mv mssql.key /etc/ssl/private/ 
+
+```bash
+openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
+sudo chown mssql:mssql mssql.pem mssql.key 
+sudo chmod 600 mssql.pem mssql.key   
+sudo mv mssql.pem /etc/ssl/certs/ 
+sudo mv mssql.key /etc/ssl/private/ 
+```
 
 - **Configurare SQL Server**
 
-        systemctl stop mssql-server 
-        cat /var/opt/mssql/mssql.conf 
-        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
-        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
-        sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
-        sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
-        
+```bash
+systemctl stop mssql-server 
+cat /var/opt/mssql/mssql.conf 
+sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
+sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
+sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
+```
+
 -   **Esempi di stringhe di connessione** 
 
     - **SQLCMD**
 
-            sqlcmd  -S <sqlhostname> -U sa -P '<YourPassword>' 
+        `sqlcmd  -S <sqlhostname> -U sa -P '<YourPassword>'`
+
     - **ADO.NET** 
 
-            "Encrypt=False; TrustServerCertificate=False;" 
+        `"Encrypt=False; TrustServerCertificate=False;"`
+
     - **ODBC** 
 
-            "Encrypt=no; TrustServerCertificate=no;"  
+        `"Encrypt=no; TrustServerCertificate=no;"`
+
     - **JDBC** 
-    
-            "encrypt=false; trustServerCertificate=false;" 
-            
+
+        `"encrypt=false; trustServerCertificate=false;"`
+
 > [!NOTE]
 > Impostare **TrustServerCertificate** su True se il client non riesce a connettersi alla CA per convalidare l'autenticità del certificato
 

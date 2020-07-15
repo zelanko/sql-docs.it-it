@@ -1,5 +1,6 @@
 ---
 title: Proprietà database (pagina File) | Microsoft Docs
+description: Informazioni su come visualizzare o modificare le proprietà di un database e su come creare un nuovo database in SQL Server Management Studio.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ f1_keywords:
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f3c0493192381bc3dedbf23ab1e01c0142e88be4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ddd5b76d37f170ed195c6b08f6debcb0f032e77
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099614"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756186"
 ---
 # <a name="database-properties-files-page"></a>Proprietà database (pagina File)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilizzare questa pagina per creare un nuovo database oppure per visualizzare o modificare le proprietà del database selezionato. Questo argomento si applica a **Proprietà database (pagina File)** per i database esistenti e a **Nuovo database (pagina Generale)** .  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
  **Nome database**  
  È possibile aggiungere o visualizzare il nome del database.  
   
@@ -47,7 +48,7 @@ ms.locfileid: "68099614"
  Per aggiungere file (contenitori) a un filegroup di dati FILESTREAM, FILESTREAM deve essere abilitato. È possibile abilitare FILESTREAM usando la finestra di dialogo [Proprietà server (pagina Avanzate)](../../database-engine/configure-windows/server-properties-advanced-page.md) .  
   
  **Filegroup**  
- È possibile selezionare il filegroup per il file nell'elenco. Per impostazione predefinita, il filegroup è PRIMARY. È possibile creare un nuovo filegroup selezionando **\<nuovo filegroup>** e immettendo informazioni sul filegroup nella finestra di dialogo **Nuovo filegroup**. Anche nella pagina **Filegroup** è possibile creare un nuovo filegroup. Non è possibile modificare il filegroup di un file esistente.  
+ È possibile selezionare il filegroup per il file nell'elenco. Per impostazione predefinita, il filegroup è PRIMARY. È possibile creare un nuovo filegroup selezionando **\<new filegroup>** e immettendo le informazioni sul filegroup nella finestra di dialogo **Nuovo filegroup**. Anche nella pagina **Filegroup** è possibile creare un nuovo filegroup. Non è possibile modificare il filegroup di un file esistente.  
   
  Quando si aggiungono file (contenitori) a un filegroup ottimizzato per la memoria, il campo **Filegroup** viene popolato con il nome del filegroup ottimizzato per la memoria del database.  
   

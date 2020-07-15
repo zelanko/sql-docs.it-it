@@ -1,5 +1,6 @@
 ---
 title: Oggetto di database (pagina Proprietà estese) | Microsoft Docs
+description: Informazioni sulla pagina Proprietà estese, su come usare la pagina per aggiungere, visualizzare o modificare le proprietà personalizzate degli oggetti di database.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de6a4504e0b84efd8fa8fb5b60a8bd01ef85b474
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a5bff24a63829f1820048bf371f4be497a95f6c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099642"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756246"
 ---
 # <a name="database-object-extended-properties-page"></a>Oggetto di database (pagina Proprietà estese)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   La pagina Proprietà estese consente di aggiungere proprietà personalizzate a oggetti di database. Utilizzare questa pagina per visualizzare o modificare le proprietà estese relative all'oggetto selezionato. La pagina **Proprietà estese** è la stessa per tutti i tipi di oggetti di database.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
  **Database**  
  Consente di visualizzare il nome del database selezionato. Questo campo è di sola lettura.  
   

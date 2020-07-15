@@ -30,19 +30,19 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 12d392c73d1e68bee57bb0a534bd65d39e48946d
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: fc69b2a0615745966971ad83da2b0acadf3b2488
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262152"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773148"
 ---
 # <a name="use-sql-server-objects"></a>Utilizzare oggetti di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rende disponibili oggetti e contatori utilizzabili in Monitoraggio di sistema per il monitoraggio dell'attività nei computer che eseguono un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per oggetto si intende qualsiasi risorsa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio un blocco di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un processo di Windows. Ogni oggetto contiene uno o più contatori che determinano diversi aspetti degli oggetti da monitorare. Ad esempio, l'oggetto **SQL Server Locks** contiene i contatori **Numero di blocchi critici deadlock/sec** e **Timeout blocchi/sec**.  
   
- Se un computer include più risorse dello stesso tipo, saranno presenti più istanze dello stesso tipo di oggetto. Ad esempio, nei sistemi con più processori saranno presenti più istanze dell'oggetto di tipo **Processor** . Per ogni database di **sarà presente un'istanza dell'oggetto di tipo** Databases [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per alcuni tipi di oggetti, ad esempio **Memory Manager** , è prevista una sola istanza. Se sono presenti più istanze di un tipo di oggetto, è possibile aggiungere i contatori per tenere traccia delle statistiche di ogni singola istanza o in molti casi di tutte le istanze contemporaneamente. I contatori per l'istanza predefinita sono visualizzati nel formato **SQLServer:** _\<nome oggetto>_ . I contatori per le istanze denominate sono visualizzati nel formato **MSSQL$** _\<nome istanza>_ **:** _\<nome contatore>_ o **SQLAgent$** _\<nome istanza>_ **:** _\<nome contatore>_ .  
+ Se un computer include più risorse dello stesso tipo, saranno presenti più istanze dello stesso tipo di oggetto. Ad esempio, nei sistemi con più processori saranno presenti più istanze dell'oggetto di tipo **Processor** . Per ogni database di **sarà presente un'istanza dell'oggetto di tipo** Databases [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per alcuni tipi di oggetti, ad esempio **Memory Manager** , è prevista una sola istanza. Se sono presenti più istanze di un tipo di oggetto, è possibile aggiungere i contatori per tenere traccia delle statistiche di ogni singola istanza o in molti casi di tutte le istanze contemporaneamente. I contatori per l'istanza predefinita vengono visualizzati nel formato **SQLServer:** _\<object name>_ . I contatori per le istanze denominate vengono visualizzati nel formato **MSSQL$** _\<instance name>_ **:** _\<counter name>_ o **SQLAgent$** _\<instance name>_ **:** _\<counter name>_ .  
   
 I valori dei contatori delle prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono generati usando il motore del contatore delle prestazioni di Windows. Alcuni valori dei contatori non vengono calcolati direttamente da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce valori di base al motore del contatore delle prestazioni di Windows, che eseguirà i calcoli necessari, ad esempio le percentuali. La DMV [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) fornisce tutti i contatori con il valore originale generato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La colonna `cntr_type` indica il tipo di contatore. Il modo in cui il motore del contatore delle prestazioni di Windows elabora i valori dei contatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dipende da questo tipo. Per altre informazioni sui tipi di contatori delle prestazioni, vedere la [documentazione di Strumentazione gestione Windows](https://docs.microsoft.com/windows/win32/wmisdk/wmi-performance-counter-types).
   

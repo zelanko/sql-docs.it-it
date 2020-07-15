@@ -28,15 +28,15 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 8af6e4e5e3b159249e9437c48791b0519821cbb9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e36315d58721fc6c50393b0bff10c7e8a2e3dee0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632322"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757201"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Compatta le dimensioni dei file di dati e di log nel database specificato.
   
@@ -120,7 +120,7 @@ Ad esempio, se si specifica un valore _target\_percent_ di 25 per la compattazio
   
 Si supponga che il file di dati di **mydb** contenga 7 MB di dati. Specificando un valore _target\_percent_ pari a 30, il file di dati può essere compattato alla percentuale disponibile di 30. Tuttavia, specificando un valore _target\_percent_ di 40, il file di dati non viene compattato perché il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non compatta un file a dimensioni minori di quelle occupate attualmente dai dati. 
 
-Questo concetto può essere descritto anche in modo diverso: il 40% di spazio disponibile desiderato + il 70% del file di dati completo (7 dei 10 MB) è maggiore del 100%. Con valori _target\_size_ superiori a 30 il file di dati non viene compattato. Non viene compattato perché la percentuale disponibile desiderata più la percentuale corrente occupata dal file di dati è superiore al 100%.
+È possibile anche considerare il problema in un altro modo: il 40% di spazio disponibile desiderato + il 70% del file di dati completo (7 dei 10 MB) è maggiore del 100%. Con valori _target\_size_ superiori a 30 il file di dati non viene compattato. Non viene compattato perché la percentuale disponibile desiderata più la percentuale corrente occupata dal file di dati è superiore al 100%.
   
 Per i file di log, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa _target\_percent_ per calcolare le dimensioni di destinazione dell'intero log. Per questa ragione _target\_percent_ è la quantità di spazio disponibile nel log dopo l'operazione di compattazione. Le dimensioni di destinazione per l'intero log vengono quindi convertite nelle dimensioni di destinazione per ogni file di log.
   
@@ -130,12 +130,12 @@ DBCC SHRINKDATABASE tenta di compattare immediatamente ogni file di log fisico f
   
 ## <a name="best-practices"></a>Procedure consigliate  
 Quando si pianifica la compattazione di un database, considerare le informazioni seguenti:
--   La compattazione è più efficace dopo un'operazione. Un'operazione di troncamento o eliminazione di tabella, ad esempio, crea spazio inutilizzato.  
+-   Un'operazione di compattazione è più efficace dopo l'esecuzione di un'operazione che crea spazio inutilizzato, ad esempio il troncamento o l'eliminazione di una tabella.
 -   La maggior parte dei database richiede spazio disponibile per lo svolgimento delle normali attività quotidiane. È possibile che, nonostante le ripetute operazioni di compattazione di un database, questo continui ad aumentare di dimensioni. Questo aumento indica che lo spazio compattato è necessario per le normali operazioni. In questi casi è inutile compattare ripetutamente il database.  
 -   L'operazione di compattazione generalmente aumenta la frammentazione degli indici del database. Questo è un altro motivo per evitare di compattare ripetutamente un database.  
 -   Se non è necessario soddisfare esigenze specifiche, non impostare l'opzione di database AUTO_SHRINK su ON.  
   
-## <a name="troubleshooting"></a>risoluzione dei problemi  
+## <a name="troubleshooting"></a>Risoluzione dei problemi  
 È possibile che le operazioni di compattazione vengano bloccate da una transazione eseguita in un [livello di isolamento basato sul controllo della versione delle righe](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). Ad esempio, si tenta di eseguire un'operazione DBCC SHRINK DATABASE mentre è in corso un'operazione di eliminazione di grandi dimensioni che usa un livello di isolamento basato sul controllo delle versioni delle righe. Quando si verifica questa situazione, l'operazione di compattazione attende fino al completamento dell'operazione di eliminazione prima di compattare i file. Mentre l'operazione di compattazione è in attesa, le operazioni DBCC SHRINKFILE e DBCC SHRINKDATABASE generano un messaggio informativo (5202 per SHRINKDATABASE e 5203 per SHRINKFILE). Questo messaggio viene generato nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ogni cinque minuti nella prima ora e in seguito una volta all'ora. Ad esempio, il log degli errori può contenere il messaggio di errore seguente:  
   
 ```sql

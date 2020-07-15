@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eaac8c264caf9009006853e0f02e258ad5d7408f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e6a000df12b44b2da1913f45febfaa93e39f7af1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165738"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881217"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Scenari di utilizzo delle tabelle temporali
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Le tabelle temporali sono in genere utili negli scenari che richiedono il rilevamento della cronologia delle modifiche dei dati. È consigliabile prendere in considerazione le tabelle temporali nei casi d'uso seguenti per ottenere vantaggi significativi in termini di produttività.
 
@@ -141,8 +141,8 @@ L'uso di AT TIME ZONE è utile in tutti gli altri scenari in cui vengono usate t
 
 > [!TIP]
 > Le condizioni del filtro specificate nelle clausole temporali con FOR SYSTEM_TIME hanno requisiti SARG-able (Search ARGument ABLE), ovvero SQL Server può usare l'indice cluster sottostante per eseguire una ricerca anziché un'operazione di analisi.
-> Se si esegue direttamente una query sulla tabella di cronologia, assicurarsi che la condizione di filtro abbia i requisiti SARGable specificando i filtri nel formato \<colonna PERIOD> {< | > | =, ...} date_condition AT TIME ZONE 'UTC'.
-> Se si applica AT TIME ZONE alle colonne del periodo, SQL Server esegue un'analisi di tabella/indice, che può risultare molto costosa. Evitare questo tipo di condizione nelle query: \<colonna periodo> AT TIME ZONE '\<fuso orario>' > {< | > | =, ...} date_condition.
+> Se si esegue direttamente una query sulla tabella di cronologia, assicurarsi che la condizione di filtro abbia i requisiti SARGable specificando i filtri nel formato \<period column> {< | > | =, ...} date_condition AT TIME ZONE 'UTC'.
+> Se si applica AT TIME ZONE alle colonne del periodo, SQL Server esegue un'analisi di tabella/indice, che può risultare molto costosa. Per ovviare a questo tipo di condizione nelle query: \<period column> AT TIME ZONE '\<your time zone>' > {< | > | =, ...} date_condition.
 
 Vedere anche la pagina relativa alla [Query sui dati in una tabella temporale con controllo delle versioni di sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).
 

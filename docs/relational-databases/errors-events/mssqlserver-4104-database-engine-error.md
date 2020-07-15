@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_4104 | Microsoft Docs
+description: Non è stato possibile eseguire il mapping dell'identificatore in più parti specificato a un'entità esistente. Vedere la descrizione dell'errore e delle possibili soluzioni.
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 52dc32d8-97ad-4ef0-834d-2e68f215d007
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 27f6dfb6a41bab31fb716671f431115468d8bd86
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9d3cac9c566928baac5a32fe0aa318fbb823c57d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68120585"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763066"
 ---
 # <a name="mssqlserver_4104"></a>MSSQLSERVER_4104
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Dettagli  
   
-|||  
-|-|-|  
+| Attributo | valore |  
+| :-------- | :---- |  
 |Nome prodotto|SQL Server|  
 |ID evento|4104|  
 |Origine evento|MSSQLSERVER|  

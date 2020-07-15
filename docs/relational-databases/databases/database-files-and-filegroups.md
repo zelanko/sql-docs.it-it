@@ -1,7 +1,8 @@
 ---
 title: Filegroup e file di database | Microsoft Docs
-ms.custom: ''
-ms.date: 01/07/2018
+description: Informazioni sui file di database e su come creare filegroup in SQL Server ai fini dell'allocazione e dell'amministrazione. Visualizzare esempi, regole e consigli.
+ms.custom: contperfq4
+ms.date: 05/29/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -32,15 +33,15 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 782536e79336c0224638707538e8a12a31f5af84
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58c4cd1b0f3df19365772aa3bee751ac73a7cd1a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287985"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756262"
 ---
 # <a name="database-files-and-filegroups"></a>Filegroup e file di database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Ogni database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene almeno due file del sistema operativo: un file di dati e un file di log. I file di dati contengono dati e oggetti come tabelle, indici, stored procedure e viste. I file di log contengono le informazioni necessarie per il recupero di tutte le transazioni del database. I file di dati possono essere raggruppati in filegroup ai fini dell'allocazione e dell'amministrazione.  
   
 ## <a name="database-files"></a>File di database  
@@ -48,20 +49,22 @@ ms.locfileid: "79287985"
   
 |File|Descrizione|  
 |----------|-----------------|  
-|Primaria|Il file di dati primario contiene le informazioni di avvio del database e punta agli altri file del database. I dati e gli oggetti degli utenti possono essere archiviati in questo file o nei file di dati secondari. In ogni database è disponibile un unico file di dati primario. L'estensione consigliata per i file di dati primari è mdf.|  
-|Secondari|I file di dati secondari sono facoltativi e definiti dall'utente e vengono utilizzati per archiviare i dati dell'utente. Possono essere utilizzati per suddividere i dati su più dischi, memorizzandoli in unità disco distinte. Se un database supera le dimensioni massime consentite per un singolo file di Windows, è inoltre possibile utilizzare i file di dati secondari per consentire l'aumento di dimensioni del database.<br /><br /> L'estensione consigliata per i file di dati secondari è ndf.|  
-|Log delle transazioni|I file di log delle transazioni contengono le informazioni necessarie per il recupero del database. È necessario che sia disponibile almeno un file di log per ogni database. L'estensione consigliata per i file di log è ldf.|  
+|Primaria|Contiene le informazioni di avvio del database e punta agli altri file del database. In ogni database è disponibile un unico file di dati primario. L'estensione consigliata per i file di dati primari è mdf.|  
+|Secondari|File di dati facoltativi definiti dall'utente. I dati possono essere distribuiti in più dischi, inserendo ogni file in un'unità disco distinta. L'estensione consigliata per i file di dati secondari è ndf.|  
+|Log delle transazioni|Il log contiene le informazioni usate per recuperare il database. È necessario che sia disponibile almeno un file di log per ogni database. L'estensione consigliata per i file di log è ldf.|  
   
- Ad esempio, è possibile creare un database semplice, denominato **Sales** , con un file primario che include tutti i dati e gli oggetti e un file di log che include le informazioni del log delle transazioni. In alternativa, è possibile creare un database più complesso, denominato **Orders** , con un file primario e cinque file secondari. I dati e gli oggetti all'interno del database vengono suddivisi nei sei file e i quattro file di log includono le informazioni del log delle transazioni.  
+ Ad esempio, un database semplice, denominato **Sales**, ha un file primario che include tutti i dati e gli oggetti e un file di log che contiene le informazioni del log delle transazioni. Si può creare un database più complesso, denominato **Orders**, con un file primario e cinque file secondari. I dati e gli oggetti all'interno del database vengono suddivisi nei sei file e i quattro file di log includono le informazioni del log delle transazioni.  
   
- Per impostazione predefinita, i dati e i log delle transazioni vengono archiviati nella stessa unità e nello stesso percorso. Ciò consente la gestione nei sistemi a disco singolo, ma può non essere la soluzione ottimale per gli ambienti di produzione. È consigliabile archiviare i dati e i file di log in dischi separati.  
+ Per impostazione predefinita, i dati e i log delle transazioni vengono archiviati nella stessa unità e nello stesso percorso per gestire i sistemi a disco singolo. Questa scelta può non essere la soluzione ottimale per gli ambienti di produzione. È consigliabile archiviare i dati e i file di log in dischi separati.  
 
 ### <a name="logical-and-physical-file-names"></a>Nomi di file logici e fisici
-I file [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hanno due tipi di nome file: 
+I file [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hanno due tipi di nome file:
 
-**logical_file_name:**  logical_file_name è il nome del file fisico in tutte le istruzioni Transact-SQL. Il nome di file logico deve essere conforme alle regole per gli identificatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e deve essere univoco tra i nomi di file logici nel database. Viene impostato dall'argomento `NAME` in `ALTER DATABASE`. Per altre informazioni, vedere [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+**logical_file_name:**  logical_file_name è il nome del file fisico in tutte le istruzioni Transact-SQL. Il nome di file logico deve essere conforme alle regole per gli identificatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e deve essere univoco tra i nomi di file logici nel database.
 
-**os_file_name:** os_file_name è il nome del file fisico che include il percorso di directory. Tale nome deve essere conforme alle regole relative ai nomi di file del sistema operativo. Viene impostato dall'argomento `FILENAME` in `ALTER DATABASE`. Per altre informazioni, vedere [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+**os_file_name:** os_file_name è il nome del file fisico che include il percorso di directory. Tale nome deve essere conforme alle regole relative ai nomi di file del sistema operativo.
+
+ Per altre informazioni su `NAME` e l'argomento `FILENAME`, vedere [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!IMPORTANT]
 > I dati e i file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere memorizzati sia in file system FAT che NTFS. Nei sistemi Windows è consigliabile utilizzare il file system NTFS per i vantaggi di sicurezza intrinseci di NTFS. 
@@ -77,14 +80,14 @@ Le pagine dei file di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 
 ![data_file_pages](../../relational-databases/databases/media/data-file-pages.gif)
 
-La prima pagina di ogni file è la pagina dell'intestazione, che include informazioni sugli attributi del file. Anche molte altre pagine all'inizio del file contengono informazioni di sistema, ad esempio mappe delle allocazioni. Una delle pagine di sistema archiviate sia nel file di dati primario che nel primo file di log è una pagina di avvio del database contenente informazioni sugli attributi del database. Per altre informazioni su pagine e tipi di pagina, vedere [Guida all'architettura di pagine ed extent](../..//relational-databases/pages-and-extents-architecture-guide.md).
-
+Una pagina di intestazione del file è la prima pagina che contiene informazioni sugli attributi del file. Anche molte altre pagine all'inizio del file contengono informazioni di sistema, ad esempio mappe delle allocazioni. Una delle pagine di sistema archiviate sia nel file di dati primario che nel primo file di log è una pagina di avvio del database contenente informazioni sugli attributi del database.
 ### <a name="file-size"></a>Dimensioni file
-Le dimensioni dei file di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono aumentare automaticamente rispetto ai valori originari. Quando si definisce un file, è possibile specificare un incremento di crescita specifico. Quando lo spazio assegnato al file si esaurisce, le sue dimensioni aumentano in base all'incremento specificato. Se un filegroup include più file, le loro dimensioni non aumentano automaticamente finché lo spazio di tutti i file non si esaurisce. L'aumento delle dimensioni avviene quindi in base a un meccanismo round robin utilizzando il [riempimento proporzionale](../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill).
+Le dimensioni dei file di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono aumentare automaticamente rispetto ai valori originari. Quando si definisce un file, è possibile specificare un incremento di crescita specifico. Quando lo spazio assegnato al file si esaurisce, le sue dimensioni aumentano in base all'incremento specificato. Se un filegroup include più file, le loro dimensioni non aumentano automaticamente finché lo spazio di tutti i file non si esaurisce.
 
-È inoltre possibile specificare le dimensioni massime di ogni file. Se non vengono specificate le dimensioni massime, il file può continuare ad aumentare fino a occupare tutto lo spazio disponibile nel disco. Questa caratteristica è particolarmente utile quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene utilizzato come database incorporato in un'applicazione per cui l'utente non può rivolgersi direttamente all'amministratore di sistema. L'utente può lasciare aumentare i file in base alle necessità per alleggerire il carico amministrativo derivante dal monitoraggio dello spazio libero nel database e dall'allocazione manuale di spazio aggiuntivo.  
+ Per altre informazioni su pagine e tipi di pagina, vedere [Guida all'architettura di pagine ed extent](../..//relational-databases/pages-and-extents-architecture-guide.md).
 
-Se [l'inizializzazione dei file immediata](../../relational-databases/databases/database-instant-file-initialization.md) è abilitata per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], durante l'allocazione di spazio aggiuntivo per i file di dati l'overhead è minimo.
+
+È inoltre possibile specificare le dimensioni massime di ogni file. Se non vengono specificate le dimensioni massime, il file può continuare ad aumentare fino a occupare tutto lo spazio disponibile nel disco. Questa caratteristica è particolarmente utile quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene usato come database incorporato in un'applicazione per cui l'utente non può rivolgersi direttamente all'amministratore di sistema. L'utente può lasciare aumentare i file in base alle necessità per alleggerire il carico amministrativo derivante dal monitoraggio dello spazio libero nel database e dall'allocazione manuale di spazio aggiuntivo.  
 
 Per altre informazioni sulla gestione del file di log delle transazioni, vedere [Gestione delle dimensioni del file di log delle transazioni](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   
 
@@ -95,18 +98,19 @@ La forma del file utilizzato da uno snapshot del database per archiviare i propr
 * Gli snapshot del database vengono utilizzati internamente da alcuni comandi DBCC, tra cui DBCC CHECKDB, DBCC CHECKTABLE, DBCC CHECKALLOC e DBCC CHECKFILEGROUP. Uno snapshot interno del database utilizza flussi di dati alternativi sparse dei file originali del database. Come i file sparse, anche i flussi di dati alternativi rappresentano una caratteristica del file system NTFS. L'utilizzo dei flussi di dati alternativi sparse consente l'associazione di più allocazioni di dati a un solo file o a una sola cartella senza incidere sulla dimensione del file o sulle statistiche del volume. 
   
 ## <a name="filegroups"></a>Filegroup  
- Ogni database contiene un filegroup primario, che include il file di dati primario e gli eventuali file secondari non inclusi in altri filegroup. È possibile creare filegroup definiti dall'utente per raggruppare i file di dati a fini amministrativi e di allocazione e posizione dei dati.  
+* Il filegroup contiene il file di dati primario e gli eventuali file secondari non inclusi in altri filegroup. 
+* È possibile creare filegroup definiti dall'utente per raggruppare i file di dati a fini amministrativi e di allocazione e posizione dei dati.  
   
- Ad esempio, è possibile creare tre file, `Data1.ndf`, `Data2.ndf` e `Data3.ndf`, rispettivamente su tre unità disco e assegnarli al filegroup `fgroup1`. È quindi possibile creare una tabella specifica nel filegroup `fgroup1`. Le query sui dati della tabella verranno suddivise sui tre dischi con il conseguente miglioramento delle prestazioni. È possibile ottenere lo stesso risultato in termini di prestazioni utilizzando un singolo file creato su un set di striping RAID. File e filegroup, tuttavia, consentono di aggiungere nuovi file su nuovi dischi in modo semplice.  
+ Ad esempio, è possibile creare `Data1.ndf`, `Data2.ndf` e `Data3.ndf` rispettivamente su tre unità disco e assegnarli al filegroup `fgroup1`. È quindi possibile creare una tabella specifica nel filegroup `fgroup1`. Le query sui dati della tabella verranno suddivise sui tre dischi con il conseguente miglioramento delle prestazioni. È possibile ottenere lo stesso risultato in termini di prestazioni utilizzando un singolo file creato su un set di striping RAID. File e filegroup, tuttavia, consentono di aggiungere nuovi file su nuovi dischi in modo semplice.  
   
  Tutti i file di dati vengono archiviati nei filegroup elencati nella tabella seguente.  
   
 |Filegroup|Descrizione|  
 |---------------|-----------------|  
-|Primaria|Il filegroup che contiene il file primario. Tutte le tabelle di sistema vengono allocate al filegroup primario.|  
+|Primaria|Il filegroup che contiene il file primario. Tutte le tabelle di sistema fanno parte del filegroup primario.|  
 |Dati ottimizzati per la memoria|Un filegroup ottimizzato per la memoria è basato sul filegroup FileStream|  
 |Filestream||    
-|Route definite dall'utente|Qualsiasi filegroup creato specificamente dall'utente in fase di creazione o di successiva modifica del database.|  
+|Route definite dall'utente|Qualsiasi filegroup creato dall'utente in fase di creazione o di successiva modifica del database.|  
   
 ### <a name="default-primary-filegroup"></a>Filegroup predefinito (PRIMARY)  
  Gli oggetti di database creati senza specificare un filegroup di appartenenza vengono assegnati al filegroup predefinito. Viene designato sempre e solo un filegroup predefinito. I file nel filegroup predefinito devono essere di dimensioni sufficienti a contenere tutti i nuovi oggetti non allocati ad altri filegroup.  
@@ -128,7 +132,7 @@ Per altre informazioni sui filegroup FileStream, vedere [FILESTREAM](../../relat
 USE master;
 GO
 -- Create the database with the default data
--- filegroup, filstream filegroup and a log file. Specify the
+-- filegroup, filestream filegroup and a log file. Specify the
 -- growth increment and the max size for the
 -- primary data file.
 CREATE DATABASE MyDB
@@ -189,9 +193,9 @@ La figura seguente riepiloga i risultati dell'esempio precedente (esclusi i dati
 ![filegroup_example](../../relational-databases/databases/media/filegroup-example.gif)
 
 ## <a name="file-and-filegroup-fill-strategy"></a>Strategia di riempimento dei file e dei filegroup
-I filegroup utilizzano una strategia di riempimento proporzionale per tutti i file presenti in ogni filegroup. Quando i dati vengono scritti nel filegroup, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] scrive una quantità di dati proporzionale allo spazio disponibile in ogni file del filegroup anziché scrivere tutti i dati nel primo file fino all'esaurimento dello spazio e quindi passa al file successivo. Ad esempio, se nel file f1 sono disponibili 100 megabyte (MB) e nel file f2 sono disponibili 200 MB, un extent verrà allocato dal file f1, due extent dal file f2 e così via. In questo modo, entrambi i file vengono riempiti quasi simultaneamente e si ottiene uno striping semplice.
+I filegroup utilizzano una strategia di riempimento proporzionale per tutti i file presenti in ogni filegroup. Quando i dati vengono scritti nel filegroup, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] scrive una quantità di dati proporzionale allo spazio disponibile in ogni file del filegroup anziché scrivere tutti i dati nel primo file fino all'esaurimento dello spazio e quindi passa al file successivo. Ad esempio, se nel file f1 sono disponibili 100 megabyte (MB) e nel file f2 sono disponibili 200 MB, un extent verrà assegnato dal file f1, due extent dal file f2 e così via. In questo modo, entrambi i file vengono riempiti quasi simultaneamente e si ottiene uno striping semplice.
 
-Non appena si esaurisce lo spazio di tutti i file di un filegroup, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] espande automaticamente i file uno alla volta in in base a un meccanismo round robin per consentire l'inserimento di ulteriori dati, a condizione che sia stato impostato l'aumento di dimensioni automatico del database. Si supponga, ad esempio, che un filegroup includa tre file per i quali è stato impostato l'aumento di dimensioni automatico. Quando lo spazio viene esaurito in tutti i file del filegroup, viene espanso solo il primo file. Quando il primo file è pieno e non è possibile scrivere altri dati nel filegroup, viene espanso il secondo file. Quando il secondo file è pieno e non è possibile scrivere altri dati nel filegroup, viene espanso il terzo file. Quando il terzo file è pieno e non è possibile scrivere altri dati nel filegroup, viene espanso nuovamente il primo file e così via.
+Si supponga, ad esempio, che un filegroup includa tre file per i quali è stato impostato l'aumento di dimensioni automatico. Quando lo spazio viene esaurito in tutti i file del filegroup, viene espanso solo il primo file. Quando il primo file è pieno e non è possibile scrivere altri dati nel filegroup, viene espanso il secondo file. Quando il secondo file è pieno e non è possibile scrivere altri dati nel filegroup, viene espanso il terzo file. Quando il terzo file è pieno e non è possibile scrivere altri dati nel filegroup, viene espanso nuovamente il primo file e così via.
 
 ## <a name="rules-for-designing-files-and-filegroups"></a>Regole per la progettazione di file e filegroup
 Per i file e i filegroup sono valide le regole seguenti:
@@ -199,14 +203,14 @@ Per i file e i filegroup sono valide le regole seguenti:
 - Un file può essere membro di un solo filegroup.
 - I file di log delle transazioni non fanno mai parte di un filegroup.
 
-## <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni
-Vengono riportate di seguito alcune indicazioni di carattere generale relative all'utilizzo di file e filegroup: 
+## <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni
+Suggerimenti per l'utilizzo di file e filegroup: 
 - La maggior parte dei database funziona in modo ottimale con un singolo file di dati e un unico file di log delle transazioni.
 - Se si utilizzano più file di dati, creare un secondo filegroup per i file aggiuntivi e impostarlo come filegroup predefinito. In questo modo, il file primario conterrà unicamente le tabelle e gli oggetti di sistema.
 - Per ottimizzare le prestazioni, creare i file o i filegroup sul numero maggiore possibile di dischi disponibili. Posizionare in filegroup diversi gli oggetti che creano conflitti di spazio.
 - Utilizzare i filegroup per la posizione di oggetti su dischi fisici specifici.
-- Posizionare in filegroup diversi le diverse tabelle utilizzate nelle stesse query di join. Questa operazione consente di ottimizzare le prestazioni, grazie al fatto che i dati uniti in join vengono cercati con operazioni di I/O su disco in parallelo.
-- Posizionare in filegroup diversi le tabelle utilizzate molto frequentemente e gli indici non cluster che appartengono a queste tabelle. Questa operazione consente di ottimizzare le prestazioni, grazie al fatto che vengono eseguite operazioni di I/O in parallelo se i file si trovano su dischi fisici diversi.
+- Posizionare in filegroup diversi le diverse tabelle utilizzate nelle stesse query di join. Questo passaggio consente di ottimizzare le prestazioni, grazie al fatto che i dati uniti in join vengono cercati con operazioni di I/O su disco in parallelo.
+- Posizionare in filegroup diversi le tabelle utilizzate molto frequentemente e gli indici non cluster che appartengono a queste tabelle. L'uso di filegroup diversi consente di ottimizzare le prestazioni, grazie al fatto che vengono eseguite operazioni di I/O in parallelo se i file si trovano su dischi fisici diversi.
 - Non posizionare il file o i file di log delle transazioni sullo stesso disco fisico in cui si trovano gli altri file o filegroup.
 
 Per altre informazioni sulle raccomandazioni relative alla gestione del file di log delle transazioni, vedere [Gestione delle dimensioni del file di log delle transazioni](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   

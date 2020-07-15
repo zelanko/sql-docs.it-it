@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff383fface773da790fd52c498e861ee402dc862
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557936"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882064"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>Manutenzione e risoluzione dei problemi del Connettore SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Informazioni supplementari sul Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono disponibili in questo argomento. Per altre informazioni sul Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) e [Usare Connettore SQL Server con le funzionalità di crittografia SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "75557936"
       -Name 'Key2' -Destination 'Software'  
     ```  
   
--   **Uso di [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o sqlcmd.exe:** usare le istruzioni seguenti, come illustrato nella sezione 3 del passaggio 3.  
+-   **Con [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o sqlcmd.exe:** usare le istruzioni seguenti, come illustrato nella sezione 3 del passaggio 3.  
   
      Importare la nuova chiave asimmetrica.  
   
@@ -147,13 +147,13 @@ In caso di perdita dell'insieme di credenziali, è necessario ricreare un insiem
 
 In sintesi, ecco i passaggi necessari:  
   
-* Eseguire il backup della chiave dell'insieme di credenziali usando il cmdlet di Powershell Backup-AzureKeyVaultKey.  
+* Eseguire il backup della chiave dell'insieme di credenziali usando il cmdlet di PowerShell Backup-AzureKeyVaultKey.  
 * In caso di errore dell'insieme di credenziali, crearne uno nuovo nella stessa area geografica*. L'utente che lo crea deve trovarsi nella stessa directory predefinita dell'entità servizio configurata per SQL Server.  
-* Ripristinare la chiave nel nuovo insieme di credenziali usando il cmdlet di Powershell Restore-AzureKeyVaultKey che consente di ripristinare la chiave usando lo stesso nome che aveva in precedenza. Se esiste già una chiave con lo stesso nome, il ripristino non riesce.  
+* Ripristinare la chiave nel nuovo insieme di credenziali usando il cmdlet di PowerShell Restore-AzureKeyVaultKey, che consente di ripristinare la chiave usando lo stesso nome che aveva in precedenza. Se esiste già una chiave con lo stesso nome, il ripristino non riesce.  
 * Concedere le autorizzazioni all'entità servizio di SQL Server per l'uso di questo nuovo insieme di credenziali.  
 * Modificare le credenziali di SQL Server usate dal motore di database in modo da riflettere il nuovo nome dell'insieme di credenziali, se necessario.  
   
-I backup delle chiavi possono essere ripristinati nelle aree di Azure, a condizione che rimangano nella stessa area geografica o nel cloud nazionale: Stati Uniti, Canada, Giappone, Australia, India, Asia Pacifico, Europa, Brasile, Cina, US Gov o Germania.  
+I backup delle chiavi possono essere ripristinati in aree diverse di Azure, purché rimangano nella stessa area geografica o nello stesso cloud nazionale: Stati Uniti, Canada, Giappone, Australia, India, Asia Pacifico, Europa, Brasile, Cina, US Government o Germania.  
   
   
 ##  <a name="b-frequently-asked-questions"></a><a name="AppendixB"></a> B. Domande frequenti  
@@ -167,7 +167,7 @@ I backup delle chiavi possono essere ripristinati nelle aree di Azure, a condizi
   
 ### <a name="on-configuring-ssnoversion"></a>Informazioni sulla configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-**Quali sono gli endpoint a cui deve accedere Connettore SQL Server?** Il connettore comunica con due endpoint che devono essere inclusi nell'elenco degli elementi consentiti. L'unica porta necessaria per la comunicazione in uscita a questi altri servizi è 443 per Https:
+**Quali sono gli endpoint a cui deve accedere Connettore SQL Server?** Il connettore comunica con due endpoint che devono essere consentiti. L'unica porta necessaria per la comunicazione in uscita a questi altri servizi è 443 per Https:
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/* :443
 

@@ -1,5 +1,6 @@
 ---
 title: Gerarchia di crittografia | Microsoft Docs
+description: Informazioni sulla gerarchia di crittografia e sull'infrastruttura di gestione delle chiavi in SQL Server. Archiviare le chiavi in un modulo Extensible Key Management.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 672631b7ef5e6453e49b269d035586949f03ece6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 805a468d462a28c3e43bddc32cfd2673546a26e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957425"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765002"
 ---
 # <a name="encryption-hierarchy"></a>Gerarchia di crittografia
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crittografa i dati in base ad una particolare gerarchia di crittografia e infrastruttura di gestione delle chiavi. Ciascun livello crittografa il livello sottostante utilizzando una combinazione di certificati, chiavi asimmetriche e chiavi simmetriche. Le chiavi asimmetriche e simmetriche possono essere archiviate al di fuori di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un modulo EKM (Extensible Key Management).  
   
  Nella figura seguente viene indicato come nella gerarchia di crittografia ogni livello crittografi il livello sottostante e vengono visualizzate le configurazioni di crittografia più comuni. L'accesso all'inizio della gerarchia è in genere protetto da una password.  

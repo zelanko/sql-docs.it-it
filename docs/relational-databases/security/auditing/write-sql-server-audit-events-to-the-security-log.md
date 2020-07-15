@@ -1,5 +1,6 @@
 ---
 title: Scrittura di eventi di controllo di SQL Server nel registro di sicurezza | Microsoft Docs
+description: Informazioni su come registrare eventi di controllo di SQL Server nel registro di sicurezza di Windows. Informazioni sulle limitazioni e le restrizioni relative all'uso del log.
 ms.custom: ''
 ms.date: 09/21/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0c998b4d5ed5988d5a5e2a01bf0cbd611157f665
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68228106bcd2620cb684bd61efec353fdb49585c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095105"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884832"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Scrittura di eventi di controllo di SQL Server nel registro di sicurezza  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 In un ambiente con sicurezza elevata il registro di sicurezza di Windows rappresenta la posizione appropriata per la scrittura di eventi che registrano l'accesso agli oggetti. Sono supportati altre posizioni di controllo che tuttavia sono più soggette alla manomissione.  
   

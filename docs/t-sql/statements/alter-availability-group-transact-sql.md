@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13f5c8c892729abe0ba0e0a79185b360f0098d07
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: d1c21bafa36dc929ef5dbc5f6e57bce27cc791b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150598"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762023"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Modifica un gruppo di disponibilità AlwaysOn esistente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La maggior parte degli argomenti ALTER AVAILABILITY GROUP sono supportati solo nella replica primaria corrente. Tuttavia gli argomenti JOIN, FAILOVER e FORCE_FAILOVER_ALLOW_DATA_LOSS sono supportati solo in repliche secondarie.  
   
@@ -407,7 +407,7 @@ Specifica se le transazioni distribuite sono abilitate per questo gruppo di disp
  NONE  
  Specifica che quando questa replica di disponibilità è la replica primaria, il routing di sola lettura non è supportato. Questo è il comportamento predefinito. In caso di utilizzo con MODIFY REPLICA ON, questo valore disabilita un elenco esistente, se presente.  
 
- READ_WRITE_ROUTING_URL **=** { **('** \<istanza_server> **')** }  
+ READ_WRITE_ROUTING_URL **=** { **('** \<server_instance> **')** }  
  Si applica a: SQL Server (a partire da SQL Server 2019 (15.x)) 
 
  Specifica istanze del server in cui sono ospitate repliche di disponibilità per questo gruppo di disponibilità che soddisfano i requisiti seguenti quando vengono eseguite nel ruolo principale:

@@ -18,15 +18,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: database-engine, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2dd4970cc25e382706f63ed94b7bcc3700549d9f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a61295dcadd884f2b54d23bd74dfee66cd866dc4
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67909749"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812646"
 ---
 # <a name="how-online-index-operations-work"></a>Funzionamento delle operazioni sugli indici online
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   In questo argomento vengono descritte le strutture esistenti durante un'operazione sugli indici online e illustra le attività associate a tali strutture.  
   
@@ -65,12 +65,14 @@ ms.locfileid: "67909749"
 |Compilare<br /><br /> Fase principale|I dati vengono sottoposti ad analisi, ordinati, uniti e inseriti nella destinazione in operazioni di caricamento bulk.<br /><br /> Le operazioni di selezione, inserimento, aggiornamento ed eliminazione di utenti simultanei vengono applicate agli indici preesistenti e ai nuovi indici compilati.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
 |Finale<br /><br /> Fase breve|Prima dell'avvio di questa fase, è necessario che tutte le transazioni di aggiornamento di cui non è stato eseguito il commit vengano completate. A seconda del blocco acquisito, tutte le nuove transazioni utente di lettura o di scrittura vengono bloccate per un breve periodo di tempo finché questa fase non viene completata.<br /><br /> I metadati di sistema vengono aggiornati per sostituire l'origine con la destinazione.<br /><br /> Se necessario, l'origine viene eliminata, ad esempio dopo la ricompilazione o l'eliminazione di un indice cluster.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> S nella tabella se viene creato un indice non cluster.\*<br /><br /> SCH-M (modifica dello schema) se viene eliminata la struttura di origine (indice o tabella).\*|  
   
- \* L'operazione sull'indice attende il completamento delle transazioni di aggiornamento di cui non è stato eseguito il commit prima di acquisire il blocco S o SCH-M nella tabella.  
+ \* L'operazione sull'indice attende il completamento delle transazioni di aggiornamento di cui non è stato eseguito il commit prima di acquisire il blocco S o SCH-M nella tabella. Se viene eseguita una query con esecuzione prolungata, l'operazione sull'indice online resta in attesa fino al completamento della query.
   
  ** Con il blocco di risorsa INDEX_BUILD_INTERNAL_RESOURCE viene impedita l'esecuzione di operazioni DDL (Data Definition Language) simultanee sulle strutture di origine e preesistenti mentre è in corso l'operazione sull'indice. Questo blocco impedisce ad esempio la ricompilazione simultanea di due indici nella stessa tabella. Nonostante questo blocco di risorsa sia associato al blocco SCH-M, non impedisce l'esecuzione di istruzioni DML.  
   
  Nella tabella precedente è incluso un solo blocco condiviso (S) acquisito durante la fase di compilazione di un'operazione sugli indici online relativa a un singolo indice. Quando si compilano o ricompilano indici cluster e non cluster, in una singola operazione sugli indici online, ad esempio durante la creazione dell'indice cluster iniziale in una tabella contenente uno o più indici non cluster, vengono acquisiti due blocchi S di breve durata durante la fase di compilazione seguiti da blocchi preventivi condivisi (IS) di lunga durata. Viene innanzitutto acquisito un blocco S per la creazione dell'indice cluster e, quando la creazione dell'indice cluster viene completata, viene acquisito un altro blocco S di breve durata per la creazione degli indici non cluster. Dopo la creazione degli indici non cluster, il blocco S viene abbassato di livello e portato a blocco IS fino alla fase finale dell'operazione sull'indice online.  
-  
+
+Per altre informazioni sulla modalità di utilizzo dei blocchi e sul modo in cui è possibile gestirli, vedere gli [argomenti](../../t-sql/statements/alter-table-index-option-transact-sql.md#arguments).
+
 ### <a name="target-structure-activities"></a>Attività relative alla struttura di destinazione  
  Nella tabella seguente sono incluse le attività relative alla struttura di destinazione durante ogni fase dell'operazione sull'indice e la relativa strategia di blocco.  
   
@@ -91,4 +93,6 @@ ms.locfileid: "67909749"
   
  [Linee guida per le operazioni sugli indici online](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
-  
+## <a name="next-steps"></a>Passaggi successivi
+
+[Opzioni di indice ALTER TABLE](../../t-sql/statements/alter-table-index-option-transact-sql.md#arguments)

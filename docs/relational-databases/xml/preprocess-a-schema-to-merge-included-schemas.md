@@ -1,5 +1,6 @@
 ---
 title: Eseguire la pre-elaborazione di uno schema per unire schemi inclusi | Microsoft Docs
+description: Informazioni su come eseguire la pre-elaborazione di XML Schema che includono la direttiva xsd:include per copiare e unire il contenuto di tutti gli schemi inclusi in un singolo schema.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 28dbb25bb3952c586b2dfc4e2b05556c41ee7602
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 48afad6a8cb4c5e3dcc65118a73fa7b3079d02f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664909"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757510"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Pre-elaborazione di uno schema per unire schemi inclusi
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   L'elemento **include** XSD W3C rende disponibile il supporto per la modularità di schema, che consente di partizionare XML Schema in più file fisici. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attualmente non supporta questo elemento. Gli XML Schema che includono tale elemento verranno rifiutati dal server.  
   
- Per risolvere questo problema, è possibile eseguire la pre-elaborazione di tutti gli XML Schema che includono la direttiva \<xsd:include> per copiare e unire il relativo contenuto in un singolo schema da caricare nel server. Per la pre-elaborazione è possibile utilizzare il codice C# seguente. I commenti nella parte iniziale del codice includono informazioni sul relativo utilizzo.  
+ Per risolvere questo problema, è possibile eseguire la pre-elaborazione degli XML Schema che includono la direttiva \<xsd:include> per copiare e unire il contenuto di tutti gli schemi inclusi in un singolo schema da caricare nel server. Per la pre-elaborazione è possibile utilizzare il codice C# seguente. I commenti nella parte iniziale del codice includono informazioni sul relativo utilizzo.  
   
 ```  
 // XSD Schema Include Normalizer  

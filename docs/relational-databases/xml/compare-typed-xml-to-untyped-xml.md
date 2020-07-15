@@ -1,5 +1,6 @@
 ---
 title: Confrontare dati XML tipizzati con dati XML non tipizzati | Microsoft Docs
+description: Informazioni sulle differenze tra XML tipizzato e non tipizzato.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6df31e36aabbf6df0a964c45873ef9bf2ad624a6
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a31b8e27147f0c9b06c79bf56c1b8ae34f4e8e14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664677"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775554"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Confronto dati XML tipizzati con dati XML non tipizzati
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   È possibile creare variabili, parametri e colonne di tipo **xml** . È inoltre possibile associare una raccolta XML Schema a una variabile, un parametro o una colonna di tipo **xml** . In questo caso, l'istanza del tipo di dati **xml** viene definita *tipizzata*. In caso contrario, l'istanza XML è definita *non tipizzata*.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>Tipi di dati XML corretti e xml  
@@ -68,14 +69,14 @@ ms.locfileid: "80664677"
   
  Negli esempi seguenti, per specificare il nome della raccolta XML Schema viene utilizzata una convenzione di denominazione in due parti. La prima parte è il nome dello schema e la seconda parte è il nome della raccolta XML Schema.  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Esempio: associazione di una raccolta di schemi a una variabile di tipo xml  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Esempio: Associazione di una raccolta di schemi a una variabile di tipo XML  
  L'esempio seguente crea una variabile di tipo**xml** alla quale viene associata una raccolta di schemi. La raccolta di schemi specificata è già stata importata nel database **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Esempio: specifica di uno schema per una colonna di tipo xml  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Esempio: Specifica di uno schema per una colonna di tipo XML  
  L'esempio seguente crea una tabella con una colonna di tipo **xml** e specifica uno schema per la colonna:  
   
 ```  
@@ -84,7 +85,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Esempio: passaggio di un parametro di tipo xml a una stored procedure  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Esempio: Passaggio di un parametro di tipo XML a una stored procedure  
  L'esempio seguente passa un parametro di tipo **xml** a una stored procedure e specifica uno schema per la variabile:  
   
 ```  
@@ -106,7 +107,7 @@ AS
   
  Nella gerarchia dei tipi di dati, il tipo di dati **xml** è visualizzato sotto al tipo **sql_variant** e ai tipi definiti dall'utente, ma sopra ai tipi predefiniti.  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Esempio: specifica di facet per vincolare una colonna xml tipizzata  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Esempio: Specifica di facet per vincolare una colonna xml tipizzata  
  È possibile vincolare le colonne **xml** tipizzate in modo tale che in ogni istanza archiviata in tali colonne siano consentiti solo elementi principali singoli. A tale scopo, è possibile specificare il facet facoltativo `DOCUMENT` durante la creazione di una tabella, come illustrato nell'esempio seguente:  
   
 ```  

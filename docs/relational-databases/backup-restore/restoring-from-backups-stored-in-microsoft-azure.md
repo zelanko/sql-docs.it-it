@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b608af9a25b6a4fe14078043276e0689990e6246
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 9b36628be4fbb72b48136f56c9403207f5e03dd8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922257"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759100"
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>Ripristino da backup archiviati in Microsoft Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Questo argomento illustra le considerazioni relative al ripristino di un database tramite un backup archiviato nel servizio Archiviazione BLOB di Azure. Ciò si applica ai backup creati tramite il backup di SQL Server nell'URL o tramite [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  È consigliabile esaminare questo argomento se si dispone di backup archiviati nel servizio Archiviazione BLOB di Azure che si vogliono ripristinare, nonché di rivedere gli argomenti in cui vengono descritti i passaggi per ripristinare un database che sono uguali sia per i backup in locale sia per quelli di Azure.  
@@ -42,7 +42,7 @@ ms.locfileid: "82922257"
   
  Per ridurre i tempi di ripristino è consigliabile usare backup compressi.  Per i backup con dimensioni superiori ai 25 GB, usare l' [utilità AzCopy](https://docs.microsoft.com/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs) per eseguire il download nell'unità locale e quindi eseguire il ripristino. Per altri suggerimenti e procedure consigliate sui backup, vedere [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md).  
   
- È inoltre possibile abilitare il flag di traccia 3051 quando si esegue il ripristino per generare un log dettagliato. Questo file di log viene inserito nella directory dei log e viene denominato usando il formato: BackupToUrl-\<nomeistanza>-\<nomedb>-azione-\<PID>.log. Nel file di log sono incluse informazioni su ogni round trip ad Archiviazione di Azure, incluso l'intervallo che può essere utile per individuare il problema.  
+ È inoltre possibile abilitare il flag di traccia 3051 quando si esegue il ripristino per generare un log dettagliato. Questo file di log viene inserito nella directory dei log e viene denominato usando il formato: BackupToUrl-\<instancename>-\<dbname>-action-\<PID>.log. Nel file di log sono incluse informazioni su ogni round trip ad Archiviazione di Azure, incluso l'intervallo che può essere utile per individuare il problema.  
   
 ### <a name="topics-on-performing-restore-operations"></a>Argomenti sull'esecuzione delle operazioni di ripristino  
   

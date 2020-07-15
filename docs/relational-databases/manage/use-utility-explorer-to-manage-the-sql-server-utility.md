@@ -1,5 +1,6 @@
 ---
 title: Usare Esplora utilità per gestire Utilità SQL Server | Microsoft Docs
+description: Vedere le varie modalità di utilizzo di Esplora utilità per gestire le istanze di SQL Server, ad esempio la modifica delle definizioni dei criteri e la visualizzazione dell'utilizzo dei volumi di CPU e archiviazione.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d904d16bb54236ee61dd463ca3c7bf829a46c3e3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c34b8239b93d1b8fb9c814ab5b5ac17482f968f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115318"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785622"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Utilizzo di Esplora utilità per gestire Utilità SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Gestione Utilità, un componente di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consente di connettersi alle istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per fornire una visualizzazione albero di tutti gli oggetti in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il riquadro del contenuto di Esplora utilità fornisce diverse soluzioni per visualizzare dati riepilogativi e dettagliati sullo stato dell'integrità delle istanze gestite di SQL Server. Esplora utilità fornisce anche un'interfaccia utente per visualizzare e gestire le definizioni dei criteri. Le funzionalità di Esplora utilità variano leggermente a seconda degli oggetti di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma generalmente includono oggetti, dati e criteri gestiti da Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 ## <a name="create-utility-control-point"></a>Creazione di un punto di controllo dell'utilità  
@@ -38,7 +39,7 @@ ms.locfileid: "68115318"
 ### <a name="sql-server-utility-navigation-pane"></a>Riquadro di navigazione di Utilità SQL Server  
  Il riquadro di navigazione di Esplora utilità fornisce una visualizzazione albero degli oggetti di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , raggruppati per punto di controllo dell'utilità. Per espandere le cartelle, fare clic sul segno più (+) o fare doppio clic sul nome del punto di controllo dell'utilità nel riquadro di navigazione di Esplora utilità. Fare clic con il pulsante destro del mouse su cartelle o oggetti per eseguire attività comuni. I nodi nella visualizzazione albero sono i seguenti:  
   
--   Il nodo principale della visualizzazione albero è il punto di controllo dell'utilità. Il nome del nodo viene costruito come: "Nome_Utilità (NomeComputer\Nome_Istanza_PuntoControllo)." Se non è presente un punto di controllo dell'utilità, è necessario crearlo. Se non si è connessi a Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario connettersi. Per altre informazioni, vedere [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md). Fare clic sul nome del punto di controllo dell'utilità nella visualizzazione albero per popolare il riquadro del contenuto di Esplora utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con i dati della visualizzazione dashboard. Per altre informazioni, vedere [Dashboard Utilità &#40;Utilità SQL Server&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1).  
+-   Il nodo principale della visualizzazione albero è il punto di controllo dell'utilità. Il nome del nodo viene costruito come: "Nome_Utilità" (NomeComputer\Nome_istanza_punto_controllo). Se non è presente un punto di controllo dell'utilità, è necessario crearlo. Se non si è connessi a Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario connettersi. Per altre informazioni, vedere [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md). Fare clic sul nome del punto di controllo dell'utilità nella visualizzazione albero per popolare il riquadro del contenuto di Esplora utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con i dati della visualizzazione dashboard. Per altre informazioni, vedere [Dashboard Utilità &#40;Utilità SQL Server&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1).  
   
      Fare clic con il pulsante destro del mouse sul nodo del punto di controllo dell'utilità per aggiornare i dati nel dashboard.  
   
@@ -61,9 +62,9 @@ ms.locfileid: "68115318"
  Quando un nodo contiene un numero elevato di oggetti, potrebbe risultare difficile trovare l'oggetto desiderato. In questo caso, è possibile usare la caratteristica di filtro di Esplora utilità per ridurre le dimensioni dell'elenco. Se, ad esempio, si vuole trovare un'istanza specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o solo i computer con spazio file sottoutilizzato, fare clic con il pulsante destro del mouse sulla cartella alla quale applicare il filtro e quindi scegliere **Impostazioni filtro** per aprire la finestra di dialogo Impostazioni filtro di Esplora utilità. È possibile filtrare l'elenco in base al nome, alla CPU del computer, alla CPU dell'istanza, allo spazio occupato dai file, allo spazio del volume, alle impostazioni di esclusione dei criteri o all'ultima ora registrata. Le colonne **Operatore** e **Valore** includono operatori di filtro aggiuntivi in un elenco a discesa.  
   
 ### <a name="starting-powershell"></a>Avvio di PowerShell  
- È possibile avviare una sessione di PowerShell facendo clic con il pulsante destro del mouse sulla maggior parte delle cartelle e degli oggetti nell'albero di Esplora oggetti e scegliendo **Avvia Powershell**. Verrà avviata una sessione di PowerShell in cui è abilitato il supporto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell e con il percorso impostato sull'oggetto su cui si è fatto clic con il pulsante destro del mouse in Esplora oggetti. È quindi possibile immettere comandi di PowerShell in un ambiente di PowerShell interattivo. Per altre informazioni, vedere [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md).  
+ È possibile avviare una sessione di PowerShell facendo clic con il pulsante destro del mouse sulla maggior parte delle cartelle e degli oggetti nell'albero di Esplora oggetti e scegliendo **Avvia PowerShell**. Verrà avviata una sessione di PowerShell in cui è abilitato il supporto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell e con il percorso impostato sull'oggetto su cui si è fatto clic con il pulsante destro del mouse in Esplora oggetti. È quindi possibile immettere comandi di PowerShell in un ambiente PowerShell interattivo. Per altre informazioni, vedere [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md).  
   
- In PowerShell non è inclusa una Guida sensibile al contesto, ma è disponibile un cmdlet **Get-Help** che fornisce informazioni sull'uso di PowerShell. Per altre informazioni, vedere [Visualizzare la Guida di SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+In PowerShell non è inclusa una Guida sensibile al contesto, ma è disponibile un cmdlet **Get-Help** che offre informazioni sull'uso di PowerShell. Per altre informazioni, vedere [Visualizzare la Guida di SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   

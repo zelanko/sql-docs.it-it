@@ -1,5 +1,6 @@
 ---
 title: Scadenza della password di accesso di SQL server | Microsoft Docs
+description: Controllare se la scadenza della password di ogni account di accesso di SQL server è abilitata per contrastare un possibile attacco in SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 7e3bf9da-a436-433d-847a-47c30428cad3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 92a8452b586768e260c9bc378d06201cd2e67ed7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 50f33195e18af58e782c03118a7e3176f1340cd1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021630"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774158"
 ---
 # <a name="sql-server-login-password-expiration"></a>Scadenza della password di accesso di SQL server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Questa regola consente di controllare se è stata abilitata la scadenza della password per ogni account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se è abilitata l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e la versione del sistema operativo è precedente a [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], un utente malintenzionato potrebbe sfruttare ripetutamente una password di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nota.  
   
 ## <a name="best-practices-recommendations"></a>Procedure consigliate  

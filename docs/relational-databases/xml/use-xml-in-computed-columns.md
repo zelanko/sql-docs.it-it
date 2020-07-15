@@ -1,5 +1,6 @@
 ---
 title: Usare codice XML nelle colonne calcolate | Microsoft Docs
+description: Esempi di utilizzo delle istanze XML e delle colonne XML con le colonne calcolate in SQL.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b11588e7f8a1e075b5091e73fe71879c7b035fd4
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: fcd9657ce64ef5be2cd1210eebb21f6b4e1d113c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664946"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775537"
 ---
 # <a name="use-xml-in-computed-columns"></a>Utilizzo del codice XML nelle colonne calcolate
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Le istanze XML possono rappresentare o l'origine o il tipo di una colonna calcolata. Gli esempi contenuti in questo argomento mostrano come utilizzare il codice XML con le colonne calcolate.  
   
 ## <a name="creating-computed-columns-from-xml-columns"></a>Creazione di colonne calcolate da colonne XML  

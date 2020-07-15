@@ -1,5 +1,6 @@
 ---
 title: Colonne provviste di un nome | Microsoft Docs
+description: Informazioni sulle colonne provviste di un nome nelle query SQL e sulle condizioni specifiche in cui viene eseguito il mapping tra le colonne del set di righe provviste di nome e il codice XML risultante.
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3a34c41519bd8e77a96a2551bc676b95f338510a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 14bc7706a7e3f562b2a3f4f01d8ab08a3684d313
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664650"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775559"
 ---
 # <a name="columns-with-a-name"></a>Colonne provviste di un nome
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Di seguito vengono illustrate le condizioni specifiche in cui viene eseguito il mapping tra le colonne del set di righe provviste di nome e il codice XML risultante, con distinzione tra maiuscole e minuscole:  
   

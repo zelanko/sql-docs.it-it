@@ -1,5 +1,6 @@
 ---
 title: Usare la Creazione guidata piano di manutenzione | Microsoft Docs
+description: Informazioni su come creare un piano di manutenzione con uno o più server usando la Creazione guidata piano di manutenzione in SQL Server.
 ms.date: 06/20/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -34,15 +35,15 @@ helpviewer_keywords:
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d2ec2dd6935d535bcef0ebb566bf0d0f8f09d6a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287565"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758988"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Utilizzare la Creazione guidata piano di manutenzione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Questo argomento descrive come creare un piano di manutenzione con uno o più server usando la Creazione guidata piano di manutenzione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Tramite la Creazione guidata piano di manutenzione è possibile creare un piano di manutenzione che potrà essere regolarmente eseguito in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. In questo modo è possibile eseguire a intervalli specificati varie attività di amministrazione di database, tra cui backup, controlli di integrità del database o aggiornamenti delle statistiche del database.  
     
  
@@ -374,7 +375,7 @@ Casella di controllo**Includi indici**
      Specificare il nome del contenitore di Archiviazione di Azure  
   
      **Prefisso URL**  
-     Viene generato automaticamente in base alle informazioni sull'account di archiviazione archiviate nelle credenziali SQL e al nome del contenitore di archiviazione di Azure specificato. Si consiglia di non modificare le informazioni in questo campo a meno che non si usi un dominio con un formato diverso da **\<account di archiviazione.blob.core.windows.net**.  
+     Viene generato automaticamente in base alle informazioni sull'account di archiviazione archiviate nelle credenziali SQL e al nome del contenitore di archiviazione di Azure specificato. Si consiglia di non modificare le informazioni in questo campo a meno che non si usi un dominio con un formato diverso da **\<storage account>.blob.core.windows.net**.  
   
      Casella**Estensione file di backup**  
      Specificare l'estensione da utilizzare per i file di backup. L'estensione predefinita è bak.  

@@ -1,24 +1,24 @@
 ---
 title: Gestire il failover di un gruppo di disponibilità - SQL Server in Linux
 description: 'Questo articolo descrive i tipi di failover: failover manuale pianificato e automatico e failover manuale forzato. Con il failover automatico e il failover manuale pianificato vengono conservati tutti i dati.'
-author: MikeRayMSFT
-ms.author: mikeray
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 635c567722fd5744aa56a16a6f48e8c4284f8ba8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 60dbfed32581a7646da590004c839fc7cf3d316f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216850"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892303"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Failover di un gruppo di disponibilità Always On in Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Nel contesto di un gruppo di disponibilità, il ruolo primario e il ruolo secondario delle repliche di disponibilità sono generalmente intercambiabili in un processo noto come failover. Sono disponibili tre tipi di failover: failover automatico (senza perdita di dati), failover manuale pianificato (senza perdita di dati) e failover manuale forzato (con possibile perdita di dati), in genere chiamato *failover forzato*. Il failover automatico e il failover manuale pianificato consentono di conservare tutti i dati. Per un gruppo di disponibilità, il failover avviene a livello di replica di disponibilità. In pratica, il failover di un gruppo di disponibilità viene eseguito in una delle relative repliche secondarie, ovvero la destinazione di failover corrente. 
 
@@ -81,14 +81,29 @@ Durante un failover manuale, il comando `pcs``move` o il comando `crm``migrate` 
 Ecco un esempio di vincolo creato per effetto di un failover manuale. 
  `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
+   > [!NOTE]
+   > Il nome della risorsa del gruppo di disponibilità nei cluster Pacemaker in Red Hat Enterprise Linux 8. x e Ubuntu 18.04 potrebbe essere simile *ag_cluster-clone* poiché la nomenclatura relativa alle risorse è passata all'uso di *risorse clone promotable*. 
+
 - **Esempio di RHEL/Ubuntu**
 
    Nel comando seguente `cli-prefer-ag_cluster-master` è l'ID del vincolo che deve essere rimosso. `sudo pcs constraint list --full` restituisce questo ID. 
    
    ```bash
+   sudo pcs resource clear ag_cluster-master  
+   ```
+   Oppure
+   
+   ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
-   
+  
+   In alternativa, è possibile eseguire lo spostamento e la cancellazione dei vincoli generati automaticamente in un'unica riga come descritto di seguito. L'esempio seguente usa la terminologia delle *risorse clone* in base a Red Hat Enterprise Linux 8.x. 
+  
+   ```bash
+   sudo pcs resource move ag_cluster-clone --master nodeName2 && sleep 30 && sudo pcs resource clear ag_cluster-clone
+
+   ```
+  
 - **Esempio di SLES**
 
    Nel comando seguente `cli-prefer-ms-ag_cluster` è l'ID del vincolo. `crm config show` restituisce questo ID. 

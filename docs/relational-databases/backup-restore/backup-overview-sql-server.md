@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6cae13ac9137a7c7f47e9574367115d6133338be
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: d13429793a2dcab0247042fcac49ee03174527ac
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220496"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834802"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In questo argomento viene presentato il componente di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'esecuzione dei backup del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è essenziale per la protezione dei dati. In questa discussione vengono analizzati i tipi di backup e le relative restrizioni. In questo argomento vengono inoltre presentati i dispositivi e i supporti di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   
@@ -101,7 +101,7 @@ ms.locfileid: "82220496"
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versioni successive. I backup compressi possono essere ripristinati in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive. Per altre informazioni, vedere [Compressione backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
 ##  <a name="backup-operations-restrictions"></a><a name="Restrictions"></a>  Restrizioni alle operazioni di backup 
- Il backup può verificarsi mentre il database è online e in uso. Si applicano tuttavia le restrizioni seguenti.  
+ Il backup può verificarsi mentre il database è online e in uso. Si applicano tuttavia le restrizioni seguenti:  
   
 ### <a name="cannot-back-up-offline-data"></a>Non è possibile eseguire il backup dei dati offline  
  Se si fa riferimento in modo implicito o esplicito a dati offline, l'operazione di backup ha esito negativo. Alcuni esempi comuni sono i seguenti:  
@@ -155,7 +155,7 @@ ms.locfileid: "82220496"
  **Creare un backup**  
   
 > [!NOTE]  
->  Per eseguire backup parziali o di sola copia è necessario usare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) rispettivamente con l'opzione PARTIAL o COPY_ONLY.  
+>  Per eseguire backup parziali o di sola copia è necessario usare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) rispettivamente con l'opzione PARTIAL o COPY_ONLY.  
   
 -   [Creazione di un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   

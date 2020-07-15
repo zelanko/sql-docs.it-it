@@ -9,16 +9,16 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c999228cdcd78ca2996ee134266a36543e97d913
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c7b22e569f17ca7297483d0b5286ecc77a9a14e5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216681"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895317"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Nozioni fondamentali sulla disponibilità di SQL Server per le distribuzioni Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 A partire da [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] è supportato sia in Linux che in Windows. Come nelle distribuzioni di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] basate su Windows, i database e le istanze di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] devono garantire la disponibilità elevata anche in Linux. Questo articolo illustra gli aspetti tecnici della pianificazione e della distribuzione di database e istanze di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] basate su Linux a disponibilità elevata, oltre ad alcune delle differenze rispetto alle installazioni basate su Windows. Poiché i professionisti Linux potrebbero non avere familiarità con [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] e i professionisti [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] potrebbero non avere familiarità con Linux, l'articolo introduce a volte concetti che potrebbero essere più noti ad alcuni e meno ad altri.
 
@@ -169,10 +169,13 @@ Il concetto di risorsa è proprio sia dei cluster WSFC che dei cluster Pacemaker
 
 Pacemaker ha risorse standard e clone. Le risorse clone sono quelle che vengono eseguite simultaneamente in tutti i nodi. Un esempio può essere quello di un indirizzo IP eseguito su più nodi per bilanciare il carico. Tutte le risorse create per le istanze del cluster di failover usano una risorsa standard, perché in un determinato momento un solo nodo può ospitare un'istanza del cluster di failover.
 
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
+
 Quando si crea un gruppo di disponibilità, è necessario un tipo specifico di risorsa clone denominata risorsa a più stati. Anche se un gruppo di disponibilità ha una sola replica primaria, il gruppo di disponibilità in sé è in esecuzione in tutti i nodi che è configurato per usare e può potenzialmente consentire azioni come l'accesso in sola lettura. Poiché si tratta di un uso "live" del nodo, le risorse hanno due tipi di stati: master e slave. Per altre informazioni, vedere [Multi-state resources: Resources that have multiple modes](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html) (Risorse a più stati: risorse con più modalità).
 
 #### <a name="resource-groupssets"></a>Set/Gruppi di risorse
-Analogamente ai ruoli in un cluster WSFC, un cluster Pacemaker si basa sul concetto di gruppo di risorse. Un gruppo di risorse, denominato set in SLES, è una raccolta di risorse che interagiscono tra loro e possono effettuare il failover da un nodo a un altro come singola unità. I gruppi di risorse non possono contenere risorse configurate come master/slave e quindi non possono essere usati per i gruppi di disponibilità. Anche se un gruppo di risorse può essere usato per le istanze del cluster di failover, non è in genere una configurazione consigliata.
+
+Analogamente ai ruoli in un cluster WSFC, un cluster Pacemaker si basa sul concetto di gruppo di risorse. Un gruppo di risorse, denominato _set_ in SLES, è una raccolta di risorse che interagiscono tra loro e possono effettuare il failover da un nodo a un altro come singola unità. I gruppi di risorse non possono contenere risorse configurate come master o slave e quindi non possono essere usati per i gruppi di disponibilità. Anche se un gruppo di risorse può essere usato per le istanze del cluster di failover, non è in genere una configurazione consigliata.
 
 #### <a name="constraints"></a>Vincoli
 I cluster WSFC presentano diversi parametri per le risorse, oltre, ad esempio, alle dipendenze, che indicano al cluster WSFC una relazione padre/figlio tra due risorse diverse. Una dipendenza è semplicemente una regola che indica a cluster WSFC quale risorsa deve essere prima online.

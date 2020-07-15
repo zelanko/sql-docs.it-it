@@ -1,5 +1,6 @@
 ---
 title: Log delle transazioni (SQL Server) | Microsoft Docs
+description: Informazioni sul log delle transazioni. Ogni database di SQL Server registra tutte le transazioni e le modifiche del database che si rendono necessarie in caso di errore di sistema.
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74220a441301bdb44c00a6e6a998861df2c6ce02
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287805"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834762"
 ---
 # <a name="the-transaction-log-sql-server"></a>Log delle transazioni (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Ogni database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include un log delle transazioni in cui vengono registrate tutte le transazioni e le modifiche apportate dalle transazioni stesse al database.
   
 Il log delle transazioni è un componente fondamentale del database. Se si verifica un errore di sistema, è necessario tale registro per ripristinare uno stato coerente del database. 
@@ -133,7 +134,7 @@ La*registrazione minima* implica la registrazione nel log delle transazioni dell
   
  Per le operazioni seguenti, con registrazione completa nel modello di recupero con registrazione completa, è prevista la registrazione minima nel modello di recupero con registrazione minima e in quello con registrazione minima delle operazioni bulk:  
   
--   Operazioni di importazione in blocco ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)e [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Per ulteriori informazioni sui casi in cui viene eseguita la registrazione minima di un'importazione bulk in una tabella, vedere [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Operazioni di importazione in blocco ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Per ulteriori informazioni sui casi in cui viene eseguita la registrazione minima di un'importazione bulk in una tabella, vedere [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 Quando la replica transazionale è abilitata, le operazioni `BULK INSERT` vengono registrate completamente, anche nel modello di recupero con registrazione minima delle operazioni bulk.  
   
@@ -157,8 +158,11 @@ Quando la replica transazionale è abilitata, le operazioni `SELECT INTO` vengon
         > [!WARNING]
         > L'istruzione `DBCC DBREINDEX` è **deprecata**: evitare di usarla nelle nuove applicazioni.  
   
+        > [!NOTE]
+        > Le operazioni di compilazione degli indici usano la registrazione minima ma possono essere posticipate se contemporaneamente viene eseguito un backup. Questo ritardo è causato dai requisiti di sincronizzazione delle pagine del pool di buffer con registrazione minima quando si usa il modello di recupero semplice o con registrazione minima delle operazioni bulk. 
+      
     -   Ricompilazione del nuovo heap [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (se pertinente). Durante un'operazione `DROP INDEX` per la deallocazione delle pagine di un indice viene eseguita **sempre** la registrazione completa.
-  
+
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
 **Gestione del log delle transazioni**  
   

@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d779af4f450fe444181df995a8dab26b102c3038
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 4328e0ae41a5d830cae37544bec972936ff39b53
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220426"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787554"
 ---
 # <a name="manage-partition-wizard"></a>Gestione guidata partizione 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Usare la **Gestione guidata partizione** per gestire e modificare tabelle partizionate esistenti tramite il cambio della partizione o l'implementazione di uno scenario basato su finestra temporale scorrevole. Questa procedura guidata può semplificare la gestione delle partizioni e la normale migrazione di dati all'interno e all'esterno delle tabelle.  
   
 ### <a name="to-start-the-manage-partition-wizard"></a>Per avviare la Gestione guidata partizione  
@@ -76,7 +76,7 @@ ms.locfileid: "82220426"
 ### <a name="sliding-window-scenario"></a>Scenario basato su finestra temporale scorrevole  
  Per gestire le partizioni in uno scenario basato su finestra temporale scorrevole, selezionare **Gestisci dati partizionati in uno scenario basato su finestra temporale scorrevole**.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
  **Crea tabella di staging per il cambio della partizione**  
  Consente di creare una tabella di staging per i dati da spostare all'interno o all'esterno della tabella partizionata esistente.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "82220426"
 ##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> Pagina Seleziona opzioni per l'attivazione della partizione  
  Usare la pagina **Seleziona opzioni per l'attivazione della partizione** per selezionare la tabella di staging che si desidera attivare nella tabella partizionata.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
  **Mostra tutte le partizioni**  
  Selezionare questa opzione per visualizzare tutte le partizioni, incluse le partizioni correnti nella tabella partizionata.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "82220426"
 ##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> Pagina Seleziona opzioni per la disattivazione della partizione  
  Usare la pagina **Seleziona opzioni per la disattivazione della partizione** per selezionare la partizione e la tabella di staging contenente i dati partizionati che si desidera disattivare dalla tabella partizionata.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
  **Griglia partizione**  
  Consente di visualizzare il nome della partizione e i valori per **Limite sinistro**, **Limite destro**, **Filegroup**e **Conteggio righe** delle partizioni selezionate.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "82220426"
   
  È inoltre possibile creare gli stessi indici nella tabella di staging presenti nella partizione di origine. La tabella di staging contiene automaticamente un vincolo basato sugli elementi della partizione di origine. In genere tale vincolo viene generato dal valore limite della partizione di origine.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
  **Nome tabella di gestione temporanea**  
  Consente di creare un nome per la tabella di staging o di accettare il nome predefinito visualizzato nella casella di modifica.  
   
@@ -259,7 +259,7 @@ ms.locfileid: "82220426"
 ##  <a name="summary-page"></a><a name="Summary"></a> Pagina Riepilogo  
  Usare la pagina **Riepilogo** per verificare le opzioni selezionate nelle pagine precedenti.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
  **Controlla selezioni**  
  Consente di visualizzare le opzioni selezionate in ogni pagina della procedura guidata. Fare clic su un nodo per espandere e visualizzare le opzioni selezionate in precedenza.  
   

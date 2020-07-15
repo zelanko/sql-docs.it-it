@@ -1,5 +1,6 @@
 ---
 title: Attività Backup database (piano di manutenzione) | Microsoft Docs
+description: Informazioni su come aggiungere un'attività di backup a un piano di manutenzione in SQL Server usando l'attività Backup database.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 60183a9777098728ee258274a19aca4d65885b87
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f1a233cdd69f069ae425de644dfe8b6d1475dd86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115834"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774407"
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>Opzioni dell'attività Backup database per il piano di manutenzione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Usare la finestra di dialogo **Attività Backup database** per aggiungere un'attività di backup al piano di manutenzione. L'esecuzione di backup del database è importante in caso di guasti al sistema o all'hardware, nonché di errori degli utenti, che possono danneggiare il database e rendere pertanto necessaria la disponibilità di una copia di backup per il ripristino. Questa attività consente di eseguire backup completi e differenziali, di file e filegroup, nonché del log delle transazioni.  
   
  **Per creare un'attività Backup database**  
@@ -38,7 +39,7 @@ ms.locfileid: "68115834"
  Consente di creare una nuova connessione server da utilizzare per l'esecuzione dell'attività. La finestra di dialogo **Nuova connessione** è descritta di seguito.  
   
  **Database**  
- Consente di specificare i database su cui verrà eseguita l'attività. Quando viene selezionato, l'elenco a discesa include le opzioni seguenti: **Tutti i database**, **Tutti i database di sistema**, **Tutti i database utente**, **Database specifici**.  
+ Consente di specificare i database su cui verrà eseguita l'attività. Quando questa opzione è selezionata, nell'elenco a discesa sono disponibili le opzioni seguenti: **Tutti i database**, **Tutti i database di sistema**, **Tutti i database utente**, **Database specifici**.  
   
  **Tutti i database**  
  Consente di generare un piano per l'esecuzione di attività di manutenzione su tutti i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -123,10 +124,10 @@ ms.locfileid: "68115834"
  Consente di specificare le opzioni di autenticazione per l'accesso al server.  
   
  **Usa la sicurezza integrata di Windows NT**  
- Consente di connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando l'autenticazione di Windows.  
+ Consente di connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando l'autenticazione di Windows.  
   
  **Usa nome utente e password specifici**  
- Consente di connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa opzione non è disponibile.  
+ Consente di connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa opzione non è disponibile.  
   
  **Nome utente**  
  Consente di specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare per l'autenticazione. Questa opzione non è disponibile.  

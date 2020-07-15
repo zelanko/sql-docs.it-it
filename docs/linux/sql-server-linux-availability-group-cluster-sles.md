@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 89f8616b13f80642a62922d9a1e1023f153b23cb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6c5ecf91349a94acb2b18156f28056ce04da3a1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558446"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892335"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurare un cluster SLES per un gruppo di disponibilità di SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Questo documento include le istruzioni per la creazione di un cluster a tre nodi per SQL Server in SUSE Linux Enterprise Server (SLES) 12 SP2. Per la disponibilità elevata, un gruppo di disponibilità in Linux richiede tre nodi. Vedere [Disponibilità elevata e protezione dei dati per le configurazioni del gruppo di disponibilità](sql-server-linux-availability-group-ha.md). Il livello di clustering si basa su SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability), a sua volta basato su [Pacemaker](https://clusterlabs.org/). 
 
@@ -28,6 +28,7 @@ Per altre informazioni su configurazione dei cluster, opzioni degli agenti delle
 >[!NOTE]
 >A questo punto, l'integrazione di SQL Server con Pacemaker in Linux non è associata come con il cluster WSFC in Windows. Il servizio SQL Server in Linux non è compatibile con i cluster. Pacemaker controlla tutta l'orchestrazione delle risorse cluster, inclusa la risorsa del gruppo di disponibilità. In Linux non è consigliabile fare affidamento sulle DMV dei gruppi di disponibilità Always On che forniscono informazioni sul cluster come sys.dm_hadr_cluster. Inoltre, il nome della rete virtuale è specifico di WSFC e non esiste un equivalente in Pacemaker. È comunque possibile creare un listener per la riconnessione trasparente dopo il failover, ma sarà necessario registrare manualmente il nome del listener nel server DNS con l'indirizzo IP usato per creare la risorsa IP virtuale, come illustrato nelle sezioni seguenti.
 
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 ## <a name="roadmap"></a>Roadmap
 
@@ -313,8 +314,8 @@ Il vincolo di condivisione percorso ha un vincolo di ordinamento implicito. Spos
 1. L'utente invia un comando di migrazione della risorsa alla replica master del gruppo di disponibilità, dal nodo 1 al nodo 2.
 2. La risorsa IP virtuale viene arrestata sul nodo 1.
 3. La risorsa IP virtuale viene avviata sul nodo 2. A questo punto, l'indirizzo IP punta temporaneamente al nodo 2, mentre il nodo 2 è ancora una replica secondaria preliminare al failover. 
-4. La replica master del gruppo di disponibilità nel nodo 1 viene abbassata di livello e diventa slave.
-5. La replica slave del gruppo di disponibilità nel nodo 2 viene alzata di livello e diventa master. 
+4. La replica master del gruppo di disponibilità nel nodo 1 viene abbassata di livello.
+5. Il gruppo di disponibilità nel nodo 2 viene alzato di livello a master. 
 
 Per evitare che l'indirizzo IP punti temporaneamente al nodo con la replica secondaria preliminare al failover, aggiungere un vincolo di ordinamento. Per aggiungere un vincolo di ordinamento, eseguire il comando seguente in un nodo: 
 

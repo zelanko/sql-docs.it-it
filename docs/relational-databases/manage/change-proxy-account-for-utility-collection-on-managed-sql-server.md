@@ -1,5 +1,6 @@
 ---
 title: Modificare l'account proxy per il set di raccolta utilità in un'istanza gestita di SQL Server | Microsoft Docs
+description: Informazioni su come usare SQL Server Management Studio per modificare l'account proxy per il set di raccolta dell'utilità in un'istanza gestita di SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: ff37ba8b-a08c-4109-b6e2-5748c995a52c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c9b474bc55edda1c4ab728bd00e0c933e05e7523
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 052f0e6c1e60c5753f879e325c7cfa0603ba4303
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908354"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776041"
 ---
 # <a name="change-proxy-account-for-utility-collection-on--managed-sql-server"></a>Modificare l'account proxy per il set di raccolta utilità in un'istanza gestita di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In questo argomento viene descritto come modificare l'account proxy per il set di raccolta utilità in un'istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
