@@ -1,5 +1,6 @@
 ---
 title: Supporto dello spazio dei nomi in modalità di PATH | Microsoft Docs
+description: Informazioni sul supporto dello spazio dei nomi quando si usa la modalità PATH per generare codice XML da una query SELECT.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5f128ea2-0ceb-4b23-bce7-c8b3fd615466
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f75729d1e31989bde851d1fde3a05ab932b6f460
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: fb8691f3cdd847a626db99a43e949a4b87a5aefe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665035"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85661643"
 ---
 # <a name="namespace-support-in-path-mode"></a>Supporto dello spazio dei nomi in modalità di PATH
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In questa versione, il supporto dello spazio dei nomi in modalità PATH è disponibile utilizzando WITH NAMESPACES. Ad esempio, nella query seguente viene illustrata la sintassi WITH NAMESPACES per la dichiarazione di uno spazio dei nomi ("a:") che è possibile utilizzare nell'istruzione SELECT successiva:  
   
 ```  

@@ -1,5 +1,6 @@
 ---
 title: Gravità degli errori del motore di database | Microsoft Docs
+description: Usare questo elenco di livelli di gravità per comprendere il tipo di problema riscontrato da SQL Server quando il motore di database di SQL Server genera un errore.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d0984d0003f6a20c410b91f99dc6fd1b4ae3f545
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 16bf5154c5ab08b790739e287ccb2934b942e591
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73844333"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727516"
 ---
 # <a name="database-engine-error-severities"></a>Gravità degli errori del Motore di database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Negli errori generati da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], la gravità dell'errore indica il tipo di problema rilevato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="levels-of-severity"></a>Livelli di gravità  

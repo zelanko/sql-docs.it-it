@@ -1,5 +1,6 @@
 ---
 title: Creare istanze di dati XML | Microsoft Docs
+description: Informazioni su come creare istanze di dati XML usando il caricamento bulk, le assegnazioni di costanti, l'istruzione SELECT e la clausola FOR XML o con il cast dei tipi delle istanze di dati d tipo stringa.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 743ed3d936a51bf3c94f0bbd28ef490093edd570
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ac342c20eb38411c4b0d1d689c34a70cda04b873
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664676"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752576"
 ---
 # <a name="create-instances-of-xml-data"></a>Creare istanze di dati XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In questo argomento viene descritto come generare istanze XML.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è possibile generare istanze XML tramite i metodi seguenti:  
@@ -94,7 +95,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  Se il parametro *style* non viene utilizzato o è impostato sul valore 0, gli spazi vuoti non significativi non vengono mantenuti per la conversione dell'istanza XML DT. Per altre informazioni sull'uso dell'operatore CONVERT e del parametro *style* durante la conversione di dati di tipo stringa in istanze XML DT, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Esempio: cast di un valore stringa al tipo XML tipizzato e assegnazione a una colonna  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Esempio: Eseguire il cast di un valore stringa al tipo XML tipizzato e assegnarlo a una colonna  
  Nell'esempio seguente viene eseguito il cast di una variabile stringa contenente un frammento XML al tipo di dati **xml** e quindi viene archiviata tale variabile nella colonna di tipo **xml** :  
   
 ```  
@@ -122,7 +123,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Esempio: conversione di una stringa nel tipo XML tipizzato e assegnazione a una variabile  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Esempio: Convertire una stringa nel tipo XML tipizzato e assegnarla a una variabile  
  Nell'esempio seguente, una stringa viene convertita nel tipo **xml** e assegnata a una variabile con tipo di dati **xml** :  
   
 ```  

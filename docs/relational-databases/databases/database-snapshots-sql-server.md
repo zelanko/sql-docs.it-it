@@ -1,5 +1,6 @@
 ---
 title: Snapshot del database (SQL Server) | Microsoft Docs
+description: Informazioni su come usare gli snapshot del database per creare visualizzazioni statiche di sola lettura di un database in SQL Server. Esaminare vantaggi, prerequisiti e limitazioni.
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -18,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdf81fde342a3c7f0e250d467e7b486d753a8588
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68300432"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630820"
 ---
 # <a name="database-snapshots-sql-server"></a>Snapshot del database (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Uno snapshot del database è una vista statica di sola lettura di un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ovvero il *database di origine*. Lo snapshot del database è consistente dal punto di vista transazionale con il database di origine al momento della creazione dello snapshot. Lo snapshot di un database deve risiedere sempre nella stessa istanza del server dove si trova il relativo database di origine. Sebbene gli snapshot del database offrano una visualizzazione di sola lettura dei dati nello stesso stato in cui è stato creato lo snapshot, le dimensioni del file di snapshot aumentano man mano che vengono apportate modifiche al database di origine. Per informazioni dettagliate, vedere la sezione [Panoramica delle caratteristiche](#FeatureOverview) riportata di seguito.
   

@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: ff8fb262b643390f2914a4a5e6c42dcc887206f8
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 7faa39c696c6dd7dfc7e1055935ab96b3cb468f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728618"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85679481"
 ---
 # <a name="mssqlserver_5120"></a>MSSQLSERVER_5120
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Dettagli  
   
-|||  
-|-|-|  
+| Attributo | valore |  
+| :-------- | :---- |  
 |Nome prodotto|SQL Server|  
 |ID evento|5120|  
 |Origine evento|MSSQLSERVER|  
@@ -33,9 +33,9 @@ ms.locfileid: "81728618"
 |Testo del messaggio|Errore di tabella: Impossibile aprire il file fisico "%.*ls". Errore %d: "%ls" del sistema operativo.|  
   
 ## <a name="explanation"></a>Spiegazione  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è riuscito ad aprire un file di database.  L'errore del sistema operativo visualizzato nel messaggio indica motivi più specifici all'origine dell'errore. Questo errore può essere visualizzato insieme ad altri errori, ad esempio [17204](mssqlserver-17204-database-engine-error.md) o [17207](mssqlserver-17207-database-engine-error.md)
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è riuscito ad aprire un file di database.  L'errore del sistema operativo visualizzato nel messaggio indica motivi più specifici all'origine dell'errore. Questo errore può essere visualizzato insieme ad altri errori, ad esempio [17204](mssqlserver-17204-database-engine-error.md) o [17207](mssqlserver-17207-database-engine-error.md).
   
-## <a name="user-action"></a>Azione dell'utente  
+## <a name="user-action"></a>Azione utente  
   
   Trovare e correggere l'errore del sistema operativo, quindi provare di nuovo l'operazione. Diversi stati consentono a Microsoft di circoscrivere l'area del prodotto in cui si è verificato l'errore. 
   
@@ -46,7 +46,9 @@ Se si riceve l'errore del sistema operativo ```Access is Denied``` = 5, prendere
    -  A seconda del tipo di operazione (apertura dei database durante l'avvio del server, collegamento di un database, ripristino del database e così via), l'account usato per la rappresentazione e l'accesso al file di database può variare. Vedere l'argomento [Sicurezza dei dati e dei file di log](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) per informazioni sulle interazioni tra operazioni, autorizzazioni e account. Usare uno strumento come [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) di Windows SysInternals per determinare se l'accesso ai file avviene nel contesto di sicurezza dell'account di avvio del servizio dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o SID del servizio) o di un account rappresentato.
 
       Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rappresenta le credenziali utente dell'accesso che esegue l'operazione ALTER DATABASE o CREATE DATABASE, si noteranno ad esempio le informazioni seguenti nello strumento Process Monitor:
-        ```Date & Time:      3/27/2010 8:26:08 PM
+      
+        ```
+        Date & Time:      3/27/2010 8:26:08 PM
         Event Class:        File System
         Operation:          CreateFile
         Result:                ACCESS DENIED
@@ -59,28 +61,29 @@ Se si riceve l'errore del sistema operativo ```Access is Denied``` = 5, prendere
         Attributes:          N
         ShareMode:       Read
         AllocationSize:   n/a
-        Impersonating: DomainName\UserName```
+        Impersonating: DomainName\UserName
+        ```
   
   
-### Attaching Files that Reside on a Network-attached storage  
-If you cannot re-attach a database that resides on network-attached storage, a message like this may be logged in the Application log:
+### <a name="attaching-files-that-reside-on-a-network-attached-storage"></a>associazione di file che risiedono in un Network-attached storage (NAS)  
+Se non è possibile ricollegare un database che risiede in un Network-attached storage (NAS), è possibile che nel registro applicazioni venga registrato un messaggio simile al seguente.
 
 ```Msg 5120, Level 16, State 101, Line 1 Unable to open the physical file "\\servername\sharename\filename.mdf". Operating system error 5: (Access is denied.).```
 
-This problem occurs because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resets the file permissions when the database is detached. When you try to reattach the database, a failure occurs because of limited share permissions.
+Questo problema si verifica perché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reimposta le autorizzazioni del file quando il database viene scollegato. Quando si tenta di riconnettere il database, si verifica un errore a causa di autorizzazioni di condivisione limitate.
 
-To resolve, follow these steps:
-1. Use the -T startup option to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use this startup option to turn on trace flag 1802 in [SQL Server Configuration Manager](../sql-server-configuration-manager.md) (see [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) for information on 1802). For more information about how to change the startup parameters, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)
+Per risolvere il problema, seguire questa procedura:
+1. usare l'opzione di avvio -T per avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usare questa opzione di avvio per attivare il flag di traccia 1802 in [Gestione configurazione SQL Server](../sql-server-configuration-manager.md) (per informazioni su 1802 vedere [Flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)). Per altre informazioni sulle modalità di modifica dei parametri di avvio, vedere [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md).
 
-2. Use the following command to detach the database.
-```tsql
- exec sp_detach_db DatabaseName
- go 
-```
+2. Usare il comando seguente per scollegare il database.
+   ```tsql
+    exec sp_detach_db DatabaseName
+    go 
+   ```
 
 3. Usare il comando seguente per riconnettere il database.
-```tsql
-exec sp_attach_db DatabaseName, '\\Network-attached storage_Path\DatabaseMDFFile.mdf', '\\Network-attached storage_Path\DatabaseLDFFile.ldf'
-go
-```
+   ```tsql
+   exec sp_attach_db DatabaseName, '\\Network-attached storage_Path\DatabaseMDFFile.mdf', '\\Network-attached storage_Path\DatabaseLDFFile.ldf'
+   go
+   ```
  

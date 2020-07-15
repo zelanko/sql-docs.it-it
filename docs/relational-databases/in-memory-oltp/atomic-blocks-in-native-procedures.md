@@ -1,5 +1,6 @@
 ---
 title: Blocchi atomici | Microsoft Docs
+description: Informazioni su BEGIN ATOMIC, parte dello standard SQL ANSI. SQL Server supporta i blocchi atomici nelle procedure native.
 ms.custom: ''
 ms.date: 10/26/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 329fb8644219d750595ff8a9cb2ddb5a6b804e4d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 662d5c2fe285e92f8e8fdf74836eb1dddca77206
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951226"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723418"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Blocchi atomici nelle procedure native
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **BEGIN ATOMIC** fa parte dello standard SQL ANSI. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta i blocchi atomici al livello superiore di stored procedure compilate in modo nativo, nonché per le funzioni compilate in modo nativo e scalari definite dall'utente. Per altre informazioni su queste funzioni, vedere [Funzioni scalari definite dall'utente per OLTP in memoria](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
@@ -150,16 +151,16 @@ GO
   
 |Opzione SET|Impostazione predefinita di sistema per i blocchi atomici|  
 |----------------|--------------------------------------|  
-|ANSI_NULLS|ATTIVA|  
-|ANSI_PADDING|ATTIVA|  
-|ANSI_WARNING|ATTIVA|  
-|ARITHABORT|ATTIVA|  
+|ANSI_NULLS|ON|  
+|ANSI_PADDING|ON|  
+|ANSI_WARNING|ON|  
+|ARITHABORT|ON|  
 |ARITHIGNORE|OFF|  
-|CONCAT_NULL_YIELDS_NULL|ATTIVA|  
+|CONCAT_NULL_YIELDS_NULL|ON|  
 |IDENTITY_INSERT|OFF|  
-|NOCOUNT|ATTIVA|  
+|NOCOUNT|ON|  
 |NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ATTIVA|  
+|QUOTED_IDENTIFIER|ON|  
 |ROWCOUNT|0|  
 |TEXTSIZE|0|  
 |XACT_ABORT|OFF<br /><br /> Le eccezioni non rilevate causano il rollback dei blocchi atomici, ma non l'interruzione della transazione, a meno che l'errore non comporti la fine della transazione.|  

@@ -10,16 +10,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5d74fd03a75b9b583eb92d34c45e7e0004ff9912
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7592100b7f8faec7dcfba35977e6b1cb5865854c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215875"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85741762"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Configurare PolyBase per l'accesso a dati esterni in MongoDB
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 L'articolo illustra come usare PolyBase in un'istanza di SQL Server per eseguire query sui dati esterni in MongoDB.
 
@@ -75,20 +75,19 @@ In questa sezione vengono usati i comandi Transact-SQL seguenti:
 >Dopo aver creato un'origine dati esterna, è possibile usare il comando [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) per creare una tabella disponibile per query su tale origine. 
 
 ## <a name="flattening"></a>Rendere flat
- L'impostazione per l'appiattimento è abilitata per i dati nidificati e ripetuti delle raccolte di documenti MongoDB. L'utente deve abilitare `create an external table` e specificare in modo esplicito uno schema relazionale per le raccolte di documenti MongoDB che possono avere dati nidificati e/o ripetuti. Il rilevamento automatico dello schema per le raccolte di documenti Mongo verrà abilitato in attività cardine future.
-I tipi di dati JSON nidificati/ripetuti verranno appiattiti come indicato di seguito
+L'impostazione per l'appiattimento è abilitata per i dati nidificati e ripetuti delle raccolte di documenti MongoDB. L'utente deve abilitare `create an external table` e specificare in modo esplicito uno schema relazionale per le raccolte di documenti MongoDB che possono avere dati nidificati e/o ripetuti. I tipi di dati JSON nidificati/ripetuti verranno appiattiti come indicato di seguito
 
 * Oggetto: raccolta chiave/valore non ordinata racchiusa tra parentesi graffe (nidificata)
 
-   - Si creerà una colonna di tabella per ogni chiave oggetto
+   - SQL Server crea una colonna della tabella per ogni chiave oggetto
 
      * Nome colonna: objectname_keyname
 
 * Matrice: valori ordinati, separati da virgole, racchiusi tra parentesi quadre (ripetute)
 
-   - Si aggiungerà una nuova riga della tabella per ogni elemento della matrice
+   - SQL Server aggiunge una nuova riga della tabella per ogni elemento della matrice
 
-   - Si creerà una colonna per ogni matrice per archiviare l'indice dell'elemento matrice
+   - SQL Server crea una colonna per ogni matrice per archiviare l'indice dell'elemento matrice
 
      * Nome colonna: arrayname_index
 
@@ -100,7 +99,7 @@ Questa tecnica può originare vari problemi, tra cui i due seguenti:
 
 * La presenza di più campi ripetuti può comportare una crescita esponenziale del numero di righe prodotte
 
-A titolo di esempio viene valutata la raccolta di ristoranti del dataset di esempio MongoDB archiviata in formato JSON non relazionale. Ogni ristorante dispone di un campo indirizzo nidificato e di una matrice di valutazioni che sono state assegnate in giorni diversi. La figura seguente illustra un ristorante con l'indirizzo nidificato e le valutazioni nidificate ripetute.
+A titolo di esempio SQL Server valuta la raccolta di ristoranti del dataset di esempio MongoDB archiviata in formato JSON non relazionale. Ogni ristorante dispone di un campo indirizzo nidificato e di una matrice di valutazioni che sono state assegnate in giorni diversi. La figura seguente illustra un ristorante con l'indirizzo nidificato e le valutazioni nidificate ripetute.
 
 ![Appiattimento MongoDB](../../relational-databases/polybase/media/mongo-flattening.png "Appiattimento ristoranti MongoDB")
 

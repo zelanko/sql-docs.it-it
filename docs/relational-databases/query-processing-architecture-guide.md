@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 67f0b04b6ac0ce0fc9d8e20ac8b8088061a6ab0a
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: e2d32824b62cf54132c6168e5f44d93fa0cd6289
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82108002"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726154"
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
 Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] consente di elaborare le query su diverse architetture di archiviazione dei dati, come tabelle locali, tabelle partizionate e tabelle distribuite su più server. Negli argomenti seguenti viene descritta l'elaborazione delle query e l'ottimizzazione del riutilizzo delle query in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite la memorizzazione nella cache dei piani di esecuzione.
 
@@ -834,7 +834,7 @@ La parametrizzazione viene eseguita a livello di singole istruzioni [!INCLUDE[ts
 #### <a name="data-types-of-parameters"></a>Tipi di dati dei parametri
 Quando in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono parametrizzati valori letterali, i parametri vengono convertiti nei tipi di dati seguenti:
 
-* I valori letterali interi le cui dimensioni altrimenti si adatterebbero al tipo di dati int vengono parametrizzati in int. I valori letterali interi di dimensioni maggiori inclusi in predicati che comportano qualsiasi operatore di confronto, come <, \<=, =, !=, >, >=, , !\<, !>, <>, `ALL`, `ANY`, `SOME`, `BETWEEN` e `IN`, vengono parametrizzati in numeric(38,0). I valori letterali di dimensioni maggiori non inclusi in predicati che comportano operatori di confronto vengono parametrizzati in numeric, la cui precisione è tale da supportarne le dimensioni e il cui valore di scala è 0.
+* I valori letterali interi le cui dimensioni altrimenti si adatterebbero al tipo di dati int vengono parametrizzati in int. I valori letterali interi di dimensioni maggiori inclusi in predicati che comportano qualsiasi operatore di confronto, tra cui <, \<=, =, !=, >, >=, , !\<, !>, <>, `ALL`, `ANY`, `SOME`, `BETWEEN` e `IN`, vengono parametrizzati in numeric(38,0). I valori letterali di dimensioni maggiori non inclusi in predicati che comportano operatori di confronto vengono parametrizzati in numeric, la cui precisione è tale da supportarne le dimensioni e il cui valore di scala è 0.
 * I valori letterali numerici a virgola fissa inclusi in predicati che comportano operatori di confronto vengono parametrizzati in numeric con precisione 38 e valore di scala tale da supportarne le dimensioni. I valori letterali numerici a virgola fissa non inclusi in predicati che comportano operatori di confronto vengono parametrizzati in numeric con precisione e valore di scala tali da supportarne le dimensioni.
 * I valori letterali numerici a virgola mobile vengono parametrizzati in float(53).
 * I valori letterali stringa vengono parametrizzati in varchar(8000) se il valore letterale non supera gli 8000 caratteri e in varchar(max) se è maggiore di 8000 caratteri.

@@ -1,7 +1,7 @@
 ---
 title: Impostare o modificare le regole di confronto del server | Microsoft Docs
 ms.custom: ''
-ms.date: 12/05/2019
+ms.date: 05/10/2020
 ms.prod: sql
 ms.technology: ''
 ms.topic: conceptual
@@ -12,16 +12,16 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
-ms.openlocfilehash: 578735009c72da997159484d308a25784ac64be0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6517111f63f2e28bf27e88003fa0c7b2e9b25fad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762902"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733955"
 ---
 # <a name="set-or-change-the-server-collation"></a>Impostazione o modifica di regole di confronto del server
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Le regole di confronto del server costituiscono le regole di confronto predefinite per tutti i database di sistema installati con l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e per ogni database utente creato successivamente. È consigliabile scegliere con attenzione le regole di confronto a livello di server perché interessano:
  - Regole di ordinamento e confronto in `=`, `JOIN`, `ORDER BY` e in altri operatori di confronto dei dati testuali.
  - Regole di confronto delle colonne `CHAR`, `VARCHAR`, `NCHAR` e `NVARCHAR` di viste di sistema, funzioni di sistema e oggetti in TempDB (ad esempio, tabelle temporanee).
@@ -29,8 +29,11 @@ ms.locfileid: "82762902"
   
 ## <a name="setting-the-server-collation-in-sql-server"></a>Impostazione delle regole di confronto in SQL Server
 
-  Le regole di confronto del server vengono specificate durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le regole di confronto predefinite corrispondono a **SQL_Latin1_General_CP1_CI_AS**. Regole di confronto solo Unicode non possono essere specificate come regole di confronto a livello di server. Per altre informazioni, vedere [Collation and Unicode Support](collation-and-unicode-support.md).
-  
+  Le regole di confronto del server vengono specificate durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le regole di confronto predefinite a livello di server sono basate sulle impostazioni locali del sistema operativo. Ad esempio, le regole di confronto predefinite per i sistemi che usano l'inglese degli Stati Uniti (en-US) sono **SQL_Latin1_General_CP1_CI_AS**. Regole di confronto solo Unicode non possono essere specificate come regole di confronto a livello di server. Per altre informazioni, incluso l'elenco delle impostazioni locali del sistema operativo per i mapping delle regole di confronto predefinite, vedere la sezione "Regole di confronto a livello di server" in [Supporto Unicode e delle regole di confronto](collation-and-unicode-support.md#Server-level-collations).
+
+> [!NOTE]  
+> Le regole di confronto a livello di server per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express LocalDB sono **SQL_Latin1_General_CP1_CI_AS** e non possono essere modificate durante o dopo l'installazione.  
+
 ## <a name="changing-the-server-collation-in-sql-server"></a>Modifica delle regole di confronto in SQL Server
 
  La modifica delle regole di confronto predefinite per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere un'operazione complessa e richiede i passaggi seguenti:  
@@ -56,7 +59,7 @@ ms.locfileid: "82762902"
 - Importare tutti i dati.  
   
 > [!NOTE]  
-> Anziché modificare le regole di confronto predefinite di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile specificare regole di confronto predefinite per ogni nuovo database creato.  
+> Anziché modificare le regole di confronto predefinite di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile specificare regole di confronto predefinite per ogni nuovo database creato con la clausola `COLLATE` delle istruzioni `CREATE DATABASE` e `ALTER DATABASE`. Per altre informazioni, vedere [Set or Change the Database Collation](set-or-change-the-database-collation.md).  
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Impostazione delle regole di confronto del server in Istanza gestita
 È possibile specificare regole di confronto a livello di server in Istanza gestita di database SQL di Azure durante la creazione dell'istanza, ma non è possibile cambiarle in seguito. È possibile impostare regole di confronto a livello di server tramite il [portale di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) o tramite [PowerShell e il modello di Resource Manager ](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) durante la creazione dell'istanza. Le regole di confronto predefinite corrispondono a **SQL_Latin1_General_CP1_CI_AS**. Regole di confronto solo Unicode e nuove regole di confronto UTF-8 a livello di server non possono essere specificate come regole di confronto a livello di server.

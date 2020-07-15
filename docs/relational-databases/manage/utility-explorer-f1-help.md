@@ -1,5 +1,6 @@
 ---
 title: Guida sensibile al contesto di Gestione Utilità | Microsoft Docs
+description: Acquisire familiarità con le funzionalità offerte in diverse aree di Utilità SQL Server. Informazioni sulle visualizzazioni, il dashboard e le schede Amministrazione utilità.
 ms.custom: ''
 ms.date: 08/19/2016
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 264c809ce03cca9a6bb9b84300d3780a1ddc33f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68024493"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640410"
 ---
 # <a name="utility-explorer-f1-help"></a>Guida sensibile al contesto di Gestione Utilità
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Le sezioni seguenti includono informazioni sulle funzionalità di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sulle operazioni associate.  
   
   ## <a name="utility-dashboard-sql-server-utility"></a>Dashboard Utilità (Utilità SQL Server)
@@ -36,7 +37,7 @@ ms.locfileid: "68024493"
  Per altre informazioni su come creare un punto di controllo dell'utilità, vedere [Creare un punto di controllo dell'Utilità SQL Server &#40;Utilità SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md). Per altre informazioni su come aggiungere un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] all'utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Registrare un'istanza di SQL Server &#40;Utilità SQL Server&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md).  
  
   
-### <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+### <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
  Integrità istanze gestite  
  Lo stato di integrità per le istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene visualizzato sul lato sinistro del riquadro contenuto di Esplora utilità.  
   
@@ -119,7 +120,7 @@ ms.locfileid: "68024493"
  ## <a name="deployed-data-tier-application-details-sql-server-utility"></a>Dettagli delle applicazioni livello dati distribuite (Utilità SQL Server)
   Le informazioni incluse nella vista Applicazioni livello dati distribuite di Gestione Utilità forniscono dati di utilizzo relativi a singole applicazioni livello dati, cronologia dell'utilizzo della CPU, dettagli sull'utilizzo dello spazio di archiviazione a livello di file e la possibilità di visualizzare e aggiornare le soglie dei criteri. È possibile controllare le soglie dei criteri a livello di applicazione del livello dati per utilizzo della CPU, file di database e file di log. È inoltre possibile visualizzare dettagli delle proprietà per le singole applicazioni di livello dati.  
   
-### <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+### <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
  Vista Elenco  
  La visualizzazione Elenco nel riquadro superiore include dati sulle singole applicazioni di livello dati. Le icone di stato di integrità forniscono lo stato riepilogativo per ogni applicazione del livello dati in base alle categorie di utilizzo:  
   
@@ -173,11 +174,11 @@ ms.locfileid: "68024493"
   
 -   Livello di compatibilità: (ad esempio Versione100)  
   
--   Crittografia abilitata: (Vero o Falso)  
+-   Crittografia abilitata: (True o False)  
   
 -   Modello di recupero: (Con registrazione minima, Con registrazione completa o Con registrazione minima delle operazioni bulk)  
   
--   Ultima ora registrata - Questa colonna restituisce la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Ultima ora registrata: questa colonna restituisce la data e l'ora locale del punto di controllo utilità usando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Scheda Utilizzo CPU  
  La scheda Utilizzo CPU mostra grafici affiancati con dati cronologici relativi all'applicazione del livello dati e all'utilizzo della CPU del computer.  
@@ -250,16 +251,16 @@ ms.locfileid: "68024493"
   
 -   Livello di compatibilità: (ad esempio Versione100)  
   
--   Crittografia abilitata: (Vero o Falso)  
+-   Crittografia abilitata: (True o False)  
   
 -   Modello di recupero: (Con registrazione minima, Con registrazione completa o Con registrazione minima delle operazioni bulk)  
   
--   Ultima ora registrata - Questa colonna restituisce la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
+-   Ultima ora registrata: questa colonna restituisce la data e l'ora locale del punto di controllo utilità usando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
 
 ## <a name="managed-instance-details-sql-server-utility"></a>Dettagli di istanze gestite (Utilità SQL Server)
  Le informazioni incluse nella vista Istanze gestite di Esplora utilità forniscono dati di utilizzo per singole istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cronologia di utilizzo della CPU, dettagli sull'utilizzo dello spazio di archiviazione a livello di file e la possibilità di visualizzare e aggiornare le soglie dei criteri. È possibile controllare le soglie dei criteri a livello di volumi di archiviazione e a livello di istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per un computer e per file di database e file di log. È inoltre possibile visualizzare dettagli delle proprietà per singole istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+### <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
  Vista Elenco  
  La visualizzazione Elenco nel riquadro superiore include dati relativi a singole stanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elencate nelle righe per NomeComputer/NomeIstanza.  
   
@@ -307,17 +308,17 @@ ms.locfileid: "68024493"
   
 -   Edizione di SQL Server:  
   
--   Cluster: (True o False)  
+-   Raggruppato: (True o False)  
   
 -   Directory di backup:  
   
 -   Regole di confronto:  
   
--   Distinzione maiuscole/minuscole: (Vero o Falso)  
+-   Distinzione maiuscole/minuscole: (True o False)  
   
 -   Language:  
   
--   Ultima ora registrata - Questa colonna restituisce la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Ultima ora registrata: questa colonna restituisce la data e l'ora locale del punto di controllo utilità usando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Scheda Utilizzo CPU  
  La scheda Utilizzo CPU mostra grafici affiancati con dati cronologici relativi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e all'utilizzo della CPU del computer.  
@@ -404,20 +405,20 @@ ms.locfileid: "68024493"
   
 -   Edizione di SQL Server:  
   
--   Cluster: (True o False)  
+-   Raggruppato: (True o False)  
   
 -   Directory di backup:  
   
 -   Regole di confronto:  
   
--   Distinzione maiuscole/minuscole: (Vero o Falso)  
+-   Distinzione maiuscole/minuscole: (True o False)  
   
 -   Language:  
 
 ## <a name="utility-administration-sql-server-utility"></a>Amministrazione utilità (Utilità SQL Server)
 Utilizzare le schede Amministrazione utilità per gestire le impostazioni di criteri, sicurezza e data warehouse per un'utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni sui concetti di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
-### <a name="uielement-list"></a>Elenco degli elementi di interfaccia
+### <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente
  **Scheda Criteri** - Utilizzare la scheda Criteri per visualizzare o specificare criteri di monitoraggio globali.  
   
  Consente di impostare i criteri di monitoraggio globali dell'applicazione del livello dati. Per espandere l'elenco dei valori disponibili per questa opzione, fare clic sulla freccia accanto al nome dei criteri o fare clic sul titolo dei criteri.  
@@ -490,15 +491,15 @@ Scheda **Data warehouse** - Consente di visualizzare i dettagli relativi alla co
   
 -   Frequenza di caricamento del set di raccolta: ogni 15 minuti.  
   
- La directory dell'utilità UMDW è configurabile: \<Unità di sistema>:\Programmi\Microsoft SQL Server\MSSQL10_50.<Nome_UCP>\MSSQL\Data\\, dove \<Unità di sistema> è in genere l'unità C:\. Il file di log UMDW_\<GUID>_LOG si trova nella stessa directory.  
+ La directory del data warehouse di gestione dell'utilità è configurabile: \<System drive>:\Programmi\Microsoft SQL Server\MSSQL10_50.<Nome_UCP>\MSSQL\Data\\, dove \<System drive> è in genere l'unità C:\. Il file di log UMDW_\<GUID>_LOG si trova nella stessa directory.  
   
-> **NOTA:** è possibile modificare la posizione del file data warehouse di gestione dell'utilità (UMDW) sysutility_mdw usando i comandi collega/scollega o l'istruzione ALTER DATABASE. È consigliabile utilizzare l'istruzione ALTER DATABASE. Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+> **NOTA** È possibile modificare la posizione del file data warehouse di gestione dell'utilità (UMDW) sysutility_mdw utilizzando i comandi collega/scollega o l'istruzione ALTER DATABASE. È consigliabile utilizzare l'istruzione ALTER DATABASE. Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
  Ritorna ai valori predefiniti  
  Per ripristinare i valori predefiniti delle impostazioni in questa scheda, fare clic sul pulsante **Ripristina impostazioni predefinite** , quindi fare clic su **Applica**.  
  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Informazioni di riferimento  
  [Creare un punto di controllo dell'Utilità SQL Server &#40;Utilità SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)  
   
  [Effettuare la connessione a Utilità SQL Server.](../../relational-databases/manage/connect-to-a-sql-server-utility.md)  

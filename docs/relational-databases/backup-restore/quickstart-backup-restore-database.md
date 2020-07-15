@@ -1,7 +1,7 @@
 ---
-title: 'Guida introduttiva: Eseguire il backup e il ripristino del database'
+title: 'Avvio rapido: Eseguire il backup e il ripristino del database'
 titleSuffix: SQL Server
-description: Questa avvio rapido illustra come eseguire il backup e il ripristino di un database di SQL Server in locale.
+description: In questo articolo viene illustrato come creare un nuovo database, eseguire un backup del database e ripristinare il backup in SQL Server.
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
@@ -11,15 +11,15 @@ ms.prod: sql
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
-ms.openlocfilehash: 97993d621de9b10d930feb2fc54f53bc83f00293
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e261914baec4774d0e7ae1f343874e4a3154d42
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258638"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669957"
 ---
-# <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>Guida introduttiva: Eseguire il backup e il ripristino di un database di SQL Server in locale
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>Avvio rapido: Eseguire il backup e il ripristino di un database di SQL Server in locale
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In questa guida di avvio rapido si procederà alla creazione di un nuovo database, all'esecuzione di un semplice backup e quindi al ripristino. 
 

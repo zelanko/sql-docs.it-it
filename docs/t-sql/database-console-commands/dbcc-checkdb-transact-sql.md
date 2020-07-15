@@ -34,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 743c3c6d24be39ae9c2b56da26017bd4b15852a6
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4003b08205f1c7db98d2656e17fe653a3616638d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635913"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748951"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Verifica l'integrità logica e fisica di tutti gli oggetti del database specificato eseguendo le operazioni seguenti:    
     
@@ -221,7 +221,13 @@ Dopo il completamento del comando DBCC CHECKDB, nel log degli errori di [!INCLUD
 |3|Indica un danneggiamento dei metadati che ha causato l'interruzione del comando DBCC.|    
 |4|È stata rilevata una violazione di accesso o asserzione.|    
 |5|il comando DBCC è stato terminato da un errore sconosciuto.|    
+
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registra la data e l'ora in cui è stata eseguita una verifica coerenza per un database senza errori (o la verifica coerenza di pulizia). Questo concetto è noto come `last known clean check`. Quando un database viene avviato per la prima volta, questa data viene scritta in EventLog (EventID-17573) e in ERRORLOG nel formato seguente: 
+>
+>`CHECKDB for database '<database>' finished without errors on 2019-05-05 18:08:22.803 (local time). This is an informational message only; no user action is required.`
     
+
 ## <a name="error-reporting"></a>Segnalazione errori    
 Quando un comando DBCC CHECKDB rileva un errore di danneggiamento, viene creato un file di dump denominato `SQLDUMP*nnnn*.txt` nella directory LOG di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando la raccolta di dati *Utilizzo caratteristiche* e le funzionalità *Segnalazione errori* sono abilitate per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il file viene inoltrato automaticamente a [!INCLUDE[msCoName](../../includes/msconame-md.md)]. I dati raccolti consentono di migliorare la funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 Il file di dump contiene i risultati dell'esecuzione del comando DBCC CHECKDB e l'output di dati diagnostici supplementari. L'accesso è limitato all'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ai membri del ruolo sysadmin. Per impostazione predefinita il ruolo sysadmin contiene tutti i membri del gruppo `BUILTIN\Administrators` di Windows e del gruppo dell'amministratore locale. Se il processo di raccolta dei dati non ha esito positivo, l'esecuzione del comando DBCC viene completata comunque.

@@ -1,5 +1,6 @@
 ---
 title: Revocare le autorizzazioni per una raccolta di XML Schema | Microsoft Docs
+description: Informazioni sulla revoca delle autorizzazioni per una raccolta di XML Schema.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b3e6a69d61f65cb755fd96d8b0a310f002ab85a5
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7952b6d917494f8d73edb24290c2f43f5f0d5d94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664843"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752537"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>Revoca delle autorizzazioni per una raccolta di XML Schema
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Per revocare l'autorizzazione per creare una raccolta XML Schema, è possibile eseguire una delle operazioni seguenti:  
   
 -   Revocare l'autorizzazione ALTER per lo schema relazionale. L'entità non sarà quindi in grado di creare una raccolta XML Schema nello schema relazionale, ma potrà comunque eseguire questa operazione negli altri schemi relazionali dello stesso database.  

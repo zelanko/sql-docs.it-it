@@ -1,5 +1,6 @@
 ---
 title: Crittografia Always Encrypted | Microsoft Docs
+description: Informazioni sugli algoritmi e i meccanismi di crittografia necessari per derivare il materiale crittografico usato dalla funzionalità Always Encrypted in SQL Server e nel database SQL di Azure.
 ms.custom: ''
 ms.date: 10/30/2019
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b0fe0e861e8139416250ffc2677230dbc2aeab6d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 364dbefa72708910d54977600ecb47942a5d96e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594409"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627562"
 ---
 # <a name="always-encrypted-cryptography"></a>Crittografia Always Encrypted
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
   Il documento descrive gli algoritmi e i meccanismi di crittografia necessari per derivare il materiale crittografico usato dalla funzionalità [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)].  
   

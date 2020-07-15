@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 994018ab8b574bc313072f7a353ff999d645e0d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 848c53ce4ca004cec84609b12869a98fa45fa78d
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292759"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469326"
 ---
 # <a name="error-handling-in-data"></a>Gestione degli errori nei dati
 
@@ -144,7 +144,7 @@ Usare la finestra di dialogo **Configura output errori** per configurare le opzi
   
     -   Includere la descrizione dell'errore in una colonna aggiuntiva, usando una singola riga di script per chiamare il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> dell'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> .  
   
-    -   Includere il nome della colonna in una colonna aggiuntiva usando una singola riga di script per chiamare il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID%2A> dell'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> .  
+    -   Includere il nome della colonna in una colonna aggiuntiva usando una singola riga di script per chiamare il metodo [Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID*] (/previous-versions/sql/sql-server-2016/mt657629(v=sql.130)) dell'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>.  
   
      È possibile aggiungere il componente Script al segmento del flusso di dati relativo agli errori in qualsiasi punto a valle dai componenti del flusso di dati di cui si vuole acquisire gli errori. In genere il componente Script viene posizionato immediatamente prima che le righe con errori vengano scritte in una destinazione. In questo modo lo script cerca solo le descrizioni relative alle righe con errori che vengono scritte. Il segmento del flusso di dati relativo agli errori può correggere alcuni errori e non scrivere tali righe in una destinazione errori.  
 

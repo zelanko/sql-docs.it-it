@@ -17,15 +17,15 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c6be1e3a8b05daf16ec845a307679620d2b1d00
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f1bd6350c31b29855915de1be8288ec1fcbe2a56
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048713"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751114"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Creazione, modifica ed eliminazione di indici spaziali
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Un indice spaziale consente di eseguire in modo più efficiente determinate operazioni in una colonna con tipo di dati **geometry** o **geography** ( *colonna spaziale*). In una colonna spaziale è possibile specificare più di un indice spaziale. Ciò è utile, ad esempio, per indicizzare diversi parametri della suddivisione a mosaico in una sola colonna.  
   
  La creazione di indici spaziali è soggetta a un certo numero di limitazioni. Per altre informazioni, vedere [Restrizioni relative agli indici spaziali](#restrictions) .  
@@ -56,7 +56,7 @@ ms.locfileid: "68048713"
   
 7.  Per specificare la colonna spaziale che si vuole indicizzare, fare clic su **Aggiungi**.  
   
-8.  Nella finestra di dialogo **Seleziona colonne da** *\<nome tabella>* selezionare una colonna di tipo **geometry** o **geography** facendo clic sulla casella di controllo corrispondente. Le altre colonne spaziali eventualmente presenti diventano non modificabili. Se si desidera selezionare una colonna spaziale diversa, è innanzitutto necessario deselezionare la colonna attualmente selezionata. Al termine, fare clic su **OK**.  
+8.  Nella finestra di dialogo **Seleziona colonne da** *\<table name>* selezionare una colonna di tipo **geometry** o **geography** facendo clic sulla casella di controllo corrispondente. Le altre colonne spaziali eventualmente presenti diventano non modificabili. Se si desidera selezionare una colonna spaziale diversa, è innanzitutto necessario deselezionare la colonna attualmente selezionata. Al termine, fare clic su **OK**.  
   
 9. Verificare la selezione della colonna nella griglia **Colonne chiave indice** .  
   

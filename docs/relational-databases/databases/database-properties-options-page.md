@@ -1,5 +1,6 @@
 ---
 title: Proprietà database (pagina Opzioni) | Microsoft Docs
+description: Informazioni su come usare la scheda Opzioni della finestra di dialogo Proprietà database per visualizzare o modificare le regole di confronto, il modello di recupero e altre impostazioni del database.
 ms.custom: ''
 ms.date: 08/28/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 98fcdb49facbc1bae6e7a0b76388c385a0fc05e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286745"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630950"
 ---
 # <a name="database-properties-options-page"></a>Proprietà database (pagina Opzioni)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Utilizzare questa pagina per visualizzare o modificare le opzioni per il database selezionato. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) e [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
@@ -29,7 +30,7 @@ ms.locfileid: "79286745"
  È possibile specificare le regole di confronto del database selezionandole nell'elenco. Per altre informazioni, vedere [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md).  
   
  **Modello di recupero**  
- È possibile specificare uno dei modelli di recupero del database seguenti: **Con registrazione completa**, **Con registrazione minima delle operazioni bulk**o **Con registrazione minima**. Per altre informazioni sui modelli di recupero, vedere [Modelli di recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+ È possibile specificare uno dei modelli di recupero del database seguenti: **Con registrazione completa**, **Con registrazione minima delle operazioni bulk** o **Con registrazione minima**. Per altre informazioni sui modelli di recupero, vedere [Modelli di recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Livello di compatibilità**  
  È possibile specificare la versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportata dal database. Per i valori possibili, vedere [Livello di compatibilità di ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Quando un database SQL Server viene aggiornato, il livello di compatibilità per il database viene mantenuto, se possibile. Oppure viene portato al livello minimo supportato per il nuovo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
@@ -121,17 +122,17 @@ Quando si è connessi al database SQL di Azure, questa sezione include impostazi
  Abilita o disabilita l'analisi dei parametri sugli eventuali database secondari. Equivale a [Flag di traccia 4136](https://support.microsoft.com/kb/980653).  
   
  **Correzioni di Query Optimizer**  
- Abilita o disabilita gli hotfix di ottimizzazione query sul database primario indipendentemente dal livello di compatibilità del database. Equivale a [Flag di traccia 4199](https://support.microsoft.com/kb/974006).  
+ Abilita o disabilita gli hotfix di ottimizzazione query sul database primario indipendentemente dal livello di compatibilità del database. Equivale a [Flag di traccia 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Per altri dettagli, vedere [QUERY_OPTIMIZER_HOTFIXES](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#qo_hotfixes).  
   
  **Correzioni di Query Optimizer per database secondari**  
- Abilita o disabilita gli hotfix di ottimizzazione query sugli eventuali database secondari indipendentemente dal livello di compatibilità del database. Equivale a [Flag di traccia 4199](https://support.microsoft.com/kb/974006).  
+ Abilita o disabilita gli hotfix di ottimizzazione query sugli eventuali database secondari indipendentemente dal livello di compatibilità del database. Equivale a [Flag di traccia 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Per altri dettagli, vedere [QUERY_OPTIMIZER_HOTFIXES](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#qo_hotfixes).  
   
 ## <a name="filestream"></a>FILESTREAM  
  **Nome di directory FILESTREAM**  
  Specifica il nome di directory per i dati FILESTREAM associati al database selezionato.  
   
  **Accesso FILESTREAM non in transazioni**  
- È possibile specificare una delle opzioni seguenti per l'accesso non transazionale tramite il file system a dati FILESTREAM archiviati in tabelle FileTable: **OFF**, **READ_ONLY**o **FULL**. Se FILESTREAM non è abilitato nel server, questo valore viene impostato su OFF ed è disabilitato. Per altre informazioni, vedere [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
+ È possibile specificare una delle opzioni seguenti per l'accesso non transazionale tramite il file system a dati FILESTREAM archiviati in tabelle FileTable: **OFF**, **READ_ONLY** o **FULL**. Se FILESTREAM non è abilitato nel server, questo valore viene impostato su OFF ed è disabilitato. Per altre informazioni, vedere [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Varie  
 **Consenti isolamento snapshot**  

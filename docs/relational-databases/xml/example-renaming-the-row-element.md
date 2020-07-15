@@ -1,5 +1,6 @@
 ---
-title: "Esempio: ridenominazione dell'elemento &lt;row&gt; | Microsoft Docs"
+title: "Esempio: Ridenominazione dell'elemento &lt;row&gt; | Microsoft Docs"
+description: È possibile visualizzare un esempio di ridenominazione di un elemento riga XML specificando un argomento facoltativo per la modalità RAW nella clausola FOR XML.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c9a082f5bd5159f8b1dc32c3c9e2ba233cce817b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: cc297571daec9825a91d4e35ebbac737d88b5619
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664517"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633051"
 ---
-# <a name="example-renaming-the-ltrowgt-element"></a>Esempio: ridenominazione dell'elemento &lt;row&gt;
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="example-renaming-the-ltrowgt-element"></a>Esempio: Ridenominazione dell'elemento &lt;row&gt;
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Nella modalità RAW viene creato un elemento `<row>`per ogni riga del set di risultati. È possibile specificare un nome diverso per l'elemento impostando un argomento facoltativo per la modalità RAW, come illustrato nella query seguente. La query restituisce un elemento <`ProductModel`> per ogni riga del set di righe.  
   
 ## <a name="example"></a>Esempio  

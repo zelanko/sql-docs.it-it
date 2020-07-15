@@ -18,16 +18,16 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 08e432e0470074a5861c070d26110478353817b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325513"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727073"
 ---
 # <a name="create-indexed-views"></a>Creazione di viste indicizzate
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Questo articolo descrive come creare indici in una vista. Il primo indice creato per una vista deve essere un indice cluster univoco. Dopo aver creato l'indice cluster univoco, è possibile creare più indici non cluster. La creazione di un indice cluster univoco per una vista consente un miglioramento delle prestazioni delle query, in quanto la vista viene archiviata nel database in modo analogo a una tabella con un indice cluster. Le viste indicizzate possono essere usate da Query Optimizer per velocizzare l'esecuzione delle query. Non è necessario fare riferimento alla vista nella query affinché venga usata da Query Optimizer per una sostituzione.
 
@@ -60,13 +60,13 @@ Per essere certi che le viste possano essere gestite in modo corretto e restitui
 
 |Opzioni SET|Valore richiesto|Valore server predefinito|Predefinito<br /><br /> OLE DB e ODBC predefinito|Predefinito<br /><br /> DB-Library predefinito|
 |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|
-|ANSI_NULLS|ATTIVA|ATTIVA|ATTIVA|OFF|
-|ANSI_PADDING|ATTIVA|ATTIVA|ATTIVA|OFF|
-|ANSI_WARNINGS<sup>1</sup>|ATTIVA|ATTIVA|ATTIVA|OFF|
-|ARITHABORT|ATTIVA|ATTIVA|OFF|OFF|
-|CONCAT_NULL_YIELDS_NULL|ATTIVA|ATTIVA|ATTIVA|OFF|
+|ANSI_NULLS|ON|ON|ON|OFF|
+|ANSI_PADDING|ON|ON|ON|OFF|
+|ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|
+|ARITHABORT|ON|ON|OFF|OFF|
+|CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|
 |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|
-|QUOTED_IDENTIFIER|ATTIVA|ATTIVA|ATTIVA|OFF|
+|QUOTED_IDENTIFIER|ON|ON|ON|OFF|
 |&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 
 <sup>1</sup> L'impostazione di `ANSI_WARNINGS` su ON imposta in modo implicito `ARITHABORT` su ON.
@@ -92,7 +92,7 @@ Oltre alle impostazioni delle opzioni SET e ai requisiti relativi alle funzioni 
 - Quando si crea l'indice, l'opzione `IGNORE_DUP_KEY` deve essere impostata su OFF (impostazione predefinita).
 - I riferimenti alle tabelle devono essere specificati come nomi composti da due parti, ovvero _schema_ **.** _nometabella_ , nella definizione della vista.
 - Le funzioni definite dall'utente a cui viene fatto riferimento nella vista devono essere create usando l'opzione `WITH SCHEMABINDING`.
-- I riferimenti alle funzioni definite dall'utente nella vista devono essere specificati come nomi composti da due parti, ovvero _\<schema\>_ **.** _\<funzione\>_ .
+- A qualsiasi funzione definita dall'utente a cui si fa riferimento nella vista deve essere fatto riferimento usando nomi in due parti, _\<schema\>_ **.** _\<function\>_ .
 - La proprietà di accesso ai dati di una funzione definita dall'utente deve essere `NO SQL` e la proprietà di accesso esterno deve essere `NO`.
 - Le funzioni CLR (Common Language Runtime) possono essere incluse solo nell'elenco SELECT della vista ma non possono fare parte della definizione della chiave di indice cluster. Le funzioni CLR non possono essere incluse nella clausola WHERE della vista o nella clausola ON di un'operazione JOIN nella vista.
 - Le proprietà delle funzioni CLR e dei metodi di tipi CLR definiti dall'utente usati nella definizione della vista devono essere impostate come illustrato nella tabella seguente.
@@ -131,7 +131,7 @@ Oltre alle impostazioni delle opzioni SET e ai requisiti relativi alle funzioni 
 > [!IMPORTANT]
 > Le viste indicizzate non sono supportate sulle query temporali, ovvero quelle che usano la clausola `FOR SYSTEM_TIME`.
 
-### <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni
+### <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni
 
 Quando si fa riferimento a valori letterali stringa **datetime** e **smalldatetime** nelle viste indicizzate, è consigliabile convertire in modo esplicito il valore letterale nel tipo di dati desiderato usando uno stile del formato di data deterministico. Per un elenco degli stili del formato di data deterministici, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Per altre informazioni sulle espressioni deterministiche e non deterministiche, vedere la sezione [Considerazioni](#nondeterministic) in questa pagina.
 
@@ -157,7 +157,7 @@ Tutti gli indici di una vista vengono eliminati con la rimozione della vista. Tu
 
 Richiede l'autorizzazione **CREATE VIEW** per il database e l'autorizzazione **ALTER** per lo schema in cui viene creata la vista.
 
-## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL
 
 ### <a name="to-create-an-indexed-view"></a>Per creare una vista indicizzata
 

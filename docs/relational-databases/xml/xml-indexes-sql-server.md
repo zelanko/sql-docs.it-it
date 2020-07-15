@@ -1,5 +1,6 @@
 ---
 title: Indici XML (SQL Server) | Microsoft Docs
+description: Informazioni sulla creazione di indici XML per le colonne con tipo di dati XML, che consente di migliorare le prestazioni di esecuzione delle query.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -33,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6aeeb9e0fdadda5635888fe2a88e0ea84b6ede12
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8f5ab347d15e0363411640431f4d833f38e13234
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664887"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729782"
 ---
 # <a name="xml-indexes-sql-server"></a>Indici XML (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   È possibile creare indici XML sulle colonne con tipo di dati **xml** . Tutti i tag, i valori e i percorsi delle istanze XML presenti nella colonna vengono indicizzati, migliorando le prestazioni delle query. Per le applicazioni in uso l'utilizzo di un indice XML può risultare vantaggioso nelle situazioni seguenti:  
   
 -   Le query sulle colonne XML sono frequenti nel carico di lavoro. È necessario tenere in considerazione il costo di manutenzione dell'indice XML durante la modifica dei dati.  
@@ -98,7 +99,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `//ContactRecord/PhoneNumber` in cui sono noti solo gli ultimi due passaggi  
   
- o  
+ OR  
   
 -   `/Book/*/Title` in cui il carattere jolly (`*`) viene specificato nella parte centrale dell'espressione.  
   
@@ -142,7 +143,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   `/root/Location` che specifica solo un percorso  
   
- o  
+ OR  
   
 -   `/root/Location/@LocationID[.="10"]` in cui vengono specificati sia il valore di percorso che il valore di nodo.  
   

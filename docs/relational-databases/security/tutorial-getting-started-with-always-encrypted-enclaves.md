@@ -2,7 +2,7 @@
 title: 'Esercitazione: Always Encrypted con enclave sicuri usando SSMS'
 description: Questa esercitazione illustra come creare un ambiente di base Always Encrypted con enclave sicuri, come crittografare i dati sul posto ed eseguire query avanzate su colonne crittografate usando SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
-ms.date: 10/15/2019
+ms.date: 04/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -13,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a01b55cb67332617ea2e326756fb8ad6fc7bcf42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2a6e27fb84267c1de09a3812747b063050b944e9
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288695"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807725"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>Esercitazione: Always Encrypted con enclave sicuri usando SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -115,14 +115,14 @@ In questo passaggio si configura il computer SQL Server come host controllato re
 
 3. Al prompt riavviare il computer SQL Server per completare l'installazione di Hyper-V.
 
-4. Se il computer SQL Server è una macchina virtuale o se si tratta di un computer fisico legacy che non supporta l'avvio protetto UEFI o non è dotato di IOMMU, è necessario rimuovere il requisito VBS per le funzionalità di sicurezza della piattaforma.
-    1. Rimuovere il requisito nel Registro di sistema di Windows.
+4. Se il computer SQL Server è una macchina virtuale, un computer fisico che non supporta l'avvio protetto UEFI o un computer fisico che non è dotato di IOMMU, è necessario rimuovere il requisito VBS per le funzionalità di sicurezza della piattaforma.
+    1. Rimuovere il requisito per l'avvio protetto e IOMMU eseguendo il comando seguente nel computer SQL Server in una console di PowerShell con privilegi elevati:
 
         ```powershell
        Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
        ```
 
-    1. Riavviare il computer per riportare online VBS con i requisiti ridotti.
+    1. Riavviare il computer SQL Server per riportare online VBS con i requisiti ridotti.
 
         ```powershell
        Restart-Computer

@@ -1,5 +1,6 @@
 ---
 title: Accedere alle tabelle FileTable con API di input/output dei file | Microsoft Docs
+description: Informazioni su come usare le API di I/O dei file con le tabelle FileTable e sulle operazioni del file system compatibili con le tabelle FileTable.
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d1cdc6947c97052660dea3be9d6013a8e61a090d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d73f6f8e993784def2dd9325933778e2048d5eae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908781"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85744700"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Accedere alle tabelle FileTable con API di Input-Output dei file
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Viene descritto il funzionamento dell'I/O del file system in una tabella FileTable.  
   
 ##  <a name="get-started-using-file-io-apis-with-filetables"></a><a name="accessing"></a> Iniziare a utilizzare le API di I/O dei file con tabelle FileTable  

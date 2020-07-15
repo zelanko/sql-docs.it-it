@@ -1,5 +1,6 @@
 ---
 title: Classe di evento Lock:Timeout | Microsoft Docs
+description: La classe di evento Lock:Timeout segnala il timeout di una richiesta di blocco su una risorsa dovuto alla presenza di un blocco sulla risorsa in SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc89f8df5d34a2a2c1f20756c743c74a5a5851f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d0f1a43ab06c931fd9fda6498790ccc7dce3476
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910334"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737204"
 ---
 # <a name="locktimeout-event-class"></a>Classe di evento Lock:Timeout
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La classe di evento Lock:Timeout segnala il timeout di una richiesta di blocco su una risorsa, ad esempio una pagina, dovuto alla presenza di un blocco su tale risorsa mantenuto attivo da un'altra transazione. Il valore di timeout è determinato dalla funzione di sistema @@LOCK_TIMEOUT e può essere impostato tramite l'istruzione SET LOCK_TIMEOUT.  
   
  La classe di evento Lock:Timeout consente di eseguire il monitoraggio delle condizioni di timeout. In questo modo è possibile determinare se i timeout influiscono in modo significativo sulle prestazioni dell'applicazione, nonché individuare gli oggetti coinvolti. È quindi possibile esaminare il codice dell'applicazione che modifica tali oggetti per verificare se possono essere apportate modifiche che riducano i timeout.  

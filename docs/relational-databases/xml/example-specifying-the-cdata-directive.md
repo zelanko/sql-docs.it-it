@@ -1,5 +1,6 @@
 ---
-title: 'Esempio: specifica della direttiva CDATA | Microsoft Docs'
+title: 'Esempio: Specifica della direttiva CDATA | Microsoft Docs'
+description: Visualizzare un esempio di come specificare la direttiva CDATA per eseguire il wrapping dei dati specificati in una sezione CDATA.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b6c6c2f5e19e22cdff4b7f9ca282fc3406efd3fc
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1e0c768d68c1bf7bb8d5c08b3967b4172fbdca36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664777"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632631"
 ---
-# <a name="example-specifying-the-cdata-directive"></a>Esempio: specifica della direttiva CDATA
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="example-specifying-the-cdata-directive"></a>Esempio: Specifica della direttiva CDATA
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Se si specifica la direttiva **CDATA**, i dati contenuti non vengono codificati come entità, ma vengono inseriti nella sezione CDATA. Gli attributi **CDATA** devono essere privi di nome.  
   
  La query seguente riporta la descrizione di riepilogo del modello di prodotto in una sezione CDATA.  

@@ -1,5 +1,6 @@
 ---
 title: Colonna ObjectType per gli eventi di traccia | Microsoft Docs
+description: Fare riferimento ai valori possibili della colonna ObjectType per gli eventi di traccia, che viene usata in un'ampia gamma di eventi di traccia in SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76675cf49ba1ac19e18b3bb4b96980aa30c4f6c3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f583813ae44cb180005b0cb9eeb592b3a946508c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115892"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755972"
 ---
 # <a name="objecttype-trace-event-column"></a>Colonna ObjectType per gli eventi di traccia
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La colonna ObjectType viene utilizzata in un'ampia gamma di eventi di traccia. In questo argomento vengono descritti i possibili valori di tale colonna e le definizioni associate.  
   
 ## <a name="object-type-column-values"></a>Valori della colonna ObjectType  
@@ -38,7 +39,7 @@ ms.locfileid: "68115892"
 |8275|Tabella di sistema|  
 |8276|Trigger nel server|  
 |8277|Tabella (definita dall'utente)|  
-|8278|Visualizza|  
+|8278|Visualizzazione|  
 |8280|Stored procedure estesa|  
 |16724|Trigger CLR|  
 |16964|Database|  

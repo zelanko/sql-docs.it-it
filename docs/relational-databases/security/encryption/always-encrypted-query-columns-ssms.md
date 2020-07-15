@@ -1,5 +1,6 @@
 ---
 title: Eseguire query sulle colonne usando Always Encrypted con SQL Server Management Studio | Microsoft Docs
+description: Informazioni su come eseguire query sulle colonne in Always Encrypted usando SQL Server Management Studio. Recuperare testo crittografato o valori di testo archiviati nelle colonne crittografate.
 ms.custom: ''
 ms.date: 10/31/2019
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f33d58a0fe9b61519c8946708dcd22c84dff90ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287135"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627404"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Eseguire query sulle colonne usando Always Encrypted con SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 Questo articolo descrive come eseguire query sulle colonne crittografate con [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) usando [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md). Con SSMS è possibile:
 - Recuperare i valori del testo crittografato archiviati nelle colonne crittografate. 
@@ -172,7 +173,7 @@ DECLARE @NewSalary money = @Salary * 1.1; -- an expression used instead of a lit
  
 Per far sì che la parametrizzazione riesca:   
 - Il tipo del valore letterale usato per l'inizializzazione della variabile da parametrizzare deve corrispondere al tipo nella dichiarazione di variabile.   
-- Se il tipo dichiarato della variabile è un tipo data o ora, la variabile deve essere inizializzata usando una stringa con uno dei formati conformi a ISO 8601 seguenti.   
+- Se il tipo dichiarato della variabile è un tipo data o ora, la variabile deve essere inizializzata usando una stringa con uno dei [formati conformi a ISO 8601](https://docs.microsoft.com/sql/t-sql/functions/cast-and-convert-transact-sql#date-and-time-styles) seguenti.    
 
 Di seguito sono riportati alcuni esempi di dichiarazioni di variabili Transact-SQL che causano errori di parametrizzazione:   
 ```sql

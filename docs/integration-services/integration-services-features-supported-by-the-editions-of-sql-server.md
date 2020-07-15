@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9963f137470c7e252bc00be189c37ac98e6374e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4149e9a9a956aaf5a212d8a6ba2a7b65b1523ee3
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71284353"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84817785"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Funzionalità di Integration Services supportate dalle edizioni di SQL Server
 
@@ -44,6 +44,7 @@ SQL Server Evaluation Edition è disponibile per un periodo di valutazione di 18
 |Scale Out Master|Sì|||||
 |Scale Out Worker|Sì|Sì <sup>1</sup>|TBD|TBD|TBD|
 |Supporto per Microsoft Dynamics AX e Microsoft Dynamics CRM nei componenti OData <sup>2</sup>|Sì|Sì||||
+|Supporto di Linux|Sì|Sì|||Sì|
 
 <sup>1</sup> Se si eseguono i pacchetti che richiedono funzionalità solo Enterprise in Scale Out, anche gli Scale Out Worker devono essere eseguiti in istanze di SQL Server Enterprise.
 
@@ -53,7 +54,10 @@ SQL Server Evaluation Edition è disponibile per un periodo di valutazione di 18
 
 |Funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Importazione/Esportazione guidata SQL Server|Sì|Sì|Sì|Sì|Sì|  
+|Importazione/Esportazione guidata SQL Server|Sì|Sì|Sì|Sì<sup>1</sup>|Sì<sup>1</sup>|
+
+<sup>1</sup> DTSWizard.exe non viene specificato con SQL in Linux. Tuttavia, dtexec in Linux può essere usato per eseguire un pacchetto creato da DTSWizard in Windows.
+
 
 ## <a name="integration-services"></a><a name="IS"></a> Integration Services  
   

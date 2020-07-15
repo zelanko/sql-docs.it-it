@@ -1,5 +1,6 @@
 ---
 title: Proprietà database (pagina Log shipping delle transazioni) | Microsoft Docs
+description: Usare la scheda Log shipping delle transazioni nella finestra di dialogo Proprietà database per abilitare un database come database primario di log shipping e impostarne le relative opzioni.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8155524f6e5d8172092630c04dbb0540514b56ed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 75c87efd24b1e345cb99413d1a524e872f0eb022
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099571"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630972"
 ---
 # <a name="database-properties-transaction-log-shipping-page"></a>Proprietà database (pagina Log shipping)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilizzare questa pagina per configurare e modificare le proprietà di log shipping per un database.  
   
  Per approfondimenti sui concetti correlati al log shipping, vedere [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  

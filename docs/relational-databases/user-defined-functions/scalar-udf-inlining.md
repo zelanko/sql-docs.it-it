@@ -2,7 +2,7 @@
 title: Inlining di funzioni definite dall'utente scalari in Microsoft SQL Server | Microsoft Docs
 description: Funzionalità di inlining di funzioni definite dall'utente scalari per migliorare le prestazioni delle query che richiamano funzioni definite dall'utente scalari in SQL Server (a partire da SQL Server 2019).
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 06/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,16 +15,16 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 79608c96e56a7f70d10aaa4b897db837bdf03acc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 395d639cd62894c91fbf0690467e60aaeac57bea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79486551"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727086"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining di funzioni definite dall'utente scalari
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Questo articolo presenta l'inlining di funzioni definite dall'utente scalari, una delle funzionalità incluse nel gruppo di funzionalità di [elaborazione di query intelligenti](../../relational-databases/performance/intelligent-query-processing.md). Questa funzionalità migliora le prestazioni delle query che chiamano funzioni definite dall'utente scalari in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]).
 
@@ -155,12 +155,24 @@ A seconda della complessità della logica della funzione definita dall'utente, i
 - Non sono state aggiunte firme alla funzione definita dall'utente.
 - La funzione definita dall'utente non è una funzione di partizione.
 - La funzione definita dall'utente non contiene riferimenti a espressioni di tabella comuni (CTE)
+- La funzione definita dall'utente non contiene riferimenti a funzioni intrinseche, ad esempio @@ROWCOUNT, che potrebbero modificare i risultati quando sono inline (restrizione aggiunta in Microsoft SQL Server 2019 CU2).
+- La funzione definita dall'utente non contiene funzioni di aggregazione passate come parametri a una funzione definita dall'utente scalare (restrizione aggiunta in Microsoft SQL Server 2019 CU2).
+- La funzione definita dall'utente non fa riferimento a viste predefinite, ad esempio OBJECT_ID, (restrizione aggiunta in Microsoft SQL Server 2019 CU2).
+-   La funzione definita dall'utente non fa riferimento a metodi XML (restrizione aggiunta in Microsoft SQL Server 2019 CU4).
+-   La funzione definita dall'utente non contiene un oggetto SELECT con ORDER BY senza "TOP 1" (restrizione aggiunta in Microsoft SQL Server 2019 CU4).
+-   La funzione definita dall'utente non contiene una query SELECT che esegue un'assegnazione in combinazione con la clausola ORDER BY, ad esempio SELECT @x = @x +1 FROM table ORDER BY column_name (restrizioni aggiunta in Microsoft SQL Server 2019 CU4).
+- La funzione definita dall'utente non contiene istruzioni RETURN multiple (restrizione aggiunta in SQL Server 2019 CU5).
+- La funzione definita dall'utente non viene chiamata da un'istruzione RETURN (restrizione aggiunta in SQL Server 2019 CU5).
+- La funzione definita dall'utente non fa riferimento alla funzione STRING_AGG (restrizione aggiunta in SQL Server 2019 CU5). 
 
 <sup>1</sup> `SELECT` con accumulo/aggregazione di variabili (ad esempio, `SELECT @val += col1 FROM table1`) non è supportata per l'inlining.
 
 <sup>2</sup> L'inlining delle funzioni definite dall'utente ricorsive viene eseguito solo fino a una determinata profondità.
 
 <sup>3</sup> Le funzioni intrinseche i cui risultati dipendono dall'ora di sistema corrente sono dipendenti dall'ora. Un esempio di funzione con effetti collaterali può essere costituito da una funzione intrinseca in grado di aggiornare uno stato globale interno. Tali funzioni restituiscono risultati diversi ogni volta che vengono chiamate, a seconda dello stato interno.
+
+> [!NOTE]
+> Per informazioni sulle correzioni e sulle modifiche più recenti dell'inlining di funzioni definite dall'utente scalari di T-SQL in scenari di idoneità all'inlining, vedere l'articolo della Knowledge Base: [CORREZIONE: Problemi relativi all'inlining di funzioni definite dall'utente scalari in SQL Server 2019](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019).
 
 ### <a name="checking-whether-or-not-a-udf-can-be-inlined"></a>Verifica dell'idoneità all'inlining di una funzione definita dall'utente
 Per ogni funzione definita dall'utente scalare T-SQL, la vista del catalogo [Sys. sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) include la proprietà `is_inlineable`, che indica se una funzione definita dall'utente è idonea all'inlining o meno. 
@@ -259,11 +271,13 @@ Come descritto in questo articolo, l'inlining di una funzione definita dall'uten
 1. Gli hint di join a livello di query possono non essere più validi, poiché l'inlining può introdurre nuovi join. È necessario usare hint di join locale.
 1. Non è possibile indicizzare le viste che fanno riferimento a funzioni definite dall'utente scalari. Se è necessario creare un indice per tali viste, disabilitare l'inlining per le funzioni definite dall'utente interessate.
 1. Con l'inlining di funzioni definite dall'utente possono presentarsi alcune differenze nel comportamento del [Dynamic Data Masking](../security/dynamic-data-masking.md). In determinate situazioni (a seconda della logica della funzione definita dall'utente), l'inlining può essere più conservativo rispetto alla maschera delle colonne di output. Negli scenari in cui le colonne a cui si fa riferimento in una funzione definita dall'utente non sono colonne di output, queste non vengono mascherate. 
-1. Se una funzione definita dall'utente fa riferimento a funzioni predefinite, ad esempio `SCOPE_IDENTITY()`, `@@ROWCOUNT` o `@@ERROR`, il valore restituito dalla funzione predefinita cambierà con l'inlining. Questa modifica nel comportamento è dovuta al fatto che l'inlining modifica l'ambito delle istruzioni all'interno della funzione definita dall'utente.
+1. Se una funzione definita dall'utente fa riferimento a funzioni predefinite, ad esempio `SCOPE_IDENTITY()`, `@@ROWCOUNT` o `@@ERROR`, il valore restituito dalla funzione predefinita cambierà con l'inlining. Questa modifica nel comportamento è dovuta al fatto che l'inlining modifica l'ambito delle istruzioni all'interno della funzione definita dall'utente. A partire da Microsoft SQL Server 2019 CU2, l'inlining viene bloccato se la funzione definita dall'utente fa riferimento a determinate funzioni intrinseche, ad esempio @@ROWCOUNT.
 
 ## <a name="see-also"></a>Vedere anche
 [Centro prestazioni per il motore di database di SQL Server e il database SQL di Azure](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md)     
 [Guida di riferimento a operatori Showplan logici e fisici](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
 [Join](../../relational-databases/performance/joins.md)     
-[Dimostrazione dell'elaborazione di query intelligenti](https://aka.ms/IQPDemos)      
+[Dimostrazione dell'elaborazione di query intelligenti](https://aka.ms/IQPDemos)     
+[CORREZIONE: Problemi relativi all'inlining di funzioni definite dall'utente scalari in SQL Server 2019](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019)     
+

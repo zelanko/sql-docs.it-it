@@ -11,16 +11,16 @@ ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 390e8d4c65951f7b2b6c1f17d161a8ddc6d71242
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e90efcea33406b176706ce8d6fe0196d3c825fb3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79434088"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727323"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Gestire sessioni di eventi in Esplora oggetti
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   In questo argomento vengono illustrate le azioni eseguibili in **Esplora oggetti** che influiscono su Eventi estesi:  
   
@@ -100,7 +100,7 @@ STATE = STOP
   
 4.  Espandere la casella di riepilogo a discesa **Modello** .  
   
-5.  Fare clic su **Apri \<file da...>** e cercare la sessione (file XML) da importare.  
+5.  Fare clic su **\<File From ...>Apri** e individuare la sessione (file XML) che si desidera importare.  
   
  La sessione verrà visualizzata nel nodo **Sessioni** . Per impostazione predefinita,la sessione non viene avviata.  
   

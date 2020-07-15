@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 0fc954228aff75940e66f976f19d1414118e1a8e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ed0403c1713ed3e7267f06d0bf765c7c449aac1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558511"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725948"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Usare Connettore SQL Server con le funzionalità di crittografia SQL
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Le attività di crittografia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comuni che usano una chiave asimmetrica protetta dall'insieme di credenziali delle chiavi di Azure includono le tre aree seguenti.  
   
 -   Transparent Data Encryption con una chiave asimmetrica dell'insieme di credenziali delle chiavi di Azure  
@@ -53,12 +53,14 @@ Dopo aver completato le parti dalla 1 alla 4 dell'argomento Procedura di install
         - Se si usa **Azure globale**, sostituire l'argomento `IDENTITY` con il nome di Azure Key Vault dalla parte II.
         - Se si usa un **cloud privato di Azure** , ad esempio Azure per enti pubblici, Azure Cina 21 Vianet o Azure Germania, sostituire l'argomento `IDENTITY` con l'URI dell'insieme di credenziali restituito nella parte II, passaggio 3. Non includere "https://" nell'URI dell'insieme di credenziali.   
   
-    -   Sostituire la prima parte dell'argomento `SECRET` con l' **ID client** di Azure Active Directory della parte 1. In questo esempio l' **ID client** è `EF5C8E094D2A4A769998D93440D8115D`.  
+    -   Sostituire la prima parte dell'argomento `SECRET` con l' **ID client** di Azure Active Directory della parte 1. In questo esempio l' **ID client** è `EF5C8E094D2A4A769998D93440D8115D`.
   
         > [!IMPORTANT]  
         >  È necessario rimuovere i trattini dall' **ID Client**.  
   
-    -   Completare la seconda parte dell'argomento `SECRET` con il **segreto client** della parte I. In questo esempio il **segreto client** della parte I è `Replace-With-AAD-Client-Secret`. La stringa finale dell'argomento `SECRET` sarà una lunga sequenza di lettere e numeri *senza trattini*.  
+    -   Completare la seconda parte dell'argomento `SECRET` con il **segreto client** della parte I. In questo esempio il **segreto client** della parte 1 è `ReplaceWithAADClientSecret`. 
+  
+    -   La stringa finale dell'argomento SECRET sarà una lunga sequenza di lettere e numeri senza trattini.
   
     ```sql  
     USE master;  
@@ -67,7 +69,7 @@ Dopo aver completato le parti dalla 1 alla 4 dell'argomento Procedura di install
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
-        SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
+        SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplaceWithAADClientSecret'   
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
     ```  
   

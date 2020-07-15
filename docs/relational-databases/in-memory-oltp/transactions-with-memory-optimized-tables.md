@@ -1,5 +1,6 @@
 ---
 title: Transazioni in tabelle con ottimizzazione per la memoria| Microsoft Docs
+description: Informazioni sulle transazioni per le tabelle ottimizzate per la memoria e le stored procedure compilate in modo nativo e sulle differenze tra queste transazioni e quelle per le tabelle basate su disco.
 ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c80e52eff233c2d04cb77fb5cf5d85bdac8fe34
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e86e2957a4c9961a5d82d13737a3239deb9a7342
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68081762"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753179"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transazioni in tabelle con ottimizzazione per la memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Questo articolo descrive tutti gli aspetti delle transazioni specifici per le tabelle ottimizzate per la memoria e le stored procedure compilate in modo nativo.  
   
@@ -114,17 +115,17 @@ Quando è interessata una tabella ottimizzata per la memoria, la durata di una t
   
 Seguono le descrizioni delle fasi.  
   
-#### <a name="regular-processing-phase-1-of-3"></a>Elaborazione normale: Fase 1 di 3  
+#### <a name="regular-processing-phase-1-of-3"></a>Elaborazione regolare: fase 1 (di 3)  
   
 - Questa fase comprende l'esecuzione di tutte le query e delle istruzioni DML nella query.  
 - Durante questa fase, le istruzioni vedono la versione delle tabelle ottimizzate per la memoria valida al momento dell'avvio logico della transazione.  
   
-#### <a name="validation-phase-2-of-3"></a>Convalida: Fase 2 di 3  
+#### <a name="validation-phase-2-of-3"></a>Convalida: fase 2 (di 3)  
   
 - La fase di convalida inizia con l'assegnazione dell'ora di fine, contrassegnando la transazione come completata a livello logico. Questo completamento rende visibili tutte le modifiche della transazione per le altre transazioni dipendenti da questa transazione. Il commit delle transazioni dipendenti non è consentito fino al commit di questa transazione. Inoltre, le transazioni che contengono queste dipendenze non possono restituire set di risultati al client per assicurare che il client veda solo i dati di cui è stato eseguito il commit nel database.  
 - Questa fase comprende la lettura ripetibile e la convalida serializzabile. Per la convalida di lettura ripetibile, verifica se le righe lette dalla transazione sono state aggiornate da quel momento. Per la convalida serializzabile, verifica se sono state inserite righe in qualsiasi intervallo di dati analizzato da questa transazione. Come indicato nella tabella [Livelli di isolamento e conflitti](#isolation-levels), la convalida di lettura ripetibile e la convalida serializzabile possono avere luogo quando si usa l'isolamento snapshot, per convalidare la coerenza dei vincoli di chiave univoca ed esterna.  
   
-#### <a name="commit-processing-phase-3-of-3"></a>Elaborazione del commit: Fase 3 di 3  
+#### <a name="commit-processing-phase-3-of-3"></a>Elaborazione del commit: fase 3 (di 3)  
   
 - Durante la fase di commit, le modifiche apportate alle tabelle durevoli vengono scritte nel log, che a sua volta viene scritto su disco. Il controllo viene quindi restituito al client.  
 - Al termine dell'elaborazione del commit, a tutte le transazioni dipendenti viene indicato che possono eseguire il commit.  
@@ -263,7 +264,7 @@ go
   - il database tempdb.  
   - Proprietà di sola lettura dal database master.  
   
-- Le transazioni distribuite non sono supportate: quando si usa BEGIN DISTRIBUTED TRANSACTION, la transazione non può accedere a una tabella ottimizzata per la memoria.  
+- Le transazioni distribuite non sono supportate: Quando si usa BEGIN DISTRIBUTED TRANSACTION, la transazione non può accedere a una tabella ottimizzata per la memoria.  
   
 ## <a name="natively-compiled-stored-procedures"></a>stored procedure compilate in modo nativo  
   

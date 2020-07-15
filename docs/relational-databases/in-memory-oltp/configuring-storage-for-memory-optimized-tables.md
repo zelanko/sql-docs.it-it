@@ -1,5 +1,6 @@
 ---
 title: Configurazione dell'archiviazione per le tabelle con ottimizzazione per la memoria | Microsoft Docs
+description: Informazioni su come configurare la capacità di archiviazione e le operazioni di input/output al secondo (IOPS) per le tabelle ottimizzate per la memoria in SQL Server.
 ms.custom: ''
 ms.date: 1/15/2020
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1d0848a1399c533162799fd9a4404955bb542dd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4bff120f8fc20b9f37b441dbb1b9f34833822dbb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76125007"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723327"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Configurazione dell'archiviazione per le tabelle con ottimizzazione per la memoria
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   È necessario configurare la capacità di archiviazione e le operazioni di input/output al secondo (IOPS).  
   
 ## <a name="storage-capacity"></a>Capacità di archiviazione  

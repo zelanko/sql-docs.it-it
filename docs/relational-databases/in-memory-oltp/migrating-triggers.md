@@ -1,5 +1,6 @@
 ---
 title: Migrazione di trigger | Microsoft Docs
+description: Informazioni sulle tabelle ottimizzate per la memoria e sui trigger DDL, che attivano per CREATE, ALTER, DROP, GRANT, DENY, REVOKE o UPDATE STATISTICs su un'istanza di SQL Server.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ad5385c5-5a50-40ca-a319-97d5606b8511
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4629b9f18cdf0b97b5a79cff0696973cb60f7c36
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7457f974820d1438d2e6d0293d31562c8c5f6a64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050144"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722473"
 ---
 # <a name="migrating-triggers"></a>Migrazione di trigger
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   In questo argomento vengono illustrati i trigger DDL e le tabelle ottimizzate per la memoria.  
   

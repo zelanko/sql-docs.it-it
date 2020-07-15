@@ -1,5 +1,6 @@
 ---
 title: Introduzione alle tabelle con ottimizzazione per la memoria | Microsoft Docs
+description: Informazioni sulle tabelle ottimizzate per la memoria, durevoli, che supportano transazioni caratterizzate da atomicità, coerenza, isolamento e durabilità.
 ms.custom: ''
 ms.date: 12/02/2016
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fe7d83331ee1dc0824e77602c60be04e070fb6f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 32129e87589c982c2ae620abbf91eeeb245dc3a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050206"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723124"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introduzione alle tabelle con ottimizzazione per la memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Le tabelle con ottimizzazione per la memoria vengono create usando [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
@@ -71,7 +72,7 @@ I seguenti fattori influiranno sui miglioramenti delle prestazioni che possono e
   
 *Comunicazione:* Il miglioramento delle prestazioni per un'applicazione con molte chiamate a stored procedure brevi può risultare inferiore rispetto a un'applicazione con meno chiamate e più funzionalità implementate in ogni stored procedure.  
   
-*[!INCLUDE[tsql](../../includes/tsql-md.md)] :* In OLTP in memoria si ottengono le migliori prestazioni quando si usano le stored procedure compilate in modo nativo anziché le stored procedure interpretate o l'esecuzione delle query. L'accesso alle tabelle ottimizzate per la memoria da queste stored procedure può essere vantaggioso.  
+*[!INCLUDE[tsql](../../includes/tsql-md.md)] Esecuzione:* In OLTP in memoria si ottengono le migliori prestazioni quando si utilizzano le stored procedure compilate in modo nativo anziché le stored procedure interpretate o l'esecuzione delle query. L'accesso alle tabelle ottimizzate per la memoria da queste stored procedure può essere vantaggioso.  
   
 *Analisi dell'intervallo e ricerca di punti:* Gli indici non cluster con ottimizzazione per la memoria supportano le analisi di intervalli e le analisi ordinate. Per le ricerche a punti, gli indici hash ottimizzati per la memoria offrono prestazioni migliori rispetto agli indici non cluster ottimizzati per la memoria. Gli indici non cluster con ottimizzazione per la memoria offrono prestazioni migliori rispetto agli indici basati su disco.
 
@@ -80,9 +81,9 @@ I seguenti fattori influiranno sui miglioramenti delle prestazioni che possono e
   - e gli indici non cluster.
   - Gli indici columnstore sono analizzabili in parallelo dall'inizio in SQL Server 2014.
   
-*Operazioni sugli indici:* le operazioni sugli indici non vengono registrate e sono presenti solo in memoria.  
+*Operazioni sugli indici:* Le operazioni sugli indici non vengono registrate e sono presenti solo in memoria.  
   
-*Concorrenza:* le prestazioni di applicazioni interessate dalla concorrenza a livello di motore, ad esempio la contesa di latch o il blocco, migliorano significativamente quando l'applicazione viene spostata in OLTP in memoria.  
+*Concorrenza:* Le prestazioni di applicazioni interessate dalla concorrenza a livello di motore, ad esempio la contesa di latch o il blocco, migliorano significativamente quando l'applicazione viene spostata in OLTP in memoria.  
   
 Nella tabella seguente sono elencati i problemi relativi a prestazioni e scalabilità presenti in genere nei database relazionali e viene descritto in che modo OLTP in memoria può consentire il miglioramento delle prestazioni.  
   

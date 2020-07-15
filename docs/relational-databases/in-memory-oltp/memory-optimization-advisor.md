@@ -1,5 +1,6 @@
 ---
 title: Ottimizzazione guidata per la memoria | Microsoft Docs
+description: Usare l'ottimizzazione guidata per la memoria in SQL Server Management Studio per facilitare la migrazione delle tabelle basate su disco in tabelle ottimizzate per la memoria.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a148e1725d1ce74d206e85cd9a8fd2b88f18eb0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9579587e39b4becd16be9bcae1e206703eb4720c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050187"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730865"
 ---
 # <a name="memory-optimization-advisor"></a>Ottimizzazione guidata per la memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   I report di analisi delle prestazioni delle transazioni (vedere [Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) indicano quali tabelle del database trarranno vantaggio se trasferite per usare OLTP in memoria. Dopo aver identificato la tabella da trasferire per usare OLTP in memoria, è possibile usare l'Ottimizzazione guidata per la memoria per eseguire la migrazione della tabella basata su disco in una tabella ottimizzata per la memoria.  
   

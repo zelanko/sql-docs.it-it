@@ -1,6 +1,6 @@
 ---
 title: Ripristino di emergenza per SQL Server | Microsoft Docs
-description: ''
+description: Usare questa panoramica delle soluzioni di continuità aziendale per la disponibilità elevata e il ripristino di emergenza in SQL Server per garantire l'uso delle risorse con interruzioni minime.
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: mikeray
@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
-ms.openlocfilehash: e08700fda793e2290e47b4499faa6bb97b37592f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ebc96b201b46461d5ab2586189628e3c4df3418
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68020755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748531"
 ---
 # <a name="business-continuity-and-database-recovery---sql-server"></a>Continuità aziendale e recupero del database - SQL Server
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 [!INCLUDE[HA-Story](../includes/sql-server-ha-story.md)]
 
 ## <a name="next-steps"></a>Passaggi successivi

@@ -1,5 +1,6 @@
 ---
 title: T-SQL non supportato da OLTP in memoria
+description: Informazioni sulle funzionalità di Transact-SQL non supportate per le tabelle ottimizzate per la memoria, le stored procedure compilate in modo nativo e le funzioni definite dall'utente.
 ms.custom: seo-dt-2019
 ms.date: 11/21/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e1052544d1243dea4e6c3da377de2dbbe36d5af
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ad82e31acbe105810b00b1f6bfc59ec433ca273b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753198"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Costrutti Transact-SQL non supportati da OLTP in memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Le tabelle con ottimizzazione per la memoria, le stored procedure compilate in modo nativo e le funzioni definite dall'utente non supportano la superficie di attacco totale di [!INCLUDE[tsql](../../includes/tsql-md.md)] supportata dalle tabelle basate su disco, dalle stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretate e dalle funzioni definite dall'utente. Quando si tenta di usare una delle funzionalità non supportate, il server restituisce un errore.  
   

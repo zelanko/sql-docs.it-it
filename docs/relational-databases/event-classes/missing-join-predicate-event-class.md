@@ -1,5 +1,6 @@
 ---
 title: Classe di evento Missing Join Predicate | Microsoft Docs
+description: La classe di evento Missing Join Predicate indica che è in esecuzione una query priva di predicato join in SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c59a45533e68eb1af5d3e62ee059aa022c5cc503
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0f0571750b7c8a9ba39c79bf640872c88241fe81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115954"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756036"
 ---
 # <a name="missing-join-predicate-event-class"></a>Missing Join Predicate - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe di evento Missing Join Predicate indica che è in esecuzione una query priva di predicato join. Ciò può comportare tempi di esecuzione della query prolungati. Per altre informazioni sui predicati di join, vedere [Predicati &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md).  
   
 ## <a name="missing-join-predicate-event-class-data-columns"></a>Colonne di dati della classe di evento Missing Join Predicate  

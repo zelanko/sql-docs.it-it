@@ -1,5 +1,6 @@
 ---
 title: Guida al processo di pulizia fantasma | Microsoft Docs
+description: Informazioni sul processo di pulizia fantasma, un processo in background che elimina record da pagine contrassegnate per l'eliminazione in SQL Server.
 ms.custom: ''
 ms.date: 05/02/2018
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - ghost clean up process
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 34be16d305bbb42a23c686e9b2befdd83792d523
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 557f76e3f54811581e41ad15a5270a0c1e6e4057
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72890490"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859093"
 ---
 # <a name="ghost-cleanup-process-guide"></a>Guida al processo di pulizia fantasma
 

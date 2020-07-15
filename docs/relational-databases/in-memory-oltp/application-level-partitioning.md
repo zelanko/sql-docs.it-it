@@ -1,5 +1,6 @@
 ---
 title: Partizionamento a livello di applicazione | Microsoft Docs
+description: Rivedere l'esempio che elabora gli ordini. Questa applicazione archivia gli ordini recenti in una tabella ottimizzata per la memoria e quelli meno recenti in una tabella basata su disco.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20fe12efc4bbc7ba948a89e5b15fb3f869651d4f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 047d337dd8ce561924a6f27de7ac43a4d57f4c60
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951250"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629710"
 ---
 # <a name="application-level-partitioning"></a>Partizionamento a livello di applicazione
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Questa applicazione elabora gli ordini. Gli ordini recenti vengono sottoposti a numerose elaborazioni. Gli ordini meno recenti non vengono sottoposti a numerose elaborazioni. Gli ordini recenti sono in una tabella ottimizzata per la memoria. Gli ordini meno recenti sono in una tabella basata su disco. Tutti gli ordini dopo *hotDate* sono nella tabella ottimizzata per la memoria. Tutti gli ordini prima di *hotDate* sono nella tabella basata su disco. Si supponga un pesante carico di lavoro OLTP con molte transazioni simultanee. Questa regola di business (ordini recenti in una tabella ottimizzata per la memoria) deve essere applicata anche se diverse transazioni simultanee stanno tentando di modificare *hotDate*.  
   
  In questo esempio non viene utilizzata una tabella partizionata della tabella basata su disco ma si tiene traccia di un punto di divisione esplicito tra le due tabelle, utilizzando una terza tabella. Il punto di divisione può essere usato per garantire che i dati appena aggiunti vengano inseriti sempre nella tabella appropriata in base alla data. Inoltre, può essere usato per determinare la posizione in cui cercare i dati. I dati che arrivano in ritardo vengono ancora inseriti nella tabella appropriata.  

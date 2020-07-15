@@ -10,15 +10,15 @@ ms.technology: backup-restore
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c62a2dfb1a6728098c3faeed32ce842dbab4304e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fe880bc4296985811d21b06b905b3ceb4bef58a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77146733"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659480"
 ---
 # <a name="sql-server-back-up-applications---volume-shadow-copy-service-vss-and-sql-writer"></a>Applicazioni di backup SQL Server - Servizio Copia Shadow del volume e writer SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server offre supporto per il Servizio Copia Shadow del volume fornendo un writer (il writer SQL) che consente a un'applicazione di backup di terze parti di usare il framework Servizio Copia Shadow del volume per eseguire il backup dei file di database. Questo documento descrive il componente writer SQL e il ruolo che svolge nel processo di creazione e ripristino di snapshot Servizio Copia Shadow del volume per i database SQL Server. Acquisisce anche informazioni dettagliate su come configurare e usare il writer SQL per lavorare con le applicazioni di backup nel framework Servizio Copia Shadow del volume.
 

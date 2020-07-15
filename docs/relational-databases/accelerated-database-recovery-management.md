@@ -12,16 +12,16 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fea43ea41bc3e65fa0a6b36c7557322431e95fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99229b68f99cf96af3916ac6946ba5d931f50bce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245257"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727918"
 ---
 # <a name="manage-accelerated-database-recovery"></a>Gestire il ripristino accelerato del database
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 ## <a name="enabling-and-controlling-adr"></a>Abilitazione e controllo del ripristino accelerato del database
 
@@ -102,7 +102,10 @@ Il processo di modifica della posizione dell'archivio versioni permanente preved
    (PERSISTENT_VERSION_STORE_FILEGROUP = [VersionStoreFG])
    ```
 
-## <a name="troubleshooting"></a>risoluzione dei problemi
+## <a name="troubleshooting"></a>Risoluzione dei problemi
+
+> [!NOTE]
+> Questa sezione si applica anche al Database SQL di Azure.
 
 Eseguire una query su `sys.dm_tran_persistent_version_store_stats` per controllare le dimensioni dell'archivio versioni permanente.
 

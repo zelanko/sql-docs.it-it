@@ -1,5 +1,6 @@
 ---
 title: Aprire il Visualizzatore File di Log | Microsoft Docs
+description: Informazioni su come usare il visualizzatore file di log in SQL Server Management Studio per accedere alle informazioni relative a errori ed eventi acquisite in diversi log.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9e76c7eb85306f63e9be230c76159efbab25444a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e6124fa7c8b4a0ab4637c52d7ceb38d4abc698fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68083977"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667956"
 ---
 # <a name="open-log-file-viewer"></a>Aprire il visualizzatore file di log
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   È possibile utilizzare il Visualizzatore file di log in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per accedere alle informazioni relative a errori ed eventi acquisite nei log seguenti:  
   
 -   Raccolta controlli  
@@ -46,7 +47,7 @@ ms.locfileid: "68083977"
   
  Per accedere a file di log per istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offline, è necessario avere accesso in lettura sia allo spazio dei nomi WMI **Root\Microsoft\SqlServer\ComputerManagement10** sia alla cartella in cui sono archiviati i file di log. Per altre informazioni, vedere la sezione Autorizzazioni dell'argomento [Visualizzare file di log offline](../../relational-databases/logs/view-offline-log-files.md).  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>Sicurezza  
  È necessaria l'appartenenza al ruolo predefinito del server securityadmin.  
   
 ### <a name="view-log-files"></a>Visualizzare file di log  

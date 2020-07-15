@@ -1,5 +1,6 @@
 ---
 title: Funzionalità non supportate - OLTP in memoria
+description: Informazioni sulle funzionalità di SQL Server non supportate per l'uso con oggetti ottimizzati per la memoria. Visualizzare le funzionalità per OLTP in memoria che sono diventate supportate.
 ms.custom: ''
 ms.date: 02/21/2020
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8464f56274308694ada9e5721ae8e0ceb5ed85ed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a2460e174ab0e8207c3e37f2e0dc999663a1dd8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77558327"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753177"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Funzionalità di SQL Server non supportate per OLTP in memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Questo argomento illustra le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supportate per l'uso con oggetti ottimizzati per la memoria. La sezione finale elenca anche le funzionalità che non erano supportate per OLTP in memoria, ma che lo sono diventate in seguito.
   

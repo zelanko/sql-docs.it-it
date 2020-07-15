@@ -17,15 +17,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4fd63c14206848107e2fea8c2e8972e76b77cc1c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021227"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629497"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Miglioramento delle prestazioni di indici full-text
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Questo argomento descrive alcune delle cause comuni della riduzione delle prestazioni per gli indici e le query full-text. Vengono inoltre forniti alcuni suggerimenti per limitare i problemi e migliorare le prestazioni.
   
 ##  <a name="common-causes-of-performance-issues"></a><a name="causes"></a> Common causes of performance issues
@@ -81,7 +81,7 @@ Il file del log di tipo ricerca per indicizzazione segue lo schema di denominazi
 `SQLFT<DatabaseID\><FullTextCatalogID\>.LOG[<n\>]`
   
 Di seguito sono riportate le parti variabili del nome del file del log di ricerca per indicizzazione.
--   \<**IDDatabase**>: ID di un database. <**dbid**> è un numero a cinque cifre con zeri iniziali.  
+-   \<**DatabaseID**> - ID di un database. <**dbid**> è un numero a cinque cifre con zeri iniziali.  
 -   <**IDCatalogoFullText**>: ID del catalogo full-text. \<**catid**> è un numero a cinque cifre con zeri iniziali.  
 -   <**n**>: numero intero che indica l'esistenza di uno o più log di ricerca per indicizzazione per lo stesso catalogo full-text.  
   
@@ -140,7 +140,7 @@ Per informazioni essenziali sulle formule seguenti, vedere le note dopo la tabel
 2.  500 MB è una stima della memoria necessaria per gli altri processi del sistema. Se nel sistema sono in corso processi aggiuntivi, aumentare questo valore di conseguenza.  
 3.  .*ism_size* sia 8 MB per le piattaforme x64.  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Esempio: Stima dei requisiti di memoria di fdhost.exe  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Esempio: stima dei requisiti di memoria di fdhost.exe  
   
  Questo esempio è relativo a un computer a 64 bit con 8 GB di RAM e 4 processori dual core. Il primo calcolo consente di stimare i requisiti di memoria di fdhost.exe, ovvero*F*. Il numero di intervalli di ricerca per indicizzazione è `8`.  
   
@@ -150,7 +150,7 @@ Per informazioni essenziali sulle formule seguenti, vedere le note dopo la tabel
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>Esempio: Impostazione del valore max server memory  
+ #### <a name="example-setting-max-server-memory"></a>Esempio: impostazione della memoria massima del server  
   
  Questo esempio usa le istruzioni [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) di [!INCLUDE[tsql](../../includes/tsql-md.md)] per impostare **max server memory** sul valore calcolato per *M* nell'esempio precedente, `7052`:  
   

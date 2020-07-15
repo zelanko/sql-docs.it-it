@@ -1,5 +1,6 @@
 ---
 title: Recuperare ed eseguire query su dati XML | Microsoft Docs
+description: Informazioni sulle opzioni di query che devono essere specificate durante l'esecuzione di query sui dati XML e sulle parti di istanze XML che non vengono mantenute se vengono archiviate nei database.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e754bc5e3fb738f36b309e7ff8a60c9f85bc258c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 86f908d6aa221b2c69be3d8960efac929cbf5306
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664868"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738401"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Recuperare ed eseguire query su dati XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In questo argomento vengono descritte le opzioni query che è necessario specificare per eseguire query sui dati XML. Vengono inoltre descritte le parti di istanze XML che non vengono mantenute quando vengono archiviate nei database.  
   
 ##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> Caratteristiche di un'istanza XML non mantenute  
@@ -92,13 +93,13 @@ GO
   
 |Opzioni SET|Valori richiesti|  
 |-----------------|---------------------|  
-|ANSI_NULLS|ATTIVA|  
-|ANSI_PADDING|ATTIVA|  
-|ANSI_WARNINGS|ATTIVA|  
-|ARITHABORT|ATTIVA|  
-|CONCAT_NULL_YIELDS_NULL|ATTIVA|  
+|ANSI_NULLS|ON|  
+|ANSI_PADDING|ON|  
+|ANSI_WARNINGS|ON|  
+|ARITHABORT|ON|  
+|CONCAT_NULL_YIELDS_NULL|ON|  
 |NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ATTIVA|  
+|QUOTED_IDENTIFIER|ON|  
   
  Se le opzioni non vengono impostate nel modo indicato, le query e le modifiche eseguite dai metodi per il tipo di dati **xml** avranno esito negativo.  
   

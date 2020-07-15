@@ -1,5 +1,6 @@
 ---
 title: Implementazione di UPDATE con FROM o sottoquery | Microsoft Docs
+description: Informazioni sugli elementi della sintassi supportati nell'istruzione UPDATE di Transact-SQL in un modulo T-SQL compilato in modo nativo.
 ms.custom: ''
 ms.date: 11/17/2016
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 138f5b0e-f8a4-400f-b581-8062aebc62b6
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c41165cf1e4a6b1ad8122cb674f8644f40d8ebe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95e55e1519ab61eee3bed031d0d80565e56b0a69
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050263"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723153"
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>Implementazione di UPDATE con FROM o sottoquery
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 

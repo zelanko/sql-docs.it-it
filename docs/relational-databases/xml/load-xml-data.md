@@ -1,5 +1,6 @@
 ---
 title: Caricare dati XML | Microsoft Docs
+description: Vengono illustrati diversi metodi per il trasferimento di dati XML nei database di SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c30b896ca36d84866244553d6420db8c66287f59
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 01790e4eacf793926725770f980c8194013a155a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665128"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738405"
 ---
 # <a name="load-xml-data"></a>Caricamento dati XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   È possibile trasferire dati XML in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in diversi modi. Ad esempio:  
   
 -   Se i dati si trovano in una colonna di tipo [n]text o image in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è possibile importare la tabella utilizzando [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Modificare il tipo di colonna in XML utilizzando l'istruzione ALTER TABLE.  
@@ -33,7 +34,7 @@ ms.locfileid: "80665128"
 ## <a name="bulk-loading-xml-data"></a>Caricamento bulk di dati XML  
  È possibile eseguire un caricamento bulk dei dati XML nel server utilizzando le funzionalità per il caricamento bulk disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio bcp. OPENROWSET consente di caricare dati in una colonna XML da uno o più file, come illustrato nell'esempio seguente.  
   
-##### <a name="example-loading-xml-from-files"></a>Esempio: caricamento di dati XML da un file  
+##### <a name="example-loading-xml-from-files"></a>Esempio: Caricamento di dati XML da un file  
  In questo esempio viene illustrato l'inserimento di una riga nella tabella T. Il valore della colonna XML viene caricato dal file C:\MyFile\xmlfile.xml come CLOB e alla colonna di tipo integer viene fornito il valore 10.  
   
 ```  
@@ -53,7 +54,7 @@ FROM    (SELECT *
   
 -   Per una codifica esplicita usare il tipo di dati **varbinary()** , che non interagisce in alcun modo con le tabelle codici, oppure usare un tipo stringa della tabella codici appropriata. Assegnare quindi i dati a una colonna, a una variabile o a un parametro XML.  
   
-### <a name="example-explicitly-specifying-an-encoding"></a>Esempio: impostazione di una codifica in modo esplicito  
+### <a name="example-explicitly-specifying-an-encoding"></a>Esempio: Impostazione di una codifica in modo esplicito  
  Si consideri un documento XML di nome vcdoc, archiviato come **varchar(max)** e che non include una dichiarazione XML esplicita. L'istruzione seguente aggiunge una dichiarazione XML con la codifica "iso8859-1", concatena il documento XML, esegue il cast del risultato a **varbinary(max)** , in modo da mantenere la rappresentazione dei byte e infine esegue il cast al tipo di dati XML. Questo consente al processore XML di analizzare i dati in base alla codifica specificata, "iso8859-1", e di generare la rappresentazione UTF-16 corrispondente per i valori stringa.  
   
 ```  

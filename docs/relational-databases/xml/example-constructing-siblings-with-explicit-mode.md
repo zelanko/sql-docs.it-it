@@ -1,5 +1,6 @@
 ---
-title: 'Esempio: creazione di elementi di pari livello con la modalità EXPLICIT | Microsoft Docs'
+title: 'Esempio: Creazione di elementi di pari livello con la modalità EXPLICIT | Microsoft Docs'
+description: Visualizzare un esempio di query SQL che usa la modalità EXPLICIT con la clausola FOR XML per costruire elementi XML di pari livello.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4acea026f7541466a1bb38819d50f1b529e6f500
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e969fd0d003d44b3aaf97efad6e029d52e146dfa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664545"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633105"
 ---
-# <a name="example-constructing-siblings-with-explicit-mode"></a>Esempio: Creazione di elementi di pari livello utilizzando la modalità EXPLICIT
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="example-constructing-siblings-with-explicit-mode"></a>Esempio: Creazione di elementi di pari livello con la modalità EXPLICIT
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Si supponga di voler creare codice XML per fornire informazioni sugli ordini di vendita. <`SalesPerson`> e <`OrderDetail`> sono elementi di pari livello. Ogni ordine dispone di un elemento <`OrderHeader`>, un elemento <`SalesPerson`> e uno o più elementi <`OrderDetail`>.  
   
 ```  

@@ -1,5 +1,6 @@
 ---
-title: Esempi d'uso della modalità PATH | Microsoft Docs
+title: 'Esempi: Utilizzo della modalità PATH | Microsoft Docs'
+description: Visualizzazione di esempi di utilizzo della modalità PATH per generare codice XML da una query SELECT.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 51bdad5bc62e9dc47a3f9cd4c3bf90d0c41c59bb
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 74e447caefd30eba8ccfc9ab27db2c74d2f63c20
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665169"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729949"
 ---
-# <a name="examples-using-path-mode"></a>Esempi di utilizzo della modalità PATH
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="examples-using-path-mode"></a>Esempi: Uso della modalità PATH
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Negli esempi seguenti viene illustrato l'utilizzo della modalità PATH nella creazione di codice XML da una query SELECT. Molte di queste query vengono specificate sui documenti XML di istruzioni per la produzione di biciclette archiviate nella colonna Instructions della tabella ProductModel.  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>Specifica di una query semplice in modalità PATH  

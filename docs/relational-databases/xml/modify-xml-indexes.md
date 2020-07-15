@@ -1,5 +1,6 @@
 ---
 title: Modificare indici XML | Microsoft Docs
+description: Informazioni sull'utilizzo dell'istruzione DDL ALTER INDEX (Transact-SQL) per modificare gli indici XML e non XML esistenti.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: efe1b72c4cb98b51da065b8194432f4e8d9efa61
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 3e89c0bc3a0cb7731507f1693fbd554011c62926
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665079"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729867"
 ---
 # <a name="modify-xml-indexes"></a>Modifica di indici XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   È possibile usare l’istruzione DDL di [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] per modificare gli indici XML e non XML esistenti. Per gli indici XML, tuttavia, non sono disponibili tutte le opzioni ALTER INDEX. Per la modifica degli indici XML non sono valide le opzioni seguenti:  
   
 -   Per gli indici XML non è valida l'opzione di ricompilazione e impostazione IGNORE_DUP_KEY. Per gli indici XML secondari è necessario impostare l'opzione di ricompilazione ONLINE su OFF. Nell'istruzione ALTER INDEX non è consentita l'opzione DROP_EXISTING.  
@@ -30,7 +31,7 @@ ms.locfileid: "80665079"
   
 -   Se viene specificata l'opzione ALTER INDEX ALL, questa viene applicata agli indici sia XML che non XML. È possibile che vengano specificate opzioni di indicizzazione che non sono valide per entrambi i tipi di indici. In tal caso, l'intera istruzione ha esito negativo.  
   
-## <a name="example-modifying-an-xml-index"></a>Esempio: modifica di un indice XML  
+## <a name="example-modifying-an-xml-index"></a>Esempio: Modifica di un indice XML  
  Nell'esempio seguente viene creato, e quindi modificato, un indice XML impostando l'opzione `ALLOW_ROW_LOCKS` su `OFF`. Quando l'opzione `ALLOW_ROW_LOCKS` è impostata su `OFF`, le righe non sono bloccate ed è possibile ottenere l'accesso agli indici specificati tramite blocchi a livello di pagina e di tabella.  
   
 ```  
@@ -51,7 +52,7 @@ ALTER INDEX PIdx_T_XmlCol on T
 SET (ALLOW_ROW_LOCKS = OFF)  
 ```  
   
-## <a name="example-disabling-and-enabling-an-xml-index"></a>Esempio: disabilitazione e attivazione di un indice XML  
+## <a name="example-disabling-and-enabling-an-xml-index"></a>Esempio: Disabilitazione e abilitazione di un indice XML  
  Per impostazione predefinita, viene attivato un indice XML. Se si disabilita un indice XML, per le query in esecuzione sulla colonna XML non viene utilizzato l'indice XML. Per abilitare un indice XML, utilizzare `ALTER INDEX` con l'opzione `REBUILD` .  
   
 ```  

@@ -1,5 +1,6 @@
 ---
 title: Tabelle e stored procedure relative al log shipping | Microsoft Docs
+description: Rivedere tutte le tabelle e le stored procedure associate a una configurazione per il log shipping. Ogni server archivia le tabelle di log shipping in msdb.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25424e7e41a2d1fdf1efb88f01c53f24902e7072
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d0164cee84309f9789dc71e2e64caf812b12b4f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68030718"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85695979"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In questo argomento vengono descritte tutte le tabelle e le stored procedure associate a una configurazione di log shipping. Tutte le tabelle relative al log shipping sono archiviate in **msdb** in ogni server. Nelle tabelle seguenti viene illustrato su quali server sono utilizzate le diverse tabelle e le stored procedure in una configurazione di log shipping.  
   
 ## <a name="primary-server-tables"></a>Tabelle del server primario  

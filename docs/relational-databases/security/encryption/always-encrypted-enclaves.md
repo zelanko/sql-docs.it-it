@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5625c3429a9bae89ae940fb552a3e6d1e58678c9
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 76af9a82a53004d01443a0442946e28fed73d0f0
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999426"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858873"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclave sicuri
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -51,7 +51,7 @@ Con gli enclave sicuri, Always Encrypted protegge la riservatezza dei dati sensi
 
 - **Crittografia sul posto** - Le operazioni di crittografia su dati sensibili, ad esempio la crittografia iniziale dei dati o la rotazione di una chiave di crittografia della colonna, vengono eseguite all'interno dell'enclave sicuro e non richiedono lo spostamento di dati all'esterno del database. È possibile eseguire la crittografia sul posto tramite l'istruzione Transact-SQL ALTER TABLE e non è necessario usare strumenti, come la procedura guidata Always Encrypted in SQL Server Management Studio o il cmdlet di PowerShell Set-SqlColumnEncryption.
 
-- **Calcoli avanzati (anteprima)** - Le operazioni su colonne crittografate, tra cui criteri di ricerca (come il predicato LIKE) e i confronti degli intervalli, sono supportate all'interno dell'enclave sicuro, che consente di rendere disponibile Always Encrypted per una vasta gamma di applicazioni e scenari che richiedono l'esecuzione di questo tipo di calcoli all'interno del sistema di database.
+- **Calcoli avanzati** - Le operazioni su colonne crittografate, tra cui criteri di ricerca, come il predicato LIKE, e i confronti degli intervalli, sono supportate all'interno dell'enclave sicuro, che consente di rendere disponibile Always Encrypted per una vasta gamma di applicazioni e scenari che richiedono l'esecuzione di questo tipo di calcoli all'interno del sistema di database.
 
 ## <a name="secure-enclave-attestation"></a>Attestazione degli enclave sicuri
 

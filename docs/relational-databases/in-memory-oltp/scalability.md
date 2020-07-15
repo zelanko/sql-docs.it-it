@@ -1,5 +1,6 @@
 ---
 title: Scalabilità | Microsoft Docs
+description: Informazioni sui miglioramenti della scalabilità dell'archiviazione su disco per le tabelle ottimizzate per la memoria in SQL Server, ad esempio l'uso di più thread per rendere persistenti le tabelle.
 ms.custom: ''
 ms.date: 08/27/2015
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: a4891c57-56bb-49f4-9bb5-f11b745279e5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2762e024f3a94ed20c900833e56840b67af1685d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9f305153cca0ce9207c81f79ca423df476e6a841
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68111777"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735055"
 ---
 # <a name="scalability"></a>Scalabilità
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] contiene miglioramenti di scalabilità dell'archiviazione su disco per le tabelle ottimizzate per la memoria. 
 
 ## <a name="multiple-threads-to-persist-memory-optimized-tables"></a>Più thread per rendere persistenti le tabelle ottimizzate per la memoria  

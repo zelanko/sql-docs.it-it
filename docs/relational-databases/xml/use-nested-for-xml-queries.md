@@ -1,5 +1,6 @@
 ---
 title: Usare query FOR XML annidate | Microsoft Docs
+description: Informazioni sull'uso delle query FOR XML nidificate.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 384e312ca4deb3266da403e796ea93e504c6ab1a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f012f629d531955a4f662dfe3ee03f691c220003
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664993"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752538"
 ---
 # <a name="use-nested-for-xml-queries"></a>Utilizzo di query FOR XML nidificate
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Il tipo di dati **xml** e la [direttiva TYPE nelle query FOR XML](../../relational-databases/xml/type-directive-in-for-xml-queries.md) l'elaborazione dell'XML restituito dalle query FOR XML sia sul server che sul client.  
   
 ## <a name="processing-with-xml-type-variables"></a>Elaborazione con variabili di tipo XML  

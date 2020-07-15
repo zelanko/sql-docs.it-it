@@ -1,5 +1,6 @@
 ---
 title: Proprietà database (pagina Mirroring) | Microsoft Docs
+description: Informazioni su come configurare le proprietà di mirroring e visualizzare lo stato di una sessione di mirroring. Informazioni su come avviare, sospendere o rimuovere una sessione di mirroring.
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a25b2b40b147cd0bd23e8c7554e548b6a577d539
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5324c46fb8a4eb67d2364ee3bcbd5e21674a5c7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099587"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630985"
 ---
 # <a name="database-properties-mirroring-page"></a>Proprietà database (pagina Mirroring)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Accedere a questa pagina dal database principale e utilizzarla per configurare e modificare le proprietà del mirroring del database per un database. Utilizzare inoltre la pagina per avviare la Configurazione guidata sicurezza mirroring del database, per visualizzare lo stato di una sessione di mirroring e per sospendere o rimuovere la sessione di mirroring del database.  
   
 > **IMPORTANTE** La sicurezza deve essere configurata prima dell'avvio del mirroring. Se il mirroring non è stato avviato, è necessario iniziare dalla procedura guidata. Le caselle di testo della pagina **Mirroring** sono disabilitate fino al termine della procedura guidata.  
@@ -41,7 +42,7 @@ ms.locfileid: "68099587"
 |Se il mirroring è stato avviato.|Se il server di controllo del mirroring è stato cambiato nella procedura guidata, viene impostato di conseguenza.|  
   
  **Indirizzi di rete del server**  
- Esiste un'opzione equivalente per ognuna delle istanze del server, ovvero **Server principale**, **Server mirror**e **Server di controllo del mirroring**.  
+ Esiste un'opzione equivalente per ognuna delle istanze del server: **Server principale**, **Server mirror** e **Server di controllo del mirroring**.  
   
  Gli indirizzi di rete del server delle istanze del server sono specificati automaticamente al completamento della Configurazione guidata sicurezza mirroring del database. Dopo aver completato la procedura guidata, è possibile modificare gli indirizzi di rete manualmente, se necessario.  
   
@@ -67,7 +68,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  Per altre informazioni, vedere [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
-> **NOTA:** Non è possibile cambiare le istanze del server principale né del server mirror durante una sessione di mirroring del database. È invece possibile cambiare l'istanza del server di controllo del mirroring durante una sessione. Per ulteriori informazioni, vedere la sezione "Note" più avanti in questo argomento.  
+> **NOTA** Non è possibile cambiare le istanze del server principale né del server mirror durante una sessione di mirroring del database. È invece possibile cambiare l'istanza del server di controllo del mirroring durante una sessione. Per ulteriori informazioni, vedere la sezione "Note" più avanti in questo argomento.  
   
  **Avvia mirroring**  
  Fare clic su questo pulsante per avviare il mirroring se sussistono tutte le condizioni seguenti:  
@@ -94,12 +95,12 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **Rimuovi mirroring**  
  Sull'istanza del server principale, fare clic per arrestare la sessione e rimuovere la configurazione del mirroring dai database. Verrà richiesta una conferma. Se si fa clic su **Sì**, la sessione verrà arrestata e il mirroring rimosso. Per informazioni sull'impatto della rimozione del mirroring del database, vedere [Rimozione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
   
-> **NOTA:** se si tratta dell'unico database con mirroring sull'istanza del server, il processo di monitoraggio viene rimosso.  
+> **NOTA** Se si tratta dell'unico database con mirroring sull'istanza del server, il processo di monitoraggio viene rimosso.  
   
  **Failover**  
  Fare clic per eseguire manualmente il failover del database principale sul database mirror.  
   
-> **NOTA:** se la sessione di mirroring è in esecuzione in modalità a prestazioni elevate, il failover manuale non è supportato. Per eseguire il failover manualmente, è prima necessario modificare la modalità operativa in **Protezione elevata senza failover automatico (sincrona)** . Dopo il completamento del failover è possibile reimpostare la modalità su **Prestazioni elevate (asincrona)** per la nuova istanza del server principale.  
+> **NOTA** Se la sessione di mirroring è in esecuzione in modalità a prestazioni elevate, il failover manuale non è supportato. Per eseguire il failover manualmente, è prima necessario modificare la modalità operativa in **Protezione elevata senza failover automatico (sincrona)** . Dopo il completamento del failover è possibile reimpostare la modalità su **Prestazioni elevate (asincrona)** per la nuova istanza del server principale.  
   
  Verrà richiesta una conferma. Se si fa clic su **Sì**, verrà tentato il failover. Il server principale prova a connettersi al server mirror utilizzando l'autenticazione di Windows. Se l'autenticazione di Windows non funziona, sul server principale viene visualizzata la finestra di dialogo **Connetti al server** . Se il server mirror usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selezionare **Autenticazione di SQL Server** nella casella **Autenticazione** . Nella casella di testo **Account di accesso** specificare l'account di accesso con cui connettersi al server mirror e nella casella di testo **Password** specificare la password per tale account.  
   

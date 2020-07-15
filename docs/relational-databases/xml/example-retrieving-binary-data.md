@@ -1,5 +1,6 @@
 ---
-title: 'Esempio: recupero di dati binari | Microsoft Docs'
+title: 'Esempio: Recupero di dati binari | Microsoft Docs'
+description: Visualizzare un esempio di query SQL che recupera dati binari usando le opzioni RAW e BINARY BASE64 con la clausola FOR XML.
 ms.custom: ''
 ms.date: 04/03/2020
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 5cea5d49-58ac-403a-a933-c4fd91de400b
 author: RothJa
 ms.author: jroth
-ms.openlocfilehash: 8d66e1ec9c580030f1f65f030cdb0367d8f4f430
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 08010e294b1b143c941774912d661a53c021a6ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664499"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632792"
 ---
-# <a name="example-retrieving-binary-data"></a>Esempio: recupero di dati binari
+# <a name="example-retrieving-binary-data"></a>Esempio: Recupero di dati binari
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 La query seguente restituisce la foto del prodotto archiviata in una colonna di tipo **varbinary(max)** . L'opzione `BINARY BASE64` specificata nella query consente di restituire i dati binari nel formato con codifica Base64.
 

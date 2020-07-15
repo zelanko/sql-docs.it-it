@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 77c45273b5381a158d8a5cf317f292fd46dec55d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9c707c97df5b6c639a2c9df5847ff4f14fc400db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79190550"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729445"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Funzionalità del Motore di database deprecate in SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 
 In questo argomento verranno descritte le funzionalità deprecate di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ancora disponibili in [!INCLUDE[sssql15-md](../includes/sssql15-md.md)]. È consigliabile non usare le funzionalità deprecate nelle nuove applicazioni.  
   
@@ -111,23 +111,23 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Servizi Web XML nativi|Istruzione CREATE o ALTER ENDPOINT con l'opzione FOR SOAP.<br /><br /> sys.endpoint_webmethods<br /><br /> sys.soap_endpoints|Usare Windows Communications Foundation (WCF) o ASP.NET.|CREATE/ALTER ENDPOINT<br /><br /> sys.endpoint_webmethods<br /><br /> EXT_soap_endpoints<br /><br /> sys.soap_endpoints|21<br /><br /> 22<br /><br /> 23|  
 |Database rimovibili|sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable|74<br /><br /> 75|  
 |Database rimovibili|sp_dbremove|DROP DATABASE|sp_dbremove|76|  
-|Security|Sintassi di ALTER LOGIN WITH SET CREDENTIAL|Nuova sintassi di ALTER LOGIN ADD e DROP CREDENTIAL|ALTER LOGIN WITH SET CREDENTIAL|230|  
-|Security|sp_addapprole<br /><br /> sp_dropapprole|CREATE APPLICATION ROLE<br /><br /> DROP APPLICATION ROLE|sp_addapprole<br /><br /> sp_dropapprole|53<br /><br /> 54|  
-|Security|sp_addlogin<br /><br /> sp_droplogin|CREATE LOGIN<br /><br /> DROP LOGIN|sp_addlogin<br /><br /> sp_droplogin|39<br /><br /> 40|  
-|Security|sp_adduser<br /><br /> sp_dropuser|CREATE USER<br /><br /> DROP USER|sp_adduser<br /><br /> sp_dropuser|49<br /><br /> 50|  
-|Security|sp_grantdbaccess<br /><br /> sp_revokedbaccess|CREATE USER<br /><br /> DROP USER|sp_grantdbaccess<br /><br /> sp_revokedbaccess|51<br /><br /> 52|  
-|Security|sp_addrole<br /><br /> sp_droprole|CREATE ROLE<br /><br /> DROP ROLE|sp_addrole<br /><br /> sp_droprole|56<br /><br /> 57|  
-|Security|sp_approlepassword<br /><br /> sp_password|ALTER APPLICATION ROLE<br /><br /> ALTER LOGIN|sp_approlepassword<br /><br /> sp_password|55<br /><br /> 46|  
-|Security|sp_changeobjectowner|ALTER SCHEMA o ALTER AUTHORIZATION|sp_changeobjectowner|58|  
-|Security|sp_control_dbmasterkey_password|La chiave master è obbligatoria e la password deve essere corretta.|sp_control_dbmasterkey_password|274|  
-|Security|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
-|Security|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
-|Security|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
-|Security|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|Le informazioni restituite da queste stored procedure risultano corrette in [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]. L'output non riflette le modifiche apportate alla gerarchia di autorizzazioni implementata in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Per ulteriori informazioni, vedere [Autorizzazioni dei ruoli predefiniti del server](https://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx).|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
-|Security|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|Autorizzazioni specifiche GRANT, DENY e REVOKE.|Autorizzazione ALL|35|  
-|Security|Funzione intrinseca PERMISSIONS|Eseguire una query su sys.fn_my_permissions.|PERMISSIONS|170|  
-|Security|SETUSER|EXECUTE AS|SETUSER|165|  
-|Security|Algoritmi di crittografia RC4 e DESX|Utilizzare un altro algoritmo, ad esempio AES.|Algoritmo DESX|238|  
+|Sicurezza|Sintassi di ALTER LOGIN WITH SET CREDENTIAL|Nuova sintassi di ALTER LOGIN ADD e DROP CREDENTIAL|ALTER LOGIN WITH SET CREDENTIAL|230|  
+|Sicurezza|sp_addapprole<br /><br /> sp_dropapprole|CREATE APPLICATION ROLE<br /><br /> DROP APPLICATION ROLE|sp_addapprole<br /><br /> sp_dropapprole|53<br /><br /> 54|  
+|Sicurezza|sp_addlogin<br /><br /> sp_droplogin|CREATE LOGIN<br /><br /> DROP LOGIN|sp_addlogin<br /><br /> sp_droplogin|39<br /><br /> 40|  
+|Sicurezza|sp_adduser<br /><br /> sp_dropuser|CREATE USER<br /><br /> DROP USER|sp_adduser<br /><br /> sp_dropuser|49<br /><br /> 50|  
+|Sicurezza|sp_grantdbaccess<br /><br /> sp_revokedbaccess|CREATE USER<br /><br /> DROP USER|sp_grantdbaccess<br /><br /> sp_revokedbaccess|51<br /><br /> 52|  
+|Sicurezza|sp_addrole<br /><br /> sp_droprole|CREATE ROLE<br /><br /> DROP ROLE|sp_addrole<br /><br /> sp_droprole|56<br /><br /> 57|  
+|Sicurezza|sp_approlepassword<br /><br /> sp_password|ALTER APPLICATION ROLE<br /><br /> ALTER LOGIN|sp_approlepassword<br /><br /> sp_password|55<br /><br /> 46|  
+|Sicurezza|sp_changeobjectowner|ALTER SCHEMA o ALTER AUTHORIZATION|sp_changeobjectowner|58|  
+|Sicurezza|sp_control_dbmasterkey_password|La chiave master è obbligatoria e la password deve essere corretta.|sp_control_dbmasterkey_password|274|  
+|Sicurezza|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
+|Sicurezza|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
+|Sicurezza|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
+|Sicurezza|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|Le informazioni restituite da queste stored procedure risultano corrette in [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]. L'output non riflette le modifiche apportate alla gerarchia di autorizzazioni implementata in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Per ulteriori informazioni, vedere [Autorizzazioni dei ruoli predefiniti del server](https://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx).|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
+|Sicurezza|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|Autorizzazioni specifiche GRANT, DENY e REVOKE.|Autorizzazione ALL|35|  
+|Sicurezza|Funzione intrinseca PERMISSIONS|Eseguire una query su sys.fn_my_permissions.|PERMISSIONS|170|  
+|Sicurezza|SETUSER|EXECUTE AS|SETUSER|165|  
+|Sicurezza|Algoritmi di crittografia RC4 e DESX|Utilizzare un altro algoritmo, ad esempio AES.|Algoritmo DESX|238|  
 |Opzioni SET|SET FMTONLY|[sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) e [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md).|SET FMTONLY|250|  
 |Opzioni di configurazione del server|opzione c2 audit<br /><br /> default trace enabled - opzione|[Opzione di configurazione del server common criteria compliance enabled](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [Eventi estesi](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
 |Classi SMO|Classe **Microsoft.SQLServer. Management.Smo.Information**<br /><br /> Classe **Microsoft.SQLServer. Management.Smo.Settings**<br /><br /> Classe **Microsoft.SQLServer.Management. Smo.DatabaseOptions**<br /><br /> Proprietà **Microsoft.SqlServer.Management.Smo. DatabaseDdlTrigger.NotForReplication**|Classe **Microsoft.SqlServer.  Management.Smo.Server**<br /><br /> Classe **Microsoft.SqlServer.  Management.Smo.Server**<br /><br /> Classe **Microsoft.SqlServer. Management.Smo.Database**<br /><br /> nessuno|nessuno|nessuno|  

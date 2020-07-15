@@ -1,5 +1,6 @@
 ---
 title: Risolvere i problemi di memoria insufficiente | Microsoft Docs
+description: Informazioni sulle situazioni di memoria insufficiente in SQL Server OLTP in memoria, su come ripristinare e risolvere gli effetti, risolvere gli errori di allocazione delle pagine e procedure consigliate.
 ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0db5cb560b4e50d903ceca431556f2bdc18365ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908444"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722388"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Risolvere i problemi di memoria insufficiente
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] usa più memoria e in modi diversi rispetto a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile che la quantità di memoria installata e allocata per [!INCLUDE[hek_2](../../includes/hek-2-md.md)] diventi inadeguata con l'aumentare delle esigenze. In tal caso, è possibile che la memoria risulti insufficiente. In questo argomento viene descritto come risolvere una situazione di memoria insufficiente. Per le linee guida che consentono di evitare molte situazioni di memoria insufficiente, vedere [Monitorare e risolvere i problemi relativi all'utilizzo della memoria](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) .  
   
@@ -26,13 +27,13 @@ ms.locfileid: "72908444"
   
 |Argomento|Panoramica|  
 |-----------|--------------|  
-|[Risoluzione degli errori di ripristino del database dovuti a memoria insufficiente](#bkmk_resolveRecoveryFailures)|Operazioni da eseguire se viene visualizzato il messaggio di errore "Operazione di ripristino non riuscita per il database ' *\<NomeDatabase>* '. Memoria insufficiente nel pool di risorse ' *\<NomePoolRisorse>* '."|  
+|[Risoluzione degli errori di ripristino del database dovuti a memoria insufficiente](#bkmk_resolveRecoveryFailures)|Operazioni da eseguire se viene visualizzato il messaggio di errore "Operazione di ripristino non riuscita per il database ' *\<databaseName>* '. Memoria insufficiente nel pool di risorse ' *\<resourcePoolName>* '."|  
 |[Risoluzione dell'impatto delle condizioni di memoria insufficiente sul carico di lavoro](#bkmk_recoverFromOOM)|Operazioni da eseguire nel caso in cui i problemi di memoria insufficiente incidono negativamente sulle prestazioni.|  
-|[Risoluzione degli errori di allocazione della pagina dovuti a memoria insufficiente quando è disponibile memoria sufficiente](#bkmk_PageAllocFailure)|Operazioni da eseguire se viene visualizzato il messaggio di errore "È in corso la disabilitazione delle allocazioni di pagine per il database ' *\<NomeDatabase>* '. Memoria insufficiente nel pool di risorse ' *\<NomePoolRisorse>* '. ..." quando la memoria disponibile è sufficiente per l'operazione.|
+|[Risoluzione degli errori di allocazione della pagina dovuti a memoria insufficiente quando è disponibile memoria sufficiente](#bkmk_PageAllocFailure)|Operazioni da eseguire se viene visualizzato il messaggio di errore "È in corso la disabilitazione delle allocazioni di pagine per il database ' *\<databaseName>* ' Memoria insufficiente nel pool di risorse ' *\<resourcePoolName>* '. ..." quando la memoria disponibile è sufficiente per l'operazione.|
 |[Procedure consigliate sull'uso di OLTP in memoria in un ambiente di VM](#bkmk_VMs)|Aspetti da tenere presenti quando si usa OLTP in memoria in un ambiente virtualizzato.|
   
 ##  <a name="resolve-database-restore-failures-due-to-oom"></a><a name="bkmk_resolveRecoveryFailures"></a> Risoluzione degli errori di ripristino del database dovuti a memoria insufficiente  
- Quando si tenta di ripristinare un database è possibile che venga visualizzato il messaggio di errore: "Operazione di ripristino non riuscita per il database ' *\<NomeDatabase>* '. Memoria insufficiente nel pool di risorse ' *\<NomePoolRisorse>* '." Questo errore indica che la memoria disponibile del server non è sufficiente per il ripristino del database. 
+ Quando si tenta di ripristinare un database è possibile che venga visualizzato il messaggio di errore: "Operazione di ripristino non riuscita per il database ' *\<databaseName>* ' Memoria insufficiente nel pool di risorse ' *\<resourcePoolName>* '." Questo errore indica che la memoria disponibile del server non è sufficiente per il ripristino del database. 
    
 La memoria disponibile del server in cui viene ripristinato un database deve essere sufficiente per le tabelle ottimizzate per la memoria nel backup del database. In caso contrario, il database non verrà portato online e verrà contrassegnato come sospetto.  
   

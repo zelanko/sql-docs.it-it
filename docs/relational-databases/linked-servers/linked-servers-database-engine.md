@@ -1,6 +1,6 @@
 ---
 title: Server collegati (motore di database) | Microsoft Docs
-ms.date: 10/14/2019
+ms.date: 06/16/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -19,21 +19,21 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f63e94b8a9ca93d6a1403e17d4a8fa7205938066
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 070dbf1c8f79a0f89364e9d0705051d9ee076627
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165337"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734947"
 ---
 # <a name="linked-servers-database-engine"></a>Server collegati (Motore di database)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  I server collegati consentono a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e all'[istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) di leggere i dati dalle origini dati remote e di eseguire comandi sui server di database remoti, ad esempio le origini dati OLE DB, al di fuori dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In genere i server collegati sono configurati per consentire a [!INCLUDE[ssDE](../../includes/ssde-md.md)] di eseguire l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che include tabelle in un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o un altro prodotto del database quale Oracle. Molti tipi di origini dati OLE DB possono essere configurati come server collegati, inclusi [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access, Excel e Azure CosmosDB.
+  I server collegati consentono a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] di leggere i dati dalle origini dati remote e di eseguire comandi sui server di database remoti, ad esempio le origini dati OLE DB, al di fuori dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In genere i server collegati sono configurati per consentire a [!INCLUDE[ssDE](../../includes/ssde-md.md)] di eseguire l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che include tabelle in un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o un altro prodotto del database quale Oracle. Molti tipi di origini dati OLE DB possono essere configurati come server collegati, inclusi [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access, Excel e Azure CosmosDB.
 
 > [!NOTE]
-> I server collegati sono disponibili in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e nell'istanza gestita di database SQL di Azure. Non sono abilitate nei database SQL di Azure singleton e in pool elastici. Esistono alcuni [vincoli nell'istanza gestita che è possibile verificare qui](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
+> I server collegati sono disponibili in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]. Non sono abilitati in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] singleton e nei pool elastici. Esistono alcuni [vincoli nell'istanza gestita che è possibile verificare qui](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
 
 ## <a name="when-to-use-linked-servers"></a>Quando si usano i server collegati?
 
@@ -56,10 +56,10 @@ ms.locfileid: "74165337"
   
 Un *provider OLE DB* è una DLL in grado di gestire un'origine dei dati specifica e interagire con essa. Un' *origine dei dati OLE DB* identifica lo specifico database a cui è possibile accedere con OLE DB. Anche se le origini dei dati su cui si eseguono query tramite definizioni di server collegati sono in genere database, esistono provider OLE DB per un'ampia gamma di file e formati di file, quali file di testo, dati di fogli di calcolo e risultati di ricerche di contenuto full-text.  
   
-Il provider OLE DB di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (PROGID: SQLNCLI11) è il provider OLE DB ufficiale per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], [Microsoft OLE DB Driver per SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) (PROGID: MSOLEDBSQL) è il provider OLE DB predefinito. Nelle versioni precedenti il [provider OLE DB di SQL Server Native Client (SQLNCLI)](../../relational-databases/native-client/sql-server-native-client.md) (PROGID: SQLNCLI11) è il provider OLE DB predefinito.
   
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le query distribuite sono progettate per funzionare con qualsiasi provider OLE DB che implementi le interfacce OLE DB necessarie. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stato tuttavia testato solo con il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e con alcuni altri provider.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le query distribuite sono progettate per funzionare con qualsiasi provider OLE DB che implementi le interfacce OLE DB necessarie. Tuttavia, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stato testato rispetto al provider OLE DB predefinito.  
   
 ## <a name="linked-server-details"></a>Dettagli relativi ai server collegati  
  Nella figura seguente vengono illustrati i componenti di base di una configurazione con server collegati.  
@@ -75,7 +75,7 @@ I server collegati vengono in genere utilizzati per la gestione delle query dist
 > Quando viene usato un provider OLE DB, l'account con cui viene eseguito il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve avere autorizzazioni di lettura ed esecuzione per la directory, e tutte le sottodirectory, in cui è installato il provider. Sono inclusi il provider rilasciato da Microsoft ed eventuali provider di terze parti.
 
 > [!NOTE]
-> I server collegati supportano l'autenticazione pass-through di Active Directory quando si usa la delega completa. A partire da SQL Server 2017 CU17 è supportata anche l'autenticazione pass-through con la delega vincolata. Tuttavia, la [delega vincolata basata sulle risorse](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) non è supportata.
+> I server collegati supportano l'autenticazione pass-through di Active Directory quando si usa la delega completa. A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17 è supportata anche l'autenticazione pass-through con la delega vincolata. Tuttavia, la [delega vincolata basata sulle risorse](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) non è supportata.
 
 ## <a name="managing-providers"></a>Gestione dei provider  
 È disponibile un set di opzioni che consente di controllare la modalità con cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carica e utilizza i provider OLE DB specificati nel Registro di sistema.  
@@ -99,17 +99,12 @@ Per definire i server collegati è inoltre possibile utilizzare [!INCLUDE[ssManS
 > È possibile definire un server collegato in modo che punti all'indietro (loopback) al server in cui è stato definito. I server di loopback risultano particolarmente utili durante il test di un'applicazione in cui vengono utilizzate query distribuite in una rete con un solo server. I server collegati di loopback sono destinati ai test e non sono supportati per molte operazioni, ad esempio le transazioni distribuite.  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Creare server collegati &#40;Motore di database di SQL Server&#41;](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)  
-  
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
-  
- [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
-  
- [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)  
+ [Creare server collegati &#40;Motore di database di SQL Server&#41;](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)    
+ [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)    
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)    
+ [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)    
   
 ## <a name="related-content"></a>Contenuto correlato  
- [sys.servers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)  
-  
+ [sys.servers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)    
  [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)  
-  
-  
+

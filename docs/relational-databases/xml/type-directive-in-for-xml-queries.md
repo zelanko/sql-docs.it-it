@@ -1,5 +1,6 @@
 ---
 title: Direttiva TYPE in query FOR XML | Microsoft Docs
+description: Informazioni su come usare la direttiva TYPE con la clausola FOR XML per richiedere che il risultato di una query venga restituito come dati XML.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa7bd23de60f82aa83620e0d81a1887c1c997634
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 36c5f8a3178d82f899b7128434af4467d4f6f846
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665272"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729839"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Direttiva TYPE in query FOR XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Il supporto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) consente di richiedere facoltativamente che il risultato di una query FOR XML venga restituito come tipo di dati **xml** specificando la direttiva TYPE. In questo modo è possibile elaborare il risultato di una query FOR XML sul server. Ad esempio, è possibile specificare un'espressione XQuery per la query FOR XML, assegnare il risultato a una variabile di tipo **xml** oppure scrivere [query FOR XML annidate](../../relational-databases/xml/use-nested-for-xml-queries.md).  
   
 > [!NOTE]  

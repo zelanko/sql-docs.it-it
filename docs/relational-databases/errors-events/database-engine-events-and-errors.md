@@ -1,5 +1,6 @@
 ---
 title: Eventi ed errori del motore di database
+description: Vedere questo elenco di codici di errore MSSQL per trovare le spiegazioni dei messaggi di errore per gli eventi del motore di database di SQL Server.
 ms.custom: ''
 ms.date: 01/28/2020
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2f8ad61d068689bb0bc5c47e4e0921eddd9aad7c
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: f87cf70ebcb3a491d31fc7523ac6a4c0a7889a2f
+ms.sourcegitcommit: 49dab56fc71dc394f4dde9962ec44d99cc15027c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728261"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84158620"
 ---
 # <a name="database-engine-errors"></a>Errori del motore di database
 
@@ -510,7 +511,7 @@ ORDER BY message_id
 |    [825](mssqlserver-825-database-engine-error.md)    |    10    |    Sì    |    Operazione di lettura del file '%ls', offset %#016I64x, riuscita dopo %d tentativo/i con errore: %ls. Per informazioni più dettagliate, vedere i messaggi aggiuntivi nel log degli errori di SQL Server e nel registro eventi di sistema. Questa condizione di errore può costituire un rischio per l'integrità del database e deve essere risolta. Eseguire un controllo di consistenza completo del database (DBCC CHECKDB). L'errore può essere causato da molti fattori. Per ulteriori informazioni, vedere la documentazione online di SQL Server.    |
 |    826    |    10    |    Sì    |    pageid non corretto (previsto: %d:%d, effettivo: %d:%d)    |
 |    829    |    21    |    Sì    |    L'ID di database %d, pagina %S_PGID è contrassegnato come RestorePending. Il disco potrebbe essere danneggiato. Per risolvere il problema, eseguire un ripristino.    |
-|    830    |    10    |    No    |    pagina non aggiornata (una lettura di pagina ha restituito un numero di sequenza del file di log (LSN) (%u:%u:%u) più vecchio dell'ultimo che è stato scritto (%u:%u:%u))     |
+|    830    |    10    |    No    |    pagina non aggiornata (una lettura di pagina ha restituito un numero di sequenza del file di log (LSN) (%u:%u:%u) più vecchio dell'ultimo che è stato scritto (%u:%u:%u))    |
 |    831    |    20    |    No    |    Impossibile deallocare una pagina contenente tutte le sezioni dell'area dati.    |
 |    832    |    24    |    Sì    |    Una pagina che dovrebbe essere costante è stata modificata (checksum previsto: %08x, checksum effettivo: %08x, database %d, file '%ls', pagina %S_PGID). Questa situazione indica in genere un errore di memoria o altri problemi a livello di hardware o sistema operativo.    |
 |    [833](mssqlserver-833-database-engine-error.md)    |    10    |    No    |    Rilevate %d occorrenze di richieste di I/O che impiegano più di %d secondi per essere completate nel file '%ls' nel database '%ls' (%d). L'handle di file del sistema operativo è 0x%p. Offset dell'ultimo I/O lungo: %#016I64x.    |
@@ -1108,7 +1109,7 @@ ORDER BY message_id
 |    2237    |    16    |    No    |    %sLa derivazione da anyType per estensione non è supportata in questa versione.    |
 |    2238    |    16    |    No    |    %sNumero eccessivo di argomenti nella chiamata alla funzione '%ls'.    |
 |    2240    |    16    |    No    |    %sLa destinazione dell'istruzione 'insert into' deve essere un nodo di elemento o documento. Trovato '%ls'    |
-|    2241    |    16    |    No    |    %sPrevista variabile: '$name'     |
+|    2241    |    16    |    No    |    %sPrevista variabile: '$name'    |
 |    2242    |    16    |    No    |    %sPrevista specifica del tipo.    |
 |    2243    |    16    |    No    |    %sEspressione di percorso relativo utilizzata senza contesto.    |
 |    2247    |    16    |    No    |    %sIl valore è di tipo "%ls", che non è un sottotipo del tipo previsto "%ls".    |
@@ -1136,7 +1137,7 @@ ORDER BY message_id
 |    2278    |    16    |    No    |    %sIl nome di un tag non può iniziare con il carattere '%c'.    |
 |    2279    |    16    |    No    |    %sUn nome o un token non può iniziare con il carattere '%c'.    |
 |    2280    |    16    |    No    |    %s<! non è seguito da un costrutto valido.    |
-|    2281    |    16    |    No    |    %sImpossibile creare DTD in XQuery     |
+|    2281    |    16    |    No    |    %sImpossibile creare DTD in XQuery    |
 |    2282    |    16    |    No    |    %sRiferimento a entità non valido.    |
 |    2283    |    16    |    No    |    %sUn riferimento a entità non può contenere il carattere '%c'.    |
 |    2284    |    16    |    No    |    %sIl prefisso di spazio dei nomi '%ls' non è stato definito.    |
@@ -1218,7 +1219,7 @@ ORDER BY message_id
 |    2376    |    16    |    No    |    %sPrevisto operando di tipo numerico specifico.    |
 |    2377    |    16    |    No    |    %sIl risultato dell'espressione '%ls' è costituito da dati statici vuoti.    |
 |    2378    |    16    |    No    |    %sPrevisto documento di XML Schema.    |
-|    2379    |    16    |    No    |    %sIl nome specificato non è un nome XML valido: '%ls'     |
+|    2379    |    16    |    No    |    %sIl nome specificato non è un nome XML valido: '%ls'    |
 |    2380    |    16    |    No    |    %sContenuto misto non consentito nella posizione '%ls'.    |
 |    2382    |    16    |    No    |    %sCombinazione di valori di minOccurs e maxOccurs non valida. Il valore di minOccurs deve essere minore o uguale a quello di maxOccurs. Posizione: '%ls'.    |
 |    2383    |    16    |    No    |    %sValore non valido '%ls' per l'attributo %ls. Il valore deve essere compreso tra 0 e %ld.    |
@@ -1229,14 +1230,14 @@ ORDER BY message_id
 |    2388    |    16    |    No    |    %sOccorrenza di elemento non valida. L'elemento '%ls' deve comparire per primo nel contesto di '%ls'.    |
 |    2389    |    16    |    No    |    %s'%ls' richiede un singleton o una sequenza vuota. Trovato operando di tipo '%ls'.    |
 |    2390    |    16    |    No    |    %sI nodi %s di livello principale non sono supportati.    |
-|    2391    |    16    |    No    |    %sLa ridefinizione degli schemi XSD non è supportata     |
+|    2391    |    16    |    No    |    %sLa ridefinizione degli schemi XSD non è supportata    |
 |    2392    |    16    |    No    |    %s'%ls::' non è un asse valido.    |
 |    2393    |    16    |    No    |    %sDeve essere presente un attributo itemType o un elemento figlio simpleType. Posizione: '%ls'.    |
 |    2394    |    16    |    No    |    %sImpossibile trovare la funzione '%ls()'.    |
 |    2395    |    16    |    No    |    %sImpossibile trovare la funzione '%ls:%ls()'.    |
 |    2396    |    16    |    No    |    %sL'attributo non può trovarsi all'esterno di un elemento.    |
 |    2397    |    16    |    No    |    %sGli identificatori non possono contenere più di %u caratteri.    |
-|    2398    |    16    |    No    |    %sTrovato valore di ID duplicato: '%ls'     |
+|    2398    |    16    |    No    |    %sTrovato valore di ID duplicato: '%ls'    |
 |    2399    |    16    |    No    |    %sUn attributo non può avere un valore di tipo '%ls'. Previsto tipo semplice.    |
 |    [2501](mssqlserver-2501-database-engine-error.md)    |    16    |    No    |    Impossibile trovare un oggetto o una tabella con il nome "%.*ls". Controllare il catalogo di sistema.    |
 |    2502    |    16    |    No    |    Dump dell'elenco di oggetti di memoria non riuscito a causa di una temporanea inconsistenza nella struttura degli oggetti di memoria. Riprovare.    |
@@ -1513,7 +1514,7 @@ ORDER BY message_id
 |    3144    |    16    |    No    |    Il file %d nel dispositivo '%.*ls' non include un backup del file '%ls'. Impossibile ripristinare il file da questo set di backup.    |
 |    3145    |    16    |    No    |    L'opzione STOPAT non è supportata per i database che utilizzano il modello di recupero con registrazione minima.    |
 |    3147    |    16    |    No    |    Le operazioni di backup e ripristino non sono consentite per il database tempdb.    |
-|    3148    |    16    |    No    |    Questa istruzione RESTORE non è valida nel contesto corrente. Quando il database è online l'opzione 'Recover Data Only' è definita per i filegroup secondari,  mentre quando il database è offline i filegroup non possono essere specificati.    |
+|    3148    |    16    |    No    |    Questa istruzione RESTORE non è valida nel contesto corrente. Quando il database è online l'opzione 'Recover Data Only' è definita per i filegroup secondari, mentre quando il database è offline i filegroup non possono essere specificati.    |
 |    3149    |    16    |    No    |    Lo stato del file o filegroup "%ls" non consente l'utilizzo dell'opzione "Recover Data Only". È possibile elaborare solo file secondari in stato OFFLINE o RECOVERY_PENDING.    |
 |    3150    |    10    |    No    |    Il ripristino del database master è stato completato correttamente. SQL Server verrà chiuso.    |
 |    [3151](mssqlserver-3151-database-engine-error.md)    |    21    |    Sì    |    Impossibile ripristinare il database master. SQL Server verrà chiuso. Controllare i log degli errori e ricompilare il database master. Per ulteriori informazioni sulla ricompilazione del database master, vedere la documentazione online di SQL Server.    |
@@ -1619,7 +1620,7 @@ ORDER BY message_id
 |    3272    |    16    |    No    |    Le dimensioni del settore hardware del dispositivo '%ls' sono di %d, ma il parametro delle dimensioni del blocco specifica il valore di sostituzione %d, che è incompatibile. Eseguire nuovamente l'istruzione specificando dimensioni di blocco compatibili.    |
 |    3276    |    16    |    No    |    È possibile utilizzare WITH SNAPSHOT solo se il set di backup è stato creato specificando WITH SNAPSHOT.    |
 |    3277    |    16    |    No    |    WITH SNAPSHOT deve essere utilizzato con un solo dispositivo virtuale.    |
-|    3278    |    16    |    No    |    Impossibile crittografare la stringa %ls     |
+|    3278    |    16    |    No    |    Impossibile crittografare la stringa %ls    |
 |    3279    |    16    |    No    |    Accesso negato a causa di un errore a livello di password.    |
 |    3280    |    16    |    No    |    Il backup su dispositivi RAW non è supportato. '%ls' è un dispositivo RAW.    |
 |    3281    |    10    |    No    |    È stato rilasciato e inizializzato il ripristino di '%ls'.    |
@@ -2201,7 +2202,7 @@ ORDER BY message_id
 |   4879    |   16  |   No  | 
 |    4871    |    16    |    No    |    Errore di caricamento bulk durante la registrazione degli errori.    |
 |    4872    |    16    |    No    |    Riga %d nel file di formato "%ls": ID di elemento "%ls" duplicato.    |
-|    4873    |    16    |    No    |    Riga %d nel file di formato "%ls":  riferimento all'ID di elemento inesistente "%ls".     |
+|    4873    |    16    |    No    |    Riga %d nel file di formato "%ls":  riferimento all'ID di elemento inesistente "%ls".    |
 |    4874    |    16    |    No    |    Riga %d nel file di formato "%ls":  riferimento all'ID di elemento duplicato "%ls".    |
 |    4875    |    16    |    No    |    Attributo di colonna non valido dal client bcp per il colid %d.    |
 |    4876    |    16    |    No    |    Timeout dell'operazione di inserimento bulk della destinazione SQL Server. Aumentare il valore della proprietà Timeout nella destinazione SQL Server nel flusso di dati.    |
@@ -2414,7 +2415,7 @@ ORDER BY message_id
 |    5095    |    16    |    No    |    Impossibile impostare la modalità sola lettura per un database o filegroup mentre sono presenti file coinvolti in un'operazione RESTORE PAGE. Prima di provare a passare alla modalità sola lettura completare la sequenza di ripristino che include il file "%ls".    |
 |    5096    |    16    |    No    |    Impossibile impostare su SIMPLE il modello di recupero mentre sono presenti file coinvolti in un'operazione RESTORE PAGE. Prima di provare a passare al modello di ripristino SIMPLE completare la sequenza di ripristino che include il file "%ls".    |
 |    5097    |    16    |    No    |    Impossibile impostare il contenitore sullo stato offline perché sono presenti modifiche che richiedono un backup del log. Eseguire un backup del log, quindi ripetere l'istruzione ALTER DATABASE.    |
-|    5098    |    16    |    No    |    Impossibile eliminare il contenitore perché sono presenti modifiche che richiedono un backup del log.  Eseguire un backup del log, quindi ripetere l'operazione ALTER DATABASE.    |
+|    5098    |    16    |    No    |    Impossibile eliminare il contenitore perché sono presenti modifiche che richiedono un backup del log. Eseguire un backup del log, quindi ripetere l'operazione ALTER DATABASE.    |
 |    5099    |    16    |    No    |    Istruzione ALTER DATABASE non riuscita perché è impossibile impostare su ON le opzioni READ_COMMITTED_SNAPSHOT e ALLOW_SNAPSHOT_ISOLATION quando un database contiene filegroup FILESTREAM. Per impostare READ_COMMITTED_SNAPSHOT o ALLOW_SNAPSHOT_ISOLATION su ON, è necessario rimuovere i filegroup FILESTREAM dal database.    |
 |    5102    |    22    |    No    |    Tentativo di aprire un filegroup per l'ID non valido %d nel database "%.*ls".    |
 |    5103    |    16    |    No    |    MAXSIZE non può essere minore del valore di SIZE per il file '%ls'.    |
@@ -2833,7 +2834,7 @@ ORDER BY message_id
 |    6312    |    16    |    No    |    Impossibile trovare componenti di schema con spazio dei nomi di destinazione '%.*ls' nella raccolta '%.* ls'.    |
 |    6314    |    16    |    No    |    La raccolta specificata non esiste nei metadati: '%.*ls'    |
 |    6315    |    16    |    No    |    XQuery: impossibile eseguire l'aggiornamento con il valore '%.*ls' perché la forma canonica del tipo '{%.* ls}%.*ls' viola il pattern richiesto. Non utilizzare facet basati su pattern su tipi non string.    |
-|    6316    |    16    |    No    |    Impossibile eliminare il componente specificato '%s' perché è utilizzato dal componente: '%s'     |
+|    6316    |    16    |    No    |    Impossibile eliminare il componente specificato '%s' perché è utilizzato dal componente: '%s'    |
 |    6317    |    16    |    No    |    XQuery: impossibile eseguire l'aggiornamento con il valore '%.*ls' perché non è stato convalidato rispetto al tipo '{%.* ls}%.*ls'    |
 |    6318    |    16    |    No    |    XQuery: conversione di stringa non riuscita durante la convalida dell'aggiornamento    |
 |    6320    |    16    |    No    |    XQuery: solo i nodi di testo o gli elementi nillable possono essere aggiornati con una sequenza vuota    |
@@ -2969,7 +2970,7 @@ ORDER BY message_id
 |    6584    |    16    |    No    |    La proprietà o il campo '%ls' del tipo '%ls' nell'assembly '%ls' non è static.    |
 |    6585    |    16    |    No    |    Impossibile rappresentare il client durante le operazioni sui file di assembly.    |
 |    6586    |    16    |    No    |    Impossibile installare l'assembly '%.*ls' perché i criteri esistenti ne impedirebbero l'utilizzo.    |
-|    6587    |    16    |    No    |    Riferimento all'assembly '%ls' reindirizzato a '%ls' da criteri esterni     |
+|    6587    |    16    |    No    |    Riferimento all'assembly '%ls' reindirizzato a '%ls' da criteri esterni    |
 |    6588    |    16    |    No    |    Operazioni sui file di assembly non consentite per l'utente di Windows NT attivato da SETUSER.    |
 |    6589    |    16    |    No    |    Istruzione DROP ASSEMBLY non riuscita perché l'assembly '%ls' fa riferimento agli assembly specificati.    |
 |    6590    |    16    |    No    |    Istruzione DROP ASSEMBLY non riuscita perché l'oggetto '%ls' fa riferimento a '%ls'.    |
@@ -3132,7 +3133,7 @@ ORDER BY message_id
 |    6938    |    16    |    No    |    Convalida XML: la forma canonica del valore '%ls' non è valida in base al tipo specificato. Questa situazione potrebbe dipendere dall'utilizzo di facet basati su pattern su tipi non string o restrizioni a livello di intervallo o enumerazioni per tipi a virgola mobile.    |
 |    6939    |    16    |    No    |    Convalida XML: l'elemento '%ls' è a contenuto misto con un valore fisso e pertanto non può avere contenuto di elemento. Percorso: %ls    |
 |    6940    |    16    |    No    |    Trovato componente non valido con nome '%s' nell'ambito globale. Nel contesto globale è possibile definire solo elementi, attributi, tipi e gruppi.    |
-|    6941    |    16    |    No    |    Definizione di tipo non valida per il tipo '%s'. I tipi con contenuto complesso possono essere derivati solo da tipi di base con contenuto     |
+|    6941    |    16    |    No    |    Definizione di tipo non valida per il tipo '%s'. I tipi con contenuto complesso possono essere derivati solo da tipi di base con contenuto    |
 |    6942    |    16    |    No    |    Definizione di tipo non valida per il tipo '%s'. I tipi con contenuto semplice possono essere derivati solo da tipi di base con contenuto semplice.    |
 |    6943    |    16    |    No    |    Definizione di tipo non valida per il tipo '%s'. La derivazione non è valida perché per il tipo di base è specificato l'attributo 'final'.    |
 |    6944    |    16    |    No    |    Definizione di tipo non valida per il tipo ''%s'. Il facet '%s' non limita lo spazio dei valori.    |
@@ -3612,14 +3613,14 @@ ORDER BY message_id
 |    7966    |    10    |    No    |    Avviso: è stata specificata l'opzione NO_INDEX di %ls. I controlli degli indici non di sistema verranno ignorati.    |
 |    7968    |    10    |    No    |    Informazioni di transazione per il database '%.*ls'.    |
 |    7969    |    16    |    No    |    Nessuna transazione attiva aperta.    |
-|    7970    |    10    |    No    |    %hsTransazione attiva meno recente:     |
+|    7970    |    10    |    No    |    %hsTransazione attiva meno recente:    |
 |    7971    |    10    |    No    |    SPID (ID processo server): %d%s    |
 |    7972    |    10    |    No    |    UID (ID utente) : %d    |
 |    7974    |    10    |    No    |    Nome: %.*ls    |
 |    7975    |    10    |    No    |    LSN: (%d:%d:%d)    |
 |    7977    |    10    |    No    |    Ora inizio: %.*ls    |
 |    7978    |    10    |    No    |    SID: %.*ls    |
-|    7979    |    10    |    No    |    %hsInformazioni transazione replicata:     |
+|    7979    |    10    |    No    |    %hsInformazioni transazione replicata:    |
 |    7980    |    10    |    No    |    LSN distribuito meno recente: (%d:%d:%d)    |
 |    7982    |    10    |    No    |    LSN non distribuito meno recente : (%d:%d:%d)    |
 |    7983    |    14    |    No    |    L'utente '%.*ls' non è autorizzato a eseguire DBCC %ls per il database '%.* ls'.    |
@@ -3953,15 +3954,15 @@ ORDER BY message_id
 |    8544    |    10    |    Sì    |    Stato sconosciuto del commit di una transazione di commit in due fasi. Arresto del server in corso. Riavviare il server per completare il recupero.    |
 |    8545    |    10    |    Sì    |    Stato sconosciuto '%d' dalla chiamata a Reenlist in rm_resolve.    |
 |    8546    |    10    |    Sì    |    Impossibile caricare la libreria di Microsoft Distributed Transaction Coordinator (MS DTC). L'errore indica che MS DTC non è installato. Per continuare, installare MS DTC.    |
-|    8547    |    10    |    Sì    |    Impossibile creare lo strumento di gestione delle risorse: %ls     |
+|    8547    |    10    |    Sì    |    Impossibile creare lo strumento di gestione delle risorse: %ls    |
 |    8548    |    10    |    Sì    |    DTC non disponibile. Impossibile inizializzarlo.    |
-|    8549    |    10    |    Sì    |    Chiamata a GetWhereaboutsSize non riuscita: %ls     |
+|    8549    |    10    |    Sì    |    Chiamata a GetWhereaboutsSize non riuscita: %ls    |
 |    8550    |    10    |    Sì    |    Impossibile inizializzare MS DTC perché l'indirizzo del gestore delle transazioni non è valido. L'elemento del protocollo utilizzato per il trasporto delle informazioni sugli indirizzi potrebbe essere troppo grande. Per ulteriori informazioni sulla causa è consigliabile utilizzare uno strumento di analisi dei protocolli di rete. Contattare il proprio servizio di supporto o il Servizio Supporto Tecnico Clienti Microsoft.    |
 |    8551    |    16    |    No    |    Istruzione CoCreateGuid non riuscita: %ls.    |
 |    8552    |    20    |    No    |    RegOpenKeyEx di \"%ls\" non riuscito: %ls.    |
 |    8553    |    20    |    No    |    RegQueryValueEx di \"%hs\" non riuscito: %ls.    |
 |    8554    |    20    |    No    |    IIDFromString non riuscita per %hs, (%ls).    |
-|    8555    |    10    |    Sì    |    RegCloseKey non riuscito: %ls     |
+|    8555    |    10    |    Sì    |    RegCloseKey non riuscito: %ls    |
 |    8556    |    10    |    Sì    |    Impossibile inizializzare Microsoft Distributed Transaction Coordinator (MS DTC). Memoria insufficiente. Potrebbe essere necessario modificare alcune opzioni di configurazione del server per rendere disponibile ulteriore memoria.    |
 |    8557    |    10    |    No    |    Impossibile contattare il servizio Microsoft Distributed Transaction Coordinator (MS DTC). Per poter utilizzare la funzionalità per le transazioni distribuite, è necessario avviare il servizio.    |
 |    8558    |    20    |    Sì    |    RegDeleteValue di \"%hs\" non riuscito: %ls.    |
@@ -4048,7 +4049,7 @@ ORDER BY message_id
 |    8903    |    16    |    No    |    L'extent %S_PGID nel database con ID %d è allocato sia nella mappa GAM %S_PGIS che nella mappa SGAM %S_PGID.    |
 |    8904    |    16    |    No    |    L'extent %S_PGID nel database con ID %d è allocato da più di un oggetto di allocazione.    |
 |    8905    |    16    |    No    |    L'extent %S_PGID nel database con ID %d è contrassegnato come allocato nella mappa GAM, ma non è stato allocato da nessuna mappa SGAM o IAM.    |
-|    8906    |    16    |    No    |    La pagina %S_PGID nel database con ID %d è allocata nella mappa SGAM %S_PGID e nella pagina PFS %S_PGID, ma non è stata allocata in alcuna mappa IAM. Flag PFS '%.*ls'.  Flag PFS '%hs'.    |
+|    8906    |    16    |    No    |    La pagina %S_PGID nel database con ID %d è allocata nella mappa SGAM %S_PGID e nella pagina PFS %S_PGID, ma non è stata allocata in alcuna mappa IAM. Flag PFS '%.*ls'. Flag PFS '%hs'.    |
 |    8907    |    16    |    No    |    L'indice spaziale, l'indice XML o la vista indicizzata '%.*ls' (ID di oggetto %d) contiene righe non prodotte dalla definizione della vista. L'errore non indica necessariamente un problema di integrità dei dati contenuti nel database. Per ulteriori informazioni sulla risoluzione dei problemi relativi agli errori DBCC nelle viste indicizzate, vedere la documentazione online di SQL Server.    |
 |    8908    |    16    |    No    |    L'indice spaziale, l'indice XML o la vista indicizzata '%.*ls' (ID di oggetto %d) non contiene tutte le righe prodotte dalla definizione della vista. L'errore non indica necessariamente un problema di integrità dei dati contenuti nel database. Per ulteriori informazioni sulla risoluzione dei problemi relativi agli errori DBCC negli indici spaziali, negli indici XML e nelle viste indicizzate, vedere la documentazione online di SQL Server.    |
 |    8909    |    16    |    No    |    Errore di tabella: ID di oggetto %d, ID di indice %d, ID di partizione %I64d, ID di unità di allocazione %I64d (tipo %.*ls), ID di pagina %S_PGID contiene un ID di pagina non corretto nell'intestazione di pagina. PageId nell'intestazione di pagina = %S_PGID.    |
@@ -4125,7 +4126,7 @@ ORDER BY message_id
 |    8980    |    16    |    No    |    Errore di tabella: ID di oggetto %d, ID di indice %d, ID di partizione %I64d, ID di unità di allocazione %I64d (tipo %.*ls). La pagina nodo dell'indice %S_PGID, slot %d fa riferimento alla pagina figlio %S_PGID e all'elemento figlio precedente %S_PGID, che non sono stati individuati.    |
 |    8981    |    16    |    No    |    Errore di tabella: ID di oggetto %d, ID di indice %d, ID di partizione %I64d, ID di unità di allocazione %I64d (tipo %.*ls). Il puntatore di pagina successiva di %S_PGID fa riferimento alla pagina %S_PGID, ma né %S_PGID, né il relativo elemento padre sono stati rilevati. Possibile problema nel collegamento a catena.    |
 |    8982    |    16    |    No    |    Errore di tabella: collegamento tra oggetti. La pagina %S_PGID->next nell'oggetto con ID %d, ID di indice %d, ID di partizione %I64d, ID di unità di allocazione %I64d (tipo %.*ls) fa riferimento alla pagina %S_PGID nell'oggetto con ID %d, ID di indice %d, ID di partizione %I64d, ID di unità di allocazione %I64d (tipo %%.* ls), ma non è inclusa nello stesso indice.    |
-|    8983    |    10    |    No    |    File %d. Extent %I64d, pagine utilizzate %I64d, pagine riservate %I64d, extent misti %I64d, pagine miste %I64d.     |
+|    8983    |    10    |    No    |    File %d. Extent %I64d, pagine utilizzate %I64d, pagine riservate %I64d, extent misti %I64d, pagine miste %I64d.    |
 |    8984    |    16    |    No    |    Errore di tabella: ID di oggetto %d, ID di indice %d, ID di partizione %I64d. Una riga prevista nella partizione numero %d è stata trovata nella partizione numero %d. Possibile chiave aggiuntiva o non valida per:    |
 |    8985    |    16    |    No    |    Impossibile individuare il file '%.*ls' per il database '%.* ls' in sys.database_files. Il file non esiste o è stato eliminato.    |
 |    8986    |    16    |    No    |    Troppi errori (%d) per l'ID di oggetto %d. Per visualizzare tutti i messaggi di errore, eseguire nuovamente l'istruzione utilizzando "WITH ALL_ERRORMSGS".    |
@@ -4134,12 +4135,12 @@ ORDER BY message_id
 |    8989    |    10    |    No    |    %.*ls ha trovato %d errori di allocazione e %d errori di consistenza nel database '%ls'.    |
 |    8990    |    10    |    No    |    %.*ls ha trovato %d errori di allocazione e %d errori di consistenza nella tabella '%ls' (ID oggetto %d).    |
 |    8991    |    16    |    No    |    0x%p - 0x%p non è un intervallo di indirizzi valido.    |
-|    [8992](mssqlserver-8992-database-engine-error.md)    |    16    |    No    |    Messaggio di controllo del catalogo %d, stato %d: %.*ls     |
+|    [8992](mssqlserver-8992-database-engine-error.md)    |    16    |    No    |    Messaggio di controllo del catalogo %d, stato %d: %.*ls    |
 |    [8993](mssqlserver-8993-database-engine-error.md)    |    16    |    No    |    L'ID di oggetto %d, nella pagina della riga da inoltrare %S_PGID, slot %d punta alla pagina %S_PGID, slot %d. Impossibile trovare la riga inoltrata. Possibile errore di allocazione.    |
 |    [8994](mssqlserver-8994-database-engine-error.md)    |    16    |    No    |    La pagina della riga da inoltrare %S_PGID, slot %d deve puntare all'ID di oggetto %d, nella pagina della riga inoltrata %S_PGID, slot %d. Impossibile trovare la riga da inoltrare. Possibile errore di allocazione.    |
 |    8995    |    16    |    No    |    La tabella di sistema '%.*ls' (ID di oggetto %d, ID di indice %d) si trova nel filegroup %d. Tutte le tabelle di sistema devono trovarsi nel filegroup %d.    |
 |    [8996](mssqlserver-8996-database-engine-error.md)    |    16    |    No    |    La pagina IAM %S_PGID per l'ID di oggetto %d, ID di indice %d, ID di partizione %I64d, ID di unità di allocazione %I64d (tipo %.*ls) controlla alcune pagine nel filegroup %d, che dovrebbero trovarsi nel filegroup %d.    |
-|    8997    |    16    |    No    |    Messaggio di Service Broker %d, stato %d: %.*ls     |
+|    8997    |    16    |    No    |    Messaggio di Service Broker %d, stato %d: %.*ls    |
 |    8998    |    16    |    No    |    Errori di pagina nelle pagine GAM, SGAM o PFS impediscono la verifica dell'integrità delle allocazioni nel database con ID %d, pagine da %S_PGID a %S_PGID. Per informazioni sulla causa, vedere gli altri errori.    |
 |    8999    |    10    |    No    |    Gli errori di allocazione del database tempdb impediscono l'ulteriore elaborazione di %ls.    |
 |    &nbsp;    |    &nbsp;    |&nbsp;        |    &nbsp;    |
@@ -4753,7 +4754,7 @@ ORDER BY message_id
 |    10321    |    16    |    No    |    Nome di metodo '%.*ls' non valido per '%.* ls'.    |
 |    10322    |    16    |    No    |    Nome di metodo '%.*ls' non valido per la chiamata al metodo UserDefinedType.    |
 |    10323    |    16    |    Sì    |    Impossibile trovare il tipo %.*ls nel database %.* ls    |
-|    10324    |    16    |    No    |    Codice utente non valido individuato dall'assistente al debug gestito di .NET Framework %.*ls     |
+|    10324    |    16    |    No    |    Codice utente non valido individuato dall'assistente al debug gestito di .NET Framework %.*ls    |
 |    10325    |    16    |    Sì    |    L'opzione WITH ENCRYPTION di CREATE TRIGGER è applicabile solo a trigger T-SQL e non a trigger CLR.    |
 |    10326    |    16    |    Sì    |    Il server verrà chiuso a causa di un overflow dello stack nel codice non gestito dell'utente.    |
 |    10327    |    14    |    No    |    Due versioni dell'assembly '%.*ls' non possono coesistere nel database '%.* ls'. Mantenere una versione e rimuovere l'altra.    |
@@ -5071,7 +5072,7 @@ ORDER BY message_id
 |    12013    |    16    |    No    |    Il valore del parametro '%.*ls' di CREATE %S_MSG deve essere maggiore del valore del parametro '%.* ls'.    |
 |    12014    |    16    |    No    |    Parametro '%.*ls' di CREATE %S_MSG definito in modo incompleto. Se il parametro è costituito da più parti, è necessario definire tutte le parti.    |
 |    12015    |    16    |    No    |    L'opzione per gli indici %.*ls nell'istruzione CREATE %S_MSG deve precedere le opzioni per gli indici generali.    |
-|    12016    |    16    |    No    |     Per creare un indice %S_MSG è necessario che la chiave primaria nella tabella di base soddisfi le seguenti restrizioni. Il numero massimo di colonne chiave primaria è %d. La dimensione massima totale per riga delle colonne chiave primaria è %d byte. La chiave primaria nella tabella di base '%.*ls' ha %d colonne e contiene %d byte. Modificare la tabella di base in modo da soddisfare le restrizioni relative alla chiave primaria imposte dall'indice %S_MSG.    |
+|    12016    |    16    |    No    |    Per creare un indice %S_MSG è necessario che la chiave primaria nella tabella di base soddisfi le seguenti restrizioni. Il numero massimo di colonne chiave primaria è %d. La dimensione massima totale per riga delle colonne chiave primaria è %d byte. La chiave primaria nella tabella di base '%.*ls' ha %d colonne e contiene %d byte. Modificare la tabella di base in modo da soddisfare le restrizioni relative alla chiave primaria imposte dall'indice %S_MSG.    |
 |    12017    |    10    |    No    |    Indice spaziale disabilitato o offline    |
 |    12018    |    10    |    No    |    Oggetto spaziale non definita nell'ambito del predicato    |
 |    12019    |    10    |    No    |    Gli indici spaziali non supportano il parametro comparand specificato nel predicato    |
@@ -5248,7 +5249,7 @@ ORDER BY message_id
 |    13170    |    0    |    No    |    tabella o vista indicizzata    |
 |    13171    |    16    |    No    |    handle di conversazione    |
 |    13172    |    16    |    No    |    GET CONVERSATION GROUP    |
-|    13173    |    16    |    No    |    chiave master     |
+|    13173    |    16    |    No    |    chiave master    |
 |    13174    |    16    |    No    |    nel database corrente è già presente un altro assembly con lo stesso nome SQL    |
 |    13175    |    16    |    No    |    versione, lingua o chiave pubblica non corrispondente    |
 |    13176    |    0    |    No    |    component    |
@@ -5308,9 +5309,9 @@ ORDER BY message_id
 |    13232    |    10    |    No    |    INSERT    |
 |    13233    |    10    |    No    |    UPDATE    |
 |    13234    |    10    |    No    |    DELETE    |
-|    13235    |    10    |    No    |    WHEN MATCHED     |
-|    13236    |    10    |    No    |    WHEN NOT MATCHED     |
-|    13237    |    10    |    No    |    WHEN SOURCE NOT MATCHED     |
+|    13235    |    10    |    No    |    WHEN MATCHED    |
+|    13236    |    10    |    No    |    WHEN NOT MATCHED    |
+|    13237    |    10    |    No    |    WHEN SOURCE NOT MATCHED    |
 |    13238    |    10    |    No    |    TOP    |
 |    13239    |    10    |    No    |    GROUP BY    |
 |    13240    |    10    |    No    |    HAVING    |
@@ -5627,7 +5628,7 @@ ORDER BY message_id
 |    14275    |    16    |    No    |    Il server di origine deve essere un server locale o un server MSX.    |
 |    14276    |    16    |    No    |    %s' è una categoria %s permanente. Impossibile eliminarla.    |
 |    14277    |    16    |    No    |    Lo script di comandi non elimina tutti gli oggetti che crea. Rivedere lo script.    |
-|    14278    |    16    |    No    |    La pianificazione del processo non è valida. (Motivo: %s.)     |
+|    14278    |    16    |    No    |    La pianificazione del processo non è valida. (Motivo: %s.)    |
 |    14279    |    16    |    No    |    Specificare \@job_name, \@job_id o \@originating_server.    |
 |    14280    |    16    |    No    |    Specificare un nome di processo (e l'aspetto del processo) oppure uno o più parametri di filtro del processo.    |
 |    14281    |    10    |    No    |    Avviso: il parametro \@new_owner_login_name non è necessario quando si specifica un'azione 'DELETE'.    |
@@ -5666,7 +5667,7 @@ ORDER BY message_id
 |    14359    |    16    |    No    |    Il servizio Active Directory non è abilitato nella rete o non è supportato dal sistema operativo.    |
 |    14360    |    16    |    No    |    %s è già configurato come computer TSX.    |
 |    14362    |    16    |    No    |    Nel server MSX deve essere in esecuzione l'edizione Standard o Enterprise di SQL Server.    |
-|    14363    |    16    |    No    |    Il server MSX non è pronto per l'integrazione [nel server è necessario definire un operatore denominato 'MSXOperator'].     |
+|    14363    |    16    |    No    |    Il server MSX non è pronto per l'integrazione [nel server è necessario definire un operatore denominato 'MSXOperator'].    |
 |    14364    |    16    |    No    |    Il server TSX non è integrato    |
 |    14365    |    16    |    No    |    Specificare un valore schedule_uid valido.    |
 |    14366    |    16    |    No    |    Solo i membri del ruolo sysadmin possono modificare il proprietario di una pianificazione.    |
@@ -5822,8 +5823,8 @@ ORDER BY message_id
 |    14601    |    16    |    No    |    L'operatore "%s" non è abilitato e pertanto non può ricevere notifiche.    |
 |    14602    |    16    |    No    |    Per l'operatore "%s" non è stato specificato un indirizzo di posta elettronica.    |
 |    14603    |    16    |    No    |    Il componente Posta elettronica database non è configurato in modo corretto.    |
-|    14604    |    16    |    No    |    I due parametri %s (ID e nome) non possono essere NULL     |
-|    14605    |    16    |    No    |    I due parametri %s (ID e nome) non rimandano allo stesso oggetto      |
+|    14604    |    16    |    No    |    I due parametri %s (ID e nome) non possono essere NULL    |
+|    14605    |    16    |    No    |    I due parametri %s (ID e nome) non rimandano allo stesso oggetto    |
 |    14606    |    16    |    No    |    L'ID %s non è valido    |
 |    14607    |    16    |    No    |    Il nome %s non è valido    |
 |    14608    |    16    |    No    |    È necessario specificare il parametro %s o %s    |
@@ -7132,7 +7133,7 @@ ORDER BY message_id
 |    20536    |    10    |    No    |    Replica: errore dell'agente    |
 |    20537    |    10    |    No    |    Replica: nuovo tentativo dell'agente    |
 |    20538    |    10    |    No    |    Replica: eliminata sottoscrizione scaduta    |
-|    20539    |    10    |    No    |    Avviso replica: %s (soglia: %s)     |
+|    20539    |    10    |    No    |    Avviso replica: %s (soglia: %s)    |
 |    20540    |    10    |    No    |    Replica: operazione dell'agente riuscita    |
 |    20541    |    10    |    No    |    Rimuove le transazioni replicate dal database di distribuzione.    |
 |    20542    |    10    |    No    |    Individua e rimuove le sottoscrizioni scadute dai database pubblicati.    |
@@ -7790,9 +7791,9 @@ ORDER BY message_id
 |    21512    |    18    |    No    |    %ls: le dimensioni del parametro %ls sono inferiori al minimo previsto.    |
 |    21514    |    16    |    No    |    Impossibile completare l'operazione richiesta nel database di sottoscrizione perché è in corso il recapito di uno snapshot al database. Eseguire di nuovo l'operazione in un momento successivo. Per arrestare il recapito dello snapshot, arrestare l'agente di distribuzione o l'agente di merge associato alla sottoscrizione.    |
 |    21515    |    18    |    No    |    Impossibile generare uno script per le procedure di replica personalizzate in quanto la pubblicazione specificata '%s' è una pubblicazione snapshot.    |
-|    21516    |    10    |    No    |    Procedure personalizzate per la replica transazionale per la pubblicazione '%s' dal database '%s':     |
+|    21516    |    10    |    No    |    Procedure personalizzate per la replica transazionale per la pubblicazione '%s' dal database '%s':    |
 |    21517    |    10    |    No    |    Impossibile inserire nello script per l'articolo '%.s' le procedure personalizzate di replica, perché l'opzione per la generazione automatica dello schema delle procedure personalizzate non è abilitata.    |
-|    21518    |    10    |    No    |    Procedure personalizzate di replica per l'articolo '%s':     |
+|    21518    |    10    |    No    |    Procedure personalizzate di replica per l'articolo '%s':    |
 |    21519    |    10    |    No    |    Impossibile creare script delle procedure personalizzate per i comandi di aggiornamento dell'articolo basati su istruzioni dirette INSERT, UPDATE o DELETE.    |
 |    21520    |    10    |    No    |    Impossibile inserire nello script la procedura personalizzata in quanto '%s' non corrisponde a una sintassi nota per il comando di aggiornamento dell'articolo.    |
 |    21521    |    16    |    No    |    Alcuni valori di generazione superano il limite massimo di %d utilizzato in SQL Server 2000. Impostare publication_compatibility_level su 90 per la pubblicazione.    |
@@ -7933,7 +7934,7 @@ ORDER BY message_id
 |    21689    |    16    |    No    |    Il valore NULL per \@schema non è valido per le operazioni di aggiunta ed eliminazione di filtri di schema.    |
 |    21690    |    10    |    No    |    Se il Sottoscrittore è uguale al server di pubblicazione, il database di sottoscrizione non può essere uguale al database di pubblicazione.    |
 |    21691    |    10    |    No    |    sp_mergesubscription_cleanup deve essere eseguita nel database di sottoscrizione    |
-|    21692    |    16    |    No    |    Impossibile creare lo script per le stored procedure del Sottoscrittore per l'articolo '%s' della pubblicazione '%s'     |
+|    21692    |    16    |    No    |    Impossibile creare lo script per le stored procedure del Sottoscrittore per l'articolo '%s' della pubblicazione '%s'    |
 |    21694    |    16    |    No    |    %s non può essere Null o vuoto se %s è impostato su 0 (autenticazione di SQL Server). Specificare un account di accesso o impostare la modalità di sicurezza su 1 (autenticazione di Windows).    |
 |    21695    |    10    |    No    |    Il nome del processo dell'agente di replica '%s' non è stato rimosso perché ha un nome non standard. Rimuovere il processo manualmente quando non è più utilizzato.    |
 |    21696    |    16    |    No    |    La stored procedure è valida solo per i server di pubblicazione Oracle. Il server di pubblicazione '%s' è un server di pubblicazione %s.    |
@@ -7957,7 +7958,7 @@ ORDER BY message_id
 |    21719    |    10    |    No    |    Il Sottoscrittore '%s':'%s' non è stato contrassegnato per la reinizializzazione nel server di pubblicazione perché la sottoscrizione non è valida o è anonima. Verificare che per i parametri \@subscriber e \@subscriber_db di sp_reinitmergesubscription siano stati specificati valori validi.    |
 |    21720    |    16    |    No    |    Impossibile trovare un processo corrispondente all'ID o al nome specificato nel parametro \@dynamic_snapshot_jobid o \@dynamic_snapshot_jobname. Verificare i valori specificati per tali parametri.    |
 |    21721    |    10    |    No    |    UserScripts    |
-|    21722    |    16    |    No    |    Impossibile aggiungere un trigger esteso per la replica dell'evento '%.*ls'     |
+|    21722    |    16    |    No    |    Impossibile aggiungere un trigger esteso per la replica dell'evento '%.*ls'    |
 |    21723    |    16    |    No    |    Il valore specificato per il parametro \@pubid della procedura '%s' non è valido o è Null. Verificare che l'agente di merge venga eseguito correttamente. Se il problema persiste, reinizializzare la sottoscrizione.    |
 |    21724    |    10    |    No    |    Impossibile aggiungere la chiave esterna %s con l'opzione CASCADE perché la tabella %s è pubblicata. Aggiungere la clausola NOT FOR REPLICATION alla definizione della chiave esterna.    |
 |    21725    |    16    |    No    |    Impossibile modificare la vista. Una vista indicizzata replicata come tabella non può essere convertita in una vista non indicizzata. Eliminare la vista dalla pubblicazione prima di provare a modificarla.    |
@@ -8099,7 +8100,7 @@ ORDER BY message_id
 |    21864    |    16    |    No    |    Impossibile pubblicare l'articolo '%s' o aggiungere l'attributo COLUMN_SET impostato sulla tabella di base '%s' perché la replica non supporta i set di colonne.    |
 |    21865    |    16    |    No    |    La proprietà di pubblicazione '%s' deve essere 'true' o 'false'.    |
 |    21866    |    16    |    No    |    La proprietà di pubblicazione '%s' può essere impostata su '%s' solo se la proprietà di pubblicazione '%s' è impostata su '%s'.    |
-|    21867    |    16    |    No    |    Istruzione ALTER TABLE SWITCH non riuscita. La tabella '%s' appartiene a una pubblicazione che non consente il cambio di partizioni     |
+|    21867    |    16    |    No    |    Istruzione ALTER TABLE SWITCH non riuscita. La tabella '%s' appartiene a una pubblicazione che non consente il cambio di partizioni    |
 |    21868    |    16    |    No    |    Istruzione ALTER TABLE SWITCH non riuscita. L'istruzione non è consentita perché una o più tabelle dell'istruzione sono un articolo con una tabella di destinazione o un proprietario diverso.    |
 |    21869    |    16    |    No    |    Impossibile aggiungere un filtro tra l'articolo padre '%s' e l'articolo figlio '%s' proposto poiché questa situazione provocherebbe un ciclo nelle relazioni tra i filtri. Il padre proposto è già filtrato dal figlio.    |
 |    [21871](mssqlserver-21871-database-engine-error.md)    |        |        |    Il server di pubblicazione %s del database %s non è stato reindirizzato.    |
@@ -8240,7 +8241,7 @@ ORDER BY message_id
 |    22820    |    10    |    No    |    Conflitto eliminazione-aggiornamento tra peer %d (in entrata) e peer %d (su disco) rilevato e risolto. Eliminazione in entrata applicata al peer %d.    |
 |    22821    |    10    |    No    |    Conflitto aggiornamento-aggiornamento tra peer %d (in entrata) e peer %d (su disco) rilevato e risolto. Aggiornamento in entrata ignorato dal peer %d.    |
 |    22822    |    10    |    No    |    Conflitto aggiornamento-aggiornamento tra peer %d (in entrata) e peer %d (su disco) rilevato e risolto. Aggiornamento in entrata applicato al peer %d.    |
-|    22823    |    10    |    No    |     Conflitto aggiornamento-eliminazione rilevato e non risolto. Impossibile aggiornare la riga, perché non esiste. Aggiornamento in entrata ignorato. Controllare la priorità del peer di destinazione ed eseguire la convalida dei dati per garantire che il conflitto di eliminazione non impedisca la convergenza dei dati.    |
+|    22823    |    10    |    No    |    Conflitto aggiornamento-eliminazione rilevato e non risolto. Impossibile aggiornare la riga, perché non esiste. Aggiornamento in entrata ignorato. Controllare la priorità del peer di destinazione ed eseguire la convalida dei dati per garantire che il conflitto di eliminazione non impedisca la convergenza dei dati.    |
 |    22824    |    10    |    No    |    Conflitto inserimento-inserimento tra peer %d (in entrata) e peer %d (su disco) rilevato e risolto. Inserimento in entrata ignorato dal peer %d.    |
 |    22825    |    10    |    No    |    Conflitto inserimento-inserimento tra peer %d (in entrata) e peer %d (su disco) rilevato e risolto. Inserimento in entrata applicato al peer %d.    |
 |    22827    |    16    |    No    |    Avviso di rilevamento dei conflitti peer-to-peer    |

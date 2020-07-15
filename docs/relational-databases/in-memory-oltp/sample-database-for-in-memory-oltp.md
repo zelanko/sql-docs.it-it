@@ -1,5 +1,6 @@
 ---
 title: Database di esempio per OLTP in memoria | Microsoft Docs
+description: Informazioni sulla funzionalità OLTP in memoria e sui relativi vantaggi in termini di prestazioni. Questo esempio illustra l'uso delle tabelle ottimizzate per la memoria e delle stored procedure compilate in modo nativo.
 ms.custom: ''
 ms.date: 12/14/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fea6c071434a50dc0e592533ccc3647aadec0106
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 4859a35269e0664b07f08db795e3e57a4c8feb70
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487665"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735037"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Database di esempio per OLTP in memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
     
 ## <a name="overview"></a>Panoramica  
  Questo esempio illustra la funzionalità OLTP in memoria . Include le tabelle ottimizzate per la memoria e le nuove stored procedure compilate in modo nativo, che possono essere usate per illustrare i vantaggi offerti da OLTP in memoria a livello di prestazioni.  

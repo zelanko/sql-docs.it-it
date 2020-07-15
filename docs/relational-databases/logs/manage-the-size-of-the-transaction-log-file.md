@@ -1,5 +1,6 @@
 ---
 title: Gestire le dimensioni del file di log delle transazioni | Microsoft Docs
+description: Informazioni su come monitorare le dimensioni di un log delle transazioni di SQL Server, compattare il log, aumentare le dimensioni di un file di log, ottimizzare la velocità di aumento del log delle transazioni tempdb e controllare l'aumento delle dimensioni di un log delle transazioni.
 ms.custom: ''
 ms.date: 01/05/2018
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ff886f2eea70b010a2e64513cd561cf7f78d8dee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a722331a28cf741adb5b17ac8a398c106e7cd1c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68084025"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668007"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Gestire le dimensioni del file di log delle transazioni
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Questo argomento descrive come monitorare le dimensioni di un log delle transazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], compattare il log delle transazioni, aumentare le dimensioni di un file di log delle transazioni, ottimizzare la velocità di aumento del log delle transazioni **tempdb** e controllare l'aumento delle dimensioni di un file di log delle transazioni.  
 
 ##  <a name="monitor-log-space-use"></a><a name="MonitorSpaceUse"></a>Monitorare l'uso dello spazio del log  
@@ -82,7 +83,7 @@ Per altre informazioni, vedere [Indicazioni](#Recommendations) in questo argomen
 
 Per altre informazioni, vedere [Indicazioni](#Recommendations) in questo argomento.
 
-## <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni
+## <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni
 Di seguito sono elencate alcune indicazioni di carattere generale relative all'uso dei file registro transazioni:
 
 -   L'incremento automatico (autogrow) delle dimensioni del log delle transazioni, definito dall'opzione `FILEGROWTH`, deve essere sufficiente a soddisfare le esigenze delle transazioni del carico di lavoro. È consigliabile specificare un incremento di crescita per un file di log sufficientemente grande da consentire di evitare l'espansione frequente. Un buon indicatore per il dimensionamento corretto di un log delle transazioni è la quantità di spazio del log occupato durante:

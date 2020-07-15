@@ -1,5 +1,6 @@
 ---
 title: Richiedere schemi come risultati con XMLDATA e XMLSCHEMA | Microsoft Docs
+description: Informazioni su come usare le opzioni XMLDATA e XMLSCHEMA in modalità RAW con la clausola FOR XML per richiedere uno schema XML-DATA o uno schema XSD nel risultato della query.
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: ed72f442fa85a505ace0a1826028ee43f1ea6e97
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e7dfada43a7f899339f9f6ab59ef94dda9853c36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664509"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632923"
 ---
 # <a name="request-schemas-as-results-with-xmldata--xmlschema"></a>Richiedere schemi come risultati con XMLDATA e XMLSCHEMA
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   La query seguente restituisce lo schema XML-DATA che contiene la descrizione della struttura del documento.  
   
 ## <a name="example"></a>Esempio  
@@ -53,7 +54,7 @@ GO
 ```  
   
 > [!NOTE]  
->  <`Schema`> viene considerato come uno spazio dei nomi. Al fine di evitare collisioni a livello di spazi dei nomi quando vengono richiesti più schemi XML-Data in query FOR XML diverse, l'identificatore dello spazio dei nomi, in questo esempio `Schema1` , cambia a ogni esecuzione della query. L'identificatore dello spazio dei nomi è composto da **Schema** _**n**_ dove _**n**_ è un numero intero.  
+>  <`Schema`> viene considerato come uno spazio dei nomi. Al fine di evitare collisioni a livello di spazi dei nomi quando vengono richiesti più schemi XML-Data in query FOR XML diverse, l'identificatore dello spazio dei nomi, in questo esempio `Schema1` , cambia a ogni esecuzione della query. L'identificatore dello spazio dei nomi è composto da **Schema**_**n**_ dove _**n**_ è un numero intero.  
   
  Specificando l'opzione `XMLSCHEMA` è possibile richiedere lo schema XSD per il risultato.  
   

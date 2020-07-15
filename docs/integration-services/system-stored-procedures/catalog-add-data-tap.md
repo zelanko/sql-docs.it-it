@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 513e4874c858d6ce83b65a9a846aa05617229481
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6df265a27d050dd554af2f57be15d398f635aa3e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295571"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749772"
 ---
 # <a name="catalogadd_data_tap"></a>catalog.add_data_tap 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Aggiunge una scelta dei dati sull'output di un componente in un flusso di dati del pacchetto, per un'istanza dell'esecuzione.  
   
@@ -56,7 +56,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  [ @data_filename = ] *data_filename*  
  Nome del file in cui sono archiviati i data tap. Se l'attività Flusso di dati viene eseguita in un contenitore Ciclo Foreach o Ciclo For, i data tap per ogni iterazione del ciclo vengono archiviati in file separati. Ogni file ha un prefisso dato da un numero corrispondente a un'iterazione.  
   
- Per impostazione predefinita, il file viene archiviato nella cartella \<*unità*>:\Programmi\Microsoft SQL Server\130\DTS\DataDumps.  
+ Per impostazione predefinita, il file viene archiviato nella cartella \<*drive*>:\Programmi\Microsoft SQL Server\130\DTS\DataDumps.  
   
  *data_filename* è di tipo **nvarchar(4000)** .  
   
@@ -67,7 +67,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  Restituisce l'ID della scelta dei dati. *data_tap_id* è di tipo **bigint**.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene creata una scelta dei dati nel percorso del flusso di dati `'Paths[OLE DB Source.OLE DB Source Output]` nell'attività Flusso di dati `\Package\Data Flow Task`. Le scelte dei dati vengono archiviate nel file `output0.txt` nella cartella DataDumps (\<*unità*>:\Programmi\Microsoft SQL Server\130\DTS\DataDumps).  
+ Nell'esempio seguente viene creata una scelta dei dati nel percorso del flusso di dati `'Paths[OLE DB Source.OLE DB Source Output]` nell'attività Flusso di dati `\Package\Data Flow Task`. Le scelte dei dati vengono archiviate nel file `output0.txt` nella cartella DataDumps (\<*drive*>:\Programmi\Microsoft SQL Server\130\DTS\DataDumps).  
   
 ```sql
 Declare @execution_id bigint  
@@ -126,7 +126,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ## <a name="requirements"></a>Requisiti  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Intervento nel blog relativo alle [scelte dei dati in SSIS 2012](https://go.microsoft.com/fwlink/?LinkId=239983) sul sito Web rafael-salas.com.  
+ Post di blog [SSIS 2012: A Peek to Data Taps](https://go.microsoft.com/fwlink/?LinkId=239983) (Scelte dei dati in SSIS 2012) nel sito rafael-salas.com.  
   
 ## <a name="see-also"></a>Vedere anche  
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  

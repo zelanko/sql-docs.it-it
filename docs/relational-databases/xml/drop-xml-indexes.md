@@ -1,5 +1,6 @@
 ---
 title: Eliminare indici XML | Microsoft Docs
+description: Informazioni su come usare l'istruzione Transact-SQL DROP INDEX per eliminare indici XML e non XML primari o secondari esistenti.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a5c638e405f7f2d15b5b48a483a5e46ea58b694e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 045e71896836a2ccb39e8605d14e49360a9cc7a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664558"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633197"
 ---
 # <a name="drop-xml-indexes"></a>Eliminazione di indici XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Per eliminare indici XML e non XML primari o secondari esistenti, è possibile usare l'istruzione [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]. Tuttavia, nessuna opzione dell'istruzione DROP INDEX si applica agli indici XML. Se si elimina l'indice XML primario, vengono eliminati anche gli indici secondari presenti.  
   
  La sintassi di DROP con *TableName.IndexName* è obsoleta e non è supportata per gli indici XML.  
   
-## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Esempio: creazione ed eliminazione di un indice XML primario  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Esempio: Creazione ed eliminazione di un indice XML primario  
  Nell'esempio seguente viene creato un indice XML in una colonna di tipo **xml** .  
   
 ```  
@@ -69,7 +70,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-drop_existing-index-option"></a>Esempio: creazione di un indice XML tramite l'opzione DROP_EXISTING  
+## <a name="example-creating-an-xml-index-by-using-the-drop_existing-index-option"></a>Esempio: Creazione di un indice XML tramite l'opzione DROP_EXISTING  
  Nell'esempio seguente un indice XML viene creato in una colonna (`XmlColx`). Successivamente, viene creato un altro indice XML con lo stesso nome in una colonna diversa, (`XmlColy`). Poiché viene specificata l'opzione `DROP_EXISTING` , viene eliminato l'indice XML esistente in (`XmlColx)` ) e creato un nuovo indice XML in (`XmlColy`).  
   
 ```  

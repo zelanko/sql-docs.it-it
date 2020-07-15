@@ -1,5 +1,6 @@
 ---
 title: Panoramica e scenari di utilizzo | Microsoft Docs
+description: Informazioni su OLTP in memoria, una tecnologia presente in SQL Server e nei database SQL di Azure per l'elaborazione delle transazioni ottimizzata. Rassegna di esempi e risorse aggiuntive.
 ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b6fdfbbdd70ad0abf95c3860c2349cc55b5e12b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4f98e06aa52d2fe7e3c0a911f793a038c8dee9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75831851"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722422"
 ---
 # <a name="overview-and-usage-scenarios"></a>Panoramica e scenari di utilizzo
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 OLTP in memoria è la principale tecnologia disponibile in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] per ottimizzare le prestazioni di elaborazione delle transazioni, l'inserimento di dati, il caricamento di dati e gli scenari di dati temporanei. Questo articolo include una panoramica della tecnologia e descrive gli scenari di utilizzo per OLTP in memoria. Usare queste informazioni per determinare se OLTP in memoria è appropriato all'applicazione usata. L'articolo si conclude con un esempio che illustra gli oggetti OLTP in memoria, un riferimento a una dimostrazione sulle prestazioni e riferimenti a risorse che è possibile usare per i passaggi successivi.
 

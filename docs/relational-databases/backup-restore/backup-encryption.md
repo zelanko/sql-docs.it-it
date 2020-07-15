@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6efb6c939f0881e1fd5a90e0d7df96303d40bea4
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 502feae1c94b905069b567bcf62d82fc128299a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220523"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728495"
 ---
 # <a name="backup-encryption"></a>Crittografia dei backup
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In questo argomento viene fornita una panoramica delle opzioni di crittografia per i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vengono illustrati i dettagli di utilizzo, i vantaggi e le procedure consigliate per eseguire la crittografia durante il backup.  
 
 ## <a name="overview"></a><a name="Overview"></a> Panoramica  
@@ -73,8 +73,20 @@ ms.locfileid: "82220523"
 
 ##  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
 
-Per crittografare un backup o per eseguire il ripristino da un backup crittografato, usare l'autorizzazione **VIEW DEFINITION** per la chiave asimmetrica o il certificato usato per crittografare il backup del database.  
-  
+L'account che esegue operazioni di backup su un database crittografato richiede autorizzazioni specifiche. 
+
+- Ruolo **db_backupoperator** a livello di database per il database di cui si esegue il backup. Questo elemento è obbligatorio indipendentemente dalla crittografia. 
+- Autorizzazione **VIEW DEFINITION** per il certificato nel database `master`.
+
+   Nell'esempio seguente vengono concesse le autorizzazioni appropriate per il certificato. 
+   
+   ```tsql
+   USE [master]
+   GO
+   GRANT VIEW DEFINITION ON CERTIFICATE::[<SERVER_CERT>] TO [<db_account>]
+   GO
+   ```
+
 > [!NOTE]  
 > L'accesso al certificato TDE non è necessario per eseguire il backup o il ripristino di un database protetto con TDE.  
   

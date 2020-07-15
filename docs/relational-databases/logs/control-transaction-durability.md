@@ -1,5 +1,6 @@
 ---
 title: Controllare la durabilità delle transazioni | Microsoft Docs
+description: Informazioni sulle transazioni durevoli ritardate. Il commit delle transazioni di SQL Server può essere completamente durevole oppure con durabilità ritardata (noto anche come Lazy Commit).
 ms.custom: ''
 ms.date: 09/16/2016
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b20a628a24e36da854dd567c8f72c89c7169e361
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8df526a46aac597c9b6fee833d2673077aaf054b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68084098"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754568"
 ---
 # <a name="control-transaction-durability"></a>Controllo della durabilità delle transazioni
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Il commit delle transazioni di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere completamente durevole, l'impostazione predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , oppure con durabilità ritardata (noto come Lazy Commit).    
     
@@ -134,7 +135,7 @@ AS BEGIN ATOMIC WITH
 END    
 ```    
     
-### <a name="table-1-durability-in-atomic-blocks"></a>Tabella 1: durabilità nei blocchi atomici    
+### <a name="table-1-durability-in-atomic-blocks"></a>Tabella 1: durabilità nei blocchi ATOMIC    
     
 |Opzione di durabilità nei blocchi atomici|Nessuna transazione esistente|Transazione in corso (completamente durevole o con durabilità ritardata)|    
 |------------------------------------|-----------------------------|---------------------------------------------------------|    

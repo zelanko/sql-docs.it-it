@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eb82df6839e15c3b710d40c52899d661fe9e55ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 757d3d7f612aeaccf3d7697d7198b1b870699fde
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297088"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469366"
 ---
 # <a name="creating-a-custom-task"></a>Creazione di un'attività personalizzata.
 
@@ -26,7 +26,7 @@ ms.locfileid: "71297088"
 
   I passaggi per la creazione di un'attività personalizzata sono simili a quelli richiesti per la creazione di qualsiasi altro oggetto personalizzato per [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
   
--   Creare una nuova classe che eredita dalla classe di base. Per un'attività, la classe di base è <xref:Microsoft.SqlServer.Dts.Runtime.Task>.  
+-   Creare una nuova classe che eredita dalla classe di base. Per un'attività, la classe di base è [Microsoft.SqlServer.Dts.Runtime.Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task).  
   
 -   Applicare alla classe l'attributo che identifica il tipo di oggetto. Per un'attività, l'attributo è <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "71297088"
 ## <a name="getting-started-with-a-custom-task"></a>Introduzione alle attività personalizzate  
   
 ### <a name="creating-projects-and-classes"></a>Creazione di progetti e classi  
- Poiché tutte le attività gestite derivano dalla classe di base <xref:Microsoft.SqlServer.Dts.Runtime.Task>, il primo passaggio da completare quando si crea un'attività personalizzata consiste nel creare un progetto di libreria di classi nel linguaggio di programmazione gestito preferito e creare una classe che eredita dalla classe di base. In questa classe derivata si eseguirà l'override dei metodi e delle proprietà della classe di base per implementare la funzionalità personalizzata.  
+ Poiché tutte le attività gestite derivano dalla classe di base [Microsoft.SqlServer.Dts.Runtime.Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task), il primo passaggio da completare quando si crea un'attività personalizzata consiste nel creare un progetto di libreria di classi nel linguaggio di programmazione gestito preferito e creare una classe che eredita dalla classe di base. In questa classe derivata si eseguirà l'override dei metodi e delle proprietà della classe di base per implementare la funzionalità personalizzata.  
   
  Nella stessa soluzione creare un secondo progetto di libreria di classi per l'interfaccia utente personalizzata. Per semplificare lo sviluppo, si consiglia di utilizzare un assembly distinto per l'interfaccia utente, perché in questo modo è possibile e ridistribuire la gestione connessione o la relativa interfaccia utente in modo indipendente.  
   

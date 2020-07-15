@@ -1,5 +1,6 @@
 ---
 title: Risoluzione dei problemi per gli indici hash per tabelle ottimizzate per la memoria
+description: Usare queste informazioni per risolvere i problemi relativi agli indici hash per le tabelle ottimizzate per la memoria in SQL Server e nel database SQL di Azure.
 ms.custom: seo-dt-2019
 ms.date: 12/01/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6216e8e008bff92ce502aa6dda8025c5ef63f0ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 13117bad78c1cfc843bbe68caeb2abb5c5f64dff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412662"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723220"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>Risoluzione dei problemi per gli indici hash per tabelle ottimizzate per la memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 ## <a name="prerequisite"></a>Prerequisito  
   

@@ -1,5 +1,6 @@
 ---
 title: Miglioramento delle prestazioni di OLTP in memoria
+description: Questo esempio di codice illustra come migliorare le prestazioni delle tabelle ottimizzate per la memoria con Transact-SQL interpretato e una stored procedure compilata in modo nativo.
 ms.custom: seo-dt-2019
 ms.date: 08/19/2016
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68cb4e95046ca2fb071ecf2ba7c713cf57646690
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d9d5cccaa99ae0343c3f6c99cd7f7bcfb249df0e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412732"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723257"
 ---
-# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Dimostrazione: Miglioramento delle prestazioni di OLTP in memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Dimostrazione: miglioramento delle prestazioni di OLTP in memoria
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   L'esempio di codice in questo argomento illustra la rapidità delle prestazioni delle tabelle ottimizzate per la memoria. Il miglioramento delle prestazioni è evidente quando l'accesso ai dati in una tabella ottimizzata per la memoria viene eseguito da codice [!INCLUDE[tsql](../../includes/tsql-md.md)]tradizionale e interpretato. Il miglioramento delle prestazioni è ancora maggiore quando l'accesso ai dati in una tabella ottimizzata per la memoria viene eseguito da una stored procedure compilata in modo nativo (NCSProc).  
  
@@ -32,7 +33,7 @@ Per visualizzare una dimostrazione più completa dei potenziali miglioramenti de
 ## <a name="code-example"></a>Esempio di codice  
  Le sezioni seguenti descrivono ogni passaggio.  
   
-### <a name="step-1a-prerequisite-if-using-ssnoversion"></a>Passaggio 1a: prerequisito se si usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="step-1a-prerequisite-if-using-ssnoversion"></a>Passaggio 1a: Prerequisito se si usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  I passaggi descritti in questa prima sottosezione si applicano solo se è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e non sono applicabili se è in esecuzione [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Eseguire le operazioni seguenti:  
   
 1.  Usare SQL Server Management Studio (SSMS.exe) per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. o qualsiasi strumento simile a SSMS.exe.  
@@ -58,7 +59,7 @@ USE imoltp;
 go  
 ```  
   
-### <a name="step-1b-prerequisite-if-using-sssdsfull"></a>Passaggio 1b: prerequisito se si usa [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
+### <a name="step-1b-prerequisite-if-using-sssdsfull"></a>Passaggio 1b: Prerequisito se si usa [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
  Questa sottosezione si applica solo se si usa [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Eseguire le operazioni seguenti:  
   
 1.  Decidere quali database di test esistenti usare per l'esempio di codice.  
@@ -67,7 +68,7 @@ go
   
  Per istruzioni relative all'uso del portale di Azure a questo scopo, vedere l'argomento di [introduzione al database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-get-started).  
   
-### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>Passaggio 2: creare tabelle con ottimizzazione per la memoria e NCSProc  
+### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>Passaggio 2: Creare tabelle ottimizzate per la memoria e NCSProc  
  Questo passaggio crea una tabella ottimizzata per la memoria e una stored procedure compilata in modo nativo (NCSProc). Eseguire le operazioni seguenti:  
   
 1.  Usare SSMS.exe per connettersi al nuovo database.  
@@ -117,7 +118,7 @@ END;
 go  
 ```  
   
-### <a name="step-3-run-the-code"></a>Passaggio 3: eseguire il codice  
+### <a name="step-3-run-the-code"></a>Passaggio 3: Eseguire il codice  
  È ora possibile eseguire le query che consentiranno di dimostrare le prestazioni delle tabelle ottimizzate per la memoria. Eseguire le operazioni seguenti:  
   
 1.  Usare SSMS.exe per eseguire l'istruzione T-SQL seguente nel database.  

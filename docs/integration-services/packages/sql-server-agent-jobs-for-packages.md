@@ -1,7 +1,7 @@
 ---
 title: Processi di SQL Server Agent per i pacchetti | Microsoft Docs
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 25a2d1fe5eba1f52fc9738b9191f9bdade40002d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 00dff38a2c1e3309d6b8984475791f885f174e82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295804"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643281"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Processi di SQL Server Agent per i pacchetti
 
@@ -122,36 +122,39 @@ ms.locfileid: "71295804"
 6.  Selezionare **Pacchetto di Integration Services** per il tipo di passaggio di processo.  
   
 7.  Nell'elenco **Esegui come** selezionare **Account del servizio SQL Server Agent** oppure selezionare un account proxy che dispone delle credenziali che verranno utilizzate dal passaggio di processo. Per informazioni sulla creazione di un account proxy, vedere [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
-  
-     L'utilizzo di un account proxy anziché dell' **Account del servizio SQL Server Agent** può risolvere i problemi comuni che possono verificarsi quando si esegue un pacchetto tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per ulteriori informazioni su questi problemi, vedere l'articolo della [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base relativo a [un pacchetto SSIS che non viene eseguito quando viene chiamato da un passaggio di processo di SQL Server Agent](https://support.microsoft.com/kb/918760). 
-     
-  7.1 Quando si esegue un processo con un proxy, perché questo venga completato correttamente, è necessario aver predisposto gli elementi di sicurezza seguenti.
 
-      L'account di accesso per le credenziali usato dal proxy, l'account che esegue SQL Server Agent e l'account che esegue il servizio SQL Server richiedono le autorizzazioni seguenti: Attributo Criteri di sicurezza locali: Sostituire il controllo completo di un token a livello di processo in %SYSTEMROOT%\Temp 
-
-La mancata predisposizione di questi elementi di sicurezza determina l'esito negativo del processo e un messaggio di errore simile al seguente: Il processo ha avuto esito negativo.  Il client non dispone di un privilegio necessario.
+    L'utilizzo di un account proxy anziché dell' **Account del servizio SQL Server Agent** può risolvere i problemi comuni che possono verificarsi quando si esegue un pacchetto tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per ulteriori informazioni su questi problemi, vedere l'articolo della [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base relativo a [un pacchetto SSIS che non viene eseguito quando viene chiamato da un passaggio di processo di SQL Server Agent](https://support.microsoft.com/kb/918760). 
      
-  
-    > **NOTE:** If the password changes for the credential that the proxy account uses, you need to update the credential password. Otherwise, the job step will fail.  
-  
-     For information about configuring the SQL Server Agent service account, see [Set the Service Startup Account for SQL Server Agent &#40;SQL Server Configuration Manager&#41;](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472).  
-  
+    - Quando si esegue un processo con un proxy, perché questo venga completato correttamente, è necessario aver predisposto gli elementi di sicurezza seguenti.
+
+        L'account di accesso per le credenziali usato dal proxy, l'account che esegue SQL Server Agent e l'account che esegue il servizio SQL Server richiedono le autorizzazioni seguenti:
+
+        - Attributo Criteri di sicurezza locali: Sostituire token a livello di processo
+        - Controllo completo su %SYSTEMROOT%\Temp 
+
+        La mancata predisposizione di questi elementi di sicurezza determina l'esito negativo del processo e un messaggio di errore simile al seguente: Il processo ha avuto esito negativo. Il client non dispone di un privilegio necessario.
+
+        > **NOTA** Se viene modificata la password per le credenziali utilizzate dall'account proxy, è necessario aggiornare la password delle credenziali. In caso contrario, il passaggio di processo avrà esito negativo.  
+
+        Per informazioni sulla configurazione dell'account del servizio SQL Server Agent, vedere [Impostazione dell'account di avvio del servizio SQL Server Agent &#40;Gestione configurazione SQL Server&#41;](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472).  
+
 8.  Nella casella di riepilogo **Origine pacchetto** fare clic sull'origine del pacchetto e quindi configurare le opzioni per il passaggio di processo.  
   
-     **Nella tabella seguente vengono descritte le possibili origini pacchetto.**  
+    **Nella tabella seguente vengono descritte le possibili origini pacchetto.**  
   
     |Origine pacchetto|Descrizione|  
     |--------------------|-----------------|  
     |**Catalogo SSIS**|Pacchetti archiviati nel database SSISDB. I pacchetti sono contenuti nei progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
     |**SQL Server**|Pacchetti archiviati nel database MSDB. Utilizzare il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per gestire i pacchetti.|  
-    |**Archivio pacchetti SSIS**|Pacchetti archiviati nella cartella predefinita nel computer. La cartella predefinita è *\<unità>* :\Programmi\Microsoft SQL Server\110\DTS\Packages. Utilizzare il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per gestire i pacchetti.<br /><br /> Nota: È possibile specificare un'altra cartella o specificare cartelle aggiuntive nel file system da gestire tramite il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], modificando il file di configurazione per [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Servizio Integration Services &#40;servizio SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).|  
+    |**Archivio pacchetti SSIS**|Pacchetti archiviati nella cartella predefinita nel computer. La cartella predefinita è *\<drive>* :\Programmi\Microsoft SQL Server\110\DTS\Packages. Utilizzare il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per gestire i pacchetti.<br /><br /> Nota: È possibile specificare un'altra cartella o specificare cartelle aggiuntive nel file system da gestire tramite il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], modificando il file di configurazione per [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Servizio Integration Services &#40;servizio SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).|  
     |**File system**|Pacchetti archiviati in qualsiasi cartella nel computer locale.|  
+    |||
   
-     **Nelle tabelle seguenti vengono descritte le opzioni di configurazione disponibili per il passaggio di processo in base all'origine del pacchetto selezionata.**  
+    **Nelle tabelle seguenti vengono descritte le opzioni di configurazione disponibili per il passaggio di processo in base all'origine del pacchetto selezionata.**  
   
     > **IMPORTANTE:** Se il pacchetto è protetto da password, quando si fa clic su una delle schede nella pagina **Generale** della finestra di dialogo **Nuovo passaggio di processo**, ad eccezione della scheda **Pacchetto**, è necessario immettere la password nella finestra di dialogo **Password pacchetto** che viene visualizzata. In caso contrario, il processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non sarà in grado di eseguire il pacchetto.  
   
-     **Origine pacchetto**: Catalogo SSIS  
+    **Origine pacchetto**: Catalogo SSIS  
   
     |Scheda|Opzioni|  
     |---------|-------------|  
@@ -162,7 +165,7 @@ La mancata predisposizione di questi elementi di sicurezza determina l'esito neg
     |**Funzionalità avanzate**<br /><br /> Si trova nella scheda **Configurazione** .|Configurare le impostazioni aggiuntive seguenti per l'esecuzione del pacchetto:|  
     ||**Override di proprietà**:<br /><br /> Fare clic su **Aggiungi** per immettere un nuovo valore per una proprietà del pacchetto, specificare il percorso della proprietà e indicare se il valore della proprietà è sensibile. Il server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crittografa i dati sensibili. Per modificare o rimuovere le impostazioni per una proprietà, fare clic su una riga nel contenitore di override **Proprietà** , quindi fare clic su **Modifica** o **Rimuovi**. È possibile trovare il percorso della proprietà con una delle operazioni seguenti:<br /><br /> -Copiare il percorso della proprietà dal file di configurazione XML (\*.dtsconfig). Il percorso è elencato nella sezione Configurazione del file, come valore dell'attributo Path. Di seguito è riportato un esempio del percorso per la proprietà MaximumErrorCount: \Package.Properties[MaximumErrorCount]<br /><br /> -Eseguire la **Configurazione guidata pacchetto** e copiare i percorsi delle proprietà dalla pagina finale **Completamento procedura guidata** . È possibile annullare la procedura guidata.<br /><br /> <br /><br /> Nota: L'opzione **Override di proprietà** è destinata ai pacchetti con configurazioni aggiornate da una versione precedente di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. I pacchetti creati tramite [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] e distribuiti al server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizzano parametri anziché configurazioni.|  
     ||**Livello di registrazione**<br /><br /> Selezionare uno dei livelli di registrazione seguenti per l'esecuzione del pacchetto. La selezione del livello di registrazione **Prestazioni** o **Dettagliato** può influire sulle prestazioni di esecuzione del pacchetto.<br /><br /> **Nessuna**:<br />                          La registrazione è disabilitata. Solo lo stato dell'esecuzione del pacchetto viene registrato.<br /><br /> **Basic**:<br />                          Tutti gli eventi sono registrati, ad eccezione di eventi personalizzati e di diagnostica. È il valore predefinito per il livello di registrazione.<br /><br /> **Prestazioni**:<br />                          Vengono registrati solo le statistiche sulle prestazioni e gli eventi OnError e OnWarning.<br /><br /> **Dettagliato**:<br />                          Tutti gli eventi vengono registrati, inclusi gli eventi personalizzati e di diagnostica.<br /><br /> Il livello di registrazione selezionato determina le informazioni visualizzate nelle viste SSISDB e nei report per il server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni, vedere [Registrazione di Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).|  
-    ||**Dump su errori**<br /><br /> Specificare se vengono generati file di dump del debug quando si verifica un errore durante l'esecuzione del pacchetto. I file contengono le informazioni sull'esecuzione del pacchetto che possono consentire di risolvere i problemi dell'esecuzione. Quando si seleziona questa opzione e si verifica un errore durante l'esecuzione, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea un file con estensione MDMP (file binario) e un file con estensione TMP (file di testo). Per impostazione predefinita, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archivia i file nella cartella *\<unità>:* \Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.|  
+    ||**Dump su errori**<br /><br /> Specificare se vengono generati file di dump del debug quando si verifica un errore durante l'esecuzione del pacchetto. I file contengono le informazioni sull'esecuzione del pacchetto che possono consentire di risolvere i problemi dell'esecuzione. Quando si seleziona questa opzione e si verifica un errore durante l'esecuzione, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea un file con estensione MDMP (file binario) e un file con estensione TMP (file di testo). Per impostazione predefinita, i file vengono archiviati da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nella cartella *\<drive>:* \Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.|  
     ||**Runtime a 32 bit**<br /><br /> Indicare se eseguire il pacchetto utilizzando la versione a 32 bit dell'utilità dtexec in un computer a 64 bit con la versione a 64 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent installata.<br /><br /> Potrebbe essere necessario eseguire il pacchetto utilizzando la versione a 32 bit di dtexec se, ad esempio, il pacchetto utilizza un provider OLE DB nativo che non è disponibile in una versione a 64 bit. Per ulteriori informazioni, vedere [Considerazioni a 64r bit per Integration Services](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx).<br /><br /> Per impostazione predefinita, quando si seleziona il tipo di passaggio di processo **Pacchetto di SQL Server Integration Services** , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent esegue il pacchetto utilizzando la versione dell'utilità dtexec che è richiamata automaticamente dal sistema. Il sistema richiama la versione a 32 bit o la versione a 64 bit dell'utilità a seconda del processore del computer e la versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in esecuzione nel computer.|  
   
      **Origine pacchetto**:  SQL Server, archivio pacchetti SSIS o file system  
@@ -189,7 +192,8 @@ La mancata predisposizione di questi elementi di sicurezza determina l'esito neg
   
 9. Scegliere **OK** per salvare le impostazioni e chiudere la finestra di dialogo **Nuovo passaggio di processo** .  
   
-    > **NOTA** Per i pacchetti archiviati nel **Catalogo SSIS**il pulsante **OK** è disabilitato se è presente un parametro o un'impostazione della proprietà di gestione connessione non risolto. Un'impostazione non risolta si verifica quando si usa un valore contenuto in una variabile di ambiente server per impostare il parametro o la proprietà e si verifica una delle condizioni seguenti:  
+    > [!NOTE]
+    > Per i pacchetti archiviati nel **Catalogo SSIS**il pulsante **OK** è disabilitato se è presente un parametro o un'impostazione della proprietà di gestione connessione non risolto. Un'impostazione non risolta si verifica quando si usa un valore contenuto in una variabile di ambiente server per impostare il parametro o la proprietà e si verifica una delle condizioni seguenti:  
     >   
     >  La casella di controllo **Ambiente** nella scheda **Configurazione** non è selezionata.  
     >   

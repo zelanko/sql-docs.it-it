@@ -1,7 +1,6 @@
 ---
 title: Audit Database Principal Impersonation - classe di evento
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -12,16 +11,17 @@ ms.assetid: 1b29dea4-3727-4c5f-8362-4ca0374de0b6
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3fe903a0d071d835a527385d44dcc5265c5134ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: a1d3e7f8210a547cbe4509751e43ff0d9e443bfa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056057"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630285"
 ---
 # <a name="audit-database-principal-impersonation-event-class"></a>Audit Database Principal Impersonation - classe di evento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  La classe di evento **Audit Database Principal Impersonation** viene generata in presenza di una rappresentazione nell'ambito del database, ad esempio EXECUTE AS \<*Utente*> o SETUSER.  
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+  La classe di evento **Audit Database Principal Impersonation** viene generata in presenza di una rappresentazione nell'ambito del database, ad esempio EXECUTE AS \<*user*> o SETUSER.  
   
 ## <a name="audit-database-principal-impersonation-event-class-data-columns"></a>Colonne di dati della classe di evento Audit Database Principal Impersonation  
   

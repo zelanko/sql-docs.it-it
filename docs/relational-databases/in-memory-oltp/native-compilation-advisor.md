@@ -1,5 +1,6 @@
 ---
 title: Assistente compilazione nativa | Microsoft Docs
+description: Informazioni su come usare l'Assistente compilazione nativa per eseguire la migrazione di una stored procedure interpretata alla compilazione nativa come parte della migrazione a OLTP in memoria.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc5a4def5c32ffc39c0df58d5a7927a24c90860d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e31863944670cbb6e32e999ec06164792848236a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68135547"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722446"
 ---
 # <a name="native-compilation-advisor"></a>Assistente compilazione nativa
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   I report di analisi delle prestazioni delle transazioni indicano quali stored procedure interpretate nel database traggono vantaggio se vengono trasferite per usare la compilazione nativa. Per altri dettagli, vedere [Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md).  
   
