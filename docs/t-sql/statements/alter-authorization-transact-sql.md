@@ -26,12 +26,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3aded8f578733ac3c6274406dccef235e71c357
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 705e5f381d8df82aff6f662b97d9742586ab498a
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85978287"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86302032"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -121,7 +121,9 @@ ALTER AUTHORIZATION ON
 }    
 ```    
     
-## <a name="arguments"></a>Argomenti    
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
 \<class_type> è la classe dell'entità a protezione diretta per la quale viene modificato il proprietario. OBJECT è l'impostazione predefinita.    
     
 |||    

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5ccaa708ec41319c8eaf17c1f917d940a086fb62
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2db827883ba69ac4183352241459638b4adf0638
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895717"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301962"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,10 @@ FOR CONVERSATION
   
 ```  
   
-## <a name="arguments"></a>Argomenti  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *ConversationPriorityName*  
  Specifica il nome della priorità di conversazione da modificare. Il nome deve fare riferimento a una priorità di conversazione nel database corrente.  
   

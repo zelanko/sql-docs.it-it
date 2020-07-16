@@ -15,12 +15,12 @@ ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6020e1907f6d8b161a8e9dddb14f9e7befb7641a
-ms.sourcegitcommit: 69f93dd1afc0df76c3b4d9203adae0ad7dbd7bb2
+ms.openlocfilehash: 05b5bf44dd2a00d3d40800806f5fe222a8d93d1a
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82598657"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197053"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Guida di riferimento a Transact-SQL (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ Ad esempio, questo argomento che si applica a tutte le versioni ha l'etichetta s
 
 L'etichetta seguente invece indica un argomento che si applica solo ad Azure SQL Data Warehouse e a Parallel Data Warehouse.
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../includes/applies-to-version/asa-pdw.md)]
 
 In alcuni casi l'argomento si applica a un prodotto o servizio, ma non sono supportati tutti gli argomenti. In questo caso alcune sezioni **Si applica a** aggiuntive vengono inserite nelle descrizioni di argomento appropriate nel corpo dell'argomento.  
  

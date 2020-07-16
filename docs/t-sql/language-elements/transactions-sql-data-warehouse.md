@@ -12,15 +12,15 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 21e6d25305bd6abf4a3dc4555f2148a2fe385187
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ac7b9a500bb87dca74082c9d16874131eb82402d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121591"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197413"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transazioni (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Una transazione è un gruppo di una o più istruzioni di database di cui è stato interamente eseguito il commit o il rollback. Ogni transazione è atomica, coerente, isolata e duratura, dotata cioè delle cosiddette proprietà ACID. Se la transazione ha esito positivo, viene eseguito il commit di tutte le istruzioni al suo interno. Se la transazione ha esito negativo, ovvero se almeno una delle istruzioni del gruppo non riesce, viene eseguito il rollback dell'intero gruppo.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68121591"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
 BEGIN TRANSACTION [;]  
 COMMIT [ TRAN | TRANSACTION | WORK ] [;]  
 ROLLBACK [ TRAN | TRANSACTION | WORK ] [;]  
@@ -78,7 +78,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  Se una transazione esplicita non viene eseguita correttamente a causa di un errore non correlato all'esecuzione di un'istruzione, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] esegue automaticamente il rollback della transazione e libera tutte le risorse usate dalla transazione stessa. Se ad esempio viene interrotta la connessione di rete tra il client e un'istanza di [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o se il client si disconnette dall'applicazione, quando la rete notifica l'interruzione all'istanza viene eseguito il rollback di tutte le transazioni della connessione di cui non è ancora stato eseguito il commit.  
   
- Se si verifica un errore durante l'esecuzione di un'istruzione in un batch, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] si comporta in modo coerente con l'impostazione di **XACT_ABORT** su **ON** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene eseguito il rollback dell'intera transazione. Per altre informazioni sull'impostazione **XACT_ABORT**, vedere [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
+ Se si verifica un errore durante l'esecuzione di un'istruzione in un batch, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] si comporta in modo coerente con l'impostazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]XACT_ABORT**su**ON**in** e viene eseguito il rollback dell'intera transazione. Per altre informazioni sull'impostazione **XACT_ABORT**, vedere [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  In un momento specifico, una sessione può eseguire solo una transazione. I punti di salvataggio e le transazioni annidate non sono supportati.  

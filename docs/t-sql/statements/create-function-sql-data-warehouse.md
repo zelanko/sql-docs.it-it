@@ -13,15 +13,15 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f3a549c8a56c14e7c372d0b882d9fd2209298346
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ae8c2994e43ff6a90105dd39c203a455da2c9468
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633383"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196771"
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Consente di creare una funzione definita dall'utente in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Una funzione definita dall'utente è una routine [!INCLUDE[tsql](../../includes/tsql-md.md)] che accetta parametri, esegue un'azione, ad esempio un calcolo complesso, e restituisce il risultato di tale azione sotto forma di valore. Il valore restituito deve essere un valore scalare (singolo). Utilizzare questa istruzione per creare una routine riutilizzabile che può essere utilizzata in queste modalità:  
   
@@ -153,7 +153,7 @@ RETURNS return_data_type
 ## <a name="metadata"></a>Metadati  
  Nella sezione seguente vengono elencate le viste del catalogo di sistema usate per restituire i metadati sulle funzioni definite dall'utente.  
   
- [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md): visualizza la definizione delle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] definite dall'utente. Ad esempio:  
+ [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md): Visualizza la definizione delle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] definite dall'utente. Ad esempio:  
   
 ```sql  
 SELECT definition, type   
@@ -165,9 +165,9 @@ GO
   
 ```  
   
- [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md): visualizza le informazioni sui parametri definiti nelle funzioni definite dall'utente.  
+ [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md): Visualizza le informazioni sui parametri definiti nelle funzioni definite dall'utente.  
   
- [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md): visualizza gli oggetti sottostanti a cui fa riferimento una funzione.  
+ [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md): Visualizza gli oggetti sottostanti a cui fa riferimento una funzione.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È necessario disporre dell'autorizzazione CREATE FUNCTION nel database e dell'autorizzazione ALTER per lo schema in cui la funzione è in fase di creazione.  
