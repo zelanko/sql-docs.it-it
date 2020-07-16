@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8624eb00f1d3822b2e3e0f857c4d07eb36c2bcad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: adcf67cf64888101f2a5a7d704cbe91785791133
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895495"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393159"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,9 @@ FOR CONVERSATION
   
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *ConversationPriorityName*  
  Specifica il nome per la priorità di conversazione. Il nome deve essere univoco nel database corrente e deve essere conforme alle regole per gli [!INCLUDE[ssDE](../../includes/ssde-md.md)]identificatori[ di ](../../relational-databases/databases/database-identifiers.md).  
   

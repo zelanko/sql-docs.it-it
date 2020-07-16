@@ -1,5 +1,5 @@
 ---
-title: CREATE PROCEDURE (Transact-SQL) | Microsoft Docs
+title: CREATE PROCEDURE (Transact-SQL)
 ms.custom: ''
 ms.date: 09/06/2017
 ms.prod: sql
@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66ee4bfb4884fe649993eeefde51ea9c329ad696
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f0897e58e9d60ef8d53ce4d9be07fb5f1f3228c4
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010779"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392889"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 
@@ -140,6 +140,8 @@ CREATE { PROC | PROCEDURE } [ schema_name.] procedure_name
 AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
 [;]
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argomenti
 
@@ -401,13 +403,16 @@ L'istruzione CREATE PROCEDURE non può essere usata in combinazione con altre is
 
 Le istruzioni seguenti non possono essere usate in un qualsiasi punto del corpo di una stored procedure.
 
-||||
-|-|-|-|
-|CREATE AGGREGATE|CREATE SCHEMA|SET SHOWPLAN_TEXT|
-|CREATE DEFAULT|CREATE o ALTER TRIGGER|SET SHOWPLAN_XML|
-|CREATE o ALTER FUNCTION|CREATE o ALTER VIEW|USE *database_name*|
-|CREATE o ALTER PROCEDURE|SET PARSEONLY||
-|CREATE RULE|SET SHOWPLAN_ALL||
+| CREATE | SET | USE |
+|--------|-----|-----|
+| CREATE AGGREGATE | SET SHOWPLAN_TEXT | USE *database_name*|
+| CREATE DEFAULT | SET SHOWPLAN_XML
+| CREATE RULE | SET PARSEONLY |
+| CREATE SCHEMA | SET SHOWPLAN_ALL |
+| CREATE o ALTER TRIGGER |
+| CREATE o ALTER FUNCTION |
+| CREATE o ALTER PROCEDURE |
+| CREATE o ALTER VIEW |
 
  Una procedura può fare riferimento a tabelle che non esistono ancora. In fase di creazione viene eseguito solo un controllo della sintassi. La procedura non viene compilata fino alla prima esecuzione ed è solo durante la compilazione che vengono risolti tutti gli oggetti a cui viene fatto riferimento nella procedura. È quindi possibile creare una procedura con sintassi corretta che fa riferimento a tabelle non ancora esistenti. Se, tuttavia, le tabelle a cui viene fatto riferimento non esistono in fase di esecuzione, la procedura ha esito negativo.
 

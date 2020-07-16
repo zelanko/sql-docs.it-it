@@ -1,5 +1,5 @@
 ---
-title: insert (XML DML) | Microsoft Docs
+title: insert (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fc19088f8ee34202b5157015ac9ef71a8d24922c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 895fda87dd1c78744f7f95b334927940c76fdcd7
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731067"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393069"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ insert
                 )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *Expression1*  
  Identifica uno o più nodi da inserire. Può trattarsi di un'istanza XML costante, un riferimento a un'istanza del tipo di dati XML tipizzata della stessa raccolta di XML Schema in cui viene applicato il metodo modify, un'istanza del tipo di dati XML non tipizzata che usa una funzione **sql:column()** /**sql:variable()** autonoma o un'espressione XQuery. L'espressione può restituire un nodo, anche un nodo di testo, o una sequenza ordinata di nodi, ma non può essere risolta nel nodo radice (/). Se l'espressione restituisce un valore o una sequenza di valori, tali valori vengono inseriti come un nodo di testo nel quale ogni valore della sequenza è separato da uno spazio. Se si specificano più nodi come costante, i nodi vengono racchiusi tra parentesi e sono separati da virgole. Non è possibile inserire sequenze eterogenee, ad esempio una sequenza di elementi, attributi o valori. Se *Expression1* viene risolta in una sequenza vuota, non viene inserito nulla e non vengono restituiti errori.  
   

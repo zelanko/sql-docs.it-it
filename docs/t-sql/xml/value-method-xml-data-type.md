@@ -1,5 +1,5 @@
 ---
-title: Metodo value() (tipo di dati xml) | Microsoft Docs
+title: Metodo value() (tipo di dati xml)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c237be1e705fa5d6b13722ae3ef5bf47f0f9436c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 316b7fda88a274812f376a511ca5f26638f0cea6
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731023"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393009"
 ---
 # <a name="value-method-xml-data-type"></a>Metodo value() (tipo di dati xml)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,9 @@ ms.locfileid: "85731023"
 value (XQuery, SQLType)  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *XQuery*  
  Espressione *XQuery*, un valore letterale stringa che recupera i dati contenuti nell'istanza XML. Deve restituire almeno un valore, In caso contrario, viene restituito un errore.  
   

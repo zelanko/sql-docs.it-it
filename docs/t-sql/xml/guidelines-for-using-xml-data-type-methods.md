@@ -1,5 +1,5 @@
 ---
-title: Linee guida per l'uso dei metodi con tipo di dati xml | Microsoft Docs
+title: Linee guida per l'utilizzo dei metodi con tipo di dati xml
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: bddba19824a9c66d12d290f2212396724d88082f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2360243c2499d5b9cb274ab7dccfed9626783829
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731085"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393079"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Linee guida per l'utilizzo dei metodi con tipo di dati xml
 
@@ -84,7 +84,7 @@ Per la verifica dei dati XML tipizzati viene utilizzato un XML Schema. Se un det
 
 La differenza tra `//first-name[1]` e `(//first-name)[1]` è molto importante per la verifica dei tipi. Nel primo caso viene restituita una sequenza di nodi `<first-name>`, in cui ogni nodo è il nodo `<first-name>` più a sinistra tra gli elementi di pari livello. Nel secondo caso viene restituito il primo nodo `<first-name>` singleton nell'ordine del documento nell'istanza XML.
 
-### <a name="example-using-value"></a>Esempio: utilizzo del metodo value()
+### <a name="example-using-value"></a>Esempio: uso di value()
 
 Per la query seguente su una colonna XML non tipizzata viene restituito un errore statico di compilazione, perché il primo argomento del metodo **value()** deve essere un nodo singleton e il compilatore non è in grado di determinare se in fase di esecuzione verrà rilevato un solo nodo `<last-name>`:
 

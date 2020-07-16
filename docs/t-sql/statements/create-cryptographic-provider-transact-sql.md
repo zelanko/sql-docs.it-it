@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 488ab9f1836f07e895a28ad595b6043fbfa1d0ff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 10d3716351aecc982ad060cd9795c029401a48a3
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895462"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392819"
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,8 +43,10 @@ ms.locfileid: "85895462"
 CREATE CRYPTOGRAPHIC PROVIDER provider_name   
     FROM FILE = path_of_DLL  
 ```  
-  
-## <a name="arguments"></a>Argomenti  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *provider_name*  
  Nome del provider EKM.  
   

@@ -1,5 +1,5 @@
 ---
-title: delete (XML DML) | Microsoft Docs
+title: delete (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1e06e1679a8a416bbcdba8d1a2930ccd50f4ce74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 340ad7968aeb31449f4b5200944ab591e08ae08b
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765645"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393099"
 ---
 # <a name="delete-xml-dml"></a>delete (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,9 @@ ms.locfileid: "85765645"
 delete Expression  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *Espressione*  
  È un'espressione XQuery che identifica i nodi da eliminare. Vengono eliminati tutti i nodi selezionati dall'espressione e i nodi e valori contenuti nei nodi selezionati. Come descritto nell'argomento [insert (XML DML)](../../t-sql/xml/insert-xml-dml.md), è necessario indicare un riferimento a un nodo esistente nel documento. Non può trattarsi di un nodo costruito. L'espressione non può essere il nodo radice (/). Se l'espressione restituisce una sequenza vuota l'eliminazione non viene eseguita e non vengono restituiti errori.  
   

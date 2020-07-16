@@ -1,5 +1,5 @@
 ---
-title: Linguaggio XML di manipolazione dei dati (XML DML) | Microsoft Docs
+title: Linguaggio XML di manipolazione dei dati (XML DML)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 68a0f5f6a52baff0a4baaaad2741bf9ad9a6288e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ce5cb12d755319255497bac7b96cd3945e92a86d
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901608"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391828"
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>Linguaggio XML di manipolazione dei dati (XML DML)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

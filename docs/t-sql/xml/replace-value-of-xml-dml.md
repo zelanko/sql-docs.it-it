@@ -1,5 +1,5 @@
 ---
-title: replace value of (XML DML) | Microsoft Docs
+title: replace value of (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1269b119a6f8bdcfe14890a911a4dd6b0e618328
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 70ef0ec9f3cec26b7e0a55df770a3983d0d8594e
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731037"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393049"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ replace value of Expression1
 with Expression2  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
 *Expression1*  
 Identifica un nodo di cui è necessario aggiornare il valore. Deve identificare solo un singolo nodo, ovvero *Expression1* deve essere un singleton statico. Se l'istanza XML è tipizzata, il nodo deve essere di tipo semplice. Quando vengono selezionati più nodi, viene generato un errore. Se *Expression1* restituisce una sequenza vuota, non viene eseguita alcuna sostituzione di valori e non vengono restituiti errori. *Expression1* deve restituire un singolo elemento con contenuto di tipo semplice (tipo elenco o atomico), un nodo di testo o un nodo di attributo. *Expression1* non può essere un tipo unione, un tipo complesso, un'istruzione di elaborazione, un nodo di documento o un nodo di commento. In caso contrario verrà restituito un errore.  
   
