@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d6382439c22ba36c2b04b3b58526e93a53d3545e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0f33586676407b8927bbae32ead7ccc27ce6c60c
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004728"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392969"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -55,7 +55,9 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
     | { BEFORE { UPDATE | DELETE } } ]  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *security_policy_name*  
  Nome del criterio di sicurezza. I nomi dei criteri sicurezza devono essere conformi alle regole per gli identificatori e devono essere univoci all'interno del database e rispetto al relativo schema.  
   

@@ -11,15 +11,15 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e71924aa85d4761448c340f1f0554c383df288d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6da86a89421fcee2c60bd0a46392dc1acc4cdd46
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632921"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279517"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 CREATE TABLE AS SELECT (CTAS) è una delle più importanti funzionalità T-SQL disponibili. È un'operazione eseguita completamente in parallelo, che crea una nuova tabella basata sull'output di un'istruzione SELECT. CTAS è il modo più semplice e rapido per creare una copia di una tabella.   
  
@@ -136,7 +136,6 @@ Per informazioni dettagliate, vedere [Osservazioni generali](https://msdn.micros
 <a name="limitations-bk"></a>
 
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
-Azure SQL Data Warehouse non supporta ancora la creazione o l'aggiornamento automatici delle statistiche.  Per ottenere prestazioni ottimali delle query, è importante creare le statistiche per tutte le colonne di tutte le tabelle dopo avere eseguito CTAS e avere apportato modifiche sostanziali ai dati. Per altre informazioni, vedere [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).
 
 È possibile creare un indice columnstore cluster ordinato per colonne con qualsiasi tipo di dati supportato in Azure SQL Data Warehouse, ad eccezione delle colonne stringa.  
 
