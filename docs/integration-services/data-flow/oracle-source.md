@@ -1,5 +1,5 @@
 ---
-title: Origine Oracle | Microsoft Docs
+title: Origine Oracle
 ms.custom: ''
 ms.date: 08/14/2019
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4444236d19c9d7c67aba5a36ba079e1dfa9189b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eced263351bc6c9add5fbd46894c08ccc65fb2be
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74542198"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196095"
 ---
 # <a name="oracle-source"></a>Origine Oracle
 
@@ -70,7 +70,7 @@ Per altre informazioni, vedere una delle sezioni seguenti:
 - [Editor origine Oracle (pagina Colonne)](#oracle-source-editor-columns-page)
 - [Editor origine Oracle (pagina Output degli errori)](#oracle-source-editor-error-output-page)
 
-![](media/oracle-source.png)
+![Origine Oracle](media/oracle-source.png)
 
 La **finestra di dialogo Editor avanzato** contiene le proprietà che è possibile impostare a livello di codice.
 

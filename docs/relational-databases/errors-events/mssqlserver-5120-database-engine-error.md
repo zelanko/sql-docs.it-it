@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_5228 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
+ms.date: 07/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: 7faa39c696c6dd7dfc7e1055935ab96b3cb468f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42741b99b89a25b50cd19d647d9f17f2ffe085d3
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679481"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279100"
 ---
 # <a name="mssqlserver_5120"></a>MSSQLSERVER_5120
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "85679481"
   Trovare e correggere l'errore del sistema operativo, quindi provare di nuovo l'operazione. Diversi stati consentono a Microsoft di circoscrivere l'area del prodotto in cui si è verificato l'errore. 
   
 ### <a name="access-is-denied"></a>Accesso negato 
-Se si riceve l'errore del sistema operativo ```Access is Denied``` = 5, prendere in considerazione questi metodi:
+Se si riceve l'errore del sistema operativo `Access is Denied` = 5, prendere in considerazione questi metodi:
    -  Controllare le autorizzazioni impostate per il file esaminando le proprietà del file in Esplora risorse. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa i gruppi di Windows per eseguire il provisioning del controllo di accesso sulle varie risorse di file. Verificare che il gruppo appropriato [con nomi come SQLServerMSSQLUser$ComputerName$MSSQLSERVER o SQLServerMSSQLUser$ComputerName$InstanceName] abbia le autorizzazioni necessarie per il file di database indicato nel messaggio di errore. Per altre informazioni, vedere [Configurare le autorizzazioni del file system per l'accesso al motore di database](../../2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md). Verificare che il gruppo di Windows includa l'account di avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il SID del servizio.
    -  Esaminare l'account utente in cui è attualmente in esecuzione il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile ottenere queste informazioni tramite Gestione attività di Windows. Cercare il valore "User Name" (Nome utente) nel file eseguibile "sqlservr.exe". Se è stato modificato di recente l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tenere presente che il metodo supportato per questa operazione è l'uso dell'utilità [Gestione configurazione SQL Server](../sql-server-configuration-manager.md). 
    -  A seconda del tipo di operazione (apertura dei database durante l'avvio del server, collegamento di un database, ripristino del database e così via), l'account usato per la rappresentazione e l'accesso al file di database può variare. Vedere l'argomento [Sicurezza dei dati e dei file di log](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) per informazioni sulle interazioni tra operazioni, autorizzazioni e account. Usare uno strumento come [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) di Windows SysInternals per determinare se l'accesso ai file avviene nel contesto di sicurezza dell'account di avvio del servizio dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o SID del servizio) o di un account rappresentato.
@@ -68,7 +68,7 @@ Se si riceve l'errore del sistema operativo ```Access is Denied``` = 5, prendere
 ### <a name="attaching-files-that-reside-on-a-network-attached-storage"></a>associazione di file che risiedono in un Network-attached storage (NAS)  
 Se non è possibile ricollegare un database che risiede in un Network-attached storage (NAS), è possibile che nel registro applicazioni venga registrato un messaggio simile al seguente.
 
-```Msg 5120, Level 16, State 101, Line 1 Unable to open the physical file "\\servername\sharename\filename.mdf". Operating system error 5: (Access is denied.).```
+`Msg 5120, Level 16, State 101, Line 1 Unable to open the physical file "\\servername\sharename\filename.mdf". Operating system error 5: (Access is denied.).`
 
 Questo problema si verifica perché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reimposta le autorizzazioni del file quando il database viene scollegato. Quando si tenta di riconnettere il database, si verifica un errore a causa di autorizzazioni di condivisione limitate.
 
@@ -76,13 +76,13 @@ Per risolvere il problema, seguire questa procedura:
 1. usare l'opzione di avvio -T per avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usare questa opzione di avvio per attivare il flag di traccia 1802 in [Gestione configurazione SQL Server](../sql-server-configuration-manager.md) (per informazioni su 1802 vedere [Flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)). Per altre informazioni sulle modalità di modifica dei parametri di avvio, vedere [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md).
 
 2. Usare il comando seguente per scollegare il database.
-   ```tsql
+   ```sql
     exec sp_detach_db DatabaseName
     go 
    ```
 
 3. Usare il comando seguente per riconnettere il database.
-   ```tsql
+   ```sql
    exec sp_attach_db DatabaseName, '\\Network-attached storage_Path\DatabaseMDFFile.mdf', '\\Network-attached storage_Path\DatabaseLDFFile.ldf'
    go
    ```
