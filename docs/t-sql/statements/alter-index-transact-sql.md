@@ -46,14 +46,15 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8c9b9fb9b58cee42c11e821e940966f2acce498
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6c16150f2023a863bbdcbecb138cc7ff6053b26a
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000715"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381215"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Consente di modificare un indice di tabella o di vista esistente, di tipo rowstore, columnstore o XML, tramite la disabilitazione, la ricompilazione o la riorganizzazione dell'indice oppure tramite l'impostazione di opzioni per l'indice.  
@@ -173,6 +174,9 @@ ALTER INDEX { index_name | ALL }
 }  
   
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argomenti
 
  *index_name*  
@@ -677,8 +681,8 @@ Se `ALLOW_ROW_LOCKS = OFF` e `ALLOW_PAGE_LOCK = OFF`, è consentito solo un bloc
   
 Se si specifica la parola chiave ALL durante l'impostazione di opzioni per blocchi di riga o di pagina, le impostazioni vengono applicate a tutti gli indici. Se la tabella sottostante è un heap, le impostazioni vengono applicate nei modi seguenti:  
   
-|||  
-|-|-|  
+|Opzione|Dettagli|
+|------|-------|
 |ALLOW_ROW_LOCKS = ON o OFF|Viene applicata all'heap e a tutti gli indici non cluster associati.|  
 |ALLOW_PAGE_LOCKS = ON|Viene applicata all'heap e a tutti gli indici non cluster associati.|  
 |ALLOW_PAGE_LOCKS = OFF|Viene applicata agli indici non cluster. Ciò significa che negli indici non cluster non è consentito alcun blocco a livello di pagina. Nell'heap non sono consentiti solo i blocchi condivisi (S), di aggiornamento (U) ed esclusivi (X) per la pagina. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] può comunque acquisire un blocco preventivo a livello di pagina (IS, IU o IX) per scopi interni.|  
