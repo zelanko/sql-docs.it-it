@@ -8,17 +8,33 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 06/15/2020
-ms.openlocfilehash: 09b894fb6604c912bafaa0fc2856134fe970a721
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.date: 07/15/2020
+ms.openlocfilehash: 3f6766e32369c2002b6da7df62646572a4cf8507
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758416"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406254"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
 
 **[Scarica e installa l'ultima versione](download.md)**
+
+## <a name="july-2020"></a>Luglio 2020
+
+15 luglio 2020 &nbsp; / &nbsp; versione: 1.20.0
+
+&nbsp;
+
+| Modifica | Dettagli |
+| :----- | :------ |
+| Aggiunta della presentazione delle nuove funzionalità | Dalla home page e dal riquadro comandi, gli utenti possono ora avviare una presentazione che illustra in modo dettagliato le funzionalità di uso comune, tra cui il viewlet Connessioni, il viewlet Notebooks e il Marketplace Estensioni |
+| Nuove funzionalità dei notebook | &bull; &nbsp; Supporto per le intestazione nella barra degli strumenti di Markdown<br/> &bull; &nbsp; Anteprima di Markdown affiancata nelle celle di testo
+| Trascinare colonne e tabelle nell'editor di query | Gli utenti possono ora trascinare colonne e tabelle direttamente dal viewlet Connessioni all'editor di query |
+| Aggiunta dell'icona Account Azure alla barra delle attività | Opzione per l'accesso ad Azure più facilmente individuabile |
+| Bug e problemi risolti | Per un elenco completo delle correzioni, vedere i [bug e i problemi su GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
+
 
 ## <a name="june-2020"></a>Giugno 2020
 

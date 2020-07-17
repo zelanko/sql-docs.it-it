@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ee30e1ce318276d9cf5bd7af3d13e291bfa2ea06
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a07244e6f34dc8b6ec645bb31517e739b32265d
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781664"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406124"
 ---
 # <a name="monitor-data-tier-applications"></a>Monitoraggio delle applicazioni livello dati
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Un'applicazione livello dati (DAC) può essere monitorata da **Gestione Utilità** e **Esplora oggetti** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), insieme alle viste e alle tabelle di sistema. Inoltre, tutti gli oggetti nel database contenuto in DAC possono essere monitorati utilizzando le tecniche di monitoraggio standard del database e del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
- Se si distribuisce un'applicazione livello dati in un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)], le informazioni sul pacchetto di applicazione livello dati distribuito vengono incorporate in Utilità SQL Server al successivo invio del set di raccolta dell'utilità dall'istanza al punto di controllo dell'utilità. È quindi possibile visualizzare informazioni relative all'integrità di base sull'applicazione livello dati tramite [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Gestione Utilità**di**.  
+ Se si distribuisce un'applicazione livello dati in un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)], le informazioni sul pacchetto di applicazione livello dati distribuito vengono incorporate in Utilità SQL Server al successivo invio del set di raccolta dell'utilità dall'istanza al punto di controllo dell'utilità. È quindi possibile visualizzare informazioni relative all'integrità di base sull'applicazione livello dati tramite **Gestione Utilità** di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  **Esplora oggetti** di SSMS consente di visualizzare informazioni di configurazione di base su ogni DAC distribuito in un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)], indipendentemente dal fatto che l'istanza sia gestita in Utilità SQL Server. Inoltre, il database associato a un DAC distribuito può essere monitorato mediante le stesse routine utilizzate per il monitoraggio di qualsiasi altro database.  
   
 ## <a name="using-the-sql-server-utility"></a>Utilizzo di Utilità SQL Server  
- La pagina dei dettagli **Applicazione livello dati distribuita** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Esplora utilità**di** visualizza un dashboard che segnala l'utilizzo delle risorse da parte di tutte le applicazioni livello dati che sono state distribuite a istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Nel riquadro superiore della pagina dei dettagli vengono elencati i DAC distribuiti con indicatori visivi che mostrano se il loro utilizzo delle risorse di CPU e file rientra tra i criteri definiti per Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Selezionando qualsiasi DAC nella visualizzazione Elenco, è possibile visualizzare ulteriori dettagli nelle schede nel riquadro inferiore della pagina. Per altre informazioni sulle informazioni presentate nella pagina dei dettagli, vedere [Dettagli di Applicazioni livello dati distribuite &#40;Utilità SQL Server&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
+ La pagina dei dettagli **Applicazione livello dati distribuita** in **Esplora utilità** di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] visualizza un dashboard che segnala l'utilizzo delle risorse da parte di tutte le applicazioni livello dati che sono state distribuite a istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Nel riquadro superiore della pagina dei dettagli vengono elencati i DAC distribuiti con indicatori visivi che mostrano se il loro utilizzo delle risorse di CPU e file rientra tra i criteri definiti per Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Selezionando qualsiasi DAC nella visualizzazione Elenco, è possibile visualizzare ulteriori dettagli nelle schede nel riquadro inferiore della pagina. Per altre informazioni sulle informazioni presentate nella pagina dei dettagli, vedere [Dettagli di Applicazioni livello dati distribuite &#40;Utilità SQL Server&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
   
  In seguito all'utilizzo della pagina dei dettagli **Applicazioni livello dati distribuite** , che consente di identificare rapidamente qualsiasi DAC che utilizzi troppo o troppo poco la risorsa hardware, è possibile pianificare la risoluzione di eventuali problemi. Più applicazioni del livello dati che non utilizzano completamente le risorse hardware potrebbero essere consolidate in un unico server, liberando così alcuni server per altri utilizzi. Se le risorse nel server corrente vengono utilizzate maniera eccessiva, è possibile spostare l'applicazione del livello dati in un server più grande o aggiungere altre risorse nel server corrente.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "85781664"
   
 1.  Selezionare il menu **Visualizza/Esplora oggetti** .  
   
-2.  Connettersi all'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]dal riquadro Esplora oggetti.  
+2.  Connettersi all'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] dal riquadro Esplora oggetti.  
   
 3.  Selezionare il menu **Visualizza/Dettagli Esplora oggetti** .  
   
