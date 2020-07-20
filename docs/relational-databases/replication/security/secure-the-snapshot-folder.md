@@ -13,21 +13,21 @@ ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: acfa04e4763eafd522cfa741fe835573b510cc4c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1418b5c24a132885d500416d6c038a3ac9c04b7e
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287242"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159479"
 ---
 # <a name="secure-the-snapshot-folder"></a>Sicurezza della cartella snapshot
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   La cartella snapshot è una directory in cui vengono archiviati i file di snapshot. È consigliabile dedicare questa directory esclusivamente all'archiviazione degli snapshot. Concedere all'agente snapshot l'autorizzazione di scrittura per la cartella e verificare che l'autorizzazione di lettura sia concessa solo all'account di Windows utilizzato dall'agente di merge o dall'agente di distribuzione per accedere alla cartella. L'account di Windows associato all'agente deve essere un account di dominio per poter accedere a una cartella snapshot posizionata in un computer remoto.  
   
 > [!NOTE]  
 >  Controllo account utente consente agli amministratori di gestire i propri diritti utente elevati (detti anche *privilegi*). Quando l'esecuzione avviene in sistemi operativi con Controllo account utente abilitato, gli amministratori non utilizzano i propri diritti amministrativi, ma eseguono la maggior parte delle azioni come utenti standard (non amministrativi), assumendo temporaneamente i diritti di amministratore solo se necessario. Controllo account utente può impedire l'accesso amministrativo alla condivisione snapshot. Le autorizzazioni per la condivisione snapshot devono pertanto essere concesse in modo esplicito agli account di Windows utilizzati dall'agente snapshot, dall'agente di distribuzione e dall'agente di merge. È necessario eseguire questa operazione anche se gli account di Windows sono membri del gruppo Administrators.  
   
- Se si configura un database di distribuzione tramite Configurazione guidata distribuzione o Creazione guidata pubblicazione, la cartella snapshot viene configurata per impostazione predefinita su un percorso locale, X:\Programmi\Microsoft SQL Server\\ *\<istanza>* \MSSQL\ReplData. Se si usano un server di distribuzione remoto o sottoscrizioni pull, è necessario specificare una condivisione di rete UNC (ad esempio \\\\<*nomecomputer>* \snapshot) anziché un percorso locale.  
+ Se si configura un server di distribuzione tramite Configurazione guidata distribuzione o Creazione guidata pubblicazione, la cartella snapshot viene configurata per impostazione predefinita su un percorso locale: X:\Programmi\Microsoft SQL Server\\ *\<instance>* \MSSQL\ReplData. Se si usano un server di distribuzione remoto o sottoscrizioni pull, è necessario specificare una condivisione di rete UNC (ad esempio \\\\<*nomecomputer>* \snapshot) anziché un percorso locale.  
   
  Quando si concedono le autorizzazioni di accesso alla cartella snapshot, è necessario valutare il tipo di accesso che verrà utilizzato per la cartella. In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 2003 vengono utilizzate le schede di finestre di dialogo seguenti:  
   

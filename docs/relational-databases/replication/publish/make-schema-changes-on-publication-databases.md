@@ -19,15 +19,15 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5e0da92258088cde7dec9d4981e270e87e09f67a
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: f7bc2b9d94b53ab1d0418d05ae9e9c8ee93ee301
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807622"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160129"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Modifiche allo schema nei database di pubblicazione
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   La replica supporta una vasta gamma di modifiche dello schema negli oggetti pubblicati. Quando si apporta una delle seguenti modifiche dello schema nell'oggetto pubblicato appropriato nel server di pubblicazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tale modifica viene propagata per impostazione predefinita a tutti i Sottoscrittori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   MODIFICA TABELLA  
@@ -90,11 +90,11 @@ ms.locfileid: "83807622"
   
 #### <a name="adding-columns"></a>Aggiunta di colonne  
   
--   Per aggiungere una nuova colonna a una tabella e includere la colonna in una pubblicazione esistente, eseguire ALTER TABLE \<Tabella> ADD \<Colonna>. Per impostazione predefinita, la colonna viene quindi replicata a tutti i Sottoscrittori. È necessario che la colonna consenta i valori NULL o che includa un vincolo DEFAULT. Per altre informazioni sull'aggiunta di colonne, vedere la sezione "Replica di tipo merge" in questo argomento.  
+-   Per aggiungere una nuova colonna a una tabella e includere la colonna in una pubblicazione esistente, eseguire ALTER TABLE \<Table> ADD \<Column>. Per impostazione predefinita, la colonna viene quindi replicata a tutti i Sottoscrittori. È necessario che la colonna consenta i valori NULL o che includa un vincolo DEFAULT. Per altre informazioni sull'aggiunta di colonne, vedere la sezione "Replica di tipo merge" in questo argomento.  
   
--   Per aggiungere una nuova colonna a una tabella e non includere la colonna in una pubblicazione esistente, disabilitare la replica delle modifiche dello schema e quindi eseguire ALTER TABLE \<Tabella> ADD \<Colonna>.  
+-   Per aggiungere una nuova colonna a una tabella e non includere la colonna in una pubblicazione esistente, disabilitare la replica delle modifiche dello schema e quindi eseguire ALTER TABLE \<Table> ADD \<Column>.  
   
--   Per includere una colonna esistente in una pubblicazione esistente, usare [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) o la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** .  
+-   Per includere una colonna esistente in una pubblicazione esistente, usare [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) o la finestra di dialogo **Proprietà pubblicazione - \<Publication>** .  
   
      Per altre informazioni, vedere [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Sarà necessario reinizializzare le sottoscrizioni.  
   
@@ -102,9 +102,9 @@ ms.locfileid: "83807622"
   
 #### <a name="dropping-columns"></a>Eliminazione di colonne  
   
--   Per eliminare una colonna da una pubblicazione esistente e dalla tabella nel server di pubblicazione, eseguire ALTER TABLE \<Tabella> DROP \<Colonna>. Per impostazione predefinita, la colonna viene quindi eliminata dalla tabella in tutti i Sottoscrittori.  
+-   Per eliminare una colonna da una pubblicazione esistente e dalla tabella nel server di pubblicazione, eseguire ALTER TABLE \<Table> DROP \<Column>. Per impostazione predefinita, la colonna viene quindi eliminata dalla tabella in tutti i Sottoscrittori.  
   
--   Per eliminare una colonna da una pubblicazione esistente, ma mantenerla nella tabella del server di pubblicazione, usare [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) o la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** .  
+-   Per eliminare una colonna da una pubblicazione esistente, ma mantenerla nella tabella del server di pubblicazione, usare [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) o la finestra di dialogo **Proprietà pubblicazione - \<Publication>** .  
   
      Per altre informazioni, vedere [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Sarà necessario generare un nuovo snapshot.  
   

@@ -2,7 +2,7 @@
 title: Azioni e gruppi di azioni di SQL Server Audit | Microsoft Docs
 description: Informazioni sui gruppi di azioni a livello di server, a livello di database e a livello di controllo e sulle singole azioni in SQL Server Audit.
 ms.custom: ''
-ms.date: 10/19/2016
+ms.date: 07/13/2020
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: vanto
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: cd25caf80cffef2810139ce1a2ab63269e5ec6ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68943b7b57794d779656ca8537a7c59d4f486db8
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885594"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301898"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Azioni e gruppi di azioni di SQL Server Audit
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -78,8 +78,8 @@ ms.locfileid: "85885594"
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Questo evento viene generato ogni volta che una password viene modificata per un ruolo applicazione. Equivale a [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Questo evento viene generato ogni volta che un controllo viene creato, modificato o eliminato, nonché ogni volta che la specifica di un controllo viene creata, modificata o eliminata. Qualsiasi modifica al controllo viene verificata nel controllo stesso. Equivale a [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
 |BACKUP_RESTORE_GROUP|Questo evento viene generato ogni volta che viene eseguito un comando per il backup o il ripristino. Equivalente alla [classe di evento Audit Backup/Restore](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
-|BATCH_COMPLETED_GROUP|Questo evento viene generato ogni volta che viene completata l'esecuzione di qualsiasi operazione di gestione di testo, stored procedure o transazione in batch. Viene generato al termine del batch e controlla l'intero testo del batch o della stored procedure, come inviato dal client, incluso il risultato.|  
-|BATCH_STARTED_GROUP|Questo evento viene generato ogni volta che viene avviata l'esecuzione di qualsiasi operazione di gestione di testo, stored procedure o transazione in batch. Viene generato prima dell'esecuzione e controlla l'intero testo del batch o della stored procedure, come inviato dal client.|  
+|BATCH_COMPLETED_GROUP|Questo evento viene generato ogni volta che viene completata l'esecuzione di qualsiasi operazione di gestione di testo, stored procedure o transazione in batch. Viene generato al termine del batch e controlla l'intero testo del batch o della stored procedure, come inviato dal client, incluso il risultato. **Aggiunto in SQL Server 2019.**|  
+|BATCH_STARTED_GROUP|Questo evento viene generato ogni volta che viene avviata l'esecuzione di qualsiasi operazione di gestione di testo, stored procedure o transazione in batch. Viene generato prima dell'esecuzione e controlla l'intero testo del batch o della stored procedure, come inviato dal client. **Aggiunto in SQL Server 2019.**|  
 |BROKER_LOGIN_GROUP|Questo evento viene generato per segnalare i messaggi di controllo correlati alla sicurezza del trasporto Service Broker. Equivale a [Audit Broker Login Event Class](../../../relational-databases/event-classes/audit-broker-login-event-class.md).|  
 |DATABASE_CHANGE_GROUP|Questo evento viene generato quando un database viene creato, modificato o eliminato. viene creato, modificato o eliminato. Equivale a [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
 |DATABASE_LOGOUT_GROUP|Questo evento viene generato quando un utente del database indipendente si disconnette da un database.|  

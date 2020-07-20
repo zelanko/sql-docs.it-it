@@ -1,5 +1,5 @@
 ---
-title: Guida sensibile al contesto di Gestione Utilità | Microsoft Docs
+title: Guida sensibile al contesto di Gestione Utilità
 description: Acquisire familiarità con le funzionalità offerte in diverse aree di Utilità SQL Server. Informazioni sulle visualizzazioni, il dashboard e le schede Amministrazione utilità.
 ms.custom: ''
 ms.date: 08/19/2016
@@ -20,14 +20,15 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 264c809ce03cca9a6bb9b84300d3780a1ddc33f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e97a0e8ddae735865b4314e33f3a5ce6d365de0
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640410"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197261"
 ---
 # <a name="utility-explorer-f1-help"></a>Guida sensibile al contesto di Gestione Utilità
+
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Le sezioni seguenti includono informazioni sulle funzionalità di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sulle operazioni associate.  
   
@@ -124,11 +125,11 @@ ms.locfileid: "85640410"
  Vista Elenco  
  La visualizzazione Elenco nel riquadro superiore include dati sulle singole applicazioni di livello dati. Le icone di stato di integrità forniscono lo stato riepilogativo per ogni applicazione del livello dati in base alle categorie di utilizzo:  
   
--   Segno di spunta verde - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Numero di applicazioni livello dati che non violano i criteri di utilizzo delle risorse. Le risorse sono utilizzate adeguatamente.  
+-   Segno di spunta verde - :::image type="icon" source="media/well-utilized.png" border="false"::: - Numero di applicazioni livello dati che non violano i criteri di utilizzo delle risorse. Le risorse sono utilizzate adeguatamente.  
   
--   Freccia in giù verde - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Le risorse sono sottoutilizzate.  
+-   Freccia in giù verde - ![freccia in giù](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Le risorse sono sottoutilizzate.  
   
--   Freccia in su rossa - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Le risorse sono sovrautilizzate.  
+-   Freccia in su rossa - ![freccia in su](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Le risorse sono sovrautilizzate.  
   
  La sequenza di colonne nella visualizzazione Elenco può essere modificata trascinando le colonne verso destra o verso sinistra. È possibile aggiungere o eliminare colonne nella visualizzazione Elenco facendo clic con il pulsante destro del mouse sulle intestazioni di colonna e selezionando o deselezionando le colonne desiderate. Anche il menu di scelta rapida fornisce opzioni per l'ordinamento. È inoltre possibile attivare l'ordinamento facendo clic all'inizio di un nome di colonna.  
   
@@ -266,11 +267,11 @@ ms.locfileid: "85640410"
   
  Le icone di stato di integrità forniscono lo stato riepilogativo per ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in base alla categoria di utilizzo:  
   
--   Segno di spunta verde - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Numero di istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che non violano i criteri di utilizzo delle risorse. Le risorse sono utilizzate adeguatamente.  
+-   Segno di spunta verde - ![segno di spunta verde](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Numero di istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che non violano i criteri di utilizzo delle risorse. Le risorse sono utilizzate adeguatamente.  
   
--   Freccia in giù verde - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Le risorse sono sottoutilizzate.  
+-   Freccia in giù verde - ![freccia in giù](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Le risorse sono sottoutilizzate.  
   
--   Freccia in su rossa - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Le risorse sono sovrautilizzate.  
+-   Freccia in su rossa - ![freccia in su](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Le risorse sono sovrautilizzate.  
   
  La sequenza di colonne nella visualizzazione Elenco può essere modificata trascinando le colonne verso destra o verso sinistra. È possibile aggiungere o eliminare colonne nella visualizzazione Elenco facendo clic con il pulsante destro del mouse sulle intestazioni di colonna e selezionando o deselezionando le colonne desiderate. Anche il menu di scelta rapida fornisce opzioni per l'ordinamento. È inoltre possibile attivare l'ordinamento facendo clic all'inizio di un nome di colonna.  
   

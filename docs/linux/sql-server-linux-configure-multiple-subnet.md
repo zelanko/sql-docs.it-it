@@ -9,12 +9,12 @@ ms.date: 12/01/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d6cd6b4cdd25c6da0a7d034e2f980ad583a6561b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a18e668d1a62a74396530e37243d75a5a86aee2
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901558"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196969"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurare gruppi di disponibilità Always On e istanze del cluster di failover con più subnet
 
@@ -28,17 +28,17 @@ Quando un gruppo di disponibilità Always On o un'istanza del cluster di failove
 
 La creazione degli indirizzi IP per il gruppo di disponibilità o l'istanza del cluster di failover viene eseguita nella VLAN. Nell'esempio seguente la VLAN ha una subnet di 192.168.3.*x*, quindi l'indirizzo IP creato per il gruppo di disponibilità o l'istanza del cluster di failover è 192.168.3.104. Non sono necessarie altre configurazioni, perché al gruppo di disponibilità o all'istanza del cluster di failover è assegnato un solo indirizzo IP.
 
-![](./media/sql-server-linux-configure-multiple-subnet/image1.png)
+![Configurare più subnet 01](./media/sql-server-linux-configure-multiple-subnet/image1.png)
 
 ## <a name="configuration-with-pacemaker"></a>Configurazione con Pacemaker
 
 Nel mondo Windows, un cluster di failover di Windows Server (WSFC) supporta in modo nativo più subnet e gestisce più indirizzi IP tramite una dipendenza OR dall'indirizzo IP. In Linux non esiste alcuna dipendenza OR, ma è possibile ottenere più subnet in modo nativo tramite Pacemaker, come illustrato di seguito. Non è possibile eseguire questa operazione semplicemente usando la normale riga di comando di Pacemaker per modificare una risorsa. È necessario modificare il file CIB (Cluster Information Base). Si tratta di un file XML con la configurazione di Pacemaker.
 
-![](./media/sql-server-linux-configure-multiple-subnet/image2.png)
+![Configurare più subnet 02](./media/sql-server-linux-configure-multiple-subnet/image2.png)
 
 ### <a name="update-the-cib"></a>Aggiornare il file CIB
 
-1.  Esportare il file CIB.
+1. Esportare il file CIB.
 
     **Red Hat Enterprise Linux (RHEL) e Ubuntu**
 
@@ -54,7 +54,7 @@ Nel mondo Windows, un cluster di failover di Windows Server (WSFC) supporta in m
 
     Dove *filename* è il nome che si vuole assegnare al file CIB.
 
-2.  Modificare il file che è stato generato. Cercare la sezione `<resources>`. Sarà possibile visualizzare le varie risorse create per il gruppo di disponibilità o l'istanza del cluster di failover. Individuare quella associata all'indirizzo IP. Aggiungere una sezione `<instance attributes>` con le informazioni per il secondo indirizzo IP sopra o sotto quello esistente, ma prima di `<operations>`. La sintassi è simile alla seguente:
+2. Modificare il file che è stato generato. Cercare la sezione `<resources>`. Sarà possibile visualizzare le varie risorse create per il gruppo di disponibilità o l'istanza del cluster di failover. Individuare quella associata all'indirizzo IP. Aggiungere una sezione `<instance attributes>` con le informazioni per il secondo indirizzo IP sopra o sotto quello esistente, ma prima di `<operations>`. La sintassi è simile alla seguente:
 
     ```xml
     <instance attributes id="<NameForAttribute>" score="<Score>">
@@ -80,7 +80,7 @@ Nel mondo Windows, un cluster di failover di Windows Server (WSFC) supporta in m
     </instance attributes>
     ```
 
-3.  Importare il file CIB modificato e riconfigurare Pacemaker.
+3. Importare il file CIB modificato e riconfigurare Pacemaker.
 
     **RHEL/Ubuntu**
     
@@ -98,7 +98,7 @@ Nel mondo Windows, un cluster di failover di Windows Server (WSFC) supporta in m
 
 ### <a name="check-and-verify-failover"></a>Controllare e verificare il failover
 
-1.  Dopo aver applicato correttamente il file CIB con la configurazione aggiornata, effettuare il ping del nome DNS associato alla risorsa indirizzo IP in Pacemaker. Deve riflettere l'indirizzo IP associato alla subnet che attualmente ospita il gruppo di disponibilità o l'istanza del cluster di failover.
-2.  Eseguire il failover del gruppo di disponibilità o dell'istanza del cluster di failover nell'altra subnet.
-3.  Quando il gruppo di disponibilità o l'istanza del cluster di failover è completamente online, effettuare il ping del nome DNS associato all'indirizzo IP. Deve riflettere l'indirizzo IP nella seconda subnet.
-4.  Se si vuole, eseguire nuovamente il failover del gruppo di disponibilità o dell'istanza del cluster di failover sulla subnet originale.
+1. Dopo aver applicato correttamente il file CIB con la configurazione aggiornata, effettuare il ping del nome DNS associato alla risorsa indirizzo IP in Pacemaker. Deve riflettere l'indirizzo IP associato alla subnet che attualmente ospita il gruppo di disponibilità o l'istanza del cluster di failover.
+2. Eseguire il failover del gruppo di disponibilità o dell'istanza del cluster di failover nell'altra subnet.
+3. Quando il gruppo di disponibilità o l'istanza del cluster di failover è completamente online, effettuare il ping del nome DNS associato all'indirizzo IP. Deve riflettere l'indirizzo IP nella seconda subnet.
+4. Se si vuole, eseguire nuovamente il failover del gruppo di disponibilità o dell'istanza del cluster di failover sulla subnet originale.

@@ -8,12 +8,12 @@ ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 72d1292b03bc518ec8dfbe7a8f2e5e281bc6978a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d2bc4c05c711645b0cff669acbf847da4998f5d2
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896553"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196739"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Creare e configurare un gruppo di disponibilità per SQL Server in Linux
 
@@ -326,7 +326,7 @@ Questa sezione illustra come creare un gruppo di disponibilità con un tipo di c
 
 3.  Nella finestra di dialogo Specificare le opzioni del gruppo di disponibilità immettere un nome per il gruppo di disponibilità e selezionare il tipo di cluster ESTERNO o NESSUNO nell'elenco a discesa. Per distribuire Pacemaker occorre usare il tipo Esterno. Il tipo Nessuno è riservato per scenari specializzati, come la scalabilità in lettura. La selezione dell'opzione per il rilevamento dell'integrità a livello di database è facoltativa. Per altre informazioni su questa opzione, vedere [Opzione di failover di rilevamento dell'integrità a livello di database di un gruppo di disponibilità](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Fare clic su **Avanti**.
 
-    ![](./media/sql-server-linux-create-availability-group/image3.png)
+    ![Creare un gruppo di disponibilità 03](./media/sql-server-linux-create-availability-group/image3.png)
 
 4.  Nella finestra di dialogo Seleziona database selezionare i database che faranno parte del gruppo di disponibilità. Prima di aggiungere ogni database a un gruppo di disponibilità è necessario effettuarne un backup completo. Fare clic su **Avanti**.
 
@@ -340,17 +340,17 @@ Questa sezione illustra come creare un gruppo di disponibilità con un tipo di c
 
     L'esempio seguente illustra un gruppo di disponibilità con due repliche, un cluster di tipo Esterno e una replica di sola configurazione.
 
-    ![](./media/sql-server-linux-create-availability-group/image4.png)
+    ![Creare un gruppo di disponibilità 04](./media/sql-server-linux-create-availability-group/image4.png)
 
     L'esempio seguente illustra un gruppo di disponibilità con due repliche, un cluster di tipo Nessuno e una replica di sola configurazione.
 
-    ![](./media/sql-server-linux-create-availability-group/image5.png)
+    ![Creare un gruppo di disponibilità 05](./media/sql-server-linux-create-availability-group/image5.png)
 
 9.  Se si vogliono modificare le preferenze di backup, fare clic sulla scheda Preferenze di backup. Per altre informazioni sulle preferenze di backup con i gruppi di disponibilità, vedere [Configurare backup in repliche secondarie per un gruppo di disponibilità Always On](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).
 
 10. Se si usano repliche secondarie leggibili o si crea un gruppo di disponibilità con un cluster di tipo Nessuno per la scalabilità in lettura, è possibile creare un listener selezionando la scheda Listener. Un listener può anche essere aggiunto in un secondo momento. Per creare un listener, scegliere l'opzione **Crea un listener del gruppo di disponibilità** e immettere un nome e una porta TCP/IP, oltre a specificare se usare un indirizzo IP DHCP statico o assegnato automaticamente. Tenere presente che per un gruppo di disponibilità con un tipo di cluster Nessuno l'indirizzo IP deve essere statico e impostato sull'indirizzo IP della replica primaria.
 
-    ![](./media/sql-server-linux-create-availability-group/image6.png)
+    ![Creare un gruppo di disponibilità 06](./media/sql-server-linux-create-availability-group/image6.png)
 
 11. Se si crea un listener per scenari di repliche leggibili, SSMS 17.3 o versioni successive consente la creazione del routing di sola lettura nella procedura guidata. Il listener può anche essere aggiunto successivamente tramite SSMS o Transact-SQL. Per aggiungere subito il routing di sola lettura:
 

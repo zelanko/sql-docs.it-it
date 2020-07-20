@@ -12,12 +12,12 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2460e174ab0e8207c3e37f2e0dc999663a1dd8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 611fb6d081167053240bcf105d28e63b74c69ada
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753177"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279269"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Funzionalità di SQL Server non supportate per OLTP in memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ Le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in
 |Server collegato|Non è possibile accedere a server collegati nella stessa query o transazione come tabelle ottimizzate per la memoria. Per altre informazioni, vedere [Server collegati &#40;Motore di database&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).|  
 |Registrazione bulk|Indipendentemente dal modello di recupero del database, tutte le operazioni nelle tabelle durevoli ottimizzate per la memoria vengono sempre registrate completamente.|  
 |Registrazione minima|La registrazione minima non è supportata dalle tabelle ottimizzate per la memoria. Per altre informazioni sulla registrazione minima, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) e [Prerequisiti per la registrazione minima nell'importazione in blocco](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).|  
-|Rilevamento modifiche|Non è possibile abilitare il rilevamento delle modifiche in un database contenente oggetti OLTP in memoria. |
+|Rilevamento modifiche|Il rilevamento modifiche non è supportato dalle tabelle ottimizzate per la memoria. |
 | trigger DDL | I trigger DDL a livello di database e di server non sono supportati con le tabelle di OLTP in memoria né con i moduli compilati in modo nativo. |  
 | Change Data Capture (CDC) | SQL Server 2017 CU15 e versioni successive supportano l'abilitazione di CDC nei database con tabelle con ottimizzazione della memoria. Questo è applicabile solo ai database e alle tabelle su disco nel database. Nelle versioni precedenti di SQL Server non è possibile usare CDC con i database contenenti tabelle con ottimizzazione della memoria, perché CDC usa internamente un trigger DDL per DROP TABLE. |  
 | Modalità fiber | La modalità fiber non è supportata con le tabelle ottimizzate per la memoria:<br /><br />Se la modalità fiber è attiva, non è possibile creare database con filegroup ottimizzati per la memoria né aggiungere filegroup ottimizzati per la memoria a database esistenti.<br /><br />È possibile abilitare la modalità fiber se sono presenti database con filegroup ottimizzati per la memoria. Tuttavia, l'abilitazione della modalità fiber richiede il riavvio del server. In quella situazione il recupero dei database con filegroup ottimizzati per la memoria avrà esito negativo. Verrà quindi visualizzato un messaggio di errore che suggerisce di disabilitare la modalità fiber per usare i database con i filegroup ottimizzati per la memoria.<br /><br />Se è attiva la modalità fiber, non sarà possibile allegare e ripristinare un database con filegroup ottimizzati per la memoria. Il database verrà contrassegnato come sospetto.<br /><br />Per altre informazioni, vedere [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md). |  

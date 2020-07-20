@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: add476168eabf5255bb4cbdce59bd763d05faf4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9a82afb6ef63963c414997e43fdd1d4ed6a42765
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719551"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279637"
 ---
 # <a name="query-profiling-infrastructure"></a>Infrastruttura di profilatura delle query
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -195,6 +195,9 @@ Per altre informazioni sull'overhead delle prestazioni della profilatura di quer
 
 > [!NOTE]
 > Se l'infrastruttura di profilatura standard è già abilitata, gli eventi estesi che sfruttano la profilatura leggera useranno le informazioni disponibili nella profilatura standard. Si supponga ad esempio che sia in esecuzione una sessione di evento esteso che usa `query_post_execution_showplan` e che venga avviata un'altra sessione che usa `query_post_execution_plan_profile`. La seconda sessione userà le informazioni provenienti dalla profilatura standard.
+
+> [!NOTE]
+> In [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] la profilatura leggera è disattivata per impostazione predefinita, ma viene attivata quando viene avviata una traccia XEvent che si basa su `query_post_execution_plan_profile` e viene quindi disattivata di nuovo quando la traccia viene arrestata. Di conseguenza, se le tracce XEvent basate su `query_post_execution_plan_profile` vengono spesso avviate e arrestate in un'istanza di [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], è consigliabile attivare la profilatura leggera a livello globale con il flag di traccia 7412 per evitare il sovraccarico ripetuto di attivazione/disattivazione. 
 
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio e ottimizzazione delle prestazioni](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

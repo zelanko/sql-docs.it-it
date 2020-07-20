@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 909bca7ee100b89362a877fcea2df54a0718b2a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ebdcdb325ba39d163ef63c04008d86a46cb6bec4
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767245"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380864"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -79,6 +79,8 @@ BULK INSERT
     )]
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argomenti
 
 *database_name* è il nome del database contenente la tabella o la vista specificata. Se viene omesso, il valore predefinito è il database corrente.
@@ -120,7 +122,7 @@ Una situazione in cui può essere necessario disabilitare i vincoli (comportamen
 > [!NOTE]
 > L'opzione MAXERRORS non viene applicata al controllo dei vincoli.
 
-CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'** _code_page_ **'** } specifica la tabella codici dei dati contenuti nel file di dati. CODEPAGE è pertinente solo se i dati contengono colonne di tipo **char**, **varchar** o **text** con valori carattere maggiori di **127** o minori di **32**. Per un esempio, vedere [Definizione di una tabella codici](#d-specifying-a-code-page).
+CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** _code_page_ **'** } specifica la tabella codici dei dati contenuti nel file di dati. CODEPAGE è pertinente solo se i dati contengono colonne di tipo **char**, **varchar** o **text** con valori carattere maggiori di **127** o minori di **32**. Per un esempio, vedere [Definizione di una tabella codici](#d-specifying-a-code-page).
 
 > [!IMPORTANT]
 > CODEPAGE non è un'opzione supportata in Linux per [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Per [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)], è consentita solo l'opzione **'RAW'** per CODEPAGE.
@@ -136,7 +138,7 @@ CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'
 |*code_page*|Numero specifico della tabella codici, ad esempio 850.<br /><br /> **&#42;&#42; Importante &#42;&#42;** Le versioni precedenti a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] non supportano la tabella codici 65001 (codifica UTF-8).|
 | &nbsp; | &nbsp; |
 
-DATAFILETYPE **=** { **'char'**  |  **'native'**  |  **'widechar'**  |  **'widenative'** } specifica che l'operazione di importazione viene eseguita tramite BULK INSERT usando il valore specificato per il tipo di file di dati.
+DATAFILETYPE **=** { **'char'** \| **'native'** \| **'widechar'** \| **'widenative'** } specifica che l'operazione di importazione viene eseguita tramite BULK INSERT usando il valore specificato per il tipo di file di dati.
 
 &nbsp;
 

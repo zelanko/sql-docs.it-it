@@ -17,15 +17,15 @@ ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bd9a563ffe3b9617bbdba529b67e7270d8b6ee5f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c5abd21bd631647bb7605289b5c8e8179c96a66
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287306"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160089"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>Gestione degli account nell'elenco di accesso alla pubblicazione
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   In questo argomento si illustra come gestire gli account di accesso nell'elenco di accesso alla pubblicazione in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'accesso a una pubblicazione viene controllato tramite l'elenco di accesso alla pubblicazione. Accessi e gruppi possono essere aggiunti e rimossi dell'elenco di accesso alla pubblicazione.  
   
  **Contenuto dell'articolo**  
@@ -46,19 +46,19 @@ ms.locfileid: "76287306"
   
 -   Prima di aggiungere l'account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] all'elenco di accesso alla pubblicazione, è necessario associarlo a un utente di database nel database di pubblicazione.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
- L'elenco di accesso alla pubblicazione nella pagina **Elenco di accesso alla pubblicazione** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** consente di gestire gli account di accesso. Per altre informazioni sull'accesso a questa finestra di dialogo, vedere [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+ L'elenco di accesso alla pubblicazione nella pagina **Elenco di accesso alla pubblicazione** della finestra di dialogo **Proprietà pubblicazione - \<Publication>** consente di gestire gli account di accesso. Per altre informazioni sull'accesso a questa finestra di dialogo, vedere [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-manage-logins-in-the-pal"></a>Per gestire gli account nell'elenco di accesso alla pubblicazione  
   
-1.  Nella pagina **Elenco di accesso alla pubblicazione** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** usare i pulsanti **Aggiungi**, **Rimuovi**  e **Rimuovi tutto** per aggiungere e rimuovere gruppi e account di accesso dall'elenco di accesso alla pubblicazione. Non rimuovere **distributor_admin** dall'elenco di accesso alla pubblicazione. Questo account è usato dalla replica.  
+1.  Nella pagina **Elenco di accesso alla pubblicazione** della finestra di dialogo **Proprietà pubblicazione - \<Publication>** usare i pulsanti **Aggiungi**, **Rimuovi**  e **Rimuovi tutto** per aggiungere e rimuovere gruppi e account di accesso dall'elenco di accesso alla pubblicazione. Non rimuovere **distributor_admin** dall'elenco di accesso alla pubblicazione. Questo account è usato dalla replica.  
   
     > [!NOTE]  
     >  Se si usano un server di distribuzione remoto, gli account nell'elenco di accesso alla pubblicazione devono essere disponibili sia nel server di pubblicazione che nel server di distribuzione. L'account deve essere un account di dominio o un account locale definito in entrambi i server. Le password associate a entrambi gli account di accesso devono essere identiche.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-view-groups-and-logins-that-belong-to-the-pal"></a>Per visualizzare gruppi e account di accesso che appartengono all'elenco di accesso alla pubblicazione  
   

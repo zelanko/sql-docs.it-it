@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5d2e90088d844bbd897f2a0efae9379e9a1a585
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9c0a353c91b952571932ae6d2abe318f70decc4a
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007486"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279255"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Indici columnstore - Novità
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,6 +49,9 @@ ms.locfileid: "86007486"
 |L'indice columnstore può avere una colonna calcolata non persistente||||sì|||   
   
  <sup>1</sup> Per creare un indice columnstore non cluster di sola lettura, archiviare l'indice in un filegroup di sola lettura.  
+ 
+> [!NOTE]
+> Il grado di parallelismo per le operazioni in [modalità batch](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) è limitato a 2 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition e 1 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web Edition ed Express Edition. Questo si riferisce agli indici columnstore creati tramite le tabelle basate su disco e le tabelle ottimizzate per la memoria.
 
 ## [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] aggiunge queste nuove funzionalità.
@@ -85,22 +88,26 @@ ms.locfileid: "86007486"
   
 -   Columnstore supporta la deframmentazione degli indici rimuovendo le righe eliminate senza necessità di ricompilare l'indice in modo esplicito. L'istruzione `ALTER INDEX ... REORGANIZE` rimuove dal columnstore le righe eliminate in base a un criterio definito internamente, con un'operazione online  
   
--   Gli indici columnstore sono accessibili su una replica secondaria leggibile AlwaysOn. È possibile migliorare le prestazioni per l'analisi operativa ripartendo le query di analisi su una replica secondaria AlwaysOn.  
+-   Gli indici columnstore sono accessibili su una replica secondaria leggibile Always On. È possibile migliorare le prestazioni per l'analisi operativa ripartendo le query di analisi su una replica secondaria Always On.  
   
--   Per migliorare le prestazioni, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] calcola le funzioni di aggregazione `MIN`, `MAX`, `SUM`, `COUNT` e `AVG` durante le scansioni di tabella quando il tipo di dati usa non più di 8 byte e non è di tipo stringa. La distribuzione dell'aggregazione è supportata con o senza clausola GROUP BY sia per gli indici columnstore cluster sia per quelli non cluster.  
+-   La distribuzione dell'aggregazione calcola le funzioni di aggregazione `MIN`, `MAX`, `SUM`, `COUNT` e `AVG` durante le scansioni di tabella quando il tipo di dati usa non più di 8 byte e non è di tipo stringa. La distribuzione dell'aggregazione è supportata con o senza clausola `GROUP BY` sia per gli indici columnstore cluster sia per quelli non cluster. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa funzionalità avanzata è riservata per Enterprise Edition.
   
--   La distribuzione del predicato consente di velocizzare le query che confrontano le stringhe di tipo [v]archar o n[v]archar. Questo si applica ai comuni operatori di confronto e include operatori come LIKE che usano i filtri bitmap. Inoltre, funziona con tutte le regole di confronto supportate da SQL Server.  
+-   La distribuzione del predicato stringa consente di velocizzare le query che confrontano stringhe di tipo VARCHAR/CHAR o NVARCHAR/NCHAR. Questo si applica ai comuni operatori di confronto e include operatori come `LIKE` che usano i filtri bitmap. Funziona con tutte le regole di confronto supportate. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa funzionalità avanzata è riservata per Enterprise Edition. 
+
+-   Miglioramenti per le operazioni in modalità batch sfruttando le funzionalità hardware basate su vettori. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] rileva il livello di supporto CPU per le estensioni hardware AVX 2 (Advanced Vector Extensions) e SSE 4 (Streaming SIMD Extensions 4) e le usa se supportate. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa funzionalità avanzata è riservata per Enterprise Edition.
   
 ### <a name="performance-for-database-compatibility-level-130"></a>Prestazioni per il livello di compatibilità del database 130  
   
 -   Nuovo supporto dell'esecuzione in modalità batch per le query che usano uno di questi operatori:  
-    -   SORT  
-    -   Funzioni di aggregazione con più funzioni distinte. Alcuni esempi: `COUNT/COUNT`, `AVG/SUM`, `CHECKSUM_AGG`, `STDEV/STDEVP`.  
-    -   Funzioni di aggregazione della finestra: `COUNT`, `COUNT_BIG`, `SUM`, `AVG`, `MIN`, `MAX` e `CLR`.  
-    -   Funzioni di aggregazione della finestra definite dall'utente: `CHECKSUM_AGG`, `STDEV`, `STDEVP`, `VAR`, `VARP` e `GROUPING`.  
-    -   Funzioni analitiche di aggregazione della finestra: `LAG`, `LEAD`, `FIRST_VALUE`, `LAST_VALUE`, `PERCENTILE_CONT`, `PERCENTILE_DISC`, `CUME_DIST` e `PERCENT_RANK`.  
+    -   `SORT`  
+    -   Funzioni di aggregazione con più funzioni distinte. Alcuni esempi: `COUNT/COUNT`, `AVG/SUM`, `CHECKSUM_AGG`, `STDEV/STDEVP`  
+    -   Funzioni di aggregazione della finestra: `COUNT`, `COUNT_BIG`, `SUM`, `AVG`, `MIN`, `MAX` e `CLR`  
+    -   Funzioni di aggregazione della finestra definite dall'utente: `CHECKSUM_AGG`, `STDEV`, `STDEVP`, `VAR`, `VARP` e `GROUPING`  
+    -   Funzioni analitiche di aggregazione della finestra: `LAG`, `LEAD`, `FIRST_VALUE`, `LAST_VALUE`, `PERCENTILE_CONT`, `PERCENTILE_DISC`, `CUME_DIST` e `PERCENT_RANK`  
+
 -   Le query a thread singolo in esecuzione in `MAXDOP 1` o con un piano di query seriale vengono eseguite in modalità batch. Le query multithreading venivano eseguite in modalità batch solo in precedenza.  
--   Le query delle tabelle con ottimizzazione per la memoria possono avere piani paralleli in modalità SQL InterOp durante l'accesso dei dati nell'indice rowstore o columnstore.  
+
+-   Le query delle tabelle ottimizzate per la memoria possono avere piani paralleli in modalità SQL InterOp durante l'accesso ai dati nell'indice rowstore o columnstore.
   
 ### <a name="supportability"></a>Facilità di supporto  
 Queste viste di sistema sono una novità per columnstore:  

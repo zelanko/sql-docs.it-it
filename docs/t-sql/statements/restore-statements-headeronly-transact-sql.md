@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2facc71bae52bf1e8706abdc6ac874ae16f11575
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: d44a81dbe1b010ff4f42363062aafeb7e5571021
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262098"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279508"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Istruzioni RESTORE - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -99,7 +99,7 @@ FROM <backup_device>
 |**ExpirationDate**|**datetime**|Data di scadenza del set di backup.|  
 |**Compressed**|**BIT(1)**|Specifica se il set di backup viene compresso utilizzando la compressione software:<br /><br /> **0** = No<br /><br /> **1** = Sì|  
 |**Posizione**|**smallint**|Posizione del set di backup nel volume (da utilizzare con l'opzione FILE =).|  
-|**DeviceType**|**tinyint**|Numero corrispondente a tipo di dispositivo utilizzato per l'operazione di backup.<br /><br /> Disco:<br /><br /> **2** = Logico<br /><br /> **102** = Fisico<br /><br /> Nastro:<br /><br /> **5** = Logico<br /><br /> **105** = Fisico<br /><br /> Dispositivo virtuale:<br /><br /> **7** = Logico<br /><br /> **107** = Fisico<br /><br /> I nomi e i numeri dei dispositivi logici sono inclusi in **sys.backup_devices**. Per altre informazioni, vedere [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
+|**DeviceType**|**tinyint**|Numero corrispondente a tipo di dispositivo utilizzato per l'operazione di backup.<br /><br /> Disco:<br /><br /> **2** = Logico<br /><br /> **102** = Fisico<br /><br /> Nastro:<br /><br /> **5** = Logico<br /><br /> **105** = Fisico<br /><br /> Dispositivo virtuale:<br /><br /> **7** = Logico<br /><br /> **107** = Fisico<br /><br /> URL<br /><br /> **9** = Logico<br /><br /> **109** = Fisico<br /><br />  I nomi e i numeri dei dispositivi logici sono inclusi in **sys.backup_devices**. Per altre informazioni, vedere [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
 |**UserName**|**nvarchar(128)**|Nome dell'utente che ha eseguito l'operazione di backup.|  
 |**ServerName**|**nvarchar(128)**|Nome del server che ha scritto il set di backup.|  
 |**DatabaseName**|**nvarchar(128)**|Nome del database di cui è stato eseguito il backup.|  
@@ -151,12 +151,12 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) alla versione corrente).<br /><br /> Tipo di componente di crittografia usato: certificato o chiave asimmetrica. Se il backup non è stato crittografato, questo valore è NULL.|  
   
 > [!NOTE]  
->  Se per i set di backup sono state definite password, tramite l'istruzione RESTORE HEADERONLY vengono visualizzate informazioni complete solo per il set di backup la cui password corrisponde al valore specificato nell'opzione PASSWORD del comando. Vengono inoltre visualizzate informazioni complete relative ai set di backup non protetti. Il valore della colonna **BackupName** per gli altri set di backup protetti con password dei supporti viene impostato su ' **_Password Protected_** ', mentre tutte le altre colonne sono NULL.  
+>  Se per i set di backup sono state definite password, tramite l'istruzione RESTORE HEADERONLY vengono visualizzate informazioni complete solo per il set di backup la cui password corrisponde al valore specificato nell'opzione PASSWORD del comando. Vengono inoltre visualizzate informazioni complete relative ai set di backup non protetti. Il valore della colonna **BackupName** per gli altri set di backup protetti con password dei supporti viene impostato su '**_Password Protected_**', mentre tutte le altre colonne sono NULL.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  In un client è possibile utilizzare l'istruzione RESTORE HEADERONLY per il recupero delle informazioni di intestazione di tutti i backup di un dispositivo di backup specifico. Per ogni backup nel dispositivo di backup il server invia le informazioni di intestazione sotto forma di riga.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  Per un'operazione di backup è possibile specificare password per un set di supporti o un set di backup oppure per entrambi. Se è stata impostata una password per un set di supporti o un set di backup, la password o le password corrette devono essere specificate nell'istruzione RESTORE. Queste password impediscono operazioni di ripristino non autorizzate e l'aggiunta non autorizzata di set di backup ai supporti tramite gli strumenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tuttavia, la password non impedisce la sovrascrittura dei supporti tramite l'opzione FORMAT dell'istruzione BACKUP.  
   
 > [!IMPORTANT]  

@@ -15,20 +15,20 @@ ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: dba4e3db3c34dd836e92cf3bc33d5a3517d534cf
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 7cd1c20e9fc0dd126fe74a7f9ae02bfd9343fc93
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807972"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159339"
 ---
 # <a name="distributor-and-publisher-information-script"></a>Script di informazioni sui server di distribuzione e di pubblicazione
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Questo script utilizza le tabelle di sistema e le stored procedure di replica per rispondere a domande frequenti su oggetti presenti nei server di distribuzione e pubblicazione. Può essere utilizzato senza alcuna variazione e può inoltre costituire la base per la generazione di script personalizzati. Per eseguire lo script nel proprio ambiente potrebbe essere necessario apportare due modifiche:  
   
 -   Modificare la riga `use AdventureWorks2012` per utilizzare il nome del database di pubblicazione in uso.  
   
--   Rimuovere i commenti (`--`) dalla riga `exec sp_helparticle @publication='<PublicationName>'` e sostituire \<NomePubblicazione> con il nome di una pubblicazione.  
+-   Rimuovere i commenti (`--`) dalla riga `exec sp_helparticle @publication='<PublicationName>'` e sostituire \<PublicationName> con il nome di una pubblicazione.  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  

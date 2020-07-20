@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d4ef0d67bdb86d08754ed23805b4c04e56cf37a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a70a3794a75ffb253e3e52917a075c11e22f865
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728684"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196942"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurare account di servizio e autorizzazioni di Windows
 
@@ -83,6 +83,9 @@ A seconda dei componenti selezionati, durante l'installazione di [!INCLUDE[ssNoV
 - **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]** : offre funzionalità OLAP (Online Analytical Processing) e di data mining per applicazioni di business intelligence. Il file eseguibile è \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe.
 - **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** : gestisce, esegue, crea, pianifica e recapita i report. Il file eseguibile è \<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe.
 - **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]** : fornisce supporto di gestione per l'archivio pacchetti e l'esecuzione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Il percorso del file eseguibile è \<MSSQLPATH>\130\DTS\Binn\MsDtsSrvr.exe
+
+   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] può includere servizi aggiuntivi per le distribuzioni con scalabilità orizzontale. Per altre informazioni, vedere [Procedura dettagliata: Installare Integration Services (SSIS) Scale Out](../../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md).
+
 - **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser** : servizio di risoluzione dei nomi che fornisce informazioni di connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i computer client. Il percorso dell'eseguibile è c:\Programmi (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe
 - **Ricerca full-text** : consente di creare rapidamente indici full-text del contenuto e delle proprietà dei dati strutturati e semistrutturati per fornire le funzioni di filtro e word breaking dei documenti per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 - **Writer SQL** : consente alle applicazioni di backup e ripristino di operare nel framework del servizio Copia Shadow del volume (VSS).

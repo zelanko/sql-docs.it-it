@@ -28,15 +28,15 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: e36315d58721fc6c50393b0bff10c7e8a2e3dee0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 38d542d84121b41311cd8aa64d4ec9747bfc2bf8
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757201"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279533"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
 
 Compatta le dimensioni dei file di dati e di log nel database specificato.
   
@@ -52,7 +52,18 @@ DBCC SHRINKDATABASE
 )  
 [ WITH NO_INFOMSGS ]  
 ```  
-  
+
+```syntaxsql
+-- Azure Synapse Analytics (formerly SQL DW)
+
+DBCC SHRINKDATABASE   
+( database_name   
+     [ , target_percent ]   
+)  
+[ WITH NO_INFOMSGS ]
+
+```  
+
 ## <a name="arguments"></a>Argomenti  
 _database\_name_ | _database\_id_ | 0  
 Nome o ID del database da compattare. Il valore 0 specifica che si sta usando il database corrente.  
@@ -93,7 +104,7 @@ Nella tabella seguente vengono descritte le colonne del set di risultati.
 ## <a name="remarks"></a>Osservazioni  
 
 >[!NOTE]
-> Azure SQL Data Warehouse attualmente non supporta DBCC SHRINKDATABASE. L'esecuzione di questo comando non è consigliata poiché si tratta di un'operazione a elevato utilizzo di input/output che può portare il data warehouse offline. Inoltre, l'esecuzione di questo comando comporta costi per gli snapshot del data warehouse. 
+> L'esecuzione di questo comando non è consigliata poiché si tratta di un'operazione a elevato utilizzo di input/output che può portare il data warehouse offline. Inoltre, l'esecuzione di questo comando comporta costi per gli snapshot del data warehouse. 
 
 Per compattare tutti i file di dati e di log per un database specifico, eseguire il comando DBCC SHRINKDATABASE. Per compattare un file di dati o di log alla volta per un database specifico, eseguire il comando [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md).
   
@@ -170,7 +181,14 @@ Nell'esempio seguente i file di dati e di log nel database di esempio `Adventure
 ```sql  
 DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);  
 ```  
-  
+### <a name="c-shrinking-an-azure-synapse-analytics-database"></a>C. Compattazione di un database di Azure Synapse Analytics
+
+```
+DBCC SHRINKDATABASE (database_A);
+DBCC SHRINKDATABASE (database_B, 10); 
+
+```
+
 ## <a name="see-also"></a>Vedere anche  
 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

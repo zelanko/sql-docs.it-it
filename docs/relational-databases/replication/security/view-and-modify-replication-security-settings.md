@@ -18,15 +18,15 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 420a68755ca7a8adbcc9cfa1dbbf40afaa5f76f7
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 11d2020fff776707da786babb18c07a0a7ab20b1
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808048"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159469"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Visualizzazione e modifica delle impostazioni di sicurezza della replica
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   In questo argomento viene descritto come visualizzare e modificare le impostazioni di sicurezza della replica in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o RMO (Replication Management Objects). È ad esempio possibile modificare la connessione dell'agente di lettura log al server di pubblicazione passando dall'autenticazione di SQL Server all'autenticazione integrata di Windows oppure potrebbe essere necessario modificare le credenziali utilizzate per eseguire un processo di agente al momento della modifica della password dell'account di Windows. Per informazioni sulle autorizzazioni richieste per ogni agente, vedere [Modello di sicurezza dell'agente di replica](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
  **Contenuto dell'articolo**  
@@ -65,13 +65,13 @@ ms.locfileid: "83808048"
   
 1.  La finestra di dialogo **Aggiorna password di replica** , disponibile nella cartella **Replica** di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Se si modifica la password di un account [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o Windows su un server di una topologia di replica, utilizzare questa finestra di dialogo anziché aggiornare la password per ogni agente che utilizza l'account. Se gli agenti di più server utilizzano lo stesso account, è necessario connettersi a ogni server e modificare la password. La password viene aggiornata in tutte le posizioni in cui viene utilizzata per la replica ma non viene aggiornata in altre posizioni, come i server collegati.  
   
-2.  La pagina **Sicurezza agente** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+2.  La pagina **Sicurezza agente** della finestra di dialogo **Proprietà pubblicazione - \<Publication>** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-3.  La finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrizione>** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) e [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+3.  La finestra di dialogo **Proprietà sottoscrizione - \<Subscription>** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) e [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
-4.  Le finestre di dialogo **Proprietà server di distribuzione - \<ServerDistribuzione>** e **Proprietà database di distribuzione - \<Database>** . Per ulteriori informazioni sull'accesso a queste finestre di dialogo, vedere [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
+4.  Le finestre di dialogo **Proprietà server di distribuzione - \<Distributor>** e **Proprietà database di distribuzione - \<Database>** . Per ulteriori informazioni sull'accesso a queste finestre di dialogo, vedere [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
-5.  La finestra di dialogo **Proprietà server di pubblicazione - \<ServerPubblicazione>** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
+5.  La finestra di dialogo **Proprietà server di pubblicazione - \<Publisher>** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
 
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>Per modificare la password di un account utilizzato da uno o più agenti  
   
@@ -90,7 +90,7 @@ ms.locfileid: "83808048"
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent"></a>Per modificare le impostazioni di sicurezza per l'agente snapshot  
   
-1.  Nella pagina **Sicurezza agente** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** , fare clic sul pulsante **Impostazioni di sicurezza** accanto alla casella di testo **Agente snapshot**.  
+1.  Nella pagina **Sicurezza agente** della finestra di dialogo **Proprietà pubblicazione - \<Publication>** fare clic sul pulsante **Impostazioni di sicurezza** accanto alla casella di testo **Agente snapshot**.  
   
 2.  Nella finestra di dialogo **Sicurezza agente snapshot** specificare l'account con il quale eseguire l'agente:  
   
@@ -105,13 +105,13 @@ ms.locfileid: "83808048"
     -   Immettere una nuova password complessa nelle caselle di testo **Password** e **Conferma password** .  
   
     > [!NOTE]  
-    >  Se il server di pubblicazione è Oracle, il contesto di connessione viene specificato nella finestra di dialogo **Proprietà server di distribuzione - \<ServerDistribuzione>** . Per la procedura di modifica del contesto, vedere di seguito.  
+    >  Se il server di pubblicazione è un server di pubblicazione Oracle, il contesto di connessione viene specificato nella finestra di dialogo **Proprietà server di distribuzione - \<Distributor>** . Per la procedura di modifica del contesto, vedere di seguito.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-security-settings-for-the-log-reader-agent"></a>Per modificare le impostazioni di sicurezza per l'agente di lettura log  
   
-1.  Nella pagina **Sicurezza agente** della finestra di dialogo **Proprietà server di pubblicazione - \<Pubblicazione>** fare clic sul pulsante **Impostazioni sicurezza** accanto alla casella di testo **Agente di lettura log**.  
+1.  Nella pagina **Sicurezza agente** della finestra di dialogo **Proprietà server di pubblicazione - \<Publication>** fare clic sul pulsante **Impostazioni sicurezza** accanto alla casella di testo **Agente di lettura log**.  
   
 2.  Nella finestra di dialogo **Sicurezza agente di lettura log** specificare l'account con il quale eseguire l'agente:  
   
@@ -126,7 +126,7 @@ ms.locfileid: "83808048"
     -   Immettere una nuova password complessa nelle caselle di testo **Password** e **Conferma password** .  
   
     > [!NOTE]  
-    >  Se il server di pubblicazione è Oracle, il contesto di connessione viene specificato nella finestra di dialogo **Proprietà server di distribuzione - \<ServerDistribuzione>** . Modificare il contesto utilizzando la procedura descritta di seguito.  
+    >  Se il server di pubblicazione è un server di pubblicazione Oracle, il contesto di connessione viene specificato nella finestra di dialogo **Proprietà server di distribuzione - \<Distributor>** . Modificare il contesto utilizzando la procedura descritta di seguito.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -135,7 +135,7 @@ ms.locfileid: "83808048"
   
 #### <a name="to-change-the-context-under-which-the-snapshot-agent-and-log-reader-agent-for-an-oracle-publication-make-connections-to-the-publisher"></a>Per modificare il contesto in cui l'agente snapshot e l'agente di lettura log di un'applicazione Oracle stabiliscono connessioni con il server di pubblicazione  
   
-1.  Nella pagina **Server di pubblicazione** della finestra di dialogo **Proprietà server di distribuzione - \<ServerDistribuzione>** fare clic sul pulsante delle proprietà ( **...** ) accanto a un server di pubblicazione.  
+1.  Nella pagina **Server di pubblicazione** della finestra di dialogo **Proprietà server di distribuzione - \<Distributor>** fare clic sul pulsante delle proprietà ( **...** ) accanto a un server di pubblicazione.  
   
 2.  Nella sezione **Connessione agente al server di pubblicazione** specificare l'account di accesso e la password utilizzati con lo schema utente di amministrazione della replica configurato. Per altre informazioni, vedere [Configurare un server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
@@ -143,7 +143,7 @@ ms.locfileid: "83808048"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-push-subscription"></a>Per modificare le impostazioni di sicurezza dell'agente di distribuzione per una sottoscrizione push  
   
-1.  Nella finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrizione>** del server di pubblicazione è possibile apportare le modifiche seguenti:  
+1.  Nella finestra di dialogo **Proprietà sottoscrizione - \<Subscription>** del server di pubblicazione è possibile apportare le modifiche seguenti:  
   
     -   Per modificare l'account utilizzato per eseguire l'agente di distribuzione e stabilire connessioni con il server di distribuzione, fare clic sulla riga **Account processo agente** e quindi sul pulsante delle proprietà ( **…** ) nella riga. Specificare un account e una password nella finestra di dialogo **Sicurezza agente di distribuzione** .  
   
@@ -155,7 +155,7 @@ ms.locfileid: "83808048"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription"></a>Per modificare le impostazioni di sicurezza dell'agente di distribuzione per una sottoscrizione pull  
   
-1.  Nella finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrizione>** del Sottoscrittore è possibile apportare le modifiche seguenti:  
+1.  Nella finestra di dialogo **Proprietà sottoscrizione - \<Subscription>** del Sottoscrittore è possibile apportare le modifiche seguenti:  
   
     -   Per modificare l'account utilizzato per eseguire l'agente di distribuzione e stabilire connessioni con il Sottoscrittore, fare clic sulla riga **Account processo agente** e quindi sul pulsante delle proprietà ( **…** ) nella riga. Specificare un account e una password nella finestra di dialogo **Sicurezza agente di distribuzione** .  
   
@@ -167,7 +167,7 @@ ms.locfileid: "83808048"
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription"></a>Per modificare le impostazioni di sicurezza dell'agente di merge per una sottoscrizione push  
   
-1.  Nella finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrizione>** del server di pubblicazione è possibile apportare le modifiche seguenti:  
+1.  Nella finestra di dialogo **Proprietà sottoscrizione - \<Subscription>** del server di pubblicazione è possibile apportare le modifiche seguenti:  
   
     -   Per modificare l'account utilizzato per eseguire l'agente di merge e stabilire connessioni con il server di pubblicazione e il server di distribuzione, fare clic sulla riga **Account processo agente** e quindi sul pulsante delle proprietà ( **…** ) nella riga. Specificare un account e una password nella finestra di dialogo **Sicurezza agente di merge** .  
   
@@ -177,7 +177,7 @@ ms.locfileid: "83808048"
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription"></a>Per modificare le impostazioni di sicurezza dell'agente di merge per una sottoscrizione pull  
   
-1.  Nella finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrizione>** del Sottoscrittore è possibile apportare le modifiche seguenti:  
+1.  Nella finestra di dialogo **Proprietà sottoscrizione - \<Subscription>** del Sottoscrittore è possibile apportare le modifiche seguenti:  
   
     -   Per modificare l'account utilizzato per eseguire l'agente di merge e stabilire connessioni con il Sottoscrittore, fare clic sulla riga **Account processo agente** e quindi sul pulsante delle proprietà ( **…** ) nella riga. Specificare un account e una password nella finestra di dialogo **Sicurezza agente di merge** .  
   
@@ -187,7 +187,7 @@ ms.locfileid: "83808048"
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>Per modificare l'account per l'esecuzione dell'agente di lettura coda  
   
-1.  Nella pagina **Generale** della finestra di dialogo **Proprietà server di distribuzione - \<ServerDistribuzione>** fare clic sul pulsante delle proprietà ( **…** ) accanto al database di distribuzione.  
+1.  Nella pagina **Generale** della finestra di dialogo **Proprietà database di distribuzione - \<Distributor>** fare clic sul pulsante delle proprietà ( **...** ) relativo al database di distribuzione.  
   
 2.  Nella finestra di dialogo **Proprietà database di distribuzione - \<Database>** fare clic sul pulsante **Impostazioni di sicurezza** accanto alla casella di testo **Account processo agente**.  
   
@@ -204,7 +204,7 @@ ms.locfileid: "83808048"
   
 #### <a name="to-change-the-context-under-which-the-queue-reader-agent-makes-connections-to-the-publisher"></a>Per modificare il contesto in cui l'agente di lettura coda stabilisce connessioni con il server di pubblicazione  
   
-1.  Nella pagina **Server di pubblicazione** della finestra di dialogo **Proprietà server di distribuzione - \<ServerDistribuzione>** fare clic sul pulsante delle proprietà ( **...** ) accanto al server di pubblicazione.  
+1.  Nella pagina **Server di pubblicazione** della finestra di dialogo **Proprietà server di distribuzione - \<Distributor>** fare clic sul pulsante delle proprietà ( **...** ) accanto al server di pubblicazione.  
   
 2.  Nella sezione **Connessione agente al server di pubblicazione** specificare il valore **Rappresenta l'account del processo dell'agente** o **Autenticazione di SQL Server** per l'opzione **Modalità di connessione dell'agente** . Se si specifica **Autenticazione di SQL Server**, immettere anche i valori per **Account di accesso** e **Password**.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "83808048"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>Per modificare le impostazioni di sicurezza per una sottoscrizione pull ad aggiornamento immediato  
   
-1.  Nella finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrizione>** del sottoscrittore fare clic sulla riga **Connessione server di pubblicazione** e quindi scegliere il pulsante delle proprietà ( **&#x2026;** ) nella riga.  
+1.  Nella finestra di dialogo **Proprietà sottoscrizione - \<Subscription>** del sottoscrittore fare clic sulla riga **Connessione server di pubblicazione** e quindi fare clic sul pulsante delle proprietà ( **&#x2026;** ) nella riga.  
   
 2.  Nella finestra di dialogo **Immissione delle informazioni per la connessione** selezionare una delle seguenti opzioni:  
   
@@ -236,11 +236,11 @@ ms.locfileid: "83808048"
   
 #### <a name="to-change-the-password-for-the-administrative-connection-from-the-publisher-to-the-distributor"></a>Per modificare la password per la connessione amministrativa dal server di pubblicazione al database di distribuzione  
   
-1.  Nella pagina **Server di pubblicazione** della finestra di dialogo **Proprietà server di distribuzione - \<ServerDistribuzione>** immettere una password complessa nelle caselle di testo **Password** e **Conferma password**.  
+1.  Nella pagina **Server di pubblicazione** della finestra di dialogo **Proprietà server di distribuzione - \<Distributor>** immettere una password complessa nelle caselle di testo **Password** e **Conferma password**.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-3.  Nella pagina **Generale** della finestra di dialogo **Proprietà server di pubblicazione - \<ServerPubblicazione>** immettere una password complessa nelle caselle di testo **Password** **e Conferma password**.  
+3.  Nella pagina **Generale** della finestra di dialogo **Proprietà server di pubblicazione - \<Publisher>** immettere una password complessa nelle caselle di testo **Password** e **Conferma password**.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

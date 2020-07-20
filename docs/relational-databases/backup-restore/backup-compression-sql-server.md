@@ -2,7 +2,7 @@
 title: Compressione dei backup (SQL Server) | Microsoft Docs
 description: Informazioni sulla compressione dei backup di SQL Server, tra cui le restrizioni, i compromessi a livello di prestazioni, la configurazione della compressione dei backup e il rapporto di compressione.
 ms.custom: ''
-ms.date: 08/08/2016
+ms.date: 07/08/2020
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2111c5c96c808202369d0516755263283a4d08b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3351a709eef1550ab172e90b61d2cb67673ba27
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728543"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196945"
 ---
 # <a name="backup-compression-sql-server"></a>Compressione backup (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -84,13 +84,22 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 -   Crittografia dei dati.  
   
-     I dati crittografati vengono compressi molto meno rispetto ai dati equivalenti non crittografati. Se si utilizza Transparent Data Encryption per crittografare un intero database, la compressione dei backup potrebbe non garantire una riduzione significativa, e in alcuni casi neanche minima, delle dimensioni.  
-  
+     I dati crittografati vengono compressi molto meno rispetto ai dati equivalenti non crittografati. Ad esempio, se i dati sono crittografati a livello di colonna con Always Encrypted o con altra crittografia a livello di applicazione, la compressione dei backup potrebbe non ridurre significativamente le dimensioni.
+
+     Per altre informazioni relative alla compressione di database crittografati con Transparent Data Encryption (TDE), vedere [Compressione dei backup con TDE](#backup-compression-with-tde).
+
 -   Compressione del database,  
   
      Se il database è compresso, la compressione potrebbe ridurre di poco o non ridurre le dimensioni dei backup.  
-  
-  
+
+## <a name="backup-compression-with-tde"></a>Compressione dei backup con TDE
+
+A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], impostando `MAXTRANSFERSIZE` su un valore **maggiore di 65536 (64 KB)** si abilita un algoritmo di compressione ottimizzato per i database con crittografia [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) che esegue innanzitutto la decrittografia di una pagina, la comprime e quindi ne esegue nuovamente la crittografia. Se il parametro `MAXTRANSFERSIZE` non viene specificato o se viene usato il valore `MAXTRANSFERSIZE = 65536` (64 KB), la compressione di backup con i database con crittografia TDE comprime direttamente le pagine crittografate e potrebbe non produrre rapporti di compressione validi. Per altre informazioni, vedere [Backup Compression for TDE-enabled Databases](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/) (Compressione dei backup per i database con TDE).
+
+A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5, non è più necessario impostare `MAXTRANSFERSIZE` per abilitare questo algoritmo di compressione ottimizzato con TDE. Se viene specificato il comando di backup `WITH COMPRESSION` o la configurazione server *Valore predefinito di compressione backup* è impostata su 1, il valore `MAXTRANSFERSIZE` verrà automaticamente aumentato a 128 KB per abilitare l'algoritmo ottimizzato. Se `MAXTRANSFERSIZE` viene specificato nel comando di backup con un valore > 64K, il valore definito verrà rispettato. In altre parole, SQL Server non ridurrà mai il valore in modo automatico, ma lo aumenterà soltanto. Se è necessario eseguire il backup di un database con crittografia TDE con `MAXTRANSFERSIZE = 65536`, è necessario specificare `WITH NO_COMPRESSION` o assicurarsi che la configurazione server *Valore predefinito di compressione backup* sia impostata su 0.
+
+Per altre informazioni, vedere [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md).
+
 ##  <a name="allocation-of-space-for-the-backup-file"></a><a name="Allocation"></a> Allocazione di spazio per il file di backup  
  Per i backup compressi le dimensioni dei file di backup finale dipende dal livello di compressione dei dati e questo valore non è noto finché l'operazione di backup non viene completata.  Per impostazione predefinita, quando si esegue il backup di un database mediante compressione, il motore di database utilizza pertanto un algoritmo di preallocazione per il file di backup. Tramite questo algoritmo viene preallocata una percentuale predefinita delle dimensioni del database per il file di backup. Se durante un'operazione di backup è necessaria una quantità di spazio maggiore, il motore di database aumenta le dimensioni del file. Se le dimensioni finali sono inferiori allo spazio allocato, al termine dell'operazione di backup il motore di database compatta il file in base alle dimensioni finali effettive del backup.  
   

@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eb93961b516623f0a22b3baeae4bc29026c3a994
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 6c5634130e2a9a4e6f2a394d067f0e679ab02827
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091782"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196073"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>SQL Server Integration Services (SSIS) DevOps Tools
 
@@ -313,9 +313,9 @@ Lo schema JSON di configurazione ha tre livelli:
 
 |Proprietà  |Descrizione  |Note  |
 |---------|---------|---------|
-|name|Nome del parametro.|Il parametro può essere un *parametro progetto* o un *parametro pacchetto*. <br> Il parametro verrà ignorato se non esiste nel progetto padre.|
-|contenitore|Contenitore del parametro.|<li>Se il parametro è un parametro progetto, il *contenitore* deve corrispondere al nome del progetto. <li>Se è un parametro pacchetto, il *contenitore* deve corrispondere al nome del pacchetto con estensione **dtsx**. <li> Se il parametro è una proprietà di gestione connessione, il nome deve essere nel formato seguente: **CM.\<Connection Manager Name>.\<Property Name>** .|
-|Valore|Valore del parametro.|<li>Quando *valueType* è *referenced*: il valore è un riferimento a una variabile di ambiente nel tipo *string*. <li> Quando *valueType* è *literal*: questo attributo supporta qualsiasi valore JSON di tipo *boolean*, *number* e *string*. <br> Il valore verrà convertito nel tipo di parametro di destinazione. Se non è possibile convertirlo, si verificherà un errore.<li> Il valore *null* non è valido. L'attività ignorerà questo oggetto parametro e visualizzerà un avviso.|
+|name|Nome del parametro.|<li>Il parametro può essere un parametro di progetto o un parametro di pacchetto. <li>Se non esiste, il parametro viene ignorato. <li>Se il parametro è una proprietà di gestione connessione, il nome deve essere nel formato **CM.\<Connection Manager Name>.\<Property Name>** . |
+|contenitore|Contenitore del parametro.|<li>Se il parametro è un parametro progetto, il *contenitore* deve corrispondere al nome del progetto. <li>Se è un parametro pacchetto, il *contenitore* deve corrispondere al nome del pacchetto con estensione **dtsx**.|
+|Valore|Valore del parametro.|<li>Quando *valueType* è *referenced*: il valore è un riferimento a una variabile di ambiente nel tipo *string*. <li> Quando *valueType* è *literal*: questo attributo supporta qualsiasi valore JSON di tipo *boolean*, *number* e *string*. <li> Il valore verrà convertito nel tipo di parametro di destinazione. Se non è possibile convertirlo, si verificherà un errore.<li> Il valore *null* non è valido. L'attività ignorerà questo oggetto parametro e visualizzerà un avviso.|
 |valueType|Tipo di valore del parametro.|I tipi validi sono: <br> *literal*: l'attributo *value* rappresenta un valore letterale. <br> *referenced*: l'attributo *valore* rappresenta un riferimento a una variabile di ambiente.|
 
 ##### <a name="reference-attributes"></a>Attributi del riferimento

@@ -13,12 +13,12 @@ ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5ffdb81cd5c1242a6a97dcb978683488c5a755b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f9bf3a75323a18b500c5bec35e0a01cb48fa754e
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998302"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86302010"
 ---
 # <a name="writing-pages"></a>Scrittura di pagine
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ Una pagina dirty può venire scritta nel disco in tre modi:
  Lazywriter è un processo di sistema che mantiene disponibili i buffer liberi rimuovendo dalla cache buffer le pagine utilizzate con meno frequenza. Le pagine dirty vengono scritte per prime nel disco. 
 
 * Eager Writer   
- Tramite il processo Eager Writer vengono scritte le pagine dirty associate a operazioni non registrate, ad esempio inserimento bulk e selezione. Questo processo consente la creazione e la scrittura di nuove pagine in parallelo. Questo significa che l'operazione che ha eseguito la chiamata non deve attendere il completamento dell'intera operazione prima della scrittura delle pagine nel disco.
+ Tramite il processo Eager Writer vengono scritte le pagine di dati dirty associate a operazioni a registrazione minima, ad esempio inserimento bulk e selezione. Questo processo consente la creazione e la scrittura di nuove pagine in parallelo. Questo significa che l'operazione che ha eseguito la chiamata non deve attendere il completamento dell'intera operazione prima della scrittura delle pagine nel disco.
 
 * Checkpoint   
  Tramite il processo di gestione dei checkpoint viene eseguita periodicamente l'analisi della cache buffer alla ricerca di buffer con pagine di un database specifico e tutte le pagine dirty vengono scritte nel disco. I checkpoint consentono di risparmiare tempo durante un successivo recupero, grazie alla creazione di un punto in cui è certo che tutte le pagine dirty siano state scritte sul disco. L'utente può richiedere un'operazione di checkpoint utilizzando il comando CHECKPOINT oppure in [!INCLUDE[ssDE](../includes/ssde-md.md)] possono venire generati checkpoint automatici in base alla quantità di spazio del log utilizzato e al tempo trascorso dall'ultimo checkpoint. Viene inoltre generato un checkpoint quando si verificano determinate attività, ad esempio quando un file di dati o di log viene aggiunto o rimosso da un database oppure quando viene arrestata l'istanza di SQL Server. Per altre informazioni, vedere [Relazione tra i checkpoint e la parte attiva del log](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).

@@ -1,5 +1,5 @@
 ---
-title: CREATE ENDPOINT (Transact-SQL) | Microsoft Docs
+title: CREATE ENDPOINT (Transact-SQL)
 ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
@@ -31,14 +31,15 @@ helpviewer_keywords:
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7a8290a80438b41a201f268c7388c06d2d7df930
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c095857b42255551d8686d3809b5e13e4b1d7889
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902290"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392739"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crea gli endpoint e ne definisce le proprietà, inclusi i metodi disponibili alle applicazioni client. Per altre informazioni relative alle autorizzazioni, vedere [GRANT - autorizzazioni per endpoint &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
@@ -107,7 +108,9 @@ FOR DATABASE_MIRRORING (
 )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *endPointName*  
  Nome assegnato per l'endpoint in fase di creazione. Utilizzare questo nome in caso di aggiornamento o eliminazione dell'endpoint.  
   
@@ -168,7 +171,7 @@ FOR DATABASE_MIRRORING (
   
  **\<authentication_options> ::=**  
   
- **WINDOWS** [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
+ **WINDOWS** [ { NTLM \| KERBEROS \| **NEGOTIATE** } ]  
  Specifica che l'endpoint deve connettersi utilizzando il protocollo di autenticazione di Windows per autenticare gli endpoint Questa è la modalità predefinita.  
   
  Se si specifica un metodo di autenticazione (NTLM o KERBEROS), il metodo specificato viene utilizzato sempre come protocollo di autenticazione. Il valore predefinito NEGOTIATE imposta l'utilizzo da parte dell'endpoint di uno dei protocolli di negoziazione di Windows (NTLM o Kerberos).  
@@ -176,13 +179,13 @@ FOR DATABASE_MIRRORING (
  CERTIFICATE *certificate_name*  
  Specifica che l'endpoint deve autenticare la connessione tramite il certificato specificato da *certificate_name* per definire l'identità per l'autorizzazione. L'endpoint sull'altro lato della connessione deve disporre di un certificato con chiave pubblica corrispondente alla chiave privata del certificato specificato.  
   
- WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
+ WINDOWS [ { NTLM \| KERBEROS \| **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
  Specifica che l'endpoint deve tentare di connettersi utilizzando l'autenticazione di Windows e, se il tentativo ha esito negativo, di provare a utilizzare il certificato specificato.  
   
- CERTIFICATE *certificate_name* WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
+ CERTIFICATE *certificate_name* WINDOWS [ { NTLM \| KERBEROS \| **NEGOTIATE** } ]  
  Specifica che l'endpoint deve tentare di connettersi utilizzando il certificato specificato e, se il tentativo ha esito negativo, di provare a utilizzare l'autenticazione di Windows.  
   
- ENCRYPTION = { DISABLED | SUPPORTED | **REQUIRED** } [ALGORITHM { **AES** | RC4 | AES RC4 | RC4 AES } ]  
+ ENCRYPTION = { DISABLED \| SUPPORTED \| **REQUIRED** } [ALGORITHM { **AES** \| RC4 \| AES RC4 \| RC4 AES } ]  
  Specifica se nel processo viene utilizzata la crittografia. Il valore predefinito è REQUIRED.  
   
  DISABLED  

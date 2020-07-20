@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c7b22e569f17ca7297483d0b5286ecc77a9a14e5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 67a5219e955ccd9d4b0303276823d8cafbce4963
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895317"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196851"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Nozioni fondamentali sulla disponibilità di SQL Server per le distribuzioni Linux
 
@@ -146,7 +146,7 @@ Tutte le distribuzioni attualmente supportate forniscono un'estensione o un comp
 
 Questa soluzione è simile alla distribuzione di configurazioni in cluster con Windows per certi aspetti, ma per altri è molto diversa. In Windows il formato di disponibilità del clustering, denominato WSFC (Windows Server Failover Cluster), è integrato nel sistema operativo e la funzionalità che consente la creazione di un cluster WSFC, il clustering di failover, è disabilitata per impostazione predefinita. In Windows i gruppi di disponibilità e le istanze del cluster di failover sono basati su un cluster WSFC e sono strettamente integrati a causa della DLL della risorsa specifica fornita da [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Questa soluzione a stretto regime di controllo, in generale, è possibile perché tutti gli elementi provengono da un unico fornitore.
 
-![](./media/sql-server-linux-ha-basics/image1.png)
+![Nozioni di base sulla disponibilità elevata](./media/sql-server-linux-ha-basics/image1.png)
 
 In Linux ogni distribuzione supportata, nonostante disponga di Pacemaker, può essere personalizzata e avere implementazioni e versioni leggermente diverse. Alcune delle differenze risulteranno evidenti dalle istruzioni riportate in questo articolo. Il livello del clustering è open source, quindi anche se viene fornito con le distribuzioni, non è così strettamente integrato come un cluster WSFC in Windows. È proprio per questo motivo che Microsoft fornisce *mssql-server-ha*, in modo che [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] e lo stack di Pacemaker possano offrire un'esperienza simile, ma non identica, a quella di Windows per i gruppi di disponibilità e le istanze del cluster di failover.
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 39d990e334c790840eab7c47634dde6c6f9ff065
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad1dbfa9c39167d6bef9ae14afc4245225cfb4cb
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774051"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159829"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurare il database di distribuzione repliche nel gruppo di disponibilità Always On
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +74,7 @@ Dopo aver configurato un database di distribuzione nel gruppo di disponibilità 
    >[!NOTE]
    >Prima di eseguire qualsiasi stored procedure di replica (ad esempio, `sp_dropdistpublisher`, `sp_dropdistributiondb`, `sp_dropdistributor`, `sp_adddistributiondb`, `sp_adddistpublisher`) nella replica secondaria, verificare che la replica sia completamente sincronizzata.
 
-- Tutte le repliche secondarie in un gruppo di disponibilità del database di distribuzione devono essere leggibili.
+- Tutte le repliche secondarie in un gruppo di disponibilità del database di distribuzione devono essere leggibili. Se una replica secondaria non è leggibile, non è possibile accedere alle proprietà del server di distribuzione in SQL Server Management Studio nella replica secondaria specifica, ma la replica continuerà a funzionare correttamente. 
 - Tutti i nodi del gruppo di disponibilità del database di distribuzione devono usare lo stesso account di dominio per eseguire SQL Server Agent, e tale account di dominio deve avere lo stesso privilegio in ogni nodo.
 - Se vi sono agenti di replica che vengono eseguiti in un account proxy, l'account proxy deve esistere in ogni nodo del gruppo di disponibilità del database di distribuzione e avere lo stesso privilegio in ogni nodo.
 - Apportare modifiche alle proprietà del server di distribuzione o del database di distribuzione in tutte le repliche del gruppo di disponibilità del database di distribuzione.
@@ -117,12 +117,18 @@ In questo esempio vengono configurati un nuovo server di distribuzione e un nuov
 
    Il valore di `@working_directory` deve essere un percorso di rete indipendente da DIST1, DIST2 e DIST3.
 
-1. In DIST2 e DIST3 eseguire:  
+1. In DIST2 e DIST3, se la replica è leggibile come secondaria, eseguire il codice seguente:  
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   Se una replica non è leggibile come secondaria, eseguire il failover in modo che la replica diventi primaria, quindi eseguire il codice seguente: 
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    Il valore di `@working_directory` deve coincidere con quello del passaggio precedente.
 
 ### <a name="publisher-workflow"></a>Flusso di lavoro del server di pubblicazione
@@ -196,12 +202,18 @@ In questo esempio viene aggiunto un nuovo server di distribuzione a una configur
    sp_adddistributiondb 'distribution'
    ```
 
-4. In DIST3 eseguire: 
+4. In DIST3, se la replica è leggibile come secondaria, eseguire il codice seguente: 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   Se la replica non è leggibile come secondaria, eseguire il failover in modo che la replica diventi primaria, quindi eseguire il codice seguente:
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    Il valore di `@working_directory` deve essere quello specificato per DIST1 e DIST2.
 
 4. In DIST3 è necessario ricreare i server collegati presso i sottoscrittori.

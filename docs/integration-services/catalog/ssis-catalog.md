@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 81f446164fd12867c19273e6cf15018b749061a4
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 14a0cfa2227179d74d67d6e3ed16198da3323855
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925170"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279407"
 ---
 # <a name="ssis-catalog"></a>Catalogo SSIS
 
@@ -87,7 +87,7 @@ ms.locfileid: "82925170"
 ###  <a name="folder-project-environment"></a><a name="Folder"></a> Cartella, progetto, ambiente  
  Quando si rinomina una cartella, un progetto o un ambiente, considerare le regole riportate di seguito.  
   
--   I caratteri non validi includono i caratteri ASCII/Unicode compresi tra 1 e 31, le virgolette ("), i simboli minore di (\<) e maggiore di (>), la barra verticale (|), backspace (\b), il valore Null (\0) e la tabulazione (\t).  
+-   I caratteri non validi includono i caratteri ASCII/Unicode compresi tra 1 e 31, le virgolette ("), il simbolo minore di (\<), greater than (>), la barra verticale (|), il carattere backspace (\b), il valore Null (\0) e la tabulazione (\t).  
   
 -   Nel nome potrebbero non essere contenuti spazi iniziali o finali.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "82925170"
 ###  <a name="environment-variable"></a><a name="EnvironmentVariable"></a> Variabile di ambiente  
  Quando si rinomina una variabile di ambiente, considerare le regole seguenti:  
   
--   I caratteri non validi includono i caratteri ASCII/Unicode compresi tra 1 e 31, le virgolette ("), i simboli minore di (\<) e maggiore di (>), la barra verticale (|), backspace (\b), il valore Null (\0) e la tabulazione (\t).  
+-   I caratteri non validi includono i caratteri ASCII/Unicode compresi tra 1 e 31, le virgolette ("), il simbolo minore di (\<), greater than (>), la barra verticale (|), il carattere backspace (\b), il valore Null (\0) e la tabulazione (\t).  
   
 -   Nel nome potrebbero non essere contenuti spazi iniziali o finali.  
   
@@ -661,6 +661,18 @@ Se l'opzione **Abilita supporto per AlwaysOn** nel menu di scelta rapida risulta
 4.  Seguire le istruzioni al [Passaggio 2: Aggiungere SSISDB a un gruppo di disponibilità Always On](#Step2) per aggiungere di nuovo il database SSISDB a un gruppo di disponibilità.  
   
 5.  Seguire le istruzioni al [Passaggio 3: Abilitare il supporto SSIS per Always On](#Step3).  
+
+
+## <a name="ssisdb-catalog-and-delegation-in-double-hop-scenarios"></a>Catalogo SSISDB e delega in scenari con doppio hop
+
+Per impostazione predefinita, la chiamata remota dei pacchetti SSIS archiviati nel catalogo SSISDB non supporta la delega delle credenziali, detta anche doppio hop. 
+
+Si immagini uno scenario in cui un utente accede al computer client A e avvia SQL Server Management Studio (SSMS). In SSMS l'utente si connette a un server SQL ospitato nel computer B, che contiene il catalogo SSISDB. Il pacchetto SSIS viene archiviato in questo catalogo SSISDB e a sua volta si connette a un servizio SQL Server in esecuzione nel computer C (il pacchetto potrebbe anche accedere a qualsiasi altro servizio). Quando l'utente richiama l'esecuzione del pacchetto SSIS dal computer A, SSMS passa innanzitutto le credenziali dell'utente dal computer A al computer B (dove il processo di runtime SSIS sta eseguendo il pacchetto). A questo punto è necessario il processo runtime di esecuzione SSIS (ISServerExec.exe) per delegare le credenziali dell'utente dal computer B al computer C affinché l'esecuzione venga completata correttamente. La delega delle credenziali non è tuttavia abilitata per impostazione predefinita.
+
+Un utente può abilitare la delega delle credenziali concedendo il diritto *Utente attendibile per la delega a qualsiasi servizio (solo Kerberos)* all'account del servizio SQL Server (nel computer B), che avvia ISServerExec.exe come processo figlio. Questo processo è noto come configurazione della delega non vincolata o della delega aperta per un account del servizio SQL Server. Prima di concedere questo diritto, valutare se soddisfa i requisiti di sicurezza dell'organizzazione.
+
+SSISDB non supporta la delega vincolata. In un ambiente a doppio hop, se l'account del servizio SQL Server che ospita il catalogo SSISDB (computer B nell'esempio) è configurato per la delega vincolata, ISServerExec.exe non sarà in grado di delegare le credenziali al terzo computer (computer C). Questa condizione è applicabile agli scenari in cui è abilitato Windows Defender Credential Guard, che richiede obbligatoriamente la configurazione della delega vincolata.
+
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenuto correlato  
   
