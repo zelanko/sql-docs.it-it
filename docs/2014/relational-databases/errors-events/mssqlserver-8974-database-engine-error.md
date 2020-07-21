@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 52098678-0858-4a14-ad07-37ebbafca5fc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25eb85125f8349fa0dbe692c159f9ada33db16d2
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 41573b7ef067d8f51e0c491eed34859b3e31c525
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85031600"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550856"
 ---
 # <a name="mssqlserver_8974"></a>MSSQLSERVER_8974
     
 ## <a name="details"></a>Dettagli  
   
-|||  
+|Attributo|valore|  
 |-|-|  
 |Nome prodotto|SQL Server|  
 |ID evento|8974|  
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC3_OFF_ROW_DATA_NODE_HAS_TWO_PARENTS|  
-|Testo del messaggio|Errore di tabella: ID di oggetto ID_O, ID di indice ID_I, ID di partizione ID_PN, ID di unità di allocazione ID_A (tipo TIPO). La pagina P_ID2, slot S_ID2 e la pagina P_ID3, slot P_ID3 puntano al nodo di dati all'esterno di righe alla pagina P_ID1, slot S_ID1, ID di testo TEXT_ID.|  
+|Testo del messaggio|Errore di tabella: ID di oggetto O_ID, ID di indice I_ID, ID di partizione PN_ID, ID di unità di allocazione A_ID (tipo TYPE). La pagina P_ID2, slot S_ID2 e la pagina P_ID3, slot P_ID3 puntano al nodo di dati all'esterno di righe alla pagina P_ID1, slot S_ID1, ID di testo TEXT_ID.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Un nodo di dati all'esterno di righe viene elencato come nodo figlio da due record di dati o di indice. Un nodo può disporre di un solo nodo padre.  

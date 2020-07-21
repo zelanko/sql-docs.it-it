@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: cf19fbbb-7158-45f2-8778-8f3cad7f574a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ee17df699cb73513a23ef7d899e2289c065ad7c9
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 3004bbb67e8bb3e89bec4acfe9674f0b99f27169
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032533"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551046"
 ---
 # <a name="mssqlserver_7905"></a>MSSQLSERVER_7905
     
 ## <a name="details"></a>Dettagli  
   
-|||  
+|Attributo|valore|  
 |-|-|  
 |Nome prodotto|SQL Server|  
 |ID evento|7905|  
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_FS_INVALID_ROWSET_DIRECTORY|  
-|Testo del messaggio|Errore di database: la directory 'DIRECTORY' non è una directory FileStream valida.|  
+|Testo del messaggio|Errore di database: la directory 'DIRECTORY' non è una directory FILESTREAM valida.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Il nome di una directory di set di righe è l'ID di partizione della partizione, ad eccezione dei nomi di directory di set di righe speciali, ad esempio 'ghost'. Se non è possibile convertire tale nome in un ID di partizione, la directory non verrà considerata una directory di set di righe valida.  

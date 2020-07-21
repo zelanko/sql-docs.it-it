@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 0d9e50da-4f42-4b3a-bc84-daf05cf0e0e5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d46c1bea4fad2eee8342fcee1ac1732f1aafdd77
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 3720d8a0965a28d56f1db118c034dc19c6c63ca8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053854"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551299"
 ---
 # <a name="mssqlserver_5229"></a>MSSQLSERVER_5229
     
 ## <a name="details"></a>Dettagli  
   
-|||  
+|Attributo|valore|  
 |-|-|  
 |Nome prodotto|SQL Server|  
 |ID evento|5229|  
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC4_ANTIMATTER_IN_HEAP_OR_CLUSTERED_INDEX|  
-|Testo del messaggio|Errore di tabella: ID di oggetto O_ID, ID di indice I_ID, ID di partizione PN_ID, ID di unità di allocazione A_ID (tipo TYPE) contiene una colonna di elenco degli elementi da eliminare ma non è un indice non cluster.|  
+|Testo del messaggio|Errore di tabella: ID oggetto O_ID, ID indice I_ID, ID partizione PN_ID, ID unità di allocazione A_ID (tipo TYPE) contiene una colonna di elenco degli elementi da eliminare ma non è un indice non cluster.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Un heap o un indice cluster contiene una colonna di elenco degli elementi da eliminare non prevista.  

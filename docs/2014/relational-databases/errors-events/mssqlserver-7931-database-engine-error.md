@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 18e7a3dc-7d8a-41b9-8724-d2a8587b6903
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6a6ae45133cd8e41479a243b0c1181851f262ca6
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 8d147f5373c1284f25ee9ffbe6b71f2c7b237ec6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053696"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551030"
 ---
 # <a name="mssqlserver_7931"></a>MSSQLSERVER_7931
     
 ## <a name="details"></a>Dettagli  
   
-|||  
+|Attributo|valore|  
 |-|-|  
 |Nome prodotto|SQL Server|  
 |ID evento|7931|  
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_FS_DOUBLE_ROWSET_ACTUAL_FACT|  
-|Testo del messaggio|Errore di database: ID di directory FileStream F_ID rilevato due volte.|  
+|Testo del messaggio|Errore di database: ID di directory FILESTREAM F_ID per una partizione rilevato due volte.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Nei metadati è stato rilevato due volte lo stesso ID di partizione per una directory FileStream.  

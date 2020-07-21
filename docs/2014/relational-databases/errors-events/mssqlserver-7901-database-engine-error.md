@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 2d0d19b9-947b-4474-9ff8-7e03019ab93d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fae6e55cbe7170f795aff85400da2c5cdaef780a
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 6dd4d2721967049295f3fcf5fc8b38807268879a
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032437"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551058"
 ---
 # <a name="mssqlserver_7901"></a>MSSQLSERVER_7901
     
 ## <a name="details"></a>Dettagli  
   
-|||  
+|Attributo|valore|  
 |-|-|  
 |Nome prodotto|SQL Server|  
 |ID evento|7901|  

@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: a8657a91-ec75-4649-a09a-21920e0030ff
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c34414754ea9d25ad89f6aba767197eb1dfc10d0
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: b427188ddf7b65511971c44ea0bf718f546484a6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85033916"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551797"
 ---
 # <a name="mssqlserver_3151"></a>MSSQLSERVER_3151
     
 ## <a name="details"></a>Dettagli  
   
-|||  
+|Attributo|valore|  
 |-|-|  
 |Nome prodotto|SQL Server|  
 |ID evento|3151|  
@@ -35,6 +35,6 @@ ms.locfileid: "85033916"
  Si tratta di un messaggio di errore generale che indica vari problemi relativi al database **master**.  
   
 ## <a name="user-action"></a>Azione dell'utente  
- Per ulteriori informazioni esaminare i log degli errori. Per creare un database **master** utilizzabile, eseguire Setup.exe con l'opzione REBUILDDATABASE. Per ulteriori informazioni, vedere "Procedura: Installazione di SQL Server dal prompt dei comandi" nella documentazione online di SQL Server.  
+ Per ulteriori informazioni esaminare i log degli errori. Per creare un database **master** utilizzabile, eseguire Setup.exe con l'opzione REBUILDDATABASE. Per altre informazioni, vedere "Procedura: Installare SQL Server dal prompt dei comandi" nella documentazione online di SQL Server.  
   
   

@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 53b138b33ce0375d16b908622f6fb3af2b6608c1
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 3aaa3745d060cecad6bc22f4d7915f314a362a49
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85054033"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551846"
 ---
 # <a name="mssqlserver_2814"></a>MSSQLSERVER_2814
     
 ## <a name="details"></a>Dettagli  
   
-|||  
+|Attributo|valore|  
 |-|-|  
 |Nome prodotto|SQL Server|  
 |ID evento|2814|  
@@ -75,6 +75,6 @@ ms.locfileid: "85054033"
 3.  Se il problema persiste, contattare il Servizio Supporto Tecnico Clienti Microsoft.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL:StmtRecompile - classe di evento](../event-classes/sql-stmtrecompile-event-class.md)  
+ [Classe di evento SQL:StmtRecompile](../event-classes/sql-stmtrecompile-event-class.md)  
   
   

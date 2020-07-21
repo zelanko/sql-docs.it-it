@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: d78fc8a9-d173-4801-bb32-ed6a29257f08
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4f26231b6740db533e36afcd239115b606e7175f
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 0777e25a68193527a6d4265a436ddb96752ef6cc
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032072"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550967"
 ---
 # <a name="mssqlserver_7936"></a>MSSQLSERVER_7936
     
 ## <a name="details"></a>Dettagli  
   
-|||  
+|Attributo|valore|  
 |-|-|  
 |Nome prodotto|SQL Server|  
 |ID evento|7936|  
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_FS_ORPHANED_COLUMN_DIRECTORY|  
-|Testo del messaggio|Errore di tabella: la directory FileStream esiste per l'ID di colonna C_ID dell'ID di oggetto O_ID, ID di indice I_ID, ID di partizione PN_ID, ma tale colonna non è una colonna FileStream.|  
+|Testo del messaggio|Errore di tabella: la directory FileStream esiste per l'ID di colonna C_ID dell'ID di oggetto O_ID, ID di indice I_ID, ID di partizione PN_ID, ma tale colonna non è una colonna FILESTREAM.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Durante DBCC CHECKDB, è stata trovata una directory FILESTREAM per la colonna specificata, ma la colonna non è `FILESTREAM`.  

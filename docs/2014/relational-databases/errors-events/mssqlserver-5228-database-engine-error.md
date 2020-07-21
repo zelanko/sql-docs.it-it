@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 5e83c617-4aa2-4755-bcc5-a798c46b97e4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eef59e62f00a44aad7bfefb1719a6d8d2b3d0290
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 76c972d1d789a78424329d8e9b465f3988f7298f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032927"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551312"
 ---
 # <a name="mssqlserver_5228"></a>MSSQLSERVER_5228
     
 ## <a name="details"></a>Dettagli  
   
-|||  
+|Attributo|valore|  
 |-|-|  
 |Nome prodotto|SQL Server|  
 |ID evento|5228|  
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC4_ANTIMATTER_COLUMN_DETECTED|  
-|Testo del messaggio|Errore di tabella: ID di oggetto O_ID, ID di indice I_ID, ID di partizione PN_ID, ID di unità di allocazione A_ID (tipo TYPE), pagina PG_ID, riga ROW_ID. DBCC ha rilevato una pulizia incompleta causata da un'operazione di compilazione di un indice online. Valore della colonna di elenco degli elementi da eliminare VALUE.|  
+|Testo del messaggio|Errore di tabella: ID oggetto O_ID, ID indice I_ID, ID partizione PN_ID, ID unità di allocazione A_ID (tipo TYPE), pagina PG_ID, riga R_ID. DBCC ha rilevato una pulizia incompleta causata da un'operazione di compilazione di un indice online. Valore della colonna di elenco degli elementi da eliminare VALUE.|  
   
 ## <a name="explanation"></a>Spiegazione  
  È stata rilevata una build di un indice online incompleta per l'oggetto *O_ID*, indice *I_ID* e partizione *PN_ID*. Tale evento è dimostrato dalla presenza di una colonna di elenco degli elementi da eliminare nella riga *R_ID*. Questa colonna viene utilizzata durante la riconciliazione di record di più origini per la compilazione di un indice online. Nel messaggio di errore viene inoltre indicato il valore della colonna di elenco degli elementi da eliminare.  
