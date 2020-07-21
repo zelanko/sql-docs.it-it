@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 helpviewer_keywords:
-- Installing the Extension Pack
+- Installing the extension pack
 - SQL Server Database Objects
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 736807d427b08a1b3a32df1d295b84f4ea3d23d2
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 2495d1b61b0251deee1b86ce66c03b6474f36cd8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411665"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554826"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Installazione dei componenti di SSMA in SQL Server (OracleToSQL)
 
@@ -60,9 +60,7 @@ Per installare il pacchetto di estensione:
 6. Nella pagina **Inizio installazione** fare clic su **Installa**.
 7. Nella pagina **completamento del primo passaggio dell'installazione** fare clic su **Avanti**.
   
-   Verrà visualizzata una nuova finestra di dialogo in cui è possibile selezionare il tipo di installazione del pacchetto di estensione.
-
-   istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'installazione del pacchetto di estensione.
+   Verrà visualizzata una nuova finestra di dialogo. Selezionare il tipo di pacchetto di estensione.
   
 8. Selezionare il tipo di installazione desiderato e fare clic su **Avanti**.
 

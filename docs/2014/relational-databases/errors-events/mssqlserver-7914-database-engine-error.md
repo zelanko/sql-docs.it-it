@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: d32a81ce-4ca7-4b33-b536-c7ea0ed6f226
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a6304bf2a35da0b3a8445f3314b7053ba227c3bc
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 85eedb211ee9fbe0384424800d1473c62e6d19a6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053731"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553278"
 ---
 # <a name="mssqlserver_7914"></a>MSSQLSERVER_7914
     
 ## <a name="details"></a>Dettagli  
   
-|||  
+|Attributo|valore|  
 |-|-|  
 |Nome prodotto|SQL Server|  
 |ID evento|7914|  

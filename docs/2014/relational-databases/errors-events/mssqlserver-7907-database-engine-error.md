@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: a1c94e4a-7e91-46e0-9fac-07bbbf6dd018
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3717030dff33b2e67ceae427b7fd42178a0597d
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: baaaaf3966841fb1ff97e9b8b29bb115ff0b4be4
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032446"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553370"
 ---
 # <a name="mssqlserver_7907"></a>MSSQLSERVER_7907
     
 ## <a name="details"></a>Dettagli  
   
-|||  
+|Attributo|valore|  
 |-|-|  
 |Nome prodotto|SQL Server|  
 |ID evento|7907|  
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_FS_INVALID_COLUMN_DIRECTORY|  
-|Testo del messaggio|Errore di tabella: la directory 'DIRECTORY' nella partizione con ID ID_PN non è una directory FileStream valida.|  
+|Testo del messaggio|Errore di tabella: la directory 'DIRECTORY' nella partizione con ID PN_ID non è una directory FileStream valida.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Il nome di una directory di colonna è l'ID di colonna del motore relazionale della partizione. Se non è possibile convertire tale nome in un ID di colonna, la directory non verrà considerata una directory di colonna valida.  

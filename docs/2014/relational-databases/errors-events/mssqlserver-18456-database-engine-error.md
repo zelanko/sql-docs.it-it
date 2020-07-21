@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 14b233839901167ca92a1d2aed5a8c1441fefe0e
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: d0f1216bf1b617a80288c6e5112674c2447979f4
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85034970"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552246"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
     
 ## <a name="details"></a>Dettagli  
   
-|||  
+|Attributo|valore|  
 |-|-|  
 |Nome prodotto|SQL Server|  
 |ID evento|18456|  
@@ -76,7 +76,7 @@ ms.locfileid: "85034970"
   
  **Possibile causa insolita aggiuntiva**  
   
- Il motivo dell'errore **un tentativo di accesso con l'autenticazione SQL non è riuscito. Il server è configurato solo per l'autenticazione di Windows.** può essere restituito nelle situazioni seguenti.  
+ Il motivo dell'errore **Tentativo di accesso tramite l'autenticazione di SQL Server non riuscito. Il server è configurato solo per l'autenticazione di Windows.** può essere restituito nelle situazioni seguenti.  
   
 -   Quando il server è configurato per l'autenticazione in modalità mista, in una connessione ODBC viene utilizzato il protocollo TCP e tramite la connessione non viene specificato in modo esplicito che in essa deve essere utilizzata una connessione trusted.  
   
@@ -89,11 +89,11 @@ ms.locfileid: "85034970"
   
 |Data|Source (Sorgente)|Message|  
 |----------|------------|-------------|  
-|2007-12-05 20:12:56.34|Accesso|Errore: 18456, gravità: 14, stato: 8.|  
+|2007-12-05 20:12:56.34|Accesso|Errore: 18456, Gravità: 14, Stato: 8.|  
 |2007-12-05 20:12:56.34|Accesso|Accesso non riuscito per l'utente '<nome_utente>'. [CLIENT: \<ip address>]|  
   
 > [!NOTE]  
->  Se durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si usa la modalità Autenticazione di Windows e successivamente si passa alla modalità Autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows, l'account di accesso **sa** verrà inizialmente disabilitato. Questo causa l'errore di stato 7: "accesso non riuscito per l'utente ' sa '". Per abilitare l'account di accesso **sa** , vedere [modifica della modalità di autenticazione del server](../../database-engine/configure-windows/change-server-authentication-mode.md).  
+>  Se durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si usa la modalità Autenticazione di Windows e successivamente si passa alla modalità Autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows, l'account di accesso **sa** verrà inizialmente disabilitato. Ciò determina l'errore di stato 7: "Accesso non riuscito per l'utente 'sa'". Per abilitare l'account di accesso **sa**, vedere [Modifica della modalità di autenticazione del server](../../database-engine/configure-windows/change-server-authentication-mode.md).  
   
 ## <a name="user-action"></a>Azione dell'utente  
  Se si sta tentando di effettuare la connessione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verificare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia configurato in modalità Autenticazione mista.  
@@ -108,6 +108,6 @@ ms.locfileid: "85034970"
   
  Se il [!INCLUDE[ssDE](../../includes/ssde-md.md)] supporta i database indipendenti, verificare che l'account di accesso non sia stato eliminato dopo la migrazione a un utente del database indipendente.  
   
- Quando ci si connette in locale a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le connessioni da servizi in esecuzione con **NT AUTHORITY\NETWORK SERVICE** devono essere autenticate usando computer con nomi di dominio completi. Per altre informazioni, vedere [Procedura: Usare l'account Servizio di rete per accedere alle risorse in ASP.NET](https://msdn.microsoft.com/library/ff647402.aspx)  
+ Quando ci si connette in locale a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le connessioni da servizi in esecuzione con **NT AUTHORITY\NETWORK SERVICE** devono essere autenticate usando computer con nomi di dominio completi. Per altre informazioni, vedere [Procedura: Usare l'account del servizio di rete per accedere alle risorse in ASP.NET](https://msdn.microsoft.com/library/ff647402.aspx)  
   
   

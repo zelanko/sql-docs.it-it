@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 729602f3-08df-474c-8740-8dea13c1eee3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d1b93e48814a1d092e2d39982f198c1779c8396e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 293bc57fa85b62f538399e703e7478c5bf7e850e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969851"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554186"
 ---
 # <a name="mssqlserver_10061"></a>MSSQLSERVER_10061
     
 ## <a name="details"></a>Dettagli  
   
-|||  
+|Attributo|valore|  
 |-|-|  
 |Nome prodotto|SQL Server|  
 |ID evento|10061|  
@@ -40,10 +40,10 @@ ms.locfileid: "84969851"
  Verificare che il server sia stato avviato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire i servizi di motore di database](../../database-engine/configure-windows/manage-the-database-engine-services.md)   
+ [Gestire il servizio Motore di database](../../database-engine/configure-windows/manage-the-database-engine-services.md)   
  [Configurare i protocolli client](../../database-engine/configure-windows/configure-client-protocols.md)   
  [Protocolli di rete e librerie di rete](../../sql-server/install/network-protocols-and-network-libraries.md)   
- [Configurazione della rete client](../../database-engine/configure-windows/client-network-configuration.md)   
+ [Configurazione di rete dei client](../../database-engine/configure-windows/client-network-configuration.md)   
  [Configurare i protocolli client](../../database-engine/configure-windows/configure-client-protocols.md)   
  [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   

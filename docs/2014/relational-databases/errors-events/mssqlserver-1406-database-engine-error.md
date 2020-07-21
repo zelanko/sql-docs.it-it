@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 915f97de-9b74-41f8-8bd5-b2d061416718
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e823c14fcb6e1a408d1589d0588a3fb966552d7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 7e46a807631bc18a1edb7c152969858333392997
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967951"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552276"
 ---
 # <a name="mssqlserver_1406"></a>MSSQLSERVER_1406
     
 ## <a name="details"></a>Dettagli  
   
-|||  
+|Attributo|valore|  
 |-|-|  
 |Nome prodotto|SQL Server|  
 |ID evento|1406|  
@@ -38,7 +38,7 @@ ms.locfileid: "84967951"
  Rimuovere il mirroring del database. Sarà quindi possibile recuperare il database mirror per potervi accedere.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Forzare il servizio in una sessione di mirroring del database &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)   
+ [Utilizzo forzato del servizio in una sessione di mirroring del database &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)   
  [Rimozione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

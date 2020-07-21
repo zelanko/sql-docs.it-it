@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: bad25b91-eaed-46c0-a5b7-71117a32304c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bf33ef7895ebeae9af158e0b7d8c3c4447805893
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: ed9c25be4a4e3cfa6b0c00c9dc790214415d3593
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969899"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554236"
 ---
 # <a name="mssqlserver_-1"></a>MSSQLSERVER_-1
     
 ## <a name="details"></a>Dettagli  
   
-|||  
+|Attributo|valore|  
 |-|-|  
 |Nome prodotto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID evento|-1|  
@@ -59,7 +59,7 @@ ms.locfileid: "84969899"
  [Configurare un Windows Firewall per l'accesso motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
  [Configurare i protocolli client](../../database-engine/configure-windows/configure-client-protocols.md)   
  [Protocolli di rete e librerie di rete](../../sql-server/install/network-protocols-and-network-libraries.md)   
- [Configurazione della rete client](../../database-engine/configure-windows/client-network-configuration.md)   
+ [Configurazione di rete dei client](../../database-engine/configure-windows/client-network-configuration.md)   
  [Configurare i protocolli client](../../database-engine/configure-windows/configure-client-protocols.md)   
  [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   

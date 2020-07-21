@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 29b967b8-de30-4618-99a8-8b1155e69026
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 62e5d41248aa5f79f5f0537c794d20b92f0e096f
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 30b9e0daa53341b60e524daea061536f826f3603
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032013"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553251"
 ---
 # <a name="mssqlserver_7988"></a>MSSQLSERVER_7988
     
 ## <a name="details"></a>Dettagli  
   
-|||  
+|Attributo|valore|  
 |-|-|  
 |Nome prodotto|SQL Server|  
 |ID evento|7988|  
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_PRE_CHECKS_CHAIN_LOOP_DETECTED|  
-|Testo del messaggio|Controlli preliminari su tabella di sistema: ID di oggetto O_ID. Rilevato ciclo nella catena di dati in P_ID. Istruzione di controllo interrotta a causa di un errore irreversibile.|  
+|Testo del messaggio|Controlli preliminari su tabella di sistema: ID oggetto O_ID. Rilevato ciclo nella catena di dati in P_ID. Istruzione di controllo interrotta a causa di un errore irreversibile.|  
   
 ## <a name="explanation"></a>Spiegazione  
  La prima fase dell'esecuzione di un comando DBCC CHECKDB consiste nell'eseguire controlli primitivi nelle pagine dei dati delle tabelle di sistema critiche. Non è possibile correggere eventuali errori rilevati. DBCC CHECKDB verrà pertanto terminato immediatamente. Viene rilevato un ciclo di collegamento delle pagine nella pagina *P_ID*. Tale ciclo si verifica quando i puntatori di pagina successiva di una pagina tornano infine alla pagina specificata.  
