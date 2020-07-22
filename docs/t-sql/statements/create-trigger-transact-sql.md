@@ -1,5 +1,5 @@
 ---
-title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
+title: CREATE TRIGGER (Transact-SQL)
 description: Informazioni di riferimento Transact-SQL per l'istruzione CREATE TRIGGER, usata per creare un trigger DML, DDL o LOGON.
 ms.date: 10/30/2019
 ms.prod: sql
@@ -28,16 +28,16 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 ms.reviewer: mathoma
-ms.openlocfilehash: 70a32b0f5c3a80d4d3c5af0cad7adcd1e15f5088
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2434250e8ea3fe4abd7c17ed5fc4041c63880321
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766951"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86481853"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Crea un trigger DML, DDL o LOGON. Un trigger è una stored procedure di tipo speciale che viene eseguita automaticamente quando si verifica un evento nel server di database. I trigger DML vengono eseguiti quando un utente prova a modificare i dati tramite un evento DML (Data Manipulation Language). Gli eventi DML sono istruzioni INSERT, UPDATE o DELETE eseguite su una tabella o una vista. Questi trigger vengono attivati quando viene generato un evento valido, indipendentemente dal fatto che le righe della tabella siano interessate o meno. Per altre informazioni, vedere [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
   
@@ -160,6 +160,8 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
     [ EXECUTE AS Clause ]  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argomenti
 OR ALTER  
 **Si applica a**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1). 
@@ -310,20 +312,27 @@ Anche se un'istruzione TRUNCATE TABLE è in effetti un'istruzione DELETE, non at
 L'istruzione WRITETEXT non attiva alcun trigger, indipendentemente dal fatto che sia registrata o meno.  
   
 Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti non sono consentite in un trigger DML:  
-  
-||||  
-|-|-|-|  
-|ALTER DATABASE|CREATE DATABASE|DROP DATABASE|  
-|RESTORE DATABASE|RESTORE LOG|RECONFIGURE|  
-  
+
+- ALTER DATABASE
+- CREATE DATABASE
+- DROP DATABASE
+- RESTORE DATABASE
+- RESTORE LOG
+- RECONFIGURE
+
 Inoltre, le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti non sono consentite nel corpo di un trigger DML eseguito sulla tabella o sulla vista che rappresenta la destinazione dell'azione del trigger.  
   
-||||  
-|-|-|-|  
-|CREATE INDEX (incluse CREATE SPATIAL INDEX e CREATE XML INDEX)|ALTER INDEX|DROP INDEX|  
-|DBCC DBREINDEX|ALTER PARTITION FUNCTION|DROP TABLE|  
-|ALTER TABLE quando viene utilizzata per eseguire le operazioni seguenti:<br /><br /> Aggiungere, modificare o eliminare colonne.<br /><br /> Passare da una partizione all'altra.<br /><br /> Aggiungere o eliminare vincoli PRIMARY KEY o UNIQUE.|||  
-  
+- CREATE INDEX (incluse CREATE SPATIAL INDEX e CREATE XML INDEX)
+- ALTER INDEX
+- DROP INDEX
+- DROP TABLE
+- DBCC DBREINDEX
+- ALTER PARTITION FUNCTION
+- ALTER TABLE quando viene utilizzata per eseguire le operazioni seguenti:
+    - Aggiungere, modificare o eliminare colonne.
+    - Passare da una partizione all'altra.
+    - Aggiungere o eliminare vincoli PRIMARY KEY o UNIQUE.
+
 > [!NOTE]  
 >  Poiché in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è supportata l'esecuzione di trigger definiti dall'utente su tabelle di sistema, è consigliabile evitare di creare trigger definiti dall'utente per tabelle di sistema. 
 

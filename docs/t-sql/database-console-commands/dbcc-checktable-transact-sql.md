@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: b882a0f234b6c30b61bc9875bb6b805baeaeb989
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db4bc3e53cd5016cbf6f89c5f0a1d6951ce12c50
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754810"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485272"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +62,9 @@ DBCC CHECKTABLE
     ]    
 ```    
     
-## <a name="arguments"></a>Argomenti    
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *table_name* | *view_name*  
  Tabella o vista indicizzata per cui si desidera eseguire i controlli di integrità. I nomi di tabelle e viste devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md).  
     

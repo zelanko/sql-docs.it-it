@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cce49d6dcad43375dc1c1e25721116f18be039e9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8971ebe550dc4fa61e7ff5d350744eafc455c102
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897032"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483899"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE - autorizzazioni per oggetti (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,9 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
     | Database_user_with_no_login      
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *permission*  
  Specifica un'autorizzazione che può essere revocata per un oggetto contenuto nello schema. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   

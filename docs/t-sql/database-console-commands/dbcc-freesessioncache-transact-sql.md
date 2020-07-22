@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a256ba63-7e11-4d5e-abc0-1fa4ed072e63
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 1a3b721a0ef8ae83d4ca07cb6ae206fc5899c019
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 30a4245b58b9da0d51a246ba025533f42b17a715
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894861"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485252"
 ---
 # <a name="dbcc-freesessioncache-transact-sql"></a>DBCC FREESESSIONCACHE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,9 @@ Scarica la cache delle connessioni di query distribuite usata dalle query distri
 DBCC FREESESSIONCACHE [ WITH NO_INFOMSGS ]  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  WITH NO_INFOMSGS  
  Disattiva tutti i messaggi informativi.  
   

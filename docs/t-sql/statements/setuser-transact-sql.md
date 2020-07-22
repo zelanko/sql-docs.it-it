@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2a1c3460d3633ddb8b17582eea53a2c8d740b2ff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 78e081b5f684751e23efab27acac38e5413f9845
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899906"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483895"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,9 @@ ms.locfileid: "85899906"
 SETUSER [ 'username' [ WITH NORESET ] ]   
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  **'** *username* **'**  
  Nome di un utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o di Windows nel database corrente che viene rappresentato. Se *username* viene omesso, viene ripristinata l'identità originale dell'amministratore di sistema o del proprietario del database che rappresenta l'utente.  
   

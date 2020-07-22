@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: de603ecc1d221dad96c7aaf70330198f7732c60c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e024024726ab6366b6dbb3580f1c27367195c130
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759590"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86548626"
 ---
 # <a name="parse-database-engine"></a>Parse (Motore di database)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,9 @@ CAST ( input AS hierarchyid )
 static SqlHierarchyId Parse ( SqlString input )   
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
 *input*  
 [!INCLUDE[tsql](../../includes/tsql-md.md)]: valore del tipo di dati character convertito.
   

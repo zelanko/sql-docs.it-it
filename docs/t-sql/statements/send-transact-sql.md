@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 024b038da647f36731a3a23d97033cad74f55a39
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 56352f68927d82e1c7df0110168a6a4aff14d0c7
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895957"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484042"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,7 +49,9 @@ SEND
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
 ON CONVERSATION *conversation_handle [.. @conversation_handle_n]*  
 Specifica le conversazioni a cui appartiene il messaggio. *conversation_handle* deve contenere un identificatore di conversazione valido. Lo stesso handle di conversazione non può essere usato più di una volta.  
   

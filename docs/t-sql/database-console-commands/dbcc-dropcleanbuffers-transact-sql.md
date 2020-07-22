@@ -1,5 +1,5 @@
 ---
-title: DBCC DROPCLEANBUFFERS (Transact-SQL) | Microsoft Docs
+title: DBCC DROPCLEANBUFFERS (Transact-SQL)
 ms.custom: ''
 ms.date: 07/16/2017
 ms.prod: sql
@@ -25,14 +25,15 @@ ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3b2d2ff81fddaae0b0ae68da9d4477819a61073
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 57c29581a8a2c7d5be9978dce6b4b8b3f9b6aae9
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101927"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485545"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
 Rimuove tutti i buffer vuoti dal pool di buffer e gli oggetti columnstore dal pool di oggetti columnstore.
@@ -40,7 +41,7 @@ Rimuove tutti i buffer vuoti dal pool di buffer e gli oggetti columnstore dal po
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi
-Sintassi per SQL Server: 
+Sintassi per SQL Server:
 
 ```sql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]  
@@ -49,8 +50,8 @@ Sintassi per Azure SQL Warehouse e Parallel Data Warehouse:
 
 ```sql  
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]  
-```  
-  
+```
+
 ## <a name="arguments"></a>Argomenti  
  WITH NO_INFOMSGS  
  Disattiva tutti i messaggi informativi. I messaggi informativi vengono soppressi sempre in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  

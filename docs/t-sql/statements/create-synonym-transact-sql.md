@@ -1,5 +1,5 @@
 ---
-title: CREATE SYNONYM (Transact-SQL) | Microsoft Docs
+title: CREATE SYNONYM (Transact-SQL)
 ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql
@@ -22,14 +22,15 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f4fd357cb833832beb03e23e3b7ba6e1f26fb03
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7d4131868fbaf40c59be2b55aad5fe078490c824
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766964"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484564"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Crea un nuovo sinonimo.  
@@ -61,7 +62,9 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 }  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *schema_name_1*  
  Specifica lo schema in cui viene creato il sinonimo. Se lo *schema* viene omesso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa lo schema predefinito dell'utente corrente.  
   
@@ -89,15 +92,19 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  È possibile creare sinonimi per i tipi di oggetti seguenti:  
   
-|||  
-|-|-|  
-|Stored procedure di assembly (CLR)|Funzione con valori di tabella di assembly (CLR)|  
-|Funzione scalare di assembly (CLR)|Funzioni aggregate di aggregazione assembly (CLR)|  
-|Procedura di filtro della replica|Stored procedure estesa|  
-|Funzione scalare SQL|Funzione con valori di tabella di SQL|  
-|Funzione SQL inline con valori di tabella|Stored procedure di SQL|  
-|Visualizza|Tabella<sup>1</sup> (definita dall'utente)|  
-  
+- Stored procedure di assembly (CLR)
+- Funzione con valori di tabella di assembly (CLR)
+- Funzione scalare di assembly (CLR)
+- Funzioni aggregate di aggregazione assembly (CLR)
+- Procedura di filtro della replica
+- Stored procedure estesa
+- Funzione scalare SQL
+- Funzione con valori di tabella di SQL
+- Funzione SQL inline con valori di tabella
+- Stored procedure di SQL
+- Tabella<sup>1</sup> (definita dall'utente)
+- Visualizzazione
+
  <sup>1 Include tabelle temporanee globali e locali</sup>  
   
  I nomi composti da quattro parti non sono supportati per gli oggetti funzione di base.  

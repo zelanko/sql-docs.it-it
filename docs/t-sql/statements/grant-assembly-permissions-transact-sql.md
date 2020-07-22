@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bdaae424fa90d2332db116d305a0e013c1d54559
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 686675f2557a4f00da592116ba938523ad322514
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735675"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484532"
 ---
 # <a name="grant-assembly-permissions-transact-sql"></a>GRANT - autorizzazioni per assembly (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ GRANT { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
     [ AS granting_principal ]  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *permission*  
  Specifica un'autorizzazione che può essere concessa per un assembly. Vedere l'elenco riportato di seguito.  
   

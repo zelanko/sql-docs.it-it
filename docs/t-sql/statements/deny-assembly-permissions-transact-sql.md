@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: be0896b3-f793-44c9-9390-1c6e58f33b2b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 84007df861dec2dc6a126edb3fa5cc95585312a7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 657f932df77506dee1e99e77aa4ab37f89125e07
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902257"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484982"
 ---
 # <a name="deny-assembly-permissions-transact-sql"></a>DENY - autorizzazioni per assembly Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,9 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
         [ AS denying_principal ]  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *permission*  
  Specifica un'autorizzazione che può essere negata per un assembly. Vedere l'elenco riportato di seguito.  
   

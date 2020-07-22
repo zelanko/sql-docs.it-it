@@ -1,5 +1,5 @@
 ---
-title: DBCC FLUSHAUTHCACHE (Transact-SQL) | Microsoft Docs
+title: DBCC FLUSHAUTHCACHE (Transact-SQL)
 ms.custom: ''
 ms.date: 07/16/2017
 ms.prod: sql
@@ -18,14 +18,15 @@ ms.assetid: 681ef31d-ceb9-4da5-86bf-bf1240df950f
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 08e28c4ded842a27d69d23de530345cdbf4ffa79
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e0a4ee56dcb1edbeba870aac79d9d64d569b6e7c
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85686205"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484299"
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (Transact-SQL)
+
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Svuota la cache di autenticazione del database che contiene le informazioni su account di accesso e regole del firewall per il database utente corrente nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Questa istruzione non si applica al database master logico perché il database master contiene lo spazio fisico di archiviazione per le informazioni su account di accesso e regole del firewall. L'utente che esegue l'istruzione e gli altri utenti attualmente connessi mantengono la connessione. DBCC FLUSHAUTHCACHE non è attualmente supportato per [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].
@@ -36,8 +37,8 @@ Svuota la cache di autenticazione del database che contiene le informazioni su a
   
 ```syntaxsql
 DBCC FLUSHAUTHCACHE [ ; ]  
-```  
-  
+```
+
 ## <a name="arguments"></a>Argomenti  
 No.
   

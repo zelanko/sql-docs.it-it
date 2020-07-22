@@ -1,5 +1,5 @@
 ---
-title: DENY (Transact-SQL) | Microsoft Docs
+title: DENY (Transact-SQL)
 ms.custom: ''
 ms.date: 05/15/2017
 ms.prod: sql
@@ -27,14 +27,15 @@ ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0b77901f1a4c625f241c057f22af6b5fd437f10
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e146021bf3bd601e01f6220ffcf42de970e63657
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012568"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484834"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Nega un'autorizzazione a un'entità. Impedisce a tale entità di ereditare l'autorizzazione tramite l'appartenenza al ruolo o al gruppo. DENY ha la precedenza su tutte le autorizzazioni, ma non si applica ai proprietari di oggetti o ai membri del ruolo predefinito del server sysadmin.
@@ -86,7 +87,9 @@ DENY
 }  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  ALL  
  Questa opzione non nega tutte le autorizzazioni possibili. Negare ALL equivale a negare le autorizzazioni seguenti.  
   
@@ -153,11 +156,12 @@ L'uso di AS in questa istruzione non implica la possibilità di rappresentare un
   
  Gli utenti che dispongono dell'autorizzazione CONTROL SERVER, ad esempio i membri del ruolo predefinito del server sysadmin, possono negare qualsiasi autorizzazione per qualsiasi entità a protezione diretta nel server. Gli utenti che dispongono dell'autorizzazione CONTROL per il database, ad esempio i membri del ruolo predefinito del database db_owner, possono negare qualsiasi autorizzazione per ogni entità a protezione diretta nel database. Gli utenti che dispongono dell'autorizzazione CONTROL per uno schema possono negare qualsiasi autorizzazione per qualsiasi oggetto nello schema. Se si utilizza la clausola AS, l'entità specificata deve essere proprietaria dell'entità a protezione diretta per cui vengono negate le autorizzazioni.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempi
+
  Nella tabella seguente vengono elencate le entità a protezione diretta e gli argomenti in cui viene descritta la relativa sintassi specifica.  
   
-|||  
-|-|-|  
+|Entità a protezione diretta|Sintassi|
+|----------|------|
 |Ruolo applicazione|[DENY - Autorizzazioni per entità di database &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
 |Assembly|[DENY - Autorizzazioni per assembly &#40;Transact-SQL&#41;](../../t-sql/statements/deny-assembly-permissions-transact-sql.md)|  
 |Chiave asimmetrica|[DENY - Autorizzazioni per chiavi asimmetriche &#40;Transact-SQL&#41;](../../t-sql/statements/deny-asymmetric-key-permissions-transact-sql.md)|  
@@ -188,7 +192,7 @@ L'uso di AS in questa istruzione non implica la possibilità di rappresentare un
 |Tabella|[DENY - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |Type|[DENY - Autorizzazioni per tipi &#40;Transact-SQL&#41;](../../t-sql/statements/deny-type-permissions-transact-sql.md)|  
 |Utente|[DENY - Autorizzazioni per entità di database &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
-|Visualizza|[DENY - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|Visualizzazione|[DENY - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |Raccolta di XML Schema|[DENY - Autorizzazioni per raccolte di XML Schema &#40;Transact-SQL&#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)|  
   
 ## <a name="see-also"></a>Vedere anche  

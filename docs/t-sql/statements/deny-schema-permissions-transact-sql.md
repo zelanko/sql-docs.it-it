@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5f5a86fc5eccf214828e969865cdedbc4379dc9c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bedc9c9519b82018402295f30d92af12642fcd02
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766658"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484172"
 ---
 # <a name="deny-schema-permissions-transact-sql"></a>DENY (autorizzazioni per schemi) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,9 @@ DENY permission  [ ,...n ] } ON SCHEMA :: schema_name
         [ AS denying_principal ]  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
 *permission*  
 Specifica un'autorizzazione che può essere negata per uno schema. Per un elenco di queste autorizzazioni, vedere la sezione Osservazioni di seguito in questo articolo.  
   
