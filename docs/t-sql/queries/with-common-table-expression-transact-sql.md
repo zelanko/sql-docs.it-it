@@ -27,12 +27,12 @@ ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8bc1a652b84aeb088046d6b76d40cbd5227d3672
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c5feec859ede608fd732099c7cfdb1219e013741
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011352"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552953"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,9 @@ Indica un set di risultati denominato temporaneo, noto come espressione di tabel
     ( CTE_query_definition )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *expression_name*  
 Identificatore valido per l'espressione di tabella comune. *expression_name* deve essere diverso dal nome di qualsiasi altra espressione di tabella comune definita nella stessa clausola WITH \<common_table_expression>, ma *expression_name* può corrispondere al nome di una vista o tabella di base. Tutti i riferimenti a *expression_name* nella query usano l'espressione di tabella comune e non l'oggetto di base.
   

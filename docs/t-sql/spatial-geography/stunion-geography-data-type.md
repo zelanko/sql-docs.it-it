@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 905a0d1799ba247ec7d63129f2ea1c8de8b4af0c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19982bf44aa3e1a5e0e6d894a5d73f503194f567
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85701706"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554372"
 ---
 # <a name="stunion-geography-data-type"></a>STUnion (tipo di dati geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85701706"
 .STUnion ( other_geography )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *other_geography*  
  Altra istanza **geography** per formare un'unione con l'istanza sulla quale viene chiamato STUnion().  
   

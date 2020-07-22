@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 39fe8559-c4c2-4d61-8508-86eb0a103807
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9b8e09118b13c016bbd8abedbfb009c76d9661e9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 70a1b678578612265491803b748db95ba9e3ac96
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762335"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554284"
 ---
 # <a name="stmlinefromtext-geometry-data-type"></a>STMLineFromText (tipo di dati geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Restituisce un'istanza **geometry** da una rappresentazione WKT (Well-Known Text
 STMLineFromText ( 'multilinestring_tagged_text' , SRID )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *multilinestring_tagged_text*  
  Rappresentazione WKT dell'istanza **geometryMultiLineString** da restituire. *multilinestring_tagged_text* è un'espressione **nvarchar(max)** .  
   

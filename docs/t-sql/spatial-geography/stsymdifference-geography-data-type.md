@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 82bbfa2c-a61b-4f41-9bf8-6f720f363bae
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 208994b0a931fa6960071f730391d36cc83e619a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6b6e09623b9a86f342127192ddbe27cf4a8cd72
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85701688"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554371"
 ---
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference (tipo di dati geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85701688"
 .STSymDifference ( other_geography )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *other_geography*  
  Altra istanza **geography** oltre all'istanza sulla quale viene richiamato STSymDistance().  
   

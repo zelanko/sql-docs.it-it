@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 47310f9f-2cdb-41e0-a6da-7c3cfbf139ac
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a98567d42b701178f0996a82e563e5655a062dac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e78d4d7fd52e018d4224726c82f1251bb1fe22a1
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762447"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554651"
 ---
 # <a name="stinteriorringn-geometry-data-type"></a>STInteriorRingN (tipo di dati geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Restituisce l'anello interno specificato di un'istanza **Polygongeometry**.
 .STInteriorRingN ( expression )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *expression*  
  Espressione **int** compresa tra 1 e il numero di anelli interni nell'istanza **geometry**.  
   

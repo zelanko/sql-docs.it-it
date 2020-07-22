@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 224cdc83-aa83-4ad4-bb82-b7481031e910
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9b8c68f34d74e512e17ac75bc4ff9b4b326852b1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a842e3ee2dcfb86f293e8ae3feba1a30665ffbe0
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762482"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554639"
 ---
 # <a name="stgeometrytype-geometry-data-type"></a>STGeometryType (tipo di dati geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Restituisce il nome del tipo OGC (Open Geospatial Consortium) rappresentato da u
 .STGeometryType ( )  
 ```  
   
-## <a name="return-types"></a>Tipi restituiti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Tipi restituiti
  Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **nvarchar(4000)**  
   
  Tipo CLR restituito: **SqlString**  

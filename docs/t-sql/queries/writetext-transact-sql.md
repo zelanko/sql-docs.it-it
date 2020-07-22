@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2646b37d4f8dfd344df916f3f47540890c41dc12
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b264935bd4cbbeaffe9ad3228734cd7acc542476
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892101"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552551"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,9 @@ WRITETEXT [BULK]
   [ WITH LOG ] { data }  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  BULK  
  Consente agli strumenti di caricamento di caricare un flusso di dati binario. Il flusso deve essere fornito dallo strumento a livello di protocollo TDS. Se il flusso di dati non è presente, Query Processor ignora l'opzione BULK.  
   

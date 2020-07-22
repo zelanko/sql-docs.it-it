@@ -23,19 +23,19 @@ ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f812c03b26df551aa90ecb5dbcca5f0c43ba7a3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f7bd1dcb906e7ba0ced0939313b21952d5ecd090
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008029"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554510"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal e numeric (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Tipi di dati numerici con precisione e scala fisse. Decimal e numeric sono sinonimi e possono essere usati in modo intercambiabile.
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>Argomenti
 **decimal**[ **(** _p_[ **,** _s_] **)** ] e **numeric**[ **(** _p_[ **,** _s_] **)** ]  
 Numeri con precisione e scala fisse. Se viene utilizzata la precisione massima, i valori validi sono compresi nell'intervallo da - 10^38 +1 a 10^38 - 1. I sinonimi ISO per **decimal** sono **dec** e **dec(** _p_, _s_ **)** . Dal punto di vista funzionale, **numeric** è identico a **decimal**.
   

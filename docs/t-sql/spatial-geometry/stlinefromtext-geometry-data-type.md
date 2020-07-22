@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 786bae63444499d440133411f6b6ed8bf5c820cc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d050440ae605b5bb43cb3ac5c423929088a48626
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762363"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554622"
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText (tipo di dati geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Restituisce un'istanza **geometry** da una rappresentazione WKT (Well-Known Text
 STLineFromText ( 'linestring_tagged_text' , SRID )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *linestring_tagged_text*  
  Rappresentazione WKT dell'istanza **geometryLineString** da restituire. *linestring_tagged_text* è un'espressione **nvarchar(max)** .  
   

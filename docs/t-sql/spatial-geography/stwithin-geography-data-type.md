@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6fc745cc-7976-418a-a89a-c267e64ab3a2
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4e563a8e5f6d668c6f99c1c2f0ae5afb2bd3cf6e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04889706ac49652dbc01225c2d8e6bcf8c7347f3
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85701497"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554356"
 ---
 # <a name="stwithin-geography-data-type"></a>STWithin (tipo di dati geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "85701497"
 .STWithin ( other_geography )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *other_geography*  
  Altra istanza **geography** da confrontare con l'istanza sulla quale viene chiamato `STWithin()`.  
   
