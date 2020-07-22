@@ -22,15 +22,15 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 85fc251c57e9f5572dfc192e0e83c8e1611a3745
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 47ce98ee7bb1e4cacc82b2125c0da08f5487c444
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159719"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86902202"
 ---
 # <a name="enhance-general-replication-performance"></a>Miglioramento delle prestazioni generali della replica
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   È possibile migliorare le prestazioni generali di tutti i tipi di replica nell'applicazione e nella rete attenendosi alle istruzioni riportate in questo argomento.  
   
 ## <a name="server-and-network"></a>Server e rete  

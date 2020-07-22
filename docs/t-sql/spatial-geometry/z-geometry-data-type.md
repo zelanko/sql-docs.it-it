@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a62ed736-44df-4591-9109-ce90e1df9bd3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 40afdb720e125899e8a4c3b7df942496b7d0ae44
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 854a5afed2e6764cf9c5224a6c52a6f1284b9ba1
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762073"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554892"
 ---
 # <a name="z-geometry-data-type"></a>Z (tipo di dati geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Valore Z (elevazione) dell'istanza. La semantica del valore di elevazione è def
 .Z  
 ```  
   
-## <a name="return-types"></a>Tipi restituiti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Tipi restituiti
  Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
  Tipo CLR: **SqlDouble**  

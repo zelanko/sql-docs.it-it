@@ -36,12 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cdc73ac23a6d95d46b6ec02bb1aeb194df96422a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c73969d5bd4b02373d9a16d292504530a626650b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731326"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555864"
 ---
 # <a name="hints-transact-sql---table"></a>Hint (Transact-SQL) - Tabella
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -120,7 +120,9 @@ WITH  ( <table_hint> [ [, ]...n ] )
 }   
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
 WITH **(** \<table_hint> **)** [[ **,** ]...*n*]  
 Con alcune eccezioni, gli hint di tabella sono supportati nella clausola FROM solo se vengono specificati con la parola chiave WITH. Tali hint devono inoltre essere racchiusi tra parentesi.  
   
@@ -393,18 +395,20 @@ In Query Optimizer non viene considerato alcun hint per l'indice se le opzioni S
 L'hint NOEXPAND è applicabile solo alle *viste indicizzate*, ovvero alle viste in cui è stato creato un indice cluster univoco. In Query Optimizer viene usato l'indice nella vista se in una query sono inclusi riferimenti a colonne disponibili sia in una vista indicizzata sia nelle tabelle di base e viene determinato che l'utilizzo della vista indicizzata rappresenta il metodo migliore per l'esecuzione della query. Questa funzionalità viene chiamata *corrispondenza della vista indicizzata*. Prima di [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, l'uso automatico di una vista indicizzata in Query Optimizer è supportato solo in edizioni specifiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 Tuttavia, affinché Query Optimizer utilizzi le viste indicizzate oppure una vista indicizzata a cui viene fatto riferimento tramite l'hint NOEXPAND per l'esecuzione della corrispondenza, le opzioni SET seguenti devono essere impostate su ON.  
- 
-> [!NOTE]  
+
+> [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supporta l'uso automatico di viste indicizzate senza specificare l'hint NOEXPAND.
-  
-||||  
-|-|-|-|  
-|ANSI_NULLS|ANSI_WARNINGS|CONCAT_NULL_YIELDS_NULL|  
-|ANSI_PADDING|ARITHABORT<sup>1</sup>|QUOTED_IDENTIFIER|  
-  
- <sup>1</sup> ARITHABORT viene impostata in modo implicito su ON se ANSI_WARNINGS è impostata su ON. Non sarà pertanto necessario modificare manualmente questa impostazione.  
-  
- L'opzione NUMERIC_ROUNDABORT deve invece essere impostata su OFF.  
+
+- ANSI_NULLS
+- ANSI_PADDING
+- ANSI_WARNINGS
+- ARITHABORT<sup>1</sup>
+- CONCAT_NULL_YIELDS_NULL
+- QUOTED_IDENTIFIER
+
+<sup>1</sup> ARITHABORT viene impostata in modo implicito su ON se ANSI_WARNINGS è impostata su ON. Non sarà pertanto necessario modificare manualmente questa impostazione.  
+
+L'opzione NUMERIC_ROUNDABORT deve invece essere impostata su OFF.  
   
  Per forzare l'utilizzo di un indice per una vista indicizzata in Query Optimizer, è necessario specificare l'opzione NOEXPAND. Questo hint può essere usato solo se la vista è specificata anche nella query. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è disponibile un hint per forzare l'utilizzo di una vista indicizzata specifica in una query in cui tale vista non viene specificata direttamente nella clausola FROM. In Query Optimizer viene tuttavia valutata la possibilità di usare le viste indicizzate, anche se non sono presenti riferimenti diretti a tali viste all'interno della query. SQL Server creerà automaticamente solo le statistiche relative a una vista indicizzata quando si usa un hint di tabella NOEXPAND. L'omissione di questo hint può causare la generazione di avvisi del piano di esecuzione relativi alla perdita di statistiche che non possono essere risolti creando manualmente le statistiche. Durante l'ottimizzazione della query [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] userà le statistiche della vista create automaticamente o manualmente quando la query fa riferimento alla vista direttamente e viene usato l'hint NOEXPAND.    
   

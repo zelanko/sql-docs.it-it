@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a3f2c84b-a49f-4ce3-ba25-b903fb0c99b4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8ea5e73a3bb79a5b0ecc298b11766062f46fbd00
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8b94beba8827be73f864059e6b657d59e0d12e8b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748891"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555684"
 ---
 # <a name="geomfromgml-geometry-data-type"></a>GeomFromGml (tipo di dati geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,9 @@ Per ulteriori informazioni su Geography Markup Language, vedere le seguenti spec
 GeomFromGml ( GML_input, SRID )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *GML_input*  
  Input XML da cui GML restituirà un valore.  
   

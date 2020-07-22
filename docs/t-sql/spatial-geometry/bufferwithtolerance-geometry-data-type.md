@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d1f071250b80ce1368b7a30ae9ca8ea66a3e7194
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ea306ec0acca8cdb2a21a1ecbeff2c5efe5bf56b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85700723"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555134"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (tipo di dati geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Restituisce un oggetto geometrico che rappresenta l'unione dei valori di tutti i
 .BufferWithTolerance ( distance, tolerance, relative )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *distance*  
  Espressione **float** che specifica la distanza dall'istanza **geometry** intorno alla quale calcolare il buffer.  
   

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c1bee651b2dd74564ebaff47add5acd4b62c5018
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d2407e539d30c3467c4fa6d8b87d831c190a9d00
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121678"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912373"
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>Barra asterisco (blocco di commento) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ text_of_comment
 */  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *text_of_comment*  
  Testo del commento. Può essere composto da una o più stringhe di caratteri.  
   

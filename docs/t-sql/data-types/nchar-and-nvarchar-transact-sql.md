@@ -16,19 +16,19 @@ ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5661008bcb550461466deddea947f205639ae98
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 63673258e2fa368544c6cc43158025770861a8f9
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007999"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555606"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar e nvarchar (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Tipi di dati character a dimensione fissa **nchar** o a dimensione variabile **nvarchar**. A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], quando si usano regole di confronto abilitate per i [caratteri supplementari (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), questi tipi di dati archiviano l'intera gamma dei dati di tipo carattere [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) e usano la codifica dei caratteri [UTF-16 ](https://www.wikipedia.org/wiki/UTF-16). Se si specificano regole di confronto non SC, questi tipi di dati archiviano solo il subset di dati di tipo carattere supportati dalla codifica dei caratteri [UCS-2](https://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms).
-  
-## <a name="arguments"></a>Argomenti  
+
+## <a name="arguments"></a>Argomenti
 **nchar** [ ( n ) ]  
 Dati stringa a dimensione fissa. *n* definisce le dimensioni della stringa in coppie di byte e deve essere un valore compreso tra 1 e 4.000. Le dimensioni di archiviazione, espresse in byte, sono pari al doppio di *n*. Per la codifica [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF), le dimensioni di archiviazione sono pari al doppio di *n* byte e anche il numero di caratteri che possono essere archiviati è *n*. Per la codifica UTF-16, le dimensioni di archiviazione sono ancora pari al doppio di *n* byte, ma il numero di caratteri che possono essere archiviati può essere inferiore a *n* perché i caratteri supplementari usano due coppie di byte, dette anche [coppie di surrogati](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF). I sinonimi ISO per **nchar** sono **national char** e **national character**.
   

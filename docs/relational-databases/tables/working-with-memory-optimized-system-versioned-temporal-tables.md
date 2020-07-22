@@ -11,16 +11,16 @@ ms.assetid: 691d4f80-6754-43f5-8b43-d4facf08f6fc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7b1c406f4b1806b3ac9bdbcddd31c7d40ce5762e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 16a064d023912782c29551cc88308df9cb8dbfad
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000200"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555280"
 ---
 # <a name="working-with-memory-optimized-system-versioned-temporal-tables"></a>Utilizzo di una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Questo argomento illustra in che modo l'utilizzo di una tabella temporale ottimizzata per la memoria con controllo delle versioni di sistema è diverso dall'utilizzo di una tabella temporale con controllo delle versioni di sistema basata su disco.
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b7c85d59-c841-4b7f-9d46-8b4b7f2a3afe
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: fcc6820db9623b989db0e679a0f6d01dc7fcd5d5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 255d1aa4a68aae877c6a32288758f68838eb44a4
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85700658"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554706"
 ---
 # <a name="collectionaggregate-geometry-data-type"></a>CollectionAggregate (tipo di dati geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ Crea un'istanza **GeometryCollection** da un set di tipi **geometry**.
 CollectionAggregate ( geometry_operand )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *geometry_operand*  
  Colonna della tabella di tipo **geometry** che rappresenta un set di oggetti **geometry** da elencare nell'istanza **GeometryCollection**.  
   

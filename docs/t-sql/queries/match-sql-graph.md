@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 576e026f19310ac596e4808b104e21bfb94cee7e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce954aaf4bab45b359bd57fea9af7b6e94933124
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731253"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555586"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -113,7 +113,9 @@ n -  positive integer only.
  
 ```
 
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
 *graph_search_pattern*  
 Specifica il criterio di ricerca o il percorso da attraversare nel grafico. Questo criterio usa la sintassi grafica ASCII per attraversare un percorso nel grafico. Il criterio passa da un nodo a un altro tramite un bordo, nella direzione della freccia indicata. I nomi o alias dei bordi vengono specificati all'interno di parentesi. I nomi o gli alias dei nodi vengono visualizzati alle due estremità della freccia. La freccia può andare in entrambe le direzioni nel modello.
 

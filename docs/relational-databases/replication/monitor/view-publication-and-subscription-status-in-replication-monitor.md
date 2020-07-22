@@ -23,15 +23,15 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 71dc0b6a274b6545169cfcd20487c935086c7764
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: ae4198c68bdef3ca6c4ad93e2c717c18125d8f4e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159589"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86909044"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Visualizzazione dello stato delle pubblicazioni e delle sottoscrizioni in Monitoraggio replica
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Monitoraggio replica per [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] visualizza informazioni sullo stato delle pubblicazioni e delle sottoscrizioni:  
   
 -   Lo stato di una pubblicazione è determinato dallo stato con priorità più alta delle relative sottoscrizioni. Ad esempio, se una sottoscrizione a una pubblicazione presenta un errore e in un'altra sottoscrizione viene rilevato un problema di prestazioni, per la pubblicazione viene visualizzato uno stato di errore.  

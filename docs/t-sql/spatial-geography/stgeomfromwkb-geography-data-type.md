@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 79d39d88-5440-49a7-9247-190eafce3f4f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9986c5eabd68afeeb16ece4a670c0014b5adfc05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 72bf7a6921f486ff202d73cf3678072b5ddb9039
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85703167"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555365"
 ---
 # <a name="stgeomfromwkb-geography-data-type"></a>STGeomFromWKB (tipo di dati geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,9 @@ Questo metodo con tipo di dati **geography** supporta le istanze **FullGlobe** o
 STGeomFromWKB ( 'WKB_geography' , SRID )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *WKB_geography*  
  Rappresentazione WKB dell'istanza **geography** da restituire. *WKB_geography* è un'espressione **varbinary(max)** .  
   

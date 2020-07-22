@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5fe54dc-0007-4631-8dde-7ae4d4c41f6e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d08ac48f8125c577d89c0c7e0b43cccc93f43c0e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5eb48601ba6b584f0846e873c3aff4f326f72493
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85702297"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556025"
 ---
 # <a name="stpointfromtext-geography-data-type"></a>STPointFromText (tipo di dati geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Restituisce un'istanza **geography** da una rappresentazione WKT (Well-Known Tex
 STPointFromText ( 'point_tagged_text' , SRID )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *point_tagged_text*  
  Rappresentazione WKT dell'istanza **geographyPoint** da restituire. *point_tagged_text* è un'espressione **nvarchar(max)** .  
   

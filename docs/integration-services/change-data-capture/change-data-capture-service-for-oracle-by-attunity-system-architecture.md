@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8c6c809aaa32bd8f953061c48bde6bf43d012aa4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3aa815b1b6ad558ac5a7d2cf705c8d139dd1b25a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294846"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912299"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Architettura di sistema del servizio Change Data Capture per Oracle di Attunity
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Con il servizio CDC per Oracle è possibile acquisire le modifiche apportate alle tabelle selezionate in uno o più database Oracle di origine nei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC presenti in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nel diagramma seguente vengono illustrati i componenti che costituiscono il servizio CDC per Oracle.  

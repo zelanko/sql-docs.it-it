@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1157c172-2dc7-4393-bae6-b85406171a34
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 81a27c3069e89672b569dcabd95ff0b365e121b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0536529d063dc8f6e26eb7f8e548d6a46f2f69b3
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762226"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555306"
 ---
 # <a name="stpointfromwkb-geometry-data-type"></a>STPointFromWKB (tipo di dati geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Restituisce un'istanza **geometryPoint** di una rappresentazione WKB (Well-Known
 STPointFromWKB ( 'WKB_point' , SRID )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *WKB_point*  
  Rappresentazione WKB dell'istanza **geometryPoint** da restituire. *WKB_point* è un'espressione **varbinary(max)** .  
   

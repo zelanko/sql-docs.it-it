@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 75e5083f3009a09e7b0ba347ab2a9982c852593f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f6e2dcc0cf6ade3cb8f4e9c82b81e650ca7622a2
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705846"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555846"
 ---
 # <a name="parse-geography-data-type"></a>Parse (tipo di dati geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Questo metodo con tipo di dati **geography** supporta le istanze **FullGlobe** o
 Parse ( 'geography_tagged_text' )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *geography_tagged_text*  
  Rappresentazione WKT dell'istanza **geography** da restituire. *geography_tagged_text* è un'espressione **nvarchar**.  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ef84f7d95644c552d90f137e9f6edab980acfba9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5cbfa37a468fcc600b4092340d9f58365954294a
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736029"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556022"
 ---
 # <a name="filter-geometry-data-type"></a>Filter (tipo di dati geometrico)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,9 @@ Nel caso in cui un indice non sia disponibile o non venga usato, il metodo resti
 .Filter ( other_geometry )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *other_geometry*  
  Altra istanza **geometry** da confrontare con l'istanza sulla quale viene chiamato Filter().  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5de112961599421eb7ce2d85d8152f1aa1339e0c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1dc18a4aaabb04cb0fc200b1158ff865203caf72
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762250"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554949"
 ---
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (tipo di dati geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Restituisce 1 se un'istanza **geometry** si sovrappone a un'altra istanza **geom
 .STOverlaps ( other_geometry )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *other_geometry*  
  Altra istanza **geometry** da confrontare con l'istanza sulla quale viene chiamato `STOverlaps()`.  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 366cd986b9c707c6cef6d8b814204ce506afb601
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 55160039220f949f68837e71d75b11e916839378
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85704963"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554732"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (tipo di dati geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,9 @@ ms.locfileid: "85704963"
 .STBuffer ( distance )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *distance*  
  Valore di tipo **float** (**double** in .NET Framework) che specifica la distanza dall'istanza **geography** intorno alla quale calcolare il buffer.  
   

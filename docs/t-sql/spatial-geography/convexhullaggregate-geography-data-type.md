@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 21784c66-2725-471b-9e2d-a8c2e3695197
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 67980ca0f7e58a9a3051cfd28d3d120acaabeb47
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e09d6f8375d1c48ea86a31c632ca2d13273a53a
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736172"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555476"
 ---
 # <a name="convexhullaggregate-geography-data-type"></a>ConvexHullAggregate (tipo di dati geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Restituisce una struttura convessa per un set specificato di oggetti **geography
 ConvexHullAggregate ( geography_operand )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *geography_operand*  
  Colonna della tabella di tipo **geography** che rappresenta un set di oggetti **geography**.  
   
