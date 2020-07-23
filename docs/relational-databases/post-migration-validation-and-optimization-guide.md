@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 82b9b9b02931aee0a7ea5411cb367b394c1d1d74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 72af408a25ecc085d60fd18e25243cd71c42c337
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774067"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914439"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guida di ottimizzazione e convalida post-migrazione
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 Il passaggio post-migrazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è molto importante per riconciliare l'accuratezza e la completezza dei dati, nonché per individuare problemi di prestazioni relativi al carico di lavoro.
 

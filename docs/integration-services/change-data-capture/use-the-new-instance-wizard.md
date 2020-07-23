@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d964639bbcf7679c71191d4b3a8e2a455a4635e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 37b453c91ce19289aa2f8b8684c163dc0fc638a0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298557"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913979"
 ---
 # <a name="use-the-new-instance-wizard"></a>Utilizzare la New Instance Wizard
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Tramite la New Instance Wizard è possibile creare una nuova istanza per un servizio CDC. Viene visualizzata la procedura guidata Create an Oracle CDC Instance da CDC Designer Console. Nella New Instance Wizard è possibile eseguire le operazioni seguenti.  
