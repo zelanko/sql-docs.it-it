@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2966868205cdf06ddabf1a86245d2f53da5c82e5
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 063c436f2e0d76ca891f332f25be385c2f16fdfa
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670165"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969663"
 ---
 # <a name="isinnode-dmx"></a>IsInNode (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Indica se il nodo specificato contiene o meno il case corrente.  
   
@@ -30,10 +30,10 @@ IsInNode(<NodeID>)
 ## <a name="return-type"></a>Tipo restituito  
  Tipo booleano.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **IsInNode** viene usato solo in [SELECT FROM &#60;Model&#62;. CASI &#40;&#41;DMX](../dmx/select-from-model-cases-dmx.md) e [selezionare da &#60;modello&#62;. SAMPLE_CASES &#40;query&#41;DMX](../dmx/select-from-model-sample-cases-dmx.md) .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituiti tutti i case utilizzati per creare il modello associato al nodo specificato nella funzione IsInNode.  
   
 ```  

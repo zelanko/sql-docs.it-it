@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9ce963b2322e19e4e3a98982a88f99d3546cabc2
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 21ac78f6ee0ed77bb9549f1749d73d29344a49d1
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668733"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968375"
 ---
 # <a name="or-dmx"></a>OR (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Operatore logico che esegue la disgiunzione logica di due espressioni numeriche.  
   
@@ -37,7 +37,7 @@ Expression1 OR Expression2
 ## <a name="return-value"></a>Valore restituito  
  Valore booleano che restituisce TRUE se uno o entrambi gli argomenti restituiscono TRUE, FALSE in caso contrario.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Per consentire all'operatore di eseguire la disgiunzione logica, entrambi gli argomenti vengono gestiti come valori booleani, per cui 0 equivale a FALSE e tutti gli altri valori a TRUE. Se uno o entrambi gli argomenti restituiscono TRUE, l'operatore restituirà TRUE. Se *expression1* restituisce true e *expression2* restituisce false, l'operatore restituisce true.  
   
  La tabella seguente illustra come viene eseguita la disgiunzione logica.  

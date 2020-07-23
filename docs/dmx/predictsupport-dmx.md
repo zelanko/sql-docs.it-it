@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a6509980065c2293a0b2697beacae1ba2d4b0d1
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: da8673d58a6d1889017b0f79ea7cb4bf41c64466
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83667193"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970699"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Viene restituito il valore di supporto per uno stato specificato.  
   
@@ -31,17 +31,17 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  Colonna scalare.  
   
 ## <a name="return-type"></a>Tipo restituito  
- Valore scalare del tipo specificato dal riferimento a una *\<* colonna scalare *>* .  
+ Valore scalare del tipo specificato da *\<*scalar column reference*>* .  
   
-## <a name="remarks"></a>Commenti  
- Se lo stato stimato viene omesso, verrà utilizzato lo stato con la più alta probabilità stimabile, escludendo il bucket degli stati mancanti. Per includere il bucket degli stati mancanti, impostare lo \< stato stimato> su **INCLUDE_NULL**.  
+## <a name="remarks"></a>Osservazioni  
+ Se lo stato stimato viene omesso, verrà utilizzato lo stato con la più alta probabilità stimabile, escludendo il bucket degli stati mancanti. Per includere il bucket degli stati mancanti, impostare \<predicted state> su **INCLUDE_NULL**.  
   
- Per restituire il supporto per gli stati mancanti, impostare lo \< stato stimato> su null.  
+ Per restituire il supporto per gli stati mancanti, impostare \<predicted state> su null.  
   
 > [!NOTE]  
 >  I valori di supporto vengono calcolati in modo diverso o potrebbero essere interpretati in modo diverso a seconda del tipo di modello su cui si esegue la query. Per ulteriori informazioni sul modo in cui viene calcolato il supporto per un tipo di modello specifico, vedere il singolo tipo di algoritmo nel [contenuto del modello di data mining &#40;Analysis Services-&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzata una query singleton per stimare se un individuo sarà un acquirente di biciclette e determinare il supporto per la stima sulla base del modello di data mining TM Decision Tree.  
   
 ```  

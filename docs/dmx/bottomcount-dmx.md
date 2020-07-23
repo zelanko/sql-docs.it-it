@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: be257e4da206c1c30d54341fbfda4c0aed894ab2
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: db7e660b5b92d49f5a5151d5d71e9ac31f9e9013
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669856"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969971"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Restituisce il numero specificato di righe a partire dal basso, in ordine di rango crescente secondo quanto specificato da una determinata espressione.  
   
@@ -28,15 +28,15 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>Si applica a  
- Espressione che restituisce una tabella, ad esempio un riferimento a una \< colonna di tabella>, o una funzione che restituisce una tabella.  
+ Espressione che restituisce una tabella, ad esempio \<table column reference> o una funzione che restituisce una tabella.  
   
 ## <a name="return-type"></a>Tipo restituito  
- \<espressione di tabella>  
+ \<table expression>  
   
-## <a name="remarks"></a>Commenti  
- Il valore fornito dall' \< espressione di rango> argomento determina l'ordine crescente di rango per le righe fornite nell' \< espressione di tabella> argomento e viene restituito il numero di righe più in basso specificato nell' \< argomento count>.  
+## <a name="remarks"></a>Osservazioni  
+ Il valore fornito dall' \<rank expression> argomento determina l'ordine crescente di rango per le righe fornite nell' \<table expression> argomento e viene restituito il numero di righe più in basso che viene specificato nell' \<count> argomento.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata una query di stima sul modello di associazione compilato mediante l'esercitazione di [base sul data mining](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
  Per comprendere il funzionamento di BottomCount, potrebbe essere utile eseguire prima una query di stima che restituisca solo la tabella nidificata.  

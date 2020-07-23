@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6fdb1563f644b544fd9c0bd2ee0857bf4b403329
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 647f0cdaaef28f1da7ca51157388288cfdd729dc
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669832"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969955"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Restituisce, in ordine di rango crescente, le ultime righe di una tabella il cui totale cumulativo corrisponde almeno a una percentuale specificata.  
   
@@ -28,22 +28,22 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *\<Espressione di tabella>*  
+ *\<Table expression>*  
  Nome di una colonna della tabella nidificata o espressione valutata a livello di tabella.  
   
- *\<espressione di rango>*  
+ *\<rank expression>*  
  Colonna della tabella nidificata o espressione che restituisce una colonna.  
   
- *\<percentuale>*  
+ *\<percent>*  
  Valore Double che indica la percentuale di destinazione totale.  
   
 ## <a name="result-type"></a>Tipo di risultato  
  Tabella.  
   
-## <a name="remarks"></a>Commenti  
- La funzione **BottomPercent** restituisce le righe più in basso in ordine crescente di rango. Il rango è basato sul valore valutato dell'espressione di \< rango> argomento per ogni riga, in modo che la somma dei \< valori dell'espressione di rango> sia uguale almeno alla percentuale specificata dall' \< argomento percentuale>. **BottomPercent** restituisce il più piccolo numero di elementi possibile mentre soddisfa ancora il valore percentuale specificato.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **BottomPercent** restituisce le righe più in basso in ordine crescente di rango. Il rango è basato sul valore valutato dell' \<rank expression> argomento per ogni riga, in modo che la somma dei \<rank expression> valori corrisponde almeno alla percentuale specificata dall' \<percent> argomento. **BottomPercent** restituisce il più piccolo numero di elementi possibile mentre soddisfa ancora il valore percentuale specificato.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata una query di stima sul modello di associazione compilato nell'esercitazione di [base sul data mining](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
  Per comprendere il funzionamento di BottomPercent, può essere utile eseguire prima una query di stima che restituisca solo la tabella nidificata.  

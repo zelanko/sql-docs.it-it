@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 54489088aa6edc540dd2da0fb0d9121fc0c6d4b9
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 1b8fe4c8a83eaf56aea70abc810e7dc45f35eebb
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670409"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971775"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>Istruzioni DMX (Data Mining Extensions)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   L'utilizzo dei modelli di data mining in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prevede le attività primarie seguenti:  
   
@@ -49,7 +49,7 @@ ms.locfileid: "83670409"
  Utilizzare l'istruzione [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md) per copiare la struttura di un modello di data mining esistente in un nuovo modello di data mining e per eseguire il training del nuovo modello con gli stessi dati.  
   
  Visualizzazione di modelli di data mining  
- Utilizzare l'istruzione [SELECT &#40;DMX&#41;](../dmx/select-dmx.md) per visualizzare le informazioni calcolate e archiviate dall'algoritmo Data mining nel modello di data mining durante il training del modello. Analogamente a [!INCLUDE[tsql](../includes/tsql-md.md)] , è possibile utilizzare più clausole con l'istruzione SELECT per estenderne la potenza. Queste clausole includono [Distinct da \< Model>](../dmx/select-distinct-from-model-dmx.md), [dal \< modello>. Case](../dmx/select-from-model-cases-dmx.md), [da \< Model>. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md) [dal \< modello>. CONTENUTO](../dmx/select-from-model-content-dmx.md) e [dal \< modello>. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md).  
+ Utilizzare l'istruzione [SELECT &#40;DMX&#41;](../dmx/select-dmx.md) per visualizzare le informazioni calcolate e archiviate dall'algoritmo Data mining nel modello di data mining durante il training del modello. Analogamente a [!INCLUDE[tsql](../includes/tsql-md.md)] , è possibile utilizzare più clausole con l'istruzione SELECT per estenderne la potenza. Queste clausole includono [Distinct from \<model> ](../dmx/select-distinct-from-model-dmx.md), [da \<model> . CASI](../dmx/select-from-model-cases-dmx.md), [da \<model> . SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md), [da \<model> . CONTENUTO](../dmx/select-from-model-content-dmx.md) e [da \<model> . DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md).  
   
  Generazione di stime basate su modelli di data mining  
  Utilizzare la clausola [PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) dell'istruzione SELECT per creare stime basate su un modello di data mining esistente.  

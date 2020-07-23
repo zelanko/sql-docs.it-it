@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 544071565a18ade74b3dd4f26945991987295cbc
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: bf4164308b0fdc9e6ba3fabb756c18214757cde5
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669601"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970615"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   L'istruzione **Select** in DMX (Data Mining Extensions) viene utilizzata per le seguenti attività in data mining:  
   
@@ -46,11 +46,11 @@ FROM <model/structure>[.aspect]
 SELECT FLATTENED <select list> FROM ...  
 ```  
   
-## <a name="top-n-and-order-by"></a>PRIMI \< n> e order by  
- È possibile ordinare i risultati di una query utilizzando un'espressione e può restituire un subset dei risultati utilizzando una combinazione delle clausole **Order by** e **Top** . Questo è utile ad esempio in uno scenario di mailing diretto in cui si desidera inviare i risultati solo ai destinatari che hanno la maggiore probabilità di rispondere. È possibile ordinare i risultati di una query di stima mailing di destinazione in base alla probabilità di stima, quindi restituire solo i primi \< n> risultati.  
+## <a name="top-n-and-order-by"></a>TOP \<n> e order by  
+ È possibile ordinare i risultati di una query utilizzando un'espressione e può restituire un subset dei risultati utilizzando una combinazione delle clausole **Order by** e **Top** . Questo è utile ad esempio in uno scenario di mailing diretto in cui si desidera inviare i risultati solo ai destinatari che hanno la maggiore probabilità di rispondere. È possibile ordinare i risultati di una query di stima mailing di destinazione in base alla probabilità di stima, quindi restituire solo i primi \<n> risultati.  
   
 ## <a name="select-list"></a>Elenco di selezione  
- L' * \< elenco di selezione>* può includere riferimenti a colonne scalari, funzioni di stima ed espressioni. Le opzioni disponibili variano in base all'algoritmo e ai contesti seguenti:  
+ *\<select list>* Può includere riferimenti a colonne scalari, funzioni di stima ed espressioni. Le opzioni disponibili variano in base all'algoritmo e ai contesti seguenti:  
   
 -   È in corso l'esecuzione di una query su una struttura di data mining o su un modello di data mining  
   
@@ -76,7 +76,7 @@ JOIN <source data query>
 ```  
   
 ## <a name="where"></a>WHERE  
- È possibile limitare i case restituiti dalla query utilizzando una clausola **where** . La clausola **where** specifica che i riferimenti di colonna nell'espressione **where** devono avere la stessa semantica dei riferimenti di colonna nell' * \< elenco di selezione>* dell'istruzione **Select** e possono restituire solo un'espressione booleana. La sintassi per la clausola **where** è la seguente:  
+ È possibile limitare i case restituiti dalla query utilizzando una clausola **where** . La clausola **where** specifica che i riferimenti di colonna nell'espressione **where** devono avere la stessa semantica dei riferimenti di colonna in *\<select list>* dell'istruzione **Select** e possono restituire solo un'espressione booleana. La sintassi per la clausola **where** è la seguente:  
   
 ```  
 WHERE < condition expression >  

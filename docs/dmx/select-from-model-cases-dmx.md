@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6753f90b76f70de9f7368a5656ba93b16a3740d1
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 1fa1da730fc370995b22927604f9550c865877f4
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669614"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970616"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>Selezionare da &lt; modello &gt; . CASI (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Supporta il drill-through e restituisce i case utilizzati per il training del modello. Se il drill-through è attivato nella struttura di data mining e nel modello di data mining e si dispone di autorizzazioni appropriate, è possibile restituire le colonne della struttura che non sono incluse nel modello.  
   
@@ -53,14 +53,14 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  *expression*  
  Facoltativa. Espressione che restituisce un valore scalare.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se il drill-through è attivato sia nella struttura di data mining che nel modello di data mining, gli utenti membri di un ruolo con autorizzazioni drill-through sul modello e sulla struttura possono accedere alle colonne della struttura di data mining che non sono incluse nel modello di data mining. Pertanto, per proteggere dati sensibili o informazioni personali, è necessario costruire la vista origine dati in modo da mascherare le informazioni personali e concedere l'autorizzazione **AllowDrillThrough** per una struttura di data mining solo quando è necessario.  
   
  La funzione [Lag &#40;DMX&#41;](../dmx/lag-dmx.md) può essere utilizzata con i modelli Time Series per restituire o filtrare in un intervallo di tempo compreso tra ogni case e l'ora iniziale.  
   
  Utilizzando la funzione [IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md) nella clausola **where** vengono restituiti solo i case associati al nodo specificato dalla colonna NODE_UNIQUE_NAME del set di righe dello schema.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Gli esempi seguenti si basano sulla struttura di data mining Targeted mailing, basata sul [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database e sui modelli di data mining associati. Per ulteriori informazioni, vedere [esercitazione di base sul data mining](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>Esempio 1: Drill-through in case del modello e colonne della struttura  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0b413a53aa0b5f423a5977ef051e55c2abf3f65e
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 94ec67fe103901f19af36b8be01ea21ceaa9ac85
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666789"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967882"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Restituisce una tabella che rappresenta un istogramma per la stima di una colonna specificata.  
   
@@ -33,11 +33,11 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 ## <a name="return-type"></a>Tipo restituito  
  Tabella.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Un istogramma genera colonne di statistiche. La struttura delle colonne dell'istogramma restituito dipende dal tipo di riferimento di colonna usato con la funzione **PredictHistogram** .  
   
 ## <a name="scalar-columns"></a>Colonne scalari  
- Per un \< riferimento a colonna scalare>, l'istogramma restituito dalla funzione **PredictHistogram** è costituito dalle colonne seguenti:  
+ Per un oggetto \<scalar column reference> , l'istogramma restituito dalla funzione **PredictHistogram** è costituito dalle colonne seguenti:  
   
 -   Valore stimato.  
   
@@ -58,7 +58,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
      La colonna **$AdjustedProbability** è un' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] estensione della [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB per la specifica di data mining.  
   
 ## <a name="cluster-columns"></a>Colonne cluster  
- L'istogramma restituito dalla funzione **PredictHistogram** per un \< riferimento a una colonna cluster> è costituito dalle colonne seguenti:  
+ L'istogramma restituito dalla funzione **PredictHistogram** per un oggetto \<cluster column reference> è costituito dalle colonne seguenti:  
   
 -   **$Cluster** (rappresenta il nome del cluster)  
   
@@ -66,7 +66,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$Probability**  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituito lo stato stimato della colonna Bike Buyer in una query singleton. La query restituisce anche i primi due stati più probabili dell'attributo Bike Buyer, in base alla probabilità adattata ottenuta tramite la funzione **PredictHistogram** .  
   
 ```  

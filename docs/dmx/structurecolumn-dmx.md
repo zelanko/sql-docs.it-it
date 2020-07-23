@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 82317f4a4e5f4c4fddd4ffaf45c5897dfd4d0df5
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cb07dd463ddbbc15942ca6f62c4ccb708a8c5efd
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669984"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970309"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Restituisce il valore della colonna della struttura corrispondente al case specificato oppure il valore di tabella relativo a una tabella nidificata nel case specificato.  
   
@@ -32,11 +32,11 @@ StructureColumn('structure column name')
  Nome della colonna della struttura di data mining di un case o di una tabella nidificata.  
   
 ## <a name="result-type"></a>Tipo di risultato  
- Il tipo restituito dipende dal tipo della colonna a cui si fa riferimento nel \< nome della colonna della struttura> parametro. Ad esempio, se la colonna della struttura di data mining a cui viene fatto riferimento contiene un valore scalare, la funzione restituisce un valore scalare.  
+ Il tipo restituito dipende dal tipo della colonna a cui si fa riferimento nel \<structure column name> parametro. Ad esempio, se la colonna della struttura di data mining a cui viene fatto riferimento contiene un valore scalare, la funzione restituisce un valore scalare.  
   
  Se la colonna della struttura di data mining alla quale viene fatto riferimento è una tabella nidificata, la funzione restituisce un valore di tabella. Il valore di tabella restituito può essere utilizzato nella clausola FROM di un'istruzione sub-SELECT.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Questa funzione è polimorfica e può essere utilizzata in qualunque posizione in un'istruzione che consente espressioni, comprese un elenco di espressioni SELECT, un'espressione di condizione WHERE e un'espressione ORDER BY.  
   
  Il nome della colonna nella struttura di data mining è un valore stringa e, di conseguenza, deve essere racchiuso tra virgolette singole: ad esempio, `StructureColumn('` **colonna 1** `')` . Nel caso in cui siano presenti più colonne con lo stesso nome, il nome è risolto nel contesto dell'istruzione SELECT che lo racchiude.  
@@ -54,7 +54,7 @@ StructureColumn('structure column name')
   
  Impossibile trovare la colonna della struttura di data mining '% {Structure-Column-Name/}' nella struttura di data mining padre '% {Structure/}' nel contesto corrente (riga% {line/}, colonna% {column/}).  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Per questi esempi sarà utilizzata la struttura di data mining riportata di seguito. Si noti che la struttura di data mining contiene due colonne di tabelle nidificate, `Products` e `Hobbies`. La tabella nidificata nella colonna `Hobbies` contiene una singola colonna che viene utilizzata come chiave per la tabella nidificata. La tabella nidificata nella colonna `Products` è una tabella nidificata complessa con una colonna chiave e altre colonne utilizzate per l'input. Negli esempi seguenti viene illustrato come progettare una struttura di data mining per includere colonne diverse, anche se un modello potrebbe non utilizzare tutte le colonne. Alcune di queste colonne potrebbero non essere utili a livello di modello per la generalizzazione dei modelli, ma rivelarsi molto indicate per il drill-through.  
   
 ```  

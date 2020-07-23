@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6c14bc8189bdea705ab37c66863d74bcef66e23c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 0cd7b2e0a78f2d47349de2701572b2f9dc4b0095
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669826"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969922"
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Restituisce il cluster che con maggiore probabilità contiene il case di input.  
   
@@ -33,12 +33,12 @@ Cluster()
 ## <a name="return-type"></a>Tipo restituito  
  La funzione **cluster** non richiede parametri.  
   
- La funzione **cluster** restituisce un valore scalare di un nome di cluster. Tuttavia, se si utilizza questa funzione come argomento di un'altra funzione, è necessario considerarla come riferimento a una \< colonna cluster>.  
+ La funzione **cluster** restituisce un valore scalare di un nome di cluster. Tuttavia, se si utilizza questa funzione come argomento di un'altra funzione, è necessario considerarla come \<cluster column reference> .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Il **cluster** può essere usato anche come `<` riferimento a una colonna cluster `>` per una funzione **PredictHistogram** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzata una query singleton con [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) e funzioni cluster per restituire la distanza del singolo case da ogni cluster del modello di data mining TM clustering e la probabilità che il singolo case sia presente in ogni cluster.  
   
 ```  

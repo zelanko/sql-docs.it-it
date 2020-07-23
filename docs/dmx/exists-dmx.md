@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: df52a83c2e60395e72b6f81903d0372d1dc05614
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: fdf58a943986dc43f82ef7023b68a2c6168a5518
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670247"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971715"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Restituisce **true** se la sottoquery specificata restituisce almeno una riga.  
   
@@ -28,18 +28,18 @@ EXISTS(<subquery>)
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *sottoquery*  
- Un'istruzione SELECT nel formato SELECT * FROM \< column name> [WHERE \< predicate list>].  
+ *subquery*  
+ Un'istruzione SELECT nel formato SELECT * FROM \<column name> [WHERE \<predicate list> ].  
   
 ## <a name="result-type"></a>Tipo di risultato  
  Restituisce **true** se il set di risultati restituito dalla sottoquery contiene almeno una riga. in caso contrario, restituisce **false**.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  È possibile utilizzare la parola chiave NOT prima di EXISTS: ad esempio, `WHERE NOT EXISTS (<subquery>)`.  
   
  L'elenco di colonne aggiunte all'argomento della sottoquery di EXISTS è irrilevante. Viene solo verificata l'esistenza di una riga che soddisfa la condizione.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  È possibile utilizzare EXISTS e NOT EXISTS per verificare le condizioni in una tabella nidificata. Ciò è utile durante la creazione di un filtro che controlla i dati utilizzati per eseguire il training o il testing di un modello di data mining. Per altre informazioni, vedere [Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
   
  L'esempio seguente si basa sulla struttura di data mining e sul modello di data mining `[Association]` creato nell' [esercitazione di base sul data mining](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La query restituisce solo i casi in cui il cliente ha acquistato almeno un Patch kit.  

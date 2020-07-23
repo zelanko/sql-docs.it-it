@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 15767abbbffd7ede7d7ae252c7e84589abad1a98
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7117409372fcbcbc6ef3662a2355f063b2a99d98
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670013"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970282"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;query sui dati di origine&gt;
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  Per eseguire il training di un modello di data mining e creare stime da un modello di data mining, è necessario accedere ai dati esterni al [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. \<Per definire questi dati esterni, è possibile utilizzare la clausola> di query sui dati di origine in DMX (Data Mining Extensions). L'istruzione [INSERT INTO &#40;dmx&#41;](../dmx/insert-into-dmx.md), [Select from &#60;Model&#62; prediction join &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)e [Select from natural prediction join](../dmx/select-from-model-prediction-join-dmx.md) all use ** \< source data query>**.  
+  Per eseguire il training di un modello di data mining e creare stime da un modello di data mining, è necessario accedere ai dati esterni al [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. Utilizzare la \<source data query> clausola in DMX (Data Mining Extensions) per definire i dati esterni. L'istruzione [INSERT INTO &#40;dmx&#41;](../dmx/insert-into-dmx.md), [Select from &#60;Model&#62; prediction join &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)e [Select from natural prediction join](../dmx/select-from-model-prediction-join-dmx.md) utilizzano tutti **\<source data query>** .  
   
 ## <a name="query-types"></a>Tipi di query  
  I tre modi più comuni per specificare i dati di origine sono i seguenti:  

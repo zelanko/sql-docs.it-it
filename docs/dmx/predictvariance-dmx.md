@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 13beb2a9a99ceea1d517e9ef2c77a071d7c72d30
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 6217df2efb63b691ad565ea4d6466cdbd5831830
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666866"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970679"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Restituisce la varianza di una colonna specificata.  
   
@@ -31,12 +31,12 @@ PredictVariance(<scalar column reference>)
  Colonna scalare.  
   
 ## <a name="return-type"></a>Tipo restituito  
- Valore scalare del tipo specificato dal * \< riferimento a colonna scalare>*.  
+ Valore scalare del tipo specificato da *\<scalar column reference>* .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se il riferimento alla colonna è discreto, **PredictVariance** restituisce 0 perché la varianza non può essere calcolata da valori discreti.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato un natural prediction join per determinare la probabilità che un individuo sia un acquirente di biciclette sulla base del modello di data mining TM Decision Tree e la varianza per la stima.  
   
 ```  

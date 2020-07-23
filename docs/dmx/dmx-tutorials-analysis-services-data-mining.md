@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 262d8f9f62718bcb91ef034177375035a37dfc84
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 4fcf803bb76bfb894faa75e6e51180cc25434abe
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668967"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969816"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>Esercitazioni su DMX (Analysis Services - Data mining)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Nelle seguenti esercitazioni vengono fornite informazioni sull'utilizzo delle istruzioni DMX (Data Mining Extensions) con le strutture e i modelli di data mining.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "83668967"
   
  In questa esercitazione vengono descritte le procedure per la creazione di un modello di data mining che stima quali prodotti tendono a essere acquistati contemporaneamente. Viene inoltre illustrato l'utilizzo delle tabelle nidificate in data mining.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Informazioni di riferimento  
  [Data Mining Extensions &#40;elementi della sintassi DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
  [Istruzioni DMX &#40;Data Mining Extensions&#41; per la definizione dei dati](../dmx/dmx-statements-data-definition.md)  

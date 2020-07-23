@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: baa7ed6209daf3de76c20d8ff67a9b76a36be4e8
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 2e0fc30945396f22184e1d18c6b132d8e2e2d781
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670103"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970437"
 ---
 # <a name="select-from-ltstructuregtcases"></a>Consente di selezionare una &lt; struttura &gt; . CASI
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Restituisce i case utilizzati per creare la struttura di data mining.  
   
@@ -46,7 +46,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
  Un'espressione può includere identificatori di colonna, funzioni definite dall'utente e funzioni VBA.  
   
- *structure*  
+ *struttura*  
  Nome della struttura.  
   
  *espressione della condizione*  
@@ -55,7 +55,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  *expression*  
  Facoltativa. Espressione che restituisce un valore scalare.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se il drill-through è attivato sia nella struttura che nel modello, qualsiasi membro di un ruolo che dispone di autorizzazioni drill-through per il modello di data mining e per la struttura di data mining può restituire le colonne della struttura non incluse nel modello utilizzando la sintassi seguente:  
   
 ```  
@@ -64,7 +64,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
   
  Pertanto, per proteggere dati sensibili o informazioni personali, è necessario costruire la vista origine dati in modo da mascherare le informazioni personali e concedere l'autorizzazione **AllowDrillThrough** per una struttura di data mining o un modello di data mining solo quando necessario.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Gli esempi seguenti si basano sulla struttura di data mining, Targeted mailing, basata sul [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] database e sui modelli di data mining associati. Per ulteriori informazioni, vedere [esercitazione di base sul data mining](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>Esempio 1: Esecuzione del drill-through nei case della struttura  

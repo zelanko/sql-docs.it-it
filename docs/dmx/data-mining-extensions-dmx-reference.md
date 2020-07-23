@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: eeaeef25f27f29234aaa5a96a9272b4bea43dca3
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 02c7185ebbf264ebf8ed8adda4915170f888e74b
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670399"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971783"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>Guida di riferimento a DMX (Data Mining Extensions)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Data Mining Extensions (DMX) è un linguaggio che è possibile utilizzare per creare e utilizzare i modelli di data mining in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . DMX consente di creare la struttura di nuovi modelli di data mining, eseguirne il training, nonché esplorarli, gestirli ed eseguire stime basate su tali modelli. DMX comprende istruzioni DDL (Data Definition Language) e DML (Data Manipulation Language), nonché funzioni e operatori.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "83670399"
   
  Le istruzioni DMX per la manipolazione dei dati consentono di eseguire le attività seguenti:  
   
--   Eseguire il training di un modello di data mining utilizzando l'istruzione [Insert into](../dmx/insert-into-dmx.md) . Tale istruzione non inserisce i dati effettivi dell'origine in un oggetto modello di data mining, ma crea un'astrazione che descrive il modello di data mining creato dall'algoritmo. La query di origine per un'istruzione INSERT INTO è descritta in [ \<>di query dei dati di origine ](../dmx/source-data-query.md).  
+-   Eseguire il training di un modello di data mining utilizzando l'istruzione [Insert into](../dmx/insert-into-dmx.md) . Tale istruzione non inserisce i dati effettivi dell'origine in un oggetto modello di data mining, ma crea un'astrazione che descrive il modello di data mining creato dall'algoritmo. La query di origine per un'istruzione INSERT INTO è descritta in [\<source data query>](../dmx/source-data-query.md) .  
   
 -   Estendere l'istruzione SELECT per visualizzare le informazioni calcolate durante il training del modello e archiviate nel modello di data mining, ad esempio le statistiche dei dati di origine. Di seguito sono riportate le clausole che è possibile includere per estendere le potenzialità dell'istruzione SELECT:  
   
@@ -82,7 +82,7 @@ ms.locfileid: "83670399"
   
     -   [Selezionare da &#60;modello&#62;. DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
   
--   Creare stime basate su un modello di data mining esistente utilizzando la clausola [PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) dell'istruzione SELECT. La query di origine per un'istruzione PREDICtion JOIN è descritta in [ \<>di query dei dati di origine ](../dmx/source-data-query.md).  
+-   Creare stime basate su un modello di data mining esistente utilizzando la clausola [PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) dell'istruzione SELECT. La query di origine per un'istruzione PREDICtion JOIN è descritta in [\<source data query>](../dmx/source-data-query.md) .  
   
 -   Rimuovere tutti i dati sottoposti a training da un modello o una struttura utilizzando l'istruzione [DELETE &#40;DMX&#41;](../dmx/delete-dmx.md) .  
   

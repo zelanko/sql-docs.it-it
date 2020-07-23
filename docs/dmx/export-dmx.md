@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 59e4a78c9432c5ba8f75eb7bfaa6ab46a0b052cf
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 620bb13d50461e850cc08de1e1b1b71709d78c7c
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670270"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971739"
 ---
 # <a name="export-dmx"></a>EXPORT (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Estrae dal server un oggetto modello o struttura di data mining e lo salva in un file con estensione abf (Analysis Services Backup File).  
   
@@ -37,7 +37,7 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  *filename*  
  Nome e percorso del file da esportare, sotto forma di stringa.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se l'istruzione specifica un modello di data mining, il file risultante conterrà anche la struttura di data mining associata. Se l'istruzione specifica **con dipendenze**, tutti gli oggetti necessari per l'elaborazione dell'oggetto, ad esempio l'origine dati e la vista origine dati, vengono inclusi nel file con estensione abf.  
   
  Per esportare o importare oggetti da un database, è necessario essere un amministratore del server o del database [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

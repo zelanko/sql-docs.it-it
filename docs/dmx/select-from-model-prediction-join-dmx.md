@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0156d12fe2d3d3f62105dccf05f99c2eebab8833
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e3e4e9a4d929d9533b10d87654f685e45dafd238
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670132"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970506"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt; Model &gt; PREDICTION JOIN (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Utilizza un modello di data mining per stimare gli stati delle colonne in un'origine dati esterna. L'istruzione **PREDICTION JOIN** consente di associare ogni case della query di origine al modello.  
   
@@ -56,8 +56,8 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *expression*  
  Facoltativa. Espressione che restituisce un valore scalare.  
   
-## <a name="remarks"></a>Commenti  
- La clausola ON definisce il mapping tra le colonne della query di origine e quelle del modello di data mining. Tale mapping viene utilizzato per dirigere le colonne dalla query di origine alle colonne nel modello di data mining, di modo che possano essere utilizzate come input durante la creazione delle stime. Le colonne nell' \< *elenco di mapping di join*> sono correlate usando un segno di uguale (=), come illustrato nell'esempio seguente:  
+## <a name="remarks"></a>Osservazioni  
+ La clausola ON definisce il mapping tra le colonne della query di origine e quelle del modello di data mining. Tale mapping viene utilizzato per dirigere le colonne dalla query di origine alle colonne nel modello di data mining, di modo che possano essere utilizzate come input durante la creazione delle stime. Le colonne in \<*join mapping list*> sono correlate usando un segno di uguale (=), come illustrato nell'esempio seguente:  
   
 ```  
 [MiningModel].ColumnA = [source data query].Column1 AND   
@@ -69,7 +69,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  La query di origine del PREDICTION JOIN può essere una query singleton o di tabella.  
   
- È possibile specificare funzioni di stima che non restituiscono un'espressione di tabella nell' \< *elenco di espressioni SELECT*> e l' \< *espressione della condizione*>.  
+ È possibile specificare funzioni di stima che non restituiscono un'espressione di tabella in \<*select expression list*> e \<*condition expression*> .  
   
  **Natural prediction join** esegue automaticamente il mapping tra i nomi di colonna della query di origine che corrispondono ai nomi di colonna nel modello. Se si utilizza la **stima naturale**, è possibile omettere la clausola on.  
   

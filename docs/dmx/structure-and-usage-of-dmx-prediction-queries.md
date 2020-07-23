@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 167bf7e17b172b9d3e6c58df1f52510f93a668aa
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e2aaeedff9eb0d22d6a7175641177f803379adaa
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669995"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970281"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Struttura e utilizzo di query di stima DMX
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   In [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] è possibile utilizzare la query di stima in DMX (Data Mining Extensions) per stimare i valori di colonna sconosciuti in un nuovo set di dati, in base ai risultati di un modello di data mining.  
   
@@ -42,13 +42,13 @@ ms.locfileid: "83669995"
   
 -   **SELECT [FLATD]**  
   
--   **In alto**  
+-   **TOP**  
   
--   **Da*** \< Model>* **PREDICTION JOIN**      
+-   **Da** *\<model>* **PREDICTION JOIN**      
   
 -   **ON**  
   
--   **IN cui**  
+-   **WHERE**  
   
 -   **ORDER BY**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "83669995"
   
 -   Funzioni mediante le quali viene restituita una colonna di dati.  
   
- L'elemento **from** * \< Model>* **PREDICTION JOIN** definisce i dati di origine da utilizzare per creare la stima. Per una query singleton tale origine è costituita da una serie di valori assegnati alle colonne. Per un prediction join vuoto l'origine dei dati viene lasciata vuota.  
+ L'elemento **from** *\<model>* **PREDICTION JOIN** definisce i dati di origine da utilizzare per creare la stima. Per una query singleton tale origine è costituita da una serie di valori assegnati alle colonne. Per un prediction join vuoto l'origine dei dati viene lasciata vuota.  
   
  L'elemento **on** esegue il mapping delle colonne definite nel modello di data mining alle colonne di un set di dati esterno. Questo elemento non è necessario per la creazione di una query con prediction join vuoto o natural prediction join.  
   

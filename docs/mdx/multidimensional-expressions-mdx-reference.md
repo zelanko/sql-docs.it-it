@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e557ffae3c4a530f448e0dfe78594f3f2c63feaf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 65164f9560cb87e0bda1018469412bb4b793e3b7
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893173"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970032"
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>Guida di riferimento a MDX (Multidimensional Expressions)
 
@@ -28,8 +28,8 @@ ms.locfileid: "68893173"
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione di query su dati multidimensionali con MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx)   
- [Analysis Services linguaggio di scripting &#40;ASSL per XMLA&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [Recupero di dati da un'origine dati analitici](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source)   
+ [Analysis Services linguaggio di scripting &#40;ASSL per XMLA&#41;](https://docs.microsoft.com/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Recupero di dati da un'origine dati analitici](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source?view=asallproducts-allversions)   
  [Definire le assegnazioni e altri comandi script](https://docs.microsoft.com/analysis-services/multidimensional-models/define-assignments-and-other-script-commands)  
   
   

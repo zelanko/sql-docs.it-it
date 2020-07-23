@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 04b06d1cbe14ee83915bd5626337720acf9bd2a9
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e011fc48b63aa653cd63e11678b84d8356370bd0
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670338"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969332"
 ---
 # <a name="lag-dmx"></a>Lag (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Restituisce l'intervallo di tempo tra la data del case corrente e l'ultima data del set di training.  
   
@@ -30,10 +30,10 @@ Lag()
 ## <a name="return-type"></a>Tipo restituito  
  Valore scalare di tipo integer.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se la funzione **lag** viene utilizzata in un modello in cui la colonna Key Time si trova all'interno di una tabella nidificata, la funzione deve trovarsi all'interno della selezione secondaria dell'istruzione.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituiti i casi che rientrano negli ultimi 12 mesi dei dati utilizzati per il training del modello.  
   
 ```  

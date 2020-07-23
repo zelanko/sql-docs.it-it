@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1fdb72a4067a9b48e648cffe1d12b29b23f1652a
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cceeac44646b904a7d7e1b45bd3c92d4ad07a0d5
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669839"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969935"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Restituisce, in ordine di rango crescente, le ultime righe di una tabella il cui totale cumulativo corrisponde almeno a un valore specificato.  
   
@@ -28,15 +28,15 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>Si applica a  
- Espressione che restituisce una tabella, ad esempio un riferimento a una \< colonna di tabella>, o una funzione che restituisce una tabella.  
+ Espressione che restituisce una tabella, ad esempio \<table column reference> o una funzione che restituisce una tabella.  
   
 ## <a name="return-type"></a>Tipo restituito  
- \<espressione di tabella>  
+ \<table expression>  
   
-## <a name="remarks"></a>Commenti  
- La funzione **BottomSum** restituisce le righe più in basso in ordine crescente di rango. Il rango è basato sul valore valutato dell'espressione di \< rango> argomento per ogni riga, in modo che la somma dei \< valori dell'espressione di rango> sia almeno il totale specificato dall' \< argomento Sum>. **BottomSum** restituisce il più piccolo numero di elementi possibile mentre soddisfa ancora il valore della somma specificato.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **BottomSum** restituisce le righe più in basso in ordine crescente di rango. Il rango è basato sul valore valutato dell' \<rank expression> argomento per ogni riga, in modo che la somma dei \<rank expression> valori corrisponde almeno al totale specificato dall' \<sum> argomento. **BottomSum** restituisce il più piccolo numero di elementi possibile mentre soddisfa ancora il valore della somma specificato.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata una query di stima sul modello di associazione compilato mediante l'esercitazione di [base sul data mining](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
  Per comprendere il funzionamento di BottomSum, potrebbe essere utile eseguire prima una query di stima che restituisca solo la tabella nidificata.  

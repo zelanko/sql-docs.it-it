@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2ef32a9e133c199aae0779c819736d77e0d15c45
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: bab465fe98c9509eaa99999a321317ee8013a74d
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670066"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969762"
 ---
 # <a name="isdescendant-dmx"></a>IsDescendant (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Indica se il nodo corrente discende dal nodo specificato.  
   
@@ -30,10 +30,10 @@ IsDescendant(<NodeID>)
 ## <a name="return-type"></a>Tipo restituito  
  Tipo booleano.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  IsSelected **viene usato** solo in [SELECT FROM &#60;Model&#62;. CONTENUTO &#40;&#41;DMX](../dmx/select-from-model-content-dmx.md) e [selezionare da &#60;modello&#62;. DIMENSION_CONTENT &#40;query&#41;DMX](../dmx/select-from-model-dimension-content-dmx.md) .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituiti tutti i case discendenti dal nodo specificato nella funzione IsDescendant.  
   
 ```  

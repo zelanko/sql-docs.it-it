@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 07cda29c288f574fd960398f8a607c04f1d8dce7
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: efe160fc3bb50f80b70c0d510eedd880f985f9b9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669457"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971810"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Crea una nuova struttura di data mining in un database e facoltativamente definisce le partizioni di training e test. Dopo aver creato la struttura di data mining, è possibile utilizzare l'istruzione [ALTER mining structure &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md) per aggiungere modelli alla struttura di data mining.  
   
@@ -34,7 +34,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *structure*  
+ *struttura*  
  Nome univoco della struttura.  
   
  *elenco delle definizioni di colonna*  
@@ -61,7 +61,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Valore predefinito: REPEATABLE (0)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Per definire una struttura di data mining è necessario specificare un elenco di colonne, specificando facoltativamente le relazioni gerarchiche tra le stesse e partizionando facoltativamente la struttura di data mining in set di dati di training e test.  
   
  La parola chiave SESSION facoltativa indica che si tratta di una struttura temporanea che è possibile utilizzare solo per la durata della sessione corrente. Al termine della sessione, la struttura e gli eventuali modelli basati su di essa verranno eliminati. Per creare strutture e modelli di data mining temporanei, è innanzitutto necessario impostare la proprietà di database AllowSessionMiningModels-. Per altre informazioni, vedere [Proprietà di data mining](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
@@ -106,7 +106,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  È possibile definire più valori dei flag di modellazione per una colonna. Tuttavia, è possibile disporre solo di un tipo di contenuto e di un tipo di dati per colonna.  
   
 ### <a name="column-relationships"></a>Relazioni tra colonne  
- Per descrivere la relazione tra due colonne, è possibile aggiungere una clausola a qualsiasi istruzione per la definizione di colonna. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]supporta l'utilizzo della \< clausola> della relazione di colonna seguente.  
+ Per descrivere la relazione tra due colonne, è possibile aggiungere una clausola a qualsiasi istruzione per la definizione di colonna. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]supporta l'utilizzo della clausola seguente \<column relationship> .  
   
  **CORRELATO A**  
  Indica una gerarchia di valori. La destinazione di una colonna con clausola RELATED TO può essere una colonna chiave in una tabella nidificata, una colonna con valori discreti nella riga dei case oppure un'altra colonna con una clausola RELATED TO, che indica una gerarchia con più livelli.  
@@ -133,7 +133,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
 > [!NOTE]  
 >  Poiché le informazioni sulla partizione vengono memorizzate nella cache con i dati di training, per utilizzare i dati di attesa, è necessario verificare che la proprietà **CacheMode** della struttura di data mining sia impostata su **KeepTrainingData**. Si tratta dell'impostazione predefinita in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per le strutture di data mining nuove. La modifica della proprietà **CacheMode** in **ClearTrainingCases** in una struttura di data mining esistente che contiene una partizione di dati di dati non influirà sui modelli di data mining elaborati. Tuttavia, se <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> non è impostato su **KeepTrainingData**, i parametri di attesa non avranno alcun effetto. Ciò significa che tutti i dati di origine saranno utilizzati per il training e non sarà disponibile alcun set di test. La definizione della partizione è memorizzata nella cache con la struttura; se si cancella la cache dei case di training, verrà cancellata anche la cache dei dati di test e la definizione del controllo impostato.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Negli esempi seguenti viene illustrato come creare una struttura di data mining con controllo mediante DMX.  
   
 ### <a name="example-1-adding-a-structure-with-no-training-set"></a>Esempio 1: Aggiunta di un struttura priva di set di training  
