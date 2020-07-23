@@ -20,12 +20,12 @@ ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2a7a5e9f8410ab8ca66f0621d6a2c955258c28c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ee50d943daf4f5970c162788659092ad31ef8c6
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734659"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943104"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -110,7 +110,7 @@ Eseguire l'istruzione T-SQL seguente in una nuova finestra di query in [!INCLUDE
         WAITFOR DELAY '00:02:00';
       ```
       
-    2.  Utilizzando **Cross Apply**.  
+  2.  Utilizzando **Cross Apply**.  
     Il sql_handle da **sys. dm_exec_requests** verrà passato a **sys. DM_EXEC_SQL_TEXT** utilizzando **Cross Apply**. Aprire una nuova finestra query e passare lo SPID identificato nel passaggio 1. In questo esempio lo SPID è `59` .
 
         ```sql
@@ -120,7 +120,7 @@ Eseguire l'istruzione T-SQL seguente in una nuova finestra di query in [!INCLUDE
         WHERE session_id = 59 -- modify this value with your actual spid
          ```      
  
-    2.  Passaggio diretto **sql_handle** .  
+  2.  Passaggio diretto **sql_handle** .  
 Acquisire il **sql_handle** da **sys. dm_exec_requests**. Passare quindi il **sql_handle** direttamente a **sys. dm_exec_sql_text**. Aprire una nuova finestra di query e passare lo SPID identificato nel passaggio 1 a **sys. dm_exec_requests**. In questo esempio lo SPID è `59` . Passare quindi il **sql_handle** restituito come argomento a **sys. dm_exec_sql_text**.
 
         ```sql
@@ -179,10 +179,10 @@ ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_exec_query_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
- [sys. dm_exec_requests &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sys. dm_exec_cursors &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
  [sys. dm_exec_xml_handles &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
  [sys. dm_exec_query_memory_grants &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   

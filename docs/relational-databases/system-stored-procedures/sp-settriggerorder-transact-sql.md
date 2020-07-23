@@ -18,12 +18,12 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7b90b91773ab0497452e0c12c5f485a36f81b6e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2f222261c21ecb96f3599b20917a441898e3325e
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719187"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977717"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|**Prima**|Trigger avviato per primo.|  
+|**First**|Trigger avviato per primo.|  
 |**Ultima**|Trigger avviato per ultimo.|  
 |**Nessuno**|Il trigger viene attivato in base a un ordine non definito.|  
   
@@ -63,9 +63,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
  ** \@ namespace =** { **' database '**  |  **' server '** | NULL  
  Quando *triggername* è un trigger DDL, ** \@ lo spazio dei nomi** specifica se *triggername* è stato creato con ambito database o ambito server. Se *triggername* è un trigger LOGON, è necessario specificare il server. Per ulteriori informazioni sull'ambito del trigger DDL, vedere [trigger DDL](../../relational-databases/triggers/ddl-triggers.md). Se non è specificato o se viene specificato NULL, *triggername* è un trigger DML.  
   
-||  
-|-|  
-|Il SERVER si applica a: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.|  
+* Il SERVER si applica a: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o 1 (esito negativo)  

@@ -26,12 +26,12 @@ ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2de8653c0a18cc6fabaf2570a10c73184e5c9706
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0f99e3497a8b1c2061ed54348943f1d087ed29bb
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825985"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977691"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,17 +58,16 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="arguments"></a>Argomenti  
 `[ @name = ] 'module\_name'`Nome del stored procedure, funzione definita dall'utente, vista, trigger DML, trigger DDL a livello di database o trigger DDL a livello di server. *module_name* non può essere un stored procedure di Common Language Runtime (CLR) o una funzione CLR. *module_name* non possono essere associati a schema. *module_name* è di **tipo nvarchar**e non prevede alcun valore predefinito. *module_name* può essere un identificatore in più parti, ma può fare riferimento solo agli oggetti nel database corrente.  
   
-`[ , @namespace = ] ' \<class> '`È la classe del modulo specificato. Quando *module_name* è un trigger DDL, la \< classe> è obbligatoria. * \<>di classe* è di **tipo nvarchar**(20). Gli input validi sono:  
-  
-|||  
-|-|-|  
-|DATABASE_DDL_TRIGGER||  
-|SERVER_DDL_TRIGGER|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.|  
-  
+`[ , @namespace = ] ' \<class> '`È la classe del modulo specificato. Quando *module_name* è un trigger DDL, \<class> è obbligatorio. *\<class>* è di **tipo nvarchar**(20). Gli input validi sono:  
+
+* DATABASE_DDL_TRIGGER
+
+* SERVER_DDL_TRIGGER: **si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
+
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o un numero diverso da zero (esito negativo)  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_refreshsqlmodule** deve essere eseguito quando vengono apportate modifiche agli oggetti sottostanti il modulo che influiscono sulla definizione. In caso contrario, le query o le chiamate su tale modulo potrebbero generare risultati imprevisti. Per aggiornare una vista, è possibile usare **sp_refreshsqlmodule** o **sp_refreshview** con gli stessi risultati.  
   
  **sp_refreshsqlmodule** non influisce sulle autorizzazioni, le proprietà estese o le opzioni set associate all'oggetto.  
@@ -169,7 +168,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_refreshview &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+ [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
  [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   
