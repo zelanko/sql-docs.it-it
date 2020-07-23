@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: feeef370bc64697e3fa9ef3a279e31ba047301fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e59c3aa71cbbff6f955c67d033713f7a27dfbb28
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296315"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920180"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>Finestra di dialogo Anteprima dati (Importazione/Esportazione guidata SQL Server)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Dopo aver specificato i dati che si desidera copiare, è possibile scegliere facoltativamente **Anteprima** per aprire la finestra di dialogo **Anteprima dati** . In questa pagina è possibile visualizzare in anteprima fino a 200 righe di dati di esempio dall'origine dati. Questo permette di verificare che la procedura guidata sta per copiare i dati desiderati.

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 931e10eb-1707-4121-b2f1-43565561119f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 968ab3afbdb5d184364758797180102d65293eb7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 57ea5cbdea10a71049e17527b64dbf2c126a90be
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71288524"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921105"
 ---
 # <a name="-parentheses-ssis-expression"></a>() (parentesi) (espressione SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Viene identificato l'ordine di valutazione delle espressioni. Le espressioni racchiuse tra parentesi hanno la massima precedenza di valutazione. Le espressioni nidificate racchiuse tra parentesi vengono valutate procedendo dall'interno verso l'esterno.  

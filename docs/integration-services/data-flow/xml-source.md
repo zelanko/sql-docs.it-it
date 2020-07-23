@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d766d6a36dbe8f91f2c2fd42433093b298935b48
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 310381f04bc48eeb3d4732ea1e9b0d7fd99aed43
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71290833"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920297"
 ---
 # <a name="xml-source"></a>Origine XML
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L'origine XML legge un file di dati XML e popola con tali dati le colonne nell'output dell'origine.  

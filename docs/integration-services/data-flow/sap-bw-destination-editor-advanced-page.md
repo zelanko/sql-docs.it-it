@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 862957db-bbc6-4dda-bc0e-591457f1baa7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d4b315a5cde27bb8dd3bce3d3642f17bbd13867
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 34af54db2bca8f4876507b827725b3d0831490f2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292090"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920668"
 ---
 # <a name="sap-bw-destination-editor-advanced-page"></a>Editor destinazione SAP BW (pagina Avanzate)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Usare la pagina **Avanzate** dell' **Editor destinazione SAP BW** per definire le impostazioni avanzate quali dimensioni del pacchetto e informazioni sul timeout.  
