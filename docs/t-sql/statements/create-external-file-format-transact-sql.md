@@ -20,29 +20,29 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c32db4bdc26e90faa74800076dade200c1348f6
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 129ac690a0615062bb620c8b81dfbdb16a41659e
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518641"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942673"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Crea un oggetto formato di file esterno che definisce i dati esterni archiviati in Hadoop, in Archiviazione BLOB di Azure o in Azure Data Lake Store o per i flussi di input e output associati a flussi esterni. La creazione di un formato di file esterno è un prerequisito per la creazione di una tabella esterna. Creando un formato di file esterno, si specifica il layout effettivo dei dati a cui fa riferimento una tabella esterna.  
+Crea un oggetto formato di file esterno che definisce i dati esterni archiviati in Hadoop, in Archiviazione BLOB di Azure o in Azure Data Lake Store o per i flussi di input e output associati a flussi esterni. La creazione di un formato di file esterno è un prerequisito per la creazione di una tabella esterna. Creando un formato di file esterno, si specifica il layout effettivo dei dati a cui fa riferimento una tabella esterna.  
   
 Sono supportati i seguenti formati di file:
   
--   Testo delimitato  
+- Testo delimitato  
   
--   Hive RCFILE  
+- Hive RCFILE  
   
--   Hive ORC
+- Hive ORC
   
--   Parquet
+- Parquet
 
--   JSON - Si applica solo a SQL Edge di Azure.
+- JSON - Si applica solo a SQL Edge di Azure.
 
 
 Per creare una tabella esterna, vedere [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
@@ -113,33 +113,33 @@ WITH (
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *file_format_name*  
- Specifica un nome per il formato di file esterno.
+*file_format_name*  
+Specifica un nome per il formato di file esterno.
   
- FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT] Specifica il formato dei dati esterni.
+FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT] Specifica il formato dei dati esterni.
   
-   -   PARQUET specifica un formato Parquet.
+- PARQUET specifica un formato Parquet.
   
-   -   ORC  
-   Specifica un formato ORC (Optimized Row Columnar). Questa opzione richiede Hive 0.11 o versione successiva nel cluster Hadoop esterno. In Hadoop il formato file ORC offre una migliore qualità di compressione e prestazioni rispetto al formato di file RCFILE.
+- ORC  
+  Specifica un formato ORC (Optimized Row Columnar). Questa opzione richiede Hive 0.11 o versione successiva nel cluster Hadoop esterno. In Hadoop il formato file ORC offre una migliore qualità di compressione e prestazioni rispetto al formato di file RCFILE.
 
-   -   RCFILE (in combinazione con SERDE_METHOD = *SERDE_method*) specifica un formato di file RCFILE (Record Columnar). Questa opzione richiede di specificare un metodo SerDe (Serializer and Deserializer) di Hive. Il requisito è lo stesso se si usa Hive/HiveQL in Hadoop per eseguire query sui file RC. Si noti che il metodo SerDe fa distinzione tra maiuscole e minuscole.
+- RCFILE (in combinazione con SERDE_METHOD = *SERDE_method*) specifica un formato di file RCFILE (Record Columnar). Questa opzione richiede di specificare un metodo SerDe (Serializer and Deserializer) di Hive. Il requisito è lo stesso se si usa Hive/HiveQL in Hadoop per eseguire query sui file RC. Si noti che il metodo SerDe fa distinzione tra maiuscole e minuscole.
 
-   Esempi di definizione di file RC con i due metodi SerDe supportati da PolyBase.
+  Esempi di definizione di file RC con i due metodi SerDe supportati da PolyBase.
 
-    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
+  - FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
 
-    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
+  - FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
 
-   -   DELIMITEDTEXT specifica un formato di testo con delimitatori di colonna, detti anche caratteri di terminazione del campo.
+- DELIMITEDTEXT specifica un formato di testo con delimitatori di colonna, detti anche caratteri di terminazione del campo.
    
-   -  JSON specifica un formato JSON. Si applica solo a SQL Edge di Azure. 
+- JSON specifica un formato JSON. Si applica solo a SQL Edge di Azure. 
   
- FIELD_TERMINATOR = *field_terminator*  
+FIELD_TERMINATOR = *field_terminator*  
 Si applica solo ai file di testo delimitato. Il carattere di terminazione del campo specifica uno o più caratteri che contrassegnano la fine di ogni campo (colonna) nel file di testo delimitato. Il valore predefinito è il carattere pipe "|". Per garantire il supporto, si consiglia di usare uno o più caratteri ASCII.
   
   
- Esempi:  
+Esempi:  
   
 -   FIELD_TERMINATOR = '|'  
   
@@ -149,7 +149,7 @@ Si applica solo ai file di testo delimitato. Il carattere di terminazione del ca
   
 -   FIELD_TERMINATOR = '~|~'  
   
- STRING_DELIMITER = *string_delimiter*  
+STRING_DELIMITER = *string_delimiter*  
 Specifica il carattere di terminazione del campo per i dati di tipo stringa nel file di testo delimitato. Il delimitatore di stringa è costituito da uno o più caratteri ed è racchiuso tra virgolette singole. Il valore predefinito è la stringa vuota "". Per garantire il supporto, si consiglia di usare uno o più caratteri ASCII.
  
   

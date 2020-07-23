@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 048cbe154dde064d43178da6c58e5f948130ca7b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ce75fa54fab43d7f84defd065ffd88111ffda542
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294267"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923735"
 ---
 # <a name="cdc-control-task-custom-properties"></a>Proprietà personalizzate dell'attività di controllo CDC
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Nella tabella seguente vengono descritte le proprietà personalizzate dell'attività di controllo CDC. Tutte le proprietà sono di lettura/scrittura.  

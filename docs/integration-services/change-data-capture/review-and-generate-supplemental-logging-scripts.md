@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2de7acdd60a4d88c6523929615541cbed7674d12
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5f647bc913a52539992f3d6dcbb74b0dde1ff175
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294583"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923895"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>Rivedere e generare script di registrazione supplementare
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Usare la scheda **Scripts** per eseguire o rieseguire uno script nel database di origine Oracle per la configurazione della registrazione supplementare.  

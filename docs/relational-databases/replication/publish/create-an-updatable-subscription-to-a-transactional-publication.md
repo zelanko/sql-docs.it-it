@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 68f87213d310c909d266a20c235f1686f66e6902
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0d28fec80479a8eec877452763e78d4fadfa3d2c
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896811"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942838"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>Creazione di una sottoscrizione aggiornabile di una pubblicazione transazionale
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +101,7 @@ Configurare le sottoscrizioni aggiornabili nella pagina **Sottoscrizioni aggiorn
     * `sync tran` - abilita la sottoscrizione per l'aggiornamento immediato.
     * `failover` - abilita la sottoscrizione per l'aggiornamento immediato sostituito dall'aggiornamento in coda in caso di failover.
     > [!NOTE]  
->  `failover` richiede che la pubblicazione sia abilitata anche per le sottoscrizioni ad aggiornamento in coda. 
+    >  `failover` richiede che la pubblicazione sia abilitata anche per le sottoscrizioni ad aggiornamento in coda. 
  
 4. Nel Sottoscrittore eseguire [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specificare le opzioni seguenti:
 
@@ -150,7 +150,7 @@ Configurare le sottoscrizioni aggiornabili nella pagina **Sottoscrizioni aggiorn
     * Le credenziali di Windows usate per eseguire l'agente di distribuzione nel server di distribuzione per `@job_login` e `@job_password`. 
 
     > [!NOTE]  
->  Per le connessioni attivate con l'autenticazione integrata di Windows vengono sempre usate le credenziali di Windows specificate da `@job_login` e `@job_password`. L'agente di distribuzione esegue sempre la connessione locale al server di distribuzione utilizzando l'autenticazione integrata di Windows. Per impostazione predefinita, l'agente si connette al Sottoscrittore utilizzando l'autenticazione integrata di Windows. 
+    >  Per le connessioni attivate con l'autenticazione integrata di Windows vengono sempre usate le credenziali di Windows specificate da `@job_login` e `@job_password`. L'agente di distribuzione esegue sempre la connessione locale al server di distribuzione utilizzando l'autenticazione integrata di Windows. Per impostazione predefinita, l'agente si connette al Sottoscrittore utilizzando l'autenticazione integrata di Windows. 
 
     * (Facoltativo) Il valore `0` per `@subscriber_security_mode` e le informazioni sull'account di accesso di SQL Server per `@subscriber_login` e `@subscriber_password`, se è necessario usare l'autenticazione di SQL Server per la connessione al Sottoscrittore. 
     * Specificare una pianificazione per il processo dell'agente di distribuzione da eseguire per la sottoscrizione.
@@ -180,7 +180,7 @@ Configurare le sottoscrizioni aggiornabili nella pagina **Sottoscrizioni aggiorn
     * `queued failover` - abilita il supporto per l'aggiornamento in coda sostituito dall'aggiornamento immediato in caso di failover.
 
     > [!NOTE]  
->  `queued failover` richiede che la pubblicazione sia abilitata anche per le sottoscrizioni ad aggiornamento immediato. Per eseguire il failover all'aggiornamento immediato, è necessario usare [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) per definire le credenziali con cui replicare nel server di pubblicazione le modifiche apportate al Sottoscrittore.
+    >  `queued failover` richiede che la pubblicazione sia abilitata anche per le sottoscrizioni ad aggiornamento immediato. Per eseguire il failover all'aggiornamento immediato, è necessario usare [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) per definire le credenziali con cui replicare nel server di pubblicazione le modifiche apportate al Sottoscrittore.
  
 4. Nel Sottoscrittore eseguire [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specificare i parametri seguenti:
 
