@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 025961e39a4f0b1beb0588f0dc7ef2c668bd09a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c396f85d05203a9a2c01825adb94bd0cd2ae910e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294767"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921687"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Come determinare se i dati delle modifiche sono pronti
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Nel flusso di controllo di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che esegue un caricamento incrementale dei dati delle modifiche, la seconda attività consiste nel verificare che i dati delle modifiche per l'intervallo selezionato siano pronti. Questo passaggio è necessario in quanto il processo di acquisizione asincrono potrebbe non avere ancora elaborato tutte le modifiche fino all'endpoint selezionato.  

@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc7255cdcb9758f2bdd55b043e70669affadabd8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b877689bbccb0ea4ab206e403b54d15ce189fb79
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285224"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922397"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>Istruzione SQL CREATE TABLE (Importazione/Esportazione guidata SQL Server)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Se nella finestra di dialogo **Mapping colonne** si seleziona **Crea tabella di destinazione** e quindi **Modifica codice SQL** , l'Importazione/Esportazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza la finestra di dialogo **Istruzione SQL CREATE TABLE** . In questa pagina è necessario esaminare ed eventualmente personalizzare il comando **CREATE TABLE** che verrà eseguito dalla procedura guidata per creare la nuova tabella di destinazione.

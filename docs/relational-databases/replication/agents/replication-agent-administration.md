@@ -24,15 +24,15 @@ ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f0a59dff4420aa4cab9a7ce62a99315196007691
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 206bf3691786007fe4ab8ac8b446af13604341a0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159689"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923427"
 ---
 # <a name="replication-agent-administration"></a>Amministrazione dell'agente di replica
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Gli agenti di replica eseguono numerose attività associate alla replica, tra cui la creazione di copie di schemi e di dati, il rilevamento di aggiornamenti nel server di pubblicazione o nel Sottoscrittore e la distribuzione delle modifiche tra i server. Per impostazione predefinita, gli agenti di replica eseguono passaggi di processo di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent. Gli agenti sono semplici file eseguibili che possono essere chiamati direttamente dalla riga di comando e dagli script batch. Ogni agente di replica supporta un set di parametri run-time utilizzati per controllarne il funzionamento. Tali parametri vengono specificati nei profili degli agenti o dalla riga di comando.  
   
 > [!IMPORTANT]  

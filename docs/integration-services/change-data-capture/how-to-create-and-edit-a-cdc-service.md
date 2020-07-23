@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9df960fa5018ad8f4368c99a91c5aed3fe0aab15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 55f486b3023eac8c91779079d118f74728f88b63
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294794"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921577"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>Procedura di creazione e modifica di un servizio CDC
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   In queste procedure viene illustrato come creare e modificare un nuovo servizio Oracle CDC da CDC Service Configuration Console.  

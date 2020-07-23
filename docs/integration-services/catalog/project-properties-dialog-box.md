@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f9aee0d7233b5f163a5f9c39f9053b9f0842aa7e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f8abf0faafe21b01c34875968cac43c501f951a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298948"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922607"
 ---
 # <a name="project-properties-dialog-box"></a>Finestra di dialogo Proprietà progetto
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Un progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è un'unità di distribuzione. In ogni progetto possono essere inclusi pacchetti, parametri e riferimenti all'ambiente. Un progetto è un oggetto a protezione diretta in cui è possibile definire autorizzazioni per le entità di database. Quando un progetto viene ridistribuito, la versione precedente può essere archiviata nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

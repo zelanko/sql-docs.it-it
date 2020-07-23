@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8b2f033557c566050dffbd82bc64df84feabb7b6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a3d0272916814eb8ba9234217d6e7978c8a925e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296922"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922028"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Eventi registrati dal servizio Integration Services
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Quando l'esecuzione del servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene avviata, arrestata o quando si verificano determinati problemi, vengono registrati vari messaggi di evento nel registro eventi applicazioni di Windows.  

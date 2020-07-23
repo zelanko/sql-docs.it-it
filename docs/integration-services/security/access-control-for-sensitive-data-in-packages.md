@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9cbb736b77cef9bcb87dfa7cac2cd5a33943ca66
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6b5347b8b3d241bc7d65fb4d344b74822150185e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288185"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922065"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Controllo dell'accesso per dati sensibili nei pacchetti
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Per proteggere i dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , è possibile impostare un livello di protezione in modo da proteggere i dati sensibili o tutti i dati all'interno del pacchetto. Inoltre, è possibile crittografare questi dati con una password o una chiave utente o utilizzare il sistema di crittografia del database. Inoltre, il livello di protezione che si utilizza per un pacchetto non è necessariamente statico, ma cambia durante tutto il ciclo di vita del pacchetto. Spesso si imposta un livello di protezione durante lo sviluppo e un altro appena si distribuisce il pacchetto.  

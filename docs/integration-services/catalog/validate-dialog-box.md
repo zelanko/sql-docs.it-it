@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 049bb90dddf4bbfb03b222a675bd4008eb83cc14
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d261c049ab59459d81a26d8f9cf23c7268ce53e8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294866"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922556"
 ---
 # <a name="validate-dialog-box"></a>Finestra di dialogo Convalida
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Utilizzare la finestra di dialogo **Convalida** per verificare i problemi comuni in un progetto o pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

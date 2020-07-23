@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 87400e2216b51bfab0132f369e452f27447b0572
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cfa304fa19b8d2f259a0cad77d4c25b5d81aa8be
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294403"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922907"
 ---
 # <a name="smo-connection-manager"></a>gestione connessione SMO
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Una gestione connessione SMO consente a un pacchetto di connettersi a un server SMO (SQL Management Object). La gestione connessione SMO viene usata dalle attività di trasferimento incluse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. L'attività Trasferisci account di accesso, che trasferisce account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , usa ad esempio una gestione connessione SMO.  

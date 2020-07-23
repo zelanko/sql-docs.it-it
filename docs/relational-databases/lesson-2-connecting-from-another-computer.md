@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: afa9d06c9f9d2bdf0281fadfc93ec2a550b9f4af
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0022e0e740e9c4268ddf08340029c2e74a101437
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767738"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922869"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lezione 2: Connessione da un altro computer
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 Per una maggiore sicurezza non è possibile accedere al [!INCLUDE[ssDE](../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Edition, Express Edition ed Evaluation Edition da un altro computer al momento dell'installazione iniziale. In questa lezione vengono descritte le procedure per abilitare i protocolli, configurare le porte e configurare Windows Firewall per la connessione da altri computer.  
   
 In questa lezione sono incluse le attività seguenti:  

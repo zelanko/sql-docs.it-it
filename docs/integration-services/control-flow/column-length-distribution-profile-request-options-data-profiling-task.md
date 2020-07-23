@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cbaf50dc98962e1053477b0535054917c3719f19
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0f3833327f518b935874b79747ef9cd6b129143a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294237"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921427"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Distribuzione lunghezze di colonna (Attività Profiling dati)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni della richiesta **Richiesta profilo Distribuzione lunghezze di colonna** selezionata nel riquadro delle richieste. Il profilo Distribuzione lunghezze di colonna segnala tutte le singole lunghezze dei valori stringa nella colonna selezionata e la percentuale di righe nella tabella rappresentata da ogni lunghezza. Questo profilo consente inoltre di identificare eventuali problemi nei dati, ad esempio valori non validi. Si analizza, ad esempio, una colonna di codici a due caratteri degli stati degli Stati Uniti e si individuano valori con lunghezza maggiore di due caratteri.  

@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c93f0be480341abb59038db34616a94d4b475952
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dc4c1b81917e07ec23b543f64cb81942104ad31d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298509"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923107"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>gestione connessione per più file flat
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Una gestione connessione per più file flat consente a un pacchetto di accedere a dati contenuti in più file flat. Ad esempio, un'origine file flat può utilizzare una gestione connessione per più file quando l'attività Flusso di dati si trova in un contenitore Ciclo, ad esempio il contenitore Ciclo For. In ogni ciclo del contenitore, l'origine file flat carica dati dal nome file successivo fornito dalla gestione connessione per più file.  
@@ -56,7 +56,7 @@ ms.locfileid: "71298509"
   
  Quando la gestione connessione per più file flat fa riferimento a più file, i percorsi dei file sono separati da una barra verticale. La proprietà **ConnectionString** della gestione connessione ha il formato seguente:  
   
- \<*percorso*>|\<*percorso*>  
+ \<*path*>|\<*path*>  
   
  Per specificare più file è inoltre possibile utilizzare caratteri jolly. Per fare riferimento, ad esempio, a tutti i file di testo sull'unità C è possibile impostare il valore della proprietà **ConnectionString** su C:\\\*.txt.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "71298509"
  **Formato**  
  Consente di indicare se utilizzare la formattazione non allineata a destra, a larghezza fissa o delimitata. Tutti i file devono avere lo stesso formato data.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |Delimitato|Le colonne sono separate dai delimitatori specificati nella pagina **Colonne** .|  
 |File a larghezza fissa|Le colonne hanno una larghezza fissa, specificata trascinando le linee dei marcatori nella pagina **Colonne** .|  
@@ -113,7 +113,7 @@ ms.locfileid: "71298509"
  **Delimitatore riga di intestazione**  
  Consente di selezionare il delimitatore per la riga di intestazione nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**{CR}{LF}**|La riga di intestazione è delimitata dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|La riga di intestazione è delimitata da un carattere di ritorno a capo.|  
@@ -148,7 +148,7 @@ ms.locfileid: "71298509"
  **Delimitatore di riga**  
  Consente di selezionare il delimitatore di riga desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|Le righe sono delimitate da un ritorno a capo.|  
@@ -162,7 +162,7 @@ ms.locfileid: "71298509"
  **Delimitatore di colonna**  
  Consente di selezionare il delimitatore di colonna desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|Le colonne sono delimitate da un ritorno a capo.|  
@@ -203,7 +203,7 @@ ms.locfileid: "71298509"
  **Delimitatore di riga**  
  Consente di selezionare il delimitatore di riga desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Descrizione|  
+|Valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|Le righe sono delimitate da un ritorno a capo.|  
@@ -237,7 +237,7 @@ ms.locfileid: "71298509"
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**ColumnType**|Indica se la colonna è delimitata, a larghezza fissa o non allineata a destra. Questa proprietà è di sola lettura. I file non allineati a destra sono file in cui ogni colonna ha una larghezza fissa ad eccezione dell'ultima, per la quale viene utilizzato il delimitatore di riga.|  
-|**OutputColumnWidth**|Consente di specificare il valore da archiviare come conteggio di byte. Nel caso dei file Unicode tale valore verrà visualizzato come conteggio di caratteri. Nell'attività Flusso di dati questo valore viene utilizzato per impostare la larghezza della colonna di output per l'origine file flat.<br /><br /> Nota: nel modello a oggetti il nome di questa proprietà è MaximumWidth.|  
+|**OutputColumnWidth**|Consente di specificare il valore da archiviare come conteggio di byte. Nel caso dei file Unicode tale valore verrà visualizzato come conteggio di caratteri. Nell'attività Flusso di dati questo valore viene utilizzato per impostare la larghezza della colonna di output per l'origine file flat.<br /><br /> Nota: Nel modello a oggetti il nome di questa proprietà è MaximumWidth.|  
 |**DataType**|Consente di selezionare i tipi di dati disponibili nell'apposito elenco. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**TextQualified**|Consente di specificare se i dati di testo sono qualificati usando un carattere qualificatore di testo:<br /><br /> **True**: i dati di tipo testo nel file flat sono qualificati.<br /><br /> **False**: i dati di tipo testo nel file flat non sono qualificati.|  
 |**Nome**|Consente di specificare un nome per la colonna. Per impostazione predefinita, si tratta di un elenco numerato di colonne. È comunque possibile scegliere qualsiasi nome descrittivo univoco.|  
@@ -249,7 +249,7 @@ ms.locfileid: "71298509"
  **Nuovo**  
  Consente di aggiungere una **nuova**colonna. Per impostazione predefinita, il pulsante **Nuova** aggiunge una colonna alla fine dell'elenco. Il pulsante offre inoltre le opzioni seguenti che è possibile selezionare dall'elenco a discesa.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Aggiungi colonna**|Consente di aggiungere una nuova colonna alla fine dell'elenco.|  
 |**Inserisci prima**|Consente di inserire una nuova colonna prima di quella selezionata.|  

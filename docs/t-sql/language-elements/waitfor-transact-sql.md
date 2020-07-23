@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3b8ca20f5304dae35a54357b79c763831ceb280
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 87fc7c86277292cbce61e1a8f66b38b80b580996
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731363"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922991"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,9 @@ WAITFOR
 }  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  DELAY  
  Periodo di tempo specificato che deve trascorrere (massimo 24 ore) prima che l'esecuzione di un batch, una stored procedure o una transazione possa continuare.  
   

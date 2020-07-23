@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 19f23e57fdb77a88ecf7c7b531c9c837e2c740ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 334105bde7936543fd1dba3167fd61e1b440fd5e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298992"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922647"
 ---
 # <a name="folder-properties-dialog-box"></a>Finestra di dialogo Proprietà cartella
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Nel catalogo di **SSISDB** della cartella sono contenuti pacchetti e ambienti. In ogni cartella vengono definite le autorizzazioni che si applicano al contenuto della cartella. Per altre informazioni sulle autorizzazioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vedere [catalog.grant_permission &#40;database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md).  

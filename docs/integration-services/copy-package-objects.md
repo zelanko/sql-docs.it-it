@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4636dde3123cc3742a7dde57fa2a468583e2f2bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7cab8f7b6d3214a3ab49eb6fe062b4235954aa87
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293606"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923257"
 ---
 # <a name="copy-package-objects"></a>Copia di oggetti di pacchetto
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   In questo argomento viene descritta la procedura per copiare elementi di un flusso di controllo, elementi di un flusso di dati e gestioni connessioni all'interno di un pacchetto o tra pacchetti diversi.  

@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ac260f2c3703260e5472d5be399333a93574f2c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6fb3889d57052bcd305056a6468a2fa42d79d5c4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283261"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922205"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>Lezione 3-3 - Test dei pacchetti distribuiti
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 In questa attività si procederà al test dei pacchetti distribuiti in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

@@ -24,16 +24,16 @@ helpviewer_keywords:
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 56dc5d83a23bfbf175c203edbdeb27d30760557b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 08012fc9ac717476be0bc9e592b96d7391aa7a85
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71299022"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922705"
 ---
 # <a name="handling-events-programmatically"></a>Gestione degli eventi a livello di programmazione
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Il runtime di [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornisce una raccolta di eventi che si verificano prima, durante e dopo la convalida e l'esecuzione di un pacchetto. Tali eventi possono essere acquisiti in due modi. Il primo metodo prevede di implementare l'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> in una classe e specificare la classe come parametro per i metodi **Execute** e **Validate** del pacchetto. Il secondo metodo consiste nella creazione di oggetti <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> che possono contenere altri oggetti di [!INCLUDE[ssIS](../../includes/ssis-md.md)], ad esempio attività e cicli, eseguiti quando si verifica un evento in <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. In questa sezione vengono descritti questi due metodi e vengono forniti esempi di codice per dimostrarne l'utilizzo.  

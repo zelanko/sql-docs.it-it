@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fd0f778495220f227e2dd1fca42c8f5104ea7d2b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eacd467eed8a9c0a80be5e94f8495176ac134633
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294225"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922493"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Distribuzione valori di colonna (Attività Profiling dati)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni della **Richiesta profilo Distribuzione valori di colonna** selezionata nel riquadro delle richieste. Il profilo Distribuzione valori di colonna segnala tutti i valori distinct nella colonna selezionata e la percentuale di righe della tabella rappresentata da ogni valore. Può inoltre segnalare i valori che rappresentano più percentuali specificate di righe nella tabella. Il profilo consente infine di identificare eventuali problemi nei dati, ad esempio un numero non corretto di valori distinct in una colonna. Si analizza, ad esempio, una colonna contenente gli stati degli Stati Uniti e si individuano più di 50 valori distinct.  

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1bee1c469ca7febfa114a3143d5842db74356ed9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5d84724471eba8f1b5215a976e51e8c498352e05
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294365"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923147"
 ---
 # <a name="multiple-files-connection-manager"></a>gestione connessione per più file
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Una gestione connessione per più file consente a un pacchetto di fare riferimento a file e cartelle esistenti o di creare file e cartelle in fase di esecuzione.  
@@ -61,7 +61,7 @@ ms.locfileid: "71294365"
   
  Se la gestione connessione per più file fa riferimento a più file e cartelle, i percorsi dei file e delle cartelle sono separati da una barra verticale. La proprietà **ConnectionString** della gestione connessione ha il formato seguente:  
   
- \<*percorso*>|\<*percorso*>  
+ \<*path*>|\<*path*>  
   
  Per specificare più file o cartelle è inoltre possibile utilizzare caratteri jolly. Per fare riferimento, ad esempio, a tutti i file di testo sull'unità C è possibile impostare il valore della proprietà **ConnectionString** su C:\\\*.txt.  
   

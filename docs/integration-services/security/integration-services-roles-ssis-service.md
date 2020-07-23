@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3290aa2297ca849ed175b7db109f6b200debc789
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 86ebb4c5420b1fa7abcbae00a190f11023b73b0b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295676"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922087"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Ruoli Integration Services (servizio SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre alcuni ruoli predefiniti a livello di database per consentire l'accesso sicuro ai pacchetti archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I ruoli disponibili sono diversi a seconda di dove si salvano i pacchetti, nel database del catalogo SSIS (SSISDB) o nel database msdb.  

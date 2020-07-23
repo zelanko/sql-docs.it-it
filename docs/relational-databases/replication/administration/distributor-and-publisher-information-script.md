@@ -15,15 +15,15 @@ ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7cd1c20e9fc0dd126fe74a7f9ae02bfd9343fc93
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 52cb0385679d82f7d5b5a24f039ba2828e09cd94
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159339"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922271"
 ---
 # <a name="distributor-and-publisher-information-script"></a>Script di informazioni sui server di distribuzione e di pubblicazione
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Questo script utilizza le tabelle di sistema e le stored procedure di replica per rispondere a domande frequenti su oggetti presenti nei server di distribuzione e pubblicazione. Può essere utilizzato senza alcuna variazione e può inoltre costituire la base per la generazione di script personalizzati. Per eseguire lo script nel proprio ambiente potrebbe essere necessario apportare due modifiche:  
   
 -   Modificare la riga `use AdventureWorks2012` per utilizzare il nome del database di pubblicazione in uso.  

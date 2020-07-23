@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7357e1508172e5b4debbdea99967314c45d53bf4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f23f4f68c6856ad86db206d19551c564b5121d67
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71299065"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921327"
 ---
 # <a name="adding-tasks-programmatically"></a>Aggiunta di attività a livello di programmazione
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   È possibile aggiungere attività ai tipi di oggetti seguenti nel motore di runtime:  

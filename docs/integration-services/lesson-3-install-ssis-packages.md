@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5f325c9322d9194ff9dfb99dcf5bcae902a59faa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4db3158c378d32dd472a9845e785be95130780b6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295973"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922169"
 ---
 # <a name="lesson-3-install-ssis-packages"></a>Lezione 3: Installare i pacchetti SSIS
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Nella [Lezione 2: Creare il pacchetto di distribuzione in SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)sono stati compilati un'utilità di distribuzione e un pacchetto di distribuzione contenente gli elementi necessari per installare i pacchetti in un altro computer. È stato inoltre verificato l'elenco dei file inclusi nel pacchetto di distribuzione ed è stato esaminato il contenuto del file manifesto creato contestualmente all'utilità di distribuzione.  

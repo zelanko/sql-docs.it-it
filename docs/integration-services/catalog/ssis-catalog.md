@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 14a0cfa2227179d74d67d6e3ed16198da3323855
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: e2ae3fa6680916e01bb69e2e8d2d243404a311f0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279407"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922590"
 ---
 # <a name="ssis-catalog"></a>Catalogo SSIS
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Il catalogo **SSISDB** è il punto centrale dell'utilizzo di progetti [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) che sono stati distribuiti nel server [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Ad esempio, è possibile impostare parametri di progetti e pacchetti, configurare ambienti per specificare valori di runtime per i pacchetti, eseguire e risolvere i problemi dei pacchetti e gestire le operazioni del server [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  

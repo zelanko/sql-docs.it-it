@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4900f90f4044b32aea673106ad0a7a2a14a8f5cb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f3616da1034fa0c590a4544691e22ffd054eaa10
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296291"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922407"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Crea database (Importazione/Esportazione guidata SQL Server)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Se si seleziona **Nuovo** nella pagina **Scegliere una destinazione** per creare un nuovo database di destinazione SQL Server, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza la finestra di dialogo **Crea database** . In questa pagina è possibile specificare un nome per il nuovo database. Facoltativamente è possibile modificare le impostazioni per la dimensione iniziale e l'aumento automatico del nuovo database e il relativo file di log. 

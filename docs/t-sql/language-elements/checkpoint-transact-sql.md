@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
-ms.openlocfilehash: edb989e798274860359a89d4a7a184ba19fd04b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec484e698234dc71282a11b07555be73cd2c694d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706650"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923373"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,9 @@ ms.locfileid: "85706650"
 CHECKPOINT [ checkpoint_duration ]  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *checkpoint_duration*  
  Specifica il numero di secondi disponibili per il completamento manuale del checkpoint. Se si specifica *checkpoint_duration*, il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] cerca di eseguire il checkpoint nell'arco di tempo specificato. Il valore di *checkpoint_duration* deve essere un'espressione di tipo **int** e maggiore di zero. Se si omette questo parametro, tramite il [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene adeguata automaticamente la durata del checkpoint per ridurre al minimo l'impatto sulle prestazioni nelle applicazioni di database. L'opzione *checkpoint_duration* è un'opzione avanzata.  
   

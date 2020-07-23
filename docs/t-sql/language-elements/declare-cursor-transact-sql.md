@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14ca7d3675242a16c8b1952aecc324ff2f7f67a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3544d4a9530be4ff90609593e8335c725a4f1a22
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706531"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921479"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,9 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
 [;]  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *cursor_name*  
  Nome del cursore server [!INCLUDE[tsql](../../includes/tsql-md.md)] definito. *cursor_name* deve essere conforme alle regole per gli identificatori.  
   
