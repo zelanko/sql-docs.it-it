@@ -18,15 +18,15 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ac80080f663d43f9084932ca697970d50c9f307c
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 4ff1261ef4b1cfed1b36c8d14dde6810e6c27ef8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159619"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918727"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Misurazione della latenza e convalida delle connessioni per la replica transazionale
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   In questo argomento viene descritto come misurare le connessione di convalida e latenza per la replica transazionale in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite Monitoraggio replica, [!INCLUDE[tsql](../../../includes/tsql-md.md)]o RMO (Replication Management Objects). La replica transazionale offre la funzionalità token di traccia, che rappresenta una modalità pratica di misurazione della latenza nelle topologie di replica transazionale e di convalida delle connessioni tra server di pubblicazione, database di distribuzione e Sottoscrittori. Un token, ovvero una piccola quantità di dati, viene scritto nel log delle transazioni del database di pubblicazione, contrassegnato come se fosse una comune transazione replicata e inviato tramite il sistema in modo da consentire:  
   
 -   Il calcolo del tempo che trascorre tra l'esecuzione del commit di una transazione nel server di pubblicazione e l'inserimento del comando corrispondente nel database di distribuzione del server di distribuzione.  

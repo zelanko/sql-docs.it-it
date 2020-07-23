@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c3f0545a3c72627bc45ab40003522d4f3ac1da5c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3c53711952ce405befe2575471e676ffd2297b67
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71287782"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918153"
 ---
 # <a name="coding-a-custom-connection-manager"></a>Scrittura del codice di una gestione connessione personalizzata
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Dopo avere creato una classe che eredita dalla classe di base <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase> e avere applicato l'attributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> alla classe, è necessario eseguire l'override dell'implementazione delle proprietà e dei metodi della classe di base per fornire la funzionalità personalizzata.  

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5dc1ae24d927247a1af61ff974a535b6bdb48502
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b777b6d9bbf6cbdf42436876b20a08ffd032c80a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298668"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917158"
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Tipi di dati dell'istanza di Oracle CDC
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L'istanza di Oracle CDC supporta la maggior parte dei tipi di dati Oracle. Nelle sezioni seguenti vengono descritti i tipi di dati supportati e non.  

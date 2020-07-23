@@ -9,16 +9,16 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d520f83f515694bd8852ce11ea13fce7f3213596
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a0aa51c868ae89062320640015ad01ef79134e8d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245119"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917757"
 ---
 # <a name="use-the-teradata-connection-manager"></a>Usare la gestione connessione Teradata
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Con la gestione connessione Teradata è possibile consentire a un pacchetto di estrarre dati da database Teradata e di caricare dati in database Teradata.
 

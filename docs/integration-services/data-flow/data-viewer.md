@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa6129fe5e617fc9f1684644012171d3ff6836c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52565494c572fdb6a0eb24ccc0c591bf00005a79
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293020"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916765"
 ---
 # <a name="data-viewer"></a>Visualizzatore dati
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Se viene configurato un percorso per utilizzare un visualizzatore dati, in quest'ultimo viene visualizzato il buffer di dati in base al buffer durante lo spostamento dei dati tra due componenti di flusso di dati.  

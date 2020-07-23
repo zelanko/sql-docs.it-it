@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b32f52bd01cb0f19bc107f5f94118d699c239e27
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3e7d3c0f25f34685af4531e5d59541f028098291
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71290716"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916649"
 ---
 # <a name="delete-packages"></a>Eliminazione di pacchetti
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]è possibile eliminare i pacchetti salvati nel file system. Se si elimina un pacchetto, quest'ultimo verrà eliminato definitivamente e non potrà essere ripristinato in un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

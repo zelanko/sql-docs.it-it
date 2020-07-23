@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 891e0fa855ec422efbdfd93abe9905f4ee7bffc0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ef16c9c83419d6b404affc49e7200a739ab65f7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297413"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919061"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE (espressione SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Viene restituita un'espressione di caratteri dopo aver sostituito una stringa di caratteri nell'espressione con un'altra stringa di caratteri o una stringa vuota.  

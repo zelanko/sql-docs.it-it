@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7b4fa1d2dd8219c28a1fd9c8f3f403c6098d96e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52972f7b21a9eb7ff2fa0059e8d52848e8cc9ab4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298073"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917838"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Editor origine SAP BW (pagina Gestione connessione)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor origine SAP BW** per selezionare la gestione connessione SAP BW per l'origine SAP BW. In questa pagina vengono inoltre selezionati la modalità di esecuzione e i parametri per estrarre i dati dal sistema SAP Netweaver BW.  

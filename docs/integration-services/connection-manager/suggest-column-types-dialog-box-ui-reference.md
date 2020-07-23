@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86e63eb6ab4c8d851d442e50b68cc56d2456580c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a1e742bfc0254cddf38a73a8b5923168fb58745f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298442"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918251"
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>Riferimento all'interfaccia utente della finestra di dialogo Suggerisci tipi di colonne
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Utilizzare la finestra di dialogo **Suggerisci tipi di colonne** per identificare il tipo di dati e la lunghezza delle colonne nella gestione connessione file flat sulla base di un campionamento del contenuto del file.  

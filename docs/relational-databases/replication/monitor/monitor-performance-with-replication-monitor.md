@@ -20,15 +20,15 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a2894c2b9919f3f270bad4407a70ef9aedda5223
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: d98498fa2f63ef4e4c3cd977c7612fd3277fbf91
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159819"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918717"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Monitoraggio delle prestazioni con Monitoraggio replica
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Monitoraggio replica di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di monitorare le prestazioni della replica transazionale e della replica di tipo merge nei modi seguenti:  
   
 -   Impostazione di avvisi e soglie  

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1fd5584a5c43762c4d732c677de225436e191a7e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 71fdb19fb47f953ceb6266be38d5c3b191a30f91
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297806"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919484"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Dimensione a modifica lenta - trasformazione
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   La trasformazione Dimensione a modifica lenta consente di coordinare l'aggiornamento e l'inserimento dei record nelle tabelle delle dimensioni dei data warehouse. È ad esempio possibile usare questa trasformazione per configurare gli output che inseriscono e aggiornano i record nella tabella DimProduct del database [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] con i dati della tabella Production.Products del database OLTP AdventureWorks.  

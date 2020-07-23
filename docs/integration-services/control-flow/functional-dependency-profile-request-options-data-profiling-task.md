@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6cf3c23908b3ec391afc7b9073796ab4c2f47100
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b2f4f0f63aa108f16a8649007c200d8f93261367
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298263"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918216"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Dipendenza funzionale (Attività Profiling dati)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni di **Richiesta profilo Dipendenza funzionale** selezionata nel riquadro delle richieste. Un profilo Dipendenza funzionale segnala il livello di dipendenza dei valori inclusi in una colonna (colonna dipendente) dai valori presenti in un'altra colonna o set di colonne (colonna determinante). Questo profilo consente inoltre di identificare eventuali problemi nei dati, ad esempio valori non validi. Si analizza, ad esempio, la dipendenza tra una colonna che contiene i codici postali ZIP (Stati Uniti) e una colonna che contiene gli stati degli Stati Uniti. Benché nel profilo uno stesso codice postale debba essere sempre associato allo stesso stato, vengono individuate violazioni di tale dipendenza.  

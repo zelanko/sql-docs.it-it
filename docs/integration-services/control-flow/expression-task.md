@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 385db632232fabe3639384b4792a621e1023075a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 988157321eff73ecc9e4a77db9b09a52281f3f40
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298283"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917907"
 ---
 # <a name="expression-task"></a>Attività Espressione
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L'Attività Espressione consente di creare e valutare espressioni per l'impostazione di valori di variabili in fase di esecuzione tramite Generatore di espressioni. Quando si modifica l'attività, viene avviato [Expression Builder](../../integration-services/expressions/expression-builder.md) .  

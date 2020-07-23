@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 26b22a82491d3f4c586c3fb259bf50c6d7216367
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff200828c1204d15f648ec783fe720d86ac22dd1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297907"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919247"
 ---
 # <a name="integration-services-transformations"></a>Trasformazioni di Integration Services
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Le trasformazioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sono i componenti nel flusso di dati di un pacchetto che aggregano, uniscono, distribuiscono e modificano i dati. Le trasformazioni possono inoltre eseguire operazioni di ricerca e generare set di dati campione. In questa sezione vengono descritte le trasformazioni incluse in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , illustrandone il funzionamento.  

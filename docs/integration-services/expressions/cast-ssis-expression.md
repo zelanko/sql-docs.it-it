@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 618c30a29473e7ade84812abeba52d23ff52da9e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c10996317ce033b6d6437ff989de8d66d31f006
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71290349"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917191"
 ---
 # <a name="cast-ssis-expression"></a>Cast (espressione SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Viene convertita esplicitamente un'espressione da un tipo di dati a un altro. L'operatore cast può essere utilizzato anche come operatore di troncamento.  

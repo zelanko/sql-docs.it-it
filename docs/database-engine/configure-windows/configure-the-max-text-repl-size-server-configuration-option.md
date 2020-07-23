@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 372bf3cfbe8aa3138bad7e03cc6c666c09ad68d5
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 8248e04f0e69519e4d1d78d39831f40775a8a38c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159709"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917953"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>Configurare l'opzione di configurazione del server max text repl size
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sql-asdbmi.md)]
+ [!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
   In questo argomento si illustra come configurare l'opzione di configurazione del server **max text repl size** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **max text repl size** è possibile specificare le dimensioni massime, in byte, di dati di tipo **text**, **ntext**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, and **image** che è possibile aggiungere a una colonna replicata o acquisita tramite un'unica istruzione INSERT, UPDATE, WRITETEXT o UPDATETEXT. Il valore predefinito è 65536 byte. Il valore -1 indica che non esiste alcun limite di dimensioni, tranne il limite imposto dal tipo di dati.  
   

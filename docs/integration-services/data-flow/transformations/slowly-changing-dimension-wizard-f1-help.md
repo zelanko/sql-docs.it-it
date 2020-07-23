@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 85f97f8e7fe754a4c52b34f52ecb45d142a43c4b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d4147da3260a2b8620d880e2d20c3ed4fd610d05
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297773"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919463"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>Guida sensibile al contesto della Configurazione guidata dimensioni a modifica lenta
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Utilizzare la **Configurazione guidata dimensioni a modifica lenta** per configurare il caricamento dei dati in diversi tipi di dimensioni a modifica lenta. In questa sezione viene fornita la Guida sensibile al contesto della **Configurazione guidata dimensioni a modificata lenta**. Gli argomenti disponibili in questa sezione sono descritti nella tabella seguente.  

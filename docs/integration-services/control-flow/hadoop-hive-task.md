@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f157b2b802142f6f00b7a3e9ffb2596ef80f1773
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9a6a0bcdfcaa6e1ac287ef22c8515eef92c123d1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298254"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918202"
 ---
 # <a name="hadoop-hive-task"></a>Attività Hive Hadoop
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Usare l'attività Hive Hadoop per eseguire script Hive in un cluster Hadoop.  

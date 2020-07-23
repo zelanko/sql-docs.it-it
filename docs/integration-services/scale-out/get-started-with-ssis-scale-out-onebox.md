@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: a631e6e3192e6b727d6fc50feaae2aadaa2d7dc2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 48ed32fedde7d3874f01644eec257f4450e0555e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764862"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919023"
 ---
 # <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>Introduzione a Integration Services Scale Out (SSIS) in un singolo computer
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Questa sezione contiene le linee guida per configurare Integration Services Scale Out in un ambiente a computer singolo con impostazioni predefinite.

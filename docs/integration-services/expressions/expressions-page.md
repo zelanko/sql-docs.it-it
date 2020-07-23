@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e3bbe6e788512144211ed35d1cfa8326d8f3ef7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1fe673f96f3272c2f23005588f0ad49271e943fe
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71290012"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917041"
 ---
 # <a name="expressions-page"></a>Pagina Espressioni
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Usare la pagina **Espressioni** per modificare le espressioni di proprietà e accedere alle finestre di dialogo **Editor espressioni di proprietà** e **Property Expression Builder** (Generatore di espressioni di proprietà).  

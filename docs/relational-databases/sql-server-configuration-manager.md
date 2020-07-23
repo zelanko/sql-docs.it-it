@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a897fdff6fa758a9c170ecca264a66b5c9051d68
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f9a66712c7547a5fce852c23cdccd57465d794f1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666499"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918817"
 ---
 # <a name="sql-server-configuration-manager"></a>Gestione configurazione SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è uno strumento che consente di gestire i servizi associati a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], di configurare i protocolli di rete utilizzati da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e di gestire la configurazione della connettività di rete da computer client [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene installato con l'installazione di SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Gestione configurazione è uno snap-in di [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console disponibile tramite il menu Start o che può essere aggiunto a qualsiasi altra visualizzazione di [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (**mmc.exe**) usa il file **SQLServerManager\<version>.msc** (ad esempio **SQLServerManager13.msc** per [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) per aprire Gestione configurazione. Per gestire la versione specifica di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è necessaria la versione di Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] corrispondente. Di seguito sono riportati i percorsi delle ultime cinque versioni, con Windows installato nell'unità C.  

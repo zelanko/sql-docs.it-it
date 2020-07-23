@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 722db3a272c99ba6733551f4fa1a4131971e2416
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 488ff9dc4cbe33881e7c7c9bf80d4a5d347507d7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298741"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916556"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>Procedura di gestione di un servizio CDC locale
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   In questa procedura viene illustrato come utilizzare CDC Service Configuration Console per gestire servizi CDC specifici.  

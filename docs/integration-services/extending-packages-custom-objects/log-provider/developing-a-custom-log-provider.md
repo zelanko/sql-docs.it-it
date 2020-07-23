@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: af676b15dfb7cafe389566655589509bf47087c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 41da6c13c50ded80c5388da1b38dad582084b3c5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297144"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916425"
 ---
 # <a name="developing-a-custom-log-provider"></a>Sviluppo di un provider di log personalizzato
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sono disponibili funzionalità di registrazione estese che consentono di acquisire eventi che si verificano durante l'esecuzione dei pacchetti. In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] è inclusa una varietà di provider di log che consentono di creare e archiviare log in formati quali XML, testo, database o nel registro eventi di Windows. Se i provider di log e i formati di output disponibili non soddisfano completamente specifici requisiti, è possibile creare un provider di log personalizzato.  

@@ -23,12 +23,12 @@ ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a76fa18b50c62127208db9430fafcfb5668225c1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cf59a6245de8c1520dcd8196cc207fe2761d84c6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004982"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918801"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>Operatori sui set - EXCEPT e INTERSECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,9 @@ Le regole di base per la combinazione dei set di risultati di due query che usan
 { <query_specification> | ( <query_expression> ) }  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
 \<_query\_specification_> | ( \<_query\_expression_> )  
 Specifica di query o espressione di query che restituisce dati da confrontare con i dati di un'altra specifica o espressione di query. Le definizioni delle colonne incluse in un'operazione EXCEPT o INTERSECT non devono essere necessariamente identiche. Devono tuttavia essere confrontabili tramite una conversione implicita. Se i tipi di dati sono diversi, le regole per la [precedenza dei tipi di dati](../../t-sql/data-types/data-type-precedence-transact-sql.md) determinano il tipo di dati eseguito per il confronto.  
   
