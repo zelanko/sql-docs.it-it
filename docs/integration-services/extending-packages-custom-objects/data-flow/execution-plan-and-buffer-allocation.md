@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dba5ae3bf996f469f18a9802dd8cc8232a5bc885
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 08a6b6b3e557b11cac28201b5dd246d296e6b15c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297233"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916171"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>Piano di esecuzione e allocazione di buffer
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Prima dell'esecuzione, l'attività Flusso di dati esamina i propri componenti e genera un piano di esecuzione per ogni sequenza di componenti. In questa sezione vengono fornite informazioni sul piano di esecuzione, su come visualizzarlo e su come influisce sull'allocazione dei buffer di input e output.  

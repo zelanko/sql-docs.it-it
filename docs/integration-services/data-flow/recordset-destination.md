@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fc14bf340407903674014a84a6b48f2ff14522fc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bb6f5361b6ad2f967bc57838ac5df785733d9aa8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298122"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916018"
 ---
 # <a name="recordset-destination"></a>recordset - destinazione
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   La destinazione recordset crea e popola un recordset ADO in memoria. La forma del recordset è definita dall'input della destinazione recordset in fase di progettazione.  

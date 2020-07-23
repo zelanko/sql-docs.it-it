@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7b28d1c4cb3f17ae5a22e98735730a94ae186885
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c2db76002be78fba04d324036b3eb5af1b81585a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298900"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916287"
 ---
 # <a name="connection-to-sql-server-for-delete"></a>Connessione a SQL Server per l'eliminazione
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Quando si tenta di eliminare un'istanza di Oracle CDC con un account di accesso senza un ruolo del database che include autorizzazione di scrittura (ad esempio il ruolo **db_owner** ) per il database MSXDBCDC, viene visualizzata la finestra di dialogo Connetti a SQL Server.  

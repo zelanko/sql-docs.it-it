@@ -21,12 +21,12 @@ ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b1a17bebea6abf2a096622bb2e4806f35478f81
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 04000e046e229c36c159d80e1541c69139ba41d4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85990515"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915671"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -87,7 +87,9 @@ END
  WHEN *Boolean_expression*  
  Espressione booleana valutata quando viene utilizzato il formato CASE avanzato. *Boolean_expression* è qualsiasi espressione booleana valida.  
   
-## <a name="return-types"></a>Tipi restituiti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Tipi restituiti
  Restituisce il tipo con precedenza maggiore nel set di tipi in *result_expressions* e l'argomento facoltativo *else_result_expression*. Per altre informazioni, vedere [Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ### <a name="return-values"></a>Valori restituiti  

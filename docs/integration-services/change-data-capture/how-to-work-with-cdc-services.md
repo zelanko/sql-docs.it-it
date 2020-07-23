@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f9202cf969f87c23af7af7d68b01b4a42cff167d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 435aa5014d19c51704a5a93a7b35c365e095b9c8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298705"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915807"
 ---
 # <a name="how-to-work-with-cdc-services"></a>Procedura di utilizzo dei servizi CDC
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   In questa procedura viene descritto come utilizzare CDC Service Configuration Console per preparare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare con i servizi Oracle CDC e creare un nuovo servizio CDC.  

@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1a437704946f379f38aa590ccbf53f240fad94cc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2ccf1b65fdbdd5493dd5e62e9e19b90fb72d8746
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296913"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915179"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Scrittura di codice e debug dell'attività Script
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Dopo avere configurato l'attività Script in **Editor attività Script**, scrivere il codice personalizzato nell'ambiente di sviluppo corrispondente.  

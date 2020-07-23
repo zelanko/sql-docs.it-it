@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 499b62d172ebcf2fef29c9f32a038921d2e2d30c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c5b19832b7bf14cf872e6d90db53b72ea3ac703a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706188"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916187"
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,9 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *savepoint_name*  
  Nome assegnato al punto di salvataggio. I nomi di punto di salvataggio devono essere conformi alle regole per gli identificatori, ma non possono contenere più di 32 caratteri. In *savepoint_name* viene sempre applicata la distinzione tra maiuscole e minuscole, anche quando l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non prevede distinzione tra maiuscole e minuscole.  
   

@@ -12,16 +12,16 @@ f1_keywords:
 - sql14.dts.designer.afpextfiledest.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9bb840838794d7fc5a2e67acc7a4a2438ea2faf1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9c5e53ba85af16c65161857d9f93c50e5105fa50
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292451"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914994"
 ---
 # <a name="flexible-file-destination"></a>Destinazione di File flessibili
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Il componente **Destinazione di File flessibili** consente a un pacchetto SSIS di scrivere dati in vari servizi di archiviazione supportati.
 
