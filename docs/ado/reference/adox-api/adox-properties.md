@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6aed31fef1f685effc3216d6055de0faf0e22698
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6441c637b371cb059ebaad94380d6bfd4f24c8f9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764102"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942816"
 ---
 # <a name="adox-properties"></a>Proprietà ADOX
 
-|||  
+|Proprietà|Descrizione|  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Indica l'oggetto **connessione** ADO a cui appartiene il catalogo.|  
-|[Attributi](../../../ado/reference/adox-api/attributes-property-adox.md)|Descrive le caratteristiche della colonna.|  
+|[Attributes (Attributi)](../../../ado/reference/adox-api/attributes-property-adox.md)|Descrive le caratteristiche della colonna.|  
 |[Cluster](../../../ado/reference/adox-api/clustered-property-adox.md)|Indica se l'indice è di tipo cluster.|  
 |[Comando](../../../ado/reference/adox-api/command-property-adox.md)|Specifica un oggetto **comando** ADO che può essere utilizzato per creare o eseguire la procedura.|  
-|[Numero](../../../ado/reference/ado-api/count-property-ado.md)|Indica il numero di oggetti in una raccolta.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Indica il numero di oggetti in una raccolta.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Indica la data di creazione dell'oggetto.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Indica la data dell'Ultima modifica apportata all'oggetto.|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|Indica le dimensioni massime indicate della colonna.|  
 |[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)|Indica l'azione eseguita quando viene eliminata una chiave primaria.|  
 |[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)|Indica se i record con valori null nei rispettivi campi di indice contengono voci di indice.|  
-|[Item](../../../ado/reference/ado-api/item-property-ado.md)|Indica un membro specifico di una raccolta, in base al nome o al numero ordinale.|  
+|[Elemento](../../../ado/reference/ado-api/item-property-ado.md)|Indica un membro specifico di una raccolta, in base al nome o al numero ordinale.|  
 |[Nome](../../../ado/reference/adox-api/name-property-adox.md)|Indica il nome dell'oggetto.|  
 |[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|Indica la scala di un valore numerico nella colonna.|  
 |[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|Specifica il catalogo padre di una tabella o di una colonna per fornire l'accesso alle proprietà specifiche del provider.|  

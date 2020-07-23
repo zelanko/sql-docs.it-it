@@ -34,16 +34,16 @@ SELECT <expression list> [TOP <n>] FROM <model>
  Elenco delimitato da virgole contenente espressioni o colonne di tipo PREDICT o PREDICT ONLY.  
   
  *n*  
- Facoltativa. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
+ facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
   
  *model*  
  Identificatore del modello.  
   
  *Elenco condizioni*  
- Facoltativa. Condizioni per limitare i valori restituiti dall'elenco di colonne.  
+ facoltativo. Condizioni per limitare i valori restituiti dall'elenco di colonne.  
   
  *expression*  
- Facoltativa. Espressione che restituisce un valore scalare.  
+ facoltativo. Espressione che restituisce un valore scalare.  
   
 ## <a name="remarks"></a>Osservazioni  
  Le colonne nell' *elenco di espressioni* devono essere definite come Predict o Predict Only oppure in relazione a una colonna stimabile.  

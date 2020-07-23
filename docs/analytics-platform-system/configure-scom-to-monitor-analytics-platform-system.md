@@ -1,5 +1,5 @@
 ---
-title: Monitorare con SCOM
+title: Configurare System Center Operations Manager per il monitoraggio di APS
 description: Attenersi alla seguente procedura per configurare i Management Pack System Center Operations Manager (SCOM) per il sistema di piattaforma di analisi. I Management Pack sono necessari per monitorare il sistema di piattaforma di analisi da SCOM.
 author: mzaman1
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0786cbc8230ecf29dd377a35fefc6969072512b3
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401307"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942213"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>Configurare System Center Operations Manager (SCOM) per monitorare il sistema della piattaforma di analisi
 Attenersi alla seguente procedura per configurare i Management Pack System Center Operations Manager (SCOM) per il sistema di piattaforma di analisi. I Management Pack sono necessari per monitorare il sistema di piattaforma di analisi da SCOM.  
@@ -37,7 +37,7 @@ Di seguito sono riportate istruzioni dettagliate su come eseguire le attività:
   
 1.  Creare l'account RunAs del controllo **APS** con il tipo di account di **Windows** per l'utente di dominio **APS Watcher** .  
   
-    1.  Passare al riquadro **Amministrazione** , fare clic con il pulsante destro del mouse su -> **account** di **Configurazione RunAs**e selezionare **Crea account RunAs.**  
+    1.  Passare al riquadro **Amministrazione** , fare clic con il pulsante destro del mouse su account di **Configurazione RunAs**  ->  **Accounts** e selezionare **Crea account RunAs.**  
   
         ![ConfigureScomCreateRunAsAccount](./media/configure-scom-to-monitor-analytics-platform-system/ConfigureScomCreateRunAsAccount.png "ConfigureScomCreateRunAsAccount")  
   
@@ -61,7 +61,7 @@ Di seguito sono riportate istruzioni dettagliate su come eseguire le attività:
   
 2.  Impostare il profilo dell' **account Microsoft APS Watcher** per l'uso dell'account RunAs del controllo **APS** .  
   
-    1.  Passare ad **Amministrazione** -> **Esegui come profili di configurazione** -> **Profiles**.  
+    1.  Passare ad **Amministrazione**  ->  **Esegui come profili di configurazione**  ->  **Profiles**.  
   
         ![AdministrationRunAsConfigurationProfiles](./media/configure-scom-to-monitor-analytics-platform-system/AdministrationRunAsConfigurationProfiles.png "AdministrationRunAsConfigurationProfiles")  
   
@@ -81,7 +81,7 @@ Di seguito sono riportate istruzioni dettagliate su come eseguire le attività:
   
 3.  Attendere il completamento dell'individuazione degli appliance APS.  
   
-    1.  Passare al riquadro **monitoraggio** e aprire il **SQL Server Appliance** -> **piattaforma di strumenti analitici Microsoft** -> visualizzazione stato**Appliance** .  
+    1.  Passare al riquadro **monitoraggio** e aprire il **SQL Server Appliance**  ->  **piattaforma di strumenti analitici Microsoft**  ->  visualizzazione stato**Appliance** .  
   
         ![SqlServerApplianceMicrosoftApsAppliances](./media/configure-scom-to-monitor-analytics-platform-system/SqlServerApplianceMicrosoftApsAppliances.png "SqlServerApplianceMicrosoftApsAppliances")  
   

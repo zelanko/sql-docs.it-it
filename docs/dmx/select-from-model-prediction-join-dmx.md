@@ -33,7 +33,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>Argomenti  
  *n*  
- Facoltativa. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
+ facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
   
  *Seleziona elenco di espressioni*  
  Elenco delimitato da virgole contenente espressioni e identificatori di colonna derivati dal modello di data mining.  
@@ -48,13 +48,13 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  Query di origine.  
   
  *elenco di mapping di join*  
- Facoltativa. Espressione logica che confronta le colonne del modello con quelle della query di origine.  
+ facoltativo. Espressione logica che confronta le colonne del modello con quelle della query di origine.  
   
  *espressione della condizione*  
- Facoltativa. Condizione per limitare i valori restituiti dall'elenco di colonne.  
+ facoltativo. Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
  *expression*  
- Facoltativa. Espressione che restituisce un valore scalare.  
+ facoltativo. Espressione che restituisce un valore scalare.  
   
 ## <a name="remarks"></a>Osservazioni  
  La clausola ON definisce il mapping tra le colonne della query di origine e quelle del modello di data mining. Tale mapping viene utilizzato per dirigere le colonne dalla query di origine alle colonne nel modello di data mining, di modo che possano essere utilizzate come input durante la creazione delle stime. Le colonne in \<*join mapping list*> sono correlate usando un segno di uguale (=), come illustrato nell'esempio seguente:  

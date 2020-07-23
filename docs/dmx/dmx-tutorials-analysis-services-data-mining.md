@@ -29,7 +29,7 @@ ms.locfileid: "86969816"
   
  In questa esercitazione vengono descritte le procedure per la creazione di un modello di data mining che stima quali prodotti tendono a essere acquistati contemporaneamente. Viene inoltre illustrato l'utilizzo delle tabelle nidificate in data mining.  
   
-## <a name="reference"></a>Informazioni di riferimento  
+## <a name="reference"></a>Riferimento  
  [Data Mining Extensions &#40;elementi della sintassi DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
  [Istruzioni DMX &#40;Data Mining Extensions&#41; per la definizione dei dati](../dmx/dmx-statements-data-definition.md)  

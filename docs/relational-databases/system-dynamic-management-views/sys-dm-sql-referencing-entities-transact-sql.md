@@ -20,12 +20,12 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9d0c2366e0d05fb7d3abe6488d8a2f8ff969f011
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a467a445dda5f4d950c5bf4813f5ec69606df487
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717449"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943062"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,17 +60,15 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *schema_name. a cui viene fatto riferimento*_*entity_name*  
- Nome dell'entità a cui si fa riferimento.  
+ `schema_name.referenced_entity_name`Nome dell'entità a cui si fa riferimento.  
   
- *schema_name* è necessario tranne quando la classe a cui si fa riferimento è PARTITION_FUNCTION.  
+ `schema_name` è obbligatorio, eccetto quando la classe a cui si fa riferimento è PARTITION_FUNCTION.  
   
- *schema_name. referenced_entity_name* è di **tipo nvarchar (517)**.  
+ `schema_name.referenced_entity_name`è di **tipo nvarchar (517)**.  
   
- *<referenced_class>* :: = {Object | TIPO | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
- Classe dell'entità a cui si fa riferimento. È possibile specificare solo una classe per istruzione.  
+ `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }`È la classe dell'entità a cui si fa riferimento. È possibile specificare solo una classe per istruzione.  
   
- *<referenced_class>* è di **tipo nvarchar**(60).  
+ `<referenced_class>`è di **tipo nvarchar**(60).  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
@@ -102,7 +100,7 @@ sys.dm_sql_referencing_entities (
 |Tipo di entità|Entità di riferimento|Entità con riferimenti|  
 |-----------------|------------------------|-----------------------|  
 |Tabella|Sì*|Sì|  
-|Visualizza|Sì|Sì|  
+|Visualizzazione|Sì|Sì|  
 |Stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sì|Sì|  
 |stored procedure CLR|No|Sì|  
 |Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Sì|Sì|  

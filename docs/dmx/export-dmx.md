@@ -32,7 +32,7 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  Facoltativo. tipo di oggetto da esportare (modello di data mining o struttura di data mining).  
   
  *nome oggetto*  
- Facoltativa. Nome dell'oggetto da esportare.  
+ facoltativo. Nome dell'oggetto da esportare.  
   
  *filename*  
  Nome e percorso del file da esportare, sotto forma di stringa.  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9a21336db54ab6fadaa219a3ef3d743dcf860087
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: d323794af598cb621b7fb8f9939cd2ae1c0f2746
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669270"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968374"
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   La funzione **Predict** restituisce un valore stimato, o un set di valori, per una colonna specificata.  
   
@@ -32,18 +32,18 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
  Riferimento a colonna scalare o a colonna di tabella.  
   
 ## <a name="return-type"></a>Tipo restituito  
- \<riferimento a colonna scalare>  
+ \<scalar column reference>  
   
  oppure  
   
- \<riferimento a colonne di tabella>  
+ \<table column reference>  
   
  Il tipo restituito dipende dal tipo di colonna a cui è applicata la funzione.  
   
 > [!NOTE]  
 >  INCLUSIVE, EXCLUSIVE, INPUT_ONLY e INCLUDE_STATISTICS sono applicabili solo a riferimenti a colonne di tabella, mentre EXCLUDE_NULL e INCLUDE_NULL sono applicabili solo a riferimenti a colonne scalari.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Le opzioni disponibili includono EXCLUDE_NULL (predefinita), INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (predefinita), INPUT_ONLY e INCLUDE_STATISTICS.  
   
 > [!NOTE]  
@@ -66,7 +66,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
   
  Il passaggio di INCLUDE_STATISTICS a una stima in una colonna con valori di tabella aggiunge le colonne **$Probability** e **$support** alla tabella risultante. che descrivono la probabilità dell'esistenza del record della tabella nidificata associato.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzata la funzione Predict per restituire i quattro prodotti del database Adventure Works che con maggiore probabilità verranno venduti insieme. Poiché la funzione stima in base a un modello di data mining Association Rules, USA automaticamente la funzione **PredictAssociation** , come descritto in precedenza.  
   
 ```  

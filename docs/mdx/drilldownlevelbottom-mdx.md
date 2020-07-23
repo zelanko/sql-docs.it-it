@@ -37,10 +37,10 @@ DrilldownLevelBottom(Set_Expression, Count [,[<Level_Expression>] [,[<Numeric_Ex
  Espressione MDX (Multidimensional Expression) valida che restituisce un livello.  
   
  *Numeric_Expression*  
- Facoltativa. Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero.  
+ facoltativo. Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero.  
   
  *Include_Calc_Members*  
- Facoltativa. Parola chiave che consente di aggiungere i membri calcolati ai risultati del drill-down.  
+ facoltativo. Parola chiave che consente di aggiungere i membri calcolati ai risultati del drill-down.  
   
 ## <a name="remarks"></a>Osservazioni  
  Se viene specificata un'espressione numerica, la funzione **DrilldownLevelBottom** Ordina in ordine crescente gli elementi figlio di ogni membro nel set specificato, in base al valore specificato, valutato sul set di membri figlio. Se non è specificata un'espressione numerica, la funzione dispone in ordine crescente membri figlio di ciascun membro nel set specificato, in base ai valori delle celle rappresentate dal set di membri figlio, determinato dal contesto di query. Questo comportamento è simile alle funzioni BottomCount e Tail (MDX) che restituiscono un set di membri in ordine naturale, senza alcun ordinamento.  

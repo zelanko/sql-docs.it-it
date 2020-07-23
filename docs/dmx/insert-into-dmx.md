@@ -64,7 +64,7 @@ INSERT INTO [MINING MODEL] <model>
 ||La struttura di data mining non è elaborata.|Vengono elaborati il modello e la struttura di data mining.|  
 ||La struttura di data mining contiene modelli di data mining aggiuntivi.|L'elaborazione non riesce. È necessario rielaborare la struttura e i modelli di data mining associati.|  
 |INSERISCI NELLA STRUTTURA DI DATA MINING*\<structure>*|La struttura di data mining viene elaborata o non elaborata.|La struttura di data mining e i modelli di data mining associati vengono elaborati.|  
-|INSERIRE nel modello di data MINING *\<model>* che contiene una query di origine<br /><br /> o<br /><br /> Inserisci nella struttura di data MINING *\<structure>* che contiene una query di origine|La struttura o il modello include già un contenuto.|L'elaborazione non riesce. È necessario cancellare gli oggetti prima di eseguire questa operazione, utilizzando [DELETE &#40;DMX&#41;](../dmx/delete-dmx.md).|  
+|INSERIRE nel modello di data MINING *\<model>* che contiene una query di origine<br /><br /> oppure<br /><br /> Inserisci nella struttura di data MINING *\<structure>* che contiene una query di origine|La struttura o il modello include già un contenuto.|L'elaborazione non riesce. È necessario cancellare gli oggetti prima di eseguire questa operazione, utilizzando [DELETE &#40;DMX&#41;](../dmx/delete-dmx.md).|  
   
 ## <a name="mapped-model-columns"></a>Elemento mapped model columns  
  Utilizzando l' \<mapped model columns> elemento, è possibile eseguire il mapping delle colonne dall'origine dati alle colonne nel modello di data mining. L' \<mapped model columns> elemento ha il formato seguente:  

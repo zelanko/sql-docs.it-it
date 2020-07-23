@@ -20,7 +20,7 @@ ms.locfileid: "86971749"
 
   La documentazione di riferimento di DMX (Data Mining Extensions) in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilizza le convenzioni seguenti per descrivere il linguaggio DMX.  
   
-|Convenzione|Uso|  
+|Convenzione|Utilizzo|  
 |----------------|-----------|  
 |**grassetto**|Testo e parole chiave di DMX da immettere esattamente come indicato.|  
 |*corsivo*|Argomenti della sintassi DMX specificati dall'utente.|  

@@ -21,19 +21,19 @@ ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce2cbf99a62ca8515e596bf4b392315c6b5945b2
-ms.sourcegitcommit: 812f572d13616c1bd085b0648603736ba1bc20d1
+ms.openlocfilehash: 6673b9d0c235f7a38e04d534bf4358585a5b0bd2
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84112313"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942574"
 ---
 # <a name="sysdatabase_query_store_options-transact-sql"></a>sys. database_query_store_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Restituisce le opzioni di Query Store per il database.  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] .
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -45,8 +45,8 @@ ms.locfileid: "84112313"
 |**current_storage_size_mb**|**bigint**|Dimensioni del Query Store su disco in megabyte.|  
 |**flush_interval_seconds**|**bigint**|Periodo di Scaricamento normale dei dati di Query Store su disco in secondi. Il valore predefinito è **900** (15 min).<br /><br /> Modificare utilizzando l' `ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)` istruzione.|  
 |**interval_length_minutes**|**bigint**|Intervallo di aggregazione delle statistiche in minuti. Non sono consentiti valori arbitrari. Usare uno dei seguenti: 1, 5, 10, 15, 30, 60 e 1440 minuti. Il valore predefinito è **60** minuti.|  
-|**max_storage_size_mb**|**bigint**|Dimensioni massime del disco per il Query Store in megabyte (MB). Il valore predefinito è **100** MB.<br />Per l' [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] edizione Premium, il valore predefinito è 1 GB e per l' [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] edizione Basic, il valore predefinito è 10 MB.<br /><br /> Modificare utilizzando l' `ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)` istruzione.|  
-|**stale_query_threshold_days**|**bigint**|Numero di giorni per cui le query senza impostazioni dei criteri vengono mantenute in Query Store. Il valore predefinito è **30**. Impostare su 0 per disabilitare i criteri di conservazione.<br />Per l'edizione [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic, l'impostazione predefinita è 7 giorni.<br /><br /> Modificare utilizzando l' `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` istruzione.|  
+|**max_storage_size_mb**|**bigint**|Dimensioni massime del disco per il Query Store in megabyte (MB). Il valore predefinito è **100** MB fino a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] e **1 GB** a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .<br />Per l' [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] edizione Premium, il valore predefinito è 1 GB e per l' [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] edizione Basic, il valore predefinito è 10 MB.<br /><br /> Modificare utilizzando l' `ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)` istruzione.|  
+|**stale_query_threshold_days**|**bigint**|Numero di giorni per cui le informazioni per una query vengono mantenute nella Query Store. Il valore predefinito è **30**. Impostare su 0 per disabilitare i criteri di conservazione.<br />Per l'edizione [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic, l'impostazione predefinita è 7 giorni.<br /><br /> Modificare utilizzando l' `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` istruzione.|  
 |**max_plans_per_query**|**bigint**|Limita il numero massimo di piani archiviati. Il valore predefinito è **200**. Se viene raggiunto il valore massimo, Query Store interrompe l'acquisizione dei nuovi piani per la query. Impostando su 0 viene rimossa la limitazione per quanto riguarda il numero di piani acquisiti.<br /><br /> Modificare utilizzando l' `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` istruzione.|  
 |**query_capture_mode**|**smallint**|Modalità di acquisizione query attualmente attiva:<br /><br /> **1** = tutte le query vengono acquisite. Si tratta del valore di configurazione predefinito per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive).<br /><br /> 2 = Acquisisci automaticamente le query pertinenti in base al numero di esecuzioni e al consumo di risorse. Si tratta del valore di configurazione predefinito di [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].<br /><br /> 3 = NONE: interrompe l'acquisizione di nuove query. Query Store continuerà a raccogliere le statistiche di compilazione e runtime per le query che sono già state acquisite. Usare questa configurazione con cautela poiché è possibile che l'acquisizione di query importanti non venga eseguita.|  
 |**query_capture_mode_desc**|**nvarchar(60)**|Descrizione testuale della modalità di acquisizione effettiva di Query Store:<br /><br /> ALL (impostazione predefinita per [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )<br /><br /> **Auto** (impostazione predefinita per [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] )<br /><br /> NONE|  
@@ -67,7 +67,7 @@ ms.locfileid: "84112313"
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys. query_store_runtime_stats_interval &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys. fn_stmt_sql_handle_from_sql_stmt &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
  [Stored procedure di Query Store &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   

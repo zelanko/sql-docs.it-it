@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 23aaa06f7da6c29cf1f082c27071d68fa0c6958a
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 98c40dba282c82f124d4e4ac009a046a44a283cb
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669189"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971633"
 ---
 # <a name="not-dmx"></a>NOT (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Operatore logico che esegue la negazione logica di un'espressione numerica.  
   
@@ -34,7 +34,7 @@ NOT Expression1
 ## <a name="return-value"></a>Valore restituito  
  Valore booleano che restituisce FALSE se l'argomento restituisce TRUE e viceversa.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Per consentire all'operatore di eseguire la negazione logica, l'argomento viene gestito come valore booleano, per cui 0 equivale a FALSE e tutti gli altri valori a TRUE. Se *expression1* è true, l'operatore restituisce false. Se *expression1* è false, l'operatore restituisce true. La tabella seguente illustra come viene eseguita la negazione logica.  
   
 |Valore di Expression1|Valore restituito|  

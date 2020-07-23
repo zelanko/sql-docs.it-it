@@ -42,9 +42,9 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
   
 |.|Risultato|  
 |---------------|------------|  
-|ELIMINA DALLA STRUTTURA DI DATA MINING*\<structure>*<br /><br /> o<br /><br /> Elimina dalla struttura di data MINING *\<structure>* . CONTENUTO|Esegue ProcessClear sulla struttura di data mining. Viene cancellato tutto il contenuto della struttura di data mining e dei modelli di data mining associati.|  
+|ELIMINA DALLA STRUTTURA DI DATA MINING*\<structure>*<br /><br /> oppure<br /><br /> Elimina dalla struttura di data MINING *\<structure>* . CONTENUTO|Esegue ProcessClear sulla struttura di data mining. Viene cancellato tutto il contenuto della struttura di data mining e dei modelli di data mining associati.|  
 |Elimina dalla struttura di data MINING *\<structure>* . CASI|Esegue ProcessClearStructureOnly sulla struttura di data mining. Viene cancellato tutto il contenuto della struttura di data mining, lasciando invariati i modelli di data mining associati. Dopo la cancellazione della struttura di data mining non è possibile eseguire il drill-through sui modelli di data mining associati.|  
-|ELIMINA DAL MODELLO DI DATA MINING*\<model>*<br /><br /> o<br /><br /> Elimina dal modello di data MINING *\<model>* . CONTENUTO|Esegue ProcessClear sul modello di data mining, ma lascia inalterati i valori di stato. I valori di stato sono i possibili stati di una colonna. Per la colonna del genere, ad esempio, i valori di stato sono maschio e femmina.|  
+|ELIMINA DAL MODELLO DI DATA MINING*\<model>*<br /><br /> oppure<br /><br /> Elimina dal modello di data MINING *\<model>* . CONTENUTO|Esegue ProcessClear sul modello di data mining, ma lascia inalterati i valori di stato. I valori di stato sono i possibili stati di una colonna. Per la colonna del genere, ad esempio, i valori di stato sono maschio e femmina.|  
   
  Per ulteriori informazioni sui tipi di elaborazione, vedere [elemento Type &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/type-element-xmla).  
   
