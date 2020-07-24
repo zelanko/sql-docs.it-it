@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb13be5e26fb4bdb74b4776ca34ab42eacc7eb03
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 307b1a1259210890d0b21abdc7a26f0e321e49b3
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890899"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122696"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,12 +47,11 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="result-sets"></a>Set di risultati  
  Quando non viene specificato alcun ** \@ parameter_name** , restituisce un set di risultati con le colonne seguenti.  
   
-||||  
-|-|-|-|  
-|Nome colonna|Tipo di dati|Descrizione|  
+| Nome colonna | Tipo di dati | Descrizione |
+| ----------- | --------- | ----------- |
 |**paramName**|**nvarchar(256)**|Nome del parametro di configurazione.|  
 |**paramValue**|**nvarchar(256)**|Valore del parametro di configurazione.|  
-|**Descrizione**|**nvarchar(256)**|Descrizione del parametro di configurazione.|  
+|**description**|**nvarchar(256)**|Descrizione del parametro di configurazione.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Nell'stored procedure **sysmail_help_configure_sp** sono elencate le impostazioni di configurazione posta elettronica database correnti per l'istanza di.  

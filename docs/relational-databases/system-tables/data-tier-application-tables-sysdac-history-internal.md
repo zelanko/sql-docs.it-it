@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08b90446625fb2d2f8375c44d2854f3f679cea32
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5095dbc6dae56a8e8ebf534cdd196b3785b43bf
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890569"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123022"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Tabelle applicazioni livello dati - sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,9 +54,8 @@ ms.locfileid: "85890569"
 ## <a name="remarks"></a>Osservazioni  
  Le azioni di gestione di applicazione livello dati, quali ad esempio la distribuzione o l'eliminazione di un'applicazione livello dati, generano più passaggi. A ogni azione viene assegnato un identificatore dell'azione. A ogni passaggio vengono assegnati un numero di sequenza e una riga in **sysdac_history_internal**, in cui viene registrato lo stato del passaggio. Ogni riga viene creata all'avvio del passaggio dell'azione e aggiornata in base alle necessità per riflettere lo stato dell'operazione. Ad esempio, un'azione Distribuisci DAC può essere assegnata **action_id** 12 e ottenere quattro righe **sysdac_history_internal**:  
   
-|||||  
-|-|-|-|-|  
-|**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
+| action_id | sequence_id | action_type_name | dac_object_type_name |
+| --------- | ----------- | ---------------- | -------------------- |
 |12|0|create|dacpac|  
 |12|1|create|login|  
 |12|2|create|database|  

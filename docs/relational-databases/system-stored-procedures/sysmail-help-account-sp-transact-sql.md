@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8374beba2eda97df3817dc27c337e46f9ba57780
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 11242eae3f17e24c428aac3a6f344d937f15dd33
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890922"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122697"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,19 +49,18 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ## <a name="result-sets"></a>Set di risultati  
  Restituisce un set di risultati contenente le colonne elencate di seguito.  
   
-||||  
-|-|-|-|  
-|Nome colonna|Tipo di dati|Descrizione|  
+| Nome colonna | Tipo di dati | Descrizione |
+| ----------- | --------- | ----------- |
 |**account_id**|**int**|ID dell'account.|  
 |**nome**|**sysname**|Nome dell'account.|  
-|**Descrizione**|**nvarchar(256)**|Descrizione dell'account.|  
+|**description**|**nvarchar(256)**|Descrizione dell'account.|  
 |**email_address**|**nvarchar(128)**|Indirizzo di posta elettronica da cui inviare i messaggi.|  
 |**display_name**|**nvarchar(128)**|Nome visualizzato dell'account.|  
 |**replyto_address**|**nvarchar(128)**|Indirizzo a cui vengono inviate le risposte ai messaggi da questo account.|  
 |**ServerType**|**sysname**|Tipo di server di posta elettronica per l'account.|  
 |**nomeserver**|**sysname**|Nome del server di posta elettronica per l'account.|  
 |**port**|**int**|Numero della porta del server di posta elettronica.|  
-|**username**|**nvarchar(128)**|Nome utente da utilizzare per accedere al server di posta elettronica se il server di posta elettronica utilizza l'autenticazione. Quando **username** è NULL, posta elettronica database non utilizza l'autenticazione per questo account.|  
+|**nome utente**|**nvarchar(128)**|Nome utente da utilizzare per accedere al server di posta elettronica se il server di posta elettronica utilizza l'autenticazione. Quando **username** è NULL, posta elettronica database non utilizza l'autenticazione per questo account.|  
 |**use_default_credentials**|**bit**|Specifica se inviare la posta elettronica al server SMTP utilizzando le credenziali di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** è di bit e non prevede alcun valore predefinito. Se questo parametro è 1, Posta elettronica database utilizza le credenziali del servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Quando questo parametro è 0, Posta elettronica database utilizza il ** \@ nome utente** e la ** \@ password** per l'autenticazione nel server SMTP. Se ** \@ nome utente** e ** \@ password** sono null, posta elettronica database usa l'autenticazione anonima. Prima di specificare questo parametro consultare l'amministratore del server SMTP.|  
 |**enable_ssl**|**bit**|Specifica se Posta elettronica database crittografa la comunicazione utilizzando Transport Layer Security (TLS), precedentemente nota come Secure Sockets Layer (SSL). Utilizzare questa opzione se TLS è necessario sul server SMTP. **enable_ssl** è di bit e non prevede alcun valore predefinito. 1 indica Posta elettronica database crittografa la comunicazione usando TLS. 0 indica Posta elettronica database invia il messaggio di posta elettronica senza crittografia TLS.|  
   

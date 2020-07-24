@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: faa96f7e-be92-47b1-8bc5-4dbba5331655
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ea9690011e963e6374b562f37d64573546a170c3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1c434dda6a19a6090c9ba3c670ce33e673d7abf7
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871118"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122294"
 ---
 # <a name="sp_clean_db_free_space-transact-sql"></a>sp_clean_db_free_space (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,47 +34,46 @@ ms.locfileid: "85871118"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
+```syntaxsql 
 sp_clean_db_free_space   
-[ @dbname ] = 'database_name'   
-[ , [ @cleaning_delay = ] 'delay_in_seconds' ] [;]  
+  [ @dbname = ] 'database_name'   
+  [ , [ @cleaning_delay = ] 'delay_in_seconds' ] [;]  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @dbname =]'*database_name*'  
+ @dbname='*database_name*'  
  Nome del database da pulire. *dbname* è di **tipo sysname** e non può essere null.  
   
- [ @cleaning_delay =]'*delay_in_seconds*'  
+ @cleaning_delay='*delay_in_seconds*'  
  Specifica un intervallo di ritardo tra le pulizie delle pagine per ridurre l'impatto sul sistema di I/O. *delay_in_seconds* è di **tipo int** e il valore predefinito è 0.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="remarks"></a>Osservazioni  
- Le operazioni di aggiornamento o le operazioni di eliminazione da una tabella che provocano lo spostamento di una riga consentono di liberare immediatamente spazio in una pagina poiché rimuovono i riferimenti alla riga specifica. In alcune circostanze, tuttavia, la riga può rimanere fisicamente nella pagina di dati come record fantasma. I record fantasma vengono rimossi periodicamente da un processo in background. Questi dati residui non vengono restituiti dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] in risposta alle query. In ambienti in cui la sicurezza fisica dei file di dati o di backup non sia sufficiente, è tuttavia possibile utilizzare sp_clean_db_free_space per eliminare tali record fantasma.  
+ Le operazioni di aggiornamento o le operazioni di eliminazione da una tabella che provocano lo spostamento di una riga consentono di liberare immediatamente spazio in una pagina poiché rimuovono i riferimenti alla riga specifica. In alcune circostanze, tuttavia, la riga può rimanere fisicamente nella pagina di dati come record fantasma. I record fantasma vengono rimossi periodicamente da un processo in background. Questi dati residui non vengono restituiti dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] in risposta alle query. Tuttavia, negli ambienti in cui la sicurezza fisica dei file di dati o di backup è a rischio, è possibile usare `sp_clean_db_free_space` per pulire questi record fantasma. Per eseguire questa operazione per ogni file di database, usare [sp_clean_db_file_free_space (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md). 
   
- La quantità di tempo necessaria per eseguire sp_clean_db_free_space dipende dalle dimensioni del file, dallo spazio libero disponibile e dalla capacità del disco. Poiché l'esecuzione di sp_clean_db_free_space può influire in modo significativo sulle attività di I/O, è consigliabile eseguire questa procedura in orario diverso da quello lavorativo.  
+ La quantità di tempo necessaria per eseguire sp_clean_db_free_space dipende dalle dimensioni del file, dallo spazio libero disponibile e dalla capacità del disco. Poiché `sp_clean_db_free_space` l'esecuzione di può influire in modo significativo sulle attività di I/O, è consigliabile eseguire questa procedura al di fuori delle ore di lavoro normali.  
   
- Prima di eseguire sp_clean_db_free_space, è opportuno creare un backup completo del database.  
+ Prima di eseguire `sp_clean_db_free_space` , è consigliabile creare un backup completo del database.  
   
  Il [sp_clean_db_file_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md) correlato stored procedure può pulire un singolo file.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza al ruolo del database db_owner.  
+ È richiesta l'appartenenza al `db_owner` ruolo del database.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono eliminate tutte le informazioni residue dal database `AdventureWorks2012`.  
   
-```  
+```sql  
 USE master;  
 GO  
-EXEC sp_clean_db_free_space   
-@dbname = N'AdventureWorks2012' ;  
+EXEC sp_clean_db_free_space @dbname = N'AdventureWorks2012';  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
- <br>[Guida al processo di pulizia fantasma](../ghost-record-cleanup-process-guide.md) 
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Guida al processo di pulizia fantasma](../ghost-record-cleanup-process-guide.md)    
+ [sp_clean_db_file_free_space (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md)
   
   
