@@ -1,1 +1,0 @@
-<Token>**Questo argomento si applica a:**![](media/yes-icon.png)Sì SQL Server (a partire dalla![versione](media/no-icon.png)2008) No![database](media/no-icon.png)SQL ![di](media/no-icon.png)Azure no Azure SQL data warehouse nessun data warehouse parallelo</Token>

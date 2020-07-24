@@ -1,1 +1,0 @@
-PowerPivot per Excel

@@ -1,1 +1,0 @@
-database SQL di Azure

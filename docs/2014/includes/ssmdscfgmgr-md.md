@@ -1,1 +1,0 @@
-Gestione configurazione Master Data Services

@@ -1,1 +1,0 @@
-Procedura guidata Failover del gruppo di disponibilità

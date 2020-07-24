@@ -1,1 +1,0 @@
-**Questo argomento si applica a:** ![Sì](media/yes-icon.png "sì")SQL Server \(a partire\) da 2008 ![No](media/no-icon.png "no")database SQL di Azure ![No](media/no-icon.png "no")Azure SQL data warehouse ![Nessun](media/no-icon.png "no")data warehouse parallelo

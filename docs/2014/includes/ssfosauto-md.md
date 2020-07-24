@@ -1,1 +1,0 @@
-failover automatico impostato
