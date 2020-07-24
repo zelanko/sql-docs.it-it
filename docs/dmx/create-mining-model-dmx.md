@@ -50,7 +50,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 >  È possibile recuperare un elenco degli algoritmi supportati dal provider corrente utilizzando [DMSCHEMA_MINING_SERVICES set di righe](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110)). Per visualizzare gli algoritmi supportati nell'istanza corrente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vedere Proprietà di [data mining](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *elenco di parametri*  
- Facoltativa. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
+ facoltativo. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
   
  *stringa XML*  
  (Solo per uso avanzato). Modello con codifica XML (PMML). La stringa deve essere racchiusa tra virgolette singole (').  

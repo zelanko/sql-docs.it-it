@@ -21,12 +21,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8dcde5de27764979cf2258d3d1895574a4ca4e54
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e1ebbe98efecd97cb7ddda6284d4a28176e8ec1
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677916"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112766"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -110,10 +110,16 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|Dimensioni medie dei record in byte.<br /><br /> Per un indice, le dimensioni medie dei record si applicano al livello corrente dell'albero B nell'unità di allocazione IN_ROW_DATA.<br /><br /> Per un heap, indica le dimensioni medie dei record nell'unità di allocazione IN_ROW_DATA.<br /><br /> Per le unità di allocazione LOB_DATA o ROW_OVERFLOW_DATA, indica le dimensioni medie dei record nell'unità di allocazione completa.<br /><br /> NULL quando *mode* = Limited.|  
 |forwarded_record_count|**bigint**|Numero di record in un heap che hanno inoltrato puntatori a un altro percorso dei dati. Questo stato si verifica durante un aggiornamento, nel caso in cui non vi sia spazio sufficiente per archiviare la riga nel percorso originale.<br /><br /> NULL per tutte le unità di allocazione escluse le unità di allocazione IN_ROW_DATA per un heap.<br /><br /> NULL per gli heap quando *mode* = Limited.|  
 |compressed_page_count|**bigint**|Numero di pagine compresse.<br /><br /> Per gli heap, alle pagine appena allocate non viene applicata la compressione di tipo PAGE. A un heap viene applicata la compressione di tipo PAGE in due condizioni speciali, ovvero quando i dati vengono importati mediante un'operazione bulk o quando un heap viene ricompilato. Alle operazioni DML tipiche che determinano le allocazioni delle pagine non verrà applicata la compressione di tipo PAGE. Ricompilare un heap quando il valore compressed_page_count aumenta oltre la soglia desiderata.<br /><br /> Per tabelle in cui è presente un indice cluster, il valore compressed_page_count indica l'efficacia della compressione di tipo PAGE.|  
-|hobt_id|bigint|**Si applica a: (da alla** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> Solo per gli indici columnstore, questo è l'ID di un set di righe che tiene traccia dei dati columnstore interni per una partizione. I set di righe vengono archiviati come heap di dati o alberi binari. Hanno lo stesso ID di indice dell'indice columnstore padre. Per ulteriori informazioni, vedere [sys. internal_partitions &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL se|  
-|column_store_delete_buffer_state|TINYINT|**Si applica a: (da alla** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = SVUOTAMENTO<br /><br /> 3 = SCARICAMENTO<br /><br /> 4 = RITIRO<br /><br /> 5 = PRONTO|  
-|column_store_delete_buff_state_desc||**Si applica a: (da alla** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> NON valido: l'indice padre non è un indice columnstore.<br /><br /> Gli scanner e gli eliminatori utilizzano questa operazione.<br /><br /> SVUOTAMENTO: gli eliminatori si svuotano, ma gli scanner lo usano ancora.<br /><br /> Il buffer di SCARICAmento viene chiuso e le righe nel buffer vengono scritte nella bitmap Delete.<br /><br /> Il ritiro delle righe nel buffer di eliminazione chiuso è stato scritto nella bitmap di eliminazione, ma il buffer non è stato troncato perché gli scanner lo usano ancora. I nuovi scanner non devono usare il buffer di ritiro perché il buffer aperto è sufficiente.<br /><br /> PRONTO: il buffer di eliminazione è pronto per l'uso.|  
-  
+|hobt_id|bigint|Solo per gli indici columnstore, questo è l'ID di un set di righe che tiene traccia dei dati columnstore interni per una partizione. I set di righe vengono archiviati come heap di dati o alberi binari. Hanno lo stesso ID di indice dell'indice columnstore padre. Per ulteriori informazioni, vedere [sys. internal_partitions &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL se <br /><br /> **Si applica a**: SQL Server 2016 e versioni successive, database SQL di Azure, azure SQL istanza gestita|  
+|column_store_delete_buffer_state|TINYINT| 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = SVUOTAMENTO<br /><br /> 3 = SCARICAMENTO<br /><br /> 4 = RITIRO<br /><br /> 5 = PRONTO<br /><br />**Si applica a**: SQL Server 2016 e versioni successive, database SQL di Azure, azure SQL istanza gestita|  
+|column_store_delete_buff_state_desc|| NON valido: l'indice padre non è un indice columnstore.<br /><br /> Gli scanner e gli eliminatori utilizzano questa operazione.<br /><br /> SVUOTAMENTO: gli eliminatori si svuotano, ma gli scanner lo usano ancora.<br /><br /> Il buffer di SCARICAmento viene chiuso e le righe nel buffer vengono scritte nella bitmap Delete.<br /><br /> Il ritiro delle righe nel buffer di eliminazione chiuso è stato scritto nella bitmap di eliminazione, ma il buffer non è stato troncato perché gli scanner lo usano ancora. I nuovi scanner non devono usare il buffer di ritiro perché il buffer aperto è sufficiente.<br /><br /> PRONTO: il buffer di eliminazione è pronto per l'uso. <br /><br /> **Si applica a**: SQL Server 2016 e versioni successive, database SQL di Azure, azure SQL istanza gestita|  
+|version_record_count|**bigint**|Conteggio dei record della versione di riga mantenuti in questo indice.  Queste versioni di riga vengono gestite dalla funzionalità di [recupero accelerato del database](../../relational-databases/accelerated-database-recovery-concepts.md) . <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
+|inrow_version_record_count|**bigint**|Numero di record di versione ADR conservati nella riga di dati per il recupero rapido. <br /><br />  [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e|  
+|inrow_diff_version_record_count|**bigint**| Numero di record di versione ADR mantenuti sotto forma di differenze rispetto alla versione di base. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|total_inrow_version_payload_size_in_bytes|**bigint**|Dimensioni totali in byte dei record della versione delle per questo indice. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|offrow_regular_version_record_count|**bigint**|Conteggio dei record versione conservati all'esterno della riga di dati originale. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|offrow_long_term_version_record_count|**bigint**|Conteggio dei record versione considerati a lungo termine. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
+
 ## <a name="remarks"></a>Osservazioni  
  La funzione a gestione dinamica sys.dm_db_index_physical_stats sostituisce l'istruzione DBCC SHOWCONTIG.  
   
@@ -424,12 +430,12 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni a gestione dinamica e DMV correlate all'indice &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_db_index_operational_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [sys. dm_db_index_usage_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys. dm_db_partition_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [sys. allocation_units &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [Viste di sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 60e27e2251cd2f613ca00266d76d4aaaf3b5c442
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e6a0d89b4976076f14fe567b7a95e7cbb47c9f9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401120"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942333"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-aps-appliance"></a>Installazione dell'hardware per il dispositivo Analytics Platform System (APS)
 Questo articolo descrive come spostare, decomprimere e installare l'hardware per il dispositivo SQL Server PDW. Questo articolo è esclusivamente informativo e può essere utile per comprendere il processo. Il dispositivo deve essere decompresso, installato e verificato prima che venga riattivato. La partecipazione dei clienti è necessaria per elementi quali l'accesso data center, l'alimentazione elettrica e le connessioni Ethernet.  
@@ -54,12 +54,12 @@ Usare il seguente elenco di controllo per spostare ogni rack dell'appliance dal 
 ## <a name="install-additional-components"></a><a name="AfterMoving"></a>Installare componenti aggiuntivi  
 Utilizzare l'elenco di controllo seguente per installare i componenti aggiuntivi.  
   
-|Attività|Descrizione||  
-|--------|---------------|-|  
-|Decomprimere e commutatori di rete rack e PDU|Usare i diagrammi rack per inserire i commutatori di rete e PDU nella posizione corretta nel rack.||  
-|Connettere i cavi Infiniband e Ethernet in base alle etichette dei cavi|Vedere il diagramma di cablaggio. Ogni cavo ha un'etichetta a ogni estremità che specifica il punto in cui deve essere connessa.||  
-|Connetti tutti i cavi di alimentazione|Vedere il diagramma di cablaggio.||  
-|Accendere l'alimentatore per i rack e il PDU|Connettere l'alimentatore ai rack e dai rack alla PDU. **Non accendere gli altri componenti del dispositivo in questo momento.**||  
+|Attività|Descrizione|
+|--------|---------------|
+|Decomprimere e commutatori di rete rack e PDU|Usare i diagrammi rack per inserire i commutatori di rete e PDU nella posizione corretta nel rack.|
+|Connettere i cavi Infiniband e Ethernet in base alle etichette dei cavi|Vedere il diagramma di cablaggio. Ogni cavo ha un'etichetta a ogni estremità che specifica il punto in cui deve essere connessa.|
+|Connetti tutti i cavi di alimentazione|Vedere il diagramma di cablaggio.|
+|Accendere l'alimentatore per i rack e il PDU|Connettere l'alimentatore ai rack e dai rack alla PDU. **Non accendere gli altri componenti del dispositivo in questo momento.**|
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

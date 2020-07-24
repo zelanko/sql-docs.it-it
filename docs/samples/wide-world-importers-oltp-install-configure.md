@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6d37575864666c5aa2b8c47484b5bcac798b3e9a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d49a56c7d545a69729f222daad1e9504802e7bcc
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718661"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942377"
 ---
 # <a name="installation-and-configuration"></a>Installazione e configurazione
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ Istruzioni per l'installazione e la configurazione del database OLTP Wide World 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (o versione successiva) o il [database SQL di Azure](https://azure.microsoft.com/services/sql-database/). Per la versione completa dell'esempio, usare SQL Server Evaluation/Developer/Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Per ottenere risultati ottimali, usare la versione di giugno 2016 o successiva.
 
-## <a name="download"></a>Download
+## <a name="download"></a>Scarica
 
 La versione più recente dell'esempio:
 
@@ -80,7 +80,9 @@ Si applica a: SQL Server
 
 L'abilitazione del controllo in SQL Server richiede la configurazione del server. Per abilitare SQL Server Audit per l'esempio WideWorldImporters, eseguire l'istruzione seguente nel database:
 
-    EXECUTE [Application].[Configuration_ApplyAuditing]
+```sql
+EXECUTE [Application].[Configuration_ApplyAuditing]
+```
 
 Nel database SQL di Azure, il controllo viene configurato tramite il [portale di Azure](https://portal.azure.com/).
 
@@ -90,5 +92,7 @@ Si applica a: database SQL di Azure
 
 La sicurezza a livello di riga non è abilitata per impostazione predefinita nel download di BacPac di WideWorldImporters. Per abilitare la sicurezza a livello di riga nel database, eseguire il stored procedure seguente:
 
-    EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
+```sql
+EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
+```
 

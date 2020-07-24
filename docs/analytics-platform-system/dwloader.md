@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5236d35009c67eb6e205129cd629fa5f7eca54d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401171"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942343"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Caricatore da riga di comando dwloader per data warehouse paralleli
 **dwloader** è uno strumento da riga di comando data warehouse parallelo (PDW) che carica le righe della tabella in blocco in una tabella esistente. Quando si caricano righe, è possibile aggiungere tutte le righe alla fine della tabella (modalità di*Accodamento* o *FastAppend*), aggiungere nuove righe e aggiornare le righe esistenti (*modalità Upsert*) o eliminare tutte le righe esistenti prima del caricamento e quindi inserire tutte le righe in una tabella vuota (*modalità di ricaricamento*).  
@@ -43,7 +43,7 @@ ms.locfileid: "74401171"
   
 5.  Eseguire **dwloader**.  
   
-    Accedere al server di caricamento ed eseguire il file eseguibile **dwloader. exe** con le opzioni della riga di comando appropriate.  
+    Accedere al server di caricamento ed eseguire il file eseguibile **dwloader.exe** con le opzioni appropriate della riga di comando.  
   
 6.  Verificare i risultati.  
   
@@ -195,15 +195,15 @@ Per caricare più file con un solo comando:
   
 Esempi:  
   
--   -i \\\loadserver\loads\daily\\*. gz  
+-   -i \\ \loadserver\loads\daily \\ *. gz  
   
--   -i \\\loadserver\loads\daily\\*. txt  
+-   -i \\ \loadserver\loads\daily \\ *. txt  
   
--   -i \\\loadserver\loads\daily\monday. *  
+-   -i \\ \loadserver\loads\daily\monday. *  
   
 -   -i \\\loadserver\loads\daily\monday.txt  
   
--   -i \\\loadserver\loads\daily\\*  
+-   -i \\ \loadserver\loads\daily\\*  
   
 **-R** *load_failure_file_name*  
 Se si verificano errori di caricamento, **dwloader** archivia la riga che non è stato possibile caricare e la descrizione dell'errore in un file denominato *load_failure_file_name*. Se il file esiste già, dwloader sovrascriverà il file esistente. *load_failure_file_name* viene creato quando si verifica il primo errore. Se tutte le righe vengono caricate correttamente, *load_failure_file_name* non viene creato.  
@@ -290,9 +290,9 @@ Percorso e nome del file di configurazione che specifica il numero di caratteri 
   
 Questo file deve risiedere nel server di caricamento. Il percorso può essere un percorso UNC, relativo o assoluto. Ogni riga in *fixed_width_config_file* contiene il nome di una colonna e il numero di caratteri per la colonna. È presente una riga per ogni colonna, come indicato di seguito, e l'ordine nel file deve corrispondere all'ordine nella tabella di destinazione:  
   
-*column_name*=*num_chars*  
+*column_name* = *num_chars*  
   
-*column_name*=*num_chars*  
+*column_name* = *num_chars*  
   
 Esempio di file di configurazione a larghezza fissa:  
   
@@ -340,17 +340,17 @@ Esempi di LF:
   
 Per UNIX è necessario un LF. Per Windows è necessario un CR.  
   
-**-D** { **YMD** | AGM | MDY | MYD |  DMY | DYM | *custom_date_format* }  
+**-D** { **YMD** \| agm \| MDY \| MYD \| DMY \| DYM \| *custom_date_format* }  
 Specifica l'ordine di month (m), Day (d) e Year (y) per tutti i campi DateTime nel file di input. L'ordine predefinito è YMD. Per specificare più formati di ordine per lo stesso file di origine, utilizzare l'opzione-DT.  
   
-YMD | DMY  
+\|DMY YMD  
 AGM e DMY consentono gli stessi formati di input. Entrambi consentono l'inizio o la fine della data dell'anno. Per i formati di data **AGM** e **DMY** , ad esempio, è possibile che nel file di input sia presente 2013-02-03 o 02-03-2013.  
   
 AGM  
 È possibile caricare solo l'input formattato come AGM in colonne con tipo di dati DateTime e smalldatetime. Non è possibile caricare valori AGM in una colonna con tipo di dati datetime2, date o DateTimeOffset.  
   
 mdy  
-<month> <space> <day>MDY consente <comma>. <year>  
+MDY consente \<month> \<space> \<day> \<comma> \<year> .  
   
 Esempi di dati di input di MDY per l'1 gennaio 1975:  
   
@@ -490,7 +490,7 @@ Disponibile con l'aggiornamento di CU 7.4, specifica la lunghezza massima della 
 ## <a name="return-code-values"></a>Valori del codice restituito  
 0 (esito positivo) o altro valore integer (esito negativo)  
   
-In una finestra di comando o in un file `errorlevel` batch usare per visualizzare il codice restituito. Ad esempio:  
+In una finestra di comando o in un file batch usare `errorlevel` per visualizzare il codice restituito. Ad esempio:  
   
 ```  
 dwloader  
@@ -499,7 +499,7 @@ if not %errorlevel%==0 echo Fail
 if %errorlevel%==0 echo Success  
 ```  
   
-Quando si usa PowerShell, `$LastExitCode`usare.  
+Quando si usa PowerShell, usare `$LastExitCode` .  
   
 ## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'autorizzazione LOAD e le autorizzazioni applicabili (INSERT, UPDATE, DELETE) nella tabella di destinazione. È richiesta l'autorizzazione CREATE (per la creazione di una tabella temporanea) nel database di gestione temporanea. Se non viene utilizzato un database di gestione temporanea, è necessario disporre dell'autorizzazione CREATE nel database di destinazione. 
@@ -554,13 +554,13 @@ La modalità di accodamento consente di caricare i dati in due fasi. La fase 1 c
   
 |Tipo di tabella|Più transazioni<br />Modalità (-m)|Tabella vuota|Concorrenza supportata|Registrazione|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|Heap|Sì|Sì|Sì|Minime|  
-|Heap|Sì|No|Sì|Minime|  
-|Heap|No|Sì|No|Minime|  
-|Heap|No|No|No|Minime|  
-|CL|Sì|Sì|No|Minime|  
+|Heap|Sì|Sì|Sì|Minimal|  
+|Heap|Sì|No|Sì|Minimal|  
+|Heap|No|Sì|No|Minimal|  
+|Heap|No|No|No|Minimal|  
+|CL|Sì|Sì|No|Minimal|  
 |CL|Sì|No|Sì|Full|  
-|CL|No|Sì|No|Minime|  
+|CL|No|Sì|No|Minimal|  
 |CL|No|No|Sì|Full|  
   
 La tabella precedente Mostra **dwloader** usando il caricamento in modalità Accodamento in un heap o una tabella dell'indice cluster (ci), con o senza il flag transazionale, e il caricamento in una tabella vuota o in una tabella non vuota. Nella tabella viene visualizzato il comportamento di blocco e di registrazione di ogni combinazione di carico. Ad esempio, la fase di caricamento (2a) con la modalità di Accodamento in un indice cluster senza modalità transazionale e in una tabella vuota creerà un blocco esclusivo sulla tabella e la registrazione sarà minima. Questo significa che un cliente non sarà in grado di caricare (2a) fase e query simultaneamente in una tabella vuota. Tuttavia, quando si carica con la stessa configurazione in una tabella non vuota, PDW non emette un blocco esclusivo sulla tabella e la concorrenza è possibile. Sfortunatamente, la registrazione completa si verifica, rallentando il processo.  
@@ -568,7 +568,7 @@ La tabella precedente Mostra **dwloader** usando il caricamento in modalità Acc
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-simple-dwloader-example"></a>R. Esempio di dwloader semplice  
-L'esempio seguente mostra l'avvio del **caricatore** con solo le opzioni obbligatorie selezionate. Altre opzioni sono tratte dal file di configurazione globale, *loadparamfile. txt*.  
+L'esempio seguente mostra l'avvio del **caricatore** con solo le opzioni obbligatorie selezionate. Le altre opzioni sono tratte dal file di configurazione globale *loadparamfile.txt*.  
   
 Esempio di utilizzo dell'autenticazione SQL Server.  
   
@@ -598,13 +598,13 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 ```  
   
 ### <a name="b-load-data-into-an-adventureworks-table"></a>B. Caricare i dati in una tabella AdventureWorks  
-L'esempio seguente fa parte di uno script batch che carica i dati in **AdventureWorksPDW2012**.  Per visualizzare lo script completo, aprire il file aw_create. bat fornito con il pacchetto di installazione di **AdventureWorksPDW2012** . 
+L'esempio seguente fa parte di uno script batch che carica i dati in **AdventureWorksPDW2012**.  Per visualizzare lo script completo, aprire il file di aw_create.bat fornito con il pacchetto di installazione di **AdventureWorksPDW2012** . 
 
 <!-- Missing link
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-Il frammento di script seguente usa dwloader per caricare i dati nelle tabelle DimAccount e DimCurrency. Questo script usa un indirizzo Ethernet. Se si utilizza InfiniBand, il server verrebbe *<appliance_name>* `-SQLCTL01`.  
+Il frammento di script seguente usa dwloader per caricare i dati nelle tabelle DimAccount e DimCurrency. Questo script usa un indirizzo Ethernet. Se si utilizza InfiniBand, il server verrebbe *<appliance_name>* `-SQLCTL01` .  
   
 ```  
 set server=10.193.63.134  
@@ -646,7 +646,7 @@ with (CLUSTERED INDEX(AccountKey),
 DISTRIBUTION = REPLICATE);  
 ```  
   
-Di seguito è riportato un esempio del file di dati, DimAccount. txt, che contiene i dati da caricare nella tabella DimAccount.  
+Di seguito è riportato un esempio del file di dati, DimAccount.txt, che contiene i dati da caricare nella tabella DimAccount.  
   
 ```  
 --Sample of data in the DimAccount.txt load file.  
@@ -675,7 +675,7 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 Descrizione dei parametri della riga di comando:  
   
--   *C:\programmi\microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe* è il percorso di installazione di dwloader. exe.  
+-   *C:\programmi\microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe* è il percorso di installazione di dwloader.exe.  
   
 -   *-S* è seguito dall'indirizzo IP del nodo di controllo.  
   
@@ -685,17 +685,17 @@ Descrizione dei parametri della riga di comando:
   
 -   *-e UTF16* indica che il file di origine usa il tipo di codifica dei caratteri little endian.  
   
--   *-i .\DimAccount.txt* specifica che i dati si trovino in un file denominato DimAccount. txt, presente nella directory corrente.  
+-   *-i .\DimAccount.txt* specifica che i dati si trova in un file denominato DimAccount.txt presente nella directory corrente.  
   
 -   *-T AdventureWorksPDW2012. dbo. DimAccount* specifica il nome in tre parti della tabella per la ricezione dei dati.  
   
 -   *-R DimAccount. Bad* specifica che le righe che non vengono caricate verranno scritte in un file denominato DimAccount. Bad.  
   
--   *-t "|"* indica che i campi nel file di input, DimAccount. txt, sono separati dal carattere barra verticale.  
+-   *-t "|"* indica che i campi nel file di input, DimAccount.txt, sono separati dal carattere barra verticale.  
   
--   *-r \r\n* specifica che ogni riga in DimAccount. txt termina con un ritorno a capo e un carattere di avanzamento riga.  
+-   *-r \r\n* specifica ogni riga in DimAccount.txt termina con un ritorno a capo e un carattere di avanzamento riga.  
   
--   *-U <login_name>-P <password> * specifica l'account di accesso e la password per l'account di accesso che dispone delle autorizzazioni per eseguire il caricamento.  
+-   *-U <login_name>-P <password> * Specifica l'account di accesso e la password per l'account di accesso che dispone delle autorizzazioni per eseguire il caricamento.  
   
 
 <!-- MISSING LINK

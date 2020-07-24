@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 223f1feb346a48a2afaae9e89437ba1b06bcd2c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e0f9b47d2a8d5732aa42ed92f2b5af00524052e6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717395"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977541"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,7 +57,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |--------------|------------|-----------------|  
 |**creation_script**||Percorso e nome di uno script di schema dell'articolo utilizzato per la creazione delle tabelle di destinazione. Il valore predefinito è NULL.|  
 |**del_cmd**||Istruzione DELETE da eseguire. In alternativa, viene creata dal log.|  
-|**Descrizione**||Nuova voce descrittiva per l'articolo.|  
+|**description**||Nuova voce descrittiva per l'articolo.|  
 |**dest_object**||Disponibile per compatibilità con le versioni precedenti. Usare **dest_table**.|  
 |**dest_table**||Nuova tabella di destinazione.|  
 |**destination_owner**||Nome del proprietario dell'oggetto di destinazione.|  
@@ -210,9 +210,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="valid-schema-options"></a>Opzioni di schema valide  
  Nella tabella seguente vengono descritti i valori consentiti di *schema_option* in base al tipo di replica (visualizzato nella parte superiore) e al tipo di articolo (mostrata nella prima colonna).  
   
-|Tipo di articolo|Tipo di replica||  
-|------------------|----------------------|------|  
-||Transazionale|Snapshot|  
+| Tipo di articolo | Tipo di replica-transazionale | Tipo di replica-snapshot |
+| ------------ | -------------------------------- | --------------------------- |
 |**logbased**|Tutte le opzioni|Tutte le opzioni, ma **0x02**|  
 |**logbased manualfilter**|Tutte le opzioni|Tutte le opzioni, ma **0x02**|  
 |**logbased manualview**|Tutte le opzioni|Tutte le opzioni, ma **0x02**|  
@@ -242,7 +241,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  [sp_addarticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_droparticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [sp_helparticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   
   

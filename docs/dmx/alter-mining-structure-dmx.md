@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f4f4cd71f7ecfaa0f8221f599a2814c153af97be
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: ace89ae45aff0e740691025d2039213cfacebff9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669871"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971839"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Crea un nuovo modello di data mining basato su una struttura di data mining esistente.  Quando si utilizza l'istruzione **ALTER MINING STRUCTURE** per creare un nuovo modello di data mining, la struttura deve essere già esistente. Al contrario, quando si utilizza l'istruzione, [creare un modello di data mining &#40;&#41;DMX ](../dmx/create-mining-model-dmx.md), si crea un modello e si genera automaticamente la struttura di data mining sottostante.  
   
@@ -36,7 +36,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *structure*  
+ *struttura*  
  Nome della struttura di data mining a cui verrà aggiunto il modello di data mining.  
   
  *model*  
@@ -55,15 +55,15 @@ USING <algorithm> [(<parameter list>)]
  Nome di un algoritmo di data mining, definito dal provider.  
   
 > [!NOTE]  
->  È possibile recuperare un elenco degli algoritmi supportati dal provider corrente utilizzando [DMSCHEMA_MINING_SERVICES set di righe](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Per visualizzare gli algoritmi supportati nell'istanza corrente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vedere Proprietà di [data mining](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  È possibile recuperare un elenco degli algoritmi supportati dal provider corrente utilizzando [DMSCHEMA_MINING_SERVICES set di righe](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110)). Per visualizzare gli algoritmi supportati nell'istanza corrente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vedere Proprietà di [data mining](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *elenco di parametri*  
- Facoltativa. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
+ facoltativo. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
   
  *criteri di filtro*  
  Espressione di filtro applicata alle colonne della tabella del case.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se la struttura di data mining contiene chiavi composte, il modello di data mining dovrà includere tutte le colonne chiave definite nella struttura.  
   
  Se il modello non richiede una colonna stimabile, come ad esempio i modelli compilati utilizzando gli algoritmi [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering e [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering, non sarà necessario includere una definizione di colonna nell'istruzione. Tutti gli attributi nel modello risultante verranno gestiti come input.  
@@ -121,7 +121,7 @@ USING <algorithm> [(<parameter list>)]
   
 |||  
 |-|-|  
-|**PREDICT**|Questa colonna può essere stimata dal modello e i relativi valori possono essere utilizzati come input per stimare il valore di altre colonne stimabili.|  
+|**STIMARE**|Questa colonna può essere stimata dal modello e i relativi valori possono essere utilizzati come input per stimare il valore di altre colonne stimabili.|  
 |**PREDICT_ONLY**|Questa colonna può essere stimata dal modello, ma i relativi valori non possono essere utilizzati nei case di input per stimare il valore di altre colonne stimabili.|  
   
 ## <a name="filter-criteria-expressions"></a>Espressioni di criteri di filtro  

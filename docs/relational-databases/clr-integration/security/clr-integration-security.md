@@ -2,7 +2,7 @@
 title: Sicurezza dell'integrazione con CLR | Microsoft Docs
 description: SQL Server integrazione con la protezione CLR .NET Framework gestisce l'accesso tra gli oggetti. I controlli di sicurezza eseguiti sugli oggetti dipendono dalle chiamate interattive.
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 07/22/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: clr
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 86785198441bab1210f6b089293d4f174e8dd1b7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd0f9f37b3381705a2e739276a7a044837fb20ad
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885786"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110167"
 ---
 # <a name="clr-integration-security"></a>Sicurezza per l'integrazione con CLR
 
@@ -56,7 +56,7 @@ ms.locfileid: "85885786"
  [Accettazione di chiamanti parzialmente attendibili](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
  Vengono illustrati i problemi che si verificano quando un metodo gestito richiama un metodo di una classe contenuta in un altro assembly.  
   
- [Domini applicazione e sicurezza per l'integrazione con CLR](/sql/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
+ [Domini applicazione e sicurezza per l'integrazione con CLR](/previous-versions/sql/2014/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
  Viene descritto come caricare gli assembly nei domini applicazione.  
   
 ## <a name="see-also"></a>Vedere anche  

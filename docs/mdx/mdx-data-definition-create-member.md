@@ -1,6 +1,6 @@
 ---
 title: Istruzione CREATE MEMBER (MDX) | Microsoft Docs
-ms.date: 06/04/2018
+ms.date: 07/22/2020
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 220741cb2103c3428737cdcb9def9463381db900
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ca2c664246dfeab8070337a0daf818fb0a3327c
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69494069"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110151"
 ---
 # <a name="mdx-data-definition---create-member"></a>Definizione dei dati MDX - CREATE MEMBER
 
@@ -105,7 +105,7 @@ WHERE ProfitRatio
 ```  
   
 ## <a name="standard-properties"></a>Proprietà standard  
- Ogni membro calcolato dispone di un set di proprietà predefinite. Quando un'applicazione client è connessa a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], le proprietà predefinite sono supportate o disponibili per essere supportate, in quanto l'amministratore sceglie.  
+ Ogni membro calcolato dispone di un set di proprietà predefinite. Quando un'applicazione client è connessa a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , le proprietà predefinite sono supportate o disponibili per essere supportate, in quanto l'amministratore sceglie.  
   
  Possono essere disponibili ulteriori proprietà dei membri, a seconda della definizione del cubo. Le proprietà seguenti rappresentano informazioni riguardanti il livello delle dimensioni del cubo.  
   
@@ -114,9 +114,9 @@ WHERE ProfitRatio
 |SOLVE_ORDER|L'ordine con cui deve essere risolto il membro calcolato nel caso in cui un membro calcolato faccia riferimento a un altro membro calcolato, ovvero, quando i membri calcolati si intersecano.|  
 |FORMAT_STRING|Stringa di formato di tipo Office che può essere utilizzata dall'applicazione client per la visualizzazione dei valori delle celle.|  
 |VISIBLE|Un valore che indica se il membro calcolato è visibile in un set di righe dello schema. I membri calcolati visibili possono essere aggiunti a un set con la funzione [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) . Un valore diverso da zero indica che il membro calcolato è visibile. Il valore predefinito per questa proprietà è *visibile*.<br /><br /> I membri calcolati non visibili, per cui il valore è impostato su zero, vengono in genere utilizzati come passaggi intermedi in membri calcolati più complessi. A tali membri calcolati è possibile fare riferimento anche da altri tipi di membri, ad esempio le misure.|  
-|NON_EMPTY_BEHAVIOR|La misura o il set utilizzato per determinare il comportamento dei membri calcolati durante la risoluzione delle celle vuote.<br /><br /> ** \* Avviso di \* \* ** Questa proprietà è deprecata. Evitare di impostarla. Per informazioni dettagliate, vedere [deprecated Analysis Services features in SQL Server 2014](/sql/analysis-services/deprecated-analysis-services-features-in-sql-server-2014) .|  
+|NON_EMPTY_BEHAVIOR|La misura o il set utilizzato per determinare il comportamento dei membri calcolati durante la risoluzione delle celle vuote.<br /><br /> Avviso questa proprietà è deprecata. ** \* \* \* \* ** Evitare di impostarla. Per informazioni dettagliate, vedere [deprecated Analysis Services features in SQL Server 2014](/previous-versions/sql/2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014?view=sql-server-2014) .|  
 |CAPTION|Una stringa che l'applicazione client utilizza come didascalia per il membro.|  
-|DISPLAY_FOLDER|Una stringa che identifica il percorso della cartella di visualizzazione che l'applicazione client utilizza per mostrarla al membro. Il separatore di livello delle cartelle è definito dall'applicazione client. Per gli strumenti e i client forniti [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]da, la barra\\rovesciata () è il separatore di livello. Per fornire più cartelle di visualizzazione per un membro definito, utilizzare un punto e virgola (;) per separare le cartelle.|  
+|DISPLAY_FOLDER|Una stringa che identifica il percorso della cartella di visualizzazione che l'applicazione client utilizza per mostrarla al membro. Il separatore di livello delle cartelle è definito dall'applicazione client. Per gli strumenti e i client forniti da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , la barra rovesciata ( \\ ) è il separatore di livello. Per fornire più cartelle di visualizzazione per un membro definito, utilizzare un punto e virgola (;) per separare le cartelle.|  
 |ASSOCIATED_MEASURE_GROUP|Il nome del gruppo di misure al quale questo membro è associato.|  
   
 ## <a name="see-also"></a>Vedere anche  

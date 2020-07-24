@@ -20,11 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 572cc4eb126114697d4fc4ecfeb9589458c46baa
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 7ce40edcea8e734aae84b5f24ec5f0e71890c7d6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053497"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977514"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "86053497"
 managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@begin_time = ] 'time1' ] [, [@end_time = ] 'time2'VARCHAR(255) = 'Xevent',@begin_time DATETIME = NULL,@end_time DATETIME = NULL  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Argomenti  
+##  <a name="arguments"></a><a name="Arguments"></a> Argomenti  
  @xevent_channel  
  Tipo di evento esteso. Il valore predefinito è impostato per restituire tutti gli eventi registrati per i 30 minuti precedenti. Gli eventi registrati dipendono dal tipo di eventi estesi abilitati. È possibile utilizzare questo parametro per filtrare la stored procedure per mostrare solo gli eventi di un determinato tipo. È possibile specificare il nome completo dell'evento o specificare una sottostringa, ad esempio: **' admin**', **' Analytical '**, **' Operational '** e **' debug '**. È di tipo @event_channel **VARCHAR (255)**.  
   
@@ -56,11 +57,10 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 ## <a name="table-returned"></a>Tabella restituita  
  Questa stored procedure restituisce una tabella con le informazioni seguenti:  
   
-||||  
-|-|-|-|  
-|Nome colonna|Tipo di dati|Descrizione|  
+| Nome colonna | Tipo di dati | Descrizione |  
+| ----------- | --------- | ----------- |
 |event_type|NVARCHAR (512)|Tipo di evento esteso.|  
-|Event|NVARCHAR (512)|Riepilogo dei registri eventi.|  
+|Evento|NVARCHAR (512)|Riepilogo dei registri eventi.|  
 |Timestamp|timestamp|Timestamp dell'evento che mostra quando è stato generato l'evento.|  
   
 ## <a name="security"></a>Sicurezza  

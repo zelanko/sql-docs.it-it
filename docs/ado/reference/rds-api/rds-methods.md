@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97af6e8394ac8371f2ddd1baff2363079c898f84
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c178bae1f3da5ccc6ca4cfdd6b5645335141908f
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758547"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942303"
 ---
 # <a name="rds-methods"></a>Metodi di Servizi Desktop remoto
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-|||  
+|Metodo|Descrizione|  
 |-|-|  
 |[Annulla (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)|Annulla l'esecuzione di una chiamata al metodo asincrona in sospeso.|  
 |[CancelUpdate (Servizi Desktop remoto)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)|Annulla tutte le modifiche apportate alla riga corrente o nuova di un oggetto **Recordset** .|  
