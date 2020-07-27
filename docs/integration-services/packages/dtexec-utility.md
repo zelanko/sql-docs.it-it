@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7f2e417ddefc0094fc6320deafea40251ba77372
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 53a05fea022a2ea0232bc44646509ee3a84028af
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76761855"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919217"
 ---
 # <a name="dtexec-utility"></a>Utilità dtexec
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L'utilità del prompt dei comandi **dtexec** viene usata per configurare ed eseguire i pacchetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Con l'utilità **dtexec** è possibile accedere a tutte le funzionalità di configurazione ed esecuzione dei pacchetti, ad esempio parametri, connessioni, proprietà, variabili, registrazione e indicatori di stato. L'utilità **dtexec** consente di caricare i pacchetti da queste origini: server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], file di progetto con estensione ispac, database [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e file system.  
@@ -68,22 +68,22 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="installation-considerations-on-64-bit-computers"></a><a name="bit"></a> Considerazioni sull'installazione in computer a 64 bit  
  In un computer a 64 bit, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installa una versione a 64 bit dell'utilità **dtexec** (dtexec.exe). Se è necessario eseguire alcuni pacchetti nella modalità a 32 bit, installare la versione a 32 bit dell'utilità **dtexec** . Per installare la versione a 32 bit dell'utilità **dtexec** , è necessario selezionare gli strumenti client o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] durante l'installazione.  
   
- Per impostazione predefinita, un computer a 64 bit contenente le versioni a 64 bit e a 32 bit di un'utilità del prompt dei comandi di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installata eseguirà la versione a 32 bit al prompt dei comandi. Viene eseguita la versione a 32 bit perché il percorso della directory della versione a 32 bit compare nella variabile di ambiente PATH prima del percorso della directory della versione a 64 bit. In genere, il percorso della directory a 32 bit è *\<unità>* :\Programmi (x86) \Microsoft SQL Server\110\DTS\Binn, mentre il percorso della directory a 64 bit è *\<unità>* :\Programmi\Microsoft SQL Server\110\DTS\Binn.  
+ Per impostazione predefinita, un computer a 64 bit contenente le versioni a 64 bit e a 32 bit di un'utilità del prompt dei comandi di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installata eseguirà la versione a 32 bit al prompt dei comandi. Viene eseguita la versione a 32 bit perché il percorso della directory della versione a 32 bit compare nella variabile di ambiente PATH prima del percorso della directory della versione a 64 bit. In genere, il percorso della directory a 32 bit è *\<drive>* :\Programmi (x86) \Microsoft SQL Server\110\DTS\Binn, mentre il percorso della directory a 64 bit è *\<drive>* :\Programmi\Microsoft SQL Server\110\DTS\Binn.  
   
 > **NOTA** Se si utilizza SQL Server Agent per eseguire l'utilità, verrà automaticamente utilizzata la versione a 64 bit dell'utilità. Per trovare l'eseguibile corretto per l'utilità, SQL Server Agent utilizza il Registro di sistema, non la variabile di ambiente PATH.  
   
  Per assicurarsi di eseguire la versione a 64 bit dell'utilità al prompt dei comandi, è possibile eseguire una delle azioni seguenti:  
   
--   Aprire una finestra del prompt dei comandi, accedere alla directory che contiene la versione a 64 bit dell'utilità, *\<unità>* :\Programmi\Microsoft SQL Server\110\DTS\Binn, quindi eseguire l'utilità da quel percorso.  
+-   Aprire una finestra del prompt dei comandi, accedere alla directory contenente la versione a 64 bit dell'utilità ( *\<drive>* :\Programmi\Microsoft SQL Server\110\DTS\Binn), quindi eseguire l'utilità da quel percorso.  
   
--   Al prompt dei comandi eseguire l'utilità immettendo il percorso completo ( *\<unità>* :\Programmi\Microsoft SQL Server\110\DTS\Binn) della versione a 64 bit dell'utilità.  
+-   Al prompt dei comandi, eseguire l'utilità immettendo il percorso completo ( *\<drive>* :\Programmi\Microsoft SQL Server\110\DTS\Binn) della versione a 64 bit dell'utilità.  
   
--   Modificare in modo definitivo l'ordine dei percorsi nella variabile di ambiente PATH spostando il percorso della versione a 64 bit ( *\<unità>* :\Programmi\Microsoft SQL Server\110\DTS\Binn) prima del percorso della versione a 32 bit ( *\<unità>* :\Programmi(x86)\Microsoft SQL Server\110\DTS\Binn).  
+-   Modificare in modo definitivo l'ordine dei percorsi nella variabile di ambiente PATH spostando il percorso della versione a 64 bit ( *\<drive>* :\Programmi\Microsoft SQL Server\110\DTS\Binn) prima del percorso della versione a 32 bit ( *\<drive>* :\Programmi(x86)\Microsoft SQL Server\110\DTS\Binn).  
   
 ##  <a name="considerations-on-computers-with-side-by-side-installations"></a><a name="side"></a> Considerazioni sui computer con installazioni side-by-side  
  Se [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] è installato in un computer con [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] , vengono installate più versioni dell'utilità **dtexec** .  
   
- Per assicurarsi di eseguire la versione corretta dell'utilità, al prompt dei comandi eseguirla immettendo il percorso completo ( *\<unità>* :\Programmi\Microsoft SQL Server\\<versione\>\DTS\Binn).  
+ Per accertarsi di eseguire la versione corretta dell'utilità, al prompt dei comandi eseguire l'utilità immettendo il percorso completo ( *\<drive>* :\Programmi\Microsoft SQL Server\\<versione\>\DTS\Binn).  
   
 ##  <a name="phases-of-execution"></a><a name="phases"></a> Fasi di esecuzione  
  L'esecuzione di questa utilità si articola nelle quattro fasi descritte di seguito.  
@@ -243,7 +243,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/Dump** _error code_: Per impostazione predefinita, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archivia i file di dump del debug nella cartella *\<unità>* :\Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     **/Dump** _error code_: Per impostazione predefinita, i file di dump del debug vengono archiviati da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nella cartella *\<drive>* :\Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > **NOTA** I file di dump del debug possono contenere informazioni riservate. Utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso ai file oppure copiare i file in una cartella con accesso limitato. Ad esempio, prima di inviare i file del debug al supporto tecnico Microsoft, si consiglia di rimuovere eventuali informazioni sensibili o riservate.  
   
@@ -255,7 +255,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/DumpOnError**: (Facoltativo) Consente di creare i file di dump del debug, con estensione .mdmp e .tmp, quando si verifica un errore durante l'esecuzione del pacchetto.  
   
-     Per impostazione predefinita, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archivia i file di dump del debug nella cartella *\<unità>* :\Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     Per impostazione predefinita, i file di dump del debug vengono archiviati da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nella cartella *\<drive>* :\Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > **NOTA** I file di dump del debug possono contenere informazioni riservate. Utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso ai file oppure copiare i file in una cartella con accesso limitato. Ad esempio, prima di inviare i file del debug al supporto tecnico Microsoft, si consiglia di rimuovere eventuali informazioni sensibili o riservate.  
   
