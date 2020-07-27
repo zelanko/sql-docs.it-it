@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 6409dd44381b1d927b07f8ecee043465eacdd14e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3595c9aac3b0b8a0419780cdeaf9b5547bfa97d1
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774649"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483859"
 ---
 # <a name="azure-data-studio-extensibility"></a>Estendibilità di Azure Data Studio
 
@@ -48,9 +48,9 @@ In questa sezione vengono illustrati i vari punti di aggiunta di contributi defi
 
 IntelliSense è supportato in azuredatastudio.
 
-## <a name="contributes-dashboard"></a>Dashboard dei contributi
+### <a name="dashboard-contribution-points"></a>Punti di aggiunta contributi del dashboard
 
-Scheda dei contributi, contenitore, widget di informazioni dettagliate nel dashboard.
+Pubblicare una scheda, un contenitore e/o un widget di informazioni dettagliate nel dashboard.
 
 ![Dashboard](media/extensibility/dashboard-page.png)
 
@@ -276,4 +276,4 @@ Nel dashboard vengono fornite le variabili di contesto seguenti:
 |`serverName`|Stringa del nome di server della connessione corrente. Ex. `serverName == 'localhost'`.|
 |`databaseName` | Stringa del nome di database della connessione corrente. Ex. `databaseName == 'master'`.|
 |`connection` | Profilo di connessione completo per la connessione corrente (IConnectionProfile)|
-|`dashboardContext` | Stringa del contesto della pagina del dashboard attualmente attiva: "database" o "server". Ex. `dashboardContext == 'database'`|
+|`dashboardContext` | Stringa del contesto della pagina in cui si trova attualmente il dashboard: "database" o "server". Ex. `dashboardContext == 'database'`|

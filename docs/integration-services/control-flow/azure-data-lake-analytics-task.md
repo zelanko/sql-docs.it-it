@@ -12,16 +12,16 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 ms.reviewer: maghan
-ms.openlocfilehash: 1f4eaadafa422611c3d24cbefee7a7d982dd88d8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: da776f4ccddcfaaa6c0f8e6af6363f2ef9a1f13d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763662"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913897"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Attività Azure Data Lake Analytics
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -60,7 +60,7 @@ La configurazione di U-SQL ha due impostazioni: **SourceType** e le opzioni dina
 |-----------|-----------------|  
 |**SourceType = DirectInput**|Digitare la query U-SQL da inviare direttamente nella casella di opzione oppure fare clic sul pulsante Sfoglia (...) per digitare la query U-SQL nella finestra di dialogo **Enter U-SQL Query** (Immettere la query U-SQL).|  
 |**SourceType = FileConnection**|Selezionare una gestione connessione file esistente o selezionare <**Nuova connessione**> per creare una nuova connessione file. Per informazioni correlate, vedere [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md) ed [Editor gestione connessione File](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
-|**SourceType = Variable**|Selezionare una variabile esistente oppure selezionare \<**Nuova variabile**> per creare una nuova variabile. Per informazioni correlate, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
+|**SourceType = Variable**|Selezionare una variabile esistente oppure selezionare \<**New variable...**> per creare una nuova variabile. Per informazioni correlate, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
 | &nbsp; | &nbsp; |
 
 

@@ -1,5 +1,6 @@
 ---
 title: Abilitare la compressione in una tabella o un indice | Microsoft Docs
+description: Informazioni su come abilitare la compressione per una tabella o un indice usando SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5d8ad2b1ccc0951276dccaf085c554fa7385b6e1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8d168265fbd400f94939103411a6f56afe901f07
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003910"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457533"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Abilitare la compressione in una tabella o un indice
 

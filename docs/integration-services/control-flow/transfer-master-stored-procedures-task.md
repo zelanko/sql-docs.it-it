@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cee2dfed374c3f479e32b8d81602eff924287356
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc3b10cd913f0cf2d270fd228ad4729f12ec0f53
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293854"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916093"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Attività Trasferisci stored procedure master
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L'attività Trasferisci stored procedure master trasferisce una o più stored procedure definite dall'utente tra i database **master** di istanze diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per trasferire una stored procedure dal database **master** , è necessario che il proprietario stored della procedure sia un dbo.  
@@ -107,10 +107,10 @@ ms.locfileid: "71293854"
   
 ### <a name="options"></a>Opzioni  
  **SourceConnection**  
- Selezionare una gestione connessione SMO nell'elenco o fare clic su **\<Nuova connessione...>** per creare una nuova connessione al server di origine.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su **\<New connection...>** per creare una nuova connessione al server di origine.  
   
  **DestinationConnection**  
- Selezionare una gestione connessione SMO nell'elenco o fare clic su **Nuova connessione...>\<** per creare una nuova connessione al server di destinazione.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su **\<New connection...>** per creare una nuova connessione al server di destinazione.  
   
  **IfObjectExists**  
  Selezionare la modalità con cui l'attività deve gestire le stored procedure definite dall'utente che hanno lo stesso nome di stored procedure già esistenti nel database **master** del server di destinazione.  

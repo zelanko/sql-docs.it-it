@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9acb58bf89d23e58ac23f96141f2a5b4dd551019
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 351f5be7bdeddb93618d2a31098f44969b2d79a7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294123"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918167"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporamento di un'attività Profiling dati nel flusso di lavoro del pacchetto
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Il profiling dati e la pulizia non sono attività potenziali per un processo automatizzato nelle fasi iniziali. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] l'output dell'attività Profiling dati richiede in genere un'analisi visiva e una valutazione umana per determinare se le violazioni segnalate sono significative o eccessive. Anche dopo il riconoscimento di problemi di qualità dei dati, è comunque necessario definire con attenzione un piano ben studiato per tentare di individuare l'approccio migliore per la pulizia.  
@@ -89,7 +89,7 @@ ms.locfileid: "71294123"
   
 2.  Aggiungere una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] al pacchetto. Configurare questa gestione connessione per l'uso del provider di dati .NET per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) e per la connessione a un'istanza disponibile del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-     Per impostazione predefinita, il nome della gestione connessione è \<nome server>.AdventureWorks1.  
+     Per impostazione predefinita, il nome della gestione connessione è \<server name>.AdventureWorks1.  
   
 3.  Aggiungere una gestione connessione file al pacchetto. Configurare questa gestione connessione per la creazione del file di output per l'attività Profiling dati.  
   

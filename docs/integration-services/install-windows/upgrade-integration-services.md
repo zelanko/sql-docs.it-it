@@ -16,23 +16,23 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 0b7fd8a71f2636893f157b18630e2773b2f01951
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f287a9853b27a58128176bfe740a3efc99a9258
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68262787"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919987"
 ---
 # <a name="upgrade-integration-services"></a>Aggiornare Integration Services
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Se nel computer è installato [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] o una versione successiva, è possibile eseguire l'aggiornamento a [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
  Se si esegue l'aggiornamento a [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] in un computer con una di queste versioni precedenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] verrà installato side-by-side con la versione precedente.  
   
- Con l'installazione side-by-side, vengono installate più versioni dell'utilità dtexec. Per assicurarsi di eseguire la versione corretta dell'utilità, al prompt dei comandi eseguirla immettendo il percorso completo (\<unità>:\Programmi\Microsoft SQL Server\\<versione\>\DTS\Binn). Per ulteriori informazioni su dtexec, vedere [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
+ Con l'installazione side-by-side, vengono installate più versioni dell'utilità dtexec. Per accertarsi di eseguire la versione corretta dell'utilità, al prompt dei comandi eseguire l'utilità immettendo il percorso completo (\<drive>:\Programmi\Microsoft SQL Server\\<versione\>\DTS\Binn). Per ulteriori informazioni su dtexec, vedere [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   
 > [!NOTE]  
 >  Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], per impostazione predefinita quando si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tutti gli utenti nel gruppo Utenti dispongono di accesso al servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Quando si installa [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], gli utenti non dispongono di accesso al servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Il servizio è protetto per impostazione predefinita. Dopo l'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , l'amministratore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve eseguire lo strumento Configurazione DCOM (Dcomcnfg.exe) per concedere a utenti specifici l'accesso al servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per altre informazioni, vedere [Servizio Integration Services &#40;servizio SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  

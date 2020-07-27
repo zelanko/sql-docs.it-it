@@ -1,5 +1,6 @@
 ---
 title: Disabilitare la compressione in una tabella o un indice | Microsoft Docs
+description: Informazioni su come disabilitare la compressione per una tabella o un indice usando SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: bda1e452-397b-4757-82a4-181217361589
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ddf8989e9eaa54923a11bb4b199cc55a2ca6b2e1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0fd426cecf7fa74e3f45ee13e9d508c6f36a4bb7
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003919"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86459043"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>Disabilitare la compressione in una tabella o un indice
 
@@ -55,7 +56,7 @@ ms.locfileid: "86003919"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o l'indice.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-disable-compression-on-a-table"></a>Per disabilitare la compressione in una tabella  
   
@@ -136,7 +137,7 @@ ms.locfileid: "86003919"
   
                 -   Se si seleziona **Giorno**, immettere sia la data del mese in cui si desidera sia eseguita la pianificazione del processo sia la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si vuole che la pianificazione del processo sia eseguita il giorno 15 del mese a mesi alterni, selezionare **Giorno** e immettere "15" nella prima casella e "2" nella seconda casella. Si noti che il numero più grande consentito nella seconda casella è "99".  
   
-                -   Se si sceglie **Ogni**, selezionare il giorno specifico della settimana del mese in cui si desidera sia eseguita la pianificazione del processo e la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si vuole che la pianificazione del processo sia eseguita l'ultimo giorno feriale del mese a mesi alterni, selezionare **Giorno**, selezionare **ultimo** nel primo elenco e **giorno feriale** nel secondo elenco, quindi immettere "2" nell'ultima casella. Nei primi due elenchi è anche possibile selezionare **primo**, **secondo**, **terzo**o **quarto**, nonché i giorni della settimana specifici, ad esempio domenica o mercoledì. Si noti che il numero più grande consentito nell'ultima casella è "99".  
+                -   Se si sceglie **Ogni**, selezionare il giorno specifico della settimana del mese in cui si desidera sia eseguita la pianificazione del processo e la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si vuole che la pianificazione del processo sia eseguita l'ultimo giorno feriale del mese a mesi alterni, selezionare **Giorno**, selezionare **ultimo** nel primo elenco e **giorno feriale** nel secondo elenco, quindi immettere "2" nell'ultima casella. Nei primi due elenchi è anche possibile selezionare **primo**, **secondo**, **terzo** o **quarto**, nonché i giorni della settimana specifici, ad esempio: domenica o mercoledì. Si noti che il numero più grande consentito nell'ultima casella è "99".  
   
         2.  In **Frequenza giornaliera**specificare la frequenza in base alla quale si ripete la pianificazione del processo in quel determinato giorno:  
   
@@ -191,7 +192,7 @@ ms.locfileid: "86003919"
   
      Al termine, fare clic su **Chiudi**.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-disable-compression-on-a-table"></a>Per disabilitare la compressione in una tabella  
   

@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f540278d8f27eb091d4818f838d069c82a61159c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bfef4a0f2bf65166193e28610d5869e65c1023cb
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296221"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917569"
 ---
 # <a name="integration-services-programming-overview"></a>Panoramica della programmazione di Integration Services
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L'architettura di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] separa lo spostamento e la trasformazione dei dati dal flusso di controllo e dalla gestione dei pacchetti. Due motori distinti definiscono questa architettura, che possono essere automatizzati ed estesi quando si programma [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Il motore di runtime implementa l'infrastruttura del flusso di controllo e di gestione dei pacchetti che consente agli sviluppatori di controllare il flusso di esecuzione e impostare le opzioni per la registrazione, la gestione degli eventi e le variabili. Il motore flusso di dati è un motore speciale, a elevate prestazioni, dedicato esclusivamente all'estrazione, alla trasformazione e al caricamento di dati. Quando si programma [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], si utilizzeranno questi due motori.  
@@ -62,9 +62,9 @@ ms.locfileid: "71296221"
 >  Le API di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] non sono compatibili con linguaggi di scripting basati su COM come VBScript.  
   
 ## <a name="locating-assemblies"></a>Individuazione di assembly  
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]gli assembly [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono stati aggiornati a .NET 4.0. È disponibile una Global Assembly Cache separata per .NET 4 in *\<unità>* :\Windows\Microsoft.NET\assembly. Tutti gli assembly di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] possono essere individuati in questo percorso, generalmente nella cartella GAC_MSIL.  
+ In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]gli assembly [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono stati aggiornati a .NET 4.0. È disponibile una Global Assembly Cache separata per .NET 4 in *\<drive>* :\Windows\Microsoft.NET\assembly. Tutti gli assembly di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] possono essere individuati in questo percorso, generalmente nella cartella GAC_MSIL.  
   
- Come nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], i file DLL di estendibilità principali di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono disponibili anche in *\<unità>* :\Programmi\Microsoft SQL Server\100\SDK\Assemblies.  
+ Come nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], i file DLL di estendibilità di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] principali sono anche disponibili in *\<drive>* :\Programmi\Microsoft SQL Server\100\SDK\Assemblies.  
   
 ## <a name="commonly-used-assemblies"></a>Assembly di uso comune  
  Nella tabella seguente sono elencati gli assembly utilizzati di frequente quando si programma [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utilizzando [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  

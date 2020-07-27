@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c4b3337be486123545a187337949da1c160343ad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c7273296d1c316cb16ae40b5e7194d6b6d8846e0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71286548"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913444"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codifica e debug del componente script
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   In Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] sono disponibili due modalità per il componente script: progettazione metadati e progettazione codice. Quando si apre l'**Editor trasformazione Script**, per il componente viene attivata la modalità di progettazione metadati, che consente di configurare i metadati e impostare le proprietà del componente. Dopo l'impostazione delle proprietà del componente script e la configurazione di input e output nella modalità di progettazione metadati, è possibile passare alla modalità di progettazione codice per scrivere lo script personalizzato. Per altre informazioni sulla modalità di progettazione metadati e sulla modalità di progettazione codice, vedere [Configurazione del componente script nell'editor corrispondente](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md).  

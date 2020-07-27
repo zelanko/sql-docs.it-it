@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a4aebf354f999b26be59efc2f3c25a205dd3d9d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b9fc8c8f8b5072afff038c590c82898776534a3c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298783"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921622"
 ---
 # <a name="error-handling"></a>Gestione degli errori
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Un'istanza di Oracle CDC estrae le modifiche da un singolo database di origine Oracle (un cluster Oracle RAC è considerato un singolo database) e scrive le modifiche di cui è stato eseguito il commit per modificare le tabelle in un database CDC nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione.  
@@ -41,7 +41,7 @@ ms.locfileid: "71298783"
 |Stato|Codice di stato attivo|Codice di stato errore|Descrizione|Stato secondario|  
 |------------|------------------------|-----------------------|-----------------|---------------|  
 |ABORTED|0|1|L'istanza di Oracle CDC non è in esecuzione. Lo stato secondario ABORTED indica che l'istanza di Oracle CDC era ACTIVE e che si è arrestata in modo imprevisto.|Lo stato secondario ABORTED viene stabilito dall'istanza principale del servizio Oracle CDC quando viene rilevato che l'istanza di Oracle CDC non è in esecuzione mentre il relativo stato è ACTIVE.|  
-|ERRORE|0|1|L'istanza di Oracle CDC non è in esecuzione. Lo stato ERROR indica che l'istanza di CDC era ACTIVE, ma che in seguito a un errore reversibile è stata disabilitata.|MISCONFIGURED: è stato rilevato un errore di configurazione irreversibile.<br /><br /> PASSWORD-REQUIRED: non è stata impostata alcuna password per Change Data Capture Designer for Oracle by Attunity oppure la password configurata non è valida. Il problema può essere dovuto a una modifica alla password della chiave asimmetrica del servizio.|  
+|ERRORE|0|1|L'istanza di Oracle CDC non è in esecuzione. Lo stato ERROR indica che l'istanza di CDC era ACTIVE, ma che in seguito a un errore reversibile è stata disabilitata.|MISCONFIGURED: è stato rilevato un errore di configurazione irreversibile.<br /><br /> PASSWORD-REQUIRED: non è stata impostata alcuna password per Change Data Capture Designer per Oracle di Attunity oppure la password configurata non è valida. Il problema può essere dovuto a una modifica alla password della chiave asimmetrica del servizio.|  
 |RUNNING|1|0|L'istanza di CDC è in esecuzione ed è in corso l'elaborazione dei record delle modifiche.|IDLE: tutti i record delle modifiche sono stati elaborati e archiviati nelle tabelle di controllo di destinazione ( **_CT**). Non è presente alcuna transazione attiva con le tabelle di controllo.<br /><br /> PROCESSING: è in corso l'elaborazione di alcuni record delle modifiche che non sono ancora stati scritti nelle tabelle di controllo ( **_CT**).|  
 |STOPPED|0|0|L'istanza di CDC non è in esecuzione.|Lo stato secondario STOP indica che l'istanza di CDC era ACTIVE e che è stata arrestata in modo corretto.|  
 |SUSPENDED|1|1|L'istanza di CDC è in esecuzione ma l'elaborazione è stata sospesa in seguito a un errore reversibile.|DISCONNECTED: non è possibile stabilire la connessione con il database Oracle di origine. L'elaborazione verrà ripresa dopo il ripristino della connessione.<br /><br /> STORAGE: lo spazio di archiviazione è esaurito. L'elaborazione verrà ripresa non appena sarà nuovamente disponibile dello spazio di archiviazione. In alcuni casi è possibile che questo stato non venga visualizzato perché non è possibile aggiornare la tabella dello stato.<br /><br /> LOGGER: il logger è connesso a Oracle, ma non è in grado di leggere i log delle transazioni di Oracle a causa di un problema temporaneo.|  

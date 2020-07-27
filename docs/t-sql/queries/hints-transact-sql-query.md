@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 4718bcb629f1aabbc458ac505eab3ae92bab52cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 260babc5be248cc07b90001c2bb63fa7a6439a05
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731304"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552952"
 ---
 # <a name="hints-transact-sql---query"></a>Hint (Transact-SQL) - Query
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -138,7 +138,9 @@ Gli hint per la query specificano che gli hint indicati devono essere utilizzati
 }  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
 { HASH | ORDER } GROUP  
 Specifica che le aggregazioni descritte dalla clausola GROUP BY o DISTINCT della query devono usare operazioni di hashing o di ordinamento.  
   
@@ -359,11 +361,11 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
   
  Quando si specifica _exposed\_object\_name_ senza specificare anche un hint di tabella, gli indici specificati nella query come parte di un hint di tabella per l'oggetto non vengono considerati. Query Optimizer determina quindi l'utilizzo degli indici. È possibile usare questa tecnica per eliminare l'effetto di un hint di tabella INDEX quando non è possibile modificare la query originale. Vedere l'esempio J.  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) | INDEX = ( _index\_value_ ) | FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } È l'hint di tabella da applicare alla tabella o alla vista che corrisponde a *exposed_object_name* come hint per la query. Per una descrizione di questi hint, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) \| INDEX = ( _index\_value_ ) \| FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... ] **))** ] \| FORCESCAN \| HOLDLOCK \| NOLOCK \| NOWAIT \| PAGLOCK \| READCOMMITTED \| READCOMMITTEDLOCK \| READPAST \| READUNCOMMITTED \| REPEATABLEREAD \| ROWLOCK \| SERIALIZABLE \| SNAPSHOT \| SPATIAL_WINDOW_MAX_CELLS \| TABLOCK \| TABLOCKX \| UPDLOCK \| XLOCK } Hint di tabella da applicare alla tabella o alla vista che corrisponde a *exposed_object_name* come hint per la query. Per una descrizione di questi hint, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Gli hint di tabella diversi da INDEX, FORCESCAN e FORCESEEK non sono consentiti come hint per la query, a meno che la query non disponga già di una clausola WITH che specifica l'hint di tabella. Per altre informazioni, vedere la sezione Osservazioni.  
   
-> [!CAUTION] 
+> [!CAUTION]
 > Se si specifica FORCESEEK con parametri, il numero di piani che possono essere considerati da Query Optimizer viene limitato più di quanto avvenga se si specifica FORCESEEK senza parametri. In questo caso potrebbe venire generato un errore "Impossibile generare il piano" con maggiore frequenza. In una versione futura, le modifiche interne a Query Optimizer potrebbero consentire di prendere in considerazione più piani.  
   
 ## <a name="remarks"></a>Osservazioni  

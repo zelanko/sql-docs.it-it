@@ -10,16 +10,16 @@ ms.custom: loading
 ms.date: 08/20/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 8d78ab5befe5f95c07b6cb539d2629fdd9d003ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c8f697e2bd68a7cbfe7053a4a2f3054d6ed14b85
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75924979"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943128"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Caricare dati in SQL Server o nel database SQL di Azure con SQL Server Integration Services (SSIS)
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-xxxx-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/ssis-appliesto-ssvrpluslinux-asdb-xxxx-xxx.md)]
 
 Creare un pacchetto di SQL Server Integration Services (SSIS) per caricare dati in SQL Server o nel [database SQL di Azure](/azure/sql-database/). È anche possibile ristrutturare, trasformare e pulire i dati durante il passaggio attraverso il flusso di dati SSIS.
 
@@ -75,28 +75,28 @@ Viene aperto Visual Studio e viene creato un nuovo progetto di Integration Servi
 * Al centro, l'area di progettazione con più schede. In genere si usano almeno le schede **Flusso di controllo** e il **Flusso di dati**.
 * A destra, i riquadri **Esplora soluzioni** e **Proprietà**.
   
-    ![][01]
+    ![Screenshot di Visual Studio che mostra il riquadro Casella degli strumenti, il riquadro Progettazione, il riquadro Esplora soluzioni e il riquadro Proprietà.][01]
 
 ## <a name="create-the-basic-data-flow"></a>Creare il flusso di dati di base
 1. Trascinare un'attività Flusso di dati dalla casella degli strumenti al centro dell'area di progettazione (nella scheda **Flusso di controllo**).
    
-    ![][02]
+    ![Screenshot di Visual Studio che mostra un'attività Flusso di dati trascinata nella scheda Flusso di controllo del riquadro Progettazione.][02]
 2. Fare doppio clic sull'attività Flusso di dati per passare alla scheda Flusso di dati.
 3. Dall'elenco Altre origini nella casella degli strumenti trascinare un'origine ADO.NET nell'area di progettazione. Con l'adattatore di origine ancora selezionato, modificare il nome su **Origine SQL Server** nel riquadro **Proprietà**.
 4. Dall'elenco Altre destinazioni nella casella degli strumenti,trascinare una destinazione ADO.NET all'area di progettazione sotto l'origine ADO.NET. Con l'adattatore di destinazione ancora selezionato, modificare il nome in **Destinazione SQL** nel riquadro **Proprietà**.
    
-    ![][09]
+    ![Screenshot di un adattatore di destinazione trascinato in una posizione direttamente sotto l'adattatore di origine.][09]
 
 ## <a name="configure-the-source-adapter"></a>Configurare l'adattatore di origine
 1. Fare doppio clic sull'adattatore di origine per aprire l'**Editor origine ADO.NET**.
    
-    ![][03]
+    ![Screenshot dell'Editor origine ADO.NET. La scheda Gestione connessioni è visibile e sono disponibili controlli per la configurazione delle proprietà del flusso di dati.][03]
 2. Nella scheda **Gestione connessione** della finestra **Editor origine ADO.NET** fare clic sul pulsante **Nuovo** accanto all'elenco **Gestione connessione ADO.NET** per aprire la finestra di dialogo **Configura gestione connessione ADO.NET** e creare le impostazioni di connessione per il database di SQL Server da cui questa esercitazione carica i dati.
    
-    ![][04]
+    ![Screenshot della finestra di dialogo Configura gestione connessione ADO.NET. Sono disponibili controlli per l'installazione e la configurazione dei gestori connessioni.][04]
 3. Nella finestra di dialogo **Configura gestione connessione ADO.NET** fare clic sul pulsante **Nuovo** per aprire la finestra di dialogo **Gestione connessione** e creare una nuova connessione dati.
    
-    ![][05]
+    ![Screenshot della finestra di dialogo Gestione connessione. Sono disponibili controlli per la configurazione di una connessione dati.][05]
 4. Nella finestra di dialogo **Gestione connessione** eseguire le operazioni seguenti.
    
    1. Per **Provider** selezionare il provider di dati SqlClient.
@@ -105,16 +105,16 @@ Viene aperto Visual Studio e viene creato un nuovo progetto di Integration Servi
    4. Nella sezione **Connessione a un database** selezionare il database di esempio AdventureWorks.
    5. Fare clic su **Test connessione**.
       
-       ![][06]
+       ![Screenshot di una finestra di dialogo in cui sono visualizzati un pulsante OK e un testo che indica che la connessione di test è riuscita.][06]
    6. Nella finestra di dialogo che indica i risultati del test di connessione fare clic su **OK** per tornare alla finestra di dialogo **Gestione connessione**.
    7. Nella finestra di dialogo **Gestione connessione** fare clic su **OK** per ritornare alla finestra di dialogo **Configura gestione connessione ADO.NET**.
 5. Nella finestra di dialogo **Configura gestione connessione ADO.NET** fare clic su **OK** per ritornare all'**Editor origine ADO.NET**.
 6. Nell'**Editor origine ADO.NET** selezionare la tabella **Sales.SalesOrderDetail** nell'elenco **Nome tabella o vista**.
    
-    ![][07]
+    ![Screenshot dell'Editor origine ADO.NET. Nell'elenco Nome tabella o vista è selezionata la tabella Sales.SalesOrderDetail.][07]
 7. Fare clic su **Anteprima** per visualizzare le prime 200 righe di dati nella tabella di origine nella finestra di dialogo **Anteprima risultati query**.
    
-    ![][08]
+    ![Screenshot della finestra di dialogo Anteprima risultati query. Sono visibili diverse righe di dati di vendita della tabella di origine.][08]
 8. Nella finestra di dialogo **Anteprima risultati query** fare clic su **Chiudi** per ritornare all'**Editor origine ADO.NET**.
 9. Nell'**Editor origine ADO.NET** fare clic su **OK** per completare la configurazione dell'origine dati.
 
@@ -122,14 +122,14 @@ Viene aperto Visual Studio e viene creato un nuovo progetto di Integration Servi
 1. Selezionare l'adattatore di origine nell'area di progettazione.
 2. Selezionare la freccia blu che si estende dall'adattatore di origine e trascinarla nell'editor di destinazione fino al completo inserimento.
    
-    ![][10]
+    ![Screenshot che mostra gli adattatori di origine e di destinazione. Una freccia blu collega l'adattatore di origine all'adattatore di destinazione.][10]
    
     In un pacchetto SSIS tipico è possibile usare diversi altri componenti dalla casella degli strumenti SSIS tra l'origine e la destinazione per ristrutturare, trasformare e pulire i dati mentre attraversano il flusso di dati SSIS. Per mantenere questo esempio il più semplice possibile, viene eseguita la connessione dell'origine direttamente alla destinazione.
 
 ## <a name="configure-the-destination-adapter"></a>Configurare l'adattatore di destinazione
 1. Fare doppio clic sull'adattatore di destinazione per aprire l'**Editor destinazione ADO.NET**.
    
-    ![][11]
+    ![Screenshot dell'Editor destinazione ADO.NET. La scheda Gestione connessione è visibile e contiene controlli per la configurazione delle proprietà del flusso di dati.][11]
 2. Nella scheda **Gestione connessione** della finestra **Editor destinazione ADO.NET** fare clic sul pulsante **Nuovo** accanto all'elenco **Gestione connessione** per aprire la finestra di dialogo **Configura gestione connessione ADO.NET** e creare le impostazioni di connessione per il database in cui questa esercitazione carica i dati.
 3. Nella finestra di dialogo **Configura gestione connessione ADO.NET** fare clic sul pulsante **Nuovo** per aprire la finestra di dialogo **Gestione connessione** e creare una nuova connessione dati.
 4. Nella finestra di dialogo **Gestione connessione** eseguire le operazioni seguenti.
@@ -143,17 +143,17 @@ Viene aperto Visual Studio e viene creato un nuovo progetto di Integration Servi
 5. Nella finestra di dialogo **Configura gestione connessione ADO.NET** fare clic su **OK** per ritornare all'**Editor destinazione ADO.NET**.
 6. Nell'**Editor destinazione ADO.NET** fare clic su **Nuovo** accanto all'elenco **Tabella o vista** per visualizzare la finestra di dialogo **Crea tabella** per creare una nuova tabella di destinazione con un elenco di colonne che corrisponde alla tabella di origine.
    
-    ![][12a]
+    ![Screenshot della finestra di dialogo Crea tabella. È visibile il codice SQL per la creazione di una tabella di destinazione.][12a]
 7. Nella finestra di dialogo **Crea tabella** eseguire le operazioni seguenti.
    
    1. Modificare il nome della tabella di destinazione su **SalesOrderDetail**.
       
-       ![][12b]
+       ![Screenshot della finestra di dialogo Crea tabella. È visibile il codice SQL per la creazione di una tabella denominata SalesOrderDetail.][12b]
 
    2. Fare clic su **OK** per creare la tabella e ritornare all'**Editor destinazione ADO.NET**.
 8. Nell'**Editor destinazione ADO.NET** selezionare la scheda **Mapping** per visualizzare come le colonne nell'origine vengono mappate alle colonne nella destinazione.
    
-    ![][13]
+    ![Screenshot della scheda Mapping dell'Editor destinazione ADO.NET. Le linee collegano le colonne con nomi identici nelle tabelle di origine e di destinazione.][13]
 9. Fare clic su **OK** per completare la configurazione della destinazione.
 
 ## <a name="run-the-package-to-load-the-data"></a>Eseguire il pacchetto per caricare i dati
@@ -163,19 +163,19 @@ I paragrafi seguenti descrivono i risultati visualizzati se si crea il pacchetto
 
 Quando inizia l'esecuzione del pacchetto si possono osservare delle ruote gialle in rotazione che indicano l'attività e il numero di righe elaborate fino a ora.
 
-![][14]
+![Screenshot che mostra gli adattatori di origine e di destinazione. Sopra ogni adattatore si trovano ruote gialle in rotazione e tra di essi è presente il testo "89748 righe".][14]
 
 Quando l'esecuzione del pacchetto è terminata vengono visualizzati dei segni di spunta verdi che indicano l'esito positivo e il numero totale di righe di dati caricati dall'origine alla destinazione.
 
-![][15]
+![Screenshot che mostra gli adattatori di origine e di destinazione. Sopra ogni adattatore si trovano segni di spunta verdi e tra di essi è presente il testo "121317 righe".][15]
 
 Congratulazioni! SQL Server Integration Services è stato usato per caricare dati nel database SQL Server o nel database SQL di Azure.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Informazioni su come eseguire il debug e risolvere i problemi relativi ai pacchetti direttamente nell'ambiente di progettazione. Iniziare da qui: [Strumenti per la risoluzione dei problemi di sviluppo di pacchetti][Troubleshooting Tools for Package Development].
+- Informazioni su come eseguire il debug e risolvere i problemi relativi ai pacchetti direttamente nell'ambiente di progettazione. Iniziare da: [Strumenti per la risoluzione dei problemi relativi allo sviluppo dei pacchetti][Troubleshooting Tools for Package Development].
 
-- Informazioni su come distribuire i progetti SSIS e i pacchetti nel server Integration Services o in un'altra posizione di archiviazione. Iniziare da qui: [Distribuzione di progetti e pacchetti][Deployment of Projects and Packages].
+- Informazioni su come distribuire i progetti SSIS e i pacchetti nel server Integration Services o in un'altra posizione di archiviazione. Iniziare da: [Distribuzione di progetti e pacchetti][Deployment of Projects and Packages].
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-database-with-ssis/ssis-designer-01.png

@@ -1,5 +1,6 @@
 ---
 title: XTP IO Governor di SQL Server | Microsoft Docs
+description: Informazioni sull'oggetto prestazione XTP IO Governor di SQL Server, che include i contatori correlati a IO Rate Governor di OLTP in memoria.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 91e176fe-c838-44e9-b4fc-2814a0551ca3
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: fede0215ef21ee7680068629a990ec1a9dd3417f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ca71e9d90cf5e057d70a32eae9882d90ddbcf611
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718952"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457943"
 ---
 # <a name="sql-server-xtp-io-governor"></a>XTP IO Governor di SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,5 +1,5 @@
 ---
-title: DBCC SHRINKLOG (Parallel Data Warehouse) | Microsoft Docs
+title: DBCC SHRINKLOG (Parallel Data Warehouse)
 ms.custom: ''
 ms.date: 03/16/2018
 ms.prod: sql
@@ -11,14 +11,15 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e730d782a7d0bc6edf689dee6fa209a1432c5b8d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4ddba1a36bfc1006d4e7c93d843431832fecf397
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632299"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484798"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (Parallel Data Warehouse)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
 Riduce le dimensioni del log delle transazioni *nell'appliance* per il database [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. I dati vengono deframmentati per compattare il log delle transazioni. Nel corso del tempo, il log delle transazioni del database può diventare frammentato e inefficiente. Usare DBCC SHRINKLOG per ridurre la frammentazione e le dimensioni del log.
@@ -33,9 +34,10 @@ DBCC SHRINKLOG
     [ WITH NO_INFOMSGS ]   
 [;]  
 ```  
-  
-## <a name="arguments"></a>Argomenti  
-SIZE = { *target_size* [ MB | **GB** | TB ]  } | **DEFAULT**.  
+
+## <a name="arguments"></a>Argomenti
+
+SIZE = { *target_size* [ MB \| **GB** \| TB ]  } \| **DEFAULT**.  
 *target_size* è la dimensione desiderata per il log delle transazioni, in tutti i nodi di calcolo, al termine dell'esecuzione di DBCC SHRINKLOG. Si tratta di un valore intero maggiore di 0.  
 Le dimensioni del log vengono misurate in megabyte (MB), gigabyte (GB) o terabyte (TB). Il valore rappresenta le dimensioni complessive del log delle transazioni in tutti i nodi di calcolo.  
 Per impostazione predefinita, DBCC SHRINKLOG consente di ridurre il log delle transazioni alle dimensioni archiviate nei metadati per il database. Le dimensioni del log nei metadati sono determinate dal parametro LOG_SIZE in [CREATE DATABASE &#40;Azure SQL Data Warehouse&#41; ](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) o [ALTER DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md). DBCC SHRINKLOG riduce le dimensioni del log delle transazioni alle dimensioni predefinite quando è stato specificato `SIZE=DEFAULT`, oppure quando la clausola `SIZE` viene omessa.
@@ -43,23 +45,24 @@ Per impostazione predefinita, DBCC SHRINKLOG consente di ridurre il log delle tr
 WITH NO_INFOMSGS  
 Nei risultati DBCC SHRINKLOG non vengono visualizzati i messaggi informativi.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Autorizzazioni
+
 È necessario avere l'autorizzazione ALTER SERVER STATE.
-  
-## <a name="general-remarks"></a>Osservazioni generali  
+
+## <a name="general-remarks"></a>Osservazioni generali
+
 DBCC SHRINKLOG non modifica le dimensioni del log archiviate nei metadati per il database. I metadati continuano a contenere il parametro LOG_SIZE specificato nell'istruzione CREATE DATABASE o ALTER DATABASE.
   
-## <a name="examples"></a>Esempi 
+## <a name="examples"></a>Esempi
+
 ### <a name="a-shrink-the-transaction-log-to-the-original-size-specified-by-create-database"></a>R. Ridurre il log delle transazioni alle dimensioni originali specificate da CREATE DATABASE.  
 Si supponga che il log delle transazioni per il database Addresses sia stato impostato su 100 MB quando il database è stato creato. In altre parole, l'istruzione CREATE DATABASE per il database Addresses era LOG_SIZE = 100 MB. A questo punto, si supponga che il file di log abbia raggiunto i 150 MB che e lo si voglia riportare nuovamente a 100 MB.
   
 Ognuna delle istruzioni seguenti tenterà di ridurre il log delle transazioni per il database di Addresses fino a riportarlo alle dimensioni predefinite pari a 100 MB. Se la riduzione del log a 100 MB comporta la perdita di dati, DBCC SHRINKLOG riduce il log alle dimensioni più piccole possibili, superiori a 100 MB, senza perdere dati.
-  
+
 ```sql
 USE Addresses;  
 DBCC SHRINKLOG ( SIZE = 100 MB );  
 DBCC SHRINKLOG ( SIZE = DEFAULT );  
 DBCC SHRINKLOG;  
-```  
-  
-  
+```

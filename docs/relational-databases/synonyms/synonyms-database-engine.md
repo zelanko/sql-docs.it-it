@@ -15,15 +15,15 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e863a04214a27f61581f10c4a2610671bde43635
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e992a6629f3dbff2e8ed5e3b2b9cc568a7b8811
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787258"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918067"
 ---
 # <a name="synonyms-database-engine"></a>Sinonimi (Motore di database)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Un sinonimo è un oggetto di database che viene utilizzato per gli scopi seguenti:  
   
 -   Fornisce un nome alternativo per un altro oggetto di database, definito oggetto di base, presente su un server locale o remoto.  
@@ -35,17 +35,37 @@ Si consideri ad esempio la tabella **Employee** di [!INCLUDE[ssSampleDBCoShort](
 Per risolvere entrambi i problemi, è possibile creare un sinonimo, **EmpTable**, in **Server2** per la tabella **Employee** in **Server1**. L'applicazione client dovrà quindi usare unicamente il nome composto da una parte, **EmpTable**, per fare riferimento alla tabella **Employee** . Se la posizione della tabella **Employee** viene modificata, sarà necessario modificare il sinonimo, **EmpTable**, per puntare alla nuova posizione della tabella **Employee** . Poiché non esiste un'istruzione ALTER SYNONYM, è necessario prima eliminare il sinonimo, **EmpTable**, quindi ricrearlo con lo stesso nome, ma puntando alla nuova posizione della tabella **Employee**.  
   
 Un sinonimo appartiene a uno schema e, come gli altri oggetti di uno schema, deve avere un nome univoco. È possibile creare sinonimi per gli oggetti di database seguenti:  
-  
-|||  
-|-|-|  
-|Stored procedure assembly (CLR)|Funzione con valori di tabella assembly (CLR)|  
-|Funzione scalare assembly (CLR)|Funzioni di aggregazione assembly (CLR)|  
-|Procedura di filtro della replica|Stored procedure estesa|  
-|Funzione scalare SQL|Funzione con valori di tabella SQL|  
-|Funzione con valori di tabella inline SQL|Stored procedure SQL|  
-|Visualizza|Tabella* (definita dall'utente)|  
-  
- *Include tabelle temporanee globali e locali  
+
+:::row:::
+    :::column:::
+        Stored procedure assembly (CLR)
+
+        Funzione scalare assembly (CLR)
+
+        Procedura di filtro della replica
+
+        Funzione scalare SQL
+
+        Funzione con valori di tabella inline SQL
+
+        Visualizzazione
+    :::column-end:::
+    :::column:::
+        Funzione con valori di tabella assembly (CLR)
+
+        Funzioni di aggregazione assembly (CLR)
+
+        Funzioni di aggregazione assembly (CLR)
+
+        Funzione con valori di tabella SQL
+
+        Stored procedure SQL
+
+        Tabella* (definita dall'utente)
+    :::column-end:::
+:::row-end:::
+
+*Include tabelle temporanee globali e locali  
   
 > [!NOTE]  
 > I nomi composti da quattro parti non sono supportati per gli oggetti funzione di base.  
@@ -63,23 +83,48 @@ Se è disponibile uno schema predefinito di cui non si è proprietari e si desid
 Le autorizzazioni per un sinonimo possono essere concesse unicamente dai proprietari del sinonimo, membri di **db_owner**o di **db_ddladmin** .  
   
 È possibile usare `GRANT`, `DENY` e `REVOKE` per concedere, negare o revocare tutte o una qualsiasi delle autorizzazioni seguenti per un sinonimo:  
-  
-|||  
-|-|-|  
-|CONTROL|Elimina|  
-|EXECUTE|INSERT|  
-|SELECT|TAKE OWNERSHIP|  
-|UPDATE|VIEW DEFINITION|  
-  
+
+:::row:::
+    :::column:::
+      CONTROL
+
+      EXECUTE
+
+      SELECT
+
+      UPDATE
+    :::column-end:::
+    :::column:::
+      DELETE
+
+      INSERT
+
+      TAKE OWNERSHIP
+
+      VIEW DEFINITION
+    :::column-end:::
+:::row-end:::
+
 ## <a name="using-synonyms"></a>Utilizzo dei sinonimi  
- In diverse istruzioni SQL e contesti di espressione è possibile utilizzare sinonimi in sostituzione dell'oggetto di base a cui viene fatto riferimento. Nella tabella seguente è riportato un elenco di tali istruzioni e contesti di espressione:  
-  
-|||  
-|-|-|  
-|SELECT|INSERT|  
-|UPDATE|Elimina|  
-|EXECUTE|Sub-SELECT|  
-  
+ In diverse istruzioni SQL e contesti di espressione è possibile utilizzare sinonimi in sostituzione dell'oggetto di base a cui viene fatto riferimento. Le colonne seguenti contengono un elenco di queste istruzioni e contesti di espressione:  
+
+:::row:::
+    :::column:::
+        SELECT
+
+        UPDATE
+
+        EXECUTE
+    :::column-end:::
+    :::column:::
+        INSERT
+
+        DELETE
+
+        Sub-SELECT
+    :::column-end:::
+:::row-end:::
+ 
  Quando si utilizzano i sinonimi nei contesti citati, l'istruzione viene eseguita sull'oggetto di base. Ad esempio, se un sinonimo fa riferimento a un oggetto di base che è una tabella e si inserisce una riga nel sinonimo, la riga verrà inserita nella tabella referenziata.  
   
 > [!NOTE]  
@@ -97,19 +142,36 @@ EXEC ('ALTER TABLE dbo.MyProduct
 ```  
   
 Le istruzioni di autorizzazione seguenti sono associate solo al sinonimo e non all'oggetto di base:  
-  
-|||  
-|-|-|  
-|GRANT|NEGA|  
-|REVOKE||  
-  
+
+:::row:::
+    :::column:::
+        GRANT
+
+        REVOKE
+    :::column-end:::
+    :::column:::
+        NEGA
+    :::column-end:::
+:::row-end:::
+
 I sinonimi non sono associati a uno schema, pertanto non è possibile farvi riferimento con i seguenti contesti di espressione associati a schema:  
-  
-|||  
-|-|-|  
-|vincoli CHECK|Colonne calcolate|  
-|Espressioni predefinite|Espressioni di regole|  
-|Viste associate a schema|Funzioni associate a schema|  
+
+:::row:::
+    :::column:::
+        vincoli CHECK
+
+        Espressioni predefinite
+
+        Viste associate a schema
+    :::column-end:::
+    :::column:::
+        Colonne calcolate
+
+        Espressioni di regole
+
+        Funzioni associate a schema
+    :::column-end:::
+:::row-end:::
   
 Per altre informazioni sulle funzioni associate a schema, vedere [Creare funzioni definite dall'utente &#40;Motore di database&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   

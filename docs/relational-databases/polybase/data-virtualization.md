@@ -1,6 +1,6 @@
 ---
 title: Virtualizzare i dati esterni
-description: Questa pagina illustra i passaggi per l'uso della procedura guidata di creazione di una tabella esterna per le origini dati relazionali
+description: Questa pagina illustra i passaggi per l'uso della procedura guidata di creazione di una tabella esterna per le origini dati ODBC
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
@@ -10,14 +10,14 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: 3b45ec31788814df7c472dbb81e3b47e0e42abeb
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: c01095e77fa974088f8a10669aecf1a8c53fd11d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588092"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943008"
 ---
-# <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Usare la procedura guidata Tabella esterna con origini dati relazionali
+# <a name="use-the-external-table-wizard-with-odbc-data-sources"></a>Usare la procedura guidata Tabella esterna con origini dati ODBC
 
 Uno degli scenari chiave per SQL Server 2019 è la possibilità di virtualizzare i dati. Questo processo consente di mantenere i dati nella posizione originale. È possibile *virtualizzare* i dati in un'istanza di SQL Server in modo da poter eseguire query nella versione virtualizzata come in qualsiasi altra tabella in SQL Server. Questo processo riduce al minimo la necessità di ricorrere a processi ETL (estrazione, trasformazione e caricamento). Per eseguire il processo è necessario l'uso di connettori Polybase. Per altre informazioni sulla virtualizzazione dei dati, vedere [Get started with PolyBase](polybase-guide.md) (Introduzione a PolyBase).
 
@@ -33,7 +33,7 @@ Connettersi all'istanza principale usando il numero di porta/indirizzo IP dell'e
 ![Procedura guidata Virtualize Data (Virtualizza dati)](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>Selezione un'origine dati
 
-Se è stata avviata la procedura guidata da uno dei database, la casella di riepilogo a discesa di destinazione viene compilata automaticamente. In questa pagina è anche possibile immettere o modificare il database di destinazione. I tipi di origini dati esterne supportati dalla procedura guidata sono SQL Server e Oracle.
+Se è stata avviata la procedura guidata da uno dei database, la casella di riepilogo a discesa di destinazione viene compilata automaticamente. In questa pagina è anche possibile immettere o modificare il database di destinazione. I tipi di origini dati esterne supportati dalla procedura guidata sono SQL Server, Oracle MongoDB e Teradata.
 
 > [!NOTE]
 >SQL Server è evidenziato per impostazione predefinita.
@@ -56,7 +56,7 @@ In questo passaggio verrà creata una chiave master del database. La creazione d
 
 In questo passaggio immettere i dettagli dell'origine dati esterna e delle credenziali per creare un oggetto origine dati esterna. Le credenziali vengono usate per la connessione dell'oggetto di database all'origine dati. Immettere un nome per l'origine dati esterna. Immettere ad esempio il nome Test. Specificare i dettagli di connessione di SQL Server dell'origine dati esterna. Immettere il **Nome server** e il **Nome database** in cui si vuole creare l'origine dati esterna.
 
-Il passaggio successivo consiste nel configurare le credenziali. Immettere un nome per le credenziali. Il nome corrisponde alle credenziali con ambito database usate per archiviare in modo sicuro le informazioni di accesso per l'origine dati esterna creata. Immettere ad esempio il nome TestCred. Immettere un nome utente e una password per la connessione all'origine dati.
+Il passaggio successivo consiste nel configurare le credenziali. Immettere un nome per le credenziali. Il nome corrisponde alle credenziali con ambito database usate per archiviare in modo sicuro le informazioni di accesso per l'origine dati esterna creata. Un esempio è `TestCred`. Immettere un nome utente e una password per la connessione all'origine dati.
 
 ![Credenziali dell'origine dati esterna](media/data-virtualization/data-source-credentials.png)
 

@@ -8,13 +8,13 @@ ms.topic: tutorial
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.custom: ''
-ms.date: 04/27/2020
-ms.openlocfilehash: e4c431cba395b8e0c732fa7ac4ab96942cac7144
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.date: 07/01/2020
+ms.openlocfilehash: 7eb7af0577cb74f180991bf455c36c9122972643
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728864"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920460"
 ---
 # <a name="create-and-run-a-python-notebook"></a>Creare ed eseguire un notebook Python
 
@@ -26,7 +26,7 @@ Questa esercitazione illustra come creare ed eseguire un notebook in Azure Data 
 
 - [Azure Data Studio installato](download-azure-data-studio.md)
 
-## <a name="new-notebook"></a>Nuovo notebook
+## <a name="create-a-notebook"></a>Creare un notebook
 
 Questa procedura illustra come creare un file di notebook in Azure Data Studio:
 
@@ -34,57 +34,64 @@ Questa procedura illustra come creare un file di notebook in Azure Data Studio:
 
 1. Scegliere **Nuovo notebook** dal menu **File**.
 
-1. Selezionare **Python 3** per **Kernel**.
+1. Selezionare **Python 3** per **Kernel**. **Collega a** è impostato su "localhost".
 
    :::image type="content" source="media/notebook-tutorial-python/set-kernel-and-attach-to-python.png" alt-text="Impostare il kernel":::
 
-1. Se viene richiesto di configurare Python, in **Configura Python per Notebooks** selezionare una delle opzioni seguenti:
+È possibile salvare il notebook usando il comando **Salva** o **Salva con nome** del menu **File**. 
 
-   - **Nuova installazione di Python** per installare una nuova copia di Python per Azure Data Studio o
-   - **Usa l'installazione esistente di Python** per specificare il percorso di un'installazione esistente di Python
+Per aprire un notebook, è possibile usare il comando **Apri file** nel menu **File**, selezionare **Apri file** nella pagina di **benvenuto** o usare il comando **File: Apri** nel riquadro comandi.
 
-## <a name="run-a-notebook-cell"></a>Eseguire una cella del notebook
+## <a name="change-the-python-kernel"></a>Modificare il kernel Python
 
-È possibile creare celle contenenti codice o testo. È possibile eseguire una cella di codice e i risultati vengono visualizzati nel notebook al termine dell'esecuzione della cella. Le celle di testo consentono di inserire documentazione formattata all'interno del codice.
+La prima volta che ci si connette al kernel Python in un notebook, viene visualizzata la pagina **Configura Python per Notebooks**. È possibile selezionare:
 
-### <a name="code"></a>Codice
+- **Nuova installazione di Python** per installare una nuova copia di Python per Azure Data Studio o
+- **Usa l'installazione esistente di Python** per specificare il percorso di un'installazione esistente di Python da usare in Azure Data Studio
 
-Aggiungere una nuova cella di codice Python selezionando il comando **+Codice** sulla barra degli strumenti.
-
-:::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python.png" alt-text="Barra degli strumenti del notebook":::
-
-Questo esempio esegue operazioni matematiche semplici.
+Per visualizzare il percorso e la versione del kernel Python attivo, creare una cella di codice ed eseguire i comandi Python seguenti:
 
 ```python
-a = 1
-b = 2
-c = a/b
-print(c)
+import os
+import sys
+print(sys.version_info)
+print(os.path.dirname(sys.executable))
 ```
-Eseguire la cella facendo clic sul pulsante di riproduzione a sinistra della cella. I risultati vengono visualizzati di seguito.
 
-:::image type="content" source="media/notebook-tutorial-python/run-notebook-cell-python.png" alt-text="Eseguire la cella del notebook":::
+Per connettersi a un'installazione diversa di Python:
 
-### <a name="text"></a>Text
+1. Scegliere **Preferenze** dal menu **File** e quindi **Impostazioni**.
+1. Scorrere fino a **Configurazione di Notebook** in **Estensioni**.
+1. In **Usa l'installazione esistente di Python** deselezionare l'opzione "Percorso locale di un'installazione preesistente di Python usata da Notebooks."
+1. Riavviare Azure Data Studio.
 
-Aggiungere una nuova cella di testo selezionando il comando **+Testo** sulla barra degli strumenti.
+Quando Azure Data Studio viene avviato e ci si connette al kernel Python, viene visualizzata la pagina **Configura Python per Notebooks**. È possibile scegliere di creare una nuova installazione di Python o specificare il percorso di un'installazione esistente.
 
-:::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python-text.png" alt-text="Barra degli strumenti del notebook":::
+## <a name="run-a-code-cell"></a>Eseguire una cella di codice
 
-La cella passa alla modalità di modifica ed è quindi possibile digitare il codice markdown e, nello stesso tempo, visualizzare l'anteprima.
+È possibile creare celle contenenti codice SQL che è possibile eseguire sul posto facendo clic sul pulsante **Esegui cella** (la freccia rotonda nera) a sinistra della cella. I risultati verranno visualizzati nel notebook al termine dell'esecuzione della cella.
 
-:::image type="content" source="media/notebook-tutorial-python/notebook-markdown-cell-python.png" alt-text="Cella di markdown":::
+Ad esempio:
 
-Se si fa clic all'esterno della cella di testo, viene visualizzato solo il testo markdown.
+1. Aggiungere una nuova cella di codice Python selezionando il comando **+Codice** sulla barra degli strumenti.
 
-:::image type="content" source="media/notebook-tutorial-python/notebook-markdown-preview-python.png" alt-text="Testo markdown":::
+   :::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python.png" alt-text="Barra degli strumenti del notebook":::
+
+1. Copiare e incollare l'esempio seguente nella cella e fare clic su **Esegui cella**. Questo esempio esegue un'operazione matematica semplice il cui risultato viene visualizzato sotto.
+
+   ```python
+   a = 1
+   b = 2
+   c = a/b
+   print(c)
+   ```
+
+   :::image type="content" source="media/notebook-tutorial-python/run-notebook-cell-python.png" alt-text="Eseguire la cella del notebook":::
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 Altre informazioni sui notebook:
 
-- [Come usare i notebook con SQL Server](notebooks-guidance.md)
-
+- [Estendere Python con Kqlmagic](notebooks-kqlmagic.md)
+- [Come usare i notebook in Azure Data Studio](notebooks-guidance.md)
 - [Creare ed eseguire un notebook di SQL Server](notebooks-tutorial-sql-kernel.md)
-
-- [Come gestire i notebook in Azure Data Studio](notebooks-manage-sql-server.md)

@@ -41,16 +41,16 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d4046228f4b0d37e72949f9bc87eac13786e6bba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e4baea69adce173ee5421605825008f7721b92bd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291128"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916683"
 ---
 # <a name="transformation-custom-properties"></a>proprietà personalizzate della trasformazione
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Oltre alle proprietà comuni alla maggior parte degli oggetti del flusso di dati nel modello a oggetti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], molti oggetti del flusso di dati hanno proprietà personalizzate specifiche dell'oggetto. Tali proprietà personalizzate sono disponibili solo in fase di esecuzione e non sono trattate nella documentazione di riferimento relativa alla programmazione gestita in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -264,7 +264,7 @@ ms.locfileid: "71291128"
   
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
-|Delimitatori|string|Delimitatori di token utilizzati dalla trasformazione. I delimitatori predefiniti includono i caratteri seguenti: spazio ( ), virgola (,), punto (.), punto e virgola (;), due punti (:), trattino (-), virgolette diritte doppie ("), virgolette diritte singole ('), e commerciale (&), barra (/), barra rovesciata (\\), chiocciola (@), punto esclamativo (!), punto interrogativo (?), parentesi di apertura ((), parentesi di chiusura ()), segno di minore (\<), segno di maggiore (>), parentesi quadra di apertura ([), parentesi quadra di chiusura (]), parentesi graffa di apertura ({), parentesi graffa di chiusura (}), barra verticale (&#124;), cancelletto (#), asterisco (*), accento circonflesso (^) e segno di percentuale (%).|  
+|Delimitatori|string|Delimitatori di token utilizzati dalla trasformazione. I delimitatori predefiniti includono i caratteri seguenti: spazio ( ), virgola (,), punto (.), punto e virgola (;), due punti (:), trattino (-), virgolette diritte doppie ("), virgolette diritte singole ('), e commerciale (&), barra (/), barra rovesciata (\\), chiocciola (@), punto esclamativo (!), punto interrogativo (?), parentesi di apertura ((), parentesi di chiusura ()), segno di minore (\<), greater than (>), parentesi quadra di apertura ([), parentesi quadra di chiusura (]), parentesi graffa di apertura ({), parentesi graffa di chiusura (}), barra verticale (&#124;), cancelletto (#), asterisco (*), accento circonflesso (^) e segno di percentuale (%).|  
 |Exhaustive|Boolean|Valore che specifica se ogni record di input viene confrontato con tutti gli altri record di input. Il valore **True** è destinato per lo più al debug. Il valore predefinito di questa proprietà è **False**.<br /><br /> Nota: Questa proprietà non è disponibile in **Editor trasformazione Raggruppamento fuzzy**, ma può essere impostata in **Editor avanzato**.|  
 |MaxMemoryUsage|Integer|Quantità di memoria massima che può essere utilizzata dalla trasformazione. Il valore predefinito di questa proprietà è **0**, che consente l'uso della memoria dinamica.<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.<br /><br /> Nota: Questa proprietà non è disponibile in **Editor trasformazione Raggruppamento fuzzy**, ma può essere impostata in **Editor avanzato**.|  
 |MinSimilarity|Double|Soglia di somiglianza utilizzata dalla trasformazione per identificare duplicati, espressa come valore compreso tra 0 e 1.  Il valore predefinito di questa proprietà è 0.8.|  
@@ -298,7 +298,7 @@ ms.locfileid: "71291128"
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Boolean|Specifica se è necessario creare una copia della tabella di riferimento per la creazione dell'indice di ricerca fuzzy e le ricerche successive. Il valore predefinito di questa proprietà è **True**.|  
-|Delimitatori|string|Delimitatori utilizzati dalla trasformazione per suddividere in token i valori di colonna. I delimitatori predefiniti includono i caratteri seguenti: spazio ( ), virgola (,), punto (.), punto e virgola (;), due punti (:), trattino (-), virgolette diritte doppie ("), virgolette diritte singole ('), e commerciale (&), barra (/), barra rovesciata (\\), chiocciola (@), punto esclamativo (!), punto interrogativo (?), parentesi di apertura ((), parentesi di chiusura ()), segno di minore (\<), segno di maggiore (>), parentesi quadra di apertura ([), parentesi quadra di chiusura (]), parentesi graffa di apertura ({), parentesi graffa di chiusura (}), barra verticale (&#124;), cancelletto (#), asterisco (*), accento circonflesso (^) e segno di percentuale (%).|  
+|Delimitatori|string|Delimitatori utilizzati dalla trasformazione per suddividere in token i valori di colonna. I delimitatori predefiniti includono i caratteri seguenti: spazio ( ), virgola (,), punto (.), punto e virgola (;), due punti (:), trattino (-), virgolette diritte doppie ("), virgolette diritte singole ('), e commerciale (&), barra (/), barra rovesciata (\\), chiocciola (@), punto esclamativo (!), punto interrogativo (?), parentesi di apertura ((), parentesi di chiusura ()), segno di minore (\<), greater than (>), parentesi quadra di apertura ([), parentesi quadra di chiusura (]), parentesi graffa di apertura ({), parentesi graffa di chiusura (}), barra verticale (&#124;). cancelletto (#), asterisco (*), accento circonflesso (^) e segno di percentuale (%).|  
 |DropExistingMatchIndex|Boolean|Un valore che specifica se l'indice delle corrispondenze specificato in MatchIndexName viene eliminato quando MatchIndexOptions non è impostata su ReuseExistingIndex. Il valore predefinito di questa proprietà è **True**.|  
 |Exhaustive|Boolean|Valore che specifica se ogni record di input viene confrontato con tutti gli altri record di input. Il valore **True** è destinato per lo più al debug. Il valore predefinito di questa proprietà è **False**.<br /><br /> Nota: Questa proprietà non è disponibile in **Editor trasformazione Ricerca fuzzy**, ma può essere impostata in **Editor avanzato**.|  
 |MatchIndexName|string|Nome dell'indice delle corrispondenze. L'indice delle corrispondenze è la tabella in cui la trasformazione crea e salva l'indice utilizzato. Se viene riusato l'indice delle corrispondenze, MatchIndexName specifica l'indice da riusare. MatchIndexName deve essere un nome di identificatore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valido. Se il nome contiene spazi, ad esempio, deve essere racchiuso tra parentesi.|  

@@ -1,5 +1,6 @@
 ---
 title: Oggetto SQL Statistics di SQL Server | Microsoft Docs
+description: Informazioni sull'oggetto SQLServer:SQL Statistics, che fornisce contatori per il monitoraggio della compilazione e del tipo di richieste inviate a un'istanza di SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 42dd497f32dc322a7b7808beca0779292198e5e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ddb47208f37344a1c7a7985f877486d3254a68f4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758939"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458130"
 ---
 # <a name="sql-server-sql-statistics-object"></a>Oggetto SQL Statistics di SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85758939"
   
  Per altre informazioni sulla parametrizzazione semplice e forzata, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
- Di seguito sono elencati i contatori dell'oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Statistics**di**.  
+ Di seguito sono elencati i contatori dell'oggetto **SQL Statistics** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Contatori dell'oggetto SQL Statistics|Descrizione|  
 |----------------------------------------|-----------------|  

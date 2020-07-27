@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fa19857dc7c0651beeaedfdef8b843fcfc58c62
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 43629b22e6aca90065c139fb35d460384ad1ef1b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296414"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923857"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Creazione di una trasformazione sincrona con il componente script
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Utilizzare un componente di trasformazione nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per modificare e analizzare i dati quando vengono passati dall'origine alla destinazione. Una trasformazione con output sincroni elabora ogni riga di input non appena viene passata attraverso il componente. Una trasformazione con output asincroni attende di aver ricevuto tutte le righe di input per completare la relativa elaborazione. In questo argomento viene descritta una trasformazione sincrona. Per informazioni sulle trasformazioni asincrone, vedere [Creazione di una trasformazione asincrona con il componente script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Per altre informazioni sulla differenza tra componenti sincroni e asincroni, vedere [Informazioni sulle trasformazioni sincrone e asincrone](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  

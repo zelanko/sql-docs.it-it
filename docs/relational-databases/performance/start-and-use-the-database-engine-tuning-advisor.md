@@ -1,5 +1,6 @@
 ---
 title: Avviare e usare Ottimizzazione guidata motore di database | Microsoft Docs
+description: Informazioni su come avviare e usare Ottimizzazione guidata motore di database in SQL Server per creare carichi di lavoro, ottimizzare i database e creare file di input XML.
 ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 00441600bb5d2059686f6fe2bc388146e880d4ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f0986c7af4ed3f6f8284db2e9faf99cad149b216
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737155"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457617"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Avvio e utilizzo di Ottimizzazione guidata motore di database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -268,7 +269,7 @@ Per altre informazioni, vedere [Ottimizzazione del database tramite un carico di
     dta -E -D DatabaseName -if WorkloadFile -s SessionName  
     ```  
   
-     dove `-E` specifica che la sessione di ottimizzazione utilizza una connessione trusted anziché un ID di accesso e una password e `-D` specifica il nome del database da ottimizzare. Per impostazione predefinita, l'utilità si connette all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer locale. Per specificare un database remoto come illustrato nella procedura seguente o per specificare un'istanza denominata, è possibile utilizzare l'opzione `-S`. L'opzione `-if` consente di specificare il nome e il percorso del file del carico di lavoro (uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] o un file di traccia) e `-s` consente di specificare il nome della sessione di ottimizzazione.  
+     dove `-E` specifica che la sessione di ottimizzazione utilizza una connessione trusted anziché un ID di accesso e una password e `-D` specifica il nome del database da ottimizzare. Per impostazione predefinita, l'utilità si connette all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer locale. Per specificare un database remoto come illustrato nella procedura seguente o per specificare un'istanza denominata, è possibile utilizzare l'opzione `-S` . L'opzione `-if` consente di specificare il nome e il percorso del file del carico di lavoro (uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] o un file di traccia) e `-s` consente di specificare il nome della sessione di ottimizzazione.  
   
      Le quattro opzioni illustrate (nome del database, carico di lavoro, tipo di connessione e nome della sessione) sono obbligatorie.  
   

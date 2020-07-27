@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ade0d29ed20bb8b39d9ac2a1762977abe24d8f65
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: acbf13282531e22c37acd247a42f4f346fa6b393
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293517"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922807"
 ---
 # <a name="ado-net-source"></a>Origine ADO NET
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L'origine ADO NET utilizza i dati di un provider .NET e li rende disponibili per il flusso di dati.  
@@ -124,7 +124,7 @@ ms.locfileid: "71293517"
  Consente di visualizzare in anteprima i risultati nella finestra di dialogo **Vista dati** . L'**anteprima** supporta la visualizzazione di un massimo di 200 righe.  
   
 > [!NOTE]  
->  Quando vengono visualizzati i dati in anteprima, le colonne con tipo definito dall'utente CLR (UDT) non contengono dati. Vengono invece visualizzati i valori \<dimensione valore eccessiva per la visualizzazione> o System.Byte[]. Il primo viene visualizzato se si accede all'origine dei dati mediante il [!INCLUDE[vstecado](../../includes/vstecado-md.md)] , il secondo se si utilizza il provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+>  Quando vengono visualizzati i dati in anteprima, le colonne con tipo definito dall'utente CLR (UDT) non contengono dati. Contengono invece i valori \<value too big to display> o System.Byte[] display. Il primo viene visualizzato se si accede all'origine dei dati mediante il [!INCLUDE[vstecado](../../includes/vstecado-md.md)] , il secondo se si utilizza il provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ### <a name="data-access-mode-dynamic-options"></a>Opzioni dinamiche relative alla modalità di accesso ai dati  
   

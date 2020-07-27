@@ -1,5 +1,6 @@
 ---
 title: Join (SQL Server) | Microsoft Docs
+description: Informazioni sui tipi di operazioni di join usate da SQL Server. SQL Server supporta il partizionamento verticale delle tabelle o l'archiviazione a colonne, tramite le operazioni di join.
 ms.custom: ''
 ms.date: 07/19/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c7f2ff4782923eef9ee4d91fa0a7c69239e298c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c4c93c73aa3f20304a5e58fda096565d0db0456a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009682"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915847"
 ---
 # <a name="joins-sql-server"></a>Join (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -245,7 +246,7 @@ Alcune condizioni rendono un join logico idoneo per un join adattivo in modalit�
 - Il livello di compatibilità del database è 140 o superiore.
 - La query è un'istruzione `SELECT` (attualmente le istruzioni di modifica dei dati non sono idonee).
 - Il join è idoneo per l'esecuzione in un algoritmo fisico di join a cicli annidati indicizzati o di hash join.
-- L'hash join usa la [modalità batch](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) con un indice columnstore nella query globale o una tabella Columnstore indicizzata a cui fa riferimento direttamente il join.
+- L'hash join usa la modalità batch, abilitata con un indice columnstore nella query globale, una tabella Columnstore indicizzata a cui fa riferimento direttamente il join o la [modalità batch nella funzionalità rowstore](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore).
 - Il primo elemento figlio (riferimento esterno) deve essere identico per le soluzioni alternative generate dal join a cicli annidati e dall'hash join.
 
 ### <a name="adaptive-threshold-rows"></a>Righe della soglia adattiva

@@ -1,5 +1,6 @@
 ---
 title: Oggetto General Statistics di SQL Server | Microsoft Docs
+description: Informazioni sull'oggetto SQLServer:General Statistics, che fornisce i contatori per monitorare l'attività generale a livello di server, ad esempio il numero di connessioni correnti.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 854345e3985d3254e774071e8e6cc4df36be177b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d146725df4f8c2eaffafb0c46f8062849857ad01
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775865"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458293"
 ---
 # <a name="sql-server-general-statistics-object"></a>Oggetto Statistiche generali di SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   L'oggetto **SQLServer:General Statistics** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include contatori che consentono di monitorare l'attività generale del server, ad esempio il numero di connessioni correnti e il numero di utenti al secondo che si connettono e disconnettono dai computer che eseguono un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo tipo di monitoraggio è particolarmente utile nei sistemi di elaborazione delle transazioni online (OLTP) di grandi dimensioni in cui numerosi client si connettono e disconnettono da computer che eseguono un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Nella tabella seguente vengono descritti i contatori dell'oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]General Statistics**di**.  
+ Nella tabella seguente vengono descritti i contatori dell'oggetto **General Statistics** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Contatori Statistiche generali di SQL Server|Descrizione|  
 |--------------------------------------------|-----------------|  

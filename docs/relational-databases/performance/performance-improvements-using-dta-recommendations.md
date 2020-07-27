@@ -1,5 +1,6 @@
 ---
 title: Indicazioni di Ottimizzazione guidata motore di database per il miglioramento delle prestazioni
+description: Informazioni su come Ottimizzazione guidata motore di database può proporre una combinazione di indici rowstore e columnstore grazie all'analisi di un carico di lavoro del database in SQL Server.
 ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3dcd1405bb41243bf2bd618d3fe8ed89393ed5d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abad80759ccfbc2d5315c5f89cf1dcce3172c9f4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762843"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458283"
 ---
 # <a name="performance-improvements-using-database-engine-tuning-advisor-dta-recommendations"></a>Miglioramenti delle prestazioni mediante le indicazioni di Ottimizzazione guidata motore di database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,8 +31,8 @@ A partire da SQL Server 2016, Ottimizzazione guidata motore di database può pro
 Per illustrare i vantaggi delle indicazioni di Ottimizzazione guidata motore di database relative alle prestazioni del carico di lavoro, abbiamo provato diversi carichi di lavoro reali dei clienti. Per ogni carico di lavoro dei clienti, Ottimizzazione guidata motore di database analizza le singole query e il carico di lavoro completo delle query. Consideriamo tre alternative:
   
   1. **Solo indici columnstore**: compilare solo gli indici columnstore per tutte le tabelle senza usare Ottimizzazione guidata motore di database. 
-  2. **Ottimizzazione guidata motore di database (solo indici rowstore)** : eseguire Ottimizzazione guidata motore di database con l'opzione per fornire indicazioni solo per gli indici rowstore.
-  3. **Ottimizzazione guidata motore di database (indici rowstore + columnstore)** : eseguire Ottimizzazione guidata motore di database con l'opzione per fornire indicazioni sia per gli indici rowstore che per gli columnstore.  
+  2. **Ottimizzazione guidata motore di database (solo indici rowstore)** : eseguire Ottimizzazione guidata motore di database con l'opzione di specificare indicazioni solo per gli indici rowstore.
+  3. **Ottimizzazione guidata motore di database (indici rowstore + columnstore)** : eseguire Ottimizzazione guidata motore di database con l'opzione per specificare indicazioni sia per gli indici rowstore che per gli indici columnstore.  
    
 In ogni caso abbiamo implementato gli indici consigliati. Viene evidenziato il tempo di CPU (in millisecondi) come valore medio di più esecuzioni della query o del carico di lavoro. Nella figura seguente è riportato il tempo di CPU in millisecondi per i carichi di lavoro tra due diversi database dei clienti. Si noti che l'asse y (tempo di CPU) usa una scala logaritmica.   
 
@@ -40,7 +41,7 @@ In ogni caso abbiamo implementato gli indici consigliati. Viene evidenziato il t
 
 
 
-**Necessario per progettazioni fisiche miste**: primo set di barre corrispondente a Cliente 1 Query 1. L'indicazione di Ottimizzazione guidata motore di database (rowstore + columnstore) che prevede un set di quattro indici columnstore e sei indici rowstore ha come risultato un tempo di CPU da 2,5 a 4 volte inferiore rispetto all'uso del solo indice columnstore e di Ottimizzazione guidata motore di database (solo rowstore). Questo esempio dimostra i vantaggi delle progettazioni fisiche miste costituite da indici rowstore e columnstore *anche per una singola query*. 
+**Necessità di progettazioni fisiche miste**: primo set di barre corrispondente a Cliente 1 Query 1. L'indicazione di Ottimizzazione guidata motore di database (rowstore + columnstore) che prevede un set di quattro indici columnstore e sei indici rowstore ha come risultato un tempo di CPU da 2,5 a 4 volte inferiore rispetto all'uso del solo indice columnstore e di Ottimizzazione guidata motore di database (solo rowstore). Questo esempio dimostra i vantaggi delle progettazioni fisiche miste costituite da indici rowstore e columnstore *anche per una singola query*. 
 
 **Efficacia delle indicazioni relative agli indici rowstore**: il secondo e terzo set di barre, corrispondenti a Cliente 1 Query 2 e a Cliente 2 Query 1, sono casi in cui le query includono predicati del filtro selettivo che traggono vantaggio dagli indici rowstore adatti. Per entrambe queste query, Ottimizzazione guidata motore di database (solo rowstore) e Ottimizzazione guidata motore di database (rowstore + columnstore) consigliano l'uso solo degli indici rowstore. Questi esempi illustrano inoltre che, anche se Ottimizzazione guidata motore di database viene chiamato con l'opzione per consigliare gli indici columnstore, il relativo approccio basato sui costi fa sì che venga proposto un indice columnstore solo se effettivamente il carico di lavoro può trarne vantaggio.
 

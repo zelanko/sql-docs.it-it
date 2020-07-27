@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a40336899e804ee634cf586078ec7c219f31c486
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e26918f5b545068ad5e121452dc704f7d72abe35
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297873"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919512"
 ---
 # <a name="script-component"></a>Componente script
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Il componente Script ospita lo script e consente a un pacchetto di includere ed eseguire codice script personalizzato. È possibile utilizzare il componente script nei pacchetti per gli scopi seguenti:  
@@ -133,7 +133,7 @@ ms.locfileid: "71297873"
  Consente di digitare un nome descrittivo univoco per la connessione.  
   
  **Gestione connessione**  
- Selezionare una gestione connessione nell'elenco delle gestioni connessioni disponibili oppure selezionare **\<Nuova connessione>** per aprire la finestra di dialogo **Aggiungi gestione connessione SSIS**.  
+ Selezionare una gestione connessione nell'elenco delle gestioni connessioni disponibili oppure selezionare **\<New connection>** per aprire la finestra di dialogo **Aggiungi gestione connessione SSIS**.  
   
  **Descrizione**  
  Consente di digitare una descrizione per la connessione.  

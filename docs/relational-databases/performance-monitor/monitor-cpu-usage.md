@@ -1,5 +1,6 @@
 ---
 title: Monitorare l'uso della CPU | Microsoft Docs
+description: Monitorare un'istanza di SQL Server per determinare se le percentuali di utilizzo della CPU sono comprese in un intervallo normale. Usare Monitor di sistema per verificare quanto tempo impiega la CPU per eseguire un thread.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0ba69baf585aca6d6dd30c6a0ab0016a76ef6047
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e81db69a70a54365ffe7da6fbe9933bb98848db
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787469"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458559"
 ---
 # <a name="monitor-cpu-usage"></a>Monitorare l'utilizzo della CPU
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

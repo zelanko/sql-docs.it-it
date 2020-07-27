@@ -1,5 +1,6 @@
 ---
 title: Eliminare una guida di piano | Microsoft Docs
+description: Informazioni su come eliminare una guida di piano in SQL Server usando SQL Server Management Studio o Transact-SQL. Usare Transact-SQL per eliminare tutte le guide di un database.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3138d4fcda123d56af975b2f2cfd5d5e4c76536b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e93982c0ad59b7016902c64cd4dd81d0f81c270f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655620"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457313"
 ---
 # <a name="delete-a-plan-guide"></a>Eliminare una guida di piano
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85655620"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  L'eliminazione di una guida di piano OBJECT richiede l'autorizzazione ALTER per l'oggetto (ad esempio funzione, stored procedure) a cui fa riferimento la guida di piano. Per tutte le altre guide di piano è necessario disporre dell'autorizzazione ALTER DATABASE.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-delete-a-plan-guide"></a>Per eliminare una guida di piano  
   
@@ -53,7 +54,7 @@ ms.locfileid: "85655620"
   
 4.  Nella finestra di dialogo **Elimina oggetto** verificare che venga selezionata la guida di piano corretta, quindi fare clic su **OK**.  
 
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-delete-a-single-plan-guide"></a>Per eliminare una singola guida di piano:  
   

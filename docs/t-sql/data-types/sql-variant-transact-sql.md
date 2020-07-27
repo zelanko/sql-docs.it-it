@@ -1,5 +1,5 @@
 ---
-title: sql_variant (Transact-SQL) | Microsoft Docs
+title: sql_variant (Transact-SQL)
 ms.custom: ''
 ms.date: 09/12/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 81914007c22cf850693d2a38b0da83cd64cde6c5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a16ac1b62c5a0aad216db06dc4e11c8c7263da65
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754804"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556206"
 ---
 # <a name="sql_variant-transact-sql"></a>sql_variant (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Tipo di dati per l'archiviazione di valori per vari tipi di dati supportati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
@@ -36,10 +37,12 @@ Tipo di dati per l'archiviazione di valori per vari tipi di dati supportati da [
   
 ## <a name="syntax"></a>Sintassi  
   
-```sql
+```syntaxsql
 sql_variant  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>Osservazioni  
 **sql_variant** può essere usato in colonne, parametri, variabili e in valori restituiti di funzioni definite dall'utente. **sql_variant** consente a questi oggetti di database di supportare valori di altri tipi di dati.
   
@@ -97,18 +100,24 @@ Per i confronti **sql_variant** vengono applicate le regole seguenti:
 ## <a name="converting-sql_variant-data"></a>Conversione di dati sql_variant  
 Nel caso del tipo di dati **sql_variant**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta la conversione implicita in **sql_variant** degli oggetti con tipi di dati diversi. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta tuttavia le conversioni implicite dal tipo di dati **sql_variant** in oggetti con un tipo di dati diverso.
   
-## <a name="restrictions"></a>Restrizioni  
-Nella tabella seguente sono elencati i tipi di valori che non è possibile archiviare con **sql_variant**:
-  
-|||  
-|-|-|  
-|**ntext**|**varbinary(max)**|  
-|**nvarchar(max)**|**xml**|  
-|**text**|**ntext**|  
-|**image**|**rowversion** (**timestamp**)|  
-|**sql_variant**|**geography**|  
-|**hierarchyid**|**geometry**|  
-|Tipi definiti dall'utente|**datetimeoffset**<sup>1</sup>| 
+## <a name="restrictions"></a>Restrizioni
+
+Di seguito sono elencati i tipi di valori che non è possibile archiviare con **sql_variant**:
+
+- **datetimeoffset**<sup>1</sup>
+- **geography**
+- **geometry**
+- **hierarchyid**
+- **image**
+- **ntext**
+- **nvarchar(max)**
+- **rowversion** (**timestamp**)
+- **text**
+- **ntext**
+- **varbinary(max)**
+- **sql_variant**
+- Tipi definiti dall'utente
+- **xml**
 
 <sup>1</sup> SQL Server 2012 e versioni successive non limitano **datetimeoffset**.
 

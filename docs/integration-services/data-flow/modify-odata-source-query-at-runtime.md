@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa8a5454fb85c4a6bcfe53088549107f09b9772f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d98222a9f8663dfb2495220ee43af34c1f0c02d9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298205"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920803"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>Fornire una query di origine OData in fase di esecuzione
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
  È possibile modificare la query di origine OData in fase di esecuzione aggiungendo un'*espressione* alla proprietà **[Origine OData].[Query]** dell'attività Flusso di dati.  
@@ -33,7 +33,7 @@ ms.locfileid: "71298205"
   
 1.  Fare clic con il pulsante destro del mouse sull'**attività Flusso di dati** e selezionare l'opzione **Imposta parametri**.  
   
-2.  Nella finestra di dialogo **Imposta parametri** selezionare **[\<< nome del componente di origine OData].[Query]** per **Proprietà**.  
+2.  Nella finestra di dialogo **Imposta parametri** selezionare **[\<Name of the OData Source Component>].[Query]** per **Proprietà**.  
   
 3.  Scegliere se **creare un nuovo parametro** o **usare un parametro esistente**.  
   

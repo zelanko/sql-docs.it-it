@@ -1,5 +1,6 @@
 ---
 title: Monitorare e ottimizzare le prestazioni | Microsoft Docs
+description: Informazioni sul monitoraggio dei database per valutare le prestazioni del server, sull'uso di snapshot periodici e sulla raccolta continua di dati per tenere traccia delle tendenze delle prestazioni.
 ms.custom: ''
 ms.date: 07/18/2016
 ms.prod: sql
@@ -29,12 +30,12 @@ ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8867064c0d2745c0e34e9e07aa956cf68c76690e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7706c41442ee412cacea4e61b76a14ac7129d72f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716910"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458880"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Monitoraggio e ottimizzazione delle prestazioni
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

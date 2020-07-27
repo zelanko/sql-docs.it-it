@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d31b2d7515eaebc7d0c2e5fb5861d8b6b51ad6f7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 205c755ce2a719031c0b07a2884134d81bd55d55
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293709"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914622"
 ---
 # <a name="wmi-event-watcher-task"></a>Attività Monitoraggio eventi WMI
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L'attività Monitoraggio eventi WMI consente di monitorare gli eventi di WMI (Windows Management Instrumentation, Strumentazione gestione Windows) utilizzando una query WQL (Management Instrumentation Query Language) per specificare gli eventi desiderati. È possibile utilizzare l'attività Monitoraggio eventi WMI per gli scopi seguenti:  
@@ -130,7 +130,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 ### <a name="static-options"></a>Opzioni statiche  
  **WMIConnectionName**  
- Selezionare una gestione connessione WMI nell'elenco o creare una nuova gestione connessione facendo clic su \<**Nuova connessione WMI**>.  
+ Selezionare una gestione connessione WMI nell'elenco oppure fare clic su \<**New WMI Connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione WMI](../../integration-services/connection-manager/wmi-connection-manager.md), [Editor gestione connessione WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
   
@@ -169,13 +169,13 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 #### <a name="wqlquerysource--file-connection"></a>WQLQuerySource = Connessione file  
  **WQLQuerySource**  
- Selezionare una gestione connessione file nell'elenco o fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione file nell'elenco oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="wqlquerysource--variable"></a>WQLQuerySource = Variabile  
  **WQLQuerySource**  
- Selezionare una variabile nell'elenco oppure fare clic su \<**Nuova variabile**> per crearne una nuova.  
+ Selezionare una variabile nell'elenco oppure fare clic su \<**New variable...**> per crearne una nuova.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

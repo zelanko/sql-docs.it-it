@@ -10,16 +10,16 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 6e46ebc13ddd9368a2234c99979c9036a702e11e
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 00a31303aac5f562462cf6950e233fa84be31215
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924865"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922107"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Supporto di Scale Out per disponibilità elevata tramite istanza del cluster di failover di SQL Server
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -47,7 +47,7 @@ Durante l'installazione, includere il nome rete SQL Server nei nomi comuni del c
 Seguire [3. Installare Scale Out Master nel nodo secondario](scale-out-support-for-high-availability.md#3-install-scale-out-master-on-the-secondary-node)
 
 ## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5. Aggiornare il file di configurazione del servizio Scale Out Master
-Aggiornare il file di configurazione del servizio Scale Out Master, \<unità\>:\Programmi\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config nei nodi primario e secondario. Aggiornare **SqlServerName** in [nome rete SQL Server]//[Nome istanza] o [nome rete SQL Server] per l'istanza predefinita.
+Aggiornare il file di configurazione del servizio Scale Out Master, \<drive\>:\Programmi\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config nei nodi primario e secondario. Aggiornare **SqlServerName** in [nome rete SQL Server]//[Nome istanza] o [nome rete SQL Server] per l'istanza predefinita.
 
 ## <a name="6-add-scale-out-master-service-to-sql-server-role-in-windows-failover-cluster"></a>6. Aggiungere il servizio Scale Out Master al ruolo di SQL Server nel cluster di failover di Windows
 In Gestione cluster di failover connettersi al cluster per Scale Out. Selezionare Ruoli in Explorer, fare clic con il pulsante destro del mouse sul ruolo di SQL Server e selezionare Add Resource (Aggiungi risorsa) e Generic Service (Servizio generico). 

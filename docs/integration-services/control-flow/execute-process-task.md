@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 214f28fbb977414d4e14fdd14f2be53e9b705bc1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a47088f610dc016fe904b9b772e261b9bd2adcf0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298332"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920685"
 ---
 # <a name="execute-process-task"></a>Attività Esegui processo
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L'attività Esegui processo consente di eseguire un'applicazione o un file batch come parte del flusso di lavoro di un pacchetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Sebbene sia possibile usarla per aprire qualsiasi applicazione standard, ad esempio [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] o [!INCLUDE[ofprword](../../includes/ofprword-md.md)], l'attività Esegui processo viene in genere usata per eseguire applicazioni aziendali o file batch che usano un'origine dei dati. È ad esempio possibile utilizzare l'attività Esegui processo per espandere un file di testo compresso. Il pacchetto può quindi utilizzare il file di testo come origine dei dati per il proprio flusso di dati. Sempre a titolo di esempio, è anche possibile utilizzare tale attività per eseguire un'applicazione [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] personalizzata che genera un report giornaliero sulle vendite, che può essere allegato a un'attività Invia messaggi e inoltrato a una lista di distribuzione.  
@@ -116,15 +116,15 @@ ms.locfileid: "71298332"
  Digitare il percorso della cartella contenente il file eseguibile oppure fare clic sul pulsante sfoglia **(...)** per individuare la cartella.  
   
  **StandardInputVariable**  
- Selezionare una variabile per l'invio dell'input al processo oppure fare clic su \<**Nuova variabile...** > per crearne una nuova:  
+ Consente di selezionare una variabile per l'invio dell'input al processo. È anche possibile fare clic su \<**New variable...**> per crearne una nuova:  
   
  **Argomenti correlati:** [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
- Selezionare una variabile per l'acquisizione dell'output del processo oppure fare clic su \<**Nuova variabile...** > per crearne una nuova.  
+ Consente di selezionare una variabile per l'acquisizione dell'output del processo. È anche possibile fare clic su \<**New variable...**> per crearne una nuova.  
   
  **StandardErrorVariable**  
- Selezionare una variabile per l'acquisizione dell'output di errore del processore oppure fare clic su \<**Nuova variabile...** > per crearne una nuova.  
+ Consente di selezionare una variabile per l'acquisizione dell'output degli errori del processore. È anche possibile fare clic su \<**New variable...**> per crearne una nuova.  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  Consente di indicare se l'attività deve avere esito negativo nel caso in cui il codice di uscita del processo non corrisponda al valore specificato in **SuccessValue**.  

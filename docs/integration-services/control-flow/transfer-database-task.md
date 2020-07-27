@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8badd727143d80db08eed45ddbf5102c635ddeeb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9aafd57717c2ac90757393ae8d0d75e569b88942
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293902"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913990"
 ---
 # <a name="transfer-database-task"></a>Attività Trasferisci database
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L'attività Trasferisci database trasferisce un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tra due istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A differenza di altre attività che trasferiscono oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo eseguendone una copia, l'attività Trasferisci database può copiare o spostare un database. Tramite questa attività è inoltre possibile copiare un database all'interno dello stesso server.  
@@ -108,10 +108,10 @@ ms.locfileid: "71293902"
   
 ### <a name="options"></a>Opzioni  
  **SourceConnection**  
- Selezionare una gestione connessione SMO nell'elenco o fare clic su **\<Nuova connessione...>** per creare una nuova connessione al server di origine.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su **\<New connection...>** per creare una nuova connessione al server di origine.  
   
  **DestinationConnection**  
- Selezionare una gestione connessione SMO nell'elenco o fare clic su **Nuova connessione...>\<** per creare una nuova connessione al server di destinazione.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su **\<New connection...>** per creare una nuova connessione al server di destinazione.  
   
  **DestinationDatabaseName**  
  Specificare il nome del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel server di destinazione.  

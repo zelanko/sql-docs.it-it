@@ -15,16 +15,16 @@ f1_keywords:
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 153cbd447fa84087b50501005d0ea457f47d1eda
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2ca597190bb5ace7a2f81532ae6482b3e423c81f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298218"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914770"
 ---
 # <a name="odbc-destination"></a>Destinazione ODBC
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Tramite la destinazione ODBC viene eseguito il caricamento bulk di dati in tabelle di database supportate da ODBC. La destinazione ODBC utilizza una gestione connessione ODBC per la connessione all'origine dati.  
@@ -132,7 +132,7 @@ ms.locfileid: "71298218"
  Elenco delle colonne di destinazione disponibili. Trascinare un colonna di destinazione in una colonna di input disponibile per eseguire il mapping tra le colonne.  
   
 #### <a name="input-column"></a>Colonna di input  
- Consente di visualizzare le colonne di input selezionate dall'utente. È possibile rimuovere i mapping selezionando **\<ignora>** per escludere colonne dall'output.  
+ Consente di visualizzare le colonne di input selezionate dall'utente. È possibile rimuovere i mapping selezionando **\<ignore>** per escludere colonne dall'output.  
   
 #### <a name="destination-column"></a>Colonna di destinazione  
  Consente di visualizzare tutte le colonne di destinazione disponibili, con o senza mapping eseguito.  

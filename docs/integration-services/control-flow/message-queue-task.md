@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 486339cc1c5ef550dbf4eee227bec3ad67ce0e3a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 94be603d8982e4c05baed997b1072afbe66c2eec
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294095"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915255"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L'attività Message Queue consente di usare Microsoft Message Queuing (noto anche come MSMQ) per scambiare messaggi tra pacchetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o per inviare messaggi a una coda di applicazione elaborata da un'applicazione personalizzata. I messaggi possono essere in forma di testo semplice, di file o di variabili con i rispettivi valori.  
@@ -120,7 +120,7 @@ ms.locfileid: "71294095"
  Consente di indicare se utilizzare il formato 2000 di Microsoft Message Queuing (noto anche come MSMQ). Il valore predefinito è **False**.  
   
  **MSMQConnection**  
- È possibile selezionare una gestione connessione MSMQ esistente o fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione MSMQ nell'elenco oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati**: [Gestione connessione MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md), [Editor gestione connessione MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
   
@@ -230,7 +230,7 @@ ms.locfileid: "71294095"
 |**Dal pacchetto**|Il messaggio riceve solo messaggi dal pacchetto specificato. La selezione del valore determina la visualizzazione dell'opzione dinamica **Identifier**.|  
   
  **Variabile**  
- Digitare il nome della variabile oppure fare clic su \<**Nuova variabile...** > per configurare una nuova variabile.  
+ Digitare il nome della variabile oppure fare clic su \<**New variable...**> per configurare una nuova variabile.  
   
  **Argomenti correlati:** [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -275,7 +275,7 @@ ms.locfileid: "71294095"
  Specificare la stringa con cui confrontare il messaggio, a meno che l'opzione **Compare** sia impostata su **Nessuno**.  
   
  **Variabile**  
- Digitare il nome della variabile per la memorizzazione del messaggio ricevuto oppure fare clic su \<**Nuova variabile...** > e quindi configurare una nuova variabile.  
+ Digitare il nome della variabile per la memorizzazione del messaggio ricevuto oppure fare clic su \<**New variable...**> per configurare una nuova variabile.  
   
  **Argomenti correlati:** [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

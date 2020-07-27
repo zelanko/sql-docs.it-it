@@ -1,5 +1,6 @@
 ---
 title: Implementazione della compressione di pagina | Microsoft Docs
+description: Informazioni su come il motore di database di SQL Server implementa la compressione delle pagine per semplificare la pianificazione dello spazio di archiviazione necessario per i dati.
 ms.custom: ''
 ms.date: 06/30/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6a8c9ad32e12d78a04579a0d93a4659546a9c7a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 603246beb04561a8462678d3ce10b7d42ae1c723
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85637554"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86459023"
 ---
 # <a name="page-compression-implementation"></a>Implementazione della compressione di pagina
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

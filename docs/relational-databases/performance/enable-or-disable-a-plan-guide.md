@@ -1,5 +1,6 @@
 ---
 title: Abilitare o disabilitare una guida di piano | Microsoft Docs
+description: Informazioni su come disabilitare e abilitare le guide di piano usando SQL Server Management Studio o Transact-SQL. Disabilitare o abilitare una o tutte le guide di piano in un database.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3bd43f7ae13f2c107915ef2e37655b5b7fe16b7f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04180f951747b7517775ec7c222f679d043286c3
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655396"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457273"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>Abilitare o disabilitare una guida di piano
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85655396"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  La disabilitazione o l'abilitazione di una guida di piano OBJECT richiede l'autorizzazione ALTER per l'oggetto (ad esempio funzione, stored procedure) a cui fa riferimento la guida di piano. Per tutte le altre guide di piano è necessario disporre dell'autorizzazione ALTER DATABASE.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-disable-or-enable-a-plan-guide"></a>Per disabilitare o abilitare una guida di piano  
   
@@ -72,7 +73,7 @@ ms.locfileid: "85655396"
   
 3.  Nella finestra di dialogo **Disabilita tutte le guide di piano** o **Abilita tutte le guide di piano** , verificare che l'azione scelta venga completata correttamente, quindi fare clic su **Chiudi**.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-disable-or-enable-a-plan-guide"></a>Per disabilitare o abilitare una guida di piano  
   

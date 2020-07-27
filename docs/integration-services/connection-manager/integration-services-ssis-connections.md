@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a09cef6ce1e90fe9fce7b7bd4b025598a387c1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 29ecedb74759b3290ff5fb391b95048aeaba5e8d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79112276"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923157"
 ---
 # <a name="integration-services-ssis-connections"></a>Connessioni in Integration Services (SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   I pacchetti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usano le connessioni per eseguire varie attività e implementare le funzionalità di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] seguenti:  
@@ -113,9 +113,9 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
   
 |Type|Descrizione|Argomento|  
 |----------|-----------------|-----------|  
-|ORACLE|Consente di connettersi a un server Oracle \<informazioni versione\>.|La gestione connessione Oracle è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
+|ORACLE|Si connette a un server Oracle \<version info\>.|La gestione connessione Oracle è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://www.microsoft.com/download/details.aspx?id=55179).|  
 |SAPBI|Consente di connettersi a un sistema SAP NetWeaver BI versione 7.|La gestione connessione SAP BI è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa al [Feature Pack di Microsoft SQL Server 2008](https://www.microsoft.com/download/details.aspx?id=30440).|  
-|TERADATA|Consente di connettersi a un server Teradata \<informazioni versione\>.|La gestione connessione Teradata è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
+|TERADATA|Si connette a un server Teradata \<version info\>.|La gestione connessione Teradata è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://www.microsoft.com/download/details.aspx?id=55179).|  
   
 ### <a name="custom-connection-managers"></a>Gestioni connessioni personalizzate  
  È inoltre possibile scrivere gestioni connessioni personalizzate. Per ulteriori informazioni, vedere [Developing a Custom Connection Manager](../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md).  

@@ -1,5 +1,6 @@
 ---
 title: Statistiche sulle query dinamiche | Microsoft Docs
+description: Informazioni su come visualizzare il piano di esecuzione dinamico di una query attiva in SQL Server Management Studio. Usare le statistiche di esecuzione per eseguire il debug dei problemi di prestazioni delle query.
 ms.custom: ''
 ms.date: 11/21/2018
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2705923e404273046b828b2cc4144a3f65c296a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d23b18096f1be3feeaddbee6bc2517bcaae8130
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731799"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457888"
 ---
 # <a name="live-query-statistics"></a>Live Query Statistics
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

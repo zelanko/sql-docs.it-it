@@ -1,5 +1,6 @@
 ---
 title: Aggiornare i database tramite l'Assistente ottimizzazione query
+description: Informazioni su come l'Assistente ottimizzazione query illustra il flusso di lavoro consigliato per garantire la stabilità delle prestazioni durante gli aggiornamenti alle versioni di SQL Server più recenti.
 ms.custom: seo-dt-2019
 ms.date: 02/13/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 3113caec4026547fcf2dca940a3908f64b6efa44
-ms.sourcegitcommit: 69f93dd1afc0df76c3b4d9203adae0ad7dbd7bb2
+ms.openlocfilehash: 25083a6254d05abb44a4df3e96d5b070c3d0ba37
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82598747"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457571"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Aggiornamento di database mediante l'Assistente ottimizzazione query
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -185,7 +186,7 @@ L'Assistente ottimizzazione Query è una funzionalità basata sulla sessione che
     -  **ID query** 
     -  **Testo query**: istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che può essere espansa facendo clic sul pulsante **...** .
     -  **Stato**: visualizza lo stato di sperimentazione corrente per la query.
-    -  **Metrica baseline**: la metrica selezionata (Durata o CpuTime) in ms per le query eseguita nel **Passaggio 2, passaggio secondario 3** che rappresenta la query regredita dopo l'aggiornamento di compatibilità del database.
+    -  **Metrica baseline**: la metrica selezionata (Durata o CpuTime) in ms per le query eseguita nel **Passaggio 2 passaggio secondario 3**, che rappresenta la query regredita dopo l'aggiornamento di compatibilità del database.
     -  **Metrica osservata**: la metrica selezionata (durata o CpuTime) in ms per la query dopo la sperimentazione, per un'ottimizzazione proposta con risultati soddisfacenti.
     -  **% di modifica**: percentuale di modifica per la metrica selezionata tra lo stato prima e dopo la sperimentazione, che rappresenta la quantità di miglioramento misurata per la query con l'ottimizzazione proposta.
     -  **Opzione di query**: collegamento all'hint proposto che migliora la metrica di esecuzione di query.

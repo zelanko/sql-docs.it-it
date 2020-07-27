@@ -1,5 +1,6 @@
 ---
 title: Oggetto Database Mirroring di SQL Server | Microsoft Docs
+description: Informazioni sull'oggetto prestazione SQLServer:Database Mirroring, che include contatori delle prestazioni per segnalare informazioni sul mirroring del database di SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b2239718cae70fc5df05e65e7d310e86efe65efc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c2d3dd59f6e2736938bfc9880e7258cf81dfafb
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760557"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458023"
 ---
 # <a name="sql-server-database-mirroring-object"></a>Oggetto Database Mirroring di SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "85760557"
 |**KB coda rollforward**|Numero totale di kilobyte di log salvato ancora da applicare al database mirror per eseguirne il rollforward. Viene inviato al principale dal mirror.|  
 |**Tempo ACK invio/ricezione**|Millisecondi di attesa prima che i messaggi vengano riconosciuti dal partner nell'ultimo secondo.<br /><br /> Questo contatore è utile per diagnosticare un problema che potrebbe essere causato da un collo di bottiglia della rete, ad esempio failover inspiegabili, una lunga coda di invio o un'elevata latenza della transazione. In questi casi è possibile analizzare il valore di tale contatore per determinare se la causa del problema risiede nella rete.|  
 |**Invii/sec**|Numero di messaggi di mirroring inviati al secondo.|  
-|**Ritardo transazioni**|Periodo di attesa dell'acknowledgement per un commit senza terminazione.|  
+|**Ritardo transazioni**|Periodo di attesa dell'acknowledgment per un commit senza terminazione.|  
   
 > [!NOTE]  
 >  Su ogni partner, alcuni dei contatori mostrano un valore zero in base al ruolo attualmente svolto dal partner.  

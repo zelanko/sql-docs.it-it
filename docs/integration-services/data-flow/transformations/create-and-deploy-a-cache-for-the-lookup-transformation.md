@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e53569a8680ec3a6414aeeaa83e9322e77568ecf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d0f402739a63d4e11983c4ad1b50d0c2f337a9e1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297979"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918855"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Creazione e distribuzione di una cache per la trasformazione Ricerca
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   È possibile creare e distribuire un file di cache (.caw) per la trasformazione Ricerca. Il set di dati di riferimento è archiviato nel file di cache.  
@@ -90,7 +90,7 @@ ms.locfileid: "71297979"
   
 4.  Configurare il progetto per creare un'utilità di distribuzione e quindi compilare il progetto. Per altre informazioni, vedere [Creazione di un'utilità di distribuzione](../../../integration-services/packages/create-a-deployment-utility.md).  
   
-     Viene creato un file manifesto, \<*nome progetto*>.SSISDeploymentManifest.xml, che elenca i vari file nel progetto, i pacchetti e le configurazioni del pacchetto.  
+     Viene creato un file manifesto, \<*project name*>.SSISDeploymentManifest.xml che elenca i vari file nel progetto, i pacchetti e le configurazioni del pacchetto.  
   
 5.  Distribuire il pacchetto nel file system. Per altre informazioni, vedere [Distribuzione di pacchetti con l'utilità di distribuzione](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
   

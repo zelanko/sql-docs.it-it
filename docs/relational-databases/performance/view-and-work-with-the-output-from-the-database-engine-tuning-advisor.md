@@ -1,6 +1,6 @@
 ---
 title: Output di DTA
-description: Visualizzare e usare l'output di Ottimizzazione guidata motore di database (DTA).
+description: Informazioni su come usare i riepiloghi, le raccomandazioni, i report e i log di ottimizzazione creati da Ottimizzazione guidata motore di database durante l'installazione di SQL Server.
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 75a8ee28972b2b80fc1244a80b35b7c9d5d6daee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c6a6dace6d14ea38aa411924f0c74dfec2218f77
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737089"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458575"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>Visualizzare e usare l'output di Ottimizzazione guidata motore di database (DTA)
 

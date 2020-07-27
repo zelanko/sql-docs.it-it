@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa6235337aab70ed826a5507e7bd8ff2a45c4636
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e265f95741ba3957902e7f502232bc4c08bbcbd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71286586"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914235"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Informazioni sul modello a oggetti del componente script
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Come illustrato in [Codifica e debug del componente script](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md), il progetto del componente script contiene tre elementi:  
@@ -121,7 +121,7 @@ public override void PreExecute()
   
 -   Una proprietà **\<column>_IsNull** per ogni colonna di input selezionata. Anche questa proprietà è di sola lettura o di lettura/scrittura a seconda del **Tipo di utilizzo** specificato per la colonna.  
   
--   Un metodo **DirectRowTo\<outputbuffer>** per ogni output configurato. Questi metodi verranno usati per filtrare le righe in uno dei diversi output dello stesso elemento **ExclusionGroup**.  
+-   Metodo **DirectRowTo\<outputbuffer>** per ogni output configurato. Questi metodi verranno usati per filtrare le righe in uno dei diversi output dello stesso elemento **ExclusionGroup**.  
   
 -   Una funzione **NextRow** per ottenere la riga di input successiva e una funzione **EndOfRowset** per determinare se è stato elaborato l'ultimo buffer di dati. Queste funzioni non sono in genere necessarie quando si usano i metodi di elaborazione dell'input implementati nella classe di base **UserComponent**. La sezione seguente contiene altre informazioni sulla classe di base **UserComponent**.  
   
@@ -130,9 +130,9 @@ public override void PreExecute()
   
 -   Un'implementazione sottoposta a override del metodo **ProcessInput**. Si tratta del metodo chiamato in fase di esecuzione dal motore flusso di dati dopo il metodo **PreExecute** e può essere chiamato più volte. **ProcessInput** passa l'elaborazione al metodo **\<inputbuffer>_ProcessInput**. Il metodo **ProcessInput** verifica quindi se è stata raggiunta la fine del buffer di input e, in caso affermativo, chiama il metodo **FinishOutputs** sottoponibile a override e il metodo **MarkOutputsAsFinished** privato. Il metodo **MarkOutputsAsFinished** chiama quindi **SetEndOfRowset** sull'ultimo buffer di output.  
   
--   Un'implementazione sottoponibile a override del metodo **\<inputbuffer>_ProcessInput**. Questa implementazione predefinita esegue il ciclo di ogni riga di input e chiama **\<inputbuffer>_ProcessInputRow**.  
+-   Un'implementazione sovrascrivibile del metodo **\<inputbuffer>_ProcessInput**. Questa implementazione predefinita esegue il ciclo di ogni riga di input e chiama **\<inputbuffer>_ProcessInputRow**.  
   
--   Un'implementazione sottoponibile a override del metodo **\<inputbuffer>_ProcessInputRow**. L'implementazione predefinita è vuota. Si tratta del metodo di cui in genere si esegue l'override per scrivere il codice personalizzato di elaborazione dati.  
+-   Un'implementazione sovrascrivibile del metodo **\<inputbuffer>_ProcessInputRow**. L'implementazione predefinita è vuota. Si tratta del metodo di cui in genere si esegue l'override per scrivere il codice personalizzato di elaborazione dati.  
   
 #### <a name="what-your-custom-code-should-do"></a>Funzione del codice personalizzato  
  Per elaborare l'input nella classe **ScriptMain** è possibile usare i metodi seguenti:  

@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d606e66c3ad7a78edf3808578fe3021d2933b22d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c33ec0b3d8b597e46403337a11b4f3d99bc3393
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294137"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918234"
 ---
 # <a name="ftp-task"></a>Attività FTP
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L'attività FTP consente di caricare e scaricare file di dati, nonché di gestire directory nei server. Un pacchetto può ad esempio scaricare file di dati da un server remoto o da un indirizzo Internet nell'ambito del flusso di lavoro di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . È possibile utilizzare l'attività FTP per gli scopi seguenti:  
@@ -85,7 +85,7 @@ ms.locfileid: "71294137"
   
 ### <a name="options"></a>Opzioni  
  **FtpConnection**  
- Consente di selezionare una gestione connessione FTP esistente o di creare una gestione connessione facendo clic su \<**Nuova connessione**>.  
+ Consente di selezionare una gestione connessione FTP esistente o di creare una gestione connessione facendo clic su \<**New connection...**>.  
   
 > [!IMPORTANT]  
 >  La gestione connessione FTP supporta solo l'autenticazione anonima e l'autenticazione di base. Non supporta l'autenticazione di Windows.  
@@ -148,13 +148,13 @@ ms.locfileid: "71294137"
   
 #### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
  **RemoteVariable**  
- Consente di selezionare una variabile esistente definita dall'utente o di creare una variabile definita dall'utente facendo clic su \<**Nuova variabile**>.  
+ Consente di selezionare una variabile esistente definita dall'utente o di creare una variabile facendo clic su \<**New variable...**>.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Aggiungere una variabile  
   
 #### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
- Consente di selezionare una gestione connessione FTP esistente o di creare una gestione connessione facendo clic su \<**Nuova connessione**>.  
+ Consente di selezionare una gestione connessione FTP esistente o di creare una gestione connessione facendo clic su \<**New connection...**>.  
   
  **Argomenti correlati:** [Gestione connessione FTP](../../integration-services/connection-manager/ftp-connection-manager.md), [Editor gestione connessione FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
@@ -162,13 +162,13 @@ ms.locfileid: "71294137"
   
 #### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
  **LocalVariable**  
- Consente di selezionare una variabile esistente definita dall'utente o di creare una variabile facendo clic su \<**Nuova variabile**>.  
+ Consente di selezionare una variabile esistente definita dall'utente o di creare una variabile facendo clic su \<**New variable...**>.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Aggiungere una variabile  
   
 #### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
- Selezionare una gestione connessione file esistente oppure crearne una nuova facendo clic su \<**Nuova connessione**>.  
+ Selezionare una gestione connessione file nell'elenco oppure fare clic su \<**New connection...**> per creare una gestione connessione.  
   
  **Argomenti correlati**: [Gestione connessione file flat](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   

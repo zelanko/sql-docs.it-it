@@ -1,5 +1,6 @@
 ---
 title: Oggetto Avvisi di SQL Server Agent | Microsoft Docs
+description: Informazioni sull'oggetto prestazione Alerts di SQL Server Agent, che include contatori delle prestazioni che contengono informazioni sugli avvisi di questo servizio.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 425a2330f8ecb3f33380cf0500de32e82463634e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9fe293b70b074322380dc55f4294971908c106ee
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787396"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457465"
 ---
 # <a name="sql-server-agent-alerts-object"></a>Oggetto Avvisi di SQL Server Agent
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

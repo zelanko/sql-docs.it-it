@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eb4812b48c9465659ca8c0739f0411a9e65660bf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e5747cc9fbac122e9bca7fa6a127fd74a4ec47ff
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293874"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916111"
 ---
 # <a name="transfer-jobs-task"></a>Attività Trasferisci processi
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L'attività Trasferisci processi trasferisce uno o più processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tra istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -103,10 +103,10 @@ ms.locfileid: "71293874"
   
 ### <a name="options"></a>Opzioni  
  **SourceConnection**  
- Selezionare una gestione connessione SMO nell'elenco o fare clic su **\<Nuova connessione...>** per creare una nuova connessione al server di origine.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su **\<New connection...>** per creare una nuova connessione al server di origine.  
   
  **DestinationConnection**  
- Selezionare una gestione connessione SMO nell'elenco o fare clic su **Nuova connessione...>\<** per creare una nuova connessione al server di destinazione.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su **\<New connection...>** per creare una nuova connessione al server di destinazione.  
   
  **TransferAllJobs**  
  Indicare se l'attività deve copiare dal server di origine nel server di destinazione tutti i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent o solo quelli specificati.  

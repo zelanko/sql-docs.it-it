@@ -30,16 +30,16 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2266b837ce7822a6b03b3f6a26d4d1d818aade72
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 176e5f4d638f6093f7239c347cbc0d3e0e5b75bb
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298294"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918244"
 ---
 # <a name="foreach-loop-container"></a>Contenitore Ciclo Foreach
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Il contenitore Ciclo Foreach definisce un flusso di controllo ripetuto all'interno di un pacchetto. L'implementazione del ciclo è simile alla struttura del ciclo **Foreach** nei linguaggi di programmazione. In un pacchetto per l'esecuzione del ciclo viene utilizzato un enumeratore Foreach.  Il contenitore Ciclo Foreach ripete il flusso di controllo per ogni membro di un enumeratore specificato.  
@@ -168,7 +168,7 @@ Questa procedura descrive la configurazione di un contenitore Ciclo Foreach, inc
   
 7.  Facoltativamente, fare clic su **Mapping variabili** per eseguire il mapping delle proprietà degli oggetti ai valori della raccolta e quindi eseguire le operazioni seguenti:  
   
-    1.  Nell'elenco **Variabili** selezionare una variabile oppure fare clic su **\<Nuova variabile>** per creare una nuova variabile.  
+    1.  Nell'elenco **Variabili** selezionare una variabile oppure fare clic su **\<New Variable>** per creare una nuova variabile.  
   
     2.  Se si aggiunge una nuova variabile, impostarne le proprietà nella finestra di dialogo **Aggiungi variabile** e fare clic su **OK**.  
   
@@ -294,7 +294,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  Foreach ADO Enumerator consente di enumerare le righe o le tabelle in un oggetto ADO o ADO.NET archiviato in una variabile. Se il Ciclo Foreach include ad esempio un'attività Script che scrive un set di dati in una variabile, è possibile utilizzare Foreach ADO Enumerator per enumerare le righe nel set di dati. Se la variabile contiene un set di dati ADO.NET, è possibile configurare l'enumeratore in modo da enumerare le righe in più tabelle o in modo da enumerare le tabelle.  
   
  **Variabile di origine oggetto ADO**  
- Selezionare una variabile definita dall'utente nell'elenco oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
+ Selezionare una variabile definita dall'utente nell'elenco oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
 > [!NOTE]  
 >  Il tipo di dati della variabile deve essere Oggetto. In caso contrario si verificherà un errore.  
@@ -314,7 +314,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  Foreach ADO.NET Schema Rowset Enumerator consente di enumerare uno schema per un'origine dei dati specificata. Se il Ciclo Foreach include ad esempio un'attività Esegui SQL, è possibile utilizzare Foreach ADO.NET Schema Rowset Enumerator per enumerare gli schemi, ad esempio le colonne nel database **AdventureWorks** , e utilizzare l'attività Esegui SQL per ottenere le autorizzazioni dello schema.  
   
  **Connection**  
- Selezionare una gestione connessione ADO.NET nell'elenco oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione ADO.NET.  
+ Selezionare una gestione connessione ADO.NET nell'elenco oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione ADO.NET.  
   
 > [!IMPORTANT]  
 >  La gestione connessione ADO.NET deve utilizzare necessariamente un provider .NET per OLE DB. In caso di connessione a SQL Server, il provider consigliato è [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, incluso nell'elenco della sezione **Provider .Net per OleDb** nella finestra di dialogo **Gestione connessione** .  
@@ -333,7 +333,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  Foreach From Variable Enumerator consente di enumerare gli oggetti enumerabili nella variabile specificata. Se il Ciclo Foreach include ad esempio un'attività Esegui SQL che esegue una query e archivia il risultato in una variabile, è possibile utilizzare Foreach From Variable Enumerator per enumerare i risultati della query.  
   
  **Variabile**  
- Selezionare una variabile nell'elenco oppure fare clic su \<**Nuova variabile**> per crearne una nuova.  
+ Selezionare una variabile nell'elenco oppure fare clic su \<**New variable...**> per crearne una nuova.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -356,11 +356,11 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **DocumentSource**  
  Se la proprietà **DocumentSourceType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione (...) per specificarlo usando la finestra di dialogo **Editor origine documento**.  
   
- Se la proprietà **DocumentSourceType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
+ Se la proprietà **DocumentSourceType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se la proprietà **DocumentSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
+ Se la proprietà **DocumentSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -386,11 +386,11 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **OuterXPathString**  
  Se la proprietà **OuterXPathStringSourceType** è impostata su **Input diretto**, indicare la stringa XPath.  
   
- Se la proprietà **OuterXPathStringSourceType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
+ Se la proprietà **OuterXPathStringSourceType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se la proprietà **OuterXPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
+ Se l'opzione **OuterXPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -409,11 +409,11 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **InnerXPathString**  
  Se la proprietà **InnerXPathStringSourceType** è impostata su **Input diretto**, indicare la stringa XPath.  
   
- Se la proprietà **InnerXPathStringSourceType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
+ Se la proprietà **InnerXPathStringSourceType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Se la proprietà **InnerXPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
+ Se l'opzione **InnerXPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -421,7 +421,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  Foreach SMO Enumerator consente di enumerare gli oggetti SQL Server Management Objects (SMO). Se il Ciclo Foreach include ad esempio un'attività Esegui SQL, è possibile usare l'enumeratore Foreach SMO per enumerare le tabelle nel database **AdventureWorks** ed eseguire query che contino il numero di righe in ogni tabella.  
   
  **Connection**  
- Selezionare una gestione connessione ADO.NET nell'elenco oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione ADO.NET nell'elenco oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  Argomenti correlati: [Gestione connessione ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [Configurazione della gestione connessione ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   

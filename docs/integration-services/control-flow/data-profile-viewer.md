@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4c4924ee6dd1c053119f7ceaf97cd1dbd4d7e95f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4197d1acc7a7faaa8414b6ff73e7d6876610cece
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294221"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919813"
 ---
 # <a name="data-profile-viewer"></a>Visualizzatore profilo dati
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   La visualizzazione e l'analisi dei profili dati costituiscono il passaggio successivo del processo di profiling dei dati. È possibile visualizzare tali profili dopo avere eseguito l'attività Profiling dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e avere calcolato i profili dati. Per altre informazioni su come configurare ed eseguire le attività Profiling dati, vedere [Impostazione dell'attività Profiling dati](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "71294221"
   
 -   Fare clic con il pulsante destro del mouse sull'attività **Profiling dati** in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , quindi scegliere **Modifica**. Fare clic su **Apri Visualizzatore profilo** nella pagina **Generale** dell' **Editor attività Profiling dati**.  
   
--   Nella cartella *\<unità>* :\Programmi (x86) | Programmi\Microsoft SQL Server\110\DTS\Binn eseguire DataProfileViewer.exe.  
+-   Nella cartella *\<drive>* :\Programmi (x86) | Programmi\Microsoft SQL Server\110\DTS\Binn eseguire DataProfileViewer.exe.  
   
  Il visualizzatore contiene più riquadri per visualizzare i profili richiesti e i risultati calcolati, con funzionalità di drill-down e dettagli facoltativi:  
   
@@ -94,7 +94,7 @@ ms.locfileid: "71294221"
   
 #### <a name="profile-type--column-length-distribution-profile"></a>Tipo di profilo: profilo Distribuzione lunghezze di colonna  
   
-##### <a name="column-length-distribution-profile---column-pane"></a>Profilo Distribuzione lunghezze di colonna - riquadro \<colonna>  
+##### <a name="column-length-distribution-profile---column-pane"></a>Profilo Distribuzione lunghezze di colonna - Riquadro \<column>  
  **Lunghezza minima**  
  Visualizza la lunghezza minima dei valori nella colonna.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "71294221"
   
 #### <a name="profile-type--column-null-ratio-profile"></a>Tipo di profilo: profilo Rapporto di valori Null nella colonna  
   
-##### <a name="column-null-ratio-profile---column-pane"></a>Profilo Rapporto di valori Null - riquadro \<colonna>  
+##### <a name="column-null-ratio-profile---column-pane"></a>Profilo Rapporto di valori Null nella colonna - Riquadro \<column>  
  **Conteggio valori Null**  
  Visualizza il numero di righe in cui il valore della colonna analizzata è un valore Null.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "71294221"
   
 #### <a name="profile-type--column-pattern-profile"></a>Tipo di profilo: profilo Criteri di ricerca colonna  
   
-##### <a name="column-pattern-profile---column-pane"></a>Profilo Criteri di ricerca colonna - riquadro \<colonna>  
+##### <a name="column-pattern-profile---column-pane"></a>Profilo Criteri di ricerca colonna - Riquadro \<column>  
  **Conteggio righe**  
  Visualizza il numero di righe della tabella o della vista.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "71294221"
   
 #### <a name="profile-type--column-statistics-profile"></a>Tipo di profilo: profilo Statistiche di colonna  
   
-##### <a name="column-statistics-profile---column-pane"></a>Profilo Statistiche di colonna - riquadro \<colonna>  
+##### <a name="column-statistics-profile---column-pane"></a>Profilo Statistiche di colonna - Riquadro \<column>  
  **Minimi**  
  Visualizza il valore minimo rilevato nella colonna analizzata.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "71294221"
   
 #### <a name="profile-type--column-value-distribution-profile"></a>Tipo di profilo: profilo Distribuzione valori di colonna  
   
-##### <a name="column-value-distribution-profile---column-pane"></a>Profilo Distribuzione valori di colonna - riquadro \<colonna>  
+##### <a name="column-value-distribution-profile---column-pane"></a>Profilo Distribuzione valori di colonna - Riquadro \<column>  
  **Numero di valori distinct**  
  Visualizza il conteggio dei valori distinct rilevati nella colonna analizzata.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "71294221"
   
 #### <a name="profile-type--candidate-key-profile"></a>Tipo di profilo: profilo Chiave candidata  
   
-##### <a name="candidate-key-profile---table-pane"></a>Profilo Chiave candidata - riquadro \<tabella>  
+##### <a name="candidate-key-profile---table-pane"></a>Profilo Chiave candidata - Riquadro \<table>  
  **Colonne chiave**  
  Visualizza le colonne selezionate per l'analisi come chiave candidata.  
   
@@ -189,7 +189,7 @@ ms.locfileid: "71294221"
  Visualizza il livello di attendibilità (come percentuale) della colonna o combinazione di colonne chiave candidata. Un livello di attendibilità inferiore al 100% indica la presenza di valori duplicati.  
   
 ##### <a name="key-violations-pane"></a>Riquadro Violazioni chiave  
- **\<colonna1>, \<colonna2>, ecc.**  
+ **\<column1>\<column2> così via.**  
  Visualizza i valori duplicati rilevati nella colonna analizzata.  
   
  **Numero**  
@@ -212,10 +212,10 @@ ms.locfileid: "71294221"
 > [!NOTE]  
 >  Una percentuale elevata di valori non corretti nei dati può provocare risultati imprevisti da un profilo Dipendenza funzionale. Ad esempio, il 90% delle righe contiene il valore di stato "WI" per il valore di codice postale ZIP "98052". Il profilo segnala le righe che contengono il valore di stato "WA" corretto come violazioni.  
   
- **\<nome colonna determinante>**  
+ **\<determinant column name>**  
  Visualizza il valore della colonna determinante o della combinazione di colonne determinanti in questa istanza di una violazione della dipendenza funzionale.  
   
- **\<nome colonna dipendente>**  
+ **\<dependent column name>**  
  Visualizza il valore della colonna dipendente in questa istanza di una violazione della dipendenza funzionale.  
   
  **Conteggio del supporto**  
@@ -240,7 +240,7 @@ ms.locfileid: "71294221"
  Visualizza il livello di attendibilità (come percentuale) della sovrapposizione tra colonne. Un livello di attendibilità inferiore al 100% indica che vi sono casi in cui il valore del subset non viene rilevato tra i valori del superset.  
   
 ##### <a name="inclusion-violations-pane"></a>Riquadro Violazioni inclusione  
- **\<colonna1>, \<colonna2>, ecc.**  
+ **\<column1>\<column2> così via.**  
  Visualizza i valori nella colonna o colonne del subset che non sono disponibili nella colonna o colonne del superset.  
   
  **Numero**  

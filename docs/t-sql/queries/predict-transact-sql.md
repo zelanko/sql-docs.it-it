@@ -17,13 +17,13 @@ helpviewer_keywords:
 - PREDICT clause
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: e570c7cbc06c6d2e384d34571e0af7ca93003ceb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions'
+ms.openlocfilehash: 039441b0029a5c2d92e16f7bc35bc496c6cd440c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012570"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918605"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)
 
@@ -32,6 +32,8 @@ ms.locfileid: "86012570"
 Genera un valore o punteggi stimati in base a un modello archiviato. Per altre informazioni, vedere [Assegnazione di punteggi nativi tramite la funzione T-SQL PREDICT](../../machine-learning/predictions/native-scoring-predict-transact-sql.md).
 
 ## <a name="syntax"></a>Sintassi
+
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 ```syntaxsql
 PREDICT  
@@ -55,21 +57,58 @@ WITH ( <result_set_definition> )
 MODEL = @model | model_literal  
 ```
 
+::: moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+```syntaxsql
+PREDICT  
+(  
+  MODEL = <model_object>,
+  DATA = object AS <table_alias>
+  [, RUNTIME = ONNX ]
+)  
+WITH ( <result_set_definition> )  
+
+<result_set_definition> ::=  
+  {  
+    { column_name  
+      data_type  
+      [ COLLATE collation_name ]  
+      [ NULL | NOT NULL ]  
+    }  
+      [,...n ]  
+  }  
+
+<model_object> ::=
+  {
+    model_literal
+    | model_variable
+    | ( scalar_subquery )
+  }
+```
+
+::: moniker-end
+
 ### <a name="arguments"></a>Argomenti
 
 **MODEL**
 
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
 Il parametro `MODEL` viene usato per specificare il modello usato per l'assegnazione dei punteggi o la stima. Il modello viene specificato come variabile, valore letterale o espressione scalare.
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
 `PREDICT` supporta i modelli sottoposti a training usando i pacchetti [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) e [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md).
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Il parametro `MODEL` viene usato per specificare il modello usato per l'assegnazione dei punteggi o la stima. Il modello viene specificato come variabile, valore letterale o espressione scalare.
+
 In Istanza gestita di SQL di Azure, `PREDICT` supporta modelli in formato [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) o modelli sottoposti a training con i pacchetti [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) e [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md).
 ::: moniker-end
 
 ::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+Il parametro `MODEL` viene usato per specificare il modello usato per l'assegnazione dei punteggi o la stima. Il modello viene specificato come variabile, valore letterale, espressione scalare o una sottoquery scalare.
+
 In Azure Synapse Analytics, `PREDICT` supporta i modelli in formato [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html).
 ::: moniker-end
 
@@ -129,11 +168,27 @@ Gli esempi seguenti illustrano la sintassi per chiamare la funzione `PREDICT`.
 
 Questo esempio fa riferimento alla funzione `PREDICT` nella clausola `FROM` di un'istruzione `SELECT`:
 
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
 ```sql
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
     DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
+
+:::moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+```sql
+DECLARE @model varbinary(max) = (SELECT test_model FROM scoring_model WHERE model_id = 1);
+
+SELECT d.*, p.Score
+FROM PREDICT(MODEL = @model,
+    DATA = dbo.mytable AS d) WITH (Score float) AS p;
+```
+
+::: moniker-end
 
 L'alias **d** specificato per l'origine di tabella nel parametro `DATA` viene usato per fare riferimento alle colonne appartenenti a `dbo.mytable`. L'alias **p** specificato per la funzione `PREDICT` viene usato per fare riferimento alle colonne restituite dalla funzione `PREDICT`.
 
@@ -141,6 +196,20 @@ L'alias **d** specificato per l'origine di tabella nel parametro `DATA` viene us
 - L'alias **d** specificato per l'origine di tabella nel parametro `DATA` viene usato per fare riferimento alle colonne appartenenti a `dbo.mytable`. I nomi delle colonne di dati di input devono corrispondere ai nomi degli input relativi al modello.
 - L'alias **p** specificato per la funzione `PREDICT` viene usato per fare riferimento alla colonna stimata restituita dalla funzione `PREDICT`. Il nome della colonna deve corrispondere al nome di output del modello.
 - Tutte le colonne di dati di input e le colonne stimate sono disponibili per la visualizzazione nell'istruzione SELECT.
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+La query di esempio precedente può essere riscritta per creare una vista specificando `MODEL` come sottoquery scalare:
+
+```sql
+CREATE VIEW predictions
+AS
+SELECT d.*, p.Score
+FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
+             DATA = dbo.mytable AS d) WITH (Score float) AS p;
+```
+
+:::moniker-end
 
 ### <a name="combining-predict-with-an-insert-statement"></a>Combinazione di PREDICT con un'istruzione INSERT
 

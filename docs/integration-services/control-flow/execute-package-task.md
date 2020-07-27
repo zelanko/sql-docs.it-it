@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4e8e6b9a30146aff61464f4aeda46cc49f07abe7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294186"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920697"
 ---
 # <a name="execute-package-task"></a>Attività Esegui pacchetto
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L'attività Esegui pacchetto permette di estendere le funzionalità aziendali di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consentendo ai pacchetti di eseguire altri pacchetti nell'ambito di un flusso di lavoro.  
@@ -191,7 +191,7 @@ ms.locfileid: "71294186"
   
 ##### <a name="location--sql-server"></a>Percorso = SQL Server  
  **Connection**  
- Selezionare una gestione connessione OLE DB nell'elenco o fare clic su \<**Nuova connessione...** > per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione OLE DB nell'elenco oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -200,7 +200,7 @@ ms.locfileid: "71294186"
   
 ##### <a name="location--file-system"></a>Percorso = File system  
  **Connection**  
- Selezionare una gestione connessione file nell'elenco o fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione file nell'elenco oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md)  
   

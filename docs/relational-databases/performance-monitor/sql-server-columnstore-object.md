@@ -1,5 +1,6 @@
 ---
 title: Oggetto Columnstore di SQL Server | Microsoft Docs
+description: Informazioni sull'oggetto SQLServer:Columnstore, che fornisce i contatori per monitorare l'esecuzione dell'indice columnstore in SQL Server.
 ms.custom: ''
 ms.date: 04/12/2016
 ms.prod: sql
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 8274597a9dddc42b9745d99add5160889f814572
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f00f4405144cec17b0b0266308ebc6df39336a70
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787314"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458416"
 ---
 # <a name="sql-server-columnstore-object"></a>SQL Server, oggetto Columnstore
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   L'oggetto **SQLServer:Columnstore** fornisce i contatori per monitorare l'esecuzione dell'indice columnstore in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Nella tabella seguente vengono descritti i contatori dell'oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Columnstore**di**.  
+ Nella tabella seguente vengono descritti i contatori dell'oggetto **Columnstore** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Contatori Columnstore|Descrizione|  
 |--------------------------|-----------------|  

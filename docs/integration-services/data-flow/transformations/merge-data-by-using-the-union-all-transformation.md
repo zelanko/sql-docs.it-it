@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 42c556b3c348205833f4d080199c184dd30c8cf3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 18ae2128e0f0bcbec5f3fb78a63778f44f260bf5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291248"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915240"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>Unione di dati tramite la trasformazione Unione input multipli
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   È possibile aggiungere e configurare una trasformazione Unione input multipli solo se il pacchetto include già almeno un'attività Flusso di dati e due origini dati.  
@@ -42,7 +42,7 @@ ms.locfileid: "71291248"
   
 4.  Fare doppio clic sulla trasformazione Unione input multipli.  
   
-5.  In **Editor trasformazione Unione input multipli**eseguire il mapping di una colonna dell'input a una colonna nell'elenco **Nome colonna di output** , facendo clic su una riga e quindi selezionando una colonna nell'elenco degli input. Per evitare di eseguire il mapping della colonna, selezionare **\<ignora>** nell'elenco degli input.  
+5.  In **Editor trasformazione Unione input multipli**eseguire il mapping di una colonna dell'input a una colonna nell'elenco **Nome colonna di output** , facendo clic su una riga e quindi selezionando una colonna nell'elenco degli input. Per evitare di eseguire il mapping della colonna, selezionare **\<ignore>** nell'elenco degli input.  
   
     > [!NOTE]  
     >  Il mapping tra due colonne può essere eseguito solo se i relativi metadati corrispondono.  

@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f145b536072314594af473488bc0b933c443230e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a275dbc088774355c3546b7234174e5b7b585e43
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294685"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922527"
 ---
 # <a name="manage-a-cdc-instance"></a>Gestire un'istanza di CDC
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   È possibile utilizzare CDC Designer Console per visualizzare le informazioni relative alle istanze create e per gestire l'operazione delle istanze.  
@@ -107,17 +107,17 @@ ms.locfileid: "71294685"
     -   **Written changes**: numero di modifiche scritte nelle tabelle delle modifiche di SQL Server.  
   
  **Oracle**  
- Vengono visualizzate informazioni sull'istanza di CDC e sulla relativa connessione al database Oracle. Questa scheda è di sola lettura. Per modificare queste proprietà, fare clic con il pulsante destro del mouse sull'istanza nel riquadro sinistro e selezionare **Proprietà** oppure scegliere **Proprietà** nel riquadro destro per aprire la finestra di dialogo delle proprietà dell'\<istanza>.  
+ Vengono visualizzate informazioni sull'istanza di CDC e sulla relativa connessione al database Oracle. Questa scheda è di sola lettura. Per modificare queste proprietà, fare clic con il pulsante destro del mouse sull'istanza nel riquadro sinistro e scegliere **Proprietà** oppure fare clic su **Proprietà** nel riquadro destro per aprire la finestra di dialogo delle proprietà di \<instance>.  
   
  Per informazioni su queste proprietà e su come modificarle, vedere [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md).  
   
  **Tabelle**  
- Vengono visualizzate informazioni sulle tabelle incluse nell'istanza di CDC. Sono anche disponibili informazioni sulle colonne. Questa scheda è di sola lettura. Per modificare queste proprietà, fare clic con il pulsante destro del mouse sull'istanza nel riquadro sinistro e selezionare **Proprietà** oppure scegliere **Proprietà** nel riquadro destro per aprire la finestra di dialogo delle proprietà dell'\<istanza>.  
+ Vengono visualizzate informazioni sulle tabelle incluse nell'istanza di CDC. Sono anche disponibili informazioni sulle colonne. Questa scheda è di sola lettura. Per modificare queste proprietà, fare clic con il pulsante destro del mouse sull'istanza nel riquadro sinistro e scegliere **Proprietà** oppure fare clic su **Proprietà** nel riquadro destro per aprire la finestra di dialogo delle proprietà di \<instance>.  
   
  Per informazioni su queste proprietà e su come modificarle, vedere [Edit Tables](../../integration-services/change-data-capture/edit-tables.md).  
   
  **Funzionalità avanzate**  
- Vengono visualizzate le proprietà avanzate per l'istanza di CDC e i valori delle proprietà. Questa scheda è di sola lettura. Per modificare queste proprietà, fare clic con il pulsante destro del mouse sull'istanza nel riquadro sinistro e selezionare **Proprietà** oppure scegliere **Proprietà** nel riquadro destro per aprire la finestra di dialogo delle proprietà dell'\<istanza>.  
+ Vengono visualizzate le proprietà avanzate per l'istanza di CDC e i valori delle proprietà. Questa scheda è di sola lettura. Per modificare queste proprietà, fare clic con il pulsante destro del mouse sull'istanza nel riquadro sinistro e scegliere **Proprietà** oppure fare clic su **Proprietà** nel riquadro destro per aprire la finestra di dialogo delle proprietà di \<instance>.  
   
  Per informazioni su queste proprietà e su come modificarle, vedere [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md).  
   

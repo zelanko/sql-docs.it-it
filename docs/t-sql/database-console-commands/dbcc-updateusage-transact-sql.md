@@ -1,5 +1,5 @@
 ---
-title: DBCC UPDATEUSAGE (Transact-SQL) | Microsoft Docs
+title: DBCC UPDATEUSAGE (Transact-SQL)
 ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
@@ -33,14 +33,15 @@ helpviewer_keywords:
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: fa1bd6767a81142e115e02d242a54b9715bf78f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2528ac49fb62a41bebe55cb50392cb306ec93edf
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643861"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484202"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Segnala e corregge le imprecisioni relative al conteggio delle pagine e delle righe nelle viste del catalogo. Queste imprecisioni possono causare la restituzione di report sull'utilizzo dello spazio non corretti da parte della stored procedure di sistema sp_spaceused.
@@ -57,14 +58,16 @@ DBCC UPDATEUSAGE
 ) [ WITH [ NO_INFOMSGS ] [ , ] [ COUNT_ROWS ] ]   
 ```  
   
-## <a name="arguments"></a>Argomenti  
-*database_name* | *database_id* | 0  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
+*database_name* \| *database_id* \| 0  
 Nome o ID del database per cui si desidera segnalare e correggere le statistiche sull'utilizzo dello spazio. Se si specifica 0, viene utilizzato il database corrente. I nomi dei database devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
-*table_name* | *table_id* | *view_name* | *view_id*  
+*table_name* \| *table_id* \| *view_name* \| *view_id*  
 Nome o ID della tabella o della vista indicizzata per cui si desidera segnalare e correggere le statistiche sull'utilizzo dello spazio. I nomi delle tabelle e delle viste devono essere conformi alle regole per gli identificatori.  
   
-*index_id* | *index_name*  
+*index_id* \| *index_name*  
 ID o nome dell'indice da utilizzare. Se viene omesso, l'istruzione elabora tutti gli indici della tabella o della vista specificata.  
   
 WITH  

@@ -15,16 +15,16 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 668b7343ae893d302a27c0a68aec58e536cffcc9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 397936fb2bd6314c83460b233a59ef6e72e113d7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293283"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915482"
 ---
 # <a name="cdc-source"></a>Origine CDC
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Tramite l'origine CDC viene letto un intervallo di dati delle modifiche da tabelle delle modifiche di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ; queste vengono poi recapitate a valle ad altri componenti SSIS.  
@@ -45,7 +45,7 @@ ms.locfileid: "71293283"
   
 -   Il nome della variabile del pacchetto dello stato CDC in base alla quale viene determinato l'intervallo di elaborazione CDC. L'origine CDC non modifica questa variabile.  
   
- I dati restituiti dall'origine CDC sono identici a quelli restituiti dalle funzioni CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**cdc.fn_cdc_get_all_changes_\<capture-instance-name>** o **cdc.fn_cdc_get_net_changes_\<capture-instance-name>** (se disponibili). L'unica aggiunta facoltativa è la colonna **__$initial_processing** , che indica se l'intervallo di elaborazione corrente può essere sovrapposto a un caricamento iniziale della tabella. Per ulteriori informazioni sull'elaborazione iniziale, vedere [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md).  
+ I dati restituiti dall'origine CDC sono identici a quelli restituiti dalle funzioni CDC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **cdc.fn_cdc_get_all_changes_\<capture-instance-name>** o **cdc.fn_cdc_get_net_changes_\<capture-instance-name>** (se disponibili). L'unica aggiunta facoltativa è la colonna **__$initial_processing** , che indica se l'intervallo di elaborazione corrente può essere sovrapposto a un caricamento iniziale della tabella. Per ulteriori informazioni sull'elaborazione iniziale, vedere [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md).  
   
  L'origine CDC include un output regolare e un output degli errori.  
   
@@ -82,7 +82,7 @@ use <cdc-enabled-database-name>
   
  dove:  
   
--   \<cdc-enabled-database-name> è il nome del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenente le tabelle delle modifiche.  
+-   \<cdc-enabled-database-name> è il nome del database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che contiene le tabelle delle modifiche.  
   
 -   \<value-from-state-cs> è il valore visualizzato nella variabile di stato CDC come CS/\<value-from-state-cs>/ (CS indica l'inizio dell'intervallo di elaborazione corrente).  
   
@@ -95,7 +95,7 @@ use <cdc-enabled-database-name>
 #### <a name="sql-server-error-message"></a>Messaggio di errore di SQL Server  
  È possibile che in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]venga restituito il messaggio di errore seguente:  
   
- **Numero di argomenti insufficiente per la routine o funzione cdc.fn_cdc_get_net_changes_\<.>.**  
+ **Numero di argomenti insufficiente per la routine o funzione cdc.fn_cdc_get_net_changes_\<..>.**  
   
  Questo errore non indica che un argomento è mancante. Indica invece che i valori LSN iniziale o finale nella variabile di stato CDC non sono validi.  
   
@@ -151,7 +151,7 @@ use <cdc-enabled-database-name>
  **Istanza di acquisizione**  
  Selezionare o digitare il nome dell'istanza di acquisizione CDC con la tabella CDC da leggere.  
   
- Una tabella di origine acquisita può contenere una o due istanze acquisite per gestire la transizione senza problemi della definizione di tabella mediante modifiche dello schema. Se per la tabella di origine in corso di acquisizione sono definite più istanze di acquisizione, selezionare l'istanza di acquisizione che si desidera utilizzare a questo punto. Il nome dell'istanza di acquisizione predefinito per una tabella [schema].[tabella] è \<schema_\<tabella, ma i nomi delle istanze di acquisizione effettivi in uso possono essere diversi. La tabella effettiva da cui viene eseguita la lettura è la tabella CDC **cdc .\<istanza-acquisizione>_CT**.  
+ Una tabella di origine acquisita può contenere una o due istanze acquisite per gestire la transizione senza problemi della definizione di tabella mediante modifiche dello schema. Se per la tabella di origine in corso di acquisizione sono definite più istanze di acquisizione, selezionare l'istanza di acquisizione che si desidera utilizzare a questo punto. Il nome dell'istanza di acquisizione predefinito per una tabella [schema].[tabella] è \<schema>_\<table>, ma i nomi delle istanze di acquisizione effettivi in uso possono essere diversi. L'effettiva tabella da cui viene eseguita la lettura è la tabella CDC **cdc .\<capture-instance>_CT**.  
   
  **CDC Processing Mode**  
  Selezionare la modalità di elaborazione più adatta per le esigenze di elaborazione correnti. Di seguito sono elencate le opzioni possibili:  
@@ -162,7 +162,7 @@ use <cdc-enabled-database-name>
   
 -   **Net**: restituisce una sola riga delle modifiche per ogni riga di origine modificata nell'intervallo di elaborazione CDC corrente. Se una riga di origine è stata aggiornata più volte, viene restituita la modifica combinata (ad esempio, inserimento+aggiornamento viene prodotto come un singolo aggiornamento e aggiornamento+eliminazione viene prodotto come una singola eliminazione). Quando si utilizza la modalità di elaborazione delle modifiche Net, è possibile suddividere le modifiche negli output Delete, Insert e Update e gestirli in parallelo, perché la singola riga di origine viene visualizzata in più output.  
   
--   **Net with update mask**: questa modalità è simile alla modalità Net standard, ma aggiunge anche colonne booleane con il modello di nome **__$\<<nome-colonna>\___Changed**, che indica la presenza di colonne modificate nella riga delle modifiche corrente.  
+-   **Net with update mask** (Net con maschera di aggiornamento): questa modalità è simile alla modalità Net standard, ma aggiunge anche colonne booleane con il modello di nome **__$\<column-name>\___Changed**, che indica la presenza di colonne modificate nella riga delle modifiche corrente.  
   
 -   **Net with merge**: questa modalità è simile alla modalità Net standard, ma con le operazioni Insert e Update unite in una singola operazione Merge (UPSERT).  
   

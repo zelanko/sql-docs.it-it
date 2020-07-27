@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 00c117a2282216f5f326cbf524f3326af5cc93e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 81ac32f8fff04a1a81d4397cc196c506eab164d2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294334"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923309"
 ---
 # <a name="bulk-insert-task"></a>Inserimento bulk - attività
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L'attività Inserimento bulk rappresenta un modo efficiente per copiare grandi quantità di dati in una tabella o in una vista di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si supponga, ad esempio, che nella propria società venga usato un mainframe per archiviare l'elenco prodotti, che include un milione di righe, ma che il sistema e-commerce dell'azienda usi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per popolare le pagine Web. È necessario aggiornare la tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei prodotti durante la notte utilizzando l'elenco master dei prodotti del mainframe. A tale scopo è possibile salvare l'elenco prodotti in un file delimitato da tabulazione e utilizzare l'attività Inserimento bulk per copiare i dati direttamente nella tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -125,7 +125,7 @@ ms.locfileid: "71294334"
   
 ### <a name="options"></a>Opzioni  
  **Connection**  
- Selezionare una gestione connessione OLE DB nell'elenco o fare clic su \<**Nuova connessione...** > per creare una nuova connessione.  
+ Selezionare una gestione connessione OLE DB nell'elenco oppure fare clic su \<**New connection...**> per creare una nuova connessione.  
   
  **Argomenti correlati:** [Gestione connessione OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -141,7 +141,7 @@ ms.locfileid: "71294334"
 |**Specifica**|Consente di specificare il formato. Selezionando questa opzione vengono visualizzate le opzioni dinamiche **RowDelimiter** e **ColumnDelimiter**.|  
   
  **File**  
- Selezionare una gestione connessione file o file flat nell'elenco oppure fare clic su \<**Nuova connessione...** > per creare una nuova connessione.  
+ Selezionare una gestione connessione file o file flat nell'elenco o fare clic su \<**New connection...**> per creare una nuova connessione.  
   
  Il percorso del file è relativo al Motore di database di SQL Server specificato nella gestione connessione per questa attività. Il file di testo deve essere accessibile dal Motore di database di SQL Server in un disco rigido locale sul server oppure tramite un'unità condivisa o di cui è stato eseguito il mapping a SQL Server. Non è possibile accedere al file tramite SSIS Runtime.  
   

@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a81d65cfd0716ba386db98b3d9973fb4e57876a7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 046e23f3861af9e1a1b6877036d90f249bb04723
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298183"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86908397"
 ---
 # <a name="ole-db-destination"></a>Destinazione OLE DB
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   La destinazione OLE DB consente di caricare dati in un'ampia gamma di database conformi con OLE DB, tramite una tabella o vista di database oppure un comando SQL. L'origine OLE DB, ad esempio, può caricare dati nelle tabelle dei database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -95,9 +95,9 @@ ms.locfileid: "71298183"
   
 |Opzione per il caricamento rapido|Descrizione|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|Specifica le dimensioni in kilobyte del batch da inserire. L'opzione ha il formato **KILOBYTES_PER_BATCH** = \< valore intero positivo **>** .|  
+|KILOBYTES_PER_BATCH|Specifica le dimensioni in kilobyte del batch da inserire. L'opzione ha il formato **KILOBYTES_PER_BATCH** = \<positive integer value**>**.|  
 |FIRE_TRIGGERS|Specifica se attivare o meno i trigger sulla tabella inserita. La sintassi dell'opzione è **FIRE_TRIGGERS**. La presenza dell'opzione indica che i trigger vengono attivati.|  
-|ORDER|Specifica la modalità con ordinare i dati in input. La sintassi dell'opzione è ORDER \<nome colonna> ASC&#124;DESC. È possibile elencare qualsiasi numero di colonne e l'indicazione del tipo di ordinamento è facoltativa. Se il tipo di ordinamento viene omesso, l'operazione di inserimento verrà eseguita presupponendo che i dati non siano ordinati.<br /><br /> Nota: è possibile migliorare le prestazioni usando l'opzione ORDER per ordinare i dati di input in base all'indice cluster nella tabella.|  
+|ORDER|Specifica la modalità con ordinare i dati in input. La sintassi dell'opzione è ORDER \<column name> ASC&#124;DESC. È possibile elencare qualsiasi numero di colonne e l'indicazione del tipo di ordinamento è facoltativa. Se il tipo di ordinamento viene omesso, l'operazione di inserimento verrà eseguita presupponendo che i dati non siano ordinati.<br /><br /> Nota: è possibile migliorare le prestazioni usando l'opzione ORDER per ordinare i dati di input in base all'indice cluster nella tabella.|  
   
  Anche se nelle parole chiave non viene rilevata la distinzione tra maiuscole e minuscole, le parole chiave [!INCLUDE[tsql](../../includes/tsql-md.md)] vengono in genere digitate in maiuscolo.  
   
@@ -268,7 +268,7 @@ ms.locfileid: "71298183"
  Consente di visualizzare l'elenco delle colonne di destinazione disponibili. Eseguire un'operazione di trascinamento della selezione per impostare il mapping tra le colonne di destinazione disponibili nella tabella e le colonne di input.  
   
  **Colonna di input**  
- Consente di visualizzare le colonne di input selezionate dall'utente. È possibile rimuovere i mapping selezionando **\<ignora>** per escludere colonne dall'output.  
+ Consente di visualizzare le colonne di input selezionate dall'utente. È possibile rimuovere i mapping selezionando **\<ignore>** per escludere colonne dall'output.  
   
  **Colonna di destinazione**  
  Consente di visualizzare ogni colonna di destinazione disponibile, indipendentemente dal fatto che sia mappata o meno.  

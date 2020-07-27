@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 13ab80fe810559105027070e15ca64c87ddc4161
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3ef2d8078dedfb15c1f4be27d4970c7eaaf4731a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903929"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919397"
 ---
 # <a name="derive-column-values-with-the-derived-column-transformation"></a>Derivare i valori di colonna con la trasformazione Colonna derivata
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   È possibile aggiungere e configurare una trasformazione Colonna derivata solo se il pacchetto include già almeno un'attività Flusso di dati e un'origine.  
@@ -48,7 +48,7 @@ ms.locfileid: "77903929"
     > [!NOTE]  
     >  Se l'espressione non è valida, il testo dell'espressione viene evidenziato e tramite una descrizione comando nella colonna vengono descritti gli errori.  
   
-7.  Nell'elenco **Colonna derivata** selezionare **\<aggiungi come nuova colonna>** per scrivere il risultato della valutazione dell'espressione in una nuova colonna oppure selezionare una colonna esistente per aggiornarla con il risultato della valutazione.  
+7.  Nell'elenco **Colonna derivata** selezionare **\<add as new column>** per scrivere il risultato della valutazione dell'espressione in una nuova colonna oppure selezionare una colonna esistente per aggiornarla con il risultato della valutazione.  
   
      Se si è scelto di usare una nuova colonna, nella finestra di dialogo **Editor trasformazione Colonna derivata** viene valutata l'espressione e viene assegnato un tipo di dati alla colonna, a seconda del tipo di dati, della lunghezza, della precisione, della scala e della tabella codici.  
   

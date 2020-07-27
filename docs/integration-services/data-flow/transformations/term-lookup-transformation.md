@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 61dad85fb7857b8694712f79b860f58d88e7d650
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da1331e4586fff4f239c9dc3cb80552dc0ea4692
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291198"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914255"
 ---
 # <a name="term-lookup-transformation"></a>Ricerca termini - trasformazione
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   La trasformazione Ricerca termini rileva le corrispondenze tra i termini estratti dal testo in una colonna di input della trasformazione e quelli contenuti in una tabella di riferimento, quindi conta il numero delle occorrenze di un termine della tabella di ricerca nel set di dati di input e scrive tale numero nelle colonne di output della trasformazione, insieme al termine della tabella di riferimento. Questa trasformazione può essere utilizzata per creare un elenco di termini personalizzato basato sul testo di input, completo di statistiche sulla frequenza dei termini.  

@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7c6c5cdc269c757b8578314d39fd07f9f947a5e7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d4f1eec14ca75ed6f878a7bdb077b899ea05993d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71287141"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920783"
 ---
 # <a name="coding-a-custom-log-provider"></a>Scrittura del codice di un provider di log personalizzato
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Dopo avere creato una classe che eredita dalla classe di base <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> e avere applicato l'attributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> alla classe, è necessario eseguire l'override dell'implementazione delle proprietà e dei metodi della classe di base per fornire la funzionalità personalizzata.  
@@ -136,7 +136,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>Scrittura di voci di log  
- Il metodo <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> viene chiamato ogni volta che un oggetto del pacchetto genera un evento chiamando un metodo Fire\<evento> in una delle interfacce degli eventi. Ogni evento viene generato con informazioni sul relativo contesto e in genere con un messaggio descrittivo. Tuttavia, non tutte le chiamate al metodo <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> includono informazioni per ogni parametro del metodo. Ad esempio, alcuni eventi standard i cui nomi sono autodescrittivi non forniscono MessageText, mentre DataCode e DataBytes vengono utilizzati per fornire informazioni supplementari facoltative.  
+ Il metodo <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> viene chiamato ogni volta che un oggetto del pacchetto genera un evento chiamando un metodo Fire\<event> in una delle interfacce degli eventi. Ogni evento viene generato con informazioni sul relativo contesto e in genere con un messaggio descrittivo. Tuttavia, non tutte le chiamate al metodo <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> includono informazioni per ogni parametro del metodo. Ad esempio, alcuni eventi standard i cui nomi sono autodescrittivi non forniscono MessageText, mentre DataCode e DataBytes vengono utilizzati per fornire informazioni supplementari facoltative.  
   
  Nell'esempio di codice seguente viene implementato il metodo <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> e vengono scritti gli eventi nel flusso aperto nella sezione precedente.  
   

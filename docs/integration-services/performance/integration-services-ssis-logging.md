@@ -29,16 +29,16 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba8e26a75af5508e2fe18390e92fda3aea73c648
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287885"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918349"
 ---
 # <a name="integration-services-ssis-logging"></a>Registrazione di Integration Services (SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili provider di log che è possibile usare per implementare la registrazione in pacchetti, contenitori e attività. Tramite la registrazione è possibile acquisire informazioni di run-time su un pacchetto, che consentono di controllare e risolvere i problemi del pacchetto ogni volta che viene eseguito. Nel log è ad esempio possibile acquisire il nome dell'operatore che ha eseguito il pacchetto, nonché la data e l'ora di inizio e di fine dell'esecuzione.  
@@ -230,7 +230,7 @@ ms.locfileid: "79287885"
   
 3.  Selezionare un provider di log nell'elenco **Tipo provider** e quindi fare clic su **Aggiungi**.  
   
-4.  Nella colonna **Configurazione** selezionare una gestione connessione oppure fare clic su **\<Nuova connessione>** per creare una nuova gestione connessione del tipo appropriato per il provider di log. A seconda del provider selezionato, utilizzare una delle gestioni connessioni seguenti:  
+4.  Nella colonna **Configurazione** selezionare una gestione connessione oppure fare clic su **\<New connection>** per creare una nuova gestione connessione del tipo appropriato per il provider di log. A seconda del provider selezionato, utilizzare una delle gestioni connessioni seguenti:  
   
     -   Per file di testo utilizzare una gestione connessione file. Per altre informazioni, vedere [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -312,7 +312,7 @@ ms.locfileid: "79287885"
  Il campo della descrizione è modificabile. Fare clic nel campo e quindi modificare la descrizione predefinita del log.  
   
  **Configurazione**  
- Selezionare una gestione connessione esistente nell'elenco oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione. A seconda del tipo di logger, è possibile configurare una gestione connessione OLE DB o una gestione connessione file. Il logger per il registro eventi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] non necessita di connessioni.  
+ Selezionare una gestione connessione esistente nell'elenco oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione. A seconda del tipo di logger, è possibile configurare una gestione connessione OLE DB o una gestione connessione file. Il logger per il registro eventi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] non necessita di connessioni.  
   
  Argomenti correlati: [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) e [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   

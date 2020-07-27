@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f35ec3ad66199e6c13c648c9a2208f5bf88f439a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 581cdcddc2138b2d5cd78790be412e0ad0a9fdda
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293933"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920477"
 ---
 # <a name="send-mail-task"></a>Invia messaggi - attività
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L'attività Invia messaggi consente di inviare un messaggio di posta elettronica. Tramite l'attività Invia messaggi un pacchetto può inviare messaggi quando le attività nel flusso di lavoro del pacchetto vengono completate o non riescono oppure in risposta a un evento generato dal pacchetto in fase di esecuzione. È ad esempio possibile utilizzare questa attività per notificare all'amministratore di un database l'esito positivo o negativo dell'attività Backup database.  
@@ -105,7 +105,7 @@ ms.locfileid: "71293933"
   
 ### <a name="options"></a>Opzioni  
  **SMTPConnection**  
- Selezionare una gestione connessione SMTP nell'elenco oppure fare clic su **\<Nuova connessione...>** per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione SMTP nell'elenco oppure fare clic su **\<New connection...>** per creare una nuova gestione connessione.  
   
 > [!IMPORTANT]  
 >  La gestione connessione SMTP supporta solo l'autenticazione anonima e l'autenticazione di Windows. Non supporta l'autenticazione di base.  
@@ -153,13 +153,13 @@ ms.locfileid: "71293933"
   
 #### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Connessione file  
  **MessageSource**  
- Selezionare una gestione connessione file nell'elenco oppure crearne una nuova facendo clic su \<**Nuova connessione**.  
+ Selezionare una gestione connessione file nell'elenco oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = Variabile  
  **MessageSource**  
- Selezionare una variabile nell'elenco oppure crearne una nuova facendo clic su \<**Nuova variabile**.  
+ Selezionare una variabile nell'elenco oppure fare clic su \<**New variable...**> per crearne una nuova.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

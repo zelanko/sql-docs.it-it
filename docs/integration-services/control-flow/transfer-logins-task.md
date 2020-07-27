@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9d82f3ef27525ad918ef01e9cb2e0600ef85ae0a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 242a5c58321ad211a7e27b28b4574433c45ceceb
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293855"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914782"
 ---
 # <a name="transfer-logins-task"></a>Attività Trasferisci account di accesso
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L'attività Trasferisci account di accesso trasferisce uno o più account di accesso tra istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -106,10 +106,10 @@ ms.locfileid: "71293855"
   
 ### <a name="options"></a>Opzioni  
  **SourceConnection**  
- Selezionare una gestione connessione SMO nell'elenco o fare clic su **\<Nuova connessione...>** per creare una nuova connessione al server di origine.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su **\<New connection...>** per creare una nuova connessione al server di origine.  
   
  **DestinationConnection**  
- Selezionare una gestione connessione SMO nell'elenco o fare clic su **Nuova connessione...>\<** per creare una nuova connessione al server di destinazione.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su **\<New connection...>** per creare una nuova connessione al server di destinazione.  
   
  **LoginsToTransfer**  
  Consente di selezionare gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da copiare dal server di origine a quello di destinazione. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  

@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 60dcf1692fb8b805b9eef8fad228353104131c93
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb26be1034632ce747c21239636f9b0a4ec08114
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295733"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913267"
 ---
 # <a name="save-packages"></a>Salvataggio di pacchetti
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] è possibile usare Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] per compilare i pacchetti e quindi salvarli nel file system come file XML, con estensione dtsx. È inoltre possibile salvare copie del file XML di un pacchetto nel database msdb in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o nell'archivio pacchetti. L'archivio pacchetti è costituito dalle cartelle del percorso del file system gestito dal servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -60,7 +60,7 @@ ms.locfileid: "71295733"
   
 1.  In Esplora soluzioni fare doppio clic sul pacchetto di cui si desidera salvare una copia.  
   
-2.  Dal menu **File** scegliere **Salva copia di \<file di pacchetto> con nome**.  
+2.  Scegliere **Salva copia di \<package file> con nome** dal menu **File**.  
   
 3.  Nella finestra di dialogo **Salva copia del pacchetto** selezionare la posizione di un pacchetto dall'elenco **Posizione pacchetto**. Sono disponibili le opzioni seguenti:  
     -   SQL Server
@@ -110,7 +110,7 @@ ms.locfileid: "71295733"
   
 2.  In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto, scegliere **Aggiungi** e quindi **Nuovo elemento**.  
   
-3.  Nella finestra di dialogo **Aggiungi nuovo elemento -\<nome progetto>** fare clic sul pacchetto che si vuole usare come modello.  
+3.  Nella finestra di dialogo **Aggiungi nuovo elemento -\<project name>** fare clic sul pacchetto che si vuole usare come modello.  
   
      Nell'elenco dei modelli è incluso il modello di pacchetto predefinito Nuovo pacchetto SSIS. I modelli che è possibile utilizzare come modelli di pacchetto sono identificati dall'icona di pacchetto.  
   

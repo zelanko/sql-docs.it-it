@@ -1,5 +1,6 @@
 ---
 title: Monitoraggio delle prestazioni con Query Store | Microsoft Docs
+description: SQL Server Query Store mostra informazioni dettagliate sulle prestazioni e sulla scelta del piano di query. Query Store acquisisce la cronologia di query, piani e statistiche di runtime.
 ms.custom: ''
 ms.date: 04/09/2020
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 010d18fff933ee1bd362d1ebd59ef86905d493ed
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f56ea55b90613ea657994af6acff7eef271843b4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006212"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458430"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoraggio delle prestazioni con Query Store
 

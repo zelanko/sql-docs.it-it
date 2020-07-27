@@ -1,5 +1,6 @@
 ---
 title: Isolare i problemi relativi alle prestazioni | Microsoft Docs
+description: Usare SQL Server Profiler e Monitor di sistema per monitorare e risolvere i problemi relativi a Transact-SQL, alle applicazioni, all'hardware e al sistema.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: 2eb425cb-9166-4027-ae08-c8fc2d236f44
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7b73900dc88ba6e0f5af7dd71f781b5816bda67
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59a452da4fa48d422855416d308383fceb126791
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715225"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457929"
 ---
 # <a name="isolate-performance-problems"></a>Isolare i problemi relativi alle prestazioni
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

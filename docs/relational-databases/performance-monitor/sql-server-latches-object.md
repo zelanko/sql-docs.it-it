@@ -1,5 +1,6 @@
 ---
 title: Oggetto Latches di SQL Server | Microsoft Docs
+description: Informazioni sull'oggetto SQLServer:Latches, che fornisce contatori per monitorare i blocchi di risorsa interni di SQL Server, definiti latch.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 2393ea1c-2bf3-41c3-9f37-b9761144eeca
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e2bcb6b6eb5558a3fed212bc281ccf74a42516cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d57998b2bbc83a231cd82ceef8846ef21902eccb
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775848"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458813"
 ---
 # <a name="sql-server-latches-object"></a>Oggetto Latch di SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   L'oggetto **SQLServer:Latch** in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce contatori per monitorare i blocchi di risorsa interni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , definiti latch. Il monitoraggio dei latch per determinare l'attività degli utenti e l'utilizzo delle risorse può essere utile per identificare eventuali colli di bottiglia.  
   
- Nella tabella seguente vengono descritti i contatori dell'oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Latches**di**.  
+ Nella tabella seguente vengono descritti i contatori dell'oggetto **Latches** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Contatori di SQLServer:Latch|Descrizione|  
 |---------------------------------|-----------------|  

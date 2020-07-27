@@ -25,16 +25,16 @@ helpviewer_keywords:
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b6f3217854bf72f3c7300c87aefceab24220401a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd679e14920099a6383a414772bc162cdf470645
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71281934"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921981"
 ---
 # <a name="set-package-properties"></a>Impostazione delle proprietà di un pacchetto
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Quando viene creato un pacchetto in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] utilizzando l'interfaccia grafica offerta da [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , è possibile impostare le proprietà dell'oggetto pacchetto nella finestra Proprietà.  
@@ -112,7 +112,7 @@ ms.locfileid: "71281934"
 |**CreatorComputerName**|Nome del computer in cui è stato creato il pacchetto.|  
 |**CreatorName**|Nome dell'utente che ha creato il pacchetto.|  
 |**Descrizione**|Descrizione delle funzionalità del pacchetto.|  
-|**ID**|GUID del pacchetto, assegnato al momento della creazione. Questa proprietà è di sola lettura. Per generare un nuovo valore casuale per la proprietà **ID**, selezionare **\<Genera nuovo ID\>** nell'elenco a discesa.|  
+|**ID**|GUID del pacchetto, assegnato al momento della creazione. Questa proprietà è di sola lettura. Per generare un nuovo valore casuale per la proprietà **ID**, selezionare **\<Generate New ID\>** nell'elenco a discesa.|  
 |**Nome**|Nome del pacchetto.|  
 |**PackageType**|Tipo di pacchetto. I possibili valori sono **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**e **SQLReplication**. Il valore predefinito di questa proprietà è **Default**. Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   

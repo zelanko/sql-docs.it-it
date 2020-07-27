@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d3912e2b5cbf8051348191cf3efb6ed2d20d551
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 76257fd464a7107297d609bfb6a4ef150d6f58bc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74687198"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913652"
 ---
 # <a name="azure-storage-connection-manager"></a>Gestione connessione di Archiviazione di Azure
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 La gestione connessione di Archiviazione di Azure consente a un pacchetto SSIS di SQL Server di connettersi a un account di Archiviazione di Azure. La gestione connessione è un componente del [Feature Pack di SQL Server Integration Services (SSIS) per Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md). 
   
@@ -33,11 +33,15 @@ Sono disponibili le proprietà seguenti.
 
 - **Service:** specifica il servizio di archiviazione a cui connettersi.
 - **Account name:** specifica il nome dell'account di archiviazione.
-- **Authentication:** specifica il metodo di autenticazione da usare. Sono supportati i metodi di autenticazione AccessKey e ServicePrincipal.
+- **Authentication:** specifica il metodo di autenticazione da usare. Sono supportate le autenticazioni AccessKey, ServicePrincipal e SharedAccessSignature.
     - **AccessKey:** per questo metodo di autenticazione, specificare la **chiave dell'account**.
     - **ServicePrincipal:** per questo metodo di autenticazione, specificare l'**ID applicazione**, la **chiave applicazione** e l'**ID tenant** per l'entità servizio.
       Per il funzionamento di **Test connessione**, all'entità servizio deve essere assegnato almeno il **Ruolo con autorizzazioni di lettura per i dati dei BLOB di archiviazione** per l'account di archiviazione.
       Per altre informazioni, vedere [Concedere l'accesso ai dati dei BLOB e delle code di Azure con il controllo degli accessi in base al ruolo nel portale di Azure](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
+    - **SharedAccessSignature:** Per questo metodo di autenticazione, specificare almeno il **token** della firma di accesso condiviso.
+      Per testare la connessione, specificare anche l'ambito della risorsa in cui eseguire il test. Potrebbe essere il **servizio**, il **contenitore** o il **BLOB**.
+      Per il **contenitore** e il **BLOB**, specificare rispettivamente il nome del contenitore e il percorso del BLOB.
+      Per altre informazioni, vedere [Panoramica della firma di accesso condiviso di Archiviazione di Azure](https://docs.microsoft.com/azure/storage/common/storage-sas-overview).
 - **Environment:** specifica l'ambiente cloud che ospita l'account di archiviazione.
 
 ## <a name="managed-identities-for-azure-resources-authentication"></a>Identità gestite per l'autenticazione delle risorse di Azure

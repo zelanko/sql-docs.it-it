@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 395d639cd62894c91fbf0690467e60aaeac57bea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d32a8c6a2096cab67917db7a464b70eaf16ff6f5
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727086"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484422"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining di funzioni definite dall'utente scalari
 
@@ -29,7 +29,7 @@ ms.locfileid: "85727086"
 Questo articolo presenta l'inlining di funzioni definite dall'utente scalari, una delle funzionalità incluse nel gruppo di funzionalità di [elaborazione di query intelligenti](../../relational-databases/performance/intelligent-query-processing.md). Questa funzionalità migliora le prestazioni delle query che chiamano funzioni definite dall'utente scalari in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]).
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>Funzioni definite dall'utente scalari T-SQL
-Le funzioni definite dall'utente (UDF) implementate in [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono un unico valore di dati sono dette funzioni definite dall'utente scalari T-SQL. Le funzioni definite dall'utente T-SQL consentono di riusare e modulare il codice in più query [!INCLUDE[tsql](../../includes/tsql-md.md)] in modo elegante. Alcuni calcoli (ad esempio regole business complesse) sono più facili da esprimere nella forma imperativa delle funzioni definite dall'utente. Le funzioni definite dall'utente consentono di creare una logica complessa senza richiedere l'esperienza necessaria per la scrittura di query SQL complesse.
+Le funzioni definite dall'utente (UDF) implementate in [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono un unico valore di dati sono dette funzioni definite dall'utente scalari T-SQL. Le funzioni definite dall'utente T-SQL consentono di riusare e modulare il codice in più query [!INCLUDE[tsql](../../includes/tsql-md.md)] in modo elegante. Alcuni calcoli (ad esempio regole business complesse) sono più facili da esprimere nella forma imperativa delle funzioni definite dall'utente. Le funzioni definite dall'utente consentono di creare una logica complessa senza richiedere l'esperienza necessaria per la scrittura di query SQL complesse. Per altre informazioni sulle funzioni definite dall'utente, vedere [Creare funzioni definite dall'utente (motore di database)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).
 
 ## <a name="performance-of-scalar-udfs"></a>Prestazioni delle funzioni definite dall'utente scalari
 Le funzioni definite dall'utente scalari offrono in genere prestazioni scarse per i motivi seguenti:
@@ -138,12 +138,12 @@ A seconda della complessità della logica della funzione definita dall'utente, i
 
 - La funzione definita dall'utente è scritta con i costrutti seguenti:
     - `DECLARE`, `SET`: Dichiarazione e assegnazione di variabili.
-    - `SELECT`: Query SQL con assegnazioni di variabili singole/multiple<sup>1</sup>.
+    - `SELECT`: Query SQL con assegnazioni di variabili singole/multiple <sup>1</sup>.
     - `IF`/`ELSE`: Diramazione con livelli di annidamento arbitrari.
     - `RETURN`: Istruzione return singola o istruzioni return multiple.
-    - `UDF`: Chiamate di funzioni ricorsive/annidate<sup>2</sup>.
+    - `UDF`: Chiamate di funzioni ricorsive/annidate <sup>2</sup>.
     - Altri: Operazioni relazionali, ad esempio `EXISTS`, `ISNULL`.
-- La funzione definita dall'utente non chiama alcuna funzione intrinseca dipendente dal tempo (ad esempio `GETDATE()`) o con effetti collaterali<sup>3</sup> (ad esempio `NEWSEQUENTIALID()`).
+- La funzione definita dall'utente non chiama alcuna funzione intrinseca dipendente dal tempo (ad esempio `GETDATE()`) o con effetti collaterali <sup>3</sup> (ad esempio `NEWSEQUENTIALID()`).
 - La funzione definita dall'utente usa la clausola `EXECUTE AS CALLER` (comportamento predefinito se la clausola `EXECUTE AS` non viene specificata).
 - La funzione definita dall'utente non fa riferimento a variabili di tabella o a parametri con valori di tabella.
 - La query che chiama una funzione definita dall'utente scalare non fa riferimento a una chiamata di funzione definita dall'utente scalare nella relativa clausola `GROUP BY`.
@@ -154,25 +154,31 @@ A seconda della complessità della logica della funzione definita dall'utente, i
 - La funzione definita dall'utente non fa riferimento a tipi definiti dall'utente.
 - Non sono state aggiunte firme alla funzione definita dall'utente.
 - La funzione definita dall'utente non è una funzione di partizione.
-- La funzione definita dall'utente non contiene riferimenti a espressioni di tabella comuni (CTE)
-- La funzione definita dall'utente non contiene riferimenti a funzioni intrinseche, ad esempio @@ROWCOUNT, che potrebbero modificare i risultati quando sono inline (restrizione aggiunta in Microsoft SQL Server 2019 CU2).
-- La funzione definita dall'utente non contiene funzioni di aggregazione passate come parametri a una funzione definita dall'utente scalare (restrizione aggiunta in Microsoft SQL Server 2019 CU2).
-- La funzione definita dall'utente non fa riferimento a viste predefinite, ad esempio OBJECT_ID, (restrizione aggiunta in Microsoft SQL Server 2019 CU2).
--   La funzione definita dall'utente non fa riferimento a metodi XML (restrizione aggiunta in Microsoft SQL Server 2019 CU4).
--   La funzione definita dall'utente non contiene un oggetto SELECT con ORDER BY senza "TOP 1" (restrizione aggiunta in Microsoft SQL Server 2019 CU4).
--   La funzione definita dall'utente non contiene una query SELECT che esegue un'assegnazione in combinazione con la clausola ORDER BY, ad esempio SELECT @x = @x +1 FROM table ORDER BY column_name (restrizioni aggiunta in Microsoft SQL Server 2019 CU4).
-- La funzione definita dall'utente non contiene istruzioni RETURN multiple (restrizione aggiunta in SQL Server 2019 CU5).
-- La funzione definita dall'utente non viene chiamata da un'istruzione RETURN (restrizione aggiunta in SQL Server 2019 CU5).
-- La funzione definita dall'utente non fa riferimento alla funzione STRING_AGG (restrizione aggiunta in SQL Server 2019 CU5). 
+- La funzione definita dall'utente non contiene riferimenti a espressioni di tabella comuni (CTE).
+- La funzione definita dall'utente non contiene riferimenti a funzioni intrinseche che potrebbero alterare i risultati quando sono inline (ad esempio, `@@ROWCOUNT`) <sup>4</sup>.
+- La funzione definita dall'utente non contiene funzioni di aggregazione passate come parametri a una funzione definita dall'utente scalare <sup>4</sup>.
+- La funzione definita dall'utente non fa riferimento a visualizzazioni predefinite (ad esempio, `OBJECT_ID`) <sup>4</sup>.
+- La funzione definita dall'utente non fa riferimento ai metodi XML <sup>5</sup>.
+- La funzione definita dall'utente non contiene una query SELECT con `ORDER BY` senza una clausola `TOP 1` <sup>5</sup>.
+- La funzione definita dall'utente non contiene una query SELECT che esegue un'assegnazione in combinazione con la clausola `ORDER BY` (ad esempio, `SELECT @x = @x + 1 FROM table1 ORDER BY col1`) <sup>5</sup>.
+- La funzione definita dall'utente non contiene più istruzioni RETURN <sup>6</sup>.
+- La funzione definita dall'utente non viene chiamata da un'istruzione RETURN <sup>6</sup>.
+- La funzione definita dall'utente non fa riferimento alla funzione `STRING_AGG` <sup>6</sup>. 
 
-<sup>1</sup> `SELECT` con accumulo/aggregazione di variabili (ad esempio, `SELECT @val += col1 FROM table1`) non è supportata per l'inlining.
+<sup>1</sup> `SELECT` con accumulo/aggregazione di variabili non è supportata per l'inlining (ad esempio, `SELECT @val += col1 FROM table1`).
 
 <sup>2</sup> L'inlining delle funzioni definite dall'utente ricorsive viene eseguito solo fino a una determinata profondità.
 
 <sup>3</sup> Le funzioni intrinseche i cui risultati dipendono dall'ora di sistema corrente sono dipendenti dall'ora. Un esempio di funzione con effetti collaterali può essere costituito da una funzione intrinseca in grado di aggiornare uno stato globale interno. Tali funzioni restituiscono risultati diversi ogni volta che vengono chiamate, a seconda dello stato interno.
 
+<sup>4</sup> Restrizione aggiunta in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2
+
+<sup>5</sup> Restrizione aggiunta in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4
+
+<sup>6</sup> Restrizione aggiunta in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5
+
 > [!NOTE]
-> Per informazioni sulle correzioni e sulle modifiche più recenti dell'inlining di funzioni definite dall'utente scalari di T-SQL in scenari di idoneità all'inlining, vedere l'articolo della Knowledge Base: [CORREZIONE: Problemi relativi all'inlining di funzioni definite dall'utente scalari in SQL Server 2019](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019).
+> Per informazioni sulle correzioni e sulle modifiche più recenti dell'inlining di funzioni definite dall'utente scalari di T-SQL in scenari di idoneità all'inlining, vedere l'articolo della Knowledge Base: [CORREZIONE: Problemi relativi all'inlining di funzioni definite dall'utente scalari in SQL Server 2019](https://support.microsoft.com/help/4538581).
 
 ### <a name="checking-whether-or-not-a-udf-can-be-inlined"></a>Verifica dell'idoneità all'inlining di una funzione definita dall'utente
 Per ogni funzione definita dall'utente scalare T-SQL, la vista del catalogo [Sys. sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) include la proprietà `is_inlineable`, che indica se una funzione definita dall'utente è idonea all'inlining o meno. 
@@ -233,7 +239,8 @@ GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 ```
 
-Un hint per la query `USE HINT` ha la precedenza sulla configurazione con ambito database o sull'impostazione del livello di compatibilità.
+> [!TIP]
+> Un hint per la query `USE HINT` ha la precedenza sulla configurazione con ambito database o sull'impostazione del livello di compatibilità.
 
 È anche possibile disabilitare l'inlining di funzioni definite dall'utente scalari per una funzione definita dall'utente specifica tramite la clausola INLINE nell'istruzione `CREATE FUNCTION` o `ALTER FUNCTION`.
 Ad esempio:
@@ -271,13 +278,14 @@ Come descritto in questo articolo, l'inlining di una funzione definita dall'uten
 1. Gli hint di join a livello di query possono non essere più validi, poiché l'inlining può introdurre nuovi join. È necessario usare hint di join locale.
 1. Non è possibile indicizzare le viste che fanno riferimento a funzioni definite dall'utente scalari. Se è necessario creare un indice per tali viste, disabilitare l'inlining per le funzioni definite dall'utente interessate.
 1. Con l'inlining di funzioni definite dall'utente possono presentarsi alcune differenze nel comportamento del [Dynamic Data Masking](../security/dynamic-data-masking.md). In determinate situazioni (a seconda della logica della funzione definita dall'utente), l'inlining può essere più conservativo rispetto alla maschera delle colonne di output. Negli scenari in cui le colonne a cui si fa riferimento in una funzione definita dall'utente non sono colonne di output, queste non vengono mascherate. 
-1. Se una funzione definita dall'utente fa riferimento a funzioni predefinite, ad esempio `SCOPE_IDENTITY()`, `@@ROWCOUNT` o `@@ERROR`, il valore restituito dalla funzione predefinita cambierà con l'inlining. Questa modifica nel comportamento è dovuta al fatto che l'inlining modifica l'ambito delle istruzioni all'interno della funzione definita dall'utente. A partire da Microsoft SQL Server 2019 CU2, l'inlining viene bloccato se la funzione definita dall'utente fa riferimento a determinate funzioni intrinseche, ad esempio @@ROWCOUNT.
+1. Se una funzione definita dall'utente fa riferimento a funzioni predefinite, ad esempio `SCOPE_IDENTITY()`, `@@ROWCOUNT` o `@@ERROR`, il valore restituito dalla funzione predefinita cambierà con l'inlining. Questa modifica nel comportamento è dovuta al fatto che l'inlining modifica l'ambito delle istruzioni all'interno della funzione definita dall'utente. A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2, l'inlining è bloccato se la funzione definita dall'utente fa riferimento a determinate funzioni intrinseche (ad esempio, `@@ROWCOUNT`).
 
 ## <a name="see-also"></a>Vedere anche
+[Creare funzioni definite dall'utente (motore di database)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
 [Centro prestazioni per il motore di database di SQL Server e il database SQL di Azure](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md)     
 [Guida di riferimento a operatori Showplan logici e fisici](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
 [Join](../../relational-databases/performance/joins.md)     
 [Dimostrazione dell'elaborazione di query intelligenti](https://aka.ms/IQPDemos)     
-[CORREZIONE: Problemi relativi all'inlining di funzioni definite dall'utente scalari in SQL Server 2019](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019)     
+[CORREZIONE: Problemi relativi all'inlining di funzioni definite dall'utente scalari in SQL Server 2019](https://support.microsoft.com/help/4538581)     
 

@@ -8,17 +8,33 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 07/15/2020
-ms.openlocfilehash: 3f6766e32369c2002b6da7df62646572a4cf8507
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.date: 07/17/2020
+ms.openlocfilehash: 5acbadb8d019b6d7d468f756bd25b70d890251c8
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406254"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458886"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
 
 **[Scarica e installa l'ultima versione](download.md)**
+
+## <a name="july-2020-hotfix"></a>Luglio 2020 (hotfix)
+
+17 luglio 2020 &nbsp; / &nbsp; versione: 1.20.1
+
+&nbsp;
+
+| Modifica | Dettagli |
+| :----- | :------ |
+| Correzione del bug 11372 relativo al wrapping non corretto dei nomi di tabella dopo il trascinamento delle tabelle in Esplora oggetti | [11372](https://github.com/microsoft/azuredatastudio/issues/11372)  |
+| Correzione del bug 11356 relativo al tema scuro impostato come predefinito | [11356](https://github.com/microsoft/azuredatastudio/issues/11356)  |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issue"></a>Problema noto
+
+- Alcuni utenti hanno segnalato errori di connessione dal nuovo Microsoft.Data.SqlClient v2.0.0 incluso in questa versione. Gli utenti sono riusciti a connettersi correttamente [seguendo queste istruzioni](https://github.com/microsoft/azuredatastudio/issues/11367#issuecomment-659614111)
 
 ## <a name="july-2020"></a>Luglio 2020
 

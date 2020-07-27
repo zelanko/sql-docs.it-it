@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df923a4a1509520b95e5efcf87e9eac51497e4a8
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: f61fad1afac14c2e6a27314e2a65371722ee9b23
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158919"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485578"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guida sull'architettura dei thread e delle attività
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -111,6 +111,9 @@ ORDER BY parent_task_address, scheduler_id;
 > [!TIP]
 > La colonna `parent_task_address` è sempre NULL per l'attività padre. 
 
+> [!TIP]
+> In un [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] occupato è possibile osservare un numero di attività attive che supera il limite impostato dai thread prenotati. Queste attività possono appartenere a un ramo che non viene più usato e si trovano in uno stato temporaneo in attesa della pulizia. 
+
 [!INCLUDE[ssResult](../includes/ssresult-md.md)] Si noti che sono presenti 17 attività attive per i rami attualmente in esecuzione: 16 attività figlio corrispondenti ai thread prenotati, a cui si aggiunge l'attività padre o l'attività di coordinamento.
 
 |parent_task_address|task_address|task_state|scheduler_id|worker_address|
@@ -133,9 +136,6 @@ ORDER BY parent_task_address, scheduler_id;
 |0x000001EF4758ACA8|0x000001EC8628D468|SUSPENDED|11|0x000001EFBFA4A160|
 |0x000001EF4758ACA8|0x000001EFBD3A1C28|SUSPENDED|11|0x000001EF6BD72160|
 
-> [!TIP]
-> In un [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] occupato è possibile osservare un numero di attività attive che supera il limite impostato dai thread prenotati. Queste attività possono appartenere a un ramo che non viene più usato e si trovano in uno stato temporaneo in attesa della pulizia. 
-
 Osservare che a ognuna delle 16 attività figlio è stato assegnato un thread di lavoro diverso (visibile nella colonna `worker_address`), ma tutti i ruoli di lavoro sono assegnati allo stesso pool di otto utilità di pianificazione (0, 5, 6, 7, 8, 9, 10, 11) e l'attività padre è assegnata a un'utilità di pianificazione all'esterno del pool (3).
 
 > [!IMPORTANT]
@@ -147,7 +147,7 @@ Un thread di lavoro può rimanere attivo nell'utilità di pianificazione solo pe
 > [!TIP] 
 > Per l'output della DMV descritto in precedenza, tutte le attività attive hanno lo stato SUSPENDED. Per informazioni dettagliate sulle attività in attesa, è possibile eseguire una query nella DMV [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md). 
 
-In breve, una richiesta parallela genera più attività dove ogni attività deve essere assegnata a un singolo thread di lavoro e ogni thread di lavoro deve essere assegnato a una singola utilità di pianificazione. Pertanto, il numero di utilità di pianificazione in uso non può superare il numero di attività parallele per ramo, impostato tramite MaxDOP. 
+In breve, una richiesta parallela genererà più attività. Ogni attività deve essere assegnata a un unico thread di lavoro. Ogni thread di lavoro deve essere assegnato a un' unica utilità di pianificazione. Il numero di utilità di pianificazione in uso non può quindi superare il numero di attività parallele per ramo, impostato dall'hint per la query o dalla configurazione di MaxDOP. Il thread di coordinamento non contribuisce al limite MaxDOP. 
 
 ### <a name="allocating-threads-to-a-cpu"></a>Allocazione di thread a una CPU
 Per impostazione predefinita, ogni istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avvia un singolo thread e il sistema operativo distribuisce i thread delle istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tra i processori (CPU) di un computer in base al carico. Se è stata abilitata l'affinità del processo a livello di sistema operativo, il sistema operativo assegna ogni thread a una CPU specifica. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assegna invece **thread di lavoro** di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alle **utilità di pianificazione** che distribuiscono uniformemente i thread fra le CPU, in modalità round robin.

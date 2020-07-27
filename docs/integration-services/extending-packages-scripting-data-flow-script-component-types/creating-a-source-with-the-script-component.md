@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6b3362c4761d6ad17618a2c390ada247be9071f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e936a0afefa71969cf9e27c2c222d8780532610
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296444"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914145"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Creazione di un'origine con il componente script
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Utilizzare un componente di origine nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per caricare dati da un'origine dati da passare a trasformazioni e destinazioni a valle. Normalmente, ci si connette all'origine dati tramite una gestione connessione esistente.  
@@ -64,7 +64,7 @@ ms.locfileid: "71296444"
 -   È possibile creare uno o più output aggiuntivi, ad esempio un output degli errori simulati per le righe che contengono valori imprevisti. Usare i pulsanti **Aggiungi output** e **Rimuovi output** per gestire gli output del componente di origine. Tutte le righe di input vengono indirizzate a tutti gli output disponibili, a meno che non si specifichi anche un valore identico diverso da zero per la proprietà **ExclusionGroup** di tali output nei casi in cui si intende indirizzare ogni riga a uno solo degli output che condividono lo stesso valore di **ExclusionGroup**. Il valore intero specifico selezionato per identificare **ExclusionGroup** non è significativo.  
   
     > [!NOTE]  
-    >  È anche possibile usare un valore diverso da zero per la proprietà **ExclusionGroup** con un singolo output se non si vuole restituire tutte le righe come output. In questo caso è tuttavia necessario chiamare in modo esplicito il metodo **DirectRowTo\<outputbuffer>** per ogni riga che si vuole inviare all'output.  
+    >  È anche possibile usare un valore diverso da zero per la proprietà **ExclusionGroup** con un singolo output se non si vuole restituire tutte le righe come output. In questo caso, tuttavia, è necessario chiamare in modo esplicito il metodo **DirectRowTo\<outputbuffer>** per ogni riga che si vuole inviare all'output.  
   
 -   È necessario assegnare un nome descrittivo agli output. In seguito, si farà riferimento agli output in base ai nomi presenti nello script, utilizzando le proprietà delle funzioni di accesso tipizzate create nel codice generato automaticamente.  
   

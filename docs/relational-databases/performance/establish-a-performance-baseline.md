@@ -1,5 +1,6 @@
 ---
 title: Definire una base di riferimento delle prestazioni | Microsoft Docs
+description: Misurare le prestazioni a intervalli di tempo regolari, anche quando non si è verificato alcun problema, in modo da definire una baseline per le prestazioni del server in SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ ms.assetid: dc5aa8d6-2507-448f-ad86-4196443915fc
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7899ee364c66e3d2f402053231e88a3eafb8d97f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 619e9d6ad55f17fece2a9d327d4e0d67512e4b90
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762851"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457687"
 ---
 # <a name="establish-a-performance-baseline"></a>Definire una base di riferimento delle prestazioni
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,6 +1,6 @@
 ---
 title: Aprire Monitoraggio attività (SSMS)
-description: Come aprire Monitoraggio attività in SQL Server Management Studio (SSMS).
+description: Informazioni su come aprire Monitoraggio attività in SQL Server Management Studio. Monitoraggio attività esegue query sull'istanza monitorata per ottenere informazioni da visualizzare.
 ms.custom: seo-dt-2019
 ms.date: 08/05/2016
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 16d08bbc2b651ef21ee80be1e8af74a00b45a253
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d570faf51200708bcbd56371d68f53a12776d12e
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787433"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457473"
 ---
 # <a name="open-activity-monitor-in-sql-server-management-studio-ssms"></a>Aprire Monitoraggio attività in SQL Server Management Studio (SSMS)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

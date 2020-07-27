@@ -1,5 +1,6 @@
 ---
 title: Oggetto Locks di SQL Server | Microsoft Docs
+description: Informazioni sull'oggetto SQLServer:Locks, che offre informazioni sui blocchi di SQL Server per i singoli tipi di risorse.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 853a19af5644e9c29659c5595a8ce9ee6357f499
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1553985a2c85eb183841491854ef010eb12d941a
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775822"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458125"
 ---
 # <a name="sql-server-locks-object"></a>Oggetto Locks di SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   L'oggetto **SQLServer:Locks** di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre informazioni sui blocchi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i singoli tipi di risorse. I blocchi sulle risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio sulle righe lette o modificate durante una transazione, impediscono che le risorse vengano utilizzate contemporaneamente da transazioni diverse. Ad esempio, se una transazione mantiene attivo un blocco esclusivo (X) su una riga all'interno di una tabella, nessun'altra transazione potrà modificare la riga fino a quando il blocco non viene rilasciato. La riduzione dei blocchi aumenta la concorrenza e, di conseguenza, potrebbe migliorare le prestazioni. È possibile monitorare contemporaneamente più istanze dell'oggetto **Locks** , che rappresentano i singoli blocchi sui tipi di risorse.  
   
- Nella tabella seguente vengono descritti i contatori dell'oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Locks**di**.  
+ Nella tabella seguente vengono descritti i contatori dell'oggetto **Locks** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Contatori di SQLServer Locks|Descrizione|  
 |-------------------------------|-----------------|  

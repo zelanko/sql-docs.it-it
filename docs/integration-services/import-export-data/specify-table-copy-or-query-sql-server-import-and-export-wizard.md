@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f561fd0e5817ecc03e8d5fe4cc8c32661ebdca21
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da112bf3a58d33fd7fae154d5a437c309ab7d2a6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296247"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914344"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Impostazione copia tabella o query (Importazione/Esportazione guidata SQL Server)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Dopo aver fornito informazioni sulla destinazione dei dati e su come connettersi a tale destinazione, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra la pagina **Impostazione copia tabella o query**. In questa pagina è possibile scegliere una delle opzioni seguenti.
@@ -56,7 +56,7 @@ Dopo aver fatto clic **Avanti**, specificare un'istruzione SQL per impostare le 
 È possibile usare l'opzione **Scrivi una query** anche se in genere non si scrivono query SQL, purché si conosca il nome della tabella da esportare. Nella finestra di dialogo **Impostazione query di origine**, visualizzata quando si fa clic su **Avanti**, immettere la query come `SELECT * FROM <name of table>`. Se il nome della tabella contiene spazi o altri caratteri speciali, racchiudere il nome tra parentesi quadre - `SELECT * FROM [<name of table>]`.
 
 ### <a name="more-info"></a>Altre informazioni
- L'opzione **Copia i dati da una o più tabelle o viste** è disponibile solo per i provider per i quali è presente una sezione ProviderDescription nel file ProviderDescriptors.xml. Per impostazione predefinita, questo file si trova in \<*unità*>:\Programmi\Microsoft SQL Server\130\DTS\ProviderDescriptors. Ogni sezione ProviderDescription del file contiene le informazioni necessarie per recuperare metadati dal provider corrispondente.    
+ L'opzione **Copia i dati da una o più tabelle o viste** è disponibile solo per i provider per i quali è presente una sezione ProviderDescription nel file ProviderDescriptors.xml. Per impostazione predefinita, questo file si trova in \<*drive*>:\Programmi\Microsoft SQL Server\130\DTS\ProviderDescriptors. Ogni sezione ProviderDescription del file contiene le informazioni necessarie per recuperare metadati dal provider corrispondente.    
     
  Per impostazione predefinita, il file ProviderDescriptors.xml contiene una sezione ProviderDescription solo per i provider seguenti:    
     

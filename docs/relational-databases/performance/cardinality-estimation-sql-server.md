@@ -1,5 +1,6 @@
 ---
 title: Stima della cardinalità (SQL Server) | Microsoft Docs
+description: SQL Server Query Optimizer seleziona i piani di query con il minor costo di elaborazione stimato, che determina in base alle righe elaborate e a un modello di costo.
 ms.custom: ''
 ms.date: 02/24/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36c7637d1408a8d37764bf18997d341db959d8e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3806092674dde608bed9a962bcf939ac0379b374
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730288"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457703"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Stima della cardinalità (SQL Server)
 

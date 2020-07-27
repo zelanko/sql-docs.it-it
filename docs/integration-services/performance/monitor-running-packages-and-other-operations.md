@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6f899ec9c1e006212483a49133ad343e93f20173
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287845"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918327"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Esecuzione di pacchetti e altre operazioni di monitoraggio
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   È possibile monitorare esecuzioni di pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , convalide di progetto e altre operazioni di usando uno o più strumenti tra quelli indicati di seguito. Alcuni strumenti, tra cui le scelte dei dati, sono disponibili solo per i progetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -179,7 +179,7 @@ ms.locfileid: "79287845"
  Nel report **Tutte le convalide** viene visualizzato un riepilogo di tutte le convalide di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] effettuate nel server. Nel riepilogo vengono visualizzate informazioni per ogni convalida, ad esempio, stato, ora di inizio e ora di fine. In ogni voce del riepilogo è incluso un collegamento ai messaggi generati durante la convalida. Come per il Dashboard Integration Services, è possibile applicare un filtro alla tabella per limitare le informazioni visualizzate.  
   
 ### <a name="custom-reports"></a>Report personalizzati  
- È possibile aggiungere un report personalizzato (file con estensione rdl) al nodo del catalogo **SSISDB** nel nodo **Cataloghi di Integration Services** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Prima di aggiungere il report, verificare che sia in uso una convenzione di denominazione di terze parti per assegnare nomi completi agli oggetti a cui si fa riferimento, ad esempio una tabella di origine. In caso contrario, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verrà visualizzato un errore. La convenzione di denominazione è \<database>.\<proprietario>.\<oggetto>. ad esempio SSISDB.internal.executions.  
+ È possibile aggiungere un report personalizzato (file con estensione rdl) al nodo del catalogo **SSISDB** nel nodo **Cataloghi di Integration Services** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Prima di aggiungere il report, verificare che sia in uso una convenzione di denominazione di terze parti per assegnare nomi completi agli oggetti a cui si fa riferimento, ad esempio una tabella di origine. In caso contrario, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verrà visualizzato un errore. La convenzione di denominazione è \<database>.\<owner>.\<object>. ad esempio SSISDB.internal.executions.  
   
 > [!NOTE]  
 >  Quando si aggiungono report personalizzati al nodo **SSISDB** nel nodo **Database** , il prefisso SSISDB non è necessario.  

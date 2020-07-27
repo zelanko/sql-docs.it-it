@@ -1,5 +1,6 @@
 ---
 title: Oggetto User Settable di SQL Server | Microsoft Docs
+description: Informazioni sull'oggetto User Settable, che crea istanze del contatore personalizzate in SQL Server per monitorare gli aspetti del server non monitorati dai contatori esistenti.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 427f24bdce5c7af4d0bd9c6b5c0c030112f8a5a1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f61f4013c02148485994ebcb5b579c0d0ef78b2b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758903"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458633"
 ---
 # <a name="sql-server-user-settable-object"></a>Oggetto Definibile dall'utente di SQLServer
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   L'oggetto **Definibile dall'utente** di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di creare istanze di contatore personalizzate. Utilizzare istanze di contatore personalizzate per monitorare gli aspetti del server non monitorati dai contatori esistenti, quali i componenti specifici del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato (ad esempio, il numero di ordini registrati o l'inventario dei prodotti).  
   
- L'oggetto **Definibile dall'utente** contiene 10 istanze del contatore di query, da **User counter 1** a **User counter 10**. Tali contatori corrispondono alle stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da **sp_user_counter1** a **sp_user_counter10**. Quando le stored procedure vengono eseguite dalle applicazioni utente, i valori impostati dalle stored procedure vengono visualizzati in Monitoraggio di sistema. Un contatore può monitorare qualsiasi valore integer, ad esempio una stored procedure che esegue il conteggio degli ordini di un prodotto specifico ricevuti in un giorno.  
+ L'oggetto **Definibile dall'utente** contiene 10 istanze del contatore di query: da **User counter 1** (Contatore utente 1) a **User counter 10** (Contatore utente 10). Tali contatori corrispondono alle stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da **sp_user_counter1** a **sp_user_counter10**. Quando le stored procedure vengono eseguite dalle applicazioni utente, i valori impostati dalle stored procedure vengono visualizzati in Monitoraggio di sistema. Un contatore può monitorare qualsiasi valore integer, ad esempio una stored procedure che esegue il conteggio degli ordini di un prodotto specifico ricevuti in un giorno.  
   
 > [!NOTE]  
 >  Il polling delle stored procedure dei contatori utente non viene eseguito automaticamente da Monitoraggio di sistema. Per aggiornare i valori dei contatori, è necessario che le stored procedure vengano eseguite in modo esplicito da un'applicazione utente. Utilizzare un trigger per aggiornare automaticamente il valore del contatore. Ad esempio, per creare un contatore che esegue il monitoraggio del numero di righe di una tabella, creare un trigger INSERT e DELETE nella tabella per eseguire l'istruzione seguente: `SELECT COUNT(*) FROM table`. Ogni volta che il trigger viene attivato da un'operazione INSERT o DELETE eseguita nella tabella, il contatore di Monitoraggio di sistema viene aggiornato automaticamente.  
   
- Nella tabella seguente viene descritto l'oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]User Settable**di**.  
+ Nella tabella seguente viene descritto l'oggetto **User Settable** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Contatori di SQLServer:Definibile dall'utente|Descrizione|  
 |---------------------------------------|-----------------|  

@@ -1,5 +1,6 @@
 ---
 title: Oggetto Batch Resp Statistics di SQL Server | Microsoft Docs
+description: Informazioni sull'oggetto prestazione SQLServer:Batch Resp Statistics, che fornisce i contatori per tenere traccia dei tempi di risposta dei batch di SQL Server.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 447ab09f049a5177a68a1c4a1d3d00239161149a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b28b0d8af863c21f4764f5c7126fca20b18c1ab1
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787377"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458153"
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server, Oggetto Batch Resp Statistics
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

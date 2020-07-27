@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cdeab9ba00b4c498970ebac378c4abe53f4fbd2c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e16612058617d324d0b3c0e4534716b39a09527f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628611"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552422"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opzioni per file e filegroup ALTER DATABASE (Transact-SQL)
 
@@ -57,9 +57,7 @@ Modifica i file e i filegroup associati al database. Consente inoltre di aggiung
 
 Per altre informazioni sulle convenzioni di sintassi, vedere [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## <a name="click-a-product"></a>Fare clic su un prodotto
-
-Nella riga seguente fare clic su qualsiasi nome di prodotto. Verrà visualizzato un contenuto diverso in questa pagina Web, appropriato per il prodotto su cui si fa clic.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -279,7 +277,7 @@ REMOVE FILEGROUP *filegroup_name* rimuove un filegroup dal database. Il filegrou
 
 MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } Modifica il filegroup impostando lo stato su READ_ONLY o READ_WRITE, impostando il filegroup come predefinito per il database o cambiando il nome del filegroup.
 
-\<filegroup_updatability_option> imposta la proprietà di sola lettura o di lettura/scrittura per il filegroup.
+\<filegroup_updatability_option> Imposta la proprietà di sola lettura o di lettura/scrittura per il filegroup.
 
 DEFAULT cambia il filegroup predefinito del database in *filegroup_name*. In un database può esistere un solo filegroup predefinito. Per altre informazioni, vedere [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).
 
@@ -812,7 +810,7 @@ REMOVE FILEGROUP *filegroup_name* rimuove un filegroup dal database. Il filegrou
 
 MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } Modifica il filegroup impostando lo stato su READ_ONLY o READ_WRITE, impostando il filegroup come predefinito per il database o cambiando il nome del filegroup.
 
-\<filegroup_updatability_option> imposta la proprietà di sola lettura o di lettura/scrittura per il filegroup.
+\<filegroup_updatability_option> Imposta la proprietà di sola lettura o di lettura/scrittura per il filegroup.
 
 DEFAULT cambia il filegroup predefinito del database in *filegroup_name*. In un database può esistere un solo filegroup predefinito. Per altre informazioni, vedere [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).
 

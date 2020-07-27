@@ -1,5 +1,6 @@
 ---
 title: Visualizzare le proprietà delle guide di piano | Microsoft Docs
+description: Informazioni su come visualizzare le proprietà delle guide di piano in SQL Server usando SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 814538af8afd11a1962d2c4efa225a29dba4fc27
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 18c1d7f663d5006cae078753e028caf133ec2c5c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655316"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458874"
 ---
 # <a name="view-plan-guide-properties"></a>Visualizzare le proprietà delle guide di piano
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85655316"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  La visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui un utente è proprietario o per le quali dispone di autorizzazioni.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-view-the-properties-of-a-plan-guide"></a>Per visualizzare le proprietà di una guida di piano  
   
@@ -85,7 +86,7 @@ ms.locfileid: "85655316"
   
 4.  Fare clic su **OK**.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-view-the-properties-of-a-plan-guide"></a>Per visualizzare le proprietà di una guida di piano  
   

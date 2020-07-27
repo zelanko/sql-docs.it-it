@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 80fe147fcdeb205752429521887d1c0b8f76234f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d809d1ffc7a3408d825589b3d69df12dba81f18e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731309"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552565"
 ---
 # <a name="hints-transact-sql---join"></a>Hint (Transact-SQL) - Join
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,8 +55,10 @@ ms.locfileid: "85731309"
      { LOOP | HASH | MERGE | REMOTE }  
 ```  
   
-## <a name="arguments"></a>Argomenti  
- LOOP | HASH | MERGE  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
+ LOOP \| HASH \| MERGE  
  Specifica che il join della query deve essere un join ciclico, hash o di merge. L'utilizzo delle opzioni LOOP | HASH | MERGE consente di applicare un join specifico tra due tabelle. Non è possibile specificare LOOP come tipo di join insieme a RIGHT o FULL. Per altre informazioni, vedere [Join](../../relational-databases/performance/joins.md).
   
  REMOTE  

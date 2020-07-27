@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0c5c86d90536d1ba7c8acd5402317ff364ffdc67
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ec9af02a6c7259741e75eae826bc9e15afe3aa80
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73637950"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86906787"
 ---
 # <a name="data-flow-performance-features"></a>Funzionalità delle prestazioni del flusso di dati
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   In questo argomento sono inclusi alcuni suggerimenti sulla progettazione di pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per evitare problemi di prestazioni comuni. Sono inoltre fornite informazioni sugli strumenti e sulle funzionalità che è possibile usare per risolvere i problemi relativi alle prestazioni dei pacchetti.  
@@ -102,7 +102,7 @@ ms.locfileid: "73637950"
  Indipendentemente dal componente del flusso di dati, è consigliabile seguire due linee guida generali per migliorare le prestazioni: ottimizzare le query ed evitare stringhe non necessarie.  
   
 #### <a name="optimize-queries"></a>Ottimizzazione delle query  
- Numerosi componenti del flusso di dati usano query in operazioni di estrazione dei dati dalle origini o in operazioni di ricerca per la creazione di tabelle di riferimento. La query predefinita usa la sintassi SELECT * FROM \<nomeTabella>. con cui vengono restituite tutte le colonne della tabella di origine. La disponibilità di tutte le colonne in fase di progettazione consente di scegliere qualsiasi colonna come colonna di ricerca, colonna pass-through o colonna di origine. Dopo avere selezionato le colonne da usare, è tuttavia necessario modificare la query in modo che includa solo le colonne selezionate. La rimozione delle colonne superflue garantisce una maggiore efficienza del flusso di dati in un pacchetto, in quanto un minor numero di colonne comporta la creazione di una riga con dimensioni inferiori. Una riga con dimensioni inferiori fa sì che sia possibile inserire più righe in un buffer e che l'elaborazione di tutte le righe nel set di dati risulti meno complessa.  
+ Numerosi componenti del flusso di dati usano query in operazioni di estrazione dei dati dalle origini o in operazioni di ricerca per la creazione di tabelle di riferimento. La query predefinita usa la sintassi SELECT * FROM \<tableName>. con cui vengono restituite tutte le colonne della tabella di origine. La disponibilità di tutte le colonne in fase di progettazione consente di scegliere qualsiasi colonna come colonna di ricerca, colonna pass-through o colonna di origine. Dopo avere selezionato le colonne da usare, è tuttavia necessario modificare la query in modo che includa solo le colonne selezionate. La rimozione delle colonne superflue garantisce una maggiore efficienza del flusso di dati in un pacchetto, in quanto un minor numero di colonne comporta la creazione di una riga con dimensioni inferiori. Una riga con dimensioni inferiori fa sì che sia possibile inserire più righe in un buffer e che l'elaborazione di tutte le righe nel set di dati risulti meno complessa.  
   
  Per creare una query, è possibile digitarla o usare Generatore query.  
   

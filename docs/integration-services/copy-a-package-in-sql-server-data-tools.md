@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b374955ea4a07cd94de88202fe02ffbb572d0a1c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52368632a7e2d871f91f4e7c60aad0a7f03dbcf9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293645"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923267"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>Copiare un pacchetto in SQL Server Data Tools
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Questo argomento descrive come creare un nuovo pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tramite la copia di un pacchetto esistente e come aggiornare le proprietà **Name** e **GUID** del nuovo pacchetto.  
@@ -37,7 +37,7 @@ ms.locfileid: "71293645"
   
 3.  Verificare che il pacchetto da copiare sia selezionato in Esplora soluzioni o che la scheda attiva in Progettazione SSIS sia quella che contiene il pacchetto.  
   
-4.  Nel menu **File** scegliere **Salva \<nome pacchetto> con nome**.  
+4.  Scegliere **Apri** dal menu **Salva \<package name> File**.  
   
     > [!NOTE]  
     >  Il comando **Salva con nome** è disponibile nel menu **File** solo se il pacchetto è aperto in Progettazione SSIS.  
@@ -52,7 +52,7 @@ ms.locfileid: "71293645"
   
 9. Facoltativamente, fare clic sullo sfondo della scheda **Flusso di controllo** e quindi su **Proprietà**.  
   
-10. Nella finestra Proprietà fare clic sul valore della proprietà ID e quindi selezionare **\<Genera nuovo ID>** nell'elenco a discesa.  
+10. Nella finestra Proprietà fare clic sul valore della proprietà ID, quindi selezionare nell'elenco a discesa **\<Generate New ID>** .  
   
 11. Scegliere **Salva elementi selezionati** dal menu **File** per salvare il nuovo pacchetto.  
   

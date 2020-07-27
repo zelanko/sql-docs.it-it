@@ -1,5 +1,6 @@
 ---
 title: Creare un gruppo di carico di lavoro | Microsoft Docs
+description: Informazioni su come creare un gruppo di carico di lavoro usando SQL Server Management Studio o Transact-SQL. È necessaria l'autorizzazione CONTROL SERVER.
 ms.custom: ''
 ms.date: 03/17/2016
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - workload groups [SQL Server], create
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 60d01508250c68bfb6143f5f53596fe9fefc4973
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eb23f8926cff87651ba0feda1b398112dec930af
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720508"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86456839"
 ---
 # <a name="create-a-workload-group"></a>Creare un gruppo di carico di lavoro
 

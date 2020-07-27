@@ -39,12 +39,12 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 296616f71102f5a5c68fe817b409273f6bf9428a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ebb1f9b6a1d2b9651b26c8649db89c0ca89fc5fa
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999774"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554756"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>Clausola SELECT - ORDER BY (Transact-SQL)
 
@@ -92,7 +92,9 @@ ORDER BY order_by_expression
 ]   
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *order_by_expression*  
  Specifica una colonna o un'espressione sulla quale ordinare il set di risultati della query. Per specificare una colonna di ordinamento è possibile utilizzare il nome, l'alias di colonna o un intero non negativo che rappresenta la posizione della colonna nell'elenco di selezione.  
   
@@ -124,7 +126,7 @@ ORDER BY SchemaName + ''; -- wrong
   
  Nei piani di esecuzione della query, il valore del conteggio delle righe di offset viene visualizzato nell'attributo **Offset** dell'operatore di query TOP.  
   
- FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
+ FETCH { FIRST \| NEXT } { *integer_constant* \| *fetch_row_count_expression* } { ROW \| ROWS } ONLY  
  Specifica il numero di righe da restituire dopo l'elaborazione della clausola OFFSET. Il valore può essere un valore costante intero o un'espressione maggiore o uguale a uno.  
   
 **SI APPLICA A**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  

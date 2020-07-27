@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f170a279f591b496b4c69cbb80b4c719954c30ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 77a347078f86299118f80c9cae55d9dd04795a9d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294132"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917897"
 ---
 # <a name="file-system-task"></a>Attività File system
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L'attività File system consente di eseguire operazioni su file e directory nel file system. Tramite l'attività File system un pacchetto può ad esempio creare, spostare o eliminare file e directory. È inoltre possibile utilizzare l'attività File system per impostare attributi su file e directory, ad esempio per impostare file come nascosti o in sola lettura.  
@@ -144,13 +144,13 @@ ms.locfileid: "71294132"
   
 #### <a name="isdestinationpathvariable--true"></a>IsDestinationPathVariable = True  
  **DestinationVariable**  
- Consente di selezionare il nome della variabile nell'elenco o di creare una nuova variabile facendo clic su \<**Nuova variabile...** >.  
+ Selezionare il nome della variabile nell'elenco o fare clic su \<**New variable...**> per crearne una nuova.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  **DestinationConnection**  
- Selezionare una gestione connessione file nell'elenco o fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione file nell'elenco oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
@@ -158,13 +158,13 @@ ms.locfileid: "71294132"
   
 #### <a name="issourcepathvariable--true"></a>IsSourcePathVariable = True  
  **SourceVariable**  
- Consente di selezionare il nome della variabile nell'elenco o di creare una nuova variabile facendo clic su \<**Nuova variabile...** >.  
+ Selezionare il nome della variabile nell'elenco o fare clic su \<**New variable...**> per crearne una nuova.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  **SourceConnection**  
- Selezionare una gestione connessione file nell'elenco o fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione file nell'elenco oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md)  
   

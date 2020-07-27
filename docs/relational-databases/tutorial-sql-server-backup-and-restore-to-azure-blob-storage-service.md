@@ -1,5 +1,6 @@
 ---
 title: 'Guida introduttiva: Backup e ripristino nel servizio Archiviazione BLOB di Azure'
+description: 'Avvio rapido: informazioni su come scrivere backup nel servizio Archiviazione BLOB di Azure e su come eseguire il ripristino. Creare un contenitore BLOB di Azure, scrivere un backup e quindi eseguire il ripristino.'
 ms.custom: seo-dt-2019
 ms.date: 04/09/2018
 ms.prod: sql
@@ -10,14 +11,14 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24847d7b14341e9a1d5a4d874eb0046f53261fea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 59968cad65f3a80c2d511dad3dc804d151d33095
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165519"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458043"
 ---
-# <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Guida introduttiva: Backup e ripristino SQL nel servizio Archiviazione BLOB di Azure
+# <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Avvio rapido: Backup e ripristino SQL nel servizio Archiviazione BLOB di Azure
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 Questa guida di avvio rapido contiene nozioni utili sulla scrittura di backup nel servizio Archiviazione BLOB di Azure e sul ripristino dallo stesso.  L'articolo illustra come creare un contenitore BLOB di Azure, scrivere un backup nel servizio BLOB e quindi eseguire un ripristino.
   

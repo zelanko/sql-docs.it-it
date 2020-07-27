@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4f1a2e2122c4d141d8d702d027bf30d65db93f9c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3665ff6dd1b49eaafdf9ba91fd112c881cf4d339
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293836"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86905137"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Attività Trasferisci oggetti di SQL Server
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L'attività Trasferisci oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trasferisce uno o più tipi di oggetti di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tra istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio, tabelle e stored procedure. A seconda della versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usata come origine, sono disponibili per la copia tipi di oggetti diversi. Ad esempio, schemi e aggregati definiti dall'utente sono inclusi solo nei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -148,13 +148,13 @@ ms.locfileid: "71293836"
   
 ### <a name="static-options"></a>Opzioni statiche  
  **SourceConnection**  
- Selezionare una gestione connessione SMO nell'elenco o fare clic su **\<Nuova connessione...>** per creare una nuova connessione al server di origine.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su **\<New connection...>** per creare una nuova connessione al server di origine.  
   
  **SourceDatabase**  
  Consente di selezionare un database nel server di origine dal quale verranno copiati gli oggetti.  
   
  **DestinationConnection**  
- Selezionare una gestione connessione SMO nell'elenco o fare clic su **Nuova connessione...>\<** per creare una nuova connessione al server di destinazione.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su **\<New connection...>** per creare una nuova connessione al server di destinazione.  
   
  **DestinationDatabase**  
  Consente di selezionare un database nel server di destinazione nel quale verranno copiati gli oggetti.  

@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e2b43837de8617af559e2a810c89115e5a3963d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 348ec6768d7a1eb47c77759c039d0a465aabed65
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283266"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922227"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>Lezione 3-2: Aggiungere e configurare le funzionalità di registrazione
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -39,7 +39,7 @@ In questa attività viene abilitata la registrazione per il flusso di dati del p
   
 5.  Facoltativamente, modificare la **Descrizione**.  
   
-6.  Nella colonna **Configurazione** selezionare **\<Nuova connessione >** per specificare dove [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] scrive le informazioni sul log.  
+6.  Nella colonna **Configurazione** selezionare **\<New Connection>** per specificare dove [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] scrive le informazioni sul log.  
   
     Nella finestra di dialogo **Editor gestione connessione file** per **Tipo di utilizzo** selezionare **Crea file** e quindi **Sfoglia**. Per impostazione predefinita, la finestra di dialogo **Seleziona file** apre la cartella di progetto; è tuttavia possibile salvare le informazioni sulla registrazione in qualsiasi posizione.  
   

@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6829260583ebc3c1b0dec3fec5d3158ddbbea297
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5ab34cf592628a92f2dcf536e2eda400aecf80ad
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293522"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920879"
 ---
 # <a name="ado-net-destination"></a>Destinazione ADO NET
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   La destinazione ADO NET consente di caricare i dati in un'ampia gamma di database compatibili con [!INCLUDE[vstecado](../../includes/vstecado-md.md)]che utilizzano una tabella o una vista di database. È disponibile l'opzione per caricare i dati in una tabella o in una vista esistenti o è possibile creare una nuova tabella e caricare i dati in essa.  
@@ -131,7 +131,7 @@ ms.locfileid: "71293522"
  Consente di visualizzare l'elenco delle colonne di destinazione disponibili. Eseguire un'operazione di trascinamento della selezione per impostare il mapping tra le colonne di destinazione disponibili nella tabella e le colonne di input.  
   
  **Colonna di input**  
- Consente di visualizzare le colonne di input selezionate dall'utente. È possibile rimuovere i mapping selezionando **\<ignora>** per escludere colonne dall'output.  
+ Consente di visualizzare le colonne di input selezionate dall'utente. È possibile rimuovere i mapping selezionando **\<ignore>** per escludere colonne dall'output.  
   
  **Colonna di destinazione**  
  Consente di visualizzare ogni colonna di destinazione disponibile, indipendentemente dal fatto che sia mappata o meno.  

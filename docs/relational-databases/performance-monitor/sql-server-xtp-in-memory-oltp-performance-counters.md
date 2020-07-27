@@ -1,5 +1,6 @@
 ---
 title: Contatori delle prestazioni XTP (OLTP in memoria)
+description: SQL Server fornisce oggetti e contatori utilizzabili da Monitor prestazioni per il monitoraggio dell'attività OLTP in memoria.
 ms.custom: seo-dt-2019
 ms.date: 04/06/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 84d07784cbd167f036cfe4540faf93784ba762cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: da65c189145f9233194f7b86ab6acf8f11765bfa
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715227"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457953"
 ---
 # <a name="sql-server-xtp-in-memory-oltp-performance-counters"></a>Contatori delle prestazioni XTP di SQL Server (OLTP in memoria)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,5 +1,6 @@
 ---
 title: Oggetto Cursor Manager by Type di SQL Server | Microsoft Docs
+description: Informazioni sull'oggetto SQLServer:Cursor Manager by Type, che include contatori per il monitoraggio dei cursori, raggruppati per tipo.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 68a5d93f420ba40e71ee43cfbcd088bb97c839b6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 09717c81690fefab85ecffd94937fd257c45d4a3
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773165"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458400"
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>Oggetto Gestione cursori per tipo di SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

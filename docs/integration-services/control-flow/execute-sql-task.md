@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f334633fa164a22f8e23175fd3ba6b25c4f6423
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298310"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917927"
 ---
 # <a name="execute-sql-task"></a>Attività Esegui SQL
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L'attività Esegui SQL consente di eseguire istruzioni SQL o stored procedure da un pacchetto. L'attività può includere una o più istruzioni SQL che vengono eseguite in ordine sequenziale. È possibile utilizzare l'attività Esegui SQL per gli scopi seguenti:  
@@ -148,7 +148,7 @@ Per sapere di più sul linguaggio di query Transact-SQL, vedere [Guida di riferi
  **Argomenti correlati:** [Gestione connessione OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md), [Gestione connessione ODBC](../../integration-services/connection-manager/odbc-connection-manager.md), [Gestione connessione ADO](../../integration-services/connection-manager/ado-connection-manager.md), [Gestione connessione ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [Gestione connessione SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Connection**  
- Consente di scegliere una connessione da un elenco di gestioni connessione definite. Per creare una nuova connessione, selezionare \<**Nuova connessione**>.  
+ Consente di scegliere una connessione da un elenco di gestioni connessione definite. Per creare una nuova connessione, selezionare \<**New connection...**>.  
   
  **SQLSourceType**  
  Consente di selezionare il tipo di origine dell'istruzione SQL eseguita dall'attività.  
@@ -190,13 +190,13 @@ Per sapere di più sul linguaggio di query Transact-SQL, vedere [Guida di riferi
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Connessione file  
  **FileConnection**  
- Selezionare una gestione connessione file esistente o fare clic su \<**Nuova connessione...** > per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione file nell'elenco oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variabile  
  **SourceVariable**  
- Selezionare una variabile esistente oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
+ Selezionare una variabile esistente oppure fare clic su \<**New variable...**> per creare una nuova variabile.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
@@ -205,7 +205,7 @@ Usare la pagina **Mapping parametri** della finestra di dialogo **Editor attivit
   
 ### <a name="options"></a>Opzioni  
  **Nome variabile**  
- Dopo aver aggiunto un mapping dei parametri facendo clic su **Aggiungi**, selezionare una variabile di sistema o una variabile definita dall'utente nell'elenco oppure fare clic su \<**Nuova variabile**> per aggiungere una nuova variabile usando la finestra di dialogo **Aggiungi variabile**.  
+ Dopo aver aggiunto un mapping dei parametri facendo clic su **Aggiungi**, selezionare una variabile di sistema o una variabile definita dall'utente nell'elenco oppure fare clic su \<**New variable...**> per aggiungere una nuova variabile usando la finestra di dialogo **Aggiungi variabile**.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
   
@@ -244,7 +244,7 @@ La pagina **Set dei risultati** della finestra di dialogo **Editor attività Ese
  
   
  **Nome variabile**  
- Eseguire il mapping del set di risultati a una variabile selezionando una variabile o facendo clic su \<**Nuova variabile**> per aggiungere una nuova variabile usando la finestra di dialogo **Aggiungi variabile**.  
+ Eseguire il mapping del set di risultati a una variabile selezionando una variabile o facendo clic su \<**New variable...**> per aggiungere una nuova variabile usando la finestra di dialogo **Aggiungi variabile**.  
   
  **Aggiungere**  
  Fare clic su questo pulsante per aggiungere un mapping del set di risultati.  
@@ -282,7 +282,7 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
 |Tipo di connessione|Marcatore di parametro|Nome parametro|Comando SQL di esempio|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<nome parametro>|\@\<nome parametro>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<parameter name>|\@\<parameter name>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL e OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -421,7 +421,7 @@ In questa sezione viene descritto come usare un'istruzione SQL con parametri nel
     |Tipo di connessione|Marcatore di parametro|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET e SQLMOBILE|\@\<nome parametro>|  
+    |ADO.NET e SQLMOBILE|\@\<parameter name>|  
     |ODBC|?|  
     |EXCEL e OLE DB|?|  
   
@@ -444,7 +444,7 @@ In questa sezione viene descritto come usare un'istruzione SQL con parametri nel
     |Tipo di connessione|Nome parametro|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, ...|  
-    |ADO.NET e SQLMOBILE|\@\<nome parametro>|  
+    |ADO.NET e SQLMOBILE|\@\<parameter name>|  
     |ODBC|1, 2, 3, ...|  
     |EXCEL e OLE DB|0, 1, 2, 3, ...|  
   
@@ -511,7 +511,7 @@ In questa sezione viene descritto come usare un'istruzione SQL con parametri nel
   
  Se il tipo di set di risultati è **Riga singola**, è possibile associare una colonna nel risultato restituito a una variabile usando il nome della colonna come nome del set di risultati oppure usare la posizione ordinale della colonna nell'elenco di colonne come nome del set di risultati. Il nome del set di risultati per la query `SELECT Color FROM Production.Product WHERE ProductID = ?` , ad esempio, potrebbe essere **Color** o **0**. Se la query restituisce più colonne e si desidera accedere ai valori in tutte le colonne, è necessario associare ogni colonna a una variabile diversa. Se si esegue il mapping delle colonne alle variabili usando numeri come nomi del set di risultati, i numeri riflettono l'ordine in cui le colonne vengono visualizzate nell'elenco di colonne della query. Nella query `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`, ad esempio, viene usato 0 per la colonna **Color** e 1 per la colonna **ListPrice** . La possibilità di usare un nome di colonna come nome di un set di risultati dipende dal provider per il quale l'attività è configurata. Non tutti i provider permettono l'uso di nomi di colonna.  
   
- Alcune query che restituiscono un singolo valore non includono nomi di colonna. L'istruzione `SELECT COUNT (*) FROM Production.Product` non restituisce ad esempio alcun nome di colonna. Per accedere al risultato restituito è possibile usare la posizione ordinale, 0, come nome del risultato. Per accedere al risultato restituito in base al nome della colonna, la query deve includere una clausola AS \<nome alias> che specifichi un nome di colonna. Nell'istruzione `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`è specificato il nome di colonna **CountOfProduct** . Per accedere alla colonna del risultato restituito è quindi possibile usare il nome di colonna, **CountOfProduct** , o la posizione ordinale, 0.  
+ Alcune query che restituiscono un singolo valore non includono nomi di colonna. L'istruzione `SELECT COUNT (*) FROM Production.Product` non restituisce ad esempio alcun nome di colonna. Per accedere al risultato restituito è possibile usare la posizione ordinale, 0, come nome del risultato. Per accedere al risultato restituito in base al nome della colonna, la query deve includere una clausola AS \<alias name> che specifichi un nome di colonna. Nell'istruzione `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`è specificato il nome di colonna **CountOfProduct** . Per accedere alla colonna del risultato restituito è quindi possibile usare il nome di colonna, **CountOfProduct** , o la posizione ordinale, 0.  
   
  Se il set di risultati è di tipo **Set dei risultati completo** o **XML**, sarà necessario usare 0 come nome del set di risultati.  
   

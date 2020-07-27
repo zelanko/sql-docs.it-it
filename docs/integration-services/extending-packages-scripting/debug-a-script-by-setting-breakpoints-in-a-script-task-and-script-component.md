@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7b9fddccdf8f6f89c7b03074d052c49c94692bc6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c9380a9e8699b2c0f38436228b0a2fdf820096e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71286289"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913388"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>Eseguire il debug di uno script impostando punti di interruzione in un'attività e in un componente Script
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   In questa procedura viene descritto come impostare i punti di interruzione negli script utilizzati nell'attività e nel componente Script.  
   
- Dopo aver impostato i punti di interruzione nello script, nella finestra di dialogo **Imposta punti di interruzione - \<nome oggetto>** vengono elencati i punti di interruzione insieme a quelli predefiniti.  
+ Dopo aver impostato i punti di interruzione nello script, nella finestra di dialogo **Imposta punti di interruzione - \<object name>** vengono elencati i punti di interruzione con quelli predefiniti.  
   
 > [!IMPORTANT]  
 >  In determinate circostanze, i punti di interruzione nell'attività Script e il componente Script vengono ignorati. Per altre informazioni, vedere la sezione **Debug dell'attività Script** in [Scrittura di codice e debug dell'attività Script](../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md) e la sezione **Debug del componente script** in [Codifica e debug del componente Script](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).  

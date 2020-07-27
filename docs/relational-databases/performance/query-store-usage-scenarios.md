@@ -1,5 +1,6 @@
 ---
 title: Scenari d'uso dell'archivio query | Microsoft Docs
+description: Informazioni su come è possibile usare Query Store per tenere traccia e garantire prestazioni prevedibili del carico di lavoro. Prendere in considerazione diversi esempi in SQL Server.
 ms.custom: ''
 ms.date: 11/29/2018
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a694e18dd4ade720283beea6fc57d5dd4e919d7d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0d1da7312c338a866b4fb22df94175a7500d8f7c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85989791"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457643"
 ---
 # <a name="query-store-usage-scenarios"></a>Scenari di utilizzo dell'Archivio query
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "85989791"
 ## <a name="identify-and-tune-top-resource-consuming-queries"></a>Identificare e ottimizzare le query che hanno il maggior consumo di risorse  
  Anche se il carico di lavoro può generare migliaia di query, nella pratica la gran parte delle risorse di sistema viene usata solo da poche query che, di conseguenza, richiedono attenzione. Tra le prime query per consumo di risorse si rilevano in genere quelle regredite o quelle che possono essere migliorate con un'ottimizzazione aggiuntiva.  
   
- Il modo più facile per iniziare l'esplorazione consiste nell'aprire **Prime query per consumo di risorse** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. L'interfaccia utente viene suddivisa in tre riquadri: un istogramma che rappresenta le prime query per consumo di risorse (a sinistra), un riepilogo del piano per la query selezionata (a destra) e un piano di query visivo per il piano selezionato (in basso). Fare clic sul pulsante **Configura** per controllare il numero di query da analizzare e l'intervallo di tempo di interesse. È anche possibile scegliere tra diverse dimensioni di consumo delle risorse (durata, CPU, memoria, operazioni I/O, numero di esecuzione) e la baseline (Media, Min, Max, Totale, Deviazione standard).  
+ Il modo più facile per iniziare l'esplorazione consiste nell'aprire **Prime query per consumo di risorse** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. L'interfaccia utente è suddivisa in tre riquadri: un istogramma che rappresenta le prime query per consumo di risorse (sinistra), un riepilogo del piano per la query selezionata (destra) e un piano di query visivo per il piano selezionato (in basso). Fare clic sul pulsante **Configura** per controllare il numero di query da analizzare e l'intervallo di tempo di interesse. È anche possibile scegliere tra diverse dimensioni di consumo delle risorse (durata, CPU, memoria, operazioni I/O, numero di esecuzione) e la baseline (Media, Min, Max, Totale, Deviazione standard).  
   
  ![utilizzo archivio query 2](../../relational-databases/performance/media/query-store-usage-2.png "utilizzo archivio query 2")  
   

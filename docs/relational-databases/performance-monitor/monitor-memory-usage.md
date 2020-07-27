@@ -1,5 +1,6 @@
 ---
 title: Monitorare l'uso della memoria | Microsoft Docs
+description: "Monitorare un'istanza di SQL Server per verificare che l'utilizzo della memoria rientri negli intervalli standard. Usare i contatori Memoria: Byte disponibili e Memoria: Pagine/sec."
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 595b14797becec29232c4e09ab3bbc6b702cb898
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d390a0ed1397a7f433c5582361def2f4022d09b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787452"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86906230"
 ---
 # <a name="monitor-memory-usage"></a>Monitoraggio dell'utilizzo della memoria
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,20 +45,20 @@ ms.locfileid: "85787452"
   
  Valori bassi del contatore **Byte disponibili** possono indicare una quantità di memoria insufficiente nel computer o la presenza di un'applicazione che non rilascia la memoria. Un valore elevato del contatore **Pagine/sec** può indicare un paging eccessivo. Monitorare il contatore **Memoria: Errori di pagina/sec** per assicurarsi che l'attività del disco non sia dovuta al paging.  
   
- Anche nei computer con una notevole quantità di memoria disponibile, la frequenza di paging, e quindi di errori di pagina, dovrebbe essere bassa. Microsoft Windows Virtual Memory Manager (VMM) sottrae pagine a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e agli altri processi in quanto riduce le dimensioni dei set di lavoro di tali processi. L'attività di VMM tende quindi a causare errori di pagina. Per determinare se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro processo provoca un paging eccessivo, monitorare il contatore **Processo: Errori di pagina/sec** alla ricerca dell'istanza del processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Anche nei computer con una notevole quantità di memoria disponibile, la frequenza di paging, e quindi di errori di pagina, dovrebbe essere bassa. Microsoft Windows Virtual Memory Manager (VMM) sottrae pagine a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e agli altri processi in quanto riduce le dimensioni dei set di lavoro di tali processi. L'attività di VMM tende quindi a causare errori di pagina. Per determinare se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro processo provoca un paging eccessivo, monitorare il contatore **Processo: Errori di pagina/sec** alla ricerca dell'istanza del processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Per altre informazioni su come evitare il paging eccessivo, vedere la documentazione del sistema operativo Windows.  
   
 ## <a name="isolating-memory-used-by-sql-server"></a>Memoria usata da SQL Server  
- Per impostazione predefinita, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i requisiti di memoria vengono modificati in modo dinamico in base alle risorse di sistema disponibili. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necessita di una maggior quantità di memoria, richiede al sistema operativo di determinare se è disponibile memoria fisica e utilizza la memoria disponibile. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non utilizza completamente la memoria attualmente allocata, rilascia la memoria al sistema operativo. È tuttavia possibile ignorare l'opzione per l'uso dinamico della memoria specificando le opzioni di configurazione del server **minservermemory**e **maxservermemory** . Per altre informazioni, vedere [Opzioni per la memoria server](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
+ Per impostazione predefinita, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i requisiti di memoria vengono modificati in modo dinamico in base alle risorse di sistema disponibili. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necessita di una maggior quantità di memoria, richiede al sistema operativo di determinare se è disponibile memoria fisica e utilizza la memoria disponibile. Se la memoria disponibile per il sistema operativo non è sufficiente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libererà memoria per il sistema operativo finché la condizione di memoria insufficiente non sarà stata risolta o finché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non avrà raggiunto il limite minservermemory. È tuttavia possibile ignorare l'opzione per l'uso dinamico della memoria specificando le opzioni di configurazione del server **minservermemory**e **maxservermemory** . Per altre informazioni, vedere [Opzioni per la memoria server](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
  Per monitorare la quantità di memoria usata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esaminare i contatori delle prestazioni seguenti:  
   
 -   **Processo: Working set**  
   
--   **SQL Server: Gestione buffer: Percentuale riscontri cache buffer**  
+-   **SQL Server: Gestione buffer: Percentuale riscontri cache del buffer**  
   
--   **SQL Server: Gestione buffer: Pagine database**  
+-   **SQL Server: Gestione buffer: Pagine di database**  
   
 -   **SQL Server: Gestione memoria: Memoria totale server (KB)**  
   

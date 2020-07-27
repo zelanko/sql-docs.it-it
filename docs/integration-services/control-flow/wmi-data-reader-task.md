@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e0c1b30985bf93ff1b04af85e45bf64e53c75853
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 08239a5cdb5991d38278569a8f49bb6bdb99190e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293723"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923894"
 ---
 # <a name="wmi-data-reader-task"></a>Attività Lettore di dati WMI
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L'attività Lettore di dati WMI esegue query che utilizzano il linguaggio di query di WMI (Windows Management Instrumentation, Strumentazione gestione Windows) per ottenere da WMI informazioni su un sistema informatico. È possibile utilizzare l'attività Lettore di dati WMI per gli scopi seguenti:  
@@ -123,7 +123,7 @@ Select * FROM Win32_QuickFixEngineering
   
 ### <a name="static-options"></a>Opzioni statiche  
  **WMIConnectionName**  
- Selezionare una gestione connessione WMI nell'elenco o creare una nuova gestione connessione facendo clic su \<**Nuova connessione WMI**>.  
+ Selezionare una gestione connessione WMI nell'elenco oppure fare clic su \<**New WMI Connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione WMI](../../integration-services/connection-manager/wmi-connection-manager.md), [Editor gestione connessione WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
   
@@ -158,13 +158,13 @@ Select * FROM Win32_QuickFixEngineering
   
 #### <a name="wqlquerysourcetype--file-connection"></a>WQLQuerySourceType = Connessione file  
  **WQLQuerySource**  
- Selezionare una gestione connessione file nell'elenco o fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione file nell'elenco oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = Variabile  
  **WQLQuerySource**  
- Selezionare una variabile nell'elenco oppure fare clic su \<**Nuova variabile**> per crearne una nuova.  
+ Selezionare una variabile nell'elenco oppure fare clic su \<**New variable...**> per crearne una nuova.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -172,13 +172,13 @@ Select * FROM Win32_QuickFixEngineering
   
 #### <a name="destinationtype--file-connection"></a>DestinationType = Connessione file  
  **Destinazione**  
- Selezionare una gestione connessione file nell'elenco o fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione file nell'elenco oppure fare clic su \<**New connection...**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="destinationtype--variable"></a>DestinationType = Variabile  
  **Destinazione**  
- Selezionare una variabile nell'elenco oppure fare clic su \<**Nuova variabile**> per crearne una nuova.  
+ Selezionare una variabile nell'elenco oppure fare clic su \<**New variable...**> per crearne una nuova.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

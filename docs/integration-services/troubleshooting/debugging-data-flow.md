@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6076e4c02ccb4c91c88a22df7cd7c4a50b0f877
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 663ecd4dba689f394af61c4a26ff8edc1c241703
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295121"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86900046"
 ---
 # <a name="debugging-data-flow"></a>Debug di un flusso di dati
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] includono funzionalità e strumenti che è possibile usare per la risoluzione dei problemi dei flussi di dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -172,7 +172,7 @@ order by source_component_name desc
   
 4.  Fare clic con il pulsante destro del mouse sul componente di cui si desidera configurare le colonne dell'output degli errori, quindi scegliere **Visualizza editor avanzato**.  
   
-5.  Fare clic sulla scheda **Proprietà input e output**. Espandere **Output errori \<nome componente>** , quindi **Colonne di output**.  
+5.  Fare clic sulla scheda **Proprietà input e output**. Espandere **Output errori \<component name>** , quindi **Colonne di output**.  
   
 6.  Fare clic su una colonna e aggiornarne le proprietà.  
   
@@ -249,7 +249,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  Il parametro dataflow_path_id_string della stored procedure add_data_tap corrisponde alla proprietà IdentificationString del percorso del flusso di dati a cui si desidera aggiungere una scelta dei dati. Per ottenere dataflow_path_id_string, fare clic sul percorso del flusso di dati (la freccia tra le attività nel flusso di dati) e prendere nota del valore della proprietà **IdentificationString** nella finestra Proprietà.  
   
- Quando si esegue lo script, il file di output viene archiviato in \<Programmi>\Microsoft SQL Server\110\DTS\DataDumps. Se esiste già un file con il nome, viene creato un nuovo file con un suffisso, ad esempio output[1].txt.  
+ Quando si esegue lo script, il file di output viene archiviato in \<Program Files>\Microsoft SQL Server\110\DTS\DataDumps. Se esiste già un file con il nome, viene creato un nuovo file con un suffisso, ad esempio output[1].txt.  
   
  Come accennato in precedenza, è inoltre possibile usare la stored procedure [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)anziché la stored procedure add_data_tap. Questa stored procedure accetta l'ID dell'attività Flusso di dati come parametro anziché task_package_path. È possibile ottenere l'ID dell'attività Flusso di dati dalla finestra delle proprietà di Visual Studio.  
   

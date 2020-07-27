@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d81c961600eca7dddd1ecd5995dbb488094aafb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 42d7d3dd3c4e8ee86da1a9fd8de8b725ba1579e7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294931"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919417"
 ---
 # <a name="creating-a-package-programmatically"></a>Creazione di un pacchetto a livello di programmazione
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   L'oggetto <xref:Microsoft.SqlServer.Dts.Runtime.Package> rappresenta il contenitore di livello principale per tutti gli altri oggetti di una soluzione di progetto di [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Essendo il contenitore di livello principale, il pacchetto è il primo oggetto creato. Gli oggetti successivi vengono aggiunti e quindi eseguiti nel contesto del pacchetto. Il pacchetto non sposta né trasforma dati, ma si basa sulle attività che contiene per eseguire questa operazione. Le attività eseguono la maggior parte delle operazioni del pacchetto e ne definiscono la funzionalità. Per creare un pacchetto sono sufficienti tre righe di codice, ma vengono aggiunti vari oggetti <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e attività per fornire funzionalità aggiuntive. In questa sezione viene descritto come creare un pacchetto a livello di programmazione. Non vengono fornite informazioni sulla creazione di attività o di oggetti <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>, che verranno descritti nelle sezioni successive.  

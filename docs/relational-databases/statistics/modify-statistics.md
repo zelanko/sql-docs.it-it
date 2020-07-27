@@ -1,5 +1,6 @@
 ---
 title: Modificare statistiche | Microsoft Docs
+description: Informazioni su come modificare le statistiche esistenti in SQL Server usando SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: b06299ca-ed52-411a-b245-45eac4628c99
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89497335ff395d3235f4bc59e1b0e86a11def404
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d39e99b4c50d1b077cf3871ba5d89b7a170d2f16
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012228"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458100"
 ---
 # <a name="modify-statistics"></a>Modificare statistiche
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "86012228"
   
 -   L'utente deve essere il proprietario della tabella o della vista indicizzata o un membro di uno dei seguenti ruoli: ruolo predefinito del server **sysadmin** , ruolo predefinito del database **db_owner** o ruolo predefinito del database **db_ddladmin** .  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-modify-statistics"></a>Per modificare le statistiche  
   
@@ -61,11 +62,11 @@ ms.locfileid: "86012228"
   
 5.  Fare clic con il pulsante destro del mouse sull'oggetto statistiche che si vuole modificare e scegliere **Proprietà**.  
   
-6.  Nella pagina **Generali** della finestra di dialogo *Proprietà statistiche -* **nome_statistiche** fare clic su **Aggiungi**, **Rimuovi**, **Sposta su** o **Sposta giù**, o su qualsiasi combinazione, per modificare le proprietà delle statistiche. Si noti che la posizione di una colonna nella griglia **Colonne statistiche** può avere un impatto significativo sull'utilità delle statistiche.  
+6.  Nella pagina **Generali** della finestra di dialogo **Proprietà statistiche -** *nome_statistiche* fare clic su **Aggiungi**, **Rimuovi**, **Sposta su** o **Sposta giù**, o su qualsiasi combinazione, per modificare le proprietà delle statistiche. Si noti che la posizione di una colonna nella griglia **Colonne statistiche** può avere un impatto significativo sull'utilità delle statistiche.  
   
 7.  Fare clic su **OK**.  
 
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per modificare le statistiche**  
   
  Non è possibile eseguire questa attività utilizzando istruzioni Transact-SQL. Per modificare statistiche tramite Transact-SQL, è innanzitutto necessario eliminare la statistica esistente e quindi ricrearla con i nuovi attributi.  

@@ -24,16 +24,16 @@ helpviewer_keywords:
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3c458257766e52898d0924b2f8ad57ddd2423b19
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4941e8bfbb47a5d4d4e7139a6c761483dec7ad8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295670"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921961"
 ---
 # <a name="ssis-designer"></a>Progettazione SSIS
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssIS](../includes/ssis-md.md)] - Progettazione SSIS è uno strumento grafico che è possibile usare per creare e gestire pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] - Progettazione SSIS è disponibile in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] nell'ambito di un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -158,7 +158,7 @@ Utilizzare la scheda **Flusso di dati** di Progettazione [!INCLUDE[ssIS](../incl
  **Elimina**  
  Dopo aver selezionato un gestore di evento, fare clic su **Elimina** per rimuoverlo dal pacchetto.  
   
- **Fare clic qui per creare un \<nome del gestore dell'evento\> per il file eseguibile \<nome eseguibile\>**  
+ **Fare clic qui per creare un \<event handler name\> per il file eseguibile \<executable name\>**  
  Fare clic per creare il gestore di evento.  
   
  Creare il flusso di controllo trascinando gli oggetti grafici che rappresentano i contenitori e le attività di [!INCLUDE[ssIS](../includes/ssis-md.md)] dalla **casella degli strumenti** all'area di progettazione della scheda **Gestori eventi** e quindi trascinando il connettore per collegare gli oggetti.  

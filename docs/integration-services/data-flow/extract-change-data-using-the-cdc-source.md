@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 35e8d152cbffb5a5f34be4cda5c7e97fc8140d2d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 56eda2d73e9d60367529e078829900433bd8617e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292810"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86906550"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>Estrarre dati delle modifiche tramite l'origine CDC
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Per aggiungere e configurare un'origine CDC, è necessario che il pacchetto includa già almeno un'attività Flusso di dati e un'attività di controllo CDC.  
@@ -44,7 +44,7 @@ ms.locfileid: "71292810"
   
 7.  Selezionare o digitare il nome dell' **istanza di acquisizione CDC** con la tabella CDC da leggere.  
   
-     Una tabella di origine acquisita può contenere una o due istanze acquisite per gestire la transizione senza problemi della definizione di tabella mediante modifiche dello schema. Se per la tabella di origine in corso di acquisizione sono definite più istanze di acquisizione, selezionare l'istanza di acquisizione che si desidera utilizzare a questo punto. Il nome dell'istanza di acquisizione predefinito per una tabella [schema].[tabella] è \<schema_\<tabella, ma i nomi delle istanze di acquisizione effettivi in uso possono essere diversi. La tabella effettiva da cui viene eseguita la lettura è la tabella CDC **cdc .\<istanza-acquisizione>_CT**.  
+     Una tabella di origine acquisita può contenere una o due istanze acquisite per gestire la transizione senza problemi della definizione di tabella mediante modifiche dello schema. Se per la tabella di origine in corso di acquisizione sono definite più istanze di acquisizione, selezionare l'istanza di acquisizione che si desidera utilizzare a questo punto. Il nome dell'istanza di acquisizione predefinito per una tabella [schema].[tabella] è \<schema>_\<table>, ma i nomi delle istanze di acquisizione effettivi in uso possono essere diversi. L'effettiva tabella da cui viene eseguita la lettura è la tabella CDC **cdc .\<capture-instance>_CT**.  
   
 8.  Selezionare la modalità di elaborazione più adatta per le esigenze di elaborazione correnti. Di seguito sono elencate le opzioni possibili:  
   
@@ -54,7 +54,7 @@ ms.locfileid: "71292810"
   
     -   **Net**: restituisce una sola riga delle modifiche per ogni riga di origine modificata nell'intervallo di elaborazione CDC corrente. Se una riga di origine è stata aggiornata più volte, viene restituita la modifica combinata (ad esempio, inserimento+aggiornamento viene prodotto come un singolo aggiornamento e aggiornamento+eliminazione viene prodotto come una singola eliminazione). Quando si utilizza la modalità di elaborazione delle modifiche Net, è possibile suddividere le modifiche negli output Delete, Insert e Update e gestirli in parallelo, perché la singola riga di origine viene visualizzata in più output.  
   
-    -   **Net with update mask**: questa modalità è simile alla modalità Net standard, ma aggiunge anche colonne booleane con il modello di nome **__$\<<nome-colonna>\___Changed**, che indica la presenza di colonne modificate nella riga delle modifiche corrente.  
+    -   **Net with update mask** (Net con maschera di aggiornamento): questa modalità è simile alla modalità Net standard, ma aggiunge anche colonne booleane con il modello di nome **__$\<column-name>\___Changed**, che indica la presenza di colonne modificate nella riga delle modifiche corrente.  
   
     -   **Net with merge**: questa modalità è simile alla modalità Net standard, ma con le operazioni Insert e Update unite in una singola operazione Merge (UPSERT).  
   

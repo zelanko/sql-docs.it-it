@@ -1,5 +1,6 @@
 ---
 title: Ridurre il carico di ottimizzazione del server di produzione | Microsoft Docs
+description: Informazioni su come Ottimizzazione guidata motore di database si basa su Query Optimizer per analizzare un carico di lavoro e fornire indicazioni di ottimizzazione in SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54b656c95323c8f6cb2a4f5f6d4666555de5e02a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d0c038cd2c6c1e3d6616eef1e4ed95fbfb86fda2
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719579"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457633"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Riduzione del carico di ottimizzazione del server di produzione
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

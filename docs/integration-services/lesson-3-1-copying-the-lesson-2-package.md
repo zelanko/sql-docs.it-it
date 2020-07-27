@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4f30cba22276d467c218da4d09749fccb464ac5d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9448dada6a93e4cda928f75e06862ad42ee2eee5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295997"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922237"
 ---
 # <a name="lesson-3-1-copy-the-lesson-2-package"></a>Lezione 3-1: Copiare il pacchetto della lezione 2
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -45,7 +45,7 @@ Attenersi alla procedura seguente se si sta copiando la lezione 2 completata.  P
 
 7.  Nella finestra **Proprietà** aggiornare la proprietà **Name** impostandola su **Lesson 3**.
 
-8.  Selezionare la casella relativa alla proprietà **ID**, fare clic sulla freccia a discesa e quindi selezionare **\<Genera nuovo ID>** .
+8.  Selezionare la casella relativa alla proprietà **ID**, fare clic sulla freccia a discesa e quindi selezionare **\<Generate New ID>** .
 
 ## <a name="add-the-completed-lesson-2-package"></a>Aggiungere il pacchetto della lezione 2 completato
 

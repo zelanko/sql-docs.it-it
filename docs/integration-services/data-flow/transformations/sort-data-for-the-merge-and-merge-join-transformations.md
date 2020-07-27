@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a73c3aaf23d74857c1c182e4505fb8d602543a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8dbc3df45f628c55e0d9e1cbf7f3b05b1a746091
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297790"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914297"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Ordinamento dei dati per le trasformazioni Unione e Merge Join
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]le trasformazioni Unione e Merge Join richiedono dati di input ordinati. I dati di input devono essere ordinati fisicamente ed è necessario impostare le opzioni di ordinamento sugli output e sulle colonne di output nell'origine o nella trasformazione a monte. Se le opzioni di ordinamento indicano che i dati sono ordinati, mentre in realtà non lo sono, l'operazione di Unione o Merge join restituisce risultati imprevisti.  
@@ -75,7 +75,7 @@ ms.locfileid: "71297790"
   
 5.  Fare clic sulla scheda **Proprietà input e output** .  
   
-6.  Fare clic su **Output \<nome componente>** e impostare la proprietà **IsSorted** su **True**.  
+6.  Fare clic su **Output \<component name>** e impostare la proprietà **IsSorted** su **True**.  
   
     > [!NOTE]  
     >  Se si imposta manualmente la proprietà **IsSorted** dell'output su **True** e se i dati non sono ordinati, quando si esegue il pacchetto alcuni dati potrebbero risultare mancanti o danneggiati nella trasformazione Unione o Merge Join.  

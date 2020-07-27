@@ -1,5 +1,5 @@
 ---
-title: DBCC CLEANTABLE (Transact-SQL) | Microsoft Docs
+title: DBCC CLEANTABLE (Transact-SQL)
 ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
@@ -26,14 +26,15 @@ helpviewer_keywords:
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 706025b8be4a8b48f022a752ac60686e51cc7692
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8294877bd557ae29ebc39b5b55534ed69088e29
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738175"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485262"
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Recupera lo spazio delle colonne a lunghezza variabile eliminate nelle tabelle e nelle viste indicizzate.
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -51,11 +52,13 @@ DBCC CLEANTABLE
 [ WITH NO_INFOMSGS ]  
 ```  
   
-## <a name="arguments"></a>Argomenti  
- *database_name* | *database_id* | 0  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
+ *database_name* \| *database_id* \| 0  
  Database a cui appartiene la tabella in cui recuperare lo spazio. Se si specifica 0, viene utilizzato il database corrente. I nomi di database devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
- *table_name* | *table_id* | *view_name*| *view_id*  
+ *table_name* \| *table_id* \| *view_name* \| *view_id*  
  Tabella o vista indicizzata in cui recuperare lo spazio.  
   
  *batch_size*  
@@ -159,8 +162,7 @@ FROM sys.dm_db_index_physical_stats(@db_id, @object_id, NULL, NULL , 'Detailed')
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
-[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
- [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>Vedere anche
+
+- [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
+- [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)

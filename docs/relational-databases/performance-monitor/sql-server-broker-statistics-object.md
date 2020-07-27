@@ -1,5 +1,6 @@
 ---
 title: Oggetto Broker Statistics di SQL Server | Microsoft Docs
+description: Informazioni sull'oggetto prestazione SQLServer:Broker Statistics, che contiene contatori delle prestazioni che forniscono le informazioni di Service Broker per il motore di database.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6dd7b9d542bb72b570a59244639685d3e56d6377
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8a32f1013418afa01abee65ab9c8fdb78c794918
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85657033"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458464"
 ---
 # <a name="sql-server-broker-statistics-object"></a>Oggetto Statistiche Broker di SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

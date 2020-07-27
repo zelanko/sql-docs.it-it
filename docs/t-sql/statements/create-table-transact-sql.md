@@ -1,5 +1,5 @@
 ---
-title: CREATE TABLE (Transact-SQL) | Microsoft Docs
+title: CREATE TABLE (Transact-SQL)
 ms.custom: ''
 ms.date: 02/24/2020
 ms.prod: sql
@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 384b474180e17eaed9827da2d2e2b2f9157c6f4b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: be5b8f28ec06b48f0f35d8d246ad12ccbc3c8292
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766958"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86482102"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -343,6 +343,8 @@ column_name <data_type>
 }
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argomenti
 
 *database_name* è il nome del database in cui è viene creata la tabella. *database_name* deve specificare il nome di un database esistente. Se l'argomento *database_name* non viene specificato, il valore predefinito è il database corrente. L'account di accesso per la connessione corrente deve essere associato a un ID utente esistente nel database specificato da *database_name*. Questo ID utente deve avere le autorizzazioni CREATE TABLE.
@@ -578,7 +580,7 @@ FOREIGN KEY REFERENCES è un vincolo che fornisce l'integrità referenziale per 
 
 **(** *ref_column* [ **,** ... *n* ] **)** è una colonna o un elenco di colonne della tabella a cui fa riferimento il vincolo FOREIGN KEY.
 
-ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT } specifica quale azione viene eseguita sulle righe nella tabella creata, se tali righe includono una relazione referenziale e se la riga a cui viene fatto riferimento viene eliminata dalla tabella padre. Il valore predefinito è NO ACTION.
+ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT } specifica quale azione viene eseguita sulle righe nella tabella creata, se tali righe includono una relazione referenziale e se la riga a cui viene fatto riferimento viene eliminata dalla tabella padre. Il valore predefinito è NO ACTION.
 
 NO ACTION: [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un errore e viene eseguito il rollback dell'azione di eliminazione della riga nella tabella padre.
 
@@ -598,7 +600,7 @@ Se viene eseguita un'istruzione `DELETE` in una riga della tabella **Vendor** e 
 
 Viceversa, se si specifica `NO ACTION`, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un errore ed esegue il rollback dell'azione di eliminazione della riga nella tabella **Vendor** se almeno una riga della tabella **ProductVendor** vi fa riferimento.
 
-ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT } specifica quale azione viene eseguita sulle righe nella tabella modificata quando tali righe includono una relazione referenziale e la riga a cui viene fatto riferimento viene aggiornata nella tabella padre. Il valore predefinito è NO ACTION.
+ON UPDATE { **NO ACTION** \| CASCADE \ SET NULL \| SET DEFAULT } specifica quale azione viene eseguita sulle righe nella tabella modificata quando tali righe includono una relazione referenziale e la riga a cui viene fatto riferimento viene aggiornata nella tabella padre. Il valore predefinito è NO ACTION.
 
 NO ACTION: [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un errore e viene eseguito il rollback dell'azione di aggiornamento della riga nella tabella padre.
 

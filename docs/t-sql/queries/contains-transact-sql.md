@@ -34,16 +34,16 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1f0bf0dd95bbb209c0e6320c4ba91eb1bc84ff41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 30942bd7f9c5ff8180eb9adfddedff72d1d97f05
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736318"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552576"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Cerca corrispondenze precise o fuzzy (meno precise) a singole parole e frasi, parole a una certa distanza una dall'altra o corrispondenze ponderate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS è un predicato usato nella [clausola WHERE](../../t-sql/queries/where-transact-sql.md) di un'istruzione SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] per eseguire una ricerca full-text [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in colonne indicizzate full-text che contengono tipi di dati basati su caratteri.  
   
@@ -140,7 +140,9 @@ CONTAINS (
   
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *column_name*  
  Nome di una colonna con indicizzazione full-text della tabella specificata nella clausola FROM. La colonna o le colonne possono essere di tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** r **varbinary(max)** .  
   
@@ -318,18 +320,18 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  Specifica un valore di ponderazione compreso tra 0.0 e 1.0. Ogni componente di *\<weighted_term>* può includere un valore *weight_value*. *weight_value* consente di modificare l'effetto delle varie parti di una query sul valore di pertinenza assegnato a ogni riga che soddisfa la query. WEIGHT non ha alcun effetto sui risultati delle query CONTAINS, ma ha effetto sul valore di pertinenza nelle query [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).  
   
 > [!NOTE]  
->  Il separatore decimale è sempre un punto, indipendentemente dalle impostazioni locali del sistema operativo.  
+> Il separatore decimale è sempre un punto, indipendentemente dalle impostazioni locali del sistema operativo.  
   
- { AND | & } | { AND NOT | &! } | { OR | | }  
+ { AND \| & } \| { AND NOT \| &! } \| { OR \| \| }  
  Specifica un'operazione logica tra due condizioni di ricerca del predicato CONTAINS.  
   
- { AND | & }  
+ { AND \| & }  
  Indica che devono essere soddisfatte entrambe le condizioni di ricerca del predicato CONTAINS. Per rappresentare l'operatore AND, è possibile usare il carattere e commerciale (&) anziché la parola chiave AND.  
   
- { AND NOT | &! }  
+ { AND NOT \| &! }  
  Indica che la seconda condizione di ricerca non deve essere soddisfatta. Per rappresentare l'operatore AND NOT, è possibile usare il carattere e commerciale seguito dal punto esclamativo (&!) anziché la parola chiave AND NOT.  
   
- { OR | | }  
+ { OR \| \| }  
  Indica che deve essere soddisfatta una delle due condizioni di ricerca del predicato CONTAINS. Per rappresentare l'operatore OR, è possibile utilizzare il carattere barra (|) anziché la parola chiave OR.  
   
  Quando *\<contains_search_condition>* include gruppi tra parentesi, tali gruppi vengono valutati per primi. In seguito alla valutazione dei gruppi tra parentesi, gli operatori logici che includono condizioni di ricerca vengono valutati in base alle regole seguenti:  

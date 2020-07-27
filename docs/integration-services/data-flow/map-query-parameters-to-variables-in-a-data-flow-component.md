@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0eef24cbeac94a6447c2cd6b4f5a43fd0ca93657
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 54581ad36eea167316d9e6c4cdb68b23e69a1cbd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292288"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916468"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>Mapping dei parametri di query a variabili in un componente del flusso di dati
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Quando viene configurata l'origine OLE DB per utilizzare query con parametri, è possibile eseguire il mapping dei parametri alle variabili.  
@@ -47,7 +47,7 @@ ms.locfileid: "71292288"
   
 7.  Fare clic su **Parametri**.  
   
-8.  Nella finestra di dialogo **Imposta parametri query** eseguire il mapping di ogni parametro nell'elenco **Parametri** a una variabile nell'elenco **Variabili** oppure fare clic su **\<Nuova variabile>** per creare una nuova variabile. Fare clic su **OK**.  
+8.  Nella finestra di dialogo **Imposta parametri query** eseguire il mapping di ogni parametro nell'elenco **Parametri** a una variabile nell'elenco **Variabili** oppure fare clic su **\<New variable>** per creare una nuova variabile. Fare clic su **OK**.  
   
     > [!NOTE]  
     >  Sono disponibili per il mapping solo le variabili di sistema e le variabili definite dall'utente nell'ambito del pacchetto, di un contenitore padre quale Ciclo Foreach o dell'attività Flusso di dati che contiene il componente del flusso di dati. La variabile deve avere un tipo di dati compatibile con la colonna nella clausola WHERE a cui è assegnato il parametro.  

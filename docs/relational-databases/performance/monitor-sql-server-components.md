@@ -1,5 +1,6 @@
 ---
 title: Monitorare i componenti di SQL Server | Microsoft Docs
+description: Informazioni su come il monitoraggio consente di identificare le tendenze delle prestazioni. SQL Server fornisce un servizio in un ambiente dinamico, quindi potrebbero essere necessarie modifiche nel corso del tempo.
 ms.custom: ''
 ms.date: 11/27/2018
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4635d22ed3349302344bfb6ea7e94c63790c324b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 70fe75b97181815246d03de588bdd6d45af3ce9f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790794"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458386"
 ---
 # <a name="monitor-sql-server-components"></a>Monitorare i componenti di SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +75,7 @@ Per ulteriori informazioni sugli strumenti di Windows Server o Windows, vedere l
 > [!IMPORTANT]
 > Traccia SQL e [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sono deprecati. Anche lo spazio dei nomi *Microsoft.SqlServer.Management.Trace* che contiene gli oggetti Trace e Replay di Microsoft SQL Server è deprecato. 
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
-> In alternativa, usare Eventi estesi. Per altre informazioni sugli [eventi estesi](../../relational-databases/extended-events/extended-events.md), vedere [Avvio rapido: Eventi estesi in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) e [Profiler XEvent di SSMS](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+> In alternativa, usare Eventi estesi. Per altre informazioni sugli [Eventi estesi](../../relational-databases/extended-events/extended-events.md), vedere [Avvio rapido: Eventi estesi in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) e [Profiler XEvent di SQL Server Management Studio](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
 
 > [!NOTE]
 > [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per i carichi di lavoro Analysis Services NON è deprecato e continuerà a essere supportato.

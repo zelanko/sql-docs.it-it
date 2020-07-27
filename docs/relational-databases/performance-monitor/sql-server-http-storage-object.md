@@ -1,5 +1,6 @@
 ---
 title: HTTP_STORAGE_OBJECT di SQL Server | Microsoft Docs
+description: Informazioni sull'oggetto prestazione SQLServer:HTTP Storage, costituito dai contatori delle prestazioni per il monitoraggio di un account di archiviazione di Azure.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 7d1406bc3696cfcd16121e2f12758791e2da86e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a18cb0e74a537a62eb662fdb30ba289e255c0348
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775847"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457423"
 ---
 # <a name="sql-server-http-storage"></a>SQL Server, archiviazione HTTP
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,5 +1,5 @@
 ---
-title: DBCC INDEXDEFRAG (Transact-SQL) | Microsoft Docs
+title: DBCC INDEXDEFRAG (Transact-SQL)
 ms.custom: ''
 ms.date: 07/16/2017
 ms.prod: sql
@@ -23,14 +23,15 @@ helpviewer_keywords:
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: d1894e33de743e8e4b7f4053b7b77746cca3e124
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ca27b41cffa6ee319acf27e62bc26e1f27a82c44
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901662"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484291"
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Deframmenta gli indici della tabella o vista specificata.
@@ -54,17 +55,19 @@ DBCC INDEXDEFRAG
     [ WITH NO_INFOMSGS ]   
 ```  
   
-## <a name="arguments"></a>Argomenti  
- *database_name* | *database_id* | 0  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
+ *database_name* \| *database_id* \| 0  
  Database contenente l'indice da deframmentare. Se si specifica 0, viene utilizzato il database corrente. I nomi dei database devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
- *table_name* | *table_id* | *view_name* | *view_id*  
+ *table_name* \| *table_id* \| *view_name* \| *view_id*  
  Tabella o vista contenente l'indice da deframmentare. I nomi delle tabelle e delle viste devono essere conformi alle regole per gli identificatori.  
   
- *index_name* | *index_id*  
+ *index_name* \| *index_id*  
  Nome o ID dell'indice da deframmentare. Se viene omesso, l'istruzione deframmenta tutti gli indici della tabella o vista specificata. I nomi degli indici devono essere conformi alle regole per gli identificatori.  
   
- *partition_number* | 0  
+ *partition_number* \| 0  
  Numero di partizione dell'indice da deframmentare. Se non viene specificato o viene specificato 0, l'istruzione deframmenta tutte le partizioni nell'indice specificato.  
   
  WITH NO_INFOMSGS  

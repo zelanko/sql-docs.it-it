@@ -12,29 +12,29 @@ ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ef2ee1bbc863de8f3be94733beac3f04fa90b3c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2ce0672c59a10e22131effacededf87db25bdb92
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723286"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484612"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Creazione di stored procedure compilate in modo nativo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Le stored procedure compilate in modo nativo non implementano la programmabilità completa di [!INCLUDE[tsql](../../includes/tsql-md.md)] e la superficie di attacco delle query. Alcuni costrutti [!INCLUDE[tsql](../../includes/tsql-md.md)] non possono essere utilizzati all'interno delle stored procedure compilate in modo nativo. Per altre informazioni, vedere [Funzionalità supportate per i moduli T-SQL compilati in modo nativo](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
-Esistono, tuttavia, alcune funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che sono supportate solo per le stored procedure compilate in modo nativo:  
+Le funzionalità seguenti di [!INCLUDE[tsql](../../includes/tsql-md.md)] sono supportate unicamente per le stored procedure compilate in modo nativo:  
   
 -   Blocchi atomici. Per altre informazioni, vedere [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
   
--   Vincoli **NOT NULL** su parametri e variabili. Non è possibile assegnare valori **NULL** ai parametri o alle variabili dichiarati come **NOT NULL**. Per altre informazioni, vedere [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
+-   Vincoli `NOT NULL` su parametri e variabili. Non è possibile assegnare valori **NULL** ai parametri o alle variabili dichiarati come **NOT NULL**. Per altre informazioni, vedere [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
   
-    -   CREATE PROCEDURE dbo.myproc (@myVarchar  varchar(32)  **not null**) ...  
+    -   `CREATE PROCEDURE dbo.myproc (@myVarchar VARCHAR(32) NOT NULL) AS (...)`  
   
-    -   DECLARE @myVarchar  varchar(32)  **not null = "Hello"** ; -- *(deve essere inizializzato su un valore.)*  
+    -   `DECLARE @myVarchar VARCHAR(32) NOT NULL = "Hello"; -- Must initialize to a value.`  
   
-    -   SET @myVarchar **= null**; -- *(viene compilato ma non riesce in fase di esecuzione).*  
+    -   `SET @myVarchar = NULL; -- Compiles, but fails during run time.`  
   
 -   Associazione allo schema delle stored procedure compilate in modo nativo.  
   

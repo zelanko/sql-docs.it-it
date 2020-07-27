@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c837241abfaebe3776a21e03a9c2cbf4c4f5ee9d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bf49a6cd604350ca9b3e73ee96bb6c61b1977a60
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292539"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920878"
 ---
 # <a name="flat-file-destination"></a>file flat - destinazione
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   La destinazione file flat scrive dati in un file di testo che può essere in formato delimitato, a larghezza fissa, a larghezza fissa con delimitatore di riga o non allineato a destra.  
@@ -91,7 +91,7 @@ ms.locfileid: "71292539"
  Consente di visualizzare l'elenco delle colonne di destinazione disponibili. Eseguire un'operazione di trascinamento della selezione per impostare il mapping tra le colonne di destinazione disponibili e le colonne di input.  
   
  **Colonna di input**  
- Consente di visualizzare le colonne di input selezionate più indietro in questo argomento. È possibile modificare i mapping utilizzando l'elenco **Colonne di input disponibili**. Selezionare **\<ignora>** per escludere la colonna dall'output.  
+ Consente di visualizzare le colonne di input selezionate più indietro in questo argomento. È possibile modificare i mapping utilizzando l'elenco **Colonne di input disponibili**. Selezionare **\<ignore>** per escludere la colonna dall'output.  
   
  **Colonna di destinazione**  
  Consente di visualizzare tutte le colonne di destinazione disponibili, indipendentemente dal fatto che siano mappate o meno.  

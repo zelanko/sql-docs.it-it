@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52c4f92994068e0c5de8afd7233bd53c1244e38d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 410fb5cc9ebfe04b62b6d196e7757f2455234014
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216898"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920336"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Procedura dettagliata: Pubblicare un pacchetto SSIS come vista SQL
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Questa procedura dettagliata fornisce le informazioni necessarie per pubblicare un pacchetto SSIS come vista SQL in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -164,9 +164,9 @@ ms.locfileid: "80216898"
   
 1.  Avviare SQL Server Management Studio.  
   
-2.  Espandere \<**nome macchina**>, **Database**, \<**database selezionato nella procedura guidata**> e **Viste**.  
+2.  Espandere \<**machine name**>, **Database**, \<**database you selected in the wizard**> e **Visualizzazioni**.  
   
-3.  Fare clic con il pulsante destro del mouse sulla \<**vista creata dalla procedura guidata**> e scegliere **Seleziona le prime 1000 righe**.  
+3.  Fare clic con il pulsante destro del mouse sulla \<**view created by the wizard**> creata dalla procedura guidata e scegliere **Seleziona le prime 1000 righe**.  
   
 4.  Confermare la visualizzazione dei risultati del pacchetto SSIS.  
   

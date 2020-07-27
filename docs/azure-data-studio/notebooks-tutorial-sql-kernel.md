@@ -8,13 +8,13 @@ ms.topic: tutorial
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.custom: ''
-ms.date: 03/30/2020
-ms.openlocfilehash: 64e5bcfa188707e784d33a6504b120c4ce0ea553
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.date: 07/01/2020
+ms.openlocfilehash: 66d8c464a0f03eb227e9fda50f6b5ad249f828da
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735325"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920437"
 ---
 # <a name="create-and-run-a-sql-server-notebook"></a>Creare ed eseguire un notebook di SQL Server
 
@@ -29,60 +29,78 @@ Questa esercitazione illustra come creare ed eseguire un notebook in Azure Data 
   - [Windows](../database-engine/install-windows/install-sql-server.md)
   - [Linux](../linux/sql-server-linux-setup.md)
 
-## <a name="new-notebook"></a>Nuovo notebook
+## <a name="create-a--notebook"></a>Creare un notebook
 
 Questa procedura illustra come creare un file di notebook in Azure Data Studio:
 
 1. In Azure Data Studio connettersi all'istanza di SQL Server.
 
-2. Selezionare la connessione in **Connessioni** nella finestra **Server**. Selezionare quindi **Nuovo notebook**.
+1. Selezionare la connessione in **Connessioni** nella finestra **Server**. Selezionare quindi **Nuovo notebook**.
 
    ![Apri notebook](media/notebook-tutorial/azure-data-studio-open-notebook.png)
 
-3. Attendere che il **kernel** e il contesto di destinazione **(Connetti a**) siano popolati. Verificare che **Kernel** sia impostato su **SQL** e impostare **Collega a** per l'istanza di SQL Server (in questo caso *localhost*).
+1. Attendere che il **kernel** e il contesto di destinazione **(Connetti a**) siano popolati. Verificare che **Kernel** sia impostato su **SQL** e impostare **Collega a** per l'istanza di SQL Server (in questo esempio *localhost*).
 
    ![Imposta Kernel e Connetti a](media/notebook-tutorial/set-kernel-and-attach-to.png)
 
-## <a name="run-a-notebook-cell"></a>Eseguire una cella del notebook
+È possibile salvare il notebook usando il comando **Salva** o **Salva con nome** del menu **File**. 
 
-È possibile eseguire ogni cella del notebook premendo il pulsante di riproduzione a sinistra della cella. I risultati verranno visualizzati nel notebook al termine dell'esecuzione della cella.
+Per aprire un notebook, è possibile usare il comando **Apri file** nel menu **File**, selezionare **Apri file** nella pagina di **benvenuto** o usare il comando **File: Apri** nel riquadro comandi.
 
-### <a name="code"></a>Codice
+## <a name="change-the-sql-connection"></a>Modificare la connessione SQL
 
-Aggiungere una nuova cella di codice selezionando il comando **+Codice** sulla barra degli strumenti.
+Per modificare la connessione SQL per un notebook:
 
-![Barra degli strumenti del notebook](media/notebooks-guidance/notebook-toolbar.png)
+1. Selezionare il menu **Collega a** dalla barra degli strumenti del notebook e quindi selezionare **Cambia connessione**.
 
-In questo esempio viene creato un nuovo database.
+   ![Fare clic sul menu "Associa a" sulla barra degli strumenti del notebook](./media/notebook-tutorial/select-attach-to-1.png)
 
-```sql
-USE master
-GO
+2. A questo punto è possibile selezionare un server di connessione recente oppure immettere i dettagli della nuova connessione per la connessione.
 
+   ![Selezionare un server dal menu Associa a.](./media/notebook-tutorial/select-attach-to-2.png)
+
+## <a name="run-a-code-cell"></a>Eseguire una cella di codice
+
+È possibile creare celle contenenti codice SQL che è possibile eseguire sul posto facendo clic sul pulsante **Esegui cella** (la freccia rotonda nera) a sinistra della cella. I risultati verranno visualizzati nel notebook al termine dell'esecuzione della cella.
+
+Ad esempio:
+
+1. Aggiungere una nuova cella di codice selezionando il comando **+Codice** sulla barra degli strumenti.
+
+   ![Barra degli strumenti del notebook](media/notebooks-guidance/notebook-toolbar.png)
+
+1. Copiare e incollare l'esempio seguente nella cella e fare clic su **Esegui cella**. In questo esempio viene creato un nuovo database.
+
+   ```sql
+   USE master
+   GO
+   
    -- Drop the database if it already exists
-IF  EXISTS (
-        SELECT name
-        FROM sys.databases
-        WHERE name = N'TestNotebookDB'
-   )
-DROP DATABASE TestNotebookDB
-GO
-
--- Create the database
-CREATE DATABASE TestNotebookDB
-GO
-```
+   IF  EXISTS (
+           SELECT name
+           FROM sys.databases
+           WHERE name = N'TestNotebookDB'
+      )
+   DROP DATABASE TestNotebookDB
+   GO
+   
+   -- Create the database
+   CREATE DATABASE TestNotebookDB
+   GO
+   ```
 
    ![Eseguire la cella del notebook](media/notebook-tutorial/run-notebook-cell.png)
 
-Se si esegue uno script che restituisce un risultato, è possibile salvare il risultato in formati diversi.
+## <a name="save-the-result"></a>Salvare il risultato
+
+Se si esegue uno script che restituisce un risultato, è possibile salvare il risultato in formati diversi usando la barra degli strumenti visualizzata sopra il risultato.
 
 - Salva in formato CSV
 - Salva in formato Excel
 - Salva in formato JSON
 - Salva in formato XML
 
-In questo caso, viene restituito il risultato di [PI](../t-sql/functions/pi-transact-sql.md).
+Il codice seguente, ad esempio, restituisce il risultato [PI](../t-sql/functions/pi-transact-sql.md).
 
 ```sql
 SELECT PI() AS PI;
@@ -91,26 +109,10 @@ GO
 
 ![Eseguire la cella del notebook](media/notebook-tutorial/run-notebook-cell-2.png)
 
-### <a name="text"></a>Text
-
-Aggiungere una nuova cella di testo selezionando il comando **+Testo** sulla barra degli strumenti.
-
-![Barra degli strumenti del notebook](media/notebooks-guidance/notebook-toolbar.png)
-
-La cella passa alla modalità di modifica ed è quindi possibile digitare la sintassi markdown e, nello stesso tempo, visualizzare l'anteprima
-
-![Cella di markdown](media/notebooks-guidance/notebook-markdown-cell.png)
-
-Se si fa clic all'esterno della cella di testo, viene visualizzato il testo markdown.
-
-![Testo markdown](media/notebooks-guidance/notebook-markdown-preview.png)
-
 ## <a name="next-steps"></a>Passaggi successivi
 
 Altre informazioni sui notebook:
 
-- [Come usare i notebook con SQL Server](notebooks-guidance.md)
-
-- [Come gestire i notebook in Azure Data Studio](notebooks-manage-sql-server.md)
-
+- [Come usare i notebook in Azure Data Studio](notebooks-guidance.md)
+- [Creare ed eseguire un notebook Python](notebooks-tutorial-python-kernel.md)
 - [Eseguire un notebook di esempio con Spark](../big-data-cluster/notebooks-tutorial-spark.md)

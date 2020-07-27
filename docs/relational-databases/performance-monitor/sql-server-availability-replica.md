@@ -1,5 +1,6 @@
 ---
 title: Oggetto Availability Replica di SQL Server | Microsoft Docs
+description: Informazioni sull'oggetto prestazione SQLServer:Availability Replica, che contiene contatori delle prestazioni sulle repliche di disponibilità nei gruppi di disponibilità Always On.
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e402f996-c1fb-484a-b804-45c49972f2e0
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 8b837a98edb0d074824a3f55c5a4dfac739e715f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f9bec13f0da210b9b6471a955fc619f7b9aec23a
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787352"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458163"
 ---
 # <a name="sql-server-availability-replica"></a>SQL Server, replica di disponibilità
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

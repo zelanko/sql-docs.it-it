@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 5ca9d821-7d61-4727-9133-5f9cb485c7f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0312349652ad1854efdeacdbfc25726e1766862f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a445bafcb6182f4af0d6089085c5a579b9109d7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298033"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917797"
 ---
 # <a name="source-assistant"></a>Assistente origine
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Il componente Assistente origine consente di creare un componente di origine e una gestione connessione. Il componente si trova nella sezione **Preferiti** della casella degli strumenti di SSIS.  
@@ -39,11 +39,11 @@ Questa sezione illustra i passaggi necessari per aggiungere una nuova origine us
   
 3.  Selezionare il tipo della destinazione nell'elenco **Tipi**.  
   
-4.  Selezionare una gestione connessione esistente nell'elenco **Gestioni connessioni** oppure selezionare **\<Nuova>** per creare una nuova gestione connessione.  
+4.  Selezionare una gestione connessione esistente nell'elenco **Gestioni connessioni** oppure selezionare **\<New>** per creare una nuova gestione connessione.  
   
 5.  Se si seleziona una gestione connessione esistente, fare clic su **OK** per chiudere la finestra di dialogo **Aggiungi nuova destinazione**. La destinazione e le gestioni connessioni verranno aggiunte al flusso di dati.  
   
-6.  Se si fa clic su **\<Nuova>** per creare una nuova gestione connessione, viene visualizzata la finestra di dialogo **Gestione connessione** in cui è possibile specificare i parametri per la connessione. Dopo avere completato la creazione della nuova gestione connessione, la destinazione e la gestione connessione saranno visibili in Progettazione SSIS.  
+6.  Se si fa clic su **\<New>** per creare una nuova gestione connessione, verrà visualizzata la finestra di dialogo **Gestione connessione** in cui specificare i parametri per la connessione. Dopo avere completato la creazione della nuova gestione connessione, la destinazione e la gestione connessione saranno visibili in Progettazione SSIS.  
 
 ## <a name="add-new-source-dialog-box"></a>Finestra di dialogo Aggiungi nuova origine
 La tabella seguente elenca le opzioni disponibili nella finestra di dialogo **Aggiungi nuova origine**.  
@@ -51,7 +51,7 @@ La tabella seguente elenca le opzioni disponibili nella finestra di dialogo **Ag
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |Tipi|Selezionare il tipo di origine a cui si desidera connettersi.|  
-|Gestioni connessioni|Selezionare una gestione connessione esistente oppure fare clic su **\<Nuova>** per creare una nuova gestione connessione.|  
+|Gestioni connessioni|Selezionare una gestione connessione esistente oppure fare clic su **\<New>** per creare una nuova gestione connessione.|  
 |Mostra solo installati|Consente di specificare se visualizzare solo le origini installate.|  
 |OK|Fare clic per salvare le modifiche e aprire eventuali finestre di dialogo successive per configurare opzioni aggiuntive.| 
   
