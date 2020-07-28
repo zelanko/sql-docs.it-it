@@ -1,9 +1,0 @@
-- name: Notifiche degli eventi
-  href: event-notifications.md
-  items:
-    - name: Implementazione di notifiche degli eventi
-      href: implement-event-notifications.md
-    - name: Configurazione della sicurezza del dialogo per le notifiche degli eventi
-      href: configure-dialog-security-for-event-notifications.md
-    - name: Recupero di informazioni sulle notifiche degli eventi
-      href: get-information-about-event-notifications.md
