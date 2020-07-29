@@ -18,12 +18,12 @@ ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
-ms.openlocfilehash: 6ef2795a36b58026cb915ca4a53670b36565948b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d0a76af198ea3c18d40b3726b94a0767b97037cd
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832818"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113287"
 ---
 # <a name="try_cast-transact-sql"></a>TRY_CAST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "82832818"
 TRY_CAST ( expression AS data_type [ ( length ) ] )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *expression*  
  Valore di cui eseguire il cast. Qualsiasi espressione valida.  
   

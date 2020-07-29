@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 944b3e02894e86de9ff5c0f2254b71de7b76bd2f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ca0bb9b4fb03cc3f567c6c642a3593d23963993
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752367"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113528"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,9 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
     [ , sub-securable ] [ , sub-securable_class ] )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *securable*  
  Nome dell'entità a protezione diretta. Se l'entità a protezione diretta è il server stesso, questo valore deve essere impostato su NULL. *securable* è un'espressione scalare di tipo **sysname**. Non prevede alcun valore predefinito.  
   

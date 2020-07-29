@@ -4,21 +4,21 @@ description: Informazioni su come installare offline i pacchetti R usando miniCR
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/20/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c8ddfcf997cd4cc62f1c65efd7ecfc4cf3aff730
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a980e356496e3e2e1cdbc5010e8f1c6f7ec7d8c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118154"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783507"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Creare un repository di pacchetti R locale usando miniCRAN
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Questo articolo descrive come installare i pacchetti R offline usando [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) per creare un repository locale di pacchetti e dipendenze. **miniCRAN** identifica e scarica pacchetti e dipendenze in un'unica cartella che è possibile copiare in altri computer per l'installazione offline di pacchetti R.
 
@@ -112,7 +112,7 @@ pdb[, c("Package", "Version", "License")]
 
 Quando si ha un repository locale con i pacchetti necessari, spostarlo nel computer di SQL Server. La procedura seguente descrive come installare i pacchetti usando R Tools.
 
-::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 > [!NOTE]
 > Il metodo consigliato per l'installazione dei pacchetti consiste nell'usare **sqlmlutils**. Vedere [Installare nuovi pacchetti R con sqlmlutils](install-additional-r-packages-on-sql-server.md).
 ::: moniker-end

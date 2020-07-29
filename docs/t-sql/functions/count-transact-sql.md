@@ -23,12 +23,12 @@ ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0c4ebccf102051d3144ca8a9955bfa0f1aef1ee
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 82928e721df413a1d5194492726734b1986b0294
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011491"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110611"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,9 @@ COUNT ( { [ [ ALL | DISTINCT ] expression ] | * } )
 COUNT ( [ ALL ]  { expression | * } ) OVER ( [ <partition_by_clause> ] )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
 **ALL**  
 Applica la funzione di aggregazione a tutti i valori. ALL funge da valore predefinito.
   

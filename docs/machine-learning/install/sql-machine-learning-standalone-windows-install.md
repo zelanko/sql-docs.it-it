@@ -2,22 +2,22 @@
 title: Installare Machine Learning Server (Standalone)
 description: Configurare un'istanza autonoma di Machine Learning Server per Python e R. Un server autonomo installato dal programma di installazione di SQL Server è equivalente, dal punto di vista funzionale, alle versioni non SQL di Microsoft Machine Learning Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 01/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e614579b3d4e64a73e5896c1be946cdb38d21dcf
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 15280d88b2219587ee63b15e8e98421be2734fab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118314"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885940"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Installare Machine Learning Server (Standalone) o R Server (Standalone) con il programma di installazione di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Il programma di installazione di SQL Server include un'opzione di **Funzionalità condivise** per l'installazione di un'istanza autonoma di Machine Learning Server che viene eseguita all'esterno di SQL Server. Questa funzionalità è denominata **Machine Learning Server (Standalone)** e include Python e R. 

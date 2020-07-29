@@ -17,12 +17,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: cd78371a838d257065eece76d69e1c3e89acc1f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28a61eb05b015be7eee85a7376a3c0ce84cac27f
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738091"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112859"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -64,6 +64,8 @@ Per impostazione predefinita, la funzione con valori di tabella **OPENJSON** res
 ![Sintassi per la clausola WITH in OPENJSON TVF](../../relational-databases/json/media/openjson-shema-syntax.png "Sintassi di OPENJSON WITH")
 
 *with_clause* contiene un elenco delle colonne con i relativi tipi che devono essere restituite da **OPENJSON**. Per impostazione predefinita, **OPENJSON** ricerca la corrispondenza delle chiavi in *jsonExpression* con i nomi di colonna in *with_clause* (in questo caso, la ricerca della corrispondenza delle chiavi implica che viene fatta distinzione tra maiuscole e minuscole). Se un nome di colonna non corrisponde al nome di una chiave, è possibile specificare un valore *column_path* facoltativo che è costituito da un'[espressione di percorso JSON](../../relational-databases/json/json-path-expressions-sql-server.md) che fa riferimento a una chiave all'interno di *jsonExpression*. 
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argomenti
 

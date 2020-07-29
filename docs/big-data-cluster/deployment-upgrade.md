@@ -9,16 +9,16 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 776c54ef7475b1ff7c5679f98e994a1b42784262
-ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
+ms.openlocfilehash: dedae90b5242282fb550ebc59c5a4d98d21506f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80607834"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764063"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Come aggiornare [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Il percorso di aggiornamento dipende dalla versione corrente del cluster Big Data di SQL Server (BDC). L'aggiornamento da una versione supportata, tra cui l'aggiornamento pubblico (GDR), l'aggiornamento cumulativo (CU) o l'aggiornamento QFE (Quick Fix Engineering), può essere eseguito sul posto. L'aggiornamento sul posto da una versione CTP (Customer Technology Preview) o dalla versione finale candidata di BDC non è supportato. È necessario rimuovere e ricreare il cluster. Le sezioni seguenti descrivono i passaggi per ogni scenario:
 

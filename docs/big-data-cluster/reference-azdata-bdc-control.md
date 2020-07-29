@@ -5,25 +5,25 @@ description: Articolo di riferimento per i comandi azdata bdc control.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3824e95e4416386f4542d7df7b2fbe95e28b5dee
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 07abbd638ad87349bbe67b5a53984f4baaf1d641
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74821447"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942599"
 ---
 # <a name="azdata-bdc-control"></a>azdata bdc control
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-L'articolo seguente offre informazioni di riferimento sui comandi `bdc control` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md)
+L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Comandi:
-|     |     |
+| Comando | Descrizione |
 | --- | --- |
 [azdata bdc control status](reference-azdata-bdc-control-status.md) | Comandi relativi allo stato del servizio di controllo.
 

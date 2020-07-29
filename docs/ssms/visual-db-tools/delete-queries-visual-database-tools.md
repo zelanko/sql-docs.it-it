@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: de579b456cb3b7ed7ebffdd601b8f70e7bf7a6f5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4573d056ac41ce3f38637ba51afb02cd825351e5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254686"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008341"
 ---
 # <a name="delete-queries-visual-database-tools"></a>Eliminazione di query (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Se una query non è più necessaria, è possibile rimuoverla dal progetto oppure eliminarla definitivamente dal file system. Le query eliminate mediante la procedura descritta di seguito non vengono spostate nel Cestino e pertanto non possono essere recuperate.  
   
 ### <a name="to-permanently-delete-a-query"></a>Per eliminare una query in modo definitivo  

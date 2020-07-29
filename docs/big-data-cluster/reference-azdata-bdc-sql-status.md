@@ -5,25 +5,25 @@ description: Articolo di riferimento per i comandi azdata bdc sql status.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d3d640fdeb503a2fe210429f9d2b1ca534b4a0a9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eff14c1b678f59265f80faeabfef5ddc1b0d3f45
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74821178"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243458"
 ---
 # <a name="azdata-bdc-sql-status"></a>azdata bdc sql status
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-L'articolo seguente offre informazioni di riferimento sui comandi `bdc sql status` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md)
+L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Comandi:
-|     |     |
+| Comando | Descrizione |
 | --- | --- |
 [azdata bdc sql status show](#azdata-bdc-sql-status-show) | Stato del servizio sql-server.
 ## <a name="azdata-bdc-sql-status-show"></a>azdata bdc sql status show
@@ -58,7 +58,7 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 

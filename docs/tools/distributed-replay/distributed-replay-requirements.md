@@ -3,22 +3,22 @@ title: Requisiti relativi a Riesecuzione distribuita
 titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 01/18/2018
-ms.openlocfilehash: 1adafe699b1168305042fbe3e9e840ca7a06e703
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 26fdf4b982b27b7ad7c4d832b7320a263d4a09ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74993622"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681673"
 ---
 # <a name="distributed-replay-requirements"></a>Requisiti relativi a Riesecuzione distribuita
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Prima di usare la funzionalità Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esaminare i requisiti del prodotto indicati in questo argomento.  
   
 ## <a name="input-trace-requirements"></a>Requisiti della traccia di input  
