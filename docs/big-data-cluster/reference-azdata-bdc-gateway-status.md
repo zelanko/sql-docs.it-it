@@ -5,25 +5,25 @@ description: Articolo di riferimento per i comandi azdata bdc gateway status.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1c74439be0a696197f35a86a0d493a8ad01e28ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 30410e4acbaa6b52228c89334c9ee8a26a80d5b4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74820928"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243059"
 ---
 # <a name="azdata-bdc-gateway-status"></a>azdata bdc gateway status
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-L'articolo seguente offre informazioni di riferimento sui comandi `bdc gateway status` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md)
+L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Comandi:
-|     |     |
+| Comando | Descrizione |
 | --- | --- |
 [azdata bdc gateway status show](#azdata-bdc-gateway-status-show) | Stato del servizio gateway.
 ## <a name="azdata-bdc-gateway-status-show"></a>azdata bdc gateway status show
@@ -58,7 +58,7 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 

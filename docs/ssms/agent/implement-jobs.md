@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 69e06724-25c7-4fb3-8a5b-3d4596f21756
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9770382558af7e77090235775c133dbeaeabff51
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2c5de395fdf9f546eb467712145fda29580914b4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242350"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246212"
 ---
 # <a name="implement-jobs"></a>Implementazione di processi
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
@@ -38,9 +37,8 @@ Un processo include una serie di operazioni specificate eseguite in sequenza da 
   
 ## <a name="related-tasks"></a>Attività correlate  
   
-|||  
-|-|-|  
-|**Descrizione**|**Argomento**|  
+|Descrizione|Argomento|  
+|-|-|   
 |Contiene informazioni sulla creazione dei processi e sull'assegnazione della proprietà.|[Crea processi](../../ssms/agent/create-jobs.md)|  
 |Contiene informazioni sull'organizzazione dei processi in categorie.|[Organizzare processi](../../ssms/agent/organize-jobs.md)|  
 |Contiene informazioni sui diversi tipi di passaggi di processo che è possibile creare e sulla rispettiva modalità di gestione.|[Gestire passaggi di processo](../../ssms/agent/manage-job-steps.md)|  

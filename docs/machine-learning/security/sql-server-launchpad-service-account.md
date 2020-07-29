@@ -2,22 +2,22 @@
 title: Configurazione dell'account di Launchpad
 description: Come modificare l'account del servizio Launchpad di SQL Server usato per l'esecuzione di script esterni in SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/17/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: aa249c59a5b97e2b2e71e5d2fa17eccbafd8944f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 5ce304db442ab9e4c1fd283cb43eed83829710b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117104"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772382"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>Configurazione del servizio Launchpad di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] è un servizio che gestisce ed esegue script esterni, in modo analogo a come il servizio di indicizzazione e query full-text avvia un host separato per l'elaborazione delle query full-text.
 

@@ -18,17 +18,16 @@ helpviewer_keywords:
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 4161966534f65936bbddc8753cdb116ea5f47e33
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 759aaed19c2ef313712725edaa03b91eb37afcbe
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246215"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002597"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Utilizzo dei dati nel riquadro Risultati (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Dopo l'esecuzione di una query o di una vista, i risultati ottenuti vengono visualizzati nel riquadro Risultati e su di essi è possibile eseguire numerose operazioni, ad esempio aggiungere ed eliminare righe, immettere o modificare dati e navigare con facilità nell'ambito di set di risultati estesi.  
   
 Le informazioni riportate di seguito consentono di evitare problemi e di utilizzare in modo ottimale i set di risultati ottenuti.  

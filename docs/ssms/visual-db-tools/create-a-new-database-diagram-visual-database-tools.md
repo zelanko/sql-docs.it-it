@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 0c9d69f04fc7825b0902e101d1c8f8f40494da72
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f16ffac1272a0dd9bfc847d33b3232179d306c3d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254399"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751457"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Creazione di un nuovo diagramma di database (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 È possibile utilizzare Esplora oggetti per creare nuovi diagrammi di database. I diagrammi di database mostrano graficamente la struttura del database. Mediante i diagrammi di database è possibile creare e modificare tabelle, colonne, relazioni e chiavi. È inoltre possibile modificare indici e vincoli.  
   
 ### <a name="to-create-a-new-database-diagram"></a>Per creare un nuovo diagramma di database  

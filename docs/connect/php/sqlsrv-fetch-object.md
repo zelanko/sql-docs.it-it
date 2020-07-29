@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a457fbc0f87f9ba83170f8235e7ae144f4e86648
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 90d900af5fe86862ad59df61d4640e38797c0a01
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922793"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893172"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,6 @@ Recupera la riga successiva di dati in forma di oggetto PHP.
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, row[, ]offset]]])  
 ```  
   
@@ -81,17 +80,21 @@ Quando si specifica una classe con il parametro *$className* , si applicano le r
   
 Se viene restituito un campo senza nome, **sqlsrv_fetch_object** rimuove il valore del campo ed emette un avviso. Ad esempio, si consideri l'istruzione Transact-SQL seguente che inserisce un valore in una tabella di database e recupera la chiave primaria generata dal server:  
   
-<pre>INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
-SELECT SCOPE_IDENTITY()</pre>  
+```sql
+INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
+SELECT SCOPE_IDENTITY()
+```
   
 Se i risultati restituiti dalla query vengono recuperati con **sqlsrv_fetch_object**, il valore restituito da `SELECT SCOPE_IDENTITY()` viene rimosso e viene emesso un avviso. Per evitare questo problema, è possibile specificare un nome per il campo restituito nell'istruzione Transact-SQL. Di seguito è illustrato un modo per specificare un nome di colonna in Transact-SQL:  
   
-`SELECT SCOPE_IDENTITY() AS PictureID`  
+```sql
+SELECT SCOPE_IDENTITY() AS PictureID
+```
   
 ## <a name="example"></a>Esempio  
 L'esempio seguente recuperata ciascuna riga di un set di risultati in forma di oggetto PHP. Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
-```  
+``` 
 <?php  
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
@@ -234,12 +237,16 @@ La variabile **sqlsrv_fetch_object** restituisce sempre i dati in base ai [Defau
   
 Se viene restituito un campo senza nome, **sqlsrv_fetch_object** rimuove il valore del campo ed emette un avviso. Ad esempio, si consideri l'istruzione Transact-SQL seguente che inserisce un valore in una tabella di database e recupera la chiave primaria generata dal server:  
   
-<pre>INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
-SELECT SCOPE_IDENTITY()</pre>  
+```sql
+INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
+SELECT SCOPE_IDENTITY()
+```
   
 Se i risultati restituiti dalla query vengono recuperati con **sqlsrv_fetch_object**, il valore restituito da `SELECT SCOPE_IDENTITY()` viene rimosso e viene emesso un avviso. Per evitare questo problema, è possibile specificare un nome per il campo restituito nell'istruzione Transact-SQL. Di seguito è illustrato un modo per specificare un nome di colonna in Transact-SQL:  
   
-`SELECT SCOPE_IDENTITY() AS PictureID`  
+```sql
+SELECT SCOPE_IDENTITY() AS PictureID
+```
   
 ## <a name="see-also"></a>Vedere anche  
 [Recupero di dati](../../connect/php/retrieving-data.md)  

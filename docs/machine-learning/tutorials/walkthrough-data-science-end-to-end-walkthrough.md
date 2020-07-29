@@ -2,22 +2,22 @@
 title: 'Esercitazione su R: Sviluppare un modello in SQL'
 description: Esercitazione che illustra come creare una soluzione R end-to-end per l'analisi nel database.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/11/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 129a109cb85d1e9a9a7784cd7d3963598c6725a5
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 24f83b1bae1a550a56c64ffdd8ebc069bbc4d9f9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115834"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781791"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>Esercitazione: Sviluppo SQL per data scientist R
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Questa esercitazione per data scientist illustra come creare una soluzione end-to-end per la modellazione predittiva basata sul supporto delle funzionalità R in SQL Server 2016 o SQL Server 2017. In questa esercitazione viene usato il database [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) in SQL Server. 
 

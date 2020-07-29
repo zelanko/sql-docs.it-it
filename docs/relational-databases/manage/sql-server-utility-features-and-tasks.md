@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c48779de7f7edccd4401e1d60740b7cff6a046cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2378ecd42d821a818a539350f872ed0d12099a8d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755691"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242964"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Attività e funzionalità di Utilità SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +40,8 @@ ms.locfileid: "85755691"
 ## <a name="related-tasks"></a>Attività correlate  
  Utilizzare gli argomenti seguenti per iniziare a utilizzare Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|||  
+|Descrizione|Argomento|  
 |-|-|  
-|**Descrizione**|**Argomento**|  
 |Vengono descritte le considerazioni per configurare un server per l'esecuzione di set di raccolta dell'utilità e non appartenenti all'utilità nella stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Considerazioni per l'esecuzione di set di raccolta dell'utilità e non appartenenti all'utilità nella stessa istanza di SQL Server](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
 |Viene descritto come creare un punto di controllo di Utilità SQL Server|[Creare un punto di controllo dell'Utilità SQL Server &#40;Utilità SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)|  
 |Viene descritto come effettuare la connessione a Utilità SQL Server.|[Effettuare la connessione a Utilità SQL Server.](../../relational-databases/manage/connect-to-a-sql-server-utility.md)|  

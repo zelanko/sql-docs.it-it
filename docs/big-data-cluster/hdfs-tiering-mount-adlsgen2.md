@@ -5,16 +5,16 @@ description: Questo articolo illustra come configurare la suddivisione in livell
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/05/2019
+ms.date: 06/29/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 543db5b96f9a2b02d579b7b6686049ff19af99d7
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: b0206ca193e6c03624c0d40d0c66e7474b00a7a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606523"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730653"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Come montare ADLS Gen2 per la suddivisione in livelli HDFS in un cluster Big Data
 
@@ -48,7 +48,7 @@ Per usare le credenziali OAuth per il montaggio, è necessario seguire questa pr
 1. Sulla barra di spostamento a destra selezionare "Registrazioni app" e creare una nuova registrazione
 1. Creare un'applicazione Web e seguire la procedura guidata. **Tenere a mente il nome dell'app creata in questa posizione**. Sarà necessario aggiungere questo nome all'account ADLS come utente autorizzato. Prendere nota anche dell'ID client dell'applicazione nella sezione di panoramica quando si seleziona l'app.
 1. Dopo aver creato l'applicazione Web, passare a "Certificati e segreti", fare clic su **Nuovo segreto client** per crearne uno e selezionare la durata della chiave. Fare clic su **Aggiungi** per aggiungere il segreto.
-1.     Tornare alla pagina Registrazioni app e fare clic su "Endpoint" nella parte superiore. **Prendere nota dell'URL dell'endpoint di token OAuth (v2)**
+1. Tornare alla pagina Registrazioni app e fare clic su "Endpoint" nella parte superiore. **Prendere nota dell'URL dell'endpoint di token OAuth (v2)**
 1. A questo punto dovrebbero essere state annotate le informazioni seguenti per OAuth:
 
     - "ID client applicazione" per l'applicazione Web
@@ -71,13 +71,13 @@ Aprire un prompt dei comandi in un computer client in grado di accedere al clust
 
 **Nota**: quando si forniscono le credenziali, è necessario rimuovere tutte le interruzioni di riga o lo spazio tra le virgole ",". La formattazione seguente è finalizzata solo a semplificare la lettura.
 
-   ```text
-    set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
-    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
-    fs.azure.account.oauth2.client.endpoint=[token endpoint],
-    fs.azure.account.oauth2.client.id=[Application client ID],
-    fs.azure.account.oauth2.client.secret=[client secret]
-   ```
+```console
+   set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
+   fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
+   fs.azure.account.oauth2.client.endpoint=[token endpoint],
+   fs.azure.account.oauth2.client.id=[Application client ID],
+   fs.azure.account.oauth2.client.secret=[client secret]
+```
 
 ## <a name="use-access-keys-to-mount"></a>Usare le chiavi di accesso per il montaggio
 
@@ -94,10 +94,10 @@ Aprire un prompt dei comandi in un computer client in grado di accedere al clust
 
 **Nota**: quando si forniscono le credenziali, è necessario rimuovere tutte le interruzioni di riga o lo spazio tra le virgole ",". La formattazione seguente è finalizzata solo a semplificare la lettura.
 
-   ```text
-   set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
-   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
-   ```
+```console
+set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
+fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
+```
 
 ## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> Montare la risorsa di archiviazione HDFS remota
 

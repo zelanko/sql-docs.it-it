@@ -10,16 +10,16 @@ ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 604292d548d9368439b810fa4dfebf2d4388929e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 25e200cf5a38a98289dcba91d08a1ce7c0cab340
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634953"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726727"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>Inviare processi Spark su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in IntelliJ
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Uno degli scenari chiave per [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] è la possibilità di inviare processi Spark. La funzionalità di invio di processi Spark consente di inviare file Jar o Py locali con riferimenti a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. Consente inoltre di eseguire file Jar o Py che si trovano già nel file system HDFS. 
 

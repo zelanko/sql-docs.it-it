@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 5c1a8b952d0723c4fd1c54ab2b841ed818017c9f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3328277c15511a94603436c7c845671e9fd8dc86
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254311"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000062"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Creazione di join esterni (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Per impostazione predefinita, in [Progettazione query e Progettazione viste](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) viene creato un inner join tra le tabelle. Le righe prive di corrispondenza nell'altra tabella vengono eliminate. Gli outer join restituiscono invece tutte le righe di almeno una delle tabelle o viste specificate nella clausola FROM, a condizione che tali righe soddisfino una delle condizioni di ricerca della clausola WHERE o HAVING. Se si desidera includere nel set di risultati le righe di dati che non hanno una corrispondenza nella tabella in join, sarà possibile creare un outer join.  
   
 Durante la creazione di un outer join, l'ordine di inserimento delle tabelle nell'istruzione SQL (riflesso nel riquadro SQL) è significativo. La prima tabella aggiunta diventa la tabella di sinistra ("left") e la seconda diventa la tabella di destra ("right"). Non è invece significativo l'ordine effettivo in cui le tabelle sono visualizzate nel [riquadro Diagramma](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) . Quando si specifica un left outer join o un right outer join, si fa riferimento alla sequenza di inserimento delle tabelle nella query o all'ordine in cui vengono visualizzate nell'istruzione SQL nel [riquadro SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  

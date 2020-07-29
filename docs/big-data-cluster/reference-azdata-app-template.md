@@ -1,36 +1,37 @@
 ---
 title: Informazioni di riferimento su azdata app template
+titleSuffix: SQL Server big data clusters
 description: Articolo di riferimento per i comandi azdata app template.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: da1b98649eeb48d5ae2d6ca05e61da53f519e944
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 89b5436536d221364f967548bf4a5c4dd70a1ebd
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251049"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942963"
 ---
 # <a name="azdata-app-template"></a>azdata app template
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-L'articolo seguente offre informazioni di riferimento sui comandi `app template` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md)
+L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Comandi:
-|     |     |
+| Comando | Descrizione |
 | --- | --- |
-[`azdata app template list`](#azdata-app-template-list) | Recupera i modelli supportati.
-[`azdata app template pull`](#azdata-app-template-pull) | Scarica i modelli supportati.
+[azdata app template list](#azdata-app-template-list) | Recupera i modelli supportati.
+[azdata app template pull](#azdata-app-template-pull) | Scarica i modelli supportati.
 ## <a name="azdata-app-template-list"></a>azdata app template list
 Recupera i modelli supportati nel repository GitHub [URL] specificato.
 ```bash
-azdata app template list [--url -u]
+azdata app template list [--url -u] 
+                         
 ```
 ### <a name="examples"></a>Esempi
 Recuperare tutti i modelli nel percorso predefinito del repository di modelli.
@@ -52,7 +53,7 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-app-template-pull"></a>azdata app template pull
@@ -60,7 +61,8 @@ Scarica i modelli supportati nel repository GitHub [URL] specificato.
 ```bash
 azdata app template pull [--name -n] 
                          [--url -u]  
-                         [--destination -d]
+                         
+[--destination -d]
 ```
 ### <a name="examples"></a>Esempi
 Scaricare tutti i modelli nel percorso predefinito del repository di modelli.
@@ -91,7 +93,7 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 

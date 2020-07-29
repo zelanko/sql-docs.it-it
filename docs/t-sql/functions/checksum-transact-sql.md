@@ -20,12 +20,12 @@ ms.assetid: e26d3339-845c-49c2-9d89-243376874c13
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f5fca41d59ed5b35451a1e63993b7ec6235244a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 496c08f2bdf9942349ccdda83c90a97336767203
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732653"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110604"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -40,7 +40,9 @@ La funzione `CHECKSUM` restituisce il valore di checksum calcolato su una riga d
 CHECKSUM ( * | expression [ ,...n ] )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
 \*  
 Questo argomento specifica che il calcolo del valore di checksum copre tutte le colonne di tabella. Se una colonna contiene un tipo di dati non confrontabile, `CHECKSUM` restituisce un errore. I tipi di dati non confrontabili includono:
 

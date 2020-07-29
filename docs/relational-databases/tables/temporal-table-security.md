@@ -11,12 +11,12 @@ ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4eb809ddbd1acfdd3a01f5601b30e9cf6e9259e0
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6f9392a6ef282d1a3201e5edb2a4fa026adc5752
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555256"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122775"
 ---
 # <a name="temporal-table-security"></a>Sicurezza di una tabella temporale
 
@@ -58,15 +58,15 @@ Quando SYSTEM_VERSIONING è impostato su ON, le operazioni di modifica dello sch
 
 ## <a name="security-of-the-create-temporal-table-statement"></a>Sicurezza dell'istruzione CREATE TABLE per le tabelle temporali
 
-||Creare una nuova tabella di cronologia|Riutilizzare una tabella di cronologia esistente|
-|-|------------------------------|----------------------------------|
+| Funzionalità | Creare una nuova tabella di cronologia | Riutilizzare una tabella di cronologia esistente |
+| ------- | ------------------------ | ---------------------------- |
 |Autorizzazione necessaria|Autorizzazione**CREATE TABLE** nel database<br /><br /> Autorizzazione**ALTER** per gli schemi in cui vengono create le tabelle corrente e di cronologia|Autorizzazione**CREATE TABLE** nel database<br /><br /> Autorizzazione**ALTER** per lo schema in cui verrà creata la tabella corrente.<br /><br /> Autorizzazione**CONTROL** per la tabella di cronologia specificata come parte dell'istruzione **CREATE TABLE** per la creazione della tabella temporale|
 |Audit|Dal controllo risulta che gli utenti hanno tentato di creare due oggetti. L'operazione può non riuscire a causa della mancanza di autorizzazioni per creare una tabella nel database o a causa della mancanza di autorizzazioni per la modifica degli schemi per entrambe le tabelle.|Il controllo indica che la tabella temporale è stata creata. L'operazione può non riuscire a causa della mancanza di autorizzazioni per creare una tabella nel database, a causa della mancanza di autorizzazioni per la modifica dello schema per la tabella temporale o a causa della mancanza di autorizzazioni per la tabella di cronologia.|
 
 ## <a name="security-of-the-alter-temporal-table-set-system_versioning-onoff-statement"></a>Sicurezza dell'istruzione ALTER TABLE SET (SYSTEM_VERSIONING ON/OFF) per le tabelle temporali
 
-||Creare una nuova tabella di cronologia|Riutilizzare una tabella di cronologia esistente|
-|-|------------------------------|----------------------------------|
+| Funzionalità | Creare una nuova tabella di cronologia | Riutilizzare una tabella di cronologia esistente |
+| ------- | ------------------------ | ---------------------------- |
 |Autorizzazione necessaria|Autorizzazione**CONTROL** nel database<br /><br /> Autorizzazione**CREATE TABLE** nel database<br /><br /> Autorizzazione**ALTER** per gli schemi in cui viene creata la tabella di cronologia|Autorizzazione**CONTROL** per la tabella originale modificata<br /><br /> Autorizzazione**CONTROL** per la tabella di cronologia specificata come parte dell'istruzione **ALTER TABLE**|
 |Audit|Il controllo indica che la tabella temporale è stata modificata e contemporaneamente è stata creata la tabella di cronologia. L'operazione può non riuscire a causa della mancanza di autorizzazioni per creare una tabella nel database, a causa della mancanza di autorizzazioni per la modifica dello schema per la tabella di cronologia o a causa della mancanza di autorizzazioni per la modifica della tabella temporale.|Il controllo indica che la tabella temporale è stata modificata, ma l'operazione ha richiesto l'accesso alla tabella di cronologia. L'operazione potrebbe non riuscire a causa della mancanza di autorizzazioni per la tabella di cronologia o per la tabella corrente.|
 

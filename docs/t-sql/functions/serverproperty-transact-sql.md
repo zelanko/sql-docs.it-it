@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97979dbef582835c5fcb8a8e3ec04fdf99b5d205
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ba9181d1b34bf39711dac702a11687b3ca38f604
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003668"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113354"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -47,7 +47,9 @@ SERVERPROPERTY ( 'propertyname' )
 > [!IMPORTANT]
 > I numeri di versione del motore di database per SQL Server e il database SQL di Azure non sono confrontabili tra loro e sono invece numeri di build interni per questi prodotti distinti. Il motore di database per il database SQL di Azure è basato sulla stessa codebase del motore di database di SQL Server. Soprattutto, il motore di database nel database SQL di Azure include sempre i componenti più recenti del motore di database SQL. La versione 12 del database SQL di Azure è più recente della versione 15 di SQL Server.
 
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
 
 *propertyname*  
 Espressione che contiene le informazioni sulle proprietà da restituire per il server. *propertyname* può essere uno dei valori seguenti.  

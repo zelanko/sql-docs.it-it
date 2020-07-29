@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f2f1989f65dfae7d772dfd7d14a9fb3dd285b0a2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a9eddcb219b8b9e8b8b83f0f9e951da1e9531303
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784543"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113487"
 ---
 # <a name="ident_current-transact-sql"></a>IDENT_CURRENT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,9 @@ Restituisce l'ultimo valore Identity generato per una tabella o una vista specif
 IDENT_CURRENT( 'table_or_view' )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
 *table_or_view*  
 Nome della tabella o della vista per la quale viene restituito il valore Identity. *table_or_view* è di tipo **varchar** e non prevede alcun valore predefinito.  
   

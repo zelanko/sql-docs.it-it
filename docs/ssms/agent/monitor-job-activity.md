@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0fdb46ddca31f870363385bef70adde37a7a36ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b4bfe163fb1f3ffe4eb5b5203bfced15f43069de
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252355"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87237423"
 ---
 # <a name="monitor-job-activity"></a>Monitoraggio delle attività del processo
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
@@ -62,9 +61,8 @@ Per visualizzare l'attività dei processi della sessione corrente è inoltre pos
   
 ## <a name="related-tasks"></a>Attività correlate  
   
-|||  
-|-|-|  
-|**Descrizione**|**Argomento**|  
+|Descrizione|Argomento|  
+|-|-|   
 |Viene illustrato come visualizzare lo stato di runtime dei processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Visualizza attività processi](../../ssms/agent/view-job-activity.md)|  
   
 ## <a name="see-also"></a>Vedere anche  

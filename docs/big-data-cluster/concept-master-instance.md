@@ -9,16 +9,16 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0cb2f253f56fc58e215d1c800788294e2df7b0aa
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: f7199663209c2d9a0dc51baa0e6986f16722ef94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606640"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773655"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>Che cos'è l'istanza master in un cluster Big Data di SQL Server?
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Questo articolo descrive il ruolo dell'*istanza master di SQL Server* in un cluster Big Data per SQL Server 2019. L'istanza master è un'istanza di SQL Server in esecuzione in un cluster Big Data per gestire connettività, query con scalabilità orizzontale, database utente e metadati e Machine Learning Services.
 

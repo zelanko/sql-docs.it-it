@@ -2,23 +2,23 @@
 title: Generare codice per le attività di data wrangling
 titleSuffix: Azure Data Studio
 description: Questo articolo descrive come usare l'acceleratore di codice PROSE in Azure Data Studio per generare automaticamente il codice per le attività comuni di data wrangling.
-author: MikeRayMSFT
-ms.author: mikeray
+author: dphansen
+ms.author: davidph
 ms.reviewer: mihaelab
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
-ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.technology: machine-learning-bdc
+ms.openlocfilehash: 548db45e97fed2a5d955eef947c6d21004d439d2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67957681"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243442"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Data wrangling con l'acceleratore di codice PROSE
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 L'acceleratore di codice PROSE genera codice Python leggibile per le attività di data wrangling. È possibile combinare facilmente il codice generato con il codice scritto manualmente mentre si lavora in un notebook in Azure Data Studio. Questo articolo fornisce una panoramica di come usare l'acceleratore di codice.
 
@@ -113,8 +113,8 @@ Per altre informazioni, vedere la [documentazione](https://aka.ms/prose-codeacce
 Un altro scenario comune è quello del rilevamento di modelli in una colonna di stringhe a scopo di pulizia o raggruppamento. Si potrebbe ad esempio avere una colonna di date con date in più formati diversi. Per standardizzare i valori, potrebbe essere necessario scrivere istruzioni condizionali usando espressioni regolari.
 
 
-|   |Nome                      |BirthDate      |
-|---|:-------------------------|:--------------|
+|Riga|Nome                      |BirthDate      |
+|--:|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Unknown        |
 | 2 |Jihoo Spel                |2014           |
