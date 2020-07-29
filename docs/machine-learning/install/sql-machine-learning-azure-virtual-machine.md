@@ -2,22 +2,22 @@
 title: Eseguire l'installazione in una macchina virtuale di Azure
 description: Eseguire soluzioni di data science e Machine Learning di Python e R con Machine Learning Services per SQL Server in una macchina virtuale nel cloud di Azure.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 01/02/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d81237f67c82fd7cc8b9259fcd7a0202ffb7fd4b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7516d23ade89b4d82858c209f46498207f06cde5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118444"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882133"
 ---
 # <a name="install-sql-server-machine-learning-services-with-python-and-r-on-an-azure-virtual-machine"></a>Installare Machine Learning Services per SQL Server con Python e R in una macchina virtuale di Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Informazioni su come installare Python e R con Machine Learning Services per SQL Server in una macchina virtuale in Azure. In questo modo vengono eliminate le attività di installazione e configurazione per Machine Learning Services.
 
