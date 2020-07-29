@@ -1,7 +1,7 @@
 ---
 title: Database model | Microsoft Docs
 ms.custom: ''
-ms.date: 11/19/2018
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 04a328034388f5ad305b627106d178b73df040bc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dd0390e7e6b781d5ca5d2b0f5685aeb8fc95c88f
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726419"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87108334"
 ---
 # <a name="model-database"></a>Database model
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "85726419"
 |Dati primari|modeldev|model.mdf|Aumento automatico di 64 MB fino a quando il disco risulta pieno.|  
 |File di log|modellog|modellog.ldf|Aumento automatico di 64 MB fino a un massimo di 2 terabyte.|  
 
-Per SQL Server 2014, vedere [Database model](https://docs.microsoft.com/sql/relational-databases/databases/model-database?view=sql-server-2014) per i valori predefiniti di aumento delle dimensioni dei file.  
+Per SQL Server 2014, vedere [Database model](/previous-versions/sql/2014/relational-databases/databases/model-database?view=sql-server-2014) per i valori predefiniti di aumento delle dimensioni dei file.  
 
  Per spostare il database **modello** o i file di log, vedere [Spostare i database di sistema](../../relational-databases/databases/move-system-databases.md).  
   

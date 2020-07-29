@@ -3,18 +3,19 @@ title: Suggerimenti per l'esplorazione della documentazione di SQL Server
 description: Suggerimenti e consigli per esplorare la documentazione tecnica di SQL Server. Vengono illustrati elementi come la pagina hub, il sommario e l'intestazione, nonché come usare i percorsi di navigazione e il filtro della versione.
 ms.date: 10/15/2019
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: ''
 ms.custom: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5492b4ff50baa805989df3521b01856eb028328e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f85c97e36900d3c6f4372004819690a8ede49d22
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76831619"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83731601"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Guida all'esplorazione della documentazione di SQL Server 
 

@@ -2,7 +2,7 @@
 title: Funzionalità del motore di database non più disponibili
 description: Informazioni sulle funzionalità del motore di database non più disponibili in SQL Server 2019 (15.x), SQL Server 2016 (13.x) e versioni precedenti.
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -36,12 +36,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2137021617ecf15375be480021ca54b50627464d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0aada5da9da6b0eadb1c190690f98c4a3d3cb3b8
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920281"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110242"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>Funzionalità del motore di database sospese in SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -69,13 +69,13 @@ Per le opzioni di configurazione correnti, vedere [ALTER DATABASE SCOPED CONFIGU
 
 - Il sottosistema ActiveX non è più disponibile. Usare la linea di comando o gli script di PowerShell.
 
-- Parametri di avvio **-h** e **-g**. Per altre informazioni, vedere [Opzioni di avvio del servizio del motore di database](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014).
+- Parametri di avvio **-h** e **-g**. Per altre informazioni, vedere [Opzioni di avvio del servizio del motore di database](/previous-versions/sql/2014/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014).
 
 - La crittografia SSL (Secure Sockets Layer) non è più disponibile. Usare in alternativa Transport Layer Security (TLS). Per altre informazioni, vedere [Abilitazione di connessioni crittografate al Motore di database](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
 
 ## <a name="previous-versions"></a>Versioni precedenti
 
-- [Funzionalità del Motore di database non più utilizzate in SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
+- [Funzionalità del Motore di database non più utilizzate in SQL Server 2014](/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
 
 ### <a name="see-also"></a>Vedere anche
 

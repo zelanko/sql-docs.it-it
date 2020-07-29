@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5b0d34ac6849f47f841a26736ebc0c0224073c42
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fed6267ca26a01003b9115d9179e9d4d2dce5f97
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257126"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001886"
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>Opzioni (Esplora oggetti di SQL Server - Comandi)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Quando si fa clic con il pulsante destro del mouse in una tabella o una vista di Esplora oggetti, le due opzioni seguenti consentono di impostare la visualizzazione delle righe nella tabella:  
   
 -   **Seleziona le prime 1000 righe**  

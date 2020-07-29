@@ -24,12 +24,12 @@ ms.assetid: b81edbf0-856a-498f-ba87-48ff1426d980
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 087e1cad75702da5b1077fcfaee2ec283074c1e9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eae4f1d4af673eb97ce98e803c964636f3e6cc32
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999077"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111600"
 ---
 # <a name="error_procedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]  
@@ -46,7 +46,9 @@ Questa funzione restituisce il nome della stored procedure o del trigger in cui 
 ERROR_PROCEDURE ( )  
 ```  
   
-## <a name="return-types"></a>Tipi restituiti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Tipi restituiti
 **nvarchar(128)**  
   
 ## <a name="return-value"></a>Valore restituito  

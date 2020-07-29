@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bbd04e9eef6d0775407e9b9893c59daefd7dc0a9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b138877b9afd07f85b90cb5ae2f7197790475c79
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448387"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942313"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Preparare i dati per report di Reporting Services per dispositivi mobili
   
@@ -23,14 +23,15 @@ ms.locfileid: "79448387"
 ## <a name="date-and-time-formats"></a>Formati di data e ora 
 Durante la definizione degli intervalli di data e ora da usare in un report per dispositivi mobili, in particolare con lo strumento di spostamento temporale, è importante formattare correttamente la colonna di data/ora in modo che possa essere identificata come tale da [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] . Ecco alcuni esempi di formati di data/ora validi:  
   
-    05/01/2009    
-    2009-05-01    
-    05/01/2009 14:57:32.8    
-    2009-05-01 14:57:32.8    
-    2009-05-01T14:57:32.8375298-04:00    
-    5/01/2008 14:57:32.80 -07:00    
-    1 May 2008 2:57:32.8 PM    
-    Fri, 15 May 2009 20:10:57 GMT    
+`05/01/2009`    
+`2009-05-01`    
+`05/01/2009 14:57:32.8`    
+`2009-05-01 14:57:32.8`    
+`2009-05-01T14:57:32.8375298-04:00`    
+`5/01/2008 14:57:32.80 -07:00`    
+`1 May 2008 2:57:32.8 PM`    
+`Fri, 15 May 2009 20:10:57 GMT`    
+
   
 I set di dati basati su data e ora possono essere descritti, nella maggior parte dei casi, da uno o più intervalli di data/ora, ad esempio orario, giornaliero, mensile, trimestrale e annuale. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] consente di combinare più tabelle con livelli di granularità diversi e visualizzarli in un singolo report per dispositivi mobili. Tenere conto, tuttavia, degli intervalli rilevanti dai set di dati originali, perché possono essere utili per decidere quale opzioni di filtro di data/ora presentare all'utente nel report per dispositivi mobili finale.  
 

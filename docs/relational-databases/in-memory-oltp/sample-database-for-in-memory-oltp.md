@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4859a35269e0664b07f08db795e3e57a4c8feb70
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4eaa35280b4f469f6fcf49fe9d73f4b33bfda672
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735037"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245205"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Database di esempio per OLTP in memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -465,14 +465,12 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
  Snapshot dopo aver appena creato il database:  
   
-||||  
-|-|-|-|  
-|**type**|**nome**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|Predefinito|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
 |MEMORYCLERK_XTP|Predefinito|0|  
 |MEMORYCLERK_XTP|Predefinito|0|  
-||||
   
  I clerk di memoria predefiniti contengono strutture di memoria di sistema e sono relativamente ridotti. Il clerk di memoria per il database utente, in questo caso il database con ID 5, è pari a circa 900 MB.  
   
@@ -490,9 +488,8 @@ WHERE t.type='U'
   
  Nella tabella che segue sono visualizzati i risultati di questa query per un'installazione aggiornata dell'esempio:  
   
-||||  
-|-|-|-|  
-|**Nome tabella**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
+| Nome tabella | memory_allocated_for_table_kb | memory_allocated_for_indexes_kb |
+| ---------- | ----------------------------- | ------------------------------- |
 |SpecialOfferProduct_inmem|64|3840|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
 |SalesOrderDetail_inmem|15316|663552|  
@@ -500,7 +497,6 @@ WHERE t.type='U'
 |SpecialOffer_inmem|3|8192|  
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
-||||
 
  Come si può notare, le dimensioni delle tabelle sono piuttosto piccole: SalesOrderHeader_inmem è circa 7 MB e SalesOrderDetail_inmem circa 15 MB.  
   
@@ -516,14 +512,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|**type**|**nome**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|Predefinito|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
 |MEMORYCLERK_XTP|Predefinito|0|  
 |MEMORYCLERK_XTP|Predefinito|0|  
-||||
 
  Come si può notare, SQL Server usa un bit in 8 GB per gli indici e le tabelle ottimizzate per la memoria nel database di esempio.  
   
@@ -538,9 +532,8 @@ ON dms.object_id=t.object_id
 WHERE t.type='U'  
 ```  
   
-||||  
-|-|-|-|  
-|**Nome tabella**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
+| Nome tabella | memory_allocated_for_table_kb | memory_allocated_for_indexes_kb |
+| ---------- | ----------------------------- | ------------------------------- |
 |SalesOrderDetail_inmem|5113761|663552|  
 |DemoSalesOrderDetailSeed|64|10368|  
 |SpecialOffer_inmem|2|8192|  
@@ -548,7 +541,6 @@ WHERE t.type='U'
 |Product_inmem|111|12032|  
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
-||||
 
  Si può notare un totale pari a circa 6,5 GB di dati. Si noti che le dimensioni degli indici delle tabelle SalesOrderHeader_inmem e SalesOrderDetail_inmem equivalgono alle dimensioni degli indici prima dell'inserimento degli ordini vendita. Le dimensioni dell'indice non sono state modificate perché in entrambe le tabelle vengono utilizzati indici hash e questo tipo di indice è statico.  
   
@@ -564,14 +556,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|**type**|**nome**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|Predefinito|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
 |MEMORYCLERK_XTP|Predefinito|0|  
 |MEMORYCLERK_XTP|Predefinito|0|  
-||||
 
  Si prevede che la memoria verrà recuperata quando il carico di lavoro transazionale è in esecuzione.  
   
@@ -584,14 +574,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|**type**|**nome**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|Predefinito|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
 |MEMORYCLERK_XTP|Predefinito|0|  
 |MEMORYCLERK_XTP|Predefinito|0|  
-||||
 
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>Utilizzo del disco per tabelle ottimizzate per la memoria  
  Le dimensioni complessive su disco per i file del checkpoint di un database in un determinato momento possono essere recuperate tramite la query seguente:  
@@ -616,11 +604,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**On-disk size in MB**|  
+| Dimensioni su disco in MB |
+| ------------------ |
 |2312|  
-||
 
  Come si può notare, esiste una grande discrepanza tra le dimensioni su disco dei file del checkpoint, vale a dire 2,3 GB, e le dimensioni effettive dei dati, prossime a 30 MB.  
   
@@ -643,14 +629,12 @@ ORDER BY state, file_type
   
  Per lo stato iniziale dell'esempio, il risultato sarà simile per un server con 16 processori logici:  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
+| state_desc | file_type_desc | count | dimensioni su disco in MB |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
-|||||
 
  Come si può notare, la maggior parte dello spazio è utilizzato dai file differenziali e di dati creati in precedenza. SQL Server ha creato preventivamente una coppia di file (differenziali e di dati) per processore logico. Inoltre, i file di dati vengono ridimensionati preventivamente a 128 MB mentre quelli differenziali a 8 MB, per poter consentire un inserimento di dati in questi file più efficiente.  
   
@@ -666,11 +650,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**On-disk size in MB**|  
+| Dimensioni su disco in MB |
+| ------------------ |
 |8828|
-||
   
  Le dimensioni su disco sono prossime ai 9 GB, che sono simili a quelle delle dimensioni in memoria dei dati.  
   
@@ -691,14 +673,12 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
+| state_desc | file_type_desc | count | dimensioni su disco in MB |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
-|||||
 
  Si dispone ancora di 16 coppie di file creati in precedenza, pronti all'utilizzo alla chiusura dei checkpoint.  
   
@@ -716,11 +696,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**On-disk size in MB**|  
+| Dimensioni su disco in MB |
+| ------------------ |
 |11839|
-||
   
  Quasi 12 GB, che sono significativamente maggiori dei 9 GB disponibili prima della reimpostazione della dimostrazione. Ciò è dovuto al fatto che sono state avviate alcune operazioni di unione di file del checkpoint, ma alcune destinazioni delle unioni non sono ancora state installate e alcuni dei file di origine di unione non sono ancora stati rimossi, come si può notare da quanto riportato di seguito:  
   
@@ -739,9 +717,8 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
+| state_desc | file_type_desc | count | dimensioni su disco in MB |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |ACTIVE|DATA|38|5152|  
@@ -750,7 +727,6 @@ ORDER BY state, file_type
 |MERGE TARGET|DELTA|7|56|  
 |MERGED SOURCE|DATA|13|1772|  
 |MERGED SOURCE|DELTA|13|455|  
-|||||
 
  Le destinazioni delle unioni vengono installate e le origini unite vengono rimosse quando viene eseguita l'attività transazionale nel sistema.  
   
@@ -773,16 +749,14 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
+| state_desc | file_type_desc | count | dimensioni su disco in MB |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|2|268|  
 |UNDER CONSTRUCTION|DELTA|2|16|  
 |ACTIVE|DATA|41|5608|  
 |ACTIVE|DELTA|41|328|  
-|||||
 
  In questo caso, sono disponibili due coppie di file di checkpoint nello stato 'in costruzione', il che significa che più coppie di file sono passate allo stato 'in costruzione' probabilmente a causa dell'elevato livello di concorrenza del carico di lavoro. Più thread simultanei hanno richiesto una nuova coppia di file contemporaneamente e di conseguenza una coppia è passata dallo stato di 'precreato' a quello di 'in costruzione'.  
   

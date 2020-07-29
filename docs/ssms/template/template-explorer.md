@@ -19,16 +19,16 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 22864ca365917d295f8111580cb833097fb31c46
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3720799e0af4dbd7d01b6703be87bd9ac16b0587
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247186"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001529"
 ---
 # <a name="template-explorer"></a>Esplora modelli
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre un'ampia gamma di modelli. I modelli sono file preimpostati contenenti script SQL che agevolano la creazione degli oggetti di database. Alla prima apertura di Esplora modelli, una copia dei modelli viene inserita nella cartella dell'utente in C:\Users in AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates.  
   
 È possibile esplorare i modelli disponibili in Esplora modelli, quindi aprire un modello per incorporare il codice in una finestra dell'editor di codice. È inoltre possibile creare modelli personalizzati.  

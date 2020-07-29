@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a31e9e898101c15c032db1be5f348bf28267d52c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 15d6c1e0cf13da4b8dd0fe38ffcf57e555bdd650
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253293"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85983457"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Finestra di dialogo Seleziona cartelle di ricerca (Visual Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Consente di assemblare, salvare e rivedere i propri set denominati di cartelle di ricerca e di specificare l'ordine di ricerca. Per visualizzare questa finestra di dialogo, fare clic sul pulsante **Sfoglia (...)** accanto all'elenco a discesa **Cerca in** nella scheda Cerca nei file o Sostituisci nei file della finestra di dialogo Trova e sostituisci.  
   
 Aggiungere cartelle all'elenco **Cartelle selezionate** , digitare un nome per il set di cartelle corrente nel campo **Insieme di cartelle** e fare clic su **Applica** per salvarlo. Questo ambito di ricerca personalizzato può quindi essere selezionato in base al nome nell'elenco a discesa **Cerca in** delle schede **Cerca nei file** e **Sostituisci nei file**. Per eliminare un insieme personalizzato di cartelle dagli elenchi **Cerca in** , selezionarne il nome nel campo **Insieme di cartelle** e fare clic su **Elimina**.  

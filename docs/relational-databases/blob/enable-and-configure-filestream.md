@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b57c86074f91d5be0790294641dafe1cf0ccfc6e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e9e0fca818c4988acacfbfa89af718eda8d8ac5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767988"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246583"
 ---
 # <a name="enable-and-configure-filestream"></a>Abilitare e configurare FILESTREAM
 
@@ -76,9 +76,8 @@ ms.locfileid: "85767988"
   
 -   Configurare e ottimizzare il livello RAID per la tolleranza di errore e le prestazioni richieste da un'applicazione.  
   
-||||||  
-|-|-|-|-|-|  
 |Livello RAID|Prestazioni di scrittura|Prestazioni di lettura|Tolleranza di errore|Osservazioni|  
+|-|-|-|-|-|   
 |RAID 5|Normale|Normale|Eccellenti|Le prestazioni sono più elevate rispetto all'utilizzo di un unico disco o di JBOD e meno elevate rispetto all'utilizzo di RAID 0 o RAID 5 con striping.|  
 |RAID 0|Eccellenti|Eccellenti|nessuno||  
 |RAID 5 + striping|Eccellenti|Eccellenti|Eccellenti|Opzione più costosa.|  

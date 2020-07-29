@@ -20,15 +20,15 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90ef549988aefd2740d10cf12b04fb5510400ab8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2e302910a5a7870ed7c57a7325e6686f42a15707
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77478460"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999723"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Risolvere i problemi relativi agli utenti isolati (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli utenti isolati (orfani) appaiono quando un utente del database dipende da un account di accesso nel database **master** , ma tale account di accesso non esiste più in **master**. Ciò può verificarsi quando viene eliminato l'account di accesso o quando il database viene spostato in un altro server in cui l'accesso non esiste. In questo argomento viene descritto come trovare gli utenti isolati e come riassociarli agli account di accesso.  
   

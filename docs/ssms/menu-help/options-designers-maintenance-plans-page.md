@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e1a6da50988a372514cf613f16896aea966fd153
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9cf4513c4094798f72b6e3f5012fd47afb29bdae
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245757"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001626"
 ---
 # <a name="options-designers---maintenance-plans-page"></a>Opzioni (Finestre di progettazione - pagina Piani di manutenzione)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Utilizzare la finestra di dialogo **Opzioni** per determinare il comportamento predefinito della finestra di progettazione quando si aggiungono nuove forme all'area di progettazione. Scegliere **Opzioni** dal menu **Strumenti**, espandere **Finestre di progettazione**e selezionare **Piani di manutenzione**.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
 **Per impostazione predefinita connetti la nuova forma alla forma selezionata**  
 Se questa casella di controllo è selezionata, le nuove forme vengono connesse automaticamente ad altre forme quando vengono aggiunte all'area di progettazione. Se la casella di controllo è deselezionata, le nuove forme non vengono connesse al momento dell'aggiunta. Selezionando questa casella di controllo si abilitano le caselle seguenti.  
   

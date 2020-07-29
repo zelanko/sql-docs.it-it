@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: cb403330-8cbe-41c6-bd23-bc432d50f173
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 2b055385ca5ee06b0fba1c87376835b16695ef57
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e0f50cc149c592633969c84a8f541239d55f1240
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251830"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85986988"
 ---
 # <a name="development-test-and-production-databases-visual-database-tools"></a>Database di sviluppo, verifica e produzione (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Se si dispone di due database con la stessa struttura, è possibile apportare alcune modifiche in uno di essi e propagarle nell'altro. Se, ad esempio, si utilizzano un database di sviluppo personale e un database di verifica condiviso dall'intero gruppo di lavoro, è possibile modificare il database di sviluppo e propagare le modifiche al database di verifica.  
   
 A tale scopo, apportare tutte le modifiche in un'unica sessione del database di sviluppo, creare uno script delle modifiche della sessione e successivamente eseguire lo script sul database di verifica.  

@@ -2,22 +2,22 @@
 title: Uso dei dati dai cubi OLAP in R
 description: Questo articolo descrive l'API olapR, oltre a una panoramica di OLAP e MDX per gli utenti R che potrebbero non essere esperti di database per cubi multidimensionali.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 99f67fb0fb52717eaa42e229a1b60c82f6223fad
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f27866a242cb03839a67a8f68478bc786222aa64
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117234"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968022"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>Uso dei dati dai cubi OLAP in R
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Il pacchetto **olapR** è un pacchetto R, fornito da Microsoft per l'uso con Machine Learning Server e SQL Server, che consente di eseguire query MDX per ottenere dati da cubi OLAP. Con questo pacchetto, non è necessario creare server collegati o ripulire set di righe bidimensionali, ma è possibile ottenere i dati OLAP direttamente da R.
 
@@ -99,7 +99,7 @@ Per informazioni generali sui due tipi di modelli, vedere l'articolo seguente:
 
 Per informazioni sull'esecuzione di query sulle proprietà del server, vedere l'articolo seguente:
 
-+ [Set di righe dello schema OLE DB per OLAP](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
++ [Set di righe dello schema OLE DB per OLAP](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
 
 ### <a name="writeback-is-not-supported"></a>Il writeback non è supportato
 

@@ -19,12 +19,12 @@ ms.assetid: f679fa6a-5739-484b-9450-fb3400d4f30c
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68508c7edcd3268f880b5b1c2885dc67f93b3d9e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1d1274de1e7ea9b2860e0d3583e2abf42f257428
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85993397"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112266"
 ---
 # <a name="tan-transact-sql"></a>TAN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "85993397"
 TAN ( float_expression )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
  *float_expression*  
  [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di tipo **float** o di un tipo che è possibile convertire in modo implicito in **float** interpretata come numero di radianti.  
   

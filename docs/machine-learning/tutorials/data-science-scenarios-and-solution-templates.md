@@ -2,22 +2,22 @@
 title: Modelli di soluzioni di data science
 description: Questo articolo descrive i modelli specifici del settore che illustrano le procedure consigliate e rendono disponibili gli elementi fondamentali per agevolare l'implementazione di una soluzione di Machine Learning.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6d323178152e07726c818971c8c7e8ee297c20af
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: b039af528200782d788394f49e0bd74ed2b54dd4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116984"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728639"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Scenari di data science e modelli di soluzioni
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Questo articolo descrive una serie di modelli di soluzioni di Machine Learning di SQL Server. Questi modelli illustrano le procedure consigliate e rendono disponibili gli elementi fondamentali che consentono di implementare rapidamente una soluzione di Machine Learning. Ogni modello è progettato per risolvere un determinato problema di data science, per un settore specifico o verticale.
 Le attività incluse in ogni modello vanno dalla preparazione dei dati alla progettazione della funzionalità fino al training e alla valutazione del modello. 

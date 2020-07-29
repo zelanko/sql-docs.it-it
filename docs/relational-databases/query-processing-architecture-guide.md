@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e2d32824b62cf54132c6168e5f44d93fa0cd6289
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ff4ab76193c13b03fbd4d7fab05cbf212d1aae4b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726154"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247618"
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -481,13 +481,61 @@ GO
 
 La modifica delle opzioni SET seguenti per una determinata esecuzione comprometterà la possibilità di riutilizzare i piani, perché il [!INCLUDE[ssde_md](../includes/ssde_md.md)] esegue l'[elaborazione delle costanti in fase di compilazione](#ConstantFolding) e queste opzioni influiscono sui risultati di tali espressioni:
 
-|||   
-|-----------|------------|------------|    
-|ANSI_NULL_DFLT_OFF|FORCEPLAN|ARITHABORT|    
-|DATEFIRST|ANSI_PADDING|NUMERIC_ROUNDABORT|    
-|ANSI_NULL_DFLT_ON|LANGUAGE|CONCAT_NULL_YIELDS_NULL|    
-|DATEFORMAT|ANSI_WARNINGS|QUOTED_IDENTIFIER|    
-|ANSI_NULLS|NO_BROWSETABLE|ANSI_DEFAULTS|    
+:::row:::
+    :::column:::
+        ANSI_NULL_DFLT_OFF
+    :::column-end:::
+    :::column:::
+        FORCEPLAN
+    :::column-end:::
+    :::column:::
+        ARITHABORT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DATEFIRST
+    :::column-end:::
+    :::column:::
+        ANSI_PADDING
+    :::column-end:::
+    :::column:::
+        NUMERIC_ROUNDABORT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ANSI_NULL_DFLT_ON
+    :::column-end:::
+    :::column:::
+        LANGUAGE
+    :::column-end:::
+    :::column:::
+        CONCAT_NULL_YIELDS_NULL
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DATEFORMAT
+    :::column-end:::
+    :::column:::
+        ANSI_WARNINGS
+    :::column-end:::
+    :::column:::
+        QUOTED_IDENTIFIER
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ANSI_NULLS
+    :::column-end:::
+    :::column:::
+        NO_BROWSETABLE
+    :::column-end:::
+    :::column:::
+        ANSI_DEFAULTS
+    :::column-end:::
+:::row-end:::
 
 ### <a name="caching-multiple-plans-for-the-same-query"></a>Memorizzazione di più piani nella cache per la stessa query 
 Le query e i piani di esecuzione sono identificabili in modo univoco nel [!INCLUDE[ssde_md](../includes/ssde_md.md)], proprio come un'impronta digitale:
@@ -671,16 +719,70 @@ La ricompilazione a livello di istruzione consente di migliorare le prestazioni 
 L'evento esteso (XEvent) `sql_statement_recompile` indica le ricompilazioni a livello di istruzione. Questo XEvent viene generato quando qualsiasi tipo di batch richiede una ricompilazione a livello di istruzione, inclusi trigger, stored procedure, batch ad hoc e query. I batch possono essere inviati tramite varie interfacce, inclusi sp_executesql, SQL dinamico, metodi Prepare e metodi Execute.
 La colonna `recompile_cause` dell'XEvent `sql_statement_recompile` contiene un codice integer che indica il motivo della ricompilazione. La tabella seguente include i motivi possibili:
 
-|||
-|----|----|  
-|Schema modificato|Statistiche modificate|  
-|Compilazione posticipata|Opzione SET modificata|  
-|Tabella temporanea modificata|Set di righe remoto modificato|  
-|Autorizzazione`FOR BROWSE` modificata|Ambiente di notifica query modificato|  
-|Vista partizionata modificata|Opzioni cursore modificate|  
-|`OPTION (RECOMPILE)` richiesta.|Piano con parametri scaricato|  
-|Piano che influisce sulla versione del database modificato|Criteri di uso forzato del piano dell'archivio query modificati|  
-|Uso forzato del piano dell'archivio query non riuscito|Piano mancante nell'archivio query|
+:::row:::
+    :::column:::
+        Schema modificato
+    :::column-end:::
+    :::column:::
+        Statistiche modificate
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Compilazione posticipata
+    :::column-end:::
+    :::column:::
+        Opzione SET modificata
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Tabella temporanea modificata
+    :::column-end:::
+    :::column:::
+        Set di righe remoto modificato
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Autorizzazione`FOR BROWSE` modificata
+    :::column-end:::
+    :::column:::
+        Ambiente di notifica query modificato
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Vista partizionata modificata
+    :::column-end:::
+    :::column:::
+        Opzioni cursore modificate
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        `OPTION (RECOMPILE)` richiesta.
+    :::column-end:::
+    :::column:::
+        Piano con parametri scaricato
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Piano che influisce sulla versione del database modificato
+    :::column-end:::
+    :::column:::
+        Criteri di uso forzato del piano dell'archivio query modificati
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Uso forzato del piano dell'archivio query non riuscito
+    :::column-end:::
+    :::column:::
+        Piano mancante nell'archivio query
+    :::column-end:::
+:::row-end:::
 
 > [!NOTE]
 > Nelle versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in cui non sono disponibili xEvent, è possibile usare l'evento di traccia [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler per lo stesso scopo, ovvero segnalare le ricompilazioni a livello di istruzione.
