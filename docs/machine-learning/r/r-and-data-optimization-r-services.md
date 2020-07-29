@@ -2,22 +2,22 @@
 title: Ottimizzazione delle prestazioni per i dati
 description: Questo articolo illustra le ottimizzazioni delle prestazioni per gli script R o Python eseguiti in SQL Server. Descrive anche i metodi disponibili per aggiornare il codice R, sia per migliorare le prestazioni che per evitare problemi noti.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d966094277f47d3ef12239c32a75c9a3ecbf88c9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a2438ff265c788753a42bc01119f954359c799ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117534"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753402"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Prestazioni per R Services: ottimizzazione dei dati
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Questo articolo è il terzo di una serie che descrive l'ottimizzazione delle prestazioni per R Services in base a due case study. Questo articolo illustra le ottimizzazioni delle prestazioni per gli script R o Python eseguiti in SQL Server. Descrive anche i metodi disponibili per aggiornare il codice R, sia per migliorare le prestazioni che per evitare problemi noti.
 

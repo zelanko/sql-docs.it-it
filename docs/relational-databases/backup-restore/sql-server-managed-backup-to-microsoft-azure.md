@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1501b60e9c858bac62b48dfa7b3875d0d93d5115
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bb479998c739a5d9bd62a5f7d6c517a3ec4b52d1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737679"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246300"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Backup gestito di SQL Server in Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,9 +51,8 @@ ms.locfileid: "85737679"
   
  Per configurare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]sono disponibili anche i cmdlet di PowerShell. SQL Server Management Studio supporta il ripristino dei backup creati da [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] tramite l'attività **Ripristina database** .  
   
-|||  
-|-|-|  
 |Oggetto di sistema|Descrizione|  
+|-|-|  
 |**MSDB**|Vengono archiviati i metadati e la cronologia di backup di tutti i backup creati da [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|Abilita [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|Configura le impostazioni avanzate per [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], ad esempio la crittografia.|  

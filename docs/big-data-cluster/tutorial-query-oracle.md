@@ -9,16 +9,16 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0955875255acc695133700fd0b5a0b30cdf9045e
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 7695cf6d88fd05fdbffba28663c910889797ace9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606121"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772844"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Esercitazione: Eseguire query su dati Oracle da un cluster Big Data di SQL Server
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Questa esercitazione illustra come eseguire una query su dati Oracle da un cluster Big Data di SQL Server 2019. Per eseguire questa esercitazione, è necessario avere accesso a un server Oracle. In caso contrario, questa esercitazione può dare un'idea del funzionamento della virtualizzazione dei dati per origini dati esterne nel cluster Big Data di SQL Server.
 

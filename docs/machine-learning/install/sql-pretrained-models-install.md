@@ -2,22 +2,22 @@
 title: Installare modelli con training preliminare
 description: Aggiungere modelli con training preliminare per l'analisi del sentiment e la definizione delle caratteristiche di un'immagine a Machine Learning Services per SQL Server (R o Python) o R Services per SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 07/30/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 97da2ed795d002fa47900eb21ead90b48b525387
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: aa50fd62b3f1d3c1d40f3603b6a0b3fc4182497f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118234"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771764"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installare modelli di Machine Learning con training preliminare in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Questo articolo illustra come usare PowerShell per aggiungere modelli di Machine Learning con training preliminare per l'*analisi del sentiment* e la *definizione delle caratteristiche di un'immagine* a un'istanza di SQL Server con l'integrazione di R o Python. I modelli con training preliminare creati da Microsoft sono pronti all'uso e vengono aggiunti a un'istanza come attività di post-installazione. Per altre informazioni su questi modelli, vedere la sezione [Risorse](#bkmk_resources) di questo articolo.
 

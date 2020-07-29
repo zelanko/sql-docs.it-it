@@ -2,22 +2,22 @@
 title: 'Python + T-SQL: Esplorare i dati'
 description: Esercitazione che illustra come incorporare il codice Python in stored procedure di SQL Server e funzioni T-SQL
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2aef2ed82803af2a6ca1966cde5f5bf6675ca016
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 05b51550880e2e2324698cdadc92ba1d7dd1cc7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115954"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775350"
 ---
 # <a name="explore-and-visualize-the-data"></a>Esplorare e visualizzare i dati
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Questo articolo fa parte dell'esercitazione [Analisi Python nel database per sviluppatori SQL](sqldev-in-database-python-for-sql-developers.md). 
 

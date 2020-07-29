@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 81c66fe885c7e700366cc12129734710094824d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d810785665e4ecb2e8c59ba3832687724e65c7b1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255524"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007407"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>Compressione di gruppi di righe (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 È possibile creare un risultato di query in cui ogni riga di risultati corrisponda a un intero gruppo di righe dei dati originali. Quando si comprimono le righe, è necessario tenere presenti alcune considerazioni:  
   
 -   **È possibile eliminare le righe duplicate** Alcune query possono creare set di risultati in cui sono presenti più righe identiche. È possibile, ad esempio, creare un set di risultati in cui ogni riga contiene la città in cui risiede un autore e il nome dello stato in cui tale città si trova. Se però in una città risiedono più autori, saranno presenti numerose righe identiche. Il codice SQL risultante potrebbe essere simile al seguente:  

@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 5c784351eadaaa6fc90c074d836ccd66238f9052
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 469afd2894737fd0a1f6150650fce3fa08fe981c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255177"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009269"
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>Regole per l'immissione di valori di ricerca (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 In questo argomento sono illustrate le convenzioni da utilizzare quando si immettono i seguenti tipi di valori letterali in una condizione di ricerca:  
   
 -   Valori di testo  

@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: d0e419703d83e0881912be76c58467db4bc83ceb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e6e66b277a52282fee2a5fc18cf8fdb39eb77760
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258004"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011083"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Finestra di dialogo Colonne indice (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Utilizzare questa finestra di dialogo per selezionare le colonne di un indice e per impostarne gli ordinamenti. Un indice può utilizzare una o più colonne, ognuna delle quali può essere ordinata con un ordinamento crescente o decrescente. Per accedere a questa finestra di dialogo, nella finestra di dialogo **Indici/chiavi** fare clic sul pulsante con i puntini nella riga **Colonne** della sezione **Generale** .  
   
 ## <a name="options"></a>Opzioni  

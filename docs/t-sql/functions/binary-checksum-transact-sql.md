@@ -19,12 +19,12 @@ ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11b29a516fb7c8eeaa50bec33b8fce8bfc6dc901
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 57a7f76f982f0f0e8631d6efc30c8ac96c4b9c8f
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790016"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111115"
 ---
 # <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -39,7 +39,9 @@ Restituisce il valore di checksum binario calcolato su una riga di una tabella o
 BINARY_CHECKSUM ( * | expression [ ,...n ] )   
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
 *\**  
 Specifica che il calcolo viene eseguito su tutte le colonne della tabella. Nel calcolo eseguito da BINARY_CHECKSUM vengono ignorate le colonne con tipi di dati non confrontabili. I tipi di dati non confrontabili includono  
 * **cursor**  

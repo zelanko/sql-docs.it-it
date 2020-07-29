@@ -21,17 +21,16 @@ helpviewer_keywords:
 ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 4924e002cecaca30538ec20045d57a1ec901b68e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a9d965c70593e99c70b400bb72cdef9636ec7070
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255042"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998411"
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>Ordinare e raggruppare i risultati delle query (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 È possibile creare un risultato di query in cui ogni riga di risultati corrisponda a un intero gruppo di righe dei dati originali.  
   
 Per informazioni dettagliate sulla creazione di query di questo tipo, vedere gli argomenti indicati nella seguente tabella:  

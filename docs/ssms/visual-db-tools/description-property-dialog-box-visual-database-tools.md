@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: 1f15ef88-6f02-4cfc-8327-3408233619b1
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 5972e47097591118fb731f03c1e7f1237dda27e7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bb550a5981c22128dc5386ee13906855ea5e2477
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254664"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008315"
 ---
 # <a name="description-property-dialog-box-visual-database-tools"></a>Finestra di dialogo Proprietà Descrizione (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Nella finestra di dialogo **Proprietà Descrizione** è presente un'area modificabile in cui è possibile scrivere una descrizione dettagliata di oggetti di database quali tabelle, colonne e vincoli di chiave esterna. L'accesso a questa finestra di dialogo è possibile dalla finestra Proprietà per oggetti quali tabelle e viste selezionate in una finestra di progettazione, dalle finestre di dialogo relative a oggetti quali indici e vincoli CHECK e dalla scheda **Proprietà colonne** di Progettazione tabelle per le colonne delle tabelle. La descrizione viene archiviata come proprietà estesa dell'oggetto.  
   
 ## <a name="see-also"></a>Vedere anche  

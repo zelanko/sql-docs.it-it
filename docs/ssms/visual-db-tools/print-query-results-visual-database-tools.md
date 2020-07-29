@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 322572041340f1ed61b003cb424df48f32bb2a0d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7cabed9e928dce14f324e7f7b482d2ebed36d8ed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255378"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002671"
 ---
 # <a name="print-query-results-visual-database-tools"></a>Stampa dei risultati di query (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Per stampare i risultati di una query, è possibile copiare il contenuto del [riquadro Risultati](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) in un altro programma per Windows, ad esempio un elaboratore di testi, quindi applicare il formato ed eseguire la stampa.  
   
 In Progettazione query e Progettazione viste i risultati delle query vengono inseriti negli Appunti utilizzando le tabulazioni come delimitatori di colonna e i caratteri di ritorno a capo e di avanzamento riga come delimitatori di riga.  

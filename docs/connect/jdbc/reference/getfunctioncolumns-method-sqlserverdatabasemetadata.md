@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2d6400652dfaac6074f19a343b9a4cf2c0ffbab8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 39b0c100c4ba80a24d0acd7ab2fdebaa32f1b1f7
+ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920339"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84203238"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>Metodo getFunctionColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -79,7 +79,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |REMARKS|**Stringa**|Commenti su una colonna o un parametro.|  
 |COLUMN_DEF|**Stringa**|Valore predefinito della colonna.<br /><br /> **Nota:** Queste informazioni sono disponibili con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e sono specifiche del driver JDBC.|  
 |SQL_DATA_TYPE|**smallint**|Questa colonna corrisponde alla colonna **DATA_TYPE**, tranne che per i tipi di dati **datetime** e ISO **interval**.<br /><br /> **Nota:** Queste informazioni sono disponibili con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e sono specifiche del driver JDBC.|  
-|SQL_DATETIME_SUB|**smallint**|Sottocodice **datetime** ISO **interval** se il valore di **SQL_DATA_TYPE** è **SQL_DATETIME** o **SQL_INTERVAL**. Per i tipi di dati diversi da **datetime** e **ISO interval**, questa colonna è NULL.<br /><br /> **Nota:** queste informazioni sono disponibili con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e sono specifiche del driver JDBC.|  
+|SQL_DATETIME_SUB|**smallint**|Sottocodice **datetime** ISO **interval** se il valore di **SQL_DATA_TYPE** è **SQL_DATETIME** o **SQL_INTERVAL**. Per i tipi di dati diversi da **datetime** e **ISO interval**, questa colonna è NULL.<br /><br /> **Nota:** Queste informazioni sono disponibili con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e sono specifiche del driver JDBC.|  
 |CHAR_OCTET_LENGTH|**int**|Lunghezza massima dei parametri o delle colonne di tipo carattere o binario. Per gli altri tipi di dati il valore è NULL.|  
 |ORDINAL_POSITION|**int**|Per i parametri di input e di output, rappresenta la posizione a partire da 1.<br /><br /> Per le colonne del set di risultati, è la posizione della colonna nel set di risultati a partire da 1.<br /><br /> Per il valore restituito, è 0.|  
 |IS_NULLABLE|**Stringa**|Determina se un parametro o una colonna ammette i valori Null.<br /><br /> Può essere uno dei valori seguenti:<br /><br /> **YES**: il parametro o la colonna può includere valori NULL.<br /><br /> **NO**: il parametro o la colonna non può includere valori NULL.<br /><br /> Stringa vuota (""): Sconosciuto.|  

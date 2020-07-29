@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: f9ec90e8-3aad-415c-a5c4-8dfa9540e37f
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 719f1ed067e3f53cc13839ecd42a5b7ec4791512
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 64cccf1d3ec1f4524531e86acf390c4b959c4c6e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254263"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000019"
 ---
 # <a name="create-self-joins-automatically-visual-database-tools"></a>Creare self-join in modo automatico (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Se una tabella ha una relazione riflessiva nel database, sarà possibile metterla in join con se stessa automaticamente.  
   
 ### <a name="to-create-a-self-join-automatically"></a>Per creare automaticamente un self-join  

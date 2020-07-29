@@ -9,16 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 758338618a312d8efe92503581ae82d49d353e51
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8112c5c6b69b83986bdf10c6b73d72afba4d9cb6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531967"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764060"
 ---
 # <a name="manage-hdfs-permissions-for-big-data-clusters-2019"></a>Gestire le autorizzazioni HDFS per i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 HDFS (Hadoop Distributed File System) è un file system simile ai file system basati su Linux che usano POSIX per le autorizzazioni per i file. Oltre al modello di autorizzazioni POSIX tradizionale, HDFS supporta anche gli elenchi di controllo di accesso POSIX. Per altre informazioni, vedere l'[articolo di Apache Hadoop sugli elenchi di controllo di accesso](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#ACLs_.28Access_Control_Lists.29).
 

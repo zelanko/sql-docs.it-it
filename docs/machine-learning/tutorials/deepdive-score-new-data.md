@@ -2,22 +2,22 @@
 title: Assegnazione dei punteggi ai dati con RevoScaleR
 description: 'Esercitazione di RevoScaleR 8: Come assegnare un punteggio ai dati usando il linguaggio R in SQL Server.'
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9f0722eeef0b8364da789c8f3787c21c1398527e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 58e58dcf3112566c09070cc6e522b29ffff6f3b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116754"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757138"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>Assegnare punteggi ai nuovi dati (esercitazione su SQL Server e RevoScaleR)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Questa è l'esercitazione 8 della [serie di esercitazioni per RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) dedicate all'uso delle [funzioni di RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 

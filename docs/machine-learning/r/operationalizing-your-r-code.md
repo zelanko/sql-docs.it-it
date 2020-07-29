@@ -2,22 +2,22 @@
 title: Distribuire il codice R nelle stored procedure
 description: Incorporare il codice del linguaggio R in una stored procedure di SQL Server per renderlo disponibile per qualsiasi applicazione client abbia accesso a un database SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/15/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 324cf4446a593175fd5a8cd11b2abc24bff7d2d7
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 9790f5a5d82584bb0d09fda92c1a7048d384e119
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486810"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242325"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Rendere operativo il codice R usando le stored procedure in Machine Learning Services per SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Quando si usano le caratteristiche di R e Python in Machine Learning Services per SQL Server, l'approccio più comune per spostare le soluzioni in un ambiente di produzione consiste nell'incorporare il codice nelle stored procedure. Questo articolo riepiloga i punti chiave che uno sviluppatore SQL deve tenere presenti quando rende operativo il codice R usando SQL Server.
 
@@ -46,7 +46,7 @@ L'assegnazione dei punteggi è un'attività importante che può essere facilment
 
 + Assegnazione dei punteggi in tempo reale, ottimizzata per piccoli batch
 + Assegnazione dei punteggi alle singole righe, per la chiamata da un'applicazione
-+ [Assegnazione dei punteggi nativa](../sql-native-scoring.md), per la stima in batch veloce da SQL Server senza chiamare R
++ [Assegnazione dei punteggi nativa](../predictions/native-scoring-predict-transact-sql.md), per la stima in batch veloce da SQL Server senza chiamare R
 
 Questa procedura dettagliata fornisce esempi di assegnazione dei punteggi tramite una stored procedure in modalità batch e a riga singola:
 

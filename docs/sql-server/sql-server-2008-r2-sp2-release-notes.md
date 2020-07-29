@@ -2,9 +2,9 @@
 title: Note sulla versione di SQL Server 2008 R2 SP2 | Microsoft Docs
 description: Nel presente documento sono descritti i problemi noti di cui è necessario essere a conoscenza prima di installare o risolvere i problemi relativi a Microsoft SQL Server 2008 R2 Service Pack 2.
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.custom: ''
-ms.date: 10/15/2019
+ms.date: 07/22/2020
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: bb817c9983e3bf4a7dd4e1d148dd5a26b18a8738
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a8ed0a9892110f4469a9adeb4d586c8eec7f081c
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999435"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111014"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 Nel presente documento sono descritti i problemi noti di cui è necessario essere a conoscenza prima di installare o risolvere i problemi relativi a Microsoft SQL Server 2008 R2 Service Pack 2. Il documento Note sulla versione è valido per tutte le edizioni di SQL Server 2008 R2 SP2 ed è disponibile solo online. Questo documento viene aggiornato periodicamente.  
   
 ## <a name="10-whats-new-in-service-pack-2"></a>1.0 Novità del Service Pack 2  

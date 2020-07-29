@@ -24,12 +24,12 @@ ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eba14b85c18ed8f64288839f5758ed4c4e456e08
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e2ca06a2b34d0c4823ad6e548ddba58f0c5589d9
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004970"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110277"
 ---
 # <a name="set-implicit_transactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,16 +46,63 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
   
 ## <a name="remarks"></a>Osservazioni  
  Quando è impostata su ON, il sistema è in modalità di transazione *implicita*. Ciò significa che se @@TRANCOUNT = 0, una qualsiasi delle istruzioni Transact-SQL seguenti avvia una nuova transazione. Equivale a un'istruzione BEGIN TRANSACTION non visibile eseguita per prima:  
-  
-||||  
-|-|-|-|  
-|MODIFICA TABELLA|FETCH|REVOKE|  
-|BEGIN TRANSACTION|GRANT|SELECT (vedere l'eccezione riportata di seguito)|  
-|CREATE|INSERT|TRUNCATE TABLE|  
-|Elimina|OPEN|UPDATE|  
-|DROP|.|.|  
-||||
-  
+
+:::row:::
+    :::column:::
+        MODIFICA TABELLA
+    :::column-end:::
+    :::column:::
+        FETCH
+    :::column-end:::
+    :::column:::
+        REVOKE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        BEGIN TRANSACTION
+    :::column-end:::
+    :::column:::
+        GRANT
+    :::column-end:::
+    :::column:::
+        SELECT (vedere l'eccezione riportata di seguito)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        CREATE
+    :::column-end:::
+    :::column:::
+        INSERT
+    :::column-end:::
+    :::column:::
+        TRUNCATE TABLE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Elimina
+    :::column-end:::
+    :::column:::
+        OPEN
+    :::column-end:::
+    :::column:::
+        UPDATE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DROP
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
+&nbsp;
+
  Quando è impostata su OFF, ognuna delle istruzioni T-SQL precedenti è vincolata da un'istruzione BEGIN TRANSACTION e COMMIT TRANSACTION non visibile. Quando è impostata su OFF, la modalità di transazione è nota come *autocommit*. Se il codice T-SQL esegue un'istruzione BEGIN TRANSACTION in modo visibile, la modalità di transazione è *esplicita*.  
   
  È necessario comprendere e chiarire alcuni punti:  

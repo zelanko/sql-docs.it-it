@@ -13,19 +13,19 @@ f1_keywords:
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 808fcde7587a68f45bda472ba51e03bddc0884af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f1370fcb02e75a5ed9173c8111a79ce17eea8490
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245744"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007862"
 ---
 # <a name="options-environment---general-page"></a>Opzioni (Ambiente - Generale)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Usare la finestra di dialogo **Opzioni** per configurare le azioni di avvio di [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], le opzioni generali di gestione della finestra e altre impostazioni generali. Scegliere **Opzioni** dal menu **Strumenti**, espandere la cartella **Ambiente** e quindi fare clic su **Generale**.
 
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia
+## <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente
 
 **Il pulsante Chiudi si applica solo alla finestra degli strumenti attiva**
 
