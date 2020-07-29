@@ -9,16 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a138a8451211436d55da537b9d8a45d26c534e48
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8a3ca863818d11471b0ae6aadd38458faf8b9daf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80215745"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85661077"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Salvataggio permanente dei dati con un cluster Big Data di SQL Server in Kubernetes
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 I [volumi permanenti](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) offrono un modello plug-in per l'archiviazione in Kubernetes. In questo modello il modo in cui viene resa disponibile l'archiviazione è astratto rispetto al modo in cui viene usata. Di conseguenza, è possibile usare la propria risorsa di archiviazione a disponibilità elevata e collegarla al cluster Big Data di SQL Server. In questo modo, si ottiene il controllo completo sul tipo di archiviazione, sulla disponibilità e sulle prestazioni necessari. Kubernetes supporta [vari tipi di soluzioni di archiviazione](https://kubernetes.io/docs/concepts/storage/storage-classes/#provisioner), tra cui dischi e file di Azure, NFS (Network File System) e archiviazione locale.
 

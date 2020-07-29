@@ -2,22 +2,22 @@
 title: Eseguire l'installazione senza accesso a Internet
 description: Installare i componenti R e Python per Machine Learning in computer isolati da un firewall di rete.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/04/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bdcec8602a9552fdc7ffac0be3badb26b19646e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d51ac079bf06938826bc343b1b3317e558964655
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118254"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247982"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Installare i componenti R e Python per il Machine Learning in SQL Server senza accesso a Internet
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Per impostazione predefinita, i programmi di installazione si connettono ai siti di download Microsoft per ottenere i componenti necessari e aggiornati per il Machine Learning in SQL Server. Se i vincoli del firewall impediscono al programma di installazione di raggiungere questi siti, è possibile usare un dispositivo connesso a Internet per scaricare i file, trasferirli in un server offline e quindi eseguire il programma di installazione.
 
@@ -215,4 +215,4 @@ Un'installazione iniziale offline di SQL Server R Services richiede la stessa co
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per informazioni su voci di log o messaggi poco noti, vedere [Domande frequenti sull'installazione e sull'aggiornamento per Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
+Per informazioni su voci di log o messaggi poco noti, vedere [Domande frequenti sull'installazione e sull'aggiornamento per Machine Learning Services](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md).

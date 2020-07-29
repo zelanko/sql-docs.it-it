@@ -10,15 +10,15 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 67e08192643337ec37ef0be3bd603599d25a769d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7472d3c02c0858935f1221521fc88275789ca261
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665407"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248080"
 ---
 # <a name="sql-server-2019-release-notes"></a>Note sulla versione di [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Questo articolo descrive le limitazioni e i problemi noti relativi a [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]. Per informazioni correlate, vedere:
 
@@ -83,6 +83,6 @@ Il numero della build RTM per SQL Server 2019 è `15.0.2000.5`.
 
 ## <a name="machine-learning-services"></a>Machine Learning Services
 
-Per problemi in SQL Server Machine Learning Services, vedere [Problemi noti in SQL Server Machine Learning Services](../machine-learning/known-issues-for-sql-server-machine-learning-services.md).
+Per problemi in SQL Server Machine Learning Services, vedere [Problemi noti in SQL Server Machine Learning Services](../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md).
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]

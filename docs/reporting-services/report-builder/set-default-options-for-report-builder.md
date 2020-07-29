@@ -11,19 +11,19 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cad43cd9b4a842cd022e9139b7b303b15134af6f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dc526ec022d139288fd057ac1cd7889653cecba5
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290770"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859764"
 ---
 # <a name="set-default-options-for-report-builder"></a>Impostare le opzioni predefinite per Generatore Report
   In Generatore Report è possibile impostare alcuni valori predefiniti utili per semplificare e accelerare la creazione di report.  Ad esempio, se è si può impostare o modificare il server di report predefinito, Generatore Report salva i report nello stesso server di report automaticamente, se non diversamente specificato.  
   
 -   In Generatore report fare clic su **File** > **Opzioni**.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
  **Usa questo server di report o sito di SharePoint per impostazione predefinita**  
  È possibile che l'amministratore abbia configurato questa opzione. Il valore può essere un URL ben formato che inizia con http:// o https://. Questa impostazione determina le connessioni all'origine dati che verranno visualizzate per impostazione predefinita nelle procedure guidate Nuova tabella o matrice e Nuovo grafico. I report verranno inoltre elaborati su questo server e sarà possibile fare riferimento alle risorse dal server.  
   

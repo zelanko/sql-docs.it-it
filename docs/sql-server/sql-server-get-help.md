@@ -3,18 +3,19 @@ title: Guida e commenti di SQL Server | Microsoft Docs
 description: Una risorsa per scoprire come ottenere assistenza per eventuali problemi o inviare commenti e suggerimenti per il prodotto SQL Server o la documentazione tecnica di SQL Server.
 ms.date: 07/11/2019
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: ''
 ms.custom: ''
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7588cb2c2c49992bbed4ceea29b035200a70128d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 49bf5ae8b9ab88859bedaf114242b1dcf64bb641
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80380762"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732180"
 ---
 # <a name="sql-server-help-and-feedback"></a>Guida e commenti di SQL Server
 

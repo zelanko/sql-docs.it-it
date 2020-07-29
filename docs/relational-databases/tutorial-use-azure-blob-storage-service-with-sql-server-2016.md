@@ -1,7 +1,7 @@
 ---
 title: 'Esercitazione: Uso del servizio di archiviazione BLOB di Azure con SQL Server 2016'
 ms.custom: seo-dt-2019
-ms.date: 01/10/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -14,12 +14,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cd01280d2777fdab926c2e733224dc94b5fef834
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4e8d09fd7af7501427490178ef7cc9624b7e98a1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906047"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247270"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Esercitazione: Uso del servizio di archiviazione BLOB di Azure con SQL Server 2016
 
@@ -37,7 +37,7 @@ Per completare l'esercitazione è necessario conoscere i concetti di backup e ri
 - Ottenere un [account Azure](https://azure.microsoft.com/offers/ms-azr-0044p/) gratuito.
 - Creare un [account di archiviazione di Azure](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
 - Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Effettuare il provisioning di una [macchina virtuale di Azure che esegue SQL Server](https://azure.microsoft.com/documentation/articles/virtual-machines-provision-sql-server/)
+- Effettuare il provisioning di una [macchina virtuale di Azure che esegue SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 - Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Scaricare i [database di esempio AdventureWorks2016](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 - Assegnare l'account utente al ruolo [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) e concedere le autorizzazioni [Modifica qualsiasi credenziale](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
@@ -180,7 +180,7 @@ Per creare credenziali di SQL Server, seguire questa procedura:
 In questa sezione si esegue un backup del database AdventureWorks2016 presente nell'istanza di SQL Server 2016 nel contenitore di Azure creato nella [sezione 1](#1---create-stored-access-policy-and-shared-access-storage).
   
 > [!NOTE]  
-> Se si vuole eseguire il backup di un database di SQL Server 2012 SP1 CU2 o versione successiva o di un database di SQL Server 2014 nel contenitore di Azure, è possibile usare la sintassi deprecata illustrata [qui](https://docs.microsoft.com/sql/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014) per eseguire il backup nell'URL usando la sintassi con credenziali.  
+> Se si vuole eseguire il backup di un database di SQL Server 2012 SP1 CU2 o versione successiva o di un database di SQL Server 2014 nel contenitore di Azure, è possibile usare la sintassi deprecata illustrata [qui](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014) per eseguire il backup nell'URL usando la sintassi con credenziali.  
   
 Per eseguire il backup di un database nell'archiviazione BLOB, seguire questi passaggi:  
   

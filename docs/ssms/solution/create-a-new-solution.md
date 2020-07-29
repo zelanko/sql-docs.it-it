@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1988a31f085619604198b889138bb8e62eb8f28b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2c41f99d32803914b20ffa65dfb22722f62143b0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251923"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999561"
 ---
 # <a name="create-a-new-solution"></a>Creazione di una nuova soluzione
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Quando viene creato un progetto, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] viene creata una soluzione per contenerlo. È possibile aprire una sola soluzione per volta. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] non consente di creare cartelle all'interno dei progetti. Per organizzare il lavoro, creare più progetti.  
   
 Per accedere a Esplora soluzioni, scegliere **Esplora soluzioni** dal menu **Visualizza** .  

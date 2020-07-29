@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 039ad2ec8ea2e0d05eae0ec2d627c07117580bf8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c865561f66f9f40ce131e9b8dce563f77ca187aa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258926"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001805"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Pagine delle proprietà in SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Tutte le finestre di dialogo Proprietà in [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] usano un formato comune per visualizzare le informazioni con categorie che è possibile espandere e comprimere. I campi visualizzati dipendono dalla proprietà. Le proprietà visualizzate in grigio sono di sola lettura. Nella parte superiore di ogni pagina delle proprietà si trovano i pulsanti Per categoria e Per nome.  
   
 Nella tabella seguente vengono descritti gli elementi comuni delle finestre di dialogo Proprietà di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] .  

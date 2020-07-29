@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 57ceb0963f303a1674642b65ef6c2089fd86ef70
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 162f2e872d1feedd3cecdf54b766ed8e3a43365b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254247"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000001"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Creazione di self-join in modo manuale (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 È possibile unire in join una tabella con se stessa anche se questa non ha una relazione riflessiva nel database. È ad esempio possibile utilizzare un self-join per individuare coppie di autori che risiedono nella stessa città.  
   
 Come per tutti i tipi di join, un self-join richiede almeno due tabelle, con la differenza che, anziché aggiungere una seconda tabella alla query, si aggiungerà una seconda istanza della stessa tabella. Sarà così possibile confrontare una colonna nella prima istanza della tabella con la stessa colonna nella seconda istanza, in modo da confrontare fra loro i valori contenuti in una colonna. In [Progettazione query e Progettazione viste](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) verrà assegnato un alias alla seconda istanza della tabella.  
