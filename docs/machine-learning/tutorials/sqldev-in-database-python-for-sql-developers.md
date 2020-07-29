@@ -2,22 +2,22 @@
 title: 'Python + T-SQL: Sviluppare un modello'
 description: Informazioni su come incorporare il codice Python in stored procedure di SQL Server e funzioni T-SQL.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3bafc3a524ec854dc9bf1669660827d5a6bc80f7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d5cdec0ad291fecf0606650d116f0c7979831c19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115994"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785632"
 ---
 # <a name="tutorial-python-data-analytics-for-sql-developers"></a>Esercitazione: Analisi dei dati Python per sviluppatori SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In questa esercitazione per programmatori SQL vengono fornite informazioni sull'integrazione di Python mediante la creazione e la distribuzione di una soluzione di Machine Learning basata su Python usando un database [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) in SQL Server. Si useranno T-SQL, SQL Server Management Studio e un'istanza del motore di database con [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) e il supporto del linguaggio Python.
 

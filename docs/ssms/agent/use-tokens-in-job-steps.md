@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5800bd00faac0c34052a5930cfdb1ccaf86afbcb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6980c7914a10498d2f1d5cc08d60d63d9dd1f0ac
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257883"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895200"
 ---
 # <a name="use-tokens-in-job-steps"></a>Utilizzo dei token nei passaggi dei processi
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
@@ -124,18 +123,22 @@ Si consideri, ad esempio, il passaggio di processo seguente che non è stato agg
   
 Dopo aver eseguito lo script di aggiornamento, una macro `ESCAPE_NONE` viene inserita con il token. In questo caso, tuttavia, è necessario riscrivere lo script senza utilizzare la nidificazione nel modo seguente e inserire la macro `ESCAPE_SQUOTE` per utilizzare correttamente caratteri di escape per i delimitatori che potrebbero essere passati nella stringa di sostituzione del token:  
   
-<pre>DECLARE @msgString nvarchar(max)  
-SET @msgString = '$(ESCAPE_SQUOTE(A-MSG))'  
-SET @msgString = QUOTENAME(@msgString,'''')  
-PRINT N'Print ' + @msgString ;</pre>  
+```sql
+DECLARE @msgString nvarchar(max);
+SET @msgString = '$(ESCAPE_SQUOTE(A-MSG))';
+SET @msgString = QUOTENAME(@msgString,'''');
+PRINT N'Print ' + @msgString;
+```
   
 Si noti inoltre che in questo esempio la funzione QUOTENAME imposta il carattere utilizzato per le virgolette.  
   
 ### <a name="c-using-tokens-with-the-escape_none-macro"></a>C. Utilizzo di token con la macro ESCAPE_NONE  
 L'esempio seguente fa parte di uno script in cui `job_id` viene recuperato dalla tabella `sysjobs` e in cui il token `JOBID` viene utilizzato per popolare la variabile `@JobID` dichiarata in precedenza nello script come tipo di dati binario. Poiché non è necessario alcun delimitatore per i tipi di dati binari, la macro `ESCAPE_NONE` viene utilizzata con il token `JOBID` . Non è necessario aggiornare questo passaggio di processo dopo aver eseguito lo script di aggiornamento.  
   
-<pre>SELECT * FROM msdb.dbo.sysjobs  
-WHERE @JobID = CONVERT(uniqueidentifier, $(ESCAPE_NONE(JOBID))) ;</pre>  
+```sql
+SELECT * FROM msdb.dbo.sysjobs  
+WHERE @JobID = CONVERT(uniqueidentifier, $(ESCAPE_NONE(JOBID)));
+```
   
 ## <a name="see-also"></a>Vedere anche  
 [Implementazione di processi](../../ssms/agent/implement-jobs.md)  

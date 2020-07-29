@@ -2,22 +2,22 @@
 title: Salvare e caricare oggetti R tramite ODBC
 description: Il pacchetto RevoScaleR include nuove funzioni di serializzazione e deserializzazione che migliorano notevolmente le prestazioni e archiviano gli oggetti in modo più compatto.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 98a14848db4854c0bcb19167e7fcf7d43eca5f2e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: c6f6f8611885a0628d3b2cf719947006a7c5094c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753354"
 ---
 # <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>Salvare e caricare oggetti R da SQL Server tramite ODBC
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server R Services può archiviare oggetti R serializzati in una tabella e quindi caricare l'oggetto dalla tabella in base alle necessità, senza dover eseguire nuovamente il codice R o ripetere il training del modello. La possibilità di salvare gli oggetti R in un database è fondamentale per gli scenari di training e salvataggio di un modello e quindi per un uso successivo per l'assegnazione dei punteggi o l'analisi.
 

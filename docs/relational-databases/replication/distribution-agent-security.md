@@ -15,15 +15,15 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 91b5915324fc95d9199b4ec1d9aaa2ca0fee89d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e664b1d96683d33ea9ffdc7cf38a5de0fe72a84e
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653682"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111057"
 ---
 # <a name="distribution-agent-security"></a>Sicurezza agente di distribuzione
-::: moniker range=">=sql-server-2014||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions" 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 La finestra di dialogo **Sicurezza agente di distribuzione** consente di specificare l'account di Windows utilizzato per l'esecuzione dell'agente di distribuzione. L'agente di distribuzione viene eseguito nel server di distribuzione per le sottoscrizioni push e nel Sottoscrittore per le sottoscrizioni pull. L'account di Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] è detto anche *account di processo*, poiché si tratta dell'account con cui viene eseguito il processo dell'agente. Le opzioni aggiuntive disponibili in questa finestra di dialogo dipendono dalla modalità con cui si accede a tale finestra di dialogo:  
   

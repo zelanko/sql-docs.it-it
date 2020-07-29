@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f88f19d26ab7653f3d677862fce8de23e05e9c5b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c3d6ced05acfdac106897b7fd5abf438d8eac6c7
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85858416"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111561"
 ---
 # <a name="file_id-transact-sql"></a>FILE_ID (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,9 @@ Per il nome logico specificato per un file di componente del database corrente, 
 FILE_ID ( file_name )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
 *file_name*  
 Un'espressione di tipo **sysname**, che rappresenta il nome logico del file per cui `FILE_ID` restituirà il valore dell'ID del file.  
   

@@ -20,12 +20,12 @@ ms.assetid: 7e1f5350-260b-4c61-8c84-69bb1a214f1f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c7c280036c2877ea70a2f4d71158f2efdce03fa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f202d45b9c815154f252c0c016fe4931dbef069e
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011551"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112140"
 ---
 # <a name="collation-functions---tertiary_weights-transact-sql"></a>Funzioni delle regole di confronto - TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,9 @@ Questa funzione restituisce una stringa binaria di spessori per ogni carattere i
 TERTIARY_WEIGHTS( non_Unicode_character_string_expression )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
 *non_Unicode_character_string_expression*  
 Un'[espressione](../../t-sql/language-elements/expressions-transact-sql.md) stringa di tipo **char**, **varchar** o **varchar(max)** definita tramite una regola di confronto SQL terziaria. Per un elenco di queste regole di confronto, vedere la sezione Osservazioni.
   

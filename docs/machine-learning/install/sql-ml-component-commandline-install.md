@@ -2,22 +2,22 @@
 title: Eseguire l'installazione al prompt dei comandi
 description: Eseguire il programma di installazione di SQL Server dalla riga di comando per aggiungere l'integrazione di Python e del linguaggio R a un'istanza del motore di database di SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/04/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a9bc48c3bb2631fc9f25a0c0aba761fd5bfaee56
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: b3c3d469cb016a562f069473923f470ce750dd5e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118264"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883896"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Installare dalla riga di comando i componenti R e Python di SQL Server per il Machine Learning
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Questo articolo contiene le istruzioni per installare dalla riga di comando i componenti di SQL Server per il Machine Learning:
 

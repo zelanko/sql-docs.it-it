@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1d55f1115db836d3fddab4e18e63499c43e5993f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a4a5cd90fc4b73304ca072ce0669227c086ed1e6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245720"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002075"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Guida sensibile al contesto delle finestre di dialogo Opzioni
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 In questa sezione è inclusa la Guida sensibile al contesto per le finestre di dialogo che vengono visualizzate quando si sceglie **Opzioni** dal menu **Strumenti** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 [Opzioni &#40;finestre di progettazione - finestre di progettazione di Analysis Services - Generale&#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  

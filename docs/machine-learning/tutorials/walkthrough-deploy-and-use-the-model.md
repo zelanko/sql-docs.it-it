@@ -2,22 +2,22 @@
 title: 'Esercitazione su R: Distribuire il modello'
 description: Esercitazione che illustra come distribuire un modello R in SQL Server per l'analisi nel database.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0117ff1ccbd90a18c1198c9a46fa60c27d28107d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: bdf7446497d242d3cc2773daad0adfa8d3a700e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115734"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781789"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Distribuire il modello R e usarlo in SQL Server (procedura dettagliata)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In questa lezione si apprenderà come distribuire modelli R in un ambiente di produzione chiamando un modello sottoposto a training da una stored procedure. Sarà quindi possibile richiamare la stored procedure da R o da qualsiasi linguaggio di programmazione di applicazioni che supporti [!INCLUDE[tsql](../../includes/tsql-md.md)] (ad esempio C#, Java, Python e così via) e usare il modello per creare stime sulle nuove osservazioni.
 

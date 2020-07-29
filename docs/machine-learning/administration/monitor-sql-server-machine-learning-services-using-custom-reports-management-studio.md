@@ -2,22 +2,22 @@
 title: Monitorare gli script con report personalizzati
 description: Usare report personalizzati in SQL Server Management Studio (SSMS) per monitorare l'esecuzione di script esterni (Python ed R) e le risorse usate, diagnosticare i problemi e ottimizzare le prestazioni in Machine Learning Services per SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 09/17/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: dad4cebf8259241b85497a0ff894228d125e839b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 708d805ff810876ba5871b2e1e887dd97aceba3a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118894"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659630"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>Monitorare l'esecuzione di script Python ed R tramite report personalizzati in SQL Server Management Studio
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Usare report personalizzati in SQL Server Management Studio (SSMS) per monitorare l'esecuzione di script esterni (Python ed R) e le risorse usate, diagnosticare i problemi e ottimizzare le prestazioni in Machine Learning Services per SQL Server.
 

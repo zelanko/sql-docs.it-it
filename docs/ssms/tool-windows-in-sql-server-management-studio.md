@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 025a4a9ecb00e9827524652047970db0031dfc43
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2965cbdec8ad5a0db80ab52c75c14b0e1e32dc75
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243887"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236861"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Finestre degli strumenti in SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] offre numerose ed efficaci finestre degli strumenti per tutte le fasi di sviluppo e amministrazione. Alcuni strumenti possono essere utilizzati su qualsiasi componente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , mentre altri sono disponibili solo per alcuni componenti. Nella tabella seguente vengono descritti gli strumenti che è possibile utilizzare per tutti i componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-|||  
-|-|-|  
-|**Strumento**|**Scopo**|  
+|Strumento|Scopo|  
+|-|-|   
 |[Esplora oggetti](../ssms/object/object-explorer.md)|Esplorare server, creare e individuare oggetti, gestire le origini dati e visualizzare i log. È possibile accedere a questo strumento dal menu **Visualizza** .|  
 |[Esplora soluzioni](../ssms/solution/solution-explorer.md)|Archiviare e organizzare script e informazioni di connessione correlate all'interno dei progetti denominati script [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . È inoltre possibile archiviare diversi script [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] come soluzioni e utilizzare il controllo del codice sorgente per gestire l'evoluzione degli script nel tempo. È possibile accedere a questo strumento dal menu **Visualizza** .|  
 |[Esplora modelli](../ssms/template/template-explorer.md)|Creare query basate sui modelli esistenti. È inoltre possibile creare query personalizzate o modificare i modelli esistenti per renderli più adeguati alle proprie esigenze. È possibile accedere a questo strumento dal menu **Visualizza** .|  

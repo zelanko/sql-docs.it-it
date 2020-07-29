@@ -2,21 +2,21 @@
 title: Creare flussi di lavoro SSIS e SSRS con R
 description: Scenari di integrazione che combinano Machine Learning Services per SQL Server e R Services, Reporting Services (SSRS) e SQL Server Integration Services (SSIS).
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/17/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b8d55e95991437e4d76911fd26afb5b1bc9c550
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 45443daacecb5423a8c5969b619391fea774bcd6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117744"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85680359"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Creare flussi di lavoro SSIS e SSRS con R in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Questo articolo illustra come usare lo script R e Python incorporato usando il linguaggio e le caratteristiche di data science di Machine Learning Services per SQL Server con due importanti funzionalità di SQL Server: SQL Server Integration Services (SSIS) e SQL Server Reporting Services (SSRS). Le librerie R e Python in SQL Server forniscono funzioni statistiche e predittive. SSIS e SSRS forniscono rispettivamente la trasformazione ETL coordinata e le visualizzazioni. Questo articolo illustra come inserire tutte queste caratteristiche in questo modello di flusso di lavoro:
 

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c9a1b33348729aca9a0f77628e51f1c7d4c0e051
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 250dc0014e7ab38bf669608e9f509e273e7a9928
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153245"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012557"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>Scaricare ODBC Driver for SQL Server
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Microsoft ODBC Driver for SQL Server è una libreria di collegamento dinamico (DLL) contenente il supporto di runtime per applicazioni che usano API di codice nativo per la connessione a SQL Server. Usare Microsoft ODBC Driver 17 for SQL Server per creare nuove applicazioni o migliorare le applicazioni esistenti per sfruttare le nuove funzionalità di SQL Server.
 

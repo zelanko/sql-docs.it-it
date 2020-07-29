@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 97d8667e7c6972331471622685d8a0bb97303dcd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fac8e4cdb99d19da39f60585db3f77a27975983a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245732"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011829"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Opzioni (Ambiente- pagina Tipi di carattere e colori)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 La finestra di dialogo **Opzioni** consente di specificare una combinazione colori e un tipo di carattere personalizzati per vari elementi dell'interfaccia utente in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Scegliere **Opzioni** dal menu **Strumenti** , espandere la cartella **Ambiente** e selezionare **Tipi di carattere e colori**.  
   
 Le modifiche apportate alla combinazione colori non diventano effettive durante la sessione in cui vengono eseguite. Per valutare le modifiche dei colori, aprire un'altra istanza di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e riprodurre le condizioni in cui si prevede che tali modifiche vengano applicate.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
 **Mostra impostazioni per**  
 Consente di visualizzare l'elenco di tutti gli elementi dell'interfaccia utente per i quali è possibile modificare le combinazioni colori e i tipi di carattere. Dopo aver selezionato un elemento da questo elenco, è possibile personalizzare le impostazioni dei colori per l'elemento selezionato in **Elementi visualizzati**.  
   

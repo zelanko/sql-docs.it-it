@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: cd6f71f5c42418ab9357a9aaeec9788ae3ea0d65
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0e9a0b87e0275846b1c1b9535b9485dd1cbae066
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920957"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243425"
 ---
 # <a name="sql-server-express-security"></a>Sicurezza di SQL Server Express
 
@@ -40,7 +40,7 @@ Ogni istanza utente è isolata dall'istanza padre e da qualsiasi altra istanza u
 ## <a name="external-resources"></a>Risorse esterne  
 Per altre informazioni su SQL Server Express, vedere le risorse seguenti.  
   
-|||  
+|Risorsa|Descrizione|
 |-|-|  
 |[Documentazione online di Microsoft SQL Server 2005 Express Edition](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Documentazione completa di SQL Server 2005 Express Edition.|  
 |[Istanze utente per non amministratori](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) nella documentazione online di SQL Server|Descrive come creare e distribuire le istanze utente.|  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9238bced3c9e0afe81a6eaaf7c9747c27ab4b3a9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e1ac269ba2768195448927375b4cbde5713f15f2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245778"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001652"
 ---
 # <a name="open-with-new-file"></a>Apri con (Nuovo file)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 È possibile aprire un documento in uno o più editor scegliendo **Apri** dal menu **File** e quindi facendo clic su **File**. Nella finestra di dialogo **Apri file** selezionare il file, fare clic sulla freccia accanto al pulsante **Apri** e quindi fare clic su **Apri con**. Nella finestra di dialogo **Apri con** selezionare il programma preferito nell'elenco **Selezionare un programma dall'elenco** e quindi fare clic su **Apri**.  
   
 ## <a name="options"></a>Opzioni  

@@ -11,17 +11,16 @@ helpviewer_keywords:
 ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: e14e968620f63a596ff9c5b65c547eab8017cc62
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f0cfe484f628040bf419738f79e6500cc6911f83
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257066"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003229"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>Query con parametri (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 In alcuni casi potrebbe essere necessario creare una query da utilizzare più volte, specificando però ogni volta un valore diverso. Se, ad esempio, si eseguono di frequente delle query per individuare tutti i `title_ids` di un determinato autore, è possibile utilizzare la stessa query per tutte le richieste specificando però ogni volta un ID o un nome di autore diverso.  
   
 Per creare una query che può accettare valori diversi in momenti diversi, è necessario utilizzare i parametri. Un parametro è un segnaposto per un valore che verrà fornito durante l'esecuzione della query. Un'istruzione SQL con un parametro potrebbe essere simile alla seguente, dove "?" rappresenta il parametro relativo all'ID dell'autore:  

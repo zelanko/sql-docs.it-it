@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 629c3e06-f933-483b-8621-280dbb7a7bd1
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a02f50ed88a2883d0149dbbd37df63b27e87dfa4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: daab193798d2d9b2d8a8571d3bb6cd71ac52b542
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247608"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243568"
 ---
 # <a name="organize-jobs"></a>organizzare processi
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
@@ -35,9 +34,8 @@ Le categorie consentono di organizzare i processi per semplificare le operazioni
   
 ## <a name="related-tasks"></a>Attività correlate  
   
-|||  
+|Descrizione|Argomento|  
 |-|-|  
-|**Descrizione**|**Argomento**|  
 |Descrive come creare una categoria di processi.|[Creare una categoria di processi](../../ssms/agent/create-a-job-category.md)|  
 |Descrive come eliminare una categoria di processi.|[Eliminare una categoria di processi](../../ssms/agent/delete-a-job-category.md)|  
 |Descrive come assegnare un processo a una categoria di processi.|[Assegnare un processo a una categoria di processi](../../ssms/agent/assign-a-job-to-a-job-category.md)|  

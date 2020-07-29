@@ -26,16 +26,16 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 575c8d2ec6e6397f7a3444bcc718988b070e783d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4eae86044d8e0ec03268e23abc81df4945b46990
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257144"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245565"
 ---
 # <a name="object-explorer"></a>Esplora oggetti
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offre caratteristiche per la gestione di oggetti in istanze di [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="benefits-of-object-explorer"></a>Vantaggi di Esplora oggetti  
@@ -49,5 +49,4 @@ Esplora oggetti offre un'interfaccia utente gerarchica per visualizzare e gestir
 |Descrive come connettere Esplora oggetti a un'istanza di [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|[Connettersi a un'istanza da Esplora oggetti](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  
 |Descrive come gestire oggetti rappresentati come nodi nella gerarchia Esplora oggetti.|[Gestire oggetti tramite Esplora oggetti](../../ssms/object/manage-objects-by-using-object-explorer.md)|  
 |Descrive il riquadro Dettagli Esplora, fornisce una vista tabulare di tutti gli oggetti nel server con un'interfaccia utente che consente di gestire tali oggetti.|[Riquadro Dettagli di Esplora oggetti](../../ssms/object/object-explorer-details-pane.md)|  
-|Descrive modalità per eseguire report personalizzati in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Report personalizzati in Management Studio](../../ssms/object/custom-reports-in-management-studio.md)|  
-  
+|Descrive modalità per eseguire report personalizzati in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Report personalizzati in Management Studio](../../ssms/object/custom-reports-in-management-studio.md)|
