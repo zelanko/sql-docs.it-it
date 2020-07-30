@@ -1,5 +1,5 @@
 ---
-title: Recupero di dati di grandi dimensioni | Microsoft Docs
+title: Recupero di dati di grandi dimensioni (provider OLE DB Native Client) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9ba0351a3ea398661642a2e737a58fb7adecf8d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 298a442dbb93ca2c0bb95d79e341d712cd3651ea
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005847"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243682"
 ---
-# <a name="getting-large-data"></a>Recupero di dati di grandi dimensioni
+# <a name="getting-large-data-from-a-sql-server-native-client-ole-db-provider"></a>Recupero di dati di grandi dimensioni da un provider di OLE DB SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   In generale, i consumer devono isolare il codice che crea un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetto di archiviazione del provider OLE DB di Native Client da altro codice che gestisce i dati a cui non viene fatto riferimento tramite un puntatore a interfaccia **ISequentialStream** .  
@@ -147,7 +148,7 @@ HRESULT GetUnboundData
     }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Oggetti BLOB e OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Utilizzo di tipi di dati per valori di grandi dimensioni](../../relational-databases/native-client/features/using-large-value-types.md)  
   

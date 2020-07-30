@@ -18,13 +18,14 @@ ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5627da0643b35bac430e59d9cbc0685ac6f44e38
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c99ab25fdfece33961b72e4ea7c3ea6e233bb071
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013086"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246790"
 ---
-# <a name="updating-data-in-sql-server-cursors"></a>Aggiornamento dei dati nei cursori di SQL Server
+# <a name="updating-data-in-sql-server-cursors-in-sql-server-native-client"></a>Aggiornamento dei dati nei cursori SQL Server in SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Quando si recuperano e si aggiornano i dati tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i cursori, un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applicazione consumer del provider OLE DB di Native Client è associata alle stesse considerazioni e ai vincoli che si applicano a qualsiasi altra applicazione client.  
@@ -44,7 +45,7 @@ ms.locfileid: "86013086"
   
  Un consumer non deve presupporre che le righe vengano elaborate in base a un ordine specifico. Se un consumer richiede un'elaborazione ordinata di modifica dei dati su più di una riga, deve stabilire l'ordine nella logica dell'applicazione e aprire una transazione per includere il processo.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Aggiornamento dei dati dei set di righe](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md)  
   
   

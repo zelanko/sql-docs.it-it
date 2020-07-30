@@ -9,14 +9,14 @@ ms.date: 12/13/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2989be74f4c180d07a6270a8ba5f685460780fbd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245387"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243475"
 ---
-# <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurare PolyBase per l'accesso a dati esterni in Hadoop
+# <a name="configure-polybase-in-parallel-data-warehouse-to-access-external-data-in-hadoop"></a>Configurare la polibase in parallelo data warehouse per accedere ai dati esterni in Hadoop
 
 Questo articolo illustra come usare la polibase in un appliance APS per eseguire query sui dati esterni in Hadoop.
 
@@ -55,7 +55,7 @@ Per migliorare le prestazioni delle query, abilitare il calcolo con distribuzion
   
 1. Aprire una connessione Desktop remoto al nodo di controllo PDW.
 
-2. Trovare il file **Yarn-site. XML** nel nodo di controllo. In genere il percorso è:  
+2. Trovare il file **yarn-site.xml** nel nodo di controllo. In genere il percorso è:  
 
    ```xml  
    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf\  
@@ -63,7 +63,7 @@ Per migliorare le prestazioni delle query, abilitare il calcolo con distribuzion
 
 3. Nel computer Hadoop trovare il file analogo nella directory di configurazione Hadoop. Nel file trovare e copiare il valore della chiave di configurazione yarn.application.classpath.  
   
-4. Nel nodo di controllo, nel **file Yarn. site. XML,** trovare la proprietà **Yarn. Application. classpath** . Incollare il valore dal computer Hadoop nell'elemento valore.  
+4. Nel nodo di controllo, nel **file diyarn.site.xml,** trovare la proprietà **Yarn. Application. classpath** . Incollare il valore dal computer Hadoop nell'elemento valore.  
   
 5. Per tutte le versioni di CDH 5.X sarà necessario aggiungere i parametri di configurazione mapreduce.application.classpath alla fine del file yarn.site.xml o nel file mapred-site.xml. HortonWorks include queste configurazioni all'interno delle configurazioni yarn.application.classpath. Vedere [Configurazione di PolyBase](../relational-databases/polybase/polybase-configuration.md) per alcuni esempi.
 
@@ -102,7 +102,7 @@ File yarn-site.xml con i parametri di configurazione yarn.application.classpath 
 </configuration>
 ```
 
-Se si sceglie di suddividere le due impostazioni di configurazione in mapred-site. XML e yarn-site. XML, i file sono i seguenti:
+Se si sceglie di suddividere le due impostazioni di configurazione nel mapred-site.xml e nella yarn-site.xml, i file sono i seguenti:
 
 **yarn-site.xml**
 
@@ -227,7 +227,7 @@ Per eseguire query sui dati nell'origine dati Hadoop, è necessario definire una
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-3. Creare un'origine dati esterna con [Crea origine dati esterna](../t-sql/statements/create-external-data-source-transact-sql.md).
+3. Creare un'origine dati esterna con [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  
@@ -316,7 +316,7 @@ from Insured_Customers INNER JOIN
 ON Insured_Customers.CustomerKey = SensorD.CustomerKey  
 ```  
 
-### <a name="exporting-data"></a>Esportazione di dati  
+### <a name="exporting-data"></a>Esportazione dei dati  
 
 La query seguente esporta i dati da APS a Hadoop. Può essere usato per archiviare dati relazionali in Hadoop, mentre è comunque possibile eseguire query su di esso.
 

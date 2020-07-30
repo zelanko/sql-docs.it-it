@@ -1,5 +1,6 @@
 ---
 title: srv_paramsetoutput (API Stored procedure estesa)
+description: Informazioni su come srv_paramsetoutput nell'API stored procedure estesa imposta il valore di un parametro restituito.
 ms.custom: seo-dt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2810e19-e513-458b-8925-5756b6ee1313
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b00f2fedd9c1053e332aaee8691207fbf990649
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3e406d8a9f2b9bc6b2f03239dee435364f481af9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755955"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248400"
 ---
 # <a name="srv_paramsetoutput-extended-stored-procedure-api"></a>srv_paramsetoutput (API Stored procedure estesa)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

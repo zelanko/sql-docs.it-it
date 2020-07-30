@@ -1,5 +1,6 @@
 ---
 title: sys. sp_rda_reconcile_indexes (Transact-SQL) | Microsoft Docs
+description: Informazioni su sys. sp_rda_reconcile_indexes. Vedere come utilizzare questo stored procedure Transact-SQL per accodare un'attività dello schema per riconciliare gli indici in una tabella remota.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: be9e80c522cc68cd4438e34d96564a7e49196152
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 098649587cbb6f01caafdedb631c901af160c85f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053003"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236031"
 ---
 # <a name="syssp_rda_reconcile_indexes-transact-sql"></a>sys. sp_rda_reconcile_indexes (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -46,7 +48,7 @@ sp_rda_reconcile_indexes [@objname = ] 'objname'
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o >0 (esito negativo)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

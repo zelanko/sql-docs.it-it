@@ -1,5 +1,6 @@
 ---
 title: srv_sendrow (API Stored procedure estesa) | Microsoft Docs
+description: Informazioni sulle srv_sendrow nell'API stored procedure estesa. srv_sendrow trasmette una riga di dati al client.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0209cfb01c0fa76fdf66dfe806f9d528489cfb79
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1cbe5886d19ca1da9bdc2bdea09ce86d142b44d9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755829"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248215"
 ---
 # <a name="srv_sendrow-extended-stored-procedure-api"></a>srv_convert (API delle stored procedure estese)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +62,7 @@ srvproc
 > [!IMPORTANT]  
 >  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [srv_describe &#40;API Stored procedure estesa&#41;](../../relational-databases/extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md)  
   
   

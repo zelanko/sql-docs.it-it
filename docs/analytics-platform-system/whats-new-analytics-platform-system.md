@@ -9,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e609beb77b92a6dbaf95f39bf5a2a6971a7ae5c4
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 684979981878590c0fbd8d56c648525b25e7c8b6
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85039827"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243079"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Novità del sistema di piattaforma di analisi, un MPP con scalabilità orizzontale data warehouse
 Vedere Novità degli aggiornamenti più recenti degli appliance per piattaforma di strumenti analitici Microsoft (APS). APS è un'appliance locale con scalabilità orizzontale che ospita MPP SQL Server data warehouse parallele. 
@@ -65,6 +65,8 @@ APS CU 7.3 migliora le prestazioni delle query con l'eliminazione della sottoesp
 
 ### <a name="aps-informatica-connector-for-informatica-1020-published"></a>Connettore APS informatica per informatica 10.2.0 pubblicato
 È stata rilasciata una nuova versione dei connettori informatica per APS che funziona con informatica versione 10.2.0 e 10.2.0 hotfix 1. I nuovi connettori possono essere scaricati dal [sito di download](https://www.microsoft.com/download/details.aspx?id=57472).
+> [!NOTE]
+> APS informatica Connector per informatica 10.2.0 o 10.2.0 hotfix 1 non funziona su Strict TLS 1.2 e richiede che TLS 1.0 e 1,1 siano completamente funzionanti.
 
 #### <a name="supported-versions"></a>Versioni supportate
 

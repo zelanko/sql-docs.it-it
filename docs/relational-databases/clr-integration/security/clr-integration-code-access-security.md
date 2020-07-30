@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e155e9c6f0e8a85eaf7ec905f9c9b471160a9ec
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2706faaf181e609df6209758e60b2a46c87aa46
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885898"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248638"
 ---
 # <a name="clr-integration-code-access-security"></a>Sicurezza da accesso di codice dell'integrazione con CLR
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -104,14 +104,13 @@ ms.locfileid: "85885898"
 ## <a name="permission-set-summary"></a>Riepilogo dei set di autorizzazioni  
  Nel grafico seguente sono riepilogate le restrizioni e le autorizzazioni concesse ai set di autorizzazioni **Safe**, **EXTERNAL_ACCESS**e **unsafe** .  
   
-|||||  
+|Funzionalità|**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|   
 |-|-|-|-|  
-||**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|  
-|**Autorizzazioni di sicurezza per l'accesso di codice**|Sola esecuzione|Esecuzione più accesso a risorse esterne|Senza restrizioni (incluso P/Invoke)|  
-|**Restrizioni del modello di programmazione**|Sì|Sì|Nessuna restrizione|  
-|**Requisito di verificabilità**|Sì|Sì|No|  
-|**Accesso ai dati locali**|Sì|Sì|Sì|  
-|**Possibilità di chiamare il codice nativo**|No|No|Sì|  
+|Autorizzazioni di sicurezza per l'accesso di codice|Sola esecuzione|Esecuzione più accesso a risorse esterne|Senza restrizioni (incluso P/Invoke)|  
+|Restrizioni del modello di programmazione|sì|sì|Nessuna restrizione|  
+|Requisito di verificabilità|sì|sì|No|  
+|Accesso ai dati locali|sì|sì|sì|  
+|Possibilità di chiamare il codice nativo|No|No|Sì|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sicurezza dell'integrazione con CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

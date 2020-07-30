@@ -18,14 +18,14 @@ ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8f689ecd7d6c66880f217a8ea262acc113591af
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: d9febce09a93e92ff2a344b091fd3cd85d6bdc2b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942870"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247045"
 ---
-# <a name="commands-generating-multiple-rowset-results"></a>Comandi che generano risultati con più set di righe
+# <a name="sql-server-native-client-commands-generating-multiple-rowset-results"></a>SQL Server Native Client comandi che generano risultati con più set di righe
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client può restituire più set di righe dalle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istruzioni. Tramite le istruzioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono restituiti più set di righe nelle condizioni seguenti:  
@@ -51,7 +51,7 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
   
 -   [Utilizzo dell'interfaccia IMultipleResults per elaborare più set di risultati](../../relational-databases/native-client-ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Comandi](../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

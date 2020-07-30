@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 21166512c691f8d50d19816afc7a0247a6c09782
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c0a4778ae941b22bf362d926881b1cd3ba806059
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895270"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87361771"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Impostazione delle proprietà per il componente aggiuntivo Master Data Services per Excel
 
@@ -27,9 +27,8 @@ ms.locfileid: "85895270"
   
 ## <a name="excel-add-in-settings"></a>Impostazioni del componente aggiuntivo per Excel  
   
-||||  
-|-|-|-|  
 |Scheda e sezione|Impostazione|Descrizione|  
+|-|-|-|  
 |Impostazioni: Server di pubblicazione|Mostra la finestra di dialogo **Pubblicazione e annotazione** durante la pubblicazione|Selezionare questa opzione per visualizzare la finestra di dialogo **Pubblicazione e annotazione** dopo avere fatto clic su **Pubblica**e consentire di immettere una sola annotazione per tutte le modifiche o un'annotazione per ogni modifica.<br /><br /> Deselezionare questa opzione per specificare che il processo Pubblica è iniziato senza visualizzare la finestra di dialogo **Pubblicazione e annotazione** . Non si avrà la possibilità di immettere un'annotazione.|  
 |Impostazioni: Versione|Selezione della versione|Selezionare la versione dei dati master che saranno caricati nel componente aggiuntivo di Excel. I possibili valori sono i seguenti:<br /><br /> **Nessuno** per fare in modo che la versione non venga impostata automaticamente su alcuna versione<br /><br /> **Meno recente** per impostare come valore predefinito la versione meno recente **Più recente** per impostare come valore predefinito la versione più recente.|  
 |Impostazioni: Registrazione|Abilita registrazione dettagliata|Consente la registrazione per il processo di caricamento dei dati master da MDS nel componente aggiuntivo di Excel, così che il risultato di ogni comando nel servizio venga registrato.|  

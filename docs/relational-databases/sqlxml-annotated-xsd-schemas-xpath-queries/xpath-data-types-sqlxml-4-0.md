@@ -29,12 +29,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eade5e3328993176f8795d27e511902a42468192
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 724290f48b0f33d586a797629766b36bae49ddb6
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764865"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332640"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Tipi di dati XPath (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "85764865"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non esegue la selezione della posizione nei set di nodi: la query XPath `Customer[3]`, ad esempio, indica il terzo cliente. Questo tipo di selezione della posizione non è supportato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pertanto, le conversioni node-set-to-**String** o node-set-to-**Number** descritte dalla specifica XPath non sono implementate. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza le semantiche "any" dove la specifica XPath specifica la semantica "first". Ad esempio, in base alla specifica XPath W3C, la query XPath `Order[OrderDetail/@UnitPrice > 10.0]` Seleziona gli ordini con il primo **OrderDetail** con un **PrezzoUnitario** maggiore di 10,0. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa query XPath seleziona gli ordini con qualsiasi **OrderDetail** con un **PrezzoUnitario** maggiore di 10,0.  
   
- La conversione in un **valore booleano** genera un test di esistenza; Pertanto, la query XPath `Products[@Discontinued=true()]` equivale all'espressione SQL "Products. Discontinued is not null", non all'espressione SQL "Products. Discontinued = 1". Per rendere la query equivalente all'ultima espressione SQL, convertire innanzitutto il set di nodi in un tipo non**booleano** , ad esempio **Number**. Ad esempio, `Products[number(@Discontinued) = true()]`  
+ La conversione in un **valore booleano** genera un test di esistenza; Pertanto, la query XPath `Products[@Discontinued=true()]` equivale all'espressione SQL "Products. Discontinued is not null", non all'espressione SQL "Products. Discontinued = 1". Per rendere la query equivalente all'ultima espressione SQL, convertire innanzitutto il set di nodi in un tipo non**booleano** , ad esempio **Number**. Ad esempio: `Products[number(@Discontinued) = true()]`.  
   
  Poiché la maggior parte degli operatori viene definita come TRUE se gli operatori sono TRUE per tutti i nodi nel set di nodi o per uno di essi, queste operazioni restituiscono sempre FALSE se il set di nodi è vuoto. In questo modo, se A è vuoto, sia `A = B` sia `A != B` sono FALSE e `not(A=B)` e `not(A!=B)` sono TRUE.  
   
@@ -92,11 +92,11 @@ ms.locfileid: "85764865"
 |-------------------|------------------------------------|--------------------------------|  
 |Nonebin.base64bin.hex|N/D|NoneEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  
-|number, int, float, i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|d'acquisto|CONVERT(float(53), EmployeeID)|  
-|id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  
+|number, int, float, i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|Numero|CONVERT(float(53), EmployeeID)|  
+|id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|Stringa|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|N/D (in XPath non è disponibile alcun tipo di dati equivalente al tipo di dati XDR fixed14.4).|CONVERT(money, EmployeeID)|  
-|Data|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
-|time<br /><br /> time.tz|string|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
+|date|Stringa|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|time<br /><br /> time.tz|Stringa|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  Le conversioni di data e ora sono progettate per funzionare se il valore viene archiviato nel database utilizzando il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati **DateTime** o una **stringa**. Si noti che il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati **DateTime** non utilizza il **fuso orario** e ha una precisione inferiore rispetto al tipo di dati **Time** XML. Per includere il tipo di dati **TimeZone** o la precisione aggiuntiva, archiviare i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando un tipo **stringa** .  
   
@@ -126,12 +126,11 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  Come illustrato nella tabella seguente, si tratta della stessa conversione applicata per altre espressioni XPath, ad esempio i valori letterali o le espressioni composte.  
   
-||||||  
-|-|-|-|-|-|  
-||X non è noto|X è una **stringa**|X è un **numero**|X è un **valore booleano**|  
-|string(X)|CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
-|number(X)|CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
-|boolean(X)|-|LEN (X) > 0|X != 0|-|  
+|   | X non è noto | X è una stringa | X è un numero | X è un valore booleano |
+| - | ------------ | ----------- | ----------- | ------------ |
+| **string(X)** |CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
+| **number(X)** |CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
+| **boolean(X)** |-|LEN (X) > 0|X != 0|-|  
   
 ## <a name="examples"></a>Esempi  
   

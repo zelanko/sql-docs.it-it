@@ -9,14 +9,14 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 3b754fb2de33a230bc7d27f239b2778d2849fd5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 352f51e0d53c9dc145b1faf1832faf59587fef6f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401268"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243092"
 ---
-# <a name="what-is-polybase"></a>Che cos'è PolyBase?
+# <a name="configure-polybase-connectivity"></a>Configurare la connettività di base
 La polibase consente al sistema di piattaforma di analisi (APS) di elaborare query Transact-SQL in grado di leggere e scrivere dati in origini dati esterne. Le stesse query che accedono a dati esterni possono includere anche tabelle di relazioni nei punti di accesso. In questo modo è possibile combinare dati da origini esterne con dati relazionali di valore elevato nei database APS.
 
 ![Logica di PolyBase](media/polybase/polybase-logical.png)
@@ -32,7 +32,7 @@ Vedere [funzionalità e limitazioni](https://docs.microsoft.com/sql/relational-d
 > [!NOTE] 
 > Il resto degli articoli correlati alla polibase descibe come configurare la polibase in APS 2016 (AU6) e versioni successive.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 - [Hadoop](polybase-configure-hadoop.md)
 - [Archiviazione BLOB di Azure](polybase-configure-azure-blob-storage.md)
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  

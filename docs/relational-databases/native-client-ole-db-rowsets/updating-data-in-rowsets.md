@@ -18,13 +18,14 @@ ms.assetid: 37769b1c-c480-419a-8c54-5cc420bf73db
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed9ce32d2ea7aa06468210277c7688c04fb55022
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 230ecf53d6260cb11411b2513e6b06a7fac883d1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013093"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246805"
 ---
-# <a name="updating-data-in-rowsets"></a>Aggiornamento dei dati dei set di righe
+# <a name="updating-data-in-rowsets-in-sql-server-native-client"></a>Aggiornamento dei dati nei set di righe in SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client aggiorna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i dati quando un consumer aggiorna un set di righe modificabile che contiene i dati. Un set di righe modificabile viene creato quando il consumer richiede il supporto per l'interfaccia **IRowsetChange** o **IRowsetUpdate**.  
@@ -42,7 +43,7 @@ ms.locfileid: "86013093"
   
 -   [Risincronizzazione delle righe](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Set di righe](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

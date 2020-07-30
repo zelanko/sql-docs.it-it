@@ -13,13 +13,14 @@ ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2de8bc662b0074ce9a8ede39ce3f7e6b9bee275d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bda8487956d8b4017a23dc23315f6d4aa4826ab4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006467"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243974"
 ---
-# <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>Eseguire una funzione definita dall'utente ed elaborare il codice restituito (OLE DB)
+# <a name="execute-a-sql-server-native-client-user-defined-function-and-process-return-code-ole-db"></a>Eseguire una SQL Server Native Client funzione definita dall'utente ed elaborare codice restituito (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   In questo esempio viene eseguita una funzione definita dall'utente e viene stampato il codice restituito. Questo esempio non è supportato in IA64.  
@@ -365,7 +366,7 @@ drop function fn_RectangleArea
 go  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Procedure relative all'elaborazione dei risultati &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

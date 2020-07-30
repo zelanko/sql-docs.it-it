@@ -1,5 +1,5 @@
 ---
-title: Recupero di una sola riga con IRow | Microsoft Docs
+title: Recuperare una singola riga con IRow (provider OLE DB Native Client) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,14 @@ ms.assetid: 07c803ca-299a-42c5-ba02-360b9631d15f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d055ddc7a5f9d7b55827e30cf42fc68a7af3ff9e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 453bc37d3cbe763cfa379339de01d523fa63307b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998488"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247614"
 ---
-# <a name="fetching-a-single-row-with-irow"></a>Recupero di una sola riga utilizzando IRow
+# <a name="fetching-a-single-row-with-irow-native-client-ole-db-provider"></a>Recupero di una singola riga con IRow (provider OLE DB Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   L'implementazione dell'interfaccia **IRow** nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB di Native Client è stata semplificata per migliorare le prestazioni. **IRow** consente l'accesso diretto alle colonne di un singolo oggetto riga. Se si prevede che il risultato dell'esecuzione di un comando produca esattamente una riga, **IRow** recupererà le colonne della riga in questione. Se il set di risultati include più righe, **IRow** esporrà solo la prima.  

@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e413913d3064b4302d4673098b82d220acc23aa1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ef825848ee0e2c43a1a70441009a590c41ce5526
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764562"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242841"
 ---
 # <a name="ado-properties"></a>Proprietà ADO
 
-|||  
+|Proprietà|Descrizione|  
 |-|-|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|Indica in quale pagina si trova il record corrente.|  
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|Indica la posizione ordinale del record corrente di un oggetto **Recordset** .|  
 |[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)|Indica l'oggetto **comando** che ha creato l'oggetto **Recordset** associato.|  
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|Indica a quale oggetto **connessione** appartiene attualmente il **comando**, il **Recordset**o l'oggetto **record** specificato.|  
 |[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)|Indica la lunghezza effettiva del valore di un campo.|  
-|[Attributi](../../../ado/reference/ado-api/attributes-property-ado.md)|Indica una o più caratteristiche di un oggetto.|  
+|[Attributes (Attributi)](../../../ado/reference/ado-api/attributes-property-ado.md)|Indica una o più caratteristiche di un oggetto.|  
 |[BOF e EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|**BOF** indica che la posizione del record corrente precede il primo record in un oggetto recordset.<br /><br /> **EOF** indica che la posizione corrente del record è successiva all'ultimo record in un oggetto recordset.|  
 |[Segnalibro](../../../ado/reference/ado-api/bookmark-property-ado.md)|Indica un segnalibro che identifica in modo univoco il record corrente in un oggetto **Recordset** o imposta il record corrente in un oggetto **Recordset** sul record identificato da un segnalibro valido.|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|Indica il numero di record di un oggetto **Recordset** memorizzati nella cache localmente in memoria.|  
@@ -55,9 +55,9 @@ ms.locfileid: "82764562"
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|Indica se la posizione corrente è alla fine del flusso.|  
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|Indica un filtro per i dati in un **Recordset**.|  
 |[HelpContext e fileguida](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|Indica il file della guida e l'argomento associato a un oggetto **Error** .<br /><br /> **HelpContextID** restituisce un ID di contesto, come valore **Long** , per un argomento in un file della guida.<br /><br /> FilePath restituisce un valore **stringa** **che restituisce un** percorso completamente risolto di un file della guida.|  
-|[Indice](../../../ado/reference/ado-api/index-property.md)|Indica il nome dell'indice attualmente attivo per un oggetto **Recordset** .|  
+|[Index](../../../ado/reference/ado-api/index-property.md)|Indica il nome dell'indice attualmente attivo per un oggetto **Recordset** .|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|Indica il livello di isolamento per un oggetto **Connection** .|  
-|[Item](../../../ado/reference/ado-api/item-property-ado.md)|Indica un membro specifico di una raccolta, in base al nome o al numero ordinale.|  
+|[Elemento](../../../ado/reference/ado-api/item-property-ado.md)|Indica un membro specifico di una raccolta, in base al nome o al numero ordinale.|  
 |[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)|Indica il carattere binario da utilizzare come separatore di riga negli oggetti del **flusso** di testo.|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Indica il tipo di blocchi inseriti nei record durante la modifica.|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|Indica i record di cui deve essere eseguito il marshalling sul server.|  
@@ -65,14 +65,14 @@ ms.locfileid: "82764562"
 |[Modalità](../../../ado/reference/ado-api/mode-property-ado.md)|Indica le autorizzazioni disponibili per la modifica dei dati in una **connessione**, un **record**o un oggetto **flusso** .|  
 |[Nome](../../../ado/reference/ado-api/name-property-ado.md)|Indica il nome di un oggetto.|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|Indica il codice di errore specifico del provider per un determinato oggetto **Error** .|  
-|[Numero](../../../ado/reference/ado-api/number-property-ado.md)|Indica il numero che identifica in modo univoco un oggetto **Error** .|  
+|[Number](../../../ado/reference/ado-api/number-property-ado.md)|Indica il numero che identifica in modo univoco un oggetto **Error** .|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|Indica la scala dei valori numerici in un **parametro** o in un oggetto **campo** .|  
 |[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|Indica il valore di un **campo** esistente nel record prima che siano state apportate modifiche.|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Indica il numero di pagine di dati contenute nell'oggetto **Recordset** .|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|Indica il numero di record che rappresentano una pagina nel **Recordset**.|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Imposta il contenitore di un oggetto OLE DB **riga** su un oggetto **ADORecordConstruction** , in modo che l'elemento padre della riga venga trasformato in un oggetto **record** ADO.|  
 |[ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)|Indica una stringa URL assoluta che punta al **record** padre dell'oggetto **record** corrente.|  
-|[Posizione](../../../ado/reference/ado-api/position-property-ado.md)|Indica la posizione corrente all'interno di un oggetto **flusso** .|  
+|[Position](../../../ado/reference/ado-api/position-property-ado.md)|Indica la posizione corrente all'interno di un oggetto **flusso** .|  
 |[Precisione](../../../ado/reference/ado-api/precision-property-ado.md)|Indica il grado di precisione per i valori numerici in un oggetto **Parameter** o per gli oggetti **campo** numerico.|  
 |[Prepared](../../../ado/reference/ado-api/prepared-property-ado.md)|Indica se salvare una versione compilata di un comando prima dell'esecuzione.|  
 |[Provider](../../../ado/reference/ado-api/provider-property-ado.md)|Indica il nome del provider per un oggetto **Connection** .|  
@@ -90,13 +90,13 @@ ms.locfileid: "82764562"
 |[Stato (recordset ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Indica lo stato del record corrente relativo agli aggiornamenti batch o ad altre operazioni bulk.|  
 |[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)|Indica, in un oggetto **Recordset** gerarchico, se il riferimento ai record figlio sottostanti (ovvero il *capitolo*) cambia quando la posizione della riga padre cambia.|  
 |[Proprietà Stream](../../../ado/reference/ado-api/stream-property.md)|Ottiene o imposta un oggetto OLE DB **flusso** da/in un oggetto **ADOStreamConstruction** .|  
-|[Type](../../../ado/reference/ado-api/type-property-ado.md)|Indica il tipo operativo o il tipo di dati di un **parametro**, un **campo**o un oggetto **proprietà** .|  
+|[Tipo](../../../ado/reference/ado-api/type-property-ado.md)|Indica il tipo operativo o il tipo di dati di un **parametro**, un **campo**o un oggetto **proprietà** .|  
 |[Tipo (flusso ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)|Indica il tipo di dati contenuti nel **flusso** (binario o testo).|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|Indica il valore corrente nel database per un oggetto **campo** .|  
 |[Valore](../../../ado/reference/ado-api/value-property-ado.md)|Indica il valore assegnato a un **campo**, un **parametro**o un oggetto **proprietà** .|  
-|[Versione](../../../ado/reference/ado-api/version-property-ado.md)|Indica il numero di versione ADO.|  
+|[Version](../../../ado/reference/ado-api/version-property-ado.md)|Indica il numero di versione ADO.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Riferimento all'API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Raccolte ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Proprietà dinamiche ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

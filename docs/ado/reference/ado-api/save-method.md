@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4134e34cc494185ec384bd9900ba578e9fa3034d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: db4b5d86c59e35ac3a7aa66684115668d19ead42
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755865"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243202"
 ---
 # <a name="save-method"></a>Metodo Save
 Salva il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in un oggetto file o [flusso](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -35,10 +35,10 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Parametri  
  *Destinazione*  
- Facoltativa. **Variant** che rappresenta il nome percorso completo del file in cui deve essere salvato il **Recordset** o un riferimento a un oggetto **flusso** .  
+ facoltativo. **Variant** che rappresenta il nome percorso completo del file in cui deve essere salvato il **Recordset** o un riferimento a un oggetto **flusso** .  
   
  *PersistFormat*  
- Facoltativa. Valore [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) che specifica il formato in cui deve essere salvato il **Recordset** (XML o ADTG). Il valore predefinito è **adPersistADTG**.  
+ facoltativo. Valore [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) che specifica il formato in cui deve essere salvato il **Recordset** (XML o ADTG). Il valore predefinito è **adPersistADTG**.  
   
 ## <a name="remarks"></a>Osservazioni  
  Il metodo [Save](../../../ado/reference/ado-api/save-method.md) può essere richiamato solo su un **Recordset**aperto. Utilizzare il metodo [Open (recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) per ripristinare successivamente il **Recordset** dalla *destinazione*.  
@@ -88,12 +88,17 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
  Un **Recordset** salvato in formato XML viene salvato utilizzando il formato UTF-8. Quando tale file viene caricato in un flusso ADO, l'oggetto flusso non tenterà di aprire un **Recordset** dal flusso, a meno che la proprietà charset del flusso non sia impostata sul valore appropriato per il formato UTF-8.  
   
 ## <a name="applies-to"></a>Si applica a  
-  
-|||  
-|-|-|  
-|[Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
-  
-## <a name="see-also"></a>Vedere anche  
+
+:::row:::
+    :::column:::
+        [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
+## <a name="see-also"></a>Vedi anche  
  [Esempio di metodi Save e Open (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
  [Esempio di metodi Save e Open (VC + +)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
  [Metodo Open (recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   

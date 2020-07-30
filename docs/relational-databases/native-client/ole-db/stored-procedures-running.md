@@ -15,13 +15,14 @@ ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c86490f0a33ba1582ebebb3a9c1da78553098ff
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ca0211f6cab19b09ac0be43ba32768511f0f6a4f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012015"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247140"
 ---
-# <a name="stored-procedures---running"></a>Stored procedure - Esecuzione
+# <a name="stored-procedures---running-in-sql-server-native-client"></a>Stored procedure-esecuzione in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Durante l'esecuzione di istruzioni, la chiamata a una stored procedure nell'origine dati, in alternativa all'esecuzione o alla preparazione diretta di un'istruzione nell'applicazione client, può offrire i vantaggi seguenti:  
@@ -52,7 +53,7 @@ ms.locfileid: "86012015"
   
  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client imposta la proprietà DBPROP_OUTPUTPARAMETERAVAILABILITY su DBPROPVAL_OA_ATROWRELEASE per indicare che i codici restituiti e i parametri di output non vengono restituiti finché il set di risultati non viene elaborato o rilasciato.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Stored procedure](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

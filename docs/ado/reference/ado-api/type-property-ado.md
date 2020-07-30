@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46718126ede409caa749b3a49dfaaffe118afc77
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7bfa47120814058adbc5c2e5f3650a79b2202afb
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761829"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243182"
 ---
 # <a name="type-property-ado"></a>Proprietà Type (ADO)
 Indica il tipo operativo o il tipo di dati di un [parametro](../../../ado/reference/ado-api/parameter-object.md), un [campo](../../../ado/reference/ado-api/field-object.md)o un oggetto [proprietà](../../../ado/reference/ado-api/property-object-ado.md) .  
@@ -35,12 +35,20 @@ Indica il tipo operativo o il tipo di dati di un [parametro](../../../ado/refere
  Per tutti gli altri oggetti, la proprietà **Type** è di sola lettura.  
   
 ## <a name="applies-to"></a>Si applica a  
-  
-||||  
-|-|-|-|  
-|[Oggetto Field](../../../ado/reference/ado-api/field-object.md)|[Oggetto Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Oggetto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-  
-## <a name="see-also"></a>Vedere anche  
+
+:::row:::
+    :::column:::
+        [Oggetto Field](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Oggetto Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+    :::column:::
+        [Oggetto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
+## <a name="see-also"></a>Vedi anche  
  [Esempio di proprietà Type (Field) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
  [Esempio di proprietà Type (Property) (VC + +)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
  [Proprietà RecordType (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   

@@ -13,13 +13,14 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d67e41f3dfaed9ef59e586368d8b80dda2936669
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e851332ad3f8485e7c716101942b1cdc0c6838bb
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010503"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243884"
 ---
-# <a name="large-clr-user-defined-types-ole-db"></a>Tipi CLR definiti dall'utente di grandi dimensioni (OLE DB)
+# <a name="large-clr-user-defined-types-in-sql-server-native-client-ole-db"></a>Tipi CLR definiti dall'utente di grandi dimensioni in SQL Server Native Client (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   In questo argomento vengono illustrate le modifiche apportate a OLE DB in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client per supportare i tipi CLR (Common Language Runtime) definiti dall'utente di grandi dimensioni.  
@@ -31,7 +32,7 @@ ms.locfileid: "86010503"
   
  Nella tabella seguente viene illustrato il mapping dei tipi di dati nei parametri e nei set di righe:  
   
-|Tipo di dati di SQL Server|Tipo di dati OLE DB|Layout in memoria|valore|  
+|Tipo di dati di SQL Server|Tipo di dati OLE DB|Layout in memoria|Valore|  
 |--------------------------|----------------------|-------------------|-----------|  
 |tipo CLR definito dall'utente|DBTYPE_UDT|BYTE[](matrice di byte\)|132 (oledb.h)|  
   
@@ -171,7 +172,7 @@ ms.locfileid: "86010503"
   
  Quando **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) è impostato su "80", i tipi definiti dall'utente di grandi dimensioni vengono visualizzati ai client nello stesso modo in cui vengono visualizzati ai client legacy.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tipi CLR definiti dall'utente di grandi dimensioni](~/relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

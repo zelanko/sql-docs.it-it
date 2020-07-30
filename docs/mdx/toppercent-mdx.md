@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a8c92a4b6a76cb9d15048d6f058038363970cb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dcb01ae9771f748ad62faba37cea103f1c7acc8c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036589"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362651"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -67,7 +67,7 @@ WHERE([Product].[Product Categories].[Bikes])
   
  Tramite l'espressione sopra indicata vengono prodotti i risultati seguenti:  
   
-||Reseller Sales Amount|  
+|Città|Reseller Sales Amount|  
 |-|---------------------------|  
 |Toronto|$3.508.904,84|  
 |Londra|$1.521.530,09|  
@@ -102,7 +102,7 @@ FROM [Adventure Works]
   
  La query precedente restituisce i risultati seguenti: le righe della sezione centrale sono state rimosse per leggibilità.  
   
-||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
+|Touring Bikes|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157.444,56|$163.112,57|($5.668,01)|  
 |Touring-2000 blu, 46|$321.027,03|$333.021,50|($11.994,47)|  
@@ -122,11 +122,11 @@ FROM [Adventure Works]
   
  La query chiede il cento percento (100%), ossia tutte le righe devono essere restituite. Tuttavia, poiché nel *Numeric_Expression* sono presenti valori negativi, viene restituita una sola riga.  
   
-||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
+|Touring Bikes|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157.444,56|$163.112,57|($5.668,01)|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

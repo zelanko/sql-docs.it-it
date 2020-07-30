@@ -1,5 +1,6 @@
 ---
 title: srv_describe (API Stored procedure estesa) | Microsoft Docs
+description: Informazioni su come srv_describe nell'API stored procedure estesa definisce il nome della colonna e i tipi di dati di origine e di destinazione per una colonna specifica di una riga.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6c181ad19d3027c5262b988a8c32fdcff52e901
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e2dc77e2ff3314664b28647980b62dabdde450fc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85678591"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248469"
 ---
 # <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (API Stored procedure estesa)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -113,7 +114,7 @@ srcdata
 > [!IMPORTANT]  
 >  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [srv_sendrow &#40;API stored procedure estesa&#41;](../../relational-databases/extended-stored-procedures-reference/srv-sendrow-extended-stored-procedure-api.md)   
  [srv_setutype &#40;API stored procedure estesa&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
  [srv_setcoldata &#40;API Stored procedure estesa&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setcoldata-extended-stored-procedure-api.md)  
