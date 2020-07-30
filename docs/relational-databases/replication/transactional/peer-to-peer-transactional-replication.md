@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d85b1f3460dc55f7d6cd24420f2d86bb0f9623c2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 656b05414327e35b5aff1a982a0313835ded20a4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901243"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394654"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Peer-to-peer - Replica transazionale
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "85901243"
 ### <a name="maintenance-considerations"></a>Considerazioni relative alla manutenzione  
  Per alcune operazioni è necessario mettere il sistema in stato di inattività, ovvero arrestare le attività sulle tabelle pubblicate in tutti i nodi e verificare che ogni nodo abbia ricevuto tutte le modifiche dagli altri nodi:  
   
-||Solo peer di SQL Server 2005 o una combinazione di peer di SQL Server 2005 con peer di SQL Server 2008 e versioni successive|Solo peer di SQL Server 2005 o una combinazione di peer di SQL Server 2005 con peer di SQL Server 2008 e versioni successive|Peer di SQL2008 e versioni successive|Peer di SQL2008 e versioni successive|  
+|Azione|Solo peer di SQL Server 2005 o una combinazione di peer di SQL Server 2005 con peer di SQL Server 2008 e versioni successive|Solo peer di SQL Server 2005 o una combinazione di peer di SQL Server 2005 con peer di SQL Server 2008 e versioni successive|Peer di SQL2008 e versioni successive|Peer di SQL2008 e versioni successive|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
 |Aggiunta di un nodo alla topologia|Due nodi nella topologia completa: disattivazione non obbligatoria. Usare `sync_type = 'initialize with backup'`.|Più di due nodi: disattivazione obbligatoria.|`sync_type = 'replication support only'`: disattivazione obbligatoria.|`sync_type = 'initialize with backup'` e `'initialize from lsn'`: disattivazione non obbligatoria.|  
   

@@ -13,20 +13,20 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7237e7f7b49916e09f4a8c5cab0d7d49486cb971
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb63045fa1a34898e9c195e7a5c75bdf6b34b15a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73145656"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394347"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys. dm_pdw_nodes_exec_query_profiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Monitora lo stato di avanzamento della query data warehouse in tempo reale mentre la query è in esecuzione.   
   
 ## <a name="table-returned"></a>Tabella restituita  
-I contatori restituiti sono specifici per ogni operatore per ogni thread. I risultati sono dinamici e non corrispondono ai risultati delle opzioni esistenti, ad esempio `SET STATISTICS XML ON` la creazione di output solo al termine della query.  
+I contatori restituiti sono specifici per ogni operatore per ogni thread. I risultati sono dinamici e non corrispondono ai risultati delle opzioni esistenti, ad esempio la `SET STATISTICS XML ON` creazione di output solo al termine della query.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -66,7 +66,7 @@ I contatori restituiti sono specifici per ogni operatore per ogni thread. I risu
 |segment_read_count|**int**|Numero di letture anticipate di segmenti.|  
 |segment_skip_count|**int**|Numero di segmenti ignorati finora.| 
 |actual_read_row_count|**bigint**|Numero di righe lette da un operatore prima dell'applicazione del predicato residuo.| 
-|estimated_read_row_count|**bigint**|**Si applica a:** A partire [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] da SP1. <br/>Numero di righe stimate per la lettura da parte di un operatore prima dell'applicazione del predicato residuo.|  
+|estimated_read_row_count|**bigint**|**Si applica a:** A partire da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Numero di righe stimate per la lettura da parte di un operatore prima dell'applicazione del predicato residuo.|  
   
 ## <a name="remarks"></a>Osservazioni  
 Si applicano le stesse osservazioni in [sys. dm_exec_query_profiles](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql?view=sql-server-ver15) .  

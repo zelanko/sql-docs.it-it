@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 17a287b38eb1dd1c1d9e3cee6943f7c069a39c61
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36cc006382bab28a93beed1ce8c6e48896719674
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944624"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395176"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Informazioni di riferimento sull'interfaccia utente (MySQLToSQL)
 Questa sezione include gli argomenti della Guida per SQL Server Migration Assistant (SSMA) per MySQL.  
@@ -22,13 +22,12 @@ Questa sezione include gli argomenti della Guida per SQL Server Migration Assist
 ## <a name="in-this-section"></a>Contenuto della sezione  
 Nella tabella seguente sono elencate le finestre di dialogo SSMA:  
   
-|||  
+|Argomento|Descrizione|  
 |-|-|  
-|**Argomento**|**Descrizione**|  
 |[Selezione avanzata oggetti &#40;MySQLToSQL&#41;](../../ssma/mysql/advanced-object-selection-mysqltosql.md)|Utilizzare la finestra di dialogo **Seleziona oggetto avanzato** per individuare gli oggetti di database utilizzando i criteri di filtro, quindi selezionare o deselezionare tali oggetti.|  
 |[Report di valutazione &#40;MySQLToSQL&#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|Usare il report per visualizzare i risultati della conversione degli oggetti MySQL nella sintassi di Transact-SQL e per stimare il tempo e la complessità di una migrazione a SQL Server.|  
 |[Connettersi a MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)|Usare la finestra di dialogo **Connetti a MySQL** per connettersi al database MySQL di cui si vuole eseguire la migrazione.|  
-|[Connettersi al SQL Server](https://msdn.microsoft.com/d73abd3a-80df-4293-b973-1723069db049)|Utilizzare la finestra di dialogo **Connetti a SQL Server** per connettersi all'istanza di SQL Server in cui si desidera eseguire la migrazione.|  
+|[Eseguire la connessione a SQL Server](https://msdn.microsoft.com/d73abd3a-80df-4293-b973-1723069db049)|Utilizzare la finestra di dialogo **Connetti a SQL Server** per connettersi all'istanza di SQL Server in cui si desidera eseguire la migrazione.|  
 |[Connettersi al database SQL di Azure &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|Utilizzare la finestra di dialogo **Connetti a SQL Azure** per connettersi all'istanza di SQL Azure in cui si desidera eseguire la migrazione.|  
 |[Impostazioni di conversione (MySQL)](https://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|Utilizzare la scheda **Impostazioni** per impostare le impostazioni a livello di nodo.|  
 |[Report di migrazione dati &#40;MySQLToSQL&#41;](../../ssma/mysql/data-migration-report-mysqltosql.md)|Visualizza i risultati della migrazione dei dati da MySQL a SQL Server o SQL Azure.|  
@@ -48,7 +47,7 @@ Nella tabella seguente sono elencate le finestre di dialogo SSMA:
 |[Aggiorna da database &#40;MySQLToSQL&#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)|Usare la finestra di dialogo **Aggiorna da database** per selezionare gli oggetti da aggiornare dal database MySQL.|  
 |[Salva metadati &#40;MySQLToSQL&#41;](../../ssma/mysql/save-metadata-mysqltosql.md)|La finestra di dialogo **Salva metadati** viene visualizzata quando si salva un progetto privo di metadati.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Introduzione con SSMA per MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
 [Migrazione di database MySQL a SQL Server-database SQL di Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

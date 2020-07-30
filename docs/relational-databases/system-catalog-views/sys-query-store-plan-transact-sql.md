@@ -21,15 +21,15 @@ ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cc78decc0c911376b61cc429ba538be11cbaded6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 25272b586e84b498cfaa9da17a772692dad6f48a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831437"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393991"
 ---
 # <a name="sysquery_store_plan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Contiene informazioni su ogni piano di esecuzione associato a una query.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "82831437"
 |**is_forced_plan**|**bit**|Il piano è contrassegnato come forzato quando l'utente esegue stored procedure **sys. sp_query_store_force_plan**. Il meccanismo di forzatura *non garantisce* che venga utilizzato esattamente questo piano per la query a cui fa riferimento **query_id**. L'utilizzo forzato del piano determina la compilazione di una query e in genere produce esattamente lo stesso piano o simile al piano a cui fa riferimento **plan_id**. Se l'utilizzo forzato del piano ha esito negativo, **force_failure_count** viene incrementato e **last_force_failure_reason** viene popolato con il motivo dell'errore. <br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
 |**is_natively_compiled**|**bit**|Il piano include procedure con ottimizzazione per la memoria compilate in modo nativo. (0 = FALSE, 1 = TRUE). <br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
 |**force_failure_count**|**bigint**|Numero di volte in cui il piano forzato non è riuscito. Può essere incrementato solo quando la query viene ricompilata (*non a ogni esecuzione*). Viene reimpostato su 0 ogni volta che **is_plan_forced** viene modificato da **false** a **true**. <br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
-|**last_force_failure_reason**|**int**|Motivo per cui la forzatura del piano non è riuscita.<br /><br /> 0: nessun errore. in caso contrario, numero di errore dell'errore che ha causato l'esito negativo della forzatura<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<> altro valore: GENERAL_FAILURE <br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
+|**last_force_failure_reason**|**int**|Motivo per cui la forzatura del piano non è riuscita.<br /><br /> 0: nessun errore. in caso contrario, numero di errore dell'errore che ha causato l'esito negativo della forzatura<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<other value>: GENERAL_FAILURE <br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
 |**last_force_failure_reason_desc**|**nvarchar(128)**|Descrizione testuale del last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD: la query tenta di modificare i dati mentre la tabella di destinazione include un indice compilato online<br /><br /> INVALID_STARJOIN: il piano contiene una specifica StarJoin non valida<br /><br /> TIME_OUT: l'ottimizzatore ha superato il numero di operazioni consentite durante la ricerca del piano specificato dal piano forzato<br /><br /> NO_DB: un database specificato nel piano non esiste<br /><br /> HINT_CONFLICT: non è possibile compilare la query perché il piano è in conflitto con un hint per la query<br /><br /> DQ_NO_FORCING_SUPPORTED: non è possibile eseguire la query perché il piano è in conflitto con l'utilizzo di query distribuite o di operazioni full-text.<br /><br /> NO_PLAN: query processor non è in grado di generare il piano di query perché non è stato possibile verificare che il piano forzato sia valido per la query<br /><br /> NO_INDEX: l'indice specificato nel piano non esiste più<br /><br /> VIEW_COMPILE_FAILED: non è stato possibile forzare il piano di query a causa di un problema in una vista indicizzata a cui si fa riferimento nel piano<br /><br /> GENERAL_FAILURE: errore forzato generale (non trattato con i motivi precedenti) <br/>**Nota:** Azure SQL Data Warehouse restituirà sempre *None*.|  
 |**count_compiles**|**bigint**|Pianificare le statistiche di compilazione.|  
 |**initial_compile_start_time**|**datetimeoffset**|Pianificare le statistiche di compilazione.|  
@@ -85,7 +85,7 @@ Infine, problemi del piano stesso:
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione **View database state** .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sys. database_query_store_options &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [sys. query_context_settings &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [sys. query_store_query &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
@@ -94,7 +94,7 @@ Infine, problemi del piano stesso:
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys. query_store_runtime_stats_interval &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Stored procedure di Query Store &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

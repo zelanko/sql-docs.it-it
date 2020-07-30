@@ -13,19 +13,19 @@ ms.assetid: 7f4136ac-3784-4a41-a98c-8a02308e4883
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 304e67e57eaa1ef980885919b1467f947d480539
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3730326d49b9139e7a83b59270930982f1c97bf9
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85721983"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362811"
 ---
 # <a name="mssql_eng002627"></a>MSSQL_ENG002627
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## <a name="message-details"></a>Dettagli messaggio  
   
-|||  
+|Attributo|valore|  
 |-|-|  
 |Nome prodotto|SQL Server|  
 |ID evento|2627|  

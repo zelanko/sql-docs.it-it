@@ -11,31 +11,30 @@ helpviewer_keywords:
 ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: a5b94ef545285cd7dfa4597820da00552b9f3930
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1741b8e638142adc7fb33398e329197bdc97220d
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103015"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395376"
 ---
 # <a name="generating-reports-mysqltosql"></a>Generazione di report (MySQLToSQL)
 I report di determinate attività eseguite usando i comandi vengono generati nella console di SSMA a livello di albero degli oggetti.  
   
 Utilizzare la procedura seguente per generare report:  
   
-1.  Specificare il parametro **Write-Summary-Report-to** . Il report correlato viene archiviato come nome file (se specificato) o nella cartella specificata. Il nome del file è predefinito dal sistema come indicato nella tabella seguente, ** &lt;dove n&gt; ** è il numero di file univoco che incrementa con una cifra a ogni esecuzione dello stesso comando.  
+1.  Specificare il parametro **Write-Summary-Report-to** . Il report correlato viene archiviato come nome file (se specificato) o nella cartella specificata. Il nome del file è predefinito dal sistema come indicato nella tabella seguente, dove ** &lt; n &gt; ** è il numero di file univoco che incrementa con una cifra a ogni esecuzione dello stesso comando.  
   
     I report Vis-à-Vis sono i seguenti:  
   
-    ||||  
+    |SL. No.|Comando|Titolo del report|  
     |-|-|-|  
-    |**SL. No.**|**Comando**|**Titolo del report**|  
-    |1|generate-assessment-report|AssessmentReport&lt;n&gt;. XML|  
-    |2|Convert-schema|SchemaConversionReport&lt;n&gt;. XML|  
-    |3|migrate-dati|DataMigrationReport&lt;n&gt;. XML|  
-    |4|Convert-SQL-statement|ConvertSQLReport&lt;n&gt;. XML|  
-    |5|sincronizzazione-destinazione|TargetSynchronizationReport&lt;n&gt;. XML|  
-    |6|aggiornamento da database|SourceDBRefreshReport&lt;n&gt;. XML|  
+    |1|generate-assessment-report|AssessmentReport &lt; n &gt; . XML|  
+    |2|Convert-schema|SchemaConversionReport &lt; n &gt; . XML|  
+    |3|migrate-dati|DataMigrationReport &lt; n &gt; . XML|  
+    |4|Convert-SQL-statement|ConvertSQLReport &lt; n &gt; . XML|  
+    |5|sincronizzazione-destinazione|TargetSynchronizationReport &lt; n &gt; . XML|  
+    |6|aggiornamento da database|SourceDBRefreshReport &lt; n &gt; . XML|  
   
     > [!IMPORTANT]  
     > Un report di output è diverso dal rapporto di valutazione. Il primo è un report sulle prestazioni di un comando eseguito mentre, quest'ultimo è un report XML per l'utilizzo a livello di codice.  
@@ -44,9 +43,8 @@ Utilizzare la procedura seguente per generare report:
   
 2.  Indica il livello di dettaglio desiderato nel report di output usando le impostazioni di dettaglio del report:  
   
-    ||||  
+    |SL. No.|Comando e parametro|Descrizione output|  
     |-|-|-|  
-    |**SL. No.**|**Comando e parametro**|**Descrizione output**|  
     |1|Verbose = "false"|Genera un report riepilogato dell'attività.|  
     |2|Verbose = "true"|Genera un report di stato riepilogativo e dettagliato per ogni attività.|  
   
@@ -55,9 +53,8 @@ Utilizzare la procedura seguente per generare report:
   
 3.  Indica il livello di dettaglio desiderato nei report degli errori usando le impostazioni di segnalazione errori:  
   
-    ||||  
+    |SL. No.|Comando e parametro|Descrizione output|  
     |-|-|-|  
-    |**SL. No.**|**Comando e parametro**|**Descrizione output**|  
     |1|report-errori = "false"|Nessun dettaglio sui messaggi di errore, di avviso/informazione.|  
     |2|report-errori = "true"|Messaggi dettagliati di errore, avviso o informazioni.|  
   
@@ -85,7 +82,7 @@ Utilizzare la procedura seguente per generare report:
 ```  
   
 ### <a name="synchronize-target"></a>sincronizzazione-destinazione:  
-Il comando **Synchronize-target** dispone del parametro **Report-Errors-to** , che specifica il percorso del report degli errori per l'operazione di sincronizzazione. Quindi, un file in base **al&lt;nome&gt;TargetSynchronizationReport n. Il codice XML** viene creato nel percorso specificato, ** &lt;dove&gt; n** è il numero di file univoco che incrementa con una cifra a ogni esecuzione dello stesso comando.  
+Il comando **Synchronize-target** dispone del parametro **Report-Errors-to** , che specifica il percorso del report degli errori per l'operazione di sincronizzazione. Quindi, un file in base al nome **TargetSynchronizationReport &lt; n &gt; . Il codice XML** viene creato nel percorso specificato, dove ** &lt; n &gt; ** è il numero di file univoco che incrementa con una cifra a ogni esecuzione dello stesso comando.  
   
 **Nota:** Se viene specificato il percorso della cartella, il parametro ' Report-Errors-to ' diventa un attributo facoltativo per il comando ' Synchronize-target '.  
   
@@ -113,7 +110,7 @@ Il comando **Synchronize-target** dispone del parametro **Report-Errors-to** , c
 -   script di errore  
   
 ### <a name="refresh-from-database"></a>aggiornamento da database:  
-Il comando **Refresh-from-database** presenta un parametro **Report-Errors-to** , che specifica la posizione della segnalazione errori per l'operazione di aggiornamento. Quindi, un file in base **al&lt;nome&gt;SourceDBRefreshReport n. Il codice XML** viene creato nel percorso specificato, ** &lt;dove&gt; n** è il numero di file univoco che incrementa con una cifra a ogni esecuzione dello stesso comando.  
+Il comando **Refresh-from-database** presenta un parametro **Report-Errors-to** , che specifica la posizione della segnalazione errori per l'operazione di aggiornamento. Quindi, un file in base al nome **SourceDBRefreshReport &lt; n &gt; . Il codice XML** viene creato nel percorso specificato, dove ** &lt; n &gt; ** è il numero di file univoco che incrementa con una cifra a ogni esecuzione dello stesso comando.  
   
 **Nota:** Se viene specificato il percorso della cartella, il parametro ' Report-Errors-to ' diventa un attributo facoltativo per il comando ' Synchronize-target '.  
   
@@ -142,6 +139,6 @@ Il comando **Refresh-from-database** presenta un parametro **Report-Errors-to** 
   
 -   script di errore  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Esecuzione della console SSMA (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

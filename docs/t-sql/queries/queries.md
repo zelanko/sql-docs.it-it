@@ -13,16 +13,16 @@ ms.assetid: 5ff02a32-e8d3-479c-ae8b-07581e41f5f8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3f0f37da5def8b9154d655751f00eb7f63d63af
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 008ea4f32b1cb159c67f77e449f1828397b628e8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248689"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394739"
 ---
 # <a name="queries"></a>Query
 
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Data Manipulation Language (DML) è un vocabolario usato per recuperare e utilizzare i dati in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e nel database SQL. Questo linguaggio è per la maggior parte utilizzabile anche in SQL Data Warehouse e PDW (vedere ogni singola istruzione per i dettagli). Utilizzare queste istruzioni per operazioni di aggiunta, modifica, esecuzione di query o rimozione dei dati di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

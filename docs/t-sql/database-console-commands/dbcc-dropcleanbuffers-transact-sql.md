@@ -25,16 +25,16 @@ ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57c29581a8a2c7d5be9978dce6b4b8b3f9b6aae9
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 68e9eca249d976398618a63e25b98c02dcf7f806
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485545"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394306"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
 Rimuove tutti i buffer vuoti dal pool di buffer e gli oggetti columnstore dal pool di oggetti columnstore.
   
