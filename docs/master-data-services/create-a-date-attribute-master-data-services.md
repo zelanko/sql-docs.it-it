@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dbf5182a41c9b5c52a73e9d005c768b48cc1fae4
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: cb52caebef0a9c042e3f7a077aa098cdc42b7ff4
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811833"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363156"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>Creare un attributo di data (Master Data Services)
 
@@ -75,7 +75,7 @@ ms.locfileid: "85811833"
 ## <a name="to-display-the-time-portion-of-a-datetime-value"></a>Per visualizzare la porzione dell'ora di un valore datetime  
  Per fare in modo che nell'interfaccia utente venga visualizzata la porzione dell'ora di un valore datetime, è necessario selezionare una maschera di input appropriata per l'attributo. Questa operazione non viene effettuata da nessuna delle maschere predefinite per gli attributi Datetime, tuttavia è possibile aggiungerne una nuova tramite cui sarà possibile visualizzare l'ora. A tale scopo, aggiungere una riga nella tabella mdm.tblList del database MDS in cui sono archiviate le maschere predefinite. Nella riga dovrebbero essere presenti i valori seguenti:  
   
-|||  
+|Colonna|Valore|  
 |-|-|  
 |ListCode|lstInputMask|  
 |ListName|Maschera di input|  

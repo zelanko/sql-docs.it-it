@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e283bbc13f0d0dda055b047b027f7b9816502df5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 969296e377d398615ad95cf1337c3f9f97d5eb5c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300681"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363401"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>Livello di conformità SQL (driver ODBC per Oracle)
 > [!IMPORTANT]  
@@ -32,42 +32,94 @@ ms.locfileid: "81300681"
 -   Join a sinistra e right outer  
   
 -   Funzioni numeriche:  
-  
-    |||||  
-    |-|-|-|-|  
-    |Abs|File di log|round|tan|  
-    |Ceiling|Log10|second|truncate|  
-    |Cos|Mod|sign||  
-    |Exp|Pi|sin||  
-    |Piano|Alimentazione|sqrt||  
-  
+
+    :::row:::
+        :::column:::
+            Abs  
+            Ceiling  
+            Cos  
+            Exp  
+            Piano  
+        :::column-end:::
+        :::column:::
+            File di log  
+            Log10  
+            Mod  
+            Pi  
+            Elettricità  
+        :::column-end:::
+        :::column:::
+            round  
+            second  
+            sign  
+            sin  
+            sqrt  
+        :::column-end:::
+        :::column:::
+            tan  
+            truncate  
+        :::column-end:::
+    :::row-end:::
+    
 -   Funzioni di data:  
-  
-    |||||  
-    |-|-|-|-|  
-    |CURDATE|DayOfWeek|MonthName|second|  
-    |Curtime|Dayofyear|minute|week|  
-    |NomeGiorno|Ora|now|year|  
-    |DayOfMonth|Month|quarter||  
-  
+
+    :::row:::
+        :::column:::
+            CURDATE  
+            Curtime  
+            NomeGiorno  
+            DayOfMonth  
+        :::column-end:::
+        :::column:::
+            DayOfWeek  
+            Dayofyear  
+            Ora  
+            Month  
+        :::column-end:::
+        :::column:::
+            MonthName  
+            minute  
+            now  
+            quarter  
+        :::column-end:::
+        :::column:::
+            second  
+            week  
+            year  
+        :::column-end:::
+    :::row-end:::
+
 -   Funzioni di stringa:  
-  
-    |||||  
-    |-|-|-|-|  
-    |Ascii|Left|right|UCase|  
-    |Char|Length|RTRIM||  
-    |Concat|Ltrim|SOUNDEX||  
-    |Lcase|Replace|substring||  
-  
+
+    :::row:::
+        :::column:::
+            Ascii  
+            Char  
+            Concat  
+            Lcase  
+        :::column-end:::
+        :::column:::
+            Sinistra  
+            Length  
+            Ltrim  
+            Sostituisci  
+        :::column-end:::
+        :::column:::
+            right  
+            RTRIM  
+            SOUNDEX  
+            substring  
+        :::column-end:::
+        :::column:::
+            UCase  
+        :::column-end:::
+    :::row-end:::
+
 -   Funzione di conversione del tipo:  
-  
-    ||  
-    |-|  
-    |Conversione|  
-  
+
+    Conversione  
+
 -   Funzioni di sistema:  
   
-    ||  
-    |-|  
-    |Ifnull|  
-    |Utente|
+    Ifnull  
+    Utente

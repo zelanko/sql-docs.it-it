@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c34e1ef-4273-4afb-a7d3-f9017ab69c5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a035a114e0ffd5c3fb44b856ea4c3016af240e82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a9b29d21c166751f5a57b7951cb6c028861cb501
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306002"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362951"
 ---
 # <a name="sqlgetstmtattr-cursor-library"></a>SQLGetStmtAttr (libreria di cursori)
 > [!IMPORTANT]  
@@ -26,11 +26,20 @@ ms.locfileid: "81306002"
  In questo argomento viene illustrato l'utilizzo della funzione **SQLGetStmtAttr** nella libreria di cursori. Per informazioni generali su **SQLGetStmtAttr**, vedere [funzione SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
   
  La libreria di cursori supporta gli attributi di istruzione seguenti con **SQLGetStmtAttr**:  
-  
-|||  
-|-|-|  
-|SQL_ATTR_CONCURRENCY|SQL_ATTR_ROW_BIND_OFFSET_PTR|  
-|SQL_ATTR_CURSOR_TYPE|SQL_ATTR_ROW_BIND_TYPE|  
-|SQL_ATTR_FETCH_BOOKMARK_PTR|SQL_ATTR_ROW_NUMBER|  
-|SQL_ATTR_PARAM_BIND_OFFSET_PTR|SQL_ATTR_ROW_ARRAY_SIZE|  
-|SQL_ATTR_PARAM_BIND_TYPE|SQL_ATTR_SIMULATE_CURSOR|
+
+:::row:::
+    :::column:::
+        SQL_ATTR_CONCURRENCY  
+        SQL_ATTR_CURSOR_TYPE  
+        SQL_ATTR_FETCH_BOOKMARK_PTR  
+        SQL_ATTR_PARAM_BIND_OFFSET_PTR  
+        SQL_ATTR_PARAM_BIND_TYPE  
+    :::column-end:::
+    :::column:::
+        SQL_ATTR_ROW_ARRAY_SIZE  
+        SQL_ATTR_ROW_BIND_OFFSET_PTR  
+        SQL_ATTR_ROW_BIND_TYPE  
+        SQL_ATTR_ROW_NUMBER  
+        SQL_ATTR_SIMULATE_CURSOR  
+    :::column-end:::
+:::row-end:::

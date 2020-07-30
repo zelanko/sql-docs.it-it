@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d31d5fe8aea1df4e7937104580efb820ba6f031
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 29f59cf06eac1ce0f6589ad9c7cba8491e8383b5
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306182"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363425"
 ---
 # <a name="level-1-interface-conformance"></a>Conformità di interfaccia di livello 1
 Il livello di conformità dell'interfaccia di livello 1 include la funzionalità di base del livello di conformità dell'interfaccia, oltre a funzionalità aggiuntive, ad esempio le transazioni, che sono in genere disponibili in un DBMS relazionale OLTP. Un driver conforme all'interfaccia di livello 1 consente all'applicazione di eseguire le operazioni seguenti, oltre alle funzionalità del livello di conformità dell'interfaccia principale:  
   
-|||  
+|Numero di funzionalità|Descrizione|  
 |-|-|  
 |101|Specificare lo schema delle tabelle e delle viste di database (usando la denominazione in due parti). (Per altre informazioni, vedere la funzionalità di denominazione in tre parti 201 nella [conformità dell'interfaccia di livello 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md)).|  
 |102|Richiama la vera esecuzione asincrona delle funzioni ODBC, in cui le funzioni ODBC applicabili sono tutte sincrone o tutte asincrone in una determinata connessione.|  

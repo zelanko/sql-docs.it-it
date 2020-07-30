@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 895dcfdd5acaa580b8ee719a3edac67d7308f605
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c9375c6050c3f401a47857c385348da1478f21ca
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897557"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362684"
 ---
 # <a name="building-a-knowledge-base"></a>Compilazione di una Knowledge Base
 
@@ -25,7 +25,7 @@ ms.locfileid: "85897557"
 ## <a name="in-this-section"></a>Contenuto della sezione  
  In una Knowledge Base è possibile effettuare le operazioni seguenti:  
   
-|||  
+|Descrizione operazione|Argomento|  
 |-|-|  
 |Creare una nuova Knowledge Base da zero, da una Knowledge Base esistente o da un file di dati DQS.|[Creare una Knowledge base](../data-quality-services/create-a-knowledge-base.md)|  
 |Aprire una Knowledge Base esistente per eseguire l'individuazione delle informazioni e la gestione del dominio o per aggiungere i criteri di corrispondenza.|[Apertura di una Knowledge Base](../data-quality-services/open-a-knowledge-base.md)|  

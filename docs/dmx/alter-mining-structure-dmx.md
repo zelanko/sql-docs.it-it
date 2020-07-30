@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ace89ae45aff0e740691025d2039213cfacebff9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8022ee6fd8cb9bf9de79a7a83d3ee0d6166606b5
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971839"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362221"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -63,7 +63,7 @@ USING <algorithm> [(<parameter list>)]
  *criteri di filtro*  
  Espressione di filtro applicata alle colonne della tabella del case.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se la struttura di data mining contiene chiavi composte, il modello di data mining dovrà includere tutte le colonne chiave definite nella struttura.  
   
  Se il modello non richiede una colonna stimabile, come ad esempio i modelli compilati utilizzando gli algoritmi [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering e [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering, non sarà necessario includere una definizione di colonna nell'istruzione. Tutti gli attributi nel modello risultante verranno gestiti come input.  
@@ -108,9 +108,8 @@ USING <algorithm> [(<parameter list>)]
 > [!NOTE]  
 >  Il flag di modellazione NOT_NULL si applica alla colonna della struttura di data mining. Per altre informazioni, vedere [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
-|||  
-|-|-|  
 |Termine|Definizione|  
+|-|-|  
 |**REGRESSORE**|Indica che l'algoritmo può utilizzare la colonna specificata nella formula di regressione degli algoritmi di regressione.|  
 |**MODEL_EXISTENCE_ONLY**|Indica che i valori per la colonna di attributi sono meno importanti rispetto alla presenza dell'attributo.|  
   
@@ -119,7 +118,7 @@ USING <algorithm> [(<parameter list>)]
 ### <a name="prediction-clause"></a>Clausola di stima  
  La clausola di stima consente di descrivere la modalità di utilizzo della colonna di stima. Nella tabella seguente sono elencate le clausole possibili.  
   
-|||  
+|Clausola|Descrizione|  
 |-|-|  
 |**STIMARE**|Questa colonna può essere stimata dal modello e i relativi valori possono essere utilizzati come input per stimare il valore di altre colonne stimabili.|  
 |**PREDICT_ONLY**|Questa colonna può essere stimata dal modello, ma i relativi valori non possono essere utilizzati nei case di input per stimare il valore di altre colonne stimabili.|  

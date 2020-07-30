@@ -41,7 +41,7 @@ fn:lower-case($arg as xs:string?) as xs:string
 |-|-|
 |*$arg*|Valore della stringa da convertire in lettere minuscole.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se il valore di *$arg* è vuoto, viene restituita una stringa di lunghezza zero.  
   
 ## <a name="examples"></a>Esempi  

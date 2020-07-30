@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d7da3f994ed0741ef7ca6bcbe4d6003eea981c7
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105306"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363411"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -53,7 +53,7 @@ InStr([start, ]searched_string, search_string[, compare])
 |String2 non trovato|zero (0)|  
 |start è maggiore di Len(String2)|zero (0)|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 > [!WARNING]  
 >  **InStr** esegue sempre un confronto senza distinzione tra maiuscole e minuscole.  
@@ -95,9 +95,8 @@ from [Adventure Works]
   
  Nella tabella seguente vengono illustrati i risultati ottenuti.  
   
-|||  
+|Campo nelle misure|Risultati|  
 |-|-|  
-||Risultati|  
 |carattere minuscolo trovato in stringa minuscola|16|  
 |carattere maiuscolo trovato in stringa minuscola|16|  
 |stringa ricercata vuota|0|  

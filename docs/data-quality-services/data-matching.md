@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0bc33f9fd40a29ab2da19d682fcbdbbb6cd40206
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: faa4c6066af0d7c516434176817d8c7f49672be5
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882565"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363049"
 ---
 # <a name="data-matching"></a>Corrispondenza di dati
 
@@ -73,7 +73,7 @@ ms.locfileid: "85882565"
 ## <a name="in-this-section"></a>Contenuto della sezione  
  È possibile eseguire le attività seguenti in relazione all'individuazione di corrispondenze in DQS:  
   
-|||  
+|Descrizione dell'attività|Argomento|  
 |-|-|  
 |Creare e testare regole di corrispondenza in criteri di corrispondenza|[Creazione di criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md)|  
 |Eseguire l'individuazione delle corrispondenze in un progetto Data Quality|[Eseguire un progetto corrispondente](../data-quality-services/run-a-matching-project.md)|  

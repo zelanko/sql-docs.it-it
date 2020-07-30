@@ -94,16 +94,16 @@ sys.dm_sql_referencing_entities (
   
  Restituisce un errore quando l'entità a cui si fa riferimento specificata è una stored procedure numerata.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Nella tabella seguente sono elencati i tipi di entità per i quali vengono create e gestite le informazioni sulle dipendenze. Le informazioni sulle dipendenze non vengono create né gestite per regole, impostazioni predefinite, tabelle temporanee, stored procedure temporanee o oggetti di sistema.  
   
 |Tipo di entità|Entità di riferimento|Entità con riferimenti|  
 |-----------------|------------------------|-----------------------|  
 |Tabella|Sì*|Sì|  
-|Visualizzazione|Sì|Sì|  
-|Stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sì|Sì|  
+|Visualizza|sì|sì|  
+|Stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**|sì|sì|  
 |stored procedure CLR|No|Sì|  
-|Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Sì|Sì|  
+|Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|sì|sì|  
 |Funzione CLR definita dall'utente|No|Sì|  
 |Trigger CLR (DML e DDL)|No|No|  
 |Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|No|  

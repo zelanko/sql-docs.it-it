@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: a4eff5b70e83b92e1c99e1d7c4b1c351dec35b7e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c677a999454f307f90b0f0444e67069ce81dfcc3
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895378"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362499"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Knowledge Base e domini DQS
 
@@ -146,7 +146,7 @@ ms.locfileid: "85895378"
 ## <a name="in-this-section"></a>Contenuto della sezione  
  È possibile eseguire le operazioni seguenti su una Knowledge Base e sui relativi domini:  
   
-|||  
+|Descrizione operazione|Argomento|  
 |-|-|  
 |Creare e aprire una Knowledge Base, aggiungervi informazioni ed eseguire l'attività di individuazione|[Compilazione di una Knowledge Base](../data-quality-services/building-a-knowledge-base.md)|  
 |Eseguire operazioni di importazione ed esportazione su domini e Knowledge Base|[Importazione ed esportazione delle informazioni](../data-quality-services/importing-and-exporting-knowledge.md)|  

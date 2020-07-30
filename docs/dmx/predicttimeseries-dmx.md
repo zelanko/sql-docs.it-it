@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ececf16131544b0a450d877b5c4ba43c2cd80466
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ff8525e9742009e5a5ada680160f20d5e8063d86
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970689"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363521"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -65,9 +65,9 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  È possibile utilizzare questi argomenti solo quando i dati nuovi sono aggiunti mediante un'istruzione PREDICTION JOIN. Se si utilizza una query PREDICTION JOIN e non si specifica un argomento, l'impostazione predefinita è EXTEND_MODEL_CASES.  
   
 ## <a name="return-type"></a>Tipo restituito  
- Un oggetto \<*table expression*>.  
+ Oggetto \<*table expression*>.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series non supporta la stima cronologica quando i dati nuovi sono aggiunti mediante l'istruzione PREDICTION JOIN.  
   
  In un'istruzione PREDICTION JOIN, il processo di stima inizia sempre immediatamente dopo la fine della serie di training originale anche se si aggiungono dati nuovi. Pertanto, i valori dei parametri *n* e *n-Start* devono essere un numero intero maggiore di 0.  
@@ -75,7 +75,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 > [!NOTE]  
 >  La lunghezza dei dati nuovi non influisce sul punto iniziale di stima. Pertanto, per aggiungere dati nuovi ed eseguire anche stime nuove, accertarsi di impostare il punto di inizio della stima su un valore maggiore della lunghezza dei dati nuovi oppure estendere il punto finale della stima in base alla lunghezza dei dati nuovi.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Negli esempi seguenti viene illustrato come eseguire stime in base a un modello Time Series esistente:  
   
 -   Nel primo esempio è illustrato come eseguire un numero specifico di stime in base al modello corrente.  
@@ -147,7 +147,7 @@ ON
   
  Stime originali:  
   
-||||  
+|Model Region|ReportingDate|Quantità|  
 |-|-|-|  
 |M200 Pacific|7/25/2008 12:00:00 AM|46|  
 |M200 Pacific|8/25/2008 12:00:00 AM|44|  
@@ -155,7 +155,7 @@ ON
   
  Stime aggiornate:  
   
-||||  
+|Model Region|ReportingDate|Quantità|  
 |-|-|-|  
 |M200 Pacific|7/25/2008 12:00:00 AM|91|  
 |M200 Pacific|8/25/2008 12:00:00 AM|89|  

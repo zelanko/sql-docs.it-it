@@ -18,15 +18,15 @@ ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2033ae81a030fa57e2f4aaf962e5dd35f9a9a318
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e3696f537cc538e011d3d037e82e54ed892da35
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831182"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394378"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Restituisce i metadati per il primo set di risultati possibile del [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Restituisce un set di risultati vuoto se il batch non restituisce risultati. Genera un errore se [!INCLUDE[ssDE](../../includes/ssde-md.md)] non è in grado di determinare i metadati per la prima query che verrà eseguita eseguendo un'analisi statica. La vista a gestione dinamica [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) restituisce le stesse informazioni.  
   
@@ -66,7 +66,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit NOT NULL**|Indica che la colonna è una colonna aggiuntiva aggiunta per informazioni di esplorazione che non compare effettivamente nel set di risultati.|  
 |**column_ordinal**|**int NOT NULL**|Contiene la posizione ordinale della colonna nel set di risultati. La posizione della prima colonna verrà specificata come 1.|  
-|**name**|**sysname NULL**|Contiene il nome della colonna se è possibile determinare un nome. In caso contrario, contiene NULL.|  
+|**nome**|**sysname NULL**|Contiene il nome della colonna se è possibile determinare un nome. In caso contrario, contiene NULL.|  
 |**is_nullable**|**bit NOT NULL**|Contiene il valore 1 se la colonna ammette valori Null, 0 se la colonna non ammette valori Null e 1 se non è possibile determinare se la colonna ammette valori Null.|  
 |**system_type_id**|**int NOT NULL**|Contiene la system_type_id del tipo di dati della colonna come specificato in sys. Types. Per i tipi CLR, anche se la colonna system_type_name restituisce NULL, in questa colonna viene restituito il valore 240.|  
 |**system_type_name**|**nvarchar (256) NULL**|Contiene il nome e gli argomenti, ad esempio lunghezza, precisione e scala, specificati per il tipo di dati della colonna. Se il tipo di dati è un tipo di alias definito dall'utente, il tipo di sistema sottostante viene specificato qui. Se è un tipo CLR definito dall'utente, in questa colonna viene restituito NULL.|  
@@ -104,7 +104,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**tds_collation_id**|**int NULL**|Per uso interno.|  
 |**tds_collation_sort_id**|**tinyint NULL**|Per uso interno.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_describe_first_result_set** garantisce che se la procedura restituisce i primi metadati del set di risultati per (un ipotetico) batch a e se tale batch (a) viene eseguito successivamente, il batch (1) genera un errore in fase di ottimizzazione, (2) genera un errore di run-time, (3) non restituisce alcun set di risultati oppure (4) restituisce un primo set di risultati con gli stessi metadati descritti da **sp_describe_first_result_set**.  
   
  Il nome, l'ammissione di valori Null e il tipo di dati possono variare. Se **sp_describe_first_result_set** restituisce un set di risultati vuoto, la garanzia è che l'esecuzione del batch non restituirà set di risultati.  
@@ -158,7 +158,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 ### <a name="typical-examples"></a>Esempi tipici  
   
-#### <a name="a-simple-example"></a>R. Esempio semplice  
+#### <a name="a-simple-example"></a>A. Esempio semplice  
  Nell'esempio seguente viene descritto il set di risultati restituito da una singola query.  
   
 ```  
@@ -269,7 +269,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- Risultato: \< nome di colonna sconosciuto> **varchar (20) null**  
+ Risultato: \<Unknown Column Name> **varchar (20) null**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>Nome della colonna forzato a essere identico tramite aliasing  
  Come in precedenza, ma le colonne hanno lo stesso nome tramite l'aliasing delle colonne.  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 93bbed557f18c847d62dec3e700023f87324e594
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: db2688a46fa785d76a0f1a98483c03eb6e604d33
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813707"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362458"
 ---
 # <a name="business-rule-examples-master-data-services"></a>Esempi di regole di business (Master Data Services)
 
@@ -28,9 +28,11 @@ Per istruzioni su come distribuire i modelli di esempio, vedere [Installazione e
   
   
 ## <a name="business-rule-examples"></a>Esempi di regole di business  
-Modello di esempio |Entità  |Nome della regola di business| Descrizione  
----------|---------|---------|-----------|  
-Customer    | Customer   | Person pmt terms| Specifica le condizioni di pagamento predefinite per i clienti.          
+
+| Modello di esempio |Entità | Nome della regola di business | Descrizione |
+|-|-|-|-|
+| Customer | Customer | Person pmt terms | Specifica le condizioni di pagamento predefinite per i clienti. |
+
 Nella regola di business seguente, se il valore dell'attributo CustomerType soddisfa la `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-conditions-master-data-services.md) is applied to the PaymentTerms attribute. In caso contrario, non viene eseguita alcuna azione.  
 ```  
 If  
@@ -42,10 +44,11 @@ Else
 ```  
   
 **--------------------------------------------------**  
-  
-Modello di esempio  |Entità  |Nome della regola di business|Descrizione    
----------|---------|---------|---------------  
-Customer     | Customer    | Org pmt terms | Specifica le condizioni di pagamento predefinite per le organizzazioni.         
+
+| Modello di esempio |Entità | Nome della regola di business | Descrizione |
+|-|-|-|-|
+| Customer | Customer | Org pmt terms | Specifica le condizioni di pagamento predefinite per le organizzazioni. |
+
 Nella regola di business seguente, se il valore dell'attributo CustomerType soddisfa la `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the PaymentTerms attribute. In caso contrario, non viene eseguita alcuna azione.  
 ```  
 If  
@@ -58,10 +61,11 @@ Else
   
 **--------------------------------------------------**  
   
-  
-Modello di esempio  |Entità  |Nome della regola di business| Descrizione    
----------|---------|---------|-----------  
-Prodotto     |  Prodotto       | DaysToManufacture |Specifica l'intervallo di giorni alla produzione per la produzione interna.          
+
+| Modello di esempio |Entità | Nome della regola di business | Descrizione |
+|-|-|-|-|
+| Prodotto | Prodotto | DaysToManufacture | Specifica l'intervallo di giorni alla produzione per la produzione interna. |
+
 Nella regola di business seguente, se il valore dell'attributo InHouseManufacture soddisfa la `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `must be between` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the DaysToManufacture attribute. In caso contrario, non viene eseguita alcuna azione.  
 ```  
 If  
@@ -74,10 +78,11 @@ Else
   
 **--------------------------------------------------**  
   
-  
-Modello di esempio  |Entità  |Nome della regola di business|Descrizione    
----------|---------|---------|-------------  
-Prodotto     |Prodotto         |Required fields| Specifica gli attributi obbligatori per i membri dell'entità Product.           
+
+| Modello di esempio |Entità | Nome della regola di business | Descrizione |
+|-|-|-|-|
+| Prodotto | Prodotto | Required fields | Specifica gli attributi obbligatori per i membri dell'entità Product. |
+
 Nella regola di business seguente, l' `is required` [validation action](../master-data-services/business-rule-actions-master-data-services.md) is taken for the specified attributes. I valori di attributo non possono essere Null o vuoti.  
 ```  
 If  
@@ -99,10 +104,11 @@ Else
   
 **--------------------------------------------------**  
   
-  
-Modello di esempio  |Entità  |Nome della regola di business|Descrizione    
----------|---------|---------|-----------  
-Prodotto     | Prodotto        |  Std Cost| Richiede che il costo standard sia maggiore di 0.        
+
+| Modello di esempio |Entità | Nome della regola di business | Descrizione |
+|-|-|-|-|
+| Prodotto | Prodotto | Std Cost | Richiede che il costo standard sia maggiore di 0. |
+
 Nella regola di business seguente, l' `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the StandardCost attribute of products.  
 ```  
 If  
@@ -115,10 +121,10 @@ Else
   
 **--------------------------------------------------**  
   
-  
-Modello di esempio  |Entità  |Nome della regola di business|Descrizione    
----------|---------|---------|------------  
-Prodotto     | Prodotto        | FG MSRP Cost|Specifica che se il prodotto è un prodotto finito, il prezzo consigliato e il prezzo del rivenditore devono essere maggiori di 0.           
+
+| Modello di esempio |Entità | Nome della regola di business | Descrizione |
+|-|-|-|-|
+| Prodotto | Prodotto | FG MSRP Cost | Specifica che se il prodotto è un prodotto finito, il prezzo consigliato e il prezzo del rivenditore devono essere maggiori di 0. |
   
 Nella regola di business seguente, se il valore dell'attributo FinishedGoodIndicator soddisfa la `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), the `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the MSRP and DealerCost attributes.  
 ```  
@@ -133,10 +139,11 @@ Else
   
 **--------------------------------------------------**  
   
-  
-Modello di esempio  |Entità  |Nome della regola di business|Descrizione    
----------|---------|---------|------------  
-Prodotto     | Prodotto        |  Default Name| Specifica il nome di prodotto predefinito in base ai valori degli attributi Color e Class. Quando il valore dell'attributo Color non è YLO e l'attributo Class non è NA, il nome predefinito è Yellow NA.         
+
+| Modello di esempio |Entità | Nome della regola di business | Descrizione |
+|-|-|-|-|
+| Prodotto | Prodotto | Default Name | Specifica il nome di prodotto predefinito in base ai valori degli attributi Color e Class. Quando il valore dell'attributo Color non è YLO e l'attributo Class non è NA, il nome predefinito è Yellow NA. |
+
 Nella regola di business seguente, se gli attributi Color e Class non soddisfano la condizione della regola `is equal` , viene applicata l' `defaults to` [](../master-data-services/business-rule-actions-master-data-services.md) all'attributo Name.  
 ```  
 If  

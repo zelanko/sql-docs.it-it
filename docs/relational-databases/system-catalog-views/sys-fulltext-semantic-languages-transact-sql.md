@@ -19,12 +19,12 @@ ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: a345e41f42cc70e941e4a87e3510312313d4dc03
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aad472489192516d367185572d1c9ac67eb78154
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764667"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248779"
 ---
 # <a name="sysfulltext_semantic_languages-transact-sql"></a>sys.fulltext_semantic_languages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,9 +33,8 @@ ms.locfileid: "85764667"
   
  Questa vista del catalogo è simile a [sys. fulltext_languages &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
     
-||||  
-|-|-|-|  
-|**Nome colonna**|**Tipo**|**Descrizione**|  
+|Nome colonna|Tipo|Descrizione|  
+|-|-|-|   
 |lcid|INT|ID delle impostazioni locali (LCID) di Microsoft Windows per la lingua.|  
 |name|sysname|Valore dell'alias in [sys.syslanguages &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corrispondenti al valore **LCID**o alla rappresentazione di stringa dell'identificatore LCID numerico.|  
   
@@ -50,7 +49,7 @@ ms.locfileid: "85764667"
 ### <a name="permissions"></a>Autorizzazioni  
  La visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene illustrato come eseguire una query su **sys. fulltext_semantic_languages** per ottenere informazioni su tutti i modelli di lingua registrati per l'indicizzazione semantica nell'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ```  

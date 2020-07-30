@@ -59,7 +59,7 @@ sp_monitor
 |**total_errors**|Numero di errori rilevati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante la lettura e la scrittura.|  
 |**connessioni**|Numero di accessi o tentativi di accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Tramite una serie di funzioni, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene tenuto traccia della quantità di operazioni eseguite. L'esecuzione di **sp_monitor** Visualizza i valori correnti restituiti da queste funzioni e Mostra la quantità di modifiche apportate dall'ultima esecuzione della stored procedure.  
   
  Per ogni colonna, la statistica viene stampata nel formato *numero*(*numero*):*numero*% o *numero*(*numero*). Il primo *numero* indica il numero di secondi (per **CPU_BUSY**, **IO_BUSY**e **Idle**) oppure il numero totale (per le altre variabili) dopo il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riavvio di. Il *numero* tra parentesi si riferisce al numero di secondi o al numero totale dall'ultima volta in cui è stato eseguito **sp_monitor** . La percentuale è la percentuale di tempo trascorso dall'ultima esecuzione **sp_monitor** . Se, ad esempio, il report Mostra **CPU_BUSY** come 4250 (215)-68%, la CPU è stata occupata 4250 secondi dall' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ultimo avvio, 215 secondi dall'ultima esecuzione di **sp_monitor** e 68% del tempo totale trascorso dall'ultima esecuzione di **sp_monitor** .  
@@ -67,7 +67,7 @@ sp_monitor
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite informazioni relative all'attività di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```console

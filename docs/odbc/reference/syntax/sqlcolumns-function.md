@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 36293c1f2393e9a57351fc8cd19dcc6e3338f5cc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 26d71bbe370e41683da44aafecd32c9e3050a223
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301257"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362757"
 ---
 # <a name="sqlcolumns-function"></a>Funzione SQLColumns
 **Conformità**  
  Versione introdotta: ODBC 1,0 Standard Compliance: Open Group  
   
- **Riepilogo**  
+ **Summary**  
  **SQLColumns** restituisce l'elenco dei nomi di colonna nelle tabelle specificate. Il driver restituisce queste informazioni come un set di risultati nel *statementHandle*specificato.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -89,7 +89,7 @@ SQLRETURN SQLColumns(
  *NameLength4*  
  Input Lunghezza in caratteri di **ColumnName*.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
@@ -102,7 +102,7 @@ SQLRETURN SQLColumns(
 |24000|Stato del cursore non valido|Un cursore è stato aperto in *statementHandle*e **SQLFetch** o **SQLFetchScroll** è stato chiamato. Questo errore viene restituito da Gestione driver se **SQLFetch** o **SQLFetchScroll** non ha restituito SQL_NO_DATA e viene restituito dal driver se **SQLFetch** o **SQLFetchScroll** ha restituito SQL_NO_DATA.<br /><br /> Un cursore è stato aperto in *statementHandle* , ma non è stato chiamato **SQLFetch** o **SQLFetchScroll** .|  
 |40001|Errore di serializzazione|È stato eseguito il rollback della transazione a causa di un deadlock delle risorse con un'altra transazione.|  
 |40003|Completamento istruzione sconosciuto|La connessione associata non è riuscita durante l'esecuzione di questa funzione e non è possibile determinare lo stato della transazione.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *statementHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione è stato chiamato **SQLCancel** o **SQLCancelHandle** in *statementHandle*. La funzione è stata chiamata nuovamente in *statementHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle* da un thread diverso in un'applicazione multithread.|  
 |HY009|Uso non valido del puntatore null|L'attributo SQL_ATTR_METADATA_ID Statement è stato impostato su SQL_TRUE, l'argomento *CatalogName* è un puntatore null e il SQL_CATALOG_NAME *InfoType* restituisce i nomi dei cataloghi supportati.<br /><br /> (DM) l'attributo SQL_ATTR_METADATA_ID Statement è stato impostato su SQL_TRUE e l'argomento *SchemaName*, *TableName*o *ColumnName* è un puntatore null.|  
@@ -148,16 +148,25 @@ SQLRETURN SQLColumns(
 |RADIX|NUM_PREC_RADIX|  
   
  Le colonne seguenti sono state aggiunte al set di risultati restituito da **SQLColumns** per ODBC 3. *x*:  
-  
-|||  
-|-|-|  
-|CHAR_OCTET_LENGTH|ORDINAL_POSITION|  
-|COLUMN_DEF|SQL_DATA_TYPE|  
-|IS_NULLABLE|SQL_DATETIME_SUB|  
-  
+
+:::row:::
+    :::column:::
+        CHAR_OCTET_LENGTH  
+        COLUMN_DEF  
+    :::column-end:::
+    :::column:::
+        IS_NULLABLE  
+        ORDINAL_POSITION  
+    :::column-end:::
+    :::column:::
+        SQL_DATA_TYPE  
+        SQL_DATETIME_SUB  
+    :::column-end:::
+:::row-end:::
+
  Nella tabella seguente sono elencate le colonne del set di risultati. È possibile definire colonne aggiuntive oltre la colonna 18 (IS_NULLABLE) dal driver. Un'applicazione deve ottenere l'accesso alle colonne specifiche del driver eseguendo il conteggio a discesa dalla fine del set di risultati anziché specificare una posizione ordinale esplicita. Per ulteriori informazioni, vedere [dati restituiti da funzioni di catalogo](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
-|Nome colonna|Colonna<br /><br /> d'acquisto|Tipo di dati|Commenti|  
+|Nome colonna|Colonna<br /><br /> Numero|Tipo di dati|Commenti|  
 |-----------------|-----------------------|---------------|--------------|  
 |TABLE_CAT (ODBC 1,0)|1|Varchar|Nome catalogo; NULL se non è applicabile all'origine dati. Se un driver supporta i cataloghi per alcune tabelle ma non per altri, ad esempio quando il driver recupera dati da DBMS diversi, restituisce una stringa vuota ("") per le tabelle che non contengono cataloghi.|  
 |TABLE_SCHEM (ODBC 1,0)|2|Varchar|Nome schema; NULL se non è applicabile all'origine dati. Se un driver supporta schemi per alcune tabelle ma non per altri, ad esempio quando il driver recupera dati da DBMS diversi, restituisce una stringa vuota ("") per le tabelle che non dispongono di schemi.|  

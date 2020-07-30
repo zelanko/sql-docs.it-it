@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cde2fe9da61ca9d877f0c905609d8baf832ea509
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6db4adccfa0786e2acb1ce45725758d6b302b51f
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971675"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363021"
 ---
 # <a name="general-prediction-functions-dmx"></a>Funzioni di stima correlate (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -22,15 +22,23 @@ ms.locfileid: "86971675"
   
 ## <a name="common-functions"></a>Funzioni comuni  
  È possibile utilizzare le funzioni per estendere i risultati restituiti da un modello di data mining. Per qualsiasi istruzione **Select** che restituisce un'espressione di tabella, è possibile utilizzare le funzioni seguenti:  
-  
-|||  
-|-|-|  
-|[BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)|[RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)|  
-|[BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)|[Conteggio &#40;DMX&#41;](../dmx/topcount-dmx.md)|  
-|[Predict &#40;DMX&#41;](../dmx/predict-dmx.md)|[Percentuale &#40;DMX&#41;](../dmx/toppercent-dmx.md)|  
-|[RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)|[&#40;DMX&#41;](../dmx/topsum-dmx.md)|  
-|[RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)||  
-  
+
+:::row:::
+    :::column:::
+        [BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)  
+        [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)  
+        [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
+        [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)  
+        [RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)  
+    :::column-end:::
+    :::column:::
+        [RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)  
+        [Conteggio &#40;DMX&#41;](../dmx/topcount-dmx.md)  
+        [Percentuale &#40;DMX&#41;](../dmx/toppercent-dmx.md)  
+        [&#40;DMX&#41;](../dmx/topsum-dmx.md)  
+    :::column-end:::
+:::row-end:::
+
  Inoltre, le funzioni seguenti sono supportate per quasi tutti i tipi di modello:  
   
 -   [Esistente &#40;DMX&#41;](../dmx/exists-dmx.md)  
@@ -58,10 +66,10 @@ ms.locfileid: "86971675"
   
  Per informazioni generali sulle funzioni in DMX, vedere [Data Mining Extensions &#40;dmx&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-|Tipo di query|Funzioni supportate|Osservazioni|  
+|Tipo di query|Funzioni supportate|Commenti|  
 |----------------|-------------------------|-------------|  
 |[SELEZIONARE DISTINCT FROM\<model>](../dmx/select-distinct-from-model-dmx.md)|[RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)<br /><br /> [RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)<br /><br /> [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)|Queste funzioni possono essere utilizzate per fornire valori massimi, valori minimi e medie per qualsiasi colonna che contenga un tipo di dati numerico, indipendentemente dal fatto che sia continua o sia stata discretizzata.|  
-|[Selezionare da \<model> . CONTENUTO](../dmx/select-from-model-content-dmx.md)<br /><br /> oppure<br /><br /> [Selezionare da \<model> . DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Questa funzione recupera i nodi figlio per il nodo specificato nel modello e può essere utilizzata, ad esempio, per scorrere i nodi nel contenuto del modello di data mining. La disposizione dei nodi nel contenuto del modello di data mining dipende dal tipo di modello. Per informazioni sulla struttura per ogni tipo di modello di data mining, vedere [contenuto dei modelli di data mining &#40;Analysis Services-&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Se il contenuto del modello di data mining è stato salvato come dimensione, è anche possibile utilizzare altre funzioni MDX (Multidimensional Expression) disponibili per l'esecuzione di query su una gerarchia di attributo.|  
+|[Selezionare da \<model> . CONTENUTO](../dmx/select-from-model-content-dmx.md)<br /><br /> oppure<br /><br /> [Selezionare da \<model> . DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Questa funzione recupera i nodi figlio per il nodo specificato nel modello e può essere utilizzata, ad esempio, per scorrere i nodi nel contenuto del modello di data mining. La disposizione dei nodi nel contenuto del modello di data mining dipende dal tipo di modello. Per informazioni sulla struttura per ogni tipo di modello di data mining, vedere [contenuto dei modelli di data mining &#40;Analysis Services-&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Se il contenuto del modello di data mining è stato salvato come dimensione, è possibile utilizzare anche altre funzioni MDX (Multidimensional Expressions) disponibili per l'esecuzione di query su una gerarchia dell'attributo.|  
 |[Selezionare da \<model> . CASI](../dmx/select-from-model-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)<br /><br /> [Classe ClientSettingsGeneralFlag](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)<br /><br /> [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)|La funzione Lag è supportata solo per i modelli Time Series.<br /><br /> La funzione IsTestCase è supportata nei modelli basati su una struttura creata usando l'opzione di controllo per creare un set di dati di testing. Se il modello non è basato su una struttura con un set di test di controllo, tutti i case vengono considerati case di training.|  
 |[Selezionare da \<model> . SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|In questo contesto, la funzione IsInNode restituisce un case che appartiene a un set di case di esempio idealizzati.|  
 |Selezionare da \<model> . PMML|Non applicabile. Utilizzare la funzione XML.|Le rappresentazioni PMML sono supportate solo per i tipi di modello seguenti:<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering|  

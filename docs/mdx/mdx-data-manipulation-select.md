@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 97b9f5fd13a6cfb017f128564f0f0cf93c22ad58
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: f56d5cbbc8e6653b4844e1b5e48b08911307395a
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86967372"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362791"
 ---
 # <a name="mdx-data-manipulation---select"></a>Manipolazione dei dati MDX - SELECT
 
@@ -88,7 +88,7 @@ FROM
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
- *Intero*  
+ *Integer*  
  Valore integer compreso tra 0 e 127.  
   
  *Cube_Name*  
@@ -109,7 +109,7 @@ FROM
  *MemberProperty_Name*  
  Stringa valida che rappresenta la proprietà di un membro.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  L'espressione `<SELECT slicer axis clause>` deve contenere membri di dimensioni e gerarchie diverse da quelle a cui fanno riferimento le espressioni `<SELECT query axis clause>` specificate.  
   
  Se nelle espressioni `<SELECT query axis clause>` specificate e nel valore `<SELECT slicer axis clause>` viene omesso un attributo del cubo, il membro predefinito dell'attributo viene aggiunto in modo implicito all'asse di sezionamento.  
@@ -159,15 +159,14 @@ FROM
   
  Il set di risultati che si ottiene è il seguente:  
   
-|||||  
+|Nome modello + misure|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
 |**Road-250**|**$9,377,457.68**|**$4,032.47**|**0,04%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**Road-650**|**$7,442,141.81**|**$39,698.30**|**0.53%**|  
 |**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47%**|  
-|**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0.05%**|  
+|**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0,05%**|  
 |**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0,57%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
 |**Road-150**|**$2,363,805.16**|**$0,00**|**0,00%**|  
@@ -211,15 +210,14 @@ FROM
   
  In base ai risultati seguenti, i due set (Top10SellingProducts, Preferred10Products) sono identici  
   
-|||||  
+|Nome modello + misure|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
 |**Road-250**|**$9,377,457.68**|**$4,032.47**|**0,04%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**Road-650**|**$7,442,141.81**|**$39,698.30**|**0.53%**|  
 |**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47%**|  
-|**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0.05%**|  
+|**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0,05%**|  
 |**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0,57%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
 |**Road-150**|**$2,363,805.16**|**$0,00**|**0,00%**|  
@@ -245,18 +243,17 @@ FROM
   
  Viene prodotto il set di risultati seguente:  
   
-|||||  
+|Nome modello + misure|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
-|**Mountain-300**|**$1,907,249.38**|**$876.95**|**0.05%**|  
+|**Mountain-300**|**$1,907,249.38**|**$876.95**|**0,05%**|  
 |**Mountain-500**|**$1,067,327.31**|**$17,266.09**|**1,62%**|  
-|**Mountain-400-W**|**$592,450.05**|**$303.49**|**0.05%**|  
-|**LL Mountain Frame**|**$521,864.42**|**$252.41**|**0.05%**|  
+|**Mountain-400-W**|**$592,450.05**|**$303.49**|**0,05%**|  
+|**LL Mountain Frame**|**$521,864.42**|**$252.41**|**0,05%**|  
 |**ML Mountain Frame-W**|**$482,953.16**|**$206.95**|**0,04%**|  
-|**ML Mountain Frame**|**$343,785.29**|**$161.82**|**0.05%**|  
+|**ML Mountain Frame**|**$343,785.29**|**$161.82**|**0,05%**|  
 |**Women's Mountain Shorts**|**$260,304.09**|**$6,675.56**|**2,56%**|  
   
  Nel set di risultati precedente si registrano sette nuove presenze nell'elenco Top10SellingProducts, mentre Mountain-200, Mountain-100 e HL Mountain Frame sono stati spostati all'inizio dell'elenco. Questi tre valori sono frammisti.  
@@ -303,9 +300,8 @@ FROM
   
  Viene prodotto il set di risultati seguente:  
   
-|||||  
+|Nome modello + misure|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
@@ -332,16 +328,15 @@ FROM
   
  Nel set di risultati seguente è illustrato il comportamento superficiale di Auto Exist.  
   
-|||||  
+|Nome modello + misure|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
   
  Il comportamento di Auto Exist può essere modificato utilizzando il parametro auto EXISTs = [1 | 2 | 3] nella stringa di connessione. vedere [Proprietà XMLA supportate &#40;&#41;XMLA](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> per l'utilizzo dei parametri.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene restituita la somma del `Measures.[Order Quantity]` membro, aggregata nei primi otto mesi dell'anno di calendario 2003 contenuti nella `Date` dimensione, dal cubo **Adventure Works** .  
   
 ```  
@@ -375,9 +370,8 @@ WHERE
   
  Produce i risultati seguenti:  
   
-|||||||  
+|Tipo di business + categoria|All Products|Accessori|Biciclette|Abbigliamento|Components|  
 |-|-|-|-|-|-|  
-||**Tutti i prodotti**|**Accessori**|**Biciclette**|**Clothing**|**Componenti**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
@@ -399,9 +393,8 @@ WHERE
   
  Produce i risultati seguenti:  
   
-|||||  
+|Tipo di business + categoria|All Products|Accessori|Clothing|  
 |-|-|-|-|  
-||**Tutti i prodotti**|**Accessori**|**Clothing**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
 |**Warehouse**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
@@ -426,9 +419,8 @@ WHERE
   
  La query precedente produce i seguenti risultati:  
   
-|||||  
+|Tipo di business + categoria|All Products|Accessori|Clothing|  
 |-|-|-|-|  
-||All Products|Accessori|Clothing|  
 |All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  
@@ -457,9 +449,8 @@ WHERE
   
  La query precedente produce i seguenti risultati:  
   
-|||||  
-|-|-|-|-|  
 |Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|Reseller Gross Profit Margin|  
+|-|-|-|-|  
 |$80,450,596.98|$79.980.114,38|$470.482,60|0,58%|  
   
 ## <a name="see-also"></a>Vedere anche  
