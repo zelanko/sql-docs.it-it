@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fbc22ea4b3673d6ed4d0d4ee581da8fadb473fb8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d09e76a26e0364857c70469ef1308f21e298727b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888048"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395046"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replica, rilevamento modifiche e Change Data Capture per i gruppi di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -205,12 +205,11 @@ Se Change Data Capture deve essere disabilitato in un database che fa parte di u
 ### <a name="restrictions"></a>Restrizioni  
  Combinazioni supportate di replica in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
-|||||  
+|Replica|Editore|Database di distribuzione|Sottoscrittore|  
 |-|-|-|-|  
-||**Autore**|**Database di distribuzione**|**Sottoscrittore**|  
-|**Transazionale**|Sì<br /><br /> Nota: non è incluso il supporto per la replica transazionale bidirezionale e reciproca.|Sì|Sì| 
+|**Transazionale**|Sì<br /><br /> Nota: non è incluso il supporto per la replica transazionale bidirezionale e reciproca.|Sì|sì| 
 |**P2P**|No|No|No|  
-|**Merge**|Sì|No|No|  
+|**Merge**|sì|No|No|  
 |**Snapshot**|Sì|No|Sì|
   
  **Non è supportato l'uso del database di distribuzione con il mirroring del database.  

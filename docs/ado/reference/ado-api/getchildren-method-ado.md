@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 605fb2e2afbd73a8a5509102ae98f348aad90bcb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7255b88c6c8ee7f6045c13ef3b7af926141a42a3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760067"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242681"
 ---
 # <a name="getchildren-method-ado"></a>Metodo GetChildren (ADO)
 Restituisce un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) le cui righe rappresentano gli elementi figlio di un [record](../../../ado/reference/ado-api/record-object-ado.md)di raccolta.  
@@ -40,7 +40,12 @@ Set recordset = record.GetChildren
  Il provider determina le colonne presenti nel **Recordset**restituito. Un provider di origine del documento restituisce, ad esempio, sempre un **Recordset**di risorsa.  
   
 ## <a name="applies-to"></a>Si applica a  
-  
-|||  
-|-|-|  
-|[Oggetto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|
+
+:::row:::
+    :::column:::
+        [Oggetto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::

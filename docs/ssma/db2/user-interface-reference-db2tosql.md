@@ -9,27 +9,26 @@ ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: c0332efca72c216ac6ecbb2f5f397fbf57e8b7cf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 29b7aa1a0e7aca34bee82180854a3b2ca63cafb4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68059963"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394548"
 ---
 # <a name="user-interface-reference-db2tosql"></a>Guida di riferimento all'interfaccia utente (DB2ToSQL)
-Questa sezione include gli argomenti della [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] guida per Migration Assistant (SSMA) per DB2.  
+Questa sezione include gli argomenti della Guida per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per DB2.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
 Nella tabella seguente sono elencate le finestre di dialogo SSMA:  
   
-|||  
-|-|-|  
 |Argomento|Descrizione|  
+|-|-|  
 |[Selezione avanzata oggetti &#40;DB2ToSQL&#41;](../../ssma/db2/advanced-object-selection-db2tosql.md)|Utilizzare la finestra di dialogo **Seleziona oggetto avanzato** per individuare gli oggetti di database utilizzando i criteri di filtro, quindi selezionare o deselezionare tali oggetti.|  
-|[Report di valutazione &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|Utilizzare il report di valutazione per visualizzare i risultati della conversione degli oggetti DB2 nella [!INCLUDE[tsql](../../includes/tsql-md.md)] sintassi e per stimare il tempo e la complessità di una migrazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a.|  
+|[Report di valutazione &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|Utilizzare il report di valutazione per visualizzare i risultati della conversione degli oggetti DB2 nella [!INCLUDE[tsql](../../includes/tsql-md.md)] sintassi e per stimare il tempo e la complessità di una migrazione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Connessione al database DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|Utilizzare la finestra di dialogo **Connetti a DB2** per connettersi al database DB2 di cui si desidera eseguire la migrazione.|  
 |[Connettersi a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connect-to-sql-server-db2tosql.md)|Utilizzare la finestra di dialogo **Connetti a SQL Server** per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si desidera eseguire la migrazione.|  
-|[Report di migrazione dati &#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|Visualizza i risultati della migrazione dei dati da DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a.|  
+|[Report di migrazione dati &#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|Visualizza i risultati della migrazione dei dati da DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Impostazioni di migrazione dei dati](https://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|Utilizzare la scheda **impostazioni di migrazione dati estesa** per scrivere query personalizzate per la migrazione dei dati.|  
 |[Modificare il mapping dei tipi &#40;DB2ToSQL&#41;](../../ssma/db2/edit-type-mapping-db2tosql.md)|Usare le finestre di dialogo **nuovo mapping tipi** o **Modifica mapping** tipi per creare o modificare il mapping dei tipi di dati tra i database di origine e di destinazione e gli oggetti di database.|  
 |[Editor &#40;impostazioni globali&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-editor-db2tosql.md)|Utilizzare la pagina editor della finestra di dialogo **Impostazioni globali** per configurare le opzioni dell'editor del codice.|  
@@ -39,14 +38,14 @@ Nella tabella seguente sono elencate le finestre di dialogo SSMA:
 |[Nuovo progetto &#40;DB2ToSQL&#41;](../../ssma/db2/new-project-db2tosql.md)|Utilizzare la finestra di dialogo **nuovo progetto** per creare un nuovo progetto SSMA per DB2.|  
 |[Impostazioni progetto &#40;conversione&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)|Utilizzare la pagina conversione della finestra di dialogo **Impostazioni progetto** per specificare il modo in cui SSMA per DB2 converte le funzioni e le variabili globali.|  
 |[Impostazioni progetto &#40;GUI&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md)|Utilizzare la pagina GUI della finestra di dialogo **Impostazioni progetto** per specificare la quantità di dati da visualizzare nella scheda **dati** .|  
-|[Impostazioni progetto &#40;migrazione&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-migration-db2tosql.md)|Utilizzare la pagina Migrazione della finestra di dialogo **Impostazioni progetto** per personalizzare il modo in cui SSMA per DB2 migra i dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]da DB2 a.|  
-|[Impostazioni progetto&#40;sincronizzazione&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)|Utilizzare la pagina sincronizzazione della finestra di dialogo **Impostazioni progetto** per personalizzare il modo in cui SSMA per DB2 crea o modifica gli oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]database migrati in.|  
-|[Impostazioni progetto&#40;il caricamento di oggetti di sistema&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md)|Utilizzare la pagina caricamento oggetti di sistema della finestra di dialogo **Impostazioni progetto** per specificare gli oggetti di sistema DB2 SSMA convertiti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e caricati in.|  
+|[Impostazioni progetto &#40;migrazione&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-migration-db2tosql.md)|Utilizzare la pagina Migrazione della finestra di dialogo **Impostazioni progetto** per personalizzare il modo in cui SSMA per DB2 migra i dati da DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Impostazioni progetto&#40;sincronizzazione&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)|Utilizzare la pagina sincronizzazione della finestra di dialogo **Impostazioni progetto** per personalizzare il modo in cui SSMA per DB2 crea o modifica gli oggetti di database migrati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Impostazioni progetto&#40;il caricamento di oggetti di sistema&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md)|Utilizzare la pagina caricamento oggetti di sistema della finestra di dialogo **Impostazioni progetto** per specificare gli oggetti di sistema DB2 SSMA convertiti e caricati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Impostazioni progetto &#40;mapping dei tipi&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)|Utilizzare la pagina mapping dei tipi della finestra di dialogo **Impostazioni progetto** per specificare i mapping dei tipi predefiniti per tutti i database e gli oggetti di database nel progetto SSMA per DB2.|  
 |[Aggiorna da database &#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md)|Utilizzare la finestra di dialogo **Aggiorna da database** per selezionare gli oggetti da aggiornare dal database DB2.|  
 |[Salva metadati &#40;DB2ToSQL&#41;](../../ssma/db2/save-metadata-db2tosql.md)|La finestra di dialogo **Salva metadati** viene visualizzata quando si salva un progetto privo di metadati.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Introduzione con SSMA per DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
 [Migrazione di database DB2 a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

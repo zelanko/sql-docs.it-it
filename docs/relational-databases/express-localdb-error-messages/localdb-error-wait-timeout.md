@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: e5b55efa-daa1-4c39-aa71-eeb7707ed601
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 64a58f3a42464d38254c577b2ad0753621026154
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 49a7b10aa85d6a1cf3393a02904fdc346cfccd6a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85641034"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242541"
 ---
 # <a name="localdb_error_wait_timeout"></a>LOCALDB_ERROR_WAIT_TIMEOUT
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>Dettagli  
   
-|||  
-|-|-|  
+| Attributo | valore |
+| --------- | ----- |
 |Nome prodotto|SQL Server|  
 |ID evento|277|  
 |Origine evento|Runtime database locale di SQL Server 12.0|  

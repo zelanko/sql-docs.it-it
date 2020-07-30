@@ -15,38 +15,144 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 155eda8cf8361abff080d52db9a226fa9237b2eb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2d7493fbba302ce23279374177819bfa7ff9b2e5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763012"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242921"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Funzioni di Visual Basic, Applications Edition
 Le funzioni di Visual Basic, Applications Edition seguenti possono essere utilizzate nelle espressioni CALC di data shaping:  
-  
-|||||||  
-|-|-|-|-|-|-|  
-|Abs|Asc|Atn|CBool|CByte|CCur|  
-|CDate|CDbl|Chr|ChrB|ChrW|Chr$|  
-|ChrB $|CInt|CLng|Cos|CSng|CStr|  
-|Cvar|CVDate|CVErr|Data|Date$|DateAdd|  
-|DateDiff|DatePart|DateSerial|DateValue|Giorno|DDB|  
-|Errore|Error$|Exp|Fix|Formato|Format$|  
-|FV|Hex|Hex$|Ora|IIF|InStr|  
-|Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
-|IsNull|IsNumeric|IsObject|LCase|LCase$|Sinistra|  
-|LeftB|Left$|LeftB $|Len|Registro|LTrim|  
-|LTrim$|Mid|Mid$|Minuto|MIRR|Month|  
-|Adesso|NPer|NPV|Oct|Oct$|Pmt|  
-|PPmt|PV|QBColor|Tariffa|RGB|Destra|  
-|RightB|Right$|RightB $|Rnd|RTrim|RTrim $|  
-|Second|Sgn|Sin|SLN|Space|Space$|  
-|Sqr|Str|Str$|StrComp|StrConv|String|  
-|String$|SYD|Tan|Tempo|Time$|Timer|  
-|TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
-|UCase$|Val|VarType|Giorno della settimana|Year||  
-  
+
+:::row:::
+    :::column:::
+        Abs  
+        Asc  
+        Atn  
+        CBool  
+        CByte  
+        CCur  
+        CDate  
+        CDbl  
+        Chr  
+        ChrB  
+        ChrW  
+        Chr$  
+        ChrB $  
+        CInt  
+        CLng  
+        Cos  
+        CSng  
+        CStr  
+        Cvar  
+    :::column-end:::
+    :::column:::
+        CVDate  
+        CVErr  
+        Data  
+        Date$  
+        DateAdd  
+        DateDiff  
+        DatePart  
+        DateSerial  
+        DateValue  
+        Giorno  
+        DDB  
+        Errore  
+        Error$  
+        Exp  
+        Fix  
+        Formato  
+        Format$  
+        FV  
+        Hex  
+    :::column-end:::
+    :::column:::
+        Hex$  
+        Ora  
+        IIF  
+        InStr  
+        Int  
+        IPmt  
+        IRR  
+        IsDate  
+        IsEmpty  
+        IsError  
+        IsNull  
+        IsNumeric  
+        IsObject  
+        LCase  
+        LCase$  
+        Sinistra  
+        LeftB  
+        Left$  
+        LeftB $  
+    :::column-end:::
+    :::column:::
+        Len  
+        File di log  
+        LTrim  
+        LTrim$  
+        Mid  
+        Mid$  
+        Minuto  
+        MIRR  
+        Month  
+        Adesso  
+        NPer  
+        NPV  
+        Oct  
+        Oct$  
+        Pmt  
+        PPmt  
+        PV  
+        QBColor  
+        Tariffa  
+    :::column-end:::
+    :::column:::
+        RGB  
+        Destra  
+        RightB  
+        Right$  
+        RightB $  
+        Rnd  
+        RTrim  
+        RTrim $  
+        Second  
+        Sgn  
+        Seno  
+        SLN  
+        Space  
+        Space$  
+        Sqr  
+        Str  
+        Str$  
+        StrComp  
+        StrConv  
+    :::column-end:::
+    :::column:::
+        Stringa  
+        String$  
+        SYD  
+        Tan  
+        Tempo  
+        Time$  
+        Timer  
+        TimeSerial  
+        TimeValue  
+        Trim  
+        Trim$  
+        TypeName  
+        UCase  
+        UCase$  
+        Val  
+        VarType  
+        Giorno della settimana  
+        Anno  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Vedere anche  
  [Accesso alle righe in un recordset gerarchico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Cenni preliminari sulla data shaping](../../../ado/guide/data/data-shaping-overview.md)   

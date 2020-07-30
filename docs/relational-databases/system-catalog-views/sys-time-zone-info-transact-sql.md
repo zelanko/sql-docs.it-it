@@ -18,15 +18,15 @@ ms.assetid: 3f51a9a4-75f8-4a11-9552-8bf6118b68da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0475dc1666af92e141610e56200a881798b3774b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bc96f144e7b23b54faae5a58bf6f17975daa305c
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821310"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395216"
 ---
 # <a name="systime_zone_info-transact-sql"></a>sys. time_zone_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Restituisce informazioni sui fusi orari supportati. Tutti i fusi orari installati nel computer vengono archiviati nel seguente hive del registro di sistema:  
 `KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`.  
@@ -37,7 +37,7 @@ ms.locfileid: "82821310"
 |**current_utc_offset**|**nvarchar (12)**|Offset corrente all'ora UTC. Ad esempio, **+ 01:00** o **-07:00**.|  
 |**is_currently_dst**|**bit**|True se attualmente si sta osservando l'ora legale.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [GETUTCDATE &#40;&#41;Transact-SQL](../../t-sql/functions/getutcdate-transact-sql.md)   
  [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
  [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   

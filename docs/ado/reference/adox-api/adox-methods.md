@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59149594d618350c9188d40eb6ade51b3aecde68
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8b2af54e33aeaa42cab3de76f1ffc6bf5fd758dd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764122"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243102"
 ---
 # <a name="adox-methods"></a>Metodi ADOX
 
-|||  
+|Metodo|Descrizione|  
 |-|-|  
 |[Append (colonne)](../../../ado/reference/adox-api/append-method-adox-columns.md)|Aggiunge un nuovo oggetto **Column** alla raccolta **Columns** .|  
 |[Accoda (gruppi)](../../../ado/reference/adox-api/append-method-adox-groups.md)|Aggiunge un nuovo oggetto **gruppo** alla raccolta di **gruppi** .|  
@@ -33,8 +33,8 @@ ms.locfileid: "82764122"
 |[Accoda (utenti)](../../../ado/reference/adox-api/append-method-adox-users.md)|Aggiunge un nuovo oggetto **utente** alla raccolta **Users** .|  
 |[Accoda (visualizzazioni)](../../../ado/reference/adox-api/append-method-adox-views.md)|Aggiunge un nuovo oggetto **visualizzazione** alla raccolta **views** .|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|Modifica la password per un account utente.|  
-|[Crea](../../../ado/reference/adox-api/create-method-adox.md)|Crea un nuovo catalogo.|  
-|[Eliminazione](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Rimuove un oggetto da una raccolta.|  
+|[Creare](../../../ado/reference/adox-api/create-method-adox.md)|Crea un nuovo catalogo.|  
+|[Elimina](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Rimuove un oggetto da una raccolta.|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Restituisce il proprietario di un oggetto in un catalogo.|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|Restituisce le autorizzazioni per un gruppo o un utente in un oggetto.|  
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|Specifica il proprietario di un oggetto in un catalogo.|  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 35aa02236cf3e8a11d03539042ccdaf9049dd8f9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9201e8f74a62315132743c36669892b7bd3cc90f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731706"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394757"
 ---
 # <a name="sp_addarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -342,9 +342,8 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="default-schema-options"></a>Opzioni predefinite dello schema  
  In questa tabella viene descritto il valore predefinito impostato dalla replica se *schema_options* non è specificato dall'utente, in cui questo valore dipende dal tipo di replica (visualizzato nella parte superiore) e dal tipo di articolo (indicato nella prima colonna).  
   
-|Tipo di articolo|Tipo di replica||  
+|Tipo di articolo|Replica transazionale|Replica snapshot|  
 |------------------|----------------------|------|  
-||Transazionale|Snapshot|  
 |**aggregate schema only**|**0x01**|**0x01**|  
 |**func schema only**|**0x01**|**0x01**|  
 |**indexed view schema only**|**0x01**|**0x01**|  
@@ -366,9 +365,8 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="valid-schema-options"></a>Opzioni di schema valide  
  In questa tabella vengono descritti i valori consentiti di *schema_option* in base al tipo di replica (visualizzato nella parte superiore) e al tipo di articolo (indicato nella prima colonna).  
   
-|Tipo di articolo|Tipo di replica||  
+|Tipo di articolo|Replica transazionale|Replica snapshot|  
 |------------------|----------------------|------|  
-||Transazionale|Snapshot|  
 |**logbased**|Tutte le opzioni|Tutte le opzioni, ma **0x02**|  
 |**logbased manualfilter**|Tutte le opzioni|Tutte le opzioni, ma **0x02**|  
 |**logbased manualview**|Tutte le opzioni|Tutte le opzioni, ma **0x02**|  
@@ -393,13 +391,13 @@ sp_addarticle [ @publication = ] 'publication'
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_addarticle**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Definire un articolo](../../relational-databases/replication/publish/define-an-article.md)   
+ [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [sp_articlecolumn &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_articlefilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
  [sp_articleview &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [sp_changearticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [sp_helparticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
  [Stored procedure di replica &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Pubblicare dati e oggetti di database](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

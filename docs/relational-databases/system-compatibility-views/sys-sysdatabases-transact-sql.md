@@ -1,5 +1,5 @@
 ---
-title: sys. sysdatabases (Transact-SQL) | Microsoft Docs
+title: Database sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,17 +21,17 @@ ms.assetid: 60a93880-62f1-4eda-a886-f046706ba90c
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b0dab1ca5f21ced6a54192a4b0173ead68fd6f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c32503ffe44cf45dbff9608e0baa9127e39b1a4d
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089158"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393392"
 ---
 # <a name="syssysdatabases-transact-sql"></a>sys.sysdatabases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  Contiene una riga per ogni database in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene installato per la prima volta, **sysdatabases** contiene le voci per i database **Master**, **Model**, **msdb**e **tempdb** .  
+  Contiene una riga per ogni database in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene installato per la prima volta, **sysdatabases** contiene le voci per i database **Master**, **Model**, **msdb**e **tempdb** .  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
@@ -48,7 +48,7 @@ ms.locfileid: "68089158"
 |**riservati**|**datetime**|Riservato per utilizzi futuri.|  
 |**category**|**int**|Include una mappa di bit di informazioni utilizzate per la replica.<br /><br /> 1 = Pubblicata per una replica snapshot o transazionale.<br /><br /> 2 = Sottoscritta a una pubblicazione snapshot o transazionale.<br /><br /> 4 = Pubblicata per una replica di tipo merge.<br /><br /> 8 = Sottoscritta a una pubblicazione di tipo merge.<br /><br /> 16 = Database di distribuzione.|  
 |**cmptlevel**|**tinyint**|Livello di compatibilità del database. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|  
-|**filename**|**nvarchar(260)**|Percorso del sistema operativo e nome del file primario del database.<br /><br /> **filename** è visibile a **dbcreator**, **sysadmin**, proprietario del DATABASE con le autorizzazioni create any database o agli utenti autorizzati che dispongono di una delle autorizzazioni seguenti: ALTER ANY database, create any database, View any Definition. Per restituire il percorso e il nome del file, eseguire una query sulla vista di compatibilità [sys. sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md) o sulla vista [sys. database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) .|  
+|**filename**|**nvarchar(260)**|Percorso del sistema operativo e nome del file primario del database.<br /><br /> **filename** è visibile a **dbcreator**, **sysadmin**, proprietario del DATABASE con le autorizzazioni create any database o agli utenti autorizzati che dispongono di una delle autorizzazioni seguenti: ALTER ANY database, create any database, View any Definition. Per restituire il percorso e il nome del file, eseguire una query sulla vista di compatibilità dei [filesys.sys](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md) o sulla vista [sys. database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) .|  
 |**version**|**smallint**|Numero di versione interno del codice [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con cui è stato creato il database. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="see-also"></a>Vedere anche  

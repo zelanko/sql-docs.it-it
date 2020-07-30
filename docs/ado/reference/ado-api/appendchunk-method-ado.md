@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ebf6f52e4c2ac9cc4875db26e633457915c0a5e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9e3d58ae93285accc9cf7a71e43579be4f54b21d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762940"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242461"
 ---
 # <a name="appendchunk-method-ado"></a>Metodo AppendChunk (ADO)
 Accoda i dati a un [campo](../../../ado/reference/ado-api/field-object.md)di dati di testo o binario di grandi dimensioni o a un oggetto [Parameter](../../../ado/reference/ado-api/parameter-object.md) .  
@@ -34,13 +34,13 @@ object.AppendChunk Data
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *oggetto*  
+ *object*  
  Oggetto **campo** o **parametro** .  
   
  *Dati*  
  **Variante** che contiene i dati da accodare all'oggetto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Usare il metodo **AppendChunk** su un oggetto **Field** o **Parameter** per inserire dati di tipo binary o character lunghi. Nelle situazioni in cui la memoria di sistema è limitata, è possibile usare il metodo **AppendChunk** per modificare i valori Long in parti piuttosto che interamente.  
   
 ## <a name="field"></a>Campo  
@@ -59,11 +59,16 @@ object.AppendChunk Data
  La prima chiamata di **AppendChunk** su un oggetto **Parameter** scrive i dati nel parametro, sovrascrivendo eventuali dati esistenti. Le chiamate **AppendChunk** successive su un oggetto **Parameter** aggiungono ai dati dei parametri esistenti. Una chiamata **AppendChunk** che passa un valore null Elimina tutti i dati dei parametri.  
   
 ## <a name="applies-to"></a>Si applica a  
-  
-|||  
-|-|-|  
-|[Oggetto Field](../../../ado/reference/ado-api/field-object.md)|[Oggetto Parameter](../../../ado/reference/ado-api/parameter-object.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Oggetto Field](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Oggetto Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di metodi AppendChunk e GetChunk (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
  [Esempio di metodi AppendChunk e GetChunk (VC + +)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   

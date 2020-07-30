@@ -15,15 +15,15 @@ ms.assetid: bc492b18-6965-4bb5-8065-fe2641d29590
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bb97d3c1d9b5f1de26365c4c5b033640f716652
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: b1dc4579216af9f47d120f19662de2908cf7f40f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977501"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394324"
 ---
 # <a name="management-data-warehouse-stored-procedures-transact-sql"></a>Stored procedure del data warehouse di gestione (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   L'agente di raccolta dati archivia i dati e le informazioni sul tipo agente di raccolta dati nel data warehouse di gestione. Le stored procedure seguenti sono utilizzate per aggiornare dati e modificare le tabelle nel data warehouse di gestione.  
 
@@ -42,7 +42,7 @@ ms.locfileid: "86977501"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Stored procedure dell'agente di raccolta dati &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   
   

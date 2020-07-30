@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 72fa5fd287b285ca7f917c5969b0e27e11837d25
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c727f73abed5fe9a30ebf191e2c6da60f8baa13a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749293"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242891"
 ---
 # <a name="ado-dynamic-properties"></a>Proprietà dinamiche ADO
 È possibile aggiungere proprietà dinamiche alle raccolte [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) degli oggetti [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Command](../../../ado/reference/ado-api/command-object-ado.md)o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) . L'origine di queste proprietà è un provider di dati, ad esempio il [provider di OLE DB per SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), o un provider di servizi, ad esempio il [servizio Microsoft Cursor per OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Per ulteriori informazioni su una specifica proprietà dinamica, fare riferimento alla documentazione del provider di dati o del provider di servizi appropriato.  
@@ -26,9 +26,9 @@ ms.locfileid: "82749293"
   
  Le seguenti proprietà dinamiche sono particolarmente interessanti e sono inoltre documentate nelle origini citate in precedenza. La funzionalità speciale con ADO è documentata negli argomenti della Guida ADO elencati di seguito.  
   
-|||  
+|Proprietà dinamica|Descrizione|  
 |-|-|  
-|[Ottimizzazione](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Specifica se è necessario creare un indice in questo campo.|  
+|[Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) (Ottimizza)|Specifica se è necessario creare un indice in questo campo.|  
 |[Messaggio di richiesta](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Specifica se il provider di OLE DB deve richiedere all'utente le informazioni di inizializzazione.|  
 |[Nome riforma](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Specifica un nome per l'oggetto **Recordset** .|  
 |[Comando di risincronizzazione](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Specifica una stringa di comando fornita dall'utente che il metodo di **Risincronizzazione** emette per aggiornare i dati nella tabella denominata nella proprietà dinamica della **tabella univoca** .|  

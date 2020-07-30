@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88754f7dbd0064c765314d88b0fcc0d06f05bbb2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c109ea1c44fc44a4cdbb585e2c612ebf8c9b2909
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763402"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242607"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 Specifica se il [parametro](../../../ado/reference/ado-api/parameter-object.md) rappresenta un parametro di input, un parametro di output, un parametro di input e un parametro di output o il valore restituito da un stored procedure.  
@@ -45,7 +45,12 @@ Specifica se il [parametro](../../../ado/reference/ado-api/parameter-object.md) 
 |AdoEnums. ParameterDirection. UNKNOWN|  
   
 ## <a name="applies-to"></a>Si applica a  
-  
-|||  
-|-|-|  
-|[Metodo CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)|[Proprietà Direction](../../../ado/reference/ado-api/direction-property.md)|
+
+:::row:::
+    :::column:::
+        [Metodo CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Proprietà Direction](../../../ado/reference/ado-api/direction-property.md)  
+    :::column-end:::
+:::row-end:::

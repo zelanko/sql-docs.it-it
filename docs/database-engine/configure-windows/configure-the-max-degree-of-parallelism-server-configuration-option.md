@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
 ms.custom: contperfq4
-ms.openlocfilehash: f1b4b8db6d5af2ff76b85933ab4fcdc3f67e4987
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 375d0b39fe0f898961d1386445b3b8e3f2945ee4
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159729"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363303"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Configurare l'opzione di configurazione del server max degree of parallelism
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], se, all'avvio de
 
 A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], usare le linee guida seguenti quando si configura il valore di configurazione del server **max degree of parallelism**:
 
-||||
+|Configurazione del server|Numero di processori|Materiale sussidiario|
 |----------------|-----------------|-----------------|
 |Server con un singolo nodo NUMA|Minore o uguale a 8 processori logici|Mantenere MAXDOP uguale o inferiore al numero di processori logici|
 |Server con un singolo nodo NUMA|Più di 8 processori logici|Mantenere MAXDOP su 8|
@@ -75,7 +75,7 @@ A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], usare le linee g
   
 A partire da [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] e fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], usare le linee guida seguenti quando si configura il valore di configurazione del server **max degree of parallelism**:
 
-||||
+|Configurazione del server|Numero di processori|Materiale sussidiario|
 |----------------|-----------------|-----------------|
 |Server con un singolo nodo NUMA|Minore o uguale a 8 processori logici|Mantenere MAXDOP uguale o inferiore al numero di processori logici|
 |Server con un singolo nodo NUMA|Più di 8 processori logici|Mantenere MAXDOP su 8|

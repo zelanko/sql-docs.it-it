@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 4aedce85a63c5f931cfab0b590810d1fac36d64b
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: db29fe499889ce67af5979821d07f2eef2a91f75
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293648"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394932"
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>Installazione di SSMA per MySQL (MySqlToSql)
 SQL Server Migration Assistant (SSMA) per MySQL è costituito da un'applicazione client usata per eseguire una migrazione da MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Contiene anche un pacchetto di estensione che supporta la migrazione dei dati e l'uso di funzioni di sistema MySQL nei database migrati.  
@@ -29,13 +29,12 @@ Se si vuole eseguire l'aggiornamento a una versione più recente di SSMA per MyS
   
 ## <a name="contents"></a>Contenuto  
   
-|||  
+|Argomento|Descrizione|  
 |-|-|  
-|**Argomento**|**Descrizione**|  
 |[Installazione di SSMA per il client MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|Vengono fornite informazioni e istruzioni per l'installazione del client SSMA.|  
 |[Installazione dei componenti di SSMA in SQL Server (da MySQL a SQL)](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|Vengono fornite informazioni e istruzioni per l'installazione del pacchetto di estensione nelle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Rimozione dei componenti SSMA per MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|Vengono fornite istruzioni per la disinstallazione del programma client.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Migrazione di database MySQL a SQL Server-database SQL di Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

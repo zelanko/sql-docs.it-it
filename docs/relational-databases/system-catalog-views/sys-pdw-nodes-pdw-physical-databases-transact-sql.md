@@ -12,17 +12,17 @@ ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 48f2a2d485f99b91b0f30a6a707a900ccbbeea96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64d74d28c4b99e75c114effdf651a58d01a614d6
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74399913"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394046"
 ---
 # <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
-  Contiene una riga per ogni database fisico in un nodo di calcolo. Aggregare le informazioni fisiche del database per ottenere informazioni dettagliate sui database. Per combinare le informazioni, unire `sys.pdw_nodes_pdw_physical_databases` le alle `sys.pdw_database_mappings` tabelle `sys.databases` e.  
+  Contiene una riga per ogni database fisico in un nodo di calcolo. Aggregare le informazioni fisiche del database per ottenere informazioni dettagliate sui database. Per combinare le informazioni, unire le `sys.pdw_nodes_pdw_physical_databases` alle `sys.pdw_database_mappings` `sys.databases` tabelle e.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -32,7 +32,7 @@ ms.locfileid: "74399913"
   
 ## <a name="examples-sspdw"></a>Esempi: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-returning"></a>A. Restituzione  
+### <a name="a-returning"></a>R. Restituzione  
  La query seguente restituisce il nome e l'ID di ogni database nel database master e il nome del database corrispondente in ogni nodo di calcolo.  
   
 ```  
@@ -85,7 +85,7 @@ SELECT TOP 1 encryption_state
        ORDER BY (CASE encryption_state WHEN 3 THEN -1 ELSE encryption_state END) DESC;  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Viste del catalogo di SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys. pdw_database_mappings &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  

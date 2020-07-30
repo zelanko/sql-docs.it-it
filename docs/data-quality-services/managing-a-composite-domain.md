@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0f6c31e8e1cb40c5fbb00eaaf42c8734a8392f74
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2d463b65247dc5606605f1760ef6a259b5f534e9
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898079"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363061"
 ---
 # <a name="managing-a-composite-domain"></a>Gestione di un dominio composito
 
@@ -29,7 +29,7 @@ ms.locfileid: "85898079"
 ## <a name="in-this-section"></a>Contenuto della sezione  
  L'utilizzo di un dominio composito consente di effettuare le operazioni seguenti:  
   
-|||  
+|Descrizione operazione|Argomento|  
 |-|-|  
 |Creare una rappresentazione semantica per un campo dati costituito da più termini correlati non analizzati.|[Creazione di un dominio composito](../data-quality-services/create-a-composite-domain.md)|  
 |Quando si esegue il mapping di dati complessi a un dominio composito, è possibile analizzare i dati in base alle informazioni oltre che in base a un delimitatore. Verranno innanzitutto utilizzate le informazioni sui singoli domini per determinare come le parti della stringa complessa appartengano ai singoli domini.|[Creazione di un dominio composito](../data-quality-services/create-a-composite-domain.md)|  

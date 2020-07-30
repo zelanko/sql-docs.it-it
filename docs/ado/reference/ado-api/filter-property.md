@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bcc1b02671d73e9056babb417ba2fa22a4d6cf0e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b69826fbbc45751247ce2eba6fe74ad251189dea
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762542"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242691"
 ---
 # <a name="filter-property"></a>Proprietà Filter
 Indica un filtro per i dati in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -35,7 +35,7 @@ Imposta o restituisce un valore **Variant** , che può contenere uno degli eleme
   
 -   Valore [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) .  
   
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Utilizzare la proprietà **Filter** per schermare selettivamente i record in un oggetto **Recordset** . Il **Recordset** filtrato diventa il cursore corrente. Sono interessate anche altre proprietà che restituiscono valori basati sul **cursore** corrente, ad esempio la [proprietà AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), la [Proprietà AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), la [proprietà RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)e la [proprietà PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). Se si imposta la proprietà **Filter** su un nuovo valore specifico, il record corrente viene spostato sul primo record che soddisfa il nuovo valore.
   
@@ -43,7 +43,7 @@ La stringa di criteri è costituita da clausole nel formato *FieldName-operator-
 
 -   *FieldName* deve essere un nome di campo valido del **Recordset**. Se il nome del campo contiene spazi, è necessario racchiudere il nome tra parentesi quadre.  
   
--   L'operatore deve essere uno dei seguenti: \< , >, \< =, >=,  <>, = o **like**.  
+-   L'operatore deve essere uno dei seguenti: \<, > , \<=, > =,  <>, = o **like**.  
   
 -   Value è il valore con cui si confronteranno i valori dei campi (ad esempio,' Smith ', #8/24/95 #, 12,345 o $50,00). Usare le virgolette singole con stringhe e segni di cancelletto (#) con date. Per i numeri, è possibile usare separatori decimali, simboli del dollaro e notazione scientifica. Se l'operatore è **simile a**, il valore può usare caratteri jolly. Solo l'asterisco (*) e il segno di percentuale (%) i caratteri jolly sono consentiti e devono essere l'ultimo carattere della stringa. Il valore non può essere Null.  
   
@@ -90,7 +90,7 @@ Solo i filtri sotto forma di stringhe di criteri influiscono sul contenuto di un
   
 Nella tabella seguente sono riepilogati gli effetti di **adFilterPendingRecords** in diverse combinazioni di filtro e modifiche. La colonna sinistra mostra le possibili modifiche. È possibile apportare modifiche in uno qualsiasi dei campi non con chiave, nel campo chiave di una tabella a chiave singola o in uno qualsiasi dei campi chiave di una tabella con più chiavi. La riga superiore mostra il criterio di filtro. I filtri possono essere basati su uno qualsiasi dei campi non con chiave, il campo chiave in una tabella a chiave singola o uno qualsiasi dei campi chiave in una tabella con più chiavi. Le celle di intersezione mostrano i risultati. Un **+** segno più significa che l'applicazione di **adFilterPendingRecords** restituisce un **Recordset**non vuoto. Un **-** segno meno indica un **Recordset**vuoto.  
   
-||Non chiavi|Chiave singola|Più chiavi|
+|Combinazioni|Non chiavi|Chiave singola|Più chiavi|
 |-|--------------|----------------|-------------------|
 |**Non chiavi**|+|+|+|
 |**Chiave singola**|+|-|N/D|

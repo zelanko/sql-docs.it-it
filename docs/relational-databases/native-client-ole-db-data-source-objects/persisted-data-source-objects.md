@@ -1,5 +1,5 @@
 ---
-title: Oggetti di origine dati persistenti | Microsoft Docs
+title: Oggetti origine dati salvati in modo permanente (provider OLE DB di Native Client)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,18 +16,19 @@ ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a0af87b23685fb0249b5abf6dbb212715e166c6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a28fd6b4f3c7fc46223a75fdf96881a73739b8d7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998261"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242141"
 ---
-# <a name="persisted-data-source-objects"></a>Oggetti origine dati persistenti
+# <a name="persisted-data-source-objects-in-sql-server-native-client"></a>Oggetti origine dati salvati in SQL Server Native Client 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta oggetti origine dati salvati in modo permanente con l'interfaccia **IPersistFile** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  **A. Rendere persistente l'inizializzazione dell'origine dati:**  
   
  In questo esempio viene illustrata una funzione che rende persistenti le proprietà di inizializzazione dell'origine dati definendo un server, un database e l'utilizzo della Modalità di autenticazione di Windows per la connessione. Il nome del server e il nome del database vengono ricevuti nei parametri *pLocation* e *pDatasource* della funzione.  
