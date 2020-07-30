@@ -19,15 +19,15 @@ ms.assetid: a9a90bdb-3f80-4c97-baca-b7407bcdc7f0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7208cc1ce83ce639cc6d832468bcd85a60cf6ac8
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f0a331ba23c92f84615284dab9440d85a1c1f577
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110940"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394106"
 ---
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Accede ai dati da una riga precedente nello stesso set di risultati senza l'utilizzo di un self-join che inizia con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. LAG fornisce l'accesso a una riga situata a una distanza fisica specificata e precedente rispetto alla riga corrente. Utilizzare questa funzione analitica in un'istruzione SELECT per confrontare valori nella riga corrente con i valori in una riga precedente.  
   

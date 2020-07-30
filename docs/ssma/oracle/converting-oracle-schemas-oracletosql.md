@@ -13,12 +13,12 @@ ms.assetid: e021182d-31da-443d-b110-937f5db27272
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 5eaf0970f5bc7d3aef49e83906a32295e9138cd9
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 844d602168c063c90034469466ade816431481d4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293578"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395166"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Conversione di schemi Oracle (OracleToSQL)
 Dopo la connessione a Oracle, la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'impostazione delle opzioni di mapping dei dati e del progetto, è possibile convertire gli oggetti di database Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti di database.  
@@ -34,9 +34,8 @@ Prima di convertire gli oggetti, esaminare le opzioni di conversione del progett
 ## <a name="conversion-results"></a>Risultati della conversione  
 Nella tabella seguente vengono illustrati gli oggetti Oracle che vengono convertiti e gli oggetti risultanti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-|||  
-|-|-|  
 |Oggetti Oracle|Oggetti SQL Server risultanti|  
+|-|-|  
 |Funzioni|Se la funzione può essere convertita direttamente in [!INCLUDE[tsql](../../includes/tsql-md.md)] , SSMA crea una funzione.<br /><br />In alcuni casi, la funzione deve essere convertita in un stored procedure. In questo caso, SSMA crea una stored procedure e una funzione che chiama l'stored procedure.|  
 |Procedure|Se la procedura può essere convertita direttamente in [!INCLUDE[tsql](../../includes/tsql-md.md)] , SSMA crea una stored procedure.<br /><br />In alcuni casi è necessario chiamare un stored procedure in una transazione autonoma. In questo caso, SSMA crea due stored procedure: una che implementa la routine e un'altra utilizzata per chiamare il stored procedure di implementazione.|  
 |Pacchetti|SSMA crea un set di stored procedure e funzioni unificate da nomi di oggetti simili.|  
@@ -117,6 +116,6 @@ Per ogni elemento che non è stato possibile convertire, è necessario determina
 ## <a name="next-step"></a>passaggio successivo  
 Il passaggio successivo del processo di migrazione consiste nel [caricare gli oggetti convertiti in SQL Server](loading-converted-database-objects-into-sql-server-oracletosql.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Migrazione di database Oracle a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

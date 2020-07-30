@@ -25,15 +25,15 @@ ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7cf13b0056a659fb59f236cf7d49c1ea1f12368
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9eb54f4ecc659a3691ee7ed27a3330be8481e9e4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915587"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394150"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Esegue il rollback di una transazione implicita o esplicita fino all'inizio della transazione o fino a un punto di salvataggio. L'istruzione ROLLBACK TRANSACTION consente di cancellare tutte le modifiche dei dati eseguite dall'inizio della transazione o fino a un punto di salvataggio, nonché di liberare le risorse utilizzate dalla transazione.  
   

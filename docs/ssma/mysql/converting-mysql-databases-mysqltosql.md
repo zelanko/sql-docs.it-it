@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 51604ba389e103798ab067245f210bd565a719e7
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: ce84ae70a1b09cd744528b132dcc7052cdde8816
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293668"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394276"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>Conversione di database MySQL (MySQLToSQL)
 Dopo aver eseguito la connessione a MySQL, avere effettuato la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure e aver impostato le opzioni di mapping dei dati e del progetto, è possibile convertire gli oggetti di database MySQL in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure oggetti di database.  
@@ -31,9 +31,8 @@ Prima di convertire gli oggetti, esaminare le opzioni di conversione del progett
 ## <a name="conversion-results"></a>Risultati della conversione  
 La tabella seguente Mostra gli oggetti MySQL che vengono convertiti e gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti risultanti:  
   
-|||  
+|Oggetti MySQL|Oggetti SQL Server risultanti|  
 |-|-|  
-|**Oggetti MySQL**|**Oggetti SQL Server risultanti**|  
 |Tabelle con oggetti dipendenti, ad esempio indici|SSMA crea tabelle con oggetti dipendenti. La tabella viene convertita con tutti gli indici e i vincoli. Gli indici vengono convertiti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti separati.<br /><br />Il **mapping del tipo di dati spaziali** può essere eseguito solo a livello di nodo della tabella.<br /><br />Per ulteriori informazioni sulle impostazioni di conversione delle tabelle, vedere [impostazioni di conversione](conversion-settings-mysqltosql.md)|  
 |Funzioni|Se la funzione può essere convertita direttamente in Transact-SQL, SSMA crea una funzione. In alcuni casi, la funzione deve essere convertita in un stored procedure. Questa operazione può essere eseguita usando la **conversione di funzioni** nelle impostazioni del progetto. In questo caso, SSMA crea una stored procedure e una funzione che chiama l'stored procedure.<br /><br />**Scelte fornite:**<br /><br />Converti in base alle impostazioni del progetto<br /><br />Converti in funzione<br /><br />Converti in stored procedure<br /><br />Per ulteriori informazioni sulle impostazioni di conversione delle funzioni, vedere [impostazioni di conversione](conversion-settings-mysqltosql.md)|  
 |Procedure|Se la procedura può essere convertita direttamente in Transact-SQL, SSMA crea una stored procedure. In alcuni casi è necessario chiamare un stored procedure in una transazione autonoma. In questo caso, SSMA crea due stored procedure: una che implementa la routine e un'altra utilizzata per chiamare il stored procedure di implementazione.|  
@@ -109,6 +108,6 @@ Per ogni elemento che non è stato possibile convertire, è necessario determina
 ## <a name="next-step"></a>passaggio successivo  
 Il passaggio successivo del processo di migrazione consiste nel [caricare gli oggetti di database convertiti in SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Migrazione di database MySQL a SQL Server-database SQL di Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

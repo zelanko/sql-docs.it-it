@@ -18,15 +18,15 @@ ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a57bf4acff6f8d0d08f86852de5ecc0411211c67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11a3bae7cc6cbf025370a947c8fa3194f978d419
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104397"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394511"
 ---
 # <a name="sp_set_session_context-transact-sql"></a>sp_set_session_context (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Imposta una coppia chiave-valore nel contesto della sessione.  
   
@@ -42,13 +42,13 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @key= ] N'key'  
+ [ @key =] N'key '  
  Chiave da impostare, di tipo **sysname**. Le dimensioni massime della chiave sono pari a 128 byte.  
   
- [ @value= ] valore  
+ [ @value =]' valore '  
  Valore per la chiave specificata, di tipo **sql_variant**. L'impostazione di un valore NULL libera la memoria. Le dimensioni massime sono pari a 8.000 byte.  
   
- [ @read_only= ] {0 | 1}  
+ [ @read_only =] {0 | 1}  
  Flag di tipo **bit**. Se è 1, il valore per la chiave specificata non può essere modificato nuovamente in questa connessione logica. Se è 0 (impostazione predefinita), il valore può essere modificato.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -75,7 +75,7 @@ SELECT SESSION_CONTEXT(N'language');
 EXEC sys.sp_set_session_context @key = N'user_id', @value = 4, @read_only = 1;  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [CURRENT_TRANSACTION_ID &#40;&#41;Transact-SQL](../../t-sql/functions/current-transaction-id-transact-sql.md)   
  [SESSION_CONTEXT &#40;&#41;Transact-SQL](../../t-sql/functions/session-context-transact-sql.md)   
  [Sicurezza a livello di riga](../../relational-databases/security/row-level-security.md)   

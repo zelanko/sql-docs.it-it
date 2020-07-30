@@ -22,15 +22,15 @@ ms.assetid: abf34f99-9ee9-460b-85b2-930ca5c4b5ae
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 915cf95799a80a0d8841206f4b23b04fba5fec5f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8b85845eea5e2bfcb1c3074b155d442b30ae499d
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112377"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394805"
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Restituisce la parte specificata del nome di un oggetto. Le parti di un oggetto che è possibile recuperare sono il nome dell'oggetto, il nome dello schema, il nome del database e il nome del server. 
   

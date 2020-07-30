@@ -17,16 +17,16 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 28a61eb05b015be7eee85a7376a3c0ce84cac27f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 27f83649fc0549854fa131bf1a859f0c20ebf65c
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112859"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394791"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 **OPENJSON** è una funzione con valori di tabella che analizza il testo JSON e restituisce gli oggetti e le proprietà dell'input JSON come righe e colonne. In altre parole, **OPENJSON** offre una visualizzazione di set di righe in un documento JSON. È possibile specificare in modo esplicito le colonne nel set di righe e i percorsi delle proprietà JSON usate per popolare le colonne. Poiché **OPENJSON** restituisce un set di righe, è possibile usare **OPENJSON** nella clausola `FROM` di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] nello stesso modo in cui è possibile usare qualsiasi altra tabella, visualizzazione o funzione con valori di tabella.  
   
