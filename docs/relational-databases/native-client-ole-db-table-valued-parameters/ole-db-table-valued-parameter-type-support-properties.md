@@ -13,13 +13,14 @@ ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7974e0f902f990c664fc6442cb5fb6a3203811c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b9a79a82eaf8f3623435bd2330d87686eb9834c7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013029"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246740"
 ---
-# <a name="ole-db-table-valued-parameter-type-support-properties"></a>Supporto dei tipi di parametri con valori di tabella OLE DB (proprietà)
+# <a name="ole-db-table-valued-parameter-type-support-in-sql-server-native-client-properties"></a>Supporto del tipo di parametro con valori di tabella OLE DB in SQL Server Native Client (proprietà)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   In questo argomento sono incluse informazioni sulle proprietà e i set di proprietà OLE DB associati a oggetti set di righe di parametri con valori di tabella.  
@@ -29,7 +30,7 @@ ms.locfileid: "86013029"
   
  Le proprietà non implementate nell'oggetto set di righe di parametri con valori di tabella non sono incluse nell'elenco. Per un elenco completo delle proprietà, vedere la documentazione di OLE DB in Windows Data Access Components.  
   
-|ID proprietà|valore|  
+|ID proprietà|Valore|  
 |-----------------|-----------|  
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  

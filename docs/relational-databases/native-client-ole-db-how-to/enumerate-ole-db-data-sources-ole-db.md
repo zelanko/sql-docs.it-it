@@ -1,5 +1,5 @@
 ---
-title: Enumerare origini dati OLE DB (OLE DB) | Microsoft Docs
+title: Enumerare OLE DB origini dati (provider OLE DB Native Client) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39603f82baede88cda48a12094241883051ecffa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c61674c160d4d0f9171b63d1d051f8d41230eccc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004562"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247863"
 ---
-# <a name="enumerate-ole-db-data-sources-ole-db"></a>Enumerare origini dati OLE DB (OLE DB)
+# <a name="enumerate-sql-server-native-client-ole-db-data-sources-ole-db"></a>Enumerare SQL Server Native Client OLE DB origini dati (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   In questo esempio viene illustrato come utilizzare l'oggetto enumeratore per elencare le origini dati disponibili.  
@@ -50,7 +51,7 @@ ms.locfileid: "86004562"
 6.  Recuperare i dati dalla copia del set di righe della riga chiamando **IRowset::GetData** ed elaborarli.  
   
 ## <a name="example"></a>Esempio  
- Compilare il listato di codice C++ seguente con ole32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
+ Compilare il listato di codice C++ seguente con ole32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L "(local)" in L "(local) \\ \name", dove name è l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
 ```  
 // compile with: ole32.lib  

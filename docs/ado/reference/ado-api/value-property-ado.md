@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6648fcabe8890ef653558636738735a4f5e4012f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c84ab6806924649bdad9bb712f730c24011cdb38
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759447"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243162"
 ---
 # <a name="value-property-ado"></a>Proprietà Value (ADO)
 
@@ -31,7 +31,7 @@ Indica il valore assegnato a un [campo](../../../ado/reference/ado-api/field-obj
 
 Imposta o restituisce un valore **Variant** che indica il valore dell'oggetto. Il valore predefinito dipende dalla proprietà [Type](../../../ado/reference/ado-api/type-property-ado.md) .
   
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Utilizzare la proprietà **value** per impostare o restituire dati da oggetti **campo** , per impostare o restituire valori di parametro con oggetti **Parameter** oppure per impostare o restituire le impostazioni delle proprietà con oggetti **Property** . Il fatto che la proprietà **value** sia di lettura/scrittura o di sola lettura dipenda da numerosi fattori. Per ulteriori informazioni, vedere gli argomenti relativi agli oggetti.
 
@@ -43,11 +43,19 @@ ADO consente di impostare e restituire dati binari lunghi con la proprietà **va
 > Per i nuovi oggetti **campo** aggiunti alla raccolta [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) di un oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) , è necessario impostare la proprietà **value** prima di poter specificare altre proprietà del **campo** . Per prima cosa, è necessario assegnare un valore specifico per la proprietà **value** e [aggiornarlo](../../../ado/reference/ado-api/update-method.md) nella raccolta **Fields** denominata. È quindi possibile accedere ad altre proprietà, ad esempio il [tipo](../../../ado/reference/ado-api/type-property-ado.md) o [gli attributi](../../../ado/reference/ado-api/attributes-property-ado.md) .
   
 ## <a name="applies-to"></a>Si applica a
-  
-||||  
-|-|-|-|  
-|[Oggetto Field](../../../ado/reference/ado-api/field-object.md)|[Oggetto Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Oggetto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|
-  
+
+:::row:::
+    :::column:::
+        [Oggetto Field](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Oggetto Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+    :::column:::
+        [Oggetto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Vedere anche
 
 [Esempio di proprietà Value (VB)](../../../ado/reference/ado-api/value-property-example-vb.md) 

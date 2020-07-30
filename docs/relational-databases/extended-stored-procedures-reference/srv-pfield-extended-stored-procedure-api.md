@@ -1,5 +1,6 @@
 ---
 title: srv_pfield (API Stored procedure estesa) | Microsoft Docs
+description: Informazioni sul modo in cui srv_pfield nell'API della stored procedure estesa restituisce informazioni su una connessione al database.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2711fa3c1e7035b75228b02e9d52de8fd3dcd6d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 12d985ca974f923f37db9d19de048e14af143271
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755936"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248313"
 ---
 # <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (API della stored procedure estesa)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

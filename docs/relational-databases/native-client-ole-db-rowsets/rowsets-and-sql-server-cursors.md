@@ -1,5 +1,5 @@
 ---
-title: Set di righe e cursori SQL Server | Microsoft Docs
+title: Set di righe e cursori SQL Server (provider OLE DB di Native Client)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,14 @@ ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3fe60226cef05b8f7925a15be40b0c8cbea9d7c7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1829d375ad8a870f1d2d24a40bfd26f6e790e261
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013121"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246836"
 ---
-# <a name="rowsets-and-sql-server-cursors"></a>Set di righe e cursori di Server SQL
+# <a name="rowsets-and-sql-server-cursors-native-client-ole-db-provider"></a>Set di righe e cursori SQL Server (provider OLE DB di Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce i set di risultati ai consumer utilizzando due metodi.  
@@ -62,7 +63,7 @@ ms.locfileid: "86013121"
   
  Le proprietà del set di righe seguenti impostano il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sull'utilizzo dei cursori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Alcune proprietà possono essere combinate con altre senza rischi. Un set di righe che indica le proprietà DBPROP_IRowsetScroll e DBPROP_IRowsetChange, ad esempio, sarà un set di righe del segnalibro che esibisce un comportamento di aggiornamento immediato. Altre proprietà si escludono a vicenda. Un set di righe che esibisce DBPROP_OTHERINSERT, ad esempio, non può contenere segnalibri.  
   
-|ID proprietà|valore|Comportamento del set di righe|  
+|ID proprietà|Valore|Comportamento del set di righe|  
 |-----------------|-----------|---------------------|  
 |DBPROP_SERVERCURSOR|VARIANT_TRUE|Non è possibile aggiornare i dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite il set di righe. Il set di righe è sequenziale e supporta solo lo scorrimento in avanti e il recupero. Il posizionamento relativo delle righe è supportato. Il testo del comando può contenere una clausola ORDER BY.|  
 |DBPROP_CANSCROLLBACKWARDS o DBPROP_CANFETCHBACKWARDS|VARIANT_TRUE|Non è possibile aggiornare i dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite il set di righe. Il set di righe supporta lo scorrimento e il recupero in entrambe le direzioni. Il posizionamento relativo delle righe è supportato. Il testo del comando può contenere una clausola ORDER BY.|  
@@ -91,7 +92,7 @@ ms.locfileid: "86013121"
   
  Per utilizzare un determinato tipo di modello di cursore, individuare la colonna che corrisponde al modello desiderato e trovare tutte le proprietà del set di righe con valore 'T' nella colonna. Impostare queste proprietà del set di righe su VARIANT_TRUE per utilizzare il modello di cursore specifico. Le proprietà del set di righe con '-' come valore possono essere impostate su VARIANT_TRUE o VARIANT_FALSE.  
   
-|Proprietà del set di righe/modelli di cursore|Predefinito<br /><br /> result<br /><br /> set<br /><br /> (RO)|Veloce<br /><br /> forward-<br /><br /> only<br /><br /> (RO)|Statico<br /><br /> (RO)|Keyset<br /><br /> keyset<br /><br /> (RO)|  
+|Proprietà del set di righe/modelli di cursore|Predefinito<br /><br /> result<br /><br /> set<br /><br /> (RO)|Veloci<br /><br /> forward-<br /><br /> only<br /><br /> (RO)|Statico<br /><br /> (RO)|Keyset<br /><br /> keyset<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  
@@ -143,7 +144,7 @@ ms.locfileid: "86013121"
   
  Per un determinato set di proprietà del set di righe, il modello di cursore selezionato viene determinato come segue.  
   
- Dalla raccolta specificata di proprietà del set di righe, ottenere un subset di proprietà elencate nelle tabelle precedenti. Dividere queste proprietà in due sottogruppi a seconda del valore del flag, obbligatorio (T, F) o facoltativo (-), di ogni proprietà del set di righe. Per ogni modello di cursore, iniziare dalla prima tabella e spostarsi da sinistra verso destra. Confrontare i valori delle proprietà nei due sottogruppi e i valori delle proprietà corrispondenti in quella colonna. Verrà selezionato il modello di cursore in cui corrispondono include tutte le proprietà obbligatorie e con il minor numero di proprietà facoltative non corrispondenti. Se è disponibile più di un modello di cursore, verrà scelto quello all'estrema sinistra.  
+ Dalla raccolta specificata di proprietà del set di righe, ottenere un subset di proprietà elencate nelle tabelle precedenti. Dividere queste proprietà in due sottogruppi a seconda del valore del flag, obbligatorio (T, F) o facoltativo (-), di ogni proprietà del set di righe. Per ogni modello di cursore, iniziare dalla prima tabella e spostarsi da sinistra a destra. Confrontare i valori delle proprietà nei due sottogruppi con i valori delle proprietà corrispondenti in tale colonna. Verrà selezionato il modello di cursore in cui corrispondono include tutte le proprietà obbligatorie e con il minor numero di proprietà facoltative non corrispondenti. Se è disponibile più di un modello di cursore, verrà scelto quello all'estrema sinistra.  
   
 ## <a name="sql-server-cursor-block-size"></a>Dimensioni del blocco del cursore di SQL Server  
  Quando un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursore supporta un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set di righe del provider OLE DB di Native client, il numero di elementi nel parametro della matrice di handle di riga dei metodi **IRowset:: GetNextRows** o **IRowsetLocate:: GetRowsAt** definisce la dimensione del blocco del cursore. Le righe indicate dagli handle nella matrice rappresentano i membri del blocco del cursore.  

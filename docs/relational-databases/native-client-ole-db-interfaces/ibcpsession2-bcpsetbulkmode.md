@@ -1,5 +1,5 @@
 ---
-title: IBCPSession2::BCPSetBulkMode | Microsoft Docs
+title: 'IBCPSession2:: BCPSetBulkMode (provider OLE DB Native Client) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12788578b865e24f390a3e49d97fa66388ecb4aa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dc8b48c6a9dab071df8fa3df1977f62afb91659d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008433"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247705"
 ---
-# <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
+# <a name="ibcpsession2bcpsetbulkmode-native-client-ole-db-provider"></a>IBCPSession2:: BCPSetBulkMode (provider OLE DB Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   IBCPSession2::BCPSetBulkMode offre un'alternativa a [IBCPSession::BCPColFmt &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) per specificare il formato della colonna. A differenza di IBCPSession::BCPColFmt, che imposta i singoli attributi di formato di colonna, IBCPSession2::BCPSetBulkMode imposta tutti gli attributi.  
@@ -64,7 +65,7 @@ HRESULT BCPSetBulkMode (
 |**E_INVALIDARG**|L'argomento non è valido.|  
 |**E_OUTOFMEMORY**|Errore di memoria insufficiente.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  IBCPSession2::BCPSetBulkMode può essere usato per creare una copia bulk da una query o una tabella. Quando si utilizza IBCPSession2::BCPSetBulkMode per eseguire una copia bulk da un'istruzione di query, è necessario chiamare tale metodo prima di `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` per specificare l'istruzione di query.  
   
  È necessario evitare di combinare la sintassi di chiamata RPC con la sintassi di query batch (ad esempio `{rpc func};SELECT * from Tbl`) in un unico testo di comando.  Un'operazione di questo tipo comporterebbe la restituzione di un errore da parte di ICommandPrepare::Prepare, rendendo impossibile il recupero dei metadati. Utilizzare la sintassi ODBC CALL (ad esempio `{call func}; SELECT * from Tbl`) se è necessario combinare l'esecuzione della stored procedure e una query batch in un singolo testo di comando.  

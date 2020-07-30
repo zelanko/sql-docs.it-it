@@ -19,14 +19,14 @@ ms.assetid: 13292d1f-c17e-4d11-bf98-3460a10cbb18
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a308a4c7dfbff5462080d696675759c8c781815f
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 5fa2776bf9e14ccd42a3aecb871dbdbce817448d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86976632"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245934"
 ---
-# <a name="data-type-mapping-in-itabledefinition"></a>Mapping dei tipi di dati in ITableDefinition
+# <a name="sql-server-native-client-data-type-mapping-in-itabledefinition"></a>Mapping del tipo di dati SQL Server Native Client in ITableDefinition
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Quando si creano tabelle tramite la funzione **ITableDefinition:: CreateTable** , il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumer del provider di OLE DB di Native client può specificare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati nel membro *pwszTypeName* della matrice DBCOLUMNDESC che viene passata. Se il consumer specifica il tipo di dati di una colonna in base al nome, il mapping del tipo di dati OLE DB rappresentato dal membro *wType* della struttura DBCOLUMNDESC viene ignorato.  

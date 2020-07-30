@@ -1,5 +1,6 @@
 ---
 title: srv_setutype (API Stored procedure estesa) | Microsoft Docs
+description: Informazioni sulle srv_setutype. srv_setutype imposta il tipo di dati definito dall'utente per una colonna in una riga.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70cacca6e6694d914c4b66b7e6eb813b012cf2b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9ecdbaef663059146f3ca6bd4a88305e12d4f495
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755814"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248193"
 ---
 # <a name="srv_setutype-extended-stored-procedure-api"></a>srv_setutype (API Stored procedure estesa)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +64,7 @@ user_type
 ## <a name="returns"></a>Restituisce  
  SUCCEED o FAIL. Restituisce FAIL se la colonna non esiste.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  In una colonna sono presenti due tipi di dati: il tipo di dati effettivo e il tipo di dati definito dall'utente. Il tipo di dati definito dall'utente viene utilizzato da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per archiviare il tipo di dati effettivo definito dall'utente, se presente, e le informazioni sulla descrizione della colonna, ad esempio il supporto di valori null e aggiornabilità, per la colonna.  
   
  La funzione **srv_setutype** può essere chiamata in qualsiasi momento in cui *column* è stato definito con **srv_describe** e prima che sia stata inviata l'ultima riga.  

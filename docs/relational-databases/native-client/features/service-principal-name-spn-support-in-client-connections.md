@@ -16,13 +16,14 @@ ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6dcafb11041fc3698e0af5db31d05e95263dd268
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e50be9c92fdf887fbf11ae5e301c8c21b55be62c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009015"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247590"
 ---
-# <a name="service-principal-name-spn-support-in-client-connections"></a>Supporto per nomi SPN nelle connessioni client
+# <a name="service-principal-name-spn-support-in-client-connections-in-sql-server-native-client"></a>Supporto del nome dell'entità servizio (SPN) nelle connessioni client in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   A partire da [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], il supporto per i nomi SPN è stato esteso per consentire l'autenticazione reciproca in tutti i protocolli. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i nomi SPN sono supportati solo per Kerberos su TCP quando il nome SPN predefinito per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene registrato con Active Directory.  

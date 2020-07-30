@@ -9,14 +9,14 @@ ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f275c77556e8abe8932e241075b9e24e2ae5db77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a1007529db6d861d3090fbbdcb6c85975fb882a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289679"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243497"
 ---
-# <a name="polybase-configuration-and-security-for-hadoop"></a>Configurazione di PolyBase e sicurezza per Hadoop
+# <a name="configure-polybase-hadoop-security"></a>Configurare la sicurezza Hadoop di base
 
 Questo articolo fornisce un riferimento per le varie impostazioni di configurazione che influiscono sulla connettività di base di APS per Hadoop. Per una procedura dettagliata sull'aspetto di polibase, vedere [che cos'è](configure-polybase-connectivity-to-external-data.md)la funzionalità di base.
 
@@ -115,7 +115,7 @@ Per connettersi a un cluster Hadoop protetto con Kerberos usando il KDC MIT, son
 4. Creare un oggetto credenziali con ambito database per specificare le informazioni di autenticazione per ogni utente di Hadoop. Vedere [Oggetti T-SQL PolyBase](../relational-databases/polybase/polybase-t-sql-objects.md).
 
 ## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a>Impostazione della zona di crittografia Hadoop
-Se si usa la zona di crittografia Hadoop, modificare Core-site. XML e HDFS-site. XML come segue. Fornire l'indirizzo IP in cui è in esecuzione il servizio KMS con il numero di porta corrispondente. La porta predefinita per il servizio di gestione delle chiavi in CDH è 16000.
+Se si usa la zona di crittografia Hadoop, modificare core-site.xml e hdfs-site.xml come segue. Fornire l'indirizzo IP in cui è in esecuzione il servizio KMS con il numero di porta corrispondente. La porta predefinita per il servizio di gestione delle chiavi in CDH è 16000.
 
 **core-site.xml**
 ```xml

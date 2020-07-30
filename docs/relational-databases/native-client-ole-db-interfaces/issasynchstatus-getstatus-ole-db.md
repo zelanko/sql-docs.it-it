@@ -1,5 +1,5 @@
 ---
-title: ISSAsynchStatus::GetStatus (OLE DB) | Microsoft Docs
+title: 'ISSAsynchStatus:: GetStatus (provider OLE DB Native Client) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f9a97a29b4f212523b4e494f87b2970f8c27693
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a3bda3f96cf7440599fafdc1f2a3ac914fd59c64
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005402"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246922"
 ---
-# <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
+# <a name="issasynchstatusgetstatus-native-client-ole-db-provider"></a>ISSAsynchStatus:: GetStatus (provider OLE DB Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Restituisce lo stato di un'operazione in esecuzione in modo asincrono.  
@@ -107,7 +108,7 @@ HRESULT GetStatus(
  E_FAIL  
  Si è verificato un errore specifico del provider.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il comportamento del metodo **ISSAsynchStatus::GetStatus** è identico a quello del metodo **IDBAsynchStatus::GetStatus** con l'eccezione che se viene interrotta l'inizializzazione di un oggetto origine dati, viene restituito E_UNEXPECTED anziché DB_E_CANCELED (anche se [ISSAsynchStatus::WaitForAsynchCompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) restituirà DB_E_CANCELED). Questo accade perché l'oggetto origine dati non rimane nello stato non valido in seguito a un'interruzione, allo scopo di consentire altri tentativi di inizializzazione.  
   
  Se il set di righe viene inizializzato o popolato in modo asincrono, deve supportare questo metodo.  

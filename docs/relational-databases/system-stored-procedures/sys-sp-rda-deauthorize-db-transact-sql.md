@@ -1,5 +1,6 @@
 ---
 title: sys. sp_rda_deauthorize_db (Transact-SQL) | Microsoft Docs
+description: Informazioni su come usare sys. sp_rda_deauthorize_db per rimuovere le connessioni autenticate tra database locali abilitati per l'estensione e database di Azure remoti.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2e362e15-2cd5-4856-9f0b-54df56b0866b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc01f07e3a07200970066e6ed505b29b3ccb9c09
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 11e039ad6c0550942632be6f34d23972e1897e2b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053403"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243362"
 ---
 # <a name="syssp_rda_deauthorize_db-transact-sql"></a>sys. sp_rda_deauthorize_db (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,7 +43,7 @@ sp_rda_deauthorize_db
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede autorizzazioni db_owner.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Dopo l'esecuzione di **sp_rda_deauthorize_db** , tutte le query sulle tabelle e i database abilitati per l'estensione hanno esito negativo. Ovvero la modalità query è impostata su DISABLEd. Per uscire da questa modalità, eseguire una delle operazioni seguenti.  
   
 -   Eseguire [sys. sp_rda_reauthorize_db &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) per riconnettersi al database di Azure remoto. Questa operazione Reimposta automaticamente la modalità di query su LOCAL_AND_REMOTE, che rappresenta il comportamento predefinito per Stretch Database. Ovvero le query restituiscono i risultati dai dati locali e remoti.  

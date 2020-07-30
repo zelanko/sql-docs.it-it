@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04e60b218439a67e0fd0d57f6c36cc725217931b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6730ee9db626356ceb8f569928717af851896b07
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727639"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246396"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Architettura di integrazione CLR - Ambiente ospitato in CLR
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -154,12 +154,11 @@ Thread.EndThreadAffinity();
 ###### <a name="security-permission-sets"></a>Sicurezza: set di autorizzazioni  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente agli utenti di specificare i requisiti di affidabilità e sicurezza per il codice distribuito nel database. Quando gli assembly vengono caricati nel database, l'autore dell'assembly può specificare uno dei tre set di autorizzazioni per tale assembly: SAFE, EXTERNAL_ACCESS e unsafe.  
   
-|||||  
+|Funzionalità|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |-|-|-|-|  
-|Set di autorizzazioni|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Sicurezza dall'accesso di codice|Sola esecuzione|Esecuzione più accesso a risorse esterne|Senza restrizioni|  
-|Restrizioni del modello di programmazione|Sì|Sì|Nessuna restrizione|  
-|Requisito di verificabilità|Sì|Sì|No|  
+|Restrizioni del modello di programmazione|sì|sì|Nessuna restrizione|  
+|Requisito di verificabilità|sì|Sì|No|  
 |Possibilità di chiamare il codice nativo|No|No|Sì|  
   
  Grazie alle restrizioni associate in termini di modello di programmazione consentito, SAFE rappresenta la modalità più affidabile e protetta. Gli assembly SAFE dispongono di autorizzazioni sufficienti per l'esecuzione, l'elaborazione di calcoli e l'accesso al database locale. Gli assembly SAFE devono essere effettivamente indipendenti dai tipi e non possono chiamare codice non gestito.  

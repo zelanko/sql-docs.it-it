@@ -1,5 +1,5 @@
 ---
-title: IColumnsRowset | Microsoft Docs
+title: IColumnsRowset (provider OLE DB Native Client) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,13 +11,14 @@ ms.assetid: e35d37ed-dd9b-4a34-a76a-bc9251f06c4f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1a94ec212e869fb6807a59db10b50388d55b2b7b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 38b486c63cf15a21a925d6d4021b926a17c0259a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008401"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247692"
 ---
-# <a name="icolumnsrowset"></a>IColumnsRowset
+# <a name="icolumnsrowset-native-client-ole-db-provider"></a>IColumnsRowset (provider OLE DB Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client viene aggiunta la colonna DBCOLUMN_BASETABLEINSTANCE a IColumnsRowset::GetColumnRowset. Questa colonna restituisce DBTYPE_I2 ed è riservata per l'uso da parte di Microsoft. Le informazioni in questa colonna sono soggette a modifiche nelle versioni future.  

@@ -1,5 +1,6 @@
 ---
 title: srv_wsendmsg (API Stored procedure estesa) | Microsoft Docs
+description: Informazioni su come srv_wsendmsg nell'API stored procedure estesa può inviare un messaggio Unicode al client.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2153076-32c9-4a52-8e1b-fc9618153543
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a74e343c67f83800c21d2c9227f064aa90f29d4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0256a21d4d64df710a4720797297293cbf8a9c0e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755779"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248203"
 ---
 # <a name="srv_wsendmsg-extended-stored-procedure-api"></a>srv_wsendmsg (API Stored procedure estesa)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +71,7 @@ msglen
 ## <a name="returns"></a>Restituisce  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare questa funzione per inviare messaggi in Unicode. È simile a **srv_sendmsg**, ma il messaggio che invia è una stringa WCHAR anziché una stringa di tipo DBCHAR. Notare che la lunghezza del messaggio viene riportata in caratteri anziché in byte e che *msglen* non sarà mai uguale a SRV_NULLTERM.  
   
  La funzione restituisce FAIL quando:  

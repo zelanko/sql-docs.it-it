@@ -1,5 +1,6 @@
 ---
 title: sys. sp_rda_set_rpo_duration (Transact-SQL) | Microsoft Docs
+description: Informazioni su sys. sp_rda_set_rpo_duration. Utilizzare questa stored procedure per impostare il numero di ore di dati migrati che SQL Server conserva in una tabella di staging.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 95c80c5b-9252-4612-9ea7-544c48834fd2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8e00939df070233efd2087a8534aaa711be01b3d
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: e3dde1d29cd72ce62a306d43d40c067ec140007d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053477"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243342"
 ---
 # <a name="syssp_rda_set_rpo_duration-transact-sql"></a>sys. sp_rda_set_rpo_duration (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -49,7 +51,7 @@ sp_rda_set_rpo_duration [ @duration_hrs = ] duration_hrs
 ## <a name="permissions"></a>Autorizzazioni    
  Richiede autorizzazioni db_owner.    
     
-## <a name="remarks"></a>Osservazioni    
+## <a name="remarks"></a>Commenti    
  Ottenere il valore corrente eseguendo [sys. sp_rda_get_rpo_duration &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md).    
     
 ## <a name="see-also"></a>Vedere anche    

@@ -1,5 +1,6 @@
 ---
 title: srv_got_attention (API Stored procedure estesa) | Microsoft Docs
+description: Informazioni su come srv_got_attention controlla se è necessario interrompere la connessione o l'attività corrente e restituisce TRUE se la connessione viene terminata o il batch viene interrotto.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 805e68e1-d17f-41bd-8b9f-a27283bb6fbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f30e546a5cd45d9c89923ab9e96670127491f1ff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2b5ba738ddd220d83cffe2c28b5629ee491d293f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756742"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248449"
 ---
 # <a name="srv_got_attention-extended-stored-procedure-api"></a>srv_got_attention (API Stored procedure estesa)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +51,7 @@ srvproc
 ## <a name="return-value"></a>Valore restituito  
  TRUE se la connessione viene terminata o il batch interrotto. FALSE se la connessione o il batch è attivo.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Una stored procedure estesa con esecuzione prolungata deve controllare l'attenzione del server chiamando periodicamente **srv_got_attention** in modo che la procedura possa terminare se stessa se la connessione viene terminata o il batch viene interrotto.  
   
 > [!IMPORTANT]  

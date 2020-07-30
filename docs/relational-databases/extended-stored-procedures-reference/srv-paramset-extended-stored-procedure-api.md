@@ -1,5 +1,6 @@
 ---
 title: srv_paramset (API Stored procedure estesa) | Microsoft Docs
+description: Informazioni sul modo in cui srv_paramset nell'API della stored procedure estesa imposta il valore di un parametro di chiamata stored procedure remota.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8a2f3caa15eeb6e7ff25f511b4a0e92de68b383
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 645b87be7c1b5955975a370e9e1b49e6608272b3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756679"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248378"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset (API Stored procedure estesa)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +88,7 @@ len
 |IG = il valore verrà ignorato||  
 |valid = qualsiasi puntatore valido ai dati||  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I parametri contengono i dati passati tra i client e l'applicazione con stored procedure remote. Il client può specificare determinati parametri come parametri restituiti. Questi parametri restituiti possono contenere valori che l'applicazione del server Open Data Services passa nuovamente al client. L'utilizzo di parametri restituiti è analogo al passaggio di parametri per riferimento.  
   
  Non è possibile impostare il valore restituito per un parametro non richiamato come parametro restituito. È possibile usare **srv_paramstatus** per determinare la modalità di richiamo del parametro.  

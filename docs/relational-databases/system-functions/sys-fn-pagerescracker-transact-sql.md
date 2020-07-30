@@ -1,6 +1,6 @@
 ---
 title: sys. fn_PageResCracker (Transact-SQL) | Microsoft Docs
-description: Documentazione per la funzione di sistema sys. fn_PageResCracker.
+description: Informazioni sulla funzione di sistema sys. fn_PageResCracker. Vedere gli esempi e visualizzare altre risorse disponibili.
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 460f1990a7020d7a57ea7ad543f3253576756d05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a48b5ba06223130a83980bf6cf8ec410bd58e5a1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790435"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247580"
 ---
 # <a name="sysfn_pagerescracker-transact-sql"></a>sys. fn_PageResCracker (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
@@ -56,7 +56,7 @@ Formato esadecimale a 8 byte di una risorsa della pagina del database.
 |file_id|**int**|ID file|  
 |page_id|**int**|ID pagina|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 `sys.fn_PageResCracker`viene utilizzato per convertire la rappresentazione esadecimale a 8 byte di una pagina di database in un set di righe che contiene l'ID del database, l'ID file e l'ID pagina della pagina.   
 
 È possibile ottenere una risorsa di pagina valida dalla `page_resource` colonna della vista a gestione dinamica [sys. Dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) o dai [processisys.sys&#40;vista di sistema Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) . Se viene usata una risorsa di pagina non valida, il valore restituito è NULL.  
@@ -65,7 +65,7 @@ L'utilizzo principale di `sys.fn_PageResCracker` consiste nel semplificare i joi
 ## <a name="permissions"></a>Autorizzazioni  
 L'utente deve disporre dell' `VIEW SERVER STATE` autorizzazione per il server.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
 La `sys.fn_PageResCracker` funzione può essere utilizzata insieme a [sys. dm_db_page_info &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) per risolvere i problemi relativi alle attese e al blocco correlati alle pagine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  Lo script seguente è un esempio di come è possibile usare queste funzioni per raccogliere informazioni sulla pagina del database per tutte le richieste attive attualmente in attesa di un tipo di risorsa di pagina. 
   
 ```sql  

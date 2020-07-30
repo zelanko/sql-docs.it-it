@@ -1,5 +1,6 @@
 ---
 title: srv_willconvert (Api Stored procedure estesa) | Microsoft Docs
+description: Informazioni su come srv_willconvert determina se una specifica conversione del tipo di dati è disponibile all'interno della libreria ODS.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6f4db5fd-215a-461c-95e4-17697852733e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d9ba59555ce590c460854481d916e30ef942cba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ef515b200221a6bb439a65a02e546017046dd0e4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755806"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248226"
 ---
 # <a name="srv_willconvert-extended-stored-procedure-api"></a>srv_willconvert (Api Stored Procedure estesa)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +58,7 @@ desttype
 ## <a name="returns"></a>Restituisce  
  TRUE se la conversione del tipo di dati è supportata. In caso contrario, FALSE.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per una descrizione di ogni tipo di dati, vedere [Tipi di dati &#40;API Stored procedure estesa&#41;](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md).  
   
 > [!IMPORTANT]  

@@ -1,5 +1,5 @@
 ---
-title: Recupero di informazioni sugli errori | Microsoft Docs
+title: Recupero delle informazioni sugli errori (provider OLE DB Native Client)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,14 @@ ms.assetid: 687b3c27-1a00-4122-8276-ea0f8fed895a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f76cf82aebc0cf0472adf91f487d0ae4490aa066
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bcbc1fc61d1f86582ae144476a16cea9e4c886f0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010532"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247940"
 ---
-# <a name="retrieving-error-information"></a>Recupero delle informazioni sugli errori
+# <a name="retrieving-error-information-native-client-ole-db-provider"></a>Recupero delle informazioni sugli errori (provider OLE DB Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   In questo esempio vengono ottenute informazioni dalle diverse interfacce di errore esposte dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB di Native Client.  

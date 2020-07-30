@@ -1,5 +1,6 @@
 ---
 title: srv_rpcowner (API Stored procedure estesa) | Microsoft Docs
+description: Informazioni sul modo in cui srv_rpcowner nell'API stored procedure estesa restituisce il componente proprietario per la stored procedure remota corrente.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e81a60e6-14ea-47bc-a11c-3d7635344447
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c427b572b6c9320c3ebe320c4469f3571641fa4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64e9fa0970367ccac5d4fca5bf6b9815ad0e0e17
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755878"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248270"
 ---
 # <a name="srv_rpcowner-extended-stored-procedure-api"></a>srv_rpcowner (API Stored procedure estesa)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +58,7 @@ len
 ## <a name="returns"></a>Restituisce  
  Puntatore DBCHAR al componente proprietario con terminazione Null per la stored procedure remota corrente. Se non è presente alcuna stored procedure remota corrente, viene restituito NULL e *len* viene impostato su -1.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa funzione restituisce solo il componente proprietario della stored procedure remota. Non include gli identificatori facoltativi per il nome, il nome della stored procedure remota e il numero della stored procedure remota.  
   
 > [!IMPORTANT]  

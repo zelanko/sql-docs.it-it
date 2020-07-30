@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPColFmt (OLE DB) | Microsoft Docs
+title: 'IBCPSession:: BCPColFmt (provider OLE DB Native Client) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c9d7eb13e438a299a4bd74c05080a4adfd14216
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e2899c671b312edff56c11568a74a67d3f961d9e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004843"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247804"
 ---
-# <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
+# <a name="ibcpsessionbcpcolfmt-native-client-ole-db-provider"></a>IBCPSession:: BCPColFmt (provider OLE DB Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Crea un'associazione tra variabili di programma e colonne di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -71,7 +72,7 @@ HRESULT BCPColFmt(
   
  **Nota** La funzione [IBCPSession::BCPWriteFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) può essere usata per rendere persistente la specifica del formato fornita tramite **BCPColFmt**.  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argomenti  
  *idxUserDataCol*[in]  
  Indice del campo nel file di dati dell'utente.  
   

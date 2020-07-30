@@ -14,15 +14,15 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1877f653244100126226b85b29a24ca458c1cf74
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a45bfb98fa5b8d5a9ce5c640d07c3c13ab7d5284
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71326133"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396171"
 ---
 # <a name="use-column-sets"></a>Utilizzare set di colonne
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   Nelle tabelle che utilizzano colonne di tipo sparse è possibile definire un set di colonne per restituire tutte le colonne di tipo sparse della tabella. Un set di colonne è una rappresentazione XML non tipizzata che combina tutte le colonne di tipo sparse di una tabella in un output strutturato. Un set di colonne è analogo a una colonna calcolata poiché non è archiviato fisicamente nella tabella, ma differisce da una colonna calcolata poiché è direttamente aggiornabile.  
   

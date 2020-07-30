@@ -1,5 +1,5 @@
 ---
-title: Avvio di una connessione a un'origine dati | Microsoft Docs
+title: Stabilire la connessione all'origine dati (provider di OLE DB di Native Client) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,14 @@ ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f3f0c654edce21a4ec5543d9488938b65d964f0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1dc465bfa63a0822fc4a1de7b13611c0d1121017
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005290"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248170"
 ---
-# <a name="establishing-a-connection-to-a-data-source"></a>Avvio di una connessione a un'origine dati
+# <a name="establishing-a-connection-to-a-sql-server-native-client-data-source"></a>Stabilire una connessione a un'origine dati SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Per accedere al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB di Native client, il consumer deve prima creare un'istanza di un oggetto origine dati chiamando il metodo **CoCreateInstance** . Un identificatore univoco di classe (CLSID) identifica ogni provider OLE DB. Per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client, l'identificatore di classe è CLSID_SQLNCLI10. È inoltre possibile utilizzare il simbolo SQLNCLI_CLSID che verrà risolto nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB di Native client utilizzato nel sqlncli. h a cui si fa riferimento.  

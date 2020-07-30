@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 87b7b030776c1c18bb13307bf97db721fe472bd3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca6449308f9683bccf55e58d9cec6d5d5a97a59e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105330"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247135"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 
@@ -28,7 +28,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- La funzione IIf accetta tre argomenti: IIf (\<Condition>, \<then Branch>, \<else Branch>).  
+ La funzione IIf accetta tre argomenti: IIf ( \<condition> , \<then branch> , \<else branch> ).  
   
  *Logical_Expression*  
  Condizione che restituisce **true** (1) o **false** (0). Deve essere un'espressione logica MDX (Multidimensional Expression) valida.  
@@ -39,7 +39,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
  *Hint expression2 [eager | Strict | Lazy]]*  
  Utilizzato quando l'espressione logica restituisce **false**. Expression2 deve essere un'espressione MDX (Multidimensional Expression) valida.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La condizione specificata dall'espressione logica restituisce **false** quando il valore di questa espressione è zero. Qualsiasi altro valore restituisce **true**.  
   
  Quando la condizione è **true**, la funzione **IIf** restituisce la prima espressione. In caso contrario, la funzione restituisce la seconda espressione.  
@@ -63,9 +63,9 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  EAGER e STRICT si escludono a vicenda nell'hint e possono essere utilizzati nella stessa funzione IIF(,,) in diverse espressioni.  
   
- Per ulteriori informazioni, vedere [hint per la query della funzione IIF in SQL Server Analysis Services 2008](https://go.microsoft.com/fwlink/?LinkId=269540) e [piani di esecuzione e hint di piano per la funzione MDX IIf e l'istruzione case](https://go.microsoft.com/fwlink/?LinkId=269565).  
+ Per ulteriori informazioni, vedere [hint per la query della funzione IIF in SQL Server Analysis Services 2008](http://www.ssas-info.com/analysis-services-articles/50-mdx/1103-iif-function-query-hints-in-sql-server-analysis-services-2008) e [piani di esecuzione e hint di piano per la funzione MDX IIf e l'istruzione case](https://go.microsoft.com/fwlink/?LinkId=269565).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nella query seguente viene illustrato un semplice utilizzo di **IIf** all'interno di una misura calcolata per restituire uno dei due valori stringa diversi quando la misura Internet Sales Amount è maggiore o minore di $10000:  
   
  `WITH MEMBER MEASURES.IIFDEMO AS`  

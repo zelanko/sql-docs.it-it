@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54c92fad618ffaad9b22a8ed73b287c0a5716959
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6907bfa9b83370074db9d9e2e522ed49d2c96e7e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756305"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243212"
 ---
 # <a name="resync-method"></a>Metodo Resync
 Aggiorna i dati nell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) corrente o nella raccolta di [campi](../../../ado/reference/ado-api/fields-collection-ado.md) di un oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) dal database sottostante.  
@@ -37,12 +37,12 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 #### <a name="parameters"></a>Parametri  
  *AffectRecords*  
- Facoltativa. Valore [AffectEnum](../../../ado/reference/ado-api/affectenum.md) che determina il numero di record su cui influirà il metodo di **Risincronizzazione** . Il valore predefinito è **adAffectAll**. Questo valore non è disponibile con il metodo **Resync** della raccolta **Fields** di un oggetto **record** .  
+ facoltativo. Valore [AffectEnum](../../../ado/reference/ado-api/affectenum.md) che determina il numero di record su cui influirà il metodo di **Risincronizzazione** . Il valore predefinito è **adAffectAll**. Questo valore non è disponibile con il metodo **Resync** della raccolta **Fields** di un oggetto **record** .  
   
  *ResyncValues*  
- Facoltativa. Valore [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) che specifica se i valori sottostanti vengono sovrascritti. Il valore predefinito è **adResyncAllValues**.  
+ facoltativo. Valore [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) che specifica se i valori sottostanti vengono sovrascritti. Il valore predefinito è **adResyncAllValues**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="recordset"></a>recordset  
  Utilizzare il metodo **Resync** per risincronizzare i record del **Recordset** corrente con il database sottostante. Questa operazione è utile se si utilizza un cursore statico o di tipo "solo di tipo", ma si desidera visualizzare eventuali modifiche nel database sottostante.  
@@ -65,11 +65,16 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
  La **Risincronizzazione** non modifica i valori di **stato** degli oggetti **campo** a meno che non si verifichi un errore quando viene chiamata la **Risincronizzazione** . Se, ad esempio, il campo non esiste più, il provider restituirà un valore di **stato** appropriato per l'oggetto **campo** , ad esempio **adFieldDoesNotExist**. I valori di **stato** restituiti possono essere combinati in modo logico all'interno del valore della proprietà **status** .  
   
 ## <a name="applies-to"></a>Si applica a  
-  
-|||  
-|-|-|  
-|[Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di metodo Resync (VB)](../../../ado/reference/ado-api/resync-method-example-vb.md)   
  [Esempio di metodo Resync (VC + +)](../../../ado/reference/ado-api/resync-method-example-vc.md)   

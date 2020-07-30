@@ -1,5 +1,6 @@
 ---
 title: srv_paramname (API Stored procedure estesa) | Microsoft Docs
+description: Informazioni sul modo in cui srv_paramname nell'API della stored procedure estesa restituisce il nome di un parametro di chiamata stored procedure remoto.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a53d707-7b06-49cc-a0df-ac727cfe953f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9905b5f148ccbf94bb4ca85f85164b5289d0dcec
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: df8add84e06ea06445a070cd94f5b2033fd4c7d1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756697"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248423"
 ---
 # <a name="srv_paramname-extended-stored-procedure-api"></a>srv_paramname (API Stored procedure estesa)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +56,7 @@ SRV_PROC * srvproc,intn, int *len );
 ## <a name="returns"></a>Restituisce  
  Puntatore a una stringa di caratteri con terminazione di tipo Null che contiene il nome del parametro. La lunghezza del nome del parametro viene archiviata in *len*. Se non è presente nessun parametro *n* o nessuna stored procedure remota, restituisce NULL, imposta *len* su -1 e invia un messaggio di errore informativo. Se il nome del parametro è NULL, *len* viene impostato su 0 e viene restituita una stringa vuota con terminazione di tipo Null.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa funzione ottiene il nome di un parametro di chiamata alla stored procedure remota. Quando viene effettuata una chiamata a una stored procedure remota con parametri, tali parametri possono essere passati per nome o per posizione (senza nome). Se invece viene effettuata con alcuni parametri passati per nome e altri passati per posizione, si verifica un errore. Il gestore SRV_RPC viene comunque chiamato, ma risulta che non sono presenti parametri e **srv_rpcparams** restituisce 0.  
   
 > [!IMPORTANT]  

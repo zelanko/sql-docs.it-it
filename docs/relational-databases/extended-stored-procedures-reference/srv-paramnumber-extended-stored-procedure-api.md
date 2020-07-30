@@ -1,5 +1,6 @@
 ---
 title: srv_paramnumber (API Stored procedure estesa) | Microsoft Docs
+description: Informazioni sul modo in cui srv_paramnumber nell'API della stored procedure estesa restituisce il numero di un parametro di chiamata stored procedure remoto.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d7a6dbff-71d9-4297-8a4f-bfd2876fe204
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f10d4a1bdfb2e3e7165596e5f3041c27440223bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d45225866cef925aa0b83ee1516e0d7dc1aa7eee
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756678"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248388"
 ---
 # <a name="srv_paramnumber-extended-stored-procedure-api"></a>srv_paramnumber (API delle stored procedure estese)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +64,7 @@ namelen
 ## <a name="returns"></a>Restituisce  
  Numero di parametro del parametro denominato. Il primo parametro è 1. Se non è presente alcun parametro denominato *name* o alcuna stored procedure remota, viene restituito 0 e viene generato un messaggio.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Quando viene effettuata una chiamata a una stored procedure remota con parametri, tali parametri possono essere passati per nome o per posizione (senza nome). Se invece viene effettuata con alcuni parametri passati per nome e altri passati per posizione, si verifica un errore. Il gestore SRV_RPC viene comunque chiamato, ma risulta che non sono presenti parametri e **srv_rpcparams** restituisce 0.  
   
 > [!IMPORTANT]  

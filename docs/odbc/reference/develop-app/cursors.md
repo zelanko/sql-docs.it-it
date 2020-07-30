@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a7484de48edaecea56fc135ca3b803875f9557c
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 2457667e374587e5e91a4c758dfbe641a0b02f78
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977778"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247121"
 ---
-# <a name="cursors"></a>Cursori
+# <a name="odbc-cursors"></a>Cursori ODBC
 Un'applicazione recupera i dati con un *cursore*. Un cursore è diverso da un set di risultati: un set di risultati è il set di righe che corrisponde a criteri di ricerca specifici, mentre un cursore è il software che restituisce tali righe all'applicazione. Il cursore del nome *,* come si applica ai database, probabilmente è stato originato dal cursore lampeggiante su un terminale del computer. Così come il cursore indica la posizione corrente sullo schermo e il punto in cui le parole digitate verranno visualizzate successivamente, un cursore in un set di risultati indicherà la posizione corrente nel set di risultati e la riga che verrà restituita successivamente.  
   
  Il modello di cursore in ODBC è basato sul modello di cursore in SQL incorporato. Una differenza rilevante tra questi modelli è la modalità di apertura dei cursori. In Embedded SQL un cursore deve essere dichiarato e aperto in modo esplicito prima di poter essere utilizzato. In ODBC un cursore viene aperto in modo implicito quando viene eseguita un'istruzione che crea un set di risultati. Quando viene aperto, il cursore viene posizionato prima della prima riga del set di risultati. In SQL incorporato e ODBC è necessario chiudere un cursore dopo che l'applicazione ha terminato di utilizzarla.  
