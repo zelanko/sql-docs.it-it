@@ -15,15 +15,15 @@ ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ef1d3001078b4f1217bad60646d28a26319d80c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5cb7e20e8f310b6cb6786c2d4cc1a62409dc81c6
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68016239"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397003"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Proprietà delle colonne delle tabelle (SQL Server Management Studio)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   Queste proprietà vengono visualizzate nel riquadro inferiore di Progettazione tabelle. Se non specificato diversamente, è possibile modificare tali proprietà nella finestra Proprietà, quando la colonna desiderata è selezionata. Le **Proprietà colonna** possono essere visualizzate in categorie o in ordine alfabetico. Molte proprietà sono visualizzate o possono essere modificate solo per determinati tipi di dati.  
   

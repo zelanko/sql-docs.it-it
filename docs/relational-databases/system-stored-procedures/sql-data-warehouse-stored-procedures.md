@@ -12,15 +12,15 @@ ms.assetid: 02e04dfe-d565-4e45-b427-b8e89c958ba3
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7aa82ee5c5a617c3564ac9246f2e42bebcab220e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97026172f23768f1393ab2b97d25b8b0b51fd1ad
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73844358"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396260"
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>Stored procedure SQL Data Warehouse
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]fornisce procedure predefinite che è possibile utilizzare per eseguire operazioni correlate ai ruoli del database. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]in sono incluse le procedure di sistema seguenti:  
   
@@ -39,9 +39,9 @@ ms.locfileid: "73844358"
  [sp_special_columns_100 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md)  
   
 > [!NOTE]  
->  Alcune stored procedure di sistema aggiuntive vengono utilizzate solo all'interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un'istanza di o tramite API client e non sono destinate all'utilizzo generale da parte dei clienti. Queste procedure sono elencate in [stored procedure di sistema (Transact-SQL)](https://msdn.microsoft.com/library/ms187961.aspx). Queste procedure sono soggette a modifiche e la compatibilità non è garantita. Tutte le procedure nell'elenco non sono disponibili in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+>  Alcune stored procedure di sistema aggiuntive vengono utilizzate solo all'interno di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tramite API client e non sono destinate all'utilizzo generale da parte dei clienti. Queste procedure sono elencate in [stored procedure di sistema (Transact-SQL)](https://msdn.microsoft.com/library/ms187961.aspx). Queste procedure sono soggette a modifiche e la compatibilità non è garantita. Tutte le procedure nell'elenco non sono disponibili in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Funzioni archiviate di sistema &#40;&#41;Transact-SQL](~/relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   

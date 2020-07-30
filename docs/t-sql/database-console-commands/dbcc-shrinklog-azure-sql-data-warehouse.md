@@ -11,16 +11,16 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ddba1a36bfc1006d4e7c93d843431832fecf397
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 70b6d2237042a5d69be8e1076d72b7b0b5c87958
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484798"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396240"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (Parallel Data Warehouse)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
 Riduce le dimensioni del log delle transazioni *nell'appliance* per il database [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. I dati vengono deframmentati per compattare il log delle transazioni. Nel corso del tempo, il log delle transazioni del database può diventare frammentato e inefficiente. Usare DBCC SHRINKLOG per ridurre la frammentazione e le dimensioni del log.
   

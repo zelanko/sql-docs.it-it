@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0b52f18f8a7247faae24f266c6d8dba3d6c2ea4c
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: d7fe937b95049788f4b488df2d36451df67c4c09
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293638"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396400"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mapping dei set di caratteri MySQL e SQL Server (MySQLToSQL)
 È possibile specificare il set di caratteri (charset) per i tipi di dati carattere MySQL, le espressioni e i valori letterali.  
@@ -77,9 +77,8 @@ Il mapping del set di caratteri varia a seconda dei livelli di nodo, ovvero:
   
     Di seguito è riportato il mapping del set di caratteri tra il database MySQL e il database di destinazione sul livello del nodo dei metadati radice:  
   
-    ||||  
+    |Nome del set di caratteri|Descrizione charset|Tipo di set di caratteri di destinazione (impostazione predefinita)|  
     |-|-|-|  
-    |**Nome del set di caratteri**|**Descrizione charset**|**Tipo di set di caratteri di destinazione (impostazione predefinita)**|  
     |Big5|Big5 cinese tradizionale|NCHAR/NVARCHAR (impostazione predefinita)|  
     |dec8|DICEMBRE Europa occidentale|CHAR/VARCHAR (impostazione predefinita)|  
     |cp850|DOS Europa occidentale|CHAR/VARCHAR (impostazione predefinita)|  
