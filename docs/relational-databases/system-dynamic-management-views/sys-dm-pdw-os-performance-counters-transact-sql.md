@@ -12,15 +12,15 @@ ms.assetid: 0673a8f8-8bed-41eb-8959-a9e3e9e03a65
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3cdc9b13203527d3f5a3fe71d0a6b32baf0446ce
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 72164d23d8f2dbd27bb30f1341b288c96ab44cc0
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627300"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396610"
 ---
 # <a name="sysdm_pdw_os_performance_counters-transact-sql"></a>sys. dm_pdw_os_performance_counters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Contiene informazioni sui contatori delle prestazioni di Windows per i nodi in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] .  
   
@@ -33,7 +33,7 @@ ms.locfileid: "84627300"
 |counter_value|**Decimali (38, 10)**|Valore corrente del contatore.||  
 |last_update_time|**Datetime2 (3)**|Timestamp dell'ultima volta in cui il valore è stato aggiornato.||  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [SQL Data Warehouse e Parallel data warehouse viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

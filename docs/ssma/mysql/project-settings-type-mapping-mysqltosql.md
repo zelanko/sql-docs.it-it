@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7add1259778bf189c981d5b302e989bf7bc233c3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138331"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396561"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Impostazioni del progetto (mapping dei tipi) (MySQLToSQL)
 Le impostazioni del progetto di mapping dei tipi consentono di impostare i mapping dei tipi predefiniti per il progetto SSMA.  
@@ -33,7 +33,7 @@ Si tratta del tipo di dati MySQL, di cui è necessario eseguire il mapping al ti
 ##### <a name="target-type"></a>Tipo destinazione  
 Tipo di dati del database di destinazione per il tipo di dati MySQL specificato.  
   
-##### <a name="add"></a>Add  
+##### <a name="add"></a>Aggiunta  
 Fare clic su questo pulsante per aggiungere un tipo di dati all'elenco di mapping.  
   
 ##### <a name="edit"></a>Modifica  
@@ -48,9 +48,8 @@ Fare clic per reimpostare l'elenco dei mapping dei tipi sui valori predefiniti d
 ## <a name="type-mappings"></a>Mapping dei tipi  
 La tabella seguente illustra il mapping predefinito tra i tipi di dati di origine e di destinazione  
   
-|||  
+|Tipo di dati MySQL|Tipo di dati di SQL Server|  
 |-|-|  
-|**Tipo di dati MySQL**|**Tipo di dati SQL Server**|  
 |bigint|bigint|  
 |bigint [*.. 255]|bigint|  
 |BINARY|binario [1]|  
@@ -82,22 +81,22 @@ La tabella seguente illustra il mapping predefinito tra i tipi di dati di origin
 |carattere variabile [2.. 255]|NVARCHAR|  
 |carattere [0.. 1]|nchar [1]|  
 |carattere [2.. 255]|nchar [*]|  
-|Data|Data|  
+|date|Data|  
 |Datetime|datetime2 [0]|  
 |dec|decimal|  
 |Dec [*... 65]|Decimal [*] [0]|  
-|Dec [*... 65] [\*.. 30|Decimal [*] [\*]|  
+|Dec [*... 65] [ \* .. 30|Decimal [*] [ \* ]|  
 |decimal|decimal|  
 |decimale [*.. 65]|Decimal [*] [0]|  
-|decimale [*.. 65] [\*.. 30|Decimal [*] [\*]|  
+|decimale [*.. 65] [ \* .. 30|Decimal [*] [ \* ]|  
 |double|float [53]|  
 |double precision|float [53]|  
-|precisione doppia [*.. 255] [\*.. 30|numeric [*] [\*]|  
-|doppio [*... 255] [\*.. 30|numeric [*] [\*]|  
+|precisione doppia [*.. 255] [ \* .. 30|numeric [*] [ \* ]|  
+|doppio [*... 255] [ \* .. 30|numeric [*] [ \* ]|  
 |fixed|NUMERIC|  
-|correzione di [*... 65] [\*.. 30|numeric [*] [\*]|  
+|correzione di [*... 65] [ \* .. 30|numeric [*] [ \* ]|  
 |float|float [24]|  
-|float [*.. 255] [\*.. 30|numeric [*] [\*]|  
+|float [*.. 255] [ \* .. 30|numeric [*] [ \* ]|  
 |float [*.. 53]|float [53]|  
 |INT|INT|  
 |int [*... 255]|INT|  
@@ -132,15 +131,15 @@ La tabella seguente illustra il mapping predefinito tra i tipi di dati di origin
 |nchar [2.. 255]|nchar [*]|  
 |NUMERIC|NUMERIC|  
 |numerico [*.. 65]|numeric [*] [0]|  
-|numerico [*.. 65] [\*.. 30|numeric [*] [\*]|  
+|numerico [*.. 65] [ \* .. 30|numeric [*] [ \* ]|  
 |NVARCHAR|nvarchar [1]|  
 |nvarchar [0.. 1]|nvarchar [1]|  
 |nvarchar [2.. 4000]|nvarchar [*]|  
 |nvarchar [4001.. *]|nvarchar(max)|  
 |real|float [53]|  
-|Real [*... 255] [\*.. 30|numeric [*] [\*]|  
+|Real [*... 255] [ \* .. 30|numeric [*] [ \* ]|  
 |serial|bigint|  
-|SMALLINT|SMALLINT|  
+|smallint|smallint|  
 |smallint [*.. 255]|SMALLINT|  
 |text|nvarchar(max)|  
 |testo [0.. 1]|nvarchar [1]|  
@@ -149,25 +148,25 @@ La tabella seguente illustra il mapping predefinito tra i tipi di dati di origin
 |time|time|  
 |timestamp|Datetime|  
 |tinyblob|varbinary [255]|  
-|TINYINT|SMALLINT|  
-|tinyint [*... 255]|SMALLINT|  
+|TINYINT|smallint|  
+|tinyint [*... 255]|smallint|  
 |tinytext|nvarchar [255]|  
 |bigint senza segno|bigint|  
 |bigint senza segno [*.. 255]|bigint|  
 |Dec senza segno|decimal|  
 |unsigned Dec [*.. 65]|Decimal [*] [0]|  
-|unsigned Dec [*.. 65] [\*.. 30|Decimal [*] [\*]|  
+|unsigned Dec [*.. 65] [ \* .. 30|Decimal [*] [ \* ]|  
 |decimale senza segno|decimal|  
 |unsigned Decimal [*.. 65]|Decimal [*] [0]|  
-|unsigned Decimal [*.. 65] [\*.. 30|Decimal [*] [\*]|  
+|unsigned Decimal [*.. 65] [ \* .. 30|Decimal [*] [ \* ]|  
 |Double senza segno|float [53]|  
 |precisione doppia senza segno|float [53]|  
-|precisione doppia senza segno [*.. 255] [\*.. 30|numeric [*] [\*]|  
-|Double senza segno [*.. 255] [\*.. 30|numeric [*] [\*]|  
+|precisione doppia senza segno [*.. 255] [ \* .. 30|numeric [*] [ \* ]|  
+|Double senza segno [*.. 255] [ \* .. 30|numeric [*] [ \* ]|  
 |senza segno fisso|NUMERIC|  
-|senza segno (fixed) [*.. 65] [\*.. 30|numeric [*] [\*]|  
+|senza segno (fixed) [*.. 65] [ \* .. 30|numeric [*] [ \* ]|  
 |float senza segno|float [24]|  
-|float senza segno [*.. 255] [\*.. 30|numeric [*] [\*]|  
+|float senza segno [*.. 255] [ \* .. 30|numeric [*] [ \* ]|  
 |float senza segno [*.. 53]|float [53]|  
 |int senza segno|bigint|  
 |unsigned int [*.. 255]|bigint|  
@@ -177,9 +176,9 @@ La tabella seguente illustra il mapping predefinito tra i tipi di dati di origin
 |unsigned MEDIUMINT [*.. 255]|INT|  
 |numerico senza segno|NUMERIC|  
 |numerico senza segno [*.. 65]|numeric [*] [0]|  
-|numerico senza segno [*.. 65] [\*.. 30|numeric [*] [\*]|  
+|numerico senza segno [*.. 65] [ \* .. 30|numeric [*] [ \* ]|  
 |Real senza segno|float [53]|  
-|Real senza segno [*.. 255 [[\*.. 30|numeric [*] [\*]|  
+|Real senza segno [*.. 255 [[ \* .. 30|numeric [*] [ \* ]|  
 |smallint senza segno|INT|  
 |smallint senza segno [*.. 255]|INT|  
 |tinyint senza segno|TINYINT|  
@@ -190,11 +189,11 @@ La tabella seguente illustra il mapping predefinito tra i tipi di dati di origin
 |varchar [0.. 1]|nvarchar [1]|  
 |varchar [2.. 4000]|nvarchar [*]|  
 |varchar [4001.. *]|nvarchar(max)|  
-|year|SMALLINT|  
-|anno [2.. 2]|SMALLINT|  
-|anno [4.. 4]|SMALLINT|  
+|year|smallint|  
+|anno [2.. 2]|smallint|  
+|anno [4.. 4]|smallint|  
   
-##### <a name="add"></a>Add  
+##### <a name="add"></a>Aggiunta  
 Fare clic su questo pulsante per aggiungere un tipo di dati all'elenco di mapping.  
   
 ##### <a name="edit"></a>Modifica  
