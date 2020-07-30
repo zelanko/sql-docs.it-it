@@ -18,15 +18,15 @@ ms.assetid: 2009acd3-0d92-435a-a8fb-057e50dc7146
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae3f46d5856aa061bac0dd06fb954052923a4d7d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 12bfa6e7d37aae2a5ffc58828d47ace11d558487
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827792"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87392916"
 ---
 # <a name="sp_execute-transact-sql"></a>sp_execute (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Esegue un'istruzione preparata [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzando un handle specificato e un valore di parametro facoltativo. sp_execute viene richiamato specificando ID = 12 in un pacchetto del flusso TDS (Tabular Data Stream).  
   
@@ -51,7 +51,7 @@ sp_execute handle OUTPUT
 > [!NOTE]  
 >  *bound_param* deve corrispondere alle dichiarazioni effettuate dal valore dei*parametri* sp_prepare e può essere nel formato * @name = valore* o *valore*.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)  
   

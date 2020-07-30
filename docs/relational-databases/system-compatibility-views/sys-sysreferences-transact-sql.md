@@ -1,5 +1,5 @@
 ---
-title: sys. sysreferences (Transact-SQL) | Microsoft Docs
+title: Riferimenti sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ ms.assetid: 81276f13-202e-4e74-962d-46eb98c98d2e
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3edce02f20a16ebd9814f995f00023f8f3b153de
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 01d369adc6611091e87cb35794532da4522560ae
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67986486"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393371"
 ---
 # <a name="syssysreferences-transact-sql"></a>sys.sysreferences (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Include i mapping tra le definizioni del vincolo FOREIGN KEY e le colonne con riferimenti all'interno del database.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "67986486"
 |**rkey15**|**smallint**|ID della colonna con riferimenti.|  
 |**rkey16**|**smallint**|ID della colonna con riferimenti.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Mapping di tabelle di sistema a viste di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Viste della compatibilità &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

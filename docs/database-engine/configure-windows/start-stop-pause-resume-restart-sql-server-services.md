@@ -41,12 +41,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: ca8891058091bca9862fbdbf81bfa51cc17d250a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 385e0a0d6873f8480c3d99efe9700ef938fc3abf
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763986"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363031"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Avviare, arrestare, sospendere, riprendere, riavviare i servizi SQL Server
 
@@ -114,7 +114,7 @@ Fare clic sul menu **Start** , scegliere **Tutti i programmi**, **Microsoft SQL 
 
 Poiché Gestione configurazione SQL Server è uno snap-in per il programma Microsoft Management Console e non un programma autonomo, Gestione configurazione SQL Server non viene visualizzato come applicazione nelle versioni più recenti di Windows. Ecco i percorsi per le ultime quattro versioni, con Windows installato nell'unità C.  
 
-|||
+|Versione|Path|
 |-|-|
 |SQL Server 2019|C:\Windows\SysWOW64\SQLServerManager15.msc|
 |SQL Server 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|

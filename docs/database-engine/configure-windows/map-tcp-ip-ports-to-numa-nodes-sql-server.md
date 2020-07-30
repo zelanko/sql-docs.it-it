@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 07727642-0266-4cbc-8c55-3c367e4458ca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6926fba5e248b51df28b342b5c7d49ecf497f89
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 055821c4d005c52ff20b79967fca35ac2994ff9f
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680953"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362623"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>Eseguire il mapping delle porte TCP/IP ai nodi NUMA (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "85680953"
   
  Per determinare il numero del nodo da usare, leggere le informazioni sul nodo nel log degli errori o nella vista **sys.dm_os_schedulers** . Per impostare un indirizzo e una porta TCP/IP in uno o più nodi, aggiungere una mappa di bit per l'identificazione del nodo, ovvero una maschera di affinità, tra parentesi dopo il numero di porta. I nodi possono essere specificati in formato decimale o esadecimale. Per creare la mappa di bit, numerare in primo luogo i nodi da destra a sinistra partendo da zero, come in 76543210. Creare una rappresentazione binaria dell'elenco dei nodi, indicando 1 per i nodi che si desidera utilizzare e 0 per quelli che non si desidera utilizzare. Ad esempio, per utilizzare i nodi NUMA 0, 2 e 5, specificare 00100101.  
   
-|||  
-|-|-|  
-|Numero del nodo NUMA|76543210|  
-|Maschera per 0, 2 e 5 partendo da destra|00100101|  
+```text
+NUMA node number                            76543210
+Mask for 0, 2, and 5 counting from right    00100101
+```
   
  Convertire la rappresentazione binaria (00100101) in un valore decimale `[37]`o esadecimale `[0x25]`. Per restare in attesa su tutti i nodi, non indicare alcun identificatore di nodo.  
   
