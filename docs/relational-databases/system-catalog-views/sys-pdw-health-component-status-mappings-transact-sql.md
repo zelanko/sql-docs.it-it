@@ -10,15 +10,15 @@ ms.assetid: 4272cfad-5ad7-493d-9edd-d9111619bda0
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 32300b0f0ee89e2a135468a658bde49bb77f7c69
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: def9dc4a7601e4d5a89794e85f4e209036966f73
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627156"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397119"
 ---
 # <a name="syspdw_health_component_status_mappings-transact-sql"></a>sys. pdw_health_component_status_mappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Definisce il mapping tra gli [!INCLUDE[ssDW](../../includes/ssdw-md.md)] stati dei componenti e i nomi dei componenti definiti dal produttore.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "84627156"
 |physical_name|**nvarchar(32)**|Nome della proprietà definito dal produttore.<br /><br /> property_id, component_id e physical_name formano la chiave per questa visualizzazione.|NOT NULL|  
 |logical_name|**nvarchar(255)**|Nome della proprietà definito da [!INCLUDE[ssDW](../../includes/ssdw-md.md)] .|NOT NULL<br /><br /> 0-l'istanza del dispositivo è univoca.<br /><br /> 1-l'istanza del dispositivo non è univoca.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Viste del catalogo di SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

@@ -23,15 +23,15 @@ ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82876d2f0e749163ced821bdc24797a6f71b6e7e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d262fd04eeac9ebe8eaed29056a01cbf48eb8a78
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76831583"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396334"
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (Caratteri jolly per la corrispondenza) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Rileva la corrispondenza con uno dei caratteri inclusi nell'intervallo o set racchiuso tra parentesi quadre `[ ]`. È possibile usare i caratteri jolly nei confronti di stringhe che prevedono l'uso di criteri di ricerca, ad esempio `LIKE` e `PATINDEX`.  
 

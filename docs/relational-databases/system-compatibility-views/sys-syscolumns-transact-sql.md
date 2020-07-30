@@ -1,5 +1,5 @@
 ---
-title: sys. syscolumns (Transact-SQL) | Microsoft Docs
+title: Colonne sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ ms.assetid: 863fd87b-ff33-4ac5-9aa9-df21140681da
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c158533188db7e3d72235a69bff1b14546a1a1a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8dcf0f88fed4ef48cc90a6057a757a205d9e56b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089244"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396093"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Restituisce una riga per ogni colonna di ogni tabella e vista e una riga per ogni parametro di una stored procedure nel database.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68089244"
 |**IsNullable**|**int**|Indica se la colonna ammette valori Null:<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**confronto**|**sysname**|Nome delle regole di confronto della colonna. NULL se non si tratta di una colonna di tipo carattere.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Mapping di tabelle di sistema a viste di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Viste della compatibilità &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

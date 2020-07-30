@@ -1,5 +1,5 @@
 ---
-title: Usare tipi definiti dall'utente CLR di grandi dimensioni (OLE DB) | Microsoft Docs
+title: Usare i tipi definiti dall'utente CLR di grandi dimensioni (provider OLE DB Native Client)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,25 +11,26 @@ ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33378d8f5ea3252e5166e9a69ea292ce1a76d663
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 60f8978fa0dedfe40a3d48b7796bc4d0fb1359c7
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011867"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396890"
 ---
-# <a name="use-large-clr-udts-ole-db"></a>Utilizzare tipi definiti dall'utente CLR di grandi dimensioni (OLE DB)
+# <a name="use-large-clr-udts--in-sql-server-native-client-ole-db"></a>USA tipi definiti dall'utente CLR di grandi dimensioni in SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   In questo esempio viene illustrato come recuperare righe con tipi di grandi dimensioni definiti dall'utente da un set di risultati. Per altre informazioni, vedere [Tipi CLR definiti dall'utente di grandi dimensioni &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). Questo esempio può essere eseguito solo in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva.  
   
 ## <a name="example"></a>Esempio  
- L'esempio include due progetti. Un progetto consente di creare un assembly (DLL) dal codice sorgente C# che contiene il tipo CLR. Nel database verrà aggiunta una tabella con una colonna di un tipo definito nell'assembly. Per impostazione predefinita, in questo esempio verrà utilizzato il database master. Il secondo progetto è un'applicazione C nativa che consente di leggere i dati dalla tabella.  
+ L'esempio include due progetti. Un progetto consente di creare un assembly (DLL) dal codice sorgente C# che contiene il tipo CLR. Nel database verrà aggiunta una tabella Una colonna nella tabella sarà di un tipo definito nell'assembly. Per impostazione predefinita, in questo esempio verrà utilizzato il database master. Il secondo progetto è un'applicazione C nativa che consente di leggere i dati dalla tabella.  
   
  Compilare il primo listato di codice (C#) in una DLL.  Copiare quindi la DLL nella directory radice dell'unità C.  
   
  Eseguire il secondo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) per aggiungere l'assembly al database master.  
   
- Compilare il terzo listato di codice (C++) con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
+ Compilare il terzo listato di codice (C++) con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L "(local)" in L "(local) \\ \name", dove name è l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
  Eseguire il quarto listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) per eliminare l'assembly nel database master.  
   

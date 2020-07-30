@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: fcc1543a26c179ae6a775b6d735283ba068312ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df1539bde5064dc9ae9211029631bb233be0f469
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68112868"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396788"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Uso di SSMA per Sybase Console (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA), versione per Sybase Adaptive Server Enterprise (ASE), è ora accessibile tramite un'applicazione console nella riga di comando. I file script formano l'input per l'applicazione per l'esecuzione dei comandi. Come applicazione console, SSMA consente l'interazione a livello di script, riduce il ciclo di migrazione e ridimensiona il lavoro di migrazione.  
@@ -23,9 +23,8 @@ Questa sezione illustra la procedura per eseguire la migrazione del database del
   
 Gli argomenti trattati in questa sezione includono:  
   
-|||  
+|Argomento|Descrizione|  
 |-|-|  
-|**Argomenti**|**Descrizione**|  
 |[Introduzione con SSMA per la console Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md)|Viene illustrata la procedura per eseguire l'applicazione console.|  
 |[Opzioni della riga di comando nella console SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md)|Descrive le opzioni e i parametri della riga di comando per il funzionamento dell'applicazione console SSMA.|  
 |[Creazione di file di script &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)|Viene illustrato come creare un file di script.|  
@@ -37,6 +36,6 @@ Gli argomenti trattati in questa sezione includono:
 |[Generazione di report &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)|Elenca i comandi per la generazione di report.|  
 |[Risoluzione dei problemi &#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)|Fornisce brevi informazioni sulla correzione dei problemi di migrazione.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Introduzione con SSMA per la console Sybase (SybaseToSQL)](https://msdn.microsoft.com/43219dbe-bcfa-427d-9242-f07b1455f15f)  
   

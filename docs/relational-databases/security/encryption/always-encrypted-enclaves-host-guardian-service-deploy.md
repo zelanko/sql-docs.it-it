@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6794f5fd57d1c89e7c1989e79b5072a8c15cf43e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d8fd7e4164807789939ba0c3fd515d1a2d8dc67
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74320054"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410987"
 ---
 # <a name="deploy-the-host-guardian-service-for-ssnoversion-md"></a>Distribuire il servizio Sorveglianza host per [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Questo articolo descrive come distribuire il servizio Sorveglianza host (HGS) come servizio di attestazione per [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
 Prima di iniziare, leggere l'articolo[Pianificare l'attestazione del servizio Sorveglianza host](./always-encrypted-enclaves-host-guardian-service-plan.md) per un elenco completo dei prerequisiti e delle linee guida per l'architettura.

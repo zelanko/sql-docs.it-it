@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 770bf86f62f243ea255693c7773e6fae48527cfd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 23ee532329e8104d3a0e02c9547d9ca7813b42a2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747091"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242821"
 ---
 # <a name="adorecordsetconstruction-interface"></a>Interfaccia ADORecordsetConstruction
 L'interfaccia **ADORecordsetConstruction** viene utilizzata per costruire un oggetto **Recordset** ADO da un oggetto OLE DB **set di righe** in un'applicazione C/C++.  
@@ -29,7 +29,7 @@ L'interfaccia **ADORecordsetConstruction** viene utilizzata per costruire un ogg
   
 ## <a name="properties"></a>Proprietà  
   
-|||  
+|Proprietà|Descrizione|  
 |-|-|  
 |[Capitolo](../../../ado/reference/ado-api/chapter-property-ado.md)|Lettura/Scrittura.<br />Ottiene o imposta un oggetto OLE DB **capitolo** da/in questo oggetto **Recordset** ADO.|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Lettura/Scrittura.<br />Ottiene o imposta un OLE DB oggetto **RowPosition** da/in questo oggetto **Recordset** ADO.|  
@@ -74,10 +74,10 @@ L'interfaccia **ADORecordsetConstruction** viene utilizzata per costruire un ogg
 ## <a name="requirements"></a>Requisiti  
  **Versione:** ADO 2,0 e versioni successive  
   
- **Libreria:** msado15. dll  
+ **Libreria:** msado15.dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Oggetto recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Proprietà Rowset (ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)

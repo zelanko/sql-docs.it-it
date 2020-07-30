@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 268844335920f88469119df5cc84a145369da1e1
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: c9d942e2255c2c60978d41004cfe53097c99209d
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197242"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332430"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 
@@ -256,7 +256,7 @@ Come per `datetime`, ad eccezione del fatto che è possibile specificare il nume
 | `money`|8|  
 | `smallmoney` |4|  
   
- `bigint` | `int` | `smallint` | `tinyint`  
+ `bigint` \| `int` \| `smallint` \| `tinyint`  
  Tipi di dati numerici esatti che utilizzano dati integer. La risorsa di archiviazione è illustrata nella tabella seguente.  
   
 | Tipo di dati | Byte per l'archiviazione |  
