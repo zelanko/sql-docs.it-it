@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d887e428773e6901544422edcb6960e6e9ae0580
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b4f794e66e881ddeb36c724fc583d95a42bce33d
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595516"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411447"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>Configurare la crittografia delle colonne sul posto usando Always Encrypted con enclave sicuri 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 [Always Encrypted con enclave sicuri](always-encrypted-enclaves.md) supporta le operazioni crittografiche sulle colonne di database sul posto, all'interno di un enclave sicuro in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La crittografia sul posto elimina la necessità di spostare i dati per tali operazioni all'esterno del database, rendendo le operazioni di crittografia più veloci e affidabili. 
 

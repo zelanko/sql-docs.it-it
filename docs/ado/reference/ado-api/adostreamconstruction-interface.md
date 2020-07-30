@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c120667a0ce279ea03922adf487f58c1fdc92de
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 75af8d899c4fb0b97f4ee09795888ef773999b60
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747053"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242811"
 ---
 # <a name="adostreamconstruction-interface"></a>Interfaccia ADOStreamConstruction
 L'interfaccia **ADOStreamConstruction** viene utilizzata per costruire un oggetto **flusso** ADO da un oggetto OLE DB **IStream** in un'applicazione C/C++.  
   
 ## <a name="properties"></a>Proprietà  
   
-|||  
+|Proprietà|Descrizione|  
 |-|-|  
-|[Proprietà Stream](../../../ado/reference/ado-api/stream-property.md)|Lettura/Scrittura. Ottiene o imposta un oggetto **flusso** OLE DB.|  
+|[Flusso](../../../ado/reference/ado-api/stream-property.md)|Lettura/Scrittura. Ottiene o imposta un oggetto **flusso** OLE DB.|  
   
 ## <a name="methods"></a>Metodi  
  No.  
@@ -37,7 +37,7 @@ L'interfaccia **ADOStreamConstruction** viene utilizzata per costruire un oggett
 ## <a name="events"></a>Eventi  
  No.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Dato un oggetto OLE DB **IStream** ( `pStream` ), la costruzione di un oggetto **flusso** ADO ( `adoStr` ) equivale alle tre operazioni di base seguenti:  
   
 1.  Creazione di un oggetto **flusso** ADO:  
@@ -68,7 +68,7 @@ adoStrConstruct->put_Stream(pUnk);
 ## <a name="requirements"></a>Requisiti  
  **Versione:** ADO 2,0 o versione successiva  
   
- **Libreria:** msado15. dll  
+ **Libreria:** msado15.dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   

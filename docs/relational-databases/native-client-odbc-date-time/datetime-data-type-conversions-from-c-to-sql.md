@@ -13,11 +13,12 @@ ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02dacc3323d331c2442e12518146681bdc45cb23
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 298e16b814251cf0068436cb5c1a6331aef8c1b4
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004377"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332416"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>Conversioni dei tipi di dati datetime da C a SQL
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,23 +27,22 @@ ms.locfileid: "86004377"
   
  Le conversioni descritte nella tabella seguente sono valide se effettuate sul client. Nei casi in cui il client specifica la precisione in secondi frazionari per un parametro che differisce da quello definito nel server, la conversione client potrebbe avere esito positivo, ma il server restituirà un errore quando viene chiamato **SQLExecute** o **SQLExecuteDirect** . In particolare, ODBC considera il troncamento dei secondi frazionari come un errore, mentre il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportamento viene arrotondato. ad esempio, l'arrotondamento si verifica quando si passa da **datetime2 (6)** a **datetime2 (2)**. I valori della colonna di tipo datetime vengono arrotondati a 1/300° di un secondo e le colonne smalldatetime contengono secondi impostati su zero dal server.  
   
-|||||||||  
-|-|-|-|-|-|-|-|-|  
-||SQL_TYPE_DATE|SQL_TYPE_TIME|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_SS_TIMSTAMPOFFSET|SQL_CHAR|SQL_WCHAR|  
-|SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
-|SQL_C_TIME|-|1|1|1,7|1, 5, 7|1,13|1,13|  
-|SQL_C_SS_TIME2|-|1,3|1,10|1,7|1, 5, 7|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|N/D|N/D|1,10,11|N/D|N/D|N/D|N/D|  
-|SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
-|SQL_C_SS_TIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|N/D|N/D|N/D|N/D|1,10,11|N/D|N/D|  
-|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|N/D|N/D|  
-|SQL_C_CHAR/SQL_WCHAR (time2)|9|9, 3|9,10|9,7,10|9,5,7,10|N/D|N/D|  
-|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9, 3, 4|9,4,10|9,10|9,5,10|N/D|N/D|  
-|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9, 3, 4, 8|9,4,8,10|9,8,10|9,10|N/D|N/D|  
-|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|N/D|N/D|N/D|N/D|N/D|N/D|  
-|SQL_C_BINARY(SQL_TIME_STRUCT)|N/D|N/D|N/D|N/D|N/D|N/D|N/D|  
-|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|N/D|N/D|N/D|N/D|N/D|N/D|N/D|  
+|   | SQL_TYPE_DATE | SQL_TYPE_TIME | SQL_SS_TIME2 | SQL_TYPE_TIMESTAMP | SQL_SS_TIMSTAMPOFFSET | SQL_CHAR | SQL_WCHAR |
+| - | ------------- | ------------- | ------------ | ------------------ | --------------------- | -------- | --------- |
+| **SQL_C_DATE** |1|-|-|1,6|1,5,6|1,13|1,13|  
+| **SQL_C_TIME** |-|1|1|1,7|1, 5, 7|1,13|1,13|  
+| **SQL_C_SS_TIME2** |-|1,3|1,10|1,7|1, 5, 7|1,13|1,13|  
+| **SQL_C_BINARY(SQL_SS_TIME2_STRUCT)** |N/D|N/D|1,10,11|N/D|N/D|N/D|N/D|  
+| **SQL_C_TYPE_TIMESTAMP** |1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
+| **SQL_C_SS_TIMESTAMPOFFSET** |1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
+| **SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)** |N/D|N/D|N/D|N/D|1,10,11|N/D|N/D|  
+| **SQL_C_CHAR/SQL_WCHAR (date)** |9|9|9|9,6|9,5,6|N/D|N/D|  
+| **SQL_C_CHAR/SQL_WCHAR (time2)** |9|9, 3|9,10|9,7,10|9,5,7,10|N/D|N/D|  
+| **SQL_C_CHAR/SQL_WCHAR (datetime)** |9,2|9, 3, 4|9,4,10|9,10|9,5,10|N/D|N/D|  
+| **SQL_C_CHAR/SQL_WCHAR (datetimeoffset)** |9,2,8|9, 3, 4, 8|9,4,8,10|9,8,10|9,10|N/D|N/D|  
+| **SQL_C_BINARY(SQL_DATE_STRUCT)** |1,11|N/D|N/D|N/D|N/D|N/D|N/D|  
+| **SQL_C_BINARY(SQL_TIME_STRUCT)** |N/D|N/D|N/D|N/D|N/D|N/D|N/D|  
+| **SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)** |N/D|N/D|N/D|N/D|N/D|N/D|N/D|  
   
 ## <a name="key-to-symbols"></a>Descrizione dei simboli  
   
@@ -78,10 +78,10 @@ ms.locfileid: "86004377"
   
      Il numero di cifre per i secondi frazionari (scala) è determinato dalla dimensione della colonna di destinazione in base alla tabella seguente:  
   
-    ||||  
-    |-|-|-|  
-    |Type|Scala implicita<br /><br /> 0|Scala implicita<br /><br /> 1.. 9|  
-    |SQL_C_TYPE_TIMESTAMP|19|21..29|  
+    |   | Scala implicita | Scala implicita |
+    | - | ------------- | ------------- |
+    | **Tipo** | 0 | 1.. 9 |  
+    |**SQL_C_TYPE_TIMESTAMP** |19|21..29|  
   
      Per SQL_C_TYPE_TIMESTAMP, tuttavia, se i secondi frazionari possono essere rappresentati con tre cifre senza perdita di dati e la dimensione della colonna è almeno 23, vengono generate esattamente tre cifre di secondi frazionari. Questo comportamento assicura la compatibilità con le versioni precedenti per le applicazioni sviluppate utilizzando driver ODBC meno recenti.  
   

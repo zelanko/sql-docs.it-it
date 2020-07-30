@@ -10,15 +10,15 @@ ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e3ab735a19342e1ecc1a941a185832edae61262
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: f28f48d8530111e2de12bbb6f075b69147ad1cff
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627444"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396042"
 ---
 # <a name="syspdw_health_alerts-transact-sql"></a>sys. pdw_health_alerts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Archivia le proprietà per i diversi avvisi che possono verificarsi nel sistema. si tratta di una tabella del catalogo per gli avvisi.  
   
@@ -29,13 +29,13 @@ ms.locfileid: "84627444"
 |alert_name|**nvarchar(255)**|Nome dell'avviso.|NOT NULL|  
 |state|**nvarchar(32)**|Stato dell'avviso.|NOT NULL<br /><br /> Valori possibili:<br /><br /> Operativo<br /><br /> ' Non operativo '<br /><br /> Degradato<br /><br /> Fallito|  
 |severity|**nvarchar(32)**|Gravità dell'avviso|NOT NULL<br /><br /> Valori possibili:<br /><br /> Informativo<br /><br /> Avviso<br /><br /> Errore|  
-|tipo|**nvarchar(32)**|Tipo di avviso.|NOT NULL<br /><br /> Valori possibili:<br /><br /> StatusChange-lo stato del dispositivo è stato modificato.<br /><br /> Soglia: un valore ha superato il valore di soglia.|  
+|type|**nvarchar(32)**|Tipo di avviso.|NOT NULL<br /><br /> Valori possibili:<br /><br /> StatusChange-lo stato del dispositivo è stato modificato.<br /><br /> Soglia: un valore ha superato il valore di soglia.|  
 |description|**nvarchar(4000)**|Descrizione dell'avviso.|NOT NULL|  
 |condizione|**nvarchar(255)**|Utilizzato quando Type = Threshold. Definisce la modalità di calcolo della soglia di avviso.|NULL|  
 |status|**nvarchar(32)**|Stato dell'avviso|NULL|  
 |condition_value|**bit**|Indica se l'avviso può verificarsi durante l'operazione di sistema.|NULL<br /><br /> Valori possibili<br /><br /> 0: l'avviso non viene generato.<br /><br /> 1: viene generato un avviso.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Viste del catalogo di SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

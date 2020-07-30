@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68572a642333e4e9c2c334cd7680b96b0cacced3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cc5d48ab323dd3e75ba40f406ec88505957153c7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760377"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242771"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Specifica la modalità di interpretazione di un argomento di comando.  
@@ -51,9 +51,17 @@ Specifica la modalità di interpretazione di un argomento di comando.
 |AdoEnums. CommandType. TABLEDIRECT|  
   
 ## <a name="applies-to"></a>Si applica a  
-  
-|||  
-|-|-|  
-|[Proprietà CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)|[Metodo Execute (Command - ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
-|[Metodo Execute (Connection - ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|[Metodo Open (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
-|[Metodo Requery](../../../ado/reference/ado-api/requery-method.md)||
+
+:::row:::
+    :::column:::
+        [Proprietà CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)  
+        [Metodo Execute (Command - ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)  
+    :::column-end:::
+    :::column:::
+        [Metodo Execute (Connection - ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
+        [Metodo Open (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+    :::column-end:::
+    :::column:::
+        [Metodo Requery](../../../ado/reference/ado-api/requery-method.md)  
+    :::column-end:::
+:::row-end:::

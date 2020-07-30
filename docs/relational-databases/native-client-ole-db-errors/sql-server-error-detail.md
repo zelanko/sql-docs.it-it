@@ -1,5 +1,5 @@
 ---
-title: Dettagli relativi agli errori di SQL Server | Microsoft Docs
+title: Dettagli errore SQL Server (provider OLE DB Native Client)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,13 +18,14 @@ ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fdb803531ae271f59dda6268cca986abb166b1f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3b491e14b7109af533eb2e7cfa3bc05658436e31
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010512"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331879"
 ---
-# <a name="sql-server-error-detail"></a>Dettagli relativi agli errori SQL Server
+# <a name="sql-server-native-client-error-detail"></a>Dettagli errore SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client definisce l'interfaccia di errore specifica del provider [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1). L'interfaccia restituisce maggiori dettagli relativi agli errori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e risulta molto utile quando operazioni di esecuzione di comandi o del set di righe non riescono.  

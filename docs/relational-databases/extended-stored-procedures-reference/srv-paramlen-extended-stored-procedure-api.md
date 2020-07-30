@@ -1,5 +1,6 @@
 ---
 title: srv_paramlen (API Stored procedure estesa) | Microsoft Docs
+description: Informazioni sul modo in cui srv_paramlen nell'API della stored procedure estesa restituisce la lunghezza dei dati di un parametro di chiamata stored procedure remoto.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55d9c6bf2e64509872faf02fa653499a28efb300
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e76d1f4a68d0c15d1f0a0b33627d18ade97669cf
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756721"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248422"
 ---
 # <a name="srv_paramlen-extended-stored-procedure-api"></a>srv_paramlen (API delle stored procedure estese)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +73,7 @@ n
   
  \*   Valore *len* effettivo = Lunghezza della stringa di carattere multibyte (cch)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Ogni parametro di stored procedure remota ha una lunghezza massima e una lunghezza effettiva dei dati. Per i tipi di dati a lunghezza fissa standard che non consentono valori Null, le due lunghezze coincidono. Per i tipi di dati a lunghezza variabile, le lunghezze possono essere diverse. Un parametro dichiarato come **varchar(30)** può ad esempio contenere dati con lunghezza pari a 10 byte. La lunghezza effettiva del parametro è 10, mentre la lunghezza massima è 30. La funzione **srv_paramlen** ottiene la lunghezza effettiva dei dati in byte di una stored procedure remota. Per ottenere la lunghezza massima dei dati di un parametro, usare **srv_parammaxlen**.  
   
  Quando viene effettuata una chiamata a una stored procedure remota con parametri, tali parametri possono essere passati per nome o per posizione (senza nome). Se invece viene effettuata con alcuni parametri passati per nome e altri passati per posizione, si verifica un errore. Il gestore SRV_RPC viene ancora chiamato, ma sembra che non siano presenti parametri e **srv_rpcparams** restituisce 0.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12a9b2cae1c516ed3bf8caef8127034e6ff2a847
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4dca796e9ba3c353d48fd3620c34a141c35a3fe8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747179"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242831"
 ---
 # <a name="adorecordconstruction-interface"></a>Interfaccia ADORecordConstruction
 L'interfaccia **ADORecordConstruction**viene utilizzata per costruire un oggetto **record** ADO da un oggetto OLE DB **Row** in un'applicazione C/C++.  
@@ -29,7 +29,7 @@ L'interfaccia **ADORecordConstruction**viene utilizzata per costruire un oggetto
   
 ## <a name="properties"></a>Proprietà  
   
-|||  
+|Proprietà|Descrizione|  
 |-|-|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Sola scrittura.<br />Imposta il contenitore di un oggetto OLE DB **riga** su questo oggetto **record** ADO.|  
 |[Riga](../../../ado/reference/ado-api/row-property-ado.md)|Lettura/Scrittura.<br />Ottiene o imposta un oggetto OLE DB **riga** da/in questo oggetto **record** ADO.|  
@@ -73,6 +73,6 @@ L'interfaccia **ADORecordConstruction**viene utilizzata per costruire un oggetto
 ## <a name="requirements"></a>Requisiti  
  **Versione:** ADO 2,0 e versioni successive  
   
- **Libreria:** msado15. dll  
+ **Libreria:** msado15.dll  
   
  **UUID:** 00000567-0000-0010-8000-00AA006D2EA4

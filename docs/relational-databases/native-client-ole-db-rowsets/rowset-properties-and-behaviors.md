@@ -1,5 +1,5 @@
 ---
-title: Proprietà e comportamenti dei set di righe | Microsoft Docs
+title: Proprietà e comportamenti dei set di righe (provider di OLE DB di Native Client)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d66aa7280bb2ce7f92211054713469626b4f6a3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 15f9884944eb5d0298e5536fa5b2f43f3aa46c96
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013131"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246850"
 ---
-# <a name="rowset-properties-and-behaviors"></a>Proprietà e comportamenti dei set di righe
+# <a name="rowset-properties-and-behaviors-native-client-ole-db-provider"></a>Proprietà e comportamenti dei set di righe (provider di OLE DB di Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Si tratta delle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proprietà del set di righe del provider OLE DB Native Client.  

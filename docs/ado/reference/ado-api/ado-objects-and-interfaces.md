@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe57e31792755aca1dc51b0af50805e853a5bab4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6deb8166c775fcdcfe8fb0975662dda0be3b3581
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747233"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242851"
 ---
 # <a name="ado-objects-and-interfaces"></a>Interfacce e oggetti ADO
 Le relazioni tra questi oggetti sono rappresentate nel [modello a oggetti ADO](../../../ado/reference/ado-api/ado-object-model.md).  
   
  Ogni oggetto può essere contenuto nella raccolta corrispondente. Un oggetto [Error](../../../ado/reference/ado-api/error-object.md) , ad esempio, può essere contenuto in una raccolta [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) . Per ulteriori informazioni, vedere [raccolte ADO](../../../ado/reference/ado-api/ado-collections.md) o un argomento specifico della raccolta.  
   
-|||  
+|Oggetto o interfaccia|Descrizione|  
 |-|-|  
 |[IADOCommandConstruction](https://msdn.microsoft.com/library/windows/desktop/aa965677.aspx)|Utilizzato per recuperare il comando OLEDB sottostante da un oggetto ADOCommand.|  
 |[ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)|Costruisce un oggetto **record** ADO da un oggetto OLE DB **riga** in un'applicazione C/C++.|  
 |[ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)|Costruisce un oggetto **Recordset** ADO da un oggetto OLE DB **set di righe** in un'applicazione C/C++.|  
 |[Interfaccia ADOStreamConstruction](../../../ado/reference/ado-api/adostreamconstruction-interface.md)|Costruisce un oggetto **flusso** ADO da un oggetto OLE DB **IStream** in un'applicazione C/C++.|  
 |[Comando](../../../ado/reference/ado-api/command-object-ado.md)|Definisce un comando specifico che si desidera eseguire su un'origine dati.<br /><br /> L'oggetto **Command** non è sicuro per lo scripting.|  
-|[Connessione](../../../ado/reference/ado-api/connection-object-ado.md)|Rappresenta una connessione aperta a un'origine dati.<br /><br /> L'oggetto **Connection** è sicuro per lo scripting.|  
+|[Connection](../../../ado/reference/ado-api/connection-object-ado.md)|Rappresenta una connessione aperta a un'origine dati.<br /><br /> L'oggetto **Connection** è sicuro per lo scripting.|  
 |[Interfaccia IDSOShapeExtensions](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)|Ottiene l'oggetto origine dati OLEDB sottostante per il provider di forme.|  
-|[Erroree](../../../ado/reference/ado-api/error-object.md)|Contiene informazioni dettagliate sugli errori di accesso ai dati relativi a una singola operazione che interessa il provider.<br /><br /> L'oggetto **errore** non è sicuro per lo scripting.|  
+|[Error (Errore) (Error (Errore)e)](../../../ado/reference/ado-api/error-object.md)|Contiene informazioni dettagliate sugli errori di accesso ai dati relativi a una singola operazione che interessa il provider.<br /><br /> L'oggetto **errore** non è sicuro per lo scripting.|  
 |[Campo](../../../ado/reference/ado-api/field-object.md)|Rappresenta una colonna di dati con un tipo di dati comune.|  
 |[Parametro](../../../ado/reference/ado-api/parameter-object.md)|Rappresenta un parametro o un argomento associato a un oggetto **Command** basato su una query con parametri o stored procedure.<br /><br /> L'oggetto **Parameter** non è sicuro per lo scripting.|  
 |[Proprietà](../../../ado/reference/ado-api/property-object-ado.md)|Rappresenta una caratteristica dinamica di un oggetto ADO definito dal provider.|  
