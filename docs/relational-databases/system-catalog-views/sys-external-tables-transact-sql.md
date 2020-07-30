@@ -11,21 +11,21 @@ ms.assetid: fac4720c-b679-4ab2-864b-ff7810a9b559
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c8920361fafe9ecd26ff401110d4661c278de88
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1e0341c16a8aa78497aa0e1e347d5cc079a26b6b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828151"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394090"
 ---
 # <a name="sysexternal_tables-transact-sql"></a>sys. external_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   Contiene una riga per ogni tabella esterna nel database corrente.  
   
 |Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|\<colonne ereditate>||Per un elenco di colonne ereditate da questa vista, vedere [sys. objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).||  
+|\<inherited columns>||Per un elenco di colonne ereditate da questa vista, vedere [sys. objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).||  
 |max_column_id_used|**int**|ID di colonna massimo utilizzato per la tabella.||  
 |uses_ansi_nulls|**bit**|La tabella è stata creata con l'opzione di database SET ANSI_NULLS impostata su ON.||  
 |data_source_id|**int**|ID oggetto per l'origine dati esterna.||  
@@ -41,9 +41,9 @@ ms.locfileid: "82828151"
 |remote_object_name|**sysname**|Per le tabelle esterne su un'origine dati esterna SHARD_MAP_MANAGER, questo è il nome della tabella di base nei database remoti, se diverso dal nome della tabella esterna.||  
   
 ## <a name="permissions"></a>Autorizzazioni  
- La visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni.  Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ La visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [sys. external_file_formats &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
  [sys. external_data_sources &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
