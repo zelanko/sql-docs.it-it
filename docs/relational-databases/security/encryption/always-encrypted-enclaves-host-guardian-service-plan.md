@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d774df3329c6c9e49e9e1bd9a86dbeaf30ac5765
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 425fdeb973918744b4aeab423629939a2a84f97a
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287145"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411381"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>Pianificare l'attestazione del servizio Sorveglianza host
 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Quando si usa [Always Encrypted con enclave sicure](always-encrypted-enclaves.md), accertarsi che l'applicazione client comunichi con un'enclave attendibile all'interno del processo di [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. Per un'enclave di sicurezza basata sulla virtualizzazione, questo requisito significa verificare che il codice all'interno dell'enclave sia valido e che il computer che ospita [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] sia attendibile. L'attestazione remota introduce a questo scopo una terza parte che può convalidare l'identità (e, facoltativamente, la configurazione) del computer [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. Prima che [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] possa usare un enclave per eseguire una query, deve fornire al servizio di attestazione informazioni sull'ambiente operativo per ottenere un certificato di integrità. Questo certificato di integrità viene quindi inviato al client, che può verificarne in modo indipendente l'autenticità con il servizio di attestazione. Quando il client considera attendibile il certificato di integrità, sa di comunicare con un enclave di sicurezza basata sulla virtualizzazione attendibile ed eseguirà la query che userà tale enclave.
 
