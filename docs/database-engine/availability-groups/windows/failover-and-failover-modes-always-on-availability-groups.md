@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 98681c7ba908a43f2f4cc3e792f7f62b8a8ba2b7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9aec87c4b57016f862b671734a871f77bd84da15
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897503"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395056"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover e modalità di failover (gruppi di disponibilità AlwaysOn)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -79,10 +79,10 @@ ms.locfileid: "85897503"
 ##  <a name="overview-of-failover"></a><a name="Overview"></a> Panoramica del failover  
  Nella tabella seguente sono riportate le forme di failover supportate nelle diverse modalità di disponibilità e di failover. Per ogni associazione, la modalità di disponibilità e la modalità di failover effettive vengono determinate dall'intersezione delle modalità della replica primaria in aggiunta alle modalità di una o più repliche secondarie.  
   
-||Modalità commit asincrono|Modalità commit sincrono con modalità di failover manuale|Modalità commit sincrono con modalità di failover automatico|  
-|-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
+|Modulo di failover|Modalità commit asincrono|Modalità commit sincrono con modalità di failover manuale|Modalità commit sincrono con modalità di failover automatico|  
+|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |Failover automatico|No|No|Sì|  
-|Failover manuale pianificato|No|Sì|Sì|  
+|Failover manuale pianificato|No|Sì|sì|  
 |failover forzato|Sì|Sì|Sì **&#42;**|  
   
  **&#42;** Se si esegue un comando di failover forzato su una replica secondaria sincronizzata, la replica secondaria si comporta come per un failover manuale.  
@@ -259,7 +259,7 @@ ms.locfileid: "85897503"
 |Modalità di disponibilità della replica secondaria|Il database è sincronizzato?|È possibile che si verifichi una perdita dei dati?|  
 |--------------------------------------------|-------------------------------|----------------------------|  
 |Synchronous-commit|Sì|No|  
-|Synchronous-commit|No|Sì|  
+|Synchronous-commit|No|sì|  
 |Asynchronous-commit|No|Sì|  
   
  I database secondari registrano solo due fork di recupero, pertanto se si eseguono più failover forzati, qualsiasi database secondario che abbia dato inizio alla sincronizzazione dati con il failover forzato precedente non potrà essere ripreso. In questo caso, i database secondari che non possono essere ripresi dovranno essere rimossi dal gruppo di disponibilità, ripristinati fino al momento corretto e nuovamente aggiunti al gruppo di disponibilità. È possibile osservare l'errore 1408 con stato 103 in questo scenario (errore: 1408, gravità: 16, stato: 103). Un ripristino non funziona tra più fork di recupero, pertanto, assicurarsi di eseguire un backup del log dopo avere eseguito più failover forzati.  

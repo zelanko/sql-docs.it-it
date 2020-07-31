@@ -1,5 +1,6 @@
 ---
 title: Eseguire una stored procedure | Microsoft Docs
+description: Informazioni su come eseguire una stored procedure in SQL Server 2019 (15.x) usando SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34ee89bdbd6e87aef9691795099cb61b17413a6a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0dc360ab3faf724830f61b4572cff93425203ec4
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000993"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332614"
 ---
 # <a name="execute-a-stored-procedure"></a>Eseguire una stored procedure
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +64,7 @@ In questo argomento viene illustrato come eseguire una stored procedure in [!INC
   
 -   Se una stored procedure definita dall'utente ha lo stesso nome di una stored procedure di sistema, potrebbe non essere possibile eseguire la prima.  
   
-###  <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 -   Esecuzione di stored procedure di sistema  
   
@@ -127,7 +128,7 @@ In questo argomento viene illustrato come eseguire una stored procedure in [!INC
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per altre informazioni, vedere la sezione Autorizzazioni in [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-execute-a-stored-procedure"></a>Per eseguire una stored procedure  
   
@@ -156,7 +157,7 @@ In questo argomento viene illustrato come eseguire una stored procedure in [!INC
   
 5.  Per eseguire la stored procedure, fare clic su **OK**.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-execute-a-stored-procedure"></a>Per eseguire una stored procedure  
   

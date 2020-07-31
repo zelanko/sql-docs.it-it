@@ -17,12 +17,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 4570d85074e2d339162aefa681bc92d35c99f3bd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 09334d8eedab294de3015cdcaf0ac5b1c61c9239
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906345"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395010"
 ---
 # <a name="replication-log-reader-agent"></a>Agente lettura log repliche
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -93,10 +93,10 @@ logread [-?]
  **-DistributorPassword** _distributor_password_  
  Password del database di distribuzione.  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [ **0**\| **1**]  
  Specifica la modalità di sicurezza del database di distribuzione. Un valore **0** indica la modalità di autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (impostazione predefinita), mentre un valore **1** indica la modalità di autenticazione di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows.  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ **-EncryptionLevel** [ **0** \| **1** \| **2** ]  
  Livello di crittografia TLS (Transport Layer Security), noto in precedenza come SSL (Secure Sockets Layer), usato dall'agente di lettura log quando vengono stabilite le connessioni.  
   
 |Valore di EncryptionLevel|Descrizione|  
@@ -113,7 +113,7 @@ logread [-?]
  **-ExtendedEventConfigFile** _configuration_path_and_file_name_  
  Consente di specificare il percorso e il nome del file di configurazione XML di eventi estesi. Il file di configurazione di eventi estesi consente di configurare sessioni e abilitare eventi per la traccia.  
   
- **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
+ **-HistoryVerboseLevel** [ **0**\| **1**\| **2**]  
  Consente di specificare la quantità di cronologia registrata durante un'operazione dell'agente di lettura log. Per ridurre al minimo l'effetto della registrazione della cronologia sulle prestazioni, selezionare **1**.  
   
 |Valore di HistoryVerboseLevel|Descrizione|  
@@ -142,12 +142,12 @@ logread [-?]
   
  Se nell'origine non vi sono transazioni replicate disponibili, tramite l'agente viene inviato al server di distribuzione un messaggio che segnala l'assenza di transazioni. Questa opzione specifica per quanto tempo l'agente aspetta prima di inviare un altro messaggio di assenza di transazioni. Gli agenti inviano sempre un messaggio di assenza di transazioni quando rilevano che nell'origine non vi sono transazioni disponibili dopo aver elaborato in precedenza transazioni replicate. Il valore predefinito è 60 secondi.  
  
- **-MultiSubnetFailover** [**0**|**1**] specifica se la proprietà MultiSubnetFailover è abilitata o meno. Se l'applicazione si connette a un gruppo di disponibilità Always On in subnet diverse, l'impostazione di MultiSubnetFailover su 1 (True) garantisce una maggiore velocità di rilevamento e connessione al server attualmente attivo.
+ **-MultiSubnetFailover** [**0**\|**1**] specifica se la proprietà MultiSubnetFailover è abilitata o meno. Se l'applicazione si connette a un gruppo di disponibilità Always On in subnet diverse, l'impostazione di MultiSubnetFailover su 1 (True) garantisce una maggiore velocità di rilevamento e connessione al server attualmente attivo.
   
  **-Output** _output_path_and_file_name_  
  Percorso del file di output dell'agente. Se non viene specificato il nome file, l'output viene inviato alla console. Se il nome file specificato esiste già, l'output viene aggiunto al file.  
   
- **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
+ **-OutputVerboseLevel** [ **0**\| **1**\| **2** \| **3** \| **4** ]  
  Specifica se l'output deve essere dettagliato.  
   
 |valore|Descrizione|  
@@ -172,7 +172,7 @@ logread [-?]
  **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  Specifica l'istanza del partner di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che partecipa in una sessione di mirroring del database con il database di pubblicazione. Per altre informazioni, vedere [Mirroring e replica del database &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
- **-PublisherSecurityMode** [ **0**| **1**]  
+ **-PublisherSecurityMode** [ **0**\| **1**]  
  Specifica la modalità di sicurezza del server di pubblicazione. Un valore **0** indica la modalità di autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (impostazione predefinita), mentre un valore **1** indica la modalità di autenticazione di Windows.  
   
  **-PublisherLogin** _publisher_login_  

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5324c46fb8a4eb67d2364ee3bcbd5e21674a5c7a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2be2bcf872af3be6caf8bb2b13af70347fcf1106
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630985"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87361373"
 ---
 # <a name="database-properties-mirroring-page"></a>Proprietà database (pagina Mirroring)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85630985"
   
  Se la procedura guidata viene completata, l'azione eseguita dipende dallo stato del mirroring come illustrato di seguito:  
   
-|||  
+|Stato mirroring|Azione intrapresa|  
 |-|-|  
 |Se il mirroring non è stato avviato.|La pagina delle proprietà memorizza nella cache le informazioni di connessione nonché un valore che indica se nel database mirror è impostata la proprietà del partner.<br /><br /> Al termine della procedura guidata, viene richiesto di avviare il mirroring del database utilizzando gli indirizzi di rete del server e la modalità operativa predefiniti. Se è necessario modificare gli indirizzi o la modalità operativa, fare clic su **Non avviare il mirroring**.|  
 |Se il mirroring è stato avviato.|Se il server di controllo del mirroring è stato cambiato nella procedura guidata, viene impostato di conseguenza.|  

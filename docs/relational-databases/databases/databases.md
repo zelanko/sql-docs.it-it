@@ -16,12 +16,12 @@ ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85c45ef2facc4a477c0851c2f2e89a7960eda001
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d69fbd48f7d7f713d9a10806c65c144fff84d6d
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630764"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87361501"
 ---
 # <a name="databases"></a>Database
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,28 +40,43 @@ ms.locfileid: "85630764"
  La maggior parte degli utenti che operano con i database utilizza lo strumento [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Lo strumento [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dispone di un'interfaccia utente grafica per la creazione di database e degli oggetti nei database. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] usa anche un editor di query per interagire con i database scrivendo istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile installare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dal disco dell'installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o scaricandolo da MSDN. Per altre informazioni sullo strumento [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vedere [Scaricare SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md).
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
-  
-|||  
-|-|-|  
-|[Database di sistema.](../../relational-databases/databases/system-databases.md)|[Eliminare file di dati o file di log da un database](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)|  
-|[Database indipendenti](../../relational-databases/databases/contained-databases.md)|[Visualizzare le informazioni sullo spazio allocato ai dati e ai log per un database](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)|  
-|[File di dati di SQL Server in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)|[Aumentare le dimensioni di un database](../../relational-databases/databases/increase-the-size-of-a-database.md)|  
-|[Filegroup e file di database](../../relational-databases/databases/database-files-and-filegroups.md)|[Rinominare un database](../../relational-databases/databases/rename-a-database.md)|  
-|[Stati del database](../../relational-databases/databases/database-states.md)|[Impostare un database in modalità utente singolo](../../relational-databases/databases/set-a-database-to-single-user-mode.md)|  
-|[Stati dei file](../../relational-databases/databases/file-states.md)|[Compattare un database](../../relational-databases/databases/shrink-a-database.md)|  
-|[Stima delle dimensioni di un database](../../relational-databases/databases/estimate-the-size-of-a-database.md)|[Compattare un file](../../relational-databases/databases/shrink-a-file.md)|  
-|[Copiare database in altri server](../../relational-databases/databases/copy-databases-to-other-servers.md)|[Visualizzare o modificare le proprietà di un database](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)|  
-|[Collegamento e scollegamento di un database &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)|[Visualizzare un elenco di database in un'istanza di SQL Server](../../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
-|[Aggiungere file di dati o file di log a un database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)|[Visualizzare o modificare il livello di compatibilità di un database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)|  
-|[Modificare le impostazioni di configurazione per un database](../../relational-databases/databases/change-the-configuration-settings-for-a-database.md)|[Utilizzare la Creazione guidata piano di manutenzione](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)|  
-|[Creare un database](../../relational-databases/databases/create-a-database.md)|[Creare un alias del tipo di dati definito dall'utente](../../relational-databases/databases/create-a-user-defined-data-type-alias.md)|  
-|[Eliminare un database](../../relational-databases/databases/delete-a-database.md)|[Snapshot del database &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Database di sistema](../../relational-databases/databases/system-databases.md)  
+        [Database indipendenti](../../relational-databases/databases/contained-databases.md)  
+        [File di dati di SQL Server in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
+        [Filegroup e file di database](../../relational-databases/databases/database-files-and-filegroups.md)  
+        [Stati del database](../../relational-databases/databases/database-states.md)  
+        [Stati dei file](../../relational-databases/databases/file-states.md)  
+        [Stima delle dimensioni di un database](../../relational-databases/databases/estimate-the-size-of-a-database.md)  
+        [Copiare database in altri server](../../relational-databases/databases/copy-databases-to-other-servers.md)  
+        [Collegamento e scollegamento di un database &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
+        [Aggiungere file di dati o file di log a un database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
+        [Modificare le impostazioni di configurazione per un database](../../relational-databases/databases/change-the-configuration-settings-for-a-database.md)  
+        [Creare un database](../../relational-databases/databases/create-a-database.md)  
+        [Eliminare un database](../../relational-databases/databases/delete-a-database.md)  
+    :::column-end:::
+    :::column:::
+        [Eliminare file di dati o file di log da un database](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)  
+        [Visualizzare le informazioni sullo spazio allocato ai dati e ai log per un database](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
+        [Aumentare le dimensioni di un database](../../relational-databases/databases/increase-the-size-of-a-database.md)  
+        [Rinominare un database](../../relational-databases/databases/rename-a-database.md)  
+        [Impostare un database in modalità utente singolo](../../relational-databases/databases/set-a-database-to-single-user-mode.md)  
+        [Compattare un database](../../relational-databases/databases/shrink-a-database.md)  
+        [Compattare un file](../../relational-databases/databases/shrink-a-file.md)  
+        [Visualizzare o modificare le proprietà di un database](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)  
+        [Visualizzare un elenco di database in un'istanza di SQL Server](../../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md)  
+        [Visualizzare o modificare il livello di compatibilità di un database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)  
+        [Usare la Creazione guidata piano di manutenzione](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
+        [Creare un alias del tipo di dati definito dall'utente](../../relational-databases/databases/create-a-user-defined-data-type-alias.md)  
+        [Snapshot del database &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="related-content"></a>Contenuto correlato  
  [Indici](../../relational-databases/indexes/indexes.md)  
   
  [Visualizzazioni](../../relational-databases/views/views.md)  
   
  [Stored procedure &#40;Motore di database&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)  
-  
-  

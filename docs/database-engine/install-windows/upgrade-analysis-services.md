@@ -21,12 +21,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 72cba47c520749a2e78ae529d941b12ddcccf105
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 61b67a70b3193763a46a7aa99783397ee57d0e92
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900259"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362607"
 ---
 # <a name="upgrade-analysis-services"></a>Aggiornare Analysis Services
 
@@ -77,7 +77,7 @@ ms.locfileid: "85900259"
   
  Per motivi di background, nella tabella seguente sono riepilogati i livelli di compatibilità, ma è necessario esaminare gli articoli specifici per conoscere le caratteristiche di ogni livello.  
   
-||||  
+|Modello di database|Livello di compatibilità|Versioni compatibili|  
 |-|-|-|  
 |Tabulare|1400|SQL Server 2017|
 |Tabulare|1200|SQL Server 2016|  

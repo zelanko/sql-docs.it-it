@@ -1,6 +1,6 @@
 ---
 title: Creare estensioni
-description: Informazioni sulla creazione e la pubblicazione di estensioni in Azure Data Studio
+description: È possibile aggiungere funzionalità ad Azure Data Studio con un'estensione. Informazioni su come crearne una e come pubblicarla nella raccolta delle estensioni.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 63a4c95f12aefafec97a58a186d33a5095b90dc2
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0473ac567f26748999e5718fe5f81660b0bfb7ba
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483845"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411127"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Estendere le funzionalità creando estensioni per Azure Data Studio
 

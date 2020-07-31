@@ -1,6 +1,6 @@
 ---
 title: Estensione Confronto schema
-description: Installare e usare l'estensione Confronto schema per Azure Data Studio
+description: Informazioni su come installare e usare l'estensione di confronto schemi di Azure Data Studio per confrontare facilmente due database e modificarli in modo selettivo in modo che corrispondano.
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.reviewer: alayu, maghan, sstein
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 09602241d0fd30153ca462225b617fd1612a0045
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 80aa0be8ae70773fe0e1a0087e623f679504a983
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758406"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411227"
 ---
 # <a name="schema-compare-extension"></a>Estensione Confronto schema
 L'estensione Confronto schema consente di confrontare facilmente due definizioni di database e di applicare le differenze dall'origine alla destinazione.

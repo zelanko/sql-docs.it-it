@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f2474ed82498dae30b96178f0fcf962f3b1f0767
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 84872a5acaacf6c969e4dea367f0e64a2588d26a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897869"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394998"
 ---
 # <a name="replication-queue-reader-agent"></a>Agente di lettura coda repliche
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -75,10 +75,10 @@ qrdrsvc [-?]
  **-DistributorPassword** _distributor_password_  
  Password del database di distribuzione.  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [ **0**\| **1**]  
  Specifica la modalità di sicurezza del database di distribuzione. Un valore **0** indica la modalità di autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (impostazione predefinita), mentre un valore **1** indica la modalità di autenticazione di Windows.  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ **-EncryptionLevel** [ **0** \| **1** \| **2** ]  
  Livello di crittografia TLS (Transport Layer Security), noto in precedenza come SSL (Secure Sockets Layer), usato dall'agente di lettura coda quando vengono stabilite le connessioni.  
   
 |Valore di EncryptionLevel|Descrizione|  
@@ -92,7 +92,7 @@ qrdrsvc [-?]
   
  Per altre informazioni, vedere [Visualizzare e modificare le impostazioni di sicurezza della replica](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
- **-HistoryVerboseLevel** [ **0**| **1**| **2**| **3**]  
+ **-HistoryVerboseLevel** [ **0**\| **1**\| **2**\| **3**]  
  Specifica la quantità di cronologia registrata durante un'operazione dell'agente di lettura coda. Per ridurre al minimo l'effetto della registrazione della cronologia sulle prestazioni, selezionare **1**.  
   
 |Valore di HistoryVerboseLevel|Descrizione|  
@@ -108,7 +108,7 @@ qrdrsvc [-?]
  **-Output** _output_path_and_file_name_  
  Percorso del file di output dell'agente. Se non viene specificato il nome file, l'output viene inviato alla console. Se il nome file specificato esiste già, l'output viene aggiunto al file.  
   
- **-OutputVerboseLevel** [ **0**| **1**| **2**]  
+ **-OutputVerboseLevel** [ **0**\| **1**\| **2**]  
  Specifica se l'output deve essere dettagliato. Se il livello di dettaglio è **0**, vengono stampati solo i messaggi di errore. Se il livello di dettaglio è **1**, vengono stampati tutti i messaggi di report di stato. Se il livello di dettaglio è **2** (impostazione predefinita), vengono stampati tutti i messaggi di errore e i messaggi di report di stato. Questa opzione è utile per l'esecuzione del debug.  
   
  **-PollingInterval** _polling_interval_  
@@ -123,7 +123,7 @@ qrdrsvc [-?]
  **-QueryTimeOut** _query_time_out_seconds_  
  Numero di secondi prima del timeout delle query. Il valore predefinito è 1800 secondi.  
   
- **-ResolverState** [ **1**| **2**| **3**]  
+ **-ResolverState** [ **1**\| **2**\| **3**]  
  Specifica in che modo vengono risolti i conflitti degli aggiornamenti in coda. Un valore **1** indica che il conflitto viene vinto dal server di pubblicazione e che verrà eseguito il rollback della transazione in coda in conflitto corrente nel server di pubblicazione e nel Sottoscrittore di aggiornamento di origine. L'elaborazione delle transazioni in coda successive continuerà. Un valore **2** indica che il conflitto viene vinto dal Sottoscrittore e che la transazione in coda sostituirà i valori nel server di pubblicazione. Un valore **3** indica che qualsiasi conflitto comporterà la reinizializzazione del Sottoscrittore. Il conflitto viene vinto dal server di pubblicazione, l'elaborazione delle transazioni in coda successive verrà interrotta e la sottoscrizione verrà reinizializzata. L'impostazione predefinita è **1** per le pubblicazioni transazionali e **3** per le pubblicazioni snapshot.  
   
 ## <a name="remarks"></a>Osservazioni  

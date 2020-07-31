@@ -34,16 +34,16 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 246cf0c526e04c5f4df33067286b0cefaf9913cd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e958aaf757ecc9e28c090d50a13ead57b2de90bb
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636197"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397080"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Clausola FROM con JOIN, APPLY, PIVOT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
 In Transact-SQL, la clausola FROM è disponibile per le istruzioni seguenti:
 
@@ -390,7 +390,7 @@ ON (p.ProductID = v.ProductID);
 **SI APPLICA A**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
   
- Restituisce una tabella con i valori per tutte le versioni di riga che erano attive nell'intervallo di tempo specificato, indipendentemente dal fatto che abbiano iniziato a essere attive prima del valore del parametro *\<start_date_time>* per l'argomento FROM o non siano più state attive dopo il valore del parametro *\<end_date_time>* per l'argomento TO. Internamente, viene eseguita un'unione tra la tabella temporale e la relativa tabella di cronologia e i risultati vengono filtrati in modo da restituire i valori per tutte le versioni di riga che erano attive in qualsiasi momento durante l'intervallo di tempo specificato. Le righe diventate attive esattamente in corrispondenza del limite inferiore definito dall'endpoint FROM sono incluse e le righe diventate attive esattamente in corrispondenza del limite superiore definito dall'endpoint TO non sono incluse.  
+ Restituisce una tabella con i valori per tutte le versioni di record che erano attive nell'intervallo di tempo specificato, indipendentemente dal fatto che abbiano iniziato a essere attive prima del valore del parametro *\<start_date_time>* per l'argomento FROM o non siano più state attive dopo il valore del parametro *\<end_date_time>* per l'argomento TO. Internamente, viene eseguita un'unione tra la tabella temporale e la relativa tabella di cronologia e i risultati vengono filtrati in modo da restituire i valori per tutte le versioni di riga che erano attive in qualsiasi momento durante l'intervallo di tempo specificato. Le righe diventate attive esattamente in corrispondenza del limite inferiore definito dall'endpoint FROM sono incluse e le righe diventate attive esattamente in corrispondenza del limite superiore definito dall'endpoint TO non sono incluse.  
   
  BETWEEN \<start_date_time> AND \<end_date_time>  
 

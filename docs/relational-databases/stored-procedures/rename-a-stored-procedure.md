@@ -1,5 +1,6 @@
 ---
 title: Rinominare una stored procedure | Microsoft Docs
+description: Informazioni su come rinominare un stored procedure in SQL Server 2019 (15.x) usando SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
 ms.date: 07/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 5d2e4c68-7e0b-4405-8919-f5b203e46770
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71d0fefec2a0b0ba867b7c96a0d8b852884e08d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ddf1685f89d24c5b1b6dec4956c3e0c7542ac236
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767500"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332530"
 ---
 # <a name="rename-a-stored-procedure"></a>Rinominare una stored procedure
 
@@ -56,12 +57,12 @@ In questo argomento viene descritto come rinominare una stored procedure in [!IN
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  CREATE PROCEDURE  
- Sono richieste l'autorizzazione CREATE PROCEDURE per il database e ALTER per lo schema in cui viene creata la procedura oppure è richiesta l'appartenenza al ruolo predefinito **db_ddladmin** del database.  
+ Sono richieste l'autorizzazione CREATE PROCEDURE per il database e ALTER per lo schema in cui viene creata la procedura. In alternativa, è richiesta l'appartenenza al ruolo predefinito del database **db_ddladmin**.  
   
  ALTER PROCEDURE  
  È richiesta l'autorizzazione ALTER per la procedura o l'appartenenza al ruolo predefinito **db_ddladmin** del database.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-rename-a-stored-procedure"></a>Per rinominare una stored procedure  
   
@@ -72,7 +73,7 @@ In questo argomento viene descritto come rinominare una stored procedure in [!IN
 5.  Modificare il nome della stored procedure.  
 6.  Modificare il nome della stored procedure in qualsiasi oggetto dipendente o script che vi fa riferimento.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-rename-a-stored-procedure"></a>Per rinominare una stored procedure  
   

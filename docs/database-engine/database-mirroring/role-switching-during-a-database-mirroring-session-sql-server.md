@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 624b42ae39cddd56c2401db346c497e6914fe7a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3aefc181c1dc42e939579dcdce274a27086dd1ed
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735159"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362234"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Cambio di ruolo durante una sessione di mirroring del database (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,11 +67,11 @@ ms.locfileid: "85735159"
   
  Nella tabella seguente viene presentato un riepilogo delle forme di failover supportate in ognuna delle modalità operative.  
   
-||Prestazioni elevate|Modalità a sicurezza elevata senza un server di controllo del mirroring|Modalità a sicurezza elevata con un server di controllo del mirroring|  
+|Forma di failover|Prestazioni elevate|Modalità a sicurezza elevata senza un server di controllo del mirroring|Modalità a sicurezza elevata con un server di controllo del mirroring|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
 |Failover automatico|No|No|Sì|  
 |Failover manuale|No|Sì|Sì|  
-|Servizio forzato|Sì|Sì|No|  
+|Servizio forzato|Sì|sì|No|  
   
  Dopo un cambio di ruolo è necessario che alcuni metadati siano disponibili su entrambi i partner per garantire che tutti gli utenti del database possano accedere al nuovo database principale. È inoltre necessario che i processi di backup vengano creati sul nuovo server principale per garantire che i backup del database continuino regolarmente in base alla pianificazione. Per altre informazioni, vedere [Gestione di account di accesso e di processi dopo un cambio di ruolo &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   

@@ -18,12 +18,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08e432e0470074a5861c070d26110478353817b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 03cff187ee251278274af6f7c97e4598235fde38
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727073"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363437"
 ---
 # <a name="create-indexed-views"></a>Creazione di viste indicizzate
 
@@ -107,10 +107,14 @@ Oltre alle impostazioni delle opzioni SET e ai requisiti relativi alle funzioni 
 
 - La vista deve essere creata usando l'opzione `WITH SCHEMABINDING`.
 - La vista deve contenere riferimenti solo a tabelle di base che si trovano nello stesso database della vista. La vista non può fare riferimento ad altre viste.
+
+- Se è presente `GROUP BY`, la definizione di VIEW deve contenere `COUNT_BIG(*)` e non deve contenere `HAVING`. Queste restrizioni di `GROUP BY` vengono applicate solo alla definizione della vista indicizzata. Una query può usare una vista indicizzata nel relativo piano di esecuzione anche se non soddisfa le restrizioni di `GROUP BY`.
+- Se la definizione della vista include una clausola `GROUP BY`, la chiave dell'indice cluster univoco può contenere riferimenti solo alle colonne specificate nella clausola `GROUP BY`.
+
 - Nell'istruzione SELECT della definizione della vista non possono essere contenuti gli elementi Transact-SQL seguenti:
 
-   ||||
-   |-|-|-|
+   | Elementi di Transact-SQL | (continua) | (continua) |
+   | --------------------- | ----------- | ----------- |
    |`COUNT`|Funzioni ROWSET (`OPENDATASOURCE`, `OPENQUERY`, `OPENROWSET` e `OPENXML`)|Join `OUTER` (`LEFT`, `RIGHT` o `FULL`)|
    |Tabella derivata (definita specificando un'istruzione `SELECT` nella clausola `FROM`)|Self-join|Specifica di colonne tramite `SELECT *` o `SELECT <table_name>.*`|
    |`DISTINCT`|`STDEV`, `STDEVP`, `VAR`, `VARP` o `AVG`|Espressione di tabella comune (CTE)|
@@ -121,15 +125,11 @@ Oltre alle impostazioni delle opzioni SET e ai requisiti relativi alle funzioni 
    |Variabili di tabella|`OUTER APPLY` o `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
    |Set di colonne di tipo sparse|Funzione con valori di tabella inline o con istruzioni multiple|`OFFSET`|
    |`CHECKSUM_AGG`|||
-   |&nbsp;|&nbsp;|&nbsp;|
-  
-    <sup>1</sup> La vista indicizzata può contenere colonne di tipo **float** che, tuttavia, non possono essere incluse nella chiave di indice cluster.
 
-- Se è presente `GROUP BY`, la definizione di VIEW deve contenere `COUNT_BIG(*)` e non deve contenere `HAVING`. Queste restrizioni di `GROUP BY` vengono applicate solo alla definizione della vista indicizzata. Una query può usare una vista indicizzata nel relativo piano di esecuzione anche se non soddisfa le restrizioni di `GROUP BY`.
-- Se la definizione della vista include una clausola `GROUP BY`, la chiave dell'indice cluster univoco può contenere riferimenti solo alle colonne specificate nella clausola `GROUP BY`.
+   <sup>1</sup> La vista indicizzata può contenere colonne di tipo **float** che, tuttavia, non possono essere incluse nella chiave di indice cluster.
 
-> [!IMPORTANT]
-> Le viste indicizzate non sono supportate sulle query temporali, ovvero quelle che usano la clausola `FOR SYSTEM_TIME`.
+   > [!IMPORTANT]
+   > Le viste indicizzate non sono supportate sulle query temporali, ovvero quelle che usano la clausola `FOR SYSTEM_TIME`.
 
 ### <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni
 

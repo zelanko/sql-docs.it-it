@@ -1,6 +1,6 @@
 ---
 title: Domande frequenti su Azure Data Studio
-description: Domande frequenti su Azure Data Studio.
+description: Risposte alle domande frequenti su Azure Data Studio, ad esempio "Che funzioni ha?", "Chi lo deve usare?" e "Qual è il costo?".
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: dfcab918073fedd80def91d3556e15f632a62edc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 123618a84b07aa2215a2666f9d427f669247c5d7
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774608"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411097"
 ---
 # <a name="azure-data-studio-faq"></a>Domande frequenti su Azure Data Studio
 
@@ -80,14 +80,14 @@ No. Gli investimenti negli strumenti principali di Windows (SSMS, SSDT, PowerShe
 
 |Funzionalità|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Accesso ad Azure|Sì|Sì|
+|Accesso ad Azure|sì|sì|
 |Dashboard|Sì| |
 |Estensioni|Sì| |
 |Terminale integrato|Sì||
-|Esplora oggetti|Sì|Sì|
-|Scripting per gli oggetti|Sì|Sì|
+|Esplora oggetti|sì|sì|
+|Scripting per gli oggetti|sì|sì|
 |Sistema di progetto|Sì||
-|Selezione da tabella|Sì|Sì|
+|Selezione da tabella|sì|sì|
 |Controllo del codice sorgente|Sì||
 |Riquadro attività|Sì||
 |Temi|Sì||
@@ -104,8 +104,8 @@ No. Gli investimenti negli strumenti principali di Windows (SSMS, SSDT, PowerShe
 |:---|:---|:---|
 |Visualizzatore grafico|Sì||
 |Esportazione risultati in CSV, JSON, XLSX|Sì||
-|IntelliSense|Sì|Sì|
-|Frammenti di codice|Sì|Sì|
+|IntelliSense|sì|sì|
+|Frammenti di codice|sì|sì|
 |Showplan|Anteprima|Sì|
 |Statistiche client||Sì|
 |Statistiche sulle query dinamiche||Sì|
@@ -120,7 +120,7 @@ No. Gli investimenti negli strumenti principali di Windows (SSMS, SSDT, PowerShe
 
 |Funzionalità|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Windows|Sì|Sì|
+|Windows|sì|sì|
 |macOS|Sì||
 |Linux|Sì||
 
@@ -136,7 +136,7 @@ No. Gli investimenti negli strumenti principali di Windows (SSMS, SSDT, PowerShe
 
 |Funzionalità|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Backup/ripristino|Sì|Sì|
+|Backup/ripristino|sì|sì|
 |Importazione file flat|Anteprima|Sì|
 |SQL Agent|Anteprima|Sì|
 |SQL Profiler|Anteprima|Sì|

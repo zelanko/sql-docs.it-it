@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 13dd1cb62f139a672e53b0945e94fc3ba25abc63
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 10eb6fdf211b15cdc5b9f11d7f85cb45c050019a
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883137"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332253"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker con i gruppi di disponibilità Always On (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "85883137"
      Per altre informazioni, vedere [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md).  
 
     > [!NOTE]  
-    SQL Server Broker non è compatibile con le subnet multiple. Usare "registerallprovidersip" impostato su 0 e verificare se non si stanno usando IP statici su DNS che concedono l'autorizzazione richiesta ai cluster nel DNS, come definito in https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server. È possibile che Broker ritardi i messaggi con stato "CONVERSING" che tentano di usare un IP non disponibile.
+    SQL Server Service Broker non è compatibile con le subnet multiple. Impostare `RegisterAllProvidersIP` su 0 e verificare che il cluster disponga delle autorizzazioni necessarie in DNS per l'uso di indirizzi IP statici. Per altre informazioni, vedere [Configurare il listener del gruppo di disponibilità](create-or-configure-an-availability-group-listener-sql-server.md). È possibile che Service Broker ritardi i messaggi con stato "CONVERSING" che tentano di usare un indirizzo IP non disabilitato.
 
 3.  **Concedere l'autorizzazione CONNECT nell'endpoint.**  
   

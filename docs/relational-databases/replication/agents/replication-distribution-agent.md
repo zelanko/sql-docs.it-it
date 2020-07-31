@@ -17,12 +17,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 51a34db68f77193c42662476656d46e5fa2f6092
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c9e762060e3afdc5df7802249e99075de66ef751
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87109401"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395024"
 ---
 # <a name="replication-distribution-agent"></a>Agente distribuzione repliche
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -133,10 +133,10 @@ distrib [-?]
  **-DistributorPassword** _distributor_password_  
  Password del database di distribuzione.  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [ **0**\| **1**]  
  Specifica la modalità di sicurezza del database di distribuzione. Un valore 0 indica la modalità di autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mentre un valore 1 indica la modalità di autenticazione di Windows (impostazione predefinita).  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ **-EncryptionLevel** [ **0** \| **1** \| **2** ]  
  Livello di crittografia TLS (Transport Layer Security) noto in precedenza come SSL (Secure Sockets Layer) usato dall'agente di distribuzione quando vengono stabilite le connessioni.  
   
 |Valore di EncryptionLevel|Descrizione|  
@@ -171,7 +171,7 @@ distrib [-?]
  **-FtpUserName**  _ftp_user_name_  
  Nome utente utilizzato per la connessione al servizio FTP. Quando non è specificato, viene utilizzato **anonymous** .  
   
- **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
+ **-HistoryVerboseLevel** [ **0** \| **1** \| **2** \| **3** ]  
  Specifica la quantità di cronologia registrata durante un'operazione di distribuzione. Per ridurre al minimo l'effetto della registrazione della cronologia sulle prestazioni, selezionare **1**.  
   
 |Valore di HistoryVerboseLevel|Descrizione|  
@@ -261,7 +261,7 @@ distrib [-?]
 |**1**|Origine dati ODBC|  
 |**3**|Origine dati OLE DB|  
   
- **-SubscriptionStreams** [**0**|**1**|**2**|...**64**]  
+ **-SubscriptionStreams** [**0**\|**1**\|**2**\|...**64**]  
  Numero di connessioni consentite per agente di distribuzione per l'applicazione di batch di modifiche in parallelo a un Sottoscrittore, conservando molte delle caratteristiche transazionali disponibili quando si utilizza un singolo thread. Per un server di pubblicazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è supportato un intervallo di valori da 1 a 64. Questo parametro è supportato solo quando il server di pubblicazione e il server di distribuzione sono in esecuzione in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versioni successive. Questo parametro non è supportato o deve essere 0 per i Sottoscrittori non [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o le sottoscrizioni peer-to-peer.  
   
 > [!NOTE]  

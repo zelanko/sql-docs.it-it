@@ -1,5 +1,6 @@
 ---
 title: Set di risultati di automazione OLE | Microsoft Docs
+description: Scoprire che se una proprietà o un metodo di automazione OLE restituisce dati in una matrice a una o a due dimensioni, tale matrice viene restituita al client come set di risultati.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: b2f99e33-2303-427c-94b9-9d55f8e2a6ab
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b11a58d6b5b838fc5add9f8303be0758a6ce7c31
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8e3498ed53137443b647e2d1e93fbec5c7d49ef5
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000957"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332595"
 ---
 # <a name="ole-automation-result-sets"></a>Set di risultati di automazione OLE
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,9 +37,8 @@ ms.locfileid: "86000957"
   
  Se a tutti i valori di dati di una colonna è associato lo stesso tipo di dati, tale tipo verrà applicato all'intera colonna. Se ai valori sono invece associati tipi di dati diversi, il tipo di dati dell'intera colonna verrà scelto in base alla tabella seguente. Per utilizzare la tabella seguente, individuare un tipo di dati lungo l'asse della riga sinistra e un secondo tipo di dati lungo l'asse della colonna superiore. L'intersezione della riga e della colonna descrive il tipo di dati della colonna del set di risultati.  
   
-||||||||  
-|-|-|-|-|-|-|-|  
-||**int**|**float**|**money**|**datetime**|**varchar**|**nvarchar**|  
+|   | **int** | **float** | **money** | **datetime** | **varchar** | **nvarchar** |
+| - | ------- | --------- | --------- | ------------ | ----------- | ------------ |
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**money**|**money**|**money**|**money**|**varchar**|**varchar**|**nvarchar**|  

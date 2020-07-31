@@ -1,5 +1,6 @@
 ---
 title: Specificare i parametri | Microsoft Docs
+description: Informazioni sul passaggio dei valori nei parametri e sulla modalità d'uso di ognuno degli attributi di parametro durante una chiamata alla procedura.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56a9e844499d8cee843b596380edb726f3efdabe
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eb9b80387573d0145c6510d9377ac959939dd536
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998138"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332350"
 ---
 # <a name="specify-parameters"></a>Specificare i parametri
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

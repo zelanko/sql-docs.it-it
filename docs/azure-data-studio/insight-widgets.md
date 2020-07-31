@@ -1,6 +1,6 @@
 ---
 title: Usare i widget di informazioni dettagliate per monitorare i server e i database
-description: Informazioni sui widget di informazioni dettagliate in Azure Data Studio
+description: Informazioni su come usare i widget di informazioni dettagliate di Azure Data Studio per trasformare le query che monitorano server e database in visualizzazioni dettagliate.
 ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
 ms.prod: azure-data-studio
@@ -9,12 +9,12 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1568251dba79998c07e05b78b2d156cebbb0e7fd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3307093404ddc09b6db085f1cc275273280913d3
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774603"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411107"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-azure-data-studio"></a>Gestire server e database con i widget di informazioni dettagliate in Azure Data Studio
 

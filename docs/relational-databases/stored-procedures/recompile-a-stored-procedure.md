@@ -1,5 +1,6 @@
 ---
 title: Ricompilare una stored procedure | Microsoft Docs
+description: Informazioni dettagliate sulla ricompilazione di una stored procedure in SQL Server 2019 (15.x) tramite Transact-SQL.
 ms.custom: ''
 ms.date: 10/28/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df92be946b13a4643f6ddca870ea98ff64b3d9d9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ec11628388263463bbb7ca3f00f8611768380fd3
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002747"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332558"
 ---
 # <a name="recompile-a-stored-procedure"></a>Ricompilare una stored procedure
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "86002747"
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="recommendations"></a><a name="Recommendations"></a> Raccomandazioni  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 -   Quando una stored procedure viene compilata per la prima volta o viene ricompilata, il piano di query della stored procedure viene ottimizzato per lo stato corrente del database e dei relativi oggetti. Se i dati o la struttura di un database vengono modificati significativamente, con la ricompilazione di una stored procedure viene aggiornato e ottimizzato il piano di query della stored procedure per tali modifiche. Ciò può migliorare le prestazioni di elaborazione della stored procedure.  
   
@@ -66,7 +67,7 @@ ms.locfileid: "86002747"
  Stored procedure di sistema**sp_recompile**  
  È richiesta l'autorizzazione ALTER per la stored procedure specificata.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
 
 1. Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

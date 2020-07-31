@@ -10,16 +10,16 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c4ebe0f59ede7d82ac15260eaa4f2265453fcc57
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 7383e63ecb96a32c9b1f0087a138bc9f862eb722
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138241"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395156"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
   Restituisce il piano di query per un'istruzione [!INCLUDE[DWsql](../../includes/dwsql-md.md)] di [!INCLUDE[ssDW](../../includes/ssdw-md.md)] senza eseguire l'istruzione. Usare EXPLAIN per un'anteprima delle operazioni che richiedono lo spostamento di dati e per visualizzare i costi stimati delle operazioni di query. `WITH RECOMMENDATIONS` si applica ad Azure SQL Data Warehouse (anteprima).
   
@@ -73,7 +73,7 @@ Restituire il piano di query con raccomandazioni per ottimizzare le prestazioni 
 |\<params>|Tag attualmente non usato.|
 |\<materialized_view_candidates> (anteprima)|Contiene l'istruzione CREATE della vista materializzata consigliata per ottenere prestazioni migliori dell'istruzione SQL.| 
 |\<dsql_operations>|Riepiloga e contiene i passaggi della query e include informazioni sui costi per la query. Contiene anche tutti i blocchi `<dsql_operation>`. Questo tag contiene informazioni relative ai conteggi per l'intera query:<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* è il tempo stimato totale per l'esecuzione della query in ms.<br /><br /> *total_number_operations* è il numero totale di operazioni per la query. Un'operazione da eseguire in parallelo in più nodi viene conteggiata come operazione singola.|  
-|\<dsql_operation>|Descrive una singola operazione all'interno del piano di query. Il tag \<dsql_operation > contiene il tipo di operazione come attributo:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* è uno dei valori trovati in [sys.dm_pdw_request_steps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).<br /><br /> Il contenuto del blocco `\<dsql_operation>` dipende dal tipo di operazione.<br /><br /> Vedere la tabella riportata di seguito.|  
+|\<dsql_operation>|Descrive una singola operazione all'interno del piano di query. Il tag \<dsql_operation> contiene il tipo di operazione come attributo:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* è uno dei valori trovati in [sys.dm_pdw_request_steps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).<br /><br /> Il contenuto del blocco `\<dsql_operation>` dipende dal tipo di operazione.<br /><br /> Vedere la tabella riportata di seguito.|  
   
 |Tipo di operazione|Contenuto|Esempio|  
 |--------------------|-------------|-------------|  

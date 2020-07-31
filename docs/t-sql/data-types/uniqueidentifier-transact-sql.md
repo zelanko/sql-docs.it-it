@@ -20,15 +20,15 @@ ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5471791b3f75130bc2fb262a05683aa953f7f3a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1f7233d92e3b6a568d64f0b23817838d65dcbc74
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000441"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396280"
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 GUID a 16 byte.
   
@@ -37,7 +37,7 @@ GUID a 16 byte.
 -   Usando le funzioni [NEWID](../../t-sql/functions/newid-transact-sql.md) o [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md).    
 -   Tramite la conversione da una costante stringa nel formato *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*-*xxxxxxxxxxxx*, in cui ogni *x* rappresenta una cifra esadecimale compresa nell'intervallo 0-9 oppure a-f. Ad esempio, 6F9619FF-8B86-D011-B42D-00C04FC964FF è un valore **uniqueidentifier** valido.  
   
-Con i valori **uniqueidentifier** è possibile usare gli operatori di confronto. Quando si confrontano gli schemi di bit dei due valori, tuttavia, l'ordinamento non viene implementato. Le uniche operazioni che è possibile eseguire su un valore **uniqueidentifier** sono i confronti (=, <>, \<, >, \<=, >=) e la verifica del valore NULL (IS NULL e IS NOT NULL). Non è possibile utilizzare altri operatori aritmetici. Con il tipo di dati **uniqueidentifier** è possibile usare tutti i vincoli e le proprietà delle colonne, ad eccezione di IDENTITY.
+Con i valori **uniqueidentifier** è possibile usare gli operatori di confronto. Quando si confrontano gli schemi di bit dei due valori, tuttavia, l'ordinamento non viene implementato. Le uniche operazioni che è possibile eseguire su un valore **uniqueidentifier** sono i confronti (=, <>, \<, >, \<=, >=) e il controllo della presenza di valori NULL (IS NULL e IS NOT NULL). Non è possibile utilizzare altri operatori aritmetici. Con il tipo di dati **uniqueidentifier** è possibile usare tutti i vincoli e le proprietà delle colonne, ad eccezione di IDENTITY.
   
 Le colonne **uniqueidentifier** vengono usate nella replica transazionale e di tipo merge con sottoscrizioni aggiornabili, per garantire che le righe siano identificate in modo univoco in più copie della tabella.
   

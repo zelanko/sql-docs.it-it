@@ -1,6 +1,6 @@
 ---
 title: 'Avvio rapido: Connettersi ed eseguire query in PostgreSQL'
-description: Questo argomento di avvio rapido illustra come usare Azure Data Studio per connettersi a PostgreSQL ed eseguire una query
+description: Eseguire una guida di avvio rapido che illustra come usare Azure Data Studio per connettersi a PostgreSQL e quindi usare istruzioni SQL per creare ed eseguire query in un database.
 ms.custom: seodec18
 ms.date: 09/18/2019
 ms.prod: azure-data-studio
@@ -9,16 +9,16 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: f429848636de075e64ebaf6f74bc69f7faef5359
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e2ba0f0123faeacd0f431a72ef35add40ee48e19
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717153"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411307"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-postgresql"></a>Avvio rapido: Usare Azure Data Studio per connettersi a PostgreSQL ed eseguire query
 
-Questo avvio rapido illustra come usare Azure Data Studio per connettersi a Postgres e quindi usare istruzioni SQL per creare il database *tutorialdb* ed eseguire query su di esso.
+Questa guida di avvio rapido illustra come usare Azure Data Studio per connettersi a PostgreSQL e quindi usare istruzioni SQL per creare il database *tutorialdb* ed eseguire query su di esso.
 
 ## <a name="prerequisites"></a>Prerequisiti
 

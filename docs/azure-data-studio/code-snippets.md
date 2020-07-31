@@ -1,6 +1,6 @@
 ---
 title: Creare frammenti di codice riutilizzabili
-description: Informazioni su come creare e usare frammenti di codice SQL in Azure Data Studio
+description: Informazioni su come creare e usare frammenti di codice SQL di Azure Data Studio, che semplificano la creazione di database e oggetti di database.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8e2c6883840513fb9f09f8dc58080d36402bdf9f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8ef725a83a0800dbe5027e4d76bc8f7f51f7f3b
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774695"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411167"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-azure-data-studio"></a>Creare e usare frammenti di codice per creare rapidamente script Transact-SQL (T-SQL) in Azure Data Studio
 

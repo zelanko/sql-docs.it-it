@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a4dff5292a3cd0bfcd46e2615bc755665ff3e49d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4f65282964494ba1fdb160b1e755922a60ad80d8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897892"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394986"
 ---
 # <a name="replication-merge-agent"></a>Agente merge repliche
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -150,7 +150,7 @@ replmerg [-?]
  **-DistributorPassword** _distributor_password_  
  Password del database di distribuzione.  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [ **0**\| **1**]  
  Specifica la modalità di sicurezza del database di distribuzione. Un valore **0** indica la modalità di autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (impostazione predefinita), mentre un valore **1** indica la modalità di autenticazione di Windows.  
   
  **-DownloadGenerationsPerBatch** _download_generations_per_batch_  
@@ -165,7 +165,7 @@ replmerg [-?]
  **-DynamicSnapshotLocation** _dynamic_snapshot_location_  
  Posizione dei file di snapshot dei dati filtrati quando nella pubblicazione vengono utilizzati filtri di riga con parametri.  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ **-EncryptionLevel** [ **0** \| **1** \| **2** ]  
  Livello di crittografia TLS (Transport Layer Security), noto in precedenza come SSL (Secure Sockets Layer), usato dall'agente di merge quando vengono stabilite le connessioni.  
   
 |Valore di EncryptionLevel|Descrizione|  
@@ -179,7 +179,7 @@ replmerg [-?]
 
  Per altre informazioni, vedere [Visualizzare e modificare le impostazioni di sicurezza della replica](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
- **-ExchangeType** [ **1**| **2**| **3**]  
+ **-ExchangeType** [ **1**\| **2**\| **3**]  
 > [!WARNING]
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Per limitare il caricamento, usare in alternativa **\@subscriber_upload_options** di **sp_addmergearticle**.  
   
@@ -195,13 +195,13 @@ replmerg [-?]
   
  Se si utilizza **ExchangeType** per separare la fase di caricamento e download della replica di tipo merge in sessioni distinte, è necessario prima eseguire l'agente di merge con **ExchangeType** impostato su 1 e poi eseguire nuovamente l'agente di merge con il valore 2. L'esito negativo dell'esecuzione dell'agente di merge per entrambi i parametri causa l'eliminazione dei metadati e la rinizializzazione della sottoscrizione senza caricamento.  
   
- **-FastRowCount** [**0**|**1**]  
+ **-FastRowCount** [**0**\|**1**]  
  Specifica il tipo di metodo di calcolo del conteggio delle righe che deve essere utilizzato per la convalida mediante il conteggio delle righe. Un valore **1** (impostazione predefinita) indica il metodo rapido. Un valore **0** indica il metodo di conteggio delle righe completo.  
   
- **-FileTransferType** [**0**|**1**]  
+ **-FileTransferType** [**0**\|**1**]  
  Specifica il tipo di trasferimento di file. Un valore **0** indica UNC (Universal Naming Convention), mentre un valore **1** indica FTP (File Transfer Protocol).  
   
- **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
+ **-ForceConvergenceLevel** [**0**\|**1**\|**2** ( **Publisher**\| **Subscriber**\| **Both**)]  
  Specifica il livello di convergenza che l'agente di merge deve utilizzare. I possibili valori sono i seguenti:  
   
 |Valore di ForceConvergenceLevel|Descrizione|  
@@ -222,7 +222,7 @@ replmerg [-?]
  **-FtpUserName** _ftp_user_name_  
  Nome utente utilizzato per la connessione al servizio FTP. Quando non è specificato, viene utilizzato anonymous.  
   
- **-HistoryVerboseLevel** [**1**|**2**|**3**]  
+ **-HistoryVerboseLevel** [**1**\|**2**\|**3**]  
  Specifica la quantità di cronologia registrata durante un'operazione di unione. Per ridurre al minimo l'effetto della registrazione della cronologia sulle prestazioni, selezionare **1**.  
   
 |Valore di HistoryVerboseLevel|Descrizione|  
@@ -235,7 +235,7 @@ replmerg [-?]
  **-Hostname** _host_name_  
  Nome di rete del computer locale. Il valore predefinito è il nome del computer locale.  
   
- **-InteractiveResolution** [**0**|**1**]  
+ **-InteractiveResolution** [**0**\|**1**]  
  Specifica se viene utilizzata la risoluzione dei conflitti interattiva quando si verifica un conflitto durante la sincronizzazione. Il valore predefinito è **0**, che indica che la risoluzione dei conflitti interattiva non viene utilizzata.  
   
  **-InternetLogin** _internet_login_  
@@ -253,7 +253,7 @@ replmerg [-?]
  **-InternetProxyServer** *internet_proxy_server*  
  Specifica il server proxy da utilizzare per l'accesso alla risorsa HTTP specificata in *internet_url*.  
   
- **-InternetSecurityMode** [**0**|**1**]  
+ **-InternetSecurityMode** [**0**\|**1**]  
  Specifica la modalità di sicurezza di IIS da utilizzare per la connessione al server Web durante la sincronizzazione Web. Un valore **0** indica l'autenticazione di base, mentre un valore **1** indica l'autenticazione integrata di Windows (impostazione predefinita).  
   
  **-InternetTimeout** _internet_timeout_  
@@ -282,16 +282,16 @@ replmerg [-?]
  **-MaxUploadChanges** _number_of_upload_changes_  
  Specifica il numero massimo di righe modificate che possono essere caricate dal Sottoscrittore al server di pubblicazione. Il numero di righe caricate può essere superiore al valore massimo specificato se vengono elaborate generazioni complete e possono essere eseguiti thread di destinazione paralleli, ognuno dei quali elabora almeno 100 modifiche nel primo passaggio. Per impostazione predefinita, tutte le modifiche pronte per essere caricate vengono inviate.  
   
- **-MetadataRetentionCleanup** [**0**|**1**]  
+ **-MetadataRetentionCleanup** [**0**\|**1**]  
  Specifica se i metadati vengono rimossi da [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md), [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md), [MSmerge_past_partition_mappings](../../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)e [MSmerge_current_partition_mappings](../../../relational-databases/system-tables/msmerge-current-partition-mappings.md) in base al periodo di memorizzazione della pubblicazione. Il valore predefinito è **1**, che indica che deve essere eseguita la pulizia. Un valore **0** indica che la pulizia non deve essere eseguita automaticamente.  
   
  **-Output** _output_path_and_file_name_  
  Percorso del file di output dell'agente. Se non viene specificato il nome file, l'output viene inviato alla console. Se il nome file specificato esiste già, l'output viene aggiunto al file.  
   
- **-OutputVerboseLevel** [**0**|**1**|**2**]  
+ **-OutputVerboseLevel** [**0**\|**1**\|**2**]  
  Specifica se l'output deve essere dettagliato. Se il livello di dettaglio è **0**, vengono stampati solo i messaggi di errore. Se il livello di dettaglio è **1**, vengono stampati tutti i messaggi di report di stato. Se il livello di dettaglio è **2** (impostazione predefinita), vengono stampati tutti i messaggi di errore e i messaggi di report di stato. Questa opzione è utile per l'esecuzione del debug.  
   
- **-ParallelUploadDownload** [**0**|**1**]  
+ **-ParallelUploadDownload** [**0**\|**1**]  
  Specifica se l'agente di merge deve elaborare in parallelo le modifiche caricate nel server di pubblicazione e quelle scaricate nel Sottoscrittore. Questa opzione è utile negli ambienti caratterizzati da volumi di traffico elevati con un'ampia larghezza di banda di rete. Se **ParallelUploadDownload** è **1**, l'elaborazione parallela è abilitata.  
   
  **-PacketSize**  
@@ -312,7 +312,7 @@ replmerg [-?]
  **-PublisherPassword** _publisher_password_  
  Password del server di pubblicazione. Se **PublisherSecurityMode** è **0** (per l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), questo parametro deve essere specificato.  
   
- **-PublisherSecurityMode** [**0**|**1**]  
+ **-PublisherSecurityMode** [**0**\|**1**]  
  Specifica la modalità di sicurezza del server di pubblicazione. Un valore **0** indica la modalità di autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (impostazione predefinita), mentre un valore **1** indica la modalità di autenticazione di Windows.  
   
  **-QueryTimeOut** _query_time_out_seconds_  
@@ -327,7 +327,7 @@ replmerg [-?]
  **-SubscriberDatabasePath** _subscriber_database_path_  
  Percorso del database Jet (file con estensione mdb) se **SubscriberType** è **2** (consente una connessione a un database Jet senza un nome origine dati (DNS, Data Source Name) ODBC).  
   
- **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
+ **-SubscriberDBAddOption** [**0**\| **1**\| **2**\| **3**]  
  Specifica se esiste un database Sottoscrittore.  
   
 |Valore di SubscriberDBAddOption|Descrizione|  
@@ -346,22 +346,22 @@ replmerg [-?]
  **-SubscriberPassword** _subscriber_password_  
  Password del Sottoscrittore. Se **SubscriberSecurityMode** è **0** (per l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), questo parametro deve essere specificato.  
   
- **-SubscriberSecurityMode** [ **0**| **1**]  
+ **-SubscriberSecurityMode** [ **0**\| **1**]  
  Specifica la modalità di sicurezza del Sottoscrittore. Un valore **0** indica la modalità di autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (impostazione predefinita), mentre un valore **1** indica la modalità di autenticazione di Windows.  
   
- **-SubscriberConflictClean** [ **0**| **1**]  
+ **-SubscriberConflictClean** [ **0**\| **1**]  
  Indica se le tabelle dei conflitti vengono pulite nel Sottoscrittore durante il processo di sincronizzazione. Il valore **1** indica che le tabelle dei conflitti vengono pulite nel Sottoscrittore. Questo parametro viene utilizzato solo per le sottoscrizioni alle pubblicazioni con registrazione dei conflitti decentralizzata.  
   
- **-SubscriberType** [ **0**| **1**| **3**| **4**| **5**| **6**| **7**| **8**]  
+ **-SubscriberType** [ **0**\| **1**\| **3**\| **4**\| **5**\| **6**\| **7**\| **8**]  
  Specifica il tipo di connessione al Sottoscrittore utilizzato dall'agente di merge. Per questo parametro è supportato solo il valore predefinito **0** .  
   
- **-SubscriptionType**[ **0**| **1**| **2**]  
+ **-SubscriptionType**[ **0**\| **1**\| **2**]  
  Specifica il tipo di sottoscrizione per la distribuzione. Un valore **0** indica una sottoscrizione push (impostazione predefinita), un valore **1** indica una sottoscrizione pull e un valore **2** indica una sottoscrizione anonima.  
   
- **-SyncToAlternate** [ **0|1**]  
+ **-SyncToAlternate** [ **0\|1**]  
  Specifica se l'agente di merge sta eseguendo la sincronizzazione tra un Sottoscrittore e un server di pubblicazione alternativo. Un valore **1** indica che si tratta di un server di pubblicazione alternativo. Il valore predefinito è **0**.  
  
- **-T** [**101|102**]  
+ **-T** [**101\|102**]  
  Flag di traccia che consentono funzionalità aggiuntive per l'agente di merge. Il valore **101** abilita informazioni di registrazione dettagliate aggiuntive per determinare la quantità di tempo necessaria per ogni passaggio del processo di sincronizzazione della replica di tipo merge. Il valore **102** scrive le stesse statistiche del flag di traccia **101**, ma nella tabella <Distribution server>..msmerge_history. Abilitare la registrazione dell'agente di merge quando si usa il flag di traccia 101 usando i parametri `-output` e `-outputverboselevel`.  Ad esempio, aggiungere i parametri seguenti all'agente di merge e quindi riavviare l'agente: `-T 101, -output, -outputverboselevel`. 
  
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
@@ -376,7 +376,7 @@ replmerg [-?]
  **-UseInprocLoader**  
  Migliora le prestazioni dello snapshot iniziale facendo in modo che l'agente di merge utilizzi il comando BULK INSERT in caso di applicazione dei file di snapshot al Sottoscrittore. Questo parametro è deprecato in quanto non è compatibile con il tipo di dati XML. Se non si sta eseguendo la replica di dati XML, è possibile utilizzare questo parametro. Questo parametro non può essere utilizzato con snapshot in modalità carattere. Se si utilizza questo parametro, l'account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel Sottoscrittore deve disporre di autorizzazioni di lettura nella directory in cui si trovano i file di dati di snapshot, con estensione bcp. Quando questo parametro non viene utilizzato, il driver ODBC caricato dall'agente legge dai file, pertanto il contesto di sicurezza dell'account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non viene utilizzato.  
   
- **-Validate** [**0**|**1**|**2**|**3**]  
+ **-Validate** [**0**\|**1**\|**2**\|**3**]  
  Specifica se la convalida deve essere effettuata al termine della sessione di merge, e, in tal caso, indica il tipo di convalida. Il valore consigliato è **3** .  
   
 |Valore di Validate|Descrizione|  

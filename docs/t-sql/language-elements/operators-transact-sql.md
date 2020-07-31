@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1fc2de8b-e7e0-4c61-9a02-4776a7d93ab7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 01f1900be16359b28a690a8e0c22d958cdb66a91
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 11b59274b87802929d51c1adb9352358b9fbf413
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248769"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395873"
 ---
 # <a name="operators-transact-sql"></a>Operatori (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "87248769"
         [Operatori bit per bit](../../t-sql/language-elements/bitwise-operators-transact-sql.md)
     :::column-end:::
     :::column:::
-        [Operatori sui set](https://msdn.microsoft.com/library/1aa4c424-b92c-4409-a1c7-34a0264ee107)
+        Operatori sui set ([EXCEPT e INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md), [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md))
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -64,7 +64,7 @@ ms.locfileid: "87248769"
         [Operatori composti](../../t-sql/language-elements/compound-operators-transact-sql.md)
     :::column-end:::
     :::column:::
-        [Operatori unari](https://msdn.microsoft.com/library/c4748146-4049-4040-8826-56c464410878)
+        [Operatori unari](../../t-sql/language-elements/unary-operators-positive.md)
     :::column-end:::
 :::row-end:::
  

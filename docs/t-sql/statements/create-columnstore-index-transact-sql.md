@@ -29,15 +29,15 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2fa18ece825ba55479eac3d5c421c6d5acba363c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7125460527a0ca6aa231d771cff8714db7891b09
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633269"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396265"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Convertire una tabella rowstore in un indice columnstore cluster o creare un indice columnstore non cluster. Usare un indice columnstore per eseguire in modo efficiente un'analisi operativa in tempo reale per un carico di lavoro OLTP o per migliorare la compressione dei dati e le prestazioni delle query per i carichi di lavoro di data warehousing.  
   
@@ -250,7 +250,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
 CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPrice, TaxRate) WITH ( ONLINE = ON );
 ```
 
-##### <a name="compression_delay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
+##### <a name="compression_delay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minuti]  
    Specifica un limite inferiore per il periodo di tempo in cui una riga deve rimanere nel rowgroup differenziale prima che sia idonea per la migrazione in un rowgroup compresso. Un cliente ad esempio può dire che se una riga non viene modificata per 120 minuti, diventa idonea per la compressione in formato di archiviazione a colonne. Per l'indice columnstore nelle tabelle basate su disco, non si tiene traccia dell'ora in cui una riga viene inserita o aggiornata, ma si usa l'ora di chiusura del rowgroup differenziale come proxy per la riga. La durata predefinita è 0 minuti. La migrazione di una riga nella risorsa di archiviazione a colonne viene eseguita quando risulta che nel rowgroup differenziale sono state accumulate 1 milione di righe e il rowgroup viene contrassegnato come chiuso.  
   
 ###### <a name="data_compression"></a>DATA_COMPRESSION  
@@ -516,7 +516,7 @@ GO
     -   Eseguire questa operazione solo se si desidera specificare un nuovo nome per l'indice quando viene convertito in un indice columnstore cluster. Se l'indice cluster non viene eliminato, il nuovo indice columnstore cluster ha lo stesso nome.  
   
         > [!NOTE]  
-        > Il nome dell'indice è più facile da ricordare se si usano il proprio nome. Tutti gli indici rowstore cluster usano il nome predefinito "ClusteredIndex_\<GUID>".  
+        > Il nome dell'indice è più facile da ricordare se si usano il proprio nome. Tutti gli indici cluster rowstore usano il nome predefinito 'ClusteredIndex_\<GUID>'.  
   
     ```sql  
     --Process for dropping a clustered index.  

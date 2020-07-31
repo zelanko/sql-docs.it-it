@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 29a53d4ccb5958a191bf06f4565cc8f908376086
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e0dc290a3e514d8de7a63a6afb4a0ed6453b6107
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552776"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332510"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -65,10 +65,17 @@ Per altre informazioni sulle convenzioni di sintassi, vedere [Convenzioni della 
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-||||
-|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[Istanza gestita<br />database SQL](backup-transact-sql.md?view=azuresqldb-mi-current)|[Piattaforma di strumenti<br />analitici (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
-||||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Istanza gestita<br />database SQL](backup-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Piattaforma di strumenti<br />analitici (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -234,9 +241,9 @@ TO \<backup_device> [ **,** ...*n* ] Indica che il set di [dispositivi di backup
 
 Specifica un dispositivo di backup logico o fisico da utilizzare per l'operazione di backup.
 
-{ *logical_device_name* |  **@** _logical\_device\_name\_var_ } **Si applica a:** SQL Server è il nome logico del dispositivo di backup in cui viene eseguito il backup del database. Il nome logico deve essere conforme alle regole per gli identificatori. Se indicato in forma di variabile (@*logical_device_name_var*), il nome del dispositivo di backup può essere specificato come costante stringa (@_logical\_device\_name\_var_ **=** logical backup device name) oppure come variabile con tipo di dati stringa di caratteri, ad eccezione dei tipi di dati **ntext** o **text**.
+{ *logical_device_name* \| **@** _logical\_device\_name\_var_ } **Si applica a:** SQL Server è il nome logico del dispositivo di backup in cui viene eseguito il backup del database. Il nome logico deve essere conforme alle regole per gli identificatori. Se indicato in forma di variabile (@*logical_device_name_var*), il nome del dispositivo di backup può essere specificato come costante stringa (@_logical\_device\_name\_var_ **=** logical backup device name) oppure come variabile con tipo di dati stringa di caratteri, ad eccezione dei tipi di dati **ntext** o **text**.
 
-{ DISK | TAPE | URL} **=** { **'** _physical\_device\_name_ **'**  |  **@** _physical\_device\_name\_var_ | 'NUL' } **Si applica a:** DISK, TAPE e URL si applicano a SQL Server.
+{ DISK \| TAPE \| URL} **=** { **'** _physical\_device\_name_ **'** \| **@** _physical\_device\_name\_var_ \| 'NUL' } **Si applica a:** DISK, TAPE e URL si applicano a SQL Server.
 Specifica un file su disco o un dispositivo a nastri oppure un servizio di archiviazione BLOB di Microsoft Azure. Il formato URL viene usato per la creazione di backup nel servizio di archiviazione di Microsoft Azure. Per altre informazioni ed esempi, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Per un'esercitazione, vedere [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione BLOB di Microsoft Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).
 
 > [!NOTE]
@@ -664,7 +671,7 @@ Questa tabella descrive le interazioni tra le opzioni { **NOINIT** | INIT } e { 
 > [!NOTE]
 > Se il nastro è vuoto oppure il file di backup su disco non esiste, tutte le interazioni comportano la scrittura di un'intestazione supporto prima di continuare l'operazione. Se i supporti non sono vuoti e non è presente un'intestazione supporto valida, viene segnalata la presenza di supporti MTF non validi e l'operazione di backup viene interrotta.
 
-||NOINIT|INIT|
+|Opzione skip|NOINIT|INIT|
 |------|------------|----------|
 |NOSKIP|Se il volume contiene un'intestazione supporto valida, verifica che il nome del supporto corrisponda al valore di `MEDIANAME`, se specificato. Se il nome corrisponde, il set di backup viene accodato, mantenendo tutti i set di backup esistenti.<br /> Se il volume non contiene un'intestazione supporto valida, viene generato un errore.|Se il volume contiene un'intestazione supporto valida, vengono effettuati i controlli seguenti:<br /><ul><li>Se è stato specificato `MEDIANAME`, viene verificata la corrispondenza tra il nome del supporto indicato e il nome del supporto nell'intestazione.<sup>1</sup></li><li>Verifica dell'assenza di set di backup non scaduti nel supporto. In caso contrario, il backup viene interrotto.</li></ul><br />Se i controlli hanno esito positivo, gli eventuali set di backup presenti nel supporto vengono sovrascritti, mantenendo solo l'intestazione.<br /> Se il volume non contiene un'intestazione supporto valida, ne viene generata automaticamente una con i valori specificati per `MEDIANAME` e `MEDIADESCRIPTION`, se disponibili.|
 |SKIP|Se il volume contiene un'intestazione supporto valida, il set di backup viene accodato, mantenendo tutti i set di backup esistenti.|Se il volume contiene un'intestazione supporto valida<sup>2</sup>, gli eventuali set di backup presenti nel supporto vengono sovrascritti, mantenendo solo l'intestazione.<br /> Se il supporto è vuoto, viene generata un'intestazione usando i valori specificati per `MEDIANAME` e `MEDIADESCRIPTION`, se disponibili.|
@@ -929,9 +936,17 @@ WHERE r.command LIKE 'BACKUP%'
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Istanza gestita<br />database SQL \*_** &nbsp;|[Piattaforma di strumenti<br />analitici (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+:::row:::
+    :::column:::
+        [SQL Server](backup-transact-sql.md?view=sql-server-2016)
+    :::column-end:::
+    :::column:::
+        **_\* Istanza gestita<br />database SQL \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Piattaforma di strumenti<br />analitici (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -1111,9 +1126,17 @@ WITH STATS = 5, COPY_ONLY;
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Istanza gestita<br />database SQL](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Piattaforma di strumenti<br />analitici (PDW) \*_** &nbsp;|
+:::row:::
+    :::column:::
+        [SQL Server](backup-transact-sql.md?view=sql-server-2016)
+    :::column-end:::
+    :::column:::
+        [Istanza gestita<br />database SQL](backup-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        **_\* Piattaforma di strumenti<br />analitici (PDW) \*_** &nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 

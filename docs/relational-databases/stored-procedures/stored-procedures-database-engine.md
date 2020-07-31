@@ -1,5 +1,6 @@
 ---
 title: Stored procedure (motore di database) | Microsoft Docs
+description: Scoprire che una stored procedure in SQL Server è un gruppo di una o più istruzioni Transact-SQL oppure un riferimento a un metodo CLR (Common Runtime Language) di .NET Framework.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73243b7be6587b1e811ac040c5977207748b3889
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 68fbf67a8ff58c4f768c56a84e45c11fd4480c05
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003100"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332223"
 ---
 # <a name="stored-procedures-database-engine"></a>Stored procedure (Motore di database)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -79,9 +80,8 @@ ms.locfileid: "86003100"
   
 ## <a name="related-tasks"></a>Attività correlate  
   
-|||  
-|-|-|  
-|**Descrizione dell'attività**|**Argomento**|  
+| Descrizione dell'attività | Argomento |
+| ---------------- | ----- |
 |Viene descritto il processo di creazione di una stored procedure.|[Creare una stored procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)|  
 |Viene descritto il processo di modifica di una stored procedure.|[Modificare una stored procedure](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)|  
 |Viene descritto il processo di eliminazione di una stored procedure.|[Eliminare una stored procedure](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)|  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 951a6967e51d877efdd68b4f4a6f118c5ec1e6e7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 08ef8be56e34d7f0e62a02c5a9819f0f5c41344b
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897341"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362683"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorare le prestazioni di gruppi di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -26,9 +26,8 @@ ms.locfileid: "85897341"
   
  ![Sincronizzazione dei dati dei gruppi di disponibilità](media/always-onag-datasynchronization.gif "Sincronizzazione dei dati dei gruppi di disponibilità")  
   
-|||||  
+|Sequenza|Descrizione passaggio|Commenti|Metrica utile|  
 |-|-|-|-|  
-|**Sequenza**|**Descrizione passaggio**|**Commenti**|**Metrica utile**|  
 |1|Generazione log|I dati del log vengono scaricati su disco. Il log deve essere replicato nelle repliche secondarie. I record del log immettono la coda di invii.|[SQL Server:Database > Byte/sec scaricamento log](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|Acquisizione|I log di ogni database vengono acquisiti e inviati alla coda del partner corrispondente (uno per ogni coppia di replica/database). Il processo di acquisizione viene eseguito in modo continuo purché la replica di disponibilità sia connessa e lo spostamento dei dati non sia per qualche motivo sospeso. La coppia replica/database avrò lo stato Sincronizzazione in corso o Sincronizzato. Se il processo di acquisizione non esegue l'analisi e accoda i messaggi a una velocità sufficiente, si crea la coda di invii del log.|[SQL Server: Replica di disponibilità> Byte inviati alla replica/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md), vale a dire un'aggregazione della somma di tutti i messaggi di database accodati per tale replica di disponibilità.<br /><br /> [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) e [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB/sec) nella replica primaria.|  
 |3|Send|I messaggi di ogni coda della replica/database vengono rimossi dalla coda e inviati in rete alla rispettiva replica secondaria.|[SQL Server:Replica di disponibilità > Byte inviati al trasporto/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
@@ -41,9 +40,8 @@ ms.locfileid: "85897341"
   
  Dopo essere stati acquisiti nella replica primaria, i log vengono sottoposti a due livelli di controllo di flusso, come illustrato nella tabella seguente.  
   
-|||||  
+|Level|Numero di controlli|Numero di messaggi|Metrica utile|  
 |-|-|-|-|  
-|**Level**|**Numero di controlli**|**Numero di messaggi**|**Metrica utile**|  
 |Trasporto|1 per replica di disponibilità|8192|Evento esteso **database_transport_flow_control_action**|  
 |Database|1 per database di disponibilità|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Evento esteso **hadron_database_flow_control_action**|  
   
