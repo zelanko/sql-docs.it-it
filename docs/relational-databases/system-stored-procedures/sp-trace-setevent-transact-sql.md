@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7d1f047fed74a212358ef7c1af61034d021661ef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f96efdec6878691c4c3b3a3efbeb1cd2d6324f3d
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892593"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472667"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Nella tabella seguente vengono descritti gli eventi che è possibile aggiungere o rimuovere in una traccia.  
   
-|Numero evento|Nome evento|Description|  
+|Numero evento|Nome evento|Descrizione|  
 |------------------|----------------|-----------------|  
 |0-9|Riservato|Riservato|  
 |10|RPC:Completed|Viene generato al completamento di una chiamata di procedura remota (RPC).|  
@@ -256,9 +256,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 |12|**SPID**|ID del processo server assegnato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al processo associato al client.|  
 |13|**Duration**|Durata dell'evento in microsecondi. Questa colonna di dati non viene popolata dall'evento Hash Warning.|  
 |14|**StartTime**|Ora di inizio dell'evento, se disponibile.|  
-|15|**EndTime**|Ora di fine dell'evento. Questa colonna non viene popolata per le classi di evento di avvio, ad esempio **SQL: BatchStarting** o **SP: Starting**. Inoltre, non viene popolata dall'evento **Hash Warning** .|  
-|16|**Legge**|Numero di letture logiche del disco eseguite dal server per conto dell'evento. Questa colonna non viene popolata dall'evento **Lock: Released** .|  
-|17|**Scrive**|Numero di scritture fisiche su disco eseguite dal server per conto dell'evento.|  
+|15|**EndTime**|Ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, come **SQL:BatchStarting** o **SP:Starting**. Inoltre, non viene popolata dall'evento **Hash Warning** .|  
+|16|**Reads**|Numero di letture logiche del disco eseguite dal server per conto dell'evento. Questa colonna non viene popolata dall'evento **Lock: Released** .|  
+|17|**Writes**|Numero di scritture fisiche su disco eseguite dal server per conto dell'evento.|  
 |18|**CPU**|Tempo della CPU in millisecondi utilizzato dall'evento.|  
 |19|**Autorizzazioni**|Rappresenta la mappa di bit delle autorizzazioni e viene utilizzata per il controllo di sicurezza.|  
 |20|**Gravità**|Livello di gravità di un'eccezione.|  
@@ -272,7 +272,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |28|**ObjectType**|Tipo di oggetto, ad esempio tabella, funzione o stored procedure.|  
 |29|**NestLevel**|Livello di nidificazione in cui viene eseguita la stored procedure. Vedere [@ @NESTLEVEL &#40;&#41;Transact-SQL ](../../t-sql/functions/nestlevel-transact-sql.md).|  
 |30|**State**|Stato del server in caso di errore.|  
-|31|**Errore**|Numero di errore.|  
+|31|**Error (Errore) (Error (Errore)e)**|Numero di errore.|  
 |32|**Modalità**|Modalità del blocco acquisito. Questa colonna non viene popolata dall'evento **Lock: Released** .|  
 |33|**Handle**|Handle dell'oggetto a cui si fa riferimento nell'evento.|  
 |34|**ObjectName**|Nome dell'oggetto a cui si accede.|  
@@ -316,7 +316,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Questa tabella illustra l'interazione tra ** \@ in** e ** \@ ColumnID**.  
   
-|@on|@columnid|Risultato|  
+|\@in|\@columnid|Risultato|  
 |---------|---------------|------------|  
 |ON (**1**)|NULL|L'evento viene abilitato.<br /><br /> Tutte le colonne vengono cancellate.|  
 ||NOT NULL|La colonna viene abilitata per l'evento specificato.|  

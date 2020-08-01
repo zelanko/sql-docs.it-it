@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ba29a05936304362d7e67abec9ae66947f0c8c31
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3b87440f9f5e1afc6ea1ede20054e4f34db8087d
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915697"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442469"
 ---
 # <a name="sysserver_event_session_fields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per ogni colonna personalizzabile che è impostata in modo esplicito su eventi e destinazioni.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "86915697"
 |event_session_id|**int**|ID della sessione dell'evento. Non ammette i valori Null.|  
 |object_id|**int**|ID dell'oggetto a cui è associato il campo. Non ammette i valori Null.|  
 |name|**sysname**|Nome del campo. Non ammette i valori Null.|  
-|value|**sql_variant**|Valore del campo. Non ammette i valori Null.|  
+|Valore|**sql_variant**|Valore del campo. Non ammette i valori Null.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
@@ -45,7 +45,7 @@ ms.locfileid: "86915697"
 ## <a name="remarks"></a>Osservazioni  
  Questa vista ha le cardinalità della relazione seguenti.  
   
-| From | A | Relazione |
+| Da | To | Relazione |
 | ---- | -- | ------------ |
 |sys.server_event_session_actions.event_session_id|sys. server_event_sessions. event_session_id|Molti-a-uno|  
 |sys.server_event_session_actions.event_id<br /><br /> sys.server_event_session_actions.object_id<br /><br /> sys.server_event_session_actions.event_session_id|sys.server_event_session_events.event_session_id<br /><br /> sys.server_event_session_events.event_id|Molti-a-uno|  

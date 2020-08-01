@@ -20,15 +20,15 @@ ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2efcff0a713c4f7f59206b484c26c4c797cd343
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fbe9d8a69a9bbe788c082cf2d684e0dd6763b1e2
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830776"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442676"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Indica i consumer di memoria a livello di database nel motore di database di [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. Nella vista viene restituita una riga per ogni consumer di memoria utilizzato dal motore di database. Usare questa DMV per vedere come la memoria viene distribuita tra oggetti interni diversi.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "82830776"
  Quando una tabella ottimizzata per la memoria dispone di un indice columnstore, il sistema usa alcune tabelle interne che utilizzano una certa quantità di memoria per tenere traccia dei dati per l'indice columnstore. Per informazioni dettagliate su queste tabelle interne e query di esempio che mostrano il consumo di memoria, vedere [sys. memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
   
 ```  
 -- memory consumers (database level)  

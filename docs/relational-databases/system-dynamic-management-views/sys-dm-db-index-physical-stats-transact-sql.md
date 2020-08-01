@@ -21,12 +21,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e1ebbe98efecd97cb7ddda6284d4a28176e8ec1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7bceaef8321248bc29be2faad3886319a9267391
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112766"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472204"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,33 +55,33 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *database_id* | NULL | 0 | PREDEFINITA  
+ *database_id* \| \| \| Valore predefinito 0 null  
  ID del database. *database_id* è **smallint**. Gli input validi sono il numero di ID di un database, NULL, 0 o DEFAULT. Il valore predefinito è 0. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto.  
   
  Specificare NULL per restituire informazioni per tutti i database presenti nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si specifica NULL per *database_id*, è necessario specificare null anche per *object_id*, *index_id*e *partition_number*.  
   
  È possibile specificare la funzione predefinita [DB_ID](../../t-sql/functions/db-id-transact-sql.md). Quando si utilizza DB_ID senza specificare un nome di database, il livello di compatibilità del database corrente deve essere 90 o un valore superiore.  
   
- *object_id* | NULL | 0 | PREDEFINITA  
+ *object_id* \| \| \| Valore predefinito 0 null  
  ID oggetto della tabella o vista in cui si trova l'indice. *object_id* è di tipo **int**.  
   
  Gli input validi sono il numero di ID di una tabella o vista, NULL, 0 o DEFAULT. Il valore predefinito è 0. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , gli input validi includono anche il nome della coda di Service Broker o il nome della tabella interna della coda. Quando vengono applicati parametri predefiniti, ovvero tutti gli oggetti, tutti gli indici e così via, le informazioni sulla frammentazione per tutte le code sono incluse nel set di risultati.  
   
  Specificare NULL per restituire le informazioni per tutte le tabelle e le viste nel database specificato. Se si specifica NULL per *object_id*, è necessario specificare null anche per *index_id* e *partition_number*.  
   
- *index_id* | 0 | NULL | -1 | PREDEFINITA  
+ *index_id* \| 0 \| null \| -1 \| valore predefinito  
  ID dell'indice. *index_id* è di **tipo int**. Gli input validi sono il numero di ID di un indice, 0 se *object_id* è un heap, null,-1 o default. Il valore predefinito è -1. NULL,-1 e DEFAULT sono valori equivalenti in questo contesto.  
   
  Specificare NULL per restituire le informazioni per tutti gli indici per una vista o tabella di base. Se si specifica NULL per *index_id*, è necessario specificare null anche per *partition_number*.  
   
- *partition_number* | NULL | 0 | PREDEFINITA  
+ *partition_number* \| \| \| Valore predefinito 0 null  
  Numero di partizione nell'oggetto. *partition_number* è di **tipo int**. Gli input validi sono la *partion_number* di un indice o di un heap, null, 0 o default. Il valore predefinito è 0. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto.  
   
  Specificare NULL per restituire le informazioni per tutte le partizioni dell'oggetto.  
   
  *partition_number* è in base 1. Un indice o heap non partizionato ha *partition_number* impostato su 1.  
   
- *modalità* | NULL | PREDEFINITA  
+ *modalità* \| \|valore predefinito null  
  Nome della modalità. *mode* specifica il livello di analisi utilizzato per ottenere le statistiche. *mode* è di **tipo sysname**. Gli input validi sono DEFAULT, NULL, LIMITED, SAMPLED o DETAILED. Il valore predefinito (NULL) è LIMITED.  
   
 ## <a name="table-returned"></a>Tabella restituita  

@@ -20,15 +20,15 @@ ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fed687f9a0f29359e60c05439e36853504e1ab6b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e0edb4d46ae47b4c45dc01f7d2e33f856424352
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830815"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442565"
 ---
 # <a name="sysdm_db_xtp_gc_cycle_stats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Restituisce lo stato corrente delle transazioni su cui è stato eseguito il commit e che hanno eliminato una o più righe. Il thread inattivo di Garbage Collection viene attivato ogni minuto o quando il numero delle transazioni DML su cui è stato eseguito il commit supera una soglia interna dopo l'ultimo ciclo di Garbage Collection. Come parte del ciclo di Garbage Collection, sposta le transazioni che sono state sottoposte al commit in una o più code associate alle generazioni. Le transazioni che hanno generato versioni non aggiornate vengono raggruppate in unità di 16 transazioni di 16 generazioni come indicato di seguito:  
   
@@ -43,7 +43,7 @@ ms.locfileid: "82830815"
  Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
   
-|Nome colonna|Tipo|Description|  
+|Nome colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
 |cycle_id|**bigint**|Identificatore univoco del ciclo di Garbage Collection.|  
 |ticks_at_cycle_start|**bigint**|Tick all'avvio del ciclo.|  

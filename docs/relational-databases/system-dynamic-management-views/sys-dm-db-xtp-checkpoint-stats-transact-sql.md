@@ -21,15 +21,15 @@ ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29e08f4fd023717a186a900f288e47f864af218e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 72af811bb5c3f9f5b3fdded8589bec4ef34806fb
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677446"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442844"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Restituisce le statistiche relative alle operazioni checkpoint OLTP in memoria del database corrente. Se il database non include oggetti OLTP in memoria, viene restituito un set di risultati vuoto.  
   
@@ -45,7 +45,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 ## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive  
  Nella tabella seguente vengono descritte le colonne in `sys.dm_db_xtp_checkpoint_stats` , a partire da **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
-|Nome colonna|Type|Descrizione|  
+|Nome colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|Ultimo LSN visualizzato dal controller.|  
 |end_of_log_lsn|**numerico (38)**|LSN della fine del log.|  
@@ -87,7 +87,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  Nella tabella seguente vengono descritte le colonne di `sys.dm_db_xtp_checkpoint_stats` per **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
-|Nome colonna|Type|Descrizione|  
+|Nome colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|Numero di byte di log tra il numero di sequenza del file di log (LSN) corrente e la fine del log del thread.|  
 |total_log_blocks_processed|**bigint**|Numero complessivo di blocchi di log elaborati dall'avvio del server.|  

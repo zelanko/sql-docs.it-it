@@ -20,15 +20,15 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8a060195e5fba5ae5e97e2ded6afb51c1636687
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8efc79ed772d92986af87a707cf64f4c0f9cbdcf
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812034"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442548"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Monitora lo stato di avanzamento delle query in tempo reale mentre la query è in esecuzione. Usare, ad esempio, questa DMV per determinare la parte della query la cui esecuzione è lenta. Creare un join di questa DMV ad altre DMV di sistema utilizzando le colonne identificate nel campo descrizione. In alternativa, creare un join di questa DMV con altri contatori di prestazioni, ad esempio Performance Monitor, xperf, usando le colonne di tipo timestamp.  
   
@@ -83,7 +83,7 @@ I contatori restituiti sono specifici per ogni operatore per ogni thread. I risu
   
 -   In caso di analisi parallela, questa DMV restituisce i contatori per ogni thread parallelo usato nell'analisi.
  
-A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, l' *infrastruttura di profilatura delle statistiche di esecuzione delle query standard* è affiancata a un'infrastruttura di *profilatura delle statistiche di esecuzione delle query Lightweight*. `SET STATISTICS XML ON`e `SET STATISTICS PROFILE ON` utilizzano sempre l' *infrastruttura di profilatura delle statistiche di esecuzione delle query standard*. Per `sys.dm_exec_query_profiles` essere popolato, è necessario abilitare una delle infrastrutture di profilatura delle query. Per altre informazioni, vedere [query profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).    
+A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, l' *infrastruttura di profilatura delle statistiche di esecuzione delle query standard* è affiancata a un'infrastruttura di *profilatura delle statistiche di esecuzione delle query Lightweight*. `SET STATISTICS XML ON`e `SET STATISTICS PROFILE ON` utilizzano sempre l' *infrastruttura di profilatura delle statistiche di esecuzione delle query standard*. Per `sys.dm_exec_query_profiles` essere popolato, è necessario abilitare una delle infrastrutture di profilatura delle query. Per altre informazioni, vedere [Infrastruttura di profilatura query](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
 > La query in fase di analisi deve essere avviata **dopo** l'abilitazione dell'infrastruttura di profilatura delle query, in modo che dopo l'avvio della query non venga generato alcun risultato `sys.dm_exec_query_profiles` . Per altre informazioni su come abilitare le infrastrutture di profilatura delle query, vedere [eseguire query sull'infrastruttura di profilatura](../../relational-databases/performance/query-profiling-infrastructure.md).
@@ -92,7 +92,7 @@ A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, l' *infrastr
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] istanza gestita, richiede `VIEW DATABASE STATE` l'autorizzazione e l'appartenenza al `db_owner` ruolo del database.   
 Nei [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
    
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Passaggio 1: accedere a una sessione in cui si prevede di eseguire la query con cui si eseguirà l'analisi `sys.dm_exec_query_profiles` . Per configurare la query per l'utilizzo della profilatura `SET STATISTICS PROFILE ON` . Eseguire la query in questa stessa sessione.  
   
 ```sql  
@@ -124,6 +124,6 @@ ORDER BY node_id;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
  

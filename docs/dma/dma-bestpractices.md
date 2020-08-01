@@ -1,6 +1,6 @@
 ---
 title: Procedura consigliate per Data Migration Assistant
-description: Informazioni sulle procedure consigliate per la migrazione di database SQL Server con Data Migration Assistant
+description: Informazioni sulle procedure consigliate per la migrazione di database SQL Server con Data Migration Assistant, incluse informazioni sull'installazione, la valutazione e la migrazione.
 ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: fbfc995b3271c9618cd773d42d3e8154958d6af5
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 1d9dc4c4030330e7065d6f8531af967dcf88baa3
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886048"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472367"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Procedure consigliate per l'esecuzione di Data Migration Assistant
 In questo articolo vengono fornite alcune informazioni sulle procedure consigliate per l'installazione, la valutazione e la migrazione.

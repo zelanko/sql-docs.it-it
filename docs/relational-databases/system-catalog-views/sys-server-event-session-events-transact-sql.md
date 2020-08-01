@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 52559b61d2447aabea35bc8d01454046a9cbbe85
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 18a39be6519d22e8a568e48be616c57bc1b6a069
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914780"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442492"
 ---
 # <a name="sysserver_event_session_events-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Restituisce una riga per ogni evento in una sessione di eventi.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "86914780"
 ## <a name="remarks"></a>Osservazioni  
  Questa vista ha le cardinalità della relazione seguenti.  
   
-| From | A | Relazione |
+| Da | To | Relazione |
 | ---- | -- | ------------ |
 |sys.server_event_session_events.event_session_id|sys. server_event_sessions. event_session_id|Molti-a-uno|  
   
