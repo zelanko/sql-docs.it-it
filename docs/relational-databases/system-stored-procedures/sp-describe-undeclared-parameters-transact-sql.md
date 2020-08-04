@@ -18,15 +18,15 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: a3745f00e8e2e6d7ed0386a128ee6bcec2adebea
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2c40ef34ffcde3f7a1d02f6ba45963bd83df841a
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831173"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522545"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)] 
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
 
   Restituisce un set di risultati che contiene metadati sui parametri non dichiarati in un [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Considera ogni parametro utilizzato nel batch ** \@ TSQL** , ma non dichiarato in ** \@ params**. Viene restituito un set di risultati che contiene una riga per ognuno di questi parametri, con le informazioni sul tipo dedotte per quel parametro. La procedura restituisce un set di risultati vuoto se il batch di input ** \@ TSQL** non contiene parametri, ad eccezione di quelli dichiarati in ** \@ params**.  
   
@@ -63,7 +63,7 @@ sp_describe_undeclared_parameters
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int NOT NULL**|Contiene la posizione ordinale del parametro nel set di risultati. La posizione del primo parametro viene specificata come 1.|  
-|**name**|**sysname non NULL**|Contiene il nome del parametro.|  
+|**nome**|**sysname non NULL**|Contiene il nome del parametro.|  
 |**suggested_system_type_id**|**int NOT NULL**|Contiene la **system_type_id** del tipo di dati del parametro come specificato in sys. Types.<br /><br /> Per i tipi CLR, anche se la colonna **system_type_name** restituirà null, questa colonna restituirà il valore 240.|  
 |**suggested_system_type_name**|**nvarchar (256) NULL**|Contiene il nome del tipo di dati. Include gli argomenti, quali lunghezza, precisione e scala, specificati per il tipo di dati del parametro. Se il tipo di dati è un tipo di alias definito dall'utente, il tipo di sistema sottostante viene specificato qui. Se il tipo di dati è un tipo CLR definito dall'utente, in questa colonna viene restituito NULL. Se non è possibile dedurre il tipo del parametro, viene restituito NULL.|  
 |**suggested_max_length**|**smallint non NULL**|Vedere sys. Columns. per **max_length** Descrizione della colonna.|  
@@ -87,7 +87,7 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int NOT NULL**|Per uso interno.|  
 |**suggested_tds_length**|**int NOT NULL**|Per uso interno.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_describe_undeclared_parameters** restituisce sempre lo stato restituito zero.  
   
  Lo scenario più comune si verifica quando a un'applicazione viene fornita un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che potrebbe contenere parametri e li deve elaborare in qualche modo. Un esempio è dato da un'interfaccia utente quale ODBCTest o RowsetViewer in cui l'utente fornisce una query con la sintassi del parametro ODBC. L'applicazione deve individuare in modo dinamico il numero di parametri che verranno richiesti singolarmente all'utente.  
@@ -177,7 +177,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      Il tipo di dati per \@ P1, \@ P2 e \@ P3 sarà il tipo di dati C1, il tipo di dati restituito di dbo. tbl e il tipo di dati Parameter per dbo. tbl rispettivamente.  
   
-     Come caso speciale, se \@ p è un argomento per un \< operatore, >, \< = o >=, le regole di deduzione semplice non si applicano. L'algoritmo di deduzione dei tipi utilizzerà le regole della deduzione generale illustrate nella sezione successiva. Se ad esempio c1 è una colonna del tipo di dati char(30), si considerino le due query seguenti:  
+     Come caso speciale, se \@ p è un argomento di un \<, > operatore, \<=, or > =, le regole di deduzione semplice non si applicano. L'algoritmo di deduzione dei tipi utilizzerà le regole della deduzione generale illustrate nella sezione successiva. Se ad esempio c1 è una colonna del tipo di dati char(30), si considerino le due query seguenti:  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p  
@@ -225,7 +225,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      In questo caso, E ( \@ p) è Col_Int + \@ p e TT ( \@ p) è **int**. viene scelto **int** per \@ p perché non produce conversioni implicite. Qualsiasi altra scelta del tipo di dati produce almeno una conversione implicita.  
   
-2.  Se più tipi di dati hanno un valore equivalente per il numero più piccolo di conversioni, viene utilizzato il tipo di dati con la precedenza maggiore. Ad esempio  
+2.  Se più tipi di dati hanno un valore equivalente per il numero più piccolo di conversioni, viene utilizzato il tipo di dati con la precedenza maggiore. Ad esempio:  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
@@ -254,7 +254,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione per eseguire l' \@ argomento TSQL.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite informazioni quali il tipo di dati previsto per i parametri `@id` e `@name` non dichiarati.  
   
 ```sql
