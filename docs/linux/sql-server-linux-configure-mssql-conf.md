@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 5d3ee42f28fed73a4dd513b10d01948552fdd6d5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe93023bfbcd285d8d50a90bb11ea532eb066f2c
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901548"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472187"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurare SQL Server in Linux con lo strumento mssql conf
 
@@ -24,7 +24,7 @@ ms.locfileid: "85901548"
 
 **mssql-conf** è uno script di configurazione che viene installato con SQL Server 2017 per Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Ubuntu. Modifica il [**file mssql.conf**](#mssql-conf-format) in cui vengono archiviati i valori di configurazione. È possibile usare l'utilità **mssql-conf** per impostare i parametri seguenti:
 
-|||
+|Parametro|Descrizione|
 |---|---|
 | [Agent](#agent) | Abilitare SQL Server Agent. |
 | [Regole di confronto](#collation) | Impostare nuove regole di confronto per SQL Server in Linux. |
@@ -52,7 +52,7 @@ ms.locfileid: "85901548"
 
 **mssql-conf** è uno script di configurazione che viene installato con [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] per Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Ubuntu. È possibile usare questa utilità per impostare i parametri seguenti:
 
-|||
+|Parametro|Descrizione|
 |---|---|
 | [Agent](#agent) | Abilitare SQL Server Agent |
 | [Regole di confronto](#collation) | Impostare nuove regole di confronto per SQL Server in Linux. |
@@ -393,7 +393,7 @@ La prima fase di acquisizione è controllata dall'impostazione **coredump.coredu
 
     Nella tabella seguente sono elencati i valori possibili per **coredump.coredumptype**.
 
-    | Type | Descrizione |
+    | Type | Description |
     |-----|-----|
     | **mini** | Mini è il tipo di file di dump più piccolo. Usa le informazioni di sistema di Linux per determinare i thread e i moduli nel processo. Il dump contiene solo i moduli e gli stack di thread dell'ambiente host. Non contiene riferimenti alla memoria indiretta o elementi globali. |
     | **miniplus** | MiniPlus è simile a mini, ma include memoria aggiuntiva. Riconosce gli elementi interni di SQLPAL e l'ambiente host, aggiungendo al dump le aree di memoria seguenti:</br></br> - Vari elementi globali</br> - Tutta la memoria sopra 64 TB</br> - Tutte le aree denominate disponibili in **/proc/$pid/maps**</br> - Memoria indiretta da thread e stack</br> - Informazioni sui thread</br> - TEB e PEB associati</br> - Informazioni sui moduli</br> - Albero VMM e VAD |

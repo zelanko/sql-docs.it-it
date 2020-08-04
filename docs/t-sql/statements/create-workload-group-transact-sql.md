@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 19d5c9abe85d308f93f0aa085ff813ab7a3ca8f7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 806a687037d2b23a2800552a6f4467ce02b7ccc0
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111188"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472627"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -142,7 +142,7 @@ Si considerino i valori usati per le classi di risorse come linee guida per requ
 *REQUEST_MAX_RESOURCE_GRANT_PERCENT* = valore</br>         
 Imposta la quantità massima di risorse allocate per ogni richiesta. Il *valore* è un parametro decimale facoltativo con un valore predefinito uguale a request_min_resource_grant_percent. Il *valore* deve essere maggiore o uguale a request_min_resource_grant_percent. Quando il valore di request_max_resource_grant_percent è maggiore di request_min_resource_grant_percent e sono disponibili risorse di sistema, vengono allocate risorse aggiuntive a una richiesta.
 
-*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>        
+*IMPORTANCE* = { LOW \| BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }</br>        
 Specifica l'importanza predefinita di una richiesta per il gruppo del carico di lavoro. L'importanza è compresa fra le seguenti, NORMAL è l'impostazione predefinita:
 
 - LOW

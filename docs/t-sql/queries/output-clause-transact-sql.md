@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a63b7d9565f93a770061fc39a9aac7eb4e496366
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 922e42698f3b911912ffc1f745d171498c37151f
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554776"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435555"
 ---
 # <a name="output-clause-transact-sql"></a>Clausola OUTPUT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +60,6 @@ ms.locfileid: "86554776"
 ## <a name="syntax"></a>Sintassi  
   
 ```syntaxsql
-  
 <OUTPUT_CLAUSE> ::=  
 {  
     [ OUTPUT <dml_select_list> INTO { @table_variable | output_table } [ ( column_list ) ] ]  
@@ -72,8 +71,8 @@ ms.locfileid: "86554776"
   
 <column_name> ::=  
 { DELETED | INSERTED | from_table_name } . { * | column_name }  
-    | $action  
-```  
+    | $action
+```
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -129,10 +128,10 @@ ms.locfileid: "86554776"
   
  Ad esempio, `OUTPUT DELETED.*` nell'istruzione DELETE seguente restituisce tutte le colonne eliminate dalla tabella `ShoppingCartItem`:  
   
-```  
-DELETE Sales.ShoppingCartItem  
-    OUTPUT DELETED.*;  
-```  
+```sql
+DELETE Sales.ShoppingCartItem
+    OUTPUT DELETED.*;
+```
   
  *column_name*  
  Riferimento di colonna esplicito. Qualsiasi riferimento alla tabella che viene modificata deve essere qualificato correttamente tramite il prefisso INSERTED o DELETED in base alle esigenze, ad esempio: INSERTED **.** _column\_name_.  
@@ -233,21 +232,22 @@ Nel contesto di un database impostato a un livello di compatibilità pari a 130 
 ## <a name="queues"></a>Code  
  È possibile utilizzare la clausola OUTPUT nelle applicazioni che utilizzano le tabelle come code oppure per mantenere i risultati intermedi delle query. In altre parole, l'applicazione aggiunge o rimuove costantemente le righe dalla tabella. Nell'esempio seguente viene utilizzata la clausola OUTPUT in un'istruzione DELETE per restituire la riga eliminata all'applicazione chiamante.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DELETE TOP(1) dbo.DatabaseLog WITH (READPAST)  
 OUTPUT deleted.*  
 WHERE DatabaseLogID = 7;  
-GO  
-  
-```  
+GO
+```
   
  In questo esempio viene rimossa una riga da una tabella utilizzata come coda e i valori eliminati vengono restituiti all'applicazione di elaborazione in una singola azione. È possibile implementare anche altri tipi di semantica, ad esempio l'utilizzo di una tabella per implementare uno stack. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non garantisce tuttavia l'ordine in cui le righe vengono elaborate e restituite dalle istruzioni DML che utilizzano la clausola OUTPUT. Spetta all'applicazione includere una clausola WHERE appropriata per garantire la semantica desiderata oppure tenere in considerazione che quando più righe possono essere incluse nell'operazione DML, non viene garantito alcun ordine particolare. Nell'esempio seguente viene utilizzata una sottoquery e viene presupposto che l'unicità sia una caratteristica della colonna `DatabaseLogID` per implementare la semantica di ordinamento desiderata.  
   
-```  
-USE tempdb;  
-GO  
+```sql
+USE tempdb;
+GO
+
 CREATE TABLE dbo.table1  
 (  
     id INT,  
@@ -301,9 +301,8 @@ DROP TABLE dbo.table1;
 --id          employee  
 ------------- ------------------------------  
 --2           Tom  
---4           Alice  
-  
-```  
+--4           Alice
+```
   
 > [!NOTE]  
 >  Utilizzare l'hint di tabella READPAST nelle istruzioni UPDATE e DELETE se lo scenario consente a più applicazioni di eseguire una operazione di lettura distruttiva da una tabella. Ciò evita i problemi relativi ai blocchi che possono verificarsi se un'altra applicazione sta già leggendo il primo record qualificato nella tabella.  
@@ -318,9 +317,10 @@ DROP TABLE dbo.table1;
 ### <a name="a-using-output-into-with-a-simple-insert-statement"></a>R. Utilizzo di OUTPUT INTO con un'istruzione INSERT semplice  
  Nell'esempio seguente viene inserita una riga nella tabella `ScrapReason` e viene usata la clausola `OUTPUT` per restituire i risultati dell'istruzione alla variabile `@MyTableVar``table`. Poiché la colonna `ScrapReasonID` è definita con una proprietà IDENTITY, non è specificato un valore nell'istruzione `INSERT` per quella colonna. Si noti tuttavia che il valore generato da [!INCLUDE[ssDE](../../includes/ssde-md.md)] per quella colonna viene restituito nella clausola `OUTPUT` nella colonna `inserted.ScrapReasonID`.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTableVar table( NewScrapReasonID smallint,  
                            Name varchar(50),  
                            ModifiedDate datetime);  
@@ -334,34 +334,33 @@ SELECT NewScrapReasonID, Name, ModifiedDate FROM @MyTableVar;
 --Display the result set of the table.  
 SELECT ScrapReasonID, Name, ModifiedDate   
 FROM Production.ScrapReason;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="b-using-output-with-a-delete-statement"></a>B. Utilizzo di OUTPUT con un'istruzione DELETE  
  Nell'esempio seguente vengono eliminate tutte le righe nella tabella `ShoppingCartItem`. La clausola `OUTPUT deleted.*` specifica che i risultati dell'istruzione `DELETE`, ovvero tutte le colonne nelle righe eliminate, devono essere restituiti all'applicazione chiamante. L'istruzione `SELECT` che segue verifica i risultati dell'operazione di eliminazione nella tabella `ShoppingCartItem`.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DELETE Sales.ShoppingCartItem  
 OUTPUT DELETED.*   
 WHERE ShoppingCartID = 20621;  
   
 --Verify the rows in the table matching the WHERE clause have been deleted.  
 SELECT COUNT(*) AS [Rows in Table] FROM Sales.ShoppingCartItem WHERE ShoppingCartID = 20621;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="c-using-output-into-with-an-update-statement"></a>C. Utilizzo di OUTPUT INTO con un'istruzione UPDATE  
  Nell'esempio seguente viene aggiornata la colonna `VacationHours` nella tabella `Employee` del 25% per le prime 10 righe. La clausola `OUTPUT` restituisce il valore `VacationHours` esistente prima di applicare l'istruzione `UPDATE` nella colonna `deleted.VacationHours` e il valore aggiornato nella colonna `inserted.VacationHours` alla variabile di tabella `@MyTableVar`.  
   
  Questa variabile è seguita da due istruzioni `SELECT` che restituiscono i valori in `@MyTableVar` e i risultati dell'operazione di aggiornamento nella tabella `Employee`.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
   
 DECLARE @MyTableVar table(  
     EmpID int NOT NULL,  
@@ -386,15 +385,15 @@ GO
 SELECT TOP (10) BusinessEntityID, VacationHours, ModifiedDate  
 FROM HumanResources.Employee;  
 GO  
-  
-```  
-  
+```
+
 ### <a name="d-using-output-into-to-return-an-expression"></a>D. Utilizzo di OUTPUT INTO per restituire un'espressione  
  Nell'esempio seguente viene utilizzato come base l'esempio C definendo un'espressione nella clausola `OUTPUT` come differenza tra il valore `VacationHours` aggiornato e il valore `VacationHours` prima dell'applicazione dell'aggiornamento. Il valore di questa espressione viene restituito alla variabile `@MyTableVar``table` nella colonna `VacationHoursDifference`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
-GO  
+GO
+
 DECLARE @MyTableVar table(  
     EmpID int NOT NULL,  
     OldVacationHours int,  
@@ -419,16 +418,16 @@ FROM @MyTableVar;
 GO  
 SELECT TOP (10) BusinessEntityID, VacationHours, ModifiedDate  
 FROM HumanResources.Employee;  
-GO  
-  
-```  
-  
+GO
+```
+
 ### <a name="e-using-output-into-with-from_table_name-in-an-update-statement"></a>E. Utilizzo di OUTPUT INTO con from_table_name in un'istruzione UPDATE  
  Nell'esempio seguente viene aggiornata la colonna `ScrapReasonID` nella tabella `WorkOrder` per tutti gli ordini di lavoro con valori `ProductID` e `ScrapReasonID` specificati. La clausola `OUTPUT INTO` restituisce i valori dalla tabella in fase di aggiornamento (`WorkOrder`) e anche dalla tabella `Product`. La tabella `Product` viene utilizzata nella clausola `FROM` per specificare le righe da aggiornare. Poiché per la tabella `WorkOrder` è stato definito un trigger `AFTER UPDATE`, è necessaria la parola chiave `INTO`.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTestVar table (  
     OldScrapReasonID int NOT NULL,   
     NewScrapReasonID int NOT NULL,   
@@ -453,16 +452,16 @@ FROM Production.WorkOrder AS wo
 SELECT OldScrapReasonID, NewScrapReasonID, WorkOrderID,   
     ProductID, ProductName   
 FROM @MyTestVar;  
-GO  
-  
-```  
-  
+GO
+```
+
 ### <a name="f-using-output-into-with-from_table_name-in-a-delete-statement"></a>F. Utilizzo di OUTPUT INTO con from_table_name in un'istruzione DELETE  
  Nell'esempio seguente vengono eliminate le righe nella tabella `ProductProductPhoto` in base ai criteri di ricerca definiti nella clausola `FROM` dell'istruzione `DELETE`. La clausola `OUTPUT` restituisce le colonne dalla tabella che viene eliminata (`deleted.ProductID`, `deleted.ProductPhotoID`) e dalla tabella `Product`. Questa tabella viene utilizzata nella clausola `FROM` per specificare le righe da eliminare.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTableVar table (  
     ProductID int NOT NULL,   
     ProductName nvarchar(50)NOT NULL,  
@@ -484,16 +483,16 @@ JOIN Production.Product as p
 SELECT ProductID, ProductName, ProductModelID, PhotoID   
 FROM @MyTableVar  
 ORDER BY ProductModelID;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="g-using-output-into-with-a-large-object-data-type"></a>G. Utilizzo di OUTPUT INTO con un tipo di dati LOB  
  Nell'esempio seguente viene aggiornato un valore parziale in `DocumentSummary`, una colonna di tipo `nvarchar(max)` della tabella `Production.Document`, tramite la clausola `.WRITE`. La parola `components` viene sostituta con la parola `features` specificando la parola sostitutiva, la posizione iniziale (offset) della parola da sostituire nei dati esistenti e il numero di caratteri da sostituire (lunghezza). Nell'esempio viene usata la clausola `OUTPUT` per restituire le immagini precedenti e successive della colonna `DocumentSummary` alla variabile `@MyTableVar``table`. Si noti che vengono restituite le immagini complete precedenti e successive della colonna `DocumentSummary`.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTableVar table (  
     SummaryBefore nvarchar(max),  
     SummaryAfter nvarchar(max));  
@@ -507,16 +506,16 @@ WHERE Title = N'Front Reflector Bracket Installation';
   
 SELECT SummaryBefore, SummaryAfter   
 FROM @MyTableVar;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="h-using-output-in-an-instead-of-trigger"></a>H. Utilizzo di OUTPUT in un trigger INSTEAD OF  
  Nell'esempio seguente viene utilizzata la clausola `OUTPUT` in un trigger per restituire i risultati dell'operazione trigger. Viene prima creata una vista nella tabella `ScrapReason` e quindi definito un trigger `INSTEAD OF INSERT` nella vista che consente all'utente di modificare esclusivamente la colonna `Name` della tabella di base. Poiché la colonna `ScrapReasonID` è una colonna `IDENTITY` nella tabella di base, il trigger ignora il valore specificato dall'utente, consentendo a [!INCLUDE[ssDE](../../includes/ssde-md.md)] di generare automaticamente il valore corretto. Inoltre, il valore specificato dall'utente per `ModifiedDate` viene ignorato e impostato sulla data corrente. La clausola `OUTPUT` restituisce i valori di fatto inseriti nella tabella `ScrapReason`.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 IF OBJECT_ID('dbo.vw_ScrapReason','V') IS NOT NULL  
     DROP VIEW dbo.vw_ScrapReason;  
 GO  
@@ -540,9 +539,8 @@ END
 GO  
 INSERT vw_ScrapReason (ScrapReasonID, Name, ModifiedDate)  
 VALUES (99, N'My scrap reason','20030404');  
-GO  
-  
-```  
+GO
+```
   
  Di seguito è riportato il set di risultati generato il 12 aprile 2004 ('`2004-04-12'`). Si noti che le colonne `ScrapReasonIDActual` e `ModifiedDate` riflettono i valori generati dall'operazione trigger invece dei valori specificati nell'istruzione `INSERT`.  
   
@@ -555,9 +553,10 @@ GO
 ### <a name="i-using-output-into-with-identity-and-computed-columns"></a>I. Utilizzo di OUTPUT INTO con le colonne calcolate e Identity  
  Nell'esempio seguente viene creata la tabella `EmployeeSales`, in cui vengono quindi inserite diverse righe tramite un'istruzione `INSERT` con un'istruzione `SELECT` per il recupero dei dati dalle tabelle di origine. La tabella `EmployeeSales` include una colonna Identity (`EmployeeID`) e una colonna calcolata (`ProjectedSales`).  
   
-```  
-USE AdventureWorks2012 ;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 IF OBJECT_ID ('dbo.EmployeeSales', 'U') IS NOT NULL  
     DROP TABLE dbo.EmployeeSales;  
 GO  
@@ -596,16 +595,16 @@ FROM @MyTableVar;
 GO  
 SELECT EmployeeID, LastName, FirstName, CurrentSales, ProjectedSales  
 FROM dbo.EmployeeSales;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="j-using-output-and-output-into-in-a-single-statement"></a>J. Utilizzo di OUTPUT e OUTPUT INTO in una singola istruzione  
  Nell'esempio seguente vengono eliminate le righe nella tabella `ProductProductPhoto` in base ai criteri di ricerca definiti nella clausola `FROM` dell'istruzione `DELETE`. La clausola `OUTPUT INTO` restituisce le colonne dalla tabella che viene eliminata (`deleted.ProductID`, `deleted.ProductPhotoID`) e dalla tabella `Product` alla variabile `@MyTableVar``table`. La tabella `Product` viene utilizzata nella clausola `FROM` per specificare le righe da eliminare. La clausola `OUTPUT` restituisce all'applicazione chiamante le colonne `deleted.ProductID`, `deleted.ProductPhotoID` e la data e l'ora in cui la riga è stata eliminata dalla tabella `ProductProductPhoto`.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTableVar table (  
     ProductID int NOT NULL,   
     ProductName nvarchar(50)NOT NULL,  
@@ -627,16 +626,16 @@ WHERE p.ProductID BETWEEN 800 and 810;
 --Display the results of the table variable.  
 SELECT ProductID, ProductName, PhotoID, ProductModelID   
 FROM @MyTableVar;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="k-inserting-data-returned-from-an-output-clause"></a>K. Inserimento dei dati restituiti da una clausola OUTPUT  
  Nell'esempio seguente vengono acquisiti i dati restituiti dalla clausola `OUTPUT` di un'istruzione `MERGE` e tali dati vengono inseriti in un'altra tabella. L'istruzione `MERGE` aggiorna la colonna `Quantity` della tabella `ProductInventory` su base giornaliera, in base agli ordini elaborati nella tabella `SalesOrderDetail`. Vengono inoltre eliminate le righe dei prodotti le cui scorte scendono a `0` oppure a un valore inferiore. In questo esempio vengono acquisite le righe eliminate, che vengono inserite in un'altra tabella, `ZeroInventory`, in cui viene tenuta traccia dei prodotti senza scorte.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 IF OBJECT_ID(N'Production.ZeroInventory', N'U') IS NOT NULL  
     DROP TABLE Production.ZeroInventory;  
 GO  
@@ -663,9 +662,10 @@ WHERE Action = 'DELETE';
 IF @@ROWCOUNT = 0  
 PRINT 'Warning: No rows were inserted';  
 GO  
-SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;  
-  
-```  
+SELECT DeletedProductID, RemovedOnDate
+FROM Production.ZeroInventory;
+GO
+```
   
 ## <a name="see-also"></a>Vedere anche  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
@@ -673,6 +673,4 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
-  
-  
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)

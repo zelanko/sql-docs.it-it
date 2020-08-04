@@ -11,12 +11,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: edde54e4f64f55bac2b3e25912a256b3c3b99bdd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1cc02299cda600a9c82e121f8b588b49d9bd64b1
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883563"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442795"
 ---
 # <a name="install-sql-server-on-server-core"></a>Installare SQL Server in Server Core
 
@@ -71,7 +71,7 @@ L'opzione di installazione Server Core offre un ambiente minimo per l'esecuzione
 |Edizioni di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tutte le edizioni a 64 bit di [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] |  
 |Lingua di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tutte le lingue|  
 |Lingua di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella combinazione lingua/impostazioni locali del sistema operativo|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows il lingua giapponese<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua tedesca<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua cinese (Cina)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua araba (Arabia Saudita)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua tailandese (Thai)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua turca<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua portoghese (Portogallo)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in lingua inglese nel sistema operativo Windows in lingua inglese|  
-|Edizione di Windows|[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Data Center<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
+|Edizione di Windows|Windows Server 2019 Datacenter <br/><br/> Windows Server 2019 Standard <br /><br />  [!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Data Center<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
   
 ## <a name="upgrade"></a>Aggiornamento 
  Nelle installazioni Server Core è supportato l'aggiornamento da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .  

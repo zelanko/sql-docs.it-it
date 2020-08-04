@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 78bc5fe4d059a644c3490c94b02b5880c5d488d0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c75779e244087072d36c041edd22d4a6fb3109b2
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922737"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435432"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importare i dati da Excel o esportarli in Excel con SQL Server Integration Services (SSIS)
 
@@ -253,8 +253,6 @@ Quando si specifica un intervallo come destinazione si verifica un errore se l'i
 Per poter salvare correttamente stringhe di oltre 255 caratteri in una colonna Excel, il driver deve riconoscere il tipo di dati della colonna di destinazione come **memo** invece di **string**.
 
 -   Se una tabella di destinazione esistente contiene già righe di dati, le prime righe campionate dal driver devono contenere almeno un'istanza di un valore composto da più di 255 caratteri nella colonna di tipo memo.
-
--   Se si crea una nuova tabella di destinazione durante la progettazione del pacchetto, in fase di esecuzione o usando la procedura guidata di importazione/esportazione, l'istruzione `CREATE TABLE` deve usare LONGTEXT (o uno dei sinonimi) come tipo di dati della colonna memo di destinazione. Controllare l'istruzione `CREATE TABLE` nella procedura guidata e rivederla, se necessario, facendo clic su **Modifica SQL** accanto all'opzione **Crea tabella di destinazione** nella pagina **Mapping colonne**.
 
 ## <a name="related-content"></a>Contenuti correlati
 

@@ -15,15 +15,15 @@ ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 608b6cc3ee887a8d17b30a027a7669d51c8822ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c49d71c0e7e149ed66d699e04126cdd1f6f9b726
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929312"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442342"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (tipo di dati geometry)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Restituisce un'istanza **geometry** che rappresenta il set di tutti i punti la cui distanza dall'istanza **geometry** chiamante è minore o uguale al parametro *distance*.  
   

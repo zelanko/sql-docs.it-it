@@ -12,16 +12,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 293df346a7eac72f23fa3b3bdd7bbe7994fdc54c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e520363adc8fb8bff12688aa8c99b879bb510dd
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892893"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522435"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con i gruppi di disponibilità AlwaysOn
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
   Un gruppo di disponibilità AlwaysOn è una raccolta predefinita di database relazionali di SQL Server per cui è previsto un failover reciproco quando le condizioni attivano un failover in uno dei database, reindirizzando le richieste a un database con mirroring su un'altra istanza nello stesso gruppo di disponibilità. Se i gruppi di disponibilità vengono utilizzati come soluzione di disponibilità elevata, è possibile utilizzare un database di questo gruppo come origine dati in una soluzione multidimensionale o tabulare di Analysis Services. Tutte le operazioni di Analysis Services elencate di seguito funzionano nel modo previsto quando si utilizza un database di disponibilità: elaborazione o importazione di dati, query dirette su dati relazionali (utilizzando la modalità DirectQuery o l'archiviazione ROLAP) e writeback.  
   

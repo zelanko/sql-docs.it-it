@@ -18,16 +18,16 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 62b5f1d23608ce6337befa1e4888ad2cda543dc9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9f53ae6f4a35cb539da1d5689ad2ba1086dd4c1b
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822258"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522933"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clustering di failover e gruppi di disponibilità Always On (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
    [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], la soluzione di ripristino di emergenza a disponibilità elevata introdotta in [!INCLUDE[sssql11](../../../includes/sssql11-md.md)], richiede WSFC (Windows Server Failover Clustering). Sebbene inoltre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] non dipenda dal clustering di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , è possibile utilizzare un'istanza di clustering di failover per ospitare una replica di disponibilità per un gruppo di disponibilità. È importante conoscere la funzione di ogni tecnologia di clustering e sapere quali sono le considerazioni necessarie per la progettazione di un ambiente di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   

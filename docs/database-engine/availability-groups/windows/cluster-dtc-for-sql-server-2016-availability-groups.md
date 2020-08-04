@@ -11,16 +11,16 @@ ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 51c42730e083990b3df7987645239dea9830090c
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 0266fc9922a8dbbf932be8521f2a63b186c6500f
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362614"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522385"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Come inserire in cluster il servizio DTC per un gruppo di disponibilità Always On
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
 Questo argomento descrive i requisiti e i passaggi per il clustering del servizio Microsoft Distributed Transaction Coordinator (DTC) per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Per altre informazioni sulle transazioni distribuite e [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Transazioni tra database non supportate per il mirroring del database o i gruppi di disponibilità Always On (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
 

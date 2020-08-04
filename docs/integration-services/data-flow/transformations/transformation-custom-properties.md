@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e4baea69adce173ee5421605825008f7721b92bd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fb2e93d5266b28ad7be189cd14034aca49abc3a1
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916683"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472517"
 ---
 # <a name="transformation-custom-properties"></a>proprietà personalizzate della trasformazione
 
@@ -60,19 +60,42 @@ ms.locfileid: "86916683"
  È possibile impostare alcune proprietà delle trasformazioni utilizzando espressioni di proprietà. Per altre informazioni, vedere [Proprietà del flusso di dati che è possibile impostare tramite espressioni](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8).  
   
 ## <a name="transformations-with-custom-properties"></a>Trasformazioni con proprietà personalizzate  
-  
-||||  
-|-|-|-|  
-|[Aggregata](#aggregate)|[Esportazione colonna](#extract)|[Conteggio righe](#rowcount)|  
-|[Controllo](#audit)|[Raggruppamento fuzzy](#fgroup)|[Campionamento righe](#rowsamp)|  
-|[Trasformazione Cache](#cachetransform)|[Ricerca fuzzy](#flookup)|[Componente script](#script)|  
-|[Mappa caratteri](#charmap)|[Importa colonna](#insert)|[Dimensione a modifica lenta](#scd)|  
-|[Suddivisione condizionale](#condsplit)|[Ricerca](#lookup)|[Sort](#sort)|  
-|[Copia colonna](#copymap)|[Merge Join](#mjoin)|[Estrazione termini](#textract)|  
-|[Conversione dati](#dataconv)|[Comando OLE DB](#oledbcmd)|[Ricerca termini](#tlookup)|  
-|[Query di data mining](#dmquery)|[Campionamento percentuale](#percent)|[UnPivot](#unpivot)|  
-|[Colonna derivata](#derived)|[Pivot](#pivot)||  
-  
+
+:::row:::
+    :::column:::
+        [Aggregata](#aggregate)  
+        [Controllo](#audit)  
+        [Trasformazione Cache](#cachetransform)  
+        [Mappa caratteri](#charmap)  
+        [Suddivisione condizionale](#condsplit)  
+        [Copia colonna](#copymap)  
+        [Conversione dati](#dataconv)  
+        [Query di data mining](#dmquery)  
+        [Colonna derivata](#derived)  
+    :::column-end:::
+    :::column:::
+        [Esportazione colonna](#extract)  
+        [Raggruppamento fuzzy](#fgroup)  
+        [Ricerca fuzzy](#flookup)  
+        [Importa colonna](#insert)  
+        [Ricerca](#lookup)  
+        [Merge Join](#mjoin)  
+        [Comando OLE DB](#oledbcmd)  
+        [Campionamento percentuale](#percent)  
+        [Pivot](#pivot)  
+    :::column-end:::
+    :::column:::
+        [Conteggio righe](#rowcount)  
+        [Campionamento righe](#rowsamp)  
+        [Componente script](#script)  
+        [Dimensione a modifica lenta](#scd)  
+        [Sort](#sort)  
+        [Estrazione termini](#textract)  
+        [Ricerca termini](#tlookup)  
+        [UnPivot](#unpivot)  
+    :::column-end:::
+:::row-end:::
+
 ### <a name="transformations-without-custom-properties"></a>Trasformazioni senza proprietà personalizzate  
  Le trasformazioni seguenti non includono proprietà personalizzate a livello di componente, di input o di output: [Trasformazione Unione](../../../integration-services/data-flow/transformations/merge-transformation.md), [Trasformazione Multicast](../../../integration-services/data-flow/transformations/multicast-transformation.md) e [Trasformazione Unione input multipli](../../../integration-services/data-flow/transformations/union-all-transformation.md). Tali trasformazioni utilizzano solo le proprietà comuni a tutti i componenti del flusso di dati.  
   

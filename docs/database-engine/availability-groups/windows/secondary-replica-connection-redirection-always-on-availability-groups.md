@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d70d9599dda2f71edff911ad42821fdf101b524c
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 2554a93ab1b7be6dc0a81c0ddb63797b8146a444
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363173"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472449"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Reindirizzamento della connessione in lettura/scrittura dalla replica secondaria alla primaria (Gruppi di disponibilità AlwaysOn)
 
@@ -62,7 +62,7 @@ In [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] l'elemento `READ_WR
 
 Per impostazione predefinita il reindirizzamento della connessione di replica di lettura/scrittura non è impostato per una replica. Il modo in cui una replica secondaria gestisce le richieste di connessione dipende dal fatto che la replica secondaria sia impostata o meno per consentire le connessioni e dall'impostazione `ApplicationIntent` nella stringa di connessione. La tabella seguente illustra come una replica secondaria gestisce le connessioni in base a `SECONDARY_ROLE (ALLOW CONNECTIONS = )` e `ApplicationIntent`.
 
-|Valore della proprietà `ApplicationIntent`|`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
+|Valore della proprietà <code>ApplicationIntent</code>|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = NO)</code>|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)</code>|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)</code>|
 |-----|-----|-----|-----|
 |`ApplicationIntent=ReadWrite`<br/> Predefinito|Le connessioni hanno esito negativo|Le connessioni hanno esito negativo|Le connessioni hanno esito positivo<br/>Le operazioni di lettura hanno esito positivo<br/>Le operazioni di scrittura hanno esito negativo|
 |`ApplicationIntent=ReadOnly`|Le connessioni hanno esito negativo|Le connessioni hanno esito positivo|Le connessioni hanno esito positivo
@@ -73,7 +73,7 @@ La tabella precedente illustra il comportamento predefinito, analogo a quello de
 
 Dopo l'impostazione del reindirizzamento della connessione di lettura/scrittura, la modalità con cui la replica gestisce le richieste di connessione cambia. Il comportamento delle connessioni dipende comunque dalle impostazioni `SECONDARY_ROLE (ALLOW CONNECTIONS = )` e `ApplicationIntent`. La tabella seguente illustra come una replica secondaria con `READ_WRITE_ROUTING` impostato gestisce le connessioni in base a `SECONDARY_ROLE (ALLOW CONNECTIONS = )` e `ApplicationIntent`.
 
-|Valore della proprietà `ApplicationIntent`|`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
+|Valore della proprietà <code>ApplicationIntent</code>|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = NO)</code>|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)</code>|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)</code>|
 |-----|-----|-----|-----|
 |`ApplicationIntent=ReadWrite`<br/>Predefinito|Le connessioni hanno esito negativo|Le connessioni hanno esito negativo|Le connessioni vengono instradate alla replica primaria|
 |`ApplicationIntent=ReadOnly`|Le connessioni hanno esito negativo|Le connessioni hanno esito positivo|Le connessioni hanno esito positivo

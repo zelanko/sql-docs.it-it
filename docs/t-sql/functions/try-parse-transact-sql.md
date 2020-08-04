@@ -18,15 +18,15 @@ ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 776cee4cf286f3b25b531dd6b6cd16798ea21b03
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 184cebde63a58c399f5719c3d07c0846a3163f9a
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112242"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87523133"
 ---
 # <a name="try_parse-transact-sql"></a>TRY_PARSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Viene restituito il risultato di un'espressione convertito nel tipo di dati richiesto. Se il cast non viene eseguito in modo corretto in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene restituito Null. Utilizzare TRY_PARSE solo per la conversione da stringa a data/ora e tipi di numero.  
   

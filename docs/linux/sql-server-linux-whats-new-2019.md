@@ -7,12 +7,12 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6c2280bacb7947b202d9291637ef294ba391e947
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9610ca6f434f78d332eb85fbf4ed71a4d477946a
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897197"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442897"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>Novità di SQL Server 2019 in Linux
 
@@ -41,7 +41,7 @@ Gli aggiornamenti sono stati eseguiti in SQL Server 2019 in Linux:
 |Miglioramenti di `tempdb` | Per impostazione predefinita, una nuova installazione di SQL Server in Linux crea più file di dati `tempdb` in base al numero di core logici (con un massimo di 8 file di dati). Questo non vale per gli aggiornamenti sul posto di una versione principale o secondaria. Ogni file `tempdb` è di 8 MB, con un aumento automatico di 64 MB. Questo comportamento è simile all'installazione predefinita di SQL Server in Windows. |
 | PolyBase in Linux | [Installare PolyBase](../relational-databases/polybase/polybase-linux-setup.md) in Linux per i connettori non Hadoop.<br/><br/>[Mapping dei tipi di PolyBase](../relational-databases/polybase/polybase-type-mapping.md). |
 | Supporto di Change Data Capture (CDC) | Change Data Capture (CDC) è ora supportato in Linux per SQL Server 2019. |
-| Registro Container Microsoft | Il [Registro Container Microsoft](https://www.ntweekly.com/2019/09/23/microsoft-container-registry-to-replace-docker-hub-for-new-images/) sostituisce ora Docker Hub per le nuove immagini di contenitori Microsoft ufficiali, incluso [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
+| Registro Container Microsoft | Il [Registro Container Microsoft](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) sostituisce ora Docker Hub per le nuove immagini di contenitori Microsoft ufficiali, incluso [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
 | Contenitori non radice | In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] è stata introdotta la possibilità di creare contenitori più sicuri avviando, per impostazione predefinita, il processo [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] come utente non radice. Per altri dettagli, vedere [Compilare ed eseguire contenitori di SQL Server come utente non radice](sql-server-linux-configure-docker.md#buildnonrootcontainer). |
 
 ## <a name="next-steps"></a>Passaggi successivi
