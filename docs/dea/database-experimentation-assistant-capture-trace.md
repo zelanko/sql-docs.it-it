@@ -1,6 +1,6 @@
 ---
 title: Acquisire una traccia per gli aggiornamenti di SQL Server
-description: Acquisire una traccia in Database Experimentation Assistant per gli aggiornamenti SQL Server
+description: Utilizzare Database Experimentation Assistant (DEA) per creare un file di traccia con un log di eventi del server acquisiti.
 ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c560aa2c5ba4b5113ce711601a4e85aab2788240
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289829"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565593"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Acquisire una traccia in Database Experimentation Assistant
 
@@ -134,7 +134,7 @@ Se viene visualizzato un errore durante l'esecuzione di un'acquisizione di tracc
 - Il nome del computer in cui è in esecuzione SQL Server è valido. Per confermare, provare a connettersi al computer che esegue SQL Server usando SQL Server Management Studio (SSMS).
 - La configurazione del firewall non blocca le connessioni al computer in cui è in esecuzione SQL Server.
 - L'utente dispone delle autorizzazioni elencate nelle [domande frequenti sulla riproduzione](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
-- Il nome della traccia non segue la convenzione di rollover standard\_(Capture 1). In alternativa, provare i nomi di\_traccia come Capture 1a o Capture1.
+- Il nome della traccia non segue la convenzione di rollover standard (Capture \_ 1). In alternativa, provare i nomi di traccia come Capture \_ 1a o Capture1.
 
 Di seguito sono riportati alcuni possibili errori che possono essere visualizzati e le soluzioni per risolverli:
 

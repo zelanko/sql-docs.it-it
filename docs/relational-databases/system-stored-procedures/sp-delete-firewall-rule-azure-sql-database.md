@@ -19,15 +19,15 @@ author: VanMSFT
 ms.author: vanto
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f25cd3da648785ad25309c2c3943dbec7390c3d9
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 41f4e779ccbab41557cb9ba20b5aa02c65e45919
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627414"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544414"
 ---
 # <a name="sp_delete_firewall_rule-azure-sql-database"></a>sp_delete_firewall_rule (Database di SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
 
   Rimuove le impostazioni del firewall a livello di server dal server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Questa stored procedure è disponibile solo nel database master all'account di accesso principale di livello server.  
 
@@ -45,7 +45,7 @@ sp_delete_firewall_rule [@name =] 'name'
  [ @name =]'*nome*'  
  Nome dell'impostazione del firewall a livello di server che verrà rimossa. *Name* è di **tipo nvarchar (128)** e non prevede alcun valore predefinito.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] i dati dell'account di accesso necessari per autenticare una connessione e le regole del firewall a livello di server vengono memorizzati temporaneamente nella cache in ogni database. Questa cache viene aggiornata periodicamente. Per forzare un aggiornamento della cache di autenticazione e assicurarsi che un database abbia la versione più recente della tabella di account di accesso, eseguire [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  

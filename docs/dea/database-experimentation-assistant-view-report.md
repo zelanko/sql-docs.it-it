@@ -1,6 +1,6 @@
 ---
 title: Visualizzare i report di analisi per gli aggiornamenti di SQL Server
-description: Visualizzare i report di analisi in Database Experimentation Assistant
+description: Informazioni su come visualizzare e comprendere i report di analisi per ottenere informazioni dettagliate sulle prestazioni in Database Experimentation Assistant (DEA).
 ms.custom: seo-lt-2019
 ms.date: 02/04/2020
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 2a6d027c1fb1834e4033a11a498bfc8cdad4561f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5850f3f78590b5ceccea49033b401055180d715e
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76977590"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565490"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Visualizzare i report di analisi in Database Experimentation Assistant
 

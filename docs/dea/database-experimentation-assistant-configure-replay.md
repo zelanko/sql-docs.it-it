@@ -1,6 +1,6 @@
 ---
 title: Configurare la riproduzione per gli aggiornamenti di SQL Server
-description: Configurare Riesecuzione distribuita per Database Experimentation Assistant
+description: Usare Database Experimentation Assistant (DEA) per accedere agli strumenti di Riesecuzione distribuita. Utilizzare gli strumenti di per riprodurre una traccia acquisita su un ambiente di testing aggiornato.
 ms.custom: seo-lt-2019
 ms.date: 01/24/2020
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: ae7c3c2a987d9fb048c1c3fa494978626abce06a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2715667fc474335ffec54259ebb821fe2e5904a
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76761535"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565519"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Configurare Riesecuzione distribuita per Database Experimentation Assistant
 
@@ -43,8 +43,8 @@ Riesecuzione distribuita richiede l'uso di account comuni tra computer. A causa 
 
 Per configurare il servizio controller:
 
-1. Installare il controller di Riesecuzione distribuita usando il programma di installazione di SQL Server. Se è stato ignorato il passaggio del programma di installazione guidata di SQL Server che configura il controller Riesecuzione distribuita, è possibile configurare il controller tramite il file di configurazione. In un'installazione tipica, il file di configurazione si trova in C:\Programmi (x86) \Microsoft\<SQL Server\>versione \Tools\DReplayController\DReplayController.config.
-2. I log del controller di Riesecuzione distribuita si trovano in C:\Programmi (x86\<)\>\Microsoft SQL Server versione \Tools\DReplayController\Log.
+1. Installare il controller di Riesecuzione distribuita usando il programma di installazione di SQL Server. Se è stato ignorato il passaggio del programma di installazione guidata di SQL Server che configura il controller Riesecuzione distribuita, è possibile configurare il controller tramite il file di configurazione. In un'installazione tipica, il file di configurazione si trova in C:\Program Files (x86) \Microsoft SQL Server \<version\>\Tools\DReplayController\DReplayController.config.
+2. I log del controller di Riesecuzione distribuita si trovano in C:\Programmi (x86) \Microsoft SQL Server \<version\> \Tools\DReplayController\Log.
 3. Aprire Services. msc e passare al servizio **SQL Server riesecuzione distribuita controller** .
 4. Fare clic con il pulsante destro del mouse sul servizio, quindi scegliere **Proprietà**. Impostare l'account del servizio su un account comune per il controller e i computer client nella rete.
 5. Selezionare **OK** per chiudere la finestra delle **Proprietà** .
@@ -59,8 +59,8 @@ Per altre opzioni di configurazione, vedere [Configure riesecuzione distribuita]
 
 Questa configurazione è necessaria solo sul computer controller.
 
-1. Aprire dcomcnfg. exe.
-2. Espandere > **computer** **Servizi** > componenti**computer locale** > **configurazione DCOM**.
+1. Aprire dcomcnfg.exe.
+2. Espandere **computer Servizi componenti**  >  **Computers**  >  **computer locale**  >  **configurazione DCOM**.
 3. In **configurazione DCOM**, fare clic con il pulsante destro del mouse su **DReplayController**e quindi scegliere **proprietà**.
 4. Selezionare la scheda **Sicurezza**.
 5. In **autorizzazioni di esecuzione e attivazione**selezionare **Personalizza**, quindi fare clic su **modifica**.
@@ -82,16 +82,16 @@ Prima di configurare il servizio client, utilizzare strumenti di rete come ping 
 1. Installare il client di Riesecuzione distribuita usando il programma di installazione di SQL Server.
 2. Aprire Services. msc e passare alla SQL Server Riesecuzione distribuita servizio client.
 3. Fare clic con il pulsante destro del mouse sul servizio, quindi scegliere **Proprietà**. Impostare l'account del servizio su un account comune per il controller e i computer client nella rete.
-4. Selezionare **OK** per chiudere la finestra delle **Proprietà** . Se è stato ignorato il passaggio del programma di installazione guidata di SQL Server per configurare il client di Riesecuzione distribuita, è possibile configurarlo tramite il file di configurazione. In un'installazione tipica, il file di configurazione si trova in C:\Programmi (x86) \Microsoft\<SQL Server\>versione \Tools\DReplayClient\DReplayClient.config.
-5. Verificare che il file DReplayClient. config contenga il nome del computer del controller come controller per la registrazione.
+4. Selezionare **OK** per chiudere la finestra delle **Proprietà** . Se è stato ignorato il passaggio del programma di installazione guidata di SQL Server per configurare il client di Riesecuzione distribuita, è possibile configurarlo tramite il file di configurazione. In un'installazione tipica, il file di configurazione si trova in C:\Program Files (x86) \Microsoft SQL Server \<version\>\Tools\DReplayClient\DReplayClient.config.
+5. Verificare che il file DReplayClient.config contenga il nome del computer del controller come controller per la registrazione.
 6. Riavviare il servizio client Riesecuzione distribuita di SQL Server da Services. msc. È anche possibile eseguire i comandi seguenti dalla riga di comando per riavviare il servizio:
 
     `NET STOP "SQL Server Distributed Replay Client"`</br>
     `NET START "SQL Server Distributed Replay Client"`
 
-    I log del controller di Riesecuzione distribuita si trovano in C:\Programmi (x86\<)\>\Microsoft SQL Server versione \Tools\DReplayClient\Log. I log indicano se il client può registrarsi con il controller.
+    I log del controller di Riesecuzione distribuita si trovano in C:\Programmi (x86) \Microsoft SQL Server \<version\> \Tools\DReplayClient\Log. I log indicano se il client può registrarsi con il controller.
 
-    Se la configurazione ha esito positivo, nel log viene visualizzato il messaggio **registrato con il\>controller <nome del controller**.
+    Se la configurazione ha esito positivo, nel log viene visualizzato il messaggio **registrato con il \> controller <nome del controller**.
 
 Per altre opzioni di configurazione, vedere [Configure riesecuzione distribuita](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
 
@@ -99,10 +99,10 @@ Per altre opzioni di configurazione, vedere [Configure riesecuzione distribuita]
 
 È possibile utilizzare Riesecuzione distribuita strumenti di amministrazione per verificare rapidamente se Riesecuzione distribuita funziona correttamente nell'ambiente. Il test della configurazione può essere particolarmente utile in un ambiente in cui più computer client vengono registrati con un controller. Potrebbe essere necessario installare SQL Server Management Studio (SSMS) per ottenere gli strumenti di amministrazione.
 
-1. Passare al percorso di installazione di SSMS e cercare lo strumento di amministrazione Riesecuzione distribuita DReplay. exe e i relativi componenti dipendenti.
-2. Al prompt dei comandi eseguire `dreplay.exe status -f 1`.
+1. Passare al percorso di installazione di SSMS e cercare lo strumento di amministrazione Riesecuzione distribuita dreplay.exe e i componenti dipendenti.
+2. Al prompt dei comandi eseguire `dreplay.exe status -f 1` .
 
-Se i passaggi precedenti hanno avuto esito positivo, l'output della console indica che il controller può visualizzare `READY` i client in uno stato.
+Se i passaggi precedenti hanno avuto esito positivo, l'output della console indica che il controller può visualizzare i client in uno `READY` stato.
 
 ## <a name="configure-the-firewall-for-remote-distributed-replay-access"></a>Configurare il firewall per l'accesso Riesecuzione distribuita remoto
 
@@ -110,8 +110,8 @@ Per accedere in remoto a Riesecuzione distribuita è necessario aprire le porte 
 
 1. Aprire **Windows Firewall** con **sicurezza avanzata**.
 2. Passare a **Regole connessioni in ingresso**.
-3. Creare una nuova regola del firewall in ingresso per il programma C:\Programmi (x86)\<\Microsoft\>SQL Server versione \Tools\DReplayController\DReplayController.exe.
-4. Consente l'accesso a livello di dominio a tutte le porte affinché DReplayController. exe sia in grado di comunicare con il servizio controller in modalità remota.
+3. Creare una nuova regola del firewall in ingresso per il programma C:\Program Files (x86) \Microsoft SQL Server \<version\>\Tools\DReplayController\DReplayController.exe.
+4. Consente l'accesso a livello di dominio a tutte le porte affinché DReplayController.exe sia in grado di comunicare con il servizio controller in modalità remota.
 5. Salvare la regola.
 
 ## <a name="set-up-target-computers"></a>Configurare i computer di destinazione

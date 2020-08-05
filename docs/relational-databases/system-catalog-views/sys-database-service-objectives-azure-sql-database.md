@@ -16,15 +16,15 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7a6de1ad7652e7b948d741acdeebdd186f590b44
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: e6ee5d0f6a2b26dc10c901297097b99338ba9091
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627575"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544374"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (database SQL di Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
 Restituisce l'edizione (livello di servizio), l'obiettivo di servizio (piano tariffario) e il nome del pool elastico, se presente, per un database SQL di Azure o un Azure SQL Data Warehouse. Se si è connessi al database master in un server di database SQL di Azure, restituisce informazioni su tutti i database. Per Azure SQL Data Warehouse, è necessario essere connessi al database master.  
   
@@ -37,7 +37,7 @@ Restituisce l'edizione (livello di servizio), l'obiettivo di servizio (piano tar
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|database_id|INT|ID del database, univoco all'interno di un'istanza del server di database SQL di Azure. Joinable con [sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|database_id|int|ID del database, univoco all'interno di un'istanza del server di database SQL di Azure. Joinable con [sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |edition|sysname|Livello di servizio per il database o data warehouse: **Basic**, **standard**, **Premium** o **data warehouse**.|  
 |service_objective|sysname|Piano tariffario del database. Se il database si trova in un pool elastico, restituisce **ElasticPool**.<br /><br /> Il livello **Basic** restituisce **Basic**.<br /><br /> Il **database singolo in un livello di servizio standard** restituisce uno dei seguenti: S0, S1, S2, S3, S4, S6, S7, S9 o S12.<br /><br /> Il **database singolo in un livello Premium** restituisce quanto segue: P1, P2, P4, P6, P11 o P15.<br /><br /> **SQL data warehouse** restituisce DW100 tramite DW30000c.<br /><br /> Per informazioni dettagliate, vedere [database singoli](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/), [pool elastici](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/), [data warehouse](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/)|  
 |elastic_pool_name|sysname|Nome del [pool elastico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) a cui appartiene il database. Restituisce **null** se il database è un database singolo o un data warehouse.|  
@@ -45,7 +45,7 @@ Restituisce l'edizione (livello di servizio), l'obiettivo di servizio (piano tar
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione **dbManager** per il database master.  A livello di database, l'utente deve essere l'autore o il proprietario.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Questo esempio può essere eseguito nel database master o nei database utente del database SQL di Azure. La query restituisce le informazioni sul nome, il servizio e il livello di prestazioni dei database.  
   
 ```sql  

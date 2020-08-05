@@ -1,5 +1,5 @@
 ---
-title: sys. dm_operation_status (database SQL di Azure) | Microsoft Docs
+title: sys. dm_operation_status | Microsoft Docs
 ms.custom: ''
 ms.date: 06/05/2017
 ms.service: sql-database
@@ -19,16 +19,16 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 6b0894c29e1c3cb525cd9378c0a95e56299e8a1e
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: 080d12cdcf945fe34a2c8f1ab9ea7414e714da8c
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85440708"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544384"
 ---
-# <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (Database di SQL Azure)
+# <a name="sysdm_operation_status"></a>sys.dm_operation_status
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
   Restituisce informazioni sulle operazioni eseguite sui database in un server del [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -46,14 +46,14 @@ ms.locfileid: "85440708"
 |error_code|**int**|Codice che indica l'errore che si è verificato durante un'operazione non riuscita. Se il valore è 0, indica che l'operazione è stata completata correttamente.|  
 |error_desc|**nvarchar(2048)**|Descrizione dell'errore che si è verificato durante un'operazione non riuscita.|  
 |error_severity|**int**|Livello di gravità dell'errore che si è verificato durante un'operazione non riuscita. Per ulteriori informazioni sui livelli di gravità degli errori, vedere [motore di database gravità degli errori](https://go.microsoft.com/fwlink/?LinkId=251052).|  
-|error_state|**int**|Riservato per utilizzi futuri. Non è garantita la compatibilità con le versioni future.|  
+|error_state|**int**|Riservato per usi futuri. Non è garantita la compatibilità con le versioni future.|  
 |start_time|**datetime**|Timestamp dell'inizio dell'operazione.|  
 |last_modify_time|**datetime**|Timestamp dell'ultima modifica del record per un'operazione a esecuzione prolungata. In caso di operazioni completate correttamente, in questo campo viene visualizzato il timestamp del completamento dell'operazione.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Questa vista è disponibile solo nel database **Master** per l'account di accesso dell'entità di livello server.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Per utilizzare questa vista, è necessario essere connessi al database **Master** . Utilizzare la `sys.dm_operation_status` vista nel database **Master** del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Server per tenere traccia dello stato delle operazioni seguenti eseguite su un [!INCLUDE[ssSDS](../../includes/sssds-md.md)] :  
   
 -   Creazione del database  

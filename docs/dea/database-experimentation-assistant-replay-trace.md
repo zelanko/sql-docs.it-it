@@ -1,6 +1,6 @@
 ---
 title: Riprodurre una traccia per gli aggiornamenti di SQL Server
-description: Riprodurre una traccia con Database Experimentation Assistant per gli aggiornamenti SQL Server
+description: Informazioni su come riprodurre una traccia acquisita con Database Experimentation Assistant per SQL Server aggiornamenti.
 ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 50f082edef5d9a6d4e95b7e37ef6d75f22eb6f2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85143440cc92cdc427be673667e22be6957cbe50
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289149"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565500"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Riprodurre una traccia in Database Experimentation Assistant
 
@@ -118,7 +118,7 @@ Il **passaggio%** indica che è stata passata solo una percentuale di query. È 
 
 **D: come è possibile esaminare gli eventi di traccia raccolti durante la riproduzione?**
 
-Aprire un file di traccia di destinazione e visualizzarlo in SQL Profiler. In alternativa, se si desidera apportare modifiche all'acquisizione di riproduzione, tutti gli script di SQL Server sono disponibili in C:\\\\programmi (x86) Microsoft Corporation\\database Experimentation Assistant\\Scripts\\StartReplayCapture. SQL.
+Aprire un file di traccia di destinazione e visualizzarlo in SQL Profiler. In alternativa, se si desidera apportare modifiche all'acquisizione di riproduzione, tutti gli script di SQL Server sono disponibili in C: \\ programmi (x86) \\ Microsoft Corporation \\ database Experimentation Assistant \\ Scripts \\ StartReplayCapture. SQL.
 
 **D: quali eventi di traccia vengono raccolti da DEA durante la riproduzione?**
 
@@ -133,11 +133,11 @@ DEA acquisisce gli eventi di traccia che contengono informazioni relative alle p
 - Verificare che l'utente disponga dei diritti utente necessari.
 - Verificare che l'account del servizio Riesecuzione distribuita client disponga dell'accesso al computer in cui è in esecuzione SQL Server.
 
-È possibile ottenere altri dettagli nei log in% temp%\\dea. Se il problema persiste, contattare il team del prodotto.
+È possibile ottenere altri dettagli nei log in% temp% \\ dea. Se il problema persiste, contattare il team del prodotto.
 
 **D: perché non è possibile connettersi al controller di Riesecuzione distribuita?**
 
-- Verificare che il servizio Riesecuzione distribuita controller sia in esecuzione nel computer del controller. Per verificare, usare gli strumenti di gestione di Riesecuzione distribuita (eseguire `dreplay.exe status -f 1`il comando).
+- Verificare che il servizio Riesecuzione distribuita controller sia in esecuzione nel computer del controller. Per verificare, usare gli strumenti di gestione di Riesecuzione distribuita (eseguire il comando `dreplay.exe status -f 1` ).
 - Se la riproduzione viene avviata in modalità remota:
   - Verificare che il computer che esegue DEA possa eseguire correttamente il ping del controller. Verificare che le impostazioni del firewall consentano le connessioni in base alle istruzioni nella pagina **Configura ambiente di riproduzione** . Per ulteriori informazioni, vedere l'articolo [SQL Server riesecuzione distribuita](https://docs.microsoft.com/sql/tools/distributed-replay/sql-server-distributed-replay?view=sql-server-2017).
   - Assicurarsi che l'avvio remoto e l'attivazione remota DCOM siano consentiti per l'utente del controller di Riesecuzione distribuita.
@@ -163,6 +163,6 @@ Questo problema è noto nella versione RTM di SQL Server 2017. Per ulteriori inf
   
 Il problema è stato risolto nell'aggiornamento cumulativo 1 più recente per SQL Server 2017. Scaricare la versione più recente dell' [aggiornamento cumulativo 1 per SQL Server 2017](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - Per creare un report di analisi che consenta di ottenere informazioni dettagliate sulle modifiche proposte, vedere [creare report](database-experimentation-assistant-create-report.md).

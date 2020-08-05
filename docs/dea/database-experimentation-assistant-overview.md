@@ -1,6 +1,6 @@
 ---
 title: Panoramica dell'Database Experimentation Assistant
-description: Panoramica di Database Experimentation Assistant
+description: Informazioni dettagliate su Database Experimentation Assistant (DEA), ad esempio come valutare una versione di destinazione SQL Server per un carico di lavoro specifico.
 ms.date: 12/12/2019
 ms.prod: sql
 ms.suite: sql
@@ -11,12 +11,12 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dce2bfcafeb95a72e6584e4b619f1e4e5e12bdf1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94bfd77da2658a4cb6b0e5e07868605f1c12140c
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759157"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565551"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Panoramica di Database Experimentation Assistant
 
@@ -32,7 +32,7 @@ I dati di confronto possono determinare una maggiore confidenza e garantire una 
 
 ## <a name="get-dea"></a>Ottenere DEA
 
-Per installare DEA, [scaricare](https://www.microsoft.com/download/details.aspx?id=54090) la versione più recente dello strumento. Eseguire quindi il file **DatabaseExperimentationAssistant. exe** .
+Per installare DEA, [scaricare](https://www.microsoft.com/download/details.aspx?id=54090) la versione più recente dello strumento. Eseguire quindi il file di **DatabaseExperimentationAssistant.exe** .
 
 ## <a name="solution-architecture-for-comparing-workloads"></a>Architettura della soluzione per il confronto dei carichi di lavoro
 
@@ -105,7 +105,7 @@ I dati di telemetria possono essere raccolti in quattro tipi di eventi:
 La raccolta e l'invio di dati di telemetria sono facoltativi. Per specificare quali eventi vengono raccolti e se gli eventi raccolti vengono inviati a Microsoft, attenersi alla procedura seguente:
 
 1. Passare al percorso in cui è installato DEA (ad esempio, C: \\ Program Files (x86) \\ Microsoft Corporation \\ database Experimentation Assistant).
-2. Aprire e modificare i file con estensione config **dea. exe. config** (per l'applicazione) e **DEACmd. exe. config** (per l'interfaccia della riga di comando) per risolvere lo scenario in modo appropriato:
+2. Aprire e modificare i file con estensione config **DEA.exe.config** (per l'applicazione) e **DEACmd.exe.config** (per l'interfaccia della riga di comando) per risolvere lo scenario in base alle esigenze:
     - Per interrompere la raccolta di un tipo di evento, impostare il valore dell' *evento* (ad esempio, **TraceEvent**) su **false**. Per iniziare a raccogliere nuovamente l'evento, impostare il valore su **true**.
     - Per arrestare il salvataggio delle copie locali degli eventi, impostare il valore di **TraceLoggerEnabled** su **false**. Per iniziare a salvare di nuovo le copie locali, impostare il valore su **true**.
     - Per arrestare l'invio di eventi a Microsoft, impostare il valore di **AppInsightsLoggerEnabled** su **false**. Per iniziare a inviare nuovamente gli eventi a Microsoft, impostare il valore su **true**.
