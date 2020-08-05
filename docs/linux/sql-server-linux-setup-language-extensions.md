@@ -1,7 +1,7 @@
 ---
 title: Installare le estensioni del linguaggio di SQL Server in Linux
 titleSuffix: ''
-description: Informazioni su come installare le estensioni del linguaggio di SQL Server in Red Hat, Ubuntu e SUSE.
+description: Informazioni su come installare le estensioni del linguaggio di SQL Server in Red Hat, Ubuntu e SUSE Linux.
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eecea181dc6ac96021df2db0707537e86d4a50ac
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 29c0d209ada9ea624c588b4510191b8ae8b7e91c
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895289"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522873"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>Installare le estensioni del linguaggio di SQL Server in Linux
 
@@ -264,19 +264,20 @@ Per la procedura di installazione dei pacchetti, seguire le istruzioni contenute
 
 #### <a name="redhat7-paths"></a>Percorsi RedHat/7
 
-|||
+|Pacchetto|Percorso download|
 |--|----|
 | Pacchetti mssql/extensibility-java | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 
 #### <a name="ubuntu1604-paths"></a>Percorsi Ubuntu/16.04
 
-|||
+|Pacchetto|Percorso download|
 |--|----|
 | Pacchetti mssql/extensibility-java | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 
 #### <a name="suse12-paths"></a>Percorsi SUSE/12
 
-|||
+
+|Pacchetto|Percorso download|
 |--|----|
 | Pacchetti mssql/extensibility-java | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 

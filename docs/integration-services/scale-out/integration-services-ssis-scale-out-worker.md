@@ -1,6 +1,6 @@
 ---
 title: SQL Server Integration Services (SSIS) Scale Out Worker | Microsoft Docs
-description: Questo articolo descrive il componente Scale Out Master di SSIS Scale Out
+description: Informazioni dettagliate sul componente Scale Out Master di SQL Server Integration Services (SSIS) Scale Out.
 ms.custom: performance
 ms.date: 01/19/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: b77fbcf909d534304bbaf2a27ca55daccb2a94c4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1fb3f2699133881ad4baba73f47b0f8548735402
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918985"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522305"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Ruolo di lavoro di scalabilità orizzontale di Integration Services (SSIS)
 

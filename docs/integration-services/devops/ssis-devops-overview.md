@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6c5634130e2a9a4e6f2a394d067f0e679ab02827
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: c89ff705077782d0cf8287f0d1bc010ce609cc72
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196073"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472477"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>SQL Server Integration Services (SSIS) DevOps Tools
 
@@ -117,7 +117,7 @@ Tipo di autenticazione per accedere al server di destinazione specificato. Quest
 
 Il supporto di un determinato tipo di autenticazione dipende tuttavia dal tipo di server di destinazione e dal tipo di agente. Per una matrice di supporto dettagliata, vedere la tabella seguente.
 
-| |Pool ospitato da Microsoft|Agente self-hosted|
+|Tipo server di destinazione|Pool ospitato da Microsoft|Agente self-hosted|
 |---------|---------|---------|
 |SQL Server in locale o macchina virtuale |N/D|Autenticazione di Windows|
 |SQL di Azure|Autenticazione di SQL Server <br> Active Directory - Password|Autenticazione di SQL Server <br> Active Directory - Password <br> Active Directory - Integrata|
@@ -143,7 +143,7 @@ Consente di specificare se sovrascrivere progetti esistenti o file SSISDeploymen
 
 #### <a name="continue-deployment-when-error-occurs"></a>Continue deployment when error occurs (Continua la distribuzione in caso di errore)
 
-Consente di specificare se TP deve continuare la distribuzione dei progetti o dei file rimanenti in caso di errore. Se 'No', l'attività di distribuzione SSIS si interromperà immediatamente in caso di errore.
+Consente di specificare se continuare la distribuzione dei progetti o dei file rimanenti in caso di errore. Se 'No', l'attività di distribuzione SSIS si interromperà immediatamente in caso di errore.
 
 ### <a name="limitations-and-known-issues"></a>Limitazioni e problemi noti
 
@@ -197,7 +197,7 @@ Tipo di autenticazione per accedere al server di destinazione specificato. In ge
 
 Il supporto di un determinato tipo di autenticazione dipende tuttavia dal tipo di server di destinazione e dal tipo di agente. Per una matrice di supporto dettagliata, vedere la tabella seguente.
 
-| |Pool ospitato da Microsoft|Agente self-hosted|
+|Tipo server di destinazione|Pool ospitato da Microsoft|Agente self-hosted|
 |---------|---------|---------|
 |SQL Server in locale o macchina virtuale |N/D|Autenticazione di Windows|
 |SQL di Azure|Autenticazione di SQL Server <br> Active Directory - Password|Autenticazione di SQL Server <br> Active Directory - Password <br> Active Directory - Integrata|

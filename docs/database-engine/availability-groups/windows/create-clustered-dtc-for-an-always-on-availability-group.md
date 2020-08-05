@@ -11,16 +11,16 @@ ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 96c706d58e0f90f4f10b89a724f7d87fa94e41f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 956cedfe3fd637b170f560863bf12eb79a9973b8
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72586768"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522923"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Creare una risorsa DTC cluster per un gruppo di disponibilità Always On
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
 Questo argomento illustra la configurazione completa di una risorsa DTC cluster per un gruppo di disponibilità AlwaysOn di SQL Server. Il completamento della configurazione può richiedere fino a un'ora. 
 
@@ -323,7 +323,7 @@ GO
 > Non è possibile abilitare DTC in un oggetto [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] esistente.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] accetta la sintassi seguente per un gruppo di disponibilità esistente:  
 > 
 > USE master;    
-> ALTER AVAILABILITY GROUP \<gruppo_disponibilità\>  
+> ALTER AVAILABILITY GROUP \<availability_group\>  
 > SET (DTC_Support = Per_DB)  
 > 
 > Tuttavia, non verrà apportata alcuna modifica alla configurazione.  È possibile confermare la configurazione **dtc_support** con la query T-SQL seguente:  

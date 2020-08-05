@@ -14,23 +14,23 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 881385dbd03af3a2425a4b853ce4b194d474bb4d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 04bdf5678284b07ecf74799e4e6caaf55af1086b
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196893"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522953"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Configurare la replica con i gruppi di disponibilità Always On
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
   La configurazione della replica in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e dei gruppi di disponibilità AlwaysOn richiede sette passaggi. Ogni passaggio è descritto in dettaglio nelle sezioni seguenti.  
   
 ##  <a name="1-configure-the-database-publications-and-subscriptions"></a><a name="step1"></a> 1. Configurare le pubblicazioni e le sottoscrizioni del database  
  **Configurare il server di distribuzione**  
   
- Il database di distribuzione non può trovarsi in un gruppo di disponibilità con SQL Server 2012 e SQL Server 2014. L'inserimento del database di distribuzione in un gruppo di disponibilità non è supportato con SQL 2016 e versioni successive. Per altre informazioni, vedere [Configurare il database di distribuzione repliche nel gruppo di disponibilità Always On](../../../relational-databases/replication/configure-distribution-availability-group.md).
+ Il database di distribuzione non può trovarsi in un gruppo di disponibilità con SQL Server 2012 e SQL Server 2014. L'inserimento del database di distribuzione in un gruppo di disponibilità è supportato con SQL 2016 e versioni successive, ad eccezione dei database di distribuzione usati nelle topologie di replica di tipo merge, bidirezionale o peer-to-peer. Per altre informazioni, vedere [Configurare il database di distribuzione repliche nel gruppo di disponibilità Always On](../../../relational-databases/replication/configure-distribution-availability-group.md).
   
 1.  Configurare la distribuzione sul server di distribuzione. Se per la configurazione vengono usate stored procedure, eseguire **sp_adddistributor**. Usare il parametro *\@password* per identificare la password che verrà usata quando un server di pubblicazione remoto si connette al server di distribuzione. La password sarà necessaria anche per ogni server di pubblicazione remoto quando viene configurato il server di distribuzione remoto.  
   

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 27e39532a3b6198fd6d54c7b58407e76c487325a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8620da6349efe012e9e0d75d6ddf5efada437832
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751899"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442806"
 ---
 # <a name="server-memory-configuration-options"></a>Opzioni di configurazione della memoria del server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,9 +77,14 @@ Per impostare una quantità di memoria fissa:
   
 2.  Fare clic sul nodo **Memoria** .  
   
-3.  In **Opzioni per la memoria del server** immettere la stessa quantità da usare per **Memoria minima per il server** e **Memoria massima per il server**.  
+3.  In **Opzioni per la memoria del server**immettere la quantità da usare per **Memoria minima per il server** e **Memoria massima per il server**.  
   
      Usare le impostazioni predefinite per consentire a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di modificare i requisiti di memoria in base alle risorse di sistema disponibili. È consigliabile impostare il valore **max server memory** come [descritto in dettaglio in precedenza](#max_server_memory). 
+
+Lo screenshot seguente illustra tutti e tre i passaggi: 
+
+:::image type="content" source="media/server-memory-server-configuration-options/configure-memory-in-ssms.png" alt-text="Configurare la memoria in SSMS":::
+
   
 ## <a name="lock-pages-in-memory-lpim"></a>Blocco di pagine in memoria 
 Questi criteri di Windows determinano gli account autorizzati a usare un processo per mantenere i dati nella memoria fisica, impedendo al sistema di eseguire il paging dei dati nella memoria virtuale su disco. Il blocco delle pagine in memoria può garantire il corretto funzionamento del server quando si verifica il paging della memoria su disco. L'opzione **Blocco di pagine in memoria** viene impostata su ON per istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition ed edizioni superiori quando all'account con i privilegi per l'esecuzione di sqlservr.exe è stato concesso il diritto utente di Windows *Blocco di pagine in memoria*.  

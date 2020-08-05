@@ -1,6 +1,6 @@
 ---
 title: Origine Power Query | Microsoft Docs
-description: Informazioni su come configurare l'origine Power Query nel flusso di dati di SQL Server Integration Services
+description: Informazioni su come configurare l'origine Power Query nel flusso di dati di SQL Server Integration Services (SSIS).
 ms.date: 12/27/2019
 ms.prod: sql
 ms.prod_service: integration-services
@@ -16,12 +16,12 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 1adc541d08e5ce74e6130d6994bd583ae58030d1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 966371e30811f82f9be25711f9bf600bbddbcc8d
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916076"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522903"
 ---
 # <a name="power-query-source-preview"></a>Origine Power Query (anteprima)
 

@@ -1,7 +1,7 @@
 ---
 title: 'Motore di database: Modifiche che causano interruzioni | Microsoft Docs'
 titleSuffix: SQL Server 2017
-description: Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2017
+description: Informazioni sulle modifiche che potrebbero comportare l'interruzione di applicazioni, script o funzionalità basati su versioni precedenti di SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
 ms.prod: sql
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b7bac937b230a5311c88676001078ce6fa54c779
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 38813ed7b78c5f43852b17a4e3e9775c589a30e4
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110204"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472459"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sssqlv14-md"></a>Modifiche di rilievo apportate alle funzionalità del motore di database in [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]

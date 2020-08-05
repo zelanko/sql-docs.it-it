@@ -1,6 +1,6 @@
 ---
 title: Supporto della disponibilità elevata in Scale Out| Microsoft Docs
-description: Questo articolo descrive come configurare SSIS Scale Out per la disponibilità elevata
+description: Informazioni su come configurare il lato SQL Server Integration Services (SSIS) Scale Out Master per la disponibilità elevata.
 ms.custom: performance
 ms.date: 05/23/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: edd0418c3dc47089db309a66ad30a6f7f75a1280
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 75eeaf7b9402de747c49ad69f64731c2de6962c9
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922097"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522893"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Supporto della disponibilità elevata in Scale Out
 

@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 28a9541c1369202b8bd322cc23201e8d531f913e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a7a6ce8832db85d54ad9513d8258af2863dab2e5
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892256"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472417"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Disponibilità elevata e protezione dei dati per le configurazioni dei gruppi di disponibilità
 
@@ -59,7 +59,7 @@ Questa configurazione è costituita da tre repliche sincrone. Per impostazione p
 
 Un gruppo di disponibilità con tre repliche sincrone può fornire scalabilità in lettura, disponibilità elevata e protezione dei dati. La tabella seguente descrive il comportamento della disponibilità. 
 
-| |Scalabilità in lettura|Disponibilità elevata e </br> protezione dei dati | Protezione dei dati|
+|Comportamento della disponibilità |Scalabilità in lettura|Disponibilità elevata e </br> protezione dei dati | Protezione dei dati|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
 |Interruzione primaria |Failover automatico. La nuova replica primaria è L/S. |Failover automatico. La nuova replica primaria è L/S. |Failover automatico. La nuova replica primaria non è disponibile per le transazioni utente finché la replica primaria precedente non viene ripristinata e aggiunta al gruppo di disponibilità come replica secondaria. |
@@ -77,7 +77,7 @@ Questa configurazione consente la protezione dei dati. Come per le altre configu
 
 Un gruppo di disponibilità con due repliche sincrone fornisce scalabilità in lettura e protezione dei dati. La tabella seguente descrive il comportamento della disponibilità. 
 
-| |Scalabilità in lettura |Protezione dei dati|
+|Comportamento della disponibilità |Scalabilità in lettura |Protezione dei dati|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Interruzione primaria | Failover manuale. Potrebbe verificarsi la perdita di dati. La nuova replica primaria è L/S.| Failover automatico. La nuova replica primaria non è disponibile per le transazioni utente finché la replica primaria precedente non viene ripristinata e aggiunta al gruppo di disponibilità come replica secondaria.|
@@ -103,7 +103,7 @@ Nel diagramma del gruppo di disponibilità, una replica primaria inserisce trami
 
 Il valore predefinito per `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` è 0. La tabella seguente descrive il comportamento della disponibilità. 
 
-| |Disponibilità elevata e </br> protezione dei dati | Protezione dei dati|
+|Comportamento della disponibilità |Disponibilità elevata e </br> protezione dei dati | Protezione dei dati|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Interruzione primaria | Failover automatico. La nuova replica primaria è L/S. | Failover automatico. La nuova replica primaria non è disponibile per le transazioni utente. |

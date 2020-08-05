@@ -1,6 +1,6 @@
 ---
 title: Modificare l'account per la registrazione di SSIS Scale Out | Microsoft Docs
-description: Questo articolo descrive come modificare l'account utente per la registrazione SSIS Scale Out
+description: Informazioni su come modificare l'account usato per la registrazione di SQL Server Integration Services (SSIS) Scale Out.
 ms.custom: performance
 ms.date: 06/29/2020
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: 0478b685adffa36b4ec344f4f13c52da6436300c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c53a389541408080f1de43da409b4b61ca85a0ec
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919037"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522335"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>Modificare l'account per la registrazione di Scale Out
 

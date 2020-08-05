@@ -1,6 +1,6 @@
 ---
 title: Controllo del codice sorgente
-description: Informazioni su come configurare il controllo del codice sorgente in Azure Data Studio
+description: Azure Data Studio supporta Git per la gestione del controllo del codice sorgente. Informazioni su come aprire un repository Git esistente e su come inizializzarne uno nuovo.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: c4f586e355ad31422c75a5abb10a4c7e42f5eda6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c8b3ad59ac518eebefa9fbb073544fdb7791a419
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758374"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522505"
 ---
 # <a name="source-control-in-azure-data-studio"></a>Controllo del codice sorgente in Azure Data Studio
 
