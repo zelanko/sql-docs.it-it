@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 66437b45-4686-4fc7-a91b-ebde45e0f1b0
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 4a670a9766388d4ba1d1908a71ef7a32147f60fc
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 987e66832ac994e47b313ba82d4a24c4a37d6c52
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87824037"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933752"
 ---
 # <a name="new-project-db2tosql"></a>Nuovo progetto (DB2ToSQL)
 Utilizzare la finestra di dialogo **nuovo progetto** per creare un nuovo progetto SSMA. Per accedere alla finestra di dialogo **nuovo progetto** , scegliere **nuovo progetto**dal menu **file** .  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2982f3c078e23529eff2c8cb050ea66628d49da
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 57f889fdbf7e52b470c1ceb8b4015cad78e4cad9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864522"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934360"
 ---
 # <a name="common-language-runtime-integration"></a>Integrazione di Common Language Runtime
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,7 +47,7 @@ L'integrazione con CLR consente di implementare funzionalità complesse disponib
   
 -   **Miglioramento della sicurezza e della protezione.** Il codice gestito è in esecuzione in un ambiente CLR, ospitato dal motore di database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo utilizza per fornire un'alternativa più sicura alle stored procedure estese disponibili in versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Possibilità di definire tipi di dati e funzioni di aggregazione.** I tipi definiti dall'utente e le funzioni di aggregazione definite dall'utente sono due nuovi oggetti di database gestiti che espandono le capacità di archiviazione ed esecuzione di query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   **Possibilità di definire tipi di dati e funzioni di aggregazione.** I tipi definiti dall'utente e le aggregazioni definite dall'utente sono due nuovi oggetti di database gestiti che espandono le funzionalità di archiviazione ed esecuzione di query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   **Sviluppo semplificato attraverso un ambiente standardizzato.** Lo sviluppo di database è integrato nelle versioni future dell'ambiente di sviluppo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .NET. Gli sviluppatori utilizzano per lo sviluppo e il debug degli script e degli oggetti di database gli stessi strumenti impiegati per scrivere componenti e servizi .NET Framework di livello intermedio o di livello client.  
   

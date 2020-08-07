@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 40c1eb02-26b2-44ba-969d-6c430c61c281
-author: Jtoland
-ms.author: Jtoland
-manager: murato
-ms.openlocfilehash: 2e4ce80a111efcf978da55cab280205b08acdd1f
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: fdb846a0b43bd9816faf931d936c456093ac26e3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292944"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934009"
 ---
 # <a name="sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant per Access (AccessToSQL)
 

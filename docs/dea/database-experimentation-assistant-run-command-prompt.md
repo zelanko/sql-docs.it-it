@@ -9,15 +9,15 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-author: HJToland3
-ms.author: jtoland
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 161258d8359ce46b9ff2afb2a878c008059772db
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: c7443ed363a4968415b651e460bbc4f69cb7415b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565530"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87951106"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Esegui Database Experimentation Assistant al prompt dei comandi
 
@@ -44,7 +44,7 @@ Per avviare una nuova acquisizione del carico di lavoro, al prompt dei comandi e
 
 Quando si avvia una nuova acquisizione del carico di lavoro con il `Deacmd.exe` comando, è possibile usare le opzioni aggiuntive seguenti:
 
-| Opzione| Description |  
+| Opzione| Descrizione |  
 | --- | --- |
 | -n, --name | Necessaria nome file di traccia |
 | -x,--Format | Necessaria formato della traccia (Trace = 0, XEvent = 1) |
@@ -115,7 +115,7 @@ Per visualizzare i report di analisi di questi file di traccia, è necessario us
 
 Quando si analizzano le tracce usando il comando DEA, è possibile usare le opzioni aggiuntive seguenti:
 
-| Opzione| Description |  
+| Opzione| Descrizione |  
 | --- | --- |
 | -a,--tracea | Necessaria percorso del file di eventi per un'istanza di. C:\traces\Sql2008trace.trc. di esempio  Se è presente un batch di file, selezionare il primo file e DEA controllerà automaticamente i file di rollover. Se i file si trovano in BLOB, specificare il percorso della cartella in cui si desidera archiviare i file di eventi in locale.  C:\TRACES\ di esempio |
 | -b,--traceB | Necessaria percorso del file di evento per l'istanza B. C:\traces\Sql2014trace.trc. di esempio Se è presente un batch di file, selezionare il primo file e DEA controllerà automaticamente i file di rollover. Se i file si trovano in BLOB, specificare il percorso della cartella in cui si desidera archiviare i file di eventi in locale.  C:\TRACES\ di esempio |

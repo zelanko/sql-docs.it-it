@@ -10,14 +10,14 @@ helpviewer_keywords:
 - MySQL Console, launching console
 - MySQL Console, output conventions
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 88cf4716ea02b8c5dbcbd73e9839c6bacfbed10b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: a5ade295e64415f50e4887fa971f20d8fe5b7f6a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075421"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935520"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Introduzione alla console di SSMA per MySQL (MySQLToSQL)
 Questa sezione descrive la procedura per avviare e iniziare a usare l'applicazione console MySQL. Sono inoltre elencate le convenzioni usate in una tipica finestra di output della console di SSMA.  
@@ -29,7 +29,7 @@ Per avviare l'applicazione console SSMA, attenersi alla procedura seguente:
   
 2.  Fare clic sul collegamento del **prompt dei comandi SQL Server Migration Assistant per MySQL** .  
   
-    Viene visualizzato il menu di utilizzo della console `(/? Help)`SSMA e, che consente di iniziare a usare l'applicazione console.  
+    Viene visualizzato il menu di utilizzo della console SSMA e, che consente di iniziare a `(/? Help)` usare l'applicazione console.  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>Procedura per l'uso della console di SSMA  
 Dopo che la console è stata avviata correttamente nel sistema Windows, è possibile utilizzare la procedura seguente per lavorare su di essa:  
@@ -57,9 +57,9 @@ Interpretazione dei colori dell'output della console nella tabella seguente:
   
 |Colore|Descrizione|  
 |---------|---------------|  
-|Rosso|Errore irreversibile durante l'esecuzione|  
+|Red|Errore irreversibile durante l'esecuzione|  
 |Grigio|Indicatore di data e ora, messaggio all'utente|  
-|bianco|Comandi file script, tipo di messaggio|  
+|White|Comandi file script, tipo di messaggio|  
 |Giallo|Avviso|  
 |Green|Richiedi input utente|  
 |azzurro|Inizio, fine e risultato di un'operazione|  

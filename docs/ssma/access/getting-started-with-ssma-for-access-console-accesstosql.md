@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 899070b1405b031e919f50a6d16bc5d6df3adf3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e9ca0ef87aac60849d114d0e43dd349e063e8c83
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68222226"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938511"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Introduzione con SSMA per la console di accesso (AccessToSQL)
 In questa sezione viene descritta la procedura per avviare e iniziare a usare l'applicazione console di accesso. Sono inoltre elencate le convenzioni usate in una tipica finestra di output della console di SSMA.  
@@ -26,7 +26,7 @@ Per avviare l'applicazione console SSMA, attenersi alla procedura seguente:
   
 2.  Fare clic sul collegamento **SQL Server Migration Assistant per accedere al prompt dei comandi** .  
   
-    Viene visualizzato il menu di utilizzo della console `(/? Help)`SSMA e, che consente di iniziare a usare l'applicazione console.  
+    Viene visualizzato il menu di utilizzo della console SSMA e, che consente di iniziare a `(/? Help)` usare l'applicazione console.  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>Procedura per l'uso della console di SSMA  
 Dopo che la console è stata avviata correttamente nel sistema Windows, è possibile utilizzare la procedura seguente per lavorare su di essa:  
@@ -54,9 +54,9 @@ Interpretazione dei colori dell'output della console nella tabella seguente:
   
 |Colore|Descrizione|  
 |---------|---------------|  
-|Rosso|Errore irreversibile durante l'esecuzione|  
+|Red|Errore irreversibile durante l'esecuzione|  
 |Grigio|Indicatore di data e ora, messaggio all'utente|  
-|bianco|Comandi file script, tipo di messaggio|  
+|White|Comandi file script, tipo di messaggio|  
 |Giallo|Avviso|  
 |Green|Richiedi input utente|  
 |azzurro|Inizio, fine e risultato di un'operazione|  

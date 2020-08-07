@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 57a7a4d3f8bee507c11700f383d5bb02adb4172c
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: cd6e32470673a87a410530298972b251d2807e4b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293938"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931811"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>Introduzione con SSMA per SAP ASE (SybaseToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) per SAP ASE consente di convertire rapidamente gli schemi di database SAP Adaptive Server Enterprise (ASE) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o negli schemi del database SQL di Azure, caricare gli schemi risultanti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o nel database SQL di Azure ed eseguire la migrazione dei dati da SAP ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o al database SQL di Azure.  
@@ -83,7 +83,7 @@ La barra degli strumenti del progetto contiene i pulsanti per l'uso di progetti,
 #### <a name="the-migration-toolbar"></a>Barra degli strumenti migrazione  
 La barra degli strumenti di migrazione contiene i comandi seguenti:  
   
-|Button|Funzione|  
+|Pulsante|Funzione|  
 |----------|------------|  
 |**Creazione di report**|Converte gli oggetti di SAP ASE selezionati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintassi, quindi crea un report che mostra l'esito positivo della conversione.<br /><br />Questo comando è disponibile solo quando gli oggetti sono selezionati in Sybase Metadata Explorer.|  
 |**Converti schema**|Converte gli oggetti di SAP ASE selezionati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti di database SQL di Azure o.<br /><br />Questo comando è disponibile solo quando gli oggetti sono selezionati in Sybase Metadata Explorer.|  
@@ -97,7 +97,7 @@ SSMA contiene i menu seguenti:
 |--------|---------------|  
 |**File**|Contiene i comandi per l'uso di progetti, la connessione a SAP ASE e la connessione al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database SQL di Azure o.|  
 |**Modifica**|Contiene i comandi per trovare e utilizzare il testo nelle pagine dei dettagli, ad esempio [!INCLUDE[tsql](../../includes/tsql-md.md)] la copia dal riquadro dettagli SQL. Contiene anche l'opzione **Gestisci segnalibri** , in cui è possibile visualizzare un elenco di segnalibri esistenti. È possibile utilizzare i pulsanti sul lato destro della finestra di dialogo per gestire i segnalibri.|  
-|**Visualizza**|Contiene il comando **Sincronizza Esplora metadati** . Questa operazione Sincronizza gli oggetti tra la finestra di esplorazione dei metadati di Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure Esplora metadati. Contiene anche i comandi per visualizzare e nascondere i riquadri di **output** e **Elenco errori** e i **layout** delle opzioni per gestire i layout.|  
+|**Visualizzazione**|Contiene il comando **Sincronizza Esplora metadati** . Questa operazione Sincronizza gli oggetti tra la finestra di esplorazione dei metadati di Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure Esplora metadati. Contiene anche i comandi per visualizzare e nascondere i riquadri di **output** e **Elenco errori** e i **layout** delle opzioni per gestire i layout.|  
 |**Strumenti**|Contiene i comandi per la creazione di report, l'esportazione e la migrazione di oggetti e dati. Consente inoltre di accedere alle **Impostazioni globali** e alle finestre di dialogo **delle impostazioni del progetto** .|  
 |**Tester**|Contiene i comandi per creare test case, visualizzare i risultati dei test e i comandi per la gestione dei backup del database.|  
 |**?**|Consente di accedere alla guida di SSMA e alla finestra **di dialogo informazioni su** .|  

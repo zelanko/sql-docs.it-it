@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2cd6bc01-b8e5-4312-83a4-eac66dc1d460
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 663a4b1e49d1f81ce040254a2c8f39a1a1f84b38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b2237d2226644799b7360c53948ae2ecd9445cfa
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028682"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930740"
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>Impostazioni del progetto (sincronizzazione) (SybaseToSQL)
-La pagina sincronizzazione della finestra di dialogo **Impostazioni progetto** contiene impostazioni che consentono di personalizzare il modo in cui SSMA carica gli oggetti di database, ad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esempio tabelle e stored procedure, in o SQL Azure.  
+La pagina sincronizzazione della finestra di dialogo **Impostazioni progetto** contiene impostazioni che consentono di personalizzare il modo in cui SSMA carica gli oggetti di database, ad esempio tabelle e stored procedure, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
   
 È possibile accedere a due diverse pagine di sincronizzazione che contengono le stesse impostazioni:  
   
@@ -27,7 +27,7 @@ La pagina sincronizzazione della finestra di dialogo **Impostazioni progetto** c
   
 ## <a name="options"></a>Opzioni  
 **Tenta**  
-Specifica il numero di tentativi che SSMA deve eseguire quando carica gli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in. Gli oggetti che non vengono caricati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel tentativo corrente verranno ritentati fino a quando SSMA non raggiunge il numero massimo di tentativi nel processo di sincronizzazione corrente.  
+Specifica il numero di tentativi che SSMA deve eseguire quando carica gli oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Gli oggetti che non vengono caricati nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tentativo corrente verranno ritentati fino a quando SSMA non raggiunge il numero massimo di tentativi nel processo di sincronizzazione corrente.  
   
 ## <a name="synchronization-for-sql-server"></a>Sincronizzazione per SQL Server  
 **Aggiorna oggetto locale sulla modifica di un oggetto locale e remoto**  

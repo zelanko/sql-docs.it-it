@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9e49c25f-9216-43f4-8e99-2eaab298e215
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 7e45f85a26d2beaaba552707681e574bae4795cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d7287c5ed79834629c5cded6e29b87cf46d0e9ef
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266511"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932852"
 ---
 # <a name="save-metadata--oracletosql"></a>Salvare i metadati (OracleToSQL)
 La finestra di dialogo **Salva metadati** richiede di caricare i metadati nel progetto SSMA prima di salvarli. In questo modo è possibile disporre di un file di progetto completo che può essere utilizzato offline e inviato ad altri utenti, ad esempio il personale del supporto tecnico.  
@@ -26,7 +26,7 @@ Per accedere alla finestra di dialogo **Salva metadati** , salvare il progetto. 
 **Nome**  
 Nome di ogni database nel progetto.  
   
-**Stato**  
+**Status**  
 Indica se i metadati vengono caricati nel progetto SSMA o se i metadati risultano mancanti.  
   
 SSMA carica i metadati nel progetto, se necessario. I metadati vengono caricati automaticamente quando si esplorano i metadati e si convertono gli schemi.  
@@ -34,7 +34,7 @@ SSMA carica i metadati nel progetto, se necessario. I metadati vengono caricati 
 **Seleziona tutto**  
 Seleziona tutti i database elencati.  
   
-**Deselezionare**  
+**Cancella**  
 Deseleziona la casella di controllo per tutti i database con metadati mancanti. Non è possibile deselezionare la casella di controllo se i metadati sono stati caricati.  
   
 **Salva**  

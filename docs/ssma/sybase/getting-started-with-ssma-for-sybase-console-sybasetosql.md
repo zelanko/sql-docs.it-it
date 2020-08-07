@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Sybase Console,Output Conventions
 - Sybase Console,Procedure for Using Console
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: bad08c06028a64a0423135b15641ebf6fa4e895e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: a577a2b187112dd0b80cedf50d42d13112208970
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029115"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931554"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Introduzione con la console di SSMA per Sybase (SybaseToSQL)
 Questa sezione descrive la procedura per avviare e iniziare a usare l'applicazione console SSMA per Sybase. Sono inoltre elencate le convenzioni usate in una tipica finestra di output della console di SSMA.  
@@ -30,7 +30,7 @@ Per avviare l'applicazione console SSMA, attenersi alla procedura seguente:
   
 2.  Fare clic sul collegamento del **prompt dei comandi SQL Server Migration Assistant per Sybase** .  
   
-    Viene visualizzato il menu di utilizzo della console `(/? Help)`SSMA e, che consente di iniziare a usare l'applicazione console.  
+    Viene visualizzato il menu di utilizzo della console SSMA e, che consente di iniziare a `(/? Help)` usare l'applicazione console.  
   
 ## <a name="using-the-ssma-console"></a>Uso della console di SSMA  
 Dopo che la console è stata avviata correttamente nel sistema Windows, è possibile utilizzare la procedura seguente per lavorare su di essa:  
@@ -58,9 +58,9 @@ L'interpretazione dei colori dell'output della console viene visualizzata nella 
   
 |Colore|Descrizione|  
 |---------|---------------|  
-|Rosso|Errore irreversibile durante l'esecuzione|  
+|Red|Errore irreversibile durante l'esecuzione|  
 |Grigio|Indicatore di data e ora, messaggio all'utente|  
-|bianco|Comandi file script, tipo di messaggio|  
+|White|Comandi file script, tipo di messaggio|  
 |Giallo|Avviso|  
 |Green|Richiedi input utente|  
 |azzurro|Inizio, fine e risultato di un'operazione|  

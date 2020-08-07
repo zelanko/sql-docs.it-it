@@ -9,21 +9,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Analyzing Conversion Problems
 ms.assetid: 4de9bcf6-1346-4740-87f9-7f24a8226357
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 0ff56be1b7da0376250c7ed021ae78d7144a7645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: f8aaa58da9e9ace704d6214dcc56cab997fe082e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264547"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935067"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>Valutazione degli schemi Oracle per la conversione (OracleToSQL)
-Prima di caricare oggetti e migrare i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dati in, è necessario determinare la complessità della migrazione e il tempo necessario per la migrazione. SSMA è in grado di creare un report di valutazione che mostra la percentuale di oggetti che verranno convertiti correttamente. SSMA consente inoltre di visualizzare i problemi specifici che provocano errori di conversione.  
+Prima di caricare oggetti e migrare i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario determinare la complessità della migrazione e il tempo necessario per la migrazione. SSMA è in grado di creare un report di valutazione che mostra la percentuale di oggetti che verranno convertiti correttamente. SSMA consente inoltre di visualizzare i problemi specifici che provocano errori di conversione.  
   
 ## <a name="creating-assessment-reports"></a>Creazione di report di valutazione  
-Quando crea il report di valutazione, SSMA converte gli oggetti di database Oracle selezionati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in sintassi, quindi Visualizza i risultati.  
+Quando crea il report di valutazione, SSMA converte gli oggetti di database Oracle selezionati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintassi, quindi Visualizza i risultati.  
   
 **Per creare un report di valutazione**  
   
@@ -37,7 +37,7 @@ Quando crea il report di valutazione, SSMA converte gli oggetti di database Orac
   
     SSMA indicherà lo stato di avanzamento nella barra di stato nella parte inferiore della finestra. Se il riquadro di output è visibile, i messaggi vengono visualizzati anche nel riquadro di output.  
   
-    Al termine della valutazione, verrà visualizzata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la finestra di Migration Assistant per Oracle: valutazione del report.  
+    Al termine della valutazione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà visualizzata la finestra di Migration Assistant per Oracle: valutazione del report.  
   
 ## <a name="using-assessment-reports"></a>Utilizzo dei report di valutazione  
 La finestra report di valutazione contiene tre riquadri:  

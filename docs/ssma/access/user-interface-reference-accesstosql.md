@@ -10,18 +10,18 @@ helpviewer_keywords:
 - reference, user interface
 - user interface
 ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: 479c22747f640a9ccfff43534571dabfcd2717a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 0366c4549c557d2e5f90733f5dadba61cecdc22c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266956"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937767"
 ---
 # <a name="user-interface-reference-accesstosql"></a>Guida di riferimento all'interfaccia utente (AccessToSQL)
-Questa sezione include gli argomenti della [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] guida per Migration Assistant (SSMA) per l'accesso.  
+Questa sezione include gli argomenti della Guida per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per l'accesso.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
@@ -45,7 +45,7 @@ Questa sezione include gli argomenti della [!INCLUDE[ssNoVersion](../../includes
 |[Nuovo progetto (SSMA)](https://msdn.microsoft.com/ca294f6d-eeb5-42ca-9306-156281a3f0f3)|Utilizzare la finestra di dialogo **nuovo progetto** per creare un nuovo progetto SSMA.|  
 |[Impostazioni progetto (conversione)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)|Utilizzare la pagina **conversione** della finestra di dialogo **Impostazioni progetto** per specificare il modo in cui SSMA converte le colonne Memo indicizzate, le chiavi primarie, i vincoli di chiave esterna, i timestamp e le tabelle senza indici.|  
 |[Impostazioni progetto &#40;GUI&#41; &#40;AccessToSQL&#41;](../../ssma/access/project-settings-gui-accesstosql.md)|Utilizzare la pagina GUI della finestra di dialogo **Impostazioni progetto** per specificare la quantità di dati da visualizzare nella scheda **dati** .|  
-|[Impostazioni progetto (migrazione)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)|Utilizzare la pagina Migrazione della finestra di dialogo **Impostazioni progetto** per specificare le dimensioni del batch di migrazione, il blocco della tabella, il controllo dei vincoli, l'attivazione del trigger di inserimento, la gestione delle identità e dei valori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] null e la modalità di gestione delle date non comprese nell'intervallo.|  
+|[Impostazioni progetto (migrazione)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)|Utilizzare la pagina Migrazione della finestra di dialogo **Impostazioni progetto** per specificare le dimensioni del batch di migrazione, il blocco della tabella, il controllo dei vincoli, l'attivazione del trigger di inserimento, la gestione delle identità e dei valori null e la modalità di gestione delle date non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprese nell'intervallo.|  
 |[Impostazioni progetto (mapping dei tipi)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)|Utilizzare la pagina mapping dei tipi della finestra di dialogo **Impostazioni progetto** per specificare i mapping dei tipi predefiniti per tutti i database e gli oggetti di database nel progetto SSMA.|  
 |[Impostazioni progetto (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|Utilizzare la pagina SQL Azure della finestra di dialogo **Impostazioni progetto** per specificare il suffisso del database e anche l'intervallo di timeout dell'heartbeat.|  
 |[Salva metadati &#40;AccessToSQL&#41;](../../ssma/access/save-metadata-accesstosql.md)|La finestra di dialogo **Salva metadati** viene visualizzata quando si salva un progetto privo di metadati.|  

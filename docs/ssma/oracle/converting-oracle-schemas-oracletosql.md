@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Conversion Results
 ms.assetid: e021182d-31da-443d-b110-937f5db27272
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 844d602168c063c90034469466ade816431481d4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 907c04d8acd0859b71d1b31d2839c23d5e4b85e8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395166"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935064"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Conversione di schemi Oracle (OracleToSQL)
 Dopo la connessione a Oracle, la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'impostazione delle opzioni di mapping dei dati e del progetto, è possibile convertire gli oggetti di database Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti di database.  
@@ -116,6 +116,6 @@ Per ogni elemento che non è stato possibile convertire, è necessario determina
 ## <a name="next-step"></a>passaggio successivo  
 Il passaggio successivo del processo di migrazione consiste nel [caricare gli oggetti convertiti in SQL Server](loading-converted-database-objects-into-sql-server-oracletosql.md).  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
 [Migrazione di database Oracle a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

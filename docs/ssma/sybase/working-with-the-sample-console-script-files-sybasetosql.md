@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Sybase Console,Sample Console Script Files
 ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: fe9e05f0078f0d1a9d3ab5ea6e2763ac28207085
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 7db44b317ee91044748519b93c7cdc175c96a94d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68091796"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934470"
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>Uso dei file script di esempio della console (SybaseToSQL)
 Sono stati forniti alcuni file di esempio insieme al prodotto per il riferimento utente e l'utilizzo. In questa sezione viene descritto come personalizzare facilmente questi script in base alle esigenze dell'utente finale.  
@@ -24,53 +24,53 @@ Sono stati forniti alcuni file di esempio insieme al prodotto per il riferimento
 ## <a name="sample-console-script-files"></a>File script della console di esempio  
 Per informazioni di riferimento sull'utente sono stati forniti i file script della console di esempio seguenti relativi a diversi scenari:  
   
--   ServersConnectionFileSample. XML  
+-   ServersConnectionFileSample.xml  
   
--   VariableValueFileSample. XML  
+-   VariableValueFileSample.xml  
   
--   AssessmentReportGenerationSample. XML  
+-   AssessmentReportGenerationSample.xml  
   
--   SqlStatementConversionSample. XML  
+-   SqlStatementConversionSample.xml  
   
--   ConversionAndDataMigrationSample. XML  
+-   ConversionAndDataMigrationSample.xml  
   
--   **ServersConnectionFileSample. XML:**  
+-   **ServersConnectionFileSample.xml:**  
   
     -   In questo esempio vengono fornite le diverse modalità di connessione disponibili per il database di origine e di destinazione e l'utente può selezionare qualsiasi modalità in base al requisito. Questo esempio contiene le definizioni del server.  
   
-    -   L'utente può connettersi al database necessario semplicemente modificando i valori delle definizioni del server di origine e di destinazione richieste. Nell'esempio, tutti i valori sono stati forniti come valori variabili disponibili in **VariableValueFileSample. XML**.  Tutti gli altri parametri di connessione possono essere rimossi dal file di connessione del server funzionante dell'utente.  
+    -   L'utente può connettersi al database necessario semplicemente modificando i valori delle definizioni del server di origine e di destinazione richieste. Nell'esempio, tutti i valori sono stati forniti come valori variabili disponibili nell' **VariableValueFileSample.xml**.  Tutti gli altri parametri di connessione possono essere rimossi dal file di connessione del server funzionante dell'utente.  
   
     -   Per ulteriori informazioni sulla connessione al server di origine e di destinazione, vedere [creazione dei file di connessione al server &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md).  
   
--   **VariableValueFileSample. XML:**  
-    Tutte le variabili usate nei file script della console di esempio e `ServersConnectionFileSample.xml` sono state confrontate in questo file. Per eseguire gli script della console di esempio, l'utente deve semplicemente sostituire i valori delle variabili di esempio con quelli definiti dall'utente e passare il file come argomento della riga di comando aggiuntivo insieme al file di script.  
+-   **VariableValueFileSample.xml:**  
+    Tutte le variabili usate nei file script della console di esempio e sono state confrontate `ServersConnectionFileSample.xml` in questo file. Per eseguire gli script della console di esempio, l'utente deve semplicemente sostituire i valori delle variabili di esempio con quelli definiti dall'utente e passare il file come argomento della riga di comando aggiuntivo insieme al file di script.  
   
     Per altre informazioni sul file di valori di variabile, vedere [creazione di file di valori di variabile &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
   
--   **AssessmentReportGenerationSample. XML:**  
+-   **AssessmentReportGenerationSample.xml:**  
     Questo esempio consente all'utente di generare un report di valutazione XML che può essere utilizzato dall'utente per l'analisi prima di iniziare la conversione e la migrazione dei dati.  
   
-    Nel `generate-assessment-report` comando l'utente deve obbligatoriamente modificare il valore della variabile (vedere **VariableValueFileSample. XML**) nell' `object-name` attributo per il nome del database usato dall'utente. A seconda del tipo di oggetto specificato, sarà necessario `object-type` modificare anche il valore.  
+    Nel `generate-assessment-report` comando l'utente deve obbligatoriamente modificare il valore della variabile (fare riferimento **VariableValueFileSample.xml**) nell' `object-name` attributo al nome del database usato dall'utente. A seconda del tipo di oggetto specificato, `object-type` sarà necessario modificare anche il valore.  
   
-    Se l'utente deve valutare più oggetti/database, può specificare più `metabase-object` nodi, come illustrato nell'esempio `generate-assessment-report` di comando 4 del file script della console di esempio.  
+    Se l'utente deve valutare più oggetti/database, può specificare più `metabase-object` nodi, come illustrato nell' `generate-assessment-report` esempio di comando 4 del file script della console di esempio.  
   
     Per ulteriori informazioni sulla generazione di report, vedere [generazione di report &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md).  
   
     > [!NOTE]  
-    > -   Verificare che l'argomento della riga di comando file valore variabile venga passato all'applicazione console e che VariableValueFileSample. XML venga aggiornato con i valori specificati dall'utente.  
-    > -   Verificare che l'argomento della riga di comando del file di connessione del server venga passato all'applicazione console e che ServersConnectionFileSample. XML venga aggiornato con i valori dei parametri del server corretti.  
+    > -   Verificare che l'argomento della riga di comando file valore variabile venga passato all'applicazione console e VariableValueFileSample.xml venga aggiornato con i valori specificati dall'utente.  
+    > -   Verificare che l'argomento della riga di comando del file di connessione del server venga passato all'applicazione console e che il ServersConnectionFileSample.xml venga aggiornato con i valori dei parametri del server corretti.  
   
--   **SqlStatementConversionSample. XML:**  
-    Questo esempio consente all'utente di generare lo script `t-sql` corrispondente per il comando del `sql` database di origine fornito come input.  
+-   **SqlStatementConversionSample.xml:**  
+    Questo esempio consente all'utente di generare lo `t-sql` script corrispondente per il comando del database di origine `sql` fornito come input.  
   
-    Nel `convert-sql-statement` comando l'utente deve obbligatoriamente modificare il valore della variabile (fare riferimento a **VariableValueFileSample. XML**) nell' `context` attributo al nome del database in uso da parte dell'utente. L'utente dovrà anche modificare il `sql` valore dell'attributo con il comando del database `sql` di origine che richiede la conversione.  
+    Nel `convert-sql-statement` comando l'utente deve obbligatoriamente modificare il valore della variabile (fare riferimento **VariableValueFileSample.xml**) nell' `context` attributo al nome del database in uso da parte dell'utente. L'utente dovrà anche modificare il `sql` valore dell'attributo con il comando del database di origine `sql` che richiede la conversione.  
   
-    L'utente può inoltre fornire i file SQL da convertire. Questo è stato illustrato nell'esempio `convert-sql-statement` 4 del comando del file script della console di esempio.  
+    L'utente può inoltre fornire i file SQL da convertire. Questo è stato illustrato nell' `convert-sql-statement` esempio 4 del comando del file script della console di esempio.  
   
     > [!NOTE]  
-    > Verificare che l'argomento della riga di comando file valore variabile venga passato all'applicazione console e che VariableValueFileSample. XML venga aggiornato con i valori specificati dall'utente.  
+    > Verificare che l'argomento della riga di comando file valore variabile venga passato all'applicazione console e VariableValueFileSample.xml venga aggiornato con i valori specificati dall'utente.  
   
--   **ConversionAndDataMigrationSample. XML:**  
+-   **ConversionAndDataMigrationSample.xml:**  
      Questo esempio consente all'utente di eseguire una migrazione end-to-end dalla conversione alla migrazione dei dati. L'elenco dei valori di attributo obbligatori che dovranno essere modificati è elencato di seguito:  
   
     **Nome comando**  
@@ -91,7 +91,7 @@ Per informazioni di riferimento sull'utente sono stati forniti i file script del
   
     -   Esegue la conversione dello schema dall'origine allo schema di destinazione.  
   
-    -   Se l'utente deve valutare più oggetti/database, può specificare più `metabase-object` nodi, come illustrato nell'esempio `convert-schema` di comando 4 del file script della console di esempio.  
+    -   Se l'utente deve valutare più oggetti/database, può specificare più `metabase-object` nodi, come illustrato nell' `convert-schema` esempio di comando 4 del file script della console di esempio.  
   
     **Attributo**  
   

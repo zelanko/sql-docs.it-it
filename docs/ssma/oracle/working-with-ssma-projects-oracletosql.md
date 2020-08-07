@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Customizing Project Settings
 ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 772bb36e42af5e96d40b4026327d90e4552218e7
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 1acf08369e0d6591c96e74defabe2a49d15e412d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862341"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932692"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>Uso dei progetti SSMA (OracleToSQL)
 Per eseguire la migrazione di database Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , creare innanzitutto un progetto SSMA. Il progetto è un file che contiene le informazioni seguenti:  
@@ -81,7 +81,7 @@ Per eseguire la migrazione dei dati da database Oracle a [!INCLUDE[ssNoVersion](
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   database SQL di Azure  
+    -   Database SQL di Azure  
   
 ## <a name="customizing-project-settings"></a>Personalizzazione delle impostazioni di progetto  
 Oltre a definire le impostazioni di progetto predefinite che si applicano a tutti i nuovi progetti SSMA, è possibile personalizzare le impostazioni per ogni progetto. Per ulteriori informazioni, vedere [impostazione delle opzioni del progetto &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md).  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - versions of Access
 - workgroup security
 ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: 1b0fe1ef2f51da9e64954040e58440a9e7eee58e
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 038ffa60562a443c916d0143fa432d3e5da87bc4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293725"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937905"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Preparazione dei database di Access per la migrazione (AccessToSQL)
 Prima di eseguire la migrazione dei database di Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario determinare i database di cui eseguire la migrazione e assicurarsi che tali database siano pronti per la migrazione.  

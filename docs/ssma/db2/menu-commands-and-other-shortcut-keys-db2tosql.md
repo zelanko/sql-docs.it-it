@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 8937eb796d75afdc404ef4815918245cda7f13a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3622c9928946e8708097f535b311a70b2a996bf3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074155"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933722"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>Comandi di menu e altri tasti di scelta rapida (DB2ToSQL)
 Le sezioni seguenti descrivono i tasti di scelta rapida per accedere ai comandi di menu e ad altri tasti di scelta rapida usati in varie finestre di dialogo di SSMA per l'applicazione DB2.  
@@ -79,7 +79,7 @@ Per accedere al menu Strumenti, il tasto di scelta rapida utilizzato è ALT + T.
 |Creare un report.|ALT + T + C|  
 |Converte lo schema.|ALT + T + N o CTRL + R|  
 |Aggiornamento dal database DB2.|ALT + T + R|  
-|Sincronizzare con SQL Server o SQL Azure database.|ALT + T + S|  
+|Sincronizzare con SQL Server o il database SQL di Azure.|ALT + T + S|  
 |Salva come script.|ALT + T + A|  
 |Eseguire la migrazione dei dati.|ALT + T + M|  
 |Arrestare l'operazione corrente.|ALT + T + O|  

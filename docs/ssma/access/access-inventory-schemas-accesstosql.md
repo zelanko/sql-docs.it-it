@@ -34,17 +34,17 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: caf6c1045b02a84cf2dec0aba56c5c1c050277c1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68068951"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934152"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Accedere agli schemi di inventario (AccessToSQL)
-Nelle sezioni seguenti vengono descritte le tabelle create da SSMA quando si esportano gli schemi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]accesso a.  
+Nelle sezioni seguenti vengono descritte le tabelle create da SSMA quando si esportano gli schemi di accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="databases"></a>Database  
 I metadati del database vengono esportati nella tabella **SSMA_Access_InventoryDatabases** . Questa tabella contiene le colonne seguenti:  
@@ -79,7 +79,7 @@ I metadati della tabella vengono esportati nella tabella **SSMA_Access_Inventory
 |**DatabaseId**|**uniqueidentifier**|Identifica il database contenente la tabella.|  
 |**TableId**|**uniqueidentifier**|GUID che identifica in modo univoco la tabella. Questa colonna è anche la chiave primaria per la tabella.|  
 |**TableName**|**nvarchar(4000)**|Nome della tabella.|  
-|**RowsCount**|**int**|Numero di righe della tabella.|  
+|**RowsCount**|**int**|Numero di righe nella tabella.|  
 |**ValidationRule**|**nvarchar(4000)**|Regola che definisce un input valido per la tabella. Se non esiste alcuna regola di convalida, il campo conterrà una stringa vuota.|  
 |**LinkedTable**|**nvarchar(4000)**|Un'altra tabella, se presente, collegata alla tabella. Il collegamento di tabelle consente l'aggiunta, l'eliminazione e l'aggiornamento dell'altra tabella tramite questa tabella.|  
 |**ExternalSource**|**nvarchar(4000)**|Origine dati, se presente, associata alla tabella. Se una tabella è collegata, in questo campo è stata specificata un'origine dati esterna.|  
@@ -96,8 +96,8 @@ I metadati della colonna vengono esportati nella tabella **SSMA_Access_Inventory
 |**IsNullable**|**bit**|Specifica se la colonna può contenere valori null. Se il valore è 1, la colonna può contenere valori null. Se il valore è 0, la colonna non può contenere valori null. Si noti che la regola di convalida può essere usata anche per impedire i valori null.|  
 |**DataType**|**nvarchar(4000)**|Tipo di dati di accesso della colonna, ad esempio **testo** o **Long**.|  
 |**IsAutoIncrement**|**bit**|Specifica se la colonna incrementa automaticamente i valori integer. Se il valore è 1, i numeri interi vengono incrementati automaticamente.|  
-|**Ordinal**|**smallint**|Ordine della colonna nella tabella, a partire da zero.|  
-|**DefaultValue**|**nvarchar(4000)**|Il valore predefinito per la colonna.|  
+|**Ordinale**|**smallint**|Ordine della colonna nella tabella, a partire da zero.|  
+|**DefaultValue**|**nvarchar(4000)**|Valore predefinito della colonna.|  
 |**ValidationRule**|**nvarchar(4000)**|Regola utilizzata per convalidare i dati aggiunti o aggiornati nella colonna.|  
   
 ## <a name="indexes"></a>Indici  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Script File Commands, Script Generation Commands,Manageability Commands
 - Script File Commands,Project Commands
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 60843fc3c41d089c28847e724585e62992089be1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 6b6d7576bc20786c49893a5cf5ab4835d1d7fb57
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76909533"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934859"
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>Esecuzione della console SSMA (OracleToSQL)
 Microsoft offre un solido set di comandi di file script per eseguire e controllare le attività SSMA. L'applicazione console USA determinati comandi del file di script standard come enumerati in questa sezione.  
@@ -160,7 +160,7 @@ Richiede uno o più nodi della metabase come parametro della riga di comando.
   
   metabase="<source/target>"/>  
 ```  
-o  
+oppure  
   
 ```xml  
 <force-load>  
@@ -244,7 +244,7 @@ generate-assessment-report
   
 -   `write-summary-report-to:`Specifica il percorso in cui verrà generato il report di riepilogo.  
   
-    Se viene indicato solo il percorso della cartella, il file in base al nome **&lt;AssessmentReport n&gt;. XML** creato. (attributo facoltativo)  
+    Se viene indicato solo il percorso della cartella, il file in base al nome **AssessmentReport &lt; n &gt; . XML** creato. (attributo facoltativo)  
   
     Per la creazione di report sono presenti due sottocategorie:  
   
@@ -273,7 +273,7 @@ generate-assessment-report
   
 />  
 ```  
-o  
+oppure  
   
 ```xml  
 <generate-assessment-report  
@@ -318,7 +318,7 @@ Convert-schema
   
 -   `write-summary-report-to:`Specifica il percorso in cui verrà generato il report di riepilogo.  
   
-    Se viene indicato solo il percorso della cartella, il file in base al nome **&lt;SchemaConversionReport n&gt;. XML** creato. (attributo facoltativo)  
+    Se viene indicato solo il percorso della cartella, il file in base al nome **SchemaConversionReport &lt; n &gt; . XML** creato. (attributo facoltativo)  
   
     Per la creazione di report sono presenti due sottocategorie:  
   
@@ -347,7 +347,7 @@ Convert-schema
   
 />  
 ```  
-o  
+oppure  
   
 ```xml  
 <convert-schema  
@@ -382,7 +382,7 @@ Esegue la migrazione dei dati di origine alla destinazione.
   
 -   `write-summary-report-to:`Specifica il percorso in cui verrà generato il report di riepilogo.  
   
-    Se viene indicato solo il percorso della cartella, il file in base al nome **&lt;DataMigrationReport n&gt;. XML** creato. (attributo facoltativo)  
+    Se viene indicato solo il percorso della cartella, il file in base al nome **DataMigrationReport &lt; n &gt; . XML** creato. (attributo facoltativo)  
   
     Per la creazione di report sono presenti due sottocategorie:  
   
@@ -415,7 +415,7 @@ Esegue la migrazione dei dati di origine alla destinazione.
   
 </migrate-data>  
 ```  
-o  
+oppure  
   
 ```xml  
 <migrate-data  
@@ -485,7 +485,7 @@ sincronizzazione-destinazione
   
     -   script di errore  
   
--   `report-errors-to:`Specifica la posizione della segnalazione errori per l'operazione di sincronizzazione (attributo facoltativo) se viene specificato solo il percorso della cartella, viene creato il file in base al nome **TargetSynchronizationReport. XML** .  
+-   `report-errors-to:`Specifica la posizione della segnalazione errori per l'operazione di sincronizzazione (attributo facoltativo) se viene specificato solo il percorso della cartella, quindi viene creato il file in base al nome **TargetSynchronizationReport.XML** .  
   
 **Esempio di sintassi:**  
   
@@ -504,7 +504,7 @@ sincronizzazione-destinazione
   
 />  
 ```  
-o  
+oppure  
   
 ```xml  
 <synchronize-target  
@@ -513,7 +513,7 @@ o
   
    object-type="<object-category>"/>  
 ```  
-o  
+oppure  
   
 ```xml  
 <synchronize-target>  
@@ -550,7 +550,7 @@ Richiede uno o più nodi della metabase come parametro della riga di comando.
   
     -   script di errore  
   
--   `report-errors-to:`Specifica la posizione della segnalazione errori per l'operazione di aggiornamento (attributo facoltativo) se viene specificato solo il percorso della cartella, viene creato il file in base al nome **SourceDBRefreshReport. XML** .  
+-   `report-errors-to:`Specifica la posizione della segnalazione errori per l'operazione di aggiornamento (attributo facoltativo) se viene specificato solo il percorso della cartella, quindi viene creato il file in base al nome **SourceDBRefreshReport.XML** .  
   
 **Esempio di sintassi:**  
   
@@ -569,7 +569,7 @@ Richiede uno o più nodi della metabase come parametro della riga di comando.
   
 />  
 ```  
-o  
+oppure  
   
 ```xml  
 <refresh-from-database  
@@ -578,7 +578,7 @@ o
   
    object-type="<object-category>"/>  
 ```  
-o  
+oppure  
   
 ```xml  
 <refresh-from-database>  
@@ -628,7 +628,7 @@ Richiede uno o più nodi della metabase come parametro della riga di comando.
   
 />  
 ```  
-o  
+oppure  
   
 ```xml  
 <save-as-script  
@@ -665,7 +665,7 @@ Convert-SQL-statement
   
 -   `sql-files`Specifica il percorso dei file SQL che devono essere convertiti nel codice T-SQL.  
   
--   `write-summary-report-to`Specifica il percorso in cui verrà generato il report. Se viene indicato solo il percorso della cartella, viene creato il file in base al nome **ConvertSQLReport. XML** . (attributo facoltativo)  
+-   `write-summary-report-to`Specifica il percorso in cui verrà generato il report. Se viene indicato solo il percorso della cartella, viene creato il file in base al nome **ConvertSQLReport.XML** . (attributo facoltativo)  
   
     La creazione di report include 2 sottocategorie aggiuntive, vale a dire:  
   
@@ -704,7 +704,7 @@ Richiede uno o più nodi della metabase come parametro della riga di comando.
   
 </convert-sql-statement>  
 ```  
-o  
+oppure  
   
 ```  
 <convert-sql-statement  
@@ -727,7 +727,7 @@ o
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-o  
+oppure  
   
 ```  
 <convert-sql-statement  

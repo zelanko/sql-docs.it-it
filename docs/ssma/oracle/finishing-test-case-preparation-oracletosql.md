@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: bc5693c71ac6061f12ee90386b3c135a45a14e09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 0cd80ee10d70b31f06c22e064d199c98cc1820b3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266070"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934869"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>Completamento della preparazione del test case (OracleToSQL)
 Nella pagina finale della procedura guidata vengono visualizzate la descrizione del test case e le informazioni sugli oggetti che coinvolgono il test. Inoltre, in questa pagina è possibile impostare le opzioni di esecuzione dei test.  

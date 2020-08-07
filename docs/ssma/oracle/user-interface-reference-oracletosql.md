@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 160d4784-d108-4705-932d-763558912804
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 664a1f861603c9ff52355660b4601a482d55ffbb
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: f0fa992181878a185fc6ba12719f3b2edc5fa9ae
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87390686"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932942"
 ---
 # <a name="user-interface-reference-oracletosql"></a>Informazioni di riferimento sull'interfaccia utente (OracleToSQL)
 In questa sezione sono inclusi gli argomenti della Guida per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per Oracle.  
@@ -47,7 +47,7 @@ Nella tabella seguente sono elencate le finestre di dialogo SSMA:
 |[Aggiorna da database &#40;OracleToSQL&#41;](../../ssma/oracle/refresh-from-database-oracletosql.md)|Utilizzare la finestra di dialogo **Aggiorna da database** per selezionare gli oggetti da aggiornare dal database Oracle.|  
 |[Salva metadati &#40;OracleToSQL&#41;](../../ssma/oracle/save-metadata-oracletosql.md)|La finestra di dialogo **Salva metadati** viene visualizzata quando si salva un progetto privo di metadati.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
 [Introduzione con SSMA per Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
 [Migrazione di database Oracle a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

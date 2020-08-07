@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: fd92aa77-21e3-41ac-8f3e-08608a734b7f
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 10d45c885570d048aea33480990161fb0413ca4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8da37a73c0a251b5ae11b59b12c688e061e3a0cd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908780"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935210"
 ---
 # <a name="project-settings-gui--mysqltosql"></a>Impostazioni del progetto (interfaccia utente grafica) (MySQLToSQL)
 Le impostazioni del progetto GUI consentono di configurare il modo in cui i dati vengono visualizzati nella scheda **dati** e se includere i report dei dati con i report di valutazione.  

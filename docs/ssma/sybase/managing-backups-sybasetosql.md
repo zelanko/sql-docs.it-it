@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Managing Backups
 ms.assetid: 266d987c-ecc5-4fa4-bfdf-8c584f1a1332
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: b10d8704a6badaed7cb10888e266fcdc7bb339f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 2a7a32804d3c4cb08f593398e901bed66d124b2a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028920"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931079"
 ---
 # <a name="managing-backups-sybasetosql"></a>Gestione dei backup (SybaseToSQL)
 Gestione backup Sybase consente di eseguire il backup e il ripristino dei dati della tabella prima o dopo l'esecuzione di un test. È anche possibile gestire il contenuto di backup con la finestra di dialogo Gestisci contenuto di backup.  

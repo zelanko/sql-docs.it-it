@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Schema Mapping
 ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 212b5719c1ef8bac3e44ec33b786a032acef1d9f
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: acd4b7c13b2f8674f120c7f5b49f503a7f8fb5bc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865329"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931226"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Mapping degli schemi di Sybase ASE per gli schemi di SQL Server (SybaseToSQL)
-In Sybase Adaptive Server Enterprise (ASE) ogni database dispone di uno o più schemi. Per impostazione predefinita, SSMA esegue la migrazione di tutti gli oggetti all'interno di un database e di uno schema nello stesso database e nello stesso schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Tuttavia, è possibile personalizzare il mapping tra l'ambiente del servizio app e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure database e schemi.  
+In Sybase Adaptive Server Enterprise (ASE) ogni database dispone di uno o più schemi. Per impostazione predefinita, SSMA esegue la migrazione di tutti gli oggetti all'interno di un database e di uno schema nello stesso database e nello stesso schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Tuttavia, è possibile personalizzare il mapping tra l'ambiente del servizio app e il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database SQL di Azure.  
   
 ## <a name="ase-and-sql-server-or-sql-azure-schemas"></a>Schemi ASE e SQL Server o SQL Azure  
 Ambiente del servizio app e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure specificano i database e i relativi schemi usando la notazione in due parti come *database. Schema*. Ad esempio, in un database **demo** dell'ambiente del servizio app potrebbe essere presente uno schema **dbo** . Il database e la coppia di schemi vengono specificati come **demo. dbo**. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure ha lo stesso database e lo stesso schema, la coppia viene specificata anche come **demo. dbo**.  
@@ -51,7 +51,7 @@ In SSMA è possibile eseguire il mapping di uno schema dell'ambiente del servizi
   
 -   Mapping a SQL Azure  
   
-È possibile eseguire il mapping del database di origine alla destinazione connessa SQL Azure database o a qualsiasi schema nella destinazione connessa SQL Azure database. Se si esegue il mapping dello schema di origine a qualsiasi schema non esistente nel database di destinazione connesso, verrà visualizzato un messaggio in cui viene visualizzato il messaggio **"lo schema non esiste nei metadati di destinazione. Verrà creata durante la sincronizzazione. Continuare? "** Fare clic su Sì.  
+È possibile eseguire il mapping del database di origine al database SQL di Azure di destinazione connesso o a qualsiasi schema nel database SQL di Azure di destinazione connesso. Se si esegue il mapping dello schema di origine a qualsiasi schema non esistente nel database di destinazione connesso, verrà visualizzato un messaggio in cui viene visualizzato il messaggio **"lo schema non esiste nei metadati di destinazione. Verrà creata durante la sincronizzazione. Continuare? "** Fare clic su Sì.  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>Ripristino del database e dello schema predefiniti  
 Se si Personalizza il mapping tra uno schema dell'ambiente del servizio app e uno [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schema o SQL Azure, è possibile ripristinare i valori predefiniti del mapping.  

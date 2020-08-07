@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Mapping Sybase ASE Schemas to SQL Server Schemas
 - Type Mapping Settings
 ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 11d17d35dd8118c2afb9310ffcc45dcbea021f6c
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 174f16b2b5a901b06f292f5bf53391fb7685eef1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865359"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931122"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Mapping dei tipi di dati di Sybase ASE e SQL Server (SybaseToSQL)
-I tipi di database di Sybase Adaptive Server Enterprise (ASE) differiscono da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure tipi di database. Quando si convertono oggetti di database dell'ambiente del servizio app in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti o SQL Azure, è necessario specificare come eseguire il mapping dei tipi di dati da ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. È possibile accettare i mapping dei tipi di dati predefiniti oppure personalizzare i mapping, come illustrato nelle sezioni seguenti.  
+I tipi di database di Sybase Adaptive Server Enterprise (ASE) differiscono da quelli di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o di database SQL di Azure. Quando si convertono oggetti di database dell'ambiente del servizio app in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti o SQL Azure, è necessario specificare come eseguire il mapping dei tipi di dati da ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. È possibile accettare i mapping dei tipi di dati predefiniti oppure personalizzare i mapping, come illustrato nelle sezioni seguenti.  
   
 ## <a name="default-mappings"></a>Mapping predefiniti  
 SSMA dispone di un set predefinito di mapping dei tipi di dati. Per l'elenco dei mapping predefiniti, vedere [Impostazioni progetto &#40;mapping dei tipi&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  

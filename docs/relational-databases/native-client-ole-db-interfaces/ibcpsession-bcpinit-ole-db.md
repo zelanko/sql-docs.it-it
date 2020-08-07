@@ -16,12 +16,12 @@ ms.assetid: 583096d7-da34-49be-87fd-31210aac81aa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 352b49656ddf0bea38c9153862f392d12e8e7e09
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f23247e09c47bc41aa7a12c89df4be6fdb5791bb
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247753"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87941292"
 ---
 # <a name="ibcpsessionbcpinit-native-client-ole-db-provider"></a>IBCPSession:: BCPInit (provider OLE DB Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -81,7 +81,7 @@ HRESULT BCPInit(
  Il metodo è riuscito.  
   
  E_FAIL  
- Si è verificato un errore specifico del provider. per informazioni dettagliate, utilizzare l'interfaccia [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) .  
+ Si è verificato un errore specifico del provider. per informazioni dettagliate, utilizzare l'interfaccia [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) .  
   
  E_OUTOFMEMORY  
  Errore di memoria insufficiente.  
@@ -89,7 +89,7 @@ HRESULT BCPInit(
  E_INVALIDARG  
  Uno o più argomenti non sono stati specificati correttamente, ad esempio è stato immesso un nome file non valido.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Esecuzione di operazioni di copia bulk](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
