@@ -21,12 +21,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 484ae60390202e09625166a266c3972d927086f9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8956eda2e25ecd96df58f863743ae39d0bb88d8f
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395146"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823726"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>sys. query_store_runtime_stats (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -98,16 +98,16 @@ ms.locfileid: "87395146"
 |**min_tempdb_space_used**|**bigint**|Numero minimo di letture di pagine per il piano di query all'interno dell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |**max_tempdb_space_used**|**bigint**|Numero massimo di letture di pagine per il piano di query all'interno dell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |**stdev_tempdb_space_used**|**float**|Numero di letture di pagina deviazione standard per il piano di query nell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**avg_page_server_io_reads**|**float**|Numero medio di letture di I/O del server di paging per il piano di query all'interno dell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** Iperscalabilità del database SQL di Azure</br>**Nota:** Azure SQL Data Warehouse, il database SQL di Azure, MI (senza iperscala) restituirà sempre zero (0).|
-|**last_page_server_io_reads**|**bigint**|Ultimo numero di letture di I/O del server di paging per il piano di query all'interno dell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** Iperscalabilità del database SQL di Azure</br>**Nota:** Azure SQL Data Warehouse, il database SQL di Azure, MI (senza iperscala) restituirà sempre zero (0).|
-|**min_page_server_io_reads**|**bigint**|Numero minimo di letture di I/O del server di paging per il piano di query all'interno dell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** Iperscalabilità del database SQL di Azure</br>**Nota:** Azure SQL Data Warehouse, il database SQL di Azure, MI (senza iperscala) restituirà sempre zero (0).|
-|**max_page_server_io_reads**|**bigint**|Numero massimo di letture di I/O del server di paging per il piano di query all'interno dell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** Iperscalabilità del database SQL di Azure</br>**Nota:** Azure SQL Data Warehouse, il database SQL di Azure, MI (senza iperscala) restituirà sempre zero (0).|
-|**stdev_page_server_io_reads**|**float**|Il numero di I/O del server di paging legge la deviazione standard per il piano di query nell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** Iperscalabilità del database SQL di Azure</br>**Nota:** Azure SQL Data Warehouse, il database SQL di Azure, MI (senza iperscala) restituirà sempre zero (0).|
+|**avg_page_server_io_reads**|**float**|Numero medio di letture di I/O del server di paging per il piano di query all'interno dell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** Iperscalabilità del database SQL di Azure</br>**Nota:** Azure SQL Data Warehouse, il database SQL di Azure, il Istanza gestita SQL di Azure (senza scalabilità) restituirà sempre zero (0).|
+|**last_page_server_io_reads**|**bigint**|Ultimo numero di letture di I/O del server di paging per il piano di query all'interno dell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** Iperscalabilità del database SQL di Azure</br>**Nota:** Azure SQL Data Warehouse, il database SQL di Azure, il Istanza gestita SQL di Azure (senza scalabilità) restituirà sempre zero (0).|
+|**min_page_server_io_reads**|**bigint**|Numero minimo di letture di I/O del server di paging per il piano di query all'interno dell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** Iperscalabilità del database SQL di Azure</br>**Nota:** Azure SQL Data Warehouse, il database SQL di Azure, il Istanza gestita SQL di Azure (senza scalabilità) restituirà sempre zero (0).|
+|**max_page_server_io_reads**|**bigint**|Numero massimo di letture di I/O del server di paging per il piano di query all'interno dell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** Iperscalabilità del database SQL di Azure</br>**Nota:** Azure SQL Data Warehouse, il database SQL di Azure, il Istanza gestita SQL di Azure (senza scalabilità) restituirà sempre zero (0).|
+|**stdev_page_server_io_reads**|**float**|Il numero di I/O del server di paging legge la deviazione standard per il piano di query nell'intervallo di aggregazione. (espressa come numero di pagine 8KB lette).<br><br/>**Si applica a:** Iperscalabilità del database SQL di Azure</br>**Nota:** Azure SQL Data Warehouse, il database SQL di Azure, il Istanza gestita SQL di Azure (senza scalabilità) restituirà sempre zero (0).|
   
 ## <a name="permissions"></a>Autorizzazioni  
 È necessaria l'autorizzazione `VIEW DATABASE STATE`.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [sys. database_query_store_options &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [sys. query_context_settings &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [sys. query_store_plan &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   

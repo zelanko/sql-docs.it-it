@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 287e3396ec26652f43754be313b02e3bf7d9831d
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 2becdd3e5ab0c6980ffbb4b4f4a5d50584f6fd35
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924625"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864898"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novità di Data Migration Assistant
 
@@ -43,7 +43,7 @@ Inoltre, questa versione di Data Migration Assistant fornisce ulteriori migliora
 
 ## <a name="data-migration-assistant-v45"></a>Data Migration Assistant v 4.5
 
-La versione 4.5 di Data Migration Assistant fornisce supporto per la valutazione della migrazione dei pacchetti di SQL Server Integration Services (SSIS) ospitati nel file System al database SQL di Azure o istanza gestita di database SQL di Azure.
+La versione 4.5 di Data Migration Assistant fornisce supporto per la valutazione della migrazione dei pacchetti di SQL Server Integration Services (SSIS) ospitati nel file System al database SQL di Azure o a SQL Istanza gestita.
 
 ## <a name="data-migration-assistant-v44"></a>Data Migration Assistant v 4.4
 
@@ -53,9 +53,9 @@ La versione 4.4 di Data Migration Assistant fornisce supporto per il caricamento
 
 La versione 4.3 di Data Migration Assistant offre supporto per:
 
-- Raccomandazioni dello SKU per le istanze gestite del database SQL di Azure in base alla valutazione del carico di lavoro.
+- Raccomandazioni per gli SKU per Istanza gestita SQL di Azure in base alla valutazione del carico di lavoro.
 - RDS SQL Server come origine per le valutazioni.
-- Valutazioni dei processi di Agent per istanza gestita di database SQL di Azure come destinazione.
+- Valutazioni dei processi dell'agente per il Istanza gestita SQL di Azure come destinazione.
 - Possibilità di ignorare determinate regole di valutazione; l'elenco dei codici di errore specificati nella proprietà' ignoreErrorCodes ' configurata in DMA non verrà visualizzato nei risultati della valutazione DMA.
 - Valutazione delle query T-SQL nei passaggi delle attività dei processi e fornire consigli appropriati
 - Valutazioni degli eventi estesi (anteprima pubblica).
@@ -67,15 +67,15 @@ Inoltre, questa versione di DMA fornisce prestazioni migliorate per la gestione 
 
 ## <a name="data-migration-assistant-v42"></a>Data Migration Assistant v 4.2
 
-La versione 4.2 di Data Migration Assistant offre supporto della riga di comando per la valutazione della conformità della destinazione per una o più istanze del server quando si esegue la migrazione da SQL Server locale a un'istanza gestita di database SQL di Azure. I clienti possono ora usare la riga di comando Data Migration Assistant per raccogliere i metadati relativi allo schema del database, rilevare i blocchi e ottenere informazioni sulle funzionalità parzialmente supportate o non supportate che influiscono sulla migrazione a un'istanza gestita di database SQL di Azure. I risultati possono quindi essere sottoposti a rendering usando il modello di Power BI fornito.
+La versione 4.2 di Data Migration Assistant fornisce supporto della riga di comando per la valutazione della conformità della destinazione per una o più istanze del server quando si esegue la migrazione da SQL Server locale a una Istanza gestita SQL. I clienti possono ora usare la riga di comando Data Migration Assistant per raccogliere i metadati relativi allo schema del database, rilevare i blocchi e ottenere informazioni sulle funzionalità parzialmente supportate o non supportate che influiscono sulla migrazione a una Istanza gestita SQL. I risultati possono quindi essere sottoposti a rendering usando il modello di Power BI fornito.
 
 ## <a name="data-migration-assistant-v41"></a>Data Migration Assistant v 4.1
 
-La versione 4.1 di Data Migration Assistant introduce il supporto per la valutazione completa dei database SQL Server locali che eseguono la migrazione a istanza gestita di database SQL di Azure.
+La versione 4.1 di Data Migration Assistant introduce il supporto per la valutazione completa dei database SQL Server locali che eseguono la migrazione a SQL Istanza gestita.
 
-Il flusso di lavoro di valutazione consente di rilevare i seguenti problemi che possono influire sulla migrazione all'istanza gestita di database SQL di Azure:
+Il flusso di lavoro di valutazione consente di rilevare i seguenti problemi che possono influire sulla migrazione a SQL Istanza gestita:
 
-- **Funzionalità non supportate o parzialmente supportate**. Data Migration Assistant valuta il database SQL Server di origine per le funzionalità in uso che sono parzialmente supportate o non supportate nel Istanza gestita di database SQL di Azure di destinazione. Lo strumento offre quindi un set completo di indicazioni, approcci alternativi disponibili in Azure e procedure di mitigazione in modo che i clienti possano prendere in considerazione queste informazioni durante la pianificazione dei progetti di migrazione.
+- **Funzionalità non supportate o parzialmente supportate**. Data Migration Assistant valuta il database SQL Server di origine per le funzionalità in uso che sono parzialmente supportate o non supportate nella Istanza gestita SQL di destinazione. Lo strumento offre quindi un set completo di indicazioni, approcci alternativi disponibili in Azure e procedure di mitigazione in modo che i clienti possano prendere in considerazione queste informazioni durante la pianificazione dei progetti di migrazione.
 
 - **Problemi di compatibilità**. Data Migration Assistant inoltre identifica i problemi di compatibilità correlati alle aree seguenti:
 
@@ -83,7 +83,7 @@ Il flusso di lavoro di valutazione consente di rilevare i seguenti problemi che 
   - Modifiche comportamentali: gli oggetti dello schema segnalati possono continuare a funzionare, ma possono presentare un comportamento diverso, ad esempio una riduzione delle prestazioni.
   - Problemi informativi: questi oggetti non avranno alcun effetto sulla migrazione, ma potrebbero essere stati deprecati dalla funzionalità SQL Server versioni.
 
-Al termine della valutazione, usare il [servizio migrazione del database di Azure](https://azure.microsoft.com/services/database-migration/) (DMS) per eseguire la migrazione dei database di SQL Server al istanza gestita di database SQL di Azure.  DMS supporta le migrazioni di database sia [offline](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (monouso) che [online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) (minimo tempo di inattività) per istanza gestita di database SQL di Azure.
+Al termine della valutazione, usare il [servizio migrazione del database di Azure](https://azure.microsoft.com/services/database-migration/) (DMS) per eseguire la migrazione dei database di SQL Server a SQL istanza gestita.  DMS supporta le migrazioni di database sia [offline](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (monouso) che [online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) (minimo tempo di inattività) a SQL istanza gestita.
 
 ## <a name="data-migration-assistant-v40"></a>Data Migration Assistant v 4.0
 
@@ -124,7 +124,7 @@ La versione 3.4 di Data Migration Assistant include le aggiunte seguenti:
 - Supporto per SQL Server 2017 come origine per le migrazioni nel database SQL di Azure.
 - Miglioramenti alla correttezza delle regole di stabilità, prestazioni e valutazione.
 
-## <a name="ddata-migration-assistant-v33"></a>Data Migration Assistant v 3.3
+## <a name="data-migration-assistant-v33"></a>Data Migration Assistant v 3.3
 
 La versione 3.3 di Data Migration Assistant consente la migrazione di un'istanza di SQL Server locale alla nuova versione di SQL Server 2017, sia in Windows che in Linux. Anche se il flusso di lavoro di migrazione complessivo per Windows e Linux è lo stesso, il passaggio a SQL Server 2017 per Linux richiede alcune considerazioni aggiuntive.
 
@@ -182,7 +182,7 @@ La versione 1.0 di Data Migration Assistant è la versione iniziale e fornisce:
 
 - Individuazione di problemi che possono influire sull'aggiornamento a una versione locale di SQL Server. I risultati vengono descritti come problemi di compatibilità e sono suddivisi in categorie nelle aree seguenti:
   - Modifiche che causano un'interruzione
-  - Modifiche funzionali
+  - Modifiche del comportamento
   - Funzionalità deprecate
 - Individuazione di nuove funzionalità nella piattaforma SQL Server di destinazione di cui il database può trarre vantaggio dopo un aggiornamento. I risultati sono descritti come raccomandazioni sulle funzionalità e sono suddivisi in categorie nelle aree seguenti:
   - Prestazioni

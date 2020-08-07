@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: f07d63387a6abd55aa2a130f2809681b00a71b19
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 529962cbc303a66102f833374e42c6cfb8981b87
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293128"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822518"
 ---
-# <a name="connecting-to-azure-sql-db-accesstosql"></a>Connessione al database SQL di Azure (AccessToSQL)
+# <a name="connecting-to-azure-sql-database-accesstosql"></a>Connessione al database SQL di Azure (AccessToSQL)
 Per eseguire la migrazione dei database di Access a SQL Azure, è necessario connettersi all'istanza di destinazione di SQL Azure. Quando si esegue la connessione, SSMA ottiene i metadati relativi a tutti i database nell'istanza di SQL Azure e Visualizza i metadati del database in Esplora metadati SQL Azure. SSMA archivia informazioni sull'istanza di SQL Azure a cui si è connessi, ma non archivia le password.  
   
 La connessione a SQL Azure rimane attiva fino a quando non si chiude il progetto. Quando si riapre il progetto, è necessario riconnettersi a SQL Azure se si desidera una connessione attiva al server. È possibile lavorare offline fino a quando non si caricano oggetti di database in SQL Azure e si migrano i dati.  

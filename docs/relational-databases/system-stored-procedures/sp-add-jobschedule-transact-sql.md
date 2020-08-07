@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7c7f644b94c405fa4072ecd7d7c448f6ea865404
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f69b827981a53024dbf22d4b3e3d2f64fd4b720f
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879967"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865120"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85879967"
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+  > Nel [istanza gestita SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la maggior parte delle funzionalità di SQL Server Agent sono attualmente supportate. Per informazioni dettagliate, vedere le [differenze di T-SQL in Azure sql istanza gestita da SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -68,19 +68,19 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_type = ] frequency_type`Valore che indica quando deve essere eseguito il processo. *frequency_type* è di **tipo int**e il valore predefinito è **0**. i possibili valori sono i seguenti:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una sola volta|  
 |**4**|Ogni giorno|  
 |**8**|Settimanale|  
-|**16**|Mensile|  
+|**16**|Ogni mese|  
 |**32**|Mensile rispetto a *frequency_interval.*|  
 |**64**|All'avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|  
 |**128**|Quando il computer è inattivo|  
   
 `[ @freq_interval = ] frequency_interval`Giorno in cui viene eseguito il processo. *frequency_interval* è di **tipo int**e il valore predefinito è 0 e dipende dal valore di *frequency_type* , come indicato nella tabella seguente:  
   
-|valore|Effetto|  
+|Valore|Effetto|  
 |-----------|------------|  
 |**1** (una volta)|*frequency_interval* non è utilizzato.|  
 |**4** (giornaliera)|Ogni *frequency_interval* giorni.|  
@@ -92,7 +92,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_subday_type = ] frequency_subday_type`Specifica le unità per *frequency_subday_interval*. *frequency_subday_type* è di **tipo int**e non prevede alcun valore predefinito. i possibili valori sono i seguenti:  
   
-|valore|Descrizione (unità)|  
+|Valore|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**0x1**|All'ora specificata|  
 |**0x4**|Minuti|  
@@ -104,9 +104,9 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval* è di **tipo int**e non prevede alcun valore predefinito. i possibili valori sono i seguenti:  
   
-|valore|Descrizione (unità)|  
+|Valore|Descrizione (unità)|  
 |-----------|--------------------------|  
-|**1**|First (Primo)|  
+|**1**|Primo|  
 |**2**|Second|  
 |**4**|Terzo|  
 |**8**|Quarto|  

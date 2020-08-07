@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: 0511e67a355f960dcc3af90324142d5662b38627
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 7c9b0a65da5038f2b8871ae9ae680d3a8bd9bf33
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477363"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863467"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Novità di SSMA per MySQL (MySQLToSql)
 
@@ -114,9 +114,9 @@ La versione v 8.1 di SSMA per MySQL è stata migliorata con correzioni mirate pr
 
 La versione v 8.0 di SSMA per MySQL è stata migliorata con correzioni mirate progettate per migliorare la qualità e le metriche di conversione. Questa versione offre anche le seguenti nuove funzionalità:
 
-* Supporto per **istanza gestita di database SQL di Azure** come destinazione. È ora possibile creare nuovi progetti destinati a Istanza gestita di database SQL di Azure:
+* Supporto per **istanza gestita SQL di Azure** come destinazione. È ora possibile creare nuovi progetti destinati a Istanza gestita SQL di Azure:
 
-  ![Progetto di database SQL MI](../media/ssma-newproject-sqldbmi.png)
+  ![Progetto SQL MI](../media/ssma-newproject-sqldbmi.png)
 
 * **Avviso di correzione**post-conversione. Altre informazioni sono disponibili [qui](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
@@ -238,7 +238,7 @@ La versione di manutenzione di SSMA per MySQL di gennaio 2016 contiene le modifi
 
 La versione luglio 2014 di SSMA per MySQL contiene le modifiche seguenti:
   
-* Conversione del codice del database SQL di Azure migliorata.
+* Migliore conversione del codice del database SQL di Azure.
 * Funzionalità del pacchetto di estensione spostata nello schema per supportare il database SQL di Azure.
 * Miglioramenti delle prestazioni testati per i database con oltre 10.000 oggetti.
 * Miglioramenti dell'interfaccia utente per la gestione di un numero elevato di oggetti.

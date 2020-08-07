@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 79313d2344f6feb978a064f3fbd92e1f7bc7dce5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11d17d35dd8118c2afb9310ffcc45dcbea021f6c
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028888"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865359"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Mapping dei tipi di dati di Sybase ASE e SQL Server (SybaseToSQL)
-I tipi di database di Sybase Adaptive Server Enterprise (ASE) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] differiscono da o SQL Azure tipi di database. Quando si convertono oggetti di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dell'ambiente del servizio app in oggetti o SQL Azure, è necessario specificare come eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il mapping dei tipi di dati da ASE a o SQL Azure. È possibile accettare i mapping dei tipi di dati predefiniti oppure personalizzare i mapping, come illustrato nelle sezioni seguenti.  
+I tipi di database di Sybase Adaptive Server Enterprise (ASE) differiscono da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure tipi di database. Quando si convertono oggetti di database dell'ambiente del servizio app in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti o SQL Azure, è necessario specificare come eseguire il mapping dei tipi di dati da ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. È possibile accettare i mapping dei tipi di dati predefiniti oppure personalizzare i mapping, come illustrato nelle sezioni seguenti.  
   
 ## <a name="default-mappings"></a>Mapping predefiniti  
 SSMA dispone di un set predefinito di mapping dei tipi di dati. Per l'elenco dei mapping predefiniti, vedere [Impostazioni progetto &#40;mapping dei tipi&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  
@@ -51,7 +51,7 @@ Nella procedura riportata di seguito viene illustrato come eseguire il mapping d
   
 2.  Per aggiungere un nuovo mapping, eseguire le operazioni seguenti:  
   
-    1.  Fare clic su **Aggiungi**.  
+    1.  Scegliere **Aggiungi**.  
   
     2.  In **tipo di origine**selezionare il tipo di dati dell'ambiente del servizio app da mappare.  
   
@@ -59,7 +59,7 @@ Nella procedura riportata di seguito viene illustrato come eseguire il mapping d
   
         In questo modo è possibile personalizzare il mapping dei dati per valori più piccoli e più grandi dello stesso tipo di dati.  
   
-    4.  In **tipo di destinazione**selezionare il tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di dati di destinazione o SQL Azure.  
+    4.  In **tipo di destinazione**selezionare il tipo di dati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
   
         Alcuni tipi richiedono una lunghezza del tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nella casella **Sostituisci con** .  
   
@@ -67,7 +67,7 @@ Nella procedura riportata di seguito viene illustrato come eseguire il mapping d
   
 3.  Per modificare un mapping dei tipi di dati, eseguire le operazioni seguenti:  
   
-    1.  Fare clic su **Edit**.  
+    1.  Fare clic su **Modifica**.  
   
     2.  In **tipo di origine**selezionare il tipo di dati dell'ambiente del servizio app da mappare.  
   
@@ -75,7 +75,7 @@ Nella procedura riportata di seguito viene illustrato come eseguire il mapping d
   
         In questo modo è possibile personalizzare il mapping dei dati per valori più piccoli e più grandi dello stesso tipo di dati.  
   
-    4.  In **tipo di destinazione**selezionare il tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di dati di destinazione o SQL Azure.  
+    4.  In **tipo di destinazione**selezionare il tipo di dati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
   
         Alcuni tipi richiedono una lunghezza del tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nella casella **Sostituisci con** , quindi fare clic su **OK**.  
   

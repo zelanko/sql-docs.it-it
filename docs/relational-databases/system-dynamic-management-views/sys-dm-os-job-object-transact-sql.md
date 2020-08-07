@@ -19,12 +19,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: dfed6ad282fe702b0f7f3fa484476524118805ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e421efbd15f15d56b6446fc39f73bcba04478800
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754152"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865279"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object (database SQL di Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -52,9 +52,9 @@ Un oggetto processo è un costrutto di Windows che implementa la governance dell
 |process_physical_affinity|**nvarchar (3072)**|Maschere di bit che descrivono i processori logici che il processo di SQL Server può utilizzare in ogni gruppo di processori. Il valore di questa colonna è costituito da una o più coppie di valori, ciascuna racchiusa tra parentesi graffe. In ogni coppia il primo valore è il numero del gruppo di processori e il secondo valore è la maschera di bit di affinità per il gruppo di processori. Ad esempio, il valore `{{0,a}{1,2}}` indica che la maschera di affinità per il gruppo di processori `0` è `a` ( `1010` in formato binario, che indica che vengono utilizzati i processori 2 e 4) e che la maschera di affinità per il gruppo di processori `1` è `2` ( `10` in formato binario, che indica che viene utilizzato il processore 2).|
   
 ## <a name="permissions"></a>Autorizzazioni  
-In Istanza gestita di database SQL, è richiesta l' `VIEW SERVER STATE` autorizzazione. Nel database SQL è richiesta l'autorizzazione `VIEW DATABASE STATE` nel database.  
+In SQL Istanza gestita richiede l' `VIEW SERVER STATE` autorizzazione. Nel database SQL è richiesta l'autorizzazione `VIEW DATABASE STATE` nel database.  
  
 ## <a name="see-also"></a>Vedere anche  
 
-Per informazioni sulle istanze gestite, vedere [istanza gestita di database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
+Per informazioni sulle istanze gestite, vedere [SQL istanza gestita](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8aec9e25008c8dfe3b14bbe838f8122bb93fb756
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ed3ae93d1b2bd87decb43050e03624bb9a7ed62c
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717402"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864998"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 `[ @value = ] 'value'`Valore per la proprietà specificata. *value* è di **tipo nvarchar (255)** e il valore predefinito è null.  
   
-`[ @storage_connection_string = ] 'storage_connection_string'`È obbligatorio per istanza gestita di database SQL, deve corrispondere alla chiave di accesso per il volume di archiviazione del database SQL di Azure. 
+`[ @storage_connection_string = ] 'storage_connection_string'`È obbligatorio per SQL Istanza gestita, deve corrispondere alla chiave di accesso per il volume di archiviazione del database SQL di Azure. 
 
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
@@ -58,13 +58,13 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 |**active**|**true**|Attiva il server di pubblicazione.|  
 ||**false**|Disattiva il server di pubblicazione.|  
 |**distribution_db**||Nome del database di distribuzione.|  
-|**accesso**||Nome dell'account di accesso.|  
+|**login**||Nome dell'account di accesso.|  
 |**password**||Password complessa per l'account di accesso fornito.|  
 |**security_mode**|**1**|Esegue la connessione al server di pubblicazione utilizzando l'autenticazione di Windows. *Non è possibile modificare questo valore per un non* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *server di pubblicazione.*|  
 ||**0**|Esegue la connessione al server di pubblicazione utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Non è possibile modificare questo valore per un non* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *server di pubblicazione.*|  
 |**working_directory**||Directory di lavoro utilizzata per archiviare i file dei dati e di schema per la pubblicazione.|  
 |NULL (predefinito)||Verranno stampate tutte le opzioni di *Proprietà* disponibili.| 
-|**storage_connection_string**| Chiave di accesso | Chiave di accesso per la directory di lavoro quando il database viene Istanza gestita di database SQL di Azure. 
+|**storage_connection_string**| Chiave di accesso | Chiave di accesso per la directory di lavoro quando il database è Istanza gestita di Azure SQL. 
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -76,10 +76,10 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_changedistpublisher**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzare e modificare le proprietà del server di distribuzione e dell'editore](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
- [sp_helpdistpublisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
+ [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

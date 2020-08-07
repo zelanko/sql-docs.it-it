@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 7fb6740681c08cb915755b3362352f139e078c4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da3e0d05abf24bdd7100769ecfbb597e2953a9d5
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103188"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822560"
 ---
-# <a name="connecting-to-azure-sql-db-mysqltosql"></a>Connessione al database SQL di Azure (MySQLToSQL)
+# <a name="connecting-to-azure-sql-database-mysqltosql"></a>Connessione al database SQL di Azure (MySQLToSQL)
 Per eseguire la migrazione dei database MySQL in SQL Azure, è necessario connettersi all'istanza di destinazione di SQL Azure. Quando si esegue la connessione, SSMA ottiene i metadati relativi a tutti i database nell'istanza di SQL Azure e Visualizza i metadati del database in Esplora metadati SQL Azure. SSMA archivia le informazioni dell'istanza di SQL Azure si è connessi a, ma non archivia le password.  
   
 La connessione a SQL Azure rimane attiva fino a quando non si chiude il progetto. Quando si riapre il progetto, è necessario riconnettersi a SQL Azure se si desidera una connessione attiva al server. È possibile lavorare offline fino a quando non si caricano oggetti di database in SQL Azure e si migrano i dati.  
@@ -29,7 +29,7 @@ I metadati relativi all'istanza di SQL Azure non vengono sincronizzati automatic
 ## <a name="required-sql-azure-permissions"></a>Autorizzazioni SQL Azure richieste  
 L'account utilizzato per connettersi a SQL Azure richiede autorizzazioni diverse a seconda delle azioni eseguite dall'account:  
   
--   Per convertire gli oggetti MySQL [!INCLUDE[tsql](../../includes/tsql-md.md)] in sintassi, per aggiornare i metadati da SQL Azure o per salvare la sintassi convertita in script, l'account deve disporre dell'autorizzazione per accedere all'istanza di SQL Azure.  
+-   Per convertire gli oggetti MySQL in [!INCLUDE[tsql](../../includes/tsql-md.md)] sintassi, per aggiornare i metadati da SQL Azure o per salvare la sintassi convertita in script, l'account deve disporre dell'autorizzazione per accedere all'istanza di SQL Azure.  
   
 -   Per caricare gli oggetti di database in SQL Azure, il requisito di autorizzazione minimo è l'appartenenza al ruolo del database **db_owner** nel database di destinazione.  
   

@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: 06fd04921d217bf81861c76a5b09769039be5ee7
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 1175a66a0d87296204825542dfb4021b568c30e6
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477373"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863822"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Novità di SSMA per Access (AccessToSQL)
 
@@ -114,9 +114,9 @@ La versione v 8.1 di SSMA per l'accesso è stata migliorata con correzioni mirat
 
 La versione v 8.0 di SSMA per l'accesso è stata migliorata con correzioni mirate progettate per migliorare la qualità e la metrica di conversione. Questa versione offre anche le seguenti nuove funzionalità:
 
-* Supporto per **istanza gestita di database SQL di Azure** come destinazione. È ora possibile creare nuovi progetti destinati a Istanza gestita di database SQL di Azure:
+* Supporto per **istanza gestita SQL di Azure** come destinazione. È ora possibile creare nuovi progetti destinati a Istanza gestita SQL di Azure:
 
-  ![Progetto di database SQL MI](../media/ssma-newproject-sqldbmi.png)
+  ![Progetto SQL MI](../media/ssma-newproject-sqldbmi.png)
 
 * **Avviso di correzione**post-conversione. Altre informazioni sono disponibili [qui](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733).
 
@@ -231,7 +231,7 @@ La versione di manutenzione di SSMA per l'accesso di gennaio 2016 contiene le mo
 
 La versione di SSMA per l'accesso del 2014 luglio contiene le modifiche seguenti:
 
-* Conversione del codice del database SQL di Azure migliorata.
+* Migliore conversione del codice del database SQL di Azure.
 * Spostamento della funzionalità Pack di estensione nello schema per supportare il database SQL di Azure.
 * Miglioramenti delle prestazioni testati per i database con oltre 10.000 oggetti.
 * Aggiunta di miglioramenti dell'interfaccia utente per la gestione di un numero elevato di oggetti.

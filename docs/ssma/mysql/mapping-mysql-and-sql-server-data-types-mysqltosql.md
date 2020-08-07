@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 99e86d99a4214b1ccdf317e75218fe22bb2c7af7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0b29deae2e0bdba81318130df46e30683717c86
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908996"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823466"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Mapping dei tipi di dati MySQL e SQL Server (MySQLToSQL)
-I tipi di database MySQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] differiscono da o SQL Azure tipi di database. Quando si convertono oggetti di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MySQL in oggetti o SQL Azure, è necessario specificare come eseguire il mapping dei tipi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di dati da MySQL a o SQL Azure. È possibile accettare i mapping dei tipi di dati predefiniti oppure personalizzare i mapping come illustrato nelle procedure seguenti.  
+I tipi di database MySQL differiscono da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure tipi di database. Quando si convertono oggetti di database MySQL in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti o SQL Azure, è necessario specificare come eseguire il mapping dei tipi di dati da MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. È possibile accettare i mapping dei tipi di dati predefiniti oppure personalizzare i mapping come illustrato nelle procedure seguenti.  
   
 ## <a name="default-mappings"></a>Mapping predefiniti  
 SSMA dispone di un set predefinito di mapping dei tipi di dati. Per l'elenco dei mapping predefiniti, vedere [Impostazioni progetto &#40;mapping dei tipi&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
@@ -81,6 +81,6 @@ Quando si visualizza la scheda **mapping dei tipi** in SSMA, lo sfondo è codifi
 ## <a name="next-step"></a>passaggio successivo  
 Il passaggio successivo del processo di migrazione consiste nel [creare un report di valutazione](assessing-mysql-databases-for-conversion-mysqltosql.md) o [convertire gli oggetti di database MySQL in SQL Server o SQL Azure sintassi](converting-mysql-databases-mysqltosql.md). Se si crea un report, gli oggetti MySQL vengono convertiti automaticamente durante la valutazione.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
 [Migrazione di database MySQL a SQL Server-database SQL di Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

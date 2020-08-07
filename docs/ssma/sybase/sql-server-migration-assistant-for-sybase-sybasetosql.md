@@ -11,12 +11,12 @@ ms.assetid: 59e63eac-8a7e-4d54-be1c-0633a9bf510d
 author: Jtoland
 ms.author: Jtoland
 manager: murato
-ms.openlocfilehash: 269fa36b578b7b13d12d5b6fd9645e84c7c39244
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: c0f30c7ae5ab048c05431fa88f9122ca53e0a0ce
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293988"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864738"
 ---
 # <a name="sql-server-migration-assistant-for-sybase-sybasetosql"></a>SQL Server Migration Assistant per Sybase (SybaseToSQL)
 

@@ -14,36 +14,36 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 7fa2b8361f9a09dbab28689e31d77a3152ff83dd
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: f2df572e7e4be92eb91662ffc47448b7becf3a7e
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885829"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864908"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificare il database SQL di Azure o lo SKU Istanza gestita appropriato per il database locale
 
 La migrazione dei database nel cloud può essere complessa, soprattutto quando si cerca di selezionare la migliore destinazione di database di Azure e lo SKU per il database. Il nostro obiettivo con il database Migration Assistant (DMA) è aiutare a rispondere a queste domande e rendere più semplice l'esperienza di migrazione del database fornendo queste raccomandazioni per gli SKU in un output intuitivo.
 
-Questo articolo è incentrato sulla funzionalità di raccomandazioni dello SKU del database SQL di Azure DMA. Il database SQL di Azure offre diverse opzioni di distribuzione, tra cui:
+Questo articolo è incentrato sulla funzionalità di raccomandazioni dello SKU del database SQL di Azure DMA. Il database SQL di Azure e Azure SQL Istanza gestita hanno diverse opzioni di distribuzione, tra cui:
 
 - Database singolo
 - Pool elastici
 - Istanza gestita
 
-La funzionalità relativa alle raccomandazioni per gli SKU consente di identificare il numero minimo consigliato di database SQL di Azure o lo SKU dell'istanza gestita in base ai contatori delle prestazioni raccolti dai computer che ospitano i database. La funzionalità fornisce consigli relativi al piano tariffario, al livello di calcolo e alle dimensioni massime dei dati, oltre ai costi stimati al mese. Offre inoltre la possibilità di eseguire il provisioning bulk di database singoli e istanze gestite in Azure per tutti i database consigliati.
+La funzionalità consigli SKU consente di identificare sia il database singolo del database SQL di Azure, sia lo SKU di SQL Istanza gestita di Azure in base ai contatori delle prestazioni raccolti dai computer che ospitano i database. La funzionalità fornisce consigli relativi al piano tariffario, al livello di calcolo e alle dimensioni massime dei dati, oltre ai costi stimati al mese. Offre inoltre la possibilità di eseguire il provisioning bulk di database singoli e istanze gestite per tutti i database consigliati.
 
 > [!NOTE]
 > Questa funzionalità è attualmente disponibile solo tramite l'interfaccia della riga di comando (CLI).
 
-Di seguito sono riportate le istruzioni che consentono di determinare le raccomandazioni dello SKU del database SQL di Azure e di effettuare il provisioning di singoli database o istanze gestite in Azure tramite DMA.
+Di seguito sono riportate le istruzioni che consentono di determinare le raccomandazioni dello SKU e di effettuare il provisioning di singoli database o istanze gestite in Azure tramite DMA.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 - Scaricare e installare la versione più recente di [DMA](https://aka.ms/get-dma). Se si dispone già di una versione precedente dello strumento, aprirla e verrà richiesto di aggiornare DMA.
 - Verificare che il computer disponga di [PowerShell versione 5,1](https://www.microsoft.com/download/details.aspx?id=54616) o successiva, che è necessario per eseguire tutti gli script. Per informazioni su come scoprire quale versione di PowerShell è installata nel computer, vedere l'articolo [scaricare e installare Windows powershell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
 - Verificare che nel computer sia installato il modulo Azure PowerShell. Per ulteriori informazioni, vedere l'articolo [installare il modulo Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0).
-- Verificare che il file di PowerShell **SkuRecommendationDataCollectionScript. ps1**, necessario per raccogliere i contatori delle prestazioni, sia installato nella cartella DMA.
+- Verificare che il file di PowerShell **SkuRecommendationDataCollectionScript.ps1**, che è necessario per raccogliere i contatori delle prestazioni, sia installato nella cartella DMA.
 - Verificare che il computer in cui si eseguirà questo processo disponga delle autorizzazioni di amministratore per il computer in cui sono ospitati i database di.
 
 ## <a name="collect-performance-counters"></a>Raccogliere i contatori delle prestazioni
@@ -52,7 +52,7 @@ Il primo passaggio del processo consiste nel raccogliere i contatori delle prest
 
 Non è necessario eseguire questa attività per ogni database singolarmente. I contatori delle prestazioni raccolti da un computer possono essere utilizzati per consigliare lo SKU per tutti i database ospitati nel computer.
 
-1. Nella cartella DMA individuare il file di PowerShell SkuRecommendationDataCollectionScript. ps1. Questo file è necessario per raccogliere i contatori delle prestazioni.
+1. Nella cartella DMA individuare il file di PowerShell SkuRecommendationDataCollectionScript.ps1. Questo file è necessario per raccogliere i contatori delle prestazioni.
 
     ![File di PowerShell visualizzato nella cartella DMA](../dma/media/dma-sku-recommend-data-collection-file.png)
 
@@ -80,9 +80,9 @@ Usare il file di output dei contatori delle prestazioni creato come input per qu
 
 Per l'opzione di database singolo, DMA fornirà consigli per il piano tariffario del database SQL di Azure, il livello di calcolo e le dimensioni massime dei dati per ogni database nel computer. Se si dispone di più database nel computer, è anche possibile specificare i database per i quali si desiderano le raccomandazioni. Il DMA fornirà inoltre il costo mensile stimato per ogni database.
 
-Per istanza gestita, le raccomandazioni supportano uno scenario Lift-and-Shift. Di conseguenza, DMA fornirà le raccomandazioni per il piano tariffario dell'istanza gestita di database SQL di Azure, il livello di calcolo e le dimensioni massime dei dati per il set di database nel computer. Anche in questo caso, se si dispone di più database nel computer, è anche possibile specificare i database per i quali si desiderano le raccomandazioni. DMA fornirà inoltre il costo mensile stimato per l'istanza gestita.
+Per istanza gestita, le raccomandazioni supportano uno scenario Lift-and-Shift. Di conseguenza, DMA fornirà consigli per il piano tariffario di SQL Istanza gestita di Azure, il livello di calcolo e le dimensioni massime dei dati per il set di database nel computer. Anche in questo caso, se si dispone di più database nel computer, è anche possibile specificare i database per i quali si desiderano le raccomandazioni. DMA fornirà inoltre il costo mensile stimato per l'istanza gestita.
 
-Per usare l'interfaccia della riga di comando DMA per ottenere le raccomandazioni dello SKU, al prompt dei comandi eseguire dmacmd. exe con gli argomenti seguenti:
+Per usare l'interfaccia della riga di comando DMA per ottenere le raccomandazioni dello SKU, al prompt dei comandi eseguire dmacmd.exe con gli argomenti seguenti:
 
 - **/Action = SkuRecommendation**: immettere questo argomento per eseguire valutazioni SKU.
 - **/SkuRecommendationInputDataFilePath**: percorso del file del contatore raccolto nella sezione precedente.
@@ -102,7 +102,7 @@ Inoltre, selezionare uno degli argomenti seguenti:
     - **/AzureAuthenticationTenantId**: tenant di autenticazione.
     - **/AzureAuthenticationClientId**: ID client dell'app AAD usata per l'autenticazione.
     - Una delle opzioni di autenticazione seguenti:
-      - Interactive (Interattivo)
+      - Interattività
         - **AzureAuthenticationInteractiveAuthentication**: impostare su true per una finestra popup di autenticazione.
       - Basato su certificati
         - **AzureAuthenticationCertificateStoreLocation**: impostare sul percorso dell'archivio certificati, ad esempio "CurrentUser".
@@ -176,15 +176,15 @@ Per indicazioni sulle istanze gestite, il file di output TSV sarà simile al seg
 Segue una descrizione di ogni colonna nel file di output.
 
 - **DatabaseName** : nome del database.
-- **MetricType** : livello di istanza gestito/database singolo del database SQL di Azure consigliato.
-- **MetricValue** : SKU di database singolo/istanza gestita SQL di Azure consigliata.
+- **MetricType** : livello di prestazioni consigliato.
+- **MetricValue** -SKU consigliato.
 - **PricePerMonth** : Prezzo stimato al mese per lo SKU corrispondente.
 - **RegionName** : nome dell'area per lo SKU corrispondente. 
 - **IsTierRecommended** -viene apportata una raccomandazione per lo SKU minimo per ogni livello. Viene quindi applicata l'euristica per determinare il livello corretto per il database. Indica il livello consigliato per il database. 
 - **ExclusionReasons** : questo valore è vuoto se si consiglia un livello. Per ogni livello non consigliato, vengono forniti i motivi per cui non è stata selezionata.
 - **AppliedRules** : breve notazione delle regole applicate.
 
-Il livello consigliato finale (ad esempio, **MetricType**) e il valore (ad esempio, **MetricValue**), trovato dove la colonna **IsTierRecommended** è true, riflette lo SKU minimo necessario per l'esecuzione delle query in Azure con una percentuale di successo simile ai database locali. Per l'istanza gestita, DMA supporta attualmente le raccomandazioni per gli SKU 8vcore più comunemente usati per 40vcore. Se, ad esempio, lo SKU minimo consigliato è S4 per il livello standard, la scelta di S3 o di seguito provocherà il timeout o l'esecuzione delle query.
+Il livello consigliato finale (ad esempio, **MetricType**) e il valore (ad esempio, **MetricValue**), trovato dove la colonna **IsTierRecommended** è true, riflette lo SKU minimo necessario per l'esecuzione delle query in Azure con una percentuale di successo simile ai database locali. Per il Istanza gestita SQL di Azure, DMA supporta attualmente le raccomandazioni per gli SKU 8vcore più comunemente usati per 40vcore. Se, ad esempio, lo SKU minimo consigliato è S4 per il livello standard, la scelta di S3 o di seguito provocherà il timeout o l'esecuzione delle query.
 
 Il file HTML contiene queste informazioni in formato grafico. Fornisce un mezzo intuitivo per visualizzare la raccomandazione finale e il provisioning della parte successiva del processo. Altre informazioni sull'output HTML sono riportate nella sezione seguente.
 
@@ -198,7 +198,7 @@ Per inserire le informazioni di provisioning e apportare modifiche alle raccoman
 
 **Per consigli su database singolo**
 
-![Schermata delle raccomandazioni dello SKU del database SQL di Azure](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
+![Schermata raccomandazioni SKU del database SQL di Azure](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
 
 1. Aprire il file HTML e immettere le informazioni seguenti:
     - **ID sottoscrizione** : l'ID sottoscrizione della sottoscrizione di Azure a cui si vuole eseguire il provisioning dei database.
@@ -214,7 +214,7 @@ Per inserire le informazioni di provisioning e apportare modifiche alle raccoman
 
     Questo processo deve creare tutti i database selezionati nella pagina HTML.
 
-**Per indicazioni sulle istanze gestite**
+**Per le raccomandazioni di Azure SQL Istanza gestita**
 
 ![Schermata delle raccomandazioni dello SKU di Azure SQL MI](../dma/media/dma-sku-recommend-mi-recommendations1.png)
 

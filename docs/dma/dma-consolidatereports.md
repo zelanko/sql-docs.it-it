@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fd6563881127b7a5c1cf134711a52fdedde629c4
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: dd3b2d26b79cf612c18a201a2b077323b1b68420
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435180"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823243"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Valutare un'azienda e consolidare i report di valutazione con DMA
 
@@ -123,7 +123,7 @@ Dopo aver caricato i moduli di PowerShell nella directory Modules e aver creato 
 
 I parametri associati alla funzione dmaDataCollector sono descritti nella tabella seguente.
 
-|Parametro  |Descrizione |
+|Parametro  |Description |
 |---------|---------|
 |**getServerListFrom** | L'inventario. I valori possibili sono **SqlServer** e **CSV**.<br/>Per altre informazioni, vedere [creare un inventario di SQL Server](#create-inventory). |
 |**csvPath** | Percorso del file di inventario CSV.  Utilizzato solo quando **getServerListFrom** è impostato su **CSV**. |
@@ -147,7 +147,7 @@ Al termine della valutazione, è ora possibile importare i dati in SQL Server pe
 
 I parametri associati alla funzione dmaProcessor sono descritti nella tabella seguente.
 
-|Parametro  |Descrizione |
+|Parametro  |Description |
 |---------|---------|
 |**processTo** | Percorso in cui verrà elaborato il file JSON. I valori possibili sono **SqlServer** e **AzureSQLDatabase**. |
 |**Nomeserver** | Istanza SQL Server in cui verranno elaborati i dati.  Se si specifica **AzureSQLDatabase** per il parametro **processTo** , includere solo il nome del SQL Server (non includere. database.Windows.NET). Quando la destinazione è il database SQL di Azure, verranno richiesti due account di accesso. il primo è quello delle credenziali del tenant di Azure, mentre il secondo è l'account di accesso amministratore per il SQL Server di Azure. |
@@ -197,7 +197,7 @@ Sebbene non sia obbligatorio, per ottenere il massimo valore dai report, è cons
 
 Per lavorare con i report DMA, usare i segnalibri e i filtri dei dati per filtrare in base a:
 
-- Tipi di valutazione (database SQL di Azure, Azure SQL MI, SQL locale) 
+- Tipi di valutazione (database SQL di Azure, Istanza gestita SQL di Azure, SQL Server) 
 - Nome dell'istanza
 - Nome database
 - Nome team
@@ -213,7 +213,7 @@ Selezionando il segnalibro filters viene abilitato il pannello seguente:
 È possibile utilizzare i segnalibri per cambiare il contesto di Reporting tra:
 
 - Valutazioni cloud del database SQL di Azure
-- Valutazioni cloud di Azure SQL MI
+- Valutazioni cloud di Azure SQL Istanza gestita
 - Valutazioni locali
 
 ![Segnalibri visualizzazioni report DMA](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)

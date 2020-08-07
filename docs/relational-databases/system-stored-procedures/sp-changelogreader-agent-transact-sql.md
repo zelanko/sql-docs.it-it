@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c776d68cb997f5f360e7b79180a8dfaea86fd6e4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a46432317ebf320af3e3860c1c1973fc04119b5
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771494"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864968"
 ---
 # <a name="sp_changelogreader_agent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +43,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_login = ] 'job_login'`Account di accesso per l'account con cui viene eseguito l'agente. *job_login* è di **tipo nvarchar (257)** e il valore predefinito è null. In Istanza gestita di database SQL di Azure usare un account di SQL Server. *Non è possibile modificare questo valore per un non* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *server di pubblicazione.*  
+`[ @job_login = ] 'job_login'`Account di accesso per l'account con cui viene eseguito l'agente. *job_login* è di **tipo nvarchar (257)** e il valore predefinito è null. In Istanza gestita SQL di Azure usare un account SQL Server. *Non è possibile modificare questo valore per un non* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *server di pubblicazione.*  
   
 `[ @job_password = ] 'job_password'`Password per l'account con cui viene eseguito l'agente. *job_password* è di **tipo sysname**e il valore predefinito è null.  
   

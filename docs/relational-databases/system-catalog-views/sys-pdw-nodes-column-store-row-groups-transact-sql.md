@@ -1,7 +1,7 @@
 ---
 title: sys. pdw_nodes_column_store_row_groups (Transact-SQL)
 ms.custom: seo-dt-2019
-ms.date: 03/03/2017
+ms.date: 08/05/2020
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -12,12 +12,12 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e65d2212dea9f8d2bbe9aad1854a2b8cd904dd3
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 88dd890b9d3f691fa671916b34daf8b2258aa2bc
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197350"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823906"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "86197350"
 ## <a name="examples-sssdw-and-sspdw"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Nell'esempio seguente viene unito la tabella **sys. pdw_nodes_column_store_row_groups** ad altre tabelle di sistema per restituire informazioni su tabelle specifiche. La colonna `PercentFull` calcolata è una stima dell'efficienza del gruppo di righe. Per trovare informazioni su una singola tabella, rimuovere i trattini dei commenti davanti alla clausola WHERE e specificare un nome di tabella.  
   
-```  
+```sql
 SELECT IndexMap.object_id,   
   object_name(IndexMap.object_id) AS LogicalTableName,   
   i.name AS LogicalIndexName, IndexMap.index_id, NI.type_desc,   
@@ -75,14 +75,15 @@ JOIN sys.pdw_nodes_indexes AS NI
 JOIN sys.pdw_nodes_column_store_row_groups AS CSRowGroups  
     ON CSRowGroups.object_id = NI.object_id   
     AND CSRowGroups.pdw_node_id = NI.pdw_node_id  
-AND CSRowGroups.index_id = NI.index_id      
+    AND CSRowGroups.index_id = NI.index_id      
+WHERE total_rows > 0
 --WHERE t.name = '<table_name>'   
 ORDER BY object_name(i.object_id), i.name, IndexMap.physical_name, pdw_node_id;  
 ```  
 
 Nell' [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] esempio seguente vengono conteggiate le righe per partizione per gli archivi di colonne del cluster, nonché il numero di righe in gruppi di righe aperti, chiusi o compressi:  
 
-```
+```sql
 SELECT
     s.name AS [Schema Name]
     ,t.name AS [Table Name]
@@ -92,14 +93,16 @@ SELECT
     ,SUM(CASE WHEN rg.State = 2 THEN rg.Total_Rows ELSE 0 END) AS [Rows in Closed Row Groups]
     ,SUM(CASE WHEN rg.State = 3 THEN rg.Total_Rows ELSE 0 END) AS [Rows in COMPRESSED Row Groups]
 FROM sys.pdw_nodes_column_store_row_groups rg
-JOIN sys.pdw_nodes_tables pt
-ON rg.object_id = pt.object_id AND rg.pdw_node_id = pt.pdw_node_id AND pt.distribution_id = rg.distribution_id
-JOIN sys.pdw_table_mappings tm
-ON pt.name = tm.physical_name
-INNER JOIN sys.tables t
-ON tm.object_id = t.object_id
-INNER JOIN sys.schemas s
-ON t.schema_id = s.schema_id
+  JOIN sys.pdw_nodes_tables pt
+    ON rg.object_id = pt.object_id
+    AND rg.pdw_node_id = pt.pdw_node_id
+    AND pt.distribution_id = rg.distribution_id
+  JOIN sys.pdw_table_mappings tm
+    ON pt.name = tm.physical_name
+  INNER JOIN sys.tables t
+    ON tm.object_id = t.object_id
+  INNER JOIN sys.schemas s
+    ON t.schema_id = s.schema_id
 GROUP BY s.name, t.name, rg.partition_number
 ORDER BY 1, 2
 ```

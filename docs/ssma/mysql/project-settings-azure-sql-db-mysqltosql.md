@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 8c06420a-533b-4de0-948d-a0c6b368c544
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: e4cf080d7a3bcb2d121a58a57be9f3fd41a4c18a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4125f73ec34418261d0308221c448cae1fb06298
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908823"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862312"
 ---
-# <a name="project-settings-azure-sql-db-mysqltosql"></a>Impostazioni del progetto (database SQL di Azure) (MySQLToSQL)
+# <a name="project-settings-azure-sql-database-mysqltosql"></a>Impostazioni progetto (database SQL di Azure) (MySQLToSQL)
 Le impostazioni del progetto SQL Azure consentono di configurare il suffisso del database SQL Azure da aggiungere nella finestra di dialogo di connessione e di consentire anche l'implementazione del meccanismo heartbeat in SQL Azure connessione.  
   
 Il riquadro SQL Azure è disponibile nelle finestre di dialogo **Impostazioni progetto** e **Impostazioni progetto predefinite** .  

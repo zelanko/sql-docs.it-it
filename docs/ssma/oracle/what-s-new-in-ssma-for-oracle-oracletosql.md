@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: 1601ae2430ced8a30a04d8ab52d97dbb9bbb095a
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: c456c383625f43a5fef7f675edcd86ede6ca2515
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477453"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862402"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Novità di SSMA per Oracle (OracleToSQL)
 
@@ -159,16 +159,16 @@ La versione v 8.1 di SSMA per Oracle è stata migliorata con correzioni mirate p
 
 La versione v 8.0 di SSMA per Oracle è stata migliorata con correzioni mirate progettate per migliorare la qualità e la metrica di conversione. Questa versione offre anche le seguenti nuove funzionalità:
 
-* Supporto per **istanza gestita di database SQL di Azure** come destinazione. È ora possibile creare nuovi progetti destinati a Istanza gestita di database SQL di Azure:
+* Supporto per **istanza gestita SQL di Azure** come destinazione. È ora possibile creare nuovi progetti destinati a Istanza gestita SQL di Azure:
 
-  ![Progetto di database SQL MI](../media/ssma-newproject-sqldbmi.png)
+  ![Progetto SQL MI](../media/ssma-newproject-sqldbmi.png)
 
   > [!NOTE]
-  > SSMA per Oracle Extension Pack è stato aggiornato anche per consentire installazioni remote nei Istanza gestita di database SQL di Azure:
+  > SSMA per Oracle Extension Pack è stato aggiornato anche per consentire installazioni remote in Azure SQL Istanza gestita:
   >
   > ![SSMA per Oracle Extension Pack](../media/ssma-oracle-ext-pack.png)
 
-  Alcune funzionalità, tra cui il tester e la migrazione dei dati sul lato server, non sono supportate quando la destinazione è Istanza gestita di database SQL di Azure. Per altre informazioni, leggere [qui](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/).
+  Alcune funzionalità, tra cui il tester e la migrazione dei dati sul lato server, non sono supportate quando la destinazione è la Istanza gestita di Azure SQL. Per altre informazioni, leggere [qui](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/).
 
 * **Avviso di correzione**post-conversione. Altre informazioni sono disponibili [qui](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 

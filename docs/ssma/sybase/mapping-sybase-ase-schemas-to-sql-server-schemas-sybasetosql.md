@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 5c39e81f8faffed606e6ca94315c47d383174c91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 212b5719c1ef8bac3e44ec33b786a032acef1d9f
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028876"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865329"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Mapping degli schemi di Sybase ASE per gli schemi di SQL Server (SybaseToSQL)
-In Sybase Adaptive Server Enterprise (ASE) ogni database dispone di uno o più schemi. Per impostazione predefinita, SSMA esegue la migrazione di tutti gli oggetti all'interno di un database e di uno [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schema nello stesso database e nello stesso schema in o SQL Azure. Tuttavia, è possibile personalizzare il mapping tra l'ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del servizio app e o SQL Azure database e schemi.  
+In Sybase Adaptive Server Enterprise (ASE) ogni database dispone di uno o più schemi. Per impostazione predefinita, SSMA esegue la migrazione di tutti gli oggetti all'interno di un database e di uno schema nello stesso database e nello stesso schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Tuttavia, è possibile personalizzare il mapping tra l'ambiente del servizio app e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure database e schemi.  
   
 ## <a name="ase-and-sql-server-or-sql-azure-schemas"></a>Schemi ASE e SQL Server o SQL Azure  
-Ambiente del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio app e o SQL Azure specificano i database e i relativi schemi usando la notazione in due parti come *database. Schema*. Ad esempio, in un database **demo** dell'ambiente del servizio app potrebbe essere presente uno schema **dbo** . Il database e la coppia di schemi vengono specificati come **demo. dbo**. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure ha lo stesso database e lo stesso schema, la coppia viene specificata anche come **demo. dbo**.  
+Ambiente del servizio app e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure specificano i database e i relativi schemi usando la notazione in due parti come *database. Schema*. Ad esempio, in un database **demo** dell'ambiente del servizio app potrebbe essere presente uno schema **dbo** . Il database e la coppia di schemi vengono specificati come **demo. dbo**. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure ha lo stesso database e lo stesso schema, la coppia viene specificata anche come **demo. dbo**.  
   
 ## <a name="modifying-the-target-database-and-schema"></a>Modifica del database di destinazione e dello schema  
-In SSMA è possibile eseguire il mapping di uno schema dell'ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del servizio app a qualsiasi schema disponibile o SQL Azure.  
+In SSMA è possibile eseguire il mapping di uno schema dell'ambiente del servizio app a qualsiasi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schema disponibile o SQL Azure.  
   
 **Per modificare il database e lo schema**  
   
@@ -35,7 +35,7 @@ In SSMA è possibile eseguire il mapping di uno schema dell'ambiente [!INCLUDE[s
   
 2.  Nel riquadro di destra fare clic sulla scheda **mapping dello schema** .  
   
-    Viene visualizzato un elenco di tutti i database dell'ambiente del servizio app con i rispettivi schemi, seguiti da un valore di destinazione. Questa destinazione è indicata in una notazione in due parti (*database. Schema*) in o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure in cui verrà eseguita la migrazione degli oggetti e dei dati.  
+    Viene visualizzato un elenco di tutti i database dell'ambiente del servizio app con i rispettivi schemi, seguiti da un valore di destinazione. Questa destinazione è indicata in una notazione in due parti (*database. Schema*) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure in cui verrà eseguita la migrazione degli oggetti e dei dati.  
   
 3.  Selezionare la riga che contiene il mapping che si desidera modificare, quindi fare clic su **modifica**.  
   
@@ -47,14 +47,14 @@ In SSMA è possibile eseguire il mapping di uno schema dell'ambiente [!INCLUDE[s
   
 -   Mapping a SQL Server  
   
-È possibile eseguire il mapping del database di origine a qualsiasi database di destinazione. Per impostazione predefinita, il database di origine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene mappato al database di destinazione con il quale è stata effettuata la connessione tramite SSMA. Se il database di destinazione di cui è stato eseguito il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mapping non è presente in, verrà visualizzato un messaggio che indica che **il database e/o lo schema non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esiste nei metadati di destinazione. Verrà creata durante la sincronizzazione. Continuare? "** Fare clic su Sì. Analogamente, è possibile eseguire il mapping dello schema a uno schema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non esistente nel database di destinazione che verrà creato durante la sincronizzazione.  
+È possibile eseguire il mapping del database di origine a qualsiasi database di destinazione. Per impostazione predefinita, il database di origine viene mappato al database di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con il quale è stata effettuata la connessione tramite SSMA. Se il database di destinazione di cui è stato eseguito il mapping non è presente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , verrà visualizzato un messaggio che indica che **il database e/o lo schema non esiste nei metadati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Verrà creata durante la sincronizzazione. Continuare? "** Fare clic su Sì. Analogamente, è possibile eseguire il mapping dello schema a uno schema non esistente nel database di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che verrà creato durante la sincronizzazione.  
   
 -   Mapping a SQL Azure  
   
 È possibile eseguire il mapping del database di origine alla destinazione connessa SQL Azure database o a qualsiasi schema nella destinazione connessa SQL Azure database. Se si esegue il mapping dello schema di origine a qualsiasi schema non esistente nel database di destinazione connesso, verrà visualizzato un messaggio in cui viene visualizzato il messaggio **"lo schema non esiste nei metadati di destinazione. Verrà creata durante la sincronizzazione. Continuare? "** Fare clic su Sì.  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>Ripristino del database e dello schema predefiniti  
-Se si Personalizza il mapping tra uno schema dell'ambiente del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio app e uno schema o SQL Azure, è possibile ripristinare i valori predefiniti del mapping.  
+Se si Personalizza il mapping tra uno schema dell'ambiente del servizio app e uno [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schema o SQL Azure, è possibile ripristinare i valori predefiniti del mapping.  
   
 **Per ripristinare il database e lo schema predefiniti**  
   

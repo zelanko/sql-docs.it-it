@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 777d0b497bae5e52c49fb95e1e7ff3e7387ea676
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: d636d13512993d64a9abd88e61412f76790c7590
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834772"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823754"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installazione e configurazione di Master Data Services
 
@@ -130,16 +130,16 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
   
 3.  Nella pagina **server database** specificare l'istanza di SQL Server. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]aggiunge il supporto per SQL Server Istanza gestita. Impostare il valore di **SQL Server istanza** sull'host di un'istanza gestita di database SQL di Azure. Ad esempio, `xxxxxx.xxxxxx.database.windows.net`
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]aggiunge il supporto per SQL Server Istanza gestita. Impostare il valore di **SQL Server istanza** sull'host dell'istanza gestita. Ad esempio: `xxxxxx.xxxxxx.database.windows.net`.
 
 4. Selezionare il **tipo di autenticazione** e quindi fare clic su **Test connessione** per confermare che è possibile connettersi al database usando le credenziali per il tipo di autenticazione selezionato. Fare clic su **Avanti**.
 
-    >Per [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] , per connettersi all'istanza gestita di database SQL di Azure, usare uno dei seguenti tipi di autenticazione:
+    >Per [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] , per connettersi all'istanza gestita, usare uno dei seguenti tipi di autenticazione:
     >
     >- Azure Active Directory autenticazione integrata: **utente corrente-Active Directory integrato**
     >- Autenticazione SQL Server: **SQL Server account**.
     >
-    >Nell'istanza gestita di database SQL di Azure, l'utente deve essere un membro del `sysadmin` ruolo predefinito del server.
+    >In SQL Istanza gestita, l'utente deve essere un membro del `sysadmin` ruolo predefinito del server.
 
     > [!NOTE]  
     >  Quando si seleziona la **sicurezza integrata dall'utente corrente** come tipo di autenticazione, la casella **nome utente** è di sola lettura e visualizza il nome dell'account utente di Windows che ha eseguito l'accesso al computer. Se si esegue [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] in una macchina virtuale (VM) Azure, nella casella **Nome utente** viene visualizzato il nome della macchina virtuale e il nome utente per l'account amministratore locale nella macchina virtuale. 
@@ -204,7 +204,7 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. Fare clic su **Apply**. Viene visualizzata la finestra di messaggio **Configurazione completata**. Fare clic su **OK** nella finestra di messaggio per avviare l'applicazione Web. L'indirizzo del sito Web è https://*nome server* / *Web Application*/. 
+15. Fare clic su **Applica**. Viene visualizzata la finestra di messaggio **Configurazione completata**. Fare clic su **OK** nella finestra di messaggio per avviare l'applicazione Web. L'indirizzo del sito Web è https://*nome server* / *Web Application*/. 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 

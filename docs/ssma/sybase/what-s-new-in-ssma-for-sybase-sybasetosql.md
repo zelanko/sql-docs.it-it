@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: 53ae61f78bed3ee262844f5242f3499d8981501b
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 8391c9642bb7ee0849ea4627b42ac580c4d44d20
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477323"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864708"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Novità di SSMA per SAP ASE (SybaseToSQL)
 
@@ -114,9 +114,9 @@ La versione v 8.1 di SSMA per SAP ASE è stata migliorata con correzioni mirate 
 
 La versione v 8.0 di SSMA per SAP ASE è stata migliorata con correzioni mirate progettate per migliorare la qualità e le metriche di conversione. Inoltre, questa versione offre le seguenti nuove funzionalità:
 
-* Supporto per **istanza gestita di database SQL di Azure** come destinazione. È ora possibile creare nuovi progetti destinati a Istanza gestita di database SQL di Azure:
+* Supporto per **istanza gestita SQL di Azure** come destinazione. È ora possibile creare nuovi progetti destinati a Istanza gestita SQL di Azure:
 
-  ![Progetto di database SQL MI](../media/ssma-newproject-sqldbmi.png)
+  ![Progetto MI del database SQL](../media/ssma-newproject-sqldbmi.png)
 
 * **Avviso di correzione**post-conversione. Altre informazioni sono disponibili [qui](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
@@ -236,7 +236,7 @@ La versione di manutenzione di SSMA per Sybase di gennaio 2016 contiene le modif
 
 La versione luglio 2014 di SSMA per Sybase contiene le modifiche seguenti:
 
-* Conversione del codice del database SQL di Azure migliorata.
+* Migliore conversione del codice del database SQL di Azure.
 * Spostamento della funzionalità Pack di estensione nello schema per supportare il database SQL di Azure.
 * Miglioramenti apportati alle prestazioni testati per i database con oltre 10.000 oggetti.
 * Aggiunta di miglioramenti dell'interfaccia utente per la gestione di un numero elevato di oggetti.

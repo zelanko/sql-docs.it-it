@@ -1,6 +1,6 @@
 ---
 title: Ospitare un database in un'istanza gestita
-description: Questo articolo descrive come configurare un database Master Data Services (MDS) in un'istanza gestita.
+description: Informazioni su come creare e configurare un database di Master Data Services (MDS) e ospitarlo in un Istanza gestita SQL di Azure.
 ms.custom: ''
 ms.date: 07/01/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6c318a1fca182e60a5df7fb5d1569433f65d25d
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 616fa3791b0dbc154282f5273cd7fb4e1eb3c1f5
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812918"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87878946"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Ospitare un database MDS in un'istanza gestita
 
@@ -27,19 +27,19 @@ ms.locfileid: "85812918"
   
 ## <a name="preparation"></a>Preparazione
 
-Per preparare, è necessario creare e configurare un'istanza gestita di database SQL di Azure e configurare il computer dell'applicazione Web.
+Per preparare, è necessario creare e configurare un Istanza gestita SQL di Azure e configurare il computer dell'applicazione Web.
 
 ### <a name="create-and-configure-the-database"></a>Creare e configurare il database
 
-1. Creare un'istanza gestita di database SQL di Azure con una rete virtuale. Per informazioni dettagliate, vedere [Guida introduttiva: creare un'istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) .
+1. Creare un'istanza gestita con una rete virtuale. Per informazioni dettagliate, vedere [Guida introduttiva: creare un istanza gestita SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) .
 
 1. Configurare una connessione da punto a sito. Per istruzioni, vedere [configurare una connessione da punto a sito a una VNet usando l'autenticazione del certificato di Azure nativo: portale di Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) .
 
-1. Configurare Azure Active Directory autenticazione con istanza gestita di database SQL. Per informazioni dettagliate, vedere [configurare e gestire Azure Active Directory autenticazione con SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) .
+1. Configurare Azure Active Directory autenticazione con SQL Istanza gestita. Per informazioni dettagliate, vedere [configurare e gestire Azure Active Directory autenticazione con SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) .
 
 ### <a name="configure-web-application-machine"></a>Configurare il computer dell'applicazione Web
 
-1. Installare un certificato di connessione da punto a sito e una VPN per assicurarsi che il computer possa accedere all'istanza gestita di database SQL. Per istruzioni, vedere [configurare una connessione da punto a sito a una VNet usando l'autenticazione del certificato nativa di Azure: portale di Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) .
+1. Installare un certificato di connessione da punto a sito e una VPN per assicurarsi che il computer possa accedere all'istanza gestita. Per istruzioni, vedere [configurare una connessione da punto a sito a una VNet usando l'autenticazione del certificato nativa di Azure: portale di Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) .
 
 1. Installare i ruoli e le funzionalità seguenti:
    - Ruoli:
@@ -47,7 +47,7 @@ Per preparare, è necessario creare e configurare un'istanza gestita di database
      - Strumenti di gestione Web
      - Console di gestione IIS
      - Servizi Web
-     - Sviluppo applicazioni
+     - Sviluppo di applicazioni
      - Estendibilità .NET 3.5
      - Estendibilità .NET 4.5
      - ASP.NET 3.5
@@ -70,7 +70,7 @@ Per preparare, è necessario creare e configurare un'istanza gestita di database
        > [!NOTE]
        > Non installare la pubblicazione WebDAV
 
-   - Funzionalità:
+   - Caratteristiche:
      - .NET Framework 3.5 (inclusi .NET 2.0 e 3.0)
      - .NET Framework 4.5 Advanced Services
      - ASP.NET 4.5
@@ -203,7 +203,7 @@ MDS supporta inoltre l'autenticazione Active Directory password e l'autenticazio
 
 Installare l' **aggiornamento cumulativo di SQL Server 2019**. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]verranno aggiornate automaticamente.
 
-### <a name="upgrade-sql-server"></a>Aggiornare SQL Server
+### <a name="upgrade-sql-server"></a>Eseguire l'aggiornamento di SQL Server
 
 È possibile che venga ricevuto l'errore: `The client version is incompatible with the database version` dopo l'installazione di **SQL Server 2019 aggiornamento cumulativo**.
 ![MDS-SQLServer2019-config-MI-UpgradeDBPage](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbpage.png "MDS-SQLServer2019-config-MI_UpgradeDBPage")

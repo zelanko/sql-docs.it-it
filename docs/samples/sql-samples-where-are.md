@@ -1,6 +1,6 @@
 ---
 title: Esempi di Microsoft SQL | Microsoft Docs
-description: Documentazione per i database di esempio e collegamenti a esempi per i prodotti Microsoft SQL.
+description: Visualizzare informazioni sui database di esempio WideWorldImporters e AdventureWorks, esempi e modelli di Azure ed esempi di codice per i prodotti Microsoft SQL.
 ms.date: 04/04/2018
 ms.reviewer: ''
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3ea8f0ae2c998b02343ae3a7575325afe2ef6820
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f453fd2395d887a1c0c7c1b4eed755eb96a39294
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718589"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87898624"
 ---
 # <a name="sql-samples"></a>Esempi di SQL
 

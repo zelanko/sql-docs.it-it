@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 85143440cc92cdc427be673667e22be6957cbe50
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: ae88f4473414e83a2ffbddee5c47fa40c552115a
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565500"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823366"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Riprodurre una traccia in Database Experimentation Assistant
 
@@ -48,7 +48,7 @@ In primo luogo, è necessario eseguire una riproduzione della traccia sulla dest
     - **Percorso traccia riproduzione**: specificare il percorso in cui archiviare i file di traccia/XEvent associati alla riproduzione della traccia.
 
         > [!NOTE]
-        > Per un database SQL di Azure o un'istanza gestita di database SQL di Azure, è necessario specificare l'URI di firma di accesso condiviso dell'account di archiviazione BLOB di Azure.
+        > Per un database SQL di Azure o un Istanza gestita SQL di Azure, è necessario specificare l'URI di firma di accesso condiviso dell'account di archiviazione BLOB di Azure.
 
 3. Verificare che il database sia stato ripristinato selezionando la casella di controllo **Sì, ho ripristinato manualmente i database** .
 

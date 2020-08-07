@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: ae9210444311267569d5f240d40252d4fe024877
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 85923b0252eb24012c12e0c19937e076806b78bd
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139214"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823806"
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>Valutazione dei database MySQL per la conversione (MySQLToSQL)
-Prima di caricare oggetti ed eseguire la migrazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei dati a o SQL Azure, è necessario determinare la complessità della migrazione e il tempo necessario per la migrazione. SSMA è in grado di creare un report di valutazione che mostra la percentuale di oggetti che verranno convertiti correttamente. SSMA consente inoltre di visualizzare i problemi specifici che provocano errori di conversione.  
+Prima di caricare oggetti ed eseguire la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è necessario determinare la complessità della migrazione e il tempo necessario per la migrazione. SSMA è in grado di creare un report di valutazione che mostra la percentuale di oggetti che verranno convertiti correttamente. SSMA consente inoltre di visualizzare i problemi specifici che provocano errori di conversione.  
   
 ## <a name="creating-assessment-reports"></a>Creazione di report di valutazione  
-Quando crea il report di valutazione, SSMA converte gli oggetti di database MySQL selezionati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in o SQL Azure la sintassi, quindi Visualizza i risultati.  
+Quando crea il report di valutazione, SSMA converte gli oggetti di database MySQL selezionati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure la sintassi, quindi Visualizza i risultati.  
   
 **Per creare un report di valutazione**  
   
@@ -36,7 +36,7 @@ Quando crea il report di valutazione, SSMA converte gli oggetti di database MySQ
   
     SSMA indicherà lo stato di avanzamento nella barra di stato nella parte inferiore della finestra. Se il riquadro di output è visibile, i messaggi vengono visualizzati anche nel riquadro di output.  
   
-    Al termine della valutazione, verrà visualizzata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la finestra Migration Assistant per MySQL, report di valutazione.  
+    Al termine della valutazione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà visualizzata la finestra Migration Assistant per MySQL, report di valutazione.  
   
 ## <a name="using-assessment-reports"></a>Utilizzo dei report di valutazione  
 La finestra report di valutazione contiene tre riquadri:  

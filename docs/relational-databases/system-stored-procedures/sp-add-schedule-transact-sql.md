@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 88dafeff6621a181b3720917235705d4e0b12e2d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d4ee3f039613865aab68860f93ab74279068a7da
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878294"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865309"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -60,15 +60,15 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_type = ] freq_type`Valore che indica quando deve essere eseguito un processo. *freq_type* è di **tipo int**e il valore predefinito è **0**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una sola volta|  
 |**4**|Ogni giorno|  
 |**8**|Settimanale|  
-|**16**|Mensile|  
+|**16**|Ogni mese|  
 |**32**|Mensile, relativo a *freq_interval*|  
 |**64**|Esegui all'avvio del servizio SQL Agent|  
-|**128**|Eseguire quando il computer è inattivo (non supportato in [istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
+|**128**|Eseguire quando il computer è inattivo (non supportato in [Azure SQL istanza gestita](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
   
 `[ @freq_interval = ] freq_interval`Giorni in cui viene eseguito un processo. *freq_interval* è di **tipo int**e il valore predefinito è **1**e dipende dal valore di *freq_type*.  
   
@@ -84,7 +84,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_subday_type = ] freq_subday_type`Specifica le unità per *freq_subday_interval*. *freq_subday_type* è di **tipo int**e il valore predefinito è **0**. i possibili valori sono i seguenti.  
   
-|valore|Descrizione (unità)|  
+|Valore|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**0x1**|All'ora specificata|  
 |**0x2**|Secondi|  
@@ -95,9 +95,9 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_relative_interval = ] freq_relative_interval`Occorrenza di un processo di *freq_interval* ogni mese, se *freq_interval* è 32 (mensile relativo). *freq_relative_interval* è di **tipo int**e il valore predefinito è **0**. i possibili valori sono i seguenti. *freq_relative_interval* viene ignorato nei casi in cui *freq_type* non è uguale a 32.  
   
-|valore|Descrizione (unità)|  
+|Valore|Descrizione (unità)|  
 |-----------|--------------------------|  
-|**1**|First (Primo)|  
+|**1**|Primo|  
 |**2**|Second|  
 |**4**|Terzo|  
 |**8**|Quarto|  

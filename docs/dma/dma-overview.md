@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: ad6bf673fb9bfe435d517dfd9e2dcf71774191a1
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: d74cb91c6e0cb9bc9a1c8dce53f8e93d355df5d2
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885798"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823603"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Panoramica di Data Migration Assistant
 
@@ -30,7 +30,7 @@ Il Data Migration Assistant (DMA) consente di eseguire l'aggiornamento a una pia
   
 ## <a name="get-data-migration-assistant"></a>Ottenere Data Migration Assistant
 
-Per installare DMA, scaricare la versione più recente dello strumento dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53595), quindi eseguire il file **DataMigrationAssistant. msi** .
+Per installare DMA, scaricare la versione più recente dello strumento dall' [area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53595), quindi eseguire il file di **DataMigrationAssistant.msi** .
 
 ## <a name="capabilities"></a>Funzionalità
 
@@ -43,7 +43,7 @@ Per installare DMA, scaricare la versione più recente dello strumento dall' [ar
 - Individuare i problemi che possono influire sull'aggiornamento a un SQL Server locale.Questi sono descritti come problemi di compatibilità e sono organizzati nelle categorie seguenti:
 
   - Modifiche che causano un'interruzione
-  - Modifiche funzionali
+  - Modifiche del comportamento
   - Funzionalità deprecate
 
 - Individuare nuove funzionalità nella piattaforma di SQL Server di destinazione che il database può trarre vantaggio da dopo un aggiornamento. Questi sono descritti come raccomandazioni sulle funzionalità e sono organizzati nelle categorie seguenti:
@@ -56,12 +56,12 @@ Per installare DMA, scaricare la versione più recente dello strumento dall' [ar
 
   - Schema dei database
   - Dati e utenti
-  - Ruoli server
+  - Ruoli del server
   - SQL Server e account di accesso di Windows
 
 - Al termine della migrazione, le applicazioni possono connettersi senza problemi ai database di destinazione SQL Server.
 
-- Valutare i pacchetti di SQL Server Integration Services (SSIS) locali che eseguono la migrazione a un database SQL di Azure o a un'istanza gestita di database SQL di Azure. La valutazione consente di individuare problemi che possono influire sulla migrazione. Questi sono descritti come problemi di compatibilità e sono organizzati nelle categorie seguenti:
+- Valutare i pacchetti di SQL Server Integration Services (SSIS) locali che eseguono la migrazione al database SQL di Azure o al Istanza gestita SQL di Azure. La valutazione consente di individuare problemi che possono influire sulla migrazione. Questi sono descritti come problemi di compatibilità e sono organizzati nelle categorie seguenti:
 
   - Blocchi per la migrazione: individua i problemi di compatibilità che bloccano la migrazione dei pacchetti di origine in Azure. DMA fornisce consigli per risolvere tali problemi.
 
@@ -83,7 +83,7 @@ DMA sostituisce tutte le versioni precedenti di SQL Server preparazione aggiorna
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
--  SQL Server 2017 in Windows
+- SQL Server 2017 in Windows
 
 **Server di destinazione**
 
@@ -93,7 +93,7 @@ DMA sostituisce tutte le versioni precedenti di SQL Server preparazione aggiorna
 - SQL Server 2017 in Windows e Linux
 - SQL Server 2019
 - Database singolo di database SQL di Azure
-- Istanza gestita di Database SQL di Azure
+- Istanza gestita di SQL di Azure
 - SQL Server in esecuzione in una macchina virtuale di Azure
 
 ## <a name="see-also"></a>Vedere anche

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: abbe0746193df3fe341b4f66086291dc1055e11b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 034d15572b214a6afbd34be78528c57241a21caa
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006614"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823854"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>Creazione e gestione di progetti (AccessToSQL)
-Per eseguire la migrazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database di Access a o SQL Azure, è necessario creare prima un progetto SSMA. Il progetto è un file contenente i metadati relativi ai database di Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cui si desidera eseguire la migrazione o SQL Azure, i metadati relativi all' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza di destinazione di o SQL Azure che riceveranno gli oggetti e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i dati migrati, le informazioni di connessione e le impostazioni del progetto.  
+Per eseguire la migrazione di database di Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è necessario creare prima un progetto SSMA. Il progetto è un file contenente i metadati relativi ai database di Access a cui si desidera eseguire la migrazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, i metadati relativi all'istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure che riceveranno gli oggetti e i dati migrati, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informazioni di connessione e le impostazioni del progetto.  
   
 ## <a name="reviewing-default-project-settings"></a>Revisione delle impostazioni predefinite del progetto  
 SSMA contiene diverse opzioni per la conversione e la sincronizzazione degli oggetti di database e per la conversione dei dati. L'impostazione predefinita per queste opzioni è appropriata per molti utenti. Tuttavia, prima di creare un nuovo progetto SSMA, è necessario rivedere le opzioni e, se si vuole, modificare le impostazioni predefinite che verranno usate per tutti i nuovi progetti.  
@@ -55,7 +55,7 @@ SSMA contiene diverse opzioni per la conversione e la sincronizzazione degli ogg
 **Nota** SQL Azure impostazioni saranno disponibili solo quando si seleziona la migrazione per SQL Azure durante la creazione di un progetto.  
   
 ## <a name="creating-new-projects"></a>Creazione di nuovi progetti  
-SSMA inizia senza caricare un progetto predefinito. Per eseguire la migrazione dei dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database di Access a o SQL Azure, è necessario creare un progetto.  
+SSMA inizia senza caricare un progetto predefinito. Per eseguire la migrazione dei dati da database di Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è necessario creare un progetto.  
   
 **Per creare un nuovo progetto**  
   
@@ -89,12 +89,12 @@ Quando si salva un progetto, SSMA Salva in modo permanente le impostazioni del p
   
         Il salvataggio dei metadati potrebbe richiedere diversi minuti. Se non si desidera salvare i metadati in questa fase, non selezionare alcuna casella di controllo.  
   
-    2.  Fare clic su **Salva**.  
+    2.  Fare clic su **Save**.  
   
         SSMA analizzerà gli schemi di accesso e salverà i metadati nel file di progetto.  
   
 ## <a name="opening-projects"></a>Apertura di progetti  
-Quando si apre un progetto, questo viene disconnesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da o SQL Azure. In questo modo è possibile lavorare offline. Per aggiornare i metadati caricare oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database in o SQL Azure. Per eseguire la migrazione dei dati, è necessario [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riconnettersi a o SQL Azure.  
+Quando si apre un progetto, questo viene disconnesso da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. In questo modo è possibile lavorare offline. Per aggiornare i metadati caricare oggetti di database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Per eseguire la migrazione dei dati, è necessario riconnettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
   
 **Per aprire un progetto**  
   
@@ -104,7 +104,7 @@ Quando si apre un progetto, questo viene disconnesso [!INCLUDE[ssNoVersion](../.
   
     -   Nel menu **file** selezionare **Apri progetto**, individuare il file di progetto. a2ssproj, selezionare il file e quindi fare clic su **Apri**.  
   
-2.  Per riconnettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], scegliere **riconnetti a SQL Server**dal menu **file** .  
+2.  Per riconnettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , scegliere **Riconnetti a SQL Server**dal menu **file** .  
   
 3.  Per riconnettersi a SQL Azure, scegliere **Riconnetti a SQL Azure** dal menu **file** .  
   
