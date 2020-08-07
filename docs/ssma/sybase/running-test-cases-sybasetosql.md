@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Execution Steps
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 73047e0741d4dee12ecec3e83df308e3f7abd343
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d828142d83f21cf38663241d593fe197b9715592
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68021026"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930502"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Esecuzione di test case (SybaseToSQL)
 Quando SSMA tester esegue un test case, esegue gli oggetti selezionati per il test e crea un report sui risultati della verifica. Se i risultati sono identici su entrambe le piattaforme, il test ha avuto esito positivo. La corrispondenza degli oggetti tra Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene determinata in base alle impostazioni di mapping dello schema per il progetto SSMA corrente.  
@@ -38,7 +38,7 @@ Al termine del test, viene creato il report del test case. Fare clic sul pulsant
 SSMA tester verifica se tutti i prerequisiti sono soddisfatti per l'esecuzione dei test prima dell'avvio del test. Se alcune condizioni non vengono soddisfatte, viene visualizzato un messaggio di errore.  
   
 ### <a name="initialization"></a>Inizializzazione  
-A questo punto, SSMA tester crea oggetti ausiliari (tabelle, trigger e visualizzazioni) sia in Sybase che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in. Consentono la traccia delle modifiche apportate alle tabelle interessate selezionate per la verifica se la modalità di confronto tabella è **solo modifiche**.  
+A questo punto, SSMA tester crea oggetti ausiliari (tabelle, trigger e visualizzazioni) sia in Sybase che in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Consentono la traccia delle modifiche apportate alle tabelle interessate selezionate per la verifica se la modalità di confronto tabella è **solo modifiche**.  
   
 Si supponga che la tabella verificata sia denominata USER_TABLE. Per una tabella di questo tipo, vengono creati gli oggetti ausiliari seguenti in Sybase.  
   
@@ -54,7 +54,7 @@ Gli oggetti seguenti vengono creati in Sybase nel database SSMATESTER2005db o SS
 |USER_TABLE $ new_id|Visualizzazione|Identificazione delle righe inserite e modificate.|  
 |USER_TABLE $ Old|Visualizzazione|Rappresentazione semplificata delle righe eliminate e sovrascritte.|  
   
-Il seguente oggetto viene creato nel database della tabella verificata in Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Il seguente oggetto viene creato nel database della tabella verificata in Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Nome|Type|Descrizione|  
 |--------|--------|---------------|  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 95b95de2-db05-4422-825d-43968ecfd01c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: e68a58135e28989c2661ee531e2b4bf3c86a0104
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 89c22a7151a7c7aa94c76d5278edd5911b9f2b6d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76910224"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937714"
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>Nuove funzionalità di GUI in SSMA per l'accesso a SQL
 Questo capitolo descrive le nuove funzionalità dell'interfaccia utente di SSMA  
@@ -54,14 +54,14 @@ Questa funzionalità consente di impostare uno o più segnalibri nel codice di o
   
 -   Fare clic sull'area grigia a sinistra della finestra SQL  
   
--   Usare CTRL + MAIUSC +&lt;0.. 9&gt; per impostare il segnalibro numerato  
+-   Usare CTRL + MAIUSC + &lt; 0.. 9 &gt; per impostare il segnalibro numerato  
   
 ### <a name="bookmark-navigation"></a>Spostamento segnalibro  
 È possibile esaminare i segnalibri nei modi seguenti:  
   
 -   Usare i pulsanti segnalibro successivo, segnalibro precedente nella parte superiore della finestra SQL  
   
--   Usare CTRL +&lt;0.. 9&gt; per trovare un segnalibro numerato  
+-   Usare CTRL + &lt; 0.. 9 &gt; per trovare un segnalibro numerato  
   
 -   Usare i pulsanti Vai a o Visualizza origine nella finestra di dialogo Gestisci segnalibri  
   

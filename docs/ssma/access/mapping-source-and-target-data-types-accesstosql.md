@@ -13,17 +13,17 @@ helpviewer_keywords:
 - source data types
 - target data types
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: e0600778b938a7736ab1112f31bbe4828605cdaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c67cb826d5a5dce7c142cba3ded468b851cef337
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907164"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938270"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Mapping dei tipi di dati di origine e di destinazione (AccessToSQL)
-I tipi di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access variano a seconda dei tipi di database. Quando si converte gli oggetti di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di Access in oggetti, è necessario specificare come eseguire il mapping dei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipi di dati da Access a. È possibile accettare i mapping dei tipi di dati predefiniti oppure personalizzare i mapping come illustrato nelle procedure seguenti.  
+I tipi di database di Access variano a seconda dei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di database. Quando si converte gli oggetti di database di Access in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti, è necessario specificare come eseguire il mapping dei tipi di dati da Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È possibile accettare i mapping dei tipi di dati predefiniti oppure personalizzare i mapping come illustrato nelle procedure seguenti.  
   
 ## <a name="default-mappings"></a>Mapping predefiniti  
 SSMA dispone di un set predefinito di mapping dei tipi di dati. Per l'elenco dei mapping predefiniti, vedere [Impostazioni progetto (mapping dei tipi)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
@@ -63,7 +63,7 @@ Nella procedura riportata di seguito viene illustrato come eseguire il mapping d
   
         In questo modo è possibile personalizzare il mapping dei dati per valori più piccoli e più grandi dello stesso tipo di dati.  
   
-    4.  In **tipo di destinazione**selezionare il tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di dati di destinazione.  
+    4.  In **tipo di destinazione**selezionare il tipo di dati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
         Alcuni tipi richiedono una lunghezza del tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nella casella **Sostituisci con** , quindi fare clic su **OK**.  
   
@@ -77,7 +77,7 @@ Nella procedura riportata di seguito viene illustrato come eseguire il mapping d
   
         In questo modo è possibile personalizzare il mapping dei dati per valori più piccoli e più grandi dello stesso tipo di dati.  
   
-    4.  In **tipo di destinazione**selezionare il tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di dati di destinazione.  
+    4.  In **tipo di destinazione**selezionare il tipo di dati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
         Alcuni tipi richiedono una lunghezza del tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nella casella **Sostituisci con** , quindi fare clic su **OK**.  
   
@@ -90,6 +90,6 @@ Nella procedura riportata di seguito viene illustrato come eseguire il mapping d
 ## <a name="next-steps"></a>Passaggi successivi  
 Il passaggio successivo del processo di migrazione consiste nel [convertire gli oggetti di database di Access in oggetti SQL Server](converting-access-database-objects-accesstosql.md)  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
 [Migrazione dei database di Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: 1b78f6ccae739b6fe70fc813959daa44adca7c22
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: ca276036465ca5228fd5c52ca7d4b7de3fdbf13f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394876"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938880"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>Opzioni della riga di comando nella console SSMA (AccessToSQL)
 Microsoft offre un solido set di opzioni della riga di comando per l'esecuzione e il controllo delle attività SSMA. Le sezioni seguenti forniscono ulteriori dettagli.  

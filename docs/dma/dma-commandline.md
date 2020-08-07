@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 0b589d9f5bf90b78d6689ff3b37f09f15fe344b8
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: a4fdc0343d1346833fd58c4e2fa0240e1a2af668
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864918"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87950976"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Esegui Data Migration Assistant dalla riga di comando
 
@@ -40,7 +40,7 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
 
-|Argomento  |Description  | Obbligatorio (Y/N)
+|Argomento  |Descrizione  | Obbligatorio (Y/N)
 |---------|---------|---------------|
 | `/help or /?`     | Come usare dmacmd.exe testo della Guida        | N
 |`/AssessmentName`     |   Nome del progetto di valutazione   | S
@@ -106,7 +106,7 @@ Catalog=DatabaseName;Integrated Security=true"
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
-**Valutazione a database singolo per il database di SQL Azure della piattaforma di destinazione, salvare i risultati in un file con estensione JSON e CSV**
+**Valutazione a database singolo per il database SQL di Azure della piattaforma di destinazione, salvare i risultati in un file con estensione JSON e CSV**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -155,7 +155,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
-**Valutazione a database singolo per il database di SQL Azure della piattaforma di destinazione, salvare i risultati in un file con estensione JSON e CSV**
+**Valutazione a database singolo per il database SQL di Azure della piattaforma di destinazione, salvare i risultati in un file con estensione JSON e CSV**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -290,7 +290,7 @@ Questi comandi supportano consigli per le opzioni di distribuzione di database s
 /SkuRecommendationPreventPriceRefresh=true 
 ```
 
-|Argomento  |Description  | Obbligatorio (Y/N)
+|Argomento  |Descrizione  | Obbligatorio (Y/N)
 |---------|---------|---------------|
 |`/Action=SkuRecommendation` | Eseguire la valutazione dello SKU usando la riga di comando DMA | S
 |`/SkuRecommendationInputDataFilePath` | Percorso completo del file del contatore delle prestazioni raccolto dal computer che ospita i database | S
@@ -304,7 +304,7 @@ Questi comandi supportano consigli per le opzioni di distribuzione di database s
 |`/SkuRecommendationSubscriptionId` | ID della sottoscrizione. | S <br> (Per i prezzi più recenti)
 |`/SkuRecommendationDatabasesToRecommend` | Elenco di database separati da spazi da consigliare (ad esempio "Database1" "Database2" "Database3"). I nomi fanno distinzione tra maiuscole e minuscole e devono essere racchiusi tra virgolette doppie. Se omesso, vengono fornite indicazioni per tutti i database. | N
 |`/AzureAuthenticationTenantId` | Tenant di autenticazione. | S <br> (Per i prezzi più recenti)
-|`/AzureAuthenticationClientId` | ID client dell'app AAD usata per l'autenticazione. | S <br> (Per i prezzi più recenti)
+|`/AzureAuthenticationClientId` | ID client dell'app Azure AD usata per l'autenticazione. | S <br> (Per i prezzi più recenti)
 |`/AzureAuthenticationInteractiveAuthentication` | Impostare su true per visualizzare la finestra. | S <br> (Per i prezzi più recenti) <br>(Scegliere una delle 3 opzioni di autenticazione-opzione 1)
 |`/AzureAuthenticationCertificateStoreLocation` | Impostare sul percorso dell'archivio certificati, ad esempio "CurrentUser". | S <br>(Per i prezzi più recenti) <br> (Scegliere una delle 3 opzioni di autenticazione-opzione 2)
 |`/AzureAuthenticationCertificateThumbprint` | Impostare sull'identificazione personale del certificato. | S <br> (Per i prezzi più recenti) <br>(Scegliere una delle 3 opzioni di autenticazione-opzione 2)

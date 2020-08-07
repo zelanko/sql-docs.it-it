@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 506b9a32b465c9006fe4030bd6fcbb8ba4d0f136
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b889b896a70fa43ee3909ff251a3d91125e878b8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938331"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937460"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>Valutazione degli schemi DB2 per la conversione (DB2ToSQL)
-Prima di caricare oggetti e migrare i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dati in, è necessario determinare la complessità della migrazione e il tempo necessario per la migrazione. SSMA è in grado di creare un report di valutazione che mostra la percentuale di oggetti che verranno convertiti correttamente. SSMA consente inoltre di visualizzare i problemi specifici che provocano errori di conversione.  
+Prima di caricare oggetti e migrare i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario determinare la complessità della migrazione e il tempo necessario per la migrazione. SSMA è in grado di creare un report di valutazione che mostra la percentuale di oggetti che verranno convertiti correttamente. SSMA consente inoltre di visualizzare i problemi specifici che provocano errori di conversione.  
   
 ## <a name="creating-assessment-reports"></a>Creazione di report di valutazione  
-Quando crea il report di valutazione, SSMA converte gli oggetti di database DB2 selezionati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in sintassi, quindi Visualizza i risultati.  
+Quando crea il report di valutazione, SSMA converte gli oggetti di database DB2 selezionati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintassi, quindi Visualizza i risultati.  
   
 **Per creare un report di valutazione**  
   
@@ -34,7 +34,7 @@ Quando crea il report di valutazione, SSMA converte gli oggetti di database DB2 
   
     SSMA indicherà lo stato di avanzamento nella barra di stato nella parte inferiore della finestra. Se il riquadro di output è visibile, i messaggi vengono visualizzati anche nel riquadro di output.  
   
-    Al termine della valutazione, verrà visualizzata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la finestra Migration Assistant per DB2: assessment report.  
+    Al termine della valutazione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà visualizzata la finestra Migration Assistant per DB2: assessment report.  
   
 ## <a name="using-assessment-reports"></a>Utilizzo dei report di valutazione  
 La finestra report di valutazione contiene tre riquadri:  
@@ -74,7 +74,7 @@ Il riquadro statistiche di conversione Mostra le statistiche di conversione. Se 
   
     -   In DB2 è possibile modificare l'oggetto DB2 per rimuovere o modificare il codice problematico. Per caricare il codice aggiornato in SSMA, sarà necessario aggiornare i metadati. Per ulteriori informazioni, vedere [connessione al database DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md).  
   
-    -   È possibile escludere l'oggetto dalla migrazione. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esplora metadati e in Esplora metadati DB2 deselezionare la casella di controllo accanto all'elemento prima di caricare gli oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed eseguire la migrazione dei dati da DB2.  
+    -   È possibile escludere l'oggetto dalla migrazione. In Esplora [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadati e in Esplora metadati DB2 deselezionare la casella di controllo accanto all'elemento prima di caricare gli oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed eseguire la migrazione dei dati da DB2.  
   
 ## <a name="next-step"></a>passaggio successivo  
 [Conversione di schemi DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)  

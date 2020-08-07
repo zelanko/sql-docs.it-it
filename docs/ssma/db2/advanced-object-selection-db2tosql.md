@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ca098c15-c343-4d7d-a284-c2fc405eb991
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 35e6c735fe0d9411d310298d4f32dbaab97b93c5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f59e442a70b8c9b621f453ab9837412238ec6102
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927782"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937260"
 ---
 # <a name="advanced-object-selection-db2tosql"></a>Selezione avanzata di oggetti (DB2ToSQL)
 La finestra di dialogo **sezione oggetti avanzati** consente di filtrare gli oggetti di database usando stringhe e sottostringhe nel nome dell'oggetto, quindi selezionare o deselezionare tali oggetti. SSMA esegue operazioni di conversione e migrazione sugli oggetti selezionati.  
@@ -25,7 +25,7 @@ Quando si apre per la prima volta la finestra di dialogo, fare clic su **Mostra 
   
 Prima di utilizzare questa finestra di dialogo, potrebbe essere necessario forzare SSMA a caricare tutti i metadati convertendo gli schemi o salvando il progetto.  
   
-## <a name="options"></a>Opzioni  
+## <a name="options"></a>Opzioni
 **Seleziona tutti gli elementi**  
 Aggiunge un segno di spunta accanto a tutti gli elementi. Questi elementi saranno selezionati immediatamente in Esplora metadati.  
   

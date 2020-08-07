@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c8aebc643d3d313dcf97bbe69044ee795649ba46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8786ecd3affd1b67bb0e036bf01317942b6ec05b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929421"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937540"
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>Impostazioni progetto (caricamento oggetti) (AccessToSQL)
 Le impostazioni del progetto caricamento oggetti consentono di configurare la modalità di sincronizzazione degli oggetti di database di Access con SQL Server oggetti di database.  

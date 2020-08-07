@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9b05b11fcf3110b9f51d1f9cb44fdabb4a3ba36
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 760fcc2212991f0841f4ded3dd2932e551c26060
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728454"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87948206"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Monitoraggio e risoluzione dei problemi relativi agli oggetti di database gestiti
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85728454"
   
 |Event|Descrizione|  
 |-----------|-----------------|  
-|[Classe di evento Assembly Load](/sql/database-engine/assembly-load-event-class)|Utilizzato per monitorare le richieste di caricamento degli assembly (esito positivo ed errori).|  
+|[Classe di evento Assembly Load](https://docs.microsoft.com/sql/relational-databases/event-classes/sql-server-event-class-reference)|Utilizzato per monitorare le richieste di caricamento degli assembly (esito positivo ed errori).|  
 |Classe di evento [SQL: BatchStarting](../../relational-databases/event-classes/sql-batchstarting-event-class.md), [classe di evento SQL: BatchCompleted](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|Fornisce informazioni sui batch [!INCLUDE[tsql](../../includes/tsql-md.md)] avviati o completati.|  
 |Classe di evento [SP: Starting](../../relational-databases/event-classes/sp-starting-event-class.md), [SP: Completed](../../relational-databases/event-classes/sp-completed-event-class.md)|Utilizzato per monitorare l'esecuzione di stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |Classe di evento [SQL: StmtStarting](../../relational-databases/event-classes/sql-stmtstarting-event-class.md), [classe di evento SQL: StmtCompleted](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|Utilizzato per monitorare l'esecuzione di routine CLR e [!INCLUDE[tsql](../../includes/tsql-md.md)].|  

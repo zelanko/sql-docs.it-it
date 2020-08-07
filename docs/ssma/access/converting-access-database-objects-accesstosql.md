@@ -28,17 +28,17 @@ helpviewer_keywords:
 - translating Access to SQL Azure
 - translating Access to SQL Server
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: f15fc6cee7f66128af7646b9605234e60830b8db
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 6109f523cce37e64bd13ccf9bf783b07a26fe94e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84302806"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939142"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Conversione di oggetti di database di Access (AccessToSQL)
-Dopo aver aggiunto i database di Access e aver effettuato la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, SSMA Visualizza i metadati per l'accesso e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure oggetti di database. È ora possibile selezionare Access Database Objects, quindi convertire gli schemi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure schemi.  
+Dopo aver aggiunto i database di Access e aver effettuato la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, SSMA Visualizza i metadati per l'accesso e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli oggetti di database SQL di Azure. È ora possibile selezionare Access Database Objects, quindi convertire gli schemi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure schemi.  
   
 ## <a name="the-conversion-process"></a>Processo di conversione  
 La conversione di oggetti di database accetta le definizioni degli oggetti dai metadati di accesso, le converte in [!INCLUDE[tsql](../../includes/tsql-md.md)] sintassi equivalente e quindi carica tali informazioni nel progetto. È quindi possibile visualizzare gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti o SQL Azure e le relative proprietà tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure Esplora metadati.  
@@ -56,7 +56,7 @@ Nella tabella seguente vengono illustrati gli oggetti di accesso che vengono con
   
 |Oggetto Access|Oggetto SQL Server risultante|  
 |-----------------|-------------------------------|  
-|table|table|  
+|tabella|tabella|  
 |colonna|colonna|  
 |indice|indice|  
 |chiave esterna|chiave esterna|  
@@ -115,7 +115,7 @@ Dopo aver convertito i metadati di accesso a [!INCLUDE[ssNoVersion](../../includ
   
 È ora possibile visualizzare le modifiche nel codice nella scheda **SQL** .  
   
-## <a name="next-step"></a>passaggio successivo  
+## <a name="next-steps"></a>Passaggi successivi  
 Il passaggio successivo del processo di migrazione consiste nel [caricare gli oggetti di database convertiti in SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  

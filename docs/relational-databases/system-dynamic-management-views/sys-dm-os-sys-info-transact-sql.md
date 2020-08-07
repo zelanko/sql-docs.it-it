@@ -22,12 +22,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b384190b6ffeee077f6658d0701f036c3f7746a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4ce8584d48a20f35b090b957b1455c444e5b4b83
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396824"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87928699"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "87396824"
 |**scheduler_total_count**|**int**|Rappresenta il numero totale di utilità di pianificazione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non ammette i valori NULL.|  
 |**deadlock_monitor_serial_number**|**int**|Specifica l'ID della sequenza corrente di monitoraggio dei deadlock. Non ammette i valori NULL.|  
 |**sqlserver_start_time_ms_ticks**|**bigint**|Rappresenta il numero di **ms_tick** al momento dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ultimo avvio di. Da confrontare con la colonna ms_ticks corrente. Non ammette i valori NULL.|  
-|**sqlserver_start_time**|**datetime**|Vengono specificate la data e l'ora dell'ultimo avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non ammette i valori NULL.|  
+|**sqlserver_start_time**|**datetime**|Specifica la data e l'ora dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ultimo avvio del sistema locale. Non ammette i valori NULL.|  
 |**affinity_type**|**int**|**Si applica a**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e versioni successive.<br /><br /> Viene specificato il tipo di affinità di processo CPU server attualmente in uso. Non ammette i valori NULL. Per ulteriori informazioni, vedere [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).<br /><br /> 1 = MANUAL<br /><br /> 2 = AUTO|  
 |**affinity_type_desc**|**varchar(60)**|**Si applica a**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e versioni successive.<br /><br /> Descrive la colonna **affinity_type** . Non ammette i valori NULL.<br /><br /> MANUAL = l'affinità è stata impostata per almeno una CPU.<br /><br /> AUTO = in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile spostare liberamente i thread tra CPU.|  
 |**process_kernel_time_ms**|**bigint**|**Si applica a**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e versioni successive.<br /><br /> Tempo totale in millisecondi impiegato da tutti i thread di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità kernel. Questo valore può essere maggiore di un singolo clock del processore perché è incluso il tempo di tutti i processori nel server. Non ammette i valori NULL.|  
@@ -85,7 +85,7 @@ ms.locfileid: "87396824"
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
 
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   

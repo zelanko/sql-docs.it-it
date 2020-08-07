@@ -11,27 +11,30 @@ helpviewer_keywords:
 - migrating databases, one-click
 - one-click migration
 ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 672aff153c2f31416550bc850af959faca253ff1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b4c161ef3abdb67351a16840336ef290ff57effd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006642"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938804"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>Converti, carica ed Esegui migrazione (AccessToSQL)
+
 La finestra di dialogo **Converti, carica ed Esegui migrazione** riporta lo stato di migrazione quando si utilizza il pulsante Converti, carica ed Esegui migrazione o la migrazione guidata.  
   
-Al termine della migrazione, è possibile visualizzare i messaggi informativi, di avviso e di errore facendo clic sul collegamento in ogni sezione. Il collegamento Mostra il numero di messaggi di errore, avviso e informativi disponibili, ad esempio "0 errori, 4 avvisi".  
+Al termine della migrazione, è possibile visualizzare i messaggi informativi, di avviso e di errore selezionando il collegamento in ogni sezione. Il dettaglio dietro ogni collegamento Mostra i messaggi di errore, avviso e informativi disponibili, ad esempio "0 errori, 4 avvisi".  
   
-La sezione **migrare i dati per gli oggetti selezionati** della pagina contiene anche un pulsante del **report** . È possibile fare clic su questo pulsante per visualizzare un report di migrazione dei dati.  
+La sezione **migrare i dati per gli oggetti selezionati** della pagina contiene anche un pulsante del **report** . È possibile selezionare questo pulsante per visualizzare un report di migrazione dei dati.  
   
-## <a name="options"></a>Opzioni  
+## <a name="options"></a>Opzioni
+
 **Report**  
 Mostra il report di conversione o migrazione associato.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
+
 [Guida di riferimento all'interfaccia utente (accesso)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
 [Migrazione guidata](migration-wizard-accesstosql.md)  
   

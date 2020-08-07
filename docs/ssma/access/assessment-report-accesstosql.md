@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Assessment Report dialog box
 - Conversion Report dialog box
 ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c28fb4cf5d110e01b156fc6ce985b2cb2fb7bfe1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: de675e479217170a465126d8fe242d01c778abf0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910679"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939079"
 ---
 # <a name="assessment-report-accesstosql"></a>Report di valutazione (AccessToSQL)
-La finestra report di valutazione Mostra i risultati della conversione degli oggetti di database [!INCLUDE[tsql](../../includes/tsql-md.md)] nella sintassi e consente inoltre di stimare la complessità e il costo dei progetti di migrazione.  
+La finestra report di valutazione Mostra i risultati della conversione degli oggetti di database nella [!INCLUDE[tsql](../../includes/tsql-md.md)] sintassi e consente inoltre di stimare la complessità e il costo dei progetti di migrazione.  
   
 Per creare un report di valutazione, selezionare gli oggetti da convertire in Esplora metadati di origine, fare clic con il pulsante destro del mouse su **database**e quindi scegliere **Crea report**. È inoltre possibile visualizzare questo report automaticamente dopo la conversione degli schemi. Il nome del report sarà tuttavia un report di conversione. Per ulteriori informazioni, vedere [Impostazioni progetto (GUI) (SSMA Common)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
   
@@ -36,6 +36,6 @@ Mostra gli errori, gli avvisi e i messaggi informativi generati al momento della
   
 Per visualizzare i dettagli del messaggio, fare clic su **errori**, **avvisi**o **messaggi**, quindi espandere un messaggio. SSMA visualizzerà l'elenco di oggetti con questo errore. Fare clic su un oggetto per visualizzare tutti i dettagli di conversione per l'oggetto.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
 [Guida di riferimento all'interfaccia utente (accesso)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

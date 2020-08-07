@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: bc14a072-8949-4ee0-a4b4-ada55fe8df5c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3d96be29aa74d3903e47f20ec6841b4a20135727
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: bd1b92f7daa49ea668a37f212f3fa338fbf3f97a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141082"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937317"
 ---
 # <a name="connect-to-sql-server-db2tosql"></a>Connetti a SQL Server (DB2ToSQL)
 Utilizzare la finestra di dialogo **Connetti a SQL Server** per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si desidera eseguire la migrazione. Per accedere alla finestra di dialogo **Connetti a SQL Server** , scegliere **Connetti a SQL Server**dal menu **file** .  
@@ -27,24 +27,24 @@ Consente di immettere o selezionare l'istanza di SQL Server a cui connettersi. P
   
 -   Se ci si connette all'istanza predefinita in un altro computer, immettere il nome del computer.  
   
--   Se ci si connette a un'istanza denominata in un altro computer, immettere il nome del computer, una barra rovesciata e il nome dell'istanza, ad esempio *MyServer*\\*istanza*.  
+-   Se ci si connette a un'istanza denominata in un altro computer, immettere il nome del computer, una barra rovesciata e il nome dell'istanza, ad esempio *MyServer* \\ *istanza*.  
   
 **Porta server**  
 Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è configurata in modo da accettare le connessioni sulla porta predefinita (1433), immettere il numero di porta. In caso contrario, lasciare vuoto questo valore.  
   
 **Database**  
-Consente di specificare il database in cui eseguire la migrazione di oggetti e dati. Questa opzione non è disponibile quando si esegue la riconnessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Consente di specificare il database in cui eseguire la migrazione di oggetti e dati. Questa opzione non è disponibile quando si esegue la riconnessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **autenticazione**  
-Selezionare il metodo di autenticazione utilizzato per la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per utilizzare l'account di Windows corrente, selezionare autenticazione di Windows. Per specificare un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso e una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] password, selezionare autenticazione.  
+Selezionare il metodo di autenticazione utilizzato per la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per utilizzare l'account di Windows corrente, selezionare autenticazione di Windows. Per specificare un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso e una password, selezionare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione.  
   
 **Nome utente**  
-Se si utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di, immettere l'account di accesso per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l'istanza di. Se si utilizza l'autenticazione di Windows, questa opzione non è disponibile.  
+Se si utilizza l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione di, immettere l'account di accesso per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si utilizza l'autenticazione di Windows, questa opzione non è disponibile.  
   
 **Password**  
-Se si utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di, immettere la password per l'account di accesso in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tale istanza di. Se si utilizza l'autenticazione di Windows, questa opzione non è disponibile.  
+Se si utilizza l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione di, immettere la password per l'account di accesso in tale istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si utilizza l'autenticazione di Windows, questa opzione non è disponibile.  
   
-**Encrypt Connection**  
+**Crittografa connessione**  
 Se si desidera connettersi in modo sicuro a SQL Server, utilizzare la casella di controllo Crittografa connessione selezionando la casella di controllo **Crittografa connessione** .  
   
 **TrustServerCertificate**  

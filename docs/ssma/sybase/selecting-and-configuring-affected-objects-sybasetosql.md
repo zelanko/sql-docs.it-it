@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Affected Objects
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c9efc329f80e880a58ec9926db677c4a71604e2c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020996"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930442"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Selezione e configurazione degli oggetti interessati (SybaseToSQL)
 In questa pagina è possibile selezionare le tabelle e le chiavi esterne, che devono essere confrontate quando SSMA verifica i risultati dell'esecuzione per gli oggetti scelti nel passaggio precedente. Inoltre, è possibile personalizzare i parametri di verifica.  
@@ -33,7 +33,7 @@ La scheda tabella contiene la visualizzazione griglia della tabella selezionata.
   
 -   Tipo di dati  
   
--   Precision  
+-   Precisione  
   
 -   Scalabilità  
   
@@ -110,9 +110,9 @@ Controlla la distinzione tra maiuscole e minuscole del confronto.
 -   Se si sceglie **false**, il confronto viene considerato per la lettera maiuscola.  
   
 ## <a name="comparing-sql"></a>Confronto di SQL  
-È possibile visualizzare le istruzioni SELECT generate da SSMA tester nella pagina **confronta SQL** . Il tester Confronta i set di risultati di queste istruzioni riga per riga. Ogni riga successiva di un set di risultati Sybase deve essere uguale alla riga successiva del set di risultati prodotto in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+È possibile visualizzare le istruzioni SELECT generate da SSMA tester nella pagina **confronta SQL** . Il tester Confronta i set di risultati di queste istruzioni riga per riga. Ogni riga successiva di un set di risultati Sybase deve essere uguale alla riga successiva del set di risultati prodotto in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-È possibile modificare le istruzioni SELECT per fornire la verifica personalizzata. Per salvare le modifiche nelle istruzioni Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in, usare i pulsanti **applica** in origine e destinazione SQL, corrispondente.  
+È possibile modificare le istruzioni SELECT per fornire la verifica personalizzata. Per salvare le modifiche nelle istruzioni Sybase e in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , usare i pulsanti **applica** in origine e destinazione SQL, corrispondente.  
   
 ## <a name="next-step"></a>passaggio successivo  
 [Personalizzazione dell'ordine delle chiamate &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  

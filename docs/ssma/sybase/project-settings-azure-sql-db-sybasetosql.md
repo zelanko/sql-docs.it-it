@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 0348d548d21ea9b593aa7fe4aa14986607ba76fb
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b79d4e94126676e128d803176463b314348ed8a1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863443"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930922"
 ---
 # <a name="project-settings-azure-sql-database--sybasetosql"></a>Impostazioni progetto (database SQL di Azure) (SybaseToSQL)
 Le impostazioni del progetto del database SQL di Azure consentono di configurare il suffisso del database SQL di Azure da aggiungere nella finestra di dialogo di connessione e consentire anche l'implementazione del meccanismo heartbeat nella connessione al database SQL di Azure.  

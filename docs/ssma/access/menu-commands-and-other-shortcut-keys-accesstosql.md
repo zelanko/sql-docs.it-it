@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: cbfb9aa200560cf8d2b4ae42486f8a39b179e88b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f7e5aa6a3b6d663c21ff57abda09ee9308a0a2af
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907137"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937786"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>Comandi di menu e altri tasti di scelta rapida (AccessToSQL)
 Le sezioni seguenti descrivono le scelte rapide da tastiera per accedere ai comandi di menu e ad altri tasti di scelta rapida usati in varie finestre di dialogo di SSMA per l'applicazione Access.  
@@ -82,7 +82,7 @@ Per accedere al menu Strumenti, il tasto di scelta rapida utilizzato è ALT + T.
 |Creare un report.|ALT + T + C|  
 |Converte lo schema.|ALT + T + N o CTRL + R|  
 |Aggiornamento dal database di Access.|ALT + T + R|  
-|Sincronizzare con SQL Server o SQL Azure database.|ALT + T + S|  
+|Sincronizzare con SQL Server o il database SQL di Azure.|ALT + T + S|  
 |Salva come script.|ALT + T + A|  
 |Eseguire la migrazione dei dati.|ALT + T + M|  
 |Arrestare l'operazione corrente.|ALT + T + O|  
@@ -188,6 +188,6 @@ Per accedere al menu di scelta rapida per l'oggetto selezionato in Esplora ogget
 |Avviare informazioni rapide.|CTRL + MAIUSC + BARRA SPAZIATRICE|  
 |Vai a dichiarazione.|F12|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
 [Tasti di scelta rapida &#40;AccessToSQL&#41;](../../ssma/access/shortcut-keys-accesstosql.md)  
   

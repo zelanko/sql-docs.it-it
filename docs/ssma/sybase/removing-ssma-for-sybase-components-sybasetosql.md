@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: aec09593-17d9-4ec2-ac56-3cd8851406fd
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 0c76b6b2e4e5295bf7db2d7857a73223fc6f8c7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 4ffa47be1f35e86d09c136e5aeca6c0811630ca5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028638"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930559"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>Rimozione di SSMA per componenti di Sybase (SybaseToSQL)
-Al termine della migrazione dei database da Sybase Adaptive Server Enterprise (ASE) a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], potrebbe essere necessario disinstallare i componenti di SSMA. È possibile disinstallare i componenti client in qualsiasi momento, ma non è necessario disinstallare il pacchetto di estensione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da a meno che non si sia certi che i database migrati non usino più funzioni nello schema **ssma_syb** del database **sysdb** .  
+Al termine della migrazione dei database da Sybase Adaptive Server Enterprise (ASE) a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , potrebbe essere necessario disinstallare i componenti di SSMA. È possibile disinstallare i componenti client in qualsiasi momento, ma non è necessario disinstallare il pacchetto di estensione da a meno che non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si sia certi che i database migrati non usino più funzioni nello schema **ssma_syb** del database **sysdb** .  
   
 ## <a name="uninstalling-the-ssma-for-sybase-client"></a>Disinstallazione di SSMA per il client Sybase  
 È possibile disinstallare SSMA utilizzando **Installazione applicazioni**.  
@@ -51,7 +51,7 @@ Per disinstallare il pacchetto di estensione
   
 7.  Nella pagina fine fare clic su **Esci**.  
   
-Dopo la disinstallazione di, è possibile verificare che lo schema **sysdb. ssma_syb** e possibilmente l'intero database **sysdb** sia stato rimosso utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Tuttavia, se si usano altri prodotti SSMA, viene usato anche il database **sysdb** . Se il database esiste e si è certi che nessun altro database faccia riferimento a oggetti in questo database, è possibile scollegare il database.  
+Dopo la disinstallazione di, è possibile verificare che lo schema **sysdb. ssma_syb** e possibilmente l'intero database **sysdb** sia stato rimosso utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Tuttavia, se si usano altri prodotti SSMA, viene usato anche il database **sysdb** . Se il database esiste e si è certi che nessun altro database faccia riferimento a oggetti in questo database, è possibile scollegare il database.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Installazione di SSMA per Sybase client &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  

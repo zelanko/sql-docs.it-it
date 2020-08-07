@@ -8,16 +8,16 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-author: HJToland3
-ms.author: jtoland
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 09f8ab0b3f4950e06c96b67c74f9cdcbc09269d5
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 7a50504923a825a437ea4456a1bb9394cd0635db
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565568"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87951326"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>Creazione di report di analisi in Database Experimentation Assistant (SQL Server)
 
@@ -88,7 +88,7 @@ Se si verifica un errore durante la creazione del report, nella pagina stato vie
 |---|---|  
 |RInterop ha raggiunto un errore all'avvio. Controllare i registri di RInterop e riprovare.|DEA richiede l'accesso a Internet per scaricare i pacchetti R dipendenti. Controllare i registri RInterop in% temp% \\ RInterop e dea log in% temp% \\ dea. Se RInterop è stato inizializzato in modo errato o è stato inizializzato senza i pacchetti R corretti, è possibile che venga visualizzata l'eccezione "non è stato possibile generare il nuovo report di analisi" dopo il passaggio InitializeRInterop nei log di DEA.<br><br>I registri RInterop possono anche visualizzare un errore simile a "non è disponibile alcun pacchetto jsonlite". Se il computer non ha accesso a Internet, è possibile scaricare manualmente il pacchetto R jsonlite necessario:<br><br><li>Passare alla cartella% UserProfile% \\ DEARPackages nel file System del computer. Questa cartella è costituita dai pacchetti usati da R per DEA.</li><br><li>Se la cartella jsonlite non è presente nell'elenco dei pacchetti installati, è necessario disporre di un computer con accesso a Internet per scaricare la versione di rilascio di jsonlite \_1.4.zip da [https://cran.r-project.org/web/packages/jsonlite/index.html](https://cran.r-project.org/web/packages/jsonlite/index.html) .</li><br><li>Copiare il file zip nel computer in cui si sta eseguendo DEA.  Estrarre la cartella jsonlite e copiarla in% UserProfile% \\ DEARPackages. Questo passaggio installa automaticamente il pacchetto jsonlite in R. La cartella deve essere denominata **jsonlite** e il contenuto deve trovarsi direttamente all'interno della cartella, non a un livello inferiore.</li><br><li>Chiudere DEA, riaprire e provare a eseguire di nuovo l'analisi.</li><br>È anche possibile usare RGUI. Passare a **pacchetti**  >  **Installa da zip**. Passare al pacchetto scaricato in precedenza e installare.<br><br>Se RInterop è stato inizializzato e configurato correttamente, verrà visualizzato il "installazione del pacchetto R dipendente jsonlite" nei log di RInterop.|  
 |Impossibile connettersi all'istanza di SQL Server, verificare che il nome del server sia corretto e verificare l'accesso richiesto per l'utente che ha eseguito l'accesso.|È possibile che non si disponga dei diritti di accesso o utente per il server o che il nome del server non sia corretto.|
-|Timeout del processo RInterop. Controllare i registri DEA e RInterop, arrestare il processo RInterop in Gestione attività, quindi riprovare.<br><br>o<br><br>RInterop è in stato di errore. Arrestare il processo RInterop in Gestione attività, quindi riprovare.|\\Per confermare l'errore, controllare i log in% Temp% RInterop. Rimuovere il processo RInterop da Gestione attività prima di riprovare. Se il problema persiste, contattare il team del prodotto.|
+|Timeout del processo RInterop. Controllare i registri DEA e RInterop, arrestare il processo RInterop in Gestione attività, quindi riprovare.<br><br>oppure<br><br>RInterop è in stato di errore. Arrestare il processo RInterop in Gestione attività, quindi riprovare.|\\Per confermare l'errore, controllare i log in% Temp% RInterop. Rimuovere il processo RInterop da Gestione attività prima di riprovare. Se il problema persiste, contattare il team del prodotto.|
 
 **D: il report è stato generato, ma i dati sembrano mancanti**
 

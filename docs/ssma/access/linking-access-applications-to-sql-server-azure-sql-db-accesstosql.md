@@ -21,18 +21,18 @@ helpviewer_keywords:
 - slow performance
 - unlinking tables
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: aadb041b3b9005d0e593e97974090250129ed33d
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d19ed1ddfa2c64b653c02d887b9605ea132ae1bc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823848"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938434"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-database-accesstosql"></a>Collegamento di applicazioni di accesso a SQL Server-database SQL di Azure (AccessToSQL)
-Se si desidera utilizzare le applicazioni di accesso esistenti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è possibile collegare le tabelle di accesso originali alle tabelle migrate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Il collegamento modifica il database di Access in modo che nelle query, nei form, nei report e nelle pagine di accesso ai dati vengano utilizzati i dati nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure anziché i dati nel database di Access.  
+Se si desidera utilizzare le applicazioni di accesso esistenti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è possibile collegare le tabelle di accesso originali alle tabelle migrate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Il collegamento modifica il database di Access in modo che le query, i form, i report e le pagine di accesso ai dati usino i dati nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database di o SQL di Azure anziché i dati nel database di Access.  
   
 > [!NOTE]  
 > Le tabelle di accesso rimangono in accesso, ma non vengono aggiornate insieme a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure aggiornamenti. Dopo aver collegato le tabelle e verificato la funzionalità, potrebbe essere necessario eliminare le tabelle di accesso.  

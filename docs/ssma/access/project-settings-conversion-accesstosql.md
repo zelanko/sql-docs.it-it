@@ -10,17 +10,17 @@ helpviewer_keywords:
 - conversion, options described
 - Project Settings dialog box, Conversion
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ff44d34e6c701c8d43260982d3117def4cb9530d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8889e0d869960f8300194afe31fe87b7f0cf2346
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929450"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937818"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Impostazioni progetto (conversione) (AccessToSQL)
-Le impostazioni del progetto di conversione consentono di configurare il modo in cui gli oggetti vengono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertiti da oggetti di database di Access a o SQL Azure oggetti di database.  
+Le impostazioni del progetto di conversione consentono di configurare il modo in cui gli oggetti vengono convertiti da oggetti di database di Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti di database SQL di Azure.  
   
 Il riquadro conversione è disponibile nelle finestre di dialogo **Impostazioni progetto** e **Impostazioni progetto predefinite** .  
   
@@ -30,7 +30,7 @@ Il riquadro conversione è disponibile nelle finestre di dialogo **Impostazioni 
   
 ## <a name="options"></a>Opzioni  
 **Aggiungi chiave primaria**  
-Crea una nuova chiave primaria nella tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure se una tabella di accesso non dispone di una chiave primaria o di un indice univoco.  
+Crea una nuova chiave primaria nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella o SQL Azure se una tabella di accesso non dispone di una chiave primaria o di un indice univoco.  
   
 -   **Modalità predefinita**: false  
   
@@ -83,7 +83,7 @@ Specifica il tipo di messaggio (avviso, errore o Nothing) visualizzato da SSMA n
   
 -   **Modalità completa**: errore  
   
-**Avvisa quando una query complessa usa un carattere jolly\&(#42;)**  
+**Avvisa quando una query complessa usa un carattere jolly ( \& #42;)**  
 Visualizza un avviso nel riquadro di output e Elenco errori quando il nome di una colonna in un'istruzione SELECT è un carattere jolly (*).  
   
 -   **Modalità predefinita**: true  
