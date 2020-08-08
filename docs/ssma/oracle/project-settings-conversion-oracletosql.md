@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a98a5e07-eb5e-47b9-a6f2-e2cb3a18309c
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: a822aa1e9c30e245b61bd43c0af60b94fae33fe1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: a98b7ec46bfb432ccb52f082376fcbaead963337
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394912"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933392"
 ---
 # <a name="project-settings-conversion-oracletosql"></a>Impostazioni del progetto (conversione) (OracleToSQL)
 La pagina conversione della finestra di dialogo **Impostazioni progetto** contiene impostazioni che consentono di personalizzare il modo in cui SSMA converte la sintassi Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintassi.  
@@ -80,6 +80,6 @@ Il riquadro conversione è disponibile nelle finestre di dialogo **Impostazioni*
 |**Converti generatore sequenza**|In Oracle è possibile utilizzare una sequenza per generare identificatori univoci.<br /><br />SSMA è in grado di convertire le sequenze come segue.<br /><br />Uso di SQL Server Generatore sequenza (questa opzione è disponibile solo quando si esegue la conversione in SQL Server 2012 e SQL Server 2014).<br /><br />Uso del generatore di sequenze SSMA.<br /><br />Utilizzando l'identità della colonna.<br /><br />Per impostazione predefinita, quando si esegue la conversione in SQL Server 2012 o SQL Server 2014 è necessario utilizzare SQL Server Generatore di sequenze. Tuttavia, SQL Server 2012 e SQL Server 2014 non supporta il recupero del valore di sequenza corrente, ad esempio il metodo CURRVAL della sequenza Oracle. Vedere il sito del Blog del team di SSMA per informazioni aggiuntive sulla migrazione del metodo CURRVAL della sequenza Oracle.<br /><br />SSMA fornisce anche un'opzione per convertire la sequenza Oracle in SSMA Sequence Emulator. Questa è l'opzione predefinita quando si esegue la conversione a SQL Server precedente alla 2012<br /><br />Infine, è anche possibile convertire la sequenza assegnata a una colonna nella tabella per SQL Server valori Identity. È necessario specificare il mapping tra le sequenze a una colonna Identity nella scheda della **tabella** Oracle|  
 |**Converte CURRVAL all'esterno di trigger**|Visibile solo quando il generatore di sequenze di conversione è impostato sull' **utilizzo dell'identità della colonna**. Poiché le sequenze Oracle sono oggetti separati dalle tabelle, molte tabelle che utilizzano sequenze utilizzano un trigger per generare e inserire un nuovo valore di sequenza. SSMA Invia commenti a queste istruzioni o le contrassegna come errori quando il commento genera errori.<br /><br />Se si seleziona **Sì**, SSMA contrassegna tutti i riferimenti ai trigger esterni nella sequenza convertita CURRVAL con un avviso.<br /><br />Se si seleziona **No**, SSMA contrassegna tutti i riferimenti ai trigger esterni sulla sequenza convertita CURRVAL con un errore.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
 [Informazioni di riferimento sull'interfaccia utente &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   

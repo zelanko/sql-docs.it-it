@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQL Server data types
 - Type Mapping settings
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 2b25cb2dbe5b92e0ece7ef28a842a2585ea9961d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066666"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934006"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Impostazioni progetto (mapping dei tipi) (AccessToSQL)
 Le impostazioni del progetto di mapping dei tipi consentono di impostare i mapping dei tipi predefiniti per il progetto SSMA. È inoltre possibile specificare i mapping dei tipi per singoli oggetti di database. Per ulteriori informazioni, vedere [mapping di tipi di dati di origine e di destinazione](mapping-source-and-target-data-types-accesstosql.md).  
@@ -37,28 +37,28 @@ Il mapping dei tipi è disponibile nelle finestre di dialogo **Impostazioni** pr
 Tipo di dati di accesso da mappare.  
   
 **Tipo di destinazione**  
-Tipo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati di destinazione o SQL Azure per il tipo di dati di accesso specificato.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Tipo di dati di destinazione o SQL Azure per il tipo di dati di accesso specificato.  
   
 Nella tabella seguente viene illustrato il mapping predefinito tra i tipi di dati di origine e di destinazione.  
   
 |Tipo di dati Access|Tipo di dati di SQL Server|  
 |--------------------|------------------------|  
-|**binario [\*.. \*]**|**varbinary [\*]**|  
+|**binario [ \* .. \* ]**|**varbinary [ \* ]**|  
 |**boolean**|**bit**|  
 |**byte**|**tinyint**|  
 |**valuta**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
-|**GUID**|**uniqueidentifier**|  
+|**guid**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
 |**long**|**int**|  
 |**LongBinary**|**varbinary(max)**|  
 |**memo**|**nvarchar(max)**|  
 |**Memo** : per l'accesso 97|**ntext**|  
 |**single**|**real**|  
-|**testo [\*.. \*]**|**nvarchar [\*]**|  
-|**testo [\*.. ] \*** -per Access 97|**varchar [\*]**|  
+|**testo [ \* .. \* ]**|**nvarchar [ \* ]**|  
+|**testo [ \* .. \* ]** -per l'accesso 97|**varchar [ \* ]**|  
   
 **Aggiungere**  
 Fare clic su questo pulsante per aggiungere un tipo di dati all'elenco di mapping.  

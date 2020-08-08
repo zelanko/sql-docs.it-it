@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: fa4ce8ad-9935-4195-90f9-3fdac587a4ee
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: f987e03ad8dda27e436f22ef54fc3c2646579f4b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 7f0f9b22d571e4ac89fcd0db464a1e79ae91a28b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68051556"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933915"
 ---
 # <a name="save-metadata-accesstosql"></a>Salva metadati (AccessToSQL)
 La finestra di dialogo **Salva metadati** richiede di caricare i metadati nel progetto SSMA prima di salvarli. In questo modo è possibile disporre di un file di progetto completo che può essere utilizzato offline e inviato ad altri utenti, ad esempio il personale del supporto tecnico.  
@@ -25,7 +25,7 @@ Per accedere alla finestra di dialogo **Salva metadati** , salvare il progetto. 
 **Nome**  
 Nome di ogni database nel progetto.  
   
-**Stato**  
+**Status**  
 Indica se i metadati vengono caricati nel progetto SSMA o se i metadati risultano mancanti.  
   
 SSMA carica i metadati nel progetto, se necessario. I metadati vengono caricati automaticamente quando si esplorano i metadati e si convertono gli schemi.  
@@ -33,7 +33,7 @@ SSMA carica i metadati nel progetto, se necessario. I metadati vengono caricati 
 **Seleziona tutto**  
 Seleziona tutti i database elencati.  
   
-**Deselezionare**  
+**Cancella**  
 Deseleziona la casella di controllo per tutti i database con metadati mancanti. Non è possibile deselezionare la casella di controllo se i metadati sono stati caricati.  
   
 **Salva**  

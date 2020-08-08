@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Report Generation in Oracle Console,refresh-from-database
 - Report Generation in Oracle Console,write-summary-report-to
 ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: ca9490b53cd55c9d8fdae5d24a045ceaf5a2e83e
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 17f9c9b31d1593edd353830d999d5afdbfbaabaa
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396230"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934848"
 ---
 # <a name="generating-reports-oracletosql"></a>Generazione di report (OracleToSQL)
 I report di determinate attività eseguite usando i comandi vengono generati nella console di SSMA a livello di albero degli oggetti.  
@@ -138,6 +138,6 @@ Il comando **Refresh-from-database** presenta un parametro **Report-Errors-to** 
   
 -   script di errore  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
 [Esecuzione della console SSMA (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

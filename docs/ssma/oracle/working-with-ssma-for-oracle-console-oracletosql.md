@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4e47bb04-cf9b-41a0-923e-bdab9ba0c51d
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: f1f760d2cc97c7f54be18281c7b55a6527eb8ec2
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d99fb680e6b2ca9b8ce044d8f8c322c6bce06cec
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87392095"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932992"
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>Uso di SSMA per la console Oracle (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]La versione Migration Assistant (SSMA) per Oracle è ora accessibile tramite un'applicazione console nella riga di comando. I file script formano l'input per l'applicazione per l'esecuzione dei comandi. Come applicazione console, SSMA consente l'interazione a livello di script, riduce il ciclo di migrazione e ridimensiona il lavoro di migrazione.  
@@ -37,6 +37,6 @@ Gli argomenti trattati in questa sezione includono:
 |[Generazione di report &#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)|Elenca i comandi per la generazione di report.|  
 |[Risoluzione dei problemi &#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)|Fornisce brevi informazioni sulla correzione dei problemi di migrazione.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
 [Introduzione con SSMA per la console Oracle](getting-started-with-ssma-for-oracle-console-oracletosql.md)  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 45897363-cfc2-44bb-817b-7561e60b7410
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: ae6a7bbeb70ae53280877a1f88a006743eea0655
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 63439231e63170f94e9a1f56662b2d75d8db0816
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264367"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934750"
 ---
 # <a name="initializing-test-cases-oracletosql"></a>Inizializzazione di test case (OracleToSQL)
 In questo passaggio vengono specificate le informazioni iniziali per la nuova test case.  

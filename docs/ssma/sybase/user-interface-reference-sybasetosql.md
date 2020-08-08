@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 997566ef168b53397ad7c76014012d671fb25c91
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: afe4c2fe8ad2ff254a44cc2aba477f4ef411fdd7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864728"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934580"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>Informazioni di riferimento sull'interfaccia utente (SybaseToSQL)
 Questa sezione include gli argomenti della Guida per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per Sybase.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |---------|---------------|  
 |[Selezione avanzata oggetti &#40;SybaseToSQL&#41;](../../ssma/sybase/advanced-object-selection-sybasetosql.md)|Utilizzare la finestra di dialogo **Seleziona oggetto avanzato** per individuare gli oggetti di database utilizzando i criteri di filtro, quindi selezionare o deselezionare tali oggetti.|  
 |[Report di valutazione &#40;SybaseToSQL&#41;](../../ssma/sybase/assessment-report-sybasetosql.md)|Usare il report di valutazione per visualizzare i risultati della conversione degli oggetti di Sybase Adaptive Server Enterprise (ASE) nella [!INCLUDE[tsql](../../includes/tsql-md.md)] sintassi e per stimare il tempo e la complessità di una migrazione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.|  

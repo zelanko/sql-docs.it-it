@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Sybase Console,Script File Commands
 - Sybase Console,Script Generation Commands
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 602bc0ac1584f9ff369efa8a2484a16a97a92285
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ee279098aa195cdc8cb1f5b7d50cf5ba7a8a73c5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029148"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931677"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Esecuzione della console SSMA (SybaseToSQL)
 Microsoft offre un solido set di comandi di file script per eseguire e controllare le attività SSMA. Le sezioni seguenti illustrano in dettaglio lo stesso.  
@@ -201,7 +201,7 @@ Errore durante la connessione al server di database di origine durante l'esecuzi
   
 -   `write-summary-report-to:`Specifica il percorso in cui verrà generato il report.  
   
-    Se viene indicato solo il percorso della cartella, il file in base al nome **&lt;AssessmentReport n&gt;. XML** creato. (attributo facoltativo)  
+    Se viene indicato solo il percorso della cartella, il file in base al nome **AssessmentReport &lt; n &gt; . XML** creato. (attributo facoltativo)  
   
     Per la creazione di report sono presenti altre due sottocategorie:  
   
@@ -230,7 +230,7 @@ Errore durante la connessione al server di database di origine durante l'esecuzi
   
 />  
 ```  
-o  
+oppure  
   
 ```xml  
 <generate-assessment-report  
@@ -267,7 +267,7 @@ Se la connessione al database di origine o di destinazione non viene eseguita pr
   
 -   `write-summary-report-to:`Specifica il percorso in cui verrà generato il report di riepilogo.  
   
-    Se viene indicato solo il percorso della cartella, il file in base al nome **&lt;SchemaConversionReport n&gt;. XML** creato. (attributo facoltativo)  
+    Se viene indicato solo il percorso della cartella, il file in base al nome **SchemaConversionReport &lt; n &gt; . XML** creato. (attributo facoltativo)  
   
     Per la creazione di report sono presenti altre due sottocategorie:  
   
@@ -295,7 +295,7 @@ Se la connessione al database di origine o di destinazione non viene eseguita pr
   
 />  
 ```  
-o  
+oppure  
   
 ```xml  
 <convert-schema  
@@ -320,7 +320,7 @@ Questo comando esegue la migrazione dei dati di origine alla destinazione.
   
 -   `write-summary-report-to:`Specifica il percorso in cui verrà generato il report.  
   
-    Se viene indicato solo il percorso della cartella, il file in base al nome **&lt;DataMigrationReport n&gt;. XML** creato. (attributo facoltativo)  
+    Se viene indicato solo il percorso della cartella, il file in base al nome **DataMigrationReport &lt; n &gt; . XML** creato. (attributo facoltativo)  
   
     Per la creazione di report sono presenti altre due sottocategorie:  
   
@@ -351,7 +351,7 @@ Questo comando esegue la migrazione dei dati di origine alla destinazione.
   
 </migrate-data>  
 ```  
-o  
+oppure  
   
 ```xml  
 <migrate-data  
@@ -411,7 +411,7 @@ Se la connessione al database di destinazione non viene eseguita prima di esegui
   
     -   script di errore  
   
--   `report-errors-to:`Specifica la posizione della segnalazione errori per l'operazione di sincronizzazione (attributo facoltativo). Se viene specificato solo il percorso della cartella, viene creato il file in base al nome **TargetSynchronizationReport. XML** .  
+-   `report-errors-to:`Specifica la posizione della segnalazione errori per l'operazione di sincronizzazione (attributo facoltativo). Se viene specificato solo il percorso della cartella, viene creato il file in base al nome **TargetSynchronizationReport.XML** .  
   
 **Esempio di sintassi:**  
   
@@ -430,7 +430,7 @@ fail-script>" (optional)
   
 />  
 ```  
-o  
+oppure  
   
 ```xml  
 <synchronize-target  
@@ -439,7 +439,7 @@ o
   
   object-type="<object-category>"/>  
 ```  
-o  
+oppure  
   
 ```xml  
 <synchronize-target>  
@@ -472,7 +472,7 @@ Questo comando richiede uno o più nodi della metabase come parametro della riga
   
     -   script di errore  
   
--   `report-errors-to:`Specifica la posizione della segnalazione errori per l'operazione di aggiornamento (attributo facoltativo). Se viene specificato solo il percorso della cartella, viene creato il file in base al nome **SourceDBRefreshReport. XML** .  
+-   `report-errors-to:`Specifica la posizione della segnalazione errori per l'operazione di aggiornamento (attributo facoltativo). Se viene specificato solo il percorso della cartella, viene creato il file in base al nome **SourceDBRefreshReport.XML** .  
   
 **Esempio di sintassi:**  
   
@@ -491,7 +491,7 @@ Questo comando richiede uno o più nodi della metabase come parametro della riga
   
 />  
 ```  
-o  
+oppure  
   
 ```xml  
 <refresh-from-database  
@@ -500,7 +500,7 @@ o
   
   object-type="<object-category>" />  
 ```  
-o  
+oppure  
   
 ```xml  
 <refresh-from-database>  
@@ -545,7 +545,7 @@ Questo comando richiede uno o più nodi della metabase come parametro della riga
   
 />  
 ```  
-o  
+oppure  
   
 ```xml  
 <save-as-script  
@@ -582,7 +582,7 @@ Questo comando converte l'istruzione SQL.
   
 -   `sql-files`Specifica il percorso dei file SQL che devono essere convertiti nel codice T-SQL.  
   
--   `write-summary-report-to`Specifica il percorso in cui verrà generato il report di riepilogo. Se viene indicato solo il percorso della cartella, viene creato il file in base al nome **ConvertSQLReport. XML** . (attributo facoltativo)  
+-   `write-summary-report-to`Specifica il percorso in cui verrà generato il report di riepilogo. Se viene indicato solo il percorso della cartella, viene creato il file in base al nome **ConvertSQLReport.XML** . (attributo facoltativo)  
   
     La creazione di report di riepilogo presenta due sottocategorie, ovvero:  
   
@@ -619,7 +619,7 @@ Questo comando richiede uno o più nodi della metabase come parametro della riga
   
 </convert-sql-statement>  
 ```  
-o  
+oppure  
   
 ```  
 <convert-sql-statement  
@@ -644,7 +644,7 @@ o
   
 />  
 ```  
-o  
+oppure  
   
 ```  
 <convert-sql-statement  

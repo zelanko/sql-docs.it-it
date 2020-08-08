@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: 9d888fa133e6cb1026ae23486dfabfc5e0b13b57
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: b81892edd4605960a50c63aa61ed65d1522d42ec
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68259833"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934001"
 ---
 # <a name="creating-script-files-accesstosql"></a>Creazione di file di script (AccessToSQL)
 Il primo passaggio prima di avviare l'applicazione console SSMA consiste nel creare il file di script e, se necessario, creare il file di valore della variabile e il file di connessione del server.  
@@ -62,7 +62,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -99,7 +99,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <migrate-data>  
@@ -132,7 +132,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -165,7 +165,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <!--synchronization-->  
@@ -176,7 +176,7 @@ Le opzioni configurabili dall'utente includono:
   
     </synchronize-target>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <!--data migration-->  
@@ -211,7 +211,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <convert-schema object-name="ssma.TT1">  
@@ -264,7 +264,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -306,7 +306,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -320,9 +320,9 @@ Le opzioni configurabili dall'utente includono:
   
     Si verificano due casi:  
   
-    1.  Se l'opzione di override è **false**, l'ordine di ricerca sarà protetto da&gt;file di script&gt;di archiviazione-server&gt; di connessione file-server.  
+    1.  Se l'opzione di override è **false**, l'ordine di ricerca sarà protetto da file di script di archiviazione- &gt; server di connessione file- &gt; server &gt; .  
   
-    2.  Se l'opzione di override è impostata su **true**, l'ordine di ricerca sarà&gt;l'utente del&gt;prompt dei file di connessione file-server.  
+    2.  Se l'opzione di override è impostata su **true**, l'ordine di ricerca sarà l'utente del prompt dei file di connessione file- &gt; server &gt; .  
   
     **Esempio:**  
   
@@ -344,7 +344,7 @@ L'opzione non configurabile è:
 ## <a name="script-commands"></a>Comandi script  
 Il file di script contiene una sequenza di comandi del flusso di lavoro di migrazione nel formato XML. L'applicazione console SSMA elabora la migrazione in base all'ordine dei comandi visualizzati nel file di script.  
   
-Ad esempio, una tipica migrazione dei dati di una tabella specifica in un database di Access segue la gerarchia di:&gt; database-table.  
+Ad esempio, una tipica migrazione dei dati di una tabella specifica in un database di Access segue la gerarchia di: database- &gt; Table.  
   
 Quando tutti i comandi nel file di script vengono eseguiti correttamente, l'applicazione console SSMA viene chiusa e restituisce il controllo all'utente. Il contenuto di un file di script è più o meno statico con le informazioni sulle variabili contenute in un file di valori di [variabile](creating-variable-value-files-accesstosql.md) o in una sezione separata all'interno del file di script per i valori delle variabili.  
   
@@ -375,13 +375,13 @@ Quando tutti i comandi nel file di script vengono eseguiti correttamente, l'appl
 ```  
 I modelli costituiti da 3 file di script (per l'esecuzione di diversi scenari), da un file di valori di variabile e da un file di connessione del server sono disponibili nella cartella script della console di esempio della directory del prodotto:  
   
--   AssessmentReportGenerationSample. XML  
+-   AssessmentReportGenerationSample.xml  
   
--   ConversionAndDataMigrationSample. XML  
+-   ConversionAndDataMigrationSample.xml  
   
--   VariableValueFileSample. XML  
+-   VariableValueFileSample.xml  
   
--   ServersConnectionFileSample. XML  
+-   ServersConnectionFileSample.xml  
   
 È possibile eseguire i modelli (file) dopo aver modificato i parametri visualizzati per rilevarli.  
   

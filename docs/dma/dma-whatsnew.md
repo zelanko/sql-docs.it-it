@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 2becdd3e5ab0c6980ffbb4b4f4a5d50584f6fd35
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 19753cddaba236d0de75e492962bd6c8ad2675e2
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864898"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988505"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novità di Data Migration Assistant
 
@@ -154,8 +154,8 @@ La versione 3.2 di Data Migration Assistant include le aggiunte seguenti:
 
 La versione 3.1 di Data Migration Assistant include le aggiunte seguenti:
 
-- Suggerimenti per la valutazione migliorati per i database SQL di Azure in termini di regole di confronto del database, uso di stored procedure di sistema non supportate e di oggetti CLR.
-- Guida alla valutazione per i livelli di compatibilità 130, 120, 110 e 100 durante la migrazione a database SQL di Azure.
+- Suggerimenti per la valutazione migliorati per il database SQL di Azure in termini di regole di confronto del database, uso di stored procedure di sistema non supportate e di oggetti CLR.
+- Guida alla valutazione per i livelli di compatibilità 130, 120, 110 e 100 durante la migrazione al database SQL di Azure.
 
 ## <a name="data-migration-assistant-v30"></a>Data Migration Assistant v 3.0
 
@@ -181,7 +181,7 @@ La versione 2.0 di Data Migration Assistant include consigli sulle funzionalità
 La versione 1.0 di Data Migration Assistant è la versione iniziale e fornisce:
 
 - Individuazione di problemi che possono influire sull'aggiornamento a una versione locale di SQL Server. I risultati vengono descritti come problemi di compatibilità e sono suddivisi in categorie nelle aree seguenti:
-  - Modifiche che causano un'interruzione
+  - Modifiche di rilievo
   - Modifiche del comportamento
   - Funzionalità deprecate
 - Individuazione di nuove funzionalità nella piattaforma SQL Server di destinazione di cui il database può trarre vantaggio dopo un aggiornamento. I risultati sono descritti come raccomandazioni sulle funzionalità e sono suddivisi in categorie nelle aree seguenti:

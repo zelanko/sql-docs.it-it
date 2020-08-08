@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 16f987415e59d145c4ff423b1c221bffe54bd13d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 020eebfe3d6ae509516eaedd8a891b0ee481bc83
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989566"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933782"
 ---
 # <a name="global-settings-logging-db2tosql"></a>Impostazioni globali (registrazione) (DB2ToSQL)
 Utilizzare la finestra di dialogo **Impostazioni globali** per specificare le impostazioni di registrazione per SSMA. Queste impostazioni vengono in genere modificate solo quando si utilizza il supporto tecnico.  
@@ -29,15 +29,15 @@ Le opzioni seguenti sono disponibili nel **livello messaggi**:
 |----------|---------------|  
 |**[tutte le categorie]**|Utilizzato per impostare il livello di registrazione per tutte le opzioni seguenti.|  
 |**Agente di raccolta**|Raccoglie i metadati relativi allo schema di origine e li salva nel progetto.|  
-|**Converter**|Converte le strutture degli oggetti di database di origine, ad esempio tabelle e stored procedure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in strutture corrispondenti.|  
-|**Migrator dati**|Esegue la migrazione dei dati dal database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]origine in.|  
+|**Converter**|Converte le strutture degli oggetti di database di origine, ad esempio tabelle e stored procedure, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strutture corrispondenti.|  
+|**Migrator dati**|Esegue la migrazione dei dati dal database di origine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**Formattatore**|Componente secondario del convertitore che genera script per lo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schema.|  
 |**Interfaccia utente grafica**|Messaggi visualizzati quando si usa lo strumento SSMA.|  
 |**Linker**|Risolve gli identificatori SQL e fornisce informazioni ad altri componenti.|  
-|**Altro**|Tutti i messaggi che non sono in nessun'altra categoria.|  
+|**Altri**|Tutti i messaggi che non sono in nessun'altra categoria.|  
 |**Parser**|Analizza lo schema di origine.|  
-|**Sincronizzazione**|Carica gli oggetti di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di origine in.|  
-|**TreeConverter**|Converte gli oggetti nei metadati di origine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in metadati.|  
+|**Sincronizzazione**|Carica gli oggetti di database di origine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**TreeConverter**|Converte gli oggetti nei metadati di origine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadati.|  
 |**Tester**|Messaggi visualizzati quando si usa SSMA tester.|  
   
 Per ogni opzione in **livello messaggi**configurare uno dei seguenti livelli di registrazione per SSMA:  
@@ -46,9 +46,9 @@ Per ogni opzione in **livello messaggi**configurare uno dei seguenti livelli di 
 |-|-|  
 |**Errore irreversibile**|Consente di scrivere nel log solo messaggi di errore irreversibili.|  
 |**Error (Errore) (Error (Errore)e)**|Scrivi messaggi di errore irreversibili e di errore nel log.|  
-|**Avviso**|Scrivere messaggi di errore, di avviso e di errore irreversibile nel log.|  
+|**Warning**|Scrivere messaggi di errore, di avviso e di errore irreversibile nel log.|  
 |**Info**|Scrivere i messaggi di errore informativi, di avviso, di errore e di errore irreversibile nel log.|  
-|**Debug**|Scrivere nel log tutti i messaggi, inclusi i messaggi di debug.|  
+|**Eseguire il debug**|Scrivere nel log tutti i messaggi, inclusi i messaggi di debug.|  
   
 **Percorso file di registro**  
 Il percorso e il nome del file di log SSMA. Per specificare un nome diverso, fare clic sul percorso corrente, quindi fare clic sul pulsante Sfoglia (**...**).  

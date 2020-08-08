@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ea6081cb68d084bf51132824a143fc6fdd544399
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8f6ea6e9b9e0971967b58b005e4fe554b397edb0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028877"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934672"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>Comandi di menu e altri tasti di scelta rapida (SybaseToSQL)
 Le sezioni seguenti descrivono le scelte rapide da tastiera per accedere ai comandi di menu e ad altri tasti di scelta rapida usati in varie finestre di dialogo di SSMA per l'applicazione Sybase.  
@@ -79,7 +79,7 @@ Per accedere al menu Strumenti, il tasto di scelta rapida utilizzato è ALT + T.
 |Creare un report.|ALT + T + C|  
 |Converte lo schema.|ALT + T + N o CTRL + R|  
 |Aggiornamento dal database Sybase.|ALT + T + R|  
-|Sincronizzare con SQL Server o SQL Azure database.|ALT + T + S|  
+|Sincronizzare con SQL Server o il database SQL di Azure.|ALT + T + S|  
 |Salva come script.|ALT + T + A|  
 |Eseguire la migrazione dei dati.|ALT + T + M|  
 |Arrestare l'operazione corrente.|ALT + T + O|  

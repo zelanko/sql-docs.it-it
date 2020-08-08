@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 3b671f49-c4cc-44fd-801e-e738a8c79415
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 209ed616f3993a0a93b802ddeca39a7065485afc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 06174be45e178f3fb7c612925e78795bf4eeaa7c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68051527"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933927"
 ---
 # <a name="refresh-from-database-accesstosql"></a>Aggiornamento dal database (AccessToSQL)
 La finestra di dialogo **Aggiorna da database** consente di selezionare gli oggetti da aggiornare dal database di Access. Le righe nella finestra di dialogo sono codificate a colori in base allo stato dei metadati:  

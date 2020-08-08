@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: f2df572e7e4be92eb91662ffc47448b7becf3a7e
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 3a061ede945ed8eda5264c2ef210bca5ac1d70e9
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864908"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988496"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificare il database SQL di Azure o lo SKU Istanza gestita appropriato per il database locale
 
@@ -29,7 +29,7 @@ Questo articolo è incentrato sulla funzionalità di raccomandazioni dello SKU d
 
 - Database singolo
 - Pool elastici
-- Istanza gestita
+- database SQL
 
 La funzionalità consigli SKU consente di identificare sia il database singolo del database SQL di Azure, sia lo SKU di SQL Istanza gestita di Azure in base ai contatori delle prestazioni raccolti dai computer che ospitano i database. La funzionalità fornisce consigli relativi al piano tariffario, al livello di calcolo e alle dimensioni massime dei dati, oltre ai costi stimati al mese. Offre inoltre la possibilità di eseguire il provisioning bulk di database singoli e istanze gestite per tutti i database consigliati.
 

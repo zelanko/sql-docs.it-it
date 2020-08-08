@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 7a16a28a163acece321cc2229e9988cf7ab01f9e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 13afcabf85515b211d8493990a59950dc97d72f5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989873"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933932"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Conversione di schemi DB2 (DB2ToSQL)
-Dopo la connessione a DB2, la connessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e l'impostazione delle opzioni di mapping dei dati e del progetto, è possibile convertire gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti di database DB2 in oggetti di database.  
+Dopo la connessione a DB2, la connessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'impostazione delle opzioni di mapping dei dati e del progetto, è possibile convertire gli oggetti di database DB2 in oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
 ## <a name="the-conversion-process"></a>Processo di conversione  
-La conversione di oggetti di database accetta le definizioni degli oggetti da DB2, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le converte in oggetti simili e quindi carica tali informazioni nei metadati SSMA. Non carica le informazioni nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È quindi possibile visualizzare gli oggetti e le relative proprietà utilizzando Esplora [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadati.  
+La conversione di oggetti di database accetta le definizioni degli oggetti da DB2, le converte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti simili e quindi carica tali informazioni nei metadati SSMA. Non carica le informazioni nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È quindi possibile visualizzare gli oggetti e le relative proprietà utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esplora metadati.  
   
 Durante la conversione, SSMA stampa i messaggi di output nel riquadro di output e i messaggi di errore nel riquadro Elenco errori. Usare le informazioni sull'output e sull'errore per determinare se è necessario modificare i database DB2 o il processo di conversione per ottenere i risultati della conversione desiderati.  
   
@@ -28,14 +28,14 @@ Durante la conversione, SSMA stampa i messaggi di output nel riquadro di output 
 Prima di convertire gli oggetti, esaminare le opzioni di conversione del progetto nella finestra di dialogo **Impostazioni progetto** . Utilizzando questa finestra di dialogo è possibile impostare il modo in cui SSMA converte le funzioni e le variabili globali. Per ulteriori informazioni, vedere [Impostazioni progetto &#40;conversione&#41; &#40;&#41;DB2ToSQL ](../../ssma/db2/project-settings-conversion-db2tosql.md).  
   
 ## <a name="conversion-results"></a>Risultati della conversione  
-Nella tabella seguente vengono indicati gli oggetti DB2 convertiti e gli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risultanti:  
+Nella tabella seguente vengono indicati gli oggetti DB2 convertiti e gli oggetti risultanti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 |Oggetti DB2|Oggetti SQL Server risultanti|  
 |-----------|----------------------------|  
 |Tipi di dati|**SSMA esegue il mapping di ogni tipo, ad eccezione di quanto indicato di seguito:**<br /><br />CLOB: alcune funzioni native per l'utilizzo di questo tipo non sono supportate (ad esempio CLOB_EMPTY ())<br /><br />BLOB: alcune funzioni native per l'utilizzo di questo tipo non sono supportate (ad esempio BLOB_EMPTY ())<br /><br />DBLOB: alcune funzioni native per l'utilizzo di questo tipo non sono supportate (ad esempio DBLOB_EMPTY ())|  
 |Tipi definiti dall'utente|**SSMA esegue il mapping dei seguenti elementi definiti dall'utente:**<br /><br />Tipo distinct<br /><br />Tipo strutturato<br /><br />Tipi di dati di SQL PL-Nota: il tipo di cursore debole non è supportato.|  
 |Registri speciali|**SSMA esegue il mapping solo di registri elencati di seguito:**<br /><br />TIMESTAMP CORRENTE<br /><br />DATA CORRENTE<br /><br />ORA CORRENTE<br /><br />FUSO ORARIO CORRENTE<br /><br />UTENTE CORRENTE<br /><br />SESSION_USER e utente<br /><br />SYSTEM_USER<br /><br />CLIENT_APPLNAME CORRENTE<br /><br />CLIENT_WRKSTNNAME CORRENTE<br /><br />TIMEOUT BLOCCO CORRENTE<br /><br />SCHEMA CORRENTE<br /><br />SERVER CORRENTE<br /><br />ISOLAMENTO CORRENTE<br /><br />Non è stato eseguito il mapping di altri registri speciali alla semantica di SQL Server.|  
-|CREA TABELLA|**SSMA esegue il mapping di CREATE TABLE con le eccezioni seguenti:**<br /><br />Tabelle di clustering multidimensionali (MDC)<br /><br />Tabelle con intervallo cluster (RCT)<br /><br />Tabelle partizionate<br /><br />Tabella scollegata<br /><br />Clausola di acquisizione dati<br /><br />Opzione IMPLICITamente nascosta<br /><br />Opzione VOLATILE|  
+|CREATE TABLE|**SSMA esegue il mapping di CREATE TABLE con le eccezioni seguenti:**<br /><br />Tabelle di clustering multidimensionali (MDC)<br /><br />Tabelle con intervallo cluster (RCT)<br /><br />Tabelle partizionate<br /><br />Tabella scollegata<br /><br />Clausola di acquisizione dati<br /><br />Opzione IMPLICITamente nascosta<br /><br />Opzione VOLATILE|  
 |CREATE VIEW|SSMA Maps crea la vista con l'opzione ' WITH LOCAL CHECK OPTION ', ma non è stato eseguito il mapping di altre opzioni alla semantica di SQL Server|  
 |CREATE INDEX|**SSMA Maps CREATE INDEX con le eccezioni seguenti:**<br /><br />Indice XML<br /><br />Opzione BUSINESS_TIME senza sovrapposizioni<br /><br />Clausola PARTITIONed<br /><br />Opzione solo specifica<br /><br />Estendi USING (opzione)<br /><br />MINPCTUSED-opzione<br /><br />Opzione di suddivisione pagina|  
 |Trigger|**SSMA esegue il mapping della semantica del trigger seguente:**<br /><br />Trigger AFTER/per ogni riga<br /><br />DOPO/FOR ogni istruzione viene attivata<br /><br />BEFORe/FOR ogni riga e anziché/per ogni trigger di riga|  
@@ -66,7 +66,7 @@ Nella tabella seguente vengono indicati gli oggetti DB2 convertiti e gli oggetti
 |Istruzione WHILE|Viene mappato.|  
 |OTTENERE l'istruzione di diagnostica|**SSMA Maps GET Diagnostics con le eccezioni seguenti:**<br /><br />Viene eseguito il mapping di ROW_COUNT.<br /><br />Viene eseguito il mapping di DB2_RETURN_STATUS.<br /><br />Viene eseguito il mapping di MESSAGE_TEXT.<br /><br />DB2_SQL_NESTING_LEVEL: non esegue il mapping alla semantica di SQL Server<br /><br />DB2_TOKEN_STRING: non esegue il mapping alla semantica di SQL Server|  
 |Cursori|**SSMA esegue il mapping dei CURSORi con le eccezioni seguenti:**<br /><br />Istruzione ALLOCAte CURSOR-non viene mappata alla semantica SQL Server<br /><br />Istruzione ASSOCIATE LOCATORs: non esegue il mapping alla semantica di SQL Server<br /><br />Istruzione DECLARE CURSOR-la clausola restituzione non è mappata alla semantica di SQL Server<br /><br />Istruzione FETCH-mapping parziale. Le variabili come destinazione sono supportate solo. Il descrittore SQLDA non è mappato alla semantica di SQL Server|  
-|variables|Viene mappato.|  
+|Variabili|Viene mappato.|  
 |Eccezioni, gestori e condizioni|**SSMA esegue il mapping di "gestione delle eccezioni" con le eccezioni seguenti:**<br /><br />Gestori di uscita-mappati.<br /><br />Gestori di annullamento-mappati.<br /><br />Gestori continua-non è stato eseguito il mapping.<br /><br />Condizioni: non viene mappata alla semantica di SQL Server.|  
 |SQL dinamica|Non mappato.|  
 |Alias|Viene mappato.|  
@@ -143,7 +143,7 @@ Per ogni elemento che non è stato possibile convertire, è necessario determina
   
 -   È possibile modificare l'oggetto nel database DB2 per rimuovere o modificare il codice problematico. Per caricare il codice aggiornato in SSMA, sarà necessario aggiornare i metadati. Per ulteriori informazioni, vedere [connessione al database DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md).  
   
--   È possibile escludere l'oggetto dalla migrazione. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esplora metadati e in Esplora metadati DB2 deselezionare la casella di controllo accanto all'elemento prima di caricare gli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in ed eseguire la migrazione dei dati da DB2.  
+-   È possibile escludere l'oggetto dalla migrazione. In Esplora [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadati e in Esplora metadati DB2 deselezionare la casella di controllo accanto all'elemento prima di caricare gli oggetti in ed eseguire la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrazione dei dati da DB2.  
   
 ## <a name="next-step"></a>passaggio successivo  
 Il passaggio successivo del processo di migrazione consiste nel [caricare gli oggetti convertiti in SQL Server](https://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  

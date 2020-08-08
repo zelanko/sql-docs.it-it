@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a63e4112-4b5d-4b7a-a5c2-06a24e86ab1b
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 6fcb9915f6945e2dc8413a4c28003428a4ad3e07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 8b1b5ffbd6a32fd148cb9eaa654b3f47df042923
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264418"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934814"
 ---
 # <a name="global-settings-editor-oracletosql"></a>Impostazioni globali (editor) (OracleToSQL)
 Utilizzare la pagina editor della finestra di dialogo **Impostazioni globali** per specificare le impostazioni per le finestre dell'editor di codice.  

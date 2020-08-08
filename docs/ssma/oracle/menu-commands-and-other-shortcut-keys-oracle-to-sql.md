@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: fc00e683-189e-4765-b280-84927d635126
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: b9534020525ace1df2976ee732d9016c02d5ed2e
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 76f088100ecdf0172cfb7403bffa4a1546113b6b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293928"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933272"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>Comandi di menu e altri tasti di scelta rapida (OracleToSQL)
 Nelle sezioni seguenti vengono descritti i tasti di scelta rapida per accedere ai comandi di menu e ad altri tasti di scelta rapida utilizzati in diverse finestre di dialogo di SSMA per l'applicazione Oracle.  
@@ -81,7 +81,7 @@ Per accedere al menu Strumenti, il tasto di scelta rapida utilizzato è ALT + T.
 |Creare un report.|ALT + T + C|  
 |Converte lo schema.|ALT + T + N o CTRL + R|  
 |Aggiornamento dal database Oracle.|ALT + T + R|  
-|Sincronizzare con SQL Server o SQL Azure database.|ALT + T + S|  
+|Sincronizzare con SQL Server o il database SQL di Azure.|ALT + T + S|  
 |Salva come script.|ALT + T + A|  
 |Eseguire la migrazione dei dati.|ALT + T + M|  
 |Arrestare l'operazione corrente.|ALT + T + O|  

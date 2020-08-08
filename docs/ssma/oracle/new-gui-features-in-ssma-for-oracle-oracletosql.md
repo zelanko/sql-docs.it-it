@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 62e2d30f-a73f-42d9-a6ab-3510a8198f4e
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 295372026ec0a1eed0abb4e62a10bc56fd279d56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 511095f8b6910f95a7f3e4105fce102bb2a9522e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76910214"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933132"
 ---
 # <a name="new-gui-features-in-ssma-for-oracle-oracletosql"></a>Nuove funzionalità di GUI in SSMA per Oracle (OracleToSQL)
 Questo capitolo descrive le nuove funzionalità dell'interfaccia utente di SSMA.  
@@ -55,14 +55,14 @@ Questa funzionalità consente di impostare uno o più segnalibri nel codice di o
   
 -   Fare clic sull'area grigia a sinistra della finestra SQL  
   
--   Usare CTRL + MAIUSC +&lt;0.. 9&gt; per impostare il segnalibro numerato  
+-   Usare CTRL + MAIUSC + &lt; 0.. 9 &gt; per impostare il segnalibro numerato  
   
 ### <a name="bookmark-navigation"></a>Spostamento segnalibro  
 È possibile esaminare i segnalibri nei modi seguenti:  
   
 -   Usare i pulsanti segnalibro successivo, segnalibro precedente nella parte superiore della finestra SQL  
   
--   Usare CTRL +&lt;0.. 9&gt; per trovare un segnalibro numerato  
+-   Usare CTRL + &lt; 0.. 9 &gt; per trovare un segnalibro numerato  
   
 -   Usare i pulsanti Vai a o Visualizza origine nella finestra di dialogo Gestisci segnalibri  
   

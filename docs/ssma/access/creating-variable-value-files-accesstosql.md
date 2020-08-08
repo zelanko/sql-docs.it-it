@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 051ded7d675f81998718b858c71488ba968ec680
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 6d208be8fb7ebf8d1c33b0df5d7c49dd28a412a7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006601"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933970"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Creazione di file di valori di variabile (AccessToSQL)
 Un file di valori di variabile è un file XML che include i valori dei parametri dei comandi, ad esempio il nome del server di origine o di destinazione, che cambiano di frequente tra le migrazioni del server. Quando si verifica un numero elevato di migrazioni di database, vengono creati più file di variabili per l'archiviazione del valore di ogni server di origine a cui viene fatto riferimento in un file di script Master con l'opzione **-v** nella riga di comando. Questo comportamento consente di mantenere i valori statici in pochi file di script con i valori delle variabili in più file variabili.  
   
 > [!NOTE]  
 > -  I nomi delle variabili hanno il prefisso e il suffisso è un simbolo di $ (dollaro). Se a una variabile non viene assegnato un valore nel file di valori di variabile, si verificherà un errore durante l'analisi del file di script, con conseguente blocco del processo di esecuzione della console.  
-> -  Il carattere di escape **$** per **$$** è. Se il valore di una variabile o di un valore statico di un parametro **$** contiene un simbolo (dollaro) **$$** , è necessario specificare per considerarlo come un carattere anziché come variabile.  
-> -  Ai fini della gestibilità, le variabili possono essere `'variable-group'` dichiarate all'interno di elementi per la separazione logica di variabili definite dall'utente.  L'utilizzo di questo elemento non è obbligatorio.  
+> -  Il carattere di escape per **$** è **$$** . Se il valore di una variabile o di un valore statico di un parametro contiene un **$** simbolo (dollaro), **$$** è necessario specificare per considerarlo come un carattere anziché come variabile.  
+> -  Ai fini della gestibilità, le variabili possono essere dichiarate all'interno di `'variable-group'` elementi per la separazione logica di variabili definite dall'utente.  L'utilizzo di questo elemento non è obbligatorio.  
   
 **Esempi:**  
   

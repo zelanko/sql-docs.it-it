@@ -15,14 +15,14 @@ helpviewer_keywords:
 - saving metadata
 - saving projects
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 034d15572b214a6afbd34be78528c57241a21caa
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ed3c26296f856c87875e2f50766a57c3f6d0c66e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823854"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934072"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>Creazione e gestione di progetti (AccessToSQL)
 Per eseguire la migrazione di database di Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è necessario creare prima un progetto SSMA. Il progetto è un file contenente i metadati relativi ai database di Access a cui si desidera eseguire la migrazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, i metadati relativi all'istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure che riceveranno gli oggetti e i dati migrati, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informazioni di connessione e le impostazioni del progetto.  

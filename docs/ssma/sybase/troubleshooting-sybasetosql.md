@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Sybase Console,Troubleshooting
 ms.assetid: 8684ed23-c36b-46f6-9687-30ad7f47f876
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2ecbd6235e0ebec1850bb959aec2aa25832e857f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 81796da3f15586fca400e4b3d4f07819ebe58308
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020886"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934570"
 ---
 # <a name="troubleshooting-sybasetosql"></a>Risoluzione dei problemi (SybaseToSQL)
 Non è insolito che si verifichino problemi di migrazione a metà dell'esecuzione di comandi o script della console.  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Sybase Console,Script File Validation
 - Sybase Console,Server Connection Parameters
 ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 9d7df0fe0917a684f1050197e6706ba5b5414f6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e5abea3995ae8b2515c142812ee47498c37497f6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67948473"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931999"
 ---
 # <a name="creating-script-files-sybasetosql"></a>Creazione di file di script (SybaseToSQL)
 Il primo passaggio prima di avviare l'applicazione console SSMA consiste nel creare il file di script e, se necessario, creare il file di valore della variabile e il file di connessione del server.  
@@ -66,7 +66,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -103,7 +103,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <migrate-data>  
@@ -136,7 +136,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -169,7 +169,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <!--synchronization-->  
@@ -180,7 +180,7 @@ Le opzioni configurabili dall'utente includono:
   
     </synchronize-target>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <!--data migration-->  
@@ -215,7 +215,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -268,7 +268,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -310,7 +310,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -324,9 +324,9 @@ Le opzioni configurabili dall'utente includono:
   
     Si verificano due casi:  
   
-    1.  Se l'opzione di override è **false**, l'ordine di ricerca sarà protetto da&gt;file di script&gt;di archiviazione-server&gt; di connessione file-server.  
+    1.  Se l'opzione di override è **false**, l'ordine di ricerca sarà protetto da file di script di archiviazione- &gt; server di connessione file- &gt; server &gt; .  
   
-    2.  Se l'opzione di override è impostata su **true**, l'ordine di ricerca sarà&gt;l'utente del&gt;prompt dei file di connessione file-server.  
+    2.  Se l'opzione di override è impostata su **true**, l'ordine di ricerca sarà l'utente del prompt dei file di connessione file- &gt; server &gt; .  
   
     **Esempio:**  
   
@@ -348,7 +348,7 @@ L'opzione non configurabile è:
 ## <a name="script-commands"></a>Comandi script  
 Il file di script contiene una sequenza di comandi del flusso di lavoro di migrazione nel formato XML. L'applicazione console SSMA elabora la migrazione in base all'ordine dei comandi visualizzati nel file di script.  
   
-Ad esempio, una tipica migrazione dei dati di una tabella specifica in un database Sybase segue la gerarchia di: database&gt;-schema&gt;-Table.  
+Ad esempio, una tipica migrazione dei dati di una tabella specifica in un database Sybase segue la gerarchia di: database- &gt; schema- &gt; Table.  
   
 Quando tutti i comandi nel file di script vengono eseguiti correttamente, l'applicazione console SSMA viene chiusa e restituisce il controllo all'utente. Il contenuto di un file di script è più o meno statico con le informazioni sulle variabili contenute in un file di valori di [variabile](creating-variable-value-files-sybasetosql.md) o in una sezione separata all'interno del file di script per i valori delle variabili.  
   
@@ -379,15 +379,15 @@ Quando tutti i comandi nel file di script vengono eseguiti correttamente, l'appl
 ```  
 I modelli costituiti da 3 file di script (per l'esecuzione di diversi scenari), da un file di valori di variabile e da un file di connessione del server sono disponibili nella cartella script della console di esempio della directory del prodotto:  
   
--   AssessmentReportGenerationSample. XML  
+-   AssessmentReportGenerationSample.xml  
   
--   ConversionAndDataMigrationSample. XML  
+-   ConversionAndDataMigrationSample.xml  
   
--   SqlStatementConversionSample. XML  
+-   SqlStatementConversionSample.xml  
   
--   VariableValueFileSample. XML  
+-   VariableValueFileSample.xml  
   
--   ServersConnectionFileSample. XML  
+-   ServersConnectionFileSample.xml  
   
 È possibile eseguire i modelli (file) dopo aver modificato i parametri visualizzati per rilevarli.  
   
