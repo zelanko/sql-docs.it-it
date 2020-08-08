@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 40c6c1063ff738428072f3198cae8827e78e2390
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 2b9c16aaee3b75c12f4f46c7fc8c6b1a29710e07
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060152"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936833"
 ---
 # <a name="project-settings-migration-db2tosql"></a>Impostazioni progetto (migrazione) (DB2ToSQL)
-La pagina Migrazione della finestra di dialogo **Impostazioni progetto** contiene impostazioni che consentono di personalizzare il modo in cui SSMA esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la migrazione dei dati da DB2 a.  
+La pagina Migrazione della finestra di dialogo **Impostazioni progetto** contiene impostazioni che consentono di personalizzare il modo in cui SSMA esegue la migrazione dei dati da DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Il riquadro migrazione è disponibile nelle finestre di dialogo **Impostazioni** progetto e **Impostazioni progetto predefinite** .  
   
@@ -47,8 +47,8 @@ Il riquadro migrazione è disponibile nelle finestre di dialogo **Impostazioni**
 |**Mantieni valori Null**|Specifica se SSMA conserva i valori null nei dati di origine quando aggiunge dati a SQL Server, indipendentemente dai valori predefiniti specificati nel SQL Server.<br /><br />**Modalità predefinita**: true<br /><br />**Modalità ottimistica**: true<br /><br />**Modalità completa**: true|  
 |**Contrassegno operazione Trim stringa con errore**|Se la dimensione della colonna di destinazione è inferiore alla lunghezza della stringa di origine, il valore verrà tagliato e contrassegnato come un errore.<br /><br />**Modalità predefinita**: Sì<br /><br />**Modalità ottimistica**: Sì<br /><br />**Modalità completa**: Sì|  
 |**In errore**|Interrompe la migrazione dei dati quando si verifica un errore. Sono disponibili tre opzioni:<br /><br />**Interrompi migrazione:** Arresta l'operazione di migrazione dei dati<br /><br />**Vai alla tabella successiva:** Interrompe la migrazione dei dati alla tabella corrente e procede a quello successivo<br /><br />**Vai al batch successivo:** Interrompe la migrazione dei dati al batch corrente e procede a quello successivo<br /><br />**Modalità predefinita**: passare al batch successivo<br /><br />**Modalità ottimistica**: passare al batch successivo<br /><br />**Modalità completa**: passare al batch successivo|  
-|**Sostituisci date non supportate**|Specifica se SSMA deve correggere le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **date antecedenti alla data di** data/ora precedente (01 gennaio 1753).<br /><br />Per memorizzare i valori correnti della data, selezionare **non eseguire alcuna operazione**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]non accetterà le date precedenti al 01 gennaio 1753 in una colonna DateTime. Se si utilizzano date precedenti, è necessario convertire i valori DateTime in valori di tipo carattere.<br /><br />Per convertire le date precedenti al 01 gennaio 1753 in NULL, selezionare **Sostituisci con null**.<br /><br />Per sostituire le date precedenti al 01 gennaio 1753 con una data supportata, selezionare **Sostituisci con la data più vicina supportata**.<br /><br />**Modalità predefinita**: non eseguire alcuna operazione<br /><br />**Modalità ottimistica**: non eseguire alcuna operazione<br /><br />**Modalità completa**: sostituire con la data più vicina supportata|  
-|**Blocco di tabella**|Specifica se SSMA blocca le tabelle quando aggiunge dati alle tabelle durante la migrazione dei dati. Ottiene un blocco di aggiornamento in blocco per la durata dell'operazione di copia bulk. Se il valore è false, viene impostato un blocco a livello di riga.<br /><br />**Modalità predefinita**: true<br /><br />**Modalità ottimistica**: true<br /><br />**Modalità completa**: true|  
+|**Sostituisci date non supportate**|Specifica se SSMA deve correggere le date antecedenti alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** data di data/ora precedente (01 gennaio 1753).<br /><br />Per memorizzare i valori correnti della data, selezionare **non eseguire alcuna operazione**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]non accetterà le date precedenti al 01 gennaio 1753 in una colonna DateTime. Se si utilizzano date precedenti, è necessario convertire i valori DateTime in valori di tipo carattere.<br /><br />Per convertire le date precedenti al 01 gennaio 1753 in NULL, selezionare **Sostituisci con null**.<br /><br />Per sostituire le date precedenti al 01 gennaio 1753 con una data supportata, selezionare **Sostituisci con la data più vicina supportata**.<br /><br />**Modalità predefinita**: non eseguire alcuna operazione<br /><br />**Modalità ottimistica**: non eseguire alcuna operazione<br /><br />**Modalità completa**: sostituire con la data più vicina supportata|  
+|**Blocco a livello di tabella**|Specifica se SSMA blocca le tabelle quando aggiunge dati alle tabelle durante la migrazione dei dati. Ottiene un blocco di aggiornamento in blocco per la durata dell'operazione di copia bulk. Se il valore è false, viene impostato un blocco a livello di riga.<br /><br />**Modalità predefinita**: true<br /><br />**Modalità ottimistica**: true<br /><br />**Modalità completa**: true|  
   
 ## <a name="parallel-data-migration"></a>Migrazione di dati paralleli  
   

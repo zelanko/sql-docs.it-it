@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 04450495d85eed7ab198090afcc2a4ac9cffb4c0
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: fc847eecec3f84cda54e2820a444036a016ec9a8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293602"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935270"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>Comandi di menu e altri tasti di scelta rapida (MySQLToSQL)
 Le sezioni seguenti descrivono le scelte rapide da tastiera per accedere ai comandi di menu e ad altri tasti di scelta rapida usati in varie finestre di dialogo di SSMA per l'applicazione MySQL.  
@@ -80,7 +80,7 @@ Per accedere al menu Strumenti, il tasto di scelta rapida utilizzato è ALT + T.
 |Creare un report.|ALT + T + C|  
 |Converte lo schema.|ALT + T + N o CTRL + R|  
 |Aggiornamento dal database MySQL.|ALT + T + R|  
-|Sincronizzare con SQL Server o SQL Azure database.|ALT + T + S|  
+|Sincronizzare con SQL Server o il database SQL di Azure.|ALT + T + S|  
 |Salva come script.|ALT + T + A|  
 |Eseguire la migrazione dei dati.|ALT + T + M|  
 |Arrestare l'operazione corrente.|ALT + T + O|  

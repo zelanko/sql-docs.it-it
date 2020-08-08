@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: cb20a327-e565-49a3-a5d0-4cc79a48c179
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 57d6ed457fe00e7ec78094b44db174e2c0150511
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 51e3533c2c65b6ff8aef4f47fb81201d2a9f48a2
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68059990"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936360"
 ---
 # <a name="shortcut-keys-db2tosql"></a>Tasti di scelta rapida (DB2ToSQL)
 È possibile usare i tasti di scelta rapida per spostarsi all'interno dell'applicazione SSMA. Per ulteriori informazioni, vedere gli argomenti seguenti.  

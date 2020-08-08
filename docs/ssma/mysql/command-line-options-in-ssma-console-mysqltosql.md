@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Command line options, variable value file option
 - Command line options, XML output option
 ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 017136669bd6478bb4e08ed0ff5c2adc01786d20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c941cca65bd5ccd3a234da7da0aa3b710ecb4ae3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103254"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936000"
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>Opzioni della riga di comando nella console SSMA (MySQLToSQL)
 Microsoft offre un'affidabile serie di opzioni della riga di comando per l'esecuzione e il controllo delle attività SSMA. Le sezioni seguenti illustrano in dettaglio lo stesso.  
@@ -34,7 +34,7 @@ Di seguito sono descritte le opzioni del comando console.
   
 Ai fini di questa sezione, il termine "opzione" viene definito anche "switch".  
   
-Le opzioni non fanno distinzione tra maiuscole e minuscole e**-** possono iniziare con il**/** carattere '' o ''.  
+Le opzioni non fanno distinzione tra maiuscole e minuscole e possono iniziare con il **-** carattere '' o ' **/** '.  
   
 Se vengono specificate opzioni, diventa obbligatorio specificare i parametri di opzione corrispondenti.  
   
@@ -131,7 +131,7 @@ Questa opzione indica la password crittografata per le connessioni server. Diffe
   
 Non è possibile immettere altre opzioni o password come parametri della riga di comando. In caso contrario, viene restituito un errore. Per ulteriori informazioni, vedere la sezione [gestione delle password](managing-passwords-mysqltosql.md) .  
   
-Per `-p/securepassword`sono supportate le opzioni secondarie seguenti:  
+Per sono supportate le opzioni secondarie seguenti `-p/securepassword` :  
   
 -   Per aggiungere la password all'archiviazione protetta per un ID server specificato o per tutti gli ID server definiti nel file di connessione del server. L'opzione-overwrite, riportata di seguito, aggiorna la password se esiste già:  
   

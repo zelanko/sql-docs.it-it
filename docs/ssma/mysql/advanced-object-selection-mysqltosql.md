@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 390ef0c2-107c-4443-9495-80f35f22d168
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2e00eece4d8a3064806b401975aa299e76518f3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 02dd86ea36cc06529e5bce9c36924e40204bfbe3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061198"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936217"
 ---
 # <a name="advanced-object-selection--mysqltosql"></a>Selezione avanzata di oggetti (MySQLToSQL)
 La finestra di dialogo **sezione oggetti avanzati** consente di filtrare gli oggetti di database usando stringhe e sottostringhe nel nome dell'oggetto, quindi selezionare o deselezionare tali oggetti. SSMA esegue operazioni di conversione e migrazione sugli oggetti selezionati.  

@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 1e9baab08f4295b2c51fd942f6153cc9425dd958
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 50320d85d957e71d317f263d820d4fca5a079547
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141014"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936900"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Mapping dei tipi di dati DB2 e SQL Server (DB2ToSQL)
-I tipi di database DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono diversi da quelli dei tipi di database. Quando si convertono oggetti di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2 in oggetti, è necessario specificare come eseguire il mapping dei tipi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di dati da DB2 a. È possibile accettare i mapping dei tipi di dati predefiniti oppure personalizzare i mapping, come illustrato nelle sezioni seguenti.  
+I tipi di database DB2 sono diversi da quelli dei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di database. Quando si convertono oggetti di database DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti, è necessario specificare come eseguire il mapping dei tipi di dati da DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È possibile accettare i mapping dei tipi di dati predefiniti oppure personalizzare i mapping, come illustrato nelle sezioni seguenti.  
   
 ## <a name="default-mappings"></a>Mapping predefiniti  
 SSMA dispone di un set predefinito di mapping dei tipi di dati. Per l'elenco dei mapping predefiniti, vedere [Impostazioni progetto &#40;mapping dei tipi&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md).  
@@ -48,7 +48,7 @@ Nella procedura seguente viene illustrato come eseguire il mapping dei tipi di d
   
 2.  Per aggiungere un nuovo mapping, eseguire le operazioni seguenti:  
   
-    1.  Fare clic su **Aggiungi**.  
+    1.  Scegliere **Aggiungi**.  
   
     2.  In **tipo di origine**selezionare il tipo di dati DB2 da mappare.  
   
@@ -56,7 +56,7 @@ Nella procedura seguente viene illustrato come eseguire il mapping dei tipi di d
   
         In questo modo è possibile personalizzare il mapping dei dati per valori più piccoli e più grandi dello stesso tipo di dati.  
   
-    4.  In **tipo di destinazione**selezionare il tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di dati di destinazione.  
+    4.  In **tipo di destinazione**selezionare il tipo di dati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
         Alcuni tipi richiedono una lunghezza del tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nella casella **Sostituisci con** .  
   
@@ -64,7 +64,7 @@ Nella procedura seguente viene illustrato come eseguire il mapping dei tipi di d
   
 3.  Per modificare un mapping dei tipi di dati, eseguire le operazioni seguenti:  
   
-    1.  Fare clic su **Edit**.  
+    1.  Fare clic su **Modifica**.  
   
     2.  In **tipo di origine**selezionare il tipo di dati DB2 da mappare.  
   
@@ -72,7 +72,7 @@ Nella procedura seguente viene illustrato come eseguire il mapping dei tipi di d
   
         In questo modo è possibile personalizzare il mapping dei dati per valori più piccoli e più grandi dello stesso tipo di dati.  
   
-    4.  In **tipo di destinazione**selezionare il tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di dati di destinazione.  
+    4.  In **tipo di destinazione**selezionare il tipo di dati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
         Alcuni tipi richiedono una lunghezza del tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nella casella **Sostituisci con** , quindi[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2f3c989626f36c003937723869b5e17d1a405ea9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: fe0c1ac52a72a627cf6b266fdb9636878be85c1a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908859"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935200"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>Impostazioni del progetto (migrazione) (MySQLToSQL)
 La pagina Migrazione della finestra di dialogo **Impostazioni progetto** contiene impostazioni che consentono di personalizzare il modo in cui SSMA esegue la migrazione dei dati da MySQL a SQL Server.  
@@ -36,7 +36,7 @@ Il riquadro migrazione è disponibile nelle finestre di dialogo **Impostazioni p
 |**Attive trigger**|Specifica se SSMA deve attivare i trigger di inserimento quando aggiunge dati alle tabelle SQL Server.<br /><br />**Modalità predefinita**: false<br /><br />**Modalità ottimistica**: false<br /><br />**Modalità completa**: false|  
 |**Mantieni valori Identity**|Specifica se SSMA conserva i valori Identity di MySQL quando aggiunge dati a SQL Server. Il valore false fa sì che i valori Identity vengano assegnati dalla destinazione.<br /><br />**Modalità predefinita**: true<br /><br />**Modalità ottimistica**: true<br /><br />**Modalità completa**: true|  
 |**Mantieni valori Null**|Specifica se SSMA conserva i valori null nei dati di origine quando aggiunge dati a SQL Server, indipendentemente dai valori predefiniti specificati nel SQL Server.<br /><br />**Modalità predefinita**: true<br /><br />**Modalità ottimistica**: true<br /><br />**Modalità completa**: true|  
-|**Blocco di tabella**|Specifica se SSMA blocca le tabelle quando aggiunge dati alle tabelle durante la migrazione dei dati. Ottiene un blocco di aggiornamento in blocco per la durata dell'operazione di copia bulk. Se il valore è false, viene impostato un blocco a livello di riga.<br /><br />**Modalità predefinita**: false<br /><br />**Modalità ottimistica**: false<br /><br />**Modalità completa**: false|  
+|**Blocco a livello di tabella**|Specifica se SSMA blocca le tabelle quando aggiunge dati alle tabelle durante la migrazione dei dati. Ottiene un blocco di aggiornamento in blocco per la durata dell'operazione di copia bulk. Se il valore è false, viene impostato un blocco a livello di riga.<br /><br />**Modalità predefinita**: false<br /><br />**Modalità ottimistica**: false<br /><br />**Modalità completa**: false|  
   
 ### <a name="data-modification"></a>Modifica dei dati  
   

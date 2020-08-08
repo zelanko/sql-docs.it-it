@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 7a8ad0b6c4c1e836a3eacca1f497d7ed229dbfc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 378bc98dd24eff758e6f4e368f4e97e211d1f2a8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908877"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935220"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Impostazioni del progetto (conversione) (MySQLToSQL)
 La pagina conversione della finestra di dialogo **Impostazioni progetto** contiene impostazioni che consentono di personalizzare il modo in cui SSMA converte la sintassi di MySQL nella sintassi SQL Server o SQL Azure.  
@@ -110,6 +110,6 @@ Il riquadro conversione è disponibile nelle finestre di dialogo **Impostazioni 
 |**Valori letterali numerici con precisione superiore a 38**|Specifica la modalità di conversione dei valori letterali numerici con precisione superiore a 38.<br /><br />**Modalità predefinita**: Arrotonda se possibile<br /><br />**Modalità ottimistica**: arrotondare se possibile<br /><br />**Modalità completa**: arrotondare se possibile|  
 |**Zero-date in colonne NOT NULL**|Specifica come gestire l'assegnazione a colonne NOT NULL con valori di data/ora zero, data zero o non validi.<br /><br />**Modalità predefinita**: GETDATE ()<br /><br />**Modalità ottimistica**: GETDATE ()<br /><br />**Modalità completa**: GETDATE ()|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
 [Informazioni di riferimento sull'interfaccia utente &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
   

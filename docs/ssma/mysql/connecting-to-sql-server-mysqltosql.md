@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connecting to SQL Server 2008, SQL Server permission
 - connecting to SQL Server 2008, synchronization
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: f79784b6498f080b15f1ef370e8a3f31be81a871
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 548433b02590ccacf164e9479690f1adadbbc3c4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823299"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936248"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>Connessione a SQL Server (MySQLToSQL)
 Per eseguire la migrazione dei database MySQL in SQL Server, è necessario connettersi all'istanza di destinazione di SQL Server. Quando si esegue la connessione, SSMA ottiene i metadati relativi a tutti i database nell'istanza di SQL Server e Visualizza i metadati del database in Esplora metadati SQL Server. SSMA archivia le informazioni dell'istanza di SQL Server si è connessi a, ma non archivia le password.  

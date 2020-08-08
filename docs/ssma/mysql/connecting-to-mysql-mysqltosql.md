@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Connecting to MySQL, MySQL permission
 - Connecting to MySQL,reconnecting
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ff5d88c5269fc1b6e03029004d92a5360b82b65b
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 0246bd83bb7ca75d464452b5b430fbef1bbf128b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822497"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935837"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>Connessione a MySQL (MySQLToSQL)
 Per eseguire la migrazione di database MySQL a SQL Server o SQL Azure, è necessario connettersi al database MySQL di cui si vuole eseguire la migrazione. Quando si esegue la connessione, SSMA ottiene i metadati relativi a tutti gli schemi MySQL e quindi li Visualizza nel riquadro MySQL Metadata Explorer. SSMA archivia le informazioni sul server di database, ma non archivia le password.  

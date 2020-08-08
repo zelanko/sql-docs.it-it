@@ -7,27 +7,27 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 50845a9bdf3c3185d7b69bb86a75b2a3d332ef6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ed1535a9e8af398b9cac7742ab955822cb6034d0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074169"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936869"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>Mapping di schemi DB2 a schemi SQL Server (DB2ToSQL)
-In DB2 ogni database dispone di uno o più schemi. Per impostazione predefinita, SSMA esegue la migrazione di tutti gli oggetti in uno [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schema DB2 a un database denominato per lo schema. Tuttavia, è possibile personalizzare il mapping tra gli schemi DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i database.  
+In DB2 ogni database dispone di uno o più schemi. Per impostazione predefinita, SSMA esegue la migrazione di tutti gli oggetti in uno schema DB2 a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database denominato per lo schema. Tuttavia, è possibile personalizzare il mapping tra gli schemi DB2 e i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
 ## <a name="db2-and-sql-server-schemas"></a>Schemi DB2 e SQL Server  
 Un database DB2 contiene schemi. Un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene più database, ognuno dei quali può disporre di più schemi.  
   
-Il concetto DB2 di uno schema viene mappato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al concetto di database e di uno dei relativi schemi. Ad esempio, DB2 potrebbe avere uno schema denominato **HR**. Un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe disporre di un database denominato **HR**e all'interno di tale database sono schemi. Uno schema è lo schema **dbo** (o Owner database). Per impostazione predefinita, lo schema DB2 **HR** verrà mappato al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database e allo schema **HR. dbo**. SSMA fa riferimento alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinazione di database e schema come schema.  
+Il concetto DB2 di uno schema viene mappato al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concetto di database e di uno dei relativi schemi. Ad esempio, DB2 potrebbe avere uno schema denominato **HR**. Un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe disporre di un database denominato **HR**e all'interno di tale database sono schemi. Uno schema è lo schema **dbo** (o Owner database). Per impostazione predefinita, lo schema DB2 **HR** verrà mappato al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database e allo schema **HR. dbo**. SSMA fa riferimento alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinazione di database e schema come schema.  
   
-È possibile modificare il mapping tra DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli schemi.  
+È possibile modificare il mapping tra DB2 e gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schemi.  
   
 ## <a name="modifying-the-target-database-and-schema"></a>Modifica del database di destinazione e dello schema  
-In SSMA è possibile eseguire il mapping di uno schema DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qualsiasi schema disponibile.  
+In SSMA è possibile eseguire il mapping di uno schema DB2 a qualsiasi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schema disponibile.  
   
 **Per modificare il database e lo schema**  
   
@@ -49,7 +49,7 @@ In SSMA è possibile eseguire il mapping di uno schema DB2 a [!INCLUDE[ssNoVersi
   
 -   Mapping a SQL Server  
   
-È possibile eseguire il mapping del database di origine a qualsiasi database di destinazione. Per impostazione predefinita, il database di origine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene mappato al database di destinazione con il quale è stata effettuata la connessione tramite SSMA. Se il database di destinazione di cui è stato eseguito il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mapping non è presente in, verrà visualizzato un messaggio che indica che **il database e/o lo schema non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esiste nei metadati di destinazione. Verrà creata durante la sincronizzazione. Continuare? "** Fare clic su Sì. Analogamente, è possibile eseguire il mapping dello schema a uno schema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non esistente nel database di destinazione che verrà creato durante la sincronizzazione.  
+È possibile eseguire il mapping del database di origine a qualsiasi database di destinazione. Per impostazione predefinita, il database di origine viene mappato al database di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con il quale è stata effettuata la connessione tramite SSMA. Se il database di destinazione di cui è stato eseguito il mapping non è presente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , verrà visualizzato un messaggio che indica che **il database e/o lo schema non esiste nei metadati di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Verrà creata durante la sincronizzazione. Continuare? "** Fare clic su Sì. Analogamente, è possibile eseguire il mapping dello schema a uno schema non esistente nel database di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che verrà creato durante la sincronizzazione.  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>Ripristino del database e dello schema predefiniti  
 Se si Personalizza il mapping tra uno schema DB2 e uno [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schema, è possibile ripristinare i valori predefiniti del mapping.  

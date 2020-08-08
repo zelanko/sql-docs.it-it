@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 29b7aa1a0e7aca34bee82180854a3b2ca63cafb4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c01e871490f5362e610339c6626252c700eea3f6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394548"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936540"
 ---
 # <a name="user-interface-reference-db2tosql"></a>Guida di riferimento all'interfaccia utente (DB2ToSQL)
 Questa sezione include gli argomenti della Guida per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per DB2.  
@@ -45,7 +45,7 @@ Nella tabella seguente sono elencate le finestre di dialogo SSMA:
 |[Aggiorna da database &#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md)|Utilizzare la finestra di dialogo **Aggiorna da database** per selezionare gli oggetti da aggiornare dal database DB2.|  
 |[Salva metadati &#40;DB2ToSQL&#41;](../../ssma/db2/save-metadata-db2tosql.md)|La finestra di dialogo **Salva metadati** viene visualizzata quando si salva un progetto privo di metadati.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
 [Introduzione con SSMA per DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
 [Migrazione di database DB2 a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

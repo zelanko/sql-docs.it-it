@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Mapping, Modifying target database and schema
 - Mapping, reverting to default database and schema
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 5fa0585a82a7c96fac8992b82f631364c27d3b87
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ded91465a2a9c7b5a0e8ddcdc219b2af5a84395e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823636"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935353"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Mapping tra database MySQL e schemi di SQL Server (MySQLToSQL)
-Per impostazione predefinita, SSMA per MySQL esegue la migrazione di tutti gli oggetti in uno schema MySQL in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database di o SQL Azure denominato per lo schema. Tuttavia, è possibile personalizzare il mapping tra gli schemi MySQL e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure database.  
+Per impostazione predefinita, SSMA per MySQL esegue la migrazione di tutti gli oggetti in uno schema MySQL in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database SQL di Azure o denominato per lo schema. Tuttavia, è possibile personalizzare il mapping tra gli schemi MySQL e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il database SQL di Azure.  
   
 ## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>Schemi MySQL e SQL Server o SQL Azure  
 Il concetto di MySQL di uno schema viene mappato al concetto di SQL Server di un database e di uno dei relativi schemi. SSMA fa riferimento alla combinazione SQL Server di database e schema come schema.  

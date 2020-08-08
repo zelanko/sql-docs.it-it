@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Uninstalling, Extension pack
 - Uninstalling, SSMA for MySQL client
 ms.assetid: 87cdbd49-a0c9-4b00-8a93-34188b18d11a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3a5d6d1234cc294cc8e8cdd163ce8a9bd6ac3e3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 27c1ab67a6d62bceb31bb036978f65b3494e4f19
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929381"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935240"
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>Rimozione dei componenti di SSMA per MySQL (MySQLToSql)
-Al termine della migrazione dei database da MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], potrebbe essere necessario disinstallare i componenti di SSMA. È possibile disinstallare i componenti client in qualsiasi momento. Tuttavia, se si disinstalla il pacchetto di estensione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da, SSMA non supporterà più la migrazione dei dati da MySQL al database di destinazione (SQL Server/SQL Azure) utilizzando il motore di migrazione dei dati sul lato server.  
+Al termine della migrazione dei database da MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , potrebbe essere necessario disinstallare i componenti di SSMA. È possibile disinstallare i componenti client in qualsiasi momento. Tuttavia, se si disinstalla il pacchetto di estensione da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SSMA non supporterà più la migrazione dei dati da MySQL al database di destinazione (SQL Server/SQL Azure) utilizzando il motore di migrazione dei dati sul lato server.  
   
 ## <a name="uninstalling-the-ssma-for-mysql-client"></a>Disinstallazione di SSMA per il client MySQL  
 È possibile disinstallare SSMA utilizzando **Installazione applicazioni**.  
@@ -48,13 +48,13 @@ Al termine della migrazione dei database da MySQL a [!INCLUDE[ssNoVersion](../..
   
 5.  Nella pagina parametri connessione selezionare il metodo di autenticazione e quindi fare clic su **Avanti**.  
   
-    L'autenticazione di Windows utilizzerà le credenziali di Windows per tentare di accedere all'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di. Se si seleziona [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di, è necessario [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] immettere un nome di account di accesso e una password.  
+    L'autenticazione di Windows utilizzerà le credenziali di Windows per tentare di accedere all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si seleziona [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di, è necessario immettere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome di account di accesso e una password.  
   
 6.  Nella pagina operazione completata fare clic su **OK**.  
   
 7.  Nella pagina fine fare clic su **Esci**.  
   
-Al termine del processo di disinstallazione, è possibile verificare che gli oggetti nello schema **sysdb. ssma_MySQL** e possibilmente l'intero database **sysdb** siano stati rimossi tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Tuttavia, se si usano altri prodotti SSMA, viene usato anche il database **sysdb** . Se il database esiste e si è certi che nessun altro database fa riferimento agli oggetti in questo database, è possibile scollegare il database.  
+Al termine del processo di disinstallazione, è possibile verificare che gli oggetti nello schema **sysdb. ssma_MySQL** e possibilmente l'intero database **sysdb** siano stati rimossi tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Tuttavia, se si usano altri prodotti SSMA, viene usato anche il database **sysdb** . Se il database esiste e si è certi che nessun altro database fa riferimento agli oggetti in questo database, è possibile scollegare il database.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Installazione di SSMA per il client MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  

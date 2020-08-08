@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d384433e5a2653291fac4d990bb3660b31c13855
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: be1cc5ca7d48d72ee9c87ceb2c421a0c411548dc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060029"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936631"
 ---
 # <a name="setting-project-options-db2tosql"></a>Impostazione delle opzioni del progetto (DB2ToSQL)
-Per ogni progetto SSMA è possibile impostare le opzioni a livello di progetto. Queste opzioni specificano conversione di oggetti, caricamento di oggetti, interfaccia utente e impostazioni di migrazione dei dati. Prima di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertire gli oggetti in o migrare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]i dati in, verificare che le opzioni di configurazione siano appropriate per il progetto.  
+Per ogni progetto SSMA è possibile impostare le opzioni a livello di progetto. Queste opzioni specificano conversione di oggetti, caricamento di oggetti, interfaccia utente e impostazioni di migrazione dei dati. Prima di convertire gli oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o migrare i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , verificare che le opzioni di configurazione siano appropriate per il progetto.  
   
 SSMA consente di configurare le opzioni predefinite per tutti i progetti. Queste opzioni vengono applicate a qualsiasi nuovo progetto creato. È quindi possibile personalizzare le opzioni per ogni progetto.  
   
@@ -94,7 +94,7 @@ Il passaggio successivo della migrazione dipende dalle esigenze del progetto:
   
 -   Per personalizzare il mapping dei tipi di dati di origine e di destinazione, vedere [mapping di tipi di dati DB2 e SQL Server &#40;&#41;DB2ToSQL ](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md).  
   
--   In caso contrario, è possibile convertire le definizioni degli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di database DB2 in definizioni di oggetti. Per ulteriori informazioni, vedere [conversione di schemi DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md).  
+-   In caso contrario, è possibile convertire le definizioni degli oggetti di database DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definizioni di oggetti. Per ulteriori informazioni, vedere [conversione di schemi DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Mapping dei tipi di dati DB2 e SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  

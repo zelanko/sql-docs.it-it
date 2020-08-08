@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 0d033492-5ec3-473a-8de1-821894ec9518
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3d5188d701cd7930ff93c37aab74e11bba949d9b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 0540a39f4e9d6d3a2cdaa3f89f69dbdc0c2533ab
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67896389"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935553"
 ---
 # <a name="global-settings-logging--mysqltosql"></a>Impostazioni globali (registrazione) (MySQLToSQL)
 Utilizzare la finestra di dialogo **Impostazioni globali** per specificare le impostazioni di registrazione per SSMA. Queste impostazioni vengono in genere modificate solo quando si utilizza il supporto tecnico.  
@@ -29,15 +29,15 @@ Le opzioni seguenti sono disponibili nel **livello messaggi**:
 |----------|---------------|  
 |**[tutte le categorie]**|Utilizzato per impostare il livello di registrazione per tutte le opzioni seguenti.|  
 |**Agente di raccolta**|Raccoglie i metadati relativi allo schema di origine e li salva nel progetto.|  
-|**Converter**|Converte le strutture degli oggetti di database di origine, ad esempio tabelle e stored procedure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in strutture corrispondenti.|  
-|**Migrator dati**|Esegue la migrazione dei dati dal database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]origine in.|  
+|**Converter**|Converte le strutture degli oggetti di database di origine, ad esempio tabelle e stored procedure, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strutture corrispondenti.|  
+|**Migrator dati**|Esegue la migrazione dei dati dal database di origine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**Formattatore**|Componente secondario del convertitore che genera script per lo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schema.|  
 |**Interfaccia utente grafica**|Messaggi visualizzati quando si usa lo strumento SSMA.|  
 |**Linker**|Risolve gli identificatori SQL e fornisce informazioni ad altri componenti.|  
-|**Altro**|Tutti i messaggi che non sono in nessun'altra categoria.|  
+|**Altri**|Tutti i messaggi che non sono in nessun'altra categoria.|  
 |**Parser**|Analizza lo schema di origine.|  
-|**Sincronizzazione**|Carica gli oggetti di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di origine in.|  
-|**TreeConverter**|Converte gli oggetti nei metadati di origine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in metadati.|  
+|**Sincronizzazione**|Carica gli oggetti di database di origine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**TreeConverter**|Converte gli oggetti nei metadati di origine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadati.|  
   
 Per ogni opzione in **livello messaggi**configurare uno dei seguenti livelli di registrazione per SSMA:  
   
@@ -45,9 +45,9 @@ Per ogni opzione in **livello messaggi**configurare uno dei seguenti livelli di 
 |-|-|  
 |**Errore irreversibile**|Consente di scrivere nel log solo messaggi di errore irreversibili.|  
 |**Error (Errore) (Error (Errore)e)**|Scrivi messaggi di errore irreversibili e di errore nel log.|  
-|**Avviso**|Scrivere messaggi di errore, di avviso e di errore irreversibile nel log.|  
+|**Warning**|Scrivere messaggi di errore, di avviso e di errore irreversibile nel log.|  
 |**Info**|Scrivere i messaggi di errore informativi, di avviso, di errore e di errore irreversibile nel log.|  
-|**Debug**|Scrivere nel log tutti i messaggi, inclusi i messaggi di debug.|  
+|**Eseguire il debug**|Scrivere nel log tutti i messaggi, inclusi i messaggi di debug.|  
   
 **Percorso del file di log**  
 Il percorso e il nome del file di log SSMA. Per specificare un nome diverso, fare clic sul percorso corrente, quindi fare clic sul pulsante Sfoglia (**...**).  

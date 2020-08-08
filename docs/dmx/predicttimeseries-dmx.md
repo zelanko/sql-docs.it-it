@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ff8525e9742009e5a5ada680160f20d5e8063d86
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: bf63bb1002e1e4ae467838b84314e1cbaaf93275
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363521"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943174"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -75,7 +75,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 > [!NOTE]  
 >  La lunghezza dei dati nuovi non influisce sul punto iniziale di stima. Pertanto, per aggiungere dati nuovi ed eseguire anche stime nuove, accertarsi di impostare il punto di inizio della stima su un valore maggiore della lunghezza dei dati nuovi oppure estendere il punto finale della stima in base alla lunghezza dei dati nuovi.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Negli esempi seguenti viene illustrato come eseguire stime in base a un modello Time Series esistente:  
   
 -   Nel primo esempio è illustrato come eseguire un numero specifico di stime in base al modello corrente.  
@@ -193,7 +193,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   Restituisce stime nuove per i tre intervalli di tempo rimanenti in base al modello appena espanso.  
   
- Nella tabella seguente sono elencati i risultati della query dell'esempio 2. Notare che i primi due valori restituiti per M200 Europa corrispondono esattamente ai nuovi valori forniti. Questo comportamento avviene per motivi strutturali. Per avviare stime dopo la fine dei nuovi dati, è necessario specificare intervallo temporale di inizio e di fine. Per un esempio di come eseguire questa operazione, vedere [lezione 5: estensione del modello Time Series](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
+ Nella tabella seguente sono elencati i risultati della query dell'esempio 2. Notare che i primi due valori restituiti per M200 Europa corrispondono esattamente ai nuovi valori forniti. Questo comportamento avviene per motivi strutturali. Per avviare stime dopo la fine dei nuovi dati, è necessario specificare intervallo temporale di inizio e di fine.  
   
  Inoltre, notare che non sono stati forniti i nuovi dati per l'area Pacifico. Pertanto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] restituisce nuove stime per tutti e cinque gli intervalli di tempo,  
   
