@@ -20,16 +20,16 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9346aa6dbf98bbc827b90423f02b5027481f956
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 35f9272b3b11e5c29fe0e2f9068ad458bd5becfa
+ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196467"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88046883"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Restituisce l'istogramma delle statistiche per l'oggetto di database specificato (tabella o vista indicizzata) nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database corrente. Simile a `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
 
@@ -84,7 +84,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 -   L'area a tinta unita a sinistra di *range_high_key* rappresenta l'intervallo dei valori di colonna e il numero medio di occorrenze di ogni valore (*average_range_rows*) di colonna. Il valore *average_range_rows* per il primo passaggio dell'istogramma è sempre 0.  
   
--   Le linee punteggiate rappresentano i valori campionati usati per stimare il numero totale di valori distinti nell'intervallo (*DISTINCT_RANGE_ROWS*) e il numero totale di valori nell'intervallo (*RANGE_ROWS*). Query Optimizer usa *range_rows* e *distinct_range_rows* per calcolare *average_range_rows* e non archivia i valori campionati.  
+-   Le linee punteggiate rappresentano i valori campionati usati per stimare il numero complessivo dei valori distinti nell'intervallo (*distinct_range_rows*) e il numero complessivo dei valori nell'intervallo (*range_rows*). Query Optimizer usa *range_rows* e *distinct_range_rows* per calcolare *average_range_rows* e non archivia i valori campionati.  
   
  Query Optimizer definisce gli intervalli dell'istogramma in base al relativo significato statistico e utilizza un algoritmo per il calcolo della differenza massima per ridurre al minimo il numero di intervalli nell'istogramma, aumentando contemporaneamente la differenza tra i valori limite. Il numero massimo di intervalli è 200. Il numero di intervalli dell'istogramma può essere minore del numero di valori distinct, anche per le colonne con un numero di punti limite inferiore a 200. A una colonna con 100 valori distinct, ad esempio, può essere associato un istogramma con un numero di punti limite inferiore a 100.  
   
