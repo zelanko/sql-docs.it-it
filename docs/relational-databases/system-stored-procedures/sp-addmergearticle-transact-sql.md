@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ebb47597b5d08e0f14d37490304001811d0b33e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee3ac3901c09ab4a0f73803d00a2e4651af51df7
+ms.sourcegitcommit: 68c1dbc465898e20ec95f98cc2f14a8c9cd166a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786273"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051120"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -201,7 +201,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1** specifica che la firma verrà verificata per verificare se si tratta di una fonte attendibile.  
   
-`[ @destination_object = ] 'destination_object'`Nome dell'oggetto nel database di sottoscrizione. *destination_object* è di **tipo sysname**e il valore predefinito è ** \@ source_object**. È possibile specificare questo parametro solo se l'articolo include solo lo schema, come nel caso di stored procedure, viste e funzioni definite dall'utente. Se l'articolo specificato è un articolo di tabella, il valore in *@source_object* sostituisce il valore in *destination_object*.  
+`[ @destination_object = ] 'destination_object'`Nome dell'oggetto nel database di sottoscrizione. *destination_object* è di **tipo sysname**e il valore predefinito è ** \@ source_object**. È possibile specificare questo parametro solo se l'articolo include solo lo schema, come nel caso di stored procedure, viste e funzioni definite dall'utente. Se l'articolo specificato è un articolo di tabella, il valore in * \@ source_object* esegue l'override del valore *destination_object*.  
   
 `[ @allow_interactive_resolver = ] 'allow_interactive_resolver'`Abilita o Disabilita l'utilizzo del sistema di risoluzione interattivo in un articolo. *allow_interactive_resolver* è di **tipo nvarchar (5)** e il valore predefinito è false. **true** consente l'utilizzo del sistema di risoluzione interattivo sull'articolo. **false** lo Disabilita.  
   
@@ -358,12 +358,12 @@ sp_addmergearticle [ @publication = ] 'publication'
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Definire un articolo](../../relational-databases/replication/publish/define-an-article.md)   
+ [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [Pubblicare dati e oggetti di database](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Replica colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md)   
  [sp_changemergearticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_dropmergearticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
- [sp_helpmergearticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   
