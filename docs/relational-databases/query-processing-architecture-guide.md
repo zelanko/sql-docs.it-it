@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: ff4ab76193c13b03fbd4d7fab05cbf212d1aae4b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b6964ee33ecbd52f538a60446c72d66bcde9927d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247618"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934385"
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -147,7 +147,7 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene utilizzata l'ela
 - Espressioni aritmetiche che contengono solo costanti, ad esempio 1+1 o 5/3*2.
 - Espressioni logiche che contengono solo costanti, ad esempio 1=1 e 1>2 AND 3>4.
 - Funzioni predefinite che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considera idonee per l'elaborazione delle costanti, come `CAST` e `CONVERT`. In genere, per una funzione è possibile eseguire l'elaborazione delle costanti in fase di compilazione se si tratta di una funzione solo dei relativi input e non di altre informazioni contestuali, ad esempio opzioni SET, impostazioni della lingua, opzioni di database e chiavi di crittografia. Per le funzioni non deterministiche non è possibile eseguire l'elaborazione delle costanti in fase di compilazione. Per le funzioni predefinite deterministiche, tranne alcune eccezioni, è possibile eseguire l'elaborazione delle costanti in fase di compilazione.
-- Metodi deterministici di tipi CLR definiti dall'utente e funzioni CLR definite dall'utente con valori scalari deterministici (a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Per altre informazioni, vedere [Elaborazione delle costanti in fase di compilazione per funzioni e metodi CLR definiti dall'utente](https://docs.microsoft.com/sql/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
+- Metodi deterministici di tipi CLR definiti dall'utente e funzioni CLR definite dall'utente con valori scalari deterministici (a partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Per altre informazioni, vedere [Elaborazione delle costanti in fase di compilazione per funzioni e metodi CLR definiti dall'utente](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15?view=sql-server-ver15).
 
 > [!NOTE] 
 > Si applica un'eccezione ai tipi LOB. Se il tipo di output del processo di elaborazione delle costanti è un tipo LOB, ossia text,ntext, image, nvarchar(max), varchar(max), varbinary(max) o XML, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non esegue l'elaborazione delle costanti per l'espressione.

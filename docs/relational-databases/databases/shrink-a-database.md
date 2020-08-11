@@ -20,12 +20,12 @@ ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5cacfade7921a099d618704b3145f5de2acd2b73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5761ee136c23cd82296f154e7e87d4756410c55a
+ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715508"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807514"
 ---
 # <a name="shrink-a-database"></a>Compattare un database
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,9 +57,7 @@ ms.locfileid: "85715508"
   
 -   Non è possibile ridurre il database a dimensioni inferiori a quelle minime. Le dimensioni minime corrispondono alle dimensioni specificate quando il database è stato inizialmente creato o alle ultime dimensioni impostate in modo esplicito mediante un'operazione di modifica delle dimensioni dei file, ad esempio DBCC SHRINKFILE. Pertanto, se originariamente è stato creato un database con dimensioni pari a 10 MB e le dimensioni sono aumentate fino a 100 MB, è possibile compattare il database fino a un minimo di 10 MB, anche se tutti i dati nel database sono stati eliminati.  
   
--   Non è possibile compattare un database mentre ne viene eseguito il backup e non è possibile eseguire il backup di un database mentre è in corso un'operazione di compattazione.  
-  
--   Se viene rilevato un indice columnstore ottimizzato in memoria xVelocity, DBCC SHRINKDATABASE avrà esito negativo. L'operazione avrà esito positivo se completata prima del rilevamento dell'indice columnstore ottenendo dimensioni del database inferiori. Per completare DBCC SHRINKDATABASE, disabilitare tutti gli indici columnstore prima di eseguire DBCC SHRINKDATABASE, quindi ricompilare gli indici columnstore.  
+-   Non è possibile compattare un database mentre ne viene eseguito il backup e non è possibile eseguire il backup di un database mentre è in corso un'operazione di compattazione.
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   

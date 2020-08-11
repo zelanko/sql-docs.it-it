@@ -1,1 +1,1 @@
-Istanza gestita di database SQL di Azure
+Istanza gestita di SQL di Azure

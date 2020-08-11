@@ -1,5 +1,5 @@
 ---
-title: Attività Esegui SQL | Microsoft Docs
+title: Attività Esegui SQL
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -8,10 +8,10 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
-- sql13.dts.designer.executesqltask.f1
-- sql13.dts.designer.executesqltask.general.f1
-- sql13.dts.designer.executesqltask.parametermapping.f1
-- sql13.dts.designer.executesqltask.resultset.f1
+- sql14.dts.designer.executesqltask.f1
+- sql14.dts.designer.executesqltask.general.f1
+- sql14.dts.designer.executesqltask.parametermapping.f1
+- sql14.dts.designer.executesqltask.resultset.f1
 helpviewer_keywords:
 - Transact-SQL statements, SSIS
 - statements [Integration Services]
@@ -20,17 +20,16 @@ helpviewer_keywords:
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4f334633fa164a22f8e23175fd3ba6b25c4f6423
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 377506ca7b8fb9b9fb94b606852bb90ce4756172
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917927"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988634"
 ---
 # <a name="execute-sql-task"></a>Attività Esegui SQL
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
 
   L'attività Esegui SQL consente di eseguire istruzioni SQL o stored procedure da un pacchetto. L'attività può includere una o più istruzioni SQL che vengono eseguite in ordine sequenziale. È possibile utilizzare l'attività Esegui SQL per gli scopi seguenti:  
   

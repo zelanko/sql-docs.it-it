@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ac342c20eb38411c4b0d1d689c34a70cda04b873
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1ee7e4446b67c60a8bb0b7a3d43453a5e7498d6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752576"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87940423"
 ---
 # <a name="create-instances-of-xml-data"></a>Creare istanze di dati XML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +62,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre internamente una rappresentazione binaria efficiente dell'istanza XML, basata sulla codifica UTF-16. La codifica specificata dall'utente non viene mantenuta, ma viene considerata durante il processo di analisi.  
   
 ### <a name="type-casting-clr-user-defined-types"></a>Cast di tipo di tipi CLR definiti dall'utente  
- Se un tipo CLR definito dall'utente include una serializzazione XML, per le istanze di tale tipo è possibile eseguire il cast in modo esplicito su un tipo di dati XML. Per altri dettagli sulla serializzazione XML di un tipo CLR definito dall'utente, vedere [Serializzazione XML da oggetti di database CLR](https://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344).  
+ Se un tipo CLR definito dall'utente include una serializzazione XML, per le istanze di tale tipo è possibile eseguire il cast in modo esplicito su un tipo di dati XML. Per altri dettagli sulla serializzazione XML di un tipo CLR definito dall'utente, vedere [Serializzazione XML da oggetti di database CLR](https://docs.microsoft.com/dotnet/standard/serialization/introducing-xml-serialization).  
   
 ### <a name="white-space-handling-in-typed-xml"></a>Gestione degli spazi vuoti nell'istanza XML tipizzata  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], gli spazi vuoti all'interno del contenuto degli elementi vengono considerati non significativi se ricorrono in una sequenza di dati di tipo carattere composti solo da spazi vuoti delimitati da markup, ad esempio tag di inizio e di fine, e non vengono sostituiti con entità. Le sezioni CDATA vengono ignorate. Questa modalità di gestione degli spazi vuoti è diversa da quella descritta nella specifica XML 1.0 pubblicata dal World Wide Web Consortium (W3C). Tale differenza è dovuta al fatto che il parser XML in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riconosce solo un numero limitato di subset DTD, come definito nella specifica XML 1.0. Per altre informazioni sul numero limitato di subset DTD supportati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  

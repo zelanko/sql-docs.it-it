@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4eaa35280b4f469f6fcf49fe9d73f4b33bfda672
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2cc94e5f36b6c36ed44185c47356f67efb8729fe
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245205"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87947471"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Database di esempio per OLTP in memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "87245205"
  Questo esempio illustra la funzionalità OLTP in memoria . Include le tabelle ottimizzate per la memoria e le nuove stored procedure compilate in modo nativo, che possono essere usate per illustrare i vantaggi offerti da OLTP in memoria a livello di prestazioni.  
   
 > [!NOTE]  
->  Per visualizzare questo argomento per [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], vedere [Estensioni a AdventureWorks per illustrare OLTP in memoria](https://msdn.microsoft.com/library/dn511655\(v=sql.120\).aspx).  
+>  Per visualizzare questo argomento per [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], vedere [Estensioni a AdventureWorks per illustrare OLTP in memoria](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios?view=sql-server-ver15#in-memory-oltp-overview).  
   
  Nell'esempio viene eseguita la migrazione di cinque tabelle del database AdventureWorks a tabelle ottimizzate per la memoria. Inoltre, è incluso un carico di lavoro dimostrativo di ordini di vendita. Questo carico di lavoro dimostrativo può essere usato per verificare i vantaggi a livello di prestazioni di OLTP in memoria nel server.  
   
@@ -183,12 +183,11 @@ A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, le 
   
  Per ottimizzare ulteriormente il carico di lavoro, è possibile usare gli indici HASH. Vengono ottimizzati in particolare per le ricerche di punti e per gli inserimenti di righe. Tuttavia, è necessario considerare che non supportano le analisi dell'intervallo, le analisi ordinate o la ricerca nelle colonne iniziali della chiave di indice. Di conseguenza, prestare attenzione quando si utilizzano questi indici. Inoltre, è necessario specificare il bucket_count al momento della creazione. In genere deve essere impostato su un valore compreso tra una e due volte il numero di valori di chiave di indice; tuttavia, un valore superiore non rappresenta di solito un problema.  
   
-Per altre informazioni, vedere la documentazione online per maggiori dettagli sulle [linee guida relative agli indici](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) e sulle linee guida per [scegliere il bucket_count corretto](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx).  
+Per altre informazioni, vedere la documentazione online per maggiori dettagli sulle [linee guida relative agli indici](https://docs.microsoft.com/sql/relational-databases/indexes/guidelines-for-online-index-operations) e sulle linee guida per [scegliere il bucket_count corretto](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx).  
 
 
 La documentazione online offre ulteriori informazioni sui seguenti argomenti:
-- [Linee guida relative agli indici](https://docs.microsoft.com/sql/database-engine/guidelines-for-using-indexes-on-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
-- [Scelta del bucket_count corretto](https://docs.microsoft.com/sql/database-engine/determining-the-correct-bucket-count-for-hash-indexes) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn494956 -->
+- [Linee guida relative agli indici](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
 
  Gli indici nelle tabelle migrate sono stati ottimizzati per il carico di lavoro dimostrativo dell'elaborazione degli ordini vendita. Il carico di lavoro si basa sugli inserimenti e sulle ricerche di punti nelle tabelle Sales.SalesOrderHeader_inmem e Sales.SalesOrderDetail_inmem, nonché sulle ricerche di punti nelle colonne chiavi primarie nelle tabelle Production.Product_inmem e Sales.SpecialOffer_inmem.  
   
@@ -276,7 +275,7 @@ La documentazione online offre ulteriori informazioni sui seguenti argomenti:
   
     -   Aggiornare le informazioni sulla spedizione per un ordine vendita specificato. Verranno aggiornate anche le informazioni sulla spedizione di tutte le voci dell'ordine vendita.  
   
-    -   Si tratta di una stored procedure wrapper per le stored procedure compilate a livello nativo Sales.usp_UpdateSalesOrderShipInfo_native con logica di riesecuzione per gestire i potenziali (imprevisti) conflitti con transazioni simultanee con cui viene aggiornato lo stesso ordine. Per altre informazioni sulla logica di riesecuzione, vedere l'argomento nella documentazione online [qui](https://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx).  
+    -   Si tratta di una stored procedure wrapper per le stored procedure compilate a livello nativo Sales.usp_UpdateSalesOrderShipInfo_native con logica di riesecuzione per gestire i potenziali (imprevisti) conflitti con transazioni simultanee con cui viene aggiornato lo stesso ordine. Per altre informazioni sulla logica di riesecuzione, vedere l'argomento nella documentazione online [qui](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables).  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   
