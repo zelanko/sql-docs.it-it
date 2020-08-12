@@ -1,5 +1,6 @@
 ---
 title: Aggiungere e verificare una connessione dati (Generatore report) | Microsoft Docs
+description: Informazioni su come usare Generatore report per aggiungere e verificare una connessione dati per assicurarsi che le credenziali specificate siano sufficienti.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/01/2017
-ms.openlocfilehash: 26ea58eaaaffbbd0c53d78ca971f472413be322b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e128bf4402074ecce5b65951f0d2463368c08bf6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082265"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812146"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>Aggiungere e verificare una connessione dati (Generatore report e SSRS)
 
@@ -54,7 +55,7 @@ L'origine dati verrà visualizzata nel riquadro dei dati del report.
 
 3. Se la connessione riesce, verrà visualizzato il messaggio seguente: "Creazione connessione completata". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-4. In caso contrario, verrà visualizzato il messaggio: "Impossibile connettersi all'origine dati".  
+4. Se la connessione non riesce, verrà visualizzato il messaggio seguente: "Non è possibile connettersi all'origine dati".  
 
 5. Fare clic su **Dettagli**e utilizzare le informazioni per risolvere il problema.
 

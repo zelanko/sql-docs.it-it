@@ -1,5 +1,6 @@
 ---
 title: Utilizzo di condizioni di test in unit test di SQL Server
+description: Informazioni sulle condizioni di test in unit test di SQL Server. Scoprire come usare le condizioni predefinite e i test negativi e visualizzare informazioni sulle condizioni personalizzate.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 85dfbf5b8843325f445a73b7e470c54cf3c91d58
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dc5e5817952ea19f12879079c572a3c79594e070
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243524"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895116"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Utilizzo di condizioni di test in unit test di SQL Server
 
@@ -28,7 +28,7 @@ Nella tabella seguente sono elencate le condizioni di test predefinite che è po
   
 |**Condizione di test**|**Descrizione della condizione di test**|  
 |----------------------|----------------------------------|  
-|Checksum di dati|Esito negativo se il valore di checksum del set di risultati restituito dallo script Transact\-SQL non corrisponde al valore di checksum previsto. Per ulteriori informazioni, vedere [Specifica di un checksum di dati](#SpecifyDataChecksum).<br /><br />**NOTA:** non è consigliabile usare questa condizione di test se vengono restituiti dati che variano tra le esecuzioni di test. Se ad esempio il set di risultati contiene date o ore generate oppure colonne Identity, i test avranno esito negativo perché il valore di checksum sarà diverso per ogni esecuzione.|  
+|Checksum di dati|Esito negativo se il valore di checksum del set di risultati restituito dallo script Transact\-SQL non corrisponde al valore di checksum previsto. Per ulteriori informazioni, vedere [Specifica di un checksum di dati](#SpecifyDataChecksum).<br /><br />**NOTA** È consigliabile non usare questa condizione di test se vengono restituiti dati che variano tra le esecuzioni dei test. Se ad esempio il set di risultati contiene date o ore generate oppure colonne Identity, i test avranno esito negativo perché il valore di checksum sarà diverso per ogni esecuzione.|  
 |Set di risultati vuoto|Esito negativo se il set di risultati restituito dallo script Transact\-SQL non è vuoto.|  
 |Tempo di esecuzione|Esito negativo se l'esecuzione dello script di test Transact\-SQL richiede più tempo del previsto. Il tempo di esecuzione predefinito è di 30 secondi.<br /><br />Il tempo di esecuzione si applica solo allo script di test, non allo script di pre-test o post-test.|  
 |Schema previsto|Esito negativo se i tipi di dati e colonne del set di risultati non corrispondono a quelli specificati per la condizione di test. È necessario specificare uno schema tramite le proprietà della condizione di test. Per ulteriori informazioni, vedere [Specifica di uno schema previsto](#SpecifyExpectedSchema).|  

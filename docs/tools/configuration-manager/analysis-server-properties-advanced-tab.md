@@ -1,5 +1,6 @@
 ---
 title: Proprietà - Analysis Server (scheda Avanzate)
+description: Informazioni sulle opzioni disponibili nella scheda Avanzate della finestra di dialogo Proprietà computer Analysis Server, ad esempio la directory dump e l'ID istanza.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: f4415e35-8f50-4cb7-813e-bdfafbdee275
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bbf3cee39d32cfa8b48de1f81228e623463a09fd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 72da2262279318c71b7df0a59433af55db7ec1c6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306573"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892068"
 ---
 # <a name="analysis-server-properties-advanced-tab"></a>Proprietà - Analysis Server (scheda Avanzate)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Si tratta del servizio Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Se sono state definite proprietà personalizzate, verranno visualizzate in questa scheda con i rispettivi valori.  
   
 ## <a name="options"></a>Opzioni  

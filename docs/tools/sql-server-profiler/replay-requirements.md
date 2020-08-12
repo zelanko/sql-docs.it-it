@@ -1,6 +1,7 @@
 ---
 title: Requisiti per la riproduzione
 titleSuffix: SQL Server Profiler
+description: Informazioni sulle classi di evento e sulle colonne di dati da acquisire in una traccia, per riprodurre dati di traccia con SQL Server Profiler o l'utilità Riesecuzione distribuita.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 85f062ae15addae9908dca572c916e55a7ffde39
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d5fa4964a2ffb0d62777c25aa0d0c6ef205ee94b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307487"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789934"
 ---
 # <a name="replay-requirements"></a>Requisiti per la riproduzione
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Per riprodurre dati di traccia con [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o Distributed Replay Utility, è necessario acquisire un set specifico di classi di evento e colonne nella traccia. Queste impostazioni sono abilitate per impostazione predefinita se si usa il modello di traccia **TSQL_Replay** per configurare una traccia usata successivamente per la riproduzione. In questo argomento vengono descritte queste impostazioni e altri requisiti per la riproduzione.  
   

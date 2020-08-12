@@ -1,21 +1,21 @@
 ---
 title: Risoluzione dei problemi relativi a unit test del database di SQL Server
+description: Visualizzare suggerimenti per la risoluzione dei problemi che possono verificarsi con gli unit test di SQL Server, ad esempio errori di timeout e di distribuzione di database a destinazioni impreviste.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: cf4c9cd1-7e73-4c3b-922a-68b9247e7b33
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fd1b41a9744c112fcafc8968bad7abc5ac9aa4c4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cc9f8c0c87922a54df0bcd3d2ee4fa730ecfaff7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256313"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883414"
 ---
 # <a name="troubleshooting-sql-server-database-unit-testing-issues"></a>Risoluzione dei problemi relativi a unit test del database di SQL Server
 

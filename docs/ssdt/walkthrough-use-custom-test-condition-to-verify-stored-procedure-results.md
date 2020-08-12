@@ -1,23 +1,23 @@
 ---
 title: Condizione di test personalizzata per verificare i risultati di una stored procedure
+description: Procedura dettagliata per la configurazione di una condizione di test personalizzata che controlla se una stored procedure restituisce il numero corretto di colonne.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 60160fe3f36d61364b8bf4385fa53b744f9a3475
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 296e9220c4c8b0518bba5a7587cf3a69fcecae06
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286595"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882895"
 ---
-# <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Procedura dettagliata: Utilizzo di una condizione di test personalizzata per verificare i risultati di una stored procedure
+# <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Procedura dettagliata: Uso di una condizione di test personalizzata per verificare i risultati di una stored procedure
 
 In questa procedura dettagliata dell'estensione di funzionalità verrà creata una condizione di test di cui ne verrà verificata la funzionalità tramite la creazione di uno unit test di SQL Server. Il processo include la creazione di un progetto libreria di classi per la condizione di test, nonché la firma e l'installazione della condizione di test. Se è già disponibile una condizione di test che si vuole aggiornare, vedere [Procedura: Aggiornare una condizione di test personalizzata di Visual Studio 2010 da una versione precedente a SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  
   
@@ -54,7 +54,7 @@ Nella prossima esercitazione verrà illustrato come firmare il progetto.
   
 2.  Nella scheda **Firma** selezionare la casella di controllo **Firma assembly**.  
   
-3.  Nella casella **Scegli un file chiave con nome sicuro** fare clic su **\<Nuovo...>** .  
+3.  Nella casella **Scegli un file chiave con nome sicuro** fare clic su **\<New...>** .  
   
     Verrà visualizzata la finestra di dialogo **Crea chiave con nome sicuro**.  
   
@@ -381,7 +381,7 @@ Nella prossima esercitazione verrà illustrato come creare uno unit test. Per cr
   
 6.  Fare clic su **Annulla** per creare lo unit test senza configurare il progetto di test per l'uso di una connessione del database. Il test vuoto viene visualizzato nella finestra di progettazione unit test di SQL Server. Viene aggiunto un file di codice sorgente Visual C\# al progetto di test.  
   
-    Per altre informazioni sulla creazione e sulla configurazione degli unit test del database con connessioni del database, vedere [How to: Create an Empty SQL Server Unit Test](../ssdt/how-to-create-an-empty-sql-server-unit-test.md).  
+    Per altre informazioni sulla creazione e sulla configurazione degli unit test del database con connessioni del database, vedere [Procedura: Creare uno unit test di SQL Server vuoto](../ssdt/how-to-create-an-empty-sql-server-unit-test.md).  
   
 7.  Fare clic su **Fare clic qui per creare** per completare la creazione dello unit test. Verrà visualizzata la nuova condizione di test nel progetto SQL Server.  
   

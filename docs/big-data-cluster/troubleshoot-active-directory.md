@@ -5,20 +5,20 @@ description: Risolvere i problemi di distribuzione di un cluster Big Data di SQL
 author: rl-msft
 ms.author: rafidl
 ms.reviewer: mikeray
-ms.date: 03/12/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 69762b5474f72256975af06e6c79d664de283809
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 302731f3f0c37f60c4944b7df44d02b2cfc64a8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153257"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772885"
 ---
 # <a name="troubleshoot-sql-server-big-data-cluster-active-directory-integration"></a>Risolvere i problemi di integrazione di Active Directory di cluster Big Data di SQL Server
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Questo articolo illustra come risolvere i problemi di distribuzione di un cluster Big Data di SQL Server in modalità Active Directory.
 
@@ -123,9 +123,9 @@ Per identificare il motivo per cui la distribuzione viene terminata senza creare
 
 ## <a name="cause"></a>Causa
 
-Nell'esempio precedente la distribuzione non riesce a creare un account di accesso per l'utente di dominio perché l'ambito del gruppo di dominio è locale al dominio. Usare gruppi con ambito globale o universale di dominio. In [Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in modalità Active Directory](deploy-active-directory.md) vengono presentati i requisiti per l'ambito dei gruppi di AD.
+Nell'esempio precedente la distribuzione non riesce a creare un account di accesso per l'utente di dominio perché l'ambito del gruppo di dominio è locale al dominio. Usare gruppi con ambito globale o universale. In [Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in modalità Active Directory](deploy-active-directory.md) vengono presentati i requisiti per l'ambito dei gruppi di AD.
 
-## <a name="resolution"></a>Risoluzione
+## <a name="verify"></a>Verifica
 
 Controllare l'ambito del gruppo di dominio (<`domain-group`>). Usare [get-adgroup](/powershell/module/addsadministration/get-adgroup/).
 

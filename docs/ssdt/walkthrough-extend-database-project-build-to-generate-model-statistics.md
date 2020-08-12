@@ -1,21 +1,21 @@
 ---
 title: Estendere la compilazione del progetto di database per generare statistiche del modello
+description: Informazioni su come creare, installare e testare un collaboratore alla compilazione che restituisce statistiche dal modello di database SQL quando si compila un progetto di database.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9365c90104fb7291a130f338e88907dce932dd7a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242685"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894021"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Procedura dettagliata: Estendere la compilazione del progetto del database per generare statistiche del modello
 
@@ -29,7 +29,7 @@ In questa procedura dettagliata, vengono eseguite le attività principali seguen
   
 -   [Testare il collaboratore alla compilazione](#TestBuildContributor)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
 Per completare questa procedura dettagliata, è necessario disporre dei componenti seguenti:  
   
 -   È necessario avere installata una versione di Visual Studio che includa SQL Server Data Tools (SSDT) e supporti lo sviluppo in C# o VB.  
@@ -54,7 +54,7 @@ L'oggetto più utile è il modello di database, rappresentato da un oggetto TSql
   
 Di seguito sono riportati alcuni dei comandi utilizzati dal collaboratore di esempio della procedura dettagliata:  
   
-|**Class**|**Metodo/proprietà**|**Descrizione**|  
+|**Classe**|**Metodo/proprietà**|**Descrizione**|  
 |-------------|------------------------|-------------------|  
 |[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Esegue una query al modello per gli oggetti ed è il punto di ingresso principale all'API del modello. È possibile eseguire query solo sui tipi di livello superiore, ad esempio, le tabelle o le viste. Altri tipi, ad esempio le colonne, si possono individuare solo con l'attraversamento del modello. Se non è specificato alcun filtro ModelTypeClass, verranno restituiti tutti i tipi di livello superiore.|  
 |[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Trova le relazioni agli elementi a cui l'elemento TSqlObject corrente fa riferimento. Ad esempio, per una tabella vengono restituiti oggetti come le colonne della tabella. In questo caso è possibile usare un filtro ModelRelationshipClass per specificare le relazioni esatte su cui eseguire la query. Ad esempio, usando il filtro "Table.Columns" si assicura che vengano restituite solo le colonne.<br /><br />Sono presenti vari metodi simili, quali GetReferencingRelationshipInstances, GetChildren e GetParent. Per ulteriori informazioni, vedere la documentazione dell'API.|  
@@ -508,7 +508,7 @@ Questa operazione può essere eseguita in due modi:
         </Project>  
         ```  
   
-    4.  Nel file con estensione sqlproj per qualsiasi progetto per cui si voglia eseguire collaboratori, importare il file targets aggiungendo l'istruzione seguente al file sqlproj dopo il nodo \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> nel file:  
+    4.  All'interno del file con estensione sqlproj per tutti i progetti per i quali si vogliono eseguire i collaboratori, importare il file targets aggiungendo l'istruzione seguente al file con estensione sqlproj dopo il nodo \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> nel file:  
   
         ```  
         <Import Project="$(MSBuildExtensionsPath)\MyContributors\MyContributors.targets " />  
@@ -525,7 +525,7 @@ Dopo aver seguito uno di questi approcci, è possibile utilizzare MSBuild per pa
   
 1.  In Visual Studio fare clic con il pulsante destro del mouse sul progetto e selezionare "Ricompila". In questo modo il progetto verrà ricompilato ed è necessario verificare le statistiche del modello generate, con l'output incluso nell'output di compilazione e salvato in ModelStatistics.xml. Si noti che può essere necessario scegliere "Mostra tutti i file" in Esplora soluzioni per visualizzare il file XML.  
   
-2.  Aprire un prompt dei comandi di Visual Studio: dal menu **Start** scegliere **Tutti i programmi**, fare clic su **Microsoft Visual Studio <Visual Studio Version>** , **Strumenti di Visual Studio** e quindi scegliere **Prompt dei comandi di Visual Studio (<Visual Studio Version>)** .  
+2.  Aprire un prompt dei comandi di Visual Studio: dal menu **Start** scegliere **Tutti i programmi**, fare clic su **Microsoft Visual Studio <Visual Studio Version>**, **Strumenti di Visual Studio** e quindi scegliere **Prompt dei comandi di Visual Studio (<Visual Studio Version>)**.  
   
 3.  Al prompt dei comandi, passare alla cartella contenente il progetto SQL.  
   
@@ -593,5 +593,5 @@ Relationships
   
 ## <a name="see-also"></a>Vedere anche  
 [Personalizzare la compilazione e la distribuzione del database tramite collaboratori alla compilazione e distribuzione](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[Procedura dettagliata: estendere la distribuzione del progetto di database per analizzare il piano di distribuzione](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
+[Procedura dettagliata: Estendere la distribuzione del progetto di database per analizzare il piano di distribuzione](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

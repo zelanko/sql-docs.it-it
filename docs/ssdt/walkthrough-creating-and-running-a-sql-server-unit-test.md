@@ -1,21 +1,21 @@
 ---
 title: Creazione ed esecuzione di uno unit test di SQL Server
+description: Informazioni su come creare un unit test di SQL Server. Procedura dettagliata per la configurazione di un test che rileva un errore in una stored procedure.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: cb284457b86d6dd1e2284d6815a1b175640fa0c2
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: edc5f591746673f55dfc7ea10c99822ee0c13098
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087508"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882919"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Procedura dettagliata: Creazione ed esecuzione di uno unit test di SQL Server
 
@@ -181,7 +181,7 @@ Per completare questa procedura dettagliata, è necessario essere in grado di co
     AS  
     BEGIN  
     INSERT INTO [Sales].[Customer] (CustomerName) VALUES (@CustomerName);  
-    SELECT SCOPE_IDENTITY()  
+    RETURN SCOPE_IDENTITY()  
     END  
     GO  
     PRINT N'Creating Sales.uspPlaceNewOrder...';  
@@ -274,7 +274,7 @@ Per impostazione predefinita, quando si preme F5 il database viene distribuito (
   
 2.  Fare clic con il pulsante destro del mouse su una delle stored procedure e selezionare **Crea unit test** per visualizzare la finestra di dialogo **Crea unit test**.  
   
-3.  Selezionare le caselle di controllo delle cinque stored procedure: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder** e **Sales.uspShowOrderDetails**.  
+3.  Selezionare le caselle di controllo delle cinque stored procedure: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder**e **Sales.uspShowOrderDetails**.  
   
 4.  Nell'elenco a discesa **Progetto** selezionare **Crea nuovo progetto di test Visual C#** .  
   

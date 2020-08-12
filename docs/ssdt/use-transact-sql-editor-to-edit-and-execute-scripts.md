@@ -1,5 +1,6 @@
 ---
 title: Utilizzare l'Editor Transact-SQL per modificare ed eseguire script
+description: Acquisire familiarità con l'editor Transact-SQL. Informazioni su come aprire l'editor, visualizzare le informazioni visualizzate nei riquadri e visualizzare risorse sulle relative funzionalità.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c3eaaa53b87d2e360503a087b8978f507d6a6023
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b6a045900509fbf7aff58f477f079747e413bf0d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256203"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883170"
 ---
 # <a name="use-transact-sql-editor-to-edit-and-execute-scripts"></a>Utilizzare l'Editor Transact-SQL per modificare ed eseguire script
 

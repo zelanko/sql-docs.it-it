@@ -1,5 +1,6 @@
 ---
 title: Creare e modificare origini dati incorporate | Microsoft Docs
+description: Informazioni su come creare e modificare le origini dati incorporate definite in una definizione del report e usate solo da tale report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f2ce2535a28661e40e845aa87936f3c23353e544
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0e5f9aed11beacf056916e44e6f2df391444eae0
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190841"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808451"
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>Creare e modificare origini dati incorporate
   Un'origine dati incorporata viene definita in una definizione del report e viene utilizzata solo dal report specifico,  

@@ -2,22 +2,22 @@
 title: Abilitare o disabilitare la gestione remota dei pacchetti R
 description: Abilitare la gestione remota dei pacchetti R in SQL Server 2016 R Services o Machine Learning Services (In-Database) di SQL Server
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 250be5c8a4207a43d2e4194c78377bd87880a99c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1a18d56d1dcf0733f080da7cf8247421c669a4aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117984"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757142"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Abilitare o disabilitare la gestione remota dei pacchetti per SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Questo articolo descrive come abilitare la gestione remota dei pacchetti R da una workstation client o da un'istanza diversa di Machine Learning Server. Dopo aver abilitato la funzionalità di gestione dei pacchetti in SQL Server, è possibile usare i comandi RevoScaleR in un client per installare i pacchetti in SQL Server.
 
@@ -41,7 +41,7 @@ Anche per [disabilitare](#bkmk_disable) la funzionalità di gestione dei pacchet
 
     Questo comando crea oggetti a livello di istanza nel computer con SQL Server che sono necessari per la gestione dei pacchetti. Riavvia anche il servizio Launchpad per l'istanza.
 
-    Se non si specifica un'istanza, viene usata l'istanza predefinita. Se non si specifica un utente, viene usato il contesto di sicurezza corrente. Il comando seguente ad esempio abilita la gestione dei pacchetti nell'istanza nel percorso di RegisterRExt.exe, usando le credenziali dell'utente che ha aperto il prompt dei comandi:
+    Se non si specifica un'istanza, viene usata l'istanza predefinita. Se non si specifica un utente, viene usato il contesto di sicurezza corrente. Il comando seguente, ad esempio, abilita la gestione dei pacchetti nell'istanza predefinita, usando le credenziali dell'utente che ha aperto il prompt dei comandi:
 
     `REgisterRExt.exe /install pkgmgmt`
 
@@ -51,7 +51,7 @@ Anche per [disabilitare](#bkmk_disable) la funzionalità di gestione dei pacchet
    
     Questo comando crea alcuni artefatti del database, tra cui i ruoli del database seguenti necessari per il controllo delle autorizzazioni utente: `rpkgs-users`, `rpkgs-private` e `rpkgs-shared`.
 
-    Il comando seguente ad esempio abilita la gestione dei pacchetti nel database, nell'istanza in cui viene eseguita l'utilità RegisterRExt. Se non si specifica un utente, viene usato il contesto di sicurezza corrente.
+    Il comando seguente, ad esempio, abilita la gestione dei pacchetti nel database, nell'istanza predefinita. Se non si specifica un utente, viene usato il contesto di sicurezza corrente.
 
     `RegisterRExt.exe /install pkgmgmt /database:TestDB`
 

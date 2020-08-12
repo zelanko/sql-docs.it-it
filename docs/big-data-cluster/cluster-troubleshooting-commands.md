@@ -5,20 +5,20 @@ description: Questo articolo offre utili comandi per il monitoraggio e la risolu
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/28/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49ed75b4986a45dfec25547317e3fe0789671fe4
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 4d384a1835d902e56030b62897d657c81c0ec3b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606403"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773671"
 ---
 # <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>Risolvere i problemi relativi a Kubernetes in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Questo articolo descrive alcuni comandi utili di Kubernetes che è possibile usare per il monitoraggio e la risoluzione dei problemi di un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Mostra come visualizzare dettagli approfonditi su un pod o altri elementi di Kubernetes che si trovano nel cluster Big Data. Questo articolo presenta anche le attività comuni, ad esempio la copia di file in o da un contenitore che esegue uno dei cluster Big Data di SQL Server.
 
@@ -118,8 +118,10 @@ I servizi seguenti supportano connessioni esterne al cluster Big Data:
 |---|---|
 | **master-svc-external** | Permette l'accesso all'istanza master<br/>(**EXTERNAL-IP, 31433** e utente **SA**). |
 | **controller-svc-external** | Supporta strumenti e client che gestiscono il cluster. |
-| **gateway-svc-external** | Permette l'accesso al gateway ADFS/Spark<br/>(**External-IP** e utente **root**). |
+| **gateway-svc-external** | Permette l'accesso al gateway ADFS/Spark<br/>(**EXTERNAL-IP** e utente `<AZDATA_USERNAME>`)<sup>1</sup>|
 | **appproxy-svc-external** | Supporta scenari di distribuzione di applicazioni. |
+
+<sup>1</sup> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 > [!TIP]
 > Questo è un modo per visualizzare i servizi con **kubectl**, ma è anche possibile usare il comando `azdata bdc endpoint list` per visualizzare questi endpoint. Per altre informazioni, vedere [Ottenere gli endpoint del cluster Big Data](deployment-guidance.md#endpoints).

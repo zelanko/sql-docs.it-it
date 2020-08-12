@@ -1,5 +1,6 @@
 ---
 title: Esecuzione di unit test di SQL Server
+description: Acquisire familiarità con gli unit test di SQL Server. Visualizzare risorse per la creazione di test, la creazione di condizioni di test personalizzate, l'esecuzione di test e l'interpretazione dei risultati.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: febcc87f-eb18-4c12-ba30-82ef0d49aaa3
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 93dfaf8cf202b0b9447574ecfc58cc13f151381b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d27d25d374d737cc51f7e0a5149556a4d5a92260
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256986"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883463"
 ---
 # <a name="running-sql-server-unit-tests"></a>Esecuzione di unit test di SQL Server
 

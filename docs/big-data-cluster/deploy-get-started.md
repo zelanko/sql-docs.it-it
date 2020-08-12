@@ -5,20 +5,20 @@ description: Informazioni sulle risorse e sui passaggi necessari per la distribu
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0f6600b6578abe0a9b72dff8fee2d815b0771c0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4caaacd2d71d00d874a793129eef2f4144f03190
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82178132"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784303"
 ---
 # <a name="get-started-with-big-data-clusters-2019-deployment"></a>Introduzione alla distribuzione di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Questo articolo offre una panoramica della distribuzione di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. L'articolo offre un'introduzione ai concetti e presenta un framework utile alla comprensione degli scenari di distribuzione. I passaggi di distribuzione specifici variano in base alla piattaforma scelta per il client e il server. Per informazioni introduttive su [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vedere [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)
 
@@ -41,16 +41,7 @@ Guardare questo video di 9 minuti per una panoramica della distribuzione di clus
 
 ## <a name="client-tools"></a><a id="tools"></a> Strumenti client
 
-I cluster Big data richiedono un set specifico di strumenti client. Prima di distribuire un cluster Big Data in Kubernetes, è necessario installare gli strumenti seguenti:
-
-| Strumento | Descrizione |
-|---|---|
-| **azdata** | Distribuisce e gestisce cluster Big Data. |
-| **kubectl** | Crea e gestisce il cluster Kubernetes sottostante. |
-| **Azure Data Studio** | Interfaccia grafica per l'uso del cluster Big Data. |
-| **Estensione di SQL Server 2019** | Estensione di Azure Data Studio che abilita le funzionalità dei cluster Big Data. |
-
-Per scenari diversi sono necessari altri strumenti. Ogni articolo descriverà gli strumenti necessari come prerequisiti per l'esecuzione di un'attività specifica. Per un elenco completo degli strumenti e dei collegamenti di installazione, vedere [Installare strumenti per Big Data di SQL Server 2019](deploy-big-data-tools.md).
+I cluster Big data richiedono un set specifico di strumenti client. Prima di distribuire un cluster Big Data in Kubernetes, è necessario installare gli strumenti richiesti per la distribuzione. Per scenari diversi sono necessari strumenti specifici. Ogni articolo descriverà gli strumenti necessari come prerequisiti per l'esecuzione di un'attività specifica. Per un elenco completo degli strumenti e dei collegamenti di installazione, vedere [Installare strumenti per Big Data di SQL Server 2019](deploy-big-data-tools.md).
 
 ## <a name="kubernetes"></a>Kubernetes
 
@@ -58,7 +49,11 @@ I cluster Big Data vengono distribuiti come serie di contenitori intercorrelati 
 
 - **Servizio Azure Kubernetes**: il servizio Azure Kubernetes permette di distribuire un cluster Kubernetes gestito in Azure. È possibile gestire solo i nodi agente. Con il servizio Azure Kubernetes non è necessario effettuare il provisioning del proprio hardware per il cluster. È facile usare anche uno [script Python](quickstart-big-data-cluster-deploy.md) o un [notebook di distribuzione](notebooks-deploy.md) per creare il cluster del servizio Azure Kubernetes e distribuire il cluster Big Data in un unico passaggio. Per altre informazioni sulla configurazione del servizio Azure Kubernetes per la distribuzione di un cluster Big Data, vedere [Configurare il servizio Azure Kubernetes per distribuzioni di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](deploy-on-aks.md).
 
+- **Azure Red Hat OpenShift (ARO)** : consente di distribuire un cluster Red Hat OpenShift gestito in Azure. È possibile gestire solo i nodi agente. Con Azure Red Hat OpenShift non è necessario effettuare il provisioning del proprio hardware per il cluster. È facile usare anche uno [script Python](quickstart-big-data-cluster-deploy-aro.md) per creare il cluster Azure Red Hat OpenShift e distribuire il cluster Big Data in un unico passaggio. Questo modello di distribuzione è stato introdotto in SQL Server 2019 CU5. 
+
 - **Più computer**: è possibile distribuire Kubernetes anche in più computer Linux, che possono essere server fisici o macchine virtuali. È possibile usare lo strumento [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) per creare il cluster Kubernetes. È possibile usare uno [script Bash](deployment-script-single-node-kubeadm.md) per automatizzare questo tipo di distribuzione. Questo metodo funziona correttamente se è già presente un'infrastruttura che si vuole usare per il cluster Big Data. Per altre informazioni sull'uso di distribuzioni **kubeadm** con cluster Big Data, vedere [Configurare Kubernetes in più computer per distribuzioni di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](deploy-with-kubeadm.md).
+
+- **Red Hat OpenShift**: è possibile eseguire la distribuzione nel proprio cluster Red Hat OpenShift. Per informazioni, vedere [Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in OpenShift in locale e in Azure Red Hat OpenShift](deploy-openshift.md). Questo modello di distribuzione è stato introdotto in SQL Server 2019 CU5.
 
 ## <a name="deploy-a-big-data-cluster"></a>Distribuire un cluster Big Data
 

@@ -1,5 +1,6 @@
 ---
 title: Riquadro dei dati del report
+description: Informazioni su come usare il riquadro dei dati del report per visualizzare i parametri attualmente definiti, le origini dati, i set di dati, le raccolte di campi e le immagini nel report.
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 24c11796a758d4cbf3b1da35af16565e0e607535
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c7afab0edc7afd86b16103e5364d17a93579d096
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190749"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812616"
 ---
 # <a name="report-data-pane-in-sql-server-reporting-services-ssrs"></a>Riquadro dei dati del report in SQL Server Reporting Services (SSRS)
 

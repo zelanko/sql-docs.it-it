@@ -1,5 +1,6 @@
 ---
 title: Gestire set di dati condivisi | Microsoft Docs
+description: Informazioni su come gestire i set di dati condivisi in Reporting Services in modo da condividere una query per fornire un set di dati coerente per più report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 332103dd9f100a2477b9ae7392bd6d24088261f6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df22dbab5cf450981f53976fb2a09e6ff08797c8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67220591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808441"
 ---
 # <a name="manage-shared-datasets"></a>Gestire set di dati condivisi
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]i set di dati condivisi consentono il recupero di dati da origini dati condivise tramite cui si esegue la connessione alle origini dati esterne. Un set di dati condiviso consente di condividere una query per fornire un set di dati coerente a più report. Nella query del set di dati possono essere inclusi i parametri di quest'ultimo. È possibile configurare un set di dati condiviso per memorizzare nella cache i risultati della query per specifiche combinazioni di parametri al primo utilizzo o specificando una pianificazione. È possibile inoltre utilizzare la memorizzazione nella cache del set di dati condiviso in combinazione con la memorizzazione nella cache dei report e con i feed di dati del report per consentire di gestire l'accesso a un'origine dati.  
@@ -41,8 +42,8 @@ ms.locfileid: "67220591"
 ### <a name="manage-shared-dataset-item-properties"></a>Gestire le proprietà dell'elemento del set di dati condiviso  
  Nella tabella seguente vengono elencate le proprietà che è possibile modificare per un elemento del set di dati condiviso.  
   
-|||  
-|-|-|  
+|Proprietà|Descrizione|  
+|--------|-----------|  
 |Modifica nome|Consente di modificare il nome del set di dati condiviso. Tutti i riferimenti dagli elementi dipendenti continueranno a funzionare.|  
 |Modifica descrizione|Consente di modificare la descrizione del set di dati condiviso.|  
 |Modifica timeout esecuzione query|Consente di impostare il timeout di esecuzione delle query in secondi. Il valore zero (0) indica l'assenza di timeout. La proprietà determina il numero di secondi prima del timeout della query del set di dati. Per non utilizzare alcun timeout, specificare il valore 0. Per altre informazioni, vedere [Impostazione dei valori di timeout per l'elaborazione di report e di set di dati condivisi &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  

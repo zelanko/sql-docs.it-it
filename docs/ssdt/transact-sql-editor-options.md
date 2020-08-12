@@ -1,5 +1,6 @@
 ---
 title: Opzioni dell'editor Transact-SQL
+description: Acquisire familiarità con le opzioni dell'editor Transact-SQL. Informazioni sulle proprietà di esecuzione delle query, sulle proprietà dei risultati delle query e su come modificare i valori.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -23,16 +24,15 @@ f1_keywords:
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 0b91be419419d7dab1904068b1600def88106023
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0edf0ee20ce44abadb7783baa6e99cba88ddff7b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256324"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883416"
 ---
 # <a name="transact-sql-editor-options"></a>Opzioni dell'editor Transact-SQL
 
@@ -79,7 +79,7 @@ In questo argomento sono contenute informazioni su alcune opzioni dell'editor Tr
 |**Elimina risultati dopo l'esecuzione**|Consente di liberare memoria eliminando i risultati delle query dopo la loro visualizzazione.|  
 |**Visualizza risultati in una scheda separata**|Consente di visualizzare il set dei risultati in una nuova finestra del documento anziché nella parte inferiore della finestra del documento della query.|  
 |**Passa alla scheda dei risultati al termine della query**|Consente di impostare automaticamente lo stato attivo dello schermo sul set dei risultati.|  
-|**Dimensioni massime caratteri recuperati**|Dati non XML:<br /><br />Consente di immettere un valore compreso tra 1 e 65535 per specificare il numero massimo di caratteri che sarà possibile visualizzare in ogni cella. **Nota:** se si specifica un numero elevato di caratteri, i dati nel set di risultati potrebbero non essere visualizzati completamente. Il numero massimo di caratteri visualizzati in ogni cella dipende dalle dimensioni del carattere. Se si specifica un valore elevato in questa casella e vengono restituiti set di risultati di notevoli dimensioni, la memoria per SQL Server Management Studio potrebbe risultare insufficiente con effetti negativi sulle prestazioni del sistema.<br /><br />Dati XML<br /><br />Consente di selezionare i valori 1 MB, 2 MB o 5 MB. Selezionare Illimitate per recuperare tutti i caratteri.|  
+|**Dimensioni massime caratteri recuperati**|Dati non XML:<br /><br />Consente di immettere un valore compreso tra 1 e 65535 per specificare il numero massimo di caratteri che sarà possibile visualizzare in ogni cella. **Nota:** Se si specifica un numero elevato di caratteri, i dati nel set di risultati potrebbero non essere visualizzati completamente. Il numero massimo di caratteri visualizzati in ogni cella dipende dalle dimensioni del carattere. Se si specifica un valore elevato in questa casella e vengono restituiti set di risultati di notevoli dimensioni, la memoria per SQL Server Management Studio potrebbe risultare insufficiente con effetti negativi sulle prestazioni del sistema.<br /><br />Dati XML<br /><br />Consente di selezionare i valori 1 MB, 2 MB o 5 MB. Selezionare Illimitate per recuperare tutti i caratteri.|  
 |**Formato di output**|Per impostazione predefinita, l'output viene visualizzato in colonne create utilizzando gli spazi per separare i risultati. Per separare le colonne, è inoltre possibile utilizzare virgole, caratteri di tabulazione o spazi. Selezionare la casella di controllo **Delimitatore personalizzato** per specificare un carattere di delimitazione differente nella casella **Delimitatore personalizzato** .|  
 |**Delimitatore personalizzato**|Consente di specificare il carattere che si desidera utilizzare per separare le colonne. Questa opzione è disponibile solo se la casella di controllo **Delimitatore personalizzato** è selezionata nella finestra **Formato di output** .|  
 |**Includi intestazioni di colonna nel set di risultati**|Deselezionare questa casella di controllo se non si vuole applicare un titolo alle colonne.|  

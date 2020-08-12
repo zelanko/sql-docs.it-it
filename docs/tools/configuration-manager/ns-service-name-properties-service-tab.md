@@ -1,5 +1,6 @@
 ---
 title: Proprietà NS$&lt;nome servizio&gt; (scheda Servizio)
+description: Informazioni sulle opzioni disponibili nella scheda Servizio della finestra di dialogo Proprietà - Notification Services, ad esempio il percorso binario, il nome host e la modalità di avvio.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 80f6d926dbe1380bf0f44b8b841d79b2bd66afc7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 00d3b6ffa3144384f04176af7ab4659649c7f338
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306390"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892495"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>Proprietà NS$&lt;nome servizio&gt; (scheda Servizio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Si tratta del servizio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)]. I valori delle proprietà visualizzati in grigio chiaro non possono essere modificati con questa applicazione.  
   
 ## <a name="options"></a>Opzioni  

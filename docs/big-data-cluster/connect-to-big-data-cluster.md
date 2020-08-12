@@ -8,16 +8,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0c5ba08a492be621e4b1f8871bdfcb49983af26d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7b6f4b11848cd0108dec5f3a4e5de0c089a89b41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285985"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784345"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Connettersi a un cluster Big Data di SQL Server con Azure Data Studio
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Questo articolo descrive come connettersi a un[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] da Azure Data Studio.
 
@@ -47,7 +47,7 @@ Per connettersi a un cluster Big Data con Azure Data Studio, stabilire una nuova
 
 1. In **Tipo di connessione** selezionare **Microsoft SQL Server**.
 
-1. Digitare il nome dell'endpoint trovato per l'istanza master di SQL Server nella casella di testo **Nome server**, ad esempio: **\<Indirizzo_IP\>, 31433**. 
+1. Digitare il nome dell'endpoint trovato per l'istanza master di SQL Server nella casella di testo **Nome server**, ad esempio: **\<IP_Address\>,31433**. 
 
 1. Scegliere il tipo di autenticazione. Per l'istanza master di SQL Server in esecuzione all'interno di cluster Big Data, sono supportati solo i tipi **Autenticazione di Windows** e **Account di accesso SQL**. 
 

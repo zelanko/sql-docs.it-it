@@ -1,5 +1,6 @@
 ---
 title: Proprietà - SQL Server Integration Services (scheda Avanzate)
+description: Informazioni sulla scheda Avanzate della finestra di dialogo Proprietà - SQL Server Integration Services, in cui è possibile visualizzare i valori delle proprietà personalizzate.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: d89cc01f-084b-41b0-8c60-3c6b964d7ad4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 83928938d5ba9e25909f7d4171630b43fcde0f49
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8597380d35dcd834c83dc5c7a0f69f6756f23d26
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306864"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894252"
 ---
 # <a name="sql-server-integration-services-properties-advanced-tab"></a>Proprietà - SQL Server Integration Services (scheda Avanzate)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Microsoft [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene implementato come servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Se sono state definite proprietà personalizzate, verranno visualizzate in questa scheda con i rispettivi valori. È possibile che questa scheda non contenga proprietà.  
   
   

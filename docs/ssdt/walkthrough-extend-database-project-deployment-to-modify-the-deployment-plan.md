@@ -1,23 +1,23 @@
 ---
 title: Estendere la distribuzione del progetto di database per modificare il piano di distribuzione
+description: Creare un collaboratore alla distribuzione di tipo DeploymentPlanModifier che programma i batch dello script di distribuzione da eseguire di nuovo se si verificano errori durante l'esecuzione.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 22b077b1-fa25-49ff-94f6-6d0d196d870a
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 1f4c73d02d131a0399fd8dde7698592629ef2726
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3fa3d424d3c6d46ba129c96d935612ce687b3ba0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242668"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882907"
 ---
-# <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Procedura dettagliata: estendere la distribuzione del progetto di database per modificare il piano di distribuzione
+# <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Procedura dettagliata: Estendere la distribuzione del progetto di database per modificare il piano di distribuzione
 
 È possibile creare collaboratori alla distribuzione per eseguire azioni personalizzate quando si distribuisce un progetto SQL. È possibile creare un elemento [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) o [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). Usare [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) per modificare il piano prima di eseguirlo e [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) per eseguire operazioni mentre il piano è in esecuzione. In questa procedura dettaglia, si crea un elemento [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) denominato SqlRestartableScriptContributor che aggiunge istruzioni IF ai batch nello script di distribuzione per consentire di eseguire nuovamente lo script finché non sono completi se si verifica un errore durante l'esecuzione.  
   
@@ -29,7 +29,7 @@ In questa procedura dettagliata, vengono eseguite le attività principali seguen
   
 -   [Eseguire o testare il collaboratore alla distribuzione](#TestDeploymentContributor)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
 Per completare questa procedura dettagliata, è necessario disporre dei componenti seguenti:  
   
 -   È necessario avere installata una versione di Visual Studio che includa SQL Server Data Tools e supporti lo sviluppo in C# o VB.  
@@ -366,7 +366,7 @@ Iniziare ad aggiungere codice alla classe.
     |CreateExecuteSQL|Definire il metodo CreateExecuteSQL per racchiudere un'istruzione fornita in un'istruzione EXEC sp_executesql. Tipi, metodi e proprietà chiave includono i seguenti: [ExecuteStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executestatement.aspx), [ExecutableProcedureReference](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executableprocedurereference.aspx), [SchemaObjectName](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx), [ProcedureReference](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.procedurereference.aspx) e [ExecuteParameter](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executeparameter.aspx).|  
     |CreateCompletedBatchesName|Definire il metodo CreateCompletedBatchesName. Questo metodo crea il nome che verrà inserito nella tabella temporanea per un batch. Tipi, metodi e proprietà chiave includono quanto segue: [SchemaObjectName](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx).|  
     |IsStatementEscaped|Definire il metodo IsStatementEscaped. Questo metodo determina se il tipo di elemento del modello richiede che l'istruzione sia racchiusa in un'istruzione EXEC sp_executesql prima di poter essere inclusa nell'istruzione IF. Tipi, metodi e proprietà chiave includono quanto segue: TSqlObject.ObjectType, ModelTypeClass e la proprietà TypeClass per i tipi di modello seguenti: Schema, Procedure, View,  TableValuedFunction, ScalarFunction, DatabaseDdlTrigger, DmlTrigger, ServerDdlTrigger.|  
-    |CreateBatchCompleteInsert|Definire il metodo CreateBatchCompleteInsert. Questo metodo crea l'istruzione INSERT che verrà aggiunta allo script di distribuzione per tenere traccia dell'avanzamento dell'esecuzione dello script. Tipi, metodi e proprietà chiave includono quanto segue: InsertStatement, NamedTableReference, ColumnReferenceExpression, ValuesInsertSource e RowValue.|  
+    |CreateBatchCompleteInsert|Definire il metodo CreateBatchCompleteInsert. Questo metodo crea l'istruzione INSERT che verrà aggiunta allo script di distribuzione per tenere traccia dell'avanzamento dell'esecuzione dello script. Tipi, metodi e proprietà chiave includono: InsertStatement, NamedTableReference, ColumnReferenceExpression, ValuesInsertSource e RowValue.|  
     |CreateIfNotExecutedStatement|Definire il metodo CreateIfNotExecutedStatement. Questo metodo genera un'istruzione IF che verifica se la tabella temporanea di esecuzione dei batch indica che questo batch è già stato eseguito. Tipi, metodi e proprietà chiave includono quanto segue: IfStatement, ExistsPredicate, ScalarSubquery, NamedTableReference, WhereClause, ColumnReferenceExpression, IntegerLiteral, BooleanComparisonExpression e BooleanNotExpression.|  
     |GetStepInfo|Definire il metodo GetStepInfo. Questo metodo estrae informazioni sull'elemento del modello usato per creare lo script del passaggio, oltre al nome del passaggio. Tipi e metodi di interesse includono i seguenti: [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx), [DeploymentScriptDomStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx), [TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx) e [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).|  
     |GetElementName|Crea un nome formattato per un elemento TSqlObject.|  
@@ -687,7 +687,7 @@ Per eseguire o testare il collaboratore alla distribuzione, è necessario effett
   
         ```  
   
-    4.  Nel file con estensione sqlproj per qualsiasi progetto per cui si vogliono eseguire collaboratori, importare il file targets aggiungendo l'istruzione seguente al file sqlproj dopo il nodo \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> nel file:  
+    4.  All'interno del file con estensione sqlproj per tutti i progetti per i quali si vogliono eseguire i collaboratori, importare il file targets aggiungendo l'istruzione seguente al file con estensione sqlproj dopo il nodo \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> nel file:  
   
         ```  
         <Import Project="$(MSBuildExtensionsPath)\MyContributors\MyContributors.targets " />  
@@ -791,6 +791,6 @@ Dopo che un progetto SQL viene compilato, viene creato un file dacpac che può e
   
 ## <a name="see-also"></a>Vedere anche  
 [Personalizzare la compilazione e la distribuzione del database tramite collaboratori alla compilazione e distribuzione](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[Procedura dettagliata: Estendere la compilazione del progetto del database per generare statistiche del modello](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)  
-[Procedura dettagliata: estendere la distribuzione del progetto di database per analizzare il piano di distribuzione](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
+[Procedura dettagliata: Estendere la compilazione del progetto di database per generare statistiche del modello](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)  
+[Procedura dettagliata: Estendere la distribuzione del progetto di database per analizzare il piano di distribuzione](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

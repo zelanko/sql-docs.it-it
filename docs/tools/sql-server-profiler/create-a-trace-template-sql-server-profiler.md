@@ -1,6 +1,7 @@
 ---
 title: Creare un modello di traccia
 titleSuffix: SQL Server Profiler
+description: Informazioni su come creare un nuovo modello di traccia in SQL Server Profiler. Informazioni su come aggiungere filtri al modello e su come aggiungere o rimuovere eventi e colonne di dati.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 2944e21afee17f66eef51723f4e552c947f43db8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: af272f50f281a8c3a564913cfb91be8abcab2898
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307314"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774868"
 ---
 # <a name="create-a-trace-template-sql-server-profiler"></a>Creare un modello di traccia (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In questo argomento viene descritto come creare un nuovo modello di traccia utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-create-a-trace-template"></a>Per creare un modello di traccia  

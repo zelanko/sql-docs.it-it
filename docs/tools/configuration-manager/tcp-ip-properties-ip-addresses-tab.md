@@ -1,5 +1,6 @@
 ---
 title: Proprietà TCP/IP
+description: Di seguito viene descritto come usare la scheda Indirizzi IP della finestra di dialogo Proprietà TCP/IP per configurare le opzioni del protocollo TCP/IP per un indirizzo IP specifico in SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 08/24/2016
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f1afdb9d25d599f32b2efb9d5339ef4afffd6f31
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c68b7a9f1da65862403750e32315ee7168ded6e6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307560"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880296"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Proprietà TCP/IP
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   La finestra di dialogo **Proprietà TCP/IP** (scheda Indirizzi IP) consente di configurare le opzioni del protocollo TCP/IP per un indirizzo IP specifico. Solo le opzioni **Porte dinamiche TCP** e **Porta TCP** possono essere configurate contemporaneamente per tutti gli indirizzi selezionando **IPAll**.  
   
  Le modifiche hanno effetto dopo il riavvio di SQL Server. Per informazioni sull'avvio e l'arresto del servizio SQL Server Browser, vedere [Avvio e arresto del servizio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
@@ -52,7 +53,7 @@ ms.locfileid: "75307560"
   
  Il motore di database può restare in attesa su più porte sullo stesso indirizzo IP. Elencare le porte separandole con una virgola, nel formato 1433,1500,1501. La lunghezza massima del campo è 2047 caratteri.  
   
- Per configurare un unico indirizzo IP per l'attesa su più porte è inoltre necessario impostare il parametro **Attesa su tutti** su **No**nella **scheda Protocolli** della finestra di dialogo **Proprietà TCP/IP** . Per altre informazioni, vedere "Procedura: Configurazione del Motore di database per l'attesa su più porte TCP" nella documentazione online di SQL Server.  
+ Per configurare un unico indirizzo IP per l'attesa su più porte è inoltre necessario impostare il parametro **Attesa su tutti** su **No**nella **scheda Protocolli** della finestra di dialogo **Proprietà TCP/IP** . Per altre informazioni, vedere "Procedura: Configurare il motore di database per l'attesa su più porte TCP" nella documentazione online di SQL Server.  
   
 ## <a name="adding-or-removing-ip-addresses"></a>Aggiunta o rimozione di indirizzi IP  
  Gestione configurazione SQL Server visualizza gli indirizzi IP disponibili al momento dell'installazione di SQL Server. Aggiungendo o modificando schede di rete, alla scadenza di un indirizzo IP assegnato dinamicamente, quando si riconfigura la struttura della rete o quando si sposta fisicamente il computer, ad esempio quando un computer portatile si connette alla rete in un edificio diverso, gli indirizzi IP disponibili cambiano. Per modificare un indirizzo IP, modificare la casella **Indirizzo IP** e quindi riavviare SQL Server.  

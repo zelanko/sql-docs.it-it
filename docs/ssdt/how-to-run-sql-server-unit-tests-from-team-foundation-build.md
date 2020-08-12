@@ -1,21 +1,21 @@
 ---
 title: Eseguire unit test di SQL Server da Team Foundation Build
+description: Informazioni su come eseguire unit test di SQL Server da Team Foundation Build. Scoprire come creare una definizione di compilazione ed eseguire unit test in un'esecuzione dei test automatizzata.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 0a892598e2d461d6c51e42292b00a367925f5f13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f256431ad0b9df55d23672522db8533ebd26f311
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244286"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893926"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Procedura: Eseguire unit test di SQL Server da Team Foundation Build
 
@@ -23,7 +23,7 @@ ms.locfileid: "75244286"
   
 -   [Creazione e definizione di unit test di SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [Procedura: configurare ed eseguire test pianificati dopo la compilazione dell'applicazione](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [Procedura: Configurare ed eseguire test pianificati dopo la compilazione dell'applicazione](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
   
 -   [Creare una definizione di compilazione di base](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
   
@@ -82,7 +82,7 @@ Prima di poter eseguire gli unit test in un agente di compilazione x64, è neces
   
 4.  In **Piattaforma processi host** all'interno del riquadro dei dettagli fare clic su **MSIL** per configurare i test da eseguire in un agente di compilazione x64.  
   
-5.  Fare clic su **Apply**.  
+5.  Fare clic su **Applica**.  
   
 ## <a name="assign-tests-to-a-test-category-optional"></a><a name="CreateATestList"></a>Assegnare test a una relativa categoria (facoltativo)  
 In genere, quando si crea una definizione di compilazione per eseguire unit test, si specificano una o più categorie di test. Tutti i test nelle categorie specificate vengono eseguiti quando viene eseguita la compilazione.  
@@ -167,7 +167,7 @@ Per impostazione predefinita, in Team Foundation Build viene creato un file di c
   
 9. In Esplora soluzioni fare doppio clic sul file app.config.  
   
-10. Nell'editor aggiungere `AllowConfigurationOverride="true"` per ogni nodo \<SqlUnitTesting_*VSVersion*>. Ad esempio:  
+10. Nell'editor, per ogni nodo \<SqlUnitTesting_*VSVersion*> aggiungere `AllowConfigurationOverride="true"`. Ad esempio:  
   
     ```  
     -- Update SqlUnitTesting_VS2010 node to:  
@@ -197,7 +197,7 @@ Per impostazione predefinita, in Team Foundation Build viene creato un file di c
   
 5.  Nella finestra di dialogo **Aggiungi file di distribuzione** specificare il file *BuildComputer*.sqlunitttest.config che è stato creato.  
   
-6.  Fare clic su **Apply**.  
+6.  Fare clic su **Applica**.  
   
 7.  Fare clic su **Close**.  
   

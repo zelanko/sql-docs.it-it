@@ -1,6 +1,7 @@
 ---
 title: Aprire una tabella di traccia
 titleSuffix: SQL Server Profiler
+description: Informazioni su come usare SQL Server Profiler per aprire una tabella in un database SQL Server contenente i risultati di traccia.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: b3779c75b0cc90bc10a208cf592a080ff067b5b6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e15fd637d0debe5916c2e548613bc8a6f3c1775b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307140"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774761"
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>Aprire una tabella di traccia (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In questo argomento viene descritto come aprire una tabella di traccia esistente utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   

@@ -1,5 +1,6 @@
 ---
 title: Configurare le proprietà delle origini dati per un report impaginato - SSRS | Microsoft Docs
+description: Informazioni su come configurare le proprietà delle origini dati in Reporting Services per un report impaginato. Impostare inoltre le proprietà per variare le informazioni di connessione all'origine dati.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5e134c81fd697d4aa6fc7e5b620c1a71ff462b73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2b4d8ce66078d49f7bf70e226de762a7c8a63325
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573200"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811370"
 ---
 # <a name="configure-data-source-properties-for-a-paginated-report"></a>Configurare le proprietà delle origini dati per un report impaginato
   Quando si esegue un report impaginato, il server di report recupera informazioni sulle proprietà per determinare come effettuare la connessione a un'origine dati. Il tipo di origine dati, la stringa di connessione e le informazioni sulle credenziali sono specificati nelle pagine delle proprietà dell'origine dati del report pubblicato. È possibile impostare le proprietà per modificare le informazioni sulla connessione all'origine dati rispetto ai valori originali specificati al momento della creazione del report.  

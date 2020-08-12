@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1ae2931ca07cdcd6e3f1216ce7adb2551a6e23ae
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: e0c679ce4a146065223123e41cb2935e7d33ad71
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607034"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784080"
 ---
 # <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>Esercitazione: Preparare i dati per eseguire il training di un modello predittivo in R con Machine Learning in SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Nella seconda parte di questa serie di esercitazioni in quattro parti si prepareranno i dati di un database usando R. Più avanti nella serie, questi dati verranno usati per eseguire il training e la distribuzione di un modello predittivo in R con Machine Learning Services per SQL Server oppure in cluster Big Data.
@@ -31,12 +30,15 @@ Nella seconda parte di questa serie di esercitazioni in quattro parti, si prepar
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Nella seconda parte di questa serie di esercitazioni in quattro parti si prepareranno i dati di un database usando R. Più avanti nella serie, questi dati verranno usati per eseguire il training e la distribuzione di un modello predittivo in R con R Services per SQL Server.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Nella seconda parte di questa serie di esercitazioni in quattro parti, si prepareranno i dati di un database usando R. Più avanti nella serie, questi dati verranno usati per eseguire il training e la distribuzione di un modello predittivo in R con Machine Learning Services per Istanza gestita di SQL di Azure.
+::: moniker-end
 
 In questo articolo si apprenderà come:
 
 > [!div class="checklist"]
 > * Ripristinare un database di esempio in un database
-> * Caricare i dati del database SQL di Azure in un frame di dati R
+> * Caricare i dati del database in un frame di dati R
 > * Preparare i dati in R identificando alcune colonne come categoriche
 
 Nella [prima parte](r-predictive-model-introduction.md) si è appreso come ripristinare il database di esempio.
@@ -51,22 +53,19 @@ Per la seconda parte di questa esercitazione è necessario aver completato la [*
 
 ## <a name="load-the-data-into-a-data-frame"></a>Caricare i dati in un frame di dati
 
-Per usare i dati in R, si caricheranno i dati dal database SQL in un frame di dati (`rentaldata`).
+Per usare i dati in R, si caricheranno i dati dal database in un frame di dati (`rentaldata`).
 
 Creare un nuovo file RScript in RStudio ed eseguire lo script seguente. Sostituire **ServerName** con le proprie informazioni di connessione.
 
 ```r
 #Define the connection string to connect to the TutorialDB database
-connStr <- "Driver=SQL Server;Server=ServerName;Database=TutorialDB;Trusted_Connection=TRUE"
+connStr <- "Driver=SQL Server;Server=ServerName;Database=TutorialDB;uid=Username;pwd=Password"
+
 
 #Get the data from the table
 library(RODBC)
 
 ch <- odbcDriverConnect(connStr)
-
-#Take a look at the structure of the data and the top rows
-head(rentaldata)
-str(rentaldata)
 
 #Import the data from the table
 rentaldata <- sqlFetch(ch, "dbo.rental_data")
@@ -138,7 +137,7 @@ Se non si intende continuare con questa esercitazione, eliminare il database Tut
 
 Nella seconda parte di questa serie di esercitazioni si è appreso come:
 
-* Caricare i dati di esempio da SQL Server in un frame di dati R
+* Caricare i dati di esempio in un frame di dati R
 * Preparare i dati in R identificando alcune colonne come categoriche
 
 Per creare un modello di Machine Learning che usa i dati del database TutorialDB, seguire la terza parte di questa serie di esercitazioni:
