@@ -1,5 +1,6 @@
 ---
 title: Precaricare la cache (SSRS) | Microsoft Docs
+description: Informazioni su come precaricare la cache per un set di dati condiviso creando un piano di aggiornamento della cache per il set di dati condiviso in un server di report di Reporting Services.
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6b2be1e020354f47aa21dc83f17ff6169bcf2d72
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5401d324be7bb59d5be21afa72acebc0a7ab6487
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66174996"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548043"
 ---
 # <a name="preload-the-cache"></a>Precaricare la cache  
   Per precaricare la cache per un set di dati condiviso, è possibile creare un piano di aggiornamento della cache per il set di dati stesso.  
@@ -48,7 +49,7 @@ ms.locfileid: "66174996"
 5. Per attivare la memorizzazione nella cache per un set di dati, selezionare il pulsante di opzione **Memorizzare nella cache copie di questo set di dati e usarle quando disponibili**. Verrà visualizzata la sezione **Scadenza della cache** al di sotto. Selezionare uno dei pulsanti di opzione seguenti:
 
     - **Scadenza della cache dopo x minuti** (immettere il numero desiderato di minuti per x).
-    - **Scadenza della cache in base a una pianificazione**.  Reporting Services rende disponibili pianificazioni condivise e pianificazioni specifiche dei report per controllare l'elaborazione, la coerenza dei contenuti e le prestazioni della distribuzione dei report. Per altre informazioni, vedere [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "Create, Modify, and Delete Schedules"). Sono disponibili diverse opzioni per creare una pianificazione, in questo caso per la scadenza della cache: Selezionare una delle due opzioni di pianificazione seguenti:  
+    - **Scadenza della cache in base a una pianificazione**.  Reporting Services rende disponibili pianificazioni condivise e pianificazioni specifiche dei report per controllare l'elaborazione, la coerenza dei contenuti e le prestazioni della distribuzione dei report. Per altre informazioni, vedere [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "Create, Modify, and Delete Schedules"). Sono disponibili diverse opzioni per creare una pianificazione, in questo caso per la scadenza della cache: selezionare una delle due opzioni di pianificazione seguenti:  
       - Pulsante di opzione **Pianificazione condivisa** e quindi selezionare una pianificazione nella casella di testo a discesa **Selezionare una pianificazione condivisa**. Per altre informazioni, vedere [Schedules](../../reporting-services/subscriptions/schedules.md "Pianificazioni").  
       - Pulsante di opzione **Pianificazione in base al report**, quindi selezionare il collegamento **Modifica pianificazione** se necessario per visualizzare la pagina *Dettagli pianificazione*.  
 

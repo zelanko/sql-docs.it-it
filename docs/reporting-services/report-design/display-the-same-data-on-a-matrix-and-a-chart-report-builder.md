@@ -1,5 +1,6 @@
 ---
 title: Visualizzare dati identici in una matrice e in un grafico (Generatore report) | Microsoft Docs
+description: Visualizzare dati identici in una matrice e in un grafico in Generatore report. Impostare le proprietà di queste aree dati in modo da includere le specifiche.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd4423251ae02931d539b047251abb5915f85ccc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b444cd40a8141ca3b9398181944aef3a6e61915c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578833"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056547"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>Visualizzare dati identici in una matrice e in un grafico (Generatore report)
   Se si desidera visualizzare gli stessi dati in una matrice e in un grafico, è necessario impostare determinate proprietà su entrambe le aree dati per specificare lo stesso set di dati, nonché le stesse espressioni per filtri, gruppi, ordinamenti e dati.  
@@ -67,7 +68,7 @@ ms.locfileid: "65578833"
   
 14. Fare clic su **Ordinamento**.  
   
-15. Fare clic su **Aggiungi**. Nella griglia delle espressioni di ordinamento verrà visualizzata una nuova riga.  
+15. Scegliere **Aggiungi**. Nella griglia delle espressioni di ordinamento verrà visualizzata una nuova riga.  
   
 16. Nell'elenco a discesa **Ordina per**selezionare il campo del set di dati scelto nel passaggio 9 per il raggruppamento.  
   
@@ -85,7 +86,7 @@ ms.locfileid: "65578833"
   
 21. Fare clic su **Ordinamento**.  
   
-22. Fare clic su **Aggiungi**. Nella griglia delle espressioni di ordinamento verrà visualizzata una nuova riga.  
+22. Scegliere **Aggiungi**. Nella griglia delle espressioni di ordinamento verrà visualizzata una nuova riga.  
   
 23. Nell'elenco a discesa **Ordina per**selezionare il campo del set di dati scelto nel passaggio 16 per il raggruppamento.  
   

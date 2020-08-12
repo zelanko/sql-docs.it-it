@@ -1,5 +1,6 @@
 ---
 title: Configurare un server di report in modalità nativa per gli amministratori locali | Microsoft Docs
+description: Informazioni su come configurare il server di report per l'amministrazione locale, se si installa un server di report di Reporting Services in determinati ambienti.
 ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 535284c89f54fb39f448a71e5484e81c1a9d31af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 07a5040138bb19bd456a11ad9dcc15dc4cf06e4d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080891"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545613"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurare un server di report in modalità nativa per gli amministratori locali (SSRS)
   Per la distribuzione di un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in uno dei seguenti sistemi operativi sono necessarie ulteriori operazioni di configurazione se si desidera amministrare localmente un'istanza del server di report. Questo argomento spiega come configurare il server di report per l'amministrazione locale. Se il server di report non è ancora stato installato o configurato, vedere [Installare SQL Server dall'Installazione guidata &#40;programma di installazione&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) e [Gestire un server di report in modalità nativa di Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
@@ -91,7 +92,7 @@ ms.locfileid: "77080891"
   
 10. Se non si usa HTTPS per il sito predefinito, deselezionare la casella di controllo **Richiedi verifica server (https:) per tutti i siti compresi nell'area** .  
   
-11. Fare clic su **Aggiungi**.  
+11. Scegliere **Aggiungi**.  
   
 12. Selezionare **OK**.  
   

@@ -1,5 +1,6 @@
 ---
 title: Incorporare un'immagine in un report (Generatore report) | Microsoft Docs
+description: Rendere un'immagine immediatamente disponibile per un report. Usare un'immagine incorporata nel report ed elencata nel riquadro dei dati del report di Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: acdbae6c6654494abe5cb498211cfb77cf0ad891
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4a4fe4e15d2d35f55aa6af846492ac81b08394f7
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080436"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255629"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>Incorporare un'immagine in un report (Generatore report e SSRS)
   Un report può includere un'immagine incorporata. L'incorporamento di un'immagine assicura che l'immagine sia sempre disponibile per il report, ma può influire sulle dimensioni della definizione del report, ovvero il file che definisce il report. Le immagini incorporate in un report sono elencate nel riquadro dei dati del report.  

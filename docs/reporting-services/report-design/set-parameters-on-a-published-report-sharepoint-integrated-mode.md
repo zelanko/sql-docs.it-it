@@ -1,5 +1,6 @@
 ---
 title: Impostare i parametri in un report pubblicato - Modalità integrata SharePoint | Microsoft Docs
+description: Informazioni su come impostare parametri ed eseguire un report con parametri, nella definizione del report o dopo la pubblicazione di questo, in Generatore report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51fcade75cff0f5cafa0e780a823ce505e43e297
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a04058cc679d7697f2526c85b8b6526e8ea4a8ce
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576664"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681220"
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>Impostare i parametri in un report pubblicato - Modalità integrata SharePoint
   Un report con parametri è un report che accetta valori di input, che verranno utilizzati per filtrare i dati durante l'esecuzione del report. I parametri vengono definiti al momento della creazione del report. A seconda di come sono definiti i parametri nella definizione del report, un report può accettare un solo valore, più valori o valori dinamici, che cambiano in risposta a una selezione precedente. Se ad esempio si sceglie una categoria di prodotti, la selezione successiva dovrà essere un prodotto specifico di tale categoria. Un parametro può avere un valore predefinito, che può essere utilizzato per eseguire automaticamente una versione filtrata del report o essere sostituito da un altro valore.  
@@ -77,7 +78,7 @@ ms.locfileid: "65576664"
   
     3.  Selezionare **Interno** se si usa un valore predefinito e non si vuole che il parametro venga visualizzato nel riquadro Parametri o nelle pagine della sottoscrizione.  
   
-7.  Fare clic su **Apply**.  
+7.  Fare clic su **Applica**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni di riferimento sulle autorizzazioni relative a elenchi e siti di SharePoint per gli elementi del server di report](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  

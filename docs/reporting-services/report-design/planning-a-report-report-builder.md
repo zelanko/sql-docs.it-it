@@ -1,5 +1,6 @@
 ---
 title: Pianificazione di un report (Generatore report) | Microsoft Docs
+description: Pianificare e creare report con testo in formato RTF che illustra i dati delle vendite, le tendenze di marketing, i report operativi o i dashboard in Generatore report.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9c65d1db987f5d317b0719ff101012b4db0a5873
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 134f0578e66f39e38efe7cb550c687f75910ac5e
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67038026"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012241"
 ---
 # <a name="planning-a-report-report-builder"></a>Pianificazione di un report (Generatore report)
   Generatore report consente di creare molti tipi di report impaginati. Ad esempio è possibile creare report in cui vengono mostrati dati di vendita dettagliati o riepilogativi, tendenze di marketing e di vendite, report operativi o dashboard. È possibile anche creare report con funzionalità avanzate di formattazione del testo, ad esempio per gli ordini di vendita, i cataloghi del prodotto o lettere tipo. Tutti questi report vengono creati utilizzando combinazioni diverse degli stessi blocchi predefiniti di compilazione di Generatore report. Per creare un report utile, facilmente comprensibile, può essere opportuno innanzitutto una pianificazione. Di seguito sono riportate alcune considerazioni da tenere presenti prima di iniziare:  

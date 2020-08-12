@@ -1,5 +1,6 @@
 ---
 title: Modificare le icone degli indicatori e dei set di indicatori (Generatore report) | Microsoft Docs
+description: Informazioni su come modificare le icone e i set di indicatori in modo da includere icone degli indicatori diverse o in numero maggiore o minore per rappresentare meglio i dati in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b93ba65ddda79ef44585c748ee2c465c1b9a25f2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3c0df0ae9ee9e67697d4f3ec321ab323cfd188e
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081863"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881759"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>Modificare le icone degli indicatori e dei set di indicatori (Generatore report e SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono forniti set di indicatori preconfigurati per report impaginati che potrebbero non raffigurare sempre i dati in maniera efficace né funzionare bene nel report recapitato. In questo argomento vengono illustrate le procedure per modificare l'aspetto delle icone degli indicatori e i set di indicatori in modo da includere differenti icone degli indicatori o per aumentarne o ridurne il numero.  
@@ -72,7 +73,7 @@ ms.locfileid: "77081863"
   
 2.  Scegliere **Valori e stati** dal riquadro sinistro.  
   
-3.  Fare clic su **Aggiungi**. Viene aggiunto un indicatore per cui vengono usati l'icona predefinita e l'opzione **Nessun colore** .  
+3.  Scegliere **Aggiungi**. Viene aggiunto un indicatore per cui vengono usati l'icona predefinita e l'opzione **Nessun colore** .  
   
      Configurare l'indicatore in modo da utilizzare l'icona e il colore desiderati. Nelle procedure riportate in precedenza in questo argomento vengono illustrati i passaggi che consentono di effettuare queste operazioni.  
   

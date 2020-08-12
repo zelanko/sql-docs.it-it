@@ -1,5 +1,6 @@
 ---
 title: Informazioni di riferimento sulle espressioni (Generatore report) | Microsoft Docs
+description: Informazioni sulla sintassi necessaria nelle espressioni, prima dell'elaborazione o della pubblicazione, per supportare i riferimenti a funzioni e raccolte predefinite in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e7f44eef3fe86685bee473a5e985aad36d21c6d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e201b6688d2c8868a666ef8d294cea7d27c9929
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080234"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681320"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>Riferimento dell'espressione (Generatore report e SSRS)
   Le espressioni del report supportano vari riferimenti a funzioni e raccolte predefinite. Le espressioni devono disporre di sintassi [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] valida prima che un report possa essere pubblicato o elaborato.  

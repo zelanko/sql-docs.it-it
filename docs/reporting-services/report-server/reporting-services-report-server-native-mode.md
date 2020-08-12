@@ -1,5 +1,6 @@
 ---
 title: Server di report di Reporting Services (modalità nativa) | Microsoft Docs
+description: Informazioni sul server di report configurato per la modalità nativa, ad esempio sulla gestione dei contenuti e delle risorse e sul riferimento a una risorsa immagine da un report.
 ms.date: 04/21/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4d4a78281f9e42921f31f8d02c5f167dd13d06d5
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 2ed406e7bb91f18149b0d42db90ed248de0d86c8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82086840"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535433"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   Un server di report configurato per la modalità nativa viene eseguito come server applicazioni che fornisce tutte le funzionalità di elaborazione e gestione esclusivamente tramite i componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -79,7 +80,7 @@ ms.locfileid: "82086840"
   
 -   Bilanciamento delle richieste di elaborazione di report inviate al server tramite la pianificazione dell'elaborazione dei report stessi e l'indicazione di quali possono essere eseguiti su richiesta e quali vengono caricati dalla cache.  
   
- Le autorizzazioni per eseguire le attività di gestione vengono fornite in due ruoli predefiniti, ovvero **Amministratore sistema** e **Gestione contenuto**. Per gestire in modo efficiente contenuto di un server di report, è necessario che un utente sia assegnato a entrambi ruoli. Per altre informazioni su questi ruoli predefiniti, vedere [Ruoli e autorizzazioni &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
+ Le autorizzazioni per eseguire le attività di gestione vengono fornite in due ruoli predefiniti: **Amministratore sistema** e **Gestione contenuto**. Per gestire in modo efficiente contenuto di un server di report, è necessario che un utente sia assegnato a entrambi ruoli. Per altre informazioni su questi ruoli predefiniti, vedere [Ruoli e autorizzazioni &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
  Gli strumenti per la gestione dei contenuti del server di report includono [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o il portale Web. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] consente di impostare valori predefiniti e di abilitare funzionalità. Il portale Web consente di concedere agli utenti l'accesso a elementi e operazioni del server di report, visualizzare e usare report e altri tipi di contenuto, nonché visualizzare e usare tutti gli elementi condivisi e le funzionalità di distribuzione del report.  
   

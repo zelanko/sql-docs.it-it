@@ -1,5 +1,6 @@
 ---
 title: Istogrammi (Generatore report) | Microsoft Docs
+description: Visualizzare confronti o modifiche dei dati per un periodo di tempo specifico con un istogramma in Generatore report. Visualizzare una serie come set di barre verticali raggruppate per categoria.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 926c2613000423d4b0bb2acb16f81183ee470966
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8973b80e17b2c6bbedcdd7140fa87148c64d6538
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082325"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881958"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Column Charts (Report Builder and SSRS)
   In un istogramma le serie vengono visualizzate come set di barre verticali raggruppate per categoria. Gli istogrammi sono utili per mostrare le modifiche ai dati in un periodo di tempo o per illustrare confronti tra elementi. L'istogramma semplice è strettamente correlato al grafico a barre, in cui le serie vengono visualizzate come set di barre orizzontali, e all'istogramma a intervalli, in cui le serie vengono visualizzate come set di barre verticali con punti iniziali e finali variabili. Per altre informazioni, vedere [Grafici a barre &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md) e [Grafici a intervalli &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md).  

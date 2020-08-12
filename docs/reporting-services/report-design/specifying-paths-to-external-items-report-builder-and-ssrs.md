@@ -1,5 +1,6 @@
 ---
 title: Specifica di percorsi di elementi esterni (Generatore report) | Microsoft Docs
+description: Informazioni su come specificare percorsi nelle proprietà degli elementi dei report per fare riferimento a elementi esterni al file di definizione del report in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cad68b0b99479b074e04760f419e12ec9837aac3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6ec449fd6b57c81e25e2a05e1702748dd88197d3
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080914"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681470"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Specifica di percorsi di elementi esterni (Generatore report e SSRS)
   Nelle proprietà degli elementi del report è possibile specificare percorsi che facciano riferimento a elementi esterni al file di definizione del report archiviati in un server di report, ad esempio report drill-through, sottoreport e file di immagini.  

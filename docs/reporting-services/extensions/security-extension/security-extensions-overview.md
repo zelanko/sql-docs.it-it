@@ -1,5 +1,6 @@
 ---
 title: Panoramica delle estensioni di sicurezza| Microsoft Docs
+description: Informazioni sulle estensioni di sicurezza in Reporting Services. Esempi di situazioni in cui l'autenticazione e l'autorizzazione personalizzate sono appropriate.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5947d26c93dc9e79fc19c37e672f3342eb1d33d0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 72eaf9b5c47d19da6b7f1893e473031cd6ebc615
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082267"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529197"
 ---
 # <a name="security-extensions-overview---reporting-services-ssrs"></a>Panoramica delle estensioni di sicurezza - Reporting Services (SSRS)
   Un'estensione di sicurezza di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] consente l'autenticazione e l'autorizzazione di utenti o gruppi, ovvero consente a utenti diversi di accedere a un server di report e, sulla base delle relative identità, di eseguire diverse attività o operazioni. Per impostazione predefinita, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilizza un'estensione di autenticazione basata su Windows che verifica le identità degli utenti che dichiarano di avere account nel sistema tramite i protocolli degli account di Windows. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] l'autorizzazione degli utenti viene effettuata tramite un sistema di sicurezza basato sui ruoli. Il modello di sicurezza basato sui ruoli di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] è simile ai modelli di sicurezza basati sui ruoli di altre tecnologie.  

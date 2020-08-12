@@ -1,5 +1,6 @@
 ---
 title: Aggiungere un'immagine con associazione a dati (Generatore report) | Microsoft Docs
+description: Informazioni su come fare riferimento a un'immagine archiviata in un database per visualizzarla nei report in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1ab11e39d435a2a4f965c4a6cb5cf367ae2b4d84
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f126fc98d517268f5513cc2cbaa8b439ae6623eb
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080765"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681560"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>Aggiungere un'immagine con associazione a dati (Generatore report e SSRS)
   Un report può includere un riferimento a un'immagine archiviata in un database. Tale immagine è nota come *immagine con associazione a dati*. Le immagini visualizzate insieme ai nomi di prodotti in un catalogo sono esempi di immagini con associazione a dati.  

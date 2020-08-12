@@ -1,5 +1,6 @@
 ---
 title: Ordinare i dati in un'area dati (Generatore report) | Microsoft Docs
+description: Informazioni su come modificare l'ordinamento dei dati in un'area dati quando un report viene eseguito per la prima volta in Generatore report.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 17c93f66924d6b948264efd9747f72b47bf765a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fecda4c838a5317bf87b50834152a3bb65f1d41b
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080974"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462205"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Ordinamento dei dati in un'area dati (Generatore report e SSRS)
   Per modificare l'ordinamento dei dati in un'area dati quando si esegue un report per la prima volta, è necessario impostare l'espressione di ordinamento nel gruppo o nell'area dati. Per impostazione predefinita, l'espressione di ordinamento per un gruppo viene impostata automaticamente su un valore identico a quello dell'espressione di raggruppamento.  
@@ -39,7 +40,7 @@ ms.locfileid: "77080974"
   
 3.  Per ogni espressione di ordinamento, attenersi alla procedura seguente:  
   
-    1.  Fare clic su **Aggiungi**.  
+    1.  Scegliere **Aggiungi**.  
   
     2.  Digitare o selezionare un'espressione in base alla quale ordinare i dati.  
   
@@ -57,7 +58,7 @@ ms.locfileid: "77080974"
   
 4.  Per ogni espressione di ordinamento, attenersi alla procedura seguente:  
   
-    1.  Fare clic su **Aggiungi**.  
+    1.  Scegliere **Aggiungi**.  
   
     2.  Digitare o selezionare un'espressione in base alla quale ordinare i dati.  
   
@@ -73,7 +74,7 @@ ms.locfileid: "77080974"
   
 3.  Per ogni espressione di ordinamento, attenersi alla procedura seguente:  
   
-    1.  Fare clic su **Aggiungi**.  
+    1.  Scegliere **Aggiungi**.  
   
     2.  Selezionare l'espressione che corrisponde al campo di raggruppamento. È possibile verificare l'espressione per il campo di raggruppamento facendo clic su **Raggruppamento**.  
   
@@ -89,7 +90,7 @@ ms.locfileid: "77080974"
   
 3.  Per ogni espressione di ordinamento, attenersi alla procedura seguente:  
   
-    1.  Fare clic su **Aggiungi**.  
+    1.  Scegliere **Aggiungi**.  
   
     2.  Selezionare l'espressione che corrisponde al campo dati. Nella maggior parte dei casi si tratta di un valore aggregato, ad esempio `=Sum(Fields!Quantity.Value)`.  
   
@@ -113,7 +114,7 @@ ms.locfileid: "77080974"
   
 7.  Per ogni espressione di ordinamento, attenersi alla procedura seguente:  
   
-    1.  Fare clic su **Aggiungi**.  
+    1.  Scegliere **Aggiungi**.  
   
     2.  Selezionare l'espressione che corrisponde al campo di raggruppamento. È possibile verificare l'espressione per il campo di raggruppamento facendo clic su **Raggruppamento**.  
   

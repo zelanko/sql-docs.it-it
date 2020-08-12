@@ -1,5 +1,6 @@
 ---
 title: Abilita errori remoti (Reporting Services) | Microsoft Docs
+description: Informazioni su come impostare le proprietà di un server di report di Reporting Services in modo da restituire altre informazioni sulle condizioni di errore che si verificano nei server remoti.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3b26db3656ee548e08f9e5d4737033bb3393a969
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 359d3705acbb3a7be762341008f32a6b473bdb55
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593877"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547973"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Abilita errori remoti (Reporting Services)
   È possibile impostare le proprietà di un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modo che vengano restituite ulteriori informazioni sulle condizioni di errore che si verificano nei server remoti. Se in un messaggio di errore è incluso il testo "Per ulteriori informazioni su questo errore, passare al server di report nel server locale oppure abilitare gli errori remoti", sarà possibile impostare la proprietà **EnableRemoteErrors** per accedere a informazioni aggiuntive che consentono di risolvere il problema. Per altre informazioni, vedere [Proprietà di sistema del server di report](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  

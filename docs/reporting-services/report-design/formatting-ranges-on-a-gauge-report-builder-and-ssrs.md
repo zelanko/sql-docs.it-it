@@ -1,5 +1,6 @@
 ---
 title: Formattazione degli intervalli su un misuratore (Generatore report) | Microsoft Docs
+description: Indicare visivamente con un intervallo del misuratore quando il valore dell'indicatore di misura rientra in un determinato intervallo di valori in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ffdec8ca-3e95-41cd-850b-9e8c83be4b49
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1540979cedf5fc77675e7bca3036ddd6524bcc8e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2b8962eb617538a44e66ba98533cd00947e29272
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079647"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255499"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>Formattazione di intervalli su un misuratore (Generatore report e SSRS)
  In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , l'intervallo del misuratore è un'area sulla scala del misuratore tramite cui viene indicata un'importante sottosezione dei valori sul misuratore. L'uso di un intervallo del misuratore consente di indicare visivamente quando il valore dell'indicatore di misura rientra in un determinato intervallo di valori. Gli intervalli sono definiti da un valore iniziale e un valore finale.  

@@ -1,5 +1,6 @@
 ---
 title: Riferimenti a raccolte di variabili di report e di gruppo (Generatore report) | Microsoft Docs
+description: Creare una variabile con un nome univoco quando è presente un calcolo complesso usato più volte in un report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ f1_keywords:
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 77373c2a1a160c7621f54f3701564eebe1312618
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2ec35aa6399929f90f8e816b8c2d2de50e5cc155
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081446"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688845"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Raccolte predefinite - Riferimenti a variabili di report e di gruppo (Generatore report)
   Quando un calcolo complesso viene utilizzato più volte nelle espressioni di un report, è possibile creare una variabile che può essere di report o di gruppo. I nomi delle variabili devono essere univoci in un report.  

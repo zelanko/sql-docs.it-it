@@ -1,21 +1,21 @@
 ---
 title: Estensione delle funzionalità del database
+description: Scoprire come estendere le funzionalità del database. Visualizzare informazioni su condizioni di test personalizzate, collaboratori di compilazione e distribuzione e altre estensioni di funzionalità.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 1c43d9e4-6fb1-4d15-a5fb-cd572daf2951
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 4006237a90f876228108504b90a26d371af4fc1d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cd0ba3850c401c57b0f478eba1ba6f8013f4a4d0
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241655"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518951"
 ---
 # <a name="extending-the-database-features"></a>Estensione delle funzionalità del database
 

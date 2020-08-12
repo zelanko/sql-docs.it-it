@@ -1,5 +1,6 @@
 ---
 title: Gestione di parti di report | Microsoft Docs
+description: Organizzare le parti di report per più utenti e report, con la possibilità di scegliere opzioni flessibili per la pubblicazione, le autorizzazioni e la sicurezza.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 241d74d615f9aac2cbe48d084fd2d8e91ea9abbf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 233aa6a48937d26b9e9f9c486f4cda7238245a47
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580093"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689682"
 ---
 # <a name="managing-report-parts"></a>Gestione di parti di report
   Le parti del report possono essere inoltre riusate da più utenti e in più report. Gli utenti possono cercare le parti del report nel server e aggiungerle a un report.  Possono inoltre essere informati sugli aggiornamenti apportati alla parte del report nel server e ripubblicare nuove versioni di una parte del report. Queste azioni di creazione di report possono essere interessate e controllate dalle autorizzazioni di sicurezza di Reporting Services.  In questo argomento vengono illustrate le proprietà delle parti del report e viene descritto il comportamento delle parti del report presenti nel server.  

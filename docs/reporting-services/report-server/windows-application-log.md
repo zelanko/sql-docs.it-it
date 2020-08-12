@@ -1,5 +1,6 @@
 ---
 title: Registro applicazioni di Windows | Microsoft Docs
+description: Informazioni su come visualizzare i messaggi di evento nel registro applicazioni che sono stati generati dalle applicazioni del server di report in esecuzione nel sistema locale.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f3d51afd8a27786be3c66bfdf935ad8b2e328d36
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5466c8a3e839a6db9438fde3ca7ce295405f3f23
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580928"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547833"
 ---
 # <a name="windows-application-log"></a>Registro applicazioni di Windows
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] i messaggi di evento vengono inseriti nel registro applicazioni di Windows. in modo da consentire l'individuazione degli eventi generati dalle applicazioni del server di report in esecuzione nel sistema locale.  

@@ -1,5 +1,6 @@
 ---
 title: Memorizzazione dei report nella cache | Microsoft Docs
+description: Informazioni sulla memorizzazione dei report nella cache in Gestione report, in modo da velocizzare la visualizzazione di un report elaborato mentre si trova nella cache.
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3e94ed2c05d3c23585abde1f2452f491be089e84
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 43a03b47b1d18569f56dae2652144af8c7e11adf
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082564"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548063"
 ---
 # <a name="caching-reports-ssrs"></a>Memorizzazione dei report nella cache (SSRS)
   Nel server di report è possibile memorizzare nella cache una copia di un report già elaborato, che verrà utilizzata quando un utente apre il report. Per l'utente, l'unico elemento disponibile per determinare che il report è una copia memorizzata nella cache è rappresentato dalla data e dall'ora di esecuzione del report. Se la data e l'ora non sono quelle correnti e se il report non è uno snapshot, significa che il report è stato recuperato dalla cache.  

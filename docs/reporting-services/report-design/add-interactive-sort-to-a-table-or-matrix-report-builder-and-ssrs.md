@@ -1,5 +1,6 @@
 ---
 title: Aggiungere un ordinamento interattivo a una tabella o a una matrice (Generatore report) | Microsoft Docs
+description: Consentire agli utenti di cambiare il tipo di ordinamento di righe e colonne in tabelle e matrici usando i pulsanti di ordinamento interattivo in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ddc1796b4b3638d91c94acafbce1377128dfe1cd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d33cab9f1805652501f9d65cfeb06e47dc444733
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081625"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255514"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Aggiungere un ordinamento interattivo a una tabella o a una matrice (Generatore report e SSRS)
   È possibile aggiungere pulsanti di ordinamento interattivo per consentire agli utenti di modificare l'ordinamento di righe e colonne in tabelle e matrici. Questa caratteristica è disponibile solo nei formati di rendering che supportano l'interazione dell'utente, ad esempio HTML.  
@@ -191,7 +192,7 @@ ms.locfileid: "77081625"
   
 8.  Fare clic su **Ordinamento**.  
   
-9. Fare clic su **Aggiungi**. Nella griglia delle opzioni di ordinamento verrà aggiunta una nuova riga di ordinamento.  
+9. Scegliere **Aggiungi**. Nella griglia delle opzioni di ordinamento verrà aggiunta una nuova riga di ordinamento.  
   
 10. Nell'elenco a discesa dell'opzione Ordina per scegliere lo stesso campo selezionato nel passaggio 6 per il raggruppamento.  
   

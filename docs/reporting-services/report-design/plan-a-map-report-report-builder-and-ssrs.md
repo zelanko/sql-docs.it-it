@@ -1,5 +1,6 @@
 ---
 title: Pianificare un report mappa (Generatore report) | Microsoft Docs
+description: Suggerire azioni e offrire informazioni dettagliate con la presentazione di dati analitici su uno sfondo geografico usando una mappa nei report impaginati in Generatore report.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0b90397a154836f41659aba858f55e28502e2741
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a064351ef75698958b3f46e989eb1945625c5066
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082425"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881852"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Pianificare un report mappa (Generatore report e SSRS)
 Report validi presentano informazioni che consentono una migliore comprensione e determinano azioni specifiche. Per presentare dati analitici, come i totali delle vendite o i dati demografici, rispetto a un contesto geografico, è possibile aggiungere una mappa al report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Una mappa può contenere più livelli, in ciascuno dei quali vengono visualizzati elementi della mappa definiti da un tipo specifico di dati spaziali, ossia punti che rappresentano posizioni, linee che rappresentano percorsi o poligoni che rappresentano aree. È possibile associare i dati analitici agli elementi della mappa su ogni livello.  
@@ -105,12 +106,12 @@ Report validi presentano informazioni che consentono una migliore comprensione e
   
 |Icona della procedura guidata|Stile del livello|Tipo di livello|Descrizione e opzioni|  
 |-----------------|-----------------|----------------|-----------------------------|  
-|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Mappa di base|Polygon|Mappa che visualizza solo le aree, ad esempio i territori di vendita.<br /><br /> Opzioni: variazione del colore mediante la tavolozza o utilizzo di un solo colore. Una tavolozza è un set predefinito di colori. Una volta assegnati tutti i colori di una tavolozza, vengono assegnate anche le sfumature.|  
+|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Mappa di base|Polygon|Mappa che visualizza solo le aree, ad esempio i territori di vendita.<br /><br /> Opzioni: variazione del colore mediante la tavolozza o uso di un solo colore. Una tavolozza è un set predefinito di colori. Una volta assegnati tutti i colori di una tavolozza, vengono assegnate anche le sfumature.|  
 |![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Mappa analitica a colori|Polygon|Mappa che visualizza i dati analitici variando il colore, ad esempio i dati di vendita per area.|  
 |![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Mappa a bolle|Polygon|Mappa che visualizza i dati analitici variando le dimensioni delle bolle al centro delle aree, ad esempio i dati di vendita per area.<br /><br /> Opzioni: variazione dei colori dell'area in base a un secondo campo analitico e indicazione delle regole colore.|  
-|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Mappa linea di base|Grafico a linee|Mappa che visualizza solo le linee, ad esempio gli itinerari di recapito.<br /><br /> Opzioni: variazione del colore mediante la tavolozza o utilizzo di un solo colore.|  
+|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Mappa linea di base|Grafico a linee|Mappa che visualizza solo le linee, ad esempio gli itinerari di recapito.<br /><br /> Opzioni: variazione del colore mediante la tavolozza o uso di un solo colore.|  
 |![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Mappa linea analitica|Grafico a linee|Mappa che varia il colore e lo spessore della linea, ad esempio il numero di pacchetti recapitati e le metriche di puntualità per itinerari.<br /><br /> Opzioni: variazione dello spessore della linea in base a un campo analitico, variazione del colore della linea in base a un secondo campo analitico e indicazione delle regole colore.|  
-|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Mappa con marcatori di base|Point|Mappa che visualizza un marcatore per ogni posizione, ad esempio le città.<br /><br /> Opzioni: variazione del colore mediante la tavolozza o utilizzo di un solo colore e modifica dello stile del marcatore.|  
+|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|Mappa con marcatori di base|Point|Mappa che visualizza un marcatore per ogni posizione, ad esempio le città.<br /><br /> Opzioni: variazione del colore mediante la tavolozza o uso di un solo colore e modifica dello stile del marcatore.|  
 |![rs_MapType_Marker_Bubble](../../reporting-services/report-design/media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|Mappa con marcatori a bolle|Point|Mappa che visualizza una bolla per ogni posizione e varia le dimensioni della bolla in base a un campo dati analitici, ad esempio i dati di vendita per città.<br /><br /> Opzioni: variazione del colore della bolla in base a un secondo campo analitico e indicazione delle regole colore.|  
 |![rs_MapType_Marker_Analytical](../../reporting-services/report-design/media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|Mappa con marcatori analitici|Point|Mappa che visualizza un marcatore per ogni posizione e varia il colore, le dimensioni e il tipo di marcatore in base ai dati analitici, ad esempio prodotti più venduti, margini di profitto e strategie di sconto.<br /><br /> Opzioni: variazione del tipo di marcatore in base a un campo analitico, variazione delle dimensioni del marcatore in base a un secondo campo analitico, variazione del colore del marcatore in base a un terzo campo analitico e indicazione delle regole colore.|  
   
@@ -152,6 +153,6 @@ Report validi presentano informazioni che consentono una migliore comprensione e
  [Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Esercitazione: Report mappa &#40;Generatore report&#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
  [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Risoluzione dei problemi relativi alle parti del report: report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Risolvere problemi relativi ai report: Report mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

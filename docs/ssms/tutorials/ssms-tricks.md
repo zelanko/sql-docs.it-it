@@ -1,6 +1,6 @@
 ---
 title: Suggerimenti e consigli per l'uso di SSMS
-description: Scoprire come aggiungere e rimuovere un commento nel codice, impostare un rientro per il testo, filtrare gli oggetti in Esplora oggetti, accedere ai log degli errori di SQL Server e trovare il nome dell'istanza di SQL Server usando SQL Server Management Studio.
+description: Scoprire come aggiungere e rimuovere commenti nel codice, far rientrare il testo, filtrare gli oggetti, accedere ai log degli errori e trovare i nomi di istanze di SQL Server con SQL Server Management Studio.
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2147baf038b99140bf21ab72695f779c0fe69faf
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245513"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462345"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Suggerimenti e consigli per l'uso di SQL Server Management Studio (SSMS)
 

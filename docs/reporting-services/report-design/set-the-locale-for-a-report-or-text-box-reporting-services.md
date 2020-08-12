@@ -1,5 +1,6 @@
 ---
 title: Definire le impostazioni locali per un report o una casella di testo (Reporting Services) | Microsoft Docs
+description: Usare la proprietà Language in una casella di testo per specificare le impostazioni locali per i formati che visualizzano i dati che differiscono per lingua e area in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: df115b01-184b-47f0-b5ec-0ad965ff9bee
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c5f31ffe9fc3158cf0c6b1c6ef8a9ba813417e76
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4105c10fba6774275471a1157677badf88c11f5f
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576767"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779094"
 ---
 # <a name="set-the-locale-for-a-report-or-text-box-reporting-services"></a>Definizione delle impostazioni locali per un report o una casella di testo (Reporting Services)
   Nella proprietà **Language** di un report o di una casella di testo sono contenute le impostazioni locali che determinano i formati predefiniti per la visualizzazione dei dati del report che differiscono in base alla lingua e al paese, ad esempio i valori relativi alla data o alla valuta o quelli numerici. La proprietà **Language** di una casella di testo ha la priorità rispetto alla proprietà **Language** impostata per il report. Se non viene specificato alcun valore per **Language**, in Reporting Services vengono utilizzate le impostazioni locali del sistema operativo nel server di report per i report pubblicati o del computer di creazione di report per l'anteprima del report.  

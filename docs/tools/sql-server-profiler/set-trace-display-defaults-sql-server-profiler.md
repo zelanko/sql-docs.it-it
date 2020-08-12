@@ -1,6 +1,7 @@
 ---
 title: Impostare i valori predefiniti per la visualizzazione della traccia
 titleSuffix: SQL Server Profiler
+description: Esplorare le opzioni dello strumento usate da SQL Server Profiler per impostazione predefinita nelle tracce, ad esempio tipo di carattere, dimensioni e stile, e apprendere come modificarle.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 4a1958ee112b1453a6b86a5e520737b0945147c5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a1e746b4f418c23e22dafc6c07b211c188b8a13
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307937"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726875"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>Impostare i valori predefiniti per la visualizzazione delle tracce (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In questo argomento viene descritta la procedura per l'impostazione delle opzioni relative al tipo, alla dimensione e allo stile del carattere utilizzato da [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per la visualizzazione delle tracce nella finestra di traccia. È inoltre possibile specificare che in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] tutti i valori di data e ora vengano visualizzati in base alle impostazioni internazionali configurate per il sistema operativo in uso.  
   

@@ -1,5 +1,6 @@
 ---
 title: Inserire o eliminare una colonna (Generatore report) | Microsoft Docs
+description: Aggiungere o eliminare colonne in un'area dati Tablix di un report impaginato. In Generatore report, l'area dati Tablix può essere una tabella, una matrice o un elenco.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 243b6ea1838e3e6d8666114172ca9c51684878b0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93b625462a1f4898bae7388842e5825c915eaf93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082029"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061737"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>Inserire o eliminare una colonna (Generatore report e SSRS)
   È possibile aggiungere o eliminare colonne in un'area dati Tablix di un report impaginato [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . L'area dati Tablix può essere una tabella, una matrice o un elenco. Le procedure riportate di seguito non sono applicabili alle aree dati del grafico e del misuratore.  

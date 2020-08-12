@@ -1,5 +1,6 @@
 ---
 title: Implementazione di una classe DataReader per un'estensione per l'elaborazione dati | Microsoft Docs
+description: Migliorare le prestazioni dell'applicazione e ridurre l'overhead del sistema implementando una classe DataReader per un'estensione per l'elaborazione dati.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 23e286e7-6074-4fbe-be29-203420d6c3d0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1367774e84dd10c2749f46a1ee6c38b8d5f6dd7b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1fbbf2e31b32cf8f4573da7281caeec97af7840d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193914"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84530001"
 ---
 # <a name="implementing-a-datareader-class-for-a-data-processing-extension"></a>Implementazione di una classe DataReader per un'estensione per l'elaborazione dati
   L'oggetto **DataReader** consente a un client di recuperare da un'origine dati un flusso di dati forward-only di sola lettura. I risultati vengono restituiti quando la query viene eseguita e vengono archiviati nel buffer di rete nel client fino a quando non vengono richiesti tramite il metodo **Read** della classe **DataReader**. Per creare una classe **DataReader**, implementare <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> e, facoltativamente, <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension>. L'uso di un oggetto **DataReader** migliora le prestazioni dell'applicazione consentendo di recuperare i dati non appena sono disponibili senza attendere che vengano restituiti tutti i risultati della query nonché, per impostazione predefinita, consentendo di archiviare in memoria una sola riga per volta, riducendo l'overhead di sistema.  

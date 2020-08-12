@@ -1,5 +1,6 @@
 ---
 title: Iniziare a visualizzare i valori del grafico a torta dalla parte superiore (Generatore report) | Microsoft Docs
+description: Informazioni su come iniziare a visualizzare i valori del grafico a torta dalla parte superiore del grafico anziché a 90 gradi dalla cima della torta (impostazione predefinita).
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0e6fb59-ca4e-4d70-97cb-0ad183da21d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f23163da5fc4b23a364646be607167e663187fd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dfdd7600a08a78baa0b70f2048423f1632ebe2db
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080903"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689441"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>Inizio della visualizzazione dei valori del grafico a torta dalla parte superiore (Generatore report e SSRS)
 Per impostazione predefinita, nei grafici a torta dei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] il primo valore nel set di dati inizia a 90 gradi dalla cima della torta. 

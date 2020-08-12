@@ -1,5 +1,6 @@
 ---
 title: Aggiungere codice HTML a un report (Generatore report) | Microsoft Docs
+description: Informazioni su come importare codice HTML usando un segnaposto di un campo nel set di dati da usare nel report in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 30bd631a-f774-48e7-a13a-b6c2eb54d9bb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e18753c105eb63343bf57977f8ced3a0cf0fe9e6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7b07521bb6a3cf293761342af6d7bdcbec728959
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081628"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255649"
 ---
 # <a name="add-html-into-a-report-report-builder-and-ssrs"></a>Aggiungere il codice HTML a un report (Generatore report e SSRS)
   Utilizzando un segnaposto, è possibile importare codice HTML da un campo nel set di dati per utilizzarlo nel report. Per impostazione predefinita, un segnaposto rappresenta un testo normale e pertanto è necessario modificarne il tipo di markup in codice HTML. Per altre informazioni, vedere [Importazione di codice HTML in un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md).  

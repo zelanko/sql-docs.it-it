@@ -1,5 +1,6 @@
 ---
 title: Implementazione di un'estensione di sicurezza | Microsoft Docs
+description: Fornire sicurezza personalizzata usando la piattaforma di sviluppo di API Reporting Services per estendere il sistema di sicurezza di Reporting Services.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6089e521e5b5fb5015816d2d18ce5a885a4c3327
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5d39e517a507c37ac692f4d304c96a06ce834495
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193795"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529047"
 ---
 # <a name="implementing-a-security-extension"></a>Implementazione di un'estensione di sicurezza
   L'autenticazione di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows rappresenta il sistema principale per la protezione dei report in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. In alcuni casi, tuttavia, potrebbe essere necessario estendere il sistema di sicurezza di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per soddisfare i requisiti di sicurezza dell'azienda. A tale scopo, è possibile utilizzare la piattaforma di sviluppo fornita dall'API di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. In questa sezione viene fornita una panoramica sulle estensioni di sicurezza in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

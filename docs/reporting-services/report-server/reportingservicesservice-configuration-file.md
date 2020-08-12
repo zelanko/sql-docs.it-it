@@ -1,5 +1,6 @@
 ---
 title: File di configurazione ReportingServicesService | Microsoft Docs
+description: Informazioni sul percorso dei file, sulle linee guida per la modifica e sulle impostazioni di configurazione di ReportingServicesService.exe.config usate per la funzionalità di traccia in Reporting Services.
 ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dfb0f48bb35e6341e2b2a9a72007ef4eb09c2b9b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bb3b4d6c7591385f332daab9102613f05f0e5dfc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66506629"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535353"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService - file di configurazione
 

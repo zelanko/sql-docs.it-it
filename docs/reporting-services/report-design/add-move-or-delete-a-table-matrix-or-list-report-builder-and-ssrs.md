@@ -1,5 +1,6 @@
 ---
 title: Aggiungere, spostare o eliminare una tabella, una matrice o un elenco (Generatore report) | Microsoft Docs
+description: Disporre le aree dati di tabelle o matrici usando la Creazione guidata tabella o la Creazione guidata matrice in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 995bfa16d25392e35b9147c021b6bbcaff423a6c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 698ee0d950b701ff864b31a6d786f72beed632f5
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081606"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84011745"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>Aggiunta, spostamento o eliminazione di una tabella, una matrice o un elenco (Generatore report e SSRS)
   In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , in un'area dati vengono visualizzati i dati di un set di dati del report. Le aree dati includono tabelle, matrici, elenchi, grafici e misuratori. Per nidificare un'area dati in un'altra, aggiungere separatamente ogni area dati, quindi trascinare l'area dati figlio nell'area dati padre.  

@@ -1,5 +1,6 @@
 ---
 title: Modificare l'ordine di un parametro del report (Generatore report) | Microsoft Docs
+description: Informazioni su come modificare l'ordine dei parametri del report quando un parametro dipendente è elencato non in ordine in Generatore report.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: abd61e19-dba3-423c-a26c-e8bc43197d3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d905dd50fd9001ed3c5b3ad5eaf3016f8f63094f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c2b93a9092991bdc5e7d177e8819303bc3474255
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078866"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681250"
 ---
 # <a name="change-the-order-of-a-report-parameter-report-builder-and-ssrs"></a>Modificare l'ordine di un parametro del report (Generatore report e SSRS)
   Modificare l'ordine dei parametri del report quando un parametro dipendente è elencato prima del parametro da cui dipende. L'ordine dei parametri è importante quando sono presenti parametri di propagazione o quando si desidera indicare il valore predefinito di un parametro prima che gli utenti scelgano i valori per altri parametri. Un parametro dipendente del report contiene un riferimento, nella query dei valori predefiniti o in quella dei valori validi, a un parametro di query che punta a un parametro del report successivo nell'elenco dei parametri del riquadro dei **dati del report** .  

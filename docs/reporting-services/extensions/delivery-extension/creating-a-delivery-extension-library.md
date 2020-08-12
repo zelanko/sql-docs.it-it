@@ -1,5 +1,6 @@
 ---
 title: Creazione di una libreria di estensioni per il recapito | Microsoft Docs
+description: Informazioni su come assegnare un'estensione per il recapito creata in Reporting Services a uno spazio dei nomi univoco e integrarla in un file di assembly o di libreria.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 63b32f93-4bab-4b07-bd72-39a47aca1cda
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 06b204e9cc3c13492b0ab6815c7d36abdc628d4b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 77bff5683f459317458f270eea663641ca5e2c33
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193878"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529137"
 ---
 # <a name="creating-a-delivery-extension-library"></a>Creazione di una libreria di estensioni per il recapito
   A ogni estensione per il recapito di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] creata deve essere assegnato uno spazio dei nomi univoco e ogni estensione deve essere inclusa in una libreria o in un file di assembly. Il nome esatto dello spazio dei nomi non è importante, ma è necessario che sia univoco e non condiviso con altre estensioni. È necessario creare spazi dei nomi univoci personalizzati per le estensioni per il recapito della società.  

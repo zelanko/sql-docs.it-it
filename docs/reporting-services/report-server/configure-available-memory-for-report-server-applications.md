@@ -1,5 +1,6 @@
 ---
 title: Configurare la memoria disponibile per applicazioni del server di report | Microsoft Docs
+description: Informazioni sulle impostazioni di configurazione per l'utilizzo della memoria in Reporting Services e sul modo in cui un server risponde quando l'utilizzo di memoria è un fattore del processo di elaborazione delle richieste.
 ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d7cbcb0b2cd0da8bd13d28620261c2e9894463db
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 38278d3e33b7317ee3fdfc56d6ac60829743987e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67564032"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548073"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurare la memoria disponibile per applicazioni del server di report
  Sebbene [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sia in grado di usare tutta la memoria disponibile, è possibile ignorare il comportamento predefinito configurando un limite superiore per la quantità totale di risorse di memoria allocate per applicazioni server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . È inoltre possibile impostare soglie in modo che il server di report modifichi il modo in cui assegna la priorità ed elabora le richieste in base all'utilizzo basso, medio o alto della memoria. Se i livelli di utilizzo della memoria non sono elevati, il server di report risponde assegnando una priorità leggermente superiore all'elaborazione dei report interattiva o su richiesta. Se invece i livelli di utilizzo della memoria sono elevati, il server di report utilizza più tecniche per rimanere operativo utilizzando le limitate risorse disponibili.  

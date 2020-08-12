@@ -1,5 +1,6 @@
 ---
 title: "Procedura: Distribuire un'estensione per l'elaborazione dati in Progettazione report | Microsoft Docs"
+description: Informazioni su come distribuire un'estensione per l'elaborazione dati in Progettazione report apprendendo quali voci aggiungere a file di configurazione specifici.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3ff2fbd4cc5b910cdb5191d4fc51941167d8bfb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ae577ca756b4f575dd1bdf7c8e6c59e379d82098
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194030"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529619"
 ---
 # <a name="deploying-a-data-processing-extension-to-report-designer"></a>Distribuzione di un'estensione per l'elaborazione dati in Progettazione report
   In Progettazione report vengono utilizzate le estensioni per l'elaborazione dati per il recupero e l'elaborazione dei dati durante la progettazione dei report. È necessario distribuire l'assembly di estensioni per l'elaborazione dati in Progettazione report come assembly privato. È inoltre necessario immettere una voce nel file di configurazione di Progettazione report, RSReportDesigner.config.  

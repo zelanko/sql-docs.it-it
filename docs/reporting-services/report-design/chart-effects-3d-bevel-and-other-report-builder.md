@@ -1,5 +1,6 @@
 ---
 title: Effetti 3D, smussature e altri effetti in un grafico (Generatore report) | Microsoft Docs
+description: Informazioni sull'uso degli effetti 3D per fornire profondità e aggiungere impatto visivo ai grafici in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a1c6dd7adfd9450ae56b9cc7718d454f5d68426
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c9875133b3d3a07d26313f5e4c375e2233d10677
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082407"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255334"
 ---
 # <a name="chart-effects---3d-bevel-and-other-report-builder"></a>Effetti per i grafici - 3D, smussatura e altri (Generatore report)
   Gli effetti tridimensionali (3D) possono essere usati per fornire profondità e aggiungere un impatto visivo ai grafici impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Ad esempio, se si desidera evidenziare una particolare sezione di un grafico a torta esplosa, è possibile ruotare e modificare la prospettiva del grafico in modo che si noti prima di tutto tale sezione. Quando al grafico vengono applicati effetti 3D, tutti i colori delle sfumature e gli stili di tratteggio vengono disabilitati.  

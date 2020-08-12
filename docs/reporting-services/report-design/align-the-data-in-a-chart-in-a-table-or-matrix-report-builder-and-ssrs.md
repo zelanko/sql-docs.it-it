@@ -1,5 +1,6 @@
 ---
 title: Allineare i dati in un grafico in una tabella o matrice (Generatore report) | Microsoft Docs
+description: Informazioni sull'uso dei grafici sparkline e delle barre dei dati in Generatore report. Questi piccoli, semplici grafici comunicano numerose informazioni con la quantità minima di dettagli.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 75137575-d1bf-46d6-8527-5afc85eea5e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6cb82188a6ded92fadf96385f193f504c29bf56
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 30b2c4ad2bb1c4c4a6254d5563ab547b11c3f52c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081519"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994571"
 ---
 # <a name="align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs"></a>Allineare i dati in un grafico di una tabella o matrice (Generatore report e SSRS)
   I grafici sparkline e le barre dei dati sono grafici semplici, di piccole dimensioni, contenenti numerose informazioni poco dettagliate. In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , quando si seleziona questa opzione, i valori presenti nei grafici sparkline e nelle barre dei dati vengono allineati nelle diverse celle della tabella o della matrice, anche se mancano dei valori nei dati su cui si basano.  

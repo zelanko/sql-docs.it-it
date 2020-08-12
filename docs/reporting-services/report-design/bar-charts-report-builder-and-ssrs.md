@@ -1,5 +1,6 @@
 ---
 title: Grafici a barre (Generatore report) | Microsoft Docs
+description: Visualizzare i dati orizzontalmente con un grafico a barre per rappresentare i dati in Generatore report con una data di inizio e una data di fine determinate.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 31749e321ac89d02a046a1bd6d67139bc476c110
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cd0fa20a515850d8ab097ef8e868946d16a0439b
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081480"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255524"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Grafici a barre (Generatore report e SSRS)
   Nei grafici a barre le serie vengono visualizzate come set di barre orizzontali. Il grafico a barre semplice è strettamente correlato all'istogramma, in cui le serie vengono visualizzate come set di barre verticali, e al grafico a barre a intervalli, in cui le serie vengono visualizzate come set di barre orizzontali con punti iniziali e finali variabili.  

@@ -1,5 +1,6 @@
 ---
 title: Preparazione dei dati per la visualizzazione in un'area dati Tablix (Generatore report) | Microsoft Docs
+description: Informazioni su come personalizzare la visualizzazione dei dati in Generatore report per visualizzare tutti i dati recuperati o un subset dei dati.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fbb00dc6-7887-480c-b771-cab6fecb8dcc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cf1e776b874a371dceeef8c10306a55efdd1a2ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2075475db3bc195517cd92c2771bd4988088b432
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082396"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681510"
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>Preparare i dati per la visualizzazione in un'area dati Tablix (Generatore report e SSRS)
   In un'area dati Tablix vengono visualizzati i dati di un set di dati. È possibile visualizzare tutti i dati recuperati per il set di dati o creare filtri in modo da visualizzare solo un subset dei dati. È inoltre possibile aggiungere espressioni condizionali per inserire valori Null o modificare la query affinché un set di dati includa colonne che definiscono il tipo di ordinamento per una colonna esistente.  

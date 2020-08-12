@@ -8,22 +8,21 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f13efaa9181521a40d6f3ba9a5cdeef7da3d2afc
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: af3826d5153e2be157a74c96037bff51c6039e7c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606984"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728562"
 ---
 # <a name="tutorial-deploy-a-predictive-model-in-r-with-sql-machine-learning"></a>Esercitazione: Distribuire un modello predittivo in R con Machine Learning in SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà in SQL Server un modello di Machine Learning, sviluppato in R, usando Machine Learning Services.
+Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello di Machine Learning, sviluppato in R, in Machine Learning Services per SQL Server oppure in cluster Big Data.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà in SQL Server un modello di Machine Learning, sviluppato in R, usando Machine Learning Services.
@@ -31,11 +30,13 @@ Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribui
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà in SQL Server un modello di Machine Learning, sviluppato in R, usando R Services per SQL Server.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello di Machine Learning, sviluppato in R, in Istanza gestita di SQL di Azure con Machine Learning Services.
+::: moniker-end
 
 In questo articolo si apprenderà come:
 
 > [!div class="checklist"]
-
 > * Creare una stored procedure che genera il modello di Machine Learning
 > * Archiviare il modello in una tabella del database
 > * Creare una stored procedure che esegue stime usando il modello
@@ -66,11 +67,14 @@ AS
 BEGIN
     EXECUTE sp_execute_external_script @language = N'R'
         , @script = N'
+rental_train_data$Month   <- factor(rental_train_data$Month);
+rental_train_data$Day     <- factor(rental_train_data$Day);
 rental_train_data$Holiday <- factor(rental_train_data$Holiday);
 rental_train_data$Snow    <- factor(rental_train_data$Snow);
 rental_train_data$WeekDay <- factor(rental_train_data$WeekDay);
 
 #Create a dtree model and train it using the training data set
+library(rpart);
 model_dtree <- rpart(RentalCount ~ Month + Day + WeekDay + Snow + Holiday, data = rental_train_data);
 #Serialize the model before saving it to the database table
 trained_model <- as.raw(serialize(model_dtree, connection=NULL));
@@ -157,6 +161,8 @@ BEGIN
     EXECUTE sp_execute_external_script @language = N'R'
         , @script = N'
 #Convert types to factors
+rentals$Month   <- factor(rentals$Month);
+rentals$Day     <- factor(rentals$Day);
 rentals$Holiday <- factor(rentals$Holiday);
 rentals$Snow    <- factor(rentals$Snow);
 rentals$WeekDay <- factor(rentals$WeekDay);
@@ -202,12 +208,12 @@ RentalCount_Predicted
 332.571428571429
 ```
 
-Un modello è stato creato, sottoposto a training e distribuito correttamente in un database SQL. Il modello è stato quindi usato in una stored procedure per stimare i valori in base ai nuovi dati.
+Sono state eseguite le operazioni di creazione, training e distribuzione di un modello in un database. Il modello è stato quindi usato in una stored procedure per stimare i valori in base ai nuovi dati.
 
 
 ## <a name="clean-up-resources"></a>Pulire le risorse
 
-Dopo aver usato il database TutorialDB, eliminarlo dal server SQL.
+Dopo aver usato il database TutorialDB, eliminarlo dal server.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -1,48 +1,50 @@
 ---
 title: 'Esercitazione: Preparare i dati per eseguire il clustering in R'
 titleSuffix: SQL machine learning
-description: Nella seconda parte di questa serie di esercitazioni in quattro parti si prepareranno i dati di un database SQL per eseguire il clustering in R con Machine Learning in SQL.
+description: Nella seconda parte di questa serie di esercitazioni in quattro parti si prepareranno i dati di un database per eseguire il clustering in R con Machine Learning in SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: adeda8bf04333bb256daea8ebc3cab1288f9aebf
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a83268efebbe53a12806c3e52a38e3c5ea2d94e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607024"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728547"
 ---
 # <a name="tutorial-prepare-data-to-perform-clustering-in-r-with-sql-machine-learning"></a>Esercitazione: Preparare i dati per eseguire il clustering in R con Machine Learning in SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-Nella seconda parte di questa serie di esercitazioni in quattro parti si prepareranno i dati di un database SQL Server per eseguire il clustering in R con Machine Learning Services per database SQL oppure in cluster Big Data.
+Nella seconda parte di questa serie di esercitazioni in quattro parti si prepareranno i dati di un database per eseguire il clustering in R con Machine Learning Services per SQL Server oppure in cluster Big Data.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-Nella seconda parte di questa serie di esercitazioni in quattro parti si prepareranno i dati di un database SQL per eseguire il clustering in R con Machine Learning Services per database SQL.
+Nella seconda parte di questa serie di esercitazioni in quattro parti si prepareranno i dati di un database per eseguire il clustering in R con Machine Learning Services per SQL Server.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-Nella seconda parte di questa serie di esercitazioni in quattro parti si prepareranno i dati di un database SQL per eseguire il clustering in R con R Services per database SQL.
+Nella seconda parte di questa serie di esercitazioni in quattro parti si prepareranno i dati di un database per eseguire il clustering in R con R Services per SQL Server 2016.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Nella seconda parte di questa serie di esercitazioni in quattro parti si prepareranno i dati di un database per eseguire il clustering in R con Machine Learning Services per Istanza gestita di SQL di Azure.
 ::: moniker-end
 
 In questo articolo si apprenderà come:
 
 > [!div class="checklist"]
 > * Separare i clienti in base alle diverse dimensioni usando R
-> * Caricare i dati del database SQL di Azure in un frame di dati R
+> * Caricare i dati del database in un frame di dati R
 
 Nella [prima parte](r-clustering-model-introduction.md) sono stati installati i prerequisiti ed è stato ripristinato il database di esempio.
 
 Nella [terza parte](r-clustering-model-build.md) si apprenderà come creare ed eseguire il training di un modello di clustering K-Means in R.
 
-Nella [quarta parte](r-clustering-model-deploy.md) si apprenderà come creare una stored procedure in un database SQL in grado di eseguire il clustering in R in base ai nuovi dati.
+Nella [quarta parte](r-clustering-model-deploy.md) si apprenderà come creare una stored procedure in un database in grado di eseguire il clustering in R in base ai nuovi dati.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -63,9 +65,9 @@ Nella funzione **connStr** sostituire **ServerName** con le proprie informazioni
 ```r
 # Define the connection string to connect to the tpcxbb_1gb database
 
-connStr <- "Driver=SQL Server;Server=ServerName;Database=tpcxbb_1gb;Trusted_Connection=TRUE"
+connStr <- "Driver=SQL Server;Server=ServerName;Database=tpcxbb_1gb;uid=Username;pwd=Password"
 
-#Define the query to select data from SQL Server
+#Define the query to select data
 input_query <- "
 SELECT ss_customer_sk AS customer
     ,round(CASE 
@@ -124,7 +126,7 @@ LEFT OUTER JOIN (
         SUM(sr_return_amt) AS returns_money
     FROM store_returns
     GROUP BY sr_customer_sk
-    ) returned ON ss_customer_sk = sr_customer_sk
+    ) returned ON ss_customer_sk = sr_customer_sk";
 ```
 
 ## <a name="load-the-data-into-a-data-frame"></a>Caricare i dati in un frame di dati
@@ -132,7 +134,7 @@ LEFT OUTER JOIN (
 A questo punto usare lo script seguente per restituire i risultati della query in un frame di dati R.
 
 ```r
-# Query SQL Server using input_query and get the results back
+# Query using input_query and get the results back
 # to data frame customer_data
 
 library(RODBC)
@@ -141,7 +143,7 @@ ch <- odbcDriverConnect(connStr)
 
 customer_data <- sqlQuery(ch, input_query)
 
-# Take a look at the data just loaded from SQL Server
+# Take a look at the data just loaded
 head(customer_data, n = 5);
 ```
 
@@ -165,7 +167,7 @@ Se non si intende continuare con questa esercitazione, eliminare il database tpc
 Nella seconda parte di questa serie di esercitazioni si è appreso come:
 
 * Separare i clienti in base alle diverse dimensioni usando R
-* Caricare i dati del database SQL di Azure in un frame di dati R
+* Caricare i dati del database in un frame di dati R
 
 Per creare un modello di Machine Learning che usa questi dati dei clienti, seguire la terza parte di questa serie di esercitazioni:
 

@@ -1,5 +1,6 @@
 ---
 title: Rimozione di un'estensione per il recapito | Microsoft Docs
+description: Informazioni su come rimuovere un'estensione per il recapito da Reporting Services in modo che il server di report non la elenchi come disponibile e disattivi le sottoscrizioni che la usano.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dcb7caf2-d19a-4bc5-afb3-2b61ad11cac5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 49b36598d643bd88496117655f23f642e663d04c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f4f23d58836dbadb9393be49dd34425c89a15c3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193729"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529487"
 ---
 # <a name="removing-a-delivery-extension"></a>Rimozione di un'estensione per il recapito
   Per rimuovere un'estensione per il recapito di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], rimuovere semplicemente l'elemento **Extension** per l'estensione dal file di configurazione. Dopo la rimozione delle informazioni di configurazione, l'estensione per il recapito non è più disponibile per il server di report.  

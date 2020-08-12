@@ -1,5 +1,6 @@
 ---
 title: Attivare le funzionalità di integrazione del server di report e di Power View in SharePoint | Microsoft Docs
+description: Il componente aggiuntivo di SQL Server Reporting Services per le funzionalità di SharePoint si attiva solitamente in modo automatico. Se è necessario attivarlo manualmente, usare queste istruzioni.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dce33b0f267dadd8454378fccb72112970553a96
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f96e73135889e94cda9e84a39c8f03b59c39973f
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580509"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764836"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Attivare le funzionalità di integrazione del server di report e di Power View in SharePoint
 

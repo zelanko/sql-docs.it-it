@@ -1,5 +1,6 @@
 ---
 title: Aggiungere filtri per set di dati, aree dati e gruppi | Microsoft Docs
+description: Informazioni su come usare i filtri per controllare i dati da visualizzare ed elaborare nei report in Generatore report.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e512a330ba8d16a0dbbce878f8bfb6c60176a098
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582059"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255694"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Aggiungere filtri per set di dati, aree dati e gruppi
   In un report un filtro è una parte di un set di dati, di un'area dati o di un gruppo di aree dati che viene creato per limitare i dati utilizzati nel report. I filtri consentono di controllare i dati del report se non è possibile modificare la query del set di dati, ad esempio se si utilizza un set di dati condiviso.  
@@ -90,7 +91,7 @@ ms.locfileid: "65582059"
 ### <a name="value"></a>valore  
  L'espressione Valore specifica la parte finale dell'equazione di filtro. Il componente Elaborazione report converte l'espressione valutata nel tipo di dati specificato dall'utente, quindi valuta l'intera equazione di filtro per determinare se i dati specificati in Espressione passano attraverso il filtro.  
   
- Per eseguire la conversione in un tipo di dati diverso da un tipo di dati CLR standard, è necessario modificare l'espressione in modo da eseguire una conversione esplicita in un tipo di dati. È possibile usare le funzioni di conversione elencate nella finestra di dialogo **Espressione** in **Funzioni comuni**, **Conversione**. Ad esempio, per un campo `ListPrice` che rappresenta i dati archiviati come tipo di dati **money** in un'origine dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'estensione per l'elaborazione dati restituisce il valore del campo come tipo di dati <xref:System.Decimal> . Per impostare un filtro in modo da usare solo i valori maggiori di **50000,00`=CDec(50000.00)` nella valuta del report, convertire il valore in Decimal mediante l'espressione** .  
+ Per eseguire la conversione in un tipo di dati diverso da un tipo di dati CLR standard, è necessario modificare l'espressione in modo da eseguire una conversione esplicita in un tipo di dati. È possibile usare le funzioni di conversione elencate nella finestra di dialogo **Espressione** in **Funzioni comuni**, **Conversione**. Ad esempio, per un campo `ListPrice` che rappresenta i dati archiviati come tipo di dati **money** in un'origine dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'estensione per l'elaborazione dati restituisce il valore del campo come tipo di dati <xref:System.Decimal> . Per impostare un filtro in modo da usare solo i valori maggiori di **50000,00`=CDec(50000.00)` nella valuta del report, convertire il valore in Decimal mediante l'espressione **.  
   
  Questo valore può inoltre includere un riferimento di parametro per consentire la selezione interattiva di un valore in base al quale applicare un filtro.  
   

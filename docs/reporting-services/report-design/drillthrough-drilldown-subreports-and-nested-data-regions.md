@@ -1,5 +1,6 @@
 ---
 title: Drill-through, drill-down, sottoreport e aree dati nidificate | Microsoft Docs
+description: Organizzare i dati per illustrare la relazione da generale a dettagliata e quindi visualizzare i dati in un sottoreport o in un report drill-through separato.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 23a1561104273203a01c99a08e86ed301e55bbf3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55dd847b01d6870712c226fa9aec0d49de2c4efb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578781"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689387"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>Drill-through, drill-down, sottoreport e aree dati nidificate
   È possibile organizzare i dati in vari modi per mostrare la relazione da generale a dettagliata.  È possibile inserire tutti i dati nel report, ma impostarli in modo che rimangano nascosti finché un utente non farà clic per rivelare i dettagli. Questa è un'azione di tipo *drill-down* . È possibile visualizzare i dati in un'area dati, ad esempio una tabella o un grafico, *annidata* in un'altra area dati, ad esempio una tabella o una matrice. È possibile visualizzare i dati in un *sottoreport* completamente contenuto in un report principale. In alternativa, è possibile inserire i dati di dettaglio in report *drill-through* , ovvero report separati che vengono visualizzati quando un utente fa clic su un collegamento.  

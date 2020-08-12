@@ -1,5 +1,6 @@
 ---
 title: Debug del codice di un'estensione per l'elaborazione dati | Microsoft Docs
+description: Informazioni su come usare gli strumenti di debug di Microsoft .NET Framework per analizzare il codice dell'estensione per l'elaborazione dati e individuare gli errori presenti.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e963e205-9ae0-446d-97df-028a1d2727d9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 031dade1cb1f5535a1b0ccacc0efe4ca8b241ccb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4514d1b0fb84da6a44e5d51a60add48aff971021
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194042"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529645"
 ---
 # <a name="debugging-data-processing-extension-code"></a>Debug del codice di un'estensione per l'elaborazione dati
   In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] sono disponibili diversi strumenti di debug che consentono di analizzare il codice delle estensioni per l'elaborazione dati e di individuare gli errori. Gli strumenti più appropriati da utilizzare variano in base alla finalità desiderata. In questo esempio viene utilizzato [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)].  

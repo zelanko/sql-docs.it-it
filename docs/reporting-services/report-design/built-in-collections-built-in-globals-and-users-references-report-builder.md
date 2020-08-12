@@ -1,5 +1,6 @@
 ---
 title: Riferimenti alle raccolte predefinite Globals e Users (Generatore report) | Microsoft Docs
+description: Informazioni sui valori utilizzabili nelle espressioni per filtrare i risultati in un report in Generatore report.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8dfd41dfbcbd35712fb2e13925b047e4ed2db962
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 23c0167fddf6887d0ff4e25dcfcd9242434b4f66
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082214"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462195"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Raccolte predefinite - Riferimenti alle raccolte predefinite Globals e Users (Generatore report)
   La raccolta di campi predefinita, in cui sono incluse le raccolte **Globals** e **User** , rappresenta i valori globali forniti da Reporting Services durante l'elaborazione di un report. La raccolta **Globals** fornisce valori come il nome del report, l'ora di inizio dell'elaborazione e i numeri di pagina correnti per l'intestazione o il piè di pagina. La raccolta **User** fornisce le impostazioni relative a ID utente e lingua. Questi valori possono essere usati nelle espressioni per filtrare i risultati in un report.  

@@ -1,5 +1,6 @@
 ---
 title: Abilitare un server di report per l'accesso a Power BI per dispositivi mobili | Microsoft Docs
+description: Informazioni su come connettere l'app Power BI per dispositivi mobili a Reporting Services per l'utilizzo di report per dispositivi mobili. I report per dispositivi mobili sono una funzionalità della modalità nativa.
 ms.date: 12/17/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c1a71522-394b-46a7-b9ec-f964bdd81d82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4dfeb99dc01a0ed2aaade9c0c21e4ce3ddd5da49
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 69e6f1b03b7ef6b1fb68d6c08cd1f526a6b481fa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486745"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545556"
 ---
 # <a name="enable-a-report-server-for-power-bi-mobile-access"></a>Abilitare un server di report per l'accesso a Power BI per dispositivi mobili
 Per utilizzare i report per dispositivi mobili, è possibile usare l'app Power BI per dispositivi mobili. Per consentire all'app Power BI per dispositivi mobili di connettersi a Reporting Services, è necessario configurare alcuni aspetti.  

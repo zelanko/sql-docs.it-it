@@ -1,5 +1,6 @@
 ---
 title: Formattazione degli elementi del report (Generatore report) | Microsoft Docs
+description: Informazioni su come la formattazione migliori la leggibilità e rende i report più interessanti in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d0433667ba85af242374933a028974d1960416c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 156745486165bd4348e70a81c910aa49fd55a0e1
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079645"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779433"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Formattazione degli elementi del report (Generatore report e SSRS)
   La formattazione degli elementi del report consente di migliorare l'aspetto e la leggibilità del report. È possibile formattare le caselle di testo e i singoli elementi contenuti nelle caselle, le immagini, le espressioni e i dati in modalità progettazione report.  
@@ -30,7 +31,7 @@ ms.locfileid: "77079645"
   
  È possibile modificare le opzioni di formattazione selezionando l'elemento che si desidera formattare e quindi aprire la finestra di dialogo Proprietà dell'elemento. Ad esempio, se si desidera formattare il contenuto di un'intera casella di testo oppure una parola selezionata al suo interno, fare clic con il pulsante destro del mouse sull'elemento e scegliere **Proprietà casella di testo**. Sarà quindi possibile applicare gli stili di formattazione desiderati.  
   
- Per iniziare rapidamente, vedere [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Per un'introduzione rapida, vedere [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

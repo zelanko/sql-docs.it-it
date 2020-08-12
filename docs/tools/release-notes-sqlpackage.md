@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 0b034a0c0d449bd85afbfd46fa407e34921b8cf2
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 84a7a8261e2fc3d2031b1b38b8ee7709ad015e39
+ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262131"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353098"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Note sulla versione per SqlPackage.exe
 
@@ -34,6 +34,21 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+
+## <a name="1851-sqlpackage"></a>18.5.1 sqlpackage
+
+|Piattaforma|Download|Data di rilascio|Versione|Compilare
+|:---|:---|:---|:---|:---|
+|Windows|[Programma di installazione MSI](https://go.microsoft.com/fwlink/?linkid=2134206)|24 giugno 2020|18.5.1|15.0.4826.1|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2134312)|24 giugno 2020| 18.5.1|15.0.4826.1|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2134311)|24 giugno 2020| 18.5.1|15.0.4826.1|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2134310)|24 giugno 2020| 18.5.1|15.0.4826.1|
+
+### <a name="fixes"></a>Correzioni
+| Funzionalità | Dettagli |
+| :------ | :------ |
+| Distribuzione | Correzione di una regressione introdotta nella versione 18.5 per cui si verifica un errore di tipo "Sintassi errata vicino a 'tipo'" quando si distribuisce un dacpac o si importa un bacpac con un utente con accesso esterno all'ambiente locale | 
+
 ## <a name="185-sqlpackage"></a>18.5 sqlpackage
 
 |Piattaforma|Download|Data di rilascio|Versione|Compilare
@@ -51,7 +66,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Distribuzione | Aggiunta del supporto di Azure SQL Data Warehouse per l'indice columnstore cluster ordinato |
 | Distribuzione | Aggiunta del supporto per un'origine dati esterna (per Oracle, Teradata, MongoDB/CosmosDB, ODBC, cluster Big Data) e una tabella esterna per cluster Big Data di SQL Server 2019 |
 | Distribuzione | Aggiunta di un'istanza di database SQL Edge come edizione supportata |
-| Distribuzione | Supporto dei nomi dei server Istanza gestita nel formato '\<server>.\<zonadns>.database.windows.net' |
+| Distribuzione | Supporto di nomi di server di Istanza gestita nel formato '\<server>.\<dnszone>.database.windows.net' |
 | Distribuzione | Aggiunta del supporto per il comando di copia in Azure SQL Data Warehouse |
 | Distribuzione | Aggiunta dell'opzione di distribuzione 'IgnoreTablePartitionOptions' durante la pubblicazione per evitare la ricreazione della tabella in caso di modifica della funzione di partizione per la tabella per Azure SQL Data Warehouse |
 | .NET Core | Aggiunta del supporto di Microsoft.Data.SqlClient nella versione .NET Core di sqlpackage |
@@ -60,7 +75,6 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="fixes"></a>Correzioni
 | Fix | Dettagli |
 | :-- | :------ |
-| Distribuzione | Correzione della pubblicazione dacpac di un database che contiene un utente esterno, che generava un errore "Riferimento oggetto non impostato su un'istanza di un oggetto." |
 | Distribuzione | Correzione dell'analisi del percorso JSON come espressione |
 | Distribuzione | Correzione della generazione di istruzioni GRANT per le autorizzazioni AlterAnyDatabaseScopedConfiguration e AlterAnySensitivityClassification |
 | Distribuzione | Correzione dell'autorizzazione script esterno non riconosciuta |
@@ -71,6 +85,13 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | ScriptDom | Correzione del bug ScriptDom a causa del quale non funzionava il riconoscimento dei vincoli inline definiti dopo un indice inline |
 | ScriptDom | Correzione della parentesi di chiusura mancante per ScriptDom SYSTEM_TIME in un'istruzione batch |
 | Always Encrypted | Correzione per la tabella #tmpErrors che non può essere eliminata se sqlpackage si riconnette e la tabella temporanea è già stata eliminata perché la tabella temporanea scompare al termine della connessione |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Problemi noti
+| Funzionalità | Dettagli |
+| :------ | :------ |
+| Distribuzione |  Nella versione 18.5 è stata introdotta una regressione per cui si verifica un errore di tipo "Sintassi errata vicino a 'tipo'" quando si distribuisce un dacpac o si importa un bacpac con un utente con accesso esterno all'ambiente locale. La soluzione alternativa consiste nell'usare sqlpackage 18.4. Il problema verrà corretto nella prossima versione di sqlpackage. | 
+| .NET Core | L'importazione di bacpac con classificazione di riservatezza non riesce con il messaggio "Errore irreversibile della connessione interna" a causa di questo [problema noto](https://github.com/dotnet/SqlClient/issues/559) di Microsoft.Data.SqlClient. Questo problema verrà risolto nella prossima versione di sqlpackage. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1841-sqlpackage"></a>sqlpackage 18.4.1
@@ -110,7 +131,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | :------ | :------ |
 | Distribuzione | Aggiungere il supporto per la distribuzione in Azure SQL Data Warehouse (GA). | 
 | Piattaforma | Versione GA di sqlpackage per .NET Core per macOS, Linux e Windows. | 
-| Sicurezza | Rimuovere la firma del codice SHA1. |
+| Security | Rimuovere la firma del codice SHA1. |
 | Distribuzione | Aggiungere il supporto per le nuove edizioni del database di Azure: GeneralPurpose, BusinessCritical, Hyperscale |
 | Distribuzione | Aggiungere il supporto di Istanza gestita per utenti e gruppi di AAD. |
 | Distribuzione | Supportare il parametro/AccessToken per sqlpackage in .NET Core. |

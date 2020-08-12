@@ -1,6 +1,6 @@
 ---
 title: Visualizzare i valori in percentuale in un grafico a torta (Generatore report) | Microsoft Docs
-description: Nei report impaginati di Reporting Services, per impostazione predefinita la legenda visualizza tutte le categorie. È anche possibile visualizzare le percentuali nella legenda o nelle sezioni del grafico a torta.
+description: Informazioni su come visualizzare i valori in percentuale in un grafico a torta, nella legenda o nelle sezioni della torta in Generatore report.
 ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1b250f8bffdebeb0cb0f1e68a739bb808cb75abd
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: abacde42f813a00ecc2f48edd8fc71d2b3a83020
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487587"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681400"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>Visualizzare i valori in percentuale in un grafico a torta (Generatore report e SSRS)
 Nei report impaginati [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], per impostazione predefinita la legenda visualizza tutte le categorie. È anche possibile visualizzare le percentuali nella legenda o nelle sezioni del grafico a torta.   

@@ -1,5 +1,6 @@
 ---
 title: Aggiungere, modificare o eliminare un parametro di report (Generatore report) | Microsoft Docs
+description: Scegliere i dati del report, connettere i report correlati e variare la presentazione del report con l'aggiunta di parametri in un report impaginato in Generatore report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d44a8e0a-10cf-4502-9391-09743ffc9bad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b07c03980cf1eb2cc7f99ab6d4e6470485bb53f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9c4ab09d50b4d1055d18c5813647a5efee7bf532
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080597"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012259"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>Aggiungere, modificare o eliminare un parametro di report (Generatore report e SSRS)
   Un parametro di report consente di scegliere i dati del report, connettere report correlati e variare la presentazione del report. È possibile specificare un valore predefinito e un elenco di valori disponibili per consentire all'utente di modificare la selezione.  

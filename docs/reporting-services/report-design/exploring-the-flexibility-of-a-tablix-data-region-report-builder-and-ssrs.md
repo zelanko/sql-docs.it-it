@@ -1,5 +1,6 @@
 ---
 title: Esplorazione della flessibilità di un'area dati Tablix (Generatore report) | Microsoft Docs
+description: Scoprire la flessibilità dei report impaginati in Generatore report quando si aggiunge una tabella, una matrice o un'area dati elenco.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aaddc6f5671ceb2727ca950459e60dc24402bb9e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1f87c4ddc6b678675d5bcad06d06a3c466ecd929
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082107"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999552"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Esplorazione della flessibilità di un'area dati Tablix (Generatore report e SSRS)
 In un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , quando si aggiunge una tabella, una matrice o un'area dati elenco dalla scheda Inserisci sulla barra multifunzione, si può partire con un modello iniziale per un'area dati Tablix. La scelta iniziale del modello, tuttavia, non è vincolante. Per continuare a sviluppare la modalità di visualizzazione dei dati è possibile aggiungere o rimuovere caratteristiche dell'area dati Tablix quali gruppi, righe e colonne.  

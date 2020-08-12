@@ -1,6 +1,6 @@
 ---
 title: Controllare le intestazioni di riga e di colonna (Generatore report e SSRS) | Microsoft Docs
-description: Una tabella, una matrice o un'area dati elenco in un report impaginato possono estendersi orizzontalmente o verticalmente in più pagine. È possibile specificare se ripetere le intestazioni di riga o di colonna in ogni pagina.
+description: Informazioni su come usare una tabella, una matrice o un'area dati elenco in un report impaginato, che consente di estendersi orizzontalmente o verticalmente in più pagine in Generatore report.
 ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ce25cfe5d8d84926cb9bc993d075372e3a81d336
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 654ec769905d17534a3896465909a14c41d60b54
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245355"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255344"
 ---
 # <a name="control-row--column-headings-report-builder--ssrs"></a>Controllare le intestazioni di riga e di colonna (Generatore report e SSRS)
   Una tabella, una matrice o un'area dati elenco in un report impaginato possono estendersi orizzontalmente o verticalmente in più pagine. È possibile specificare se ripetere le intestazioni di riga o di colonna in ogni pagina. In un renderer interattivo come il portale Web o un'anteprima del report è anche possibile specificare se bloccare le intestazioni di riga o di colonna per mantenerle visualizzate quando si scorre un report in senso orizzontale o verso il basso. Nella prima riga di una tabella o di una matrice in genere sono contenute intestazioni di colonna che identificano i dati di ogni colonna, mentre nella prima colonna sono contenute intestazioni di riga che identificano i dati di ogni riga. Per i gruppi nidificati, è possibile ripetere il set iniziale di intestazioni di riga e di colonna contenenti etichette di gruppo. Per impostazione predefinita, in un'area dati elenco non sono incluse intestazioni.  
@@ -111,7 +111,7 @@ ms.locfileid: "75245355"
   
  ![Gruppi di righe, modalità avanzata con membri statici](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "Gruppi di righe, modalità avanzata con membri statici")  
   
- Vengono elencati i membri Tablix seguenti: **Statico**, (**Statico**), Categoria e (**Dettagli**). Un membro Tablix che include le parentesi () indica l'assenza di un'intestazione di gruppo corrispondente. Per ripetere o bloccare le intestazioni di colonna, selezionare il membro Tablix statico superiore e impostare le proprietà nel riquadro Proprietà.  
+ Sono elencati i membri Tablix seguenti: **Statico**, (**Statico**), Categoria e (**Dettagli**). Un membro Tablix che include le parentesi () indica l'assenza di un'intestazione di gruppo corrispondente. Per ripetere o bloccare le intestazioni di colonna, selezionare il membro Tablix statico superiore e impostare le proprietà nel riquadro Proprietà.  
   
  [Torna all'inizio](#Top)  
   
@@ -138,7 +138,7 @@ ms.locfileid: "75245355"
   
  ![Gruppi di righe, modalità avanzata, senza intestazione gruppo.](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Gruppi di righe, modalità avanzata, senza intestazione gruppo.")  
   
- Nel riquadro Gruppi di righe vengono elencati i membri Tablix seguenti: (**Statico**), (Categoria), (**Statico**) e (**Dettagli**). Per ripetere o bloccare le intestazioni di colonna, selezionare il membro Tablix (**Statico**) superiore e impostare le proprietà nel riquadro Proprietà.  
+ Nel riquadro Gruppi di righe sono elencati i membri Tablix seguenti: (**Statico**), (Categoria), (**Statico**) e (**Dettagli**). Per ripetere o bloccare le intestazioni di colonna, selezionare il membro Tablix (**Statico**) superiore e impostare le proprietà nel riquadro Proprietà.  
   
  [Torna all'inizio](#Top)  
   

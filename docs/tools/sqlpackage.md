@@ -1,5 +1,6 @@
 ---
 title: SqlPackage.exe
+description: Informazioni su come automatizzare le attività di sviluppo di database con SqlPackage.exe. È possibile visualizzare esempi, oltre a parametri, proprietà e variabili SQLCMD disponibili.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -9,12 +10,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: alayu; sstein
 ms.date: 03/17/2020
-ms.openlocfilehash: 1ee42c97fe4e032835ccb2f8a07ea51fe70114ac
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 1209945c167f26dd7011cc4ce210e61ac24f7134
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81303142"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441258"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -94,7 +95,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 
 ### <a name="properties-specific-to-the-extract-action"></a>Proprietà specifiche dell'azione Estrai
 
-|Proprietà|valore|Descrizione|
+|Proprietà|Valore|Descrizione|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|Specifica il timeout del comando in secondi quando si eseguono query in SQL Server.|
 |**/p:**|DacApplicationDescription=(STRING)|Definisce la descrizione dell'applicazione da archiviare nei metadati DACPAC.|
@@ -160,7 +161,7 @@ Un'operazione di pubblicazione tramite SqlPackage.exe consente di aggiornare in 
 
 ### <a name="properties-specific-to-the-publish-action"></a>Proprietà specifiche dell'azione Pubblica
 
-|Proprietà|valore|Descrizione|
+|Proprietà|Valore|Descrizione|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Specifica altri argomenti per i collaboratori alla distribuzione in un elenco di valori separati da punti e virgola.|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Specifica altri collaboratori alla distribuzione da eseguire durante la distribuzione del dacpac in un elenco di ID o nomi di collaboratori di compilazione completi separati da punti e virgola.|
@@ -269,7 +270,7 @@ Un'azione Esportazione di SqlPackage.exe esporta un database attivo da un databa
   
 ### <a name="help-for-export-action"></a>Guida per l'azione Esportazione
 
-|Parametro|Forma breve|valore|Descrizione|
+|Parametro|Forma breve|valore|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|Esportazione|Specifica l'azione da eseguire. |
 |**/AccessToken:**|**/at**|{string}| Specifica il token di accesso per l'autenticazione basata su token da usare per la connessione al database di destinazione. |
@@ -293,7 +294,7 @@ Un'azione Esportazione di SqlPackage.exe esporta un database attivo da un databa
 
 ### <a name="properties-specific-to-the-export-action"></a>Proprietà specifiche dell'azione Esportazione
 
-|Proprietà|valore|Descrizione|
+|Proprietà|Valore|Descrizione|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|Specifica il timeout del comando in secondi quando si eseguono query in SQL Server.|
 |**/p:**|DatabaseLockTimeout=(INT32 '60')| Specifica il timeout del blocco a livello di database in secondi quando si eseguono query su SQL Server. Usare -1 per l'attesa indefinita.|
@@ -333,7 +334,7 @@ L'azione Importazione di SqlPackage.exe importa i dati di tabella e schema da un
 
 Proprietà specifiche dell'azione Importazione:
 
-|Proprietà|valore|Descrizione|
+|Proprietà|Valore|Descrizione|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|Specifica il timeout del comando in secondi quando si eseguono query in SQL Server.|
 |**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;Hyperscale&#124;Default} 'Default')|Definisce l'edizione di un database SQL di Azure.|
@@ -388,7 +389,7 @@ Un'azione report di **SqlPackage.exe** crea un report XML delle modifiche che ve
 
 ## <a name="properties-specific-to-the-deployreport-action"></a>Proprietà specifiche dell'azione DeployReport
 
-|Proprietà|valore|Descrizione|
+|Proprietà|Valore|Descrizione|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Specifica altri argomenti per i collaboratori alla distribuzione in un elenco di valori separati da punti e virgola.|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Specifica altri collaboratori alla distribuzione da eseguire durante la distribuzione del dacpac in un elenco di ID o nomi di collaboratori di compilazione completi separati da punti e virgola.|
@@ -553,7 +554,7 @@ L'azione Script di **SqlPackage.exe** consente di creare uno script di aggiornam
 
 ### <a name="properties-specific-to-the-script-action"></a>Proprietà specifiche dell'azione Script
 
-|Proprietà|valore|Descrizione|
+|Proprietà|Valore|Descrizione|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Specifica altri argomenti per i collaboratori alla distribuzione in un elenco di valori separati da punti e virgola.
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Specifica altri collaboratori alla distribuzione da eseguire durante la distribuzione del dacpac in un elenco di ID o nomi di collaboratori di compilazione completi separati da punti e virgola.

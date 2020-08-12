@@ -1,5 +1,6 @@
 ---
 title: Funzione Lookup (Generatore report) | Microsoft Docs
+description: Usare la funzione Lookup per restituire il primo valore corrispondente per il nome specificato da un set di dati contenente coppie nome/valore.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ca2ef5b2c605d2eb1ca73d05e897919869a435f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f2a3016bc45537aed393124b6d20f8d4a1656759
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081228"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255724"
 ---
 # <a name="report-builder-functions---lookup-function"></a>Funzioni di Generatore report - Funzione Lookup
   Viene restituito il primo valore corrispondente per il nome specificato da un set di dati contenente coppie nome/valore.  

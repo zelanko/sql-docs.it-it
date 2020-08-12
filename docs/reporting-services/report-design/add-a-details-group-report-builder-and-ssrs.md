@@ -1,5 +1,6 @@
 ---
 title: Aggiungere un gruppo dettagli (Generatore report) | Microsoft Docs
+description: Informazioni sull'aggiunta di un gruppo dettagli a un'area dati Tablix esistente per visualizzare i dati dettagliati per una matrice in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5ef8efba-6d48-4aeb-a3b9-a02ba5a44614
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 317b8d31e84078be586fb15986707f39273382d9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 040f7017734a31b77792c3cb2b3d714742b5044a
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080773"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779133"
 ---
 # <a name="add-a-details-group-report-builder-and-ssrs"></a>Aggiungere un gruppo dettagli (Generatore report e SSRS)
 In un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , i dati dettaglio di un set di dati del report vengono specificati come gruppo senza espressione di raggruppamento. È possibile aggiungere un gruppo dettagli a un'area dati Tablix esistente quando si desidera visualizzare i dati dettaglio per una matrice, aggiungere di nuovo i dati dettaglio eliminati da una tabella o un elenco oppure aggiungere ulteriori gruppi dettagli. Per altre informazioni sui gruppi, vedere [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  

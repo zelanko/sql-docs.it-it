@@ -1,5 +1,6 @@
 ---
 title: Visualizzare descrizioni comando in una serie (Generatore report) | Microsoft Docs
+description: Informazioni su come aggiungere una descrizione comando a ogni punto dati nella serie di un grafico per visualizzare informazioni correlate in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 69804b41ccfafe3edf7be7aba719088d7212c2ba
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f89c94b8a9b457ff312acfd97d84632f037de82a
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080983"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681480"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>Visualizzazione di descrizioni comandi in una serie (Generatore report e SSRS)
   È possibile aggiungere una descrizione comando a ogni punto dati nella serie di un grafico per visualizzare informazioni relative al punto dati, ad esempio il nome del gruppo, il valore del punto dati o la relativa percentuale rispetto al totale della serie. Al passaggio del mouse sul punto dati in un report impaginato verranno visualizzate queste informazioni.  

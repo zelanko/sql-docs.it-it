@@ -1,5 +1,6 @@
 ---
 title: Modificare l'altezza di riga o la larghezza di colonna (Generatore report) | Microsoft Docs
+description: Informazioni sull'impostazione di una larghezza di colonna o di un'altezza di riga fissa con proprietà della casella di testo per i report visualizzabili in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5396ca15db85405053f8c003fb643e26b13f46fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 485dc6918cad6fef9c55256f07de299af377b2d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078921"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044035"
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Modificare l'altezza di riga o la larghezza di colonna (Generatore report e SSRS)
   Quando si imposta un'altezza di riga, si specifica l'altezza massima della riga nel report visualizzabile. Per impostazione predefinita, tuttavia, le caselle di testo nella riga sono impostate in modo da ingrandirsi verticalmente per poter contenere i dati immessi in fase di esecuzione. Per questo motivo, può verificarsi che una riga si espanda oltre l'altezza specificata dall'utente. Per impostare un'altezza di riga fissa è necessario modificare le proprietà della casella di testo in modo che non venga espansa automaticamente.  

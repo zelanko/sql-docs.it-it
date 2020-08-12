@@ -1,21 +1,21 @@
 ---
 title: Creare condizioni di test per la finestra di progettazione unit test di SQL Server
+description: Informazioni su come estendere la classe TestCondition per creare una condizione di test personalizzata per la finestra di progettazione unit test di SQL Server. Visualizzare un esempio di una condizione di test personalizzata.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 75d65bb7b30a8a48a35ada0c929ddf4698ad8408
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e34ca98e6a6a9423bd0237c980e15b91fcdd9aa6
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241483"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518891"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Procedura: Creare condizioni di test per la finestra di progettazione unit test di SQL Server
 
@@ -49,7 +49,7 @@ In questa procedura viene spiegato come creare una condizione di test da visuali
   
 10. Derivare la classe dalla classe [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx).  
   
-11. Firmare l'assembly con un nome sicuro. Per altre informazioni, vedere [Procedura: firmare un assembly con un nome sicuro](https://msdn.microsoft.com/library/xc31ft41.aspx).  
+11. Firmare l'assembly con un nome sicuro. Per altre informazioni, vedere [Procedura: Firmare un assembly con un nome sicuro](https://msdn.microsoft.com/library/xc31ft41.aspx).  
   
 12. Compilare la libreria di classi.  
   

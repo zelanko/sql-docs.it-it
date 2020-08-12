@@ -1,5 +1,6 @@
 ---
 title: Configurare il portale Web | Microsoft Docs
+description: Informazioni su come configurare l'applicazione del portale Web usata per visualizzare report, gestire il contenuto del server di report e concedere l'accesso utente a un server di report in modalità nativa.
 ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 962ab17170c69b6225f852f0b625a6cd50fa20d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 52a6055a3b3c79c08622d89b2931a48eedd14d76
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63308394"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548053"
 ---
 # <a name="configure-the-web-portal"></a>Configurare il portale Web
 
 Il Portale Web è un'applicazione front-end Web usata per visualizzare report, gestire il contenuto del server di report e concedere l'accesso utente a un server di report in modalità nativa. Il portale Web viene installato con il servizio Web ReportServer all'interno della stessa istanza del server di report e facoltativamente configurato se si seleziona l'opzione **Installa la configurazione predefinita della modalità nativa** del programma di installazione. Può essere configurato anche come attività di post-installazione. Questo argomento offre informazioni sui seguenti scenari di configurazione del portale Web:
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per usare il portale Web, è necessario che vengano soddisfatti i prerequisiti seguenti:
 
@@ -48,7 +49,7 @@ Per impostazione predefinita, l'URL del portale Web include un nome di directory
 
 3. Immettere un nome di directory virtuale univoco per il portale Web.
 
-4. Fare clic su **Apply**.
+4. Fare clic su **Applica**.
 
 5. Se si usa [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] o Windows Server 2008, potrebbe essere necessario completare altri passaggi per usare il portale Web. Per altre informazioni, vedere [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
 
@@ -60,7 +61,7 @@ Quando si configurano gli URL nello strumento di configurazione di [!INCLUDE[ssR
 
 #### <a name="to-configure-a-static-report-server-url"></a>Per configurare un URL di un server di report statico
 
-1. Aprire il file **RSReportServer.config** in un editor di testo. Per impostazione predefinita, il percorso di questo file è \Programmi\Microsoft SQL Server\MSRS12.\<*nomeistanza*>\Reporting Services\ReportServer.  
+1. Aprire il file **RSReportServer.config** in un editor di testo. Per impostazione predefinita, il percorso di questo file è \Program Files\Microsoft SQL Server\MSRS12.\<*instancename*>\Reporting Services\ReportServer.  
 
 2. Individuare **ReportServerURL**.
 
@@ -80,7 +81,7 @@ Per altre informazioni sul file di configurazione, vedere [Modificare un file di
 
 2. Aprire Internet Explorer.
 
-3. Immettere l'URL del portale Web. Per impostazione predefinita, l'URL è https://\<**your-server-name**>/reports, ma se Reporting Services è stato installato come istanza denominata, l'URL predefinito sarà https://\<**nome-server**>/reports\< **_nome istanza**>.
+3. Immettere l'URL del portale Web. Per impostazione predefinita, l'URL è https://\<**your-server-name**>/reports, ma se Reporting Services è stato installato come istanza denominata, l'URL predefinito sarà https://\<**your-server-name**>/reports\<**_instancename**>.
 
 4. Selezionare **Impostazioni sito**.
 

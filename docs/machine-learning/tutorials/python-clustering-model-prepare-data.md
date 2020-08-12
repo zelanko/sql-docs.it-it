@@ -5,23 +5,22 @@ description: Nella seconda parte di questa serie di esercitazioni in quattro par
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 04/15/2020
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 25ccde4580e43ce68b74ef32f37f9c92cad12dfe
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 436546f7b84d561a3605912a7af55a0a1ad19315
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606845"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730499"
 ---
 # <a name="python-tutorial-prepare-data-to-categorize-customers-with-sql-machine-learning"></a>Esercitazione su Python: Preparare i dati per categorizzare i clienti con Machine Learning in SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Nella seconda parte di questa serie di esercitazioni in quattro parti si ripristineranno e prepareranno i dati da un database tramite Python. Più avanti nel corso della serie questi dati verranno usati per eseguire il training e la distribuzione di un modello di clustering in Python con Machine Learning Services per SQL Server oppure in cluster Big Data.
@@ -29,12 +28,15 @@ Nella seconda parte di questa serie di esercitazioni in quattro parti si riprist
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 Nella seconda parte di questa serie di esercitazioni in quattro parti si ripristineranno e prepareranno i dati da un database tramite Python. Più avanti nel corso della serie questi dati verranno usati per eseguire il training e la distribuzione di un modello di clustering in Python con Machine Learning Services per SQL Server.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Nella seconda parte di questa serie di esercitazioni in quattro parti si ripristineranno e prepareranno i dati da un database tramite Python. Più avanti nel corso della serie questi dati verranno usati per eseguire il training e la distribuzione di un modello di clustering in Python con Machine Learning Services per Istanza gestita di SQL di Azure.
+::: moniker-end
 
 In questo articolo si apprenderà come:
 
 > [!div class="checklist"]
 > * Separare i clienti in dimensioni diverse tramite Python
-> * Caricare i dati dal database SQL in un frame di dati Python
+> * Caricare i dati dal database in un frame di dati Python
 
 Nella [prima parte](python-clustering-model.md) sono stati installati i prerequisiti ed è stato ripristinato il database di esempio.
 
@@ -75,7 +77,7 @@ from sklearn import cluster as sk_cluster
 ################################################################################################
 
 # Connection string to connect to SQL Server named instance.
-conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<SQL Server>; DATABASE=tpcxbb_1gb; Trusted_Connection=yes')
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<server>; DATABASE=tpcxbb_1gb; UID=<username>; PWD=<password>')
 
 input_query = '''SELECT
 ss_customer_sk AS customer,

@@ -1,5 +1,6 @@
 ---
 title: Sottoreport (Generatore report) | Microsoft Docs
+description: Visualizzare un report all'interno di un altro report. Visualizzarli e archiviarli entrambi nella stessa cartella del server in Generatore report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f149ed74be35184e3364cbadece6d63635d22584
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 53cfa4ce0981693fde4905eb1034da16f1f74f2b
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077103"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255374"
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>Sottoreport (Generatore report e SSRS)
   Un sottoreport è un elemento del report in cui viene visualizzato un altro report all'interno del corpo del report principale. A livello concettuale, un sottoreport in un report è simile a un frame in una pagina Web. Un sottoreport viene utilizzato per incorporare un report in un altro report. Qualsiasi report può essere utilizzato come sottoreport. Il report visualizzato come sottoreport è archiviato in un server di report, solitamente nella stessa cartella del report padre. È possibile progettare il report padre per il passaggio di parametri al sottoreport. Un sottoreport può essere ripetuto all'interno di aree dati, utilizzando un parametro per filtrare i dati in ogni istanza del sottoreport.  

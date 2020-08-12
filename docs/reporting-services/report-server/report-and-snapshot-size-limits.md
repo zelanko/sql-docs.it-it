@@ -1,5 +1,6 @@
 ---
 title: Limiti delle dimensioni di report e snapshot | Microsoft Docs
+description: Informazioni sui limiti relativi alle dimensioni dei report quando vengono pubblicati in un server di report, ne viene eseguito il rendering in fase di esecuzione e viene salvato nel file system.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 05ed8b22882264aa16efc8c5b7736bcc517e44f9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a4fa74909490cf7596faa1e38c83a83b6329bd28
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581447"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547993"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limiti delle dimensioni di report e snapshot
   Le informazioni contenute in questo argomento consentono agli amministratori che gestiscono una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] di conoscere i limiti relativi alle dimensioni dei report quando questi ultimi vengono pubblicati in un server di report, quando ne viene eseguito il rendering in fase di esecuzione e quando vengono salvati nel file system. In questo argomento vengono inoltre fornite indicazioni pratiche su come calcolare le dimensioni di un database del server di report e vengono descritti gli effetti delle dimensioni degli snapshot sulle prestazioni del server.  

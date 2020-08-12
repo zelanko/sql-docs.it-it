@@ -1,5 +1,6 @@
 ---
 title: Implementazione di una classe Command per un'estensione per l'elaborazione dati | Microsoft Docs
+description: Informazioni su come implementare una classe Command per un'estensione per l'elaborazione dati in modo che l'estensione possa formulare richieste e passarle all'origine dati.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 465ef8d1-c503-407c-8afd-58d620e344ee
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e415d9498c624aa3dcea443f2cdc3641dd7c8491
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7150b14354be738baa8a127cfe7025dc3245b03e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193948"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529520"
 ---
 # <a name="implementing-a-command-class-for-a-data-processing-extension"></a>Implementazione di una classe Command per un'estensione per l'elaborazione dati
   L'oggetto **Command** formula una richiesta e la passa all'origine dati. Il testo del comando può avere forme sintattiche diverse, tra cui testo e XML. Se vengono restituiti risultati, l'oggetto **Command** restituisce i risultati come oggetto **DataReader**.  

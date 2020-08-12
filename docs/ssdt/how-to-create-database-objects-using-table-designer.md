@@ -1,5 +1,6 @@
 ---
 title: Creare oggetti di database tramite Progettazione tabelle
+description: Informazioni su come creare un nuovo database in Esplora oggetti di SQL Server. Scoprire come creare nuove tabelle, vincoli e riferimenti di chiave esterna in Progettazione tabelle.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,18 +10,17 @@ f1_keywords:
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ef475a7a0f5e2e8fdea510a0ee743f0d74d19dd2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3364df5dd6336023af7316be12150b878f2c9eb9
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241499"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518781"
 ---
-# <a name="how-to-create-database-objects-using-table-designer"></a>Procedura: Creazione di oggetti di database tramite Progettazione tabelle
+# <a name="how-to-create-database-objects-using-table-designer"></a>Procedura: Creare oggetti di database tramite Progettazione tabelle
 
 Il nuovo nodo **SQL Server** in **Esplora oggetti di SQL Server** non solo è visivamente molto simile a SSMS, ma consente di creare nuovi oggetti tramite menu contestuali con un funzionamento è simile ai corrispondenti di SSMS.  
   

@@ -1,5 +1,6 @@
 ---
 title: Configurare un firewall per l'accesso al server di report | Microsoft Docs
+description: Informazioni su come configurare Windows Firewall per consentire l'accesso alle applicazioni del server di report e ai report pubblicati a cui si accede tramite URL.
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bbcd96e24d0819cc8403a669c7333bb92d396e05
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08a80c8307d551813a30becbed6d12507e6b2947
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593741"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545585"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configurare un firewall per l'accesso al server di report
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Alle applicazioni del server di report e ai report pubblicati si accede tramite URL che specificano un indirizzo IP, una porta e una directory virtuale. Se Windows Firewall è abilitato, la porta configurata per l'utilizzo da parte del server di report è probabilmente chiusa. La visualizzazione di una pagina vuota quando si cerca di aprire il portale Web da un computer client remoto oppure dopo la richiesta di un report indica che una porta potrebbe essere chiusa.  
@@ -27,7 +28,7 @@ ms.locfileid: "73593741"
   
  Se si accede ai database relazionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in computer esterni o se il database del server di report si trova in un'istanza esterna di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario aprire le porte 1433 e 1434 nel computer esterno. Per altre informazioni, vedere [Configurazione di Windows Firewall per l'accesso al Motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md). Per altre informazioni sulle impostazioni predefinite di Windows Firewall e per una descrizione delle porte TCP che interessano [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vedere [Configurare Windows Firewall per consentire l'accesso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  In queste istruzioni si presuppone che sia già stato configurato l'account del servizio, sia già stato creato il database del server di report e che siano già stati configurati gli URL per il servizio Web ReportServer e per il portale Web. Per altre informazioni, vedere [Gestione di un server di report in modalità nativa](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
   
  È inoltre necessario avere verificato la possibilità di accedere al server di report tramite una connessione del browser all'istanza locale del server di report. Questo passaggio consente di stabilire che si dispone di un'installazione funzionante. Prima di procedere all'apertura delle porte, è necessario verificare la corretta configurazione dell'installazione. Per completare questo passaggio in Windows Server, è inoltre necessario avere aggiunto il server di report all'area dei siti attendibili. Per altre informazioni, vedere [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  

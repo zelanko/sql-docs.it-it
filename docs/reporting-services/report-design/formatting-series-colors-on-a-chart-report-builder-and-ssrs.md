@@ -1,5 +1,6 @@
 ---
 title: Formattazione dei colori delle serie in un grafico (Generatore report) | Microsoft Docs
+description: Informazioni su come usare le numerose tavolozze predefinite per i grafici o come definire una tavolozza personalizzata di propria ideazione in Generatore report.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f1d56ecf79c427c885814e87437264ca23c13e18
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a8e099cb6660665ef36e287797e46c432615f1bf
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079514"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880276"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>Formattazione dei colori delle serie in un grafico (Generatore report e SSRS)
   In Reporting Services sono disponibili diverse tavolozze incorporate per i grafici o è possibile definirne di personalizzate. Per impostazione predefinita, nei grafici viene utilizzata la tavolozza dei colori **Pacific** incorporata per riempire ogni serie. Tali colori vengono visualizzati anche nella legenda. Quando al grafico vengono aggiunte più serie, a queste vengono assegnati i colori in base all'ordine dei colori definito nella tavolozza.  

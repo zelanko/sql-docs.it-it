@@ -1,21 +1,21 @@
 ---
 title: Eseguire il debug di oggetti di database
+description: Informazioni su come eseguire il debug di stored procedure, funzioni e trigger. Scoprire come attivare il debug, impostare i punti di interruzione ed eseguire un unit test di SQL Server in modalità debug.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ba04eba5107968f1be11c62fbac0f57ca5733b3f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a9e1b3b6dd7e46872c6196ef3257805c1f5a72f
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241456"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518761"
 ---
 # <a name="how-to--debug-database-objects"></a>Procedura:  Eseguire il debug di oggetti di database
 
@@ -23,7 +23,7 @@ Uno unit test di SQL Server è costituito dagli elementi seguenti:
   
 -   Codice dello unit test scritto in Visual C\# o Visual Basic. Questo codice, generato dalla finestra di progettazione unit test di SQL Server, è responsabile dell'invio dello script Transact\-SQL che forma il corpo del test.  
   
--   Una o più condizioni di test, scritte in Visual C\# o Visual Basic. Per eseguire il debug delle condizioni di test, attenersi alla procedura per eseguire il debug di uno unit test come descritto in [Procedura: Eseguire il debug durante l'esecuzione di un test (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) oppure [Procedura: Eseguire il debug durante l'esecuzione di un test (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx).  
+-   Una o più condizioni di test, scritte in Visual C\# o Visual Basic. Per eseguire il debug delle condizioni di test, attenersi alla procedura per eseguire il debug di uno unit test come descritto in [Procedura: eseguire il debug durante l'esecuzione di un test (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) o [Procedura: eseguire il debug durante l'esecuzione di un test (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx).  
   
 -   Uno o più script Transact\-SQL eseguiti sugli oggetti nel database sottoposto a test. Non è possibile eseguire il debug di questi script Transact\-SQL.  
   

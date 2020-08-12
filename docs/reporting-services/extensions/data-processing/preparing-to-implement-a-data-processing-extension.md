@@ -1,5 +1,6 @@
 ---
 title: Preparazione all'implementazione di un'estensione per l'elaborazione dati | Microsoft Docs
+description: Informazioni su come implementare un'estensione per l'elaborazione dati in Reporting Services. Informazioni sulle interfacce disponibili e sulle funzionalità obbligatorie e facoltative.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3ae11d41956f37f1a203235abad71639f942ae7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bf7bbaddbe4379c7d56ce7209b6b93eb1b4f6254
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193899"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529163"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Preparazione all'implementazione di un'estensione per l'elaborazione dati
   Prima di implementare l'estensione per l'elaborazione dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], è necessario definire le interfacce da implementare. È possibile fornire implementazioni specifiche dell'estensione dell'intero set di interfacce oppure è possibile incentrare l'implementazione semplicemente su un subset, ad esempio le interfacce <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> e <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> in cui i client interagirebbero principalmente con un set di risultati come un oggetto **DataReader** e in cui l'estensione per l'elaborazione dati di [!INCLUDE[ssRS](../../../includes/ssrs.md)] verrebbe usata come collegamento tra il set di risultati e l'origine dati.  

@@ -1,6 +1,6 @@
 ---
 title: Definizioni di ruolo - Ruoli predefiniti | Microsoft Docs
-ms.date: 05/24/2019
+ms.date: 06/10/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18ac0bfb10914b8e0afb1aca363e53f9dff3af91
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7c792804d9e7daae9209bcbafb8bae95fffb3492
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67500190"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716748"
 ---
 # <a name="role-definitions---predefined-roles"></a>Definizioni di ruolo - Ruoli predefiniti
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato con ruoli predefiniti che è possibile utilizzare per concedere l'accesso alle operazioni del server di report. Ogni ruolo predefinito definisce una raccolta di attività correlate. È possibile assegnare account utente e di gruppo ai ruoli predefiniti per fornire accesso immediato alle operazioni del server di report.  
@@ -59,11 +59,11 @@ ms.locfileid: "67500190"
 |----------|-----------------|  
 |Utilizzo di report|Leggere le definizioni dei report.|  
 |Creazione di report collegati|Creare report collegati basati su un report non collegato.|  
-|Gestione di tutte le sottoscrizioni|Visualizzare, modificare ed eliminare sottoscrizioni associate ai report e ai report collegati, indipendentemente dal proprietario della sottoscrizione. Questa attività supporta inoltre la creazione di sottoscrizioni guidate dai dati.|  
+|Gestione di tutte le sottoscrizioni|Visualizzare, modificare ed eliminare sottoscrizioni associate ai report e ai report collegati, indipendentemente dal proprietario della sottoscrizione. Questa attività supporta la creazione di sottoscrizioni guidate dai dati. Supporta anche la modifica e l'esecuzione di un [aggiornamento pianificato per i file di Power BI (con estensione pbix) in un server di report di Power BI](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh).|  
 |Gestire le origini dati|Creare ed eliminare origini dei dati condivise e visualizzare e modificare le proprietà e il contenuto delle origini dei dati.|  
 |Gestione di cartelle|Creare, visualizzare ed eliminare cartelle e visualizzarne e modificarne le proprietà.|  
 |Gestire i modelli|Creare, visualizzare ed eliminare modelli e visualizzare e modificare le proprietà dei modelli.|  
-|Gestione di sottoscrizioni individuali|Creare, visualizzare, modificare ed eliminare sottoscrizioni personali degli utenti per report e report collegati.|  
+|Gestione di sottoscrizioni individuali|Creare, visualizzare, modificare ed eliminare sottoscrizioni personali degli utenti per report e report collegati. Questa attività supporta anche la modifica e l'esecuzione di un [aggiornamento pianificato per i file di Power BI (con estensione pbix) in un server di report di Power BI](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh).|  
 |Gestione della cronologia dei report|Creare, visualizzare ed eliminare la cronologia del report, visualizzare le proprietà della cronologia del report e visualizzare e modificare le impostazioni che determinano i limiti per la cronologia dello snapshot e il funzionamento della memorizzazione nella cache.|  
 |Gestione di report|Aggiungere ed eliminare report, modificare i parametri dei report, visualizzare e modificare le proprietà dei report, visualizzare e modificare le origini dei dati per il contenuto dei report, visualizzare e modificare le definizioni dei report e impostare i criteri di sicurezza a livello dei report.|  
 |Gestione di risorse|Creare, modificare ed eliminare risorse e visualizzarne e modificarne le proprietà.|  

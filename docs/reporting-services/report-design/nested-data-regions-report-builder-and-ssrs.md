@@ -1,5 +1,6 @@
 ---
 title: Aree dati annidate (Generatore report) | Microsoft Docs
+description: Individuare modi per annidare un'area dati all'interno di un'altra area dati in Generatore report. Visualizzare riepiloghi dei dati in una tabella o in una matrice concisa.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d58cdcf55429a76766e3e1810c1d6599aa360e6d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4822f668b78332a7a62aeab7ca4959eb328fcc0d
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082596"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84885082"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>Aree dati nidificate (Generatore report e SSRS)
   È possibile nidificare un'area dati, ad esempio un grafico, all'interno di un'altra, quale una matrice, in genere per visualizzare in modo conciso riepiloghi dei dati o fornire una rappresentazione visiva, nonché una visualizzazione di tipo tabella o matrice.  

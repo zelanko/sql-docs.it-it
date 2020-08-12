@@ -1,5 +1,6 @@
 ---
 title: Esempi di espressioni di raggruppamento (Generatore report) | Microsoft Docs
+description: Informazioni su come raggruppare i dati in base a un solo campo oppure su come creare espressioni più complesse che consentono di identificare i dati in base ai quali eseguire il raggruppamento in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0e6378f523b74483ed6f1a459f63aafbfa1fc5ee
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ead7e4c893c667021770df4977244bb509c0d79c
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082104"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012419"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>Esempi di espressioni di raggruppamento (Generatore report e SSRS)
   In un'area dati è possibile raggruppare i dati in base a un solo campo oppure creare espressioni più complesse che consentono di identificare i dati in base a quali eseguire il raggruppamento. Le espressioni complesse includono riferimenti a più campi o parametri, istruzioni condizionali o codice personalizzato. Quando si definisce un gruppo per un'area dati, queste espressioni vengono aggiunte alle proprietà del **gruppo**. Per altre informazioni, vedere [Aggiunta o eliminazione di un gruppo in un'area dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  

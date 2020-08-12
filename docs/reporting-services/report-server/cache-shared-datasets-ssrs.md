@@ -1,5 +1,6 @@
 ---
 title: Memorizzare nella cache set di dati condivisi | Microsoft Docs
+description: Informazioni sulla memorizzazione nella cache di set di dati condivisi in Gestione report di SQL Server, che contribuisce a migliorare il tempo di risposta e a offrire dati coerenti per i report che usano il set di dati.
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9436fd4963c5c9af86f3ea4ede200952fb6deb59
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0b256074f441dd2160298fe7840af4f6fca13eaf
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082553"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545600"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Memorizzare nella cache set di dati condivisi (SSRS)
   I risultati della query per un set di dati condiviso possono essere copiati in una cache per fornire dati coerenti per più report e migliorare il tempo di risposta per la query del set di dati. In modo analogo ai report, è possibile configurare un set di dati condiviso da memorizzare nella cache al momento del primo utilizzo o specificando una pianificazione.  

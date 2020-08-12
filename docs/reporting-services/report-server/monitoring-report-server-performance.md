@@ -1,5 +1,6 @@
 ---
 title: Monitoraggio delle prestazioni del server di report | Microsoft Docs
+description: Informazioni su come monitorare le prestazioni del server di report per valutare l'attività del server, osservare le tendenze, diagnosticare i colli di bottiglia e raccogliere dati sulla configurazione del sistema.
 ms.date: 06/20/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 67d9f59f1561ce844c3e6a1b6f3e20770e12db6b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67412650"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547948"
 ---
 # <a name="monitoring-report-server-performance"></a>Monitoraggio delle prestazioni del server di report
   Con gli strumenti di monitoraggio delle prestazioni è possibile valutare l'attività del server di report, osservare le tendenze, diagnosticare i colli di bottiglia a livello di sistema e raccogliere dati che consentono di determinare più facilmente se la configurazione del sistema corrente è sufficiente. Per ottimizzare le prestazioni del server, è possibile specificare la frequenza di riciclo del dominio dell'applicazione del server di report. Per altre informazioni, vedere [Configurare la memoria disponibile per applicazioni del server di report](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  

@@ -4,23 +4,23 @@ titleSuffix: SQL Server Distributed Replay
 description: Questo articolo descrive i modi in cui è possibile installare Riesecuzione distribuita, ovvero usando l'Installazione guidata, la finestra del prompt dei comandi o un file di configurazione.
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 08e69ce63d3bd3524614f014a2c193cad1634389
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8b05cbaf1978ec06da1f364d337509ca3652d030
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999391"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681331"
 ---
 # <a name="install-distributed-replay"></a>Installare Riesecuzione distribuita
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 È possibile disinstallare Riesecuzione distribuita in tre modi diversi:  
   
@@ -67,7 +67,7 @@ ms.locfileid: "82999391"
   
      \- OPPURE -  
   
-     \<directory della funzionalità condivisa\Tools\\(directory della funzionalità condivisa alternativa specificata dall'utente)  
+     \<Share Feature Directory>\Tools\\(directory della funzionalità condivisa alternativa specificata dall'utente)  
   
 -   In un sistema a 64 bit:  
   
@@ -75,7 +75,7 @@ ms.locfileid: "82999391"
   
      \- OPPURE -  
   
-     \<directory della funzionalità condivisa (x86)>\Tools\\(directory (x86) della funzionalità condivisa alternativa specificata dall'utente)  
+     \<Share Feature Directory (x86)>\Tools\\(directory (x86) della funzionalità condivisa alternativa specificata dall'utente)  
   
 #### <a name="to-install-distributed-replay-features"></a>Per installare le funzionalità di Riesecuzione distribuita  
   

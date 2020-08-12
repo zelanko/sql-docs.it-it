@@ -1,5 +1,6 @@
 ---
 title: Immagini (Generatore report) | Microsoft Docs
+description: Informazioni sulle immagini come elementi in Generatore report. Questi elementi contengono un riferimento a un'immagine incorporata in un report o archiviata in un database.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d1336910c5538ff9d15ff7f2d651aa23e220ca87
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 608db54cb445fe202d4a778e01eec2cf996c7fc8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082076"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994556"
 ---
 # <a name="images-report-builder-and-ssrs"></a>Immagini (Generatore report e SSRS)
   Un'immagine è un elemento del report in cui è incluso un riferimento a un'immagine incorporata nel report o archiviata in un database, nel server di report o in un'altra posizione nel Web. Un'immagine può essere rappresentata da un'immagine ripetuta con le righe di dati. Inoltre è possibile utilizzare un'immagine come sfondo per determinati elementi del report.  

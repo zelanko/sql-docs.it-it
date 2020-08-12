@@ -1,5 +1,6 @@
 ---
 title: Impostare un valore minimo o massimo su un misuratore (Generatore report) | Microsoft Docs
+description: Informazioni sulle differenze tra il misuratore e i grafici in un report impaginato. In Generatore report è necessario definire i valori minimo e massimo della scala.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b4c260c0-5a88-4f30-8977-eb5cc78fc146
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab0aa643285b4afb0129c2bcd33455967571c750
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2277867a1709ddaa735c00934468800c23841548
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081033"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886579"
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>Impostare un valore minimo o massimo su un misuratore (Generatore report e SSRS)
   A differenza dei grafici in un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , in cui sono definiti più gruppi, i misuratori mostrano un solo valore. Poiché Generatore report e Progettazione report possono determinare il significato contestuale o relativo del valore che si sta tentando di visualizzare sul misuratore, è necessario definire il valore minimo e massimo per la scala.   

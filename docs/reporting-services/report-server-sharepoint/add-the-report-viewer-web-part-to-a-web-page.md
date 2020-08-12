@@ -1,5 +1,6 @@
 ---
 title: Aggiungere la web part Visualizzatore di report a una pagina Web | Microsoft Docs
+description: È possibile usare la web part Visualizzatore di report per visualizzare report eseguiti in SQL Server Reporting Services in modalità integrata SharePoint.
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 562c762871db5c29476d10a81ac52dad46f65ad5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bf8f744078ccad4e755cc6d635ba999e0f077574
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579392"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767112"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page"></a>Aggiungere la web part Visualizzatore di report a una pagina Web
 
@@ -39,7 +40,7 @@ Per aggiungere una web part a una pagina Web, è necessario avere l'autorizzazio
   
 4.  Nell'elenco delle categorie di web part selezionare la categoria **Varie** e quindi selezionare **Visualizzatore report di SQL Server Reporting Services**.  
   
-5.  Fare clic su **Aggiungi**. La web part verrà aggiunta nella parte superiore dell'area. È possibile trascinarla in una posizione diversa all'interno dell'area.  
+5.  Scegliere **Aggiungi**. La web part verrà aggiunta nella parte superiore dell'area. È possibile trascinarla in una posizione diversa all'interno dell'area.  
   
 6.  Nel visualizzatore fare clic su **Fare clic qui per aprire il riquadro Strumenti**.  
   

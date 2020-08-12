@@ -1,5 +1,6 @@
 ---
 title: Aggiungere o rimuovere i margini da un grafico (Generatore report) | Microsoft Docs
+description: Aggiungere o rimuovere margini da una colonna o da un grafico a dispersione in Generatore report. Migliorare la leggibilità o l'aspetto dei report impaginati.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 91c43f58-5771-4d33-a54d-0e802d2f5cba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1a5b9d749cbeab7164bd1ca06d0fc8192561931c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 90b6b1e10ded769785b038b03d3f9d4886c4ba96
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081545"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882019"
 ---
 # <a name="add-or-remove-margins-from-a-chart-report-builder-and-ssrs"></a>Aggiungere o rimuovere i margini da un grafico (Generatore report e SSRS)
 Negli istogrammi e nei grafici a dispersione a dispersione dei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , i margini laterali alle estremità dell'asse X vengono aggiunti automaticamente. Nei tipi di grafico a barre vengono automaticamente aggiunti margini laterali alle estremità dell'asse Y. In tutti gli altri tipi di grafico non vengono aggiunti margini laterali. Non è possibile modificare le dimensioni del margine.  

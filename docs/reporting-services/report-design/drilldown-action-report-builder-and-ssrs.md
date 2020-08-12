@@ -1,5 +1,6 @@
 ---
 title: Azione di drill-down (Generatore report) | Microsoft Docs
+description: Consentire agli utenti di nascondere e visualizzare elementi in modo interattivo in Generatore report rendendo disponibili icone più e meno in una casella di testo.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -38,12 +39,12 @@ f1_keywords:
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a0c286663b339171a2536340ca19213879e22091
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c917e591bf7de47c7d6084d06cf2064904f8b4a
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080475"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462235"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>Azione di drill-down (Generatore report e SSRS)
 Le icone più e meno in una casella di testo consentono agli utenti di nascondere o visualizzare gli elementi in modo interattivo. Questa azione viene chiamata *drill-down* . Per una tabella o una matrice, è possibile visualizzare o nascondere le righe e le colonne statiche o le righe e le colonne associate ai gruppi.  

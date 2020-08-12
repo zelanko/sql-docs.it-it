@@ -1,5 +1,6 @@
 ---
 title: Distribuzione di un'estensione per il rendering | Microsoft Docs
+description: Informazioni su come distribuire un'estensione per il rendering del report. Informazioni su quali voci del file di configurazione aggiungere in modo che il server di report e Progettazione report individuino l'estensione.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 10c822b8cd292c975309443f9196fb7ceb66cbc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a13d9eb18fae38ef85c182576fe50ed3be6f4d38
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193694"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529467"
 ---
 # <a name="deploying-a-rendering-extension"></a>Distribuzione di un'estensione per il rendering
   Dopo avere scritto e compilato l'estensione per il rendering del report [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in una libreria di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], è necessario renderla individuabile dal server di report e da Progettazione report. A tale scopo, copiare l'estensione nella directory appropriata e aggiungere voci ai file di configurazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] appropriati.  
   
 ## <a name="configuration-file-rendering-extension-element"></a>Elemento di estensione del rendering del file di configurazione  
- Dopo avere compilato un'estensione per il rendering in una DLL, è necessario aggiungere una voce al file rsreportserver.config. Per impostazione predefinita, il percorso è %Programmi%\Microsoft SQL Server\MSRS10_50.\<nomeistanza>\Reporting Services\ReportServer. L'elemento padre è \<Render>. Sotto l'elemento Render è presente un elemento Extension per ogni estensione per il rendering. L'elemento **Extension** contiene due attributi, Name e Type.  
+ Dopo avere compilato un'estensione per il rendering in una DLL, è necessario aggiungere una voce al file rsreportserver.config. Per impostazione predefinita, il percorso è %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer. L'elemento padre è \<Render>. Sotto l'elemento Render è presente un elemento Extension per ogni estensione per il rendering. L'elemento **Extension** contiene due attributi, Name e Type.  
   
  Nella tabella riportata di seguito vengono descritti gli attributi relativi all'elemento **Extension** per le estensioni per il rendering:  
   
@@ -40,7 +41,7 @@ ms.locfileid: "63193694"
   
 ### <a name="to-deploy-the-assembly"></a>Per distribuire l'assembly  
   
-1.  Copiare l'assembly dal percorso di gestione temporanea nella directory bin del server di report in cui si desidera usare l'estensione per il rendering. Il percorso predefinito della directory bin del server di report è %Programmi%\Microsoft SQL Server\MSRS10_50.\<NomeIstanza>\Reporting Services\ReportServer\Bin.  
+1.  Copiare l'assembly dal percorso di gestione temporanea nella directory bin del server di report in cui si desidera usare l'estensione per il rendering. Il percorso predefinito della directory Bin del server di report è %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer\Bin.  
   
 2.  Dopo aver copiato il file di assembly, aprire il file rsreportserver.config, situato nella directory bin del server di report. È necessario immettere una voce nel file di configurazione per il file di assembly dell'estensione. È possibile aprire il file con [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o con un semplice editor di testo.  
   

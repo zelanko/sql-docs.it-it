@@ -1,6 +1,7 @@
 ---
 title: Raccolte predefinite nelle espressioni (Generatore report) | Microsoft Docs
-ms.date: 03/14/2017
+description: Individuare raccolte predefinite nelle espressioni per fare riferimento a raccolte quali parametri, campi e set di dati nei report in Generatore report.
+ms.date: 3/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 73fcabfe163fce811b208861adbde97e4411300b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b5dbc7cf2683f78118087d18b2dd51865bf52f3d
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082205"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880265"
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>Raccolte predefinite nelle espressioni (Generatore report e SSRS)
   Nell'espressione di un report è possibile includere riferimenti alle raccolte predefinite seguenti: ReportItems, Parameters, Fields, DataSets, DataSources, Variables e a campi predefiniti per informazioni generali quali il nome del report. Nella finestra di dialogo **Espressione** non vengono visualizzate tutte le raccolte. Le raccolte DataSets e DataSources sono disponibili solo in fase di progettazione per i report pubblicati in un server di report. ReportItems è una raccolta di caselle di testo in un'area del report, ad esempio le caselle di testo visualizzate in una pagina o in un'intestazione.  
@@ -31,7 +32,7 @@ ms.locfileid: "77082205"
 |**Elementi globali**|Campi predefiniti|`=Globals.ReportName`<br /><br /> `- or -`<br /><br /> `=Globals.PageNumber`|Rappresenta le variabili globali utili per i report, quali il nome del report o il numero di pagina. Sempre disponibile.<br /><br /> Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).|  
 |**Utente**|Campi predefiniti|`=User.UserID`<br /><br /> - oppure -<br /><br /> `=User.Language`|Rappresenta una raccolta di dati relativi all'utente che esegue il report, ad esempio l'impostazione della lingua o l'ID utente. Sempre disponibile.<br /><br /> Per altre informazioni, vedere [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).|  
 |**Parameters**|Parametri|`=Parameters("ReportMonth").Value`<br /><br /> - oppure -<br /><br /> `=Parameters!ReportYear.Value`|Rappresenta la raccolta dei parametri del report, che possono essere a valore singolo o multivalore. Non disponibile prima del completamento dell'inizializzazione dell'elaborazione. Per altre informazioni, vedere [Riferimenti alla raccolta dei parametri &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md).|  
-|**Campi(** *\<Set di dati>* **)**|Campi|`=Fields!Sales.Value`|Rappresenta la raccolta di campi del set di dati disponibili per il report. Disponibile dopo il recupero dei dati da un'origine dei dati in un set di dati. Per altre informazioni, vedere [Riferimenti alla raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).|  
+|**Campi(** *\<Dataset>* **)**|Campi|`=Fields!Sales.Value`|Rappresenta la raccolta di campi del set di dati disponibili per il report. Disponibile dopo il recupero dei dati da un'origine dei dati in un set di dati. Per altre informazioni, vedere [Riferimenti alla raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).|  
 |**Set di dati**|Non visualizzata|`=DataSets("TopEmployees").CommandText`|Rappresenta la raccolta di set di dati a cui si fa riferimento nel corpo della definizione del report. Non include origini dei dati utilizzate solo nelle intestazioni pagina o nei piè di pagina. Non disponibile nell'anteprima locale. Per altre informazioni, vedere [Riferimenti a raccolte DataSources e DataSets &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md).|  
 |**DataSources**|Non visualizzata|`=DataSources("AdventureWorks2012").Type`|Rappresenta la raccolta di origini dei dati a cui viene fatto riferimento nel corpo di un report. Non include origini dei dati utilizzate solo nelle intestazioni pagina o nei piè di pagina. Non disponibile nell'anteprima locale. Per altre informazioni, vedere [Riferimenti a raccolte DataSources e DataSets &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md).|  
 |**Variabili**|`Variables`|`=Variables!CustomTimeStamp.Value`|Rappresenta la raccolta di variabili del report e variabili di gruppo. Per altre informazioni, vedere [Riferimenti a raccolte di variabili di report e di gruppo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md).|  

@@ -1,5 +1,6 @@
 ---
 title: Elaborare report di grandi dimensioni | Microsoft Docs
+description: Informazioni su come eseguire correttamente report di grandi dimensioni in un server di report seguendo le raccomandazioni di configurazione, rendering, implementazione e distribuzione.
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 574fcc9c8e180b75d5d3def6d97798708c40996c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9b263aa61d02c20f55933744449151fa7676bad1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140259"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544513"
 ---
 # <a name="process-large-reports"></a>Elaborare report di grandi dimensioni
   La corretta esecuzione di report di grandi dimensioni presenta alcuni aspetti complessi e richiede determinate configurazioni. Non è consigliabile eseguire report di grandi dimensioni su richiesta, a meno che siano configurati per supportare l'impaginazione.  

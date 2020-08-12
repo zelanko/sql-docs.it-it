@@ -1,5 +1,6 @@
 ---
 title: Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici | Microsoft Docs
+description: Controllare la visualizzazione di poligoni, linee e punti impostando opzioni e regole oppure eseguendo l'override delle opzioni per gli elementi della mappa incorporati in Generatore report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +19,12 @@ f1_keywords:
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4c323a03752ea7b9e0c7450dc53446191f3c3315
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b251d3483d999ee2e4923502608bb9254e44776a
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578451"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012219"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Vary Polygon, Line, and Point Display by Rules and Analytical Data
   Le opzioni di visualizzazione per poligoni, linee e punti su un livello mappa vengono controllate impostando le opzioni del livello, le regole per gli elementi della mappa sul livello o sostituendo le opzioni per specifici elementi incorporati della mappa su un livello.  

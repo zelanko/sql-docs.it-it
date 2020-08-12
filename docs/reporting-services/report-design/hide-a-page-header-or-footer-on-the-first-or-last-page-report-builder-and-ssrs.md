@@ -1,5 +1,6 @@
 ---
 title: Nascondere un'intestazione o un piè di pagina nella prima o nell'ultima pagina (Generatore report e SSRS) | Microsoft Docs
+description: Se non si vuole visualizzare un'intestazione o un piè di pagina sulla prima o sull'ultima pagina del report, questo articolo illustra come disattivare la visualizzazione dell'intestazione o del piè di pagina in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8cdadc94bea1f3e303c89653cb9272cac244aeba
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 77621a062b53e2433d9890975771a7208bd04a71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580365"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056516"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>Nascondere un'intestazione o un piè di pagina nella prima o nell'ultima pagina (Generatore report e SSRS)
   In un report è possibile includere un'intestazione e un piè di pagina, posizionati rispettivamente nella parte superiore e inferiore di ogni pagina. Dopo aver aggiunto un'intestazione o un piè di pagina, è possibile nasconderlo selettivamente nella prima e nell'ultima pagina di un report.  

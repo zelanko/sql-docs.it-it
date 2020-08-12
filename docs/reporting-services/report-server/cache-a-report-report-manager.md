@@ -1,5 +1,6 @@
 ---
 title: Memorizzare un report nella cache (Gestione report) | Microsoft Docs
+description: Informazioni su come pianificare la scadenza di un report memorizzato nella cache in Gestione report. La memorizzazione di un report nella cache consente di visualizzarlo più rapidamente mentre si trova nella cache.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2b82d064b379f7c8a43f854204b9fce7337262e4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 67a423a34d0b641e15daf5828748d572e504e329
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574848"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547901"
 ---
 # <a name="cache-a-report-report-manager"></a>Memorizzare un report nella cache (Gestione report)
   Per ottimizzare le prestazioni, è possibile configurare le proprietà relative alla memorizzazione nella cache per un report. Quando un report viene memorizzato nella cache, una copia del report visualizzabile viene salvata per un breve periodo di tempo. Il primo utente che richiede il report deve attendere il completamento di tutte le elaborazioni prima di visualizzare il report. Gli utenti successivi che richiedono il report all'interno del periodo di memorizzazione nella cache possono visualizzarlo immediatamente perché l'elaborazione è già stata eseguita.  
@@ -44,7 +45,7 @@ ms.locfileid: "65574848"
   
     -   Per configurare una copia memorizzata nella cache affinché scada in base a una pianificazione, fare clic su **Memorizza nella cache una copia temporanea del report. La scadenza della copia è determinata dalla pianificazione seguente.** Fare clic su **Configura**oppure selezionare una pianificazione condivisa per controllare la scadenza del report.  
   
-7.  Fare clic su **Apply**.  
+7.  Fare clic su **Applica**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostare proprietà di elaborazione dei report](../../reporting-services/report-server/set-report-processing-properties.md)   

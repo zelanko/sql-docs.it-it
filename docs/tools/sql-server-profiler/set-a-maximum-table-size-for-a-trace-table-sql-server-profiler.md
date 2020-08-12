@@ -1,6 +1,7 @@
 ---
 title: Impostare le dimensioni massime di un tabella di traccia
 titleSuffix: SQL Server Profiler
+description: Informazioni su come limitare le dimensioni di una tabella di traccia. Usare SQL Server Profiler per specificare il numero massimo di righe consentite per la tabella.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 21d68638d85acd48f8f1c552319b0ea4784dec68
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d867d1dca6ab5f17f45c89aa6bbd99394e72bcef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307611"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726877"
 ---
 # <a name="set-a-maximum-table-size-for-a-trace-table-sql-server-profiler"></a>Impostare le dimensioni massime di una tabella di traccia (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In questo argomento viene descritta la procedura per l'impostazione delle dimensioni massime delle tabelle di traccia tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   

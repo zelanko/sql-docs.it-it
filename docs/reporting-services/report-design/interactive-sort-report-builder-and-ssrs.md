@@ -1,5 +1,6 @@
 ---
 title: Ordinamento interattivo (Generatore report) | Microsoft Docs
+description: Aggiungere pulsanti di ordinamento interattivo per consentire a un utente di passare dall'ordine crescente a quello decrescente e viceversa per le righe di una tabella.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d87ccdb5cc240f73dc22c132bf4d3f88685919c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6e9677095ce97fe046f1d1e4b0a4d7b93ea4bffc
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081984"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689352"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Ordinamento interattivo (Generatore report e SSRS)
   È possibile aggiungere pulsanti di ordinamento interattivo per consentire a un utente di passare dall'ordine crescente a quello decrescente e viceversa per le righe di una tabella o per le righe e le colonne di una matrice. In genere l'ordinamento interattivo viene utilizzato per aggiungere un pulsante di ordinamento a ogni intestazione di colonna. L'utente può quindi scegliere la colonna in base alla quale eseguire l'ordinamento.  

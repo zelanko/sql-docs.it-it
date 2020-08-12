@@ -1,5 +1,6 @@
 ---
 title: Aggiungere, modificare o eliminare valori disponibili per un parametro di report | Microsoft Docs
+description: Personalizzare l'elenco di opzioni che un utente può scegliere per un parametro in Generatore report specificando l'elenco di valori disponibili da visualizzare.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0d6f5a74365565e5da3be99408f53bc086b0b689
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b9d826682f2bcb742ab4ba7ae9e2b6fba33600c0
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582044"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681330"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter"></a>Aggiungere, modificare o eliminare valori disponibili per un parametro di report
   Dopo aver creato un parametro del report, è possibile specificare un elenco di valori disponibili da visualizzare. Tale elenco limita le scelte dell'utente ai soli valori validi per il parametro.  

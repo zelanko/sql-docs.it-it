@@ -1,5 +1,6 @@
 ---
 title: Rendering delle aree dati (Generatore report) | Microsoft Docs
+description: Informazioni sui comportamenti di impaginazione e rendering di varie parti di un'area dati in Generatore report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 06eb5ee05e045a2cb6e902030714ebb2f824becc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9db14d568b96599a114616b011383b6aaf14ea7e
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077005"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462295"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>Rendering delle aree dati (Generatore report e SSRS)
   Oltre ai comportamenti di rendering generali che si applicano a tutti gli elementi del report, le aree dati prevedono comportamenti aggiuntivi di paginazione e rendering. Le regole di rendering specifiche delle aree dati includono il modo in cui aumentano le dimensioni dell'area dati, la modalità di rendering di celle speciali, ad esempio la cella d'angolo o le celle di intestazione, e la modalità di rendering di un'area dati per la lettura da destra a sinistra. In questo argomento viene descritto il rendering delle varie parti di un'area dati.  

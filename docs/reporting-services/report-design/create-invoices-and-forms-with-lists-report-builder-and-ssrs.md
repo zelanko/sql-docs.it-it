@@ -1,5 +1,6 @@
 ---
 title: Creare fatture e moduli con elenchi (Generatore Report) | Microsoft Docs
+description: Informazioni su come definire e usare elenchi per creare report o moduli in formato libero e su come usare gli elenchi insieme ad altre aree dati in Generatore report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ce4867fdbaff2ff83f2c7e36d450e6c3b0f07471
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 351b24601c7e7cc101951547eb0a99ca0dcf59c8
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078587"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012689"
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>Creazione di fatture e form con elenchi (Generatore Report e SSRS)
   Un'area dati elenco viene ripetuta con ogni gruppo o riga nel set di dati del report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . È possibile utilizzare un elenco per creare form o report in formato libero, ad esempio fatture, o in combinazione ad altre aree dati, nonché definire elenchi contenenti il numero desiderato di elementi del report. Un elenco può essere annidato con  
   
- Per una rapida introduzione agli elenchi, vedere [Esercitazione: Creazione di un report in formato libero &#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
+ Per una rapida introduzione agli elenchi, vedere [Esercitazione: Creazione di un report in formato libero&#40;Generatore report&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
 >  È possibile pubblicare elenchi separatamente da un report come parti del report. Altre informazioni su [Parti del report (Generatore report SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  

@@ -1,5 +1,6 @@
 ---
 title: Creare uno unit test di SQL Server vuoto
+description: Informazioni su come creare unit test di SQL Server. Scoprire come usare gli stessi script TestInitialize e TestCleanup usati da altri test e come usare script diversi.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 5684735fc0bf2aaaa35183933145006d6efe188e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f447368d92d3e19d6733c0c1f026298202a8c7a9
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241506"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518821"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>Procedura: Creare uno unit test di SQL Server vuoto
 
@@ -96,7 +96,7 @@ Dopo aver configurato il progetto di test e aver creato il database, procedere c
 -   Aggiungere condizioni di test o un'altra istruzione di asserzione per verificare i risultati dello script.  
   
 > [!NOTE]  
-> La condizione di test Senza risultati è la condizione predefinita aggiunta a ogni test. Questa condizione di test viene inclusa per indicare che la verifica del test non è stata implementata. Eliminare tale condizione dal test dopo l'aggiunta di altre condizioni di test. Per altre informazioni, vedere [Procedura: aggiungere condizioni di test a unit test del database](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
+> La condizione di test Senza risultati è la condizione predefinita aggiunta a ogni test. Questa condizione di test viene inclusa per indicare che la verifica del test non è stata implementata. Eliminare tale condizione dal test dopo l'aggiunta di altre condizioni di test. Per altre informazioni, vedere [Procedura: Aggiungere condizioni di test a unit test del database](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Procedura: Eseguire unit test di SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md)  

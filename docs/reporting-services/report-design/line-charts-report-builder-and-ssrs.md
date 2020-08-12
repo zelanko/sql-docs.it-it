@@ -1,5 +1,6 @@
 ---
 title: Grafici a linee (Generatore report) | Microsoft Docs
+description: Usare grafici a linee per rappresentare grandi quantità di dati che si presentano nell'arco di un periodo di tempo in Generatore report.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 194e6679-890d-4a3e-a756-130d32ef7e29
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b0e1308f7dfac834e6c50062a199403023088a59
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b2663e6bbd5c30b2412ff91c91c3f565c7d2214d
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081975"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255454"
 ---
 # <a name="line-charts-report-builder-and-ssrs"></a>Grafici a linee (Generatore report e SSRS)
   In un grafico a linee le serie vengono visualizzate come set di punti collegati da una singola linea. I grafici a linee vengono utilizzati per rappresentare grandi quantità di dati che si verificano nell'arco di un periodo di tempo continuo. Per altre informazioni sull'aggiunta di dati a un grafico a linee, vedere [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  

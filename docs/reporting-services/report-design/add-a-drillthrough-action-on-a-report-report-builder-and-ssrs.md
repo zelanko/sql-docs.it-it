@@ -1,5 +1,6 @@
 ---
 title: Aggiungere un'azione drill-through a un report (Generatore report) | Microsoft Docs
+description: Migliorare le prestazioni delle query con l'aggiunta di un collegamento all'azione drill-through in una casella di testo, in un'immagine o nei punti dati di un grafico.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8f2737d0d67851fdcce06a926d8ceb71849aea2c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8540ade9e1c13dac159c20ffade0d5b0c1652071
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080736"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689515"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>Aggiungere un'azione drill-through a un report (Generatore report e SSRS)
   Il report visualizzato quando si fa clic sul collegamento nel report principale è noto come *report drill-through*. Questo collegamento drill-through consente un'azione drill-through.  

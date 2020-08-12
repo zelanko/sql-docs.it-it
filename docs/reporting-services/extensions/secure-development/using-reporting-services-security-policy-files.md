@@ -1,5 +1,6 @@
 ---
 title: Using Reporting Services Security Policy Files (Uso di file di criteri di sicurezza di Reporting Services) | Microsoft Docs
+description: Informazioni sui file di configurazione usati da Reporting Services per archiviare i dati sui criteri di sicurezza per gli assembly di codice. Indicazioni su come modificarli.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae971989342ca6d3fda121b0559bebb681f07fb0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1390e53ddbc864f634b581bd2a1b42902c6b6bb9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193322"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529327"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Utilizzo di file di criteri di sicurezza di Reporting Services
   In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] le informazioni sui criteri di sicurezza dei componenti sono archiviate in tre file di configurazione che vengono copiati nel file system durante l'installazione. Questi file possono contenere una combinazione di criteri di sicurezza per uso interno e definiti dall'utente per gli assembly del codice in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. I tre file di configurazione corrispondono a tre componenti a sicurezza diretta in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], ovvero il server di report e il servizio Windows, l'applicazione Web Gestione report e la finestra di anteprima Progettazione report.  

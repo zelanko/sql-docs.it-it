@@ -1,5 +1,6 @@
 ---
 title: Configurare un server di report per l'amministrazione remota | Microsoft Docs
+description: Informazioni su come configurare istanze del server di report di Reporting Services per la configurazione locale o remota tramite lo strumento di configurazione o la scrittura di codice personalizzato.
 ms.date: 09/14/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 48e8662f3547e9e483d67cc4af83e67d355ba664
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4edd8925bffec751d00379c9a9e78cc6d06a62c8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580418"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545593"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurare un server di report per l'amministrazione remota
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]è possibile configurare istanze del server di report in modalità locale o remota. Per configurare un'istanza remota del server di report, è possibile usare lo strumento di configurazione di Reporting Services oppure scrivere codice personalizzato che usi il provider WMI (Windows Management Instrumentation) per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Lo strumento Gestione configurazione Reporting Services offre un'interfaccia grafica al provider WMI, per consentire di configurare un server di report senza dover scrivere codice. Quando si avvia lo strumento, è possibile specificare un server remoto a cui connettersi.  
@@ -32,7 +33,7 @@ ms.locfileid: "65580418"
   
  `"The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".`  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  A tale scopo, è necessario accedere al sistema localmente ed essere membri del gruppo Administrators locale. Non è possibile modificare le impostazioni di Windows Firewall di un computer remoto tramite una connessione remota.  
   
  Se si desidera abilitare l'amministrazione remota per un utente non amministratore, è necessario concedere all'account le autorizzazioni per l'attivazione remota DCOM (Distributed Component Object Model). In questo argomento vengono fornite le istruzioni per la configurazione del server per l'accesso da parte di utenti non amministratori.  
@@ -108,7 +109,7 @@ ms.locfileid: "65580418"
   
 9. Digitare il nome del proprio account utente e quindi fare clic su **OK**.  
   
-10. In **Autorizzazioni per \<Utente o Gruppo>** nella colonna **Consenti** selezionare **Avvio remoto** e **Attivazione remota** e quindi fare clic su **OK**.  
+10. Nella colonna **Consenti** in **Autorizzazioni per \<User or Group>** , selezionare **Avvio remoto** e **Attivazione remota** e quindi fare clic su **OK**.  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>Per impostare autorizzazioni nello spazio dei nomi WMI del server di report per utenti non amministratori  
   

@@ -1,21 +1,21 @@
 ---
 title: Cercare oggetti in un progetto di database di SQL Server
+description: Informazioni su come visualizzare oggetti in un progetto di database di SQL Server. Scoprire come usare il nodo Progetti in Esplora oggetti di SQL Server in Visual Studio per questa attività.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 5a6443c6-857e-4756-8d87-ae520953335b
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 39e4d8797bbe889653326bff04a44840afceffcd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 26a25e31ff93f2240442ff189fbe14a99338d2d2
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241615"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519051"
 ---
 # <a name="how-to-browse-objects-in-a-sql-server-database-project"></a>Procedura: Cercare oggetti in un progetto di database di SQL Server
 

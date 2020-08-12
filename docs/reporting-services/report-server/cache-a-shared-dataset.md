@@ -1,5 +1,6 @@
 ---
 title: Memorizzare nella cache un set di dati condiviso | Microsoft Docs
+description: Informazioni su come pianificare la scadenza di un set di dati condiviso memorizzato nella cache in Gestione report. La memorizzazione di set di dati condivisi nella cache migliora le prestazioni.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7e98e5ffd8970806e2ed92e53c8e82da21387938
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 13b2f1d7af594346a6c9f0ce46a0c412541fcc65
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574763"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547913"
 ---
 # <a name="cache-a-shared-dataset"></a>Memorizzare nella cache un set di dati condiviso
   Per ottimizzare le prestazioni, è possibile configurare le proprietà relative alla memorizzazione nella cache per un set di dati condiviso. Quando un set di dati condiviso viene memorizzato nella cache, una copia dei risultati di query viene salvata per un determinato periodo di tempo. Il primo utente che richiede un report che utilizza il set di dati condiviso deve attendere il completamento dei risultati di query e di tutte le elaborazioni prima di visualizzare il report. Gli utenti successivi che richiedono il report all'interno del periodo di memorizzazione nella cache otterranno prestazioni migliori perché la query e l'elaborazione sono già state eseguite. È inoltre possibile specificare un piano di aggiornamento della cache per eseguire la query e memorizzare nella cache i risultati fino alla scadenza della cache specificata.  
@@ -39,7 +40,7 @@ ms.locfileid: "65574763"
   
 6.  Selezionare l'opzione che determina la scadenza della cache dopo 30 minuti. È inoltre possibile scegliere che la cache scada in base a una determinata pianificazione.  
   
-7.  Fare clic su **Apply**.  
+7.  Fare clic su **Applica**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestire set di dati condivisi](../../reporting-services/report-data/manage-shared-datasets.md)  

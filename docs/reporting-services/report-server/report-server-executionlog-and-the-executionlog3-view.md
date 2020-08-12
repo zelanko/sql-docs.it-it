@@ -1,5 +1,6 @@
 ---
 title: Vista ExecutionLog ed ExecutionLog3 del server di report | Microsoft Docs
+description: Informazioni sul log di esecuzione del server di report in Reporting Services, che contiene informazioni sui report eseguiti in server in modalità nativa o in una farm di SharePoint.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 15e8b648603952226af45d485d5678f5d0d3bbd6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65619697"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548013"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Vista ExecutionLog ed ExecutionLog3 del server di report
   Il log di esecuzione del server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]include informazioni sui report eseguiti in uno o più server in una distribuzione con scalabilità orizzontale in modalità nativa o in una farm di SharePoint. Il log consente di conoscere la frequenza con cui un report viene richiesto, i formati di output più usati e i millisecondi dedicati a ogni fase dell'elaborazione. Nel log, inoltre, sono contenute informazioni sul tempo impiegato per l'esecuzione di una query del set di dati di un report e su quello speso per l'elaborazione dei dati. Se si è un amministratore del server di report, è possibile esaminare le informazioni sul log, identificare le attività con esecuzione prolungata e inviare suggerimenti agli autori del report sulle aree del report, set di dati o elaborazione, che potrebbero essere migliorate.  
@@ -121,7 +122,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|Numero di millisecondi impiegati per il recupero dei dati.|  
 |TimeProcessing|Numero di millisecondi impiegati per l'elaborazione del report.|  
 |TimeRendering|Numero di millisecondi impiegati per il rendering del report.|  
-|Source (Sorgente)|Origine dell'esecuzione del report. Valori possibili:<br /><br /> Live<br /><br /> Cache: indica un'esecuzione memorizzata nella cache, ad esempio le query del set di dati che non vengono eseguite in tempo reale.<br /><br /> Snapshot<br /><br /> Cronologia<br /><br /> AdHoc: indica un report drill-through basato su un modello di report generato dinamicamente o un report di Generatore report visualizzato in anteprima in un client che usa il server di report per l'elaborazione e l'esecuzione del rendering.<br /><br /> Sessione: indica una richiesta di completamento in una sessione già stabilita.  Ad esempio la richiesta iniziale è di visualizzare la pagina 1 e la richiesta di completamento è di esportare in Excel con lo stato della sessione corrente.<br /><br /> Rdce: indica un'estensione RDCE (Report Definition Customization Extension). Un'estensione personalizzata RDCE consente di personalizzare in modo dinamico la definizione di un report prima che venga passata al motore di elaborazione all'esecuzione del report.|  
+|Source (Sorgente)|Origine dell'esecuzione del report. Valori possibili:<br /><br /> Live<br /><br /> Cache: indica un'esecuzione memorizzata nella cache, ad esempio le query del set di dati che non vengono eseguite in tempo reale.<br /><br /> Snapshot<br /><br /> Cronologia<br /><br /> AdHoc: indica un report drill-through basato su un modello di report generato dinamicamente o un report di Generatore report visualizzato in anteprima in un client che usa il server di report per l'elaborazione e l'esecuzione del rendering.<br /><br /> Session: indica una richiesta di completamento in una sessione già stabilita.  Ad esempio la richiesta iniziale è di visualizzare la pagina 1 e la richiesta di completamento è di esportare in Excel con lo stato della sessione corrente.<br /><br /> Rdce:  indica un'estensione RDCE (Report Definition Customization Extension). Un'estensione personalizzata RDCE consente di personalizzare in modo dinamico la definizione di un report prima che venga passata al motore di elaborazione all'esecuzione del report.|  
 |Stato|Stato (rsSuccess oppure un codice di errore; in caso di più errori, viene registrato solo il primo).|  
 |ByteCount|Dimensione dei report visualizzabili, in byte.|  
 |RowCount|Numero di righe restituite dalle query.|  

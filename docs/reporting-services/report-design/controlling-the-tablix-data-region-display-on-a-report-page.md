@@ -1,5 +1,6 @@
 ---
 title: Controllo della visualizzazione dell'area dati Tablix in una pagina del report | Microsoft Docs
+description: Informazioni sulle proprietà che consentono di modificare l'aspetto di un report impaginato quando si visualizza un'area dati tabella, matrice o elenco in Generatore report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e87bea9a9bd4807b1d91735cc5a620ac3242de73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 95ee59f09fd839460c6635600ceb9c00905e6357
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581522"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255304"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>Controllo della visualizzazione dell'area dati Tablix in una pagina del report
 Informazioni sulle proprietà che è possibile impostare in un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] per le aree dati tabella, matrice o elenco, per modificare l'aspetto del report durante la visualizzazione.  

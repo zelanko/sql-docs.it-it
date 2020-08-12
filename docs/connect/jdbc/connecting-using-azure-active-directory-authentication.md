@@ -2,7 +2,7 @@
 title: Connessione con l'autenticazione di Azure Active Directory
 description: Informazioni su come sviluppare applicazioni Java che usano la funzionalità di autenticazione di Azure Active Directory con Microsoft JDBC Driver per SQL Server.
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 06/17/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 73b377076dfea329ba82c0219c28bf9c955d7e7f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 16e6758e6846c6258c0345bd8ceca8aed3c3f3c6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634811"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054261"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Connessione con l'autenticazione di Azure Active Directory
 
@@ -31,7 +31,7 @@ Le proprietà di connessione per supportare l'autenticazione di Azure Active Dir
     * **ActiveDirectoryMSI**
         * Supportato a partire dalla versione del driver **v7.2**, `authentication=ActiveDirectoryMSI` consente di connettersi a un database SQL di Azure o ad Azure SQL Data Warehouse dall'interno di una risorsa di Azure con il supporto di identità abilitato. Facoltativamente, è possibile specificare insieme a questa modalità di autenticazione anche **msiClientId** nelle proprietà Connection/DataSource che devono includere l'ID client dell'identità di un servizio gestito da usare per acquisire **accessToken** per stabilire la connessione.
     * **ActiveDirectoryIntegrated**
-        * Supportato a partire dalla versione del driver **v6.0**, `authentication=ActiveDirectoryIntegrated` consente di connettersi a un database SQL di Azure o ad Azure SQL Data Warehouse usando l'autenticazione integrata. Per usare questa modalità di autenticazione, è necessaria la federazione di Active Directory Federation Services (ADFS) locale con Azure Active Directory nel cloud. Al termine della configurazione, è possibile connettersi aggiungendo la libreria nativa 'mssql-jdbc_auth-\<versione>-\<arch>.dll' al percorso della classe dell'applicazione nel sistema operativo Windows o impostando un ticket Kerberos per il supporto dell'autenticazione multipiattaforma. È possibile accedere al database SQL di Azure o ad Azure SQL Data Warehouse senza che vengano richieste le credenziali quando si è connessi a un computer aggiunto al dominio.
+        * Supportato a partire dalla versione del driver **v6.0**, `authentication=ActiveDirectoryIntegrated` consente di connettersi a un database SQL di Azure o ad Azure SQL Data Warehouse usando l'autenticazione integrata. Per usare questa modalità di autenticazione, è necessaria la federazione di Active Directory Federation Services (ADFS) locale con Azure Active Directory nel cloud. Al termine della configurazione, è possibile connettersi aggiungendo la libreria nativa 'mssql-jdbc_auth-\<version>-\<arch>.dll' al percorso della classe dell'applicazione nel sistema operativo Windows o configurando un ticket Kerberos per il supporto dell'autenticazione multipiattaforma. È possibile accedere al database SQL di Azure o ad Azure SQL Data Warehouse senza che vengano richieste le credenziali quando si è connessi a un computer aggiunto al dominio.
     * **ActiveDirectoryPassword**
         * Supportato a partire dalla versione del driver **v6.0**, `authentication=ActiveDirectoryPassword` consente di connettersi a un database SQL di Azure o ad Azure SQL Data Warehouse usando il nome di un'entità di sicurezza e la password.
     * **SqlPassword**
@@ -67,7 +67,7 @@ Prima di eseguire l'esempio, sostituire il nome del server o database con il nom
 ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
 ds.setDatabaseName("demo"); // replace with your database name
 //Optional
-ds.setMsiClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned MSI to be used
+ds.setMSIClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned MSI to be used
 ```
 
 Esempio di utilizzo della modalità di autenticazione ActiveDirectoryMSI:
@@ -108,7 +108,7 @@ You have successfully logged on as: <your MSI username>
 
 ## <a name="connecting-using-activedirectoryintegrated-authentication-mode"></a>Connessione tramite la modalità di autenticazione ActiveDirectoryIntegrated
 Con la versione 6.4, Microsoft JDBC Driver aggiunge il supporto dell'autenticazione ActiveDirectoryIntegrated usando un ticket Kerberos su più piattaforme (Windows, Linux e macOS).
-Per altre informazioni, vedere [Impostare un ticket Kerberos in Windows, Linux e macOS](#set-kerberos-ticket-on-windows-linux-and-macos). In alternativa, in Windows è anche possibile usare mssql-jdbc_auth-\<versione>-\<arch>.dll per l'autenticazione ActiveDirectoryIntegrated con un driver JDBC.
+Per altre informazioni, vedere [Impostare un ticket Kerberos in Windows, Linux e macOS](#set-kerberos-ticket-on-windows-linux-and-macos). In alternativa, in Windows è anche possibile usare mssql-jdbc_auth-\<version>-\<arch>.dll per l'autenticazione ActiveDirectoryIntegrated con JDBC Driver.
 
 > [!NOTE]
 >  Se si usa una versione precedente del driver, cercare in questo [collegamento](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) le relative dipendenze necessarie per usare questa modalità di autenticazione. 

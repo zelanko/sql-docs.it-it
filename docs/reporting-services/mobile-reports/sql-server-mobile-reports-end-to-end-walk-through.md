@@ -1,6 +1,6 @@
 ---
 title: 'Report per dispositivi mobili di SQL Server: procedura dettagliata completa'
-description: Procedura dettagliata per la creazione di report per dispositivi mobili per schermi di qualsiasi dimensione con Microsoft SQL Server Mobile Report Publisher nel portale Web di Reporting Services e la visualizzazione degli stessi nell'app Power BI per dispositivi mobili.
+description: Informazioni su come creare report per dispositivi mobili in SQL Server Mobile Report Publisher, salvarli nel portale Web di Reporting Services e visualizzarli nelle app per dispositivi mobili di Power BI.
 ms.date: 12/07/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5fc718243db6a816fb2a0593131362007facce89
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028887"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462355"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Report per dispositivi mobili di SQL Server: procedura dettagliata completa
 Procedura dettagliata per creare report per dispositivi mobili per schermi di qualsiasi dimensione con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] nel portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e visualizzarli nell'app Power BI per dispositivi mobili.

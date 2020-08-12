@@ -1,5 +1,6 @@
 ---
 title: Raccogliere piccole sezioni in un grafico a torta (Generatore report) | Microsoft Docs
+description: Informazioni sulla raccolta di molte piccole sezioni molte in un grafico a torta in un'unica sezione nei report impaginati di Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5c318bebf807846aed85f49770498c57a27ef4d3
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 5a4dc5671d5a23448f3549e383b26097026cc021
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487980"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462065"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Raccogliere piccole sezioni in un grafico a torta (Generatore report e SSRS)
 I grafici a torta con un numero eccessivo di sezioni potrebbero apparire poco chiari. In questo articolo viene illustrato come raccogliere molte piccole sezioni in un grafico a torta in un'unica sezione nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)].

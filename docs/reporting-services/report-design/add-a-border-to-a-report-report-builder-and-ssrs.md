@@ -1,5 +1,6 @@
 ---
 title: Aggiungere un bordo a un report (Generatore report) | Microsoft Docs
+description: Definire le aree di un report impaginato aggiungendo bordi alle intestazioni, ai piè di pagina e al corpo in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7790d44cc4160d7f61562cf470da43bb49a82cf2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cfec5b85bce53a018bfab013494f2f0413a3803b
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080778"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681570"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>Aggiungere un bordo a un report (Generatore report e SSRS)
   È possibile aggiungere un bordo a un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] aggiungendo bordi alle intestazioni, ai piè di pagina e al corpo del report, senza inserire righe o rettangoli.    

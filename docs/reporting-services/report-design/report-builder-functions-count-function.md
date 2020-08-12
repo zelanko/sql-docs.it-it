@@ -1,5 +1,6 @@
 ---
 title: Funzione Count (Generatore report) | Microsoft Docs
+description: Informazioni sulla funzione Count, che restituisce il conteggio dei valori non Null specificati da un'espressione, che viene valutata nel contesto dell'ambito specificato.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c37b4999f0fb2dd7cbf14322348e5836e8b38e32
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e0213d580935112e48df2f8a774ac49202ee7af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081297"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044088"
 ---
 # <a name="report-builder-functions---count-function"></a>Funzioni di Generatore report - Funzione Count
   Restituisce il conteggio dei valori non Null specificati dall'espressione, valutato nel contesto dell'ambito specificato.  

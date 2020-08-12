@@ -1,5 +1,6 @@
 ---
 title: Controllo di interruzioni di pagina, intestazioni, colonne e righe (Generatore report) | Microsoft Docs
+description: Ottimizzare la visualizzazione e la stampa di tabelle, elenchi o immagini con scelte per la lunghezza della pagina, le colonne, le intestazioni e le righe in Generatore report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2199d84efbf16b2f9a21ca48b523215749ffc488
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d3bcce26870ffea199d83f542a5d31bed1452cd1
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082303"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012639"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>Controllo di interruzioni di pagina, intestazioni, colonne e righe (Generatore report e SSRS)
   Un'interruzione di pagina consente di suddividere un report in più pagine per la visualizzazione e la stampa. Consentono inoltre di adattare il contenuto alle pagine dei report in modo da ottenere una visualizzazione ottimale quando si visualizza l'anteprima di un report o si esporta il report in un altro formato.  

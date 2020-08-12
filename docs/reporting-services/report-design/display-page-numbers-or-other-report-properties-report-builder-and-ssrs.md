@@ -1,5 +1,6 @@
 ---
 title: Visualizzare i numeri di pagina o altre proprietà del report (Generatore report) | Microsoft Docs
+description: Aggiungere proprietà del report, inclusi numeri di pagina, nomi file e titoli, per la visualizzazione nelle intestazioni o nei piè di pagina.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 14496cc4e46118b5421f4d061136f7b1c5b16850
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b5bd98f079ed492a4959597068c1f49a048b74cd
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080486"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689540"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Visualizzare i numeri di pagina o altre proprietà del report (Generatore report e SSRS)
   Aggiungere numeri di pagina, un titolo di report, un nome file e altre proprietà alle intestazioni o ai piè di pagina del report è un'operazione semplice. Queste proprietà sono archiviate come campi nella cartella Campi predefiniti nel riquadro dei dati del report:  

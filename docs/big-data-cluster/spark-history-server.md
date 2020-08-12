@@ -6,20 +6,20 @@ author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a2e1297ee6d32adc59810f3a4f9379e600f1464f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 7139b427e58e1aabc516c562def45f986ece1c9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606503"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728030"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>Eseguire il debug e la diagnosi delle applicazioni Spark di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] nel server cronologia Spark
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Questo articolo fornisce indicazioni su come usare il server cronologia Spark esteso per eseguire il debug e la diagnosi delle applicazioni Spark in un cluster Big Data di SQL Server. Le funzionalità di debug e diagnosi sono integrate nel server cronologia Spark e basate su tecnologia Microsoft. L'estensione include le schede relative a dati, grafici e diagnosi. Nella scheda relativa ai dati gli utenti possono esaminare i dati di input e di output del processo Spark. Nella scheda relativa ai grafici gli utenti possono esaminare il flusso di dati e riprodurre il grafico del processo. Nella scheda relativa alla diagnosi l'utente può vedere le analisi relative ad asimmetria dei dati, sfasamento dell'ora e utilizzo dell'executor.
 
@@ -28,7 +28,7 @@ Questo articolo fornisce indicazioni su come usare il server cronologia Spark es
 L'esperienza utente del server cronologia Spark open source è stata migliorata con alcune informazioni, tra cui dati specifici dei processi e visualizzazione interattiva del grafico del processo e dei flussi di dati per i cluster Big Data. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>Aprire l'interfaccia utente Web del server cronologia Spark tramite l'URL
-Aprire il server cronologia Spark passando all'URL seguente, sostituendo `<Ipaddress>` e `<Port>` con informazioni specifiche del cluster Big Data. In un'installazione di cluster Big Data con autenticazione di base (nome utente/password), è necessario specificare la **radice** dell'utente quando viene chiesto di accedere agli endpoint del gateway (Knox). Per altre informazioni, vedere: [Distribuire un cluster Big Data di SQL Server](quickstart-big-data-cluster-deploy.md)
+Aprire il server cronologia Spark passando all'URL seguente, sostituendo `<Ipaddress>` e `<Port>` con informazioni specifiche del cluster Big Data. Nei cluster distribuiti nella versione precedente a SQL Server 2019 CU 5, tramite un'installazione di cluster Big Data con autenticazione di base (nome utente/password), è necessario specificare la **radice** dell'utente quando viene chiesto di accedere agli endpoint del gateway (Knox). Vedere [Distribuire un cluster Big Data di SQL Server](quickstart-big-data-cluster-deploy.md). [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -193,7 +193,13 @@ Il grafico relativo all'utilizzo dell'executor visualizza l'allocazione effettiv
 + Fare clic sull'icona del colore per selezionare o deselezionare il contenuto corrispondente in tutte le bozze.
 
     ![Selezionare il grafico](./media/apache-azure-spark-history-server/sparkui-diagnosis-select-chart.png)
+    
+## <a name="spark--yarn-logs"></a>Log di Spark/Yarn
+Oltre al server della cronologia di Spark, è possibile trovare i log per Spark e Yarn rispettivamente agli indirizzi seguenti:
+* Log eventi di Spark: hdfs:///system/spark-events
+* Log di Yarn: hdfs:///tmp/logs/root/logs-tfile
 
+Nota: per entrambi questi log è previsto un periodo di conservazione predefinito di 7 giorni. Se si vuole modificare il periodo di conservazione, vedere la pagina [Configurare Apache Spark e Apache Hadoop](configure-spark-hdfs.md). Il percorso **non può** essere modificato.
 
 ## <a name="known-issues"></a>Problemi noti
 Il server cronologia Spark presenta i problemi noti seguenti:

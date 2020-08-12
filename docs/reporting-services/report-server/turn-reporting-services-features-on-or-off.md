@@ -1,5 +1,6 @@
 ---
 title: Abilitare o disabilitare le funzionalità di Reporting Services | Microsoft Docs
+description: Informazioni su come disabilitare singole funzionalità in Reporting Services in modalità nativa. Esistono diversi modi per configurare le funzionalità.
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67945db1fd131b27b37a7e34853987c38fad8d84
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b66ae216df1b50ee1fa71de8e18f7ee8251e1be4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140374"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547873"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Abilitare o disabilitare le funzionalità di Reporting Services
   È possibile disabilitare le funzionalità del server di report non utilizzate come parte di una strategia di blocco per ridurre la superficie di attacco di un server di report di produzione. Nella maggior parte dei casi, è consigliabile eseguire le funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] simultaneamente in modo da poter utilizzare tutte le funzionalità disponibili in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Tuttavia, a seconda del modello di distribuzione, è possibile disabilitare le funzionalità che non sono necessarie. Ad esempio, è possibile abilitare solo l'elaborazione in background se tutte le operazioni di elaborazione dei report vengono configurate come operazioni pianificate. Analogamente, se si vuole che la generazione di report venga eseguita solo in modo interattivo e su richiesta, è possibile eseguire solo il servizio Web ReportServer.  

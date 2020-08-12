@@ -1,5 +1,6 @@
 ---
 title: Creare un gruppo di gerarchie ricorsive (Generatore report) | Microsoft Docs
+description: Informazioni sull'organizzazione dei dati in un report impaginato, da un singolo set di dati del report contenente livelli gerarchici, usando un gruppo di gerarchie ricorsive.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d1a73f72cc267b8a58c70dd4ea958be3560a4fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9d72c85df464893a4f7e7d6ba1f183a3702aee87
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080555"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681530"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Creare un gruppo di gerarchie ricorsive (Generatore report e SSRS)
 Nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , un gruppo di gerarchie ricorsive organizza i dati da un unico set di dati di un report in cui sono inclusi più livelli gerarchici, ad esempio il report per definire la struttura di relazioni tra dipendenti e manager in una gerarchia organizzativa.  
@@ -48,7 +49,7 @@ Nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-m
     > [!NOTE]  
     >  Se il riquadro Proprietà non è visualizzato, fare clic su **Proprietà** nella scheda **Visualizza** .  
   
-2.  Nel riquadro Proprietà espandere il nodo **Riempimento**, fare clic su **A sinistra**, quindi selezionare **\<Espressione...>** dall'elenco a discesa.  
+2.  Nel riquadro Proprietà espandere il nodo **Riempimento**, fare clic su **A sinistra** e selezionare **\<Expression...>** dall'elenco a discesa.  
   
 3.  Nel riquadro Espressione digitare l'espressione seguente:  
   

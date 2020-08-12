@@ -1,5 +1,6 @@
 ---
 title: Formattazione delle etichette degli assi in un grafico (Generatore report) | Microsoft Docs
+description: Informazioni su come formattare le etichette degli assi in un grafico tramite una finestra di dialogo o il riquadro delle proprietà per categorizzare e visualizzare le relazioni in Generatore report.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0838e5d0ea9c592a52408956b75ee651bcc542a4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5d44212b3d290f69f8565040d44946104f92b045
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079908"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880280"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formattazione delle etichette degli assi in un grafico (Generatore report e SSRS)
   Nei tipi di grafico basati su coordinate (grafico a barre, ad area, a punti, a linee, con intervalli e istogramma) sono inclusi due assi utilizzati per la classificazione e la visualizzazione di relazioni tra dati. A ogni asse verranno applicati tipi diversi di formattazione.  

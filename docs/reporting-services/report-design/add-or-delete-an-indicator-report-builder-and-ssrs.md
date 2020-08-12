@@ -1,5 +1,6 @@
 ---
 title: Aggiungere o eliminare un indicatore (Generatore report) | Microsoft Docs
+description: Informazioni su come aggiungere o eliminare un indicatore nei report impaginati per comunicare lo stato di un singolo valore di dati in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 08dd396fc68bae04d973d6b96f67466006642120
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 154faecf24a142578fc236a2cae6330ea7d89a76
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081569"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881251"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>Aggiungere o eliminare un indicatore (Generatore report e SSRS)
-  In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , gli indicatori sono piccoli misuratori sui quali è possibile leggere immediatamente lo stato di un singolo valore di dati. Per altre informazioni in merito, vedere [Indicatori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+  In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] gli indicatori sono piccoli misuratori che comunicano immediatamente lo stato di un singolo valore di dati. Per altre informazioni in merito, vedere [Indicatori &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
  Gli indicatori sono posizionati comunemente nelle celle di una tabella o di una matrice, ma possono essere utilizzati anche separatamente, affiancati ai misuratori o incorporati nei misuratori.  
   

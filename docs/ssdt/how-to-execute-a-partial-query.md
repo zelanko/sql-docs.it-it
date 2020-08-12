@@ -1,23 +1,23 @@
 ---
 title: Eseguire una query parziale
+description: Informazioni su come eseguire il debug di una sezione di una query complessa. Usare l'editor Transact-SQL per evidenziare un segmento di script specifico ed eseguirlo come singola query.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: af04ab37-6cbb-4185-9382-e5922fa5b1df
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 5786127626a655e47e2f6eb4ba96f0a16b740258
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f9aaa7712726b37d03c7d7de0994bb8abe01a7d9
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241423"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518801"
 ---
-# <a name="how-to-execute-a-partial-query"></a>Procedura: Esecuzione di una query parziale
+# <a name="how-to-execute-a-partial-query"></a>Procedura: Eseguire una query parziale
 
 L'Editor Transact\-SQL consente di evidenziare un segmento specifico dello script ed eseguirlo come una singola query. In questo modo è più semplice eseguire il debug di sezioni di query complesse.  
   

@@ -1,5 +1,6 @@
 ---
 title: Aggiungere punti vuoti a un grafico (Generatore Report) | Microsoft Docs
+description: Specificare punti vuoti in un grafico. Questi punti vengono calcolati in Generatore report considerando la media tra il punto dati precedente e quello successivo che contiene un valore.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2b056119-439f-494f-83cf-ee0c05dc6487
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65b97d3f50eec05574a9f7463678ca7da09e2492
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: afdcb8a6d464484fb6f294cb4d7943659e32e7f1
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081652"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255664"
 ---
 # <a name="add-empty-points-to-a-chart-report-builder-and-ssrs"></a>Aggiunta di punti vuoti a un grafico (Generatore Report e SSRS)
 Nel grafico i valori Null vengono visualizzati come spazi o intervalli vuoti tra punti dati in una serie. Nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] i punti vuoti sono punti dati che possono essere inseriti nello spazio vuoto creato dai valori Null.  

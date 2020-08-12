@@ -1,5 +1,6 @@
 ---
 title: Sviluppo sicuro (Reporting Services) | Microsoft Docs
+description: Informazioni sul sistema di sicurezza dall'accesso di codice usato da Reporting Services, che esegue il codice in contesti di sicurezza strettamente vincolati e definiti dall'amministratore.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12161a6c-b93b-4312-9d27-0c922561eb9b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ead476f8aa6d2565c1865a24c2570a68c2b958d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 69d60e4a68deee28c639cc5e100456ef1c9c3552
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193810"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529408"
 ---
 # <a name="secure-development-reporting-services"></a>Sviluppo sicuro (Reporting Services)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] è un potente sistema di sicurezza che consente l'esecuzione di codice in contesti di sicurezza soggetti a vincoli definiti dall'amministratore. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usano il sistema di sicurezza di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], noto come sicurezza dall'accesso di codice (o sicurezza basata sull'evidenza). In un sistema con sicurezza dall'accesso di codice un utente può essere considerato attendibile per accedere a una risorsa, ma se il codice eseguito non è attendibile, l'accesso alla risorsa verrà negato.  

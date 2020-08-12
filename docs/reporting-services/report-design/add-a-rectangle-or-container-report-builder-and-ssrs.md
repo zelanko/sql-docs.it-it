@@ -1,5 +1,6 @@
 ---
 title: Aggiungere un rettangolo o un contenitore (Generatore report) | Microsoft Docs
+description: Separare o evidenziare le aree di un report oppure fornire uno sfondo per uno o più elementi del report usando un rettangolo personalizzato in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fc7cba2147dbcc781a5764173bbd09699ab74385
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 013232ad5f6013f60d19e9934c40828b60bb67d0
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080694"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255534"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>Aggiungere un rettangolo o un contenitore (Generatore report e SSRS)
   Aggiungere un rettangolo al report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] quando si desidera separare le aree del report con un elemento grafico, enfatizzare aree del report o fornire uno sfondo per uno o più elementi del report. I rettangoli sono utilizzati anche come contenitori per consentire di controllare il rendering di aree dati in un report. È possibile personalizzare l'aspetto di un rettangolo modificandone le proprietà quali lo sfondo e i colori del bordo. Per altre informazioni sull'uso di un rettangolo come contenitore, vedere [Rettangoli e linee &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md) e [Visualizzare dati identici in una matrice e in un grafico &#40;Generatore report&#41;](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).    

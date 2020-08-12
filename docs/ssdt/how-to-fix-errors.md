@@ -1,21 +1,21 @@
 ---
 title: Correggere gli errori
+description: Acquisire familiarità con il riquadro Elenco errori e i tipi di errori visualizzati. Scoprire come ordinare e filtrare le informazioni nell'elenco errori e identificare le origini degli errori.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e7cc581bc721f3174b5526ecf44941ee2d455634
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d9b10f9ae7cca4a486c277f953e1881a6d645587
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241394"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518791"
 ---
 # <a name="how-to-fix-errors"></a>Procedura: Correggere gli errori
 

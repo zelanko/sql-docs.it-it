@@ -1,5 +1,6 @@
 ---
 title: Espressioni (Generatore report) | Microsoft Docs
+description: Controllare il contenuto, la progettazione e l'interattività del report con espressioni che consentono di recuperare, visualizzare, filtrare e formattare i dati in Generatore report.
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 99314c9108ef0af50a3c43d83a5fcb69b9ccf14f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: d092377531a2391917ccdaae046d456bd3b1f629
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487620"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012249"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Espressioni (Generatore report e SSRS)
   Le espressioni vengono ampiamente usate nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] per recuperare, calcolare, visualizzare, raggruppare, ordinare, filtrare, parametrizzare e formattare i dati. 

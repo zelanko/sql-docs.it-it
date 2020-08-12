@@ -1,5 +1,6 @@
 ---
 title: Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint (ULS) | Microsoft Docs
+description: Informazioni su come attivare la scrittura di eventi di Reporting Services nel log di traccia ULS di SharePoint per i server di Reporting Services in modalità SharePoint.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef8729d35598b59c33a827d77e5e7c5473ead049
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893245"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547863"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint (ULS)
 
@@ -124,7 +125,7 @@ Get-SPDiagnosticConfig
 |Provider del server di report||  
 |Rendering del server di report||  
 |Anteprima report del server di report||  
-|Utilità risorse server di report|Voci di esempio:<br /><br /> Servizi MediumReporting di avvio SKU: valutazione<br /><br /> Copia di MediumEvaluation: scadenza tra 180 giorni|  
+|Utilità risorse server di report|Voci di esempio:<br /><br /> Servizi MediumReporting di avvio SKU: Versione di valutazione<br /><br /> Copia di MediumEvaluation: scadenza tra 180 giorni|  
 |Processi in esecuzione del server di report||  
 |Richieste in esecuzione del server di report||  
 |Pianificazione del server di report||  

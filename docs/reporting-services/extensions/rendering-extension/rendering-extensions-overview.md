@@ -1,5 +1,6 @@
 ---
 title: Cenni preliminari sulle estensioni per il rendering | Microsoft Docs
+description: Informazioni sulle estensioni per il rendering dei dati incluse in Reporting Services. Informazioni su come aggiungere estensioni per il rendering personalizzate per generare report in altri formati.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c411048c247224f0d1af95329480f24d9b6ccdad
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd3bca97b438d683e325194616af123ea9fb8290
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193889"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529427"
 ---
 # <a name="rendering-extensions-overview"></a>Cenni preliminari sulle estensioni per il rendering
   Un'estensione per il rendering è un componente o un modulo di un server di report che consente di trasformare le informazioni sul layout e i dati del report in un formato specifico del dispositivo. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include sette estensioni per il rendering: HTML, Excel, Word, CSV o testo, XML, immagine e PDF. È possibile creare estensioni per il rendering aggiuntive per generare report in altri formati.  

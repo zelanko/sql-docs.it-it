@@ -1,21 +1,21 @@
 ---
 title: Aggiungere condizioni di test a unit test di SQL Server
+description: Informazioni su come aggiungere condizioni di test a un unit test di SQL Server. Scoprire come usare la finestra di progettazione unit test di SQL Server per questa attività.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 85ba2e56-a0b2-489c-aea2-fb135cce0cfc
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 4216358a4b8b541ed724b70fe68245a16235664b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e78a045c3dd7127df8c692120ff140892594fb0c
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241631"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518931"
 ---
 # <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>Procedura: Aggiungere condizioni di test a unit test di SQL Server
 

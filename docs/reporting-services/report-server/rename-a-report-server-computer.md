@@ -1,5 +1,6 @@
 ---
 title: Rinominare un computer del server di report | Microsoft Docs
+description: Informazioni su come riconfigurare un server di report dopo aver modificato il nome del computer. È possibile che SQL Server Reporting Services non sia accessibile dopo aver modificato il nome di un computer.
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3fe381daf1b89d76d9282f2c1a54c3940a3ffbe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 83de666e0f6aa3dc54c3e9b864ebabf957f4ac25
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67314048"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544523"
 ---
 # <a name="rename-a-report-server-computer"></a>Rinominare un computer del server di report
   La ridenominazione di un computer provoca una corrispondente modifica del nome del server Web e dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se presente sullo stesso computer. In alcuni casi, dopo una modifica del nome del computer potrebbe non essere possibile accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Usare la procedura descritta in questo articolo per riconfigurare un server di report dopo la modifica del nome del computer.  
@@ -29,7 +30,7 @@ ms.locfileid: "67314048"
   
 3.  In **Nome server**digitare o selezionare il nome del server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , quindi fare clic su **Connetti**.  
   
-4.  Fare clic su **Apply**.  
+4.  Fare clic su **Applica**.  
   
  Se il server di report utilizza un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] locale, è possibile usare *(locale)* o *(locale)\nomeistanza* per specificare il server. Se si usa *(locale)* per fare riferimento al server, è possibile rinominare il server e le connessioni continueranno a funzionare. Se si utilizza un server remoto, o se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è configurato con il nome del server, è necessario aggiornare le informazioni di connessione al database ogni volta che si modifica il nome server.  
   

@@ -1,5 +1,6 @@
 ---
 title: Contatori delle prestazioni per oggetti prestazioni del servizio ReportServer | Microsoft Docs
+description: Informazioni sui contatori delle prestazioni per gli oggetti prestazioni di ReportServer:Service e ReportServerSharePoint:Service, che fanno parte di una distribuzione di SQL Server 2012.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f86af60001deb0991983fe17c3cf1cf9ba3f2552
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b7afe684cb88327fd7b8bb22ae2637ad4064cb25
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893445"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545523"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>Contatori delle prestazioni per oggetti prestazioni del servizio ReportServer
   Questo argomento descrive i contatori delle prestazioni per gli oggetti prestazioni di **ReportServer:Service** e **ReportServerSharePoint:Service** che fanno parte di una distribuzione di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
@@ -37,7 +38,7 @@ ms.locfileid: "68893445"
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ##  <a name="reportserverservice-performance-counters-native-mode-report-server"></a><a name="bkmk_ReportServer"></a> Contatori delle prestazioni di ReportServer:Service (server di report in modalità nativa)  
- L'oggetto prestazioni **ReportServer:Service** include una raccolta di contatori per tenere traccia degli eventi correlati a HTTP e degli eventi correlati alla memoria per un'istanza del server di report. Questo oggetto prestazione viene visualizzato una volta per ogni istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nel computer ed è possibile aggiungere o rimuovere contatori nell'oggetto prestazione per ogni istanza. I contatori per l'istanza predefinita sono visualizzati nel formato **ReportServer:Service**. I contatori per le istanze denominate sono visualizzati nel formato **ReportServer$\<***nome_istanza***>:Service**.  
+ L'oggetto prestazioni **ReportServer:Service** include una raccolta di contatori per tenere traccia degli eventi correlati a HTTP e degli eventi correlati alla memoria per un'istanza del server di report. Questo oggetto prestazione viene visualizzato una volta per ogni istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nel computer ed è possibile aggiungere o rimuovere contatori nell'oggetto prestazione per ogni istanza. I contatori per l'istanza predefinita sono visualizzati nel formato **ReportServer:Service**. I contatori per le istanze denominate sono visualizzati nel formato **ReportServer$\<***instance_name***>:Service**.  
   
  L'oggetto prestazioni **ReportServer:Service** rappresenta una novità di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e fornisce un subset di contatori inclusi in Internet Information Services (IIS) e [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] nelle versioni precedenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Questi nuovi contatori sono specifici di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e consentono di tenere traccia di eventi correlati a HTTP per il server di report, quali richieste, connessioni e tentativi di accesso. Questo oggetto prestazione, inoltre, include contatori per tenere traccia di eventi di gestione della memoria.  
   

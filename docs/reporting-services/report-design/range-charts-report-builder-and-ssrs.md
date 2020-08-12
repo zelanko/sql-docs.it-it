@@ -1,5 +1,6 @@
 ---
 title: Grafici a intervalli (Generatore report) | Microsoft Docs
+description: Visualizzare un set di punti dati, ognuno dei quali definito da più valori per la stessa categoria, tramite grafici a intervalli in Generatore report.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48e351d3-ac5b-4eda-a4bd-32a0de206a30
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3df3a377b466a84f325fbc5bee13f94bf9d08da7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eaeebef414b5bcb57ef59fa1400a288097704bc2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082361"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057577"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>Grafici a intervalli (Generatore report e SSRS)
   Il tipo di grafico a intervalli consente di visualizzare un set di punti dati, ognuno dei quali è definito da più valori per la stessa categoria. I valori sono rappresentati dall'altezza del marcatore misurata sull'asse del valore. Le etichette delle categorie vengono visualizzate sull'asse delle categorie. Nel grafico con intervalli semplice viene riempita l'area compresa tra il valore iniziale e finale per ogni punto dati.  

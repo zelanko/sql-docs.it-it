@@ -1,5 +1,6 @@
 ---
 title: Funzione Max (Generatore report) | Microsoft Docs
+description: Informazioni sulla funzione Max, che restituisce il valore massimo di tutti i valori numerici non Null specificati dall'espressione in Generatore report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 61c4d6ff-6435-456a-9cbd-5113d2113e8a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5546cf4759f6e7cc6f1c659425ff783901ca9ffd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b5e94652a48eace778636335b3270046db4f1237
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081215"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681230"
 ---
 # <a name="report-builder-functions---max-function"></a>Funzioni di Generatore report - Funzione Max
   Restituisce il valore massimo di tutti i valori numerici non Null specificati dall'espressione, nel contesto dell'ambito specificato.  

@@ -1,5 +1,6 @@
 ---
 title: Usi delle espressioni nei report (Generatore report) | Microsoft Docs
+description: Specificare o calcolare valori con espressioni per parametri, query, filtri e proprietà di caselle di testo in Generatore report.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e781df6f5ccbdbb427de7e8b68c9dbc06522be71
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b12b393e2b749c34abdd98c7f6363829800c5d06
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080274"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462215"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Utilizzo delle espressioni nei report (Generatore report e SSRS)
-Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] le espressioni sono usate nella definizione del report per specificare o calcolare valori per parametri, query, filtri, proprietà degli elementi del report, definizioni di gruppo e di ordinamento, proprietà delle caselle di testo, segnalibri, mappe documento, contenuto dinamico dell'intestazione e del piè di pagina, immagini e definizioni delle origini dati dinamiche. In questo argomento vengono forniti esempi delle numerose posizioni in cui è possibile utilizzare le espressioni per modificare il contenuto o l'aspetto di un report. Non si tratta tuttavia di un elenco completo. È possibile impostare un'espressione per qualsiasi proprietà in una finestra di dialogo che contiene il pulsante di espressione (**fx**) o in un elenco a discesa in cui è visualizzato **\<Espressione...>** .  
+Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] le espressioni sono usate nella definizione del report per specificare o calcolare valori per parametri, query, filtri, proprietà degli elementi del report, definizioni di gruppo e di ordinamento, proprietà delle caselle di testo, segnalibri, mappe documento, contenuto dinamico dell'intestazione e del piè di pagina, immagini e definizioni delle origini dati dinamiche. In questo argomento vengono forniti esempi delle numerose posizioni in cui è possibile utilizzare le espressioni per modificare il contenuto o l'aspetto di un report. Non si tratta tuttavia di un elenco completo. È possibile impostare un'espressione per qualsiasi proprietà in una finestra di dialogo che contiene il pulsante di espressione (**fx**) o in un elenco a discesa in cui è visualizzato **\<Expression...>** .  
   
  Le espressioni possono essere semplici o complesse. Le*espressioni semplici* contengono un riferimento a un solo campo del set di dati, un solo parametro o un solo campo predefinito. Le espressioni complesse possono contenere più riferimenti incorporati, operatori e chiamate di funzione. Ad esempio, un'espressione complessa potrebbe includere la funzione Sum applicata al campo Sales.  
   
@@ -57,7 +58,7 @@ Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversio
 |Formattare i dati in una casella di testo in base al valore.|Colore per un segnaposto in una casella di testo nella riga dei dettagli di una Tablix. Usare la finestra di dialogo **Proprietà casella di testo, Carattere**.|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |Calcolare un valore una volta per farvi riferimento in tutto il report.|Value per una variabile del report. Usare la finestra di dialogo **Proprietà report, Variabili**.|`=Variables!MyCalculation.Value`|  
 |Includere valori specifici per più campi di un set di dati.|Equazione di filtro per un gruppo in una Tablix. Usare la finestra di dialogo **Proprietà Tablix, Filtri**.|Come tipo di dati selezionare **Boolean**.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
-|Nascondere una casella di testo nell'area di progettazione, la cui visibilità può essere attivata o disattivata dall'utente mediante un parametro booleano denominato *Show*.|Hiddenproperty in una casella di testo. Usare la finestra di dialogo **Proprietà casella di testo, Visibilità**.|`=Not Parameters!` *Mostra\<parametro booleano>* `.Value`|  
+|Nascondere una casella di testo nell'area di progettazione, la cui visibilità può essere attivata o disattivata dall'utente mediante un parametro booleano denominato *Show*.|Hiddenproperty in una casella di testo. Usare la finestra di dialogo **Proprietà casella di testo, Visibilità**.|`=Not Parameters!` *Show\<boolean parameter>* `.Value`|  
 |Specificare il contenuto dinamico dell'intestazione o del piè di pagina.|Value per un segnaposto in una casella di testo posizionata nell'intestazione o nel piè di pagina.|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |Specificare un'origine dati in modo dinamico utilizzando un parametro.|Stringa di connessione nell'origine dati. Usare la finestra di dialogo **Proprietà origine dati, Generale**.|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |Identificare tutti i valori per un parametro multivalore scelto dall'utente.|Value per un segnaposto in una casella di testo. Usare la finestra di dialogo **Proprietà Tablix, Filtri**.|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  

@@ -1,5 +1,6 @@
 ---
 title: Riferimenti alla raccolta di campi del set di dati (Generatore report) | Microsoft Docs
+description: Creare un set di dati per la visualizzazione di valori singoli o riepilogati nel riquadro dei dati del report di Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 83b041ebde43c0208c3606fff6b0dcc33d7680c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3b2466036918d6c66db980a7a66259cef63fe20d
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081904"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688860"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Raccolte predefinite- Riferimenti alla raccolta di campi del set di dati (Generatore report)
   In ogni set di dati di un report è contenuta una raccolta Campi. La raccolta Campi rappresenta il set di campi specificati dalla query del set di dati, più qualsiasi campo calcolato aggiuntivo creato dall'utente. Dopo la creazione di un set di dati, la raccolta di campi viene visualizzata nel riquadro **Dati report** .  
@@ -38,7 +39,7 @@ ms.locfileid: "77081904"
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>Rilevamento di campi mancanti per query dinamiche in fase di esecuzione  
- Per impostazione predefinita, agli elementi della raccolta Campi sono associate due proprietà: Value e IsMissing. La proprietà IsMissing indica se un campo definito per un set di dati in fase di progettazione è incluso nei campi recuperati in fase di runtime. La query può ad esempio chiamare una stored procedure in cui il set di risultati varia in base a un parametro di input oppure la query può essere `SELECT * FROM` *\<table>* , in cui la definizione della tabella è stata modificata.  
+ Per impostazione predefinita, agli elementi della raccolta Fields sono associate due proprietà, ovvero Value e IsMissing. La proprietà IsMissing indica se un campo definito per un set di dati in fase di progettazione è incluso nei campi recuperati in fase di runtime. La query può ad esempio chiamare una stored procedure in cui il set di risultati varia in base a un parametro di input oppure la query può essere `SELECT * FROM` *\<table>*, in cui la definizione della tabella è stata modificata.  
   
 > [!NOTE]  
 >  IsMissing consente di rilevare le modifiche nello schema del set di dati tra la fase di progettazione e quella di runtime per qualsiasi tipo di origine dati. La proprietà IsMissing non può essere usata per rilevare membri vuoti in un cubo multidimensionale e non è correlata ai concetti **EMPTY** e **NON EMPTY**del linguaggio di query MDX.  

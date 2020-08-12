@@ -1,5 +1,6 @@
 ---
 title: Distribuzione di un'estensione per il recapito | Microsoft Docs
+description: Informazioni su come distribuire un'estensione per il recapito in un server di report. Informazioni su quali voci aggiungere a file di configurazione specifici in modo che il server di report individui l'estensione.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 06cffe614eaa55713fed862dc03f7c81da7bc287
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f358ebb3cc58a9f10c117d24bce8c04d849fd2f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193769"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529117"
 ---
 # <a name="deploying-a-delivery-extension"></a>Distribuzione di un'estensione per il recapito
   Le estensioni per il recapito forniscono le informazioni di configurazione in un file di configurazione XML. Il file XML è conforme all'elemento XML Schema definito per le estensioni per il recapito. Le estensioni per il recapito forniscono l'infrastruttura per l'impostazione e la modifica del file di configurazione.  
@@ -44,12 +45,12 @@ ms.locfileid: "63193769"
   
 #### <a name="to-deploy-a-deliver-extension-assembly-to-a-report-server"></a>Per distribuire un assembly di estensioni per il recapito in un server di report  
   
-1.  Copiare l'assembly dal percorso di gestione temporanea nella directory bin del server di report in cui si desidera utilizzare l'estensione per il recapito. Il percorso predefinito della directory bin del server di report è %Programmi%\Microsoft SQL Server\MSRS13.\<NomeIstanza>\Reporting Services\ReportServer\bin.  
+1.  Copiare l'assembly dal percorso di gestione temporanea nella directory bin del server di report in cui si desidera utilizzare l'estensione per il recapito. Il percorso predefinito della directory bin del server di report è %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer\bin.  
   
     > [!IMPORTANT]  
     >  Se si tenta di sovrascrivere un assembly di estensioni per il recapito esistente, è necessario arrestare il servizio del server di report prima di copiare l'assembly aggiornato. Riavviare il servizio dopo il completamento della copia dell'assembly.  
   
-2.  Dopo aver copiato il file di assembly, aprire il file RSReportServer.config Il file RSReportServer.config si trova nella directory %Programmi%\Microsoft SQL Server\MSRS13.\<NomeIstanza>\Reporting Services\ReportServer. È necessario immettere una voce nel file di configurazione per il file di assembly di estensioni per il recapito. È possibile aprire il file di configurazione con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o con un semplice editor di testo, ad esempio Blocco note.  
+2.  Dopo aver copiato il file di assembly, aprire il file RSReportServer.config Il file RSReportServer.config si trova nella directory %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer. È necessario immettere una voce nel file di configurazione per il file di assembly di estensioni per il recapito. È possibile aprire il file di configurazione con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o con un semplice editor di testo, ad esempio Blocco note.  
   
 3.  Individuare l'elemento **Delivery** nel file RSReportServer.config. È necessario immettere una voce per l'estensione per il recapito appena creata nel percorso seguente:  
   
@@ -69,7 +70,7 @@ ms.locfileid: "63193769"
   
      Il valore per **Name** è il nome univoco dell'estensione per il recapito. Il valore per **Type** è un elenco delimitato da virgole che include una voce per lo spazio dei nomi completo della classe che implementa l'interfaccia <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension>, seguita dal nome dell'assembly, senza l'estensione dll. Per impostazione predefinita, le estensioni per il recapito sono visibili. Per nascondere un'estensione dalle interfacce utente, ad esempio il portale Web, aggiungere un attributo **Visible** all'elemento **Extension** e impostarlo su **false**.  
   
-5.  Aggiungere infine un gruppo di codice per l'assembly personalizzato che conceda l'autorizzazione **FullTrust** per l'estensione per il recapito. A questo scopo, aggiungere il gruppo di codice al file rssrvpolicy.config che per impostazione predefinita si trova in %Programmi%\Microsoft SQL Server\MSRS13.\<NomeIstanza>\Reporting Services\ReportServer. Il gruppo di codice può essere simile a quanto riportato di seguito:  
+5.  Aggiungere infine un gruppo di codice per l'assembly personalizzato che conceda l'autorizzazione **FullTrust** per l'estensione per il recapito. A questo scopo, aggiungere il gruppo di codice al file rssrvpolicy.config che per impostazione predefinita si trova in %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer. Il gruppo di codice può essere simile a quanto riportato di seguito:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  

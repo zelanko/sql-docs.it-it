@@ -1,6 +1,6 @@
 ---
 title: Configurare l'autenticazione di Windows nel server di report | Microsoft Docs
-ms.date: 08/26/2016
+ms.date: 06/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 47cba9b26c56a41b6741211f1f9d228884b32b5b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c3320851b253b8ca509b564405db4b873e5dea0b
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66499941"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263835"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurare l'autenticazione di Windows nel server di report.
   Per impostazione predefinita, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accetta richieste che specificano l'autenticazione con negoziazione o NTLM. Se nella distribuzione sono incluse applicazioni client e browser che utilizzano tali provider di sicurezza, è possibile utilizzare i valori predefiniti senza alcuna configurazione aggiuntiva. Se si desidera utilizzare un provider di sicurezza diverso per la sicurezza integrata di Windows, ad esempio se si desidera utilizzare direttamente l'autenticazione Kerberos, o se i valori predefiniti sono stati modificati e si desidera ripristinare le impostazioni originali, è possibile utilizzare le informazioni contenute in questo argomento per specificare le impostazioni di autenticazione nel server di report.  
@@ -51,7 +51,7 @@ ms.locfileid: "66499941"
   
 1.  Aprire RSReportServer.config in un editor di testo.  
   
-2.  Trovare \<**Authentication**>.  
+2.  Individuare \<**Authentication**>.  
   
 3.  Tra le strutture XML seguenti, copiare quella che corrisponde meglio alle proprie esigenze. È possibile specificare **RSWindowsNegotiate**, **RSWindowsNTLM**e **RSWindowsKerberos** in qualsiasi ordine. Se si desidera autenticare la connessione anziché ogni singola richiesta, è necessario abilitare la persistenza dell'autenticazione in modo che tutte le richieste per cui è necessaria l'autenticazione verranno consentite per la durata della connessione.  
   
@@ -160,15 +160,9 @@ ms.locfileid: "66499941"
     <RSWindowsExtendedProtectionScenario>Any</RSWindowsExtendedProtectionScenario>  
     ```  
   
--   Riavviare il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e cercare voci simili alle seguenti nel file di log di traccia:  
-  
-    ```  
-    rshost!rshost!e44!01/14/2010-14:43:51:: i INFO: Registered valid SPNs list for endpoint 2: rshost!rshost!e44!01/14/2010-14:43:52:: i INFO: SPN Whitelist Added <Explicit> - \<HTTP/sqlpod064-13.w2k3.net>.  
-    ```  
-  
--   I valori per \<Explicit> conterranno i nomi SPN configurati in Active Directory per l'account di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
-  
- Se non vuole continuare a usare la Protezione estesa, ripristinare le impostazioni predefinite per i valori di configurazione e riavviare l'account di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   Riavviare il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
+
+ Se non si vuole continuare a usare la Protezione estesa, ripristinare le impostazioni predefinite per i valori di configurazione e riavviare l'account di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ```  
 <RSWindowsExtendedProtectionLevel>Off</RSWindowsExtendedProtectionLevel>  

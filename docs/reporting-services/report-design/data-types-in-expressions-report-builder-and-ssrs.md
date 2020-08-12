@@ -1,5 +1,6 @@
 ---
 title: Tipi di dati nelle espressioni (Generatore report) | Microsoft Docs
+description: Esaminare il fatto che i tipi di dati rappresentano tipologie di dati diverse che consentono l'archiviazione e l'elaborazione dei dati in Generatore report.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fc38e22d7265384e8f16df56ffcab63018ecd4e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 74a15489c057490ddf358860f8cd0f78eb79ba20
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080534"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255284"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipi di dati nelle espressioni (Generatore report e SSRS)
   I tipi di dati rappresentano tipologie di dati diversi che possono essere archiviati ed elaborati in modo efficiente. I tipi di dati standard includono testo, noto anche come stringhe, numeri con e senza posizioni decimali, date e ore e immagini. I valori in un report devono essere costituiti da un tipo di dati RDL (Report Definition Language). È possibile formattare un valore in base alle proprie preferenze quando si lo visualizza in un report. Un campo che rappresenta la valuta, ad esempio, viene archiviato nella definizione del report come numero a virgola mobile, ma può essere visualizzato in diversi formati a seconda della proprietà di formattazione scelta.  
@@ -28,12 +29,12 @@ ms.locfileid: "77080534"
   
 |Tipo RDL|Tipi CLR|  
 |--------------|---------------|  
-|string|Valore predefinito: String<br /><br /> Chart, GUID, Timespan|  
-|Boolean|Valore predefinito: Boolean|  
-|Integer|Valore predefinito: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|Datetime|Valore predefinito: DateTime<br /><br /> DateTimeOffset|  
-|Float|Valore predefinito: Double<br /><br /> Single, Decimal|  
-|Binary|Valore predefinito: Byte []|  
+|string|Predefinito: string<br /><br /> Chart, GUID, Timespan|  
+|Boolean|Predefinito: Boolean|  
+|Integer|Predefinito: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
+|Datetime|Predefinito: Datetime<br /><br /> DateTimeOffset|  
+|Float|Predefinito: Double<br /><br /> Single, Decimal|  
+|Binary|Predefinito: Byte[]|  
 |Variant|Uno qualsiasi tra quelli riportati in precedenza eccetto Byte []|  
 |VariantArray|Matrice di Variant|  
 |Serializable|Variant oppure tipi contrassegnati con Serializable o che consentono di implementare ISerializable.|  

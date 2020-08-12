@@ -1,5 +1,6 @@
 ---
 title: Ambito di espressioni per totali, aggregazioni e raccolte predefinite | Microsoft Docs
+description: Individuare i diversi significati per l'ambito nelle espressioni per totali, aggregazioni e raccolte predefinite nei report in Generatore report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c822f0b6a3a17ccba2afbaf8bf0a9e4a4e2f7b12
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 453d5d9e960ead988e4c7f57adc48e2de69b25a1
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579817"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681310"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Ambito di espressioni per totali, aggregazioni e raccolte predefinite
-  Quando si scrivono espressioni, si noterà che il termine *ambito* viene utilizzato in molti contesti. Può infatti specificare i dati da utilizzare per la valutazione di un'espressione, il set di caselle di testo in una pagina di cui è stato eseguito il rendering, il set di elementi del report che possono essere mostrati o nascosti in base a un elemento Toggle. Il termine *ambito* verrà utilizzato in argomenti correlati alla valutazione di un'espressione, alla sintassi della funzione di aggregazione, alla visibilità condizionale nonché nei messaggi di errore relativi a queste aree. Per comprendere il significato di *ambito* in un contesto specifico, utilizzare le descrizioni seguenti:  
+  Quando si scrivono espressioni, si noterà che il termine *ambito* viene usato in molti contesti. Può infatti specificare i dati da utilizzare per la valutazione di un'espressione, il set di caselle di testo in una pagina di cui è stato eseguito il rendering, il set di elementi del report che possono essere mostrati o nascosti in base a un elemento Toggle. Il termine *ambito* verrà utilizzato in argomenti correlati alla valutazione di un'espressione, alla sintassi della funzione di aggregazione, alla visibilità condizionale nonché nei messaggi di errore relativi a queste aree. Per comprendere il significato di *ambito* in un contesto specifico, utilizzare le descrizioni seguenti:  
   
 -   **Ambito dei dati** L'ambito dei dati è una gerarchia di ambiti utilizzata dall'elaboratore di report mentre vengono combinati i dati report con il layout del report e compilate le aree dati esterne, ad esempio tabelle e grafici, in cui visualizzare i dati. Le informazioni sull'ambito dei dati consentono di ottenere i risultati desiderati quando si effettuano le seguenti operazioni:  
   

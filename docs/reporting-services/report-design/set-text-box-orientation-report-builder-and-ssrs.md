@@ -1,5 +1,6 @@
 ---
 title: Impostare l'orientamento della casella di testo (Generatore report) | Microsoft Docs
+description: Informazioni su come ruotare una casella di testo in direzioni diverse nei report impaginati in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +9,18 @@ ms.topic: conceptual
 ms.assetid: 64bd53f4-2f31-4732-8c2e-64c7b54b6972
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 322c393749f60b1fb505577bf3af57238eb093c6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 058da26bfe4fc5bf8ae5d777a35d0356b463ca11
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081005"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681380"
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>Impostare l'orientamento della casella di testo (Generatore report e SSRS)
 In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] è possibile ruotare una casella di testo in varie direzioni:   
 * Orizzontalmente   
-* Verticalmente (rotazione di 90 gradi, con testo leggibile dall'alto verso il basso)  
+* Verticalmente (rotazione di 90 gradi, con testo leggibile dall'alto verso il basso, ad eccezione dei caratteri dell'Asia orientale)
+
 * Con rotazione di 270 gradi (testo leggibile dal basso verso l'alto).   
   
 Essendo applicata sulla casella di testo e non sul testo, la rotazione interessa tutto il testo della casella. Non è possibile specificare direzioni diverse per le parti del testo. Per adattare il testo ruotato ridimensionare manualmente la larghezza della colonna e l'altezza della riga.  

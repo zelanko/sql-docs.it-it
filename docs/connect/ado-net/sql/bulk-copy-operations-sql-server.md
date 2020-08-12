@@ -1,7 +1,7 @@
 ---
 title: Operazioni di copia bulk in SQL Server
 description: Viene descritta la funzionalità di copia bulk per il provider di dati .NET per SQL Server.
-ms.date: 09/30/2019
+ms.date: 06/15/2020
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 6ab832627f04825b5cdddc2939108fb427801bc7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4896bfdb419cfbd8e2cf6302a0a818407d6a596c
+ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928903"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107014"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>Operazioni di copia bulk in SQL Server
 
@@ -46,6 +46,9 @@ Viene descritto come eseguire più operazioni di copia bulk dei dati in un'istan
   
 [Transazioni e operazioni di copia bulk](transaction-bulk-copy-operations.md)  
 Viene descritto come eseguire un'operazione di copia bulk all'interno di una transazione e come eseguire il commit o il ripristino dello stato precedente della transazione.  
+
+[Suggerimenti per l'ordinamento per le operazioni di copia bulk](bulk-copy-order-hints.md)  
+Descrive come usare suggerimenti per l'ordinamento per migliorare le prestazioni della copia bulk.
   
 ## <a name="next-steps"></a>Passaggi successivi
 - [SQL Server e ADO.NET](index.md)

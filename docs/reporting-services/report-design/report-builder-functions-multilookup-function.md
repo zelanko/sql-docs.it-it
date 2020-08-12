@@ -1,5 +1,6 @@
 ---
 title: Funzione Multilookup (Generatore report) | Microsoft Docs
+description: La funzione Multilookup restituisce il set di valori di prima corrispondenza per il set di nomi specificato da un set di dati che contiene coppie nome/valore in Generatore report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 94883e68a4543c7fe98794d8b89dc38f05d2b410
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fca4a966d661005f1c672011ac5712903644780b
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081193"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462385"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>Funzioni di Generatore report - Funzione Multilookup
   Viene restituito il set di valori di prima corrispondenza per il set di nomi specificato da un set di dati che contiene coppie nome/valore.  

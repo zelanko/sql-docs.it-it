@@ -1,6 +1,7 @@
 ---
 title: Modelli e autorizzazioni di SQL Server Profiler
 titleSuffix: SQL Server Profiler
+description: Informazioni sul funzionamento di SQL Server Profiler, su come usarlo per tracciare gli eventi e su dove trovare altre informazioni sulle relative funzionalità.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 9a5bb7c38fe1a9984c66dd83414aed9d3b853aa6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 96c78bc0fee624170b94b3360f75e00d876dc218
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307838"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729557"
 ---
 # <a name="sql-server-profiler-templates-and-permissions"></a>Modelli e autorizzazioni di SQL Server Profiler
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] mostra in che modo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risolve internamente le query. In questo modo gli amministratori possono verificare quali istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] o espressioni multidimensionali vengono inviate al server e in quale modo il server accede al database o al cubo per restituire i set di risultati.  
   

@@ -1,5 +1,6 @@
 ---
 title: Configurare un server di report in un cluster per il bilanciamento del carico di rete | Microsoft Docs
+description: Informazioni su come configurare la scalabilità orizzontale di un server di report per l'esecuzione in un cluster per il bilanciamento del carico di rete, nonché su come implementare una soluzione cluster per il bilanciamento del carico di rete per supportare una distribuzione con scalabilità orizzontale di Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.date: 12/11/2019
-ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b8bd6d8e99549cb6228a46f04b1532bbf872a066
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244396"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545573"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurare un server di report in un cluster per il bilanciamento del carico di rete
 
@@ -136,7 +137,7 @@ Per eseguire una distribuzione con scalabilità orizzontale in un cluster per il
   
 1. Aprire il file RSReportServer.config in un editor di testo.  
   
-2. Trovare \<**Hostname**>, \<**ReportServerUrl**> e \<**UrlRoot**>, quindi verificare il nome host per ogni impostazione. Se il valore non corrisponde al nome host previsto, sostituirlo con il nome host corretto.  
+2. Trovare \<**Hostname**>, \<**ReportServerUrl**> e \<**UrlRoot**> e quindi controllare il nome host per ogni impostazione. Se il valore non corrisponde al nome host previsto, sostituirlo con il nome host corretto.  
   
  Se si avvia lo strumento di configurazione di Reporting Services dopo avere apportato queste modifiche, lo strumento potrebbe modificare le impostazioni di \<**ReportServerUrl**> ripristinando il valore predefinito. Mantenere sempre una copia di backup dei file di configurazione per i casi in cui sia necessario sostituirli con la versione contenente le impostazioni che si desidera utilizzare.  
   

@@ -1,7 +1,7 @@
 ---
 title: Introduzione allo spazio dei nomi Microsoft.Data.SqlClient
 description: Pagina di introduzione per lo spazio dei nomi Microsoft.Data.SqlClient.
-ms.date: 09/30/2019
+ms.date: 06/23/2019
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,16 +10,119 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 9a5f787e9cd95e3d2966e5bc2b722aada5b97032
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3a4f0611d3708aba9557deb81ab702f29e7a7462
+ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928992"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334582"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Introduzione allo spazio dei nomi Microsoft.Data.SqlClient
 
-[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
+[!INCLUDE [Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
+
+## <a name="release-notes-for-microsoftdatasqlclient-20"></a>Note sulla versione per Microsoft.Data.SqlClient 2.0
+
+Le note sulla versione sono disponibili anche nel repository GitHub: [Note sulla versione 2.0](https://github.com/dotnet/SqlClient/tree/master/release-notes/2.0).
+
+### <a name="breaking-changes"></a>Modifiche di rilievo
+
+- Il modificatore di accesso per l'interfaccia del provider di enclave `SqlColumnEncryptionEnclaveProvider` è stato modificato da `public` a `internal`.
+
+- Le costanti nella classe `SqlClientMetaDataCollectionNames` sono state aggiornate in modo da riflettere le modifiche apportate a SQL Server.
+
+- Il driver eseguirà ora la convalida del certificato del server quando l'istanza di SQL Server di destinazione applica la crittografia TLS, che è l'impostazione predefinita per le connessioni di Azure.
+
+- `SqlDataReader.GetSchemaTable()` restituisce ora una stringa `DataTable` vuota invece di `null`.
+
+- Il driver esegue ora l'arrotondamento delle cifre decimali in modo che corrisponda al comportamento di SQL Server. Per la compatibilità con le versioni precedenti, è possibile abilitare il comportamento di troncamento precedente usando un'opzione di AppContext.
+
+- Per le applicazioni .NET Framework che usano **Microsoft.Data.SqlClient**, i file SNI.dll scaricati in precedenza nelle cartelle `bin\x64` e `bin\x86` sono ora denominati `Microsoft.Data.SqlClient.SNI.x64.dll` e ` Microsoft.Data.SqlClient.SNI.x86.dll` e vengono scaricati nella directory `bin`.
+
+- Nuovi sinonimi delle proprietà della stringa di connessione sostituiranno le proprietà obsolete durante il recupero della stringa di connessione da `SqlConnectionStringBuilder` per coerenza. [Altre informazioni](#new-connection-string-property-synonyms)
+
+### <a name="new-features"></a>Nuove funzionalità
+
+#### <a name="dns-failure-resiliency"></a>Resilienza agli errori DNS
+
+Il driver memorizza ora nella cache gli indirizzi IP da ogni connessione riuscita a un endpoint SQL Server che supporta la funzionalità. Se si verifica un errore di risoluzione DNS durante un tentativo di connessione, il driver tenta di stabilire una connessione usando un indirizzo IP memorizzato nella cache per il server, se presente. 
+
+#### <a name="eventsource-tracing"></a>Traccia EventSource
+
+Questa versione introduce il supporto per l'acquisizione dei log di traccia eventi per il debug delle applicazioni. Per acquisire questi eventi, le applicazioni client devono restare in ascolto degli eventi dall'implementazione EventSource di SqlClient:
+
+```
+Microsoft.Data.SqlClient.EventSource
+```
+
+Per altre informazioni, vedere [Come abilitare la traccia eventi in SqlClient](enable-eventsource-tracing.md).
+
+#### <a name="enabling-managed-networking-on-windows"></a>Abilitazione di reti gestite in Windows
+
+Una nuova opzione di AppContext, **"Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows"** , consente l'uso di un'implementazione di SNI gestita in Windows per scopi di test e debug. Questa opzione attiva o disattiva il comportamento del driver in modo da usare uno SNI gestito in progetti .NET Core 2.1+ e .NET Standard 2.0+ in Windows, eliminando tutte le dipendenze dalle librerie native per la libreria Microsoft. Data.SqlClient.
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows", true);
+```
+
+Per un elenco completo delle opzioni disponibili nel driver, vedere [Opzioni di AppContext in SqlClient](appcontext-switches.md).
+
+#### <a name="enabling-decimal-truncation-behavior"></a>Abilitazione del comportamento di troncamento decimale 
+
+Per impostazione predefinita, i dati decimali vengono arrotondati dal driver allo stesso modo che in SQL Server. Per la compatibilità con le versioni precedenti, è possibile impostare l'opzione di AppContext **"Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal"** su **true**.
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal", true);
+```
+
+#### <a name="new-connection-string-property-synonyms"></a>Nuovi sinonimi delle proprietà della stringa di connessione
+
+Sono stati aggiunti nuovi sinonimi per le proprietà della stringa di connessione esistenti seguenti per evitare problemi di spaziatura tra le proprietà con più di una parola. I nomi di proprietà precedenti continueranno a essere supportati per la compatibilità con le versioni precedenti, ma le nuove proprietà della stringa di connessione verranno ora incluse durante il recupero della stringa di connessione da [SqlConnectionStringBuilder](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder).
+
+|Proprietà della stringa di connessione esistente|Nuovo sinonimo|
+|-----------------------------------|-----------|
+| ApplicationIntent | Finalità dell'applicazione |
+| ConnectRetryCount | Numero di tentativi di connessione |
+| ConnectRetryInterval | Intervallo dei tentativi di connessione |
+| PoolBlockingPeriod | Periodo di blocco del pool |
+| MultipleActiveResultSets | Più set di risultati attivi |
+| MultiSubnetFailover | Failover di più subnet |
+| TransparentNetworkIPResolution | Risoluzione dell'IP di rete trasparente |
+| TrustServerCertificate | TrustServerCertificate |
+
+#### <a name="sqlbulkcopy-rowscopied-property"></a>Proprietà RowsCopied di SqlBulkCopy
+
+La proprietà RowsCopied fornisce accesso in sola lettura al numero di righe elaborate durante l'operazione di copia bulk in corso. Questo valore non deve necessariamente essere uguale al numero finale di righe aggiunte alla tabella di destinazione. 
+
+#### <a name="connection-open-overrides"></a>Override dell'apertura della connessione
+
+È possibile eseguire l'override del comportamento predefinito di SqlConnection.Open() per disabilitare il ritardo di dieci secondi e i tentativi di connessione automatici attivati da errori temporanei.
+
+```csharp
+using SqlConnection sqlConnection = new SqlConnection("Data Source=(local);Integrated Security=true;Initial Catalog=AdventureWorks;");
+sqlConnection.Open(SqlConnectionOverrides.OpenWithoutRetry);
+```
+
+> [!NOTE]
+> Si noti che questo override può essere applicato solo a SqlConnection.Open() e non a SqlConnection.OpenAsync().
+
+#### <a name="username-support-for-active-directory-interactive-mode"></a>Supporto di nomi utente per la modalità interattiva di Azure Active Directory
+
+È possibile specificare un nome utente nella stringa di connessione quando si usa la modalità di autenticazione interattiva di Azure Active Directory per .NET Framework e .NET Core
+
+Impostare un nome utente usando la proprietà **User ID** o **UID** della stringa di connessione:
+
+```
+"Server=<server name>; Database=<db name>; Authentication=Active Directory Interactive; User Id=<username>;"
+```
+
+#### <a name="order-hints-for-sqlbulkcopy"></a>Suggerimenti per l'ordinamento per SqlBulkCopy
+
+È possibile fornire suggerimenti per l'ordinamento per migliorare le prestazioni delle operazioni di copia bulk sulle tabelle con indici cluster. Per altre informazioni, vedere la sezione [Operazioni di copia bulk](sql/bulk-copy-order-hints.md).
+
+#### <a name="sni-dependency-changes"></a>Modifiche alle dipendenze di SNI
+
+Microsoft.Data.SqlClient (.NET Core e .NET Standard) in Windows è ora dipendente da **Microsoft.Data.SqlClient.SNI.runtime**, in sostituzione alla precedente dipendenza da **runtime.native.System.Data.SqlClient.SNI**. La nuova dipendenza aggiunge il supporto per la piattaforma ARM insieme alle piattaforme già supportate ARM64, x64 e x86 in Windows.
 
 ## <a name="release-notes-for-microsoftdatasqlclient-110"></a>Note sulla versione per Microsoft.Data.SqlClient 1.1.0
 
@@ -29,13 +132,13 @@ Le note sulla versione sono disponibili anche nel repository GitHub: [Note sulla
 
 #### <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclave sicuri
 
-Always Encrypted è disponibile a partire da Microsoft SQL Server 2016. Gli enclave sicuri sono disponibili a partire da Microsoft SQL Server 2019. Per usare la funzionalità di enclave, le stringhe di connessione devono includere il protocollo di attestazione e l'URL di attestazione necessari. Esempi:
+Always Encrypted è disponibile a partire da Microsoft SQL Server 2016. Gli enclave sicuri sono disponibili a partire da Microsoft SQL Server 2019. Per usare la funzionalità di enclave, le stringhe di connessione devono includere il protocollo di attestazione e l'URL di attestazione necessari. Ad esempio:
 
 ```
 Attestation Protocol=HGS;Enclave Attestation Url=<attestation_url_for_HGS>
 ```
 
-Per informazioni dettagliate, vedere:
+Per altre informazioni, vedere:
 
 - [Supporto di SqlClient per Always Encrypted](sql/sqlclient-support-always-encrypted.md)
 - [Esercitazione: Sviluppare un'applicazione .NET usando Always Encrypted con enclave sicure](sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)
@@ -63,7 +166,7 @@ Le note sulla versione sono disponibili anche nel repository GitHub: [Note sulla
 
 ### <a name="data-classification"></a>Classificazione dei dati
 
-La classificazione dei dati offre un nuovo set di API che espongono informazioni di sola lettura sulla riservatezza e classificazione dei dati relative agli oggetti recuperati tramite SqlDataReader quando l'origine sottostante supporta la funzionalità e contiene metadati di [riservatezza e classificazione dei dati](../../relational-databases/security/sql-data-discovery-and-classification.md).
+La classificazione dei dati offre un nuovo set di API che espongono informazioni di sola lettura sulla riservatezza e classificazione dei dati relative agli oggetti recuperati tramite SqlDataReader quando l'origine sottostante supporta la funzionalità e contiene metadati di [riservatezza e classificazione dei dati](../../relational-databases/security/sql-data-discovery-and-classification.md). Vedere l'applicazione di esempio in [Data Discovery and Classification in SqlClient](https://github.com/dotnet/SqlClient/tree/master/release-notes/1.1).
 
 ```csharp
 public class SqlDataReader
@@ -103,7 +206,7 @@ namespace Microsoft.Data.SqlClient.DataClassification
 
 ### <a name="utf-8-support"></a>Supporto UTF-8
 
-Il supporto UTF-8 non richiede modifiche al codice dell'applicazione. Queste modifiche di SqlClient consentono semplicemente di ottimizzare la comunicazione tra il client e il server quando il server supporta UTF-8 e le regole di confronto delle colonne sottostanti usano UTF-8. Vedere la sezione UTF-8 in [Novità di SQL Server 2019 (anteprima)](../../sql-server/what-s-new-in-sql-server-ver15.md).
+Il supporto UTF-8 non richiede modifiche al codice dell'applicazione. Queste modifiche di SqlClient consentono di ottimizzare la comunicazione tra il client e il server quando il server supporta UTF-8 e le regole di confronto delle colonne sottostanti usano UTF-8. Vedere la sezione UTF-8 in [Novità di SQL Server 2019 (anteprima)](../../sql-server/what-s-new-in-sql-server-ver15.md).
 
 ### <a name="always-encrypted-with-enclaves"></a>Always Encrypted con enclave
 

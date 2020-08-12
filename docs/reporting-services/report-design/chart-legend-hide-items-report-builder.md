@@ -1,5 +1,6 @@
 ---
 title: Nascondere elementi della legenda nel grafico (Generatore report) | Microsoft Docs
+description: Informazioni su come scegliere elementi visualizzati nella legenda per visualizzare i dati essenziali in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92256240-0cd5-4be4-8904-d1e3b93cb6b3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 784258433329832bbff3f8737086ef906eecfd64
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5f745b3eb2c862f4105bcdd872a8915845341942
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081335"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681420"
 ---
 # <a name="chart-legend---hide-items-report-builder"></a>Legenda del grafico - Nascondere elementi (Generatore report)
 Per impostazione predefinita, qualsiasi serie aggiunta a un grafico senza forme in un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verrà aggiunta come elemento nella legenda. Per grafici a torta, ad anello, a imbuto e a piramide, qualsiasi serie aggiunta al grafico determina l'aggiunta di punti dati singoli nella legenda.  

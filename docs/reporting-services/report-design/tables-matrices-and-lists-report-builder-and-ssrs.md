@@ -1,5 +1,6 @@
 ---
 title: Tabelle, matrici ed elenchi (Generatore report) | Microsoft Docs
+description: Informazioni su tabelle, matrici ed elenchi e sulle aree dati Tablix che visualizzano i dati dei report impaginati organizzati in righe e colonne in Generatore report.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -33,12 +34,12 @@ f1_keywords:
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e3390f952eaa553c144d8dd50e906276d4f96649
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c28f2c267c49f2a31fd07eecdbb9e593237a1835
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080876"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778073"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tabelle, matrici ed elenchi (Generatore report e SSRS)
  In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], tabelle, matrici ed elenchi sono *aree dati* in cui i dati del report impaginati vengono visualizzati in celle suddivise in righe e colonne. Nelle celle sono contenuti in genere dati di testo, ad esempio testo, date e numeri ma possono essere contenuti anche misuratori, grafici o elementi del report come le immagini. Di frequente, tabelle, matrici ed elenchi sono definiti collettivamente aree dati *Tablix* .  

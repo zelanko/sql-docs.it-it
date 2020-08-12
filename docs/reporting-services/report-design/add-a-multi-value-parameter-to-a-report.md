@@ -1,5 +1,6 @@
 ---
 title: Aggiungere un parametro multivalore a un report | Microsoft Docs
+description: Informazioni su come aggiungere un parametro a un report che consente di selezionare più valori per il parametro in Generatore report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ac257b63b3cd36cc789a842c87aff9d5186f1206
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fc464c7ffeb6f166a8c4c39c70dc4001468f3568
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575413"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779427"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Aggiunta di un parametro multivalore a un report
   È possibile aggiungere un parametro a un report che consente all'utente di selezionare più valori per il parametro.  

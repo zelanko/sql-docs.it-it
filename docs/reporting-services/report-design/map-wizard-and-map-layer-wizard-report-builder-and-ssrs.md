@@ -1,5 +1,6 @@
 ---
 title: Creazione guidata mappa e Creazione guidata livello mappa (Generatore report) | Microsoft Docs
+description: Come automatizzare la creazione di una mappa, l'aggiunta di un livello mappa o la modifica delle opzioni di un livello mappa con la Creazione guidata mappa e la Creazione guidata livello mappa in Generatore report.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 02be70284a4a32c69618659f1271165677628845
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b139dc1b0aaa0b2d1477d182cf128d0f93795ca3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078575"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048332"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Creazione guidata mappa e Creazione guidata livello mappa (Generatore report e SSRS)
  Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , la Creazione guidata mappa e la Creazione guidata livello mappa consentono di automatizzare l'attività di creazione di una mappa, di aggiunta di un livello mappa o di modifica delle opzioni di livello mappa in un livello esistente.  
@@ -44,7 +45,7 @@ ms.locfileid: "77078575"
   
  Fare clic sul titolo della pagina della procedura guidata per il contenuto della guida corrispondente. Le pagine visualizzate variano a seconda delle scelte effettuate per il tipo di mappa, l'origine dei dati spaziali e l'origine dei dati analitici.  
   
-1.  [Scegliere un'origine dati spaziali](#SpatialDataSource). I dati spaziali possono provenire dalla raccolta mappe, da un file di forma Environmental Systems Research (ESRI) o da dati spaziali di un database relazionale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  [Scegliere un'origine dati spaziali](#SpatialDataSource). I dati spaziali possono provenire dalla raccolta mappe, ovvero un file di forma Environmental Systems Research Institute, Inc. (ESRI) o da dati spaziali di un database relazionale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     -   [Informazioni sui dati spaziali](#SpatialData)  
   
@@ -119,7 +120,7 @@ ms.locfileid: "77078575"
  Per estendere la raccolta mappe, è possibile aggiungere o rimuovere report dalla directory della raccolta mappe e aggiungere cartelle per organizzare le mappe. Per altre informazioni, vedere [Mappe &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
 ###  <a name="what-is-an-esri-shapefile"></a><a name="Shapefile"></a> What is an ESRI shapefile?  
- Un file di forma ESRI è un set di file contenente dati conformi al formato dei dati spaziali dei file di forma Environmental Systems Research Institute, Inc. (ESRI). Il set di file include in genere il file *\<nomefile>* .shp che contiene i dati spaziali e un file di supporto *\<nomefile>* .dbf.  
+ Un file di forma ESRI è un set di file contenente dati conformi al formato dei dati spaziali dei file di forma Environmental Systems Research Institute, Inc. (ESRI). Il set di file include in genere il file *\<filename>* .shp che contiene i dati spaziali e un file di supporto, *\<filename>* .dbf.  
   
  Quando si specifica come origine dati spaziali un file di forma posizionato nel computer locale, i dati spaziali vengono incorporati automaticamente nel report. Per utilizzare in modo dinamico i dati spaziali di un file ESRI, è necessario eseguire le operazioni seguenti:  
   

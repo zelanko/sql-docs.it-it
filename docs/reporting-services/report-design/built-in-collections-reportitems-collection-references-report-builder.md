@@ -1,5 +1,6 @@
 ---
 title: Riferimenti alla raccolta ReportItems (Generatore report) | Microsoft Docs
+description: Informazioni sulla raccolta ReportItems. Queste caselle di testo in Generatore report si trovano nell'ambito corrente di un'intestazione di pagina, di un piè di pagina o del corpo di un report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e8819e97cbece0ab9682252c3afdedee7d671428
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbb13f8e3ce8b64b64a8f575dd087a715cd6e5da
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081893"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462325"
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>Raccolte predefinite - Riferimenti alla raccolta ReportItems (Generatore report)
   La raccolta predefinita **ReportItems** è il set di caselle di testo di elementi del report, ad esempio righe di un'area dati o caselle di testo nell'area di progettazione del report. La raccolta **ReportItems** include caselle di testo che si trovano nell'ambito corrente di un'intestazione di pagina, un piè di pagina o il corpo di un report. Questa raccolta viene determinata in fase di esecuzione dal componente Elaborazione report e dal renderer di report. L'ambito corrente cambia quando il componente Elaborazione report combina in successione i dati del report e gli elementi di layout dei relativi elementi mentre l'utente visualizza le pagine di un report. È possibile usare la raccolta predefinita **ReportItems** per produrre intestazioni di pagina in formato dizionario in cui vengono visualizzati il primo e l'ultimo elemento in ogni pagina.  

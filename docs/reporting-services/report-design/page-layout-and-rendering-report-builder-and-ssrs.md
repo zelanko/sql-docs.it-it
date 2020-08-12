@@ -1,5 +1,6 @@
 ---
 title: Layout e rendering della pagina (Generatore report) | Microsoft Docs
+description: Progettare o migliorare i report impaginati con estensioni per il rendering per il layout di pagina, le interruzioni di pagina e il formato della carta in Generatore report.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee04e2cef1f4f4681b42ff8ffb4ce549aeae624d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef2d28282a1fd787585f401e3b532f104cba5e2c
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082455"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012699"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Layout e rendering della pagina (Generatore report e SSRS)
 Leggere le informazioni sulle estensioni per il rendering di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per i report impaginati in modo da ottenere il report desiderato in termini di layout di pagina, interruzioni di pagina e formato della carta. 
 
  Quando i report vengono visualizzati nel server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o nel riquadro di anteprima di Generatore report o Progettazione report, il report viene innanzitutto sottoposto a rendering dal renderer HTML. Successivamente può essere esportato in formati diversi, ad esempio Excel o CSV (Comma Separated File, file con valori delimitati da virgole). Il report esportato può essere quindi usato per ulteriori analisi in Excel o come origine dati per applicazioni tramite cui è possibile importare e usare file di dati CSV.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è disponibile un set di renderer per l'esportazione di report in formati diversi. Ogni renderer consente di applicare delle regole durante il rendering dei report. Quando si esporta un report in un formato di file diverso, soprattutto per renderer quali il renderer di Adobe Acrobat (PDF) che usa la paginazione in base alle dimensioni fisiche della pagina, potrebbe essere necessario modificare il layout del report affinché il report esportato venga visualizzato e stampato correttamente dopo aver applicato le regole di rendering.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è disponibile un set di renderer per l'esportazione di report in formati diversi. Ogni renderer consente di applicare regole durante il rendering dei report. Quando si esporta un report in un formato di file diverso, soprattutto per renderer quali il renderer di Adobe Acrobat (PDF) che usa la paginazione in base alle dimensioni fisiche della pagina, potrebbe essere necessario modificare il layout del report affinché il report esportato venga visualizzato e stampato correttamente dopo aver applicato le regole di rendering.  
   
  L'ottenimento dei migliori risultati per i report esportati è spesso un processo iterativo; si crea e visualizza in anteprima il report in Generatore report o Progettazione report, si esporta il report nel formato preferito, si rivede il report esportato e infine si apportano le modifiche al report.  
     

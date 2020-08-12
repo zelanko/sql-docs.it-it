@@ -5,20 +5,20 @@ description: Informazioni su come usare uno script di distribuzione per distribu
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: eea087ed3a4859e179f7bb0d1e77140bb8229a17
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 052e3794fa058ec988160855123c5b0993f3fbd4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77608389"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85699824"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Usare uno script Python per distribuire un cluster Big Data di SQL Server nel servizio Azure Kubernetes
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 In questa esercitazione si usa uno script di distribuzione Python di esempio per distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] nel servizio Azure Kubernetes.
 
@@ -85,7 +85,8 @@ Usare la procedura seguente per eseguire lo script di distribuzione in un prompt
    > La dimensione del computer predefinita **Standard_L8s** potrebbe non essere disponibile in tutte le aree di Azure. Se si selezionano dimensioni del computer diverse, assicurarsi che il numero totale di dischi che è possibile collegare tra i nodi del cluster sia maggiore o uguale a 24. Ogni attestazione di volume permanente nel cluster richiede un disco collegato. Attualmente, il cluster Big Data richiede 24 attestazioni di volumi permanenti. La dimensione [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/lsv2-series), ad esempio, supporta 32 dischi collegati, quindi è possibile valutare i cluster Big Data con un singolo nodo di questa dimensione.
 
    > [!NOTE]
-   > Durante la distribuzione di cluster Big Data, l'account `sa` di SQL Server è disabilitato. Viene eseguito il provisioning di un nuovo account di accesso sysadmin nell'istanza master di SQL Server usando lo stesso nome specificato per l'input **Nome utente** e la password corrispondente all'input **Password**. Gli stessi valori di **Nome utente** e **Password** vengono usati anche per il provisioning di un utente amministratore del controller. Solo l'utente supportato per il gateway (Knox) è la **radice** e la password è identica a quella indicata in precedenza.
+   > Durante la distribuzione di cluster Big Data, l'account `sa` di SQL Server è disabilitato. Viene eseguito il provisioning di un nuovo account di accesso sysadmin nell'istanza master di SQL Server usando lo stesso nome specificato per l'input **Nome utente** e la password corrispondente all'input **Password**. Gli stessi valori di **Nome utente** e **Password** vengono usati anche per il provisioning di un utente amministratore del controller. Nei cluster distribuiti prima di SQL Server 2019 CU5, l'unico utente supportato per il gateway (Knox) è l'utente **ROOT** e la password è identica a quella indicata in precedenza.
+   >[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 1. Lo script si avvierà creando un cluster del servizio Azure Kubernetes con i parametri specificati. Questo passaggio richiede alcuni minuti.
 

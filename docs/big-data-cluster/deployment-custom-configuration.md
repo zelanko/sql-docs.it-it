@@ -5,20 +5,20 @@ description: Informazioni su come personalizzare la distribuzione di un cluster 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd9624ed1b3d6b164168d162ee68f1773b7a55ac
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: ad43f370db096450a88bf1ffe3dd742c86be3206
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550202"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728024"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configurare le impostazioni di distribuzione per risorse e servizi cluster
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Partendo da un set predefinito di profili di configurazione integrati nello strumento di gestione `azdata`, è possibile modificare facilmente le impostazioni predefinite per soddisfare al meglio i requisiti del carico di lavoro del cluster Big Data. La struttura dei file di configurazione permette di aggiornare in modo granulare le impostazioni per ogni servizio della risorsa.
 
@@ -665,6 +665,16 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 
 > [!IMPORTANT]
 > Come procedura consigliata, aggiornare manualmente l'impostazione di `max_map_count` in ogni host del cluster Kubernetes in base alle istruzioni contenute in [questo articolo](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html).
+
+## <a name="turn-pods-and-nodes-metrics-colelction-onoff"></a>Attivare/disattivare la raccolta di metriche di pod e nodi
+
+SQL Server 2019 CU5 ha abilitato due opzioni di funzionalità per controllare la raccolta di metriche di pod e nodi. Se si usano soluzioni diverse per il monitoraggio dell'infrastruttura Kubernetes, è possibile disattivare la raccolta predefinita di metriche per pod e nodi dell'host impostando *allowNodeMetricsCollection* e *allowPodMetricsCollection* su *false* nel file di configurazione della distribuzione *control.json*. Per gli ambienti OpenShift, queste impostazioni sono impostate su *false* per impostazione predefinita nei profili di distribuzione predefiniti, perché la raccolta di metriche di pod e nodi richiede capacità con privilegi.
+Eseguire questo comando per aggiornare i valori di queste impostazioni nel file di configurazione personalizzato usando l'interfaccia della riga di comando di *azdata*:
+
+```bash
+ azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowNodeMetricsCollection=false"
+ azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowPodMetricsCollection=false"
+ ```
 
 ## <a name="next-steps"></a>Passaggi successivi
 

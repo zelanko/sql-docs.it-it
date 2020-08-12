@@ -1,5 +1,6 @@
 ---
 title: Modificare il testo di un elemento della legenda (Generatore report) | Microsoft Docs
+description: Informazioni su come modificare il testo di un elemento della legenda in modo da visualizzare altre informazioni sui singoli punti dati in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f592abd3f634865a432b31d2aba4764187b0d86
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7f13d4663cf0d4e27148e77eebc59068e8c36924
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078696"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681240"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>Legenda del grafico - Modificare il testo degli elementi (Generatore report)
   Quando un campo viene posizionato nell'area Valori del grafico, viene generato automaticamente un elemento della legenda contenente il nome di tale campo. Ogni elemento della legenda è collegato a una singola serie nel grafico, ad eccezione dei grafici con forme in cui la legenda è collegata a singoli punti dati anziché a singole serie.  

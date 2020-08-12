@@ -1,5 +1,6 @@
 ---
 title: Visualizzare intestazioni e piè di pagina con un gruppo (Generatore report) | Microsoft Docs
+description: Informazioni su come impostare le proprietà per il rendering di intestazioni e piè di pagina con righe dinamiche associate a un gruppo in un'area dati Tablix.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ecc2cb9b0b2e425627f73ae87aa3a9e8f5a289b1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 54afbcc4f95fdd0c626b6559437e08c454cd2dd4
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080479"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689262"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Visualizzare intestazioni e piè di pagina con un gruppo (Generatore report e SSRS)
   È possibile stabilire se di una riga statica, ad esempio l'intestazione o il piè di pagina di un gruppo, viene eseguito il rendering con righe dinamiche associate a un gruppo in un'area dati Tablix.  

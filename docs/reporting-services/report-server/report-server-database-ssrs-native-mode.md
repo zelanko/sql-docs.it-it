@@ -1,5 +1,6 @@
 ---
 title: Database del server di report (modalità nativa) | Microsoft Docs
+description: Informazioni su come un'installazione di Reporting Services in modalità nativa separi l'archiviazione persistente dei dati e l'archiviazione temporanea dei dati in due database.
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 71207cc3476374c457ab72aa03e54215b38330ba
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1a4bfe8c47361793dde026d61fb5fb7bdf0e709c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078013"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547283"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>Database del server di report (modalità nativa SSRS)
   Un server di report è un server senza stato che usa il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di [!INCLUDE[ssDE](../../includes/ssde-md.md)] per archiviare le definizioni dei metadati e degli oggetti. In un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa vengono usati due database per separare i requisiti per l'archiviazione persistente dei dati da quelli per l'archiviazione temporanea. I database vengono creati assieme e associati in base al nome. Per impostazione predefinita, i nomi dei database sono rispettivamente **ReportServer** e **ReportServerTempDB**.  

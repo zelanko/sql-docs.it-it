@@ -1,5 +1,6 @@
 ---
 title: Aggiungere un grafico a un report (Generatore report) | Microsoft Docs
+description: Informazioni su come aggiungere un grafico in un report impaginato per riepilogare i dati in formato visivo in Generatore report.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 986871918463e09fe0aec138c75487694faee258
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2ba53f3fa33bdb8b0f09c13b1afa9aba9398ff87
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080802"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779143"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Aggiungere un grafico a un report (Generatore report e SSRS)
   Per riepilogare i dati in formato visivo in un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , usare un'area dati del grafico. È importante scegliere un tipo di grafico appropriato per il tipo di dati da visualizzare. Tale scelta influirà sull'interpretazione dei dati visualizzati nel grafico. Per altre informazioni, vedere [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  

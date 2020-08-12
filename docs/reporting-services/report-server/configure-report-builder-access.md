@@ -1,5 +1,6 @@
 ---
 title: Configurare l'accesso a Generatore report | Microsoft Docs
+description: Configurare Generatore report, uno strumento di creazione di report installato con un server di report di SQL Server Reporting Services. Viene usata la modalità nativa o la modalità di integrazione SharePoint.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/06/2019
-ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 168e8897743e113ae1a40df5ad8d35c66289fde0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68255177"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548083"
 ---
 # <a name="configure-report-builder-access"></a>Configurare l'accesso a Generatore report
 Generatore report è uno strumento per il reporting ad hoc installato con un server di report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurato per la modalità nativa o la modalità integrata SharePoint.  
@@ -25,7 +26,7 @@ L'accesso a Generatore report dipende dai fattori seguenti:
 
 - Impostazioni di autenticazione che determinano se le credenziali utente possono essere passate al server di report o se l'accesso anonimo è configurato sui file dell'applicazione.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Generatore report non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere l'argomento relativo alle [funzionalità supportate dalle edizioni di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
 
@@ -101,7 +102,7 @@ Dopo avere creato le assegnazioni di ruolo, gli utenti disporranno dell'autorizz
 
     4. In Descrizione immettere una descrizione per il ruolo in modo da indicare lo scopo del ruolo agli utenti del portale Web.  
 
-    5. Aggiungere le attività seguenti: **Utilizzo di report**, **Visualizzazione di report**, **Visualizzazione di modelli**, **Visualizzazione di risorse**, **Visualizzazione di cartelle**e **Gestione di sottoscrizioni individuali**.  
+    5. Aggiungere le attività seguenti: **Utilizzo di report**, **Visualizzazione di report**, **Visualizzazione di modelli**, **Visualizzazione di risorse**, **Visualizzazione di cartelle** e **Gestione di sottoscrizioni individuali**.  
 
     6. Fare clic su **OK** per salvare il ruolo.  
 
@@ -115,7 +116,7 @@ Dopo avere creato le assegnazioni di ruolo, gli utenti disporranno dell'autorizz
 3. Fare clic su **Security**.  
 
 4. Se esiste già un'assegnazione di ruolo per l'utente o il gruppo per cui si vuole configurare l'accesso a Generatore report, fare clic su **Modifica**.  
-In caso contrario, fare clic su **Nuova assegnazione ruolo**. In Gruppo o utente immettere un account utente o di gruppo di dominio Windows nel formato \<dominio>\\<account\>. Se si utilizza l'autenticazione basata su form o la sicurezza personalizzata, specificare l'account utente o di gruppo nel formato corretto per la propria distribuzione.  
+In caso contrario, fare clic su **Nuova assegnazione ruolo**. In Gruppo o utente immettere un account utente o di gruppo di dominio Windows in questo formato: \<domain>\\<account\>. Se si utilizza l'autenticazione basata su form o la sicurezza personalizzata, specificare l'account utente o di gruppo nel formato corretto per la propria distribuzione.  
 
 5. Selezionare **Utente sistema**e quindi fare clic su **OK**.  
 
@@ -127,7 +128,7 @@ In caso contrario, fare clic su **Nuova assegnazione ruolo**. In Gruppo o utente
 
 9. Se esiste già un'assegnazione di ruolo per l'utente o il gruppo per cui si vuole configurare l'accesso a Generatore report, fare clic su **Modifica**.  
 
-    In caso contrario, fare clic su **Nuova assegnazione ruolo**. In Gruppo o utente immettere un account utente o di gruppo di dominio Windows nel formato \<dominio>\\<account\>. Se si utilizza l'autenticazione basata su form o la sicurezza personalizzata, specificare l'account utente o di gruppo nel formato corretto per la propria distribuzione.  
+    In caso contrario, fare clic su **Nuova assegnazione ruolo**. In Gruppo o utente immettere un account utente o di gruppo di dominio Windows in questo formato: \<domain>\\<account\>. Se si utilizza l'autenticazione basata su form o la sicurezza personalizzata, specificare l'account utente o di gruppo nel formato corretto per la propria distribuzione.  
 
 10. Selezionare **Generatore report**e quindi fare clic su **Applica**.  
 

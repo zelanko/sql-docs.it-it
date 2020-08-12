@@ -1,21 +1,21 @@
 ---
 title: Creare unit test di SQL Server per funzioni, trigger e stored procedure
+description: Informazioni su come usare Esplora oggetti di SQL Server per creare un unit test di SQL Server da una funzione di database, un trigger o una stored procedure.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: bda57c10-a1ab-4a1a-8a71-42085a3cb793
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c7218f035ca907bf9052865408b3a7311e8f75b4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 035ab41a162ca31542f87ba545af35e3bf49f007
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241465"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518711"
 ---
 # <a name="how-to-create-sql-server-unit-tests-for-functions-triggers-and-stored-procedures"></a>Procedura: Creare unit test di SQL Server per funzioni, trigger e stored procedure
 

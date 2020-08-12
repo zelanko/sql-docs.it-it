@@ -1,5 +1,6 @@
 ---
 title: Costanti nelle espressioni (Generatore report) | Microsoft Docs
+description: Informazioni sul testo letterale o sul testo predefinito delle costanti nelle espressioni per i report in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b8ae650b-0f46-4848-b62b-15f8a40751b8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0231c41e3104756232c55cb4c4707948605a35e6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8737057e0e4b291abf6530f5f6f74ce145dc84d7
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077068"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779109"
 ---
 # <a name="constants-in-expressions-report-builder-and-ssrs"></a>Costanti nelle espressioni (Generatore report e SSRS)
   Una costante è costituita da testo letterale o da testo predefinito. Il componente di elaborazione del report ha accesso alle costanti predefinite in modo che quando queste vengono incluse in un'espressione, i valori che rappresentano vengono sostituiti prima di essere valutati.  

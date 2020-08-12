@@ -1,5 +1,6 @@
 ---
 title: Suggerimenti relativi alla progettazione di report (Generatore report) | Microsoft Docs
+description: Identificare i metodi di progettazione visiva per una migliore visualizzazione dei dati in Generatore report. Personalizzare i report con grafici, barre dei dati, indicatori, grafici sparkline, tabelle e mappe.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e527b4059e225b012a2fa39cf21033b8af5ab9e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1dcd59cb3b101007143fe212f1dd988b556ed770
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081094"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034963"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Suggerimenti relativi alla progettazione di report (Generatore report e SSRS)
   Usare i suggerimenti seguenti per progettare report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

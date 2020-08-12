@@ -1,5 +1,6 @@
 ---
 title: Informazioni di riferimento sulle funzioni di aggregazione (Generatore report) | Microsoft Docs
+description: Usare funzioni di aggregazione predefinite nelle espressioni in Generatore report per includere valori di aggregazione nel report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5ef615a05648e2a5873e48371b1f1edaf754664
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c767c4e4feced7f5979cf6b22e90cceef311ca5
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081324"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255734"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funzioni di Generatore report - Informazioni di riferimento sulle funzioni di aggregazione
   Per includere valori aggregati nel report, è possibile utilizzare funzioni di aggregazione predefinite nelle espressioni. La funzione di aggregazione predefinita per i campi numerici è SUM. È possibile modificare l'espressione e utilizzare una funzione di aggregazione predefinita o specificare un ambito differente. L'ambito identifica il set di dati da utilizzare per il calcolo.  
@@ -71,19 +72,19 @@ ms.locfileid: "77081324"
   
 |Percorso nel report|Campi|Parametri|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|variables|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
-|Intestazione di pagina<br /><br /> Piè di pagina|Sì|Sì|Al massimo uno<br /><br /> Nota 1|Sì|Sì|Sì|Sì|  
-|Corpo|Sì<br /><br /> Nota 2|Sì|Solo elementi nell'ambito corrente o in un ambito contenitore<br /><br /> Nota 3|No|Sì|Sì|Sì|  
+|Intestazione di pagina<br /><br /> Piè di pagina|Sì|sì|Al massimo uno<br /><br /> Nota 1|Sì|Sì|Sì|sì|  
+|Corpo|Sì<br /><br /> Nota 2|Sì|Solo elementi nell'ambito corrente o in un ambito contenitore<br /><br /> Nota 3|No|Sì|Sì|sì|  
 |Parametro del report|No|Solo i parametri precedenti dell'elenco<br /><br /> Nota 4|No|No|No|No|No|  
-|Campo|Sì|Sì|No|No|No|No|No|  
+|Campo|Sì|sì|No|No|No|No|No|  
 |Parametro della query|No|Sì|No|No|No|No|No|  
-|Espressione di raggruppamento|Sì|Sì|No|No|Sì|No|No|  
-|Espressione di ordinamento|Sì|Sì|No|No|Sì|Sì<br /><br /> Nota 5|No|  
-|Espressione filtro|Sì|Sì|No|No|Sì|Sì<br /><br /> Nota 6|No|  
+|Espressione di raggruppamento|Sì|sì|No|No|Sì|No|No|  
+|Espressione di ordinamento|Sì|sì|No|No|Sì|sì<br /><br /> Nota 5|No|  
+|Espressione filtro|Sì|sì|No|No|Sì|sì<br /><br /> Nota 6|No|  
 |Codice|No|Sì<br /><br /> Nota 7|No|No|No|No|No|  
 |Lingua del report|No|Sì|No|No|No|No|No|  
-|variables|Sì|Sì|No|No|Sì|Ambito corrente o contenitore|No|  
-|Aggregazioni|Sì|Sì|Solo nell'intestazione di pagina/piè di pagina|Solo nelle aggregazioni dell'elemento del report|Sì|No|No|  
-|Funzioni di ricerca|Sì|Sì|Sì|No|Sì|No|No|  
+|variables|Sì|sì|No|No|Sì|Ambito corrente o contenitore|No|  
+|Aggregazioni|Sì|sì|Solo nell'intestazione di pagina/piè di pagina|Solo nelle aggregazioni dell'elemento del report|Sì|No|No|  
+|Funzioni di ricerca|Sì|Sì|sì|No|Sì|No|No|  
   
 -   **Nota 1.** ReportItems deve essere incluso nella pagina del report visualizzabile; in caso contrario, il relativo valore è Null. Se la visibilità di un elemento del report dipende da un'espressione che restituisce False, l'elemento del report non sarà presente nella pagina.  
   
@@ -110,10 +111,10 @@ ms.locfileid: "77081324"
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
 |Valore corrente|No|No|No|No|Sì|No|Sì|No|  
 |First (Primo)<br /><br /> Last (Ultimo)|No|No|No|No|Sì|No|No|No|  
-|Previous|Sì|Sì|Sì|No|Sì|No|Sì|No|  
+|Previous|Sì|Sì|sì|No|Sì|No|Sì|No|  
 |Sum e altre funzioni di ordinamento preliminare|No|No|No|No|Sì|No|Sì|No|  
 |Aggregazioni ReportItem|No|No|No|No|No|No|No|No|  
-|Funzioni di ricerca|Sì|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|No|No|  
+|Funzioni di ricerca|Sì|sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|Sì<br /><br /> Nota 1|No|No|  
 |Funzione di aggregazione|No|No|No|No|No|No|No|No|  
   
 -   **Nota 1.** Le funzioni di aggregazione sono consentite solo all'interno dell'espressione *Source* di una funzione di ricerca se tale funzione non è contenuta in un'aggregazione. Le funzioni di aggregazione non sono consentite all'interno di espressioni *Destination* o *Result* di una funzione di ricerca.  

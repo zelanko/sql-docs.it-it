@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
-ms.date: 12/04/2019
-ms.openlocfilehash: 49a5f8e19db65691fe8e521d7ca6a65e828fe6bd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 06/09/2020
+ms.openlocfilehash: f1c17f3a3f3accdbc9fcefa4872100d6a4ee2889
+ms.sourcegitcommit: 60900cdd520ec723102b54ccd27b102bf6c91d25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866024"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84638285"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurare l'account del servizio del server di report (Gestione configurazione SSRS)
 
@@ -52,15 +52,15 @@ ms.locfileid: "74866024"
   
 2. Nella pagina Account servizio selezionare l'opzione che descrive il tipo di account che si desidera utilizzare.  
   
-3. Se è stato selezionato un account utente di Windows, specificare il nuovo account e la password. Il nome dell'account non può contenere più di 20 caratteri.  
+3. Se è stato selezionato un account utente di Windows, specificare il nuovo account e la password. L'account può essere costituito da un massimo di 20 caratteri e non può contenere i caratteri speciali " / \ [ ] : ; | = , + * ? < > ' in base alle regole di denominazione degli account utente Windows.  
   
      Se il server di report viene distribuito in una rete che supporta l'autenticazione Kerberos, è necessario registrare il nome dell'entità servizio del server di report con l'account utente di dominio specificato. Per altre informazioni, vedere [Registrare un nome dell'entità servizio &#40;SPN&#41; per un server di report](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
-4. Fare clic su **Apply**.  
+4. Fare clic su **Applica**.  
   
 5. Quando viene richiesto di eseguire il backup della chiave simmetrica, digitare un nome di file e un percorso per la copia di backup della chiave simmetrica, digitare una password per bloccare e sbloccare il file, quindi scegliere **OK**.  
   
-6. Se il server di report utilizza l'account del servizio per connettersi al database del server di report, le informazioni di connessione vengono aggiornate per l'utilizzo del nuovo account o della nuova password. L'aggiornamento delle informazioni di connessione richiede la connessione al database. Se viene visualizzata la finestra di dialogo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Connessione al database**di**, immettere credenziali con l'autorizzazione necessaria per connettersi al database, quindi fare clic su **OK**.  
+6. Se il server di report utilizza l'account del servizio per connettersi al database del server di report, le informazioni di connessione vengono aggiornate per l'utilizzo del nuovo account o della nuova password. L'aggiornamento delle informazioni di connessione richiede la connessione al database. Se viene visualizzata la finestra di dialogo **Connessione al database** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], immettere credenziali con l'autorizzazione necessaria per connettersi al database, quindi fare clic su **OK**.  
   
 7. Quando viene richiesto di ripristinare la chiave simmetrica, digitare la password specificata al passaggio 5, quindi scegliere **OK**.  
   
@@ -72,7 +72,8 @@ ms.locfileid: "74866024"
   
 |Account|Spiegazione|  
 |-------------|-----------------|  
-|Account utente di dominio|Se si possiede un account utente di dominio di Windows che dispone delle autorizzazioni minime necessarie per operazioni sul server di report, è consigliabile utilizzarlo.<br /><br /> Un account utente di dominio rappresenta la scelta consigliata, in quanto isola il servizio del server di report dalle altre applicazioni. L'esecuzione di più applicazioni tramite un account condiviso, ad esempio Servizio di rete, aumenta il rischio di esporre il server di report al controllo da parte di utenti malintenzionati, in quanto una violazione della sicurezza di una delle applicazioni può facilmente estendersi a tutte le applicazioni eseguite utilizzando lo stesso account.<br /><br /> Se si utilizza un account utente di dominio, è necessario modificare periodicamente la password se l'organizzazione applica criteri di scadenza delle password. Potrebbe inoltre essere necessario registrare il servizio con l'account utente. Per altre informazioni, vedere [Registrare un nome dell'entità servizio &#40;SPN&#41; per un server di report](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).<br /><br /> Evitare di utilizzare un account utente locale di Windows. Gli account locali non dispongono in genere di autorizzazioni sufficienti per accedere alle risorse in altri computer. Per altre informazioni sulle limitazioni imposte alle funzionalità del server di report quando si utilizza un account locale, vedere [Considerazioni sull'utilizzo di account locali](#localaccounts) in questo argomento.|  
+|Account utente di dominio|Se si possiede un account utente di dominio di Windows che dispone delle autorizzazioni minime necessarie per operazioni sul server di report, è consigliabile utilizzarlo.<br /><br /> Un account utente di dominio rappresenta la scelta consigliata, in quanto isola il servizio del server di report dalle altre applicazioni. L'esecuzione di più applicazioni tramite un account condiviso, ad esempio Servizio di rete, aumenta il rischio di esporre il server di report al controllo da parte di utenti malintenzionati, in quanto una violazione della sicurezza di una delle applicazioni può facilmente estendersi a tutte le applicazioni eseguite utilizzando lo stesso account.<br /><br /> Se si utilizza un account utente di dominio, è necessario modificare periodicamente la password se l'organizzazione applica criteri di scadenza delle password. Potrebbe inoltre essere necessario registrare il servizio con l'account utente. Per altre informazioni, vedere [Registrare un nome dell'entità servizio &#40;SPN&#41; per un server di report](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).<br /><br /> Evitare di utilizzare un account utente locale di Windows. Gli account locali non dispongono in genere di autorizzazioni sufficienti per accedere alle risorse in altri computer. Per altre informazioni sulle limitazioni imposte alle funzionalità del server di report quando si utilizza un account locale, vedere [Considerazioni sull'utilizzo di account locali](#localaccounts) in questo argomento.| 
+| **Account del servizio gestito del gruppo (gMSA)** | Gli account del servizio gestito autonomi sono stati introdotti in Windows Server 2008 R2 e Windows 7. Si tratta di account di dominio gestiti che forniscono la gestione automatica delle password e la gestione semplificata di SPN, tra cui la delega della gestione ad altri amministratori. L'**account del servizio gestito del gruppo** include le stesse funzionalità disponibili all'interno del dominio, ma estese a più server. |
 |**Account del servizio virtuale**|L'**account Servizio virtuale** rappresenta il servizio di Windows. È un account predefinito con privilegi minimi che dispone di autorizzazioni di accesso alla rete. Tale account è consigliato se non si dispone di un account utente di dominio o se si desidera evitare le possibili interruzioni del servizio provocate dall'applicazione di criteri di scadenza delle password.|  
 |**Servizio di rete**|**Servizio di rete** è un account predefinito con privilegi minimi che dispone di autorizzazioni di accesso alla rete. <br /><br /> Se si seleziona **Servizio di rete**, tentare di ridurre al minimo il numero degli altri servizi eseguiti con lo stesso account. Una violazione della sicurezza di una delle applicazioni pregiudica la sicurezza di tutte le altre applicazioni eseguite con lo stesso account.|  
 |**Servizio locale**|**Servizio locale** è un account predefinito simile a un account utente locale di Windows autenticato. I servizi eseguiti tramite l'account **Servizio locale** possono accedere alle risorse di rete come sessione Null senza credenziali. Questo account non è adatto per scenari di distribuzione Intranet in cui il server di report deve connettersi a un database del server di report remoto o a un controller di dominio di rete per autenticare un utente prima dell'apertura di un report o dell'elaborazione di una sottoscrizione.|  

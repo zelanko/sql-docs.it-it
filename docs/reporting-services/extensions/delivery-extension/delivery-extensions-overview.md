@@ -1,5 +1,6 @@
 ---
 title: Panoramica delle estensioni per il recapito | Microsoft Docs
+description: Panoramica delle estensioni per il recapito, che è possibile usare per recapitare i report Reporting Services in diversi modi, ad esempio tramite posta elettronica o condivisione di file.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 69dce8309f96988a9d339aefbb684116c0df2eb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1aca4a83bb117624fdfd5a090c9caab2ff4b7efd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193775"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529162"
 ---
 # <a name="delivery-extensions-overview"></a>Cenni preliminari sulle estensioni per il recapito
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] consente agli utenti di creare e pubblicare report che dopo la creazione e la pubblicazione possono essere recapitati in diverse posizioni. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include inoltre diverse estensioni per il recapito e un'API di recapito tramite cui gli sviluppatori possono creare estensioni per il recapito aggiuntive per estendere ulteriormente le funzionalità di recapito in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

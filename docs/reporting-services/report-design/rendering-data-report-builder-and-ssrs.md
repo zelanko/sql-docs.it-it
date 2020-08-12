@@ -1,5 +1,6 @@
 ---
 title: Rendering dei dati (Generatore report) | Microsoft Docs
+description: Informazioni su come usare i renderer di dati per importare dati in un database o in Excel, all'interno di trasformazioni XSLT o in uno scambio di dati/EDI in Generatore report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a458fdf9-fb2a-4fee-9fbd-b38f36e91753
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e7645c285ed63ae241fe9df0f5dd468685e5f143
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f073f61cb469c3a31ef475a93920d7beba99a508
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077014"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012229"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>Rendering dei dati (Generatore report e SSRS)
   Quando si utilizzano i renderer del layout, ad esempio HTML, MHTML, Word, Excel, PDF o Immagine, i dati e la relativa organizzazione rimangono invariati. Quando si esegue l'esportazione utilizzando un formato di renderer di dati, ad esempio CSV (Comma-Separated Value) o XML, non viene eseguito il rendering di alcun elemento del layout visivo. Durante il rendering del report, CSV e XML applicano al corpo del report e al relativo contenuto apposite regole che determinano la modalità di rendering dei dati in tali formati.  

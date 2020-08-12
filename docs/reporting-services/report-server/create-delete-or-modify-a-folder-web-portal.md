@@ -1,5 +1,6 @@
 ---
 title: Creare, eliminare o modificare una cartella - Reporting Services | Microsoft Docs
+description: Informazioni su come creare, modificare ed eliminare cartelle in modo da poter organizzare e gestire gli elementi pubblicati in un server di report di Reporting Services.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 874fb7ba143c8f08a0f25501e1852b4d2b280cb2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ae3ae4b181ee6b3308bcbe5bcfc4af1ca370c974
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67492859"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548023"
 ---
 # <a name="create-delete-or-modify-a-folder---reporting-services"></a>Creare, eliminare o modificare una cartella - Reporting Services
   È possibile creare cartelle per organizzare e gestire gli elementi pubblicati in un server di report. La creazione di cartelle consente agli utenti di individuare in modo semplice i report desiderati. Per gli utenti con ruolo di gestione del contenuto, le cartelle costituiscono una struttura per l'applicazione di autorizzazioni. È possibile creare assegnazioni di ruolo su cartelle specifiche per limitare l'accesso a report in fase di sviluppo o che non devono essere distribuiti su larga scala.  

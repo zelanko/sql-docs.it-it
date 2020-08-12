@@ -1,5 +1,6 @@
 ---
 title: Esempi di espressioni (Generatore report) | Microsoft Docs
+description: Controllare il contenuto e l'aspetto del report usando funzioni predefinite, codice personalizzato, variabili di report e di gruppo e variabili definite dall'utente in Generatore report.
 ms.date: 04/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 12933c259fa02e77a76b8c31edf61db916dcde49
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f37521692b7b30cc8db1e56b81222c3e8bad38de
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080345"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681340"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Esempi di espressioni (Generatore report e SSRS)
 Le espressioni vengono usate di frequente nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per controllare il contenuto e l'aspetto del report. Vengono scritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e possono includere funzioni predefinite, codice personalizzato, variabili di gruppo e di report e variabili definite dall'utente. Le espressioni iniziano con un segno di uguale (=). Per altre informazioni sull'editor espressioni e sui tipi di riferimenti che è possibile includere, vedere [Uso delle espressioni nei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) e [Aggiungere un'espressione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
@@ -233,7 +234,7 @@ Per ulteriori informazioni su come scrivere espressioni in cui vengono utilizzat
   
     ```  
   
--   Le funzioni **Regex** della classe [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] di <xref:System.Text.RegularExpressions> sono utili per modificare il formato di stringhe esistenti, ad esempio per formattare un numero di telefono. L'espressione seguente usa la funzione **Replace** per modificare il formato di un numero telefonico di dieci cifre in un campo da "*nnn*-*nnn*-*nnnn*" a "(*nnn*) *nnn*-*nnnn*":  
+-   Le funzioni **Regex** della classe <xref:System.Text.RegularExpressions> di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sono utili per modificare il formato di stringhe esistenti, ad esempio per formattare un numero di telefono. L'espressione seguente usa la funzione **Replace** per modificare il formato di un numero telefonico di dieci cifre in un campo da "*nnn*-*nnn*-*nnnn*" a "(*nnn*) *nnn*-*nnnn*":  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  

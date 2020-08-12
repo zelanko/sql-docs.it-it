@@ -1,21 +1,21 @@
 ---
 title: Creazione e definizione di unit test di SQL Server
+description: Informazioni sugli unit test di SQL Server. Visualizzare fonti di informazioni su come creare ed eseguire unit test, risolvere i problemi ed eseguire altre attività correlate.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 3c082177-a2b1-4fde-8833-b49b2a351815
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 096fc7128d5c6d62dad0957445380ac8860645a6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 861014b336d9f75c2df1dfc7888a28eb663575de
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245537"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518751"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>Creazione e definizione di unit test di SQL Server
 

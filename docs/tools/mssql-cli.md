@@ -11,24 +11,53 @@ ms.reviewer: alayu, sstein, maghan
 ms.custom: tools|mssql-cli
 ms.date: 02/22/2018
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0363c91021baccb3ed8afd9d9dc41c23f807abac
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 03bc52a6f8941bbc8d04f8f795876b0ca664f08c
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80216450"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462285"
 ---
 # <a name="mssql-cli-command-line-query-tool-for-sql-server-preview"></a>Strumento di query da riga di comando mssql-cli per SQL Server (anteprima)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-mssql-cli è uno strumento da riga di comando interattivo per eseguire query su SQL Server, che è possibile installare in Windows, macOS o Linux.
+mssql-cli è uno strumento da riga di comando interattivo per l'esecuzione di query su SQL Server, eseguibile in Windows, macOS o Linux.
 
 ## <a name="install-mssql-cli"></a>Installare mssql-cli
 
-Per istruzioni di installazione dettagliate, vedere la [guida all'installazione](https://github.com/dbcli/mssql-cli/tree/master/doc/installation) o, se si ha familiarità con pip, eseguire l'installazione usando il comando seguente:
+Per le istruzioni dettagliate sull'installazione, vedere la [Guida all'installazione](https://github.com/dbcli/mssql-cli/tree/master/doc/installation). Gli scenari di installazione più comuni sono riepilogati di seguito.
+
+### <a name="windows-and-macos-installation"></a>Installazione in Windows e in macOS
+
+mssql-cli viene installato in Windows e in macOS tramite `pip`:
 
 ```$ pip install mssql-cli```
+
+Per istruzioni più dettagliate, vedere la [Guida all'installazione](https://github.com/dbcli/mssql-cli/tree/master/doc/installation).
+
+### <a name="linux-installation"></a>Installazione in Linux
+
+Dopo la registrazione del repository Microsoft, mssql-cli può essere installato e aggiornato tramite gestione pacchetti in diverse distribuzioni di Linux.
+
+L'esempio seguente si applica a Ubuntu 18.04 (Bionic). Altre informazioni ed esempi per altre distribuzioni sono disponibili nella [Guida all'installazione](https://github.com/dbcli/mssql-cli/tree/master/doc/installation).
+
+```
+# Import the public repository GPG keys
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+
+# Register the Microsoft Ubuntu repository
+sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod
+
+# Update the list of products
+sudo apt-get update
+
+# Install mssql-cli
+sudo apt-get install mssql-cli
+
+# Install missing dependencies
+sudo apt-get install -f
+```
 
 ## <a name="mssql-cli-documentation"></a>Documentazione di mssql-cli
 

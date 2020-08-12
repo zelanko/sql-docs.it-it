@@ -1,23 +1,23 @@
 ---
 title: Clonare un database esistente
+description: Informazioni su come clonare un database. Scoprire le procedure per la creazione di un nuovo database, la duplicazione dello schema e la replica dei dati.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 79dc8d87ab950336766283be20d79536b31a3cdd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 03dedf5c30c8370195243c11406552d12edd8394
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241594"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518901"
 ---
-# <a name="how-to-clone-an-existing-database"></a>Procedura: Clonazione di un database esistente
+# <a name="how-to-clone-an-existing-database"></a>Procedura: Clonare un database esistente
 
 In questa attività vengono utilizzati alcuni dei passaggi di procedure precedenti per creare un nuovo database in cui trasferire i dati esistenti. Vengono inoltre usati i passaggi illustrati in [Procedura: Usare il confronto schema per confrontare definizioni di database diverse](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) per sincronizzare lo schema di un database di origine e di un database del progetto.  
   

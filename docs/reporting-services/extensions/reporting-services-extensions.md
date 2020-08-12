@@ -1,5 +1,6 @@
 ---
 title: Estensioni di Reporting Services | Microsoft Docs
+description: Informazioni su come estendere le funzionalità di elaborazione dati in Reporting Services personalizzando i dati dei report, i meccanismi di notifica e i sistemi di sicurezza.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d0cf0ab94a17883f9721701b13725e34745a7875
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 957b494e9bb581a8d41e0951cec62724e46c7d0d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193819"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524572"
 ---
 # <a name="reporting-services-extensions"></a>Estensioni di Reporting Services
   L'architettura modulare di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è progettata per offrire estendibilità. È disponibile un'API in codice gestito che consente di sviluppare, installare e gestire in modo semplice le estensioni usate da numerosi componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . È possibile creare assembly privati o condivisi usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e aggiungere nuove funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per soddisfare le esigenze aziendali in continua evoluzione.  

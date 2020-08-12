@@ -1,23 +1,23 @@
 ---
 title: Compilare e distribuire in un database locale
+description: Informazioni sull'istanza del server locale fornita da SQL Server 2012. Scoprire come usare questa istanza per la compilazione, il test e il debug di progetti di sviluppo.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c3c079ddc375c1fa252975c419aff587d324dd1b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d7503049f0ea68b38206764eb3163a5a80a0b2d7
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241613"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518921"
 ---
-# <a name="how-to-build-and-deploy-to-a-local-database"></a>Procedura: Compilazione e distribuzione in un database locale
+# <a name="how-to-build-and-deploy-to-a-local-database"></a>Procedura: Compilare e distribuire in un database locale
 
 In Microsoft SQL Server 2012 è disponibile un'istanza del server su richiesta locale, denominata Runtime del database locale di SQL Server Express, che viene attivata quando si esegue il debug di un progetto di database di SQL Server. Questa istanza del server locale può essere utilizzata come sandbox per la compilazione, il test e il debug del progetto. È indipendente da tutte le istanze di SQL Server installate e non è accessibile al di fuori di SQL Server Data Tools (SSDT). Tale soluzione è ideale per gli sviluppatori che dispongono di accesso limitato ai database di produzione, o a cui non possono accedere affatto, ma che desiderano eseguire il test dei progetti in locale prima che vengano distribuiti nella produzione da persone autorizzate. Inoltre, quando si sviluppa una soluzione database per SQL Azure, è possibile avvalersi dei vantaggi forniti da questo server locale per sviluppare ed eseguire il test del progetto di database in locale, prima di distribuirlo nel cloud.  
   

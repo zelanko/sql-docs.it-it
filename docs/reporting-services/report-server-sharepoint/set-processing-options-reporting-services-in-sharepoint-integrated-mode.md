@@ -1,5 +1,6 @@
 ---
 title: Impostare le opzioni di elaborazione (Reporting Services in modalità integrata SharePoint)| Microsoft Docs
+description: In SQL Server Reporting Services in modalità integrata SharePoint, è possibile specificare quando deve essere eseguita l'elaborazione dei dati e impostare un valore di timeout e altre opzioni.
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 986ae6e89727b0cef59e4d6b3bf7e5d92bd5342b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7b698f7e3d566cd49a0106c0cdf834be894cb92f
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580544"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764799"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Impostare le opzioni di elaborazione (Reporting Services in modalità integrata SharePoint)
 

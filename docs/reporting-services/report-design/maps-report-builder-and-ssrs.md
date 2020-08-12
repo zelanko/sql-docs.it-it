@@ -1,5 +1,6 @@
 ---
 title: Mappe (Generatore report) | Microsoft Docs
+description: Acquisire familiarità con l'aggiunta al report impaginato di una mappa che visualizza i dati aziendali su uno sfondo geografico nel report impaginato in Generatore report.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b59d2545358c2536bcbd0dc6d4e5e211e0c76caa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b3c37e642ba5c9d570fc754f5eca3ab0b57d24a
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082612"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881910"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mappe (Generatore report e SSRS)
   Per visualizzare i dati aziendali su uno sfondo geografico, è possibile aggiungere una mappa al report impaginato [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Il tipo di mappa da selezionare dipende da quali informazioni si desidera comunicare nel report. È possibile aggiungere una mappa che visualizza solo le posizioni, una mappa a bolle in cui le dimensioni di queste ultime variano in base al numero di unità familiari presenti in un'area, una mappa con marcatori in cui lo stile del marcatore cambia a seconda del prodotto più remunerativo per ogni negozio oppure una mappa linea che consente di visualizzare gli itinerari tra i diversi negozi.  
@@ -70,7 +71,7 @@ ms.locfileid: "77082612"
 #### <a name="sources-of-spatial-data"></a>Origini dei dati spaziali  
  Sono supportate le seguenti origini dei dati spaziali:  
   
--   **Report di Raccolta mappe.** I dati spaziali sono incorporati nei report posizionati nella raccolta mappe. Per impostazione predefinita, la raccolta mappe è installata in *\<unità>* :\Programmi\Microsoft SQL Server\Generatore report\RaccoltaMappe.  
+-   **Report di Raccolta mappe.** I dati spaziali sono incorporati nei report posizionati nella raccolta mappe. Per impostazione predefinita, la raccolta mappe è installata in *\<drive>* :\Programmi\Microsoft SQL Server\Generatore report\RaccoltaMappe.  
   
     > [!NOTE]  
     >  Questa funzionalità di mapping di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i dati dei file di forma TIGER/Line forniti gentilmente Census Bureau degli Stati Uniti ([https://www.census.gov/](https://www.census.gov/)). I file di forma TIGER/Line sono un estratto di informazioni geografiche e cartografiche selezionate dal database Census MAF/TIGER e sono messi a disposizione gratuitamente dallo United States Census Bureau. Per altre informazioni sui file di forma TIGER/Line, vedere [TIGER/Line Shapefiles and TIGER/Line Files Technical Documentation](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html) (Documentazione tecnica dei file di forma TIGER/Line e dei file TIGER/Line). Le informazioni sui confini presenti nei file di forma TIGER/Line servono solo per la raccolta dei dati statistici e la tabulazione. La relativa rappresentazione e designazione per scopi statistici non determina un'autorità giurisdizionale oppure diritti di proprietà o titoli, né rappresentano descrizioni geografiche valide a livello legale. Census TIGER e TIGER/Line sono marchi registrati dello United States Bureau of the Census.  

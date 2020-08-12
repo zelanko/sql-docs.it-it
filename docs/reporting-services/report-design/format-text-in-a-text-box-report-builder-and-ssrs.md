@@ -1,5 +1,6 @@
 ---
 title: Formattare il testo in una casella di testo (Generatore report) | Microsoft Docs
+description: Come formattare il testo all'interno di una casella di testo e come combinare testo segnaposto e testo statico per creare unioni o modelli di posta elettronica per il testo in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f7448ee783e1e4a747942ef774a9106de09487fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5c1ea82680da039b9f38c7a3c308fd07bfa1cd89
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079964"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778903"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>Formattare il testo in una casella di testo (Generatore report e SSRS)
   È possibile formattare qualsiasi parte del testo all'interno di una casella di testo in modo indipendente e combinare testo segnaposto e testo statico in un'unica casella di testo. La possibilità di combinare i formati e aggiungere testo segnaposto consente di creare stampe unione o modelli per il testo nel report. Qualsiasi espressione può essere definita e formattata separatamente utilizzando un segnaposto.  

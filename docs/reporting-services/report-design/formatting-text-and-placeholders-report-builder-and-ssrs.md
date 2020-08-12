@@ -1,5 +1,6 @@
 ---
 title: Formattazione di testo e segnaposto (Generatore report) | Microsoft Docs
+description: Migliorare la leggibilità dei report con scelte di formato per tipi di carattere, stili, colori e allineamento all'interno del testo o in un'area dati in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5c97993b2cc2bd2585bfe6010e6aa4b1cfd59f78
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e507c40fba6755a0a7a82e3047b2b9b44cbc66d
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079521"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012659"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Formattazione di testo e segnaposto (Generatore report e SSRS)
   Una casella di testo può essere un elemento del report o una cella singola all'interno di un'area dati contenente testo, un campo calcolato, un indicatore di misura a un campo in un database o una combinazione di questi tre elementi. È possibile combinare tipi di carattere e colori, aggiungere grassetto e corsivo e utilizzare stili di paragrafo, quali allineamento e rientri sporgenti. È possibile formattare un'intera casella di testo oppure testo, numeri, espressioni o campi specifici all'interno della casella.  
@@ -31,7 +32,7 @@ ms.locfileid: "77079521"
   
  In questa illustrazione la casella di testo dispone di un bordo e tutto il testo è presente nella stessa casella, sebbene con formattazioni diverse.  
   
- Per iniziare rapidamente, vedere [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Per un'introduzione rapida, vedere [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

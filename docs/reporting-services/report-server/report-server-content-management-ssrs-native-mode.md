@@ -1,5 +1,6 @@
 ---
 title: Gestione contenuto del server di report (modalità nativa) | Microsoft Docs
+description: Informazioni sul portale Web e sulla nuova esperienza del portale Web per la gestione dei contenuti di Reporting Services. Informazioni sulla gestione degli elementi tramite le proprietà e le impostazioni di sicurezza.
 ms.date: 06/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 78fb75acfefce3a1f0c8cb28ea286a028463a56b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 12832f724da36f6359f34fd2fd950ba804619c45
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286385"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547247"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gestione contenuto del server di report (modalità nativa SSRS)
 In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], il concetto di gestione dei contenuti fa riferimento alla gestione degli elementi del server di report. È possibile gestire tutti gli elementi singolarmente tramite impostazioni di sicurezza e proprietà. Ogni elemento può essere spostato in una posizione diversa nello spazio dei nomi delle cartelle del server di report. Per gestire gli elementi in modo efficiente, è necessario conoscere quali attività vengono eseguite da un utente con ruolo Gestione contenuto. A partire da SQL Server 2016 Reporting Services o versione successiva (SSRS) CTP 3.2, è disponibile il portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. In questo articolo verranno esaminati il portale Web e la nuova esperienza del portale Web.  
@@ -42,7 +43,7 @@ In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], il concetto di
   
 -   Bilanciare le richieste di elaborazione di report inviate al server tramite la pianificazione dell'elaborazione dei report stessi e l'indicazione di quali possono essere eseguiti su richiesta e quali vengono caricati dalla cache.  
   
--   Fornire le autorizzazioni per eseguire le attività di gestione usando ruoli predefiniti, ovvero **Amministratore sistema** e **Gestione contenuto**. Per gestire in modo efficiente contenuto di un server di report, è necessario che un utente sia assegnato a entrambi ruoli.  
+-   Fornire le autorizzazioni per eseguire le attività di gestione usando ruoli predefiniti: **Amministratore sistema** e **Gestione contenuto**. Per gestire in modo efficiente contenuto di un server di report, è necessario che un utente sia assegnato a entrambi ruoli.  
   
 Gli strumenti per la gestione dei contenuti del server di report includono [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e il portale Web. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] consente di impostare valori predefiniti e di abilitare funzionalità. Il portale Web consente di concedere agli utenti l'accesso a elementi e operazioni del server di report, visualizzare e usare report e altri tipi di contenuto, nonché visualizzare e usare tutti gli elementi condivisi e le funzionalità di distribuzione del report. Il portale Web è un sito aggiornato che offre gran parte delle funzionalità di Gestione report, deprecato. Per altre informazioni, vedere [Strumenti di Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
   

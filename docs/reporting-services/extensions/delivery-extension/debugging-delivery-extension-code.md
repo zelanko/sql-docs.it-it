@@ -1,5 +1,6 @@
 ---
 title: Esecuzione del debug del codice dell'estensione per il recapito | Microsoft Docs
+description: Informazioni su come usare gli strumenti di debug di Microsoft .NET Framework per analizzare il codice dell'estensione per il recapito e individuare gli errori presenti.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7d959da-5005-4a50-aca7-2cef36aa9947
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1abe30a462e8bf303b0171dbeeb82c407c80ca2a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2e28243c1cb41a8c7a85ddbe381302a18d161f2e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193750"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529127"
 ---
 # <a name="debugging-delivery-extension-code"></a>Esecuzione del debug del codice dell'estensione per il recapito
   In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] sono disponibili diversi strumenti di debug che consentono di analizzare il codice dell'estensione per il recapito e di individuare gli errori. Gli strumenti più appropriati da utilizzare variano in base alla finalità desiderata. In questo esempio viene utilizzato [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)].  

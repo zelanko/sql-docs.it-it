@@ -1,5 +1,6 @@
 ---
 title: Aggiungere un sottoreport e i parametri (Generatore report) | Microsoft Docs
+description: Informazioni su come aggiungere un sottoreport. Usare i sottoreport per creare un report principale come contenitore per più report correlati in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a74ef0a64fb7d1a77f3e336f98aeaa245c4458d8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9131d15b8374df4b3db22946583d3349f0386e91
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080674"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462305"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Aggiungere un sottoreport e di parametri (Generatore report e SSRS)
   Aggiungere sottoreport a un report quando si desidera creare un report principale in cui è possibile includere più report correlati. Un sottoreport rappresenta un riferimento a un altro report. Per correlare i report tramite valori dei dati, ad esempio per fare in modo che in più report vengano visualizzati i dati relativi allo stesso cliente, è necessario progettare come sottoreport un report con parametri, ovvero un report in cui sono visualizzati i dettagli relativi a un cliente specifico. Quando al report principale si aggiunge un sottoreport, è possibile specificare parametri da passare a quest'ultimo.  
@@ -50,7 +51,7 @@ ms.locfileid: "77080674"
   
 2.  Nella finestra di dialogo **Proprietà sottoreport** fare clic su **Parametri**.  
   
-3.  Fare clic su **Aggiungi**. Alla griglia dei parametri verrà aggiunta una nuova riga.  
+3.  Scegliere **Aggiungi**. Alla griglia dei parametri verrà aggiunta una nuova riga.  
   
 4.  Nella casella di testo **Nome** digitare il nome di un parametro nel sottoreport o sceglierlo dalla casella di riepilogo. Il nome deve corrispondere a un parametro del report e non al parametro di query nel sottoreport.  
   

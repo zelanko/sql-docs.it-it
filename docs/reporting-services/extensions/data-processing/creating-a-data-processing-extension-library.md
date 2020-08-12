@@ -1,5 +1,6 @@
 ---
 title: Creazione di una libreria di estensioni per l'elaborazione dati | Microsoft Docs
+description: Informazioni su come creare un'estensione per l'elaborazione dati di Reporting Services. Visualizzare il codice di esempio ed esaminare i requisiti dello spazio dei nomi e del file di libreria che è necessario soddisfare.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82f4b71b-dd39-467d-8d8c-6771eb2b12de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7e3c3f4a30b828b889ebfe61617460ff58962fdc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 43dbf019b4721c32f479b5862417e90f8e97f2f1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194078"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529147"
 ---
 # <a name="creating-a-data-processing-extension-library"></a>Creazione di una libreria di estensioni per l'elaborazione dati
   A ogni estensione per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] creata deve essere assegnato uno spazio dei nomi univoco e ogni estensione deve essere compilata in una libreria o in un file di assembly. Il nome esatto dello spazio dei nomi non è importante, ma è necessario che sia univoco e non condiviso con altre estensioni. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] utilizza lo spazio dei nomi <xref:Microsoft.ReportingServices.DataProcessing> per le estensioni per l'elaborazione dati disponibili in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. È necessario creare spazi dei nomi univoci personalizzati per le estensioni per l'elaborazione dati della società.  

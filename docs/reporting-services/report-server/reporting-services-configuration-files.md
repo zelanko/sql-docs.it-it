@@ -1,5 +1,6 @@
 ---
 title: File di configurazione di Reporting Services | Microsoft Docs
+description: Informazioni sui file di configurazione in cui Reporting Services archivia informazioni sui componenti. Potrebbe essere necessario modificare alcuni file per aggiungere o configurare impostazioni avanzate.
 ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b0bd7ad95fcda039c6fd5a9299f4339d35b8a619
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c9a56dd5cb8e26c57f25f458eff96b467df16cf6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67564127"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541463"
 ---
 # <a name="reporting-services-configuration-files"></a>File di configurazione di Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le informazioni sui componenti vengono archiviate nel Registro di sistema e in file di configurazione che vengono copiati nel file system durante l'installazione. I file di configurazione contengono una combinazione di valori solo per uso interno e valori definiti dall'utente. I valori definiti dall'utente vengono specificati durante l'installazione, tramite gli strumenti di configurazione e le utilità della riga di comando e mediante la modifica manuale dei file di configurazione.  
@@ -47,14 +48,14 @@ C:\Program Files\Microsoft SQL Server Reporting Services\SSRS
   
 |File di archiviazione|Descrizione|Location|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|Archivia le impostazioni di configurazione per le aree funzionali del servizio del server di report: Gestione report o il portale Web, il servizio Web ReportServer e l'elaborazione in background. Per altre informazioni su ogni impostazione, vedere [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<Directory installazione> \Reporting Services \ReportServer|  
-|RSSrvPolicy.config|Nel file sono archiviati i criteri di sicurezza dall'accesso di codice per le estensioni del server. Per ulteriori informazioni su questo file, vedere [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Directory installazione> \Reporting Services \ReportServer|  
-|RSMgrPolicy.config|Nel file sono archiviati i criteri di sicurezza dall'accesso di codice per il portale Web. Per ulteriori informazioni su questo file, vedere [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Directory installazione> \Reporting Services \ReportManager|  
-|Web.config per il servizio Web ReportServer|Nel file sono incluse solo le impostazioni necessarie per ASP.NET.|\<Directory installazione> \Reporting Services \ReportServer|  
-|Web.config per Gestione report|Nel file sono incluse solo le impostazioni necessarie per ASP.NET se applicabile per la versione di SSRS.|\<Directory installazione> \Reporting Services \ReportManager|  
-|ReportingServicesService.exe.config|Nel file sono archiviate le impostazioni di configurazione che specificano i livello di traccia e le opzioni di registrazione per il servizio del server di report. Per ulteriori informazioni sugli elementi di questo file, vedere [ReportingServicesService Configuration File](../../reporting-services/report-server/reportingservicesservice-configuration-file.md).|\<Directory installazione> \Reporting Services \ReportServer \Bin|  
+|RSReportServer.config|Nel file sono archiviate le impostazioni di configurazione per caratteristiche del servizio del server di report, ovvero Gestione report o il portale Web, il servizio Web ReportServer e l'elaborazione in background. Per altre informazioni su ogni impostazione, vedere [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<Installation directory> \Reporting Services \ReportServer|  
+|RSSrvPolicy.config|Nel file sono archiviati i criteri di sicurezza dall'accesso di codice per le estensioni del server. Per ulteriori informazioni su questo file, vedere [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Installation directory> \Reporting Services \ReportServer|  
+|RSMgrPolicy.config|Nel file sono archiviati i criteri di sicurezza dall'accesso di codice per il portale Web. Per ulteriori informazioni su questo file, vedere [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Installation directory> \Reporting Services \ReportManager|  
+|Web.config per il servizio Web ReportServer|Nel file sono incluse solo le impostazioni necessarie per ASP.NET.|\<Installation directory> \Reporting Services \ReportServer|  
+|Web.config per Gestione report|Nel file sono incluse solo le impostazioni necessarie per ASP.NET se applicabile per la versione di SSRS.|\<Installation directory> \Reporting Services \ReportManager|  
+|ReportingServicesService.exe.config|Nel file sono archiviate le impostazioni di configurazione che specificano i livello di traccia e le opzioni di registrazione per il servizio del server di report. Per ulteriori informazioni sugli elementi di questo file, vedere [ReportingServicesService Configuration File](../../reporting-services/report-server/reportingservicesservice-configuration-file.md).|\<Installation directory> \Reporting Services \ReportServer \Bin|  
 |Impostazioni del Registro di sistema|Nel Registro di sistema sono archiviati lo stato della configurazione e altre impostazioni utilizzate per disinstallare Reporting Services. Durante la risoluzione di problemi di installazione o di configurazione, è possibile visualizzare queste impostazioni per ottenere informazioni sulla configurazione del server di report.<br /><br /> Non modificare direttamente queste impostazioni poiché questa operazione potrebbe rendere non valida l'installazione.|HKEY_LOCAL_MACHINE \SOFTWARE \Microsoft \Microsoft SQL Server \\<IDIstanza\> \Setup<br /><br /> **- e -**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Services\ReportServer|  
-|RSReportDesigner.config|In questo file sono archiviate impostazioni di configurazione per Progettazione report. Per altre informazioni, vedere [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).|\<unità>:\Programmi \Microsoft Visual Studio 10 \Common7 \IDE \PrivateAssemblies.|  
+|RSReportDesigner.config|In questo file sono archiviate impostazioni di configurazione per Progettazione report. Per altre informazioni, vedere [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).|\<drive>:\Programmi \Microsoft Visual Studio 10 \Common7 \IDE \PrivateAssemblies.|  
 |RSPreviewPolicy.config|Nel file sono archiviati i criteri di sicurezza dall'accesso di codice per le estensioni del server utilizzate durante l'anteprima del report. Per ulteriori informazioni su questo file, vedere [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|C:\Programmi\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssembliesr|  
   
 ##  <a name="summary-of-configuration-files-sharepoint-mode"></a><a name="bkmk_config_file_Summary_sharepoint_mode"></a> Riepilogo dei file di configurazione (modalità SharePoint)  
@@ -69,11 +70,11 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 |File di archiviazione|Descrizione|Location|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|Archivia le impostazioni di configurazione per le aree funzionali del servizio del server di report: Gestione report o il portale Web, il servizio Web ReportServer e l'elaborazione in background. Per altre informazioni su ogni impostazione, vedere [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<Directory installazione> \Reporting Services \ReportServer|  
-|RSSrvPolicy.config|Nel file sono archiviati i criteri di sicurezza dall'accesso di codice per le estensioni del server. Per ulteriori informazioni su questo file, vedere [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Directory installazione> \Reporting Services \ReportServer|  
-|Web.config per il servizio Web ReportServer|Nel file sono incluse solo le impostazioni necessarie per ASP.NET se applicabile per la versione di SSRS.|\<Directory installazione> \Reporting Services \ReportServer|  
+|RSReportServer.config|Nel file sono archiviate le impostazioni di configurazione per caratteristiche del servizio del server di report, ovvero Gestione report o il portale Web, il servizio Web ReportServer e l'elaborazione in background. Per altre informazioni su ogni impostazione, vedere [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<Installation directory> \Reporting Services \ReportServer|  
+|RSSrvPolicy.config|Nel file sono archiviati i criteri di sicurezza dall'accesso di codice per le estensioni del server. Per ulteriori informazioni su questo file, vedere [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Installation directory> \Reporting Services \ReportServer|  
+|Web.config per il servizio Web ReportServer|Nel file sono incluse solo le impostazioni necessarie per ASP.NET se applicabile per la versione di SSRS.|\<Installation directory> \Reporting Services \ReportServer|  
 |Impostazioni del Registro di sistema|Nel Registro di sistema sono archiviati lo stato della configurazione e altre impostazioni utilizzate per disinstallare Reporting Services. Sono inoltre archiviate informazioni su ogni applicazione di servizio di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Non modificare direttamente queste impostazioni poiché questa operazione potrebbe rendere non valida l'installazione.|HKEY_LOCAL_MACHINE \SOFTWARE \Microsoft \Microsoft SQL Server \\<IDIstanza\> \Setup<br /><br /> ID istanza di esempio: MSSQL13.MSSQLSERVER<br /><br /> **- e -**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Reporting Services\Service Applications|  
-|RSReportDesigner.config|In questo file sono archiviate impostazioni di configurazione per Progettazione report. Per altre informazioni, vedere [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).|\<unità>:\Programmi \Microsoft Visual Studio 10 \Common7 \IDE \PrivateAssemblies.|  
+|RSReportDesigner.config|In questo file sono archiviate impostazioni di configurazione per Progettazione report. Per altre informazioni, vedere [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).|\<drive>:\Programmi \Microsoft Visual Studio 10 \Common7 \IDE \PrivateAssemblies.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Server di report di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   

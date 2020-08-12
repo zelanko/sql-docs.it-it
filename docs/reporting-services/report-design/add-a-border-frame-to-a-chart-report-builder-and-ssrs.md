@@ -1,5 +1,6 @@
 ---
 title: Aggiungere un bordo o un frame a un grafico (Generatore report) | Microsoft Docs
+description: Informazioni su come aumentare l'impatto visivo di un grafico usando un bordo/frame intorno alla parte esterna in Generatore report.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b1e3f4b0c6f4efca4c3bd0b901acd715de0f74f6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 91e84e8ee73c8e0bbedd4df4de4cf19ec627e7dc
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080794"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681580"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Aggiungere un bordo o un frame a un grafico (Generatore report e SSRS)
   Per aumentare l'impatto visivo di un grafico è possibile utilizzare un bordo/frame intorno alla parte esterna del grafico. È possibile selezionare un bordo o un frame utilizzando la finestra di dialogo **Proprietà grafico** o il riquadro Proprietà. Non è possibile applicare i bordi del grafico ad altre aree dati.  

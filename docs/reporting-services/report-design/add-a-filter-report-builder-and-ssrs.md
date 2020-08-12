@@ -1,5 +1,6 @@
 ---
 title: Aggiungere un filtro (Generatore report) | Microsoft Docs
+description: Informazioni su come aggiungere un filtro a un set di dati, un'area dati o un gruppo per includere o escludere valori specifici nei calcoli o nella visualizzazione.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0eadf07ed347ce2b77eccab229ef6551a62d63d8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2606be83dfd87916df4c40d069321b91dc465837
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080749"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689510"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Aggiungere un filtro (Generatore report e SSRS)
   Aggiungere un filtro a un set di dati, un'area dati o un gruppo per includere o escludere valori specifici nei calcoli o nella visualizzazione. In fase di esecuzione, i filtri vengono applicati prima al set di dati, poi all'area dati e infine al gruppo procedendo dall'alto verso il basso per le gerarchie di gruppi. In una tabella, una matrice o un elenco i filtri per gruppi di righe, gruppi di colonne e gruppi adiacenti vengono applicati in modo indipendente. Anche in un grafico i filtri per gruppi di categorie e gruppi di serie vengono applicati in modo indipendente.  
@@ -38,7 +39,7 @@ ms.locfileid: "77080749"
   
 3.  Fare clic su **Filtri**. Verrà visualizzato l'elenco corrente di equazioni di filtro. Per impostazione predefinita, l'elenco è vuoto.  
   
-4.  Fare clic su **Aggiungi**. Verrà visualizzata una nuova equazione di filtro vuota.  
+4.  Scegliere **Aggiungi**. Verrà visualizzata una nuova equazione di filtro vuota.  
   
 5.  Nella casella **Espressione**digitare o selezionare l'espressione per il campo da filtrare. Per modificare l'espressione, fare clic sul pulsante dell'espressione (*fx*).  
   
@@ -62,7 +63,7 @@ ms.locfileid: "77080749"
   
 4.  Fare clic su **Filtri**. Verrà visualizzato l'elenco corrente di equazioni di filtro. Per impostazione predefinita, l'elenco è vuoto.  
   
-5.  Fare clic su **Aggiungi**. Verrà visualizzata una nuova equazione di filtro vuota.  
+5.  Scegliere **Aggiungi**. Verrà visualizzata una nuova equazione di filtro vuota.  
   
 6.  Nella casella **Espressione**digitare o selezionare l'espressione per il campo da filtrare. Per modificare l'espressione, fare clic sul pulsante dell'espressione (*fx*).  
   
@@ -86,7 +87,7 @@ ms.locfileid: "77080749"
   
 4.  Fare clic su **Filtri**. Verrà visualizzato l'elenco corrente di equazioni di filtro. Per impostazione predefinita, l'elenco è vuoto.  
   
-5.  Fare clic su **Aggiungi**. Verrà visualizzata una nuova equazione di filtro vuota.  
+5.  Scegliere **Aggiungi**. Verrà visualizzata una nuova equazione di filtro vuota.  
   
 6.  Nella casella **Espressione**digitare o selezionare l'espressione per il campo da filtrare. Per modificare l'espressione, fare clic sul pulsante dell'espressione (*fx*).  
   
@@ -110,7 +111,7 @@ ms.locfileid: "77080749"
   
 4.  Fare clic su **Filtri**. Verrà visualizzato l'elenco corrente di equazioni di filtro. Per impostazione predefinita, l'elenco è vuoto.  
   
-5.  Fare clic su **Aggiungi**. Verrà visualizzata una nuova equazione di filtro vuota.  
+5.  Scegliere **Aggiungi**. Verrà visualizzata una nuova equazione di filtro vuota.  
   
 6.  Nella casella **Espressione**digitare o selezionare l'espressione per il campo da filtrare. Per modificare l'espressione, fare clic sul pulsante dell'espressione (*fx*).  
   

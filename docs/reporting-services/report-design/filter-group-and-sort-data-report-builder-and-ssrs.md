@@ -1,5 +1,6 @@
 ---
 title: Filtrare, raggruppare e ordinare i dati (Generatore report) | Microsoft Docs
+description: Informazioni sui modi per controllare, organizzare e ordinare i dati dei report con espressioni basate su campi del set di dati, parametri nel riquadro dei dati del report di Generatore report.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ f1_keywords:
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e08a4a43897c1497c81a9e01f010fa99a252130e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eca67966ff36c2100df7d46f07e150ed6aa32d1c
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080174"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681390"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtro, raggruppamento e ordinamento di dati (Generatore report e SSRS)
   In un report le espressioni vengono usate per facilitare il controllo, l'organizzazione e l'ordinamento di dati del report. Per impostazione predefinita, mentre si creano set di dati e si progetta il layout del report, le proprietà degli elementi del report vengono impostate automaticamente su espressioni basate su campi del set di dati, parametri e altri elementi visualizzati nel riquadro dei dati del report. È inoltre possibile aggiungere un pulsante di ordinamento interattivo a una tabella o una cella della matrice, in modo da consentire a un utente di modificare in modo interattivo l'ordinamento della riga per gruppi o righe all'interno di gruppi.  
@@ -107,7 +108,7 @@ ms.locfileid: "77080174"
   
  Tutti e tre i tipi di ordinamento possono essere combinati nello stesso report. Per impostazione predefinita, l'ordinamento è determinato dall'ordine in cui i dati vengono restituiti dalla query del set di dati. Le espressioni di ordinamento vengono applicate nell'area dati e nel gruppo di aree dati. Gli ordinamenti interattivi vengono applicati dopo le espressioni di ordinamento.  
   
- Per le espressioni contenenti funzioni di aggregazione, la maggior parte dei risultati non è interessata dall'ordinamento. I valori restituiti per le funzioni di aggregazione seguenti sono interessati dall'ordinamento:: First, Last e Previous. Per altre informazioni, vedere [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
+ Per le espressioni contenenti funzioni di aggregazione, la maggior parte dei risultati non è interessata dall'ordinamento. I valori restituiti per le funzioni di aggregazione seguenti sono interessati dall'ordinamento: First, Last e Previous. Per altre informazioni, vedere [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>Ordinamento dei dati di una query del set di dati  
  Includere l'ordinamento nella query del set di dati per eseguire un preordinamento dei dati prima che vengano recuperati per un report. Quando si ordinano i dati nella query, l'operazione di ordinamento viene eseguita dall'origine dati anziché dal componente Elaborazione report.  

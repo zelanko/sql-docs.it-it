@@ -1,5 +1,6 @@
 ---
 title: Server di report di Reporting Services (modalità SharePoint) | Microsoft Docs
+description: Un server di report di Reporting Services con modalità SharePoint può essere eseguito in SharePoint per poter usare le funzionalità di collaborazione e gestione dei vari tipi di contenuto di Reporting Services.
 ms.date: 09/26/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: af25232f5a1603f25814309270813188c05a89fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 66cd108b1f96e003645510e3a17a3627a45495e4
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68262347"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764957"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Server di report di Reporting Services (modalità SharePoint)
 

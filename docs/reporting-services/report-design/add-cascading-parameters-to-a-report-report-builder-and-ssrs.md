@@ -1,5 +1,6 @@
 ---
 title: Aggiungere parametri di propagazione a un report (Generatore report) | Microsoft Docs
+description: Informazioni su come includere parametri di propagazione nei report in Generatore report per gestire grandi quantità di dati.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55cba07f738c9a7a6b87f656687f545b64fd14cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3335665e1e7e7212c6521e6c6c654a1eb5ee04ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080625"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035041"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Aggiunta di parametri di propagazione a un report (Generatore report e SSRS)
   I parametri di propagazione consentono di gestire quantità elevate di dati del report. È possibile definire un set di parametri correlati in modo che l'elenco dei valori di un parametro dipenda dal valore scelto per un altro parametro. Il primo parametro può essere ad esempio indipendente e presentare un elenco di categorie di prodotti. Quando l'utente seleziona una categoria, il secondo parametro dipende dal valore del primo parametro. I relativi valori vengono aggiornati con un elenco di sottocategorie all'interno della categoria scelta. Quando l'utente visualizza il report, per filtrarne i dati vengono utilizzati sia i valori dei parametri di categoria che di sottocategoria.  
@@ -113,7 +114,7 @@ ms.locfileid: "77080625"
     WHERE (Category = @Category)  
     ```  
   
-     Nella clausola WHERE Category è il nome di un campo di \<tabella> e @Category è un parametro di query. Questa istruzione produce un elenco di sottocategorie per la categoria specificata in @Category. In fase di esecuzione tale valore verrà compilato con il valore selezionato dall'utente per il parametro del report con nome identico.  
+     Nella clausola WHERE, Category è il nome di un campo di \<table> e @Category è un parametro di query. Questa istruzione produce un elenco di sottocategorie per la categoria specificata in @Category. In fase di esecuzione tale valore verrà compilato con il valore selezionato dall'utente per il parametro del report con nome identico.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

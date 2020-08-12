@@ -4,23 +4,23 @@ titleSuffix: SQL Server Distributed Replay
 description: Informazioni su come modificare gli account del servizio client e del controller di Riesecuzione distribuita e quindi come riapplicare gli elenchi di controllo di accesso.
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 7abe40c16dc49e948fbca68486f96db221e1aae8
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 4c8a0f29addf80905ef6edaf5920e479fbaa48e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000451"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681161"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Modificare gli account dei servizi controller e client
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In questo argomento verrà illustrato come modificare gli account dei servizi client e controller di Riesecuzione distribuita e quindi riapplicare gli elenchi di controllo di accesso (ACL).  
   
@@ -28,7 +28,7 @@ In questo argomento verrà illustrato come modificare gli account dei servizi cl
   
 1.  Nel computer in cui sono installati i servizi di ridistribuzione distribuita digitare **dcomcnfg**al prompt dei comandi.  
   
-2.  Fare doppio clic su **Servizi**, scorrere verso il basso e fare clic con il pulsante destro del mouse su **nome servizio>\< Riesecuzione distribuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** e quindi fare clic su **Avvia** o **Arresta**.  
+2.  Fare doppio clic su **Servizi**, scorrere verso il basso e fare clic con il pulsante destro del mouse su Riesecuzione distribuita **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<service name>** , quindi scegliere **Avvia** o **Arresta**.  
   
 ### <a name="to-modify-the-distributed-replay-controller-service"></a>Per modificare il servizio controller di Riesecuzione distribuita  
   

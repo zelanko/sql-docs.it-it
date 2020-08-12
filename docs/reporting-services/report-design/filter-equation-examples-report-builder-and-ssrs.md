@@ -1,5 +1,6 @@
 ---
 title: Esempi di equazioni di filtro (Generatore report) | Microsoft Docs
+description: Informazioni su come creare un filtro per i report. Considerare questi filtri di esempio di uso frequente per crearne di personalizzati.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 23a76863222fdd58d769031020ac888966596146
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 074a7d7b300d9ae55776199479b229407b2ba3a1
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080127"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689736"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>Esempi di equazioni di filtro (Generatore report e SSRS)
   Per creare un filtro è necessario specificare una o più equazioni di filtro. Un'equazione di filtro include un'espressione, un tipo di dati, un operatore e un valore. In questo argomento vengono forniti esempi di filtri di uso comune.  
@@ -26,7 +27,7 @@ ms.locfileid: "77080127"
 ## <a name="filter-examples"></a>Esempi di filtri  
  Nella tabella seguente sono riportati esempi di equazioni di filtro che utilizzano tipi di dati e operatori differenti. L'ambito per il confronto è determinato dall'elemento del report per il quale è definito il filtro. Per un filtro definito in un set di dati, ad esempio, **TOP% 10** si riferisce al primo 10 percento di valori nel set di dati. Per un filtro definito in un gruppo, **TOP% 10** rappresenta il primo 10 percento di valori nel gruppo.  
   
-|Espressione semplice|Tipo di dati|Operatore|valore|Descrizione|  
+|Espressione semplice|Tipo di dati|Operatore|Valore|Descrizione|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|**Integer**|**>**|`7`|Sono inclusi valori di dati maggiori di 7.|  
 |`[SUM(Quantity)]`|**Integer**|**TOP N**|`10`|Include i primi 10 valori di dati.|  

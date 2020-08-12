@@ -1,21 +1,21 @@
 ---
 title: Sviluppo del database connesso
+description: Scoprire in che modo SQL Server Data Tools può interagire con i database connessi. Informazioni su come esplorare entità, progettare tabelle, modificare script ed eseguire altre attività.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 068418e04624d912671e5b390823fb0903ba50af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 340df9136dd674f4d340779dfc3d2d5e4db32042
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256135"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519071"
 ---
 # <a name="connected-database-development"></a>Sviluppo del database connesso
 

@@ -1,5 +1,6 @@
 ---
 title: Eseguire il debug di stored procedure
+description: Informazioni su come usare il debugger Transact-SQL per eseguire il debug interattivo di una stored procedure. Vedere come visualizzare lo stack di chiamate SQL, le variabili locali e i parametri.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: efd64369a6a8e666d67f2c277df62dc9af9c4e99
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fc60da27d0176057fb7340b4db743786efe27017
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241436"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518871"
 ---
 # <a name="how-to-debug-stored-procedures"></a>Procedura: Eseguire il debug di stored procedure
 

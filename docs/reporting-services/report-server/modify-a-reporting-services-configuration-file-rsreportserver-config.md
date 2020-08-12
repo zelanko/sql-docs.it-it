@@ -1,5 +1,6 @@
 ---
 title: Modificare un file di configurazione di Reporting Services (RSreportserver.config) | Microsoft Docs
+description: Informazioni su come modificare i file di configurazione in Reporting Services per aggiungere o configurare impostazioni avanzate. Alcune impostazioni sono solo per uso interno. Procedere con cautela.
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e97dff2a6d08207d95b28ce2f9a0cedafd9b6fff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 315f1129f6c83f36de02efebf4eb4ec58cb4c48f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581123"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547949"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le impostazioni dell'applicazione vengono archiviate in un set di file di configurazione. Durante l'installazione vengono creati i file di configurazione per ogni istanza del server di report installata. All'interno di ogni file, i valori vengono impostati in questa fase o nel momento in cui si utilizzano strumenti e applicazioni per configurare un server per l'esecuzione di operazioni. In alcuni casi, è necessario modificare direttamente un file per aggiungere o configurare impostazioni avanzate. Le impostazioni di configurazione sono specificate come elementi o attributi XML. Se si conoscono il linguaggio XML e i file di configurazione, è possibile utilizzare un editor di testo o di codice per modificare le impostazioni definibili dall'utente.  

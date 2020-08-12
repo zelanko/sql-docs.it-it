@@ -1,5 +1,6 @@
 ---
 title: Indicatori (Generatore report) | Microsoft Docs
+description: Informazioni sugli indicatori, i piccoli misuratori sui quali è possibile leggere lo stato di un singolo valore di dati nei record impaginati in Generatore report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2e62ec26c0019e82b3f0e37dbdd9c1539332212
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2b440f82dc7d758e7f6eb17bdf0f13e818348423
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082075"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779513"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indicatori (Generatore report e SSRS)
   Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] gli indicatori sono piccoli misuratori sui quali è possibile leggere immediatamente lo stato di un singolo valore di dati. Le icone che rappresentano gli indicatori e i relativi stati sono semplici e visivamente valide anche quando vengono utilizzate in dimensioni ridotte.  
@@ -41,7 +42,7 @@ ms.locfileid: "77082075"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include set e icone di indicatori predefiniti che possono essere usati così come sono oppure personalizzati in base alle specifiche esigenze.  
   
- Per altre informazioni sull'uso degli indicatori come KPI, vedere [Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report &#40;Generatore report&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Per altre informazioni sull'utilizzo degli indicatori come KPI, vedere [Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report &#40;Generatore report&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  È possibile pubblicare indicatori separatamente da un report come parti del report. Altre informazioni su [Parti del report](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  

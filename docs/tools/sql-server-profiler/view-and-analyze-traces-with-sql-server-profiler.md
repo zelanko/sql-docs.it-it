@@ -1,6 +1,7 @@
 ---
 title: Visualizzare e analizzare le tracce
 titleSuffix: SQL Server Profiler
+description: Informazioni su come usare SQL Server Profiler per visualizzare i dati di traccia, trovare eventi specifici, visualizzare i nomi degli oggetti e risolvere i problemi.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: bd9c65d104e6b397ea3483cd3873f4014d7798b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c806d55867c63c273bd528ecafc4419d31fde7e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307785"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722628"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>Visualizzare e analizzare le tracce con SQL Server Profiler
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per visualizzare i dati eventi acquisiti in una traccia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] consente di visualizzare i dati in base alle proprietà definite della traccia. Per analizzare i dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile copiarli in un altro programma, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)] Se la colonna di dati **Text** è inclusa nella traccia, in Ottimizzazione guidata è possibile usare un file di traccia contenente eventi correlati a batch SQL e RPC (Remote Procedure Call). Per assicurarsi di acquisire gli eventi e le colonne corretti da utilizzare con Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] , utilizzare il modello di ottimizzazione predefinito disponibile in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   

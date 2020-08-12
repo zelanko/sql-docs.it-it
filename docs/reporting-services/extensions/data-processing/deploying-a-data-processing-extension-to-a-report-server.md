@@ -1,5 +1,6 @@
 ---
 title: "Procedura: Distribuire un'estensione per l'elaborazione dati in un server di report | Microsoft Docs"
+description: Informazioni su come distribuire un'estensione per l'elaborazione dati in un server di report apprendendo quali voci aggiungere a file di configurazione specifici.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3f0b775b53244cd0a428bb4ce4023906d2f5119
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a43b94a4ef45b210ea2f54b0401962e79ca9a489
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194131"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529583"
 ---
 # <a name="deploying-a-data-processing-extension-to-a-report-server"></a>Distribuzione di un'estensione per l'elaborazione dati in un server di report
   I server di report utilizzano le estensioni per l'elaborazione dati per il recupero e l'elaborazione di dati nei report visualizzabili. È necessario distribuire l'assembly dell'estensione per l'elaborazione dati in un server di report come assembly privato. È inoltre necessario creare una voce nel file di configurazione del server di report, ovvero RSReportServer.config.  
@@ -25,7 +26,7 @@ ms.locfileid: "63194131"
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>Per distribuire un assembly dell'estensione per l'elaborazione dati  
   
-1.  Copiare l'assembly dal percorso di gestione temporanea nella directory bin del server di report in cui si desidera utilizzare l'estensione per l'elaborazione dati. Il percorso predefinito della directory bin del server di report è %Programmi%\Microsoft SQL Server\MSRS10_50.\<*NomeIstanza*>\Reporting Services\ReportServer\bin.  
+1.  Copiare l'assembly dal percorso di gestione temporanea nella directory bin del server di report in cui si desidera utilizzare l'estensione per l'elaborazione dati. Il percorso predefinito della directory bin del server di report è %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer\bin.  
   
     > [!NOTE]  
     >  Con questo passaggio viene evitato l'aggiornamento a un'istanza di SQL Server più recente. Per ulteriori informazioni, vedere [Upgrade and Migrate Reporting Services](../../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
@@ -50,7 +51,7 @@ ms.locfileid: "63194131"
   
      Il valore per **Name** è il nome univoco dell'estensione per l'elaborazione dati. Il valore per **Type** è un elenco delimitato da virgole che include una voce per lo spazio dei nomi completo della classe che implementa le interfacce <xref:Microsoft.ReportingServices.Interfaces.IExtension> e <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, seguita dal nome dell'assembly, senza l'estensione dll. Per impostazione predefinita, le estensioni per l'elaborazione dati sono visibili. Per nascondere un'estensione dalle interfacce utente, come Gestione report, aggiungere un attributo **Visible** all'elemento **Extension** e impostarlo su **false**.  
   
-5.  Aggiungere un gruppo di codice per l'assembly personalizzato che conceda l'autorizzazione **FullTrust** per l'estensione. A questo scopo, aggiungere il gruppo di codice al file rssrvpolicy.config che per impostazione predefinita si trova nel percorso %Programmi%\Microsoft SQL Server\\<MSRS10_50.\<*Nome istanza*>\Reporting Services\ReportServer. Il gruppo di codice può essere simile a quanto riportato di seguito:  
+5.  Aggiungere un gruppo di codice per l'assembly personalizzato che conceda l'autorizzazione **FullTrust** per l'estensione. A questo scopo, aggiungere il gruppo di codice al file rssrvpolicy.config che per impostazione predefinita si trova in %ProgramFiles%\Microsoft SQL Server\\<MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer. Il gruppo di codice può essere simile a quanto riportato di seguito:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  

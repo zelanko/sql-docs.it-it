@@ -1,5 +1,6 @@
 ---
 title: Intestazioni di pagina e piè di pagina (Generatore report) | Microsoft Docs
+description: Informazioni sui molti elementi che è possibile aggiungere a intestazioni e piè di pagina, tra cui testo, immagini, rettangoli, bordi, colore di sfondo ed espressioni in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +22,12 @@ f1_keywords:
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a94f7bf5e149431135972e4911463c5f86ffaa5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ca788f2b86e2e71465228a7e00cf55efb86c8914
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082465"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778373"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Intestazioni di pagina e piè di pagina (Generatore report e SSRS)
   Un report può contenere un'intestazione e un piè di pagina, posizionati rispettivamente nella parte superiore e inferiore di ogni pagina. Le intestazioni e i piè di pagina possono contenere testo statico, immagini, linee, rettangoli, bordi, colore di sfondo, immagini di sfondo ed espressioni. Le espressioni includono riferimenti ai campi del set di dati per i report contenenti un solo set di dati e chiamate di funzioni di aggregazione che includono il set di dati come ambito.  

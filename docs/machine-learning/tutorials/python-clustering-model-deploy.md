@@ -1,32 +1,35 @@
 ---
 title: 'Esercitazione su Python: Distribuire un modello di clustering'
+titleSuffix: SQL machine learning
 description: Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello di clustering in Python con Machine Learning in SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/27/2019
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0343c3c410c8cf7b76b391fecd6ff57bff5e80d3
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 93b01f213ccac6d6ede0965cc55f3e11a12623ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606442"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730522"
 ---
 # <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Esercitazione su Python: Distribuire un modello per categorizzare i clienti con Machine Learning in SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello di clustering, sviluppato in Python, in un database SQL usando Machine Learning Services per SQL Server oppure in cluster Big Data.
+Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello di clustering, sviluppato in Python, in un database usando Machine Learning Services per SQL Server oppure in cluster Big Data.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello di clustering, sviluppato in Python, in un database SQL Server usando Machine Learning Services per SQL Server.
+Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello di clustering, sviluppato in Python, in un database usando Machine Learning Services per SQL Server.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello di clustering, sviluppato in Python, in un database usando Machine Learning Services per Istanza gestita di SQL di Azure.
 ::: moniker-end
 
 Per eseguire regolarmente il clustering, man mano che si registrano nuovi clienti, è necessario essere in grado di chiamare lo script Python da qualsiasi app. A questo scopo è possibile distribuire lo script Python in un database inserendolo all'interno di una stored procedure SQL. Poiché il modello viene eseguito nel database, può essere facilmente sottoposto a training in base ai dati archiviati nel database.
@@ -42,7 +45,7 @@ In questo articolo si apprenderà come:
 
 Nella [prima parte](python-clustering-model.md) sono stati installati i prerequisiti ed è stato ripristinato il database di esempio.
 
-Nella [seconda parte](python-clustering-model-prepare-data.md) si è appreso come preparare i dati di un database SQL per il clustering.
+Nella [seconda parte](python-clustering-model-prepare-data.md) si è appreso come preparare i dati di un database per il clustering.
 
 Nella [parte tre](python-clustering-model-build.md) si è appreso come creare ed eseguire il training di un modello di clustering K-Means in Python.
 
@@ -130,7 +133,7 @@ END;
 GO
 ```
 
-## <a name="perform-clustering-in-sql-database"></a>Eseguire il clustering nel database SQL
+## <a name="perform-clustering"></a>Eseguire il clustering
 
 Ora che è stata creata la stored procedure, eseguire lo script seguente per eseguire il clustering usando la stored procedure.
 

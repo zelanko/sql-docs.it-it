@@ -1,23 +1,23 @@
 ---
 title: Creare nuovi oggetti di database tramite query
+description: Acquisire familiarità con l'editor Transact-SQL. Informazioni su come aprire questo editor e visualizzare esempi che illustrano come usarlo per creare una nuova tabella, funzione o vista.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 38a7165eb1145c6da08902d06a8483b0e26abf5b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df5dc9a0af721e8582ec7f9095efe73d03af2710
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241487"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518771"
 ---
-# <a name="how-to-create-new-database-objects-using-queries"></a>Procedura: Creazione di nuovi oggetti di database tramite query
+# <a name="how-to-create-new-database-objects-using-queries"></a>Procedura: Creare nuovi oggetti di database tramite query
 
 Se si preferisce usare script per creare o modificare viste, stored procedure, funzioni, trigger o tipi definiti dall'utente, è possibile usare l'Editor Transact\-SQL. L'Editor Transact\-SQL fornisce IntelliSense e altro supporto del linguaggio. Per altre informazioni, vedere [Usare l'Editor Transact-SQL per modificare ed eseguire script](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md).  
   

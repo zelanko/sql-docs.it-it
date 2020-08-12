@@ -1,5 +1,6 @@
 ---
 title: Aggiungere effetti 3D a un grafico (Generatore report) | Microsoft Docs
+description: Fornire profondità e aggiungere impatto visivo ai grafici nel report impaginato con effetti tridimensionali in Generatore report.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d8bf9b9951ac461f6aaa3a33602ecb4e2aa4c30
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1dfc09cadd1b98116f2145e95fc6e96759d53013
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078790"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012671"
 ---
 # <a name="chart-effects---add-3d-effects-report-builder"></a>Effetti per i grafici - Aggiungere effetti 3D (Generatore Report)
   Gli effetti tridimensionali (3D) possono essere usati per fornire profondità e aggiungere un impatto visivo ai grafici impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Ad esempio, se si desidera evidenziare una particolare sezione di un grafico a torta esplosa, è possibile ruotare e modificare la prospettiva del grafico in modo che si noti prima di tutto tale sezione. Quando al grafico vengono applicati effetti 3D, tutti i colori delle sfumature e gli stili di tratteggio vengono disabilitati.  

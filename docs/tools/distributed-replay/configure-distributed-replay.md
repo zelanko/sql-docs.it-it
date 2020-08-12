@@ -12,15 +12,15 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: b1385a3bcc755844f5af803f16d247f0692d9fbb
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 5ec828e6aa1df2ad38c7a3f831d9f8432dc681b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999381"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681864"
 ---
 # <a name="configure-distributed-replay"></a>Configurare Distributed Replay
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   I dettagli relativi alla configurazione della Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono specificati in file XML nel controller della Riesecuzione distribuita, nei client e nella posizione in cui è installato lo strumento di amministrazione, ovvero i file seguenti:  
   
 -   [File di configurazione del controller](#DReplayController)  
@@ -34,7 +34,7 @@ ms.locfileid: "82999381"
 ##  <a name="controller-configuration-file-dreplaycontrollerconfig"></a><a name="DReplayController"></a> File di configurazione del controller: DReplayController.config  
  All'avvio del servizio Distributed Replay Controller di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , viene caricato il livello di registrazione dal file di configurazione del controller, ovvero `DReplayController.config`. Questo file si trova nella cartella in cui è stato installato il servizio Distributed Replay Controller:  
   
- **\<percorso installazione controller>\DReplayController.config**  
+ **\<controller installation path>\DReplayController.config**  
   
  Nel livello di registrazione specificato nel file di configurazione del controller è inclusa la seguente impostazione:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "82999381"
 ##  <a name="client-configuration-file-dreplayclientconfig"></a><a name="DReplayClient"></a> File di configurazione del client: DReplayClient.config  
  All'avvio del servizio client Distributed Replay di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vengono caricate le impostazioni di configurazione dal file di configurazione del client, ovvero `DReplayClient.config`. Questo file si trova in ogni client, nella cartella in cui è stato installato il servizio client Distributed Replay:  
   
- **\<percorso installazione client>\DReplayClient.config**  
+ **\<client installation path>\DReplayClient.config**  
   
  Di seguito vengono indicate le impostazioni specificate nel file di configurazione del client:  
   
@@ -86,7 +86,7 @@ ms.locfileid: "82999381"
   
  Il file di configurazione della pre-elaborazione predefinito si trova nella cartella in cui è stato installato lo strumento di amministrazione:  
   
- **\<percorso installazione strumento di amministrazione>\DReplayAdmin\DReplay.exe.preprocess.config**  
+ **\<administration tool installation path>\DReplayAdmin\DReplay.exe.preprocess.config**  
   
  Le impostazioni di configurazione della pre-elaborazione vengono specificate in elementi XML figli dell'elemento `<PreprocessModifiers>` nel file di configurazione della pre-elaborazione. Tali impostazioni includono quanto segue:  
   
@@ -115,7 +115,7 @@ ms.locfileid: "82999381"
   
  Il file di configurazione della riproduzione predefinito si trova nella cartella in cui è stato installato lo strumento di amministrazione:  
   
- **\<percorso installazione strumento di amministrazione>\DReplayAdmin\DReplay.exe.replay.config**  
+ **\<administration tool installation path>\DReplayAdmin\DReplay.exe.replay.config**  
   
  Le impostazioni di configurazione della riproduzione vengono specificate in elementi XML figli degli elementi `<ReplayOptions>` e `<OutputOptions>` del file di configurazione della riproduzione.  
   

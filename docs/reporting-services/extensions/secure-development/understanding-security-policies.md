@@ -1,5 +1,6 @@
 ---
 title: Informazioni sui criteri di sicurezza | Microsoft Docs
+description: Informazioni sui criteri di sicurezza di Reporting Services, che specificano le autorizzazioni per gli assembly, le estensioni e le espressioni del report in base ai gruppi di codice.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6649017002fb3dd5df2dc3ee68a0d759ded24887
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a8fe596a34298d9864454a544bfb6d98a6601a46
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193394"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529345"
 ---
 # <a name="understanding-security-policies"></a>Informazioni sui criteri di sicurezza
   Qualsiasi codice eseguito da un server di report deve far parte di criteri di sicurezza dall'accesso di codice specifici. Tali criteri di sicurezza sono costituiti da gruppi di codice che eseguono il mapping dell'evidenza a un insieme di set di autorizzazioni denominati. I gruppi di codice sono spesso associati a un set di autorizzazioni denominato che specifica le autorizzazioni consentite per il codice appartenente al gruppo specifico. In fase di esecuzione l'evidenza viene usata da un host trusted o dal caricatore per determinare i gruppi di codice cui il codice appartiene e, di conseguenza, le autorizzazioni per concedere il codice. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] aderisce a questo tipo di architettura relativa ai criteri di sicurezza come definito da Common Language Runtime (CLR) di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Nelle sezioni seguenti vengono descritti i diversi tipi di codice in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e le regole dei criteri associate.  

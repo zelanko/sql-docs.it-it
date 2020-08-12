@@ -1,5 +1,6 @@
 ---
 title: Aggiungere, modificare o eliminare una mappa o un livello mappa (Generatore report) | Microsoft Docs
+description: Informazioni su come aggiungere, rimuovere o cambiare le opzioni delle mappe, manualmente o con la creazione guidata del livello mappa in Generatore report.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +26,12 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e2330442d2e50b5f62328d831e582a03e1ac202
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 347a55c139a35c7edf0a5fc37e21a2de0736c401
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488248"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681460"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Aggiungere, modificare o eliminare una mappa o un livello mappa (Generatore report e SSRS)
   Una mappa è una raccolta di livelli. Quando si aggiunge una mappa a un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , si definisce il primo livello. È possibile creare livelli aggiuntivi tramite la creazione guidata del livello mappa.  

@@ -1,5 +1,6 @@
 ---
 title: Tabelle (Generatore report e SSRS) | Microsoft Docs
+description: Visualizzare dati di dettaglio o dati raggruppati usando un singolo campo o più campi oppure scrivendo un'espressione personalizzata in un report impaginato in Generatore report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 319f221116d49cab52b0c01a273db565a9049669
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cac6edf23b15cbb6dc100c84a7035b425798d9d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574723"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067113"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tabelle (Generatore report e SSRS)
  In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]è possibile usare una tabella per visualizzare dati di dettaglio, dati raggruppati o una combinazione di entrambi.   

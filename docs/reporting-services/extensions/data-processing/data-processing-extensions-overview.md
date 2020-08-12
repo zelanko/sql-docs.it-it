@@ -1,5 +1,6 @@
 ---
 title: Panoramica delle estensioni per l'elaborazione dati | Microsoft Docs
+description: Informazioni sulle estensioni per l'elaborazione dati incluse in Reporting Services e su come aggiungere l'elaborazione dati personalizzata al server di report.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67e20d8d0bdcfbb03d0188ac62b4d89bc12b704f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e9c3407060e22a2be8f74214cd1ba6a44c1487c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194231"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529675"
 ---
 # <a name="data-processing-extensions-overview"></a>Cenni preliminari sulle estensioni per l'elaborazione dati
   Le estensioni per l'elaborazione dati in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] consentono di eseguire la connessione a un'origine dati e di recuperare i dati. Fungono inoltre da ponte tra un'origine dati e un set di dati. Le estensioni per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono modellate in base a un subset delle interfacce dei provider di dati [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  

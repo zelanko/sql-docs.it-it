@@ -1,5 +1,6 @@
 ---
 title: Confronto tra server di report nativi e di Reporting Services in SharePoint | Microsoft Docs
+description: Informazioni sull'elemento centrale di un'installazione di SQL Server Reporting Services, costituito da un motore di elaborazione e da estensioni per l'aggiunta di funzionalità.
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f7a75f578c025386966fc4fc7a15c41e7e44e0a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b884782c7ae1ad7898a2d2ef04de7de18b7c73df
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67038021"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764833"
 ---
 # <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Confronto tra server di report nativi e di Reporting Services in SharePoint
 
@@ -54,11 +55,11 @@ Un server di report di Reporting Services viene eseguito in una delle due modali
 |**Gestione configurazione**|Sì|**\*\* Importante \*\*** Non è possibile usare Gestione configurazione per gestire un server di report in modalità SharePoint. Usare invece Amministrazione centrale SharePoint.|  
 |**Portale Web**|Sì|Non è possibile gestire la modalità SharePoint nel portale Web. Usare le pagine dell'applicazione SharePoint. Per altre informazioni, vedere [Servizio SharePoint di Reporting Services e applicazioni di servizio](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Report collegati**|Sì|No.|  
-|**Report personali**|Sì|No|  
-|**Sottoscrizioni personali** e metodi di invio in batch|Sì|No|  
+|**Report personali**|sì|No|  
+|**Sottoscrizioni personali** e metodi di invio in batch|sì|No|  
 |**Avvisi dati**|No|Sì|  
 |**Power View**|No|Sì<br /><br /> È necessario disporre di Silverlight nel browser del client. Per altre informazioni sui requisiti del browser, vedere [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
-|**Report RDL**|Sì|Sì<br /><br /> I report RDL possono essere eseguiti nei server di report di Reporting Services in modalità nativa o SharePoint.|  
+|**Report RDL**|Sì|sì<br /><br /> I report RDL possono essere eseguiti nei server di report di Reporting Services in modalità nativa o SharePoint.|  
 |**Report RDLX**|No|Sì<br /><br /> I report RDLX di Power View possono essere eseguiti solo nei server di report di Reporting Services in modalità SharePoint.|  
 |**Credenziali del token utente di SharePoint per l'estensione dell'elenco SharePoint**|No|Sì|  
 |**Aree AAM per distribuzioni che si interfacciano a Internet**|No|Sì|  

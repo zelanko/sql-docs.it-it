@@ -1,5 +1,6 @@
 ---
 title: Grafici polari (Generatore report) | Microsoft Docs
+description: Informazioni sull'uso di un grafico polare con punti raggruppati per categoria in un cerchio e valori rappresentati dalla lunghezza di un punto dal centro del cerchio.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9402d8f-202a-4cdf-949e-50f5b1d2b885
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e07905447f53e27272710594fd140076fb813665
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2f0ab5d9368f96cfd54a54a3859891dc4efbe821
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082395"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689461"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>Grafici polari (Generatore report e SSRS)
   In un grafico polare le serie vengono visualizzate come set di punti raggruppati per categoria in un cerchio di 360 gradi. I valori sono rappresentati dalla lunghezza del punto, in base alla misurazione dal centro del cerchio. A una distanza maggiore del punto dal centro corrisponde un valore maggiore. Le etichette delle categorie vengono visualizzate sul perimetro del grafico. Per altre informazioni sull'aggiunta di dati a un grafico polare, vedere [Grafici &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  

@@ -1,6 +1,6 @@
 ---
 title: Visualizzare le intestazioni di riga e colonna in più pagine (Generatore report) | Microsoft Docs
-description: È possibile specificare se ripetere le intestazioni di riga e di colonna in ogni pagina di report impaginato di Reporting Services per un'area dati Tablix (tabella, matrice o elenco) che si estende su più pagine.
+description: Informazioni su come specificare se ripetere le intestazioni di riga e di colonna in ogni pagina di report impaginato per un'area dati Tablix che si estende su più pagine in Generatore report.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.date: 12/09/2019
-ms.openlocfilehash: ca1b00d98c71808cd42acb220e7fbf5d1c382555
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a0ece423e7396e2c3aab07cc1882cf1e7f5b09ad
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254587"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778643"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Visualizzare le intestazioni di riga e colonna in più pagine (Generatore report e SSRS)
 

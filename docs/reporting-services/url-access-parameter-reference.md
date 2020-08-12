@@ -1,7 +1,7 @@
 ---
 title: Riferimento ai parametri di accesso con URL | Microsoft Docs
 description: Usare i parametri in questo articolo come parte di un URL per configurare l'aspetto dei report di Reporting Services.
-ms.date: 01/31/2020
+ms.date: 05/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ac67de4831d1785f17029bc6c68fa6f7d8aeb16
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5c975f457238912c16e33a13f1f2ba598c82cac3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77147380"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859032"
 ---
 # <a name="url-access-parameter-reference"></a>Riferimento ai parametri di accesso con URL
 
@@ -79,18 +79,21 @@ ms.locfileid: "77147380"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
     ```  
   
--   **FindString**: Individuare un set di testo specifico in un report.
+-   **FindString**: Cerca un report per un set di testo specifico ed evidenzia il testo.
+    
+    > [!IMPORTANT]  
+    >  *rc:FindString* non funziona a meno che non si includa *rc:Toolbar*=**false** nella stringa di accesso con URL.
   
      Ad esempio, in modalità nativa:
   
     ```  
-    https://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
+    https://myrshost/reportserver?/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
      Ad esempio, in modalità SharePoint:
   
     ```  
-    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
 -   **StartFind**: Specifica l'ultima sezione in cui cercare. Il valore predefinito di questo parametro è l'ultima pagina del report.  
@@ -260,7 +263,7 @@ ms.locfileid: "77147380"
   
 -   **ClearSession**: Il valore **true** indica al server di report di rimuovere un report dalla sessione di report. Tutte le istanze del report associate a un utente autenticato vengono rimosse dalla sessione di report. Un'istanza di un report viene definita quando lo stesso report viene eseguito più volte con valori dei parametri del report diversi. Il valore predefinito è **false**.
   
--   **ResetSession**: Il valore **true** richiede al server di report di reimpostare la sessione del report rimuovendone l'associazione a tutti gli snapshot del report. Il valore predefinito è **false**.
+-   **ResetSession**: il valore **true** richiede al server di report di reimpostare la sessione del report rimuovendone l'associazione a tutti gli snapshot del report. Il valore predefinito è **false**.
   
 -   **ShowHideToggle**: Visualizza o nasconde una sezione del report. Specificare un integer positivo per rappresentare la sezione da attivare o disattivare.
   

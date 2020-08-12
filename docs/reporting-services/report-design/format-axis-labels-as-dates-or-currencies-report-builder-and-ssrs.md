@@ -1,5 +1,6 @@
 ---
 title: Formattare le etichette degli assi come date o valute (Generatore report) | Microsoft Docs
+description: Specificare un intervallo di data o ora per un asse x formattando le etichette dell'asse e impostando il tipo di intervallo dell'asse su un intervallo valido.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e9a01a74-2f51-4b35-be3a-a6138568f6cf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f93ab65674436fc0225ba8f8c66b98d12f9b7694
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b65c752c479c86f88679cb01bd328dc2d22cf3be
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080018"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689430"
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>Formattazione delle etichette degli assi come date o valute (Generatore report e SSRS)
 Quando i valori DateTime sono formattati correttamente su un asse, vengono visualizzati automaticamente in un grafico impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] come giorni. Per specificare un intervallo di data o ora per l'asse X, ad esempio un intervallo di mesi o di ore, è necessario formattare le etichette dell'asse e impostare il tipo di intervallo dell'asse su un intervallo di data o ora valido.  

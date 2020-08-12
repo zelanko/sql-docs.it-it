@@ -1,5 +1,6 @@
 ---
 title: Aggiungere codice a un report | Microsoft Docs
+description: Informazioni su come chiamare codice personalizzato per qualsiasi espressione disponibile nel report in Generatore report.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd2f5d60bacc29a5b7efcf1abb8c1d44429d93f6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9d54e2ce879e78787b9b51d20c8df83367038c7b
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081674"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255684"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>Aggiungere codice a un report (SSRS)
   In qualsiasi espressione, è possibile chiamare un codice personalizzato. Il codice può essere fornito nei due modi seguenti:  

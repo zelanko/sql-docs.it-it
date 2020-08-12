@@ -1,5 +1,6 @@
 ---
 title: Log HTTP del server di report | Microsoft Docs
+description: Informazioni su come abilitare il log HTTP del server di report dopo aver installato Reporting Services. Questa funzionalità consente di registrare tutte le richieste e le risposte HTTP in un server di report.
 ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7fb733325b09c189221729a3edc0dd12cf33b283
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f640506f2f247c31c74d111d30b64f4fa0016dae
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140457"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548003"
 ---
 # <a name="report-server-http-log"></a>Log HTTP del server di report
   Nel file di log HTTP del server di report viene mantenuto un record per ogni richiesta HTTP e relativa risposta gestite dal server di report. Poiché gli errori di overflow e di timeout relativi alle richiesta ed errori non raggiungono il server di report, non vengono registrati nel file di log.  
@@ -28,7 +29,7 @@ ms.locfileid: "67140457"
 |||  
 |-|-|  
 |Nome file|Per impostazione predefinita, il nome del file è ReportServerService_HTTP_\<timestamp>.log. È possibile personalizzare il prefisso del nome del file modificando l'attributo HttpTraceFileName nel file ReportingServicesService.exe.config. Il timestamp si basa su l'ora UTC (Coordinated Universal Time).|  
-|Percorso del file|Il percorso del file è \Microsoft SQL Server\\ *\<Istanza di SQL Server>* \Reporting Services\LogFiles.|  
+|Percorso del file|Il percorso del file è \Microsoft SQL Server\\ *\<SQL Server Instance>* \Reporting Services\LogFiles.|  
 |Formato file|Il file è in formato en-US ed è un file di testo ASCII.|  
 |Creazione e memorizzazione del file|Per creare un log HTTP, è necessario innanzitutto riabilitarlo nel file di configurazione e riavviare il servizio. Il file viene quindi creato quando il server di report gestisce una richiesta HTTP. Se le impostazioni sono state configurate ma il file di log non viene visualizzato, aprire un report o avviare un'applicazione del server di report (ad esempio il portale Web) per generare una richiesta HTTP per creare il file.<br /><br /> Una nuova istanza del file di log verrà creata dopo ogni riavvio del servizio e ogni successiva richiesta HTTP al server di report.<br /><br /> Per impostazione predefinita, i log di traccia possono occupare uno spazio massimo di 32 MB e vengono eliminati dopo 14 giorni.|  
   

@@ -1,6 +1,6 @@
 ---
 title: Correzione di pagina automatica per gruppi di disponibilità e mirroring del database
-description: 'Riparare automaticamente determinati tipi di danneggiamento della pagina quando un database partecipa a un gruppo di disponibilità Always On o a una relazione di mirroring del database. Questo argomento fornisce informazioni sui tipi di errori e sulle possibili soluzioni. '
+description: Informazioni su come correggere determinati tipi di danneggiamento delle pagine quando un database fa parte di un gruppo di disponibilità AlwaysOn o del mirroring del database.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7c8d58b7bdc836f44871560c0d1e9908d1f72f23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 861ffae3a6bb9451ca9dc9d5c8684e5b211a3b93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822646"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729133"
 ---
-# <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Correzione di pagina automatica (Gruppi di disponibilità/Mirroring del database)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Correzione automatica della pagina (Gruppi di disponibilità: mirroring del database
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La correzione automatica della pagina è supportata dal mirroring del database e da [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Se una pagina viene danneggiata e resa illeggibile a causa di determinati tipi di errori, viene tentato il relativo recupero automatico tramite un partner di mirroring di database (principale o mirror) o una replica di disponibilità (primaria o secondaria). Dal partner o dalla replica che non è grado di leggere la pagina viene richiesta una copia aggiornata di quest'ultima dal relativo partner o da un'altra replica. Se la richiesta viene soddisfatta, la pagina illeggibile viene sostituita dalla copia leggibile. In questo modo, l'errore viene in genere risolto.  
   
  In generale, gli errori di I/O possono essere gestiti dal mirroring del database e da [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] in modi equivalenti. Di seguito sono illustrate in modo esplicito le poche differenze.  
@@ -63,7 +63,7 @@ ms.locfileid: "74822646"
   
 -   Pagina 9 (pagina di avvio del database).  
   
--   Pagine di allocazione: pagine mappa di allocazione globale (GAM, Global Allocation Map), pagine mappa di allocazione globale condivisa (SGAM, Shared Global Allocation Map) e pagine spazio libero nella pagina (PFS, Page Free Space).  
+-   Pagine di allocazione: pagine GAM (Global Allocation Map), pagine SGAM ( Shared Global Allocation Map) e pagine PFS (Page Free Space).  
   
  
 ##  <a name="handling-io-errors-on-the-principalprimary-database"></a><a name="PrimaryIOErrors"></a> Gestione degli errori di I/O nel database principale o primario  
@@ -96,7 +96,7 @@ ms.locfileid: "74822646"
  La correzione automatica di una pagina è un processo asincrono eseguito in background. Pertanto, non sarà possibile completare un'operazione sul database tramite cui viene richiesta una pagina illeggibile e verrà restituito il codice di errore relativo alla condizione che lo ha causato. In fase di sviluppo di un'applicazione per un database con mirroring o un database di disponibilità, è consigliabile intercettare le eccezioni per le operazioni con errori. Se il codice di errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è 823, 824 o 829, ripetere l'operazione in un secondo momento.  
   
 
-##  <a name="how-to-view-automatic-page-repair-attempts"></a><a name="ViewAPRattempts"></a> How To: View Automatic Page-Repair Attempts  
+##  <a name="how-to-view-automatic-page-repair-attempts"></a><a name="ViewAPRattempts"></a> Procedura: Visualizzare i tentativi di correzione automatica della pagina  
  Tramite le DMV seguenti vengono restituite righe degli ultimi tentativi di correzione automatica delle pagine in un database di disponibilità o database con mirroring specificato, con un massimo di 100 righe per database.  
   
 -   **Gruppi di disponibilità AlwaysOn:**  

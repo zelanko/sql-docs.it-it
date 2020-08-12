@@ -1,5 +1,6 @@
 ---
 title: Immagini, caselle di testo, rettangoli e linee (Generatore report) | Microsoft Docs
+description: Aggiungere interesse visivo, evidenziare le informazioni chiave o fornire informazioni correlate in Generatore report. Aggiungere immagini, caselle di testo, rettangoli e linee.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a57bef0be8819674142526d62ec824078ded04e0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 18afd1d921969d84f0015b6e982b634feb46b097
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082064"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061030"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Immagini, caselle di testo, rettangoli e linee (Generatore report e SSRS)
   Oltre alle aree dati quali tabelle, matrici e grafici, nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] vengono usati altri elementi, ad esempio immagini, caselle di testo e rettangoli, per aumentarne l'impatto visivo, evidenziare le informazioni più importanti o fornire informazioni correlate. È possibile modificare la formattazione di un elemento del report. È possibile, ad esempio, aggiungere un bordo o un riempimento, modificare la visibilità o la direzione iniziale oppure specificare valori esatti per le dimensioni e la posizione dell'elemento.  

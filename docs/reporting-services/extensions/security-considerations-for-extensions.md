@@ -1,5 +1,6 @@
 ---
 title: Considerazioni sulla sicurezza per le estensioni | Microsoft Docs
+description: Informazioni su criteri, condizioni e requisiti di sicurezza che determinano il modo in cui i server di report concedono le autorizzazioni per le estensioni di Reporting Services.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 73da0b40d845e8e2a692b969a119adb3cfce6ef1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fb6a43fba085319b8be4ff374fea7d089e8a529a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193362"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529935"
 ---
 # <a name="security-considerations-for-extensions"></a>Considerazioni sulla sicurezza per le estensioni
   È necessario che ogni applicazione destinata a CLR (Common Language Runtime) interagisca con il relativo sistema di sicurezza. L'applicazione viene valutata automaticamente al momento dell'esecuzione e a tale applicazione viene concesso da CLR un set di autorizzazioni. A seconda delle autorizzazioni ricevute, l'applicazione può continuare a essere eseguita oppure viene generata un'eccezione di sicurezza. I criteri e le impostazioni di sicurezza locali nei file di configurazione dei criteri di sicurezza per un server di report specifico definiscono le autorizzazioni per il codice ricevute da un assembly.  

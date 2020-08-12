@@ -1,5 +1,6 @@
 ---
 title: Tipi di rendering (Generatore report e SSRS) | Microsoft Docs
+description: Informazioni sulle regole applicate al corpo del report e al relativo contenuto durante il rendering di un report in Generatore report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24b196927e582d1b21bf9f11bd7ea824ecf8ba7b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0214df6c7299f0a3240b904bbd00e965988d95dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576461"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048245"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Tipi di rendering (Generatore report e SSRS)
   A seconda del renderer selezionato, vengono applicate regole specifiche al corpo del report e al relativo contenuto durante il rendering di un report. La disposizione degli elementi del report in una pagina dipende dalla combinazione dei seguenti fattori:  

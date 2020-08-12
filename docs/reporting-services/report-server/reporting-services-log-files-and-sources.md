@@ -1,5 +1,6 @@
 ---
 title: File di log e origini di Reporting Services | Microsoft Docs
+description: Informazioni sui log usati dai server di report e dagli ambienti dei server di report in Reporting Services per registrare informazioni sull'esecuzione e sulla traccia.
 ms.date: 05/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a0f6270fc40d4a22db2d8b03deba8a53e57fbf6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1e9fad0dad3b5a5d90339403d2d596bb95bf0759
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65620308"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541443"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>File di log e origini di Reporting Services
   Nel server di report e nell'ambiente server di report viene utilizzata una varietà di destinazioni di log per registrare le informazioni sullo stato e sulle operazioni del server. Sono disponibili due categorie di base di registrazione: registrazione dell'esecuzione e registrazione della traccia. La registrazione dell'esecuzione include le informazioni sulle statistiche, sul controllo, sulla diagnosi delle prestazioni e sull'ottimizzazione dell'esecuzione del report. La registrazione della traccia è costituita da informazioni su messaggi di errore e diagnostica generale.  

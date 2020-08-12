@@ -1,5 +1,6 @@
 ---
 title: Report, parti del report e definizioni dei report (Generatore report) | Microsoft Docs
+description: Informazioni sui termini usati per descrivere i report in stati diversi in Generatore report. Questi stati includono la definizione iniziale e il report pubblicato.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 11236a29e22877e1d785d7ac2325898cc11bac7e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 53e8c7fcd6765742af0056fb44659386cf652561
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081055"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039720"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Report, parti del report e definizioni dei report (Generatore report e SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa vari termini per descrivere un report impaginato nei diversi stati, inclusi la definizione iniziale, il report pubblicato e il report così come viene visualizzato dall'utente.  

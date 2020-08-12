@@ -1,6 +1,6 @@
 ---
 title: Celle, righe e colonne in un'area dati Tablix | Microsoft Docs
-description: Per controllare come righe e colonne di un'area dati Tablix vengono visualizzate in un report impaginato di SQL Server Reporting Services, è necessario comprendere in che modo specificare righe e colonne relative a dati dettaglio, dati di gruppo, etichette e totali.
+description: Informazioni su come specificare righe e colonne per i dati, le etichette e i totali, per controllare la visualizzazione in un report di SQL Server.
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1630b872e3a445b082c6ceca98d45cf225cdaf7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 26567c364e734824964e19ee6a639f2500ee2b4b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252403"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689444"
 ---
 # <a name="cells-rows--columns-in-a-tablix-data-region-report-builder-and-ssrs"></a>Celle, righe e colonne in un'area dati Tablix (Generatore report) e SSRS
 

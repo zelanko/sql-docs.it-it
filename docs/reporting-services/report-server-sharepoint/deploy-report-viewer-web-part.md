@@ -1,5 +1,6 @@
 ---
 title: Distribuire la web part Visualizzatore report di SQL Server Reporting Services in un sito di SharePoint | Microsoft Docs
+description: Per SQL Server Reporting Services, è possibile aggiungere manualmente la web part personalizzata Visualizzatore report a un prodotto SharePoint.
 ms.date: 11/15/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 232338818620069fc31bb57bc29cf07901d0f712
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 49ac20b46c5453c431cb856ad060512b48315262
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256688"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767034"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Distribuire la web part Visualizzatore report di SQL Server Reporting Services in un sito di SharePoint
 
@@ -154,7 +155,7 @@ La web part supporta le lingue seguenti:
 
     Install-SPRSService : [A] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService cannot be cast to [B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService. Type A originates from 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' in the context 'Default' at location 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'. Type B originates from 'Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' in the context 'Default' at location 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'.
     
-    Soluzione
+    Soluzione:
     1. Rimuovere la web part Visualizzatore report
     2. Disinstallare SSRS
     3. Reinstallare la web part Visualizzatore report
@@ -163,7 +164,7 @@ La web part supporta le lingue seguenti:
 
     Could not load file or assembly 'Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. Non è possibile trovare il file specificato. 00000000-0000-0000-0000-000000000000
     
-    Soluzione
+    Soluzione:
     1. Rimuovere la web part Visualizzatore report
     2. Disinstallare SSRS
     3. Reinstallare la web part Visualizzatore report

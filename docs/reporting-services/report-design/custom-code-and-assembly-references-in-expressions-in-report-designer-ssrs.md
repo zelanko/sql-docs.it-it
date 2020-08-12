@@ -1,5 +1,6 @@
 ---
 title: Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report | Microsoft Docs
+description: Informazioni su come aggiungere riferimenti al codice personalizzato incorporato in un report. Compilare e salvare nel computer e distribuire nel server di report in Generatore report.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab5e36ce6e76cf0017e7306802544f1b2764af73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 603207390785ff684167b3b553b31c3b956842c6
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080568"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880760"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report (SSRS)
   È possibile aggiungere riferimenti a codice personalizzato incorporato in un report o ad assembly personalizzati compilati e salvati nel computer in uso e distribuiti nel server di report. Usare codice incorporato per costanti personalizzate, funzioni complesse o funzioni usate più volte in un singolo report. Usare gli assembly di codice personalizzati per mantenere il codice in un'unica posizione e condividerne l'utilizzo in più report. Il codice personalizzato può includere nuove costanti, variabili, funzioni o subroutine personalizzate. È possibile includere riferimenti di sola lettura a raccolte predefinite come ad esempio Parameters. Non è tuttavia possibile passare alle funzioni personalizzate set di valori di dati. In particolare, non sono supportate le aggregazioni personalizzate.  
@@ -115,7 +116,7 @@ End Function
  Per altre informazioni sulle raccolte di oggetti predefiniti e sull'inizializzazione, vedere [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md) e [Inizializzazione di oggetti assembly personalizzati](../../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md).  
   
 ##  <a name="including-references-to-parameters-from-code"></a><a name="Parameters"></a> Inclusione di riferimenti ai parametri da codice  
- È possibile fare riferimento alla raccolta globale di parametri tramite codice personalizzato in un blocco di codice della definizione del report oppure in un assembly personalizzato specificato dall'utente. La raccolta di parametri è di sola lettura e non include iteratori pubblici. Non è possibile usare un costrutto [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]For Each**di** per analizzare la raccolta. È necessario conoscere il nome del parametro definito nella definizione del report per potervi fare riferimento nel codice personalizzato. È tuttavia possibile scorrere tutti i valori di un parametro multivalore.  
+ È possibile fare riferimento alla raccolta globale di parametri tramite codice personalizzato in un blocco di codice della definizione del report oppure in un assembly personalizzato specificato dall'utente. La raccolta di parametri è di sola lettura e non include iteratori pubblici. Non è possibile usare un costrutto **For Each** di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] per analizzare la raccolta. È necessario conoscere il nome del parametro definito nella definizione del report per potervi fare riferimento nel codice personalizzato. È tuttavia possibile scorrere tutti i valori di un parametro multivalore.  
   
  Nella tabella seguente sono inclusi esempi di riferimenti alla raccolta predefinita `Parameters` da codice personalizzato:  
   

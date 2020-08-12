@@ -1,5 +1,6 @@
 ---
 title: Funzione LookupSet (Generatore report) | Microsoft Docs
+description: Informazioni sulla funzione LookupSet, che restituisce il set di valori corrispondenti per un nome specificato da un set di dati contenente coppie nome/valore.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f30c2747a384a49282be0208e28d6153570299c7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8c790f63ddec2a30d1381459b37b4cfdf9088389
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081224"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255584"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>Funzioni di Generatore report - Funzione LookupSet
   Viene restituito il set di valori corrispondenti per il nome specificato da un set di dati contenente coppie nome/valore.  

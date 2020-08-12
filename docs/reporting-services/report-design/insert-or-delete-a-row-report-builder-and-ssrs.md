@@ -1,5 +1,6 @@
 ---
 title: Inserire o eliminare una riga (Generatore report) | Microsoft Docs
+description: Informazioni sull'aggiunta e sull'eliminazione di righe in un'area dati Tablix in un report impaginato in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b9642af3-b3ae-4f78-b0be-8f96b79fc313
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6bdec71e808d577a764d2b0cc3fa99fc9cd522fd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ff37c91140ed4da0706c0eaf35ed258267e6e189
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082023"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681290"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>Inserire o eliminare una riga (Generatore report e SSRS)
 È possibile aggiungere o eliminare righe in un'area dati Tablix di un report impaginato [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . L'area dati Tablix può essere una tabella, una matrice o un elenco. Le procedure riportate di seguito non sono applicabili alle aree dati del grafico e del misuratore.  

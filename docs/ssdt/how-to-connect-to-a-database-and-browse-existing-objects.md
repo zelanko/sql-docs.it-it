@@ -1,5 +1,6 @@
 ---
 title: Connettersi a un database e visualizzare gli oggetti esistenti
+description: Informazioni su come usare Esplora oggetti di SQL Server in Visual Studio per connettersi a istanze di SQL Server locali e non locali.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 65559af8337bc7421f96463a954a212f56a3c269
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b2195bd66960640747381db5fd3a1390c7d3e342
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75755826"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519021"
 ---
 # <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Procedura: Connettersi a un database e visualizzare gli oggetti esistenti
 

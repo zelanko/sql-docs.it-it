@@ -1,5 +1,6 @@
 ---
 title: Configurare Reporting Services per usare un nome alternativo del soggetto | Microsoft Docs
+description: Informazioni su come configurare SQL Server Reporting Services in modo da usare un nome alternativo del soggetto (SAN) modificando il file rsreportserver.config e usando lo strumento Netsh.exe.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 41a39c92a8ec9e9d940c44660a02abe5e710fede
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: ecb4b0be06731070c0852f23375fafea0eed4434
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487024"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767061"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurare Reporting Services per usare un nome alternativo del soggetto
 

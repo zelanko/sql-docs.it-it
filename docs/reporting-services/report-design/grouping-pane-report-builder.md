@@ -1,5 +1,6 @@
 ---
 title: Riquadro di raggruppamento (Generatore report) | Microsoft Docs
+description: Visualizzare gruppi di righe e di colonne per un'area dati Tablix selezionata. Informazioni sul riquadro di raggruppamento in Generatore report.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 983ee5a4-944c-491e-8720-7cd9f3881961
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aad20a916864bb8ed0d281af768989a0a7d9e85a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4a2746590db0978738220dcf76f6eda54bd2f990
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572195"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039746"
 ---
 # <a name="grouping-pane-report-builder"></a>Riquadro di raggruppamento (Generatore report)
   Nel riquadro Raggruppamento vengono visualizzati i gruppi di righe e di colonne dell'area dati Tablix selezionata. Il riquadro Raggruppamento non è disponibile per le aree dati Grafico e Misuratore. Il riquadro Raggruppamento è costituito da un riquadro Gruppi di righe e da un riquadro Gruppi di colonne e include due modalità: predefinita e avanzata. Nella modalità predefinita è riportata una visualizzazione gerarchica dei membri dinamici dei gruppi di righe e di colonne. Nella modalità avanzata vengono visualizzati sia i membri dinamici che quelli statici dei gruppi di righe e di colonne. Un gruppo è un set di dati denominato che deriva da un set di dati del report visualizzato in un'area dati. I gruppi sono organizzati in gerarchie che includono membri statici e dinamici. Per altre informazioni, vedere [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  

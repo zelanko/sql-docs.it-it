@@ -1,5 +1,6 @@
 ---
 title: Grafici mappa ad albero e radiali in SQL Server Reporting Services | Microsoft Docs
+description: Informazioni su come rappresentare visivamente dati gerarchici usando una mappa ad albero o un grafico radiale in Generatore report.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
-ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: af294ac47e7523f0b0dba5a57bbf2318bbe8c149
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68259359"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255434"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Grafici mappa ad albero e radiali in Reporting Services 
 

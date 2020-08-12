@@ -1,5 +1,6 @@
 ---
 title: Domini applicazione per applicazioni del server di report | Microsoft Docs
+description: Informazioni sugli eventi che determinano il riciclo di un dominio di applicazioni di Reporting Services per la risoluzione dei problemi.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d39f1b9b081d50e5d64a6d5f948255f3a4d6e53b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9492a6617b459fad1afca9200ae9437f02a41d29
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574801"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535493"
 ---
 # <a name="application-domains-for-report-server-applications"></a>Domini applicazione per applicazioni del server di report
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]il server di report viene implementato come un unico servizio che contiene il servizio Web ReportServer, Gestione report e un'applicazione di elaborazione in background. Ogni applicazione viene eseguita nel proprio dominio all'interno del singolo processo del server di report. Nella maggior parte dei casi, i domini applicazione vengono creati, configurati e gestiti internamente. Tuttavia la conoscenza del modo in cui vengono eseguite le operazioni di riciclo per i domini applicazione del server di report può risultare utile per ottenere prestazioni elevate, per ricercare problemi di memoria o per risolvere interruzioni del servizio.  

@@ -1,5 +1,6 @@
 ---
 title: Confrontare e sincronizzare i dati di due database
+description: Informazioni su come confrontare e sincronizzare i dati da due database. Scoprire come configurare il confronto, visualizzare le differenze e aggiornare la destinazione.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +11,17 @@ f1_keywords:
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c53dc1e11d242d6864525aba677e78c67671277c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 19a1854a939f776f8eb75d9adf9d6d43856f920b
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241576"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519041"
 ---
-# <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Procedura: confrontare e sincronizzare i dati di due database
+# <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Procedura: Confrontare e sincronizzare i dati di due database
 
 È possibile confrontare i dati contenuti in due database. I database che si confrontano sono chiamati *origine* e *destinazione*.  
   

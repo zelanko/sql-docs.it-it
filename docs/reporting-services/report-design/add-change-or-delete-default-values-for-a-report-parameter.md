@@ -1,5 +1,6 @@
 ---
 title: Aggiungere, modificare o eliminare valori predefiniti per un parametro di report | Microsoft Docs
+description: Usare questa procedura per personalizzare i report con i valori predefiniti aggiunti, cambiati o eliminati per i parametri.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 902d28e7d37524ac0d1649642ca592b20ea5b3cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55e1d43bfdea2c01bf4e8f0516bf1554e1258d8d
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582036"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689278"
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter"></a>Aggiungere, modificare o eliminare valori predefiniti per un parametro di report
   Dopo aver creato un parametro del report, è possibile specificare un elenco di valori predefiniti. Se tutti i parametri dispongono di un valore predefinito valido, il report viene eseguito automaticamente la prima volta che viene visualizzato o ne viene visualizzata l'anteprima.  

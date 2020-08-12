@@ -1,5 +1,6 @@
 ---
 title: Grafici sparkline e barre dei dati (Generatore report) | Microsoft Docs
+description: Tutti i vantaggi dell'uso di grafici sparkline e barre dei dati in Generatore report. Questi grafici compatti trasmettono molte informazioni in pochissimo spazio.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d65843f0f1104947532bf71f97e5b4c34d2bb291
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6c7721b8b5002c104ff5076b3b0d1c9bc8219fba
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080959"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880721"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Grafici sparkline e barre dei dati (Generatore report e SSRS)
   I grafici sparkline e le barre dei dati sono grafici semplici e di piccole dimensioni contenenti numerose informazioni in uno spazio ridotto, spesso in linea con il testo.   
@@ -33,15 +34,15 @@ ms.locfileid: "77080959"
 ##  <a name="types-of-sparklines"></a><a name="KindsofSparklines"></a> Tipi di grafici sparkline  
  Si possono creare quasi tanti tipi di grafici sparkline quanti sono quelli normali. In generale, non è possibile creare grafici sparkline 3D. È possibile creare versioni di grafici sparkline di questi grafici completi:  
   
--   [Istogrammi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md): standard, in pila e in pila 100%.  
+-   [Istogrammi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md): grafici standard, istogramma in pila e istogramma in pila 100%.  
   
--   [Grafici a linee &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md): tutti i tipi eccetto il grafico a linee 3D.  
+-   [Grafici a linee &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md): tutti i tipi di grafico eccetto quello a linee 3D.  
   
--   [Grafici ad area &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md): tutti i tipi eccetto il grafico ad area 3D.  
+-   [Grafici ad aree &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md): tutti i tipi di grafico eccetto quello ad area 3D  
   
 -   [Grafici a torta &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md): inclusi i grafici ad anello, sia lineari che 3D, ma non i grafici di altre forme, come i grafici a imbuto e a piramide.  
   
--   [Grafici con intervalli &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md): azionari, a candela, a barre di errore e box plot.  
+-   [Grafici a intervalli &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md): azionari, a candela, a barre di errore e box plot.  
   
 ##  <a name="data-bars"></a><a name="DataBars"></a> Barre dei dati  
  Le barre dei dati rappresentano in genere un solo punto dati, sebbene possano rappresentarne di più, proprio come i grafici a barre normali. Spesso contengono diverse serie senza categoria o dispongono di raggruppamento di serie.  
@@ -52,9 +53,9 @@ ms.locfileid: "77080959"
   
  È possibile creare versioni di barre dei dati di questi grafici completi:  
   
--   [Grafici a barre &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md): standard, in pila e in pila 100%.  
+-   [Grafici a barre &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md): grafici standard, con barre in pila e barre in pila 100%.  
   
--   [Istogrammi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md): standard, in pila e in pila 100%. Gli istogrammi possono essere grafici sparkline o barre dei dati.  
+-   [Istogrammi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md): grafici standard, istogramma in pila e istogramma in pila 100%. Gli istogrammi possono essere grafici sparkline o barre dei dati.  
   
 ##  <a name="aligning-sparkline-data-in-a-table-or-matrix"></a><a name="AlignDatainTableMatrix"></a> Allineamento dei dati del grafico sparkline in una tabella o matrice  
  Quando si inserisce un grafico sparkline in una tabella o matrice, è di solito importante allineare i punti dati in ogni grafico sparkline ai punti dati degli altri grafici sparkline in quella colonna. In caso contrario risulta difficile il confronto dei dati nelle differenti righe. Ad esempio, quando si confrontano i dati di vendita in base al mese di diversi venditori nella società, sarebbe opportuno l'allineamento dei mesi. Se un dipendente fosse fuori per il mese di aprile, non ci sarebbero dati forniti da quel dipendente relativamente a quel mese. Per visualizzare il gap per quel mese e vedere i dati relativi ai mesi successivi, allineare i dati degli altri dipendenti. È possibile eseguire questa operazione allineando l'asse orizzontale. Per altre informazioni, vedere la sezione sui grafici sparkline in [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) e vedere anche [Allineare i dati in un grafico di una tabella o matrice &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  

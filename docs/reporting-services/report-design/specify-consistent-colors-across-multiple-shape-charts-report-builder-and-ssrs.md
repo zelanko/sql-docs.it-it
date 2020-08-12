@@ -1,5 +1,6 @@
 ---
 title: Specificare i colori coerenti in più grafici con forme - Generatore report - SSRS | Microsoft Docs
+description: Informazioni su come la scelta dei colori per un grafico con forme comporti il mapping di ogni colore nella tavolozza a un punto dati nel set di dati.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d9e7b846d17fd6ad86edc45ff7dd4251c098ae1a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d0c02b81c5ce7ea5363cf119c3a3618efd78f2aa
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578460"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688963"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>Specificare i colori coerenti in più grafici con forme (Generatore report e SSRS)
   Nei grafici senza forme in un report impaginato [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] seleziona un nuovo colore dalla tavolozza in base all'indice di serie del grafico. Verrà eseguito il mapping delle prime serie sul grafico al primo colore della tavolozza. Questo comportamento non si verifica nei grafici con forme, nei quali di ogni colore nella tavolozza viene eseguito il mapping a un punto dati nel set di dati. Ad esempio viene eseguito il mapping del punto dati 1 al primo colore nella tavolozza e del punto dati 2 alla seconda tavolozza di colori e così via.  

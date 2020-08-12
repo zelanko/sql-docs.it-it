@@ -13,25 +13,24 @@ helpviewer_keywords:
 ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0638821e198ab99ae9eaa065ccf6ede543af77a1
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: ee53a4f973537dad629a24bb442e8a1076eebd11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087531"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85644530"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>Impostazione delle opzioni di crittografia nei server di destinazione
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Se non è possibile usare un certificato per le comunicazioni crittografate TLS (Transport Layer Security), protocollo noto in precedenza come SSL (Secure Sockets Layer), tra server master e alcuni o tutti i server di destinazione e si vuole crittografare il canale di comunicazione, configurare i server di destinazione per l'uso del livello di sicurezza necessario.  
   
-Per configurare il livello di sicurezza appropriato necessario per uno specifico canale di comunicazione tra server master e server di destinazione, impostare la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sottochiave del Registro di sistema di Agent **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\** \<*nome_istanza*> **\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** nel server di destinazione su uno dei valori seguenti. Il valore di \<*nome_istanza*> è **MSSQL.** _n_. Ad esempio, **MSSQL.1** o **MSSQL.3**.  
+Per configurare il livello di sicurezza appropriato necessario per uno specifico canale di comunicazione tra server master e server di destinazione, impostare la sottochiave del Registro di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\** \<*instance_name*> **\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** nel server di destinazione su uno dei valori seguenti. Il valore di \<*instance_name*> è **MSSQL.** _n_. Ad esempio, **MSSQL.1** o **MSSQL.3**.  
   
 |valore|Descrizione|  
 |---------|---------------|  

@@ -1,5 +1,6 @@
 ---
 title: Cmdlet di PowerShell per la modalità SharePoint di Reporting Services | Microsoft Docs
+description: I cmdlet di PowerShell sono installati per supportare la modalità SharePoint di SQL Server Reporting Services, tra cui l'installazione e la gestione delle applicazioni e delle funzionalità.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e415fee08a9723419c7d8a4258fc88670c5e262
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2a92cb1a23c4c1d7062945bc24961a2c37d25950
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68892399"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764991"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Cmdlet di PowerShell per la modalità SharePoint di Reporting Services
 
@@ -109,7 +110,7 @@ Quando si installa la modalità SharePoint di SQL Server 2016 Reporting Services
 |New-SPRSExtension|Registra una nuova estensione con un'applicazione di servizio Reporting Services.|  
 |Set-SPRSExtension|Imposta le proprietà di un'estensione di Reporting Services esistente.|  
 |Remove-SPRSExtension|Rimuove un'estensione da un'applicazione di servizio Reporting Services.|  
-|Get-SPRSExtension|Ottiene una o più estensioni di Reporting Services per un'applicazione di servizio Reporting Services.<br /><br /> I valori validi sono:<br /><br /> <br /><br /> Recapito<br /><br /> DeliveryUI<br /><br /> Rendering<br /><br /> data<br /><br /> Security<br /><br /> Authentication<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> Finestra di progettazione<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
+|Get-SPRSExtension|Ottiene una o più estensioni di Reporting Services per un'applicazione di servizio Reporting Services.<br /><br /> I valori validi sono:<br /><br /> <br /><br /> Recapito<br /><br /> DeliveryUI<br /><br /> Rendering<br /><br /> Data<br /><br /> Sicurezza<br /><br /> Authentication<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> Finestra di progettazione<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
 |Get-SPRSSite|Ottiene i siti di SharePoint in base all'eventuale abilitazione della funzionalità "ReportingService". Per impostazione predefinita, vengono restituiti i siti in cui la funzionalità "ReportingService" è abilitata.|  
   
 ## <a name="basic-samples"></a>Esempi di base
@@ -290,7 +291,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[Elenco di controllo: usare PowerShell per verificare PowerPivot per SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
+[Elenco di controllo: Usare PowerShell per verificare PowerPivot per SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
 [Visualizzare la Guida di SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

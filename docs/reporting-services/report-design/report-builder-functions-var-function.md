@@ -1,5 +1,6 @@
 ---
 title: Funzione Var (Generatore report) | Microsoft Docs
+description: Usare la funzione Var per restituire la varianza di tutti i valori numerici non Null specificati dall'espressione in Generatore report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7b2018ce-c5f9-4f8b-bd44-4201379a584b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c8fc31dec4f6e4cfc289c5d01ab03c9ecbbd5a7d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b31b6e36d176cc8f11b34afa81935ab4e0a93c56
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081104"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779483"
 ---
 # <a name="report-builder-functions---var-function"></a>Funzioni di Generatore report - Funzione Var
   Restituisce la varianza di tutti i valori numerici non Null specificati dall'espressione, valutata nell'ambito specificato.  

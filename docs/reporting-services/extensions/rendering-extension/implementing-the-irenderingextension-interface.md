@@ -1,5 +1,6 @@
 ---
 title: Implementazione dell'interfaccia IRenderingExtension | Microsoft Docs
+description: Informazioni su come implementare l'interfaccia IRenderingExtension, che trasforma i dati del report in formati di output utilizzati da visualizzatori, stampanti e altre destinazioni.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e19691222fd55350bb3f0da7aaf94a983ec620cd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8e53f229aff5a0093a38d4d785994514aeb1e971
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193581"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529447"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>Implementazione dell'interfaccia IRenderingExtension
   L'estensione per il rendering prende i risultati da una definizione del report combinata con i dati effettivi ed eseguire il rendering dei dati risultanti in un formato che sia possibile utilizzare. La trasformazione dei dati combinati e della formattazione viene eseguita tramite una classe CLR (Common Language Runtime) che implementa <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>. Ciò consente di trasformare il modello a oggetti in un formato di output che può essere utilizzato da un visualizzatore, una stampante o un'altra destinazione di output.  
@@ -47,7 +48,7 @@ ms.locfileid: "63193581"
 -   *createAndRegisterStream* è una funzione di delegato che deve essere chiamata per ottenere un flusso in cui eseguire il rendering.  
   
 ### <a name="deviceinfo-parameter"></a>Parametro deviceInfo  
- Il parametro *deviceInfo* contiene i parametri di rendering, non i parametri del report. Questi parametri vengono passati all'estensione per il rendering. I valori di *deviceInfo* vengono convertiti in un oggetto <xref:System.Collections.Specialized.NameValueCollection> dal server di report. Gli elementi inclusi nel parametro *deviceInfo* vengono trattati come valori senza distinzione tra maiuscole e minuscole. Se la richiesta di rendering deriva da un accesso con URL, i parametri URL nel formato `rc:key=value` vengono convertiti in coppie chiave/valore nell'oggetto dizionario *deviceInfo*. Il codice di rilevamento del browser include anche gli elementi seguenti nel dizionario *clientCapabilities*: EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, Type e AcceptLanguage. Le coppie nome/valore incluse nel parametro *deviceInfo* che non vengono comprese dall'estensione per il rendering verranno ignorate. Nell'esempio di codice seguente viene illustrato un metodo <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> di esempio per il recupero delle icone:  
+ Il parametro *deviceInfo* contiene i parametri di rendering, non i parametri del report. Questi parametri vengono passati all'estensione per il rendering. I valori di *deviceInfo* vengono convertiti in un oggetto <xref:System.Collections.Specialized.NameValueCollection> dal server di report. Gli elementi inclusi nel parametro *deviceInfo* vengono trattati come valori senza distinzione tra maiuscole e minuscole. Se la richiesta di rendering deriva da un accesso con URL, i parametri URL nel formato `rc:key=value` vengono convertiti in coppie chiave/valore nell'oggetto dizionario *deviceInfo*. Il codice di rilevamento del browser fornisce anche gli elementi seguenti nel dizionario *clientCapabilities*: EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, Type e AcceptLanguage. Le coppie nome/valore incluse nel parametro *deviceInfo* che non vengono comprese dall'estensione per il rendering verranno ignorate. Nell'esempio di codice seguente viene illustrato un metodo <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> di esempio per il recupero delle icone:  
   
 ```csharp  
 public void GetRenderingResource (CreateStream createStreamCallback, NameValueCollection deviceInfo)  

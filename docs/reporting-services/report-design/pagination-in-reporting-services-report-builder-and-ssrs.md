@@ -1,6 +1,6 @@
 ---
 title: Paginazione nei report (Generatore report e SSRS) | Microsoft Docs
-description: Il termine paginazione si riferisce al numero di pagine all'interno di un report impaginato e alla disposizione degli elementi del report in tali pagine. In Reporting Services la paginazione varia a seconda dell'estensione per il rendering usata per visualizzare e recapitare il report.
+description: Informazioni sul numero di pagine all'interno di un report impaginato e alla disposizione degli elementi del report in tali pagine in Generatore report.
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2c3ce298553ebe5103cc8639a3a86e14977725ce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b308503f2aafb1fcbfd88b3e7509906cafad8a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247335"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006155"
 ---
 # <a name="pagination-in-reports-report-builder--and-ssrs"></a>Paginazione nei report (Generatore report e SSRS)
   Il termine paginazione si riferisce al numero di pagine all'interno di un report impaginato e alla disposizione degli elementi del report in tali pagine. In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] la paginazione varia a seconda dell'estensione per il rendering usata per visualizzare e recapitare il report. Quando si esegue un report sul server di report, viene usato il renderer HTML. Tale renderer si attiene a un set specifico di regole di paginazione. Se ad esempio si esporta lo stesso report in formato PDF, viene usato il renderer PDF e viene applicato un set di regole differente, pertanto il report viene impaginato in modo diverso. Per progettare correttamente un report di facile lettura e ottimizzato per il renderer che si intende usare per recapitare il report, è necessario comprendere le regole usate per controllare la paginazione in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

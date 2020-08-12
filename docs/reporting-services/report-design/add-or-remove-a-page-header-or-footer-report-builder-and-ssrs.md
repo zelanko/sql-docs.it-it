@@ -1,5 +1,6 @@
 ---
 title: Aggiungere o rimuovere un'intestazione o un piè di pagina (Generatore report) | Microsoft Docs
+description: Informazioni su come aggiungere testo statico, immagini, linee, rettangoli e bordi a intestazioni di pagina o piè di pagina in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: adb2d9d24bc353c7d1c64c328b342b24022faef8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab6d1585b254e8c03d9e471b32d3429cc489f8a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081565"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056536"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Aggiungere o rimuovere un'intestazione o un piè di pagina (Generatore report e SSRS)
   È possibile aggiungere testo statico, immagini, linee, rettangoli e bordi a intestazioni di pagina o piè di pagina. È possibile posizionare espressioni e immagini con associazioni a dati in una casella di testo se si desiderano dati variabili o calcolati in un'intestazione o in un piè di pagina.  

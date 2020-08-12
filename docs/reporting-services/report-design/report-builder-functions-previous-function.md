@@ -1,5 +1,6 @@
 ---
 title: Funzione Previous (Generatore report) | Microsoft Docs
+description: La funzione Previous in Generatore report restituisce il valore o il valore di aggregazione specificato per l'istanza precedente di un elemento.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 882a098aaabcd4610fc6623e9741f7eeaa4f53ec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0905feea8324effcc9dd61b713eafcc060cc5e2f
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081184"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462375"
 ---
 # <a name="report-builder-functions---previous-function"></a>Funzioni di Generatore report - Funzione Previous
   Restituisce il valore o il valore di aggregazione specificato per l'istanza precedente di un elemento all'interno dell'ambito specificato.  

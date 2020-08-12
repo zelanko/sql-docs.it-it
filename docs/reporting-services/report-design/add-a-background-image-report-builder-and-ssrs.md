@@ -1,5 +1,6 @@
 ---
 title: Aggiungere un'immagine di sfondo (Generatore report) | Microsoft Docs
+description: Informazioni su come incorporare un'immagine nella definizione del report per aggiungerla a un'ampia varietà di elementi del report, come caselle di testo, elenchi e intestazioni di pagina.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c777fefb-8695-44a7-b5cd-a18c587583f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c8b53c0e259a9a0c99ae1bd06cc9cab9cc14355
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 719201b31c4bbfef138799f6712d33e24c50b725
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081343"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689355"
 ---
 # <a name="add-a-background-image-report-builder-and-ssrs"></a>Aggiungere un'immagine di sfondo (Generatore report e SSRS)
   È possibile aggiungere un'immagine di sfondo a un elemento del report, ad esempio un rettangolo, una casella di testo, un elenco, una matrice, una tabella e ad alcune parti di un grafico, o a una sezione del report, ad esempio un'intestazione di pagina, un piè di pagina o il corpo del report. È possibile definire un'immagine di sfondo per qualsiasi elemento selezionato nell'area di progettazione per il quale la proprietà **BackgroundImage** sia visualizzata nel riquadro Proprietà. Analogamente ad altre immagini, quella di sfondo può essere l'URL di un'immagine nel server di report, un'immagine da un campo del set di dati o un'immagine incorporata nella definizione del report. Per utilizzare un'immagine incorporata nel report, è necessario innanzitutto aggiungere l'immagine alla definizione del report prima di poterla aggiungere all'area di progettazione.  

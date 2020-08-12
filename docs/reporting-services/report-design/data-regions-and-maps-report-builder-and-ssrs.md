@@ -1,5 +1,6 @@
 ---
 title: Aree dati e mappe (Generatore report) | Microsoft Docs
+description: Esplorare i tipi e le caratteristiche delle aree dati e delle mappe per progettare la visualizzazione dei set di dati del report in Generatore report.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5cdc8e2cb16b4a73122ffbdc60a845a3b258a108
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ad7082d259b4e8da970083e880aa664fbbe71c21
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080536"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012629"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>Aree dati e mappe (Generatore report e SSRS)
   Un'area dati è un oggetto in un report che consente di visualizzare dati da un set di dati del report. I dati del report possono essere visualizzati come numeri e testo in una tabella, una matrice o un elenco, graficamente in un grafico o un misuratore e su uno sfondo geografico in una mappa. Le tabelle, le matrici e gli elenchi sono tutti basati sull'area dati *Tablix* , che si espande in base alle necessità per visualizzare tutti i dati dal set di dati. Un'area dati Tablix supporta più gruppi di righe e colonne, nonché righe e colonne statiche e dinamiche. Un grafico consente di visualizzare più serie e gruppi di categorie in un'ampia gamma di formati di grafico. Un misuratore consente di visualizzare un singolo valore o un valore aggregato per un set di dati. Una mappa consente di visualizzare dati spaziali come elementi della mappa che possono variare nell'aspetto in base ai dati aggregati di un set di dati.  

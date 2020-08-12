@@ -1,5 +1,6 @@
 ---
 title: Concetti relativi ai parametri di report (Generatore report) | Microsoft Docs
+description: Come aggiungere parametri per collegare report correlati, controllare l'aspetto di un report, filtrare i dati del report o limitare l'ambito in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e5e7cafdce773969f9e6914a47534f88eb238a4d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e6e6419e43991ff2dfe28ea0e3f6b2033693b9c3
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081073"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681600"
 ---
 # <a name="report-parameters-concepts-report-builder-and-ssrs"></a>Concetti relativi ai parametri di report (Generatore report e SSRS)
   È possibile aggiungere parametri a un report per collegare report correlati, controllare l'aspetto del report, filtrare i dati del report o per limitare l'ambito di un report a percorsi o utenti specifici.  

@@ -1,5 +1,6 @@
 ---
 title: Autenticazione in Reporting Services | Microsoft Docs
+description: Informazioni su come estendere gli schemi di autenticazione in Reporting Services usando l'autenticazione basata su form o l'interfaccia IAuthenticationExtension2.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fdf93fe49275f0604606b65b7a8b5f60df0e887e
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 64d22ded480b62a8d963127e32cf35b5e53df9ea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488587"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529077"
 ---
 # <a name="authentication-in-reporting-services"></a>Autenticazione in Reporting Services
   L'autenticazione è il processo di determinazione del diritto di un utente a un'identità. Per autenticare un utente sono disponibili numerose tecniche. La più comune consiste nell'utilizzo di password. Quando si implementa l'autenticazione basata su form, ad esempio, si sceglie un'implementazione che richiede le credenziali agli utenti (generalmente tramite un'interfaccia in cui vengono richiesti un nome di accesso e una password), quindi si convalidano gli utenti in base a un archivio dati, ad esempio una tabella di database o un file di configurazione. Se non è possibile convalidare le credenziali, il processo di autenticazione non riesce e all'utente viene assegnata un'identità anonima.  

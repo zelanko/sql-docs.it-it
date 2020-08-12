@@ -2,20 +2,20 @@
 title: Che cos'è la distribuzione di applicazioni?
 titleSuffix: SQL Server Big Data Clusters
 description: Questo articolo descrive la distribuzione delle applicazioni in un cluster Big Data per SQL Server 2019.
-author: jeroenterheerdt
-ms.author: jterh
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4b647ab4d03d110ce303388a8b62461f28033b6c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4423e6fe624c27c0b9c06d3ff59c56648762af99
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76831574"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215450"
 ---
 # <a name="what-is-application-deployment-on-a-big-data-cluster"></a>Che cos'è la distribuzione di applicazioni in un cluster Big Data?
 
@@ -53,9 +53,31 @@ Dopo la creazione del set di repliche e l'avvio dei pod, viene creato un process
 
 Quando viene eseguita un'applicazione, il servizio Kubernetes dell'applicazione inoltra le richieste a una replica e restituisce i risultati.
 
+## <a name="security-considerations-for-applications-deployments-on-openshift"></a><a id="app-deploy-security"></a> Considerazioni sulla sicurezza per la distribuzione di applicazioni
+
+SQL Server 2019 CU5 abilita il supporto per la distribuzione di cluster Big Data in Red Hat OpenShift, oltre a un modello di sicurezza aggiornato per cluster BDC, in modo che i contenitori con privilegi non siano più necessari. Oltre che senza privilegi, per impostazione predefinita i contenitori vengono eseguiti come utente non ROOT per tutte le nuove distribuzioni con SQL Server 2019 CU5.
+
+Al momento della versione CU5, il passaggio di installazione delle applicazioni distribuite con le interfacce [app deploy](concept-application-deployment.md) verrà comunque eseguito come utente *ROOT*. Questo è necessario perché durante questo passaggio vengono installati pacchetti aggiuntivi che saranno usati dall'applicazione. Altro codice utente distribuito come parte dell'applicazione verrà eseguito come utente con privilegi limitati. 
+
+È inoltre disponibile la funzionalità facoltativa **CAP_AUDIT_WRITE** che può essere usata per consentire la pianificazione di applicazioni SSIS con processi cron. Quando il file di specifiche YAML dell'applicazione definisce una pianificazione, l'applicazione viene attivata tramite un processo cron, il che richiede funzionalità aggiuntive.  In alternativa, l'applicazione può essere attivata su richiesta con *azdata app run* tramite una chiamata al servizio Web, senza che sia necessaria la funzionalità CAP_AUDIT_WRITE. 
+
+> [!NOTE]
+> I vincoli del contesto di sicurezza (SCC) personalizzati nell'[articolo relativo alla distribuzione di OpenShift](deploy-openshift.md) non include questa funzionalità perché non è necessaria per una distribuzione predefinita di un cluster Big Data. Per abilitare questa funzionalità, è necessario prima aggiornare il file YAML di SCC personalizzato per includere CAP_AUDIT_WRITE nel modo seguente: 
+
+```yml
+...
+allowedCapabilities:
+- SETUID
+- SETGID
+- CHOWN
+- SYS_PTRACE
+- AUDIT_WRITE
+...
+```
+
 ## <a name="how-to-work-with-application-deployment"></a>Come usare la distribuzione di applicazioni
 
-Le due interfacce principali dello strumento di distribuzione di applicazioni sono: 
+Le due interfacce principali per la distribuzione di applicazioni sono: 
 - [Interfaccia della riga di comando `azdata`](big-data-cluster-create-apps.md)
 - [Estensione di Visual Studio Code e Azure Data Studio](app-deployment-extension.md)
 

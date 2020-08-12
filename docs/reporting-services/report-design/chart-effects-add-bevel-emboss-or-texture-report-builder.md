@@ -1,5 +1,6 @@
 ---
 title: Aggiungere gli stili smussato, rilievo e trama a un grafico (Generatore report) | Microsoft Docs
+description: Informazioni su come specificare un effetto di disegno, ad esempio smussature, rilievi o trame, per aumentare l'impatto visivo del grafico in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9bbb097362d2569bcea8a16d451d33d931b82b35
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dc70f46d093336157fbc474abfa63460c42deb41
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078755"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462315"
 ---
 # <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>Effetti per i grafici - Aggiungere smussatura, rilievo o trama (Generatore report)
   Quando si utilizzano determinati tipi di grafico, è possibile specificare un effetto di disegno per aumentarne l'effetto visivo. Tali effetti vengono applicati solo alle serie, mentre non influiscono su altri elementi del grafico.  

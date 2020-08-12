@@ -1,5 +1,6 @@
 ---
 title: Implementazione dell'interfaccia IDeliveryExtension per un'estensione per il recapito | Microsoft Docs
+description: Informazioni su come implementare l'interfaccia IDeliveryExtension in un'estensione per il recapito in modo che i client possano convalidare i dati utente e recuperare le impostazioni di recapito.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 229d08da8be91a462b243fbb5580395fd03867ed
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba66d4f375e30edf37594230ddb44c1bd18d99b8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193647"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529533"
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>Implementazione dell'interfaccia IDeliveryExtension per un'estensione per il recapito
   La classe di estensioni per il recapito viene utilizzata per recapitare le notifiche dei report agli utenti in base al contenuto delle notifiche. La classe di estensioni per il recapito fornisce anche l'infrastruttura per la convalida delle impostazioni utente passate all'estensione per il recapito. Questa classe deve inoltre contenere proprietà specifiche che i client possono utilizzare per ottenere informazioni sul nome dell'estensione, sulle impostazioni supportate dall'estensione e sui formati di rendering disponibili per l'estensione per il recapito.  

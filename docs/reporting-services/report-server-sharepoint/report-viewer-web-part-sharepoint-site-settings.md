@@ -1,5 +1,6 @@
 ---
 title: Impostazioni del sito di SharePoint per la Web part del Visualizzatore di report - SSRS | Microsoft Docs
+description: Informazioni su come configurare le impostazioni del sito di SharePoint nella web part del Visualizzatore report in SQL Server Reporting Server.
 ms.date: 11/15/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: jt000
 ms.author: jasontre
-ms.openlocfilehash: 8eadb83c35f69dc2a1dba108e83df93bf614be3e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8673f824762a9c7f6a28cd1232e742aac4428b23
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256810"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764980"
 ---
 # <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>Impostazioni del sito di SharePoint per la Web part del Visualizzatore di report - Reporting Services
 

@@ -1,5 +1,6 @@
 ---
 title: Specificare un'area del grafico per una serie (Generatore report) | Microsoft Docs
+description: Informazioni sull'area grafico come contenitore di livello superiore che include il bordo esterno, il titolo del grafico e la legenda in Generatore report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 32f16dd226167c180de81a456a6493f1c717b481
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4a537d0319bb3cb035a8bff5891c24449de77777
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080950"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057565"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>Specificare un'area del grafico per una serie (Generatore report e SSRS)
   Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] il *grafico* è il contenitore di livello superiore che include il bordo esterno, il titolo del grafico e la legenda. Per impostazione predefinita, il grafico contiene una sola *area del grafico*. L'area del grafico non è visibile sulla superficie del grafico, ma è possibile considerarla come un contenitore che include solo le etichette e il titolo degli assi, nonché l'area tracciato di una o più serie. Nell'illustrazione seguente viene mostrato il concetto di più aree del grafico all'interno di un singolo grafico.  

@@ -1,5 +1,6 @@
 ---
 title: Area dati Tablix (Generatore report) | Microsoft Docs
+description: Informazioni su come visualizzare i dati di un report impaginato all'interno di celle. Organizzare i dati in righe e colonne con un'area dati Tablix in Generatore report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a37105db6639b7d7db35c3beb1fc85020015d7e4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 98c23ceae7ced6bdd31e55319db67aefa5a6e848
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081368"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067073"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Area dati Tablix (Generatore report e SSRS)
-  In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], l'area dati Tablix è un elemento del report di layout generalizzato in cui i dati del report impaginati vengono visualizzati in celle suddivise in righe e colonne. I dati del report possono essere dati dettaglio recuperati direttamente dall'origine dati o dati dettaglio aggregati organizzati in gruppi specificati dall'utente. Ogni cella della Tablix può contenere qualsiasi elemento del report, ad esempio una casella di testo, un'immagine o un'altra area dati, ad esempio un grafico, un misuratore o un'area Tablix. Per aggiungere più elementi del report a una cella, aggiungere innanzitutto un rettangolo da utilizzare come contenitore. Aggiungere elementi del report al rettangolo.  
+  In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], l'area dati Tablix è un elemento del report di layout generalizzato in cui i dati del report impaginati vengono visualizzati in celle suddivise in righe e colonne. I dati del report possono essere dati dettaglio recuperati direttamente dall'origine dati o dati dettaglio aggregati organizzati in gruppi specificati dall'utente. Ogni cella della Tablix può contenere qualsiasi elemento del report, ad esempio una casella di testo, un'immagine o un'altra area dati, ad esempio un grafico, un misuratore o un'area Tablix. Per aggiungere più elementi del report a una cella, aggiungere innanzitutto un rettangolo da utilizzare come contenitore. Aggiungere elementi del report al rettangolo. 
   
  Le aree dati di tabella, matrice ed elenco sono rappresentate sulla barra multifunzione mediante modelli per l'area dati Tablix sottostante. Quando si aggiunge uno di questi modelli a un report, in realtà si aggiunge un'area dati Tablix ottimizzata per uno specifico layout dei dati. Per impostazione predefinita, un modello di tabella visualizza i dati dettaglio in un layout di griglia, una matrice visualizza i dati di gruppo in un layout di griglia e un elenco visualizza i dati dettaglio in un layout in formato libero.  
   

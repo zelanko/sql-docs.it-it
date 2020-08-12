@@ -1,5 +1,6 @@
 ---
 title: Creare, modificare ed eliminare snapshot nella cronologia dei report | Microsoft Docs
+description: Informazioni su come intervenire sulla cronologia di Reporting Services aggiungendo ed eliminando snapshot oppure modificando le proprietà che specificano le modalità di archiviazione della cronologia.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 72486193f4171be9fdce9400328bd1c2a199f2c5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4c686ff203b9a080424fb46e50c42a6edefd7655
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580472"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548033"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Creare, modificare ed eliminare snapshot nella cronologia dei report
   La cronologia dei report è una raccolta di snapshot dei report. È possibile intervenire sulla cronologia aggiungendo ed eliminando snapshot oppure modificando le proprietà che specificano le modalità di archiviazione della cronologia. È possibile creare la cronologia dei report manualmente o in base a una pianificazione.  
