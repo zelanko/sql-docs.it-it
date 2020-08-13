@@ -18,11 +18,12 @@ ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 92ea113cfde897e2735be4ae1a3cc35b6bb788fc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a11d686bef327e4e3daba1ed5365289f78169853
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85984861"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173103"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85984861"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_tables [ [ @table_name = ] 'name' ]   
@@ -90,14 +91,14 @@ sp_tables [ [ @table_name = ] 'name' ]
 ### <a name="a-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>R. Restituzione di un elenco di oggetti su cui è possibile eseguire query nell'ambiente corrente  
  Nell'esempio seguente viene restituito un elenco di oggetti su cui è possibile eseguire una query nell'ambiente corrente.  
   
-```  
+```sql  
 EXEC sp_tables ;  
 ```  
   
 ### <a name="b-returning-information-about-the-tables-in-a-specified-schema"></a>B. Restituzione di informazioni sulle tabelle in uno schema specificato  
  Nell'esempio seguente vengono restituite informazioni sulle tabelle appartenenti allo schema `Person` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_tables   
@@ -111,14 +112,14 @@ EXEC sp_tables
 ### <a name="c-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>C. Restituzione di un elenco di oggetti su cui è possibile eseguire query nell'ambiente corrente  
  Nell'esempio seguente viene restituito un elenco di oggetti su cui è possibile eseguire una query nell'ambiente corrente.  
   
-```  
+```sql  
 EXEC sp_tables ;  
 ```  
   
 ### <a name="d-returning-information-about-the-tables-in-a-specified-schema"></a>D. Restituzione di informazioni sulle tabelle in uno schema specificato  
  Nell'esempio seguente vengono restituite informazioni sulle tabelle delle dimensioni nel `AdventureWorksPDW201` database.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXEC sp_tables   

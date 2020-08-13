@@ -14,12 +14,12 @@ helpviewer_keywords:
 - ghost clean up process
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 557f76e3f54811581e41ad15a5270a0c1e6e4057
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 16c9aa51475b00998b3c7aa9e71529bbbc292464
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859093"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248160"
 ---
 # <a name="ghost-cleanup-process-guide"></a>Guida al processo di pulizia fantasma
 
@@ -46,7 +46,7 @@ La query seguente identifica il numero di record fantasma esistenti in un singol
 
 ## <a name="disable-the-ghost-cleanup"></a>Disabilitare la pulizia fantasma
 
-Nei sistemi con carichi di lavoro elevati e molte operazioni di eliminazione il processo di pulizia fantasma può causare un problema di prestazioni, originato dal mantenimento delle pagine nel pool di buffer e dalle operazioni I/O generate. È possibile disabilitare il processo usando il flag di traccia 661. Per altre informazioni su questa operazione, vedere [Opzioni di ottimizzazione per SQL Server durante l'esecuzione di carichi di lavoro ad alte prestazioni](https://support.microsoft.com/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa). Tuttavia la disabilitazione del processo presenta implicazioni a livello di prestazioni.
+Nei sistemi con carichi di lavoro elevati e molte operazioni di eliminazione il processo di pulizia fantasma può causare un problema di prestazioni, originato dal mantenimento delle pagine nel pool di buffer e dalle operazioni I/O generate. È possibile disabilitare il processo usando il [flag di traccia 661](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Tuttavia la disabilitazione del processo presenta implicazioni a livello di prestazioni.
 
 La disabilitazione del processo di pulizia fantasma può causare una crescita eccessiva e non necessaria del database e di conseguenza originare problemi di prestazioni. Dato che il processo di pulizia fantasma rimuove i record contrassegnati come elementi fantasma, quando si disabilita il processo questi record restano nella pagina e impediscono a SQL Server di riusare questo spazio. SQL Server deve aggiungere dati a nuove pagine, dando origine a file di database troppo grandi ed eventualmente a [divisioni di pagina](indexes/specify-fill-factor-for-an-index.md). Le divisioni di pagina causano problemi di prestazioni durante la creazione dei piani di esecuzione e quando si eseguono operazioni di analisi. 
 

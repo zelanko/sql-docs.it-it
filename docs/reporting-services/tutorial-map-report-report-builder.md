@@ -1,5 +1,6 @@
 ---
 title: 'Esercitazione: Report mappa (Generatore report) | Microsoft Docs'
+description: Informazioni sulle funzionalità della mappa che è possibile usare per visualizzare i dati su uno sfondo geografico in un report impaginato di Reporting Services.
 ms.date: 08/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 069fb0c365e3ecb5353e9dad99f116779222af87
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041575"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248130"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Esercitazione: Report mappa (Generatore report)
 Questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] illustra le funzionalità della mappa che si possono usare per visualizzare i dati su uno sfondo geografico in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
@@ -29,7 +30,7 @@ In questa esercitazione viene compilato un report mappa in cui sono visualizzate
 > [!NOTE]  
 > In questa esercitazione, i passaggi della procedura guidata sono consolidati in due procedure: una per la creazione del set di dati e un'altra per la creazione di una tabella. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati, creare un set di dati ed eseguire la procedura guidata, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Tempo previsto per il completamento di questa esercitazione: 30 minuti.  
+Tempo stimato per il completamento dell'esercitazione: 30 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per questa esercitazione è necessario configurare il server di report affinché supporti le mappe Bing come sfondo. Per altre informazioni, vedere [Pianificare il supporto dei report mappa](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
@@ -174,7 +175,7 @@ In questa sezione viene usata la Creazione guidata livello mappa per aggiungere 
     *   **SellingArea**: l'area disponibile per la visualizzazione dei prodotti, che va da circa 42 metri quadrati a circa 104 metri quadrati.
     *   **City**.
     *   **County**.
-    *   **Sales**: vendite totali. 
+    *   **Vendite**: vendite totali. 
     *   **SpatialLocation**: percorso in longitudine e latitudine. 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 

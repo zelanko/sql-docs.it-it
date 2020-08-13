@@ -1,5 +1,6 @@
 ---
 title: Novità di Reporting Services | Microsoft Docs
+description: Informazioni sulle novità delle diverse versioni di SQL Server Reporting Services, incluse le modifiche alle principali aree funzionali.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
-ms.openlocfilehash: cb50ca237fb1b9fae87b73fd81a9e6f2426b4775
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 869c2be4422df2361a0522e5b2183e61e43ae797
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079615"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248552"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novità di SQL Server Reporting Services (SSRS)
 
@@ -34,23 +35,23 @@ Per informazioni su Server di report di Power BI, vedere [Che cos'è Server di r
 
 ### <a name="azure-sql-managed-instance-support"></a>Supporto per Istanza gestita di database SQL di Azure
 
-È ora possibile ospitare un catalogo di database usato per SQL Server Reporting Services (SSRS) in un'istanza gestita SQL di Azure (MI) ospitata in una macchina virtuale o nel data center. Il supporto è limitato all'utilizzo delle credenziali del database per la connessione all'istanza gestita SQL.
+È ora possibile ospitare un catalogo di database usato per SQL Server Reporting Services (SSRS) in un'istanza gestita SQL di Azure (MI) ospitata in una macchina virtuale o nel data center. Il supporto è limitato all'uso delle credenziali del database per la connessione all'istanza gestita di database SQL.
 
-### <a name="power-bi-premium-dataset-support"></a>Supporto del set di dati Power BI Premium
+### <a name="power-bi-premium-dataset-support"></a>Supporto di set di dati di Power BI Premium
 
-È possibile connettersi ai set di dati di Power BI usando il Generatore report Microsoft o SQL Server Data Tools (SSDT). È quindi possibile pubblicare i report in SSRS 2019 usando la connettività di SQL Server Analysis Services. Per abilitare lo scenario, gli utenti devono usare un nome utente e una password di Windows archiviati.
+È possibile connettersi a set di dati di Power BI usando Generatore report Microsoft o SQL Server Data Tools (SSDT). È quindi possibile pubblicare i report in SSRS 2019 usando la connettività di SQL Server Analysis Services. Per abilitare lo scenario, gli utenti devono usare un nome utente e una password archiviati di Windows.
 
 ### <a name="alttext-alternative-text-support-for-report-elements"></a>Supporto di AltText (testo alternativo) per gli elementi del report
 
-Quando si creano report, è possibile usare le descrizioni comando per specificare il testo per ogni elemento nel report. La tecnologia per la lettura dello schermo identifica queste descrizioni comando in modo corretto.
+Durante la creazione di report è possibile usare descrizioni comando per specificare il testo per ogni elemento nel report. La tecnologia per la lettura dello schermo identifica queste descrizioni comando in modo corretto.
 
 ### <a name="azure-active-directory-application-proxy-support"></a>Supporto per Azure Active Directory Application Proxy
 
-Con Azure Active Directory Application Proxy, non è più necessario gestire il proxy applicazione Web per consentire l'accesso sicuro tramite le app Web o per dispositivi mobili.
+Con Azure Active Directory Application Proxy non è più necessario gestire il proxy applicazione Web per consentire l'accesso sicuro tramite le app Web o per dispositivi mobili.
 
 ### <a name="custom-headers"></a>Intestazioni personalizzate
 
-Imposta i valori di intestazione per tutti gli URL che corrispondono al criterio regex specificato. Gli utenti possono aggiornare il valore dell'intestazione personalizzata con un XML valido per impostare i valori di intestazione per gli URL di richiesta selezionati. Gli amministratori possono aggiungere un numero qualsiasi di intestazioni in XML. Per informazioni dettagliate, vedere [Intestazioni personalizzate](tools/server-properties-advanced-page-reporting-services.md#customheaders) nell'articolo **Pagina Avanzate delle proprietà del server**.
+Impostare i valori di intestazione per tutti gli URL che corrispondono al modello regex specificato. Gli utenti possono aggiornare il valore dell'intestazione personalizzata con XML valido per impostare i valori di intestazione per gli URL di richiesta selezionati. Gli amministratori possono aggiungere un numero qualsiasi di intestazioni nel codice XML. Per informazioni dettagliate, vedere [Intestazioni personalizzate](tools/server-properties-advanced-page-reporting-services.md#customheaders) nell'articolo **Pagina Avanzate delle proprietà del server**.
 
 ### <a name="transparent-database-encryption"></a>Crittografia trasparente del database
 
@@ -58,7 +59,7 @@ SQL Server 2019 supporta ora la crittografia TDE (Transparent Database Encryptio
 
 ### <a name="microsoft-report-builder-update"></a>Aggiornamento di Generatore report Microsoft
 
-La nuova versione rilasciata del Generatore report è completamente compatibile con le versioni 2016, 2017 e 2019 di Reporting Services. È compatibile anche con tutte le versioni rilasciate e supportate del server di report di Power BI.
+La nuova versione rilasciata di Generatore report è completamente compatibile con le versioni 2016, 2017 e 2019 di Reporting Services. È compatibile anche con tutte le versioni rilasciate e supportate di Server di report di Power BI.
 
 ::: moniker-end
 
@@ -179,9 +180,9 @@ Per altre informazioni, vedere:
 
 Per altre informazioni sul supporto dei browser, vedere [Supporto browser per Reporting Services e Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
 
-**Report impaginati moderni:** è possibile progettare report impaginati moderni e accattivanti con nuovi stili attuali per grafici, misuratori, mappe e altre visualizzazioni dei dati.
+**Report moderni impaginati:** è possibile progettare report impaginati moderni accattivanti con nuovi stili attuali per grafici, misuratori, mappe e altre visualizzazioni dei dati.
 
-**Mappa ad albero e grafici radiali:** è possibile ottimizzare i report con mappe ad albero ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") e grafici radiali ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"), strumenti eccezionali per la visualizzazione di dati gerarchici. Per altre informazioni, vedere [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
+**Mappa ad albero e grafici radiali:** ottimizzare i report con mappe ad albero ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") e grafici radiali ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"), strumenti eccezionali per la visualizzazione di dati gerarchici. Per altre informazioni, vedere [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
 **Incorporamento di report:** è ora possibile incorporare report per dispositivi mobili e report impaginati in altre pagine Web e applicazioni usando un iframe e i parametri URL.  
 
@@ -197,7 +198,7 @@ Per altre informazioni sul supporto dei browser, vedere [Supporto browser per Re
 
 Per altre informazioni, vedere [Integrazione del server di report di Power BI &#40;Gestione configurazione&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) e [Aggiungere elementi di Reporting Services ai dashboard di Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
 
-**Rendering ed esportazione in PowerPoint:** il formato Microsoft PowerPoint (PPTX) è una nuova estensione per il rendering di [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] . È possibile esportare report in formato PPTX dalle applicazioni consuete, ovvero Generatore report, Progettazione report (in SSDT) e dal [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. L'immagine seguente mostra ad esempio il menu per l'esportazione dal [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
+**Rendering ed esportazione in PowerPoint:** il formato Microsoft PowerPoint (PPTX) è una nuova estensione per il rendering di [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. È possibile esportare report in formato PPTX dalle applicazioni consuete, ovvero Generatore report, Progettazione report (in SSDT) e dal [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. L'immagine seguente mostra ad esempio il menu per l'esportazione dal [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
 
 ![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
 
@@ -226,18 +227,18 @@ Per altre informazioni, vedere [Abilitare e disabilitare la stampa sul lato clie
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)
 
-La nuova versione di SSDT include i modelli di progetto per [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)], ovvero Creazione guidata progetto server di report e Progetto server di report. Per informazioni sul download di SSDT, vedere [SQL Server Data Tools per Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542).  
+La nuova versione di SSDT include i modelli di progetto per [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: Creazione guidata progetto server di report e Progetto server di report. Per informazioni sul download di SSDT, vedere [SQL Server Data Tools per Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542).  
 
 ### <a name="report-builder-improvements"></a>Miglioramenti di Generatore report
 
-**Nuova interfaccia utente di Generatore report:** l'interfaccia utente di base di [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] ora ha un aspetto moderno grazie a elementi semplificati.  
+**Nuova interfaccia utente di Generatore report:** l'interfaccia utente di base di [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] ha ora un aspetto moderno grazie a elementi semplificati per l'interfaccia utente.  
 
 |||  
 |-|-|  
 |Nuovo|Previous|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
-**Riquadro Parametri personalizzato:** è ora possibile personalizzare il riquadro Parametri. Usando l'area di progettazione in Generatore report, è possibile trascinare un parametro in una colonna e in una riga specifiche del riquadro Parametri. È possibile aggiungere e rimuovere colonne per modificare il layout del riquadro. Per altre informazioni, vedere [Personalizzare il riquadro dei parametri in un report &#40;Generatore report&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
+**Personalizzazione del riquadro Parametri:** è ora possibile personalizzare il riquadro Parametri. Usando l'area di progettazione in Generatore report, è possibile trascinare un parametro in una colonna e in una riga specifiche del riquadro Parametri. È possibile aggiungere e rimuovere colonne per modificare il layout del riquadro. Per altre informazioni, vedere [Personalizzare il riquadro dei parametri in un report &#40;Generatore report&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
 
 ![Elenco di parametri nel riquadro dei dati del report e nel riquadro dei parametri](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "Elenco di parametri nel riquadro dei dati del report e nel riquadro dei parametri")  
 

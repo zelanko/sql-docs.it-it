@@ -18,12 +18,12 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 65b65c0ff721742c1bccbd6998d358797bd6d10b
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 91b38115cfcd9f688187fc7663e3da8c90d3d457
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87393951"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173086"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "87393951"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql  
 sp_spaceused [[ @objname = ] 'objname' ]   
 [, [ @updateusage = ] 'updateusage' ]  
 [, [ @mode = ] 'mode' ]  
@@ -60,7 +60,7 @@ Se *ObjName* viene omesso, vengono restituiti i risultati per l'intero database.
   
  L'argomento *mode* può includere i valori seguenti:  
   
-|Valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |ALL|Restituisce le statistiche di archiviazione dell'oggetto o del database, inclusi sia la parte locale che la parte remota.|  
 |LOCAL_ONLY|Restituisce le statistiche di archiviazione solo della parte locale dell'oggetto o del database. Se l'oggetto o il database non è abilitato per l'estensione, restituisce le stesse statistiche di quando @mode = all.|  
@@ -70,7 +70,7 @@ Se *ObjName* viene omesso, vengono restituiti i risultati per l'intero database.
   
 `[ @oneresultset = ] oneresultset`Indica se restituire un singolo set di risultati. L'argomento *oneresultset* può avere i valori seguenti:  
   
-|Valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |0|Quando * \@ ObjName* è null o non è specificato, vengono restituiti due set di risultati. Il comportamento predefinito è due set di risultati.|  
 |1|Quando * \@ ObjName* = null o non è specificato, viene restituito un singolo set di risultati.|  
@@ -244,7 +244,7 @@ EXEC sp_spaceused
 GO
 ```  
 
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC UPDATEUSAGE &#40;&#41;Transact-SQL](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   

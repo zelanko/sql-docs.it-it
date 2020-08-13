@@ -18,11 +18,12 @@ ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6afbbc9cc5a1300048b043ab92e0152e68ed03a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f00b2446595835cb4ff556c34d58a3dd04b448a8
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007453"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180105"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,9 +37,8 @@ ms.locfileid: "86007453"
   
 ## <a name="syntax"></a>Sintassi  
   
-```
+```syntaxsql
 sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'  
-
 ```    
   
 ## <a name="arguments"></a>Argomenti  
@@ -79,7 +79,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 > [!NOTE]  
 >  Poiché `Contoso\Mary5` è noto come utente del database `Mary5` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], è necessario specificare il nome utente `Mary5`. L'istruzione non verrà eseguita correttamente se non esiste un account di accesso `Contoso\Mary5`. Eseguire un test mediante un account di accesso dal dominio.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE USER Mary5 FOR LOGIN [Contoso\Mary5] ;  
@@ -89,7 +89,7 @@ GO
 ### <a name="b-adding-a-database-user"></a>B. Aggiunta di un utente del database  
  Nell'esempio seguente l'utente del database `Mary5` viene aggiunto al ruolo del database `Production` nel database corrente.  
   
-```  
+```sql  
 EXEC sp_addrolemember 'Production', 'Mary5';  
 ```  
   
@@ -101,7 +101,7 @@ EXEC sp_addrolemember 'Production', 'Mary5';
 > [!NOTE]  
 >  Poiché l'account `LoginMary` di accesso è noto come utente del database `UserMary` nel [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database, è necessario specificare il nome utente `UserMary` . L'istruzione non verrà eseguita correttamente se non esiste un account di accesso `Mary5`. Gli account di accesso e gli utenti di solito hanno lo stesso nome. Questo esempio usa nomi diversi per distinguere le azioni che interessano l'accesso e l'utente.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 CREATE USER UserMary FOR LOGIN LoginMary ;  
@@ -112,7 +112,7 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 ### <a name="d-adding-a-database-user"></a>D. Aggiunta di un utente del database  
  Nell'esempio seguente l'utente del database `UserMary` viene aggiunto al ruolo del database `Production` nel database corrente.  
   
-```  
+```sql  
 EXEC sp_addrolemember 'Production', 'UserMary'  
 ```  
   

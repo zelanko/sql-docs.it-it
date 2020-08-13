@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68737e96c3c2c90592b1cccf807675ae5518ee4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 53bc390e3e95ac49554826ad6ed96b8c4138ca10
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891191"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88172900"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
 `[ @pollinginterval ] = polling\_interval_`Numero di secondi tra i cicli di analisi del log. *polling_interval* è di tipo **bigint** e il valore predefinito è 5.  
   
- *polling_interval* è valido solo per i processi di acquisizione quando *Continuous* è impostato su 1. Se specificato, il valore non può essere negativo e non può superare 24 ore. Se viene specificato il valore 0, non esiste alcun intervallo di attesa tra le analisi del log.  
+ *polling_interval* è valido solo per i processi di acquisizione quando *Continuous* è impostato su 1. Se specificato, il valore deve essere maggiore o uguale a 0 e inferiore a 24 ore (max: 86399 secondi). Se viene specificato il valore 0, non esiste alcun intervallo di attesa tra le analisi del log.  
   
 `[ @retention ] = retention_`Numero di minuti per i quali le righe dei dati delle modifiche devono essere conservate nelle tabelle delle modifiche. la *conservazione* è di tipo **bigint** e il valore predefinito è 4320 (72 ore). Il valore massimo è 52494800 (100 anni). Se specificato, il valore deve essere un numero intero positivo.  
   

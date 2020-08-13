@@ -1,5 +1,6 @@
 ---
 title: 'Esercitazione: Introduzione alle espressioni | Microsoft Docs'
+description: Informazioni su come usare espressioni con operatori e funzioni comuni per creare report impaginati di Reporting Services efficaci e flessibili.
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7ebb428a12bc75f3c61793918dde0594da531ed2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63295922"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248540"
 ---
 # <a name="tutorial-introducing-expressions"></a>Esercitazione: Introduzione alle espressioni
 In questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] vengono usate espressioni e operatori comuni per creare report impaginati di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] potenti e flessibili. 
@@ -26,7 +27,7 @@ Nell'immagine seguente viene illustrato un report simile a quello che verrà cre
   
 ![Generatore-report-espressione-esercitazione-nel-browser](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
   
-Tempo previsto per il completamento di questa esercitazione: 30 minuti.  
+Tempo stimato per il completamento dell'esercitazione: 30 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -89,7 +90,7 @@ In questa sezione vengono creati un report tabella, un'origine dati e un set di 
     ```  
 
   
-10. Nella barra degli strumenti Progettazione query fare clic su **Esegui** ( **!** ). Nel set di risultati vengono visualizzate 23 righe di dati nelle colonne seguenti: Nome, Cognome, Paese/Regione, ID Paese/Regione, Sesso, Acquisti da inizio anno e Ultimo acquisto.  
+10. Nella barra degli strumenti Progettazione query fare clic su **Esegui** ( **!** ). Nel set di risultati vengono visualizzate 23 righe di dati con le colonne seguenti: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase e LastPurchase.  
 
     ![Generatore-report-espressione-esercitazione-query-come-testo](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -147,7 +148,7 @@ In questa sezione vengono creati un report tabella, un'origine dati e un set di 
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3. Visualizzare iniziale nome e cognome  
-In questa sezione, viene usata la funzione **Left** e l'operatore di **concatenazione** ( **&** ) in un'espressione tramite cui vengono restituiti un'iniziale del nome e un cognome. È possibile compilare l'espressione passaggio dopo passaggio oppure andare avanti nella procedura e copiare e incollare l'espressione dall'esercitazione nella finestra di dialogo **Espressione** .   
+In questa sezione, viene usata la funzione **Left** e l'operatore di **concatenazione** (**&**) in un'espressione tramite cui vengono restituiti un'iniziale del nome e un cognome. È possibile compilare l'espressione passaggio dopo passaggio oppure andare avanti nella procedura e copiare e incollare l'espressione dall'esercitazione nella finestra di dialogo **Espressione** .   
   
 1.  Fare clic con il pulsante destro del mouse sulla colonna **StateProvince** , scegliere **Inserisci colonna**e fare clic su **A sinistra**.  
   
@@ -357,7 +358,7 @@ In questa sezione viene creato un set di dati PaeseRegione e viene usata la funz
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>Per cercare valori nel set di dati CountryRegion  
   
-1.  Fare clic sull'intestazione della colonna **ID Paese/Regione** ed eliminare il testo : **ID**in modo che si legga **Paese/Regione**.  
+1.  Fare clic sul titolo di colonna **Country Region ID** ed eliminare il testo: **ID**, in modo che si legga **Country Region**.  
   
 2.  Fare clic con il pulsante destro del mouse sulla cella di dati per la colonna **Country Region** e scegliere **Espressione**.  
   
@@ -533,25 +534,25 @@ Creare un parametro in modo che gli utenti del report possano specificare il col
   
 5.  Nella scheda **Valori disponibili** fare clic su **Imposta valori**.  
   
-7.  Fare clic su **Aggiungi**.  
+7.  Scegliere **Aggiungi**.  
   
 8.  Nella casella **Etichetta** digitare: **Giallo**  
   
 9. Nella casella **Valore** digitare **Yellow**  
   
-10. Fare clic su **Aggiungi**.  
+10. Scegliere **Aggiungi**.  
   
 11. Nella casella **Etichetta** digitare **Green**  
   
 12. Nella casella **Valore** digitare **PaleGreen**  
   
-13. Fare clic su **Aggiungi**.  
+13. Scegliere **Aggiungi**.  
   
 14. Nella casella **Etichetta** digitare **Blue**  
   
 15. Nella casella **Valore** digitare **LightBlue**  
   
-16. Fare clic su **Aggiungi**.  
+16. Scegliere **Aggiungi**.  
   
 17. Nella casella **Etichetta** digitare **Pink**  
   
