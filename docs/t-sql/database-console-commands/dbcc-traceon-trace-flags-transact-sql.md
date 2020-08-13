@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 248377fa1c4d498d6ffeb5b72518b2baf322362a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 67dc81b5a0a3c8c5e7dabdd1013f5927ceedff0b
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248526"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87877800"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - Flag di traccia (Transact-SQL)
 
@@ -54,7 +54,7 @@ Per verificare i flag di traccia attivi, usare il comando `DBCC TRACESTATUS`.
 Nella tabella seguente vengono elencati e descritti i flag di traccia disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 > [!NOTE]
-> Istanza gestita di database SQL di Azure supporta i flag di traccia globali seguenti: 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389, 10316 e 11024. I flag di traccia di sessione non sono ancora supportati in Istanza gestita.
+> Istanza gestita di SQL di Azure supporta i flag di traccia globali seguenti: 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389, 10316 e 11024. I flag di traccia di sessione non sono ancora supportati in Istanza gestita.
  
 > [!NOTE]
 > Alcuni flag di traccia sono stati introdotti in specifiche versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni sulla versione applicabile, vedere l'articolo del supporto tecnico Microsoft associato a un flag di traccia specifico.
