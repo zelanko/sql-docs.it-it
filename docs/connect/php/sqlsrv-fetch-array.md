@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_fetch_array | Microsoft Docs
+title: sqlsrv_fetch_array
+description: Riferimento API per la funzione sqlsrv_fetch_array nel driver per PHP per SQL Server.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d0055ed89d217a664d201d93d2c13c8e078d2a38
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3b3c3f296d0fd2ae05c3b88a08428c3ddb8a5f2c
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927808"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391806"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,15 +40,15 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
 #### <a name="parameters"></a>Parametri  
 *$stmt*: risorsa di istruzione corrispondente a un'istruzione eseguita.  
   
-*$fetchType* [facoltativo]: costante predefinita. Questo parametro può assumere uno dei valori elencati nella tabella seguente:  
+*$fetchType* [FACOLTATIVO]: costante predefinita. Questo parametro può assumere uno dei valori elencati nella tabella seguente:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|La riga successiva di dati viene restituita come matrice numerica.|  
 |SQLSRV_FETCH_ASSOC|La riga successiva di dati viene restituita come matrice associativa. Le chiavi della matrice sono i nomi di colonna nel set di risultati.|  
 |SQLSRV_FETCH_BOTH|La riga successiva di dati viene restituita come matrice numerica e matrice associativa. Si tratta del valore predefinito.|  
   
-*row* [facoltativo]: aggiunto nella versione 1.1. Uno dei valori seguenti che specifica la riga a cui accedere in un set di risultati che usa un cursore scorrevole. (Se si specifica *row* è necessario specificare esplicitamente *fetchtype* anche se si indica il valore predefinito.)  
+*row* [FACOLTATIVO]: aggiunto nella versione 1.1. Uno dei valori seguenti che specifica la riga a cui accedere in un set di risultati che usa un cursore scorrevole. (Se si specifica *row* è necessario specificare esplicitamente *fetchtype* anche se si indica il valore predefinito.)  
   
 -   SQLSRV_SCROLL_NEXT  
 -   SQLSRV_SCROLL_PRIOR  
@@ -58,7 +59,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 Per altre informazioni su questi valori, vedere [Specifica di un tipo di cursore e selezione di righe](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md). Il supporto del cursore scorrevole è stato aggiunto nella versione 1.1 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-*offset* [facoltativo]: usato con SQLSRV_SCROLL_ABSOLUTE e SQLSRV_SCROLL_RELATIVE per specificare la riga da recuperare. Il primo record nel set di risultati è 0.  
+*offset* [FACOLTATIVO]: usato con SQLSRV_SCROLL_ABSOLUTE e SQLSRV_SCROLL_RELATIVE per specificare la riga da recuperare. Il primo record nel set di risultati è 0.  
   
 ## <a name="return-value"></a>Valore restituito  
 Se viene recuperata una riga di dati, viene restituita una **matrice** . Se non sono presenti altre righe da recuperare, viene restituito **null** . Se si verifica un errore, viene restituito **false** .  
@@ -73,7 +74,7 @@ INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);
 SELECT SCOPE_IDENTITY()
 ```
   
-Se il set di risultati restituito dalla sezione `SELECT SCOPE_IDENTITY()` di questa istruzione viene recuperato come matrice associativa, la chiave per il valore restituito sarà una stringa vuota ("") perché la colonna restituita non ha nome. Per evitare questa circostanza, è possibile recuperare il risultato come matrice numerica oppure specificare un nome per la colonna restituita nell'istruzione Transact-SQL. Di seguito è illustrato un modo per specificare un nome di colonna in Transact-SQL:  
+Se il set di risultati restituito dalla sezione `SELECT SCOPE_IDENTITY()` di questa istruzione viene recuperato come matrice associativa, la chiave per il valore restituito sarà una stringa vuota ("") perché la colonna restituita non ha nome. Per evitare questa circostanza, è possibile recuperare il risultato come matrice numerica oppure specificare un nome per la colonna restituita nell'istruzione Transact-SQL. L'istruzione seguente offre un modo per specificare un nome di colonna in Transact-SQL:  
   
 ```
 SELECT SCOPE_IDENTITY() AS PictureID
@@ -176,7 +177,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-La funzione **sqlsrv_fetch_array** restituisce sempre i dati in base ai [Default PHP Data Types](../../connect/php/default-php-data-types.md). Per informazioni su come specificare il tipo di dati PHP, vedere [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+La funzione **sqlsrv_fetch_array** restituisce sempre i dati in base ai [Default PHP Data Types](../../connect/php/default-php-data-types.md). Per informazioni su come specificare il tipo di dati PHP, vedere [Procedura: Specificare i tipi di dati PHP](../../connect/php/how-to-specify-php-data-types.md).  
   
 Se viene recuperato un campo senza nome, la chiave associativa per l'elemento della matrice sarà una stringa vuota (""). Per altre informazioni, vedere [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   

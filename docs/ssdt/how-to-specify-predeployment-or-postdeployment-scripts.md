@@ -1,23 +1,23 @@
 ---
 title: Specificare script di pre-distribuzione o di post-distribuzione
+description: Informazioni su come usare gli script pre-distribuzione e post-distribuzione per eseguire istruzioni Transact-SQL prima e dopo lo script di distribuzione principale.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 56b69a6b84aa3c529c02690f7e6554e76e46b079
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbf8067047edf1c3b9b6a837ed12d49cb5d95df1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244269"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901120"
 ---
-# <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>Procedura: specificare script pre-distribuzione o post-distribuzione
+# <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>Procedura: Specificare script pre-distribuzione o post-distribuzione
 
 Gli script pre-distribuzione e post-distribuzione consentono di eseguire le istruzioni Transact\-SQL prima e dopo lo script di distribuzione principale generato dal progetto di database. Lo script di pre-distribuzione non verrà eseguito quando si aggiornano le destinazioni dai risultati di confronto dello schema in Visual Studio. Un progetto può contenere un solo script pre-distribuzione e un solo script post-distribuzione. Tali script possono essere utilizzati per molti scopi. Ad esempio:  
   

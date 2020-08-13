@@ -1,7 +1,5 @@
 ---
 title: Creare e aggiornare le tabelle
-ms.custom: seo-lt-2019
-ms.date: 08/25/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -16,52 +14,54 @@ helpviewer_keywords:
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 42da7ce86560e77cc7757f8077b0c0aca8775d93
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.custom: seo-lt-2019
+ms.date: 08/25/2017
+ms.openlocfilehash: 026080e2eedf38cb65b3c8860335ab5432504a0a
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254684"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196859"
 ---
 # <a name="create-and-update-database-tables"></a>Creare e aggiornare le tabelle di database
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
 Progettazione tabelle è uno strumento visivo che consente di progettare e visualizzare le [tabelle di database](../../relational-databases/tables/tables.md). È possibile usare Progettazione tabelle di SQL Server Management Studio (SSMS) per creare, modificare o eliminare tabelle, colonne, chiavi, indici, relazioni e vincoli.  
 
-  
-## <a name="create-a-table"></a>Creare una tabella  
-  
-1. Fare clic con il pulsante destro del mouse sul nodo **Tabelle** nel database e quindi scegliere **Nuovo** > **Tabella**:  
-  
+## <a name="create-a-table"></a>Creare una tabella
+
+1. Fare clic con il pulsante destro del mouse sul nodo **Tabelle** nel database e quindi scegliere **Nuovo** > **Tabella**:
+
     ![Nuova tabella](../media/design-tables/new-table.png)
-  
-1. Aggiungere [colonne](column-properties-visual-database-tools.md) alla tabella:
-  
+
+2. Aggiungere [colonne](column-properties-visual-database-tools.md) alla tabella:
+
     ![Progettare una tabella](../media/design-tables/new-table2.png)
 
-1. Chiudere la finestra di progettazione e salvare le modifiche.
-  
-## <a name="update-a-table"></a>Aggiornare una tabella  
-  
-1. Fare clic con il pulsante destro del mouse sulla tabella disponibile nel nodo **Tabelle** del database e quindi scegliere **Progetta**:  
-  
-   ![Aggiornare una tabella](../media/design-tables/update-table.png)
+3. Chiudere la finestra di progettazione e salvare le modifiche.
 
-1. Aggiornare le impostazioni specifiche della tabella:
+## <a name="update-a-table"></a>Aggiornare una tabella
 
-   ![](../media/design-tables/update-table2.png)
+1. Fare clic con il pulsante destro del mouse sulla tabella disponibile nel nodo **Tabelle** del database e quindi scegliere **Progetta**:
 
-1. Chiudere la finestra di progettazione e salvare le modifiche.
+    ![Aggiornare una tabella](../media/design-tables/update-table.png)
+
+2. Aggiornare le impostazioni specifiche della tabella:
+
+    ![Creare una tabella](../media/design-tables/update-table2.png)
+
+3. Chiudere la finestra di progettazione e salvare le modifiche.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Tabelle](../../relational-databases/tables/tables.md)  
-[Proprietà delle tabelle &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
-[Proprietà delle colonne](column-properties-visual-database-tools.md)  
-[Aggiungere colonne a una tabella](../../relational-databases/tables/add-columns-to-a-table-database-engine.md)  
-[Chiavi primarie ed esterne](../../relational-databases/tables/primary-and-foreign-key-constraints.md)  
-[Indici](../../relational-databases/indexes/indexes.md)  
-[Tipi di dati (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
-[Scaricare SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)  
-[Creare un database e aggiungere tabelle in Visual Studio](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)
+- [Tabelle](../../relational-databases/tables/tables.md)
+- [Proprietà delle tabelle &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)
+- [Proprietà delle colonne](column-properties-visual-database-tools.md)
+- [Aggiungere colonne a una tabella](../../relational-databases/tables/add-columns-to-a-table-database-engine.md)
+- [Chiavi primarie ed esterne](../../relational-databases/tables/primary-and-foreign-key-constraints.md)
+- [Indici](../../relational-databases/indexes/indexes.md)
+- [Tipi di dati (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
+- [Scaricare SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
+- [Creare un database e aggiungere tabelle in Visual Studio](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)

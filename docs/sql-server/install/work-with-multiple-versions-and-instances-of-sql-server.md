@@ -1,5 +1,6 @@
 ---
 title: Usare più versioni e istanze
+description: È possibile installare più istanze di SQL Server o installare SQL Server in un computer in cui sono già installate versioni precedenti di SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -17,18 +18,18 @@ helpviewer_keywords:
 - 32-bit edition [SQL Server]
 - editions [SQL Server], side-by-side installations
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 42359f4b8b6f36eec3c4618d39ee68d0f8c84ba5
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3067b285a1d821808323cff524b109f782172e84
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528409"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899625"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Usare più versioni e istanze di SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 È possibile installare più istanze di SQL Server o installare SQL Server in un computer in cui sono già installate versioni precedenti di SQL Server.
 

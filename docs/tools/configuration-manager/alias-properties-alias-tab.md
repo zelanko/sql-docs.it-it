@@ -1,5 +1,6 @@
 ---
 title: Proprietà Alias (scheda Alias)
+description: Usare la scheda Alias della finestra di dialogo Proprietà per configurare un alias e usare così un nome alternativo per la connessione a un'istanza di SQL Server.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,18 +12,18 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 53bb19934209ee501c76317e102e5b1fcae28c4d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 098da595a57c82e4d0ff68713880f38fe6acb6d2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306603"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902193"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>Proprietà &lt;Alias&gt; (scheda Alias)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-Un alias rappresenta un nome alternativo che può essere utilizzato per stabilire una connessione. L'alias incapsula gli elementi necessari di una stringa di connessione e li espone con un nome scelto dall'utente. Usare la pagina **Alias** nella finestra di dialogo **Proprietà \<** Nome alias **>** per visualizzare o specificare gli elementi della stringa di connessione di un alias.
+Un alias rappresenta un nome alternativo che può essere utilizzato per stabilire una connessione. L'alias incapsula gli elementi necessari di una stringa di connessione e li espone con un nome scelto dall'utente. Usare la pagina **Alias** nella finestra di dialogo **Proprietà \<**Alias name**>** per visualizzare o specificare gli elementi della stringa di connessione di un alias.
 
 ## <a name="options"></a>Opzioni
 

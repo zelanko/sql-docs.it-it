@@ -9,16 +9,16 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b614373ee8517c0b0aa369c9793dec323a137044
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08574ef070803a8612d12e595169bbc00b99b139
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286045"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279462"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Distribuire un cluster Big Data di SQL Server con disponibilità elevata
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Poiché i cluster Big Data di SQL Server si trovano in Kubernetes come applicazioni in contenitori e usano funzionalità come i set con stato e l'archiviazione permanente, questa infrastruttura include meccanismi predefiniti di monitoraggio dello stato, rilevamento degli errori e failover sfruttati dai componenti del cluster per mantenere l'integrità del servizio. Per una maggiore affidabilità, è anche possibile configurare l'istanza master di SQL Server o il nodo NameNode di HDFS e i servizi condivisi di Spark per la distribuzione con repliche aggiuntive in una configurazione a disponibilità elevata. Il monitoraggio, il rilevamento degli errori e il failover automatico vengono gestiti da un servizio di gestione del cluster Big Data, ovvero il servizio di controllo. Questo servizio opera senza l'intervento dell'utente, dall'impostazione del gruppo di disponibilità, configurando gli endpoint di mirroring dei database per l'aggiunta dei database al gruppo di disponibilità o per il coordinamento del failover e dell'aggiornamento. 
 

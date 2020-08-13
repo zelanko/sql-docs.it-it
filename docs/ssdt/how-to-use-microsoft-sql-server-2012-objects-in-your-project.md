@@ -1,23 +1,23 @@
 ---
 title: Oggetti di SQL Server 2012 nel progetto
+description: Acquisire familiarità con le sequenze di SQL Server 2012. Scoprire come aggiungere questi oggetti ai progetti di database e usarli nelle query.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 69c68812e169d2831ffde71d2b21f9af8f418600
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 42c9c1cdc852aed9a1ff8bf469cd0534bc992ba2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486792"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895840"
 ---
-# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Procedura: Utilizzo di oggetti di Microsoft SQL Server 2012 nel progetto
+# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Procedura: Usare oggetti di Microsoft SQL Server 2012 nel progetto
 
 In questo esempio, si aggiungerà un oggetto Sequence a un progetto di database per Microsoft SQL Server 2012.  
   
@@ -44,7 +44,7 @@ Le sequenze sono state introdotte in Microsoft SQL Server 2012. Una sequenza è 
     CACHE 10  
     ```  
   
-4.  Se la piattaforma di destinazione del progetto non è impostata su Microsoft SQL Server 2012, nell'**Elenco errori** verrà visualizzato un errore di sintassi per l'istruzione `CREATE SEQUENCE`. Per correggerlo, seguire l'argomento [Procedura: Modifica della piattaforma di destinazione e pubblicazione di un progetto di database](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) per modificare la piattaforma di destinazione di conseguenza.  
+4.  Se la piattaforma di destinazione del progetto non è impostata su Microsoft SQL Server 2012, nell'**Elenco errori** verrà visualizzato un errore di sintassi per l'istruzione `CREATE SEQUENCE`. Per correggerlo, seguire l'argomento [Procedura: Modifica della piattaforma di destinazione e pubblicazione di un progetto di database](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) per cambiare la piattaforma di destinazione di conseguenza.  
   
 5.  Seguire l'argomento [Procedura: Modificare la piattaforma di destinazione e pubblicare un progetto di database](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) per pubblicare il progetto in un database nel server Microsoft SQL Server 2012 connesso.  
   

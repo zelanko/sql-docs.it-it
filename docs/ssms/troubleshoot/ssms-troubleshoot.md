@@ -1,31 +1,31 @@
 ---
-title: Risoluzione dei problemi relativi a un blocco o a un arresto anomalo con SSMS
+title: Risoluzione dei problemi relativi a un sistema che non risponde o ad arresti anomali di SSMS
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: dnethi
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
+ms.reviewer: dnethi
 ms.custom: seo-lt-2019
 ms.date: 09/18/2019
-ms.openlocfilehash: f994a44d6fe0f458ae8f8d8be0351421322e7967
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 98ed3868008808ff18a9847a009108ee41205d12
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243876"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091287"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>Ottenere dati di diagnostica dopo un arresto anomalo di SQL Server Management Studio (SSMS)
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-## <a name="get-full-memory-dump-after-a-hang-or-crash"></a>Ottenere il dump della memoria completo dopo un blocco o un arresto anomalo del sistema
+## <a name="get-full-memory-dump-after-an-unresponsive-system-or-crash"></a>Ottenere il dump completo della memoria in caso di un sistema che non risponde o di un arresto anomalo
 
-Ottenere un dump della memoria completo di SQL Server Management Studio (SSMS) in seguito a un blocco o un arresto anomalo.
+Ottenere un dump completo della memoria di SQL Server Management Studio (SSMS) quando smette di rispondere o in seguito a un arresto anomalo.
 
-Per acquisire le informazioni di diagnostica per risolvere i problemi di un arresto anomalo o un blocco di SSMS, seguire questa procedura.
+Per acquisire le informazioni di diagnostica per risolvere i problemi di un arresto anomalo di SSMS o quando SSMS non risponde, seguire questa procedura.
 
 1. Scaricare [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
 

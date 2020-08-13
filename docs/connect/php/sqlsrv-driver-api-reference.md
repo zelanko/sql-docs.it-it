@@ -1,5 +1,6 @@
 ---
-title: Informazioni di riferimento per l'API del driver SQLSRV | Microsoft Docs
+title: Riferimento all'API del driver SQLSRV
+description: Il riferimento API per il driver SQLSRV per PHP descrive le funzioni disponibili, i relativi parametri e i valori restituiti.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a05b7a39bce6fb263b63bdbfa4644c78175a584c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 01dfb59cd433a545efbe7376fd369c897ee4f693
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928235"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381075"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>Riferimento all'API del driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -54,7 +55,7 @@ Il driver SQLSRV contiene le funzioni seguenti:
 |[sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)|Invia fino a otto kilobyte (8 KB) di dati al server con ogni chiamata alla funzione.|  
 |[sqlsrv_server_info](../../connect/php/sqlsrv-server-info.md)|Fornisce informazioni sul server.|  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Informazioni di riferimento  
 [Manuale PHP](https://php.net/manual)  
   
 ## <a name="see-also"></a>Vedere anche  

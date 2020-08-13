@@ -1,6 +1,6 @@
 ---
 title: Ripristino di emergenza tramite quorum forzato
-description: Il ripristino da un errore del quorum richiede un intervento manuale. Questo articolo descrive come forzare il quorum in caso di emergenza di un'istanza del cluster di failover di SQL Server.
+description: Il ripristino da un errore del quorum richiede un intervento manuale. Informazioni su come forzare il quorum in caso di emergenza di un'istanza del cluster di failover di SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 36eebd77371cf2cede1e36ab68873c080a752128
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 20beee1d78975cdb4da4338ca85eff14a32b8153
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74821987"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896688"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Ripristino di emergenza WSFC tramite quorum forzato (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Un errore del quorum è causato generalmente da una situazione di emergenza a livello di sistema, da un errore di comunicazione persistente o da una configurazione errata che interessa diversi nodi del cluster WSFC.  Per il recupero da un errore del quorum è necessario intervenire manualmente.  
   
 -   **Prima di iniziare:**  [Prerequisiti](#Prerequisites), [Sicurezza](#Security)  

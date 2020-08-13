@@ -1,5 +1,6 @@
 ---
 title: Proprietà - SQL Server (scheda Accesso)
+description: Informazioni sulla scheda Accesso della finestra di dialogo Proprietà di SQL Server Usare questa scheda per specificare l'account usato da SQL Server e per avviare o arrestare il servizio.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 042a0bcf0b0a078b87219a4371d7cb890b4abab6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ac7122b1ec746fa3f73dab8fc104d91851b7569a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306811"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898932"
 ---
 # <a name="sql-server-properties-log-on-tab"></a>Proprietà - SQL Server (scheda Accesso)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Utilizzare la scheda **Accesso** della finestra di dialogo **Proprietà - SQL Server** per specificare l'account utilizzato dal servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per modificare la password di un account e per avviare e arrestare il servizio. La modifica della password di un account ha effetto immediato.  
   
 > [!NOTE]  

@@ -1,23 +1,24 @@
 ---
 title: Installare l'istanza del cluster di failover
+description: Informazioni su come installare un cluster di failover di SQL Server. Creare e configurare un'istanza del cluster di failover eseguendo il programma di installazione di SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3de22853ccef8bd38c338b05043da7061ffeed0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 574f8f557eab10fa43be721f9b73bfc446b04687
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230615"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897662"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Installazione del cluster di failover di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Per installare un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , è necessario creare e configurare un'istanza del cluster di failover eseguendo il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="installing-a-failover-cluster"></a>Installazione di un cluster di failover  
@@ -39,7 +40,7 @@ ms.locfileid: "75230615"
   
     -   In tutti i nodi di un cluster di failover deve essere utilizzata la stessa piattaforma, a 32 o a 64 bit, e l'edizione e la versione del sistema operativo eseguite devono essere uguali. È inoltre necessario installare le versioni a 64 bit di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in computer a 64 bit che eseguono versioni a 64 bit dei sistemi operativi Windows. Non è disponibile alcun supporto WOW64 per il clustering di failover in questa versione.  
   
-3.  Specificare più indirizzi IP per ogni istanza del cluster di failover. È possibile specificare più indirizzi IP per ogni subnet. Se i diversi indirizzi IP si trovano nella stessa subnet, il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di impostare la dipendenza su AND. Se si sta eseguendo il clustering di nodi in più subnet, il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di impostare la dipendenza su OR.  
+3.  Specificare più indirizzi IP per ogni istanza del cluster di failover. È possibile specificare più indirizzi IP per ogni subnet. Se i diversi indirizzi IP si trovano nella stessa subnet, il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] imposta la dipendenza su AND. Se si sta eseguendo il clustering di nodi in più subnet, il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di impostare la dipendenza su OR.  
 
 4.  Per l'istanza del cluster di failover di SQL Server è necessario che i nodi del cluster siano aggiunti a un dominio. **Non sono supportate** le configurazioni seguenti:
     - Istanza del cluster di failover di SQL Server in cluster di gruppi di lavoro. 

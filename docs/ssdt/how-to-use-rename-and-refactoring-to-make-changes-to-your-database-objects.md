@@ -1,5 +1,6 @@
 ---
 title: Ridenominazione e refactoring per apportare modifiche agli oggetti di database
+description: Informazioni sui menu Rinomina e Refactoring nell'editor Transact-SQL. Scoprire come rinominare i tipi, modificare gli schemi degli oggetti, espandere i caratteri jolly e specificare i nomi completi.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -12,18 +13,17 @@ f1_keywords:
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ac10530cf2fa3831a26733e7470b6bd107d17121
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8ca1ef866a86f71eaa1b5f7dfa94821c94da5588
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244243"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895829"
 ---
-# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Procedura: Utilizzo della ridenominazione e del refactoring per apportare modifiche agli oggetti di database
+# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Procedura: Usare la ridenominazione e il refactoring per apportare modifiche agli oggetti di database
 
 Il menu contestuale Refactoring nell'Editor Transact\-SQL consente di rinominare o spostare un oggetto in uno schema differente e di generare un'anteprima di tutte le aree interessate prima di eseguire il commit della modifica. È inoltre possibile usare il menu Refactoring per indicare il nome completo di tutti i riferimenti agli oggetti di database o per espandere alcuni caratteri jolly nelle istruzioni `SELECT` del progetto di database in uso.  
   
@@ -40,7 +40,7 @@ Il menu contestuale Refactoring nell'Editor Transact\-SQL consente di rinominare
   
 4.  Nell schermata successiva sarà possibile visualizzare un'anteprima di un elenco di script che saranno interessati dall'operazione di ridenominazione. In particolare, verranno evidenziate tutte le parti che fanno riferimento a `Products`. Questa operazione è molto simile all'attività Trova tutti i riferimenti illustrata nella procedura precedente. Fare clic su un elemento nel riquadro superiore e visualizzare la modifica effettiva negli script (evidenziati in verde) nel riquadro inferiore.  
   
-5.  Fare clic su **Apply**.  
+5.  Fare clic su **Applica**.  
   
 6.  Per i file di script già aperti in Progettazione tabelle o nell'Editor Transact\-SQL, si noti che le posizioni in cui sono state eseguite modifiche sono evidenziate con una barra verde a sinistra nell'Editor Transact\-SQL.  
   

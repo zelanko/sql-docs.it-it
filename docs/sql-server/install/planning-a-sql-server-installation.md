@@ -1,5 +1,6 @@
 ---
 title: Pianificazione di un'installazione di SQL Server | Microsoft Docs
+description: Questo articolo consente di pianificare l'installazione di SQL Server. Include i collegamenti alle risorse necessarie per l'installazione di SQL Server.
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -9,17 +10,17 @@ ms.topic: quickstart
 helpviewer_keywords:
 - installing SQL Server, planning
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 56adbb10af74ef8e0e71012378b4aa13a2d818d2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ce94f99ac38a6d87dfc39a9ba01ad672f1cd70a0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79428182"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902306"
 ---
 # <a name="planning-a-sql-server-installation"></a>Pianificazione di un'installazione di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Per installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], effettuare le operazioni seguenti:  
   

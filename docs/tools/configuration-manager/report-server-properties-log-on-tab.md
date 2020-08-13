@@ -1,5 +1,6 @@
 ---
 title: Proprietà - Server di report (scheda Accesso)
+description: Informazioni sulla scheda Accesso della finestra di dialogo Proprietà - Server di report in SQL Server e su come usarla per specificare un account e avviare o arrestare il servizio.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: f54be594-f290-4db2-bf18-fd2521728a4a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1dda864021df72f2e45e2db08fec0c66765fb0a4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8a79108efea864af196de1d8b756195c1a9e4036
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306348"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897617"
 ---
 # <a name="report-server-properties-log-on-tab"></a>Proprietà - Server di report (scheda Accesso)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Utilizzare la scheda **Accesso** della finestra di dialogo **Proprietà - Server di report** per specificare l'account utilizzato dal servizio del server di report e avviare e arrestare il servizio.  
   
 ## <a name="options"></a>Opzioni  

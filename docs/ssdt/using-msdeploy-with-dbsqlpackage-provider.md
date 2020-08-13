@@ -1,21 +1,21 @@
 ---
 title: Utilizzo di MSDeploy con il provider dbSqlPackage
+description: Informazioni sul provider MSDeploy obsoleto DbSqlPackage. Visualizzare parametri, esempi e strumenti di pubblicazione di database alternativi per SQL Server e SQL di Azure.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: f4c45335bae79a0307be27efb88cb0858bd6439f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5a0bda3b935a7123de3c8766a40e7d7f8df5a0d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243557"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899747"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Utilizzo di MSDeploy con il provider dbSqlPackage
 

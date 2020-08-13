@@ -1,23 +1,24 @@
 ---
 title: 'Installare gli strumenti client: cluster di failover'
+description: Informazioni su come installare strumenti client, come SQL Server Management Studio, in un'istanza di failover di SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c4918cdbb99a49bf577f9efad19ed0360c9a4911
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b9f992c50b19d8618f1eacbdbb4a441501de4a61
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230497"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897680"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>Installare strumenti client in un cluster di failover di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gli strumenti client, ad esempio [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , sono funzionalità condivise comuni a tutte le istanze dello stesso computer. Sono compatibili con le versioni precedenti e consentono l'installazione affiancata delle versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supportate. In un nodo può esistere solo una versione dello strumento client alla volta.  
   
  Se gli strumenti client di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono installati durante l'installazione del cluster di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel primo nodo, questi verranno aggiunti automaticamente a tutti i nodi che verranno aggiunti in un secondo momento all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite la funzionalità per l'aggiunta del nodo.  
@@ -45,7 +46,7 @@ ms.locfileid: "75230497"
   
 1.  Per installare gli strumenti client di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e la documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], eseguire il comando seguente: Setup.exe/q/Action=Install /Features=Tools  
   
-2.  Per installare solo gli strumenti di gestione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di base, eseguire il comando seguente: Setup.exe/q/Action=Install Features=SSMS. Verrà installato il supporto di [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] per [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], l'utilità sqlcmd e il provider Powershell di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+2.  Per installare solo gli strumenti di gestione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di base, eseguire il comando seguente: Setup.exe/q/Action=Install Features=SSMS. Verranno installati il supporto di [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] per [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], l'utilità sqlcmd e il provider PowerShell di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 3.  Per installare gli strumenti di gestione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] completi, eseguire il comando seguente: Setup.exe/q/Action=Install /Features=ADV_SSMS. Per altre informazioni sui valori dei parametri per le funzionalità, vedere [Installazione di SQL Server 2016 dal prompt dei comandi](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   

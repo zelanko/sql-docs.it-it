@@ -1,21 +1,21 @@
 ---
 title: Creazione di un assembly di regole personalizzate di analisi del codice statica per SQL Server
+description: Informazioni su come creare regole di analisi codice di SQL Server. Configurare una regola per evitare istruzioni WAITFOR DELAY in stored procedure, trigger e funzioni.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: d11446e3ef8fade0c4cfe6ec885c40754861fc26
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 31d183a212ea18f681724d06834041b0a50f752c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257034"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896241"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>Procedura dettagliata per la creazione di un assembly di regole personalizzate di analisi del codice statica per SQL Server
 
@@ -252,7 +252,7 @@ A questo punto aggiungere un file di risorse che definirà il nome della regola,
   
 6. Definire quattro stringhe di risorse come segue:  
   
-    |Nome|valore|  
+    |Nome|Valore|  
     |--------|---------|  
     |AvoidWaitForDelay_ProblemDescription|L'istruzione WAITFOR DELAY è stata trovata in {0}.|  
     |AvoidWaitForDelay_RuleName|Evitare di usare istruzioni WaitFor Delay in stored procedure, funzioni e trigger.|  

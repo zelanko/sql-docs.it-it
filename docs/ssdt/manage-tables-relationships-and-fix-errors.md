@@ -1,21 +1,21 @@
 ---
 title: Gestire tabelle e relazioni e correggere errori
+description: Visualizzare le risorse disponibili su come usare Progettazione tabelle per progettare tabelle e gestire relazioni tra tabelle, nonché su come correggere errori di sintassi o semantica comuni.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 729e5866-aa6f-4c7d-9c75-aa2ae5ab9269
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 45742b44eaf10de2ed9403c539db41c3ab9cec7f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 05b0bed4a16dcbbac17030adc79ff1231d989696
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246396"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899749"
 ---
 # <a name="manage-tables-relationships-and-fix-errors"></a>Gestire tabelle e relazioni e correggere errori
 

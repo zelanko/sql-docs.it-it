@@ -1,5 +1,6 @@
 ---
 title: Visualizzare le differenze dei dati
+description: Informazioni su come confrontare due database e visualizzare le differenze tra i rispettivi oggetti. Scoprire come visualizzare i record all'interno degli oggetti e come filtrare la visualizzazione.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: f88d3350-2eaf-44cc-96a8-84008b6cd071
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 5c9e80f6289ff3313a3eeb7cec0601fb2c651aa2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 750909ea5344d5972ffdc8a2db418d8c482231f5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226745"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895766"
 ---
 # <a name="how-to-view-data-differences"></a>Procedura: Visualizzare le differenze dei dati
 

@@ -2,21 +2,21 @@
 title: Aggiornare i componenti Python e R
 description: Aggiornare Python e R in Machine Learning Services per SQL Server o R Services per SQL Server usando sqlbindr.exe per il binding a Machine Learning Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 4aebb9e64c73762166aa81aebd1bfbab22191bfc
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 918ab8c2b1e643196e99cd11ff92c07c3978e078
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487380"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900070"
 ---
 # <a name="upgrade-machine-learning-python-and-r-components-in-sql-server-instances"></a>Aggiornare i componenti di Machine Learning (Python e R) nelle istanze di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 L'integrazione di Python e R in SQL Server include pacchetti open source e pacchetti proprietari di Microsoft.
                                                                                
@@ -263,9 +263,9 @@ Soluzione alternativa: Disinstallare e reinstallare completamente l'istanza del 
 
 |Nome|Descrizione|
 |------|------|
-|*list*| Visualizza un elenco di tutti gli ID delle istanze di database SQL nel computer corrente|
-|*bind*| Aggiorna l'istanza di database SQL specificata alla versione più recente di R Server e verifica che all'istanza vengano applicati automaticamente gli aggiornamenti successivi di R Server|
-|*unbind*|Disinstalla la versione più recente di R Server dall'istanza di database SQL specificata e impedisce l'applicazione degli aggiornamenti successivi di R Server|
+|*list*| Visualizza un elenco di tutti gli ID delle istanze di SQL Server nel computer corrente|
+|*bind*| Aggiorna l'istanza di SQL Server specificata alla versione più recente di R Server e fa in modo che all'istanza vengano applicati automaticamente gli aggiornamenti futuri di R Server|
+|*unbind*|Disinstalla la versione più recente di R Server dall'istanza di SQL Server specificata e impedisce l'applicazione degli aggiornamenti futuri di R Server all'istanza|
 
 <a name="sqlbindr-error-codes"><a/>
 

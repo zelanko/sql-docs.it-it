@@ -1,5 +1,6 @@
 ---
-title: Protezione delle stringhe di connessione | Microsoft Docs
+title: Protezione delle stringhe di connessione
+description: Informazioni su come proteggere le informazioni della stringa di connessione quando si usa JDBC Driver per SQL Server.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 69ce8557-5260-4ea4-81b8-d0c5481f0868
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8f783db5fef7c0da10fb0ec856f3766388be49f5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b8fc42c778e0a8971ea36b8c0588765e82ee8fd2
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928426"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391146"
 ---
 # <a name="securing-connection-strings"></a>Protezione delle stringhe di connessione
 

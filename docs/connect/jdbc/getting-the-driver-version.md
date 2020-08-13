@@ -1,5 +1,6 @@
 ---
-title: Recupero della versione del driver | Microsoft Docs
+title: Recupero della versione del driver
+description: Informazioni su come e dove trovare la versione di Microsoft JDBC Driver per SQL Server.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5e241d72-16da-4ada-ac67-e6308394108f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: db44a391c16a63d28057c99755018179d6c2c0b5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f90f521457f5df17be814a179353d138a3245aea
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028037"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381195"
 ---
 # <a name="getting-the-driver-version"></a>Recupero della versione del driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

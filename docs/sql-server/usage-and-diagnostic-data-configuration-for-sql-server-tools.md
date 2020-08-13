@@ -1,5 +1,6 @@
 ---
 title: Configurare la raccolta di dati di diagnostica e utilizzo per gli strumenti di SQL Server (Analisi utilizzo software) | Microsoft Docs
+description: Informazioni sui dati che Analisi utilizzo software raccoglie dagli utenti per migliorare i prodotti. Vedere come acconsentire o rifiutare esplicitamente la partecipazione al programma in SQL Server Data Tools (SSDT).
 ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 556d60a4c7f2cc8003f6b9a29fa20dad8c5b72ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c93a4023ebcdb9716d7e7790ea97c8df186081f9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68091810"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000425"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>Configurare la raccolta di dati di diagnostica e utilizzo per gli strumenti di SQL Server (Analisi utilizzo software)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Informazioni su come il programma Analisi utilizzo software consente a Microsoft di identificare modi per migliorare il software.  È possibile configurare gli strumenti per i quali si vuole o meno partecipare in qualsiasi momento.  
   
@@ -71,7 +72,7 @@ Valore = (DWORD)
 
   
 > [!CAUTION]  
->  Se il Registro di sistema viene modificato in modo non appropriato, il sistema potrebbe venire gravemente danneggiato. Prima di modificare il Registro di sistema, è consigliabile eseguire il backup di tutti i dati importanti disponibili nel computer. Se si riscontrano problemi dopo l'applicazione di modifiche manuali, è inoltre possibile utilizzare l'opzione di avvio Ultima configurazione valida nota.  
+>  La modifica non corretta del Registro di sistema potrebbe danneggiare gravemente il sistema. Prima di apportare modifiche al Registro di sistema, si consiglia di effettuare il backup di tutti i dati importanti presenti sul computer. Se si riscontrano problemi dopo l'applicazione di modifiche manuali, è inoltre possibile utilizzare l'opzione di avvio Ultima configurazione valida nota.  
   
  Per altre informazioni sulle informazioni raccolte, elaborate o trasmesse dal programma Analisi utilizzo software, vedere l'[Informativa sulla privacy](https://go.microsoft.com/fwlink/?LinkID=868444).  
  
@@ -113,7 +114,7 @@ Valore = (DWORD)
 -   1 è acconsentire esplicitamente  
   
 > [!CAUTION]  
->  Se il Registro di sistema viene modificato in modo non appropriato, il sistema potrebbe venire gravemente danneggiato. Prima di modificare il Registro di sistema, è consigliabile eseguire il backup di tutti i dati importanti disponibili nel computer. Se si riscontrano problemi dopo l'applicazione di modifiche manuali, è inoltre possibile utilizzare l'opzione di avvio Ultima configurazione valida nota.  
+>  La modifica non corretta del Registro di sistema potrebbe danneggiare gravemente il sistema. Prima di apportare modifiche al Registro di sistema, si consiglia di effettuare il backup di tutti i dati importanti presenti sul computer. Se si riscontrano problemi dopo l'applicazione di modifiche manuali, è inoltre possibile utilizzare l'opzione di avvio Ultima configurazione valida nota.  
   
  Per altre informazioni sulle informazioni raccolte, elaborate o trasmesse dal programma Analisi utilizzo software, vedere l'[Informativa sulla privacy](https://go.microsoft.com/fwlink/?LinkID=868444).  
   

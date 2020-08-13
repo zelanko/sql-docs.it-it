@@ -1,5 +1,6 @@
 ---
 title: Proprietà - Server di report (scheda Avanzate)
+description: Informazioni sulle opzioni disponibili nella scheda Avanzate della finestra di dialogo Proprietà - Server di report, ad esempio la directory dump e l'ID istanza.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 80aedab6-2be4-409d-88ba-2107e96345fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 42cc01602f1f09958bbff07af7525bb48bca3cc8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e6d5cb99e8c449b8768bcb3a6d692a769fae79bc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306368"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895927"
 ---
 # <a name="report-server-properties-advanced-tab"></a>Proprietà - Server di report (scheda Avanzate)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Si tratta del servizio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se sono state definite proprietà personalizzate, verranno visualizzate in questa scheda con i rispettivi valori.  
   
 ## <a name="options"></a>Opzioni  

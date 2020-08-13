@@ -1,5 +1,6 @@
 ---
 title: Proprietà - SQL Server Agent (scheda Accesso)
+description: Informazioni sulla scheda Accesso della finestra di dialogo Proprietà SQL Server Agent e su come usare questa scheda per specificare un account e avviare o arrestare il servizio.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 01fc6329-5d6b-4186-9565-395f375477bb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1b9ec7ce2d0280f551953bf14f8494b7bd80becb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b20e60e719cf988ae4fb8821870f2c2b3333c76
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307152"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900748"
 ---
 # <a name="sql-server-agent-properties-log-on-tab"></a>Proprietà - SQL Server Agent (scheda Accesso)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Utilizzare la scheda **Accesso** della finestra di dialogo **Proprietà SQL Server Agent** per specificare l'account utilizzato dal servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e per avviare e arrestare il servizio. La modifica della password di un account diventa effettiva immediatamente, senza dover riavviare il servizio.  
   
 > [!NOTE]  

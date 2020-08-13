@@ -1,6 +1,6 @@
 ---
-title: 'Passaggio 4: Connettersi in modo resiliente a SQL con ADO.NET | Microsoft Docs'
-description: Viene descritto come connettersi in modo resiliente a SQL
+title: 'Passaggio 4: Connettersi in modo resiliente a SQL con ADO.NET'
+description: Informazioni su come usare la logica di ripetizione dei tentativi per migliorare la resilienza delle connessioni in un database SQL usando ADO.NET.
 ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 23b87d6774fb4020b5c7eca3d3f776bbb95fc7fe
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a70b5449d1af02c3b367a204e2e32dfb32281d72
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918039"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391766"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Passaggio 4: Connettersi in modo resiliente a SQL con ADO.NET
 

@@ -1,6 +1,6 @@
 ---
 title: Ottenere il dump della memoria completo per risolvere i problemi di SSMS
-Description: Risoluzione dei problemi relativi a un blocco o un arresto anomalo del sistema di SSMS tramite la raccolta di un dump completo della memoria
+Description: Risoluzione dei problemi relativi al sistema SSMS che non risponde o a un arresto anomalo di SSMS tramite la raccolta di un dump completo della memoria
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -11,18 +11,18 @@ ms.author: maghan
 ms.reviewer: dineth, sstein
 ms.custom: seo-lt-2019
 ms.date: 05/17/2019
-ms.openlocfilehash: 95e88b8bbf61e04251ce17ad0a4fcd5aff91cc9e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7b55e8e68076ad14f874306ffdb578f619af1cf0
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247167"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091248"
 ---
 # <a name="get-full-memory-dump"></a>Ottenere il dump completo della memoria
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-Questo articolo descrive come acquisire le informazioni di diagnostica per risolvere i problemi relativi a un arresto anomalo del sistema o a un blocco riscontrato in SQL Server Management Studio (SSMS).
+Questo articolo descrive come acquisire le informazioni di diagnostica per risolvere i problemi di un arresto anomalo del sistema o del sistema che non risponde riscontrati in SQL Server Management Studio (SSMS).
 
 Per acquisire le informazioni di diagnostica per la risoluzione dei problemi, seguire questa procedura.
 

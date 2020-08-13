@@ -1,23 +1,23 @@
 ---
 title: Note sulla versione per OLE DB Driver
 description: Questo articolo sulle note sulla versione descrive le modifiche in ogni versione di Microsoft OLE DB Driver per SQL Server.
-ms.date: 02/27/2020
+ms.date: 05/25/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 70f3239f1e644850bc391a0be5ef8918e1e9e617
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 296efcdd888e2424cfb80f40221f7d8f65acab89
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81727968"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011910"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Note sulla versione per il driver Microsoft OLE DB per SQL Server
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Questa pagina elenca le nuove funzionalità aggiunte o modificate in ogni versione di Microsoft OLE DB Driver for SQL Server.
 
@@ -27,6 +27,37 @@ Hello, from now on, please use the table-based format standard for all new Relea
 See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
+
+## <a name="1840"></a>18.4.0
+![download](../../ssms/media/download-icon.png) [Scaricare il programma di installazione x64](https://go.microsoft.com/fwlink/?linkid=2129954)  
+![download](../../ssms/media/download-icon.png) [Scaricare il programma di installazione x86](https://go.microsoft.com/fwlink/?linkid=2131003)  
+
+Resa disponibile: Maggio 2020
+
+Se è necessario scaricare il programma di installazione in una lingua diversa da quella rilevata, è possibile usare questi collegamenti diretti.  
+Per il driver x64: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x40a)  
+Per il driver x86: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x40a)  
+
+### <a name="features-added"></a>Funzionalità aggiunte
+
+| Funzionalità aggiunta | Dettagli |
+| :------------ | :------ |
+| Supporto per la risoluzione dell'IP di rete trasparente |[Risoluzione dell'IP di rete trasparente](features/using-transparent-network-ip-resolution.md)|
+| Supporto per la codifica client UTF-8 | [Supporto UTF-8 in OLE DB Driver for SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md) |
+
+### <a name="bugs-fixed"></a>Bug risolti
+
+| Bug risolto | Dettagli |
+| :-------- | :------ |
+| Correzione di diversi bug nell'interfaccia [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) | Alcuni bug che interessano le tabelle codici multibyte fanno sì che l'interfaccia indichi prematuramente la fine del flusso durante l'operazione di lettura.|
+| Correzione di una perdita di memoria nell'interfaccia [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) | Correzione di una perdita di memoria nell'interfaccia [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) quando è abilitata la proprietà `SSPROP_IRowsetFastLoad`. |
+| Correzione di un bug in scenari che includono un tipo di dati `sql_variant` e stringhe non ASCII. | L'esecuzione di determinati scenari che includono un tipo di dati `sql_variant` e stringhe non ASCII può causare il danneggiamento dei dati. Per informazioni dettagliate, vedere: [Problemi noti](ole-db-data-types/ssvariant-structure.md#known-issues). |
+| Correzione di problemi relativi al pulsante *Test connessione* nella [finestra di dialogo di configurazione di UDL](help-topics/data-link-pages.md) | Il pulsante *Test connessione* nella [finestra di dialogo di configurazione di UDL](help-topics/data-link-pages.md) applica ora le proprietà di inizializzazione impostate nella scheda *Tutte*. |
+| Correzione della gestione del valore predefinito della proprietà `SSPROP_INIT_PACKETSIZE` | Correzione di un errore imprevisto quando la proprietà `SSPROP_INIT_PACKETSIZE` è impostata sul valore predefinito `0`. Per informazioni su questa proprietà, vedere [Proprietà di inizializzazione e autorizzazione](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
+| Correzione dei problemi di overflow del buffer in [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) | Correzione dei problemi di overflow del buffer quando si usano file di dati in formato non valido. |
+| Correzione dei problemi di accessibilità | Correzione dei problemi di accessibilità nell'interfaccia utente del programma di installazione e nella [finestra di dialogo di accesso a SQL Server](help-topics/sql-server-login-dialog.md) (lettura di contenuto, tabulazioni). |
+
+## <a name="previous-releases"></a>Versioni precedenti
 
 ## <a name="1830"></a>18.3.0
 
@@ -53,8 +84,6 @@ Per il driver x86: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?link
 | :-------- | :------ |
 | Correzione della logica di eliminazione degli indici in [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448). | Le versioni precedenti del driver OLE DB non possono eliminare un indice di chiave primaria se l'ID schema e l'ID utente del proprietario dell'indice non sono uguali. |
 | &nbsp; | &nbsp; |
-
-## <a name="previous-releases"></a>Versioni precedenti
 
 Scaricare le versioni precedenti del driver OLE DB facendo clic sui collegamenti di download nelle sezioni seguenti:
 

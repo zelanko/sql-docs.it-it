@@ -1,10 +1,11 @@
 ---
 title: Operazioni preliminari all'installazione del clustering di failover | Microsoft Docs
+description: Questo articolo illustra le considerazioni sulla pianificazione da fare in preparazione dell'installazione di un cluster di failover di SQL Server, tra cui hardware, sistema operativo e configurazione.
 ms.custom: ''
 ms.date: 08/24/2016
 ms.reviewer: ''
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f13de472628de7f0bfea12cdac2c001682678a66
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72517938"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900511"
 ---
 # <a name="before-installing-failover-clustering"></a>Operazioni preliminari all'installazione del clustering di failover
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Prima di installare un cluster di failover di SQL Server è necessario selezionare l'hardware e il sistema operativo usati per l'esecuzione di SQL Server. È inoltre necessario configurare il clustering di failover di Windows Server (WSFC) ed esaminare le considerazioni relative alla rete, alla sicurezza e agli altri software che verranno eseguiti nel cluster di failover.  
   
  Se un cluster Windows dispone di un'unità disco locale e la stessa lettera di unità viene utilizzata anche in uno o più nodi del cluster come unità condivisa, non sarà possibile installare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in questa unità. Questa restrizione si applica sia a istanze del cluster di failover di SQL Server sia a istanze autonome in un server che fa parte di un'istanza del cluster di failover di Windows.

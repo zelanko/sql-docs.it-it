@@ -1,5 +1,6 @@
 ---
 title: Proprietà - SQL Server (scheda Servizio)
+description: Informazioni sulle opzioni disponibili nella scheda Servizio della finestra di dialogo Proprietà MSSQLSERVER, ad esempio il percorso binario, il nome host e la modalità di avvio.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b87f54bcfc50249cef1810a728eaa796e7ee3b38
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7fb389b6fd903393539bdffffc3bf0bad3cd27d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306790"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898960"
 ---
 # <a name="sql-server-properties-service-tab"></a>Proprietà - SQL Server (scheda Servizio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Usare la scheda **Servizio**della finestra di dialogo **Proprietà - SQL (MSSQLSERVER)** per visualizzare o specificare le opzioni seguenti.  
   
 ## <a name="options"></a>Opzioni  

@@ -1,23 +1,23 @@
 ---
 title: Estendere la distribuzione del progetto di database per analizzare il piano di distribuzione
+description: Creare un collaboratore alla distribuzione DeploymentPlanExecutor. Configurare un collaboratore che tenga traccia degli eventi che si verificano quando si distribuisce un progetto di database.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 5e51dddb7635ba0f50dfdd7566722b170be9f48a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 797289f29c9c0eff6a7b9d876d21f7573a546c84
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242677"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897475"
 ---
-# <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Procedura dettagliata: estendere la distribuzione del progetto di database per analizzare il piano di distribuzione
+# <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Procedura dettagliata: Estendere la distribuzione del progetto di database per analizzare il piano di distribuzione
 
 È possibile creare collaboratori alla distribuzione per eseguire azioni personalizzate quando si distribuisce un progetto SQL. È possibile creare un elemento DeploymentPlanModifier o DeploymentPlanExecutor. Utilizzare DeploymentPlanModifier per modificare il piano prima di eseguirlo e DeploymentPlanExecutor per eseguire operazioni mentre il piano è in esecuzione. In questa procedura dettagliata viene creato un elemento DeploymentPlanExecutor denominato DeploymentUpdateReportContributor che crea un report sulle azioni eseguite quando si distribuisce un progetto di database. Poiché questo collaboratore alla compilazione accetta un parametro per controllare se il report viene generato, è necessario eseguire un'operazione necessaria aggiuntiva.  
   
@@ -29,7 +29,7 @@ In questa procedura dettagliata, vengono eseguite le attività principali seguen
   
 -   [Testare il collaboratore alla distribuzione](#TestDeploymentContributor)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
 Per completare questa procedura dettagliata, è necessario disporre dei componenti seguenti:  
   
 -   È necessario avere installata una versione di Visual Studio che includa SQL Server Data Tools (SSDT) e supporti lo sviluppo in C# o VB.  
@@ -601,7 +601,7 @@ Il secondo metodo consiste nel creare un file targets contenente gli argomenti d
     </Project>  
     ```  
   
-4.  Nel file con estensione sqlproj per qualsiasi progetto per cui si vogliono eseguire collaboratori, importare il file targets aggiungendo l'istruzione seguente al file sqlproj dopo il nodo \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> nel file:  
+4.  All'interno del file con estensione sqlproj per tutti i progetti per i quali si vogliono eseguire i collaboratori, importare il file targets aggiungendo l'istruzione seguente al file con estensione sqlproj dopo il nodo \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> nel file:  
   
     ```  
     <Import Project="$(MSBuildExtensionsPath)\MyContributors\MyContributors.targets " />  
@@ -741,7 +741,7 @@ Il progetto può essere pubblicato o distribuito normalmente in Visual Studio. �
 È possibile creare strumenti aggiuntivi per eseguire l'elaborazione dei file XML di output. Questo è solo un esempio di [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). È anche possibile creare un elemento [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) per modificare un piano di distribuzione prima che sia eseguito.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Procedura dettagliata: Estendere la compilazione del progetto del database per generare statistiche del modello](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
-[Procedura dettagliata: estendere la distribuzione del progetto di database per modificare il piano di distribuzione](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
+[Procedura dettagliata: Estendere la compilazione del progetto di database per generare statistiche del modello](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
+[Procedura dettagliata: Estendere la distribuzione del progetto di database per modificare il piano di distribuzione](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
 [Personalizzare la compilazione e la distribuzione del database tramite collaboratori alla compilazione e distribuzione](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
   

@@ -5,53 +5,51 @@ description: Informazioni su come distribuire cluster Big Data di SQL Server in 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 828ad42bd6ecdc31d6e1c99a489fb4cbe8548d0e
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 4bca65dbae188c02ddc85bc385f6ada912111efb
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531079"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159369"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Come distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Un cluster Big Data di SQL Server viene distribuito come contenitore Docker in un cluster Kubernetes. Questa è una panoramica dei passaggi di installazione e configurazione:
 
-- Configurare un cluster Kubernetes in una singola macchina virtuale, in un cluster di macchine virtuali o nel servizio Azure Kubernetes.
+- Configurare un cluster Kubernetes in una singola macchina virtuale, in un cluster di macchine virtuali, nel servizio Azure Kubernetes (AKS), in Red Hat OpenShift or in Azure Red Hat OpenShift (ARO).
 - Installare lo strumento di configurazione dei cluster `azdata` nel computer client.
 - Distribuire un cluster Big Data di SQL Server in un cluster Kubernetes.
 
-## <a name="install-sql-server-2019-big-data-tools"></a>Installare gli strumenti per Big Data di SQL Server 2019
+## <a name="supported-platforms"></a>Piattaforme supportate
 
-Prima di distribuire un cluster Big Data di SQL Server 2019, [installare innanzitutto gli strumenti per Big Data](deploy-big-data-tools.md):
+Vedere [Piattaforme supportate](release-notes-big-data-cluster.md#supported-platforms) per un elenco completo delle diverse piattaforme Kubernetes convalidate per la distribuzione di cluster Big Data di SQL Server.
 
-- `azdata`
-- `kubectl`
-- Azure Data Studio
-- [Estensione di virtualizzazione dei dati](../azure-data-studio/data-virtualization-extension.md) per Azure Data Studio
+### <a name="sql-server-editions"></a>Edizioni di SQL Server
 
-## <a name="kubernetes-prerequisites"></a><a id="prereqs"></a> Prerequisiti per Kubernetes
+|Edizione|Note|
+|---------|---------|
+|Enterprise<br/>Standard<br/>Developer| L'edizione del cluster Big Data è determinata dall'edizione dell'istanza master di SQL Server. In fase di distribuzione, per impostazione predefinita viene distribuita l'edizione Developer. È possibile modificare l'edizione dopo la distribuzione. Vedere [Configurare l'istanza master di SQL Server](../big-data-cluster/configure-sql-server-master-instance.md). |
 
-I [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] richiedono la versione minima di Kubernetes 1.13 sia per il server sia per il client (kubectl).
-
-> [!NOTE]
-> Le versioni client e server di Kubernetes devono essere comprese tra le versioni secondarie +1 e -1. Per altre informazioni, vedere [Note sulla versione di Kubernetes e criteri per gli SKU relativi alla differenza tra versioni](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
+## <a name="kubernetes"></a><a id="prereqs"></a> Kubernetes
 
 ### <a name="kubernetes-cluster-setup"></a><a id="kubernetes"></a> Installazione del cluster Kubernetes
 
 Se è già presente un cluster Kubernetes che soddisfa i prerequisiti indicati sopra, è possibile passare direttamente alla [fase di distribuzione](#deploy). Questa sezione presuppone una conoscenza di base dei concetti relativi a Kubernetes.  Per informazioni dettagliate su Kubernetes, vedere la [documentazione di Kubernetes](https://kubernetes.io/docs/home).
 
-È possibile scegliere di distribuire Kubernetes in uno dei tre modi seguenti:
+È possibile scegliere di distribuire Kubernetes nei modi seguenti:
 
 | Distribuire in Kubernetes in: | Descrizione | Collegamento |
 |---|---|---|
 | **Servizio Azure Kubernetes** | Servizio contenitore Kubernetes gestito in Azure. | [Istruzioni](deploy-on-aks.md) |
 | **Uno o più computer (`kubeadm`)** | Un cluster Kubernetes distribuito in computer fisici o macchine virtuali tramite `kubeadm` | [Istruzioni](deploy-with-kubeadm.md) |
+|**Azure Red Hat OpenShift** | Offerta gestita di OpenShift in esecuzione in Azure. | [Istruzioni](deploy-openshift.md)|
+|**Red Hat OpenShift**|Cloud ibrido, piattaforma applicativa Kubernetes di livello enterprise.| [Istruzioni](deploy-openshift.md)|
 
 > [!TIP]
 > È anche possibile usare uno script per distribuire il servizio Azure Kubernetes e un cluster Big Data in un unico passaggio. Per altre informazioni, vedere come eseguire questa operazione in uno [script Python](quickstart-big-data-cluster-deploy.md) o in un [notebook](notebooks-deploy.md) di Azure Data Studio.
@@ -75,6 +73,16 @@ Per la maggior parte delle distribuzioni di cluster Big Data deve essere disponi
 
 Se si esegue la distribuzione nel servizio Azure Kubernetes, non occorre configurare l'archiviazione. Il servizio Azure Kubernetes fornisce classi di archiviazione predefinite con provisioning dinamico. È possibile personalizzare la classe di archiviazione (`default` o `managed-premium`) nel file di configurazione della distribuzione. I profili predefiniti usano una classe di archiviazione `default`. Se si esegue la distribuzione in un cluster Kubernetes distribuito con `kubeadm`, è necessario assicurarsi di disporre di spazio di archiviazione sufficiente per un cluster con la scala desiderata e configurato per l'uso. Se si desidera personalizzare la modalità d'uso dell'archiviazione, è necessario farlo prima di procedere. Vedere [Salvataggio permanente dei dati con un cluster Big Data di SQL Server in Kubernetes](concept-data-persistence.md).
 
+## <a name="install-sql-server-2019-big-data-tools"></a>Installare gli strumenti per Big Data di SQL Server 2019
+
+Prima di distribuire un cluster Big Data di SQL Server 2019, [installare innanzitutto gli strumenti per Big Data](deploy-big-data-tools.md):
+
+- `azdata`
+- `kubectl`
+- Azure Data Studio
+- [Estensione di virtualizzazione dei dati](../azure-data-studio/data-virtualization-extension.md) per Azure Data Studio
+
+
 ## <a name="deployment-overview"></a><a id="deploy"></a> Panoramica della distribuzione
 
 La maggior parte delle impostazioni del cluster Big Data è definita in un file di configurazione della distribuzione JSON. È possibile usare un profilo di distribuzione predefinito per il servizio Azure Kubernetes e cluster Kubernetes creati con `kubeadm` oppure è possibile personalizzare il file di configurazione della distribuzione da usare durante l'impostazione. Per motivi di sicurezza, le impostazioni di autenticazione vengono passate tramite variabili di ambiente.
@@ -94,23 +102,18 @@ Eseguire questo comando per trovare i modelli disponibili:
 azdata bdc config list -o table 
 ```
 
-Ad esempio, per la versione SQL Server 2019 RTM Servicing Update (GDR1), il codice precedente restituisce:
-
-```
-Result
-----------------
-aks-dev-test
-aks-dev-test-ha
-kubeadm-dev-test
-kubeadm-prod
-```
+I modelli seguenti sono disponibili a partire da SQL Server 2019 CU5: 
 
 | Profilo di distribuzione | Ambiente Kubernetes |
 |---|---|
 | `aks-dev-test` | Distribuzione di un cluster Big Data di SQL Server nel servizio Azure Kubernetes|
 | `aks-dev-test-ha` | Distribuzione di un cluster Big Data di SQL Server nel servizio Azure Kubernetes. I servizi cruciali come l'istanza master di SQL Server e il nodo NameNode di HDFS vengono configurati per la disponibilità elevata.|
+| `aro-dev-test`|Distribuzione di un cluster Big Data di SQL Server in Azure Red Hat OpenShift per lo sviluppo e il test. <br/><br/>Opzione introdotta in SQL Server 2019 CU 5.|
+| `aro-dev-test-ha`|Distribuzione di un cluster Big Data di SQL Server con disponibilità elevata in un cluster Red Hat OpenShift per lo sviluppo e il test. <br/><br/>Opzione introdotta in SQL Server 2019 CU 5.|
 | `kubeadm-dev-test` | Distribuzione di un cluster Big Data di SQL Server in un cluster Kubernetes creato con kubeadm tramite uno o più computer fisici o macchine virtuali.|
 | `kubeadm-prod`| Distribuzione di un cluster Big Data di SQL Server in un cluster Kubernetes creato con kubeadm tramite uno o più computer fisici o macchine virtuali. Usare questo modello per abilitare l'integrazione dei servizi del cluster Big Data con Active Directory. I servizi cruciali come l'istanza master di SQL Server e il nodo NameNode di HDFS vengono distribuiti in una configurazione a disponibilità elevata.  |
+| `openshift-dev-test`|Distribuzione di un cluster Big Data di SQL Server in un cluster Red Hat OpenShift per lo sviluppo e il test. <br/><br/>Opzione introdotta in SQL Server 2019 CU 5.|
+| `openshift-prod`|Distribuzione di un cluster Big Data di SQL Server con disponibilità elevata in un cluster Red Hat OpenShift. <br/><br/>Opzione introdotta in SQL Server 2019 CU 5.|
 
 È possibile distribuire un cluster Big Data eseguendo `azdata bdc create`. Verrà chiesto di scegliere una delle configurazioni predefinite e quindi verranno presentati i passaggi di distribuzione.
 
@@ -127,7 +130,7 @@ In questo scenario vengono chieste le impostazioni che non fanno parte della con
 
 ## <a name="custom-configurations"></a><a id="customconfig"></a> Configurazioni personalizzate
 
-È anche possibile personalizzare la distribuzione per gestire i carichi di lavoro che si prevede di eseguire. Si noti che non è possibile modificare la scalabilità (numero di repliche) o le impostazioni di archiviazione per i servizi del cluster Big Data dopo la distribuzione e di conseguenza è necessario pianificare attentamente la configurazione della distribuzione per evitare problemi di capacità. Per personalizzare la distribuzione, eseguire queste operazioni:
+È anche possibile personalizzare la distribuzione per gestire i carichi di lavoro che si prevede di eseguire. Non è possibile modificare la scalabilità (numero di repliche) o le impostazioni di archiviazione per i servizi del cluster Big Data dopo la distribuzione e di conseguenza è necessario pianificare attentamente la configurazione della distribuzione per evitare problemi di capacità. Per personalizzare la distribuzione, eseguire queste operazioni:
 
 1. Iniziare con uno dei profili di distribuzione standard che corrispondono all'ambiente Kubernetes. È possibile usare il comando `azdata bdc config list` per elencarli:
 
@@ -171,8 +174,8 @@ Le variabili di ambiente seguenti vengono usate per le impostazioni di sicurezza
 
 | Variabile di ambiente | Requisito |Descrizione |
 |---|---|---|
-| `AZDATA_USERNAME` | Obbligatoria |Nome utente dell'amministratore del cluster Big Data di SQL Server. Viene creato un account di accesso sysadmin con lo stesso nome nell'istanza master di SQL Server. Come procedura consigliata per la sicurezza, l'account `sa` è disabilitato. |
-| `AZDATA_PASSWORD` | Obbligatoria |Password per gli account utente creati sopra. La stessa password viene usata per l'utente `root`, usato per la protezione del gateway Knox e HDFS. |
+| `AZDATA_USERNAME` | Obbligatorio |Nome utente dell'amministratore del cluster Big Data di SQL Server. Viene creato un account di accesso sysadmin con lo stesso nome nell'istanza master di SQL Server. Come procedura consigliata per la sicurezza, l'account `sa` è disabilitato. <br/><br/>[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]|
+| `AZDATA_PASSWORD` | Obbligatoria |Password per gli account utente creati sopra. Nei cluster distribuiti prima di SQL Server 2019 CU5, viene usata la stessa password per l'utente `root`, per proteggere il gateway Knox e HDFS. |
 | `ACCEPT_EULA`| Obbligatoria per il primo utilizzo di `azdata`| Impostata su "yes". Quando è impostata come variabile di ambiente, applica il contratto di licenza con l'utente finale a SQL Server e a `azdata`. Se non è impostata come variabile di ambiente, è possibile includere `--accept-eula=yes` al primo utilizzo del comando `azdata`.|
 | `DOCKER_USERNAME` | Facoltativo | Nome utente per accedere alle immagini del contenitore se sono archiviate in un repository privato. Per altre informazioni su come usare un repository Docker privato per la distribuzione di cluster Big Data, vedere l'argomento [Distribuzioni offline](deploy-offline.md).|
 | `DOCKER_PASSWORD` | Facoltativo |Password per accedere al repository privato citato sopra. |
@@ -193,9 +196,9 @@ SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
-> È necessario usare l'utente `root` per il gateway Knox con la password precedente. `root` è l'unico utente supportato per in questa configurazione di autenticazione di base (nome utente/password).
+> Nei cluster distribuiti prima di SQL Server 2019 CU 5, è necessario usare l'utente `root` per il gateway Knox con la password precedente. `root` è l'unico utente supportato per in questa configurazione di autenticazione di base (nome utente/password).
+> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 > Per connettersi a SQL Server con l'autenticazione di base, usare gli stessi valori delle [variabili di ambiente](#env) AZDATA_USERNAME e AZDATA_PASSWORD. 
-
 
 Dopo aver impostato le variabili di ambiente, è necessario eseguire `azdata bdc create` per attivare la distribuzione. Questo esempio usa il profilo di configurazione del cluster creato sopra:
 

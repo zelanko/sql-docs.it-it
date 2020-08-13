@@ -1,21 +1,21 @@
 ---
 title: Stringhe di connessione e autorizzazioni
+description: Informazioni sulle stringhe di connessione, gli account e le autorizzazioni necessarie per eseguire unit test di SQL Server. Vedere come configurare le stringhe di connessione.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 37e1b0c050da78722422d9bf20e4eae310565ec1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 292901b39a4c4f6732290ba7425f26f0bc1e6c48
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243756"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901106"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>Panoramica delle stringhe di connessione e delle autorizzazioni
 
