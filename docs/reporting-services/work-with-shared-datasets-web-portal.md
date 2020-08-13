@@ -1,5 +1,6 @@
 ---
 title: Uso dei set di dati condivisi (portale Web) | Microsoft Docs
+description: È possibile visualizzare e gestire le proprietà di un set di dati condivisi all'interno del portale Web, nonché usare il portale Web per creare o modificare set di dati condivisi in Generatore report.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e034b911ec5817ac82214466fdc2bf7087e8865a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0d37e617ef7dcb4c63b7d2239881cc6cb96c7c2f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68222762"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243602"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>Uso dei set di dati condivisi (portale Web)
 
@@ -37,7 +38,7 @@ Per creare un nuovo set di dati condiviso, eseguire le operazioni seguenti.
   
 4.  Nella finestra di dialogo **Nuovo report o set di dati** selezionare una connessione all'origine dati da usare per il set di dati. Potrebbe essere necessario passare alla posizione dell'origine dati condivisa.  
   
-5.  Selezionare **Create** (Crea).  
+5.  Selezionare **Crea**.  
   
 6.  Creare il set di dati e quindi selezionare l'icona **Salva** in alto a sinistra per salvare di nuovo il set di dati nel server d report.  
   

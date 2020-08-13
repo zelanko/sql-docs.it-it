@@ -1,5 +1,5 @@
 ---
-title: Proprietà e comportamenti dei set di righe | Microsoft Docs
+title: Proprietà e comportamenti dei set di righe (OLE DB Driver)
 description: Proprietà e comportamenti dei set di righe in OLE DB Driver per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 1e2fff64739942539fd4fc34c736e32578555f93
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e541289c5ae71a7289cd005ba03ca2f886fc0bb7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015356"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244178"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Proprietà e comportamenti dei set di righe
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -80,7 +80,7 @@ ms.locfileid: "68015356"
 |DBPROP_REPORTMULTIPLECHANGES|Questa proprietà del set di righe non viene implementata da OLE DB Driver per SQL Server. Il tentativo di lettura o scrittura del valore della proprietà genera un errore.|  
 |DBPROP_RETURNPENDINGINSERTS|R/W (L/S): Sola lettura<br /><br /> Predefinito: VARIANT_FALSE<br /><br /> Descrizione: quando viene chiamato un metodo che recupera righe, OLE DB Driver per SQL Server non restituisce righe di inserimento in sospeso.|  
 |DBPROP_ROWRESTRICT|R/W (L/S): Sola lettura<br /><br /> Predefinito: VARIANT_TRUE<br /><br /> Descrizione: OLE DB Driver per SQL Server non supporta i diritti di accesso in base alla riga. Se l'interfaccia **IRowsetChange** è esposta in un set di righe, il metodo **SetData** può essere chiamato dal consumer.|  
-|DBPROP_ROWSET_ASYNCH|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: 0<br /><br /> Descrizione: elabora i set di righe in modo asincrono. Questa proprietà è inclusa nel gruppo di proprietà Rowset e nel set di proprietà DBPROPSET_ROWSET. Il tipo è VT_14.<br /><br /> L'unico valore nella maschera di bit supportata da OLE DB Driver per SQL Server è **DBPROPVAL_ASYNCH_INITIALIZE**.|  
+|DBPROP_ROWSET_ASYNCH|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: 0<br /><br /> Descrizione: consente l'elaborazione asincrona dei set di righe. Questa proprietà è inclusa nel gruppo di proprietà Rowset e nel set di proprietà DBPROPSET_ROWSET. Il tipo è VT_14.<br /><br /> L'unico valore nella maschera di bit supportata da OLE DB Driver per SQL Server è **DBPROPVAL_ASYNCH_INITIALIZE**.|  
 |DBPROP_ROWTHREADMODEL|R/W (L/S): Sola lettura<br /><br /> Predefinito: DBPROPVAL_RT_FREETHREAD<br /><br /> Descrizione: OLE DB Driver per SQL Server supporta l'accesso ai relativi oggetti da più thread di esecuzione di un singolo consumer.|  
 |DBPROP_SERVERCURSOR|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: VARIANT_FALSE<br /><br /> Descrizione: se impostata, viene usato un cursore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per supportare il set di righe. Per altre informazioni, vedere [Set di righe e cursori SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
 |DBPROP_SERVERDATAONINSERT|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: VARIANT_FALSE<br /><br /> Descrizione: dati server in fase di inserimento.<br /><br /> VARIANT_TRUE: quando viene trasmesso un inserimento al server, il provider recupera i dati dal server per aggiornare la cache locale delle righe.<br /><br /> VARIANT_FALSE: il provider non recupera i valori server per le nuove righe inserite.|  

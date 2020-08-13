@@ -1,21 +1,21 @@
 ---
 title: Creare un progetto di test per l'esecuzione di unit test del database di SQL Server
+description: Informazioni su come creare progetti di test per l'esecuzione di unit test del database di SQL Server. Scoprire modi diversi per aggiungere progetti di test a soluzioni che contengono progetti di database.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fe6b8e2e70a20041f394afa5cad1d800535559d1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ff3cb815dcd27f72ea96296935484ec0cc15ea0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241524"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243532"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Procedura: Creare un progetto di test per l'esecuzione di unit test del database di SQL Server
 
@@ -23,9 +23,8 @@ Prima di iniziare a scrivere unit test per valutare gli oggetti di database, è 
   
 È possibile inserire tutti gli unit test di SQL Server di un determinato progetto di database all'interno di un solo progetto di test. Può tuttavia essere opportuno creare progetti di test aggiuntivi, in base alle risposte fornite alle domande seguenti:  
   
-|||  
-|-|-|  
-|**Domanda**|**Decisione**|  
+|Domanda|Decisione|  
+|-|-|   
 |È necessario l'accesso di unit test di SQL Server differenti a connessioni di database diverse per l'esecuzione o la convalida dei test?|Se sì, sono necessari più progetti di test. Non è possibile specificare più di una connessione al database per l'esecuzione del test. Tuttavia, è possibile specificare una connessione al database differente per la convalida del test.|  
 |Si desidera distribuire progetti di database diversi per unit test differenti?|Se sì, sono necessari più progetti di test. Un progetto di test può distribuire un solo progetto di database.|  
   

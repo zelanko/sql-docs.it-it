@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/26/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 558d6b9aaa47288de7c75e61ee38d379a3fc1e68
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a9dab3e7cf8bda374b26003db83281bb1db275e5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607104"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244042"
 ---
-# <a name="tutorial-prepare-data-to-perform-clustering-in-r-with-sql-machine-learning"></a>Esercitazione: Preparare i dati per eseguire il clustering in R con Machine Learning in SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="tutorial-develop-a-clustering-model-in-r-with-sql-machine-learning"></a>Esercitazione: Sviluppare un modello di clustering in R con Machine Learning in SQL
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In questa serie di esercitazioni in quattro parti si userà R per sviluppare e distribuire un modello di clustering K-Means in [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md) oppure in [cluster Big Data](../../big-data-cluster/machine-learning-services.md) per categorizzare i dati dei clienti.
@@ -31,17 +30,19 @@ In questa serie di esercitazioni in quattro parti si userà R per sviluppare e d
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 In questa serie di esercitazioni in quattro parti si userà R per sviluppare e distribuire un modello di clustering K-Means in [R Services per SQL Server](../r/sql-server-r-services.md) per il clustering dei dati dei clienti.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In questa serie di esercitazioni in quattro parti si userà R per sviluppare e distribuire un modello di clustering K-means in [Machine Learning Services per Istanza gestita di SQL di Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview) per il clustering dei dati dei clienti.
+::: moniker-end
 
 Nella prima parte della serie verranno configurati i prerequisiti per l'esercitazione e quindi verrà ripristinato un set di dati di esempio in un database. Nelle seconda e nella terza parte si svilupperanno alcuni script R in un notebook di Azure Data Studio per analizzare e preparare i dati di esempio ed eseguire il training di un modello di Machine Learning. Nella quarta parte verranno quindi eseguiti gli script R all'interno di un database mediante stored procedure.
 
 Per *clustering* si intende l'organizzazione dei dati in gruppi in cui i membri di ciascun gruppo sono simili per certi aspetti. Per questa serie di esercitazioni, si supponga di essere proprietari di un'azienda di vendita al dettaglio. Si userà l'algoritmo **K-Means** per eseguire il clustering dei clienti in un set di dati di acquisti e resi di prodotti. Il clustering dei clienti favorisce attività di marketing più mirate rivolte a gruppi specifici. Il clustering K-Means è un algoritmo di *apprendimento non supervisionato* che cerca schemi nei dati in base ad analogie.
 
-
 In questo articolo si apprenderà come:
 
 > [!div class="checklist"]
 > * Ripristinare un database di esempio
-> 
+
 Nella [seconda parte](r-clustering-model-prepare-data.md) si apprenderà come preparare i dati di un database per il clustering.
 
 Nella [terza parte](r-clustering-model-build.md) si apprenderà come creare ed eseguire il training di un modello di clustering K-Means in R.
@@ -56,6 +57,11 @@ Nella [quarta parte](r-clustering-model-deploy.md) si apprenderà come creare un
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 * [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md) con l'opzione del linguaggio R: seguire le istruzioni di installazione nella [guida all'installazione di Windows](../install/sql-machine-learning-services-windows-install.md).
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+* Machine Learning Services per Istanza gestita di SQL di Azure. Per informazioni sulla registrazione, vedere [Panoramica di Machine Learning Services per Istanza gestita di SQL di Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+
+* [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) per il ripristino del database di esempio in Istanza gestita di SQL di Azure.
+::: moniker-end
 
 * [Azure Data Studio](../../azure-data-studio/what-is.md). Si userà un notebook in Azure Data Studio per SQL. Per altre informazioni sui notebook in Azure Data Studio, vedere [Come usare i notebook in Azure Data Studio](../../azure-data-studio/notebooks-guidance.md).
 
@@ -65,13 +71,14 @@ Nella [quarta parte](r-clustering-model-deploy.md) si apprenderà come creare un
 
 ## <a name="restore-the-sample-database"></a>Ripristinare il database di esempio
 
-Il set di dati di esempio usato in questa esercitazione è stato salvato in un file di backup del database con estensione **bak** che è possibile scaricare e usare. Questo set di dati deriva dal set di dati [tpcx-bb](http://www.tpc.org/tpcx-bb/default.asp) fornito dal [Transaction Processing Performance Council (TPC)](http://www.tpc.org/default.asp).
+Il set di dati di esempio usato in questa esercitazione è stato salvato in un file di backup del database con estensione **bak** che è possibile scaricare e usare. Questo set di dati deriva dal set di dati [tpcx-bb](http://www.tpc.org/tpcx-bb/default5.asp) fornito dal [Transaction Processing Performance Council (TPC)](http://www.tpc.org/).
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]
 > Se si usa Machine Learning Services in cluster Big Data, vedere l'articolo su come [ripristinare un database nell'istanza master di un cluster Big Data di SQL Server](../../big-data-cluster/data-ingestion-restore-database.md).
 ::: moniker-end
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 1. Scaricare il file [tpcxbb_1gb.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak).
 
 1. Seguire le istruzioni in [Ripristinare un database da un file di backup](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio usando i dettagli seguenti:
@@ -85,6 +92,22 @@ Il set di dati di esempio usato in questa esercitazione è stato salvato in un f
     USE tpcxbb_1gb;
     SELECT * FROM [dbo].[customer];
     ```
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+1. Scaricare il file [tpcxbb_1gb.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak).
+
+1. Seguire le istruzioni in [Ripristinare un database in un'istanza gestita](/azure/sql-database/sql-database-managed-instance-get-started-restore) in SQL Server Management Studio, usando i dati seguenti:
+
+   * Importare i dati dal file **tpcxbb_1gb.bak** scaricato
+   * Assegnare al database di destinazione il nome "tpcxbb_1gb"
+
+1. È possibile verificare che il set di dati esista dopo il ripristino del database eseguendo una query sulla tabella **dbo.customer**:
+
+    ```sql
+    USE tpcxbb_1gb;
+    SELECT * FROM [dbo].[customer];
+    ```
+::: moniker-end
 
 ## <a name="clean-up-resources"></a>Pulire le risorse
 
@@ -95,7 +118,7 @@ Se non si intende continuare con questa esercitazione, eliminare il database tpc
 Nella prima parte di questa serie di esercitazioni sono stati completati i passaggi seguenti:
 
 * Sono stati installati i prerequisiti
-* È stato ripristinato un database di esempio in SQL Server
+* È stato ripristinato un database di esempio
 
 Per preparare i dati per il modello di Machine Learning, seguire la seconda parte di questa serie di esercitazioni:
 

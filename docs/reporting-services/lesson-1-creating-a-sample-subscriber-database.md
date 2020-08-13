@@ -1,5 +1,6 @@
 ---
 title: 'Lesson 1: Creating a Sample Subscriber Database (Lezione 1: Creazione di un database di esempio del Sottoscrittore) | Microsoft Docs'
+description: Informazioni su come creare un database "subscriber" di piccole dimensioni per archiviare dati di sottoscrizione che verranno usati in uno scenario di sottoscrizione guidata dai dati.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2aa2fefb5df874b08a34c4a7091d450afdfd4828
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a62e0e1c47cd6df4d2d5e4f28b35294af694a824
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62513163"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243272"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lezione 1: Creazione di un database di esempio del Sottoscrittore
 
@@ -55,14 +56,14 @@ In questa lezione si presuppone che si usi [!INCLUDE[ssManStudioFull_md](../incl
     GO  
     ```  
   
-7.  Fare clic su **Esegui** sulla barra degli strumenti.  
+7.  Fare clic su  **Esegui** sulla barra degli strumenti.  
   
 8.  Utilizzare un'istruzione SELECT per verificare che siano disponibili tre righe di dati. Ad esempio: `select * from OrderInfo`  
   
 ## <a name="next-steps"></a>Passaggi successivi  
 + In tal modo sono stati creati i dati di sottoscrizione per la distribuzione dei report e per la variazione dell'output del report per ogni sottoscrittore. 
 + Sarà quindi possibile modificare le proprietà dell'origine dati del report per l'uso delle credenziali archiviate. 
-+ Inoltre, verrà modificata la progettazione report per includere un parametro che verrà utilizzato dalla sottoscrizione con i dati del sottoscrittore. [Lezione 2: Modifica delle proprietà dell'origine dei dati del report](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
++ Inoltre, verrà modificata la progettazione report per includere un parametro che verrà utilizzato dalla sottoscrizione con i dati del sottoscrittore. [Lezione 2: Modifica delle proprietà dell'origine dati del report](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
 
 ## <a name="next-steps"></a>Passaggi successivi
 

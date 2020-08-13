@@ -20,12 +20,12 @@ ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c421a03bfbafbe8d734ad6d3174e3ea20834606
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5aca8d2f5135400c80c5943455237c066a7ba424
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483088"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236804"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT - autorizzazioni per database (Transact-SQL)
 
@@ -63,9 +63,9 @@ permission | ALL [ PRIVILEGES ]
 
 *permission* specifica un'autorizzazione che può essere concessa per un database. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.
 
-L'opzione ALL non concede tutte le autorizzazioni possibili. L'impostazione di ALL equivale a concedere le autorizzazioni seguenti: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.
+L'opzione ALL non concede tutte le autorizzazioni possibili. L'impostazione di ALL equivale a concedere le autorizzazioni seguenti: BACKUP DATABASE, BACKUP LOG, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE, e CREATE VIEW.
 
-PRIVILEGES viene incluso per la conformità allo standard ISO. Non modifica il funzionamento di ALL.
+PRIVILEGES viene incluso per la conformità allo standard ANSI-92. Non modifica il funzionamento di ALL.
 
 WITH GRANT OPTION indica che l'entità di sicurezza potrà anche concedere l'autorizzazione specificata ad altre entità di sicurezza.
 

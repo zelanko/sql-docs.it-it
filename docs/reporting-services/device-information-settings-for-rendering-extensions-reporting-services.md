@@ -1,5 +1,6 @@
 ---
 title: Impostazioni relative alle informazioni sul dispositivo per le estensioni per il rendering (Reporting Services) | Microsoft Docs
+description: Informazioni su come le impostazioni relative alle informazioni sul dispositivo vengono usate per passare i parametri di rendering a un'estensione per il rendering in Reporting Services.
 ms.date: 09/15/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd1fda200aae4a8d5bbc91191fe3b516a6109821
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bb51a73b7290d4363395d21e86a6fa591ca1455d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503987"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242481"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Impostazioni relative alle informazioni sul dispositivo per le estensioni per il rendering (Reporting Services)
   In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]le impostazioni relative alle informazioni sul dispositivo vengono usate per passare i parametri di rendering a un'estensione per il rendering. Ogni estensione per il rendering accetta un set specifico di impostazioni.  

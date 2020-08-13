@@ -15,12 +15,12 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12dc8a03cbf65a0c07e9a5985f1ffade813a3e5f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4681cdb7dbca293501902caec456a3e08eac5ba7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012141"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243700"
 ---
 # <a name="memory-management-architecture-guide"></a>guida sull'architettura di gestione della memoria
 
@@ -55,7 +55,7 @@ Usando AWE e il privilegio Blocco di pagine in memoria, è possibile fornire al 
 > [!NOTE]
 > La tabella seguente include una colonna per le versioni a 32 bit non più disponibili.
 
-| |32 bit <sup>1</sup> |64 bit|
+|Criteri di memoria|32 bit <sup>1</sup> |64 bit|
 |-------|-------|-------| 
 |Memoria convenzionale |Tutte le edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Fino al limite dello spazio degli indirizzi virtuali di processo: <br>- 2 GB<br>- 3 GB con parametro di avvio /3gb <sup>2</sup> <br>- 4 GB su WOW64 <sup>3</sup> |Tutte le edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Fino al limite dello spazio degli indirizzi virtuali di processo: <br>- 7 TB con architettura IA64 (IA64 non è supportato in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e versioni successive)<br>- Valore massimo del sistema operativo con architettura x64 <sup>4</sup>
 |Meccanismo AWE (consente a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di superare il limite dello spazio degli indirizzi virtuali di processo nelle piattaforme a 32 bit) |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Edizione Standard, Enterprise e Developer: Il pool di buffer può accedere a un massimo di 64 GB di memoria.|Non applicabile <sup>5</sup> |
@@ -121,7 +121,7 @@ La tabella seguente indica se un tipo specifico di allocazione di memoria rientr
 |-------|-------|-------|
 |Allocazioni di singole pagine|No|No, consolidata in allocazioni di pagine "di qualsiasi dimensione"|
 |Allocazioni di più pagine|Sì|No, consolidata in allocazioni di pagine "di qualsiasi dimensione"|
-|Allocazioni CLR|Sì|Sì|
+|Allocazioni CLR|Sì|sì|
 |Memoria stack di thread|Sì|Sì|
 |Allocazioni dirette da Windows|Sì|Sì|
 

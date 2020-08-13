@@ -1,5 +1,6 @@
 ---
 title: Uso di report impaginati (portale Web) | Microsoft Docs
+description: Informazioni su come visualizzare e gestire le proprietà di un report impaginato all'interno del portale Web, nonché su come usare Generatore report per creare o modificare report impaginati.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0516adde38fc7f6e9cc1b4e20bc9beef76a4df22
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d5c5a6a7b1bd60f066c13a2b06e65dc6ef5f053
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68222680"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243577"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Utilizzo di report impaginati (portale web)
 
@@ -77,7 +78,7 @@ Consente di specificare l'estensione per l'elaborazione dati usata per elaborare
   
 Specificare la stringa di connessione utilizzata dal server di report per la connessione all'origine dati. Il tipo di connessione determina la sintassi da utilizzare. Ad esempio, una stringa di connessione per l'estensione per l'elaborazione dei dati XML è rappresentata da un URL per un documento XML. In una stringa di connessione tipica vengono in genere specificati il server di database e un file di dati. L'esempio seguente illustra una stringa di connessione usata per la connessione a un database di SQL Server denominato MyData:  
   
-    data source=(a SQL Server instance);initial catalog=MyData  
+`data source=(a SQL Server instance);initial catalog=MyData`
   
 È possibile configurare una stringa di connessione come espressione in modo da poter specificare l'origine dati in fase di esecuzione. Le espressioni dell'origine dati sono definite nel report in Progettazione report e non possono essere definite, visualizzate o modificate nel portale Web. È tuttavia possibile sostituire un'espressione di origine dati scegliendo **Ignora predefinita** per digitare una stringa di connessione statica. Per tornare nuovamente all'espressione, fare clic su **Ripristina predefinita**. Nel server di report viene archiviata la stringa di connessione originale che può essere utilizzata nel caso sia necessario ripristinarla. Per utilizzare le espressioni dell'origine dati, è necessario utilizzare le informazioni di connessione all'origine dati pubblicate originariamente con il report. Le origini dati condivise non supportano l'utilizzo di espressioni nella stringa di connessione.  
   

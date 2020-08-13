@@ -1,5 +1,6 @@
 ---
 title: "Lesson 7: Add Drillthrough Action on Parent Report (Lezione 7: Aggiungere un'azione drill-through in un report padre) | Microsoft Docs"
+description: Informazioni su come aggiungere un'azione drill-through nel report padre dopo aver aggiunto un controllo ReportViewer all'applicazione del sito Web.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: aad2da1a-d7b1-4afa-a66a-1ff102e8306f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ade2bf3463ca2efc139cfea661dba0a83394f804
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d6a6e588cb79ffbc97450a4ad0a627957dc73b75
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651267"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243252"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>Lezione 7: Aggiungere un'azione drill-through in un report padre
 Dopo aver aggiunto un controllo ReportViewer all'applicazione del sito Web, il passaggio successivo consiste nell'aggiunta di un'azione drill-through nel report padre.  

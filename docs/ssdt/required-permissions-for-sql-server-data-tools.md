@@ -1,5 +1,6 @@
 ---
 title: Autorizzazioni necessarie
+description: Informazioni sulle autorizzazioni necessarie per varie attività in SQL Server Data Tools, ad esempio la creazione di un database, l'esecuzione di unit test e il confronto di schemi.
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.prod: sql
@@ -8,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
-ms.openlocfilehash: fbe44c84b2a1974981dff5173015ecf0fc5e74b5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5637af0406176ba8099038eaa8a2500d2f03629e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256987"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243722"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>Autorizzazioni necessarie per SQL Server Data Tools
 
@@ -38,9 +38,8 @@ Prima di poter eseguire un'azione in un database in Visual Studio, è necessario
 ## <a name="permissions-to-create-or-deploy-a-database"></a><a name="DatabaseCreationAndDeploymentPermissions"></a>Autorizzazioni per creare o distribuire un database  
 Per creare o distribuire un database è necessario disporre delle autorizzazioni riportate di seguito.  
   
-|||  
-|-|-|  
 |Azioni|Autorizzazioni necessarie|  
+|-|-|  
 |Importare oggetti di database e relative impostazioni|È necessario avere la possibilità di connettersi al database di origine.<br /><br />Se il database di origine è basato su SQL Server 2005, è necessario avere anche l'autorizzazione **VIEW DEFINITION** per ogni oggetto.<br /><br />Anche se il database di origine è basato su SQL Server 2008 o versioni successive, è necessario avere l'autorizzazione **VIEW DEFINITION** per ogni oggetto. Per l'accesso è necessaria l'autorizzazione **VIEW SERVER STATE** per le chiavi di crittografia del database.|  
 |Importare oggetti server e relative impostazioni|È necessario avere la possibilità di connettersi al database master nel server specificato.<br /><br />Se nel server è in esecuzione SQL Server 2005, è necessario avere l'autorizzazione **VIEW ANY DEFINITION** per il server.<br /><br />Anche se il database di origine è basato su SQL Server 2008 o versioni successive, è necessario avere l'autorizzazione **VIEW ANY DEFINITION** per il server. Per l'accesso è necessaria l'autorizzazione **VIEW SERVER STATE** per le chiavi di crittografia del database.|  
 |Creare o aggiornare un progetto di database|Non è necessario disporre di alcuna autorizzazione per database per creare o modificare un progetto di database.|  
@@ -57,9 +56,8 @@ Il *refactoring del database* viene eseguito solo all'interno del progetto di da
 ## <a name="permissions-to-perform-unit-testing-on-a-sql-server-database"></a><a name="DatabaseUnitTestingPermissions"></a>Autorizzazioni per eseguire unit test in un database di SQL Server  
 Per eseguire unit test in un database, è necessario disporre delle autorizzazioni seguenti.  
   
-|||  
-|-|-|  
 |Azioni|Autorizzazioni necessarie|  
+|-|-|   
 |Eseguire un'azione di test|È necessario utilizzare la connessione al database del contesto di esecuzione. Per altre informazioni, vedere [Panoramica delle stringhe di connessione e delle autorizzazioni](../ssdt/overview-of-connection-strings-and-permissions.md).|  
 |Eseguire un'azione di pre-test o post-test|È necessario utilizzare la connessione al database del contesto autorizzato. Questa connessione ha più autorizzazioni rispetto alla connessione del contesto di esecuzione.|  
 |Eseguire script TestInitialize e TestCleanup|È necessario utilizzare la connessione al database del contesto autorizzato.|  
@@ -72,9 +70,8 @@ Per generare dati di test tramite il generatore di dati, è necessario avere le 
 ## <a name="permissions-to-compare-schemas-and-data"></a><a name="SchemaAndDataComparePermissions"></a>Autorizzazioni per confrontare schemi e dati  
 Per confrontare schemi o dati, è necessario disporre delle autorizzazioni seguenti.  
   
-|||  
-|-|-|  
 |Azioni|Autorizzazioni necessarie|  
+|-|-|   
 |Confrontare gli schemi di due database|È necessario avere le autorizzazioni per importare oggetti e impostazioni dai database come descritto nella sezione [Autorizzazioni per creare o distribuire un database](#DatabaseCreationAndDeploymentPermissions).|  
 |Confrontare gli schemi di un database e di un progetto di database|È necessario avere le autorizzazioni per importare oggetti e impostazioni dal database come descritto nella sezione [Autorizzazioni per creare o distribuire un database](#DatabaseCreationAndDeploymentPermissions). Il progetto di database deve inoltre essere aperto in Visual Studio.|  
 |Scrivere aggiornamenti in un database di destinazione|È necessario avere le autorizzazioni per distribuire gli aggiornamenti al database di destinazione come descritto nella sezione [Autorizzazioni per creare o distribuire un database](#DatabaseCreationAndDeploymentPermissions).|  

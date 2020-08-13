@@ -1,5 +1,6 @@
 ---
 title: Finestra di progettazione Avviso dati | Microsoft Docs
+description: Informazioni sulle definizioni di avviso dati e su come creare e modificare definizioni di avviso dati nella finestra di progettazione Avviso dati.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d0d166462c2a542d834e92da03735e6e8294290d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571600"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243302"
 ---
 # <a name="data-alert-designer"></a>Finestra di progettazione Avviso dati
 
@@ -170,7 +171,7 @@ Le definizioni di avviso dati vengono create e modificate nella finestra di prog
 ### <a name="email-settings"></a>Impostazioni posta elettronica  
  L'opzione **Destinatario/i** consente di specificare gli indirizzi di posta elettronica dei destinatari dei messaggi di avviso dati. Separare più indirizzi di posta elettronica tramite punti e virgola, analogamente a quanto avviene nei messaggi di posta elettronica di Microsoft Office Outlook. È anche possibile specificare come destinatari gruppi di distribuzione, in modo da poter gestire l'elenco destinatari in modo più semplice ed efficace. Se in SharePoint è possibile determinare l'indirizzo di posta elettronica personale quando si crea una definizione di avviso, tale indirizzo viene aggiunto automaticamente all'elenco di destinatari; in caso contrario, è necessario aggiungerlo in modo esplicito come destinatario.  
   
- L'oggetto predefinito del messaggio di posta elettronica è **Avviso dati per \<nome avviso>** . È possibile modificare l'oggetto in base alle proprie esigenze.  
+ L'oggetto predefinito del messaggio di posta elettronica è **Avviso dati per \<alert name>** . È possibile modificare l'oggetto in base alle proprie esigenze.  
   
  È anche possibile fornire una descrizione da includere nel messaggio di avviso dati nell'opzione **Descrizione** . L'inserimento di una descrizione, in particolare se vi sono avvisi dati simili, è utile per distinguere rapidamente i messaggi di avviso dati e per comprenderli. Oltre al messaggio di avviso inviato quando i dati del report soddisfano le regole specificate, viene inviato un messaggio di avviso a tutti i destinatari quando si verifica un errore. Per altre informazioni, vedere [Data Alert Messages](../reporting-services/data-alert-messages.md).  
   

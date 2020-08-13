@@ -1,5 +1,5 @@
 ---
-title: Funzionalità del motore di database deprecate | Microsoft Docs
+title: Funzionalità del motore di database deprecate in SQL Server 2017 | Microsoft Docs
 titleSuffix: SQL Server 2019
 description: Informazioni sulle funzionalità del motore di database deprecate ancora disponibili in SQL Server 2017 (14.x), ma che non devono essere usate nelle nuove applicazioni.
 ms.custom: seo-lt-2019
@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 33b12c2b68c067db1a47159c201f5cd04a9b1c45
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ff7a91230daff2aab0e031fa2b87803e379921b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759132"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244079"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Funzionalità del motore di database deprecate in SQL Server 2017
 
@@ -38,7 +38,7 @@ Quando una funzionalità è contrassegnata come deprecata significa che:
 
 È possibile monitorare l'utilizzo delle funzionalità deprecate tramite il contatore delle prestazioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :Funzionalità deprecate e gli eventi di traccia. Per altre informazioni, vedere [Usare oggetti di SQL Server](../relational-databases/performance-monitor/use-sql-server-objects.md).  
 
-Il valore di questi contatori è disponibile anche tramite l'istruzione seguente:  
+I valori di questi contatori sono disponibili anche tramite l'istruzione seguente:  
 
 ```sql
 SELECT * FROM sys.dm_os_performance_counters
