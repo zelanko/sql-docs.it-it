@@ -1,5 +1,6 @@
 ---
 title: Tipo di connessione XML | Microsoft Docs
+description: Informazioni sul tipo di connessione XML per connettersi e recuperare dati da documenti XML, servizi Web o codice XML incorporato nella query.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9355ac713c502acbbd319ec7bdc9cb035079ca34
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 120e99440b77a27be4f83f8e4355a4ec75cab7bb
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081676"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458503"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo di connessione XML (SSRS)
   Per includere dati nel report da un'origine dati XML, è necessario disporre di un set di dati basato su un'origine dati del report di tipo XML. Questo tipo di origine dati incorporato è basato sull'estensione per i dati XML. Utilizzare questo tipo di origine dati per connettersi e recuperare dati da documenti XML, servizi Web o valori XML incorporati nella query.  
@@ -115,12 +116,12 @@ ms.locfileid: "77081676"
   
  Per altre informazioni sulla sintassi delle query, vedere [Sintassi di XML Query per i dati del report XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).  
   
- Per consultare degli esempi, vedere [Reporting Services: Using XML and Web Service Data Sources](https://go.microsoft.com/fwlink/?LinkId=81654).  
+ Per gli esempi, vedere [Reporting Services: uso di origini dati XML e servizio Web](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Requisiti per il recupero di dati del servizio Web XML  
  Lo schema non viene rilevato automaticamente dall'estensione per l'elaborazione dati XML. È pertanto necessario essere in grado di individuare i metodi SOAP tramite i quali verranno recuperati i dati desiderati. È inoltre necessario comprendere lo spazio dei nomi o lo schema di indirizzamento che il servizio Web utilizza per i dati.  
   
- Per un servizio Web è possibile specificare un elemento \<**Query**> che definisce un metodo da chiamare o un'azione SOAP. È possibile lasciare la query vuota e utilizzare la query predefinita se l'origine dei dati XML ha una struttura gerarchica che genera i dati che si desidera utilizzare per il report. Per gli attributi e i valori del nodo elemento XML recuperati durante l'esecuzione della query viene eseguito il mapping ai campi del set di dati utilizzati nel report.  
+ Per un servizio Web, è possibile specificare un elemento \<**Query**> che definisce un metodo da chiamare o un'azione SOAP. È possibile lasciare la query vuota e utilizzare la query predefinita se l'origine dei dati XML ha una struttura gerarchica che genera i dati che si desidera utilizzare per il report. Per gli attributi e i valori del nodo elemento XML recuperati durante l'esecuzione della query viene eseguito il mapping ai campi del set di dati utilizzati nel report.  
   
 ### <a name="requirements-for-retrieving-xml-document-data"></a>Requisiti per il recupero di dati di documenti XML  
  Se si usa il protocollo HTTP, il server deve restituire dati XML oppure i dati XML devono essere incorporati nell'elemento **Query** XML. Se si fa riferimento a un documento XML direttamente utilizzando il protocollo HTTP, l'estensione deve essere xml.  

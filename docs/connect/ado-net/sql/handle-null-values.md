@@ -1,6 +1,6 @@
 ---
 title: Gestione dei valori NULL
-description: Viene illustrato come usare i valori GUID e uniqueidentifier in SQL Server e .NET.
+description: Descrive come usare valori null in SQL Server e .NET e indica come differiscono dai valori vuoti.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 40c3d2e938e8b595fa63566a096fb4145c73c439
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: be42913b07f037b002123bedb6d285f41b52c9a3
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921196"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393169"
 ---
 # <a name="handling-null-values"></a>Gestione dei valori NULL
 

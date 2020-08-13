@@ -1,5 +1,5 @@
 ---
-title: Proprietà delle informazioni sulle origini dati | Microsoft Docs
+title: Proprietà delle informazioni sulle origini dati (OLE DB Driver) | Microsoft Docs
 description: Proprietà delle informazioni sulle origini dati
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - OLE DB data source properties [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: ba9fa21f0c22c342922946a43124216a25ba09ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e68103f98e9a1de3902206876cd95c48b22ff7cb
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68016028"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977788"
 ---
 # <a name="data-source-information-properties"></a>Proprietà delle informazioni sulle origini dati
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

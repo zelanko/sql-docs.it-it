@@ -1,5 +1,5 @@
 ---
-title: Creazione di indici di SQL Server | Microsoft Docs
+title: Creare indici di SQL Server (OLE DB Driver) | Microsoft Docs
 description: Creazione di indici di SQL Server con OLE DB Driver per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - adding indexes
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: ca823023764a691eae0afc1e6df62bab91dd075d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 96521e592f1c44d4929c93dca7463d8e20189726
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015257"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977818"
 ---
 # <a name="creating-sql-server-indexes"></a>Creazione di indici SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

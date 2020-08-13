@@ -1,5 +1,6 @@
 ---
 title: Generare script
+description: Informazioni su come usare la procedura guidata Genera e pubblica script per creare script Transact-SQL per più oggetti e come usare il menu Crea script per in Esplora oggetti per generare script per singoli oggetti o più oggetti.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: scripting
@@ -11,16 +12,16 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a25249c04d322e2faa4c876b1afd2822896038b6
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 534d4982f46d0d83cb25718646b018dfa662cc35
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151879"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123130"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Generazione di script (SQL Server Management Studio)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornisce due meccanismi per la generazione di script [!INCLUDE[tsql](../../includes/tsql-md.md)] . È possibile creare script per più oggetti usando la **Procedura guidata Genera e pubblica script**. È anche possibile generare uno script per un singolo oggetto o per più oggetti usando il menu **Crea script per** in **Esplora oggetti**.
 
@@ -48,7 +49,7 @@ Il menu **Script come** in Esplora oggetti consente di creare uno script per un 
 
 3. Espandere la categoria dell'oggetto: ad esempio il nodo **Tabelle** o **Viste** .
 
-4. Fare clic con il pulsante destro del mouse sull'oggetto e scegliere **Crea script per \<tipo di oggetto**, ad esempio **Crea script per tabella**.
+4. Fare clic con il pulsante destro del mouse sull'oggetto e scegliere **Crea script per \<object type>** , ad esempio **Crea script per tabella**.
 
 5. Scegliere il tipo di script, ad esempio **Genera codice per istruzione CREATE** o **Genera codice per istruzione ALTER**.
 
@@ -72,6 +73,6 @@ Il menu **Script come** in Esplora oggetti consente di creare uno script per un 
 
 6. Tenendo premuto CTRL fare clic sul secondo oggetto per cui si vuole creare lo script.
 
-7. Fare clic con il pulsante destro del mouse su uno degli oggetti selezionati e scegliere **Crea script per \<tipo di oggetto>** .
+7. Fare clic con il pulsante destro del mouse su uno degli oggetti selezionati e scegliere **Crea script per \<object type>** .
 
     ![Esplora oggetti](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)

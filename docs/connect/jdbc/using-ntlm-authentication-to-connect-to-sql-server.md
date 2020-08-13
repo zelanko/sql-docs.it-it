@@ -1,5 +1,6 @@
 ---
-title: Uso dell'autenticazione NTLM per la connessione a SQL Server | Microsoft Docs
+title: Uso dell'autenticazione NTLM per la connessione a SQL Server
+description: Informazioni su come stabilire una connessione al database SQL usando l'autenticazione NTLM con JDBC Driver.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93b4956b70e6e81e215da4fcde61a3a3287b50ec
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69026097"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393149"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Uso dell'autenticazione NTLM per la connessione a SQL Server
 
@@ -72,7 +73,7 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 
 Un nome dell'entità servizio (SPN) è il nome con cui un client identifica in modo univoco un'istanza di un servizio.
 
-È possibile specificare il nome dell'entità servizio usando la proprietà di connessione **serverSpn** o lasciare che sia il driver a crearlo automaticamente (impostazione predefinita). Il formato della proprietà è: "MSSQLSvc/fqdn:porta\@AREADIAUTENTICAZIONE" dove fqdn è il nome di dominio completo, porta è il numero di porta e AREADIAUTENTICAZIONE è l'area di autenticazione di SQL Server in lettere maiuscole. La parte dell'area di autenticazione di questa proprietà è facoltativa perché l'area di autenticazione predefinita è la stessa di quella del server.
+È possibile specificare il nome dell'entità servizio usando la proprietà di connessione **serverSpn** o lasciare che sia il driver a crearlo automaticamente (impostazione predefinita). Questa proprietà usa il formato: "MSSQLSvc/fqdn:porta\@AREADIAUTENTICAZIONE", dove fqdn è il nome di dominio completo, porta è il numero di porta e AREADIAUTENTICAZIONE è l'area di autenticazione di SQL Server in lettere maiuscole. La parte dell'area di autenticazione di questa proprietà è facoltativa perché l'area di autenticazione predefinita è la stessa di quella del server.
 
 Ad esempio, il nome dell'entità servizio potrebbe essere simile al seguente: "MSSQLSvc/some-server.zzz.corp.contoso.com:1433"
 

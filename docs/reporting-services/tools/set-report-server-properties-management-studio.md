@@ -1,5 +1,6 @@
 ---
 title: Impostare le proprietà di un server di report (Management Studio) | Microsoft Docs
+description: Informazioni su come impostare le proprietà di sistema di un server di report in SQL Server Management Studio per attivare funzionalità o specificare i valori predefiniti del server.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ed0f84b-b12a-4e49-b65c-a11a99f9093f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e2632e93cf325a560434e0833e3bb5a7288f83ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 360c2408e7078845d58e28dff42fdf932d5e311a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578992"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918017"
 ---
 # <a name="set-report-server-properties-management-studio"></a>Impostare le proprietà di un server di report (Management Studio)
   È possibile impostare le proprietà del sistema di un server di report in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per attivare funzionalità o specificare i valori predefiniti del server.  

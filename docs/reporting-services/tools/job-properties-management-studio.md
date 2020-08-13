@@ -1,5 +1,6 @@
 ---
 title: Proprietà processo (Management Studio) | Microsoft Docs
+description: Ulteriori informazioni sulla pagina Proprietà processo in SQL Server Management Studio, in cui è possibile visualizzare informazioni sui processi in esecuzione nel server di report.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fb1a989876126a57553a1ae833bcf847f9c005bc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8aabf771f7bd87f138e188a41be4b46ed43d2045
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571123"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915567"
 ---
 # <a name="job-properties-management-studio"></a>Proprietà processo (Management Studio)
   Usare la pagina **Proprietà processo** per visualizzare le informazioni su una sottoscrizione o su un report in corso prima di annullarlo.  

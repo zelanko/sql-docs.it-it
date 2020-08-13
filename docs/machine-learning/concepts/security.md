@@ -2,26 +2,26 @@
 title: Panoramica della sicurezza per l'estendibilità
 description: Panoramica della sicurezza per il framework di estendibilità in Machine Learning Services per SQL Server. Sicurezza per gli account di accesso e gli account utente, servizio Launchpad di SQL Server, account di lavoro, esecuzione di più script e autorizzazioni file.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 03/11/2020
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 562cc28d09b7c1341b58c45bfcc517db553bff16
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 80f14fc69a6abf0720f3f9d9fb3c170f0ab1da0d
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118544"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406224"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Panoramica della sicurezza per il framework di estendibilità in Machine Learning Services per SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Questo articolo descrive l'architettura di sicurezza generale usata per integrare il motore di database di SQL Server e i componenti correlati con il framework di estendibilità. L'articolo esamina anche gli oggetti a protezione diretta, i servizi, l'identità dei processi e le autorizzazioni. Per altre informazioni sui concetti e i componenti principali dell'estendibilità in SQL Server, vedere [Architettura di estendibilità in Machine Learning Services per SQL Server](extensibility-framework.md).
+Questo articolo descrive l'architettura di sicurezza generale usata per integrare il motore di database di SQL Server e i componenti correlati con il framework di estendibilità in [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md). L'articolo esamina anche gli oggetti a protezione diretta, i servizi, l'identità dei processi e le autorizzazioni. Per altre informazioni sui concetti e i componenti principali dell'estendibilità in SQL Server, vedere [Architettura di estendibilità in Machine Learning Services per SQL Server](extensibility-framework.md).
 
 ## <a name="securables-for-external-script"></a>Oggetti a protezione diretta per lo script esterno
 

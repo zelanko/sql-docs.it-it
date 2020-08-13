@@ -1,5 +1,6 @@
 ---
 title: Aggiungere un report nuovo o esistente a un progetto report | Microsoft Docs
+description: Informazioni su come aggiungere un report nuovo o esistente a un progetto report usando la Creazione guidata report in SQL Server Reporting Services.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d9afb31b4c2793e7196fda36280fed3d590a32cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d2bea776af3fd91144adfbc62b0e395550c66752
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077886"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918007"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Aggiungere un report nuovo o esistente a un progetto report (SSRS)
   Per aggiungere un nuovo report impaginato di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , è possibile usare la Creazione guidata report o aggiungere un nuovo report vuoto al progetto. È anche possibile aggiungere un report esistente. Dopo l'aggiunta di un report, il relativo nome verrà visualizzato nella cartella **Report** nel progetto.  
@@ -45,7 +46,7 @@ ms.locfileid: "77077886"
   
 2.  In **Modelli**fare clic su **Report**.  
   
-3.  Fare clic su **Aggiungi**.  
+3.  Scegliere **Aggiungi**.  
   
      Un nuovo report vuoto verrà aggiunto al progetto e visualizzato nell'area di progettazione.  
   

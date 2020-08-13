@@ -2,9 +2,9 @@
 title: Note sulla versione di SQL Server 2012 | Microsoft Docs
 description: Questo documento descrive i problemi noti di cui è necessario essere a conoscenza prima di installare o risolvere i problemi relativi a Microsoft SQL Server 2012.
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.custom: ''
-ms.date: 02/01/2017
+ms.date: 07/22/2020
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d60d53f11096343e96c0c309ba3aeb7bed419856
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f07d5ea10fbb762b46dcf47fb15e9acdfe8404a9
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999401"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111139"
 ---
 # <a name="sql-server-2012-release-notes"></a>Note sulla versione di SQL Server 2012
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
-Questo documento descrive i problemi noti di cui è necessario essere a conoscenza prima di installare Microsoft SQL Server 2012 o di risolverne i problemi ([fare clic qui per scaricarlo](https://go.microsoft.com/fwlink/?LinkId=238647)). Questo documento è disponibile solo online, non nei supporti di installazione, e viene aggiornato periodicamente.  
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+Questo documento descrive i problemi noti di cui è necessario essere a conoscenza prima di installare o risolvere i problemi relativi a [Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=238647). Questo documento è disponibile solo online, non nei supporti di installazione, e viene aggiornato periodicamente.  
   
 Per informazioni su come installare SQL Server 2012, vedere il file Leggimi di SQL Server 2012 disponibile nei supporti di installazione e nella pagina di download del [file Leggimi](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) . Ulteriori informazioni sono disponibili nella [documentazione online di SQL Server](https://go.microsoft.com/fwlink/?LinkId=190948) e nel [forum su SQL Server](https://go.microsoft.com/fwlink/?LinkId=213599).  
   
@@ -62,13 +62,17 @@ Prima di installare [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], si consi
 ### <a name="13-sql-server-setup-might-fail-while-trying-to-start-the-sql-server-browser-service"></a>1.3 L'installazione di SQL Server potrebbe non venir completata nel tentativo di avviare il servizio SQL Server Browser  
 **Problema:** l'installazione di SQL Server potrebbe non riuscire quando si tenta di avviare il servizio SQL Server Browser, con errori simili al seguente:  
   
-<pre>The following error has occurred:  
-Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.</pre>  
+```
+The following error has occurred:  
+Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.
+```
   
 o  
   
-<pre>The following error has occurred:  
-SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
+```
+The following error has occurred:  
+SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.
+```
   
 **Soluzione alternativa:** può verificarsi quando l'installazione del motore di SQL Server o di Analysis Services non riesce. Per risolvere il problema, vedere i log del programma di installazione di SQL Server e risolvere i problemi relativi al motore di SQL Server e ad Analysis Services. Per altre informazioni, vedere la pagina relativa alla visualizzazione e alla lettura dei file di log del programma di installazione di SQL Server. Per altre informazioni, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
@@ -105,8 +109,10 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
   
 Una volta completate le attività, verrà visualizzato il seguente messaggio di errore quando si tenta di creare un indice semantico.  
   
-<pre>Msg 41209, Level 16, State 3, Line 1  
-A semantic language statistics database is not registered. Full-text indexes using 'STATISTICAL_SEMANTICS' cannot be created or populated.</pre>  
+```
+Msg 41209, Level 16, State 3, Line 1  
+A semantic language statistics database is not registered. Full-text indexes using 'STATISTICAL_SEMANTICS' cannot be created or populated.
+```
   
 ### <a name="17-installation-prerequisite-handling-during-sql-server-2012-setup"></a>1.7 Gestione dei prerequisiti dell'installazione durante l'installazione di SQL Server 2012  
 Di seguito viene descritto il comportamento dell'installazione dei prerequisiti durante l'installazione di SQL Server 2012:  
@@ -343,7 +349,7 @@ Si verificano problemi con l'attività Elaborazione Analysis Services quando si 
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 I controlli non scalano correttamente con dimensioni del carattere grandi  
 **Problema:** se si modifica la dimensione del testo in "Grande - 150%" (in Windows Server 2008 o Windows 7) o si modifica l'impostazione personalizzata DPI in 200% (in Windows 7), i pulsanti **Annulla** e **Crea** nella pagina **Nuova Knowledge Base** non saranno accessibili.  
   
-**Soluzione alternativa:** per risolvere il problema, impostare il tipo di carattere su una dimensione minore.  
+**Soluzione alternativa:** Per risolvere il problema, impostare dimensioni inferiori per il tipo di carattere.  
   
 ### <a name="46-screen-resolution-of-800x600-is-not-supported"></a>4.6 La risoluzione dello schermo di 800x600 non è supportata  
 **Problema:** l'applicazione Data Quality Client non viene visualizzata correttamente se la risoluzione dello schermo è impostata su 800x600.  
@@ -378,9 +384,9 @@ In un progetto DQS se è stato eseguito il mapping di un campo nei dati di origi
 ### <a name="414-issue-with-date-or-datetime-values-in-unmapped-source-fields-in-excel-during-cleansing-and-matching"></a>4.14 Problema con i valori Date o DateTime nei campi di origine di cui non è stato eseguito il mapping in Excel durante la pulizia e la corrispondenza  
 **Problema**: se i dati di origine sono in formato Excel e per i campi di origine contenenti valori di tipo **Date** o **DateTime** non è stato eseguito il mapping, durante le attività di pulizia e corrispondenza si verifica quanto segue:  
   
--   I valori **Date** e di cui non è stato eseguito il mapping vengono visualizzati ed esportati nel formato aaaammgg.  
+-   I valori **Date** di cui non è stato eseguito il mapping vengono visualizzati ed esportati nel formato aaaa-mm-dd.  
   
--   Il valore time viene perso per i valori **DateTime** di cui non è stato eseguito il mapping e che vengono visualizzati ed esportati nel formato aaaammgg.  
+-   Il valore time va perso per i valori **DateTime** di cui non è stato eseguito il mapping e che vengono visualizzati ed esportati nel formato aaaa-mm-gg.  
   
 **Soluzione alternativa:** è possibile visualizzare i valori dei campi di cui non è stato eseguito il mapping nel riquadro inferiore destro della pagina **Gestisci e visualizza risultati** nell'attività di pulizia e nella pagina **Corrispondenza** nell'attività di corrispondenza.  
   
@@ -464,12 +470,12 @@ Di seguito viene fornito un esempio per illustrare questo comportamento. Si cons
 ### <a name="54-an-error-might-occur-when-navigating-in-the-generate-script-wizard"></a>5.4 Potrebbe verificarsi un errore nel corso della Generazione guidata script  
 **Problema:** dopo aver generato uno script nella Generazione guidata script facendo clic su **Salva o pubblica script**, su **Scegli opzioni** o **Imposta opzioni di generazione script**, quindi nuovamente su **Salva o pubblica script** potrebbe verificarsi l'errore seguente:  
   
-<pre>
+```
 An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
 ------------------------------  
 ADDITIONAL INFORMATION:  
 Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
-</pre>  
+```
   
 **Soluzione alternativa:** chiudere e riaprire la Generazione guidata script.  
   
@@ -631,9 +637,8 @@ In SQL Server 2012 è incluso StreamInsight 2.0 per cui sono richiesti una licen
 ## <a name="100-upgrade-advisor"></a><a name="UA"></a>10.0 Preparazione aggiornamento  
   
 ### <a name="101-link-to-install-upgrade-advisor-is-not-enabled-on-chinese-hk-operating-systems"></a>10.1 Il collegamento per installare Upgrade Advisor non è abilitato in sistemi operativi cinesi (HK)  
-Problema: Quando si tenta di installare Preparazione aggiornamento in qualsiasi versione di Windows supportata in sistemi operativi in lingua cinese (Hong Kong), è possibile che il collegamento per installare Preparazione aggiornamento non sia abilitato.  
+Problema: Quando si prova a installare Preparazione aggiornamento in qualsiasi versione di Windows supportata in sistemi operativi in lingua cinese (RAS di Hong Kong), è possibile che il collegamento per installare Preparazione aggiornamento non sia abilitato.  
   
 **Soluzione alternativa**: individuare il file **SQLUA.msi** nel supporto SQL Server 2012 in `\1028_CHT_LP\x64\redist\Upgrade Advisor` o `\1028_CHT_LP\x86\redist\Upgrade Advisor`, a seconda dell'architettura del sistema operativo.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
-  

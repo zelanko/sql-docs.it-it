@@ -2,21 +2,21 @@
 title: Note sulla versione di SQL Server 2014 | Microsoft Docs
 description: Questo documento descrive i problemi noti di cui è necessario essere a conoscenza prima di installare o risolvere i problemi relativi alle versioni di Microsoft SQL Server 2014 (12.x).
 ms.custom: ''
-ms.date: 03/15/2018
+ms.date: 07/22/2020
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 6346b8e611fc70f07211abe3060781d548a6a929
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: aeeaf52d389da8bb58d4b76bfbe85957cbd832dd
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001141"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111126"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ Questa azione non è supportata.
 **Soluzione alternativa:** per il downgrade non sono disponibili soluzioni alternative. Si consiglia di eseguire il backup del database prima di eseguire l'aggiornamento a SQL Server 2014 RTM.  
   
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>Versione non corretta di StreamInsight Client su supporto/ISO/CAB di SQL Server 2014  
-La versione errata di StreamInsight.msi e StreamInsightClient.msi si trova nel percorso seguente in supporto/ISO/CAB di SQL Server (StreamInsight\\\<Architecture\>\\\<ID Lingua\>).  
+La versione errata di StreamInsight.msi e StreamInsightClient.msi si trova nel percorso seguente nel supporto /ISO/CAB di SQL Server (StreamInsight\\\<Architecture\>\\\<Language ID\>).  
   
 **Soluzione alternativa:** Scaricare e installare la versione corretta dalla [pagina per il download di SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
@@ -287,7 +287,7 @@ Se si è già verificato il problema relativo ai valori instance_id non corrispo
 5.  Identificare le righe che devono corrispondere all'istanza da correggere. 
 6.  Aggiornare il valore sysdac_history_internal.instance_id con il valore annotato nel passaggio 3 (dalla tabella sysdac_instances_internal):  
   
-    `update` sysdac_history_internal `set` instance_id = '\<valore del passaggio 3\>' `where` \<espressione corrispondente alle righe da aggiornare\>  
+    `update` sysdac_history_internal `set` instance_id = '\<value from step 3\>' `where` \<expression that matches the rows you want to update\>  
   
 ### <a name="reporting-services-rtm"></a><a name="SSRS"></a>Reporting Services (RTM)
   

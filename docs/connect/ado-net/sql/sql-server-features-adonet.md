@@ -1,7 +1,7 @@
 ---
 title: Funzionalità di SQL Server e ADO.NET
 description: Descrive le funzionalità di SQL Server utili per gli sviluppatori di applicazioni ADO.NET.
-ms.date: 08/15/2019
+ms.date: 07/09/2020
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 3c2a2c1597caa95c15f41de0e16f9cf9290d2a8a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d1c1911905c1ddf0af01a2592d0be49796cd3596
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902087"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393109"
 ---
 # <a name="sql-server-features-and-adonet"></a>Funzionalità di SQL Server e ADO.NET
 
@@ -55,6 +55,9 @@ Descrive il supporto di SqlClient per i database Local DB.
 
 [Supporto di SqlClient per Always Encrypted](sqlclient-support-always-encrypted.md)  
 Viene descritto il supporto di SqlClient per la funzionalità Always Encrypted.
+
+[Supporto di SqlClient per l'individuazione e la classificazione dei dati](data-classification.md)  
+Viene descritto come accedere alle informazioni di individuazione e classificazione dei dati tramite SqlClient.
 
 ## <a name="next-steps"></a>Passaggi successivi
 - [Operazioni sui dati di SQL Server in ADO.NET](sql-server-data-operations.md)

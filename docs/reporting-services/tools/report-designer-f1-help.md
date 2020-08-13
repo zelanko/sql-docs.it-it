@@ -1,5 +1,6 @@
 ---
 title: Guida sensibile al contesto di Progettazione report | Microsoft Docs
+description: Informazioni sulla Guida sensibile al contesto per le procedure guidate, le visualizzazioni e le finestre di dialogo di Progettazione report di SQL Server Reporting Services in SQL Server Data Tools.
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7c1bc931-d1ec-47fc-8f82-55560ddaf776
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f767424e9ec24215e280b49fe1ed6b820b7a3d6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1f9091e7ef4115d2809c629cedda524a947b695e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576050"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920317"
 ---
 # <a name="report-designer-f1-help"></a>Guida sensibile al contesto di Progettazione report
   In questa sezione è inclusa la Guida relativa alle procedure guidate, alle visualizzazioni e alle finestre di dialogo di Progettazione report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]. In alternativa, è possibile accedere alla Guida durante l'utilizzo della finestra di dialogo premendo F1 o facendo clic sul pulsante ? visualizzato nella finestra di dialogo.  

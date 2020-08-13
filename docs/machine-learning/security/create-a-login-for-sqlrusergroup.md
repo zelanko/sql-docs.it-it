@@ -1,22 +1,22 @@
 ---
 title: Creare un account di accesso per SQLRUserGroup
-description: Per le connessioni loopback che usano l'autenticazione implicita, creare un account di accesso in SQL Server per SQLRUserGroup, in modo che un account di lavoro possa accedere al server per la conversione di identità nell'utente chiamante.
+description: Creare un account di accesso in SQL Server per SQLRUserGroup, usando l'autenticazione implicita per accedere al server, per riconvertire l'identità nell'utente chiamante.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 01/25/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c57a62e954ae8cb0fc52c9a5ead22d418243c0b8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f3d7bd23c2a6b218e56f4de57d5b281b34d0687d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117124"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484636"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>Creare un account di accesso per SQLRUserGroup
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Creare un [account di accesso in SQL Server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) per [SQLRUserGroup](../concepts/security.md#sqlrusergroup) quando una [connessione loopback](../../machine-learning/concepts/security.md#implied-authentication) nello script specifica una *connessione trusted* e l'identità usata per eseguire un oggetto che contiene il codice è un account utente di Windows.
 

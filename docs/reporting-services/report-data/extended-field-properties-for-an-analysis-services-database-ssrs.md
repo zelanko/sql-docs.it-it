@@ -1,5 +1,6 @@
 ---
 title: Proprietà di campo estese per un database di Analysis Services | Microsoft Docs
+description: Informazioni sulle proprietà di campo estese per un database di Analysis Services e su come includere i valori di tali proprietà nel report.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aa0f8b8d8b8ee4cbd3ebdaf70fcb63b9cb5005b9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: beae593bc4673a1fd31d27c5f807553a2b960872
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077684"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458356"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Proprietà di campo estese per un database di Analysis Services (SSRS)
   L'estensione per l'elaborazione dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta proprietà di campo estese. Le proprietà di campo estese sono proprietà aggiuntive rispetto alle proprietà di campo **Value** e **IsMissing** , disponibili nell'origine dati e supportate dall'estensione per l'elaborazione dati. Le proprietà estese non vengono visualizzate nel riquadro Dati report all'interno della raccolta di campi per un set di dati del report. È possibile includere valori di proprietà di campo estese in un report scrivendo espressioni mediante la raccolta predefinita **Campi** nelle quali i valori sono specificati per nome.  
@@ -126,10 +127,10 @@ CELL PROPERTIES
   
  Sebbene le proprietà facciano parte dell'istruzione MDX SELECT, non sono incluse nelle colonne del set di risultati. I dati sono tuttavia disponibili per un report mediante la caratteristica delle proprietà estese. Nel riquadro risultati di una query MDX di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fare doppio clic sulla cella per visualizzare i relativi valori delle proprietà, se impostati nel cubo. Se si fa doppio clic sulla prima cella Order Count contenente 1,379, verrà visualizzata una finestra popup con le proprietà della cella seguenti:  
   
-|Proprietà|valore|  
+|Proprietà|Valore|  
 |--------------|-----------|  
 |CellOrdinal|0|  
-|VALORE|2481|  
+|VALUE|2481|  
 |BACK_COLOR|(null)|  
 |FORE_COLOR|(null)|  
 |FORMATTED_VALUE|2,481|  

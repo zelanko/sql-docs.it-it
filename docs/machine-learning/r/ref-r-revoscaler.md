@@ -1,39 +1,39 @@
 ---
-title: Libreria di funzioni R RevoScaleR
-description: Introduzione alla libreria di funzioni RevoScaleR in R Services per SQL Server 2016 e in Machine Learning Services per SQL Server con R.
+title: Pacchetto RevoScaleR R
+description: RevoScaleR è un pacchetto R di Microsoft che supporta l'elaborazione distribuita, i contesti di calcolo remoti e gli algoritmi di data science con prestazioni elevate. Supporta inoltre l'importazione dei dati, la trasformazione dei dati, il riepilogo, la visualizzazione e l'analisi. Il pacchetto è incluso in Machine Learning Services per SQL Server e R Services per SQL Server 2016.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/06/2019
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b24d5499e618a09c4d80e8614b08219e6c6f788
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2288c1898d9299fb346a80e2cd0a53104e308724
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117434"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406154"
 ---
-# <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (libreria R in SQL Server)
+# <a name="revoscaler-r-package-in-sql-server-machine-learning-services"></a>RevoScaleR (pacchetto R in Machine Learning Services per SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**RevoScaleR** è una libreria di funzioni di data science a prestazioni elevate di Microsoft. Le funzioni supportano l'importazione dei dati, la trasformazione dei dati, il riepilogo, la visualizzazione e l'analisi.
+**RevoScaleR** è un pacchetto R di Microsoft che supporta l'elaborazione distribuita, i contesti di calcolo remoti e gli algoritmi di data science con prestazioni elevate. Supporta inoltre l'importazione dei dati, la trasformazione dei dati, il riepilogo, la visualizzazione e l'analisi. Il pacchetto è incluso in [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md) e [R Services per SQL Server 2016](sql-server-r-services.md).
 
-Diversamente dalle funzioni R di base, le operazioni RevoScaleR possono essere eseguite su set di dati molto grandi, in parallelo e in file system distribuiti. Le funzioni possono operare su set di dati che non rientrano nella memoria usando la divisione in blocchi e riassemblando i risultati al termine delle operazioni.
+Diversamente dalle funzioni R di base, le operazioni RevoScaleR possono essere eseguite su set di dati di grandi dimensioni, in parallelo e in file system distribuiti. Le funzioni possono operare su set di dati che non rientrano nella memoria usando la divisione in blocchi e riassemblando i risultati al termine delle operazioni.
 
-Le funzioni RevoScaleR vengono indicate con un prefisso **rx** o **Rx** che ne facilita l'identificazione.
+Le funzioni RevoScaleR vengono indicate con un prefisso rx** o **Rx** che ne facilita l'identificazione.
 
 RevoScaleR funge da piattaforma per la data science distribuita. È ad esempio possibile usare i contesti di calcolo e le trasformazioni di RevoScaleR con gli algoritmi all'avanguardia in [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-the-microsoftml-package). È anche possibile usare [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) per eseguire le funzioni R di base in parallelo.
 
 ## <a name="full-reference-documentation"></a>Documentazione di riferimento completa
 
-La libreria **RevoScaleR** è distribuita in più prodotti Microsoft, ma l'utilizzo è lo stesso indipendentemente dal fatto che sia inclusa in SQL Server o in un altro prodotto. Poiché le funzioni sono le stesse, la [documentazione per le singole funzioni RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) viene pubblicata in una sola posizione nelle [informazioni di riferimento per R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) per Microsoft Machine Learning Server. In caso di comportamenti specifici per un prodotto, le discrepanze verranno indicate nella pagina della Guida delle funzioni in questione.
+Il pacchetto **RevoScaleR** è distribuito in più prodotti Microsoft, ma l'utilizzo è lo stesso indipendentemente dal fatto che sia incluso in SQL Server o in un altro prodotto. Poiché le funzioni sono le stesse, la [documentazione per le singole funzioni RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) viene pubblicata in una sola posizione nelle [informazioni di riferimento per R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) per Microsoft Machine Learning Server. In caso di comportamenti specifici per un prodotto, le discrepanze verranno indicate nella pagina della Guida delle funzioni in questione.
 
 ## <a name="versions-and-platforms"></a>Versioni e piattaforme
 
-La libreria **RevoScaleR** è basata su R 3.4.3 ed è disponibile solo quando si installa uno dei prodotti o download Microsoft seguenti:
+Il pacchetto **RevoScaleR** è basato su R 3.4.3 ed è disponibile solo quando si installa uno dei prodotti o download Microsoft seguenti:
 
 + [R Services per SQL Server 2016](../install/sql-r-services-windows-install.md)
 + [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
@@ -91,7 +91,7 @@ Dopo aver creato un oggetto di origine dati, è possibile usare l'oggetto per ca
 |---------------|-------------|
 |[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)  |Crea un istogramma dai dati. | 
 |[rxLinePlot](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlineplot) |Crea un tracciato di linea dai dati. | 
-|[rxLorenz](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlorenz)  |Calcola una curva di Lorenz tracciabile. | 
+|[rxLorenz](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlorenz)  |Calcola una curva di Lorenz, che è possibile rappresentare con un tracciato. | 
 |[rxRocCurve](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxroc)  |Calcola e traccia curve ROC da dati effettivi e stimati. | 
 
 <a name="statistics-functions"></a>

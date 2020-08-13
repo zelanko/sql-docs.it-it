@@ -1,5 +1,6 @@
 ---
 title: Gestire origini dati dei report | Microsoft Docs
+description: Informazioni sulla gestione delle origini dati del report, tra cui come connettersi a origini dati esterne a cui viene fatto riferimento in un report.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 68125acb2c810e7463c8612936e545026ea94d69
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2a433169d694f9f2d71a049c906267a64b6c0756
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190812"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458258"
 ---
 # <a name="manage-report-data-sources"></a>Gestire origini dati dei report
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]i report, i modelli di report e le sottoscrizioni guidate dai dati recuperano i dati da origini dati esterne. Per connettersi a un'origine dati esterna, un server di report utilizza le informazioni di connessione all'origine dei dati definite in o a cui si fa riferimento dal report, dal modello o dalla sottoscrizione. Le proprietà di connessione alle origini dati vengono sempre definite al momento della creazione del report o del modello, ma possono essere gestite in modo indipendente dopo la pubblicazione del report o del modello in un server di report.  
@@ -37,7 +38,7 @@ ms.locfileid: "74190812"
   
  Si noti che la modifica delle query non fa parte della gestione delle connessioni a origini dati. Per modificare una query per un report o un modello, è necessario utilizzare uno strumento di creazione e apportare le modifiche nella definizione del report o del modello.  
   
-## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>Proprietà gestite: tipo di origine dati, stringhe di connessione e credenziali.  
+## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>Proprietà gestite: tipo di origine dati, stringhe di connessione e credenziali  
  Le proprietà dell'origine dati che è possibile gestire in un server di report sono le seguenti:  
   
 |Proprietà|Descrizione|Modalità di gestione|  

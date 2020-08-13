@@ -1,5 +1,6 @@
 ---
 title: Strumenti di Reporting Services | Microsoft Docs
+description: Informazioni sugli strumenti di sviluppo, configurazione, amministrazione e visualizzazione di report contenuti in SQL Server Reporting Services.
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e5a060e58019d79b44d42feeb396854807c19f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8adb6775be47b2d064e97c74e6888c64af75fe2e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66826920"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915015"
 ---
 # <a name="reporting-services-tools"></a>Strumenti di Reporting Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contiene un set di strumenti grafici e di scripting che supportano lo sviluppo e l'uso di report completi in un ambiente gestito. Il set include strumenti di sviluppo, strumenti di configurazione e amministrazione e strumenti per la visualizzazione di report. Questo articolo include una breve panoramica di ogni strumento di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e di come è possibile accedervi.  
   
- Per trovare rapidamente uno strumento, vedere [Esercitazione: Individuazione e avvio degli strumenti di Reporting Services &#40;SSRS&#41;](../../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
+ Per trovare subito uno strumento, vedere [Esercitazione: Come individuare e avviare gli strumenti di Reporting Services &#40;SSRS&#41;](../../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
 ## <a name="tools-for-report-authoring"></a>Strumenti per la creazione di report  
  La tabella seguente elenca gli strumenti disponibili per la creazione di report in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -49,7 +50,7 @@ ms.locfileid: "66826920"
   
 |Strumento|Descrizione|Modalità di accesso|  
 |----------|-----------------|-------------------|  
-|Gestione configurazione Reporting Services|Utilizzare questo strumento per configurare un'installazione di Reporting Services. Le attività disponibili includono:<br /><br />  Configurazione dell'account del servizio del server di report.<br /><br /> Creazione e configurazione di uno o più URL del servizio Web.<br /><br /> Configurazione dell'URL del portale Web<br /><br /> Creazione e configurazione del database del server di report.<br /><br /> Configurazione di una distribuzione con scalabilità orizzontale.<br /><br /> Backup, ripristino o sostituzione della chiave simmetrica utilizzata per crittografare stringhe di connessione e credenziali archiviate.<br /><br /> Configurazione dell'account di esecuzione automatica.<br /><br /> Configurazione delle impostazioni di sottoscrizione.<br /><br /> Configurazione di un server SMTP per il recapito tramite posta elettronica.<br /><br /> Configurazione del servizio Power BI (cloud).<br /><br /> Nota: Gestione configurazione Reporting Services non consente di gestire il contenuto del server di report, abilitare funzionalità aggiuntive o concedere l'accesso al server.<br /><br /> Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).|Menu Start|  
+|Gestione configurazione Reporting Services|Utilizzare questo strumento per configurare un'installazione di Reporting Services. Le attività disponibili includono:<br /><br />  Configurazione dell'account del servizio del server di report.<br /><br /> Creazione e configurazione di uno o più URL del servizio Web.<br /><br /> Configurazione dell'URL del portale Web<br /><br /> Creazione e configurazione del database del server di report.<br /><br /> Configurazione di una distribuzione con scalabilità orizzontale.<br /><br /> Backup, ripristino o sostituzione della chiave simmetrica utilizzata per crittografare stringhe di connessione e credenziali archiviate.<br /><br /> Configurazione dell'account di esecuzione automatica.<br /><br /> Configurazione delle impostazioni di sottoscrizione.<br /><br /> Configurazione di un server SMTP per il recapito tramite posta elettronica.<br /><br /> Configurazione del servizio Power BI (cloud).<br /><br /> Nota: Gestione configurazione Reporting Services non consente di gestire il contenuto del server di report, abilitare caratteristiche aggiuntive o concedere l'accesso al server.<br /><br /> Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).|Menu Start|  
 |SQL Server Management Studio|Utilizzare questo strumento per gestire una o più istanze del server di report in un unico ambiente, incluse le seguenti attività:.<br /><br /> Gestione sia delle istanze locali che remote del server di report<br /><br /> Impostazione delle proprietà del server di report<br /><br /> Modifica di definizioni di ruolo<br /><br /> Disabilitazione delle caratteristiche del server di report non utilizzate<br /><br /> Gestione di processi<br /><br /> Gestione di pianificazioni condivise|Menu Start|   
 |Utilità rsconfig|Utilizzare questo strumento per configurare e gestire una connessione del server di report al database del server di report. È inoltre possibile utilizzarla per specificare un account utente per l'elaborazione automatica dei report.<br /><br /> Per altre informazioni, vedere [Utilità della riga di comando del server di report &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md).|Prompt dei comandi|  
 |Utilità rskeymgmt|Utilizzare questo strumento per eseguire le operazioni seguenti:<br /><br /> Estrarre, ripristinare, creare ed eliminare la chiave simmetrica utilizzata per crittografare i dati del server di report.<br /><br /> Creare un join delle istanze del server di report in una distribuzione con scalabilità orizzontale.<br /><br /> <br /><br /> Per altre informazioni, vedere [Utilità della riga di comando del server di report &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md).|Prompt dei comandi|  

@@ -21,12 +21,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 976fae5e1f906e80248ac11d1f89e889bcbb5e0e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1b41b9a68776a41b9b7aaab480ea749187becf5b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000522"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122653"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guida sull'architettura e gestione del log delle transazioni di SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -95,11 +95,11 @@ Per altre informazioni sugli argomenti `FILEGROWTH` e `SIZE` di `ALTER DATABASE`
   
  Il log delle transazioni è un file circolare. Si consideri ad esempio un database con un file di log fisico diviso in quattro file di log virtuali. Quando viene creato il database, il file di log logico comincia all'inizio del file di log fisico. Vengono aggiunti nuovi record di log alla fine del log logico, che si espandono verso la fine del log fisico. Il troncamento del log libera tutti i log virtuali i cui record vengono visualizzati tutti davanti al numero minimo di sequenza del file di log (MinLSN, Minimum Log Sequence Number) per il recupero. *MinLSN* è il numero di sequenza del file di log del record di log meno recente necessario per un corretto rollback a livello di database. Il log delle transazioni del database di esempio sarebbe simile a quello illustrato nella figura seguente.  
   
- ![tranlog3](../relational-databases/media/tranlog3.gif)  
+ ![Illustra il modo in cui un file di log fisico è suddiviso in log virtuali](../relational-databases/media/tranlog3.png)  
   
  Quando la fine del log logico raggiunge la fine del file di log fisico, i nuovi record di log vengono nuovamente inseriti a partire dall'inizio del file di log fisico.  
   
-![tranlog4](../relational-databases/media/tranlog4.gif)   
+![Illustra il modo in cui viene eseguito il wrapping di un log delle transazioni logico nel relativo file di log fisico](../relational-databases/media/tranlog4.png)   
   
  Questo ciclo viene ripetuto all'infinito, a condizione che la fine del log logico non raggiunga mai l'inizio del log stesso. Se i vecchi record di log vengono troncati abbastanza frequentemente in modo da lasciare sempre spazio sufficiente per i nuovi record di log creati fino al checkpoint successivo, il log non viene mai riempito completamente. Se, tuttavia, la fine del log logico raggiunge l'inizio del log stesso, può verificarsi uno dei due eventi indicati di seguito:  
   
@@ -117,11 +117,11 @@ Per altre informazioni sugli argomenti `FILEGROWTH` e `SIZE` di `ALTER DATABASE`
   
  Nelle figure seguenti viene illustrato un log delle transazioni prima e dopo il troncamento. Nella prima figura viene illustrato un log delle transazioni che non è mai stato troncato. Attualmente, il log logico utilizza quattro file di log virtuali. Il log logico inizia prima del primo file di log virtuale e termina al log virtuale 4. Il record MinLSN si trova nel log virtuale 3. I log virtuali 1 e 2 contengono solo record di log inattivi. Questi record possono essere troncati. Il log virtuale 5 è ancora inutilizzato e non fa parte del log logico corrente.  
   
-![tranlog2](../relational-databases/media/tranlog2.gif)  
+![Illustra il modo in cui viene visualizzato un log delle transazioni prima del troncamento](../relational-databases/media/tranlog2.png)  
   
  Nella seconda figura è illustrata la struttura del log dopo il troncamento. I log virtuali 1 e 2 sono stati liberati per il riutilizzo. Il log logico ora inizia all'inizio del log virtuale 3. Il log virtuale 5 è ancora inutilizzato e non fa parte del log logico corrente.  
   
-![tranlog3](../relational-databases/media/tranlog3.gif)  
+![Illustra il modo in cui viene visualizzato un log delle transazioni dopo il troncamento](../relational-databases/media/tranlog3.png)  
   
  A meno che non venga posticipato per qualche motivo, il troncamento del log viene effettuato automaticamente dopo gli eventi seguenti:  
   
@@ -228,7 +228,7 @@ La parte del file di log compresa tra il numero MinLSN e l'ultimo record di log 
 
 Nella figura seguente viene illustrata una versione semplificata della parte finale di un log delle transazioni con due transazioni attive. I record di checkpoint sono stati compattati in un unico record.
 
-![active_log](../relational-databases/media/active-log.gif) 
+![Illustra un log di fine delle transazioni con due transazioni attive e un record di checkpoint compresso](../relational-databases/media/active-log.png) 
 
 LSN 148 è l'ultimo record del log delle transazioni. Quando è stato elaborato il checkpoint registrato in corrispondenza del numero LSN 147, era stato eseguito il commit di Tran 1 e Tran 2 era l'unica transazione attiva. Pertanto, il primo record di log di Tran 2 è il meno recente di una transazione attiva al momento dell'ultimo checkpoint e, di conseguenza, il numero MinLSN corrisponde a LSN 142, ovvero al record di inizio della transazione Tran 2.
 

@@ -1,5 +1,6 @@
 ---
 title: Archiviare le credenziali in un'origine dati di Reporting Services | Microsoft Docs
+description: Informazioni su come configurare le credenziali archiviate per i server di report sia in modalità nativa che in modalità SharePoint.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/24/2018
-ms.openlocfilehash: 09fcacbd2f1c5c197517f962073dce6294aed2e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c0fd3f93cd38c562d5374ecfa65d52b082eef07b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68891860"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458200"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Store Credentials in a Reporting Services Data Source
 
@@ -61,11 +62,11 @@ ms.locfileid: "68891860"
   
 7.  Digitare un nome utente e una password.  
   
-    -   Se l'account è un account utente di dominio Windows, specificarlo nel formato \<dominio>\\<account\> e quindi selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati**.  
+    -   Se l'account è un account utente di dominio Windows, specificarlo nel formato \<domain>\\<account\> e quindi selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati**.  
   
     -   Se il nome utente e la password sono credenziali del database, non selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati**. Se il server di database supporta la rappresentazione o la delega, selezionare **Rappresenta l'utente autenticato dopo che è stata stabilita una connessione all'origine dei dati**.  
   
-8.  Fare clic su **Apply**.  
+8.  Fare clic su **Applica**.  
   
      ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Requisiti dei criteri di sicurezza per le credenziali archiviate](#bkmk_top)  
   
@@ -89,7 +90,7 @@ ms.locfileid: "68891860"
   
 7.  Digitare un **nome utente** e una **password**.  
   
-    -   Se l'account è un account utente di dominio Windows, specificarlo nel formato \<dominio>\\<account\> e quindi selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati**.  
+    -   Se l'account è un account utente di dominio Windows, specificarlo nel formato \<domain>\\<account\> e quindi selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati**.  
   
     -   Se il nome utente e la password sono credenziali del database, non selezionare **Usa come credenziali di Windows**. Se il server di database supporta la rappresentazione o la delega, è possibile selezionare **Imposta contesto di esecuzione sull'account seguente**.  
   
@@ -115,11 +116,11 @@ ms.locfileid: "68891860"
   
 5.  Digitare un nome utente e una password.  
   
-    -   Se l'account è un account utente di dominio Windows, specificarlo nel formato \<dominio>\\<account\> e quindi selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati**.  
+    -   Se l'account è un account utente di dominio Windows, specificarlo nel formato \<domain>\\<account\> e quindi selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati**.  
   
     -   Se il nome utente e la password sono credenziali del database, non selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati**. Se il server di database supporta la rappresentazione o la delega, selezionare **Rappresenta l'utente autenticato dopo che è stata stabilita una connessione all'origine dei dati**.  
   
-6.  Fare clic su **Apply**.  
+6.  Fare clic su **Applica**.  
   
      ![Icona freccia usata con il collegamento Torna all'inizio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Requisiti dei criteri di sicurezza per le credenziali archiviate](#bkmk_top)  
   
@@ -143,7 +144,7 @@ ms.locfileid: "68891860"
   
 6.  Digitare un nome utente e una password.  
   
-    -   Se l'account è un account utente di dominio Windows, specificarlo nel formato \<dominio>\\<account\> e quindi selezionare **Usa come credenziali di Windows**.  
+    -   Se l'account è un account utente di dominio Windows, specificarlo nel formato \<domain>\\<account\> e quindi selezionare **Usa come credenziali di Windows**.  
   
     -   Se il nome utente e la password sono credenziali del database, non selezionare **Usa come credenziali di Windows**. Se il server di database supporta la rappresentazione o la delega, è possibile selezionare **Imposta contesto di esecuzione sull'account seguente**.  
   

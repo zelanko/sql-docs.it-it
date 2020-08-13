@@ -1,34 +1,34 @@
 ---
 title: Connettere Spark a SQL Server
 titleSuffix: SQL Server big data clusters
-description: Informazioni su come usare il connettore Spark MSSQL in Spark per operazioni di lettura e scrittura in SQL Server.
+description: Informazioni su come usare il connettore Apache Spark per SQL Server e SQL Azure per le operazioni di lettura e scrittura in SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: shivsood
+ms.reviewer: mikeray
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
-ms.openlocfilehash: 7c8b8da0912f3c928857dd84b8981fecb10b17da
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.technology: machine-learning-bdc
+ms.openlocfilehash: 3cb36c4bdddfaa97b9b6c08015308799d54cb0dc
+ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531111"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86438073"
 ---
-# <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Come leggere e scrivere in SQL Server da Spark usando il connettore Spark MSSQL
+# <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-apache-spark-connector-for-sql-server-and-azure-sql"></a>Come leggere e scrivere in SQL Server da Spark usando il connettore Apache Spark per SQL Server e SQL Azure
 
 Un modello di utilizzo chiave dei Big Data è l'elaborazione di grandi volumi di dati in Spark, seguito dalla scrittura dei dati in SQL Server per l'accesso alle applicazioni line-of-business. Questi modelli di utilizzo traggono vantaggio da un connettore che sfrutta le ottimizzazioni SQL chiave e fornisce un meccanismo di scrittura efficiente.
 
-Questo articolo fornisce una panoramica dell'interfaccia del connettore Spark MSSQL e di come crearne un'istanza per l'uso con la modalità non AD e la modalità AD. È anche disponibile un esempio di come usare il connettore Spark MSSQL per leggere e scrivere nelle posizioni seguenti all'interno di un cluster Big Data:
+Questo articolo presenta una panoramica dell'interfaccia del connettore Apache Spark per SQL Server e SQL Azure e illustra come crearne un'istanza per l'uso con la modalità non AD e la modalità AD. È anche disponibile un esempio relativo all'uso del connettore Apache Spark per SQL Server e SQL Azure per leggere e scrivere nelle posizioni seguenti all'interno di un cluster Big Data:
 1. Istanza master di SQL Server
 1. Pool di dati di SQL Server
 
-   ![Diagramma del connettore Spark MSSQL](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
+   ![Diagramma del connettore Apache Spark per SQL Server e SQL Azure](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
 
-## <a name="mssql-spark-connector-interface"></a>Interfaccia del connettore Spark MSSQL
+## <a name="apache-spark-connector-for-sql-server-and-azure-sql-interface"></a>Interfaccia del connettore Apache Spark per SQL Server e SQL Azure
 
-SQL Server 2019 fornisce il **connettore Spark MSSQL** per i cluster Big Data, che usa le API di scrittura bulk di SQL Server per le operazioni di scrittura da Spark a SQL. Il connettore Spark MSSQL è basato sulle API delle origini dati Spark e fornisce un'interfaccia familiare del connettore JDBC Spark. Per i parametri dell'interfaccia, vedere la [documentazione di Apache Spark](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). Al connettore Spark MSSQL viene fatto riferimento con il nome **com.microsoft.sqlserver.jdbc.spark**. Il connettore Spark MSSQL supporta due modalità di sicurezza per la connessione con SQL Server, modalità non Active Directory e Active Directory (AD):
+SQL Server 2019 fornisce il [**connettore Apache Spark per SQL Server e SQL Azure**](https://github.com/microsoft/sql-spark-connector) per i cluster Big Data, che usa le API di scrittura bulk di SQL Server per le operazioni di scrittura da Spark a SQL. Il connettore Apache Spark per SQL Server e SQL Azure è basato sulle API delle origini dati Spark e fornisce un'interfaccia familiare del connettore JDBC Spark. Per i parametri dell'interfaccia, vedere la [documentazione di Apache Spark](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). Al connettore Apache Spark per SQL Server e SQL Azure viene fatto riferimento con il nome **com.microsoft.sqlserver.jdbc.spark**. Il connettore Apache Spark per SQL Server e SQL Azure supporta due modalità di sicurezza per la connessione con SQL Server, ovvero la modalità non Active Directory (AD) e la modalità Active Directory (AD):
 ### <a name="non-ad-mode"></a>Modalità non AD:
 Nella sicurezza in modalità non AD, ogni utente ha un nome utente e una password che devono essere specificati come parametri durante la creazione di un'istanza del connettore per eseguire operazioni di lettura e/o scrittura.
 Di seguito è riportato un esempio di creazione di un'istanza del connettore per la modalità non AD:
@@ -70,11 +70,11 @@ La tabella seguente descrive i parametri dell'interfaccia nuovi o modificati:
 
 | Nome proprietà | Facoltativo | Descrizione |
 |---|---|---|
-| **isolationLevel** | Sì | Descrive il livello di isolamento della connessione. Il valore predefinito per il connettore MSSQLSpark è **READ_COMMITTED** |
+| **isolationLevel** | Sì | Descrive il livello di isolamento della connessione. Il valore predefinito per il connettore è **READ_COMMITTED** |
 
 Il connettore usa le API di scrittura bulk di SQL Server. I parametri di scrittura bulk possono essere passati come parametri facoltativi dall'utente e vengono passati così come sono dal connettore all'API sottostante. Per altre informazioni sulle operazioni di scrittura bulk, vedere [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
 
-## <a name="mssql-spark-connector-sample"></a>Esempio per il connettore Spark MSSQL
+## <a name="apache-spark-connector-for-sql-server-and-azure-sql-sample"></a>Esempio di connettore Apache Spark per SQL Server e SQL Azure
 Nell'esempio vengono eseguite le attività seguenti:
 
 - Lettura di un file da HDFS ed esecuzione di alcune operazioni di elaborazione di base.
@@ -111,7 +111,7 @@ Nell'esempio vengono eseguite le attività seguenti:
 
 ### <a name="run-the-sample-notebook"></a>Eseguire il notebook di esempio
 
-Per illustrare l'uso del connettore Spark MSSQL con questi dati in modalità non AD, è possibile scaricare un notebook di esempio, aprirlo in Azure Data Studio ed eseguire ogni blocco di codice. Per altre informazioni sull'uso dei notebook, vedere [Come usare i notebook in SQL Server](../azure-data-studio/notebooks-guidance.md).
+Per illustrare l'uso del connettore Apache Spark per SQL Server e SQL Azure con questi dati in modalità non AD, è possibile scaricare un notebook di esempio, aprirlo in Azure Data Studio ed eseguire ogni blocco di codice. Per altre informazioni sull'uso dei notebook, vedere [Come usare i notebook in SQL Server](../azure-data-studio/notebooks-guidance.md).
 
 1. Da una riga di comando di PowerShell o dalla shell Bash, eseguire il comando seguente per scaricare il notebook di esempio **mssql_spark_connector_non_ad_pyspark.ipynb**:
 
@@ -121,7 +121,7 @@ Per illustrare l'uso del connettore Spark MSSQL con questi dati in modalità non
 
 1. In Azure Data Studio aprire il file del notebook di esempio. Verificare che sia connesso al gateway HDFS/Spark per il cluster Big Data.
 
-1. Eseguire ogni cella di codice nell'esempio per visualizzare l'utilizzo del connettore Spark MSSQL.
+1. Eseguire ogni cella di codice nell'esempio per visualizzare l'utilizzo del connettore Apache Spark per SQL Server e SQL Azure.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

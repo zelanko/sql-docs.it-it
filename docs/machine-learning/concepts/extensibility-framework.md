@@ -1,30 +1,30 @@
 ---
 title: Architettura di estendibilità
-description: Questo articolo descrive l'architettura del framework di estendibilità per l'esecuzione di uno script esterno, ad esempio R o Python, su SQL Server.
+description: Questo articolo descrive l'architettura del framework di estendibilità per l'esecuzione di uno script Python o R esterno in Machine Learning Services per SQL Server. Lo script viene eseguito in un ambiente di runtime del linguaggio come estensione del motore di database principale.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 408125a3369d35a28893852a2f674e3e4562b063
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 14611369afe42da2e87aab87d675fd77e710c461
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118824"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406294"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Architettura di estendibilità in SQL Server Machine Learning Services 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-SQL Server ha un framework di estendibilità per l'esecuzione di uno script esterno, ad esempio R o Python, nel server. Lo script viene eseguito in un ambiente di runtime del linguaggio come estensione del motore di database principale.
+Questo articolo descrive l'architettura del framework di estendibilità per l'esecuzione di uno script Python o R esterno in Machine Learning Services per SQL Server. Lo script viene eseguito in un ambiente di runtime del linguaggio come estensione del motore di database principale.
 
 ## <a name="background"></a>Background
 
-Il framework di estendibilità è stato introdotto in SQL Server 2016 per supportare il runtime R. In SQL Server 2017 e versioni successive è incluso il supporto per Python.
+Il framework di estendibilità è stato introdotto in SQL Server 2016 per supportare il runtime R con [R Services](../r/sql-server-r-services.md). In SQL Server 2017 e versioni successive è incluso il supporto per Python con [Machine Learning Services](../sql-server-machine-learning-services.md).
 
 Lo scopo del framework di estendibilità è fornire un'interfaccia tra SQL Server e i linguaggi di data science, ad esempio R e Python. L'obiettivo è ridurre l'attrito durante il trasferimento delle soluzioni di data science all'ambiente di produzione e proteggere i dati esposti durante il processo di sviluppo. Eseguendo un linguaggio di scripting attendibile all'interno di un framework protetto gestito da SQL Server, gli amministratori di database possono mantenere la sicurezza consentendo ai data scientist di accedere ai dati aziendali.
 

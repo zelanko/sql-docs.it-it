@@ -1,5 +1,6 @@
 ---
 title: Aggiornare le credenziali nelle origini dati dei report da un sito di SharePoint | Microsoft Docs
+description: Informazioni su come aggiornare le origini dati incorporate nei report e le origini dati condivise salvate in una raccolta documenti di SharePoint.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0a9908e340dadeb1108e68ca10f466276c14df23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 335fdaee0e27a868a889de4ab00b55f06c372e15
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575440"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458957"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>Aggiornare le credenziali nelle origini dati dei report da un sito di SharePoint
   In questo argomento viene descritto come aggiornare origini dati incorporate in report e origini dati condivise salvate in una raccolta documenti di SharePoint.  
@@ -46,7 +47,7 @@ ms.locfileid: "65575440"
   
 7.  Digitare un nome utente e una password.  
   
-    -   Se l'account è un account utente di dominio di Windows, specificarlo nel formato: \<dominio>\\<account\>, quindi selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati**.  
+    -   Se l'account è un account utente di dominio Windows, specificarlo nel formato \<domain>\\<account\> e quindi selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati**.  
   
     -   Se il nome utente e la password sono credenziali del database, non selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati**. Se il server di database supporta la rappresentazione o la delega, è possibile selezionare **Imposta contesto di esecuzione sull'account seguente**.  
   
@@ -72,7 +73,7 @@ ms.locfileid: "65575440"
   
 5.  Digitare un nome utente e una password.  
   
-    -   Se l'account è un account utente di dominio Windows, specificarlo nel formato \<dominio>\\<account\> e quindi selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati**.  
+    -   Se l'account è un account utente di dominio Windows, specificarlo nel formato \<domain>\\<account\> e quindi selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati**.  
   
     -   Se il nome utente e la password sono credenziali del database, non selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati**. Se il server di database supporta la rappresentazione o la delega, è possibile selezionare **Imposta contesto di esecuzione sull'account seguente**.  
   

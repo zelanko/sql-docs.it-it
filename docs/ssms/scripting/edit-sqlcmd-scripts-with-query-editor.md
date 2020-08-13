@@ -1,5 +1,6 @@
 ---
 title: Modifica di script SQLCMD con l'editor di query
+description: Gli script SQLCMD vengono usati quando è necessario elaborare comandi di sistema di Windows e istruzioni Transact-SQL nello stesso script. Informazioni su come scrivere e modificare script SQLCMD con l'editor di query del motore di database.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 637de4e8168b97e27da707f3f189d3608786d973
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed1171649c422ccb451fc7540cae8ca6629b65b1
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253906"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122962"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Modifica di script SQLCMD con l'editor di query
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] consente di scrivere e modificare query come script SQLCMD. Gli script SQLCMD vengono utilizzati quando è necessario elaborare comandi di sistema di Windows e istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] nello stesso script.  
   
 ## <a name="sqlcmd-mode"></a>Modalità SQLCMD  
@@ -78,7 +79,7 @@ ms.locfileid: "75253906"
   
     -   (Righe interessate: 6)  
   
-    -   \<Informazioni della directory>  
+    -   \<The directory information>  
   
     -   (Righe interessate: 4)  
   
@@ -140,7 +141,7 @@ ms.locfileid: "75253906"
 > [!NOTE]  
 >  Sia per `:error` sia per `:out`, `stderr` e `stdout` inviano l'output alla scheda Messaggi.  
   
- I comandi SQLCMD non inclusi nell'elenco precedente non sono supportati nell'editor di query. Quando viene eseguito uno script contenente parole chiave SQLCMD non supportate, per ognuna di esse l'editor di query invierà un messaggio "Ignoring command *\<comando ignorato*>" alla destinazione. Lo script verrà eseguito, ma i comandi non supportati verranno ignorati.  
+ I comandi SQLCMD non inclusi nell'elenco precedente non sono supportati nell'editor di query. Quando viene eseguito uno script contenente parole chiave SQLCMD non supportate, l'editor di query invia un messaggio del tipo "Il comando *\<ignored command*> verrà ignorato" alla destinazione per ogni parola chiave non supportata. Lo script verrà eseguito, ma i comandi non supportati verranno ignorati.  
   
 > [!CAUTION]  
 >  Poiché SQLCMD non viene avviato dalla riga di comando, l'esecuzione dell'editor di query in modalità SQLCMD presenta alcune limitazioni. Non è possibile passare parametri della riga di comando come variabili e poiché l'editor di query non è in grado di rispondere ai prompt del sistema operativo, evitare di eseguire istruzioni interattive.  

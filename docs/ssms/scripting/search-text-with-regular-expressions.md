@@ -1,5 +1,6 @@
 ---
 title: Testo di ricerca con espressioni regolari
+description: Informazioni su come usare un'espressione regolare nel campo "Trova" di una finestra di dialogo Trova e sostituisci per specificare un criterio per la corrispondenza.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69ce1c16013b9ad27e390ddd91b0655aee2986d5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 44c9350ef8134382a413018bcfde1d36351f808d
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253683"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122782"
 ---
 # <a name="search-text-with-regular-expressions"></a>Testo di ricerca con espressioni regolari
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Le espressioni regolari costituiscono un metodo di notazione conciso e flessibile per la ricerca e la sostituzione di testo che soddisfa determinati criteri. È possibile usare un set specifico di espressioni regolari nel campo **Trova** della finestra di dialogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Trova e sostituisci**di**.  
+Le espressioni regolari costituiscono un metodo di notazione conciso e flessibile per la ricerca e la sostituzione di testo che soddisfa determinati criteri. È possibile usare un set specifico di espressioni regolari nel campo **Trova** della finestra di dialogo **Trova e sostituisci** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="find-using-regular-expressions"></a>Per eseguire la ricerca usando espressioni regolari  
   
@@ -108,7 +109,7 @@ Le espressioni regolari costituiscono un metodo di notazione conciso e flessibil
 |Accenti e segni diacritici|:Mn|Consente di ricercare accenti e segni diacritici.|  
 |Segno di combinazione|:Mc|Consente di ricercare segni di combinazione.|  
 |Segno di inclusione|:Me|Consente di ricercare segni di inclusione.|  
-|Simbolo matematico|:Sm|Consente di ricercare +, =, ~, &#124;, \< e >.|  
+|Simbolo matematico|:Sm|Consente di cercare +, =, ~, &#124;, \<, and >.|  
 |Simbolo di valuta|:Sc|Consente di ricercare il simbolo $ e altri simboli di valuta.|  
 |Simbolo modificatore|:Sk|Consente di ricercare simboli modificatori, ad esempio accenti circonflessi, accenti gravi e macron.|  
 |Altro simbolo|:So|Consente di ricercare altri simboli, ad esempio il simbolo di copyright, il simbolo di paragrafo e quello di grado.|  

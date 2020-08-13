@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: af1ceea86c3e91cb11c393f585c2906f50f039c1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 05ab2bfea73d7419613d21a3cce85135743e48f5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286175"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941293"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Installare il primo server di report in modalità SharePoint
 
@@ -92,13 +92,17 @@ ms.locfileid: "79286175"
     > [!NOTE]
     > Verificare di avere specificato il nome corretto del server SharePoint.
     
-        Set-SPServer SERVERNAME -Role Custom
+    ```powershell
+    Set-SPServer SERVERNAME -Role Custom
+    ```
 
 4. Verrà visualizzata una risposta che informa che è stato pianificato un processo timer. Sarà necessario attendere l'esecuzione del processo.
 
 5. Usare il comando seguente per verificare il ruolo assegnato del server.
 
-        Get-SPServer SERVERNAME 
+    ```powershell
+    Get-SPServer SERVERNAME 
+    ```
  
  6. Il **Ruolo** dovrà essere **Custom**.
  
@@ -209,7 +213,9 @@ ms.locfileid: "79286175"
     > [!IMPORTANT]
     > Se viene visualizzato un messaggio di errore simile al seguente,  
     >   
-    >     Install-SPRSService : Il termine 'Install-SPRSService' **non è riconosciuto** come nome di cmdlet, funzione, file di script o programma eseguibile. Verificare l'ortografia del nome, che il percorso sia incluso e corretto, quindi riprovare.  
+    ```powershell
+    >     Install-SPRSService : The term 'Install-SPRSService' **is not recognized** as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.  
+    ```
     >
     > Si è in Windows PowerShell anziché nella shell di gestione SharePoint oppure la modalità SharePoint di Reporting Services non è installata. Per altre informazioni su Reporting Services e PowerShell, vedere [Cmdlet di PowerShell per la modalità SharePoint di Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
@@ -240,7 +246,7 @@ ms.locfileid: "79286175"
   
 5.  Nella sezione **Pool di applicazioni** creare un nuovo pool di applicazioni per l'applicazione (consigliato). Se si utilizza lo stesso nome sia per il pool di applicazioni sia per l'applicazione di servizio, l'amministrazione può risultare più semplice. Questa situazione può essere influenzata anche dal numero di applicazioni di servizio create e dall'eventuale necessità di utilizzarne diverse in un unico pool di applicazioni. Vedere la documentazione del server SharePoint relativa alle indicazioni e alle procedure consigliate per la gestione del pool di applicazioni.  
   
-     Selezionare o creare un account di sicurezza per il pool di applicazioni. Assicurarsi di specificare un account utente di dominio. Un account utente di dominio permette di utilizzare la funzionalità dell'account gestito di SharePoint, che consente di aggiornare password e informazioni sull'account da un'unica posizione. Gli account di dominio sono inoltre obbligatori se si prevede di aumentare il numero di istanze per la distribuzione in modo da includere istanze del servizio aggiuntive da eseguire con la stessa identità.  
+     Selezionare o creare un account di sicurezza per il pool di applicazioni. Assicurarsi di specificare un account utente di dominio. Un account utente di dominio permette di utilizzare la funzionalità dell'account gestito di SharePoint, che consente di aggiornare password e informazioni sull'account da un'unica posizione. Gli account di dominio sono inoltre obbligatori se si prevede di ridimensionare la distribuzione per includere istanze del servizio aggiuntive da eseguire con la stessa identità.  
   
 6.  In **Server di database**è possibile utilizzare il server corrente o scegliere un SQL Server diverso.  
   
@@ -260,7 +266,7 @@ ms.locfileid: "79286175"
   
 -   Argomento [Per creare un'applicazione di servizio Reporting Services con PowerShell](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
 
-##  <a name="step-4-activate-the-power-view-site-collection-feature"></a><a name="bkmk_powerview"></a> Passaggio 4: Attivare la funzionalità per la raccolta siti di Power View.
+##  <a name="step-4-activate-the-power-view-site-collection-feature"></a><a name="bkmk_powerview"></a>Passaggio 4: Attivare la funzionalità per la raccolta di siti di Power View.
 
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], una funzionalità del componente aggiuntivo di SQL Server 2016 Reporting Services per i prodotti [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint, è una funzionalità di raccolta siti. La funzionalità viene attivata automaticamente per raccolte siti radice e raccolte siti create dopo l'installazione del componente aggiuntivo di Reporting Services. Se si intende utilizzare [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], verificare che la funzionalità sia attivata.  
   
@@ -270,7 +276,7 @@ ms.locfileid: "79286175"
   
 1.  Nei passaggi seguenti si presuppone che il sito di SharePoint sia configurato per la **versione esperienza**2013, per SharePoint 2013.  
   
-     Aprire il browser al sito di SharePoint desiderato. Ad esempio https://\<nomeserver >/siti/bi  
+     Aprire il browser al sito di SharePoint desiderato. Ad esempio https://\<servername>/sites/bi  
   
 2.  Selezionare **Impostazioni**![Impostazioni di SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Impostazioni di SharePoint").  
   

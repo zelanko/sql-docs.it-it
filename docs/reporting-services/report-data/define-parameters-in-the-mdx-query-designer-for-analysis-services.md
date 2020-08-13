@@ -1,5 +1,6 @@
 ---
 title: Definizione dei parametri in Progettazione query MDX per Analysis Services | Microsoft Docs
+description: Informazioni su come definire i parametri di query in Progettazione query MDX (Multidimensional Expression) per Analysis Services.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 02b9884d4f1f9d7928db80091c68678dbc55fa10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 72fe1a64e1aa474d0aa0233e8065cf351acfe432
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573659"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458198"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Definizione dei parametri in Progettazione query MDX per Analysis Services
   Per parametrizzare una query MDX per un'origine dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è necessario aggiungere un parametro di query alla query. In Progettazione query MDX, è possibile aggiungere un parametro di query sia in modalità progettazione sia in modalità query specificando un filtro. Dopo avere definito la query tramite un parametro di query, in Reporting Services vengono creati automaticamente un parametro di report e un set di dati per l'elenco dei valori validi. In questo modo un utente può specificare un valore che viene passato direttamente alla query.  
@@ -59,7 +60,7 @@ ms.locfileid: "65573659"
   
 3.  Nella barra degli strumenti della progettazione query MDX fare clic su **Parametri query** (![icona della finestra di dialogo Parametri query](../../reporting-services/report-data/media/iconqueryparameter.gif "Icona della finestra di dialogo Parametri query")). Verrà visualizzata la finestra di dialogo Parametri query.  
   
-4.  Nella colonna **Parametro** selezionare **\<Immetti parametro>** e digitare il nome di un parametro.  
+4.  Nella colonna **Parametro** fare clic su **\<Enter Parameter>** e digitare il nome di un parametro.  
   
 5.  Selezionare un valore nell'elenco a discesa della colonna **Dimensione** .  
   

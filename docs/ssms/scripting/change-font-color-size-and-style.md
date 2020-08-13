@@ -1,5 +1,6 @@
 ---
 title: Modifica dello stile, delle dimensioni e del colore del carattere
+description: Informazioni su come modificare il colore, le dimensioni e lo stile del carattere per gli editor di SQL Server Management Studio. Il colore può essere diverso per diversi tipi di testo, ad esempio commenti e istruzioni.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d479991bed66e04a7c42870f0f1ba0c61ca7101
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b131fef64ea7628b89a64c01be100b40a09af9e5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246422"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920911"
 ---
 # <a name="change-font-color-size-and-style"></a>Modifica dello stile, delle dimensioni e del colore del carattere
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   È possibile personalizzare la visualizzazione del testo nell'editor e in altre posizioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="to-change-font-color-size-and-style-in-the-editor"></a>Per cambiare colore carattere, dimensioni e stile nell'editor  

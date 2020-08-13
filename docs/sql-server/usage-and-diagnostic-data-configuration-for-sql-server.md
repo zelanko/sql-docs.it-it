@@ -1,6 +1,6 @@
 ---
 title: Configurare la raccolta di dati di diagnostica e utilizzo per SQL Server (Analisi utilizzo software) | Microsoft Docs
-description: ''
+description: Informazioni sui dati che SQL Server raccoglie dagli utenti per migliorare i prodotti. Vedere come configurare SQL Server per non inviare queste informazioni.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 03/27/2019
@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: d5248f97b044cb688174171fdb6ef79943851a92
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 76ffe524200c2f8df136074bc089b13e7404d6bd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028932"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86902057"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>Configurare la raccolta di dati di diagnostica e utilizzo per SQL Server (Analisi utilizzo software)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 ## <a name="summary"></a>Summary
 
@@ -115,7 +115,7 @@ In modo analogo al comportamento in una versione precedente di SQL Server, i cli
 
     Nome RegEntry = EnableErrorReporting
 
-    Tipo voce DWORD: 0 rifiuto esplicito ; 1 consenso esplicito
+    Tipo voce DWORD: 0 rifiuto esplicito; 1 consenso esplicito
  
     {IDIstanza} fa riferimento al tipo di istanza e all'istanza, come negli esempi seguenti: 
 
@@ -130,7 +130,7 @@ In modo analogo al comportamento in una versione precedente di SQL Server, i cli
 
     Nome RegEntry = EnableErrorReporting
 
-    Tipo voce DWORD: 0 rifiuto esplicito ; 1 consenso esplicito
+    Tipo voce DWORD: 0 rifiuto esplicito; 1 consenso esplicito
 
 > [!NOTE]
 > {Versione principale} fa riferimento alla versione di SQL Server. Ad esempio, "140" indica SQL Server 2017.

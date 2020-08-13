@@ -1,5 +1,6 @@
 ---
 title: Impostare le proprietà di distribuzione (Reporting Services) | Microsoft Docs
+description: Informazioni su come impostare le proprietà di distribuzione usate da SQL Server Data Tools (SSDT) o Visual Studio per compilare, visualizzare in anteprima e distribuire i report.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
@@ -13,12 +14,12 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/15/2019
-ms.openlocfilehash: 9106c4c45845d1e31d65180c8f0fd979e7e3e14c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 45e168c5fa0e0edcb450ca4f302de2676303b5c3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66175336"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914889"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Impostare le proprietà di distribuzione (Reporting Services)
 
@@ -62,7 +63,7 @@ ms.locfileid: "66175336"
     > [!NOTE]  
     > Per un server di report in esecuzione in modalità nativa, per poter pubblicare i report nella cartella di destinazione è necessario disporre delle autorizzazioni **Pubblica** , che vengono fornite tramite un'assegnazione di ruolo che esegue il mapping dell'account utente a un ruolo che include operazioni di pubblicazione. Per altre informazioni, vedere [Creare e gestire assegnazioni di ruolo](../../reporting-services/security/create-and-manage-role-assignments.md). Per un server di report in esecuzione in modalità integrata SharePoint, è necessario disporre dell'autorizzazione **Membro** o **Proprietario** per il sito di SharePoint. Per altre informazioni, vedere [Informazioni di riferimento sulle autorizzazioni relative a elenchi e siti di SharePoint per gli elementi del server di report](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
-10. Nella casella di testo **TargetServerURL** digitare l'URL del server di report di destinazione. Prima di pubblicare un report, è necessario impostare questa proprietà su un URL valido per il server di report. Quando si pubblica in un server di report in esecuzione in modalità nativa, usare l'URL della directory virtuale del server di report, ad esempio http: *//server/serverdireport* o https: *//server/serverdireport*. In questa casella è necessario impostare la directory virtuale del server di report e non del portale Web.  
+10. Nella casella di testo **TargetServerURL** digitare l'URL del server di report di destinazione. Prima di pubblicare un report, è necessario impostare questa proprietà su un URL valido per il server di report. Quando si pubblica in un server di report in esecuzione in modalità nativa, usare l'URL della directory virtuale del server di report, ad esempio http:*//server/serverdireport* o https:*//server/serverdireport*. In questa casella è necessario impostare la directory virtuale del server di report e non del portale Web.  
   
      Per la pubblicazione su un server di report in cui è attiva la modalità integrata SharePoint, utilizzare l'URL di un sito principale o secondario di SharePoint. Se non si specifica un sito, verrà usato il sito principale predefinito, ad esempio <https://*servername*>, <https://*servername*/*site*> o <https://*servername*/*site*/*subsite*>.  
   
@@ -72,7 +73,7 @@ ms.locfileid: "66175336"
   
 2. Nella finestra di dialogo **Pagine delle proprietà** del progetto fare clic su **Gestione configurazione**.  
   
-3. Nella finestra di dialogo **Gestione configurazione** selezionare la configurazione da modificare. La configurazione attualmente attiva è visualizzata come **Attiva(***\<configurazione>***)** .  
+3. Nella finestra di dialogo **Gestione configurazione** selezionare la configurazione da modificare. La configurazione attualmente attiva è visualizzata come **Attiva(***\<configuration>***)** .  
   
 4. Per ogni progetto nella soluzione, in **Contesti progetto**selezionare o deselezionare la casella di controllo **Compila** o **Distribuisci**.  
   

@@ -5,38 +5,43 @@ description: Articolo di riferimento per i comandi azdata bdc debug.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cccdc543a572df19849afec16d0a2a71413ed19e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bda7fc541c0c89827df28e368d0cf8cc9db8bed5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74820892"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943044"
 ---
 # <a name="azdata-bdc-debug"></a>azdata bdc debug
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-L'articolo seguente offre informazioni di riferimento sui comandi `bdc debug` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md)
+L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Comandi:
-|     |     |
+| Comando | Descrizione |
 | --- | --- |
 [azdata bdc debug copy-logs](#azdata-bdc-debug-copy-logs) | Copia i log.
-[azdata bdc debug dump](#azdata-bdc-debug-dump) | Attiva il dump di registrazione.
+[azdata bdc debug dump](#azdata-bdc-debug-dump) | Attiva il dump della memoria.
 ## <a name="azdata-bdc-debug-copy-logs"></a>azdata bdc debug copy-logs
 Copia i log di debug dal cluster Big Data. È necessaria la configurazione di Kubernetes nel sistema in uso.
 ```bash
 azdata bdc debug copy-logs --namespace -n 
                            [--container -c]  
-                           [--target-folder -d]  
-                           [--pod -p]  
-                           [--timeout -t]  
-                           [--skip-compress -sc]  
-                           [--exclude-dumps -ed]
+                           
+[--target-folder -d]  
+                           
+[--pod -p]  
+                           
+[--timeout -t]  
+                           
+[--skip-compress -sc]  
+                           
+[--exclude-dumps -ed]
 ```
 ### <a name="required-parameters"></a>Parametri obbligatori
 #### `--namespace -n`
@@ -62,24 +67,25 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-debug-dump"></a>azdata bdc debug dump
-Attiva il dump della registrazione e lo copia dal contenitore. È necessaria la configurazione di Kubernetes nel sistema in uso.
+Attiva il dump della memoria e lo copia dal contenitore. È necessaria la configurazione di Kubernetes nel sistema in uso.
 ```bash
 azdata bdc debug dump --namespace -n 
-                      --container -c  
-                      [--target-folder -d]
+                      [--container -c]  
+                      
+[--target-folder -d]
 ```
 ### <a name="required-parameters"></a>Parametri obbligatori
 #### `--namespace -n`
 Nome del cluster Big Data, usato per lo spazio dei nomi kubernetes.
-#### `--container -c`
-Copia i log relativi ai contenitori con nome simile. Facoltativo; per impostazione predefinita, vengono copiati i log di tutti i contenitori. Questo parametro non può essere specificato più volte. In caso contrario, verrà usato l'ultimo parametro specificato.
 ### <a name="optional-parameters"></a>Parametri facoltativi
+#### `--container -c`
+Contenitore di destinazione da attivare per il dump dei processi `controller` in esecuzione
 #### `--target-folder -d`
-Percorso della cartella di destinazione in cui copiare i log. Facoltativo; per impostazione predefinita, il risultato viene creato nella cartella locale.  Questo parametro non può essere specificato più volte. In caso contrario, verrà usato l'ultimo parametro specificato. `./output/dump`
+Cartella di destinazione in cui copiare il dump. `./output/dump`
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
@@ -88,7 +94,7 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 

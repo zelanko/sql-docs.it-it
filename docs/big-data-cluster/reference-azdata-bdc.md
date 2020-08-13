@@ -5,26 +5,27 @@ description: Articolo di riferimento per i comandi azdata bdc.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d5d5cb5256f4a1b8389d882300a89f0ee0012a99
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eaecb3075b01817e7281b562834a23010d7653b9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74820982"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942655"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-L'articolo seguente offre informazioni di riferimento sui comandi `bdc` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md)
+L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Comandi:
-|     |     |
+| Comando | Descrizione |
 | --- | --- |
+[azdata bdc spark](reference-azdata-bdc-spark.md) | I comandi Spark consentono agli utenti di interagire con il sistema Spark creando e gestendo sessioni, istruzioni e batch.
 [azdata bdc create](#azdata-bdc-create) | Crea un cluster Big Data.
 [azdata bdc delete](#azdata-bdc-delete) | Elimina un cluster Big Data.
 [azdata bdc upgrade](#azdata-bdc-upgrade) | Aggiorna le immagini distribuite in ogni contenitore del cluster Big Data di SQL Server.
@@ -38,29 +39,31 @@ L'articolo seguente offre informazioni di riferimento sui comandi `bdc` dello st
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Comandi del servizio Spark.
 [azdata bdc gateway](reference-azdata-bdc-gateway.md) | Comandi del servizio gateway.
 [azdata bdc app](reference-azdata-bdc-app.md) | Comandi del servizio app.
-[azdata bdc spark](reference-azdata-bdc-spark.md) | I comandi Spark consentono agli utenti di interagire con il sistema Spark creando e gestendo sessioni, istruzioni e batch.
 [azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | Il modulo HDFS fornisce i comandi per accedere a un file system HDFS.
 ## <a name="azdata-bdc-create"></a>azdata bdc create
 Crea un cluster Big Data di SQL Server. È necessaria la configurazione di Kubernetes nel sistema in uso con le variabili di ambiente seguenti ['AZDATA_USERNAME', 'AZDATA_PASSWORD'].
 ```bash
 azdata bdc create [--name -n] 
                   [--config-profile -c]  
-                  [--accept-eula -a]  
-                  [--node-label -l]  
-                  [--force -f]
+                  
+[--accept-eula -a]  
+                  
+[--node-label -l]  
+                  
+[--force -f]
 ```
 ### <a name="examples"></a>Esempi
 Esperienza guidata di distribuzione del cluster Big Data: si riceveranno le indicazioni relative ai valori necessari.
 ```bash
 azdata bdc create
 ```
-Distribuzione del cluster Big Data con argomenti.
+Distribuzione del cluster Big Data con argomenti e profilo di configurazione personalizzato inizializzato tramite `azdata bdc config init`.
 ```bash
-azdata bdc create --accept-eula yes --config-profile aks-dev-test
+azdata bdc create --accept-eula yes --config-profile ./path/to/config/profile
 ```
-Distribuzione del cluster Big Data con il nome specificato anziché con il nome predefinito nel profilo.
+Distribuzione del cluster Big Data con nome del cluster personalizzato specificato e profilo di configurazione predefinito aks-dev-test.
 ```bash
-azdata bdc create --name <cluster_name> --accept-eula yes --config-profile aks-dev-test --force
+azdata bdc create --name <cluster_name> --accept-eula yes --config-profile aks-dev-test
 ```
 Distribuzione del cluster Big Data con argomenti: viene usato il flag --force e non verrà quindi visualizzato alcun messaggio di richiesta.
 ```bash
@@ -70,9 +73,9 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--name -n`
 Nome del cluster Big Data, usato per gli spazi dei nomi kubernetes.
 #### `--config-profile -c`
-Profilo di configurazione del cluster Big Data, usato per la distribuzione del cluster: ['kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test', 'aks-dev-test-ha']
+Profilo di configurazione del cluster Big Data, usato per la distribuzione del cluster: ['openshift-dev-test', 'aro-dev-test-ha', 'aks-dev-test', 'openshift-prod', 'aks-dev-test-ha', 'kubeadm-prod', 'aro-dev-test', 'kubeadm-dev-test']
 #### `--accept-eula -a`
-Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". È possibile visualizzare le condizioni di licenza per azdata all'indirizzo https://aka.ms/eula-azdata-en. È possibile visualizzare le condizioni di licenza per il cluster Big Data per le diverse edizioni agli indirizzi seguenti: Enterprise: https://go.microsoft.com/fwlink/?linkid=2104292, Standard: https://go.microsoft.com/fwlink/?linkid=2104294, Developer: https://go.microsoft.com/fwlink/?linkid=2104079.
+Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". Le condizioni di licenza di azdata sono disponibili all'indirizzo https://aka.ms/eula-azdata-en.
 #### `--node-label -l`
 Etichetta del nodo del cluster Big data, usata per definire i nodi in cui eseguire la distribuzione.
 #### `--force -f`
@@ -85,7 +88,7 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-delete"></a>azdata bdc delete
@@ -113,7 +116,7 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 ## <a name="azdata-bdc-upgrade"></a>azdata bdc upgrade
@@ -121,7 +124,14 @@ Aggiorna le immagini distribuite in ogni contenitore del cluster Big Data di SQL
 ```bash
 azdata bdc upgrade --name -n 
                    --tag -t  
-                   [--repository -r]
+                   
+[--repository -r]  
+                   
+[--controller-timeout -k]  
+                   
+[--stability-threshold -s]  
+                   
+[--component-timeout -p]
 ```
 ### <a name="examples"></a>Esempi
 Aggiornamento del cluster Big Data con un nuovo tag immagine "cu2" dallo stesso repository.
@@ -132,6 +142,10 @@ Aggiornamento del cluster Big Data con nuove immagini con tag "cu2" dal nuovo re
 ```bash
 azdata bdc upgrade -t cu2 -r foo/bar/baz
 ```
+Aggiornamento del cluster Big Data con nuove immagini con tag "cu2" dallo stesso repository. L'aggiornamento attenderà 30 minuti per l'aggiornamento del controller e 30 minuti per l'aggiornamento del database del controller. Attenderà quindi che il controller e il database del controller vengano eseguiti per tre minuti senza causare l'arresto anomalo dell'aggiornamento del resto del cluster. Ogni fase successiva dell'aggiornamento avrà a disposizione 40 minuti per il completamento.
+```bash
+azdata bdc upgrade -t cu2 --controller-timeout=30 --component-timeout=40 --stability-threshold=3
+```
 ### <a name="required-parameters"></a>Parametri obbligatori
 #### `--name -n`
 Nome del cluster Big Data, usato per gli spazi dei nomi kubernetes.
@@ -140,6 +154,12 @@ Tag dell'immagine Docker di destinazione a cui aggiornare tutti i contenitori de
 ### <a name="optional-parameters"></a>Parametri facoltativi
 #### `--repository -r`
 Repository Docker da cui tutti i contenitori del cluster devono trarre le proprie immagini.
+#### `--controller-timeout -k`
+Numero di minuti di attesa per l'aggiornamento del controller o del database del controller prima di eseguire il rollback dell'aggiornamento.
+#### `--stability-threshold -s`
+Numero di minuti di attesa dopo un aggiornamento prima di contrassegnarlo come stabile.
+#### `--component-timeout -p`
+Numero di minuti di attesa per il completamento di ogni fase dell'aggiornamento (dopo l'aggiornamento del controller) prima di sospendere l'aggiornamento.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
@@ -148,7 +168,7 @@ Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
 Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/).
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 

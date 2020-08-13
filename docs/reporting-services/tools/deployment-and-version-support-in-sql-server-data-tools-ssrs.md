@@ -1,5 +1,6 @@
 ---
 title: Distribuzione e supporto della versione in SQL Server Data Tools (SSRS) | Microsoft Docs
+description: Informazioni sulle versioni supportate per creare e pubblicare report in SQL Server Data Tools e su come impostare le proprietà di configurazione e distribuzione dei progetti.
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f055219476507f52894fe7d5b246710e6054a20
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a33626c529d59d9ffa2b80e012dbb325c93b670a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571502"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917962"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Distribuzione e supporto della versione in SQL Server Data Tools (SSRS)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] supporta gli scenari seguenti:  
@@ -33,7 +34,7 @@ ms.locfileid: "65571502"
   
  I report vengono compilati prima di essere sottoposti a rendering come anteprime in Progettazione report o di essere distribuiti nel server di report.  
   
- È possibile impostare le proprietà di configurazione nella finestra di dialogo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Proprietà progetto**di**.  
+ È possibile impostare le proprietà di configurazione nella finestra di dialogo **Proprietà progetto** di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Nelle proprietà di compilazione e distribuzione è incluso quanto segue:  
   

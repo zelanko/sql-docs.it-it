@@ -1,5 +1,6 @@
 ---
 title: Finestre Risultati ricerca
+description: Sono disponibili due finestre Risultati ricerca che consentono di mantenere le corrispondenze individuate dalle operazioni Cerca nei file e Sostituisci nei file. Informazioni su come visualizzare queste finestre e su come visualizzare il file di codice e la riga corrispondenti a una corrispondenza.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 463e2943fbad1b8ad03843d94267c2d0a009104b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef2063c8d9c5d4645ad96826400e14e9d2eea870
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253837"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122915"
 ---
 # <a name="find-results-windows"></a>Finestre Risultati ricerca
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Nelle due finestre Risultati ricerca vengono visualizzate le corrispondenze trovate utilizzando la scheda **Cerca nei file** o **Sostituisci nei file** della finestra di dialogo **Trova e sostituisci** . Il comando **Opzioni risultati** disponibile nelle schede **Cerca nei file** e **Sostituisci nei file** consente di scegliere la finestra Risultati ricerca in cui verranno visualizzate le corrispondenze trovate.  
   
  Ogni volta che vengono trovate corrispondenze, la finestra Risultati ricerca selezionata verrà visualizzata automaticamente. Per visualizzare manualmente una finestra Risultati ricerca scegliere **Altre finestre** dal menu **Visualizza** e quindi fare clic su **Risultati ricerca 1** o **Risultati ricerca 2**.  

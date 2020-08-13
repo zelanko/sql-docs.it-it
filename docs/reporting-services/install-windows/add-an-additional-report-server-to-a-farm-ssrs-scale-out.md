@@ -8,12 +8,12 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 17cffe2f1eaf94174301212c6bb926528c56c7d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f7997b4e7bf9ccf51198e317c2e175f115fa6973
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63225680"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942983"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Aggiungere un ulteriore server di report a una farm (con scalabilità orizzontale SSRS)
 
@@ -66,13 +66,15 @@ ms.locfileid: "63225680"
 ##  <a name="additional-configuration"></a><a name="bkmk_additional"></a> Configurazione aggiuntiva  
  È possibile ottimizzare singoli server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una distribuzione con scalabilità orizzontale solo per eseguire l'elaborazione in background, in modo da non condividere le risorse con esecuzione interattiva del report. Nell'elaborazione in background sono incluse pianificazioni, sottoscrizioni e avvisi dati.  
   
- Per modificare il comportamento di server di report singoli, impostare **\<IsWebServiceEnable>** su false nel file di configurazione **RSreportServer.config**.  
+ Per cambiare il comportamento di singoli server di report, impostare **\<IsWebServiceEnable>** su False nel file di configurazione **RSreportServer.config**.  
   
  Per impostazione predefinita, i server di report vengono configurati con \<IsWebServiceEnable> impostato su TRUE. Quando tutti i server sono configurati per TRUE, l'elaborazione interattiva e in background sarà con carico bilanciato in tutti i nodi nella farm.  
   
- Se si configurano tutti i server di report con \<IsWebServiceEnable> impostato su False, verrà visualizzato un messaggio di errore simile al seguente quando si tenterà di usare le funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
+ Se si configurano tutti i server di report con \<IsWebServiceEnable> impostato su False, verrà visualizzato un messaggio di errore simile al seguente quando si tenta di usare le funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
-      The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true. 
+```output
+The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true.
+```
  
  Per altre informazioni, vedere [Modificare un file di configurazione di Reporting Services&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 

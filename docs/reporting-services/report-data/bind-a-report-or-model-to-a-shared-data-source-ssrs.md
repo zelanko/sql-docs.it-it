@@ -1,5 +1,6 @@
 ---
 title: Associare un report a un'origine dati condivisa | Microsoft Docs
+description: Informazioni su come associare un report a un'origine dati condivisa in un server di report in esecuzione in modalità integrata SharePoint.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c5aa5e504c8434d3634b903c08b6a03c0e62345c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c35e3d48167ecba74f18fa0ed13461a5165cec42
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081417"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458923"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>Associare un report a un'origine dati condivisa (SSRS)
   In alcune situazioni, ad esempio quando si sposta un report da un server di test a uno di produzione, può essere necessario salvare il file nel computer locale e quindi caricarlo in un altro server di report. Quando si carica il report nel nuovo server è necessario riassociarlo a un'origine dati condivisa archiviata nel nuovo server di report. Se il report non viene riassociato non funzionerà correttamente quando vi si accede dal nuovo server di report.  
@@ -34,7 +35,7 @@ ms.locfileid: "77081417"
   
 4.  Selezionare l'origine dati e fare clic su **Salva**.  
   
-5.  Fare clic su **Apply**.  
+5.  Fare clic su **Applica**.  
   
      Il report viene associato all'origine dati selezionata.  
   
