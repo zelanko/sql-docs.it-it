@@ -1,5 +1,5 @@
 ---
-title: CURRENT_TIMEZONE (Transact-SQL) | Microsoft Docs
+title: CURRENT_TIMEZONE_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/18/2020
 ms.prod: sql
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CURRENT_TIMEZONE_ID function [SQL Server]
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3cadc9cd33fd1cdabb96cf450ad09253fdd435d1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: beaa58fddd6889b4ebbbce620d98277468dd67a2
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85684626"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988843"
 ---
 # <a name="current_timezone_id-transact-sql"></a>CURRENT_TIMEZONE_ID (Transact-SQL)
 
@@ -38,7 +38,7 @@ ms.locfileid: "85684626"
 Questa funzione restituisce l'ID del fuso orario osservato da un server o un'istanza. Per Istanza gestita di Azure SQL, il valore restituito è basato sul fuso orario dell'istanza stessa assegnato durante la creazione dell'istanza e non sul fuso orario del sistema operativo sottostante.
   
 > [!NOTE]  
-> Per i database SQL singolo e in pool il fuso orario è sempre impostato su UTC e `CURRENT_TIMEZONE_ID` restituisce l'ID del fuso orario UTC.
+> Per i database SQL, il fuso orario è sempre impostato su UTC e `CURRENT_TIMEZONE_ID` restituisce l'ID del fuso orario UTC.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -71,6 +71,6 @@ W. Europe Standard Time
   
 ## <a name="see-also"></a>Vedere anche
 
-[Fuso orario dell'istanza gestita di database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
+[Fuso orario di Istanza gestita di SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
 
 [CURRENT_TIMEZONE()](https://docs.microsoft.com/sql/t-sql/functions/current-timezone-transact-sql)
