@@ -1,5 +1,6 @@
 ---
 title: Compatibilità con le versioni precedenti | Reporting Services | Microsoft Docs
+description: Informazioni sulle modifiche introdotte nel comportamento di SQL Server Reporting Services, incluse le funzionalità non più disponibili o che verranno rimosse in una delle prossime versioni.
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b16398915b774454895ee39ad80fa008d22a8a75
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0b6618f89ab0bdf31ef71e779a3d69fe675d5e2d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571458"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245728"
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Compatibilità con le versioni precedenti di Reporting Services
 Informazioni sulle modifiche del comportamento di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Descrive le funzionalità che non sono più disponibili o che verranno rimosse in una delle prossime versioni.

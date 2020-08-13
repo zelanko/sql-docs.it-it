@@ -1,5 +1,6 @@
 ---
 title: Finestra Punti di interruzione
+description: Informazioni su come usare la finestra Punti di interruzione dell'editor di query di motore di database per gestire i punti di interruzione del debugger Transact-SQL.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -11,18 +12,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-ms.date: 12/04/2019
-monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: a80750a9885bd3cd61afd6b6719f5839b5503eac
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 07/22/2020
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 70178cf723b4e599ca6982668ade3faed61ee8c2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243366"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248039"
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Debugger Transact-SQL - Finestra Punti di interruzione
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Nella finestra **Punti di interruzione** sono elencati tutti i punti di interruzione impostati nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] corrente. Per gestire i punti di interruzione, usare la barra degli strumenti nella finestra **Punti di interruzione** . I punti di interruzione sono posizioni nel codice in cui viene sospesa l'esecuzione in modalità di debug per consentire la visualizzazione dei dati di debug.
 

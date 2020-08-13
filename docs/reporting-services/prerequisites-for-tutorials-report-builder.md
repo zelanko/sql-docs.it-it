@@ -1,5 +1,6 @@
 ---
 title: Prerequisiti per le esercitazioni (Generatore report) | Microsoft Docs
+description: Informazioni sui prerequisiti necessari per completare le esercitazioni di Generatore report.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f00a23d175ce798edc8c73fe0c1ec7e92053392
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 27fbd90962370cf3198c53b0c39c5d7886ed943a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81485184"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247490"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Prerequisiti per le esercitazioni (Generatore report)
 

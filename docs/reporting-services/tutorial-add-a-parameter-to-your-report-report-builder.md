@@ -1,5 +1,6 @@
 ---
 title: 'Esercitazione: Aggiungere un parametro al report (Generatore report) | Microsoft Docs'
+description: Informazioni su come aggiungere un parametro in un report impaginato di Reporting Services per consentire ai lettori del report di filtrare i dati in base a uno o più valori.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cd5fab649fc481bdb91b42c34be33f5976b5af93
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72252135"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245678"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Esercitazione: Aggiungere un parametro al report (Generatore report)
 In questa esercitazione viene aggiunto un parametro in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] per consentire ai lettori del report di filtrare i dati in base a uno o più valori. 
@@ -25,7 +26,7 @@ I parametri di report vengono creati automaticamente per ogni parametro di query
 > [!NOTE]  
 > In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, come scegliere un'origine dati e come creare un set di dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Tempo stimato per il completamento dell'esercitazione: 25 minuti.  
+Tempo stimato per il completamento dell'esercitazione: 25 minuti  
   
 ## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  

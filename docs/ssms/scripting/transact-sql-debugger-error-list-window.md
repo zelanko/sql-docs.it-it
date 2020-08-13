@@ -1,5 +1,6 @@
 ---
 title: Finestra Elenco errori
+description: Informazioni su come usare l'Elenco errori per visualizzare gli errori e gli avvisi generati da IntelliSense durante la modifica di script Transact-SQL.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -16,18 +17,18 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64fa6b834d3f771712f9ce09dedb237fff46ed2c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4755c439edafb5f38740e12f6ec57abf468bc01a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243391"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247349"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Debugger Transact-SQL - Finestra Elenco errori
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-La finestra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Elenco errori**di** mostra gli errori semantici e di sintassi generati dal codice IntelliSense nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+La finestra **Elenco errori** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mostra gli errori semantici e di sintassi generati dal codice IntelliSense nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
@@ -74,7 +75,7 @@ In **Elenco errori** sono disponibili le funzionalità seguenti:
 > [!NOTE]  
 >  **Elenco errori** visualizza solo gli errori dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , non gli errori degli editor MDX, DMX o XML/A. Questi errori vengono visualizzati nella scheda **Messaggi** dei rispettivi editor.  
   
-## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
+## <a name="ui-element-list"></a>Elenco di elementi dell'interfaccia utente  
  All'apertura di **Elenco errori** le informazioni sono visualizzate nelle colonne seguenti:  
   
  **Ordine predefinito**  

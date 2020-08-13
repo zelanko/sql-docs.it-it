@@ -1,5 +1,6 @@
 ---
 title: Specificare le impostazioni relative alle informazioni sul dispositivo in un URL | Microsoft Docs
+description: Informazioni su come specificare le impostazioni relative alle informazioni sul dispositivo in un URL, in particolar modo con l'elemento XML DeviceInfo.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb7f7577-c6a8-4e6f-8e60-5ec0760f29c3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 906a21de49d562d788f9a1384b31e080616c67c4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a2d2ef7937d228cc4feeff2c788c1ae3aa3f0b59
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578436"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246628"
 ---
 # <a name="specify-device-information-settings-in-a-url"></a>Specificare le impostazioni relative alle informazioni sul dispositivo in un URL
   Le impostazioni relative alle informazioni sul dispositivo sono parametri passati a un'estensione per il rendering. Se si usano i metodi del servizio Web ReportServer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per eseguire il rendering di un report, viene passato un elemento XML **DeviceInfo** come parametro di input. Gli elementi figlio dell'elemento **DeviceInfo** sono specifici delle impostazioni relative alle informazioni sul dispositivo di diverse estensioni per il rendering. È possibile includere le impostazioni relative alle informazioni sul dispositivo in un URL usando la stringa di parametri *rc:tag=value* , dove *tag* è il nome dell'elemento delle impostazioni relative alle informazioni sul dispositivo a cui si accede. Per altre informazioni sulle impostazioni relative alle informazioni sul dispositivo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere [Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  

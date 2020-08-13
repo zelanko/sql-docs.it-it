@@ -1,5 +1,6 @@
 ---
 title: "Lesson 9: Build and Run the Application (Lezione 9: Compilare ed eseguire l'applicazione) | Microsoft Docs"
+description: Informazioni su come compilare ed eseguire l'applicazione del sito Web dopo aver creato un filtro dati per la tabella dati.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 00f139a6b7b334e3a3e8254a742874cfc28145b4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6b72153a14a20509feeb71bfdec0f2eb08b18c96
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651257"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245090"
 ---
-# <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
+# <a name="lesson-9-build-and-run-the-application"></a>Lezione 9: Compilare ed eseguire l'applicazione
 Dopo aver creato un filtro di dati per la tabella di dati, il passaggio successivo consiste nel compilare ed eseguire l'applicazione del sito Web.  
   
 ### <a name="to-build-and-run-the-application"></a>Per compilare ed eseguire l'applicazione  

@@ -12,12 +12,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6a13f70bfffbdbeba0ba08882c4dcc9b53aaa69
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0c62f1f2ef34bd5ba1a59a642ac8d07db2dbe259
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85668876"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247078"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guida all'elaborazione delle query per le tabelle con ottimizzazione per la memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -195,7 +195,7 @@ END
   
  Le stored procedure compilate in modo nativo vengono compilate al momento della creazione, mentre le stored procedure interpretate vengono compilate alla prima esecuzione (una parte della compilazione, specificamente l'analisi e la normalizzazione, avviene al momento della creazione; tuttavia, per le stored procedure interpretate, l'ottimizzazione dei piani di query ha luogo alla prima esecuzione). La logica di ricompilazione è simile. Le stored procedure compilate in modo nativo vengono ricompilate alla prima esecuzione della procedura se il server viene riavviato. Le stored procedure interpretate vengono ricompilate se il piano non si trova più nella cache dei piani. Nella tabella seguente vengono riepilogati i casi di compilazione e di ricompilazione per le stored procedure compilate in modo nativo e interpretate:  
   
-||Compilate in modo nativo|Accesso del codice|  
+|Tipo di compilazione|Compilate in modo nativo|Accesso del codice|  
 |-|-----------------------|-----------------|  
 |Compilazione iniziale|Al momento della creazione.|Alla prima esecuzione.|  
 |Ricompilazione automatica|Alla prima esecuzione della procedura dopo il riavvio del database o del server.|Al riavvio del server. In alternativa, eliminazione dalla cache dei piani, in genere in base alle modifiche di schema o di statistiche o a utilizzo elevato di memoria.|  

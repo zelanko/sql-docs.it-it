@@ -1,5 +1,6 @@
 ---
 title: Documentazione per gli sviluppatori di Reporting Services | Microsoft Docs
+description: È possibile usare la documentazione per conoscere le caratteristiche e le funzionalità di Reporting Services che consentono di compilare strumenti di gestione e di creazione di report personalizzati nei siti Web e nelle applicazioni Windows.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Reporting Services, programming
 - programming [Reporting Services]
 ms.date: 03/17/2017
-ms.openlocfilehash: e2db4a113ebdb53756200879e3797ccbbeec8a52
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2a60936a1a267ac93b181ff8c5b5913486ba9314
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68259609"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246670"
 ---
 # <a name="reporting-services-developer-documentation"></a>Documentazione per gli sviluppatori di Reporting Services
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre diverse interfacce di programmazione che è possibile usare nelle proprie applicazioni. È possibile utilizzare le caratteristiche e le funzionalità esistenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per compilare strumenti di gestione e di creazione di report personalizzati nei siti Web e nelle applicazioni Windows oppure per estendere la piattaforma [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  

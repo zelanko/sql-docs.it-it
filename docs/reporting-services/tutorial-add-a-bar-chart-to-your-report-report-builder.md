@@ -1,5 +1,6 @@
 ---
 title: 'Esercitazione: Aggiungere un grafico a barre al report (Generatore report) | Microsoft Docs'
+description: Informazioni su come creare un report impaginato di Reporting Services con un istogramma che visualizza una serie come set di barre verticali raggruppate per categoria.
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d650fd4b93df758ccaa39d716cf122c66adf7ab
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041183"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245698"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico a barre al report (Generatore report)
 In questa esercitazione viene usata una procedura guidata di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] per creare un grafico a barre in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. Successivamente si aggiungerà un filtro e si migliorerà il grafico. 
@@ -32,7 +33,7 @@ L'illustrazione seguente visualizza il grafico a barre che verrà creato con le 
 > [!NOTE]  
 > In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, creare un set di dati e scegliere un'origine dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report di tabelle semplici &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Tempo previsto per il completamento di questa esercitazione: 15 minuti.  
+Tempo stimato per il completamento dell'esercitazione: 15 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -93,7 +94,7 @@ Nella quale si crea un set di dati incorporato, si sceglie un'origine dati condi
   
 2.  Fare clic su **Barre**, quindi su **Avanti**.  
   
-    Nella pagina **Disponi campi del grafico** il riquadro **Campi disponibili** include quattro campi: FirstName, LastName, SalesYear2015 e SalesYear2014.  
+    Nel riquadro **Campi disponibili** della pagina **Disponi campi del grafico** sono contenuti quattro campi: FirstName, LastName, SalesYear2015 e SalesYear2014.  
   
 3.  Trascinare LastName nel riquadro Categorie.  
   
@@ -243,7 +244,7 @@ Il report visualizza l'importo delle vendite sull'asse orizzontale come valuta i
   
 4.  Fare clic su **Filtri**. Nella pagina **Modificare i filtri** può essere visualizzato un elenco di espressioni di filtro. Per impostazione predefinita, tale elenco è vuoto.  
   
-5.  Fare clic su **Aggiungi**. Verrà visualizzato un nuovo filtro vuoto.  
+5.  Scegliere **Aggiungi**. Verrà visualizzato un nuovo filtro vuoto.  
   
 6.  In **Espressione**digitare **[Sum(SalesYear2015)]** . Viene creata l'espressione sottostante `=Sum(Fields!SalesYear2015.Value)`, che può essere visualizzata facendo clic sul pulsante **fx** .  
   

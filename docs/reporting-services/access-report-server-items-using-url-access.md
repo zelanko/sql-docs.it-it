@@ -1,5 +1,6 @@
 ---
 title: Accedere agli elementi del server di report usando l'accesso con URL | Microsoft Docs
+description: Informazioni su come accedere a tipi diversi di elementi del catalogo in un database del server di report o in un sito di SharePoint usando rs:Command=Value.
 ms.date: 05/08/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 52222f154ccc8068c77b0925f246e738a66721cd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9d415b9e263841757e7557e30cf3beb80e5afaa0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581253"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246375"
 ---
 # <a name="access-report-server-items-using-url-access"></a>Accesso agli elementi del server di report utilizzando l'accesso tramite URL
   Questo argomento descrive come accedere a tipi diversi di elementi del catalogo in un database del server di report o in un sito di SharePoint usando *rs:Command*=*Value*. In realtà non è necessario aggiungere questa stringa del parametro. Se la si omette, il tipo di elemento viene valutato dal server di report e il valore del parametro appropriato viene selezionato automaticamente. Tuttavia, l'uso della stringa *rs:Command*=*Valore* nell'URL migliora le prestazioni del server di report.  

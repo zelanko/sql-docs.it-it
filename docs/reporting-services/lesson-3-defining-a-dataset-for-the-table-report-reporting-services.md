@@ -1,6 +1,6 @@
 ---
 title: 'Lezione 3: Definire un set di dati per il report tabella | Microsoft Docs'
-description: Dopo aver definito l'origine dati per il report impaginato, è necessario definire un set di dati. In SQL Server Reporting Services i dati usati nei report sono contenuti in un set di dati.
+description: In questa lezione si apprenderà come definire un set di dati per il report tabella in SQL Server Reporting Services (SSRS).
 ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25c62e0cd615748a764937d6dc2b8e4c952e59a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 272787e124616593c90483735afec702f5d4fb18
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244311"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247550"
 ---
 # <a name="lesson-3-define-a-dataset-for-the-table-report---sql-server-reporting-services"></a>Lezione 3: Definire un set di dati per il report tabella - SQL Server Reporting Services
 

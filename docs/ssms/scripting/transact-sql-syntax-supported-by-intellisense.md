@@ -1,5 +1,6 @@
 ---
 title: Sintassi Transact-SQL supportata da IntelliSense
+description: Informazioni sulle istruzioni Transact-SQL e gli elementi di sintassi supportati da SQL Server Management Studio IntelliSense in SQL Server 2019 (15.x).
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -15,15 +16,15 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5acada236056a5691ceebe81d0372f1fa06543f1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 772574d5f50c9c3f9666c56abab80d3ce5181d82
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252983"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247358"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Sintassi Transact-SQL supportata da IntelliSense
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   In questo argomento vengono descritti le istruzioni e gli elementi di sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] supportati da IntelliSense in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="statements-supported-by-intellisense"></a>Istruzioni supportate da IntelliSense  
@@ -35,14 +36,47 @@ ms.locfileid: "75252983"
 ### <a name="select-statement"></a>Istruzione SELECT  
  L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] offre supporto IntelliSense per gli elementi della sintassi seguenti nell'istruzione SELECT:  
   
-|||  
-|-|-|  
-|SELECT|WHERE|  
-|FROM|ORDER BY|  
-|HAVING|UNION|  
-|FOR|GROUP BY|  
-|Torna all'inizio|OPTION (hint)|  
-  
+:::row:::
+    :::column:::
+        SELECT
+    :::column-end:::
+    :::column:::
+        WHERE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        FROM
+    :::column-end:::
+    :::column:::
+        ORDER BY
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        HAVING
+    :::column-end:::
+    :::column:::
+        UNION
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        FOR
+    :::column-end:::
+    :::column:::
+        GROUP BY
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        TOP
+    :::column-end:::
+    :::column:::
+        OPTION (hint)
+    :::column-end:::
+:::row-end:::
+
 ### <a name="additional-transact-sql-statements-that-are-supported"></a>Istruzioni Transact-SQL aggiuntive supportate  
  L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] offre inoltre supporto IntelliSense per le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] elencate nella tabella seguente.  
   

@@ -1,5 +1,6 @@
 ---
 title: Impostazioni relative alle informazioni sul dispositivo PDF | Microsoft Docs
+description: Informazioni sulle impostazioni relative alle informazioni sul dispositivo disponibili per il rendering dei report in formato PDF.
 ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 10633ef2ed778a7b7c3d5bcd64ee006cefe24752
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 126740ad794007e06d7565ddeea8a977fe07798b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "70911322"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245280"
 ---
 # <a name="pdf-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo PDF
   Nella tabella seguente sono elencate le impostazioni relative alle informazioni sul dispositivo per il rendering dei report nel formato PDF.  
   
-|Impostazione|valore|  
+|Impostazione|Valore|  
 |-------------|-----------|  
 | **AccessiblePDF** | Indica se eseguire il rendering di un file PDF accessibile/con tag, di dimensioni maggiori ma più semplice da leggere e scorrere per le utilità per la lettura dello schermo e altri strumenti di assistive technology. Il valore predefinito è **false**. [Disponibile in Server di report di Power BI (marzo 2018) e versioni successive] |
 |**Colonne**|Numero di colonne da impostare per il report. Questo valore ha la priorità sulle impostazioni originali del report.|  

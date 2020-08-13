@@ -1,5 +1,6 @@
 ---
 title: 'Esercitazione: Aggiunta di un grafico sparkline al report (Generatore report) | Microsoft Docs'
+description: Informazioni su come usare Generatore report per creare una tabella di base con un grafico sparkline in un report impaginato di Reporting Services.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fe0d52f55905721002a1590f54ada84d7732f2a0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63043183"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245658"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico sparkline al report (Generatore report)
 
@@ -23,7 +24,7 @@ I grafici sparkline e le barre dei dati sono grafici semplici e di piccole dimen
   
 ![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
      
-Tempo previsto per il completamento di questa esercitazione: 30 minuti.  
+Tempo stimato per il completamento dell'esercitazione: 30 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -154,7 +155,7 @@ In un report, è possibile utilizzare un set di dati condiviso che dispone di un
   
 14. La tabella viene aggiunta all'area di progettazione. Nella tabella sono presenti tre colonne e altrettante righe.  
   
-    Osservare il riquadro di raggruppamento. Se il riquadro Raggruppamento non è visualizzato, scegliere **Raggruppamento** dal menu **Visualizza**. Nel riquadro Gruppi di righe viene visualizzato un gruppo di righe, ovvero **Product**. Nel riquadro Gruppi di colonne viene visualizzato un gruppo di colonne, ovvero **SalesDate**. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
+    Osservare il riquadro di raggruppamento. Se il riquadro Raggruppamento non è visualizzato, scegliere **Raggruppamento** dal menu **Visualizza**. Nel riquadro Gruppi di righe viene visualizzato un gruppo di righe: **Product**. Nel riquadro Gruppi di colonne viene visualizzato un gruppo di colonne: **SalesDate**. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
     
     ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   

@@ -1,5 +1,6 @@
 ---
 title: Avvio dell'utilità sqlcmd
+description: Informazioni su come avviare l'utilità sqlcmd, che consente di immettere istruzioni Transact-SQL, procedure di sistema e file di script, in modalità SQLCMD o in script e processi.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2571401f408babd0d3fe0ce114dbabbf3deeed26
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cbbf6064708f272eda5d646043ee7d43e766d104
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243466"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248110"
 ---
 # <a name="sqlcmd---start-the-utility"></a>sqlcmd - Avviare l'utilità
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  L'utilità [sqlcmd](../../tools/sqlcmd-utility.md) consente di immettere istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] , procedure di sistema e file script al prompt dei comandi, nell'editor di query in modalità SQLCMD, in un file script Windows o in un passaggio di processo del sistema operativo (Cmd.exe) in un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+   L'[utilità sqlcmd](../../tools/sqlcmd-utility.md) consente di immettere istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], procedure di sistema e file script al prompt dei comandi, nell'editor di query in modalità SQLCMD, in un file di script Windows o in un passaggio di processo del sistema operativo (Cmd.exe) in un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.
 > [!NOTE]  
 >  La modalità di autenticazione predefinita per **sqlcmd**è l'autenticazione di Windows. Per usare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario specificare un nome utente e una password con le opzioni **-U** e **-P** .  
   

@@ -2,23 +2,23 @@
 title: Scaricare aggiornamenti per l'installazione offline
 description: Scaricare i file CAB di Python e R per Machine Learning Services per SQL Server. Questi file CAB contengono gli aggiornamenti della funzionalità Machine Learning Services (Python e R) e vengono usati quando si installa SQL Server in un server senza accesso a Internet.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3682858eb76b78069497c23364e1f9db12ade9f4
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 21e95b5e3fa15a48e62974aa7f574a370b3aeba1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087381"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247990"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>Download dei file CAB per gli aggiornamenti cumulativi di Machine Learning Services per SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Scaricare i file CAB di Python e R per Machine Learning Services per SQL Server. Questi file CAB contengono gli aggiornamenti della funzionalità Machine Learning Services (Python e R) e vengono usati quando si installa SQL Server in un server senza accesso a Internet.
@@ -50,6 +50,11 @@ I file CAB sono elencati in ordine cronologico inverso. Quando si scaricano i fi
 
 |Versione | Componente | Collegamento di download | Problemi risolti |
 |------- | --------- | ------------- | ---------------- |
+|**[SQL Server 2019 CU5](https://support.microsoft.com/help/4552255)** |  |  |  |
+| | Microsoft R Open      | [SRO_3.5.2.293_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118178)  |  |
+| | R Server              | [SRS_9.4.7.804_1033.cab](https://go.microsoft.com/fwlink/?linkid=2122004)  |  |
+| | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |
+| | Server Python         | [SPS_9.4.7.804_1033.cab](https://go.microsoft.com/fwlink/?linkid=2121809)  |  |
 |**[SQL Server 2019 CU3](https://support.microsoft.com/help/4538853)** |  |  |  |
 | | Microsoft R Open      | [SRO_3.5.2.293_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118178)  |  |
 | | R Server              | [SRS_9.4.7.717_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118177)  |  |
@@ -125,7 +130,7 @@ I file CAB sono elencati in ordine cronologico inverso. Quando si scaricano i fi
 | | Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
 | | R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
 | | Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Nessuna modifica rispetto alle versioni precedenti. |
-| | Server Python    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)| Serializzazione dei modelli Python in revoscalepy tramite la [funzione rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model).<br/>Supporto dell'[assegnazione dei punteggi nativa](../sql-native-scoring.md) e miglioramenti all'[assegnazione dei punteggi in tempo reale](../real-time-scoring.md). 
+| | Server Python    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)| Serializzazione dei modelli Python in revoscalepy tramite la [funzione rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model).<br/>Supporto dell'[assegnazione dei punteggi nativa](../predictions/native-scoring-predict-transact-sql.md) e miglioramenti all'[assegnazione dei punteggi in tempo reale](../predictions/real-time-scoring.md). 
 |**[SQL Server 2017 CU1](https://support.microsoft.com/help/4038634)-[CU2](https://support.microsoft.com/help/4052574)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)| Nessuna modifica rispetto alle versioni precedenti. |
 | | R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
@@ -149,7 +154,7 @@ Per R Services per SQL Server 2016, la versione di base corrisponde alla version
 
 |Versione  |Collegamento di download  |
 |---------|---------------|
-|**SQL Server 2016 SP2 CU6**     |
+|**SQL Server 2016 SP2 CU6-CU13**     |
 |Microsoft R Open     |[SRO_3.2.2.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079936&clcid=1033)|
 |Microsoft R Server    |[SRS_8.0.3.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079933&clcid=1033)|
 |**SQL Server 2016 SP2 da CU1 a CU5**     |

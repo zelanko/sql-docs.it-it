@@ -1,5 +1,6 @@
 ---
 title: Creare un report tabella semplice (esercitazione su SSRS) | Microsoft Docs
+description: Usare lo strumento Progettazione report in Visual Studio/SQL Server Data Tools (SSDT) e quindi creare un report impaginato di SQL Server Reporting Services (SSRS).
 ms.date: 04/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: af41da75d553794019f1d01c8b8f5bb6aba80622
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f1549d3ba775d598902fd0fd4b5cc33bab2f54de
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65103310"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245140"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Creare un report tabella semplice (esercitazione su SSRS)
 

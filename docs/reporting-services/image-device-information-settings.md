@@ -1,5 +1,6 @@
 ---
 title: Impostazioni relative alle informazioni sul dispositivo di acquisizione immagini | Microsoft Docs
+description: Informazioni sulle varie impostazioni relative alle informazioni sul dispositivo che è possibile usare per eseguire il rendering in un formato di immagine in Reporting Services.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 295784ba9f2c14ce0f73f9639ec6ed129e447e76
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 57126e2ab47493b2f320308344acf9d15b572318
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503085"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247170"
 ---
 # <a name="image-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo di acquisizione immagini
   Nella tabella seguente sono elencate le impostazioni relative alle informazioni sul dispositivo per il rendering nel formato IMAGE.  
   
-|Impostazione|valore|  
+|Impostazione|Valore|  
 |-------------|-----------|  
 |**Colonne**|Numero di colonne da impostare per il report. Questo valore ha la priorità sulle impostazioni originali del report.|  
 |**ColumnSpacing**|Spaziatura delle colonne da impostare per il report. Questo valore ha la priorità sulle impostazioni originali del report.|  
@@ -32,7 +33,7 @@ ms.locfileid: "65503085"
 |**MarginLeft**|Valore in pollici del margine sinistro da impostare per il report. È necessario includere un numero intero o un valore decimale seguito da "in", ad esempio **1in**. Questo valore ha la priorità sulle impostazioni originali del report.|  
 |**MarginRight**|Valore in pollici del margine destro da impostare per il report. È necessario includere un numero intero o un valore decimale seguito da "in", ad esempio **1in**. Questo valore ha la priorità sulle impostazioni originali del report.|  
 |**MarginTop**|Valore in pollici del margine superiore da impostare per il report. È necessario includere un numero intero o un valore decimale seguito da "in", ad esempio **1in**. Questo valore ha la priorità sulle impostazioni originali del report.|  
-|**OutputFormat**|Uno dei formati di output supportati di [!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]): **BMP**, **EMF**, **GIF**, **JPEG**, **PNG**, o **TIFF**.|  
+|**OutputFormat**|Uno dei formati di output supportati [!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]): **BMP**, **EMF**, **GIF**, **JPEG**, **PNG** o **TIFF**.|  
 |**PageHeight**|Altezza di pagina in pollici da impostare per il report. È necessario includere un numero intero o un valore decimale seguito da "in", ad esempio **11in**. Questo valore ha la priorità sulle impostazioni originali del report.|  
 |**PageWidth**|Larghezza di pagina in pollici da impostare per il report. È necessario includere un numero intero o un valore decimale seguito da "in", ad esempio **8.5in**. Questo valore ha la priorità sulle impostazioni originali del report.|  
 |**PrintDpiX**|Risoluzione orizzontale dell'immagine di output. Il valore predefinito è **300**. Si applica al formato di output Enhanced MetaFile (**EMF**).|  

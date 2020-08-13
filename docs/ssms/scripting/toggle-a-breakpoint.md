@@ -1,5 +1,6 @@
 ---
 title: Attivare/disattivare un punto di interruzione
+description: Informazioni su come attivare/disattivare un punto di interruzione per evidenziare l'istruzione Transact-SQL associata e per eseguire varie azioni sull'istruzione, ad esempio la modifica.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -11,16 +12,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 868e588d5ff2a60acbed41a729a8f1c3c1819b00
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 159834507edfc57466dc0872bf42e2976c4ca8cc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243422"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248070"
 ---
 # <a name="toggle-a-breakpoint"></a>Attivare/disattivare un punto di interruzione
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 L'azione di definizione di un punto di interruzione in un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] è denominata impostazione/rimozione di un punto di interruzione.  
 

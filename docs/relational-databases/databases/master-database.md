@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2964e02ad49ef21b61949da7eec2f48ede553b02
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b5f8da43f32319c45c94a8a6f82b012c4460e8e1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728441"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246386"
 ---
 # <a name="master-database"></a>Database master
 
@@ -87,6 +87,7 @@ Per una descrizione di queste opzioni di database, vedere [ALTER DATABASE &#40;T
 Nel database **master** non è possibile eseguire le operazioni seguenti:  
   
 - Aggiunta di file o di filegroup.  
+- È possibile eseguire solo un backup completo del database nel database master.
 - Modifica delle regole di confronto. Le regole di confronto predefinite corrispondono a quelle del server.  
 - Modifica del proprietario del database. **master** è di proprietà di **sa**.  
 - Creazione di un catalogo o di un indice full-text.  

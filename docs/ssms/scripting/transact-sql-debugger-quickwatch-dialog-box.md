@@ -1,5 +1,6 @@
 ---
 title: Finestra di dialogo Controllo immediato
+description: Informazioni su come usare la finestra di dialogo Controllo immediato durante il debug del codice per visualizzare rapidamente il tipo di dati e il valore di un'espressione Transact-SQL, ad esempio una variabile.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -15,16 +16,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cfd48c59a928481be28d03d970fb399ea10b720
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab9e15deb9c1f46750d15e2a05e632e4f3f5b0f5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253020"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247320"
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Debugger Transact-SQL - Finestra di dialogo Controllo immediato
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Utilizzare la finestra di dialogo **Controllo immediato** per visualizzare rapidamente il tipo di dati e il valore di un'espressione [!INCLUDE[tsql](../../includes/tsql-md.md)] , ad esempio una variabile o un parametro, quando si esegue il debug di codice [!INCLUDE[tsql](../../includes/tsql-md.md)] . Per controllare più espressioni, è anche possibile aggiungere l'espressione a una finestra **Espressione di controllo** .  
 
@@ -48,7 +49,7 @@ Utilizzare la finestra di dialogo **Controllo immediato** per visualizzare rapid
   
     -   Espressioni compilate applicando operatori a uno o più parametri, variabili o funzioni di sistema, ad esempio @@IntegerCounter + 1 o FirstName + LastName.  
   
-    -   Istruzioni Transact-SQL tramite cui viene restituito un solo valore, ad esempio SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
+    -   Istruzioni Transact-SQL che restituiscono un singolo valore, come ad esempio: SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
   
 2.  Fare clic su **Rivaluta**.  
   

@@ -1,5 +1,6 @@
 ---
 title: Finestra Thread
+description: Informazioni sulla finestra Thread, che consente di visualizzare informazioni sul thread del motore di database di cui è in corso il debug. Le informazioni vengono visualizzate solo in modalità debug.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -13,16 +14,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 057178568ef12c6de42cde518c02db1ae137a0ae
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 27a1b4f5673b959d378bd70122e334e3a4629bad
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253013"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248022"
 ---
 # <a name="transact-sql-debugger---threads-window"></a>Debugger Transact-SQL - Finestra Thread
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Nella finestra **Thread** vengono visualizzate informazioni sul thread del [!INCLUDE[ssDE](../../includes/ssde-md.md)] usato dalla sessione dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] di cui viene eseguito il debug. Per visualizzare le informazioni sul thread, è necessario utilizzare la modalità di debug.  
 

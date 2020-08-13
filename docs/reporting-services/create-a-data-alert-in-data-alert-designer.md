@@ -1,5 +1,6 @@
 ---
 title: Creare un avviso dati nella finestra di progettazione Avviso dati | Microsoft Docs
+description: Informazioni su come creare definizioni di avviso dati nella finestra di progettazione Avviso dati, nonché su come modificare gli avvisi e salvare le modifiche al termine dell'operazione.
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +10,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5be6c645caadfc2b619e3fbd6d8f6b2a78ad2ff0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4a7ef1c053dbf22bc1717a47d9a662d1d29fd55f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571573"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247564"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Creare un avviso dati nella finestra di progettazione Avviso dati
 
@@ -69,7 +70,7 @@ Le definizioni di avviso dati vengono create nella finestra di progettazione Avv
   
      A seconda del tipo di dati della colonna selezionata, vengono elencati operatori di confronto differenti. Se la colonna dispone di un tipo di dati relativo alla data, verrà visualizzata un'icona di calendario accanto al valore soglia per la regola. È possibile immettere dati facendo clic su una data nel calendario o digitando la data.  
   
-     La finestra di progettazione Avviso Dati offre due modalità di confronto: **Modalità immissione valori** e **Modalità selezione campo**. La modalità predefinita è **Modalità immissione valori**. È possibile aggiungere clausole OR solo quando è attiva la **Modalità immissione valori** e si sta usando il confronto di tipo **is** .  
+     La finestra di progettazione Avviso Dati fornisce due modalità di confronto: **Modalità immissione valori** e **Modalità selezione campo**. La modalità predefinita è **Modalità immissione valori**. È possibile aggiungere clausole OR solo quando è attiva la **Modalità immissione valori** e si sta usando il confronto di tipo **is** .  
   
 9. Per aggiungere una clausola OR, fare clic sulla freccia rivolta verso il basso, quindi su **Modalità immissione valori**.  
   
@@ -114,7 +115,7 @@ Le definizioni di avviso dati vengono create nella finestra di progettazione Avv
   
 20. Facoltativamente, nella casella di testo **Oggetto** aggiornare la riga dell'oggetto del messaggio di avviso.  
   
-     L'oggetto predefinito è **Avviso dati per \<nome avviso dati>** .  
+     L'oggetto predefinito è **Avviso dati per \<data alert name>** .  
   
 21. Facoltativamente, digitare una descrizione per il messaggio di avviso nella casella di testo **Descrizione** .  
   

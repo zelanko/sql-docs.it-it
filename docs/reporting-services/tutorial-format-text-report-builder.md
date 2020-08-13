@@ -1,5 +1,6 @@
 ---
 title: 'Esercitazione: Formattazione di testo (Generatore report) | Microsoft Docs'
+description: Informazioni sui vari modi in cui è possibile formattare il testo in un report impaginato di Reporting Services. È possibile, ad esempio, provare formati diversi.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f71447f2e0f83c87d9b48a464a99dbbb7a1d4c9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63043042"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248120"
 ---
-# <a name="tutorial-format-text-report-builder"></a>Esercitazione: Formattazione di testo (Generatore report)
+# <a name="tutorial-format-text-report-builder"></a>Esercitazione: Formattazione del testo (Generatore report)
 
 In questa esercitazione verranno illustrati i vari modi in cui è possibile formattare il testo in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . È possibile provare formati diversi. 
 
@@ -25,7 +26,7 @@ Dopo avere impostato il report vuoto con l'origine dati e il set di dati, è pos
   
 In un passaggio si introdurrà intenzionalmente un errore, in modo da comprenderne gli effetti. Si correggerà quindi l'errore per ottenere il risultato desiderato.  
     
-Il tempo stimato per il completare l'esercitazione è di 20 minuti.  
+Tempo stimato per il completamento dell'esercitazione: 20 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -67,7 +68,7 @@ Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;G
   
 2.  Verificare che l'origine dati sia **TextDataSource**.  
   
-3.  Nella casella **Nome** digitare: **TextDataset**.  
+3.  Nella casella **Nome** digitare: **TextDataset.**  
   
 4.  Verificare che il tipo di query **Testo** sia selezionato, quindi fare clic su **Progettazione query**.  
   
@@ -179,7 +180,7 @@ Creare questa tabella per avere un elemento in cui inserire i collegamenti ipert
   
 1.  Nella scheda **Inserisci** > **Tabella** > **Creazione guidata Tabella**.  
   
-2.  Nella pagina **Scegliere un set di dati** della Creazione guidata tabella o matrice fare clic su **Scegli un set di dati esistente in questo report o un set di dati condiviso** > **TextDataset (in questo report)**  > **Avanti**.  
+2.  Nella pagina **Scegliere un set di dati** della Creazione guidata tabella o matrice fare clic su **Scegli un set di dati esistente in questo report o un set di dati condiviso** > **TextDataset (in questo report)** > **Avanti**.  
   
 3.  Nella pagina **Disponi campi** trascinare i campi **Territory**, **LinkText**e **Product** in **Gruppi di righe**, trascinare il campo **Sales** in **Valori**, quindi fare clic su **Avanti**.  
 
@@ -355,7 +356,7 @@ Il report verrà salvato sul server di report. Il nome del server di report al q
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Ci sono vari modi per formattare il testo in Generatore report. L'[Esercitazione: Creazione di un report in formato libero](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) include più esempi.  
+Ci sono vari modi per formattare il testo in Generatore report. [Esercitazione: Creazione di un report in formato libero](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) include più esempi.  
 
 [Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md) 
 [Formattazione degli elementi del report](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

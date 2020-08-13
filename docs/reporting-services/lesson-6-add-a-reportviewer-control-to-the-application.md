@@ -1,5 +1,6 @@
 ---
 title: "Lesson 6: Add a ReportViewer Control to the Application (Lezione 6: Aggiungere un controllo ReportViewer all'applicazione) | Microsoft Docs"
+description: Informazioni su come aggiungere un controllo ReportViewer all'applicazione del sito Web dopo aver progettato il report figlio tramite la Creazione guidata report.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9b13a3653b19d4079a47941a0bb05faa2821c823
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4090a01d4aa50fcbbfa64182dcd23a3e01c50e78
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62512536"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245100"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Lezione 6: Aggiungere un controllo ReportViewer all'applicazione
 Dopo aver progettato il report figlio tramite la Creazione guidata report, il passaggio successivo consiste nell'aggiungere un controllo ReportViewer all'applicazione del sito Web. Se si usa il sito Web report ASP.NET, il controllo ReportViewer viene aggiunto alla pagina default.aspx.   

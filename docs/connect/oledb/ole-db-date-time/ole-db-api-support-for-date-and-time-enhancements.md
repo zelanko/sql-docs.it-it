@@ -1,5 +1,5 @@
 ---
-title: Supporto dell'API OLE DB per i miglioramenti relativi a data e ora | Microsoft Docs
+title: API supportate per i miglioramenti relativi a data e ora (OLE DB Driver)
 description: Supporto dell'API OLE DB per i miglioramenti relativi a data e ora
 ms.custom: ''
 ms.date: 06/14/2018
@@ -10,15 +10,15 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: c2671b3df6432e63c0e0b36a24bade60286f72a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3003ed2de3b3c732ac9ef57e21ed5d6cf9415ec7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015677"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244889"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>Supporto dell'API OLE DB per i miglioramenti relativi a data e ora
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

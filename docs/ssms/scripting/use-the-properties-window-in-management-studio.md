@@ -1,5 +1,6 @@
 ---
 title: Utilizzo della finestra Proprietà in Management Studio
+description: Informazioni su come usare la finestra Proprietà per visualizzare informazioni su un elemento di SQL Server Management Studio, ad esempio una connessione, e sugli oggetti di database.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9277e6ee5e1dbd7b5c059c30d7ae49f56963d917
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 256355d1cf0d7b245832c0effe551a0236ed8597
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252955"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245533"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Utilizzo della finestra Proprietà in Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Nella finestra Proprietà è indicato lo stato di un elemento in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ad esempio una connessione o un operatore Showplan, e vengono riportate informazioni su oggetti di database come ad esempio tabelle, visualizzazioni e finestre di progettazione.  
   
  È possibile utilizzare la finestra Proprietà per visualizzare le proprietà della connessione corrente. In questa finestra molte proprietà solo di sola lettura ma è possibile modificarle altrove in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La proprietà Database di una query, ad esempio, è di sola lettura nella finestra Proprietà ma può essere modificata sulla barra degli strumenti.  

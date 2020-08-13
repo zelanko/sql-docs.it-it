@@ -1,5 +1,6 @@
 ---
 title: Estensioni
+description: Informazioni sulle estensioni immediatamente disponibili in Reporting Services e sul modo in cui usa le estensioni per modularizzare i tipi di input o output accettati.
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.technology: reporting-services
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: f7a64289bd3f1e1bd8fce71d21e5e1604e5bf4b4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c532561c8d31cce2b5b044d8158be046bb824e4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68262892"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247223"
 ---
 # <a name="extensions-for-sql-server-reporting-services-ssrs"></a>Estensioni di SQL Server Reporting Services (SSRS)
 
@@ -66,7 +67,7 @@ Alcune estensioni consentono inoltre di eseguire le attività seguenti:
   
 - **Estensione per il rendering XML** L'estensione per il rendering XML esegue il rendering dei report in file XML che possono essere archiviati o letti da altri programmi. È inoltre possibile utilizzare una trasformazione XSLT per trasformare il report in un altro XML Schema utilizzabile da un'altra applicazione. Per il codice XML generato dall'estensione per il rendering XML viene utilizzata la codifica UTF-8. Per altre informazioni, vedere [Esportazione in XML &#40;Generatore report e SSRS&#41;](../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).  
   
-- **Estensioni per il rendering delle immagini** L'estensione per il rendering delle immagini esegue il rendering dei report in bitmap o metafile nei formati BMP, EMF, GIF, JPEG, PNG, TIFF e WMF. Per impostazione predefinita, il rendering delle immagini viene eseguito nel formato TIFF supportato dal visualizzatore di immagini predefinito del sistema operativo, ad esempio Visualizzatore immagini e fax per Windows. È quindi possibile inviare l'immagine a una stampante dal visualizzatore. L'utilizzo di questa estensione per il rendering dei report garantisce che l'aspetto del report sia identico in tutti i client. Quando si visualizza un report in formato HTML, infatti, l'aspetto del report può variare a seconda della versione e delle impostazioni del browser, nonché dei tipi di carattere disponibili nel sistema. L'estensione per il rendering delle immagini esegue invece il rendering del report nel server, pertanto tutti gli utenti vedranno la stessa immagine. Poiché il rendering del report viene eseguito nel server, è necessario che in tale server siano installati tutti i tipi di carattere utilizzati nel report. Per altre informazioni, vedere [Esportazione in un file di immagine &#40;Generatore report e SSRS&#41;](../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).  
+- **Estensioni per il rendering delle immagini** L'estensione per il rendering delle immagini esegue il rendering dei report in bitmap o metafile L'estensione può eseguire il rendering dei report nei formati seguenti: BMP, EMF, GIF, JPEG, PNG, TIFF e WMF. Per impostazione predefinita, il rendering delle immagini viene eseguito nel formato TIFF supportato dal visualizzatore di immagini predefinito del sistema operativo, ad esempio Visualizzatore immagini e fax per Windows. È quindi possibile inviare l'immagine a una stampante dal visualizzatore. L'utilizzo di questa estensione per il rendering dei report garantisce che l'aspetto del report sia identico in tutti i client. Quando si visualizza un report in formato HTML, infatti, l'aspetto del report può variare a seconda della versione e delle impostazioni del browser, nonché dei tipi di carattere disponibili nel sistema. L'estensione per il rendering delle immagini esegue invece il rendering del report nel server, pertanto tutti gli utenti vedranno la stessa immagine. Poiché il rendering del report viene eseguito nel server, è necessario che in tale server siano installati tutti i tipi di carattere utilizzati nel report. Per altre informazioni, vedere [Esportazione in un file di immagine &#40;Generatore report e SSRS&#41;](../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).  
   
 - **Estensione per il rendering PDF** L'estensione per il rendering PDF consente di eseguire il rendering dei report in file PDF che possono essere aperti e visualizzati con Adobe Acrobat 6.0 o versioni successive. Per altre informazioni, vedere [Esportazione in un file PDF &#40;Generatore report e SSRS&#41;](../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md).  
   

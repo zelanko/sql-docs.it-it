@@ -1,5 +1,6 @@
 ---
 title: 'Lesson 5: Design the Child Report using the Report Wizard (Lezione 5: Progettare il report figlio tramite la Creazione guidata report) | Microsoft Docs'
+description: Informazioni su come progettare il report figlio usando la Creazione guidata report in Progettazione report dopo aver creato una connessione dati e una tabella di dati per il report figlio.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da9f07cf60a2ec42e23416b52cbfebab78802247
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cb9555522638ab6c8132f3422c7f0ca30928f893
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62512645"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246256"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Lezione 5: Progettare il report figlio tramite la Creazione guidata report
 Dopo aver creato una connessione dati e una tabella di dati per il report figlio, il passaggio successivo consiste nel progettare il report figlio utilizzando la Creazione guidata report in Progettazione report. Per altre informazioni sulla progettazione dei report, vedere [Progettare report con Progettazione report &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
@@ -38,7 +39,7 @@ Dopo aver creato una connessione dati e una tabella di dati per il report figlio
   
     1.  Trascinare **ProductID**, **PurchaseOrderID**, **PurchaseOrderDetailID**, **OrderQty**, **ReceivedQty**, **RejectedQty**e **StockedQty** da **Campi disponibili** nella casella **Valori** .  
   
-    2.  Fare clic sulla freccia accanto a **Sum(ProductID)** , **Sum(PurchaseOrderID)** , **Sum(PurchaseOrderDetailID)** , **Sum(OrderQty)** , **Sum(ReceivedQty)** , **Sum(RejectedQty)** e **Sum(StockedQty)** e deselezionare **Sum** .  
+    2.  Fare clic sulla freccia accanto a **Sum(ProductID)**, **Sum(PurchaseOrderID)**, **Sum(PurchaseOrderDetailID)**, **Sum(OrderQty)**, **Sum(ReceivedQty)**, **Sum(RejectedQty)** e **Sum(StockedQty)** e deselezionare **Sum** .  
   
 7.  Fare clic due volte su **Avanti** e selezionare **Fine** per chiudere la **Creazione guidata report**.  
   

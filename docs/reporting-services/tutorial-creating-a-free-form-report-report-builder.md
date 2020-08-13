@@ -1,5 +1,6 @@
 ---
 title: 'Esercitazione: Creazione di un report in formato libero (Generatore report) | Microsoft Docs'
+description: Informazioni su come creare un report impaginato che abbia l'aspetto di un notiziario e in cui ogni pagina visualizzi testo statico, oggetti visivi di riepilogo e dati di vendita di esempio dettagliati.
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6b189c494f887faca2b6d3d4bb00253992470132
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66499556"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247460"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Esercitazione: Creazione di un report in formato libero (Generatore report)
 In questa esercitazione viene creato un rapporto impaginato che ha l'aspetto di un notiziario. Ogni pagina visualizza testo statico, elementi visivi di riepilogo e dati di vendita di esempio dettagliati.
@@ -22,7 +23,7 @@ In questa esercitazione viene creato un rapporto impaginato che ha l'aspetto di 
 
 Nel report le informazioni vengono raggruppate per territorio e vengono visualizzati il nome del responsabile vendite del territorio e informazioni dettagliate e riepilogative relative alle vendite. Si inizia con un'area dati elenco come base per il report in formato libero, quindi si aggiunge un pannello decorativo con un'immagine, testo statico contenente dati, una tabella per la visualizzazione di informazioni dettagliate e facoltativamente grafici a torta e istogrammi per la visualizzazione di informazioni di riepilogo.  
   
-Il tempo stimato per il completare l'esercitazione è di 20 minuti.  
+Tempo stimato per il completamento dell'esercitazione: 20 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -48,13 +49,13 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
   
 1.  Nel riquadro Dati report fare clic su **Nuovo** > **Origine dati**.  
   
-2.  Nella casella **Nome** digitare **ListDataSource**  
+2.  Nella casella **Nome** digitare: **ListDataSource**  
   
 3.  Fare clic su **Usa una connessione incorporata nel report**.  
   
-4.  Verificare che il tipo di connessione sia Microsoft SQL Server, quindi nella casella **Stringa di connessione** digitare **Origine dati = \<nomeserver>**  
+4.  Verificare che il tipo di connessione sia Microsoft SQL Server, quindi nella casella **Stringa di connessione** digitare: **Origine dati = \<servername>**  
   
-    **\<nomeserver>** , ad esempio Report001 specifica un computer in cui viene installata un'istanza del motore di database di SQL Server. Poiché i dati di questo report non vengono estratti da un database di SQL Server, non è necessario includere il nome di un database. Per analizzare la query viene usato il database predefinito nel server specificato.  
+    **\<servername>** , ad esempio Report001 specifica un computer in cui viene installata un'istanza del motore di database di SQL Server. Poiché i dati di questo report non vengono estratti da un database di SQL Server, non è necessario includere il nome di un database. Per analizzare la query viene usato il database predefinito nel server specificato.  
   
 5.  Fare clic su **Credenziali**, quindi immettere le credenziali necessarie per la connessione all'istanza del motore di database di SQL Server.  
   
@@ -64,7 +65,7 @@ Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni 
   
 1.  Nel riquadro Dati report fare clic su **Nuovo** > **Set di dati**.  
   
-2.  Nella casella **Nome** digitare **ListDataset**.  
+2.  Nella casella **Nome** digitare: **ListDataset**.  
   
 3.  Fare clic su **Utilizzare un set di dati incorporato nel report**, quindi verificare che l'origine dati sia **ListDataSource**.  
   

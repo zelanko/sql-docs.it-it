@@ -1,5 +1,6 @@
 ---
 title: 'Lesson 3: Design the Parent Report using the Report Wizard (Lezione 3: Progettare il report padre tramite la Creazione guidata report) | Microsoft Docs'
+description: Informazioni su come progettare il report padre usando la Creazione guidata report in Progettazione report dopo aver creato una connessione dati e una tabella di dati per il report padre.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ad06a5a76344348c71838873edcc490c75b7b2e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 74b71002f5f84f4d9b80966f6b44721b9942c8b4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651277"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247530"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Lezione 3: Progettare il report padre tramite la Creazione guidata report
 Dopo aver creato una connessione dati e una tabella di dati per il report padre, il passaggio successivo consiste nel progettare il report padre utilizzando la Creazione guidata report in Progettazione report. Per altre informazioni sulla progettazione dei report, vedere [Progettare report con Progettazione report &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  

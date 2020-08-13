@@ -1,5 +1,6 @@
 ---
 title: 'Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report (Generatore report) | Microsoft Docs'
+description: Informazioni su come aggiungere un indicatore di prestazioni chiave (KPI) a un report impaginato di Reporting Services in Generatore report.
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3446eb921f0a731a571f2ad5e7a6f275612f2776
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041891"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245648"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report (Generatore report)
 In questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] si aggiunge un indicatore di prestazioni chiave (KPI) a un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
@@ -27,7 +28,7 @@ L'immagine seguente illustra un report simile quello che verrà creato.
 > [!NOTE]  
 > In questa esercitazione, i passaggi della procedura guidata sono consolidati in due procedure: una per la creazione del set di dati e un'altra per la creazione di una tabella. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati, creare un set di dati ed eseguire la procedura guidata, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Tempo previsto per il completamento di questa esercitazione: 15 minuti.  
+Tempo stimato per il completamento dell'esercitazione: 15 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -136,7 +137,7 @@ La Creazione guidata tabella o matrice offre una progettazione iniziale in cui v
   
 11. Fare clic su **Fine**.  
   
-      La tabella viene aggiunta all'area di progettazione. Nella tabella sono presenti cinque colonne e altrettante righe. Nel riquadro Gruppi di righe sono visualizzati tre gruppi di righe: SalesDate, Subcategory e Details. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati. Il riquadro Gruppi di colonne è vuoto.  
+      La tabella viene aggiunta all'area di progettazione. Nella tabella sono presenti cinque colonne e altrettante righe. Nel riquadro Gruppi di righe vengono visualizzati tre gruppi di righe: SalesDate, Subcategory e Details. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati. Il riquadro Gruppi di colonne è vuoto.  
       
       ![report-builder-kpi-row-groups](../reporting-services/media/report-builder-kpi-row-groups.png)
   

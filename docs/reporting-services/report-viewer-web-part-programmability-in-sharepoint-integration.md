@@ -1,5 +1,6 @@
 ---
 title: Programmabilità della web part Visualizzatore di report nell'integrazione con SharePoint | Microsoft Docs
+description: Informazioni su come creare web part personalizzate che forniscono parametri e percorsi di report alla web part Visualizzatore report tramite connessioni web part.
 ms.date: 03/04/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 990dba53ca575e09bcfefead21b5e37c82754c40
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ee3b85d50225a8c3b7b74e111a152128e4af0d4a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63187304"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245718"
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>Programmabilità della web part Visualizzatore report nell'integrazione con SharePoint
   La web part Visualizzatore di report è un controllo server contenente un set di API pubbliche che consentono agli sviluppatori di creare applicazioni di SharePoint personalizzate. È possibile creare web part personalizzate che forniscono parametri e percorsi di report a web part Visualizzatore report tramite connessioni web part. È inoltre possibile incorporare la web part in una pagina web part di SharePoint personalizzata e personalizzarla usando l'API pubblica.  

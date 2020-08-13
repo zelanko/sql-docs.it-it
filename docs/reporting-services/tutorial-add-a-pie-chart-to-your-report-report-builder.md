@@ -1,5 +1,6 @@
 ---
 title: 'Esercitazione: Aggiungere un grafico a torta al report (Generatore report) | Microsoft Docs'
+description: Informazioni su come creare un grafico a torta in un report impaginato di Reporting Services, aggiungere percentuali e combinare sezioni piccole in un'unica sezione.
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55cf0d48ebe4cec7063089c1ec025dd4b34bce1b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041253"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245668"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico a torta al report (Generatore report)
 In questa esercitazione viene creato il grafico a torta in un report impaginato di Reporting Services. Vengono aggiunte le percentuali e le sezioni piccole vengono unite in un'unica sezione.
@@ -29,7 +30,7 @@ Se sono presenti troppi punti dati su un grafico a torta, le etichette dei punti
 > [!NOTE]  
 > In questa esercitazione, i passaggi per la procedura guidata sono consolidati in due procedure. Per istruzioni dettagliate su come selezionare un server di report, aggiungere un'origine dati e un set di dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Il tempo stimato per il completare l'esercitazione è di 10 minuti.  
+Tempo stimato per il completamento dell'esercitazione: 10 minuti  
   
 ## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  

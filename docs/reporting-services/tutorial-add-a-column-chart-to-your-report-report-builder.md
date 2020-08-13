@@ -1,5 +1,6 @@
 ---
 title: 'Esercitazione: Aggiungere un grafico a torta al report (Generatore report) | Microsoft Docs'
+description: Informazioni su come creare un report impaginato di Reporting Services con un istogramma che visualizza una serie come set di barre verticali raggruppate per categoria.
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 450e625fba58eaa6ff1d9e9fe13065bf934a633b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041401"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245688"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un istogramma al report (Generatore report)
 In questa esercitazione si creerà un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con un istogramma che visualizza una serie come set di barre verticali raggruppate per categoria. 
@@ -30,7 +31,7 @@ Nell'illustrazione seguente è mostrato l'istogramma che verrà creato con una m
 > [!NOTE]  
 > In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, come scegliere un'origine dati e come creare un set di dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Tempo previsto per il completamento di questa esercitazione: 15 minuti.  
+Tempo stimato per il completamento dell'esercitazione: 15 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  

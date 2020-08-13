@@ -1,5 +1,6 @@
 ---
 title: Finestra di output
+description: Informazioni su come usare la finestra Output per visualizzare i messaggi di stato e altro output del debugger di SQL Server Management Studio e di altri strumenti.
 titleSuffix: T-SQL Debugger
 ms.prod: sql
 ms.technology: scripting
@@ -14,16 +15,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d446b3b7af6ce4606d656a6a1232016dbb90ea5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93cf1e703e7a8610ecf2bc8de841c00b7b2b3397
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253032"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247333"
 ---
 # <a name="transact-sql-debugger---output-window"></a>Debugger Transact-SQL - Finestra Output
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Questa finestra visualizza i messaggi di stato per le diverse caratteristiche disponibili in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. L'output viene visualizzato in riquadri speciali della finestra **Output** dal debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] , usando caratteristiche di strumenti esterni oppure comandi eseguiti in **Finestra di comando**del debugger. È disponibile anche l'output visualizzato nella finestra del prompt dei comandi da strumenti esterni, ad esempio i file con estensione bat o com.
 

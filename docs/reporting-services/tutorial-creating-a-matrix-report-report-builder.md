@@ -1,5 +1,6 @@
 ---
 title: 'Esercitazione: Creazione di un report tabella semplice (Generatore report) | Microsoft Docs'
+description: Informazioni su come create un report impaginato di Reporting Services con una matrice di dati di vendita di esempio in gruppi di righe e colonne nidificate.
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4891a25815d1efb14f230cbab9bcaaa75cad0a16
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63294692"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247450"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Esercitazione: Creazione di un report matrice (Generatore report)
 In questa esercitazione viene illustrato come creare un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con una matrice di dati di vendita di esempio in gruppi di righe e colonne nidificate. 
@@ -22,7 +23,7 @@ In questa esercitazione viene illustrato come creare un report impaginato di [!I
   
 ![report-builder-matrix-tutorial](../reporting-services/media/report-builder-matrix-tutorial.png)
    
-Il tempo stimato per il completare l'esercitazione è di 20 minuti.  
+Tempo stimato per il completamento dell'esercitazione: 20 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni](../reporting-services/prerequisites-for-tutorials-report-builder.md). 
@@ -49,7 +50,7 @@ Questa sezione spiega come scegliere un'origine dati condivisa, creare un set di
   
 5.  Fare clic su **Avanti**.  
   
-6.  Nella pagina **Scegliere una connessione a un'origine dei dati** selezionare un'origine dati esistente o individuare il server di report e selezionare un'origine dati. Se non è disponibile un'origine dati o non si dispone dell'accesso a un server di report, sarà possibile utilizzare un'origine dati incorporata. Per informazioni sulla creazione di un'origine dati incorporata, vedere [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Nella pagina **Scegliere una connessione a un'origine dei dati** selezionare un'origine dati esistente o individuare il server di report e selezionare un'origine dati. Se non è disponibile un'origine dati o non si dispone dell'accesso a un server di report, sarà possibile utilizzare un'origine dati incorporata. Per altre informazioni sulla creazione di un'origine dati incorporata, vedere [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Fare clic su **Avanti**.  
   
@@ -133,7 +134,7 @@ Utilizzare la procedura guidata per fornire una progettazione iniziale in cui vi
   
 13. Fare clic su **Fine**.  
   
-    La matrice viene aggiunta all'area di progettazione. Nel riquadro Gruppi di righe vengono visualizzati due gruppi di righe, ovvero Territory e SalesDate. Nel riquadro Gruppi di colonne vengono visualizzati due gruppi di colonne, ovvero Subcategory e Product. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
+    La matrice viene aggiunta all'area di progettazione. Nel riquadro Gruppi di righe vengono visualizzati due gruppi di righe: Territory e SalesDate. Nel riquadro Gruppi di colonne vengono visualizzati due gruppi di colonne: SubCategory e Product. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
     
     ![report-builder-row-and-column-groups](../reporting-services/media/report-builder-row-and-column-groups.png)
   

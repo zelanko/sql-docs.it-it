@@ -1,5 +1,6 @@
 ---
 title: Uso di indicatori KPI in Reporting Services | Microsoft Docs
+description: Informazioni su come è possibile misurare facilmente lo stato e le prestazioni usando gli indicatori KPI in SQL Server Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
-ms.openlocfilehash: dd8dc50b9885bb33df66d152b432092b6ac9868d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b92f19c74e5b5e3215836e174bf895f7cb61c36b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68329367"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247440"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Usare gli indicatori KPI in Reporting Services
 

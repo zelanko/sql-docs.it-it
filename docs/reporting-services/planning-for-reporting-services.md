@@ -1,5 +1,6 @@
 ---
 title: Pianificazione per Reporting Services | Microsoft Docs
+description: Informazioni su come installare e configurare l'ambiente SQL Server Reporting Services (SSRS) nel modo più adatto alle proprie esigenze.
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aa89fdf4bce0f268d71ea8c93e60ec4fcee6237c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 569daf4b395e40d9bcaf444aace9565cd9fd3822
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68891766"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247520"
 ---
 # <a name="planning-for-reporting-services"></a>Pianificazione per Reporting Services
   In questi argomenti vengono fornite informazioni su [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Informazioni su come installare e configurare l'ambiente [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nel modo più adatto per le proprie esigenze.  
@@ -28,7 +29,7 @@ ms.locfileid: "68891766"
  ![Icona della cartella file piccola](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Icona della cartella file piccola") **Configurazione di Reporting Services**  
  [Server di report di Reporting Services](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
- [Elenco di controllo per la distribuzione: installare Reporting Services in una farm di SharePoint esistente](https://msdn.microsoft.com/library/436b4c3d-3f2f-464a-be7e-5c051d9ffb8f)  
+ [Elenco di controllo per la distribuzione: Installare Reporting Services in una farm di SharePoint esistente](https://msdn.microsoft.com/library/436b4c3d-3f2f-464a-be7e-5c051d9ffb8f)  
   
  [Topologie di distribuzione per funzionalità di Business Intelligence di SQL Server in SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)  
   

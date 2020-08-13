@@ -1,5 +1,6 @@
 ---
 title: Finestra Stack di chiamate
+description: Informazioni su come usare la finestra Stack di chiamate del debugger Transact-SQL per visualizzare i tipi di dati dei parametri e i valori di stored procedure, funzioni e trigger.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -13,16 +14,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c15e01a9555ceeacbbd741660cd19baba1f6842
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8421e448b36cb1cf4958ef5cfaa1d583a7cca262
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243382"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248032"
 ---
 # <a name="transact-sql-debugger---call-stack-window"></a>Debugger Transact-SQL - Finestra Stack di chiamate
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Nella finestra **Stack di chiamate** vengono visualizzati i moduli nello stack di chiamate e i tipi di dati e i valori di qualsiasi parametro passati ai moduli. [!INCLUDE[tsql](../../includes/tsql-md.md)] i moduli includono stored procedure, funzioni e trigger. Per visualizzare lo stack di chiamate, è necessario utilizzare la modalità di debug.  
 

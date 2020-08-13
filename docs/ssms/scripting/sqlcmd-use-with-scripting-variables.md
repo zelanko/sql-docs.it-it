@@ -1,5 +1,6 @@
 ---
 title: Utilizzo di sqlcmd con variabili di scripting
+description: Informazioni su come usare le variabili di scripting per creare uno script che può essere usato in più scenari.
 ms.custom: seo-lt-2019
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,15 +19,15 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a084f84473dd6394aa0ad09e1730bcdb13e4a22
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9b3628994d100057de864ac1e1188e865d14dca8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76761615"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246200"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - Usare con variabili di scripting
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Per variabile di scripting si intende una variabile utilizzata negli script. Le variabili di scripting consentono di utilizzare uno script in più scenari. Se, ad esempio, si desidera eseguire uno script su più server, è possibile utilizzare una variabile di scripting per il nome del server anziché modificare lo script per ogni server. È infatti sufficiente modificare il nome del server fornito alla variabile di scripting per eseguire lo stesso script su server diversi.  
   
  Le variabili di scripting possono essere definite in modo esplicito con il comando **setvar** oppure in modo implicito con l'opzione **sqlcmd -v**.  

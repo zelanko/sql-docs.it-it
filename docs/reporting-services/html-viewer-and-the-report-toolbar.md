@@ -1,5 +1,6 @@
 ---
 title: Visualizzatore HTML e barra degli strumenti dei report | Microsoft Docs
+description: Informazioni sul Visualizzatore HTML e sulla barra degli strumenti dei report e su come è possibile visualizzare i report su richiesta quando vengono richiesti dal server di report.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 948abaaae630de34f4340370fd2f6f0f4e0a1d34
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 825e169f3819cc19b042715662f4ec554f02d65b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503068"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247200"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visualizzatore HTML e barra degli strumenti dei report
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce un visualizzatore HTML usato per visualizzare i report quando vengono richiesti dal server di report. Il Visualizzatore HTML è progettato per la visualizzazione di report in formato HTML e include una barra degli strumenti dei report, una sezione dei parametri, una sezione delle credenziali e una mappa documento. Nella barra degli strumenti dei report nel Visualizzatore HTML sono disponibili funzionalità per l'utilizzo del report oltre a opzioni per l'esportazione che consentono di visualizzare il report in formati diversi da HTML. La sezione dei parametri e la mappa documento vengono visualizzate solo se si aprono report configurati per l'utilizzo dei parametri e di un controllo mappa documento.  

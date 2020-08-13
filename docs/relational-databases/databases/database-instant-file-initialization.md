@@ -2,7 +2,7 @@
 title: Inizializzazione immediata dei file di database
 description: Informazioni sull'inizializzazione immediata dei file e su come abilitarla nel database di SQL Server.
 ms.custom: contperfq4
-ms.date: 05/30/2020
+ms.date: 07/24/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a10e6f9cff886b18b8bc344270516aaf2b5577db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 20b182186244221c0f8cea2dda86d8f6a269cd50
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756249"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246581"
 ---
 # <a name="database-instant-file-initialization"></a>Inizializzazione immediata dei file di database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,6 +37,7 @@ Per impostazione predefinita, i file di dati e di log vengono inizializzati per 
 - Ripristino di un database o un filegroup.  
 
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'inizializzazione immediata dei file consente un'esecuzione più rapida delle operazioni sui file indicate in precedenza, poiché recupera lo spazio su disco usato senza riempire lo spazio con zeri. Il contenuto del disco viene invece sovrascritto via via che nuovi dati vengono scritti nei file. Per i file di log non è possibile eseguire l'inizializzazione immediata.
+
 
 ## <a name="enable-instant-file-initialization"></a>Abilitare l'inizializzazione immediata dei file
 
@@ -99,5 +100,29 @@ Se la potenziale diffusione del contenuto eliminato rappresenta un problema, è 
     > [!NOTE]
     > La disabilitazione aumenterà i tempi di allocazione per i file di dati e ha effetto solo sui file che sono stati creati o le cui dimensioni sono aumentate dopo la revoca del diritto utente.
   
+### <a name="se_manage_volume_name-user-right"></a>Diritto utente SE_MANAGE_VOLUME_NAME
+
+Il privilegio utente *SE_MANAGE_VOLUME_NAME* può essere assegnato in **Strumenti di amministrazione Windows**, applet **Criteri di sicurezza locali**. In **Criteri locali** selezionare **Assegnazione diritti utente** e modificare la proprietà **Esecuzione di attività di manutenzione volume**.
+
+## <a name="performance-considerations"></a>Considerazioni sulle prestazioni
+
+Il processo di inizializzazione dei file di database scrive zeri nelle nuove aree del file in fase di inizializzazione. La durata di questo processo dipende dalle dimensioni della parte del file inizializzata e dal tempo di risposta e dalla capacità del sistema di archiviazione. Se l'inizializzazione richiede molto tempo, è possibile che vengano visualizzati i seguenti messaggi registrati nel log degli errori di SQL Server e nel registro applicazioni.
+
+```
+Msg 5144
+Autogrow of file '%.*ls' in database '%.*ls' was cancelled by user or timed out after %d milliseconds.  Use ALTER DATABASE to set a smaller FILEGROWTH value for this file or to explicitly set a new file size.
+```
+
+```
+Msg 5145
+Autogrow of file '%.*ls' in database '%.*ls' took %d milliseconds.  Consider using ALTER DATABASE to set a smaller FILEGROWTH for this file.
+```
+
+Un aumento automatico esteso di un file di log di database e/o di un file di log delle transazioni può causare problemi di prestazioni delle query. Ciò è dovuto al fatto che un'operazione che richiede l'aumento automatico di un file verrà mantenuta in risorse quali blocchi o latch per la durata dell'operazione di aumento delle dimensioni dei file. Possono verificarsi lunghe attese nei latch per le pagine di allocazione. L'operazione che richiede l'aumento automatico esteso mostrerà un tipo di attesa PREEMPTIVE_OS_WRITEFILEGATHER.
+
+
+
+
+
 ## <a name="see-also"></a>Vedere anche  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)

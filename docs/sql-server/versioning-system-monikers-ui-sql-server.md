@@ -1,20 +1,18 @@
 ---
 title: Documentazione SQL del sistema di controllo delle versioni
-ms.date: 10/15/2019
+ms.date: 07/22/2020
 ms.prod: sql
-ms.technology: ''
-ms.custom: ''
+ms.technology: release-landing
 ms.topic: conceptual
-ms.reviewer: ''
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b343f34e0d7fdc30e2549095f5731d93e863414c
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 7ca82e29d32bfe2721baa619ec37d4c7576a0533
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150602"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247367"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>Sistema di versioni per la documentazione SQL
 
@@ -163,10 +161,11 @@ Il sistema di controllo delle versioni è completamente implementato per le vers
     - [Versioni precedenti di SQL Server, 2012-2005](../toc/previous-versions-sql-server.md)
 
 - _2014:_ &nbsp; il sistema di controllo delle versioni è implementato a metà per SQL Server 2014. È possibile scegliere SQL Server 2014 nel controllo delle versioni e funziona. Tuttavia, internamente i file per la versione 2014 sono dedicati solo alla versione 2014, allo stesso modo in cui i file per la versione 2008 sono dedicati solo alla versione 2008.
-    - [Documentazione di SQL Server 2014](/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014)
+    - [Documentazione offline di SQL Server 2014](/sql/sql-server/sql-server-offline-documentation)
 
 - _2016 e versioni successive:_ &nbsp; il sistema di controllo delle versioni è completamente implementato per SQL Server 2016 e versioni successive.
     - [Documentazione di SQL Server 2016 e versioni successive](/sql/sql-server/?view=sql-server-2016)
+    - [Documentazione offline di SQL Server 2016](sql-server-offline-documentation.md)
 
 ## <a name="see-also"></a>Vedere anche
 

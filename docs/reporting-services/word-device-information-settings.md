@@ -1,5 +1,6 @@
 ---
 title: Impostazioni relative alle informazioni sul dispositivo Word | Microsoft Docs
+description: Informazioni sulle impostazioni relative alle informazioni sul dispositivo disponibili per il rendering in formato Microsoft Word.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 28146498-fae7-4b13-b47f-6ec05aa8e057
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 776a825c480568be2640d1309c7c3a48970e2c54
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e12669575e06ab2ea3898e7592c2c1d08e90f283
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571136"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247430"
 ---
 # <a name="word-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo Word
   Nella tabella seguente sono elencate le impostazioni relative alle informazioni sul dispositivo per il rendering nel formato [!INCLUDE[ofprword](../includes/ofprword-md.md)] .  
   
-|Impostazione|valore|  
+|Impostazione|Valore|  
 |-------------|-----------|  
 |**AutoFit**|**False**. L'impostazione di AutoFit è **false** in tutte le tabelle di Word.<br /><br /> **True**. L'impostazione di AutoFit è **true** in tutte le tabelle di Word.<br /><br /> **Never**. I valori di AutoFit non sono impostati in alcuna tabella di Word e viene applicato il comportamento predefinito di Word.<br /><br /> **Default**. AutoFit è impostata per le tabelle più strette rispetto all'area di disegno fisica (larghezza fisica della pagina esclusi i margini) per la pagina logica.|  
 |**ExpandToggles**|Indica se per tutti gli elementi che possono essere attivati o disattivati deve venire eseguito il rendering nello stato completamente espanso. Il valore predefinito è **false**.|  

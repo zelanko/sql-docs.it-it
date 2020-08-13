@@ -1,5 +1,6 @@
 ---
 title: Impostare la lingua per i parametri del report in un URL | Microsoft Docs
+description: Informazioni su come impostare la lingua per i parametri del report in un URL tramite il parametro di accesso con URL rs:ParameterLanguage.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e1ccf22f-80d6-45bc-aae0-f5f263275092
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 98ff61142ff7b748ba6a16b632b256e8b0ec3c47
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5972235f37a8cc10968d68a614bab00f3ca9a556
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579403"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245708"
 ---
 # <a name="set-the-language-for-report-parameters-in-a-url"></a>Impostare la lingua per i parametri del report in un URL
   Il parametro di accesso con URL *rs:ParameterLanguage* consente di risolvere un problema di interpretazione dei parametri del report con distinzione delle impostazioni cultura, come date, ore, valuta e numeri, in base alla lingua del browser. Con *rs:ParameterLanguage*l'URL viene ora interpretato in modo indipendente dal browser. Se, ad esempio, per il server di report sono definite le impostazioni internazionali per il tedesco, ma un utente accede a un report tramite un URL utilizzando un browser che è impostato su Inglese (Stati Uniti), i valori dei parametri passati a un server di report vengono interpretati in modo errato.  

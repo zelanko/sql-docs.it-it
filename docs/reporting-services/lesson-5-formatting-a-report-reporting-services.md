@@ -1,5 +1,6 @@
 ---
 title: 'Lezione 5: Formattazione di un report (Reporting Services) | Microsoft Docs'
+description: Informazioni su come formattare i campi relativi a data e valuta e le intestazioni di colonna dopo aver aggiunto un'area dati e alcuni campi al report Sales Orders.
 ms.date: 04/29/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8bf8b6814f7989a904507cd89fbea397b8b6930
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef2d3fd220aef7a593a2244cf2d7509c5264fcca
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65105932"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245110"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lezione 5: Formattazione di un report (Reporting Services)
 

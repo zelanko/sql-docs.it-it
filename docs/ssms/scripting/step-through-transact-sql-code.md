@@ -1,5 +1,6 @@
 ---
 title: Esecuzione istruzione per istruzione del codice Transact-SQL
+description: Informazioni su come usare il debugger Transact-SQL per controllare quali istruzioni Transact-SQL vengono eseguite in una finestra dell'editor di query del motore di database.
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -15,16 +16,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fbd6c6b01d5be8afb3e0e0c70c15363664263eb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d7317f783df8cd8810cb4d2371f8469697bb9a45
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243435"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246185"
 ---
 # <a name="step-through-transact-sql-code"></a>Esecuzione istruzione per istruzione del codice Transact-SQL
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] consente di controllare quali istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] vengono eseguite in una finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . È possibile sospendere l'esecuzione del debugger in corrispondenza di singole istruzioni e successivamente visualizzare lo stato degli elementi di codice in quei punti.  
 

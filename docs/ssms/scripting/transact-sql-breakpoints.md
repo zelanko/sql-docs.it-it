@@ -1,5 +1,6 @@
 ---
 title: Punti di interruzione Transact-SQL
+description: Quando si esegue il debug è possibile usare i punti di interruzione per sospendere l'esecuzione in base alle esigenze. In questo articolo è disponibile un elenco delle attività relative ai punti di interruzione, con collegamenti agli articoli che le descrivono.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -13,16 +14,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c31101eb201a55dffd100fb9365f7c29826fb5d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4013fea38f42ff997ebf07e74d3adee2c4896b45
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243398"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246182"
 ---
 # <a name="transact-sql-breakpoints"></a>Punti di interruzione Transact-SQL
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 I punti di interruzione specificano la sospensione dell'esecuzione del debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] in un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] specifica, per consentire le visualizzazione dello stato degli elementi di codice in tale punto.
 

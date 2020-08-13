@@ -1,5 +1,6 @@
 ---
 title: 'Lesson 3: Defining a Data-Driven Subscription (Lezione 3: Definizione di una sottoscrizione guidata dai dati) | Microsoft Docs'
+description: È possibile usare le pagine di sottoscrizione guidate dai dati del portale Web di Reporting Services per connettersi a un'origine dei dati di sottoscrizione e compilare una query che consenta di recuperare i dati di sottoscrizione.
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 332a1cbcda7bee87c16167179ef488fe02334474
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66826863"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247180"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lezione 3: Definizione di una sottoscrizione guidata dai dati
 In questa lezione dell'esercitazione [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] verranno usate le pagine di sottoscrizione guidata dai dati del portale Web di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per connettersi a un'origine dati di sottoscrizione, verrà compilata una query che recupera i dati di sottoscrizione e verrà eseguito il mapping tra il set di risultati e le opzioni di recapito e del report.  
   
 > [!NOTE]  
 > Prima di iniziare, verificare che il servizio **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent** sia in esecuzione. Se non è in esecuzione, non è possibile salvare la sottoscrizione.  Un metodo per verificarlo consiste nell'aprire [Gestione configurazione SQL Server](../relational-databases/sql-server-configuration-manager.md).
-In questa lezione si presuppone che le lezioni 1 e 2 siano state completate e che l'origine dati del report utilizzi credenziali archiviate.  Per altre informazioni, vedere [Lezione 2: Modifica delle proprietà dell'origine dei dati del report](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+In questa lezione si presuppone che le lezioni 1 e 2 siano state completate e che l'origine dati del report utilizzi credenziali archiviate.  Per altre informazioni, vedere [Lezione 2: Modifica delle proprietà dell'origine dati del report](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
 ## <a name="start-the-data-driven-subscription-wizard"></a><a name="bkmk_startwizard"></a>Avvio di Creazione guidata sottoscrizione guidata dai dati  
   
@@ -86,7 +87,7 @@ Parametro  |Origine del valore  | Valore/campo
 **Formato di rendering** | Ottieni il valore dal set di dati | Format
 **Modalità scrittura**| Immettere il valore| Incremento automatico    
 **Estensione file** |Immettere il valore |True
-**Nome utente** | Immettere il valore | Digitare l'account utente di dominio. Specificare l'account nel formato \<dominio>\\\<<account>. L'account utente deve avere le autorizzazioni richieste per il percorso configurato. 
+**Nome utente** | Immettere il valore | Digitare l'account utente di dominio. Immetterlo nel formato \<domain>\\\<account>. L'account utente deve avere le autorizzazioni richieste per il percorso configurato. 
 **Password** | Immettere il valore | Digitare la password
 **Usa l'account di condivisione file** | Immettere il valore | False
 

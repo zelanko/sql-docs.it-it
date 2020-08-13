@@ -1,5 +1,6 @@
 ---
 title: Creare una sottoscrizione guidata dai dati (esercitazione su SSRS) | Microsoft Docs
+description: Informazioni sulle sottoscrizioni guidate dai dati attraverso un semplice esempio in cui viene creata una sottoscrizione guidata dai dati per generare e salvare l'output di un report filtrato in una condivisione di file.
 ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: baff01bd8bc02af409a37c5cc1ce193e69663387
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2f4843c02d12c08cac8efa8b453999f4484ab084
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194829"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246333"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Creare una sottoscrizione guidata dai dati (esercitazione su SSRS)
 Questa esercitazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] illustra i concetti di sottoscrizioni guidate dai dati attraverso un semplice esempio che crea una sottoscrizione guidata dai dati per generare e salvare l'output di un report filtrato in una condivisione di file. 
@@ -33,7 +34,7 @@ L'esercitazione è suddivisa in tre lezioni:
 
 | Lezione | Commenti |
 | ------ | -------- |
-| [Lezione 1: Creare un database di esempio del Sottoscrittore](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | In questa lezione verrà creato un database [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] locale di tabelle che contiene informazioni sul Sottoscrittore. Le informazioni su numeri di ordine da usare per il filtro e i formati del file di output. |
+| [Lezione 1: Creare un database sottoscrittore di esempio](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | In questa lezione verrà creato un database [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] locale di tabelle che contiene informazioni sul Sottoscrittore. Le informazioni su numeri di ordine da usare per il filtro e i formati del file di output. |
 | [Lezione 2: Configurare le proprietà dell'origine dati del report](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) | In questa lezione, verrà configurata un'origine dati del report in modo che il report possa essere eseguito in modalità automatica secondo una pianificazione. Le credenziali archiviate sono necessarie per l'elaborazione automatica. Inoltre, verrà modificato il set di dati del report per includere un parametro fornito dai dati del sottoscrittore. Questo parametro viene usato per filtrare i dati del report basati su numeri di ordine. |
 | [Lezione 3: Definire una sottoscrizione guidata dai dati](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | In questa lezione verrà creata una sottoscrizione guidata dai dati. In questa lezione viene introdotta la procedura guidata che consente di eseguire in modo semplificato i passaggi necessari per creare sottoscrizioni guidate dai dati. |
 

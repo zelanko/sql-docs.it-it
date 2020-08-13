@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de9ceed1aa019b82bc943a1985f0f251ad82b1fa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b32c0b24aea8e1a55060b501fd001c1ad7f90b36
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917530"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248050"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Parametri del pacchetto e del progetto di Integration Services (SSIS)
 
@@ -76,10 +76,10 @@ ms.locfileid: "86917530"
  Le stored procedure e le viste Transact-SQL seguenti possono essere utilizzate per visualizzare e impostare i valori di parametri.  
   
  [catalog.execution_parameter_values &#40;database SSISDB&#41;](../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)(vista)  
- Consente di visualizzare i valori di parametri effettivi che verranno utilizzati da un'esecuzione specifica  
+ Visualizza i valori dei parametri effettivi in un'esecuzione specifica.
   
  [catalog.get_parameter_values &#40;database SSISDB&#41;](../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md) (stored procedure)  
- Consente di risolvere e visualizzare i valori effettivi per il riferimento all'ambiente e al pacchetto specificato  
+ Risolve e visualizza i valori effettivi per il riferimento al pacchetto e all'ambiente specificato.
   
  [catalog.object_parameters &#40;database SSISDB&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) (vista)  
  Consente di visualizzare i parametri e le proprietà per tutti i pacchetti e i progetti nel catalogo di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , inclusi i valori predefiniti del server e i valori predefiniti di progettazione.  
