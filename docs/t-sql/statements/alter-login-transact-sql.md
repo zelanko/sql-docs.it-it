@@ -24,12 +24,12 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 65f6869d0f4b4dec46d6b27e0f7ef856e4ae20b1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ef071062597fee3bb8a25b7cf6a866fa0ab393d1
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243522"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988417"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -46,10 +46,10 @@ Modifica le proprietà di un account di accesso di [!INCLUDE[ssNoVersion](../../
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Database singolo/pool elastico<br />database SQL](alter-login-transact-sql.md?view=azuresqldb-current)
+        [Database SQL](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Istanza gestita<br />database SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Database SQL<br />Istanza gestita](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -280,10 +280,10 @@ GO
         [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\*Database singolo/pool elastico<br />database SQL\*_**
+        **_\* Database SQL \*_**
     :::column-end:::
     :::column:::
-        [Istanza gestita<br />database SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Database SQL<br />Istanza gestita](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -295,7 +295,7 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Database singolo/pool elastico di database SQL di Azure
+## <a name="sql-database"></a>Database SQL
 
 ## <a name="sql-server"></a>SQL Server
 
@@ -452,10 +452,10 @@ GO
         [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Database singolo/pool elastico<br />database SQL](alter-login-transact-sql.md?view=azuresqldb-current)
+        [Database SQL](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* Istanza gestita<br />database SQL\*_**
+        **_\* Database SQL<br />Istanza gestita \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -467,12 +467,12 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Istanza gestita di Database SQL di Azure
+## <a name="azure-sql-managed-instance"></a>Istanza gestita di SQL di Azure
 
 ## <a name="syntax"></a>Sintassi
 
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database managed instance
+-- Syntax for SQL Server and Azure SQL Managed Instance
 
 ALTER LOGIN login_name
     {
@@ -511,7 +511,7 @@ ALTER LOGIN login_name
 > L'amministratore di Azure AD per la funzionalità dell'istanza gestita dopo la creazione è stato modificato. Per altre informazioni, vedere [Nuove funzionalità di amministrazione di Azure AD per l'istanza gestita](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 ```syntaxsql
--- Syntax for Azure SQL Database managed instance using Azure AD logins
+-- Syntax for Azure SQL Managed Instance using Azure AD logins
 
 ALTER LOGIN login_name
   {
@@ -654,7 +654,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 Nell'esempio seguente viene eseguito il mapping dell'account di accesso `Mary5` alla credenziale EKM `EKMProvider1`.
 
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e all'istanza gestita di database SQL di Azure.
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e a Istanza gestita di SQL di Azure.
 
 ```sql
 ALTER LOGIN Mary5
@@ -684,7 +684,7 @@ GO
 
 Nell'esempio seguente viene modificata la password dell'account di accesso `TestUser` con un valore con hash.
 
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e all'istanza gestita di database SQL di Azure.
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e a Istanza gestita di SQL di Azure.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -717,10 +717,10 @@ ALTER LOGIN [joe@contoso.com] DISABLE
         [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Database singolo/pool elastico<br />database SQL](alter-login-transact-sql.md?view=azuresqldb-current)
+        [Database SQL](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Istanza gestita<br />database SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Database SQL<br />Istanza gestita](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -886,10 +886,10 @@ GO
         [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Database singolo/pool elastico<br />database SQL](alter-login-transact-sql.md?view=azuresqldb-current)
+        [Database SQL](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Istanza gestita<br />database SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Database SQL<br />Istanza gestita](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)

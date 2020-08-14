@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f8d91ef65f8beb5194bbb8cbe3b1618d7666e106
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e7f5fb29c15fbd8532a6852477ed9376df92f72
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781731"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988771"
 ---
 # <a name="data-tier-applications"></a>Applicazioni livello dati
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "85781731"
   
     -   Possono usare SQL Server Management Studio per estrarre un pacchetto di applicazione livello dati da un database esistente ed eseguire altre operazioni dell'applicazione livello dati.  
   
-    -   Inoltre, l'amministratore di un database per [!INCLUDE[ssSDS](../../includes/sssds-md.md)] può utilizzare il Portale di gestione per SQL Azure per le operazioni dell'applicazione livello dati.  
+    -   Inoltre, l'amministratore di database per [!INCLUDE[ssSDS](../../includes/sssds-md.md)] può usare il portale di Azure per le operazioni dell'applicazione livello dati.  
   
 -   Fornitori di software indipendenti:  
   
@@ -87,7 +87,7 @@ ms.locfileid: "85781731"
   
 -   **EXTRACT**: l'utente può estrarre un database in un pacchetto di applicazione livello dati.  
   
--   **DEPLOY**: l'utente può distribuire un pacchetto di applicazione livello dati in un server host. Quando la distribuzione viene eseguita tramite uno strumento di gestione come SQL Server Management Studio o il Portale di gestione per SQL Azure, il database risultante nel server host viene registrato in modo implicito come applicazione livello dati.  
+-   **DEPLOY**: l'utente può distribuire un pacchetto di applicazione livello dati in un server host. Quando la distribuzione viene eseguita tramite uno strumento di gestione come SQL Server Management Studio o il portale di Azure, il database risultante nel server host viene registrato in modo implicito come applicazione livello dati.  
   
 -   **REGISTER**: l'utente può registrare un database come applicazione livello dati.  
   

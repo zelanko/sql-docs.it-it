@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e4252d018df169f6fac238b4cb0b39991f9c8996
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e1bb0bc0ec1b16af3882880ac1d528a8c7907994
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719034"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823748"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Creazione di server collegati (Motore di database di SQL Server)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "85719034"
      Usare l'utente remoto per eseguire il mapping di utenti non definiti in **Account di accesso locale**. L' **Utente remoto** deve essere un account di accesso basato sull'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel server remoto.  
 
     > [!WARNING]
-    > Come "Utente remoto" in una distribuzione di istanza gestita del database SQL di Azure può essere usato solo un utente di SQL Server.  
+    > Come "Utente remoto" in una distribuzione di istanza gestita può essere usato solo un utente di SQL Server.  
 
      **Password remota**  
      Consente di specificare la password dell'Utente remoto.  

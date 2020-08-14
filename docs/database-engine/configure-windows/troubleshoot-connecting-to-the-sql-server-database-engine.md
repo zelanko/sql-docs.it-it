@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: afe2679e29f92d4b222067b6ab3b5220078744e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dbd46a6a2de2e46841eb8cc7b40542d8073e82c6
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763956"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988644"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Risolvere i problemi di connessione al motore di database di SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ Questo errore indica in genere che il client non è in grado di trovare l'istanz
 
 - In questo argomento non vengono fornite informazioni sugli errori SSPI. Per gli errori SSPI, vedere [Risoluzione del messaggio di errore "Impossibile generare il contesto SSPI"](https://support.microsoft.com/kb/811889).
 - In questo argomento non vengono fornite informazioni sugli errori Kerberos. Per altre informazioni, vedere [Microsoft Kerberos Configuration Manager per SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).
-- In questo argomento non vengono fornite informazioni sulla connettività SQL di Azure. Per altre informazioni, vedere [Risoluzione dei problemi di connettività al database SQL di Microsoft Azure](/azure/sql-database/troubleshoot-connectivity-issues-microsoft-azure-sql-database).
+- Questo argomento non include informazioni sulla connettività al database SQL di Azure. Per altre informazioni, vedere [Risoluzione dei problemi di connettività al database SQL di Microsoft Azure](/azure/sql-database/troubleshoot-connectivity-issues-microsoft-azure-sql-database).
 
 ## <a name="get-instance-name-from-configuration-manger"></a>Recuperare il nome dell'istanza da Gestione configurazione
 

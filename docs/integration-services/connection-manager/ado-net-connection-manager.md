@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 13248409cca973de00f0ee04f6fcb22e020f64fd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2e12c6d57b9505bfefaae5c7fae87e03375c4e9d
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918600"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864668"
 ---
 # <a name="adonet-connection-manager"></a>Gestione connessione ADO.NET
 
@@ -85,10 +85,10 @@ Consente di creare una connessione dati ADO.NET tramite la finestra di dialogo *
 Selezionare una connessione e quindi eliminarla selezionando **Elimina**.  
   
 #### <a name="managed-identities-for-azure-resources-authentication"></a>Identità gestite per l'autenticazione delle risorse di Azure
-Quando si eseguono pacchetti SSIS in [Azure-SSIS Integration Runtime in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), è possibile usare l'[identità gestita](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) associata alla data factory per l'autenticazione del database SQL di Azure (o istanza gestita). La factory specificata può accedere e copiare i dati dal database o nel database usando questa identità.
+Quando si eseguono pacchetti SSIS in [Azure-SSIS Integration Runtime in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), è possibile usare l'[identità gestita](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) associata alla data factory per l'autenticazione del database SQL di Azure o di Istanza gestita di SQL di Azure. La factory specificata può accedere e copiare i dati dal database o nel database usando questa identità.
 
 > [!NOTE]
->  Quando si usa l'autenticazione di Azure Active Directory (Azure AD), inclusa l'autenticazione identità gestita, per connettersi al database SQL di Azure (o istanza gestita), si potrebbe verificare un errore di esecuzione del pacchetto o una modifica del comportamento imprevista. Per altre informazioni, vedere [Funzionalità e limitazioni di Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
+>  Quando si usa l'autenticazione di Azure Active Directory (Azure AD), inclusa l'autenticazione identità gestita, per connettersi al database SQL di Azure o a Istanza gestita di SQL di Azure, si potrebbe verificare un errore di esecuzione del pacchetto o una modifica del comportamento imprevista. Per altre informazioni, vedere [Funzionalità e limitazioni di Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
 
 Per usare l'autenticazione identità gestita per il database SQL di Azure, seguire questa procedura per configurare il database:
 
@@ -106,7 +106,7 @@ Per usare l'autenticazione identità gestita per il database SQL di Azure, segui
     EXEC sp_addrolemember [role name], [your data factory name];
     ```
 
-Per usare l'autenticazione identità gestita per Istanza gestita di database SQL, seguire questa procedura per configurare il database:
+Per usare l'autenticazione identità gestita per Istanza gestita di SQL di Azure, seguire questa procedura per configurare il database:
     
 1. [Effettuare il provisioning di un amministratore di Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) per l'istanza gestita nel portale di Azure, se non è già stato fatto. L'amministratore di Azure AD può essere un utente di Azure AD o gruppo di Azure AD. Se si concede al gruppo con identità gestita un ruolo di amministratore, ignorare i passaggi 2-4. L'amministratore avrà accesso completo al database.
 

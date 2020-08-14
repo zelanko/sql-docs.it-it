@@ -16,12 +16,12 @@ ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 877dc8524c1d87cb83dfa194020454f2d0841d76
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 66f58a7526684384e4533290ee42c4cc75dea1a2
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756122"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864888"
 ---
 # <a name="system-databases"></a>Database di sistema.
 
@@ -37,7 +37,7 @@ ms.locfileid: "85756122"
 |[Database tempdb](../../relational-databases/databases/tempdb-database.md)|Area di lavoro per l'archiviazione di oggetti temporanei o set di risultati intermedi.|  
 
 > [!IMPORTANT]
-> Per i singoli database e i pool elastici di database SQL di Azure, si applicano solo il database master e il database tempdb. Per altre informazioni, vedere [Informazioni sul server di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). Per una descrizione di tempdb nel contesto del database SQL di Azure, vedere [Database tempdb nel database SQL](tempdb-database.md#tempdb-database-in-sql-database). Per Istanza gestita di database SQL di Azure si applicano tutti i database di sistema. Per altre informazioni sulle istanze gestite nel database SQL di Azure, vedere [Informazioni su Istanza gestita](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
+> Per i singoli database e i pool elastici di database SQL di Azure, si applicano solo il database master e il database tempdb. Per altre informazioni, vedere [Informazioni sul server di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). Per una descrizione di tempdb nel contesto del database SQL di Azure, vedere [Database tempdb nel database SQL](tempdb-database.md#tempdb-database-in-sql-database). Per Istanza gestita di SQL di Azure si applicano tutti i database di sistema. Per altre informazioni sulle istanze gestite nel database SQL di Azure, vedere [Informazioni su Istanza gestita](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
   
 ## <a name="modifying-system-data"></a>modifica dei dati di sistema  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta l'aggiornamento diretto delle informazioni da parte degli utenti in oggetti di sistema, ad esempio tabelle di sistema, stored procedure di sistema e viste del catalogo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre, tuttavia, un set completo di strumenti di amministrazione che consentono agli utenti di amministrare completamente il sistema e gestire tutti gli utenti e gli oggetti di un database. tra cui:  

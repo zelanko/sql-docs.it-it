@@ -1,6 +1,6 @@
 ---
 title: INSERT (grafo SQL) | Microsoft Docs
-description: Sintassi INSERT per le tabelle nodi e bordi di un grafo SQL.
+description: Informazioni sulla sintassi, le autorizzazioni e gli argomenti per l'istruzione INSERT che aggiunge una o più righe a un nodo o a una tabella archi di un grafo SQL in SQL Server.
 ms.date: 05/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +17,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f772d95923a7fcfe3dce8bafaf4382be71ccce54
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 7ffd99a9291e35024d1c8a209569e399b71b53de
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484514"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899807"
 ---
 # <a name="insert-sql-graph"></a>INSERT (grafo SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]

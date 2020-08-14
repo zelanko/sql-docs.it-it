@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: e06355d91e73430c203711515fb9501caebfd291
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: ea604f3144f371047c00171947c0b7ceaeaa602f
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331992"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988390"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opzioni di ALTER DATABASE SET (Transact-SQL)
 
@@ -56,10 +56,10 @@ Nella riga seguente selezionare il nome del prodotto a cui si è interessati. Ve
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Database singolo/pool elastico<br />database SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [Database SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Istanza gestita<br />database SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [Database SQL<br />Istanza gestita](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -1465,10 +1465,10 @@ SET QUERY_STORE = ON
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Database singolo/pool elastico<br />Database SQL \*_** &nbsp;
+        **_\* Database SQL \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Istanza gestita<br />database SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [Database SQL<br />Istanza gestita](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -1477,7 +1477,7 @@ SET QUERY_STORE = ON
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Database singolo/pool elastico di database SQL di Azure
+## <a name="sql-database"></a>Database SQL
 
 I livelli di compatibilità sono opzioni `SET`, ma sono descritti in [Livello di compatibilità ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
@@ -1831,7 +1831,7 @@ Per modificare questo stato, è necessario disporre dell'accesso esclusivo al da
 Controlla l'accesso degli utenti al database.
 
 RESTRICTED_USER     
-Consente la connessione al database solo ai membri del ruolo predefinito del database `db_owner` e ai membri dei ruoli predefiniti del server `dbcreator` e `sysadmin`, senza tuttavia imporre un limite al numero di connessioni. Tutte le connessioni al database vengono interrotte entro l'intervallo di tempo specificato nella clausola di interruzione dell'istruzione ALTER DATABASE. Dopo l'impostazione dello stato RESTRICTED_USER per il database, qualsiasi tentativo di connessione da parte di utenti non qualificati viene rifiutato. **RESTRICTED_USER** non può essere modificato con l'istanza gestita di database SQL.
+Consente la connessione al database solo ai membri del ruolo predefinito del database `db_owner` e ai membri dei ruoli predefiniti del server `dbcreator` e `sysadmin`, senza tuttavia imporre un limite al numero di connessioni. Tutte le connessioni al database vengono interrotte entro l'intervallo di tempo specificato nella clausola di interruzione dell'istruzione ALTER DATABASE. Dopo l'impostazione dello stato RESTRICTED_USER per il database, qualsiasi tentativo di connessione da parte di utenti non qualificati viene rifiutato. **RESTRICTED_USER** non può essere modificato con Istanza gestita di SQL.
 
 MULTI_USER     
 Consente la connessione al database a tutti gli utenti che dispongono di autorizzazioni appropriate.
@@ -2357,10 +2357,10 @@ SET QUERY_STORE = ON
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Database singolo/pool elastico<br />database SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [Database SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* Istanza gestita<br />database SQL \*_** &nbsp;
+        **_\* Database SQL<br />Istanza gestita\*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -2369,7 +2369,7 @@ SET QUERY_STORE = ON
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Istanza gestita di Database SQL di Azure
+## <a name="azure-sql-managed-instance"></a>Istanza gestita di SQL di Azure
 
 I livelli di compatibilità sono opzioni `SET`, ma sono descritti in [Livello di compatibilità ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
@@ -2660,7 +2660,7 @@ Per modificare questo stato, è necessario disporre dell'accesso esclusivo al da
 Controlla l'accesso degli utenti al database.
 
 RESTRICTED_USER     
-Consente la connessione al database solo ai membri del ruolo predefinito del database `db_owner` e ai membri dei ruoli predefiniti del server `dbcreator` e `sysadmin`, senza tuttavia imporre un limite al numero di connessioni. Tutte le connessioni al database vengono interrotte entro l'intervallo di tempo specificato nella clausola di interruzione dell'istruzione ALTER DATABASE. Dopo l'impostazione dello stato RESTRICTED_USER per il database, qualsiasi tentativo di connessione da parte di utenti non qualificati viene rifiutato. **RESTRICTED_USER** non può essere modificato con l'istanza gestita di database SQL.
+Consente la connessione al database solo ai membri del ruolo predefinito del database `db_owner` e ai membri dei ruoli predefiniti del server `dbcreator` e `sysadmin`, senza tuttavia imporre un limite al numero di connessioni. Tutte le connessioni al database vengono interrotte entro l'intervallo di tempo specificato nella clausola di interruzione dell'istruzione ALTER DATABASE. Dopo l'impostazione dello stato RESTRICTED_USER per il database, qualsiasi tentativo di connessione da parte di utenti non qualificati viene rifiutato. **RESTRICTED_USER** non può essere modificato con Istanza gestita di SQL.
 
 MULTI_USER     
 Consente la connessione al database a tutti gli utenti che dispongono di autorizzazioni appropriate.
@@ -3151,10 +3151,10 @@ SET QUERY_STORE = ON
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Database singolo/pool elastico<br />database SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [Database SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Istanza gestita<br />database SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [Database SQL<br />Istanza gestita](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;

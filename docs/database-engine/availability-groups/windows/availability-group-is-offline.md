@@ -1,6 +1,6 @@
 ---
 title: Il gruppo di disponibilità è offline
-description: Informazioni su come identificare i possibili motivi per cui un gruppo di disponibilità Always On è offline.
+description: Informazioni su come identificare i momenti e i possibili motivi per cui un gruppo di disponibilità Always On può passare offline.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ad3f81452b6b3abad43eaff1d7771b688c84638a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7d0c6a3864bec577c1d030da4fc828cd0c095fd9
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900845"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565359"
 ---
 # <a name="always-on-availability-group-is-offline"></a>Un gruppo di disponibilità Always On è offline
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 3812f2f7e2f41259416147e969ceb90e395b5bbb
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 698048be11f3514762f27c23ec16bf4ef18041a5
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279497"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864482"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -350,7 +350,7 @@ GLOBAL_TEMPORARY_TABLE_AUTO_DROP **=** { **ON** | OFF }
 Consente di impostare la funzionalità di eliminazione automatica per le [tabelle temporanee globali](../../t-sql/statements/create-table-transact-sql.md#temporary-tables). Il valore predefinito è ON, il che significa che le tabelle temporanee globali vengono eliminate automaticamente quando non sono usate in nessuna sessione. Se impostato su OFF, le tabelle temporanee globali devono essere eliminate in modo esplicito usando un'istruzione DROP TABLE, altrimenti verranno eliminate automaticamente al riavvio del server.
 
 - Con database singoli e pool elastici di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], questa opzione può essere impostata nei singoli database utente del server di database SQL.
-- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nell'istanza gestita di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] questa opzione è impostata in `TempDB` e l'impostazione dei singoli database utente non ha effetto.
+- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e in Istanza gestita di SQL di Azure questa opzione è impostata in `TempDB` e l'impostazione dei singoli database utente non ha effetto.
 
 <a name="lqp"></a>
 

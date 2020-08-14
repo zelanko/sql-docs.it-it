@@ -20,12 +20,12 @@ ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8f61833c4c532056d7af9980360e04e9d124854d
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 34a467f81612e88e15b45c055650c961493357dd
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381295"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823499"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -81,7 +81,7 @@ ALTER SERVER AUDIT audit_name
  Determina la posizione della destinazione del controllo. Le opzioni possibili sono un file binario, il registro applicazioni o il registro di sicurezza di Windows.  
 
 > [!IMPORTANT]
-> Nell'istanza gestita di database SQL di Azure, il controllo SQL opera a livello di server e archivia i file `.xel` in Archiviazione BLOB di Azure.
+> In Istanza gestita di SQL di Azure, il controllo SQL opera a livello di server e archivia i file `.xel` in Archiviazione BLOB di Azure.
   
  FILEPATH **= '** _os\_file\_path_ **'**  
  Percorso dell'itinerario di controllo. Il nome del file viene generato in base al nome e al GUID del controllo.  

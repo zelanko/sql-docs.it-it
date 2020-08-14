@@ -11,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c4bf57fb080c7f634256364e9ce1ac0d601ad589
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 706aa149b51b2cc56b524ad39db0e1453324bd00
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756832"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863366"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinazioni per gli eventi estesi in SQL Server
 
@@ -156,7 +156,7 @@ La destinazione **event_file** scrive l'output della sessione eventi dal buffer 
 > [!NOTE]
 > Database SQL di Azure supporta solo l'archiviazione di file `xel` in un archivio BLOB di Azure. 
 >
-> Per un esempio di codice **event_file** specifico per il database SQL (e l'Istanza gestita di database SQL), vedere [Codice di destinazione del file evento per eventi estesi nel database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
+> Per un esempio di codice **event_file** specifico per il database SQL (e Istanza gestita di SQL), vedere [Codice di destinazione del file evento per eventi estesi nel database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
 
 ::: moniker-end
 

@@ -1,6 +1,6 @@
 ---
 title: SQL Server Service Broker | Microsoft Docs
-description: Informazioni su Service Broker. Scoprire come offre supporto nativo per la messaggistica nel motore di database di SQL Server e in Istanza gestita di database SQL di Azure.
+description: Informazioni su Service Broker. Scoprire come offre supporto nativo per la messaggistica nel motore di database di SQL Server e in Istanza gestita di SQL di Azure.
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -24,17 +24,17 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3e915b46eb89c29d260dc66ad7b73bc0cbc73ebc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2841f36d3f9e4498763f6b0862e2fa0cfaa2e4a9
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764048"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863404"
 ---
 # <a name="service-broker"></a>Broker di servizio
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] offre supporto nativo per la messaggistica e l'accodamento nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e in [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Gli sviluppatori possono creare facilmente applicazioni complesse che usano i componenti del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per la comunicazione tra vari database, nonché compilare applicazioni distribuite e affidabili.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] offre supporto nativo per la messaggistica e l'accodamento nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e in [Istanza gestita di SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Gli sviluppatori possono creare facilmente applicazioni complesse che usano i componenti del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per la comunicazione tra vari database, nonché compilare applicazioni distribuite e affidabili.  
   
 ## <a name="when-to-use-service-broker"></a>Quando usare Service Broker
 
@@ -103,7 +103,7 @@ FROM ExpenseQueue;
 ## <a name="whats-new-in-service-broker"></a>Novità di Service Broker  
  Non è stata introdotta alcuna modifica significativa in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]sono state introdotte le modifiche riportate di seguito.  
 
-### <a name="service-broker-and-azure-sql-database-managed-instance"></a>Service broker e Istanza gestita di database SQL di Azure
+### <a name="service-broker-and-azure-sql-managed-instance"></a>Service broker e Istanza gestita di SQL di Azure
 
 - Service Broker per istanze diverse non è supportato 
  - `sys.routes` - Prerequisito: selezionare l'indirizzo da sys.routes. L'indirizzo deve essere LOCAL in ogni route. Vedere [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md).

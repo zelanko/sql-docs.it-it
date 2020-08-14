@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c89ff705077782d0cf8287f0d1bc010ce609cc72
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 29cef6bf700c6d837c77f02e16debe50e1f1a267
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472477"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823483"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>SQL Server Integration Services (SSIS) DevOps Tools
 
@@ -95,7 +95,7 @@ Tipo della destinazione. L'attività di distribuzione SSIS supporta attualmente 
 
 #### <a name="destination-server"></a>Server di destinazione
 
-Nome del server SQL di destinazione. Può corrispondere al nome di un database SQL Server locale, di un database SQL di Azure o di un'istanza gestita di database SQL di Azure. Questa proprietà è visibile solo se il tipo di destinazione è SSISDB.
+Nome del server SQL di destinazione. Può corrispondere al nome di un database di SQL Server locale, di un database SQL di Azure o di Istanza gestita di SQL di Azure. Questa proprietà è visibile solo se il tipo di destinazione è SSISDB.
 
 #### <a name="destination-path"></a>Percorso di destinazione
 
@@ -184,7 +184,7 @@ Indica se eseguire il rollback della configurazione effettuata da questa attivit
 
 #### <a name="target-server"></a>Server di destinazione
 
-Nome dell'istanza di SQL Server di destinazione. Può corrispondere al nome di un database SQL Server locale, di un database SQL di Azure o di un'istanza gestita di database SQL di Azure.
+Nome dell'istanza di SQL Server di destinazione. Può corrispondere al nome di un database di SQL Server locale, di un database SQL di Azure o di Istanza gestita di SQL di Azure.
 
 #### <a name="authentication-type"></a>Tipo di autenticazione
 

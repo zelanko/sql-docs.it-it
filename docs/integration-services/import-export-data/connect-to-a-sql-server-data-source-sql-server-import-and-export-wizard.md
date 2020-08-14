@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 31a3cba341ee6d7ec8aada3bf620ab23ab55bf9f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f50c53d596c73565b3b5e56c27fa59fca0afe708
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920976"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790354"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati SQL Server (Importazione/Esportazione guidata SQL Server)
 
@@ -67,7 +67,7 @@ Dopo aver selezionato **Provider di dati .NET Framework per SQL Server** nella p
 I driver ODBC non sono presenti nell'elenco a discesa delle origini dati. Per connettersi con un driver ODBC, selezionare innanzitutto **Provider di dati .NET Framework per ODBC** come origine dati. Questo provider funge da wrapper per il driver ODBC.
 
 > [!TIP]
-> **Ottenere il driver più recente**. Scaricare [Microsoft ODBC Driver 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339).
+> **Ottenere il driver più recente**. Scaricare [Microsoft ODBC Driver for SQL Server](https://aka.ms/downloadmsodbcsql).
 
 Di seguito è riportata la schermata generica che viene visualizzata dopo aver selezionato il Provider di dati .NET Framework per ODBC.
 

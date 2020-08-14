@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 123618a84b07aa2215a2666f9d427f669247c5d7
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: f7da670d93de95d06fb7a602332011f9218cdc2b
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411097"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87861972"
 ---
 # <a name="azure-data-studio-faq"></a>Domande frequenti su Azure Data Studio
 
@@ -80,14 +80,14 @@ No. Gli investimenti negli strumenti principali di Windows (SSMS, SSDT, PowerShe
 
 |Funzionalità|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Accesso ad Azure|sì|sì|
+|Accesso ad Azure|Sì|Sì|
 |Dashboard|Sì| |
 |Estensioni|Sì| |
 |Terminale integrato|Sì||
-|Esplora oggetti|sì|sì|
-|Scripting per gli oggetti|sì|sì|
+|Esplora oggetti|Sì|Sì|
+|Scripting per gli oggetti|Sì|Sì|
 |Sistema di progetto|Sì||
-|Selezione da tabella|sì|sì|
+|Selezione da tabella|Sì|Sì|
 |Controllo del codice sorgente|Sì||
 |Riquadro attività|Sì||
 |Temi|Sì||
@@ -104,8 +104,8 @@ No. Gli investimenti negli strumenti principali di Windows (SSMS, SSDT, PowerShe
 |:---|:---|:---|
 |Visualizzatore grafico|Sì||
 |Esportazione risultati in CSV, JSON, XLSX|Sì||
-|IntelliSense|sì|sì|
-|Frammenti di codice|sì|sì|
+|IntelliSense|Sì|Sì|
+|Frammenti di codice|Sì|Sì|
 |Showplan|Anteprima|Sì|
 |Statistiche client||Sì|
 |Statistiche sulle query dinamiche||Sì|
@@ -120,7 +120,7 @@ No. Gli investimenti negli strumenti principali di Windows (SSMS, SSDT, PowerShe
 
 |Funzionalità|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Windows|sì|sì|
+|Windows|Sì|Sì|
 |macOS|Sì||
 |Linux|Sì||
 
@@ -136,7 +136,7 @@ No. Gli investimenti negli strumenti principali di Windows (SSMS, SSDT, PowerShe
 
 |Funzionalità|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Backup/ripristino|sì|sì|
+|Backup/ripristino|Sì|Sì|
 |Importazione file flat|Anteprima|Sì|
 |SQL Agent|Anteprima|Sì|
 |SQL Profiler|Anteprima|Sì|
@@ -183,7 +183,7 @@ I normali utenti di Azure Data Studio sono sviluppatori e amministratori di data
 
 ## <a name="does-azure-data-studio-integrate-with-azure-sql-data-warehouse"></a>Azure Data Studio si integra con Azure SQL Data Warehouse?
 
-Sì. Attualmente il supporto di Azure Data Studio per Azure SQL Data Warehouse è disponibile in anteprima, insieme a Istanza gestita di database SQL di Azure e ai Big Data di SQL Server 2019.
+Sì. Attualmente il supporto di Azure Data Studio per Azure SQL Data Warehouse è disponibile in anteprima, insieme a Istanza gestita di SQL di Azure e ai Big Data di SQL Server 2019.
 
 ## <a name="why-is-azure-data-studio-important-for-the-new-version-of-sql-server"></a>Perché Azure Data Studio è importante per la nuova versione di SQL Server?
 

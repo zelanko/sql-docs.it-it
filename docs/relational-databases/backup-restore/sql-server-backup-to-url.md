@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1409125ca324117a3b7bba1792ff0a3f3361fe05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6835fbc893b45214cf8ea6f7b6a02d8f1e1df773
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768073"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988744"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup di SQL Server nell'URL
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85768073"
 - I clienti che devono eseguire il backup nei BLOB di pagine tramite un server proxy dovranno usare backuptourl.exe. 
 
 
-Il backup di un database di grandi dimensioni nell'archiviazione BLOB è soggetto alle limitazioni elencate in [Differenze, limitazioni e problemi noti di T-SQL nelle istanze gestite](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup).
+Il backup di un database di grandi dimensioni nell'archiviazione BLOB è soggetto alle limitazioni elencate in [Differenze, limitazioni e problemi noti di T-SQL in Istanza gestita](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup).
 
  Se le dimensioni del database sono troppo grandi, è possibile:
 - Usare la compressione del backup oppure

@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 11994d1dc3ec931f729c2739a107848464ed7f8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e93398b38e2fff73e63013fd0bfc1c4bedc31a43
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781699"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988761"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Distribuire un database tramite un'applicazione livello dati
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Usare la procedura guidata **Distribuisci database in SQL Azure** per distribuire un database tra un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e un server [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] o tra due server [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+  Usare la procedura guidata **Distribuire il database nel database SQL di Microsoft Azure** per distribuire un database tra un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e un server [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] o tra due server [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
 ##  <a name="before-you-begin"></a><a name="BeforeBegin"></a> Prima di iniziare  
  Nella procedura guidata viene utilizzato un file di archivio BACPAC dell'applicazione livello dati per distribuire sia i dati sia le definizioni degli oggetti di database. Vengono eseguite un'operazione di esportazione dell'applicazione livello dati dal database di origine e un'importazione dell'applicazione livello dati nella destinazione.  
@@ -68,7 +68,7 @@ ms.locfileid: "85781699"
   
 3.  Espandere il nodo di **Database** .  
   
-4.  Fare clic con il pulsante destro del mouse sul database che si vuole distribuire, selezionare **Attività** e quindi scegliere **Distribuisci database in SQL Azure**.  
+4.  Fare clic con il pulsante destro del mouse sul database da distribuire, scegliere **Attività** e quindi **Distribuire il database nel database SQL di Microsoft Azure**  
   
 5.  Completare le finestre di dialogo della procedura guidata:  
   

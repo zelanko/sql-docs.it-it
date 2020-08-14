@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: d5aa9af5ae45e962ff130d7de18d62417a0b3987
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 07fb87822e638e879287d556434172f8b436d998
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111033"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864310"
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "87111033"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Istanza gestita<br />database SQL](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+        [Database SQL<br />Istanza gestita](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)
@@ -44,7 +44,7 @@ ms.locfileid: "87111033"
 
 &nbsp;
 
-## <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server e Istanza gestita di database SQL
+## <a name="sql-server-and-sql-managed-instance"></a>SQL Server e Istanza gestita di SQL
 
 [!INCLUDE [DROP WORKLOAD GROUP](../../includes/drop-workload-group.md)]
   
@@ -56,7 +56,7 @@ ms.locfileid: "87111033"
         [SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Istanza gestita<br />database SQL \*_** &nbsp;
+        **_\* Database SQL<br />Istanza gestita\*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)
@@ -65,7 +65,7 @@ ms.locfileid: "87111033"
 
 &nbsp;
 
-##  <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server e Istanza gestita di database SQL
+##  <a name="sql-server-and-sql-managed-instance"></a>SQL Server e Istanza gestita di SQL
 
 [!INCLUDE [DROP WORKLOAD GROUP](../../includes/drop-workload-group.md)]
 
@@ -77,7 +77,7 @@ ms.locfileid: "87111033"
         [SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Istanza gestita<br />database SQL](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+        [Database SQL<br />Istanza gestita](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;

@@ -15,12 +15,12 @@ ms.assetid: 43451080-a562-4231-b1d4-1ba35ca0ea79
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7cfebbf9266bfa97bd17415cd892f20f04869f1d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d127e7400238210d96b95adcba505cb2a1572cdd
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001218"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790384"
 ---
 # <a name="check-the-odbc-sql-server-driver-version-windows"></a>Verifica della versione dei driver ODBC di SQL Server (Windows)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86001218"
 
 
 > [!NOTE]  
->  Per le connessioni all'autenticazione di Azure Active Directory per il database SQL, installare il driver più recente, ad esempio il [driver ODBC 13.1 per SQL Server](https://www.microsoft.com/download/details.aspx?id=53339).   
+>  Per le connessioni all'autenticazione di Azure Active Directory per il database SQL, installare il driver più recente, ad esempio il [driver ODBC 17 per SQL Server](https://aka.ms/downloadmsodbcsql).   
 
   
 ## <a name="see-also"></a>Vedere anche  

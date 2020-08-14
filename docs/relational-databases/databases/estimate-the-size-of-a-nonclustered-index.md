@@ -21,12 +21,12 @@ ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 00132b65b2dc5e21fbc57c376ac005d968871f62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f7f5c8f910d4fd9d5af81789a62eea86d609ec7a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85743329"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864502"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Stima delle dimensioni di un indice non cluster
 
@@ -176,13 +176,13 @@ ms.locfileid: "85743329"
   
 4.  Calcolare le dimensioni dei dati a lunghezza variabile:  
   
-     Se sono presenti colonne a lunghezza variabile nella chiave dell'indice, incluse eventuali colonne chiave di clustering necessarie descritte al passaggio 2.2, determinare lo spazio utilizzato per archiviare le colonne all'interno della riga di indice:  
+     Se sono presenti colonne a lunghezza variabile (colonne chiave o incluse), incluse eventuali colonne chiave di clustering necessarie descritte al passaggio 2.2, determinare lo spazio usato per archiviare le colonne all'interno della riga di indice:  
   
      ***Variable_Leaf_Size***  = 2 + (***Num_Variable_Leaf_Cols*** x 2) + ***Max_Var_Leaf_Size***  
   
      I byte aggiunti a ***Max_Var_Key_Size*** servono a tenere traccia di ogni colonna variabile. Questa formula si basa sul presupposto che tutte le colonne a lunghezza variabile siano piene al 100%. Se si prevede una percentuale inferiore di utilizzo dello spazio di archiviazione delle colonne di lunghezza variabile, è possibile modificare il valore ***Max_Var_Leaf_Size*** in base a tale percentuale per ottenere una stima più precisa delle dimensioni complessive della tabella.  
   
-     Se non sono disponibili colonne a lunghezza variabile, impostare ***Variable_Leaf_Size*** su 0.  
+     Se non sono presenti colonne a lunghezza variabile (colonne chiave o incluse), impostare ***Variable_Leaf_Size*** su 0.  
   
 5.  Calcolare le dimensioni della riga di indice:  
   

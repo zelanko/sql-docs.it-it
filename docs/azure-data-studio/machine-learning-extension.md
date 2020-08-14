@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: e6b38724e2cb8fde7fe38a544c3f87fba3cebd45
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 8a415678b777ba6142bab01bced7d7da908b2204
+ms.sourcegitcommit: 68c1dbc465898e20ec95f98cc2f14a8c9cd166a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85352418"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051110"
 ---
 # <a name="machine-learning-extension-preview-for-azure-data-studio"></a>Estensione Machine Learning (anteprima) per Azure Data Studio
 
@@ -30,6 +30,23 @@ Nel computer in cui si esegue Azure Data Studio devono essere installati i prere
 - [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) per Windows, macOS o Linux.
 
 - [R 3.5](https://www.r-project.org/) (facoltativo). Versioni diverse dalla 3.5 non sono attualmente supportate. Dopo aver installato R 3.5, è necessario abilitare R e specificare il percorso locale di un'installazione di R in [Impostazioni estensione](#settings). Questa operazione è necessaria solo se si vogliono gestire pacchetti R nel database.
+
+### <a name="trouble-installing-python-3-from-within-ads"></a>Problemi di installazione di Python 3 dall'interno di ADS?
+Se si tenta di installare Python 3, ma si riceve un errore relativo a TLS/SSL, aggiungere questi due componenti facoltativi:
+
+_errore di esempio:_
+```
+$: ~/0.0.1/bin/python3 -m pip install --user "jupyter>=1.0.0" --extra-index-url https://prose-python-packages.azurewebsites.net
+WARNING: pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available.
+Looking in indexes: https://pypi.org/simple, https://prose-python-packages.azurewebsites.net
+Requirement already satisfied: jupyter
+```
+
+_installare questi:_
+
+- [Homebrew](https://brew.sh) (facoltativo). Installare homebrew e quindi eseguire `brew update` dalla riga di comando.
+
+- *openssl* (facoltativo). Eseguire poi `brew install openssl`.
 
 ## <a name="install-the-extension"></a>Installare l'estensione
 

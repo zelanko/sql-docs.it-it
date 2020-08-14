@@ -15,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e297be837d954217aa9197494d6734f53d5a6aa0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a76bc720df1808290a09e2cec5fad1c0667ae389
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005606"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988798"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Utenti di database indipendente: rendere portabile un database
 
@@ -75,9 +75,9 @@ ms.locfileid: "86005606"
 |-----------------------|-----------------------------------|  
 |Per cambiare la password, nel contesto del database master:<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|Per cambiare la password, nel contesto del database utente:<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
 
-### <a name="managed-instance"></a>Istanza gestita
+### <a name="managed-instance"></a>database SQL
 
-Un'istanza gestita di database SQL di Azure si comporta come SQL Server in locale nel contesto dei database indipendenti. Assicurarsi di modificare il contesto del database dal database master al database utente durante la creazione dell'utente indipendente. Quando si imposta l'opzione di indipendenza, inoltre, non devono essere presenti connessioni attive al database utente. 
+Istanza gestita di SQL di Azure si comporta come SQL Server in locale nel contesto dei database indipendenti. Assicurarsi di modificare il contesto del database dal database master al database utente durante la creazione dell'utente indipendente. Quando si imposta l'opzione di indipendenza, inoltre, non devono essere presenti connessioni attive al database utente. 
 
 Ad esempio: 
 

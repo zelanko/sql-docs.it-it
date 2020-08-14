@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e0dc290a3e514d8de7a63a6afb4a0ed6453b6107
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 568a3824405798cf7fc23f9dc0b28f6b43d0fff9
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332510"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864412"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -70,7 +70,7 @@ Per altre informazioni sulle convenzioni di sintassi, vedere [Convenzioni della 
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Istanza gestita<br />database SQL](backup-transact-sql.md?view=azuresqldb-mi-current)
+        [Database SQL<br />Istanza gestita](backup-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Piattaforma di strumenti<br />analitici (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
@@ -941,7 +941,7 @@ WHERE r.command LIKE 'BACKUP%'
         [SQL Server](backup-transact-sql.md?view=sql-server-2016)
     :::column-end:::
     :::column:::
-        **_\* Istanza gestita<br />database SQL \*_** &nbsp;
+        **_\* Database SQL<br />Istanza gestita\*_** &nbsp;
     :::column-end:::
     :::column:::
         [Piattaforma di strumenti<br />analitici (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
@@ -950,9 +950,9 @@ WHERE r.command LIKE 'BACKUP%'
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Istanza gestita di Database SQL di Azure
+## <a name="azure-sql-managed-instance"></a>Istanza gestita di SQL di Azure
 
-Esegue il backup di un database SQL posizionato/ospitato in un'istanza gestita di database SQL di Azure. Un'[istanza gestita](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) di database SQL ha backup automatici e consente agli utenti di creare backup `COPY_ONLY` dei database completi. I backup differenziali, del log e di snapshot di file non sono supportati.
+Esegue il backup di un database SQL posizionato/ospitato in Istanza gestita di SQL di Azure. [Istanza gestita](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) SQL include backup automatici e consente agli utenti di creare backup `COPY_ONLY` di database completi. I backup differenziali, del log e di snapshot di file non sono supportati.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -990,12 +990,12 @@ BACKUP DATABASE { database_name | @database_name_var }
 
 ## <a name="arguments"></a>Argomenti
 
-DATABASE specifica un backup completo del database. Durante un backup del database, l'istanza gestita esegue il backup di una parte del log delle transazioni sufficiente per generare un database consistente quando viene ripristinato il backup.
+DATABASE specifica un backup completo del database. Durante un backup del database, Istanza gestita di SQL di Azure esegue il backup di una parte del log delle transazioni sufficiente per generare un database consistente quando viene ripristinato il backup.
 
 > [!IMPORTANT]
-> Un backup del database creato in un'istanza gestita può essere ripristinato solo in un'altra istanza gestita. Non può essere ripristinato in un'istanza locale di SQL Server (in modo analogo a un backup di un database di SQL Server 2016 che non può essere ripristinato in un'istanza di SQL Server 2012).
+> Un backup del database creato in un'istanza gestita può essere ripristinato solo in un'altra istanza di Istanza gestita di SQL di Azure. Non può essere ripristinato in un'istanza locale di SQL Server (in modo analogo a un backup di un database di SQL Server 2016 che non può essere ripristinato in un'istanza di SQL Server 2012).
 
-Quando si ripristina un backup creato da BACKUP DATABASE (*backup dei dati*), viene ripristinato l'intero backup. Per eseguire il ripristino dai backup automatici di un'istanza gestita del database SQL di Azure, vedere [Ripristinare un database in un'istanza gestita](/azure/sql-database/sql-database-managed-instance-get-started-restore).
+Quando si ripristina un backup creato da BACKUP DATABASE (*backup dei dati*), viene ripristinato l'intero backup. Per eseguire il ripristino dai backup automatici di Istanza gestita di SQL di Azure, vedere [Ripristinare un database in un'istanza gestita](/azure/sql-database/sql-database-managed-instance-get-started-restore).
 
 { *database_name* |  **@** _database\_name\_var_ } è il database di cui viene eseguito il backup completo. Se indicato in forma di variabile ( **@** _database\_name\_var_), questo nome può essere specificato come costante stringa ( **@** _database\_name\_var_ **=** _database name_) oppure come variabile di tipo stringa di caratteri, ad eccezione del tipo di dati **ntext** o **text**.
 
@@ -1097,7 +1097,7 @@ STATS [ **=** _percentage_ ] visualizza un messaggio a ogni completamento di *pe
 
 L'opzione STATS segnala la percentuale di completamento in base alla soglia specificata per l'intervallo successivo. Si tratta approssimativamente della percentuale specificata. Con l'impostazione STATS=10, ad esempio, se la percentuale di completamento corrisponde al 40%, potrebbe venire indicata una percentuale uguale al 43%. Per i set di backup di grandi dimensioni ciò non rappresenta un problema, perché la percentuale di completamento aumenta molto lentamente tra le varie chiamate di I/O completate.
 
-## <a name="limitations-for-sql-database-managed-instance"></a>Limitazioni per un'istanza gestita di database SQL
+## <a name="limitations-for-sql-managed-instance"></a>Limitazioni per Istanza gestita di SQL
 
 La dimensione massima della striscia di backup corrisponde a 195 GB (dimensione massima di un oggetto BLOB). Aumentare il numero di strisce nel comando di backup per ridurre la dimensione delle singole strisce e rimanere entro questo limite.
 
@@ -1131,7 +1131,7 @@ WITH STATS = 5, COPY_ONLY;
         [SQL Server](backup-transact-sql.md?view=sql-server-2016)
     :::column-end:::
     :::column:::
-        [Istanza gestita<br />database SQL](backup-transact-sql.md?view=azuresqldb-mi-current)
+        [Database SQL<br />Istanza gestita](backup-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Piattaforma di strumenti<br />analitici (PDW) \*_** &nbsp;

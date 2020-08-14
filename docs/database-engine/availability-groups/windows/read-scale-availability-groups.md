@@ -1,6 +1,6 @@
 ---
 title: Usare gruppi di disponibilità con scalabilità in lettura
-description: 'Descrizione di come realizzare la scalabilità in lettura quando si usano i gruppi di disponibilità Always On. '
+description: Informazioni dettagliate su come ottenere la scalabilità in lettura quando si usano i gruppi di disponibilità Always On e sull'uso di gruppi di disponibilità distribuiti per la scalabilità in lettura geografica.
 ms.custom: seodec18
 ms.date: 10/24/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 28d9540c331ac5a250acc24abbd173f7ddf87e5f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 540f02a2b58fff4c2800dfcf16908d53935ed82c
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882573"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565545"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Usare gruppi di disponibilità Always On con scalabilità in lettura
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

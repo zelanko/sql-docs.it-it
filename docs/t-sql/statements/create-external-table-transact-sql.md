@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4660b5f0bd16d4373498e472452b61aa4be3f24
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 29c625eb5b169e1811f880416a027eb3ac32c027
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111170"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864382"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -899,7 +899,7 @@ Costrutti e operazioni non supportati:
 
 Limitazioni delle query:
 
-PolyBase può utilizzare al massimo 33.000 file per cartella durante l'esecuzione di 32 query PolyBase simultanee. Questo numero massimo include i file e le sottocartelle presenti in ogni cartella HDFS. Se il livello di concorrenza è inferiore a 32, un utente può eseguire le query PolyBase sulle cartelle in HDFS che contengono più di 33.000 file. È consigliabile usare percorsi brevi per i file esterni e non più di 30.000 file per ogni cartella HDFS. Quando si fa riferimento a troppi file, potrebbe verificarsi un'eccezione di memoria insufficiente in Java Virtual Machine (JVM).
+Si consiglia di non fare riferimento a più di 30.000 file per cartella. Quando si fa riferimento a troppi file, potrebbe verificarsi un'eccezione di memoria insufficiente in Java Virtual Machine (JVM) o un peggioramento delle prestazioni.
 
 Limitazioni della larghezza della tabella:
 

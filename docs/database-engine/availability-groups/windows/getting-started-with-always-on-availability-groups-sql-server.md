@@ -1,6 +1,6 @@
 ---
 title: Introduzione ai gruppi di disponibilità
-description: Elenco con i passaggi necessari per configurare un gruppo di disponibilità Always On.
+description: Informazioni sui passaggi per configurare le istanze di SQL Server per supportare i gruppi di disponibilità Always On e per la creazione, la gestione e il monitoraggio di un gruppo di disponibilità.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2d5232cbf132e8fe84865dea9e64092692757c14
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 8391f41c1024d8bf747aace5acd5571aad4284b2
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362682"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565116"
 ---
 # <a name="getting-started-with-always-on-availability-groups"></a>Introduzione ai gruppi di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

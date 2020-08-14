@@ -1,6 +1,6 @@
 ---
-title: Estensione Istanza gestita di database SQL di Azure
-description: Usare Azure Data Studio con l'istanza gestita di SQL di Azure
+title: Estensione Istanza gestita di SQL di Azure
+description: Usare Azure Data Studio con Istanza gestita di SQL di Azure
 ms.custom: seodec18
 ms.date: 10/07/2019
 ms.reviewer: alanyu, maghan, sstein
@@ -10,18 +10,18 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: 6a406efdd7c07d2740ebf33b6e84cd7d7175fde2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 58c79a367782f040739b23f52e01bec5cb0ed917
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774706"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988606"
 ---
-# <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>Dashboard dell'istanza gestita di database SQL di Azure per Azure Data Studio (anteprima)
+# <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Dashboard di Istanza gestita di SQL di Azure per Azure Data Studio (anteprima)
 
-L'estensione Istanza gestita di database SQL di Azure fornisce un dashboard per l'uso di un'[istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). L'estensione offre le funzionalità seguenti:
+L'estensione Istanza gestita di SQL di Azure fornisce un dashboard per l'uso di [Istanza gestita di SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). L'estensione offre le funzionalità seguenti:
 
-- Mostra le proprietà dell'istanza gestita, tra cui Vcore e spazio di archiviazione utilizzato
+- Mostra le proprietà di Istanza gestita di SQL, tra cui vCore e spazio di archiviazione usato
 - Monitora l'utilizzo della CPU e dello spazio di archiviazione per le due ore precedenti
 - Mostra gli avvisi di configurazione e le raccomandazioni di ottimizzazione
 - Mostra lo stato delle repliche di database
@@ -30,7 +30,7 @@ L'estensione Istanza gestita di database SQL di Azure fornisce un dashboard per 
 ## <a name="install"></a>Installazione
 
 È possibile installare la versione ufficiale di questa estensione. Seguire i passaggi descritti nella [documentazione di Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions).
-Nel riquadro **Estensioni** cercare "istanza gestita" e installare l'estensione. Dopo l'installazione, si riceverà una notifica automatica degli aggiornamenti futuri dell'estensione.
+Nel riquadro **Estensioni** cercare "Istanza gestita" e installare l'estensione. Dopo l'installazione, si riceverà una notifica automatica degli aggiornamenti futuri dell'estensione.
 
 Con l'estensione installata, in Azure Data Studio sarà disponibile una scheda **Istanza gestita**. La scheda include informazioni specifiche sull'istanza gestita.
 
@@ -38,7 +38,7 @@ Con l'estensione installata, in Azure Data Studio sarà disponibile una scheda *
 
 L'estensione mostra le caratteristiche tecniche dell'istanza gestita e l'utilizzo di alcune risorse.
 
-[ ![Proprietà dell'istanza gestita](media/azure-sql-mi-extension/ads-mi-tab1.png )](media/azure-sql-mi-extension/ads-mi-tab1.png#lightbox)
+[ ![Proprietà di Istanza gestita](media/azure-sql-mi-extension/ads-mi-tab1.png )](media/azure-sql-mi-extension/ads-mi-tab1.png#lightbox)
 
 Il riquadro superiore mostra i dettagli seguenti:
 
@@ -51,7 +51,7 @@ Il riquadro superiore mostra i dettagli seguenti:
 
 Nel secondo riquadro nella scheda **Istanza gestita** compaiono suggerimenti e avvisi che consentono di ottimizzare l'istanza gestita.
 
-[![ Raccomandazioni sull'istanza gestita](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
+[![ Raccomandazioni per Istanza gestita](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
 
 Potrebbero essere visualizzate raccomandazioni simili alle seguenti:
 
@@ -62,13 +62,13 @@ Potrebbero essere visualizzate raccomandazioni simili alle seguenti:
 - **Limiti dei file di dati**. Se i file di dati raggiungono i [limiti di I/O al livello di servizio Utilizzo generico](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), potrebbe essere necessario aumentare le dimensioni dei file per ottenere prestazioni migliori. Questo problema potrebbe causare un utilizzo elevato della memoria e rallentare i backup.
 - **Problemi di disponibilità**. La presenza di un numero elevato di file di log virtuali può influire sulle prestazioni. Se si verifica un errore di processo, questi problemi potrebbero comportare tempi più lunghi per il recupero del database al livello di servizio Utilizzo generico.
 
-Rivedere regolarmente queste raccomandazioni, analizzare le cause radice e intraprendere azioni correttive. L'estensione Istanza gestita di database SQL di Azure offre script che è possibile eseguire per attenuare alcuni dei problemi segnalati.
+Rivedere regolarmente queste raccomandazioni, analizzare le cause radice e intraprendere azioni correttive. L'estensione Istanza gestita di SQL offre script che è possibile eseguire per risolvere alcuni dei problemi segnalati.
 
 ## <a name="replicas"></a>Repliche
 
 Il terzo riquadro nella scheda **Istanza gestita** mostra lo stato delle repliche di database nell'istanza gestita.
 
-[ ![Repliche dell'istanza gestita](media/azure-sql-mi-extension/ads-mi-tab3.png )](media/azure-sql-mi-extension/ads-mi-tab3.png#lightbox)
+[ ![Repliche di Istanza gestita](media/azure-sql-mi-extension/ads-mi-tab3.png )](media/azure-sql-mi-extension/ads-mi-tab3.png#lightbox)
 
 Al livello di servizio Utilizzo generico, ogni database ha una sola replica (primaria). In un'istanza Business Critical, ogni database ha una replica primaria e tre repliche secondarie, una delle quali è usata per i carichi di lavoro di sola lettura. Nel riquadro delle **repliche** è possibile monitorare il processo di sincronizzazione e verificare che tutte le repliche secondarie siano sincronizzate con la replica primaria.
 
@@ -76,15 +76,15 @@ Al livello di servizio Utilizzo generico, ogni database ha una sola replica (pri
 
 Il quarto riquadro di **Istanza gestita** mostra le voci del log degli errori di SQL più recenti e rilevanti.
 
-[ ![Voci del log dell'istanza gestita](media/azure-sql-mi-extension/ads-mi-tab4.png )](media/azure-sql-mi-extension/ads-mi-tab4.png#lightbox)
+[ ![Voci del log di Istanza gestita](media/azure-sql-mi-extension/ads-mi-tab4.png )](media/azure-sql-mi-extension/ads-mi-tab4.png#lightbox)
 
 Anche se l'istanza gestita genera un numero elevato di voci di log, la maggior parte di esse sono informazioni interne o di sistema. Inoltre, alcune voci di log mostrano i nomi di database fisici (valori `GUID`) anziché i nomi di database logici effettivi.
 
-L'estensione Istanza gestita di database SQL di Azure esclude le voci di log non necessarie in base al [metodo Dimitri Furman](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506). Inoltre, l'estensione visualizza i nomi dei file logici effettivi anziché i nomi fisici.
+L'estensione Istanza gestita di SQL esclude le voci di log non necessarie in base al [metodo Dimitri Furman](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506). Inoltre, l'estensione visualizza i nomi dei file logici effettivi anziché i nomi fisici.
 
 ## <a name="reporting-problems"></a>Segnalazione di problemi
 
-Se si verificano problemi con l'estensione Istanza gestita di database SQL di Azure, segnalare il problema nel [progetto GitHub dell'estensione](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues).
+Se si verificano problemi con l'estensione Istanza gestita di SQL, segnalare il problema nel [progetto GitHub dell'estensione](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues).
 
 ## <a name="code-of-conduct"></a>Codice di comportamento
 

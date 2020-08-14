@@ -1,6 +1,6 @@
 ---
 title: Configurare un gruppo di disponibilità distribuito
-description: 'In questo argomento viene descritto come creare e configurare un gruppo di disponibilità distribuito Always On. '
+description: Informazioni su come configurare un gruppo di disponibilità distribuito usando un esempio Transact-SQL. Scoprire anche dove trovare informazioni sui gruppi di disponibilità distribuiti.
 ms.custom: seodec18
 ms.date: 01/28/2020
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d5bd6d960b30d6c6b261de96ba93ae558e71e866
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 629aceee12a89498d763fde2d3510f69e0cde452
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896130"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565277"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Configurare un gruppo di disponibilità distribuito Always On  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +24,7 @@ Per creare un gruppo di disponibilità distribuito, è necessario creare due gru
 
 Per una panoramica tecnica dei gruppi di disponibilità distribuiti, vedere [Gruppi di disponibilità distribuiti](distributed-availability-groups.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>Impostare i listener di endpoint in ascolto per tutti gli indirizzi IP
 

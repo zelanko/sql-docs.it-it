@@ -24,12 +24,12 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4690f82c1ae731a25edce6dbe0b36d7b31d448f2
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 0f87466ebfccaaf69b970386865af68275e83e10
+ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392829"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88046597"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
@@ -89,7 +89,7 @@ A un account di accesso è possibile eseguire il mapping di più credenziali, a 
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-basic-example"></a>R. Esempio di base
+### <a name="a-creating-a-credential-for-windows-identity"></a>R. Creazione di una credenziale per l'identità Windows
 
 Nell'esempio seguente viene creata la credenziale denominata `AlterEgo`. Tale credenziale contiene l'utente di Windows `Mary5` e una password.
 
@@ -145,7 +145,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. Creazione di una credenziale mediante un token di firma di accesso condiviso
 
-**Si applica a**: da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658) e istanze gestite nel database SQL di Azure.
+**Si applica a**: da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658) e a Istanza gestita di SQL di Azure.
 
 Nell'esempio seguente viene creata una credenziale di firma di accesso condiviso usando un token di firma di accesso condiviso. Per un'esercitazione sulla creazione di criteri di accesso archiviati e di una firma di accesso condiviso in un contenitore di Azure e sulla creazione, in un secondo momento, di una credenziale usando la firma di accesso condiviso, vedere [Esercitazione: Uso del servizio di archiviazione BLOB di Microsoft Azure con i database di SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).
 
@@ -159,6 +159,15 @@ USE master
 CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a trailing forward slash.
     WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.
     , SECRET = 'sharedaccesssignature' -- this is the shared access signature token
+GO
+```
+
+### <a name="e-creating-a-credential-for-managed-identity"></a>E. Creazione di una credenziale per l'identità gestita
+
+Nell'esempio seguente vengono create le credenziali che rappresentano l'identità gestita del servizio SQL di Azure o Azure Synapse. La password e il segreto non sono applicabili in questo caso.
+
+```sql
+CREATE CREDENTIAL ServiceIdentity WITH IDENTITY = 'Managed Identity';
 GO
 ```
 

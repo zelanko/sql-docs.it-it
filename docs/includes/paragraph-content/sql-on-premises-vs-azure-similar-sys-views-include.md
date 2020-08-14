@@ -8,7 +8,7 @@
 Alcuni esempi di codice Transact-SQL scritti per SQL Server locale richiedono qualche piccola modifica per funzionare nel servizio database SQL di Azure nel cloud. Una categoria di questi esempi di codice prevede viste di sistema i cui prefissi dei nomi differiscono leggermente tra i due sistemi di database:
 
 - **server\_** &nbsp; - &nbsp; _prefisso per locale_
-- **database\_** &nbsp; - &nbsp;_prefisso per il servizio database SQL di Azure nel cloud_
+- **database\_** &nbsp; - &nbsp; _prefisso per il database SQL di Azure_
 
 Come riferimento visivo, la tabella seguente elenca e confronta due subset delle viste di sistema. Per brevità, i subset sono limitati ai nomi di vista che contengono anche la stringa `_event`. I nomi dei subset hanno prefissi diversi perché derivano dai due diversi sistemi di database.
 

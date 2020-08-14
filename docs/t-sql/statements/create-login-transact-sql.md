@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11f67835fe3cd74b63a9f2921850376ff4805881
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 0ff1117c601cc42d8fa14147df18b90a10fc97bd
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411043"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87987966"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -51,7 +51,7 @@ Per altre informazioni sulle convenzioni di sintassi, vedere [Convenzioni della 
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Database singolo/pool elastico<br />di database SQL di Azure](create-login-transact-sql.md?view=azuresqldb-current)
+        [Database SQL di Azure](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Istanza gestita<br />di SQL di Azure](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -284,7 +284,7 @@ CHECK_EXPIRATION = OFF ;
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Database singolo/pool elastico<br />di database SQL di Azure\*_**
+        **_\* Database SQL di Azure\*_**
     :::column-end:::
     :::column:::
         [Istanza gestita<br />di SQL di Azure](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -299,7 +299,7 @@ CHECK_EXPIRATION = OFF ;
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Database singolo/pool elastico di database SQL di Azure
+## <a name="sql-database"></a>Database SQL
 
 ## <a name="syntax"></a>Sintassi
 
@@ -402,7 +402,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Database singolo/pool elastico<br />di database SQL di Azure](create-login-transact-sql.md?view=azuresqldb-current)
+        [Database SQL di Azure](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         **_\* Istanza gestita<br />di SQL di Azure \*_**
@@ -417,12 +417,12 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Istanza gestita di Database SQL di Azure
+## <a name="azure-sql-managed-instance"></a>Istanza gestita di SQL di Azure
 
 ## <a name="syntax"></a>Sintassi
 
 ```syntaxsql
--- Syntax for Azure SQL Database managed instance
+-- Syntax for Azure SQL Managed Instance
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 
 <option_list> ::=
@@ -451,7 +451,7 @@ SID **=** *sid* si usa per ricreare l'account di accesso. Si applica solo agli a
 - È stata introdotta una nuova sintassi per la creazione di entità di livello server mappate agli account Azure AD (**FROM EXTERNAL PROVIDER**)
 - Quando si specifica **FROM EXTERNAL PROVIDER**:
 
-  - login_name deve rappresentare un account Azure AD esistente (utente, gruppo o applicazione) accessibile in Azure AD dall'istanza gestita di SQL di Azure corrente. Per le entità di sicurezza di Azure AD, la sintassi CREATE LOGIN richiede:
+  - login_name deve rappresentare un account Azure AD esistente (utente, gruppo o applicazione) accessibile in Azure AD dall'Istanza gestita SQL di Azure corrente. Per le entità di sicurezza di Azure AD, la sintassi CREATE LOGIN richiede:
     - UserPrincipalName dell'oggetto di Azure AD per utenti di Azure AD.
     - DisplayName dell'oggetto di Azure AD per i gruppi di Azure AD e le applicazioni di Azure AD.
   - Non è possibile usare l'opzione **PASSWORD**.
@@ -469,18 +469,18 @@ Solo l'account di accesso dell'entità di livello server (creato dal processo di
 
 Per impostazione predefinita, l'autorizzazione standard concessa a un nuovo account di accesso di Azure AD nel database master è: **CONNECT SQL** e **VIEW ANY DATABASE**.
 
-### <a name="sql-database-managed-instance-logins"></a>Account di accesso dell'istanza gestita di database SQL
+### <a name="sql-managed-instance-logins"></a>Account di accesso per Istanza gestita di SQL
 
 - È richiesta l'autorizzazione **ALTER ANY LOGIN** nel server o l'appartenenza a uno dei ruoli predefiniti del server `securityadmin` o `sysadmin`. Il comando Create può essere eseguito solo da un account Azure Active Directory (Azure AD) con l'autorizzazione **ALTER ANY LOGIN** nel server o l'appartenenza a uno di questi ruoli.
 - Se l'account di accesso è un'entità di sicurezza SQL, solo gli account di accesso che fanno parte del ruolo `sysadmin` possono usare il comando per creare gli account di accesso per un account Azure AD.
-- Deve essere un membro di Azure AD all'interno della stessa directory usata per l'istanza gestita di SQL di Azure.
+- Deve essere un membro di Azure AD all'interno della stessa directory usata per l'Istanza gestita SQL di Azure.
 
 ## <a name="after-creating-a-login"></a>Dopo la creazione di un account di accesso
 
 > [!NOTE]
-> L'amministratore di Azure AD per la funzionalità dell'istanza gestita dopo la creazione è stato modificato. Per altre informazioni, vedere [Nuove funzionalità di amministrazione di Azure AD per l'istanza gestita](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
+> L'amministratore di Azure AD per la funzionalità Istanza gestita di SQL di Azure dopo la creazione è stato modificato. Per altre informazioni, vedere [Nuove funzionalità di amministrazione di Azure AD per l'istanza gestita](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
-Una volta creato, un account di accesso può connettersi a un'istanza gestita di database SQL, ma ha solo le autorizzazioni concesse al ruolo **public**. Provare a eseguire alcune delle attività seguenti.
+Una volta creato, un account di accesso può connettersi a un'istanza gestita, ma ha solo le autorizzazioni concesse al ruolo **public**. Provare a eseguire alcune delle attività seguenti.
 
 - Per creare un utente di Azure AD da un account di accesso di Azure AD, vedere [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
 - Per concedere le autorizzazioni a un utente in un database, usare l'istruzione **ALTER SERVER ROLE** ... **ADD MEMBER** per aggiungere l'utente a uno dei ruoli predefiniti del database o a un ruolo personalizzato o concedere le autorizzazioni all'utente direttamente tramite l'istruzione [GRANT](../../t-sql/statements/grant-transact-sql.md). Per altre informazioni, vedere [Utenti non amministratori](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Ruoli amministrativi aggiuntivi a livello di server](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) e l'istruzione [GRANT](grant-transact-sql.md).
@@ -601,7 +601,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Database singolo/pool elastico<br />di database SQL di Azure](create-login-transact-sql.md?view=azuresqldb-current)
+        [Database SQL di Azure](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Istanza gestita<br />di SQL di Azure](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -729,7 +729,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Database singolo/pool elastico<br />di database SQL di Azure](create-login-transact-sql.md?view=azuresqldb-current)
+        [Database SQL di Azure](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Istanza gestita<br />di SQL di Azure](create-login-transact-sql.md?view=azuresqldb-mi-current)

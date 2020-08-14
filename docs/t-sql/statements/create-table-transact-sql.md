@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: be5b8f28ec06b48f0f35d8d246ad12ccbc3c8292
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 7c57cfe67bc8407cd02f970ebcf9ddbc92187071
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86482102"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862991"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -793,7 +793,7 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **Si applica a**: [!INCLUDE[ss
 
 - Specificare `PAUSED` per sospendere o posticipare la migrazione dei dati. Per altre informazioni, vedere [Sospendere e riprendere la migrazione dei dati - Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
 
-MEMORY_OPTIMIZED **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Un'istanza gestita di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] non supporta tabelle ottimizzate per la memoria.
+MEMORY_OPTIMIZED **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Istanza gestita di SQL di Azure non supporta tabelle ottimizzate per la memoria.
 
 Il valore ON indica che la tabella è ottimizzata per la memoria. Le tabelle ottimizzate per la memoria fanno parte della funzionalità OLTP in memoria, che viene usata ottimizzare le prestazioni dell'elaborazione delle transazioni. Per un'introduzione a OLTP in memoria, vedere [Avvio rapido 1: Tecnologie OLTP in memoria per migliorare le prestazioni di Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Per informazioni più dettagliate sulle tabelle ottimizzate per la memoria, vedere [Tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).
 

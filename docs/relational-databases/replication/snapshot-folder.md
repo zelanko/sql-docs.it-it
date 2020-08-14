@@ -13,12 +13,12 @@ ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d66be3ee4f5d4a5eb7237dbec55160b4d263d626
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 21fe129f15022532e9e7c8613159cfc7617fd6e4
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767619"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864868"
 ---
 # <a name="snapshot-folder"></a>Cartella snapshot
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -27,14 +27,14 @@ La pagina **Cartella snapshot** viene visualizzata nella Configurazione guidata 
   
 La cartella snapshot è semplicemente una directory designata come condivisione. Gli agenti che eseguono letture e scritture in questa cartella devono disporre di autorizzazioni sufficienti per accedervi. Per altre informazioni sulle impostazioni di sicurezza appropriate per la cartella, vedere [Proteggere la cartella snapshot](../../relational-databases/replication/security/secure-the-snapshot-folder.md). Prima di implementare la replica è necessario verificare che gli agenti di replica possano connettersi alla cartella snapshot. Accedere con l'account che verrà utilizzato da ogni agente e quindi tentare di accedere alla cartella snapshot.  
 
-Per un'istanza gestita di database SQL di Azure, la cartella snapshot deve essere una condivisione file di Azure. 
+Per Istanza gestita di SQL di Azure, la cartella snapshot deve essere una condivisione file di Azure. 
   
 ## <a name="options"></a>Opzioni  
  **Cartella snapshot**  
  Consente di immettere il percorso della cartella in cui archiviare i file di snapshot.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di usare una condivisione di rete come percorso della cartella snapshot. I percorsi locali, ovvero quelli che iniziano con una lettera di unità, ad esempio C:\\, non sono accessibili agli agenti in altri computer.  
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di usare una condivisione di rete come percorso della cartella snapshot. I percorsi locali, ovvero quelli che iniziano con una lettera di unità, ad esempio C:\\, non sono accessibili agli agenti in altri computer.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modificare le opzioni snapshot](../../relational-databases/replication/snapshot-options.md)   

@@ -21,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 59657ae7be557bfd2c9036f2cba84f3019d4cf0a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 41d77ae1b9c0763fedf2e53610bb3a0be5cd185c
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882069"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823936"
 ---
 # <a name="replication-agent-security-model"></a>Modello di sicurezza dell'agente di replica
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Il modello di sicurezza degli agenti di replica garantisce un controllo dettagliato sugli account usati per eseguire gli agenti e stabilire connessioni: Per ogni agente, è possibile specificare un account diverso. Per altre informazioni su come specificare gli account, vedere [Controllo di identità e accesso (replica)](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
 
-Il modello di sicurezza dell'agente di replica è leggermente diverso per le istanze gestite del database SQL di Azure, in quanto non sono previsti account di Windows con cui verranno eseguiti gli agenti. Al contrario, è necessario eseguire tutte le operazioni tramite l'autenticazione di SQL Server. 
+Il modello di sicurezza dell'agente di replica è leggermente diverso per Istanza gestita di SQL di Azure, in quanto non sono previsti account di Windows con cui verranno eseguiti gli agenti. Al contrario, è necessario eseguire tutte le operazioni tramite l'autenticazione di SQL Server. 
   
 > [!IMPORTANT]  
 >  Quando un membro del ruolo predefinito del server **sysadmin** configura la replica, è possibile configurare gli agenti di replica in modo che rappresentino l'account di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent. A tale scopo è necessario non specificare un account di accesso e una password per un agente di replica. Si tratta comunque di un approccio non consigliato. Ai fini della sicurezza, è consigliabile invece specificare un account per ogni agente dotato delle autorizzazioni minime descritte nella sezione "Autorizzazioni richieste per gli agenti" più avanti in questo argomento.  

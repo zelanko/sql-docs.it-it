@@ -21,12 +21,12 @@ ms.assetid: 385ba80e-7c28-41a5-9cdb-5648f3785983
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 272bfdacbf11207539f75c2c51045eff4e8c5c90
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3a92f830f4880278afacf10f59072b29dede6026
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112190"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863414"
 ---
 # <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;Version - Funzioni di configurazione di Transact SQL
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "87112190"
 > [!NOTE]  
 > Esiste un problema noto a causa del quale la versione del prodotto segnalata da @@VERSION non è corretta per il database SQL di Azure. La versione del motore di database di SQL Server eseguita dal database SQL di Azure è sempre più avanti rispetto alla versione locale di SQL Server e include le correzioni della sicurezza più recenti. Questo significa che il livello di patch è sempre corrispondente o posteriore a quello della versione locale di SQL Serve, e che le funzionalità più recenti disponibili in SQL Server sono disponibili nel database SQL di Azure.
 >
-> Per determinare a livello di codice l'edizione del motore, usare SELECT SERVERPROPERTY('EngineEdition'). Questa query restituirà '5' per database singoli/pool elastici e '8' per le istanze gestite nel database SQL di Azure. 
+> Per determinare a livello di codice l'edizione del motore, usare SELECT SERVERPROPERTY('EngineEdition'). Questa query restituirà '5' per il database SQL di Azure e '8' per Istanza gestita di SQL di Azure.
 >
 > La documentazione verrà aggiornato una volta risolto il problema.
 

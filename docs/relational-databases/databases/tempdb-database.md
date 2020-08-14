@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf911fae5cc8df106cc2a4be9556cf873dd49eaa
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: d4b7c4f52c5d0e70ac6c7f59eebf5fd8a5e47e29
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332480"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864878"
 ---
 # <a name="tempdb-database"></a>Database tempdb
 
@@ -39,8 +39,8 @@ Il database di sistema `tempdb` è una risorsa globale disponibile per tutti gli
   > [!NOTE]
   > Ogni oggetto interno usa un minimo di nove pagine: una pagina IAM e un extent di otto pagine. Per altre informazioni sulle pagine e sugli extent, vedere [Pagine ed extent](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents).
   > [!IMPORTANT]
-  > I database singoli e i pool elastici di database SQL di Azure supportano tabelle temporanee globali e stored procedure temporanee globali archiviate in `tempdb` e con ambito a livello di database. Le tabelle temporanee globali e le stored procedure temporanee globali vengono condivise per le sessioni di tutti gli utenti all'interno dello stesso database SQL di Azure. Le sessioni utente di altri database SQL di Azure non possono accedere alle tabelle temporanee globali. Per altre informazioni, vedere [Tabelle temporanee globali con ambito database (database SQL di Azure)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Istanza gestita di Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)) supporta gli stessi oggetti temporanei di SQL Server.
-  > Per i database singoli e i pool elastici di database SQL di Azure si applicano solo il database master e il database `tempdb`. Per altre informazioni, vedere [Informazioni sul server di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). Per una descrizione di `tempdb` nel contesto di database singoli e pool elastici di database SQL di Azure, vedere [Database tempdb nei database singoli e pool elastici di database SQL di Azure](#tempdb-database-in-sql-database). Per Istanza gestita di database SQL di Azure si applicano tutti i database di sistema.
+  > I database singoli e i pool elastici di database SQL di Azure supportano tabelle temporanee globali e stored procedure temporanee globali archiviate in `tempdb` e con ambito a livello di database. Le tabelle temporanee globali e le stored procedure temporanee globali vengono condivise per le sessioni di tutti gli utenti all'interno dello stesso database SQL di Azure. Le sessioni utente di altri database SQL di Azure non possono accedere alle tabelle temporanee globali. Per altre informazioni, vedere [Tabelle temporanee globali con ambito database (database SQL di Azure)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Istanza gestita di SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) supporta gli stessi oggetti temporanei di SQL Server.
+  > Per i database singoli e i pool elastici di database SQL di Azure si applicano solo il database master e il database `tempdb`. Per altre informazioni, vedere [Informazioni sul server di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). Per una descrizione di `tempdb` nel contesto di database singoli e pool elastici di database SQL di Azure, vedere [Database tempdb nei database singoli e pool elastici di database SQL di Azure](#tempdb-database-in-sql-database). Per Istanza gestita di SQL di Azure si applicano tutti i database di sistema.
 
 - **Archivi delle versioni**, raccolte di pagine di dati che contengono le righe di dati usate dalle caratteristiche che supportano il controllo delle versioni delle righe. Vengono utilizzati due archivi delle versioni: uno comune e uno per la compilazione di indici online. Gli archivi delle versioni contengono:
   - Versioni di riga generate dalle transazioni di modifica dei dati in un database in cui viene usato il Read committed tramite isolamento del controllo delle versioni delle righe o transazioni di isolamento dello snapshot.  

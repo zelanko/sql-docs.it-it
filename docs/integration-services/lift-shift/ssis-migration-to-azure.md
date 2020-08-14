@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 81fb9b9cb792cf350137a375e7a2e25643656b6e
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: 7bf5aa9ee503dff3a00053365485c3ef70cc9247
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002852"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823265"
 ---
 # <a name="migrate-on-premises-ssis-workloads-to-ssis-in-adf"></a>Eseguire la migrazione di carichi di lavoro SSIS locali a SSIS in ADF
 
@@ -36,5 +36,5 @@ A seconda dei tipi di archiviazione dei pacchetti SSIS di origine e della destin
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Eseguire la migrazione di pacchetti SSIS a un'istanza gestita del database SQL di Azure](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance).
+- [Eseguire la migrazione di pacchetti SSIS a Istanza gestita di SQL di Azure](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance).
 - [Eseguire la migrazione di processi SSIS ad Azure Data Factory (ADF) con SQL Server Management Studio (SSMS)](https://docs.microsoft.com/azure/data-factory/how-to-migrate-ssis-job-ssms).

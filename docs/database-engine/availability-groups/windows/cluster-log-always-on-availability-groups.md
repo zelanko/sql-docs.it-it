@@ -1,6 +1,6 @@
 ---
 title: Generare e analizzare CLUSTER.LOG per i gruppi di disponibilità
-description: 'Viene descritto come generare e analizzare il registro cluster per un gruppo di disponibilità Always On. '
+description: Informazioni dettagliate su come generare e analizzare il log del cluster per un gruppo di disponibilità Always On.
 ms.custom: seo-lt-2019
 ms.date: 06/14/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b0cd86318c4ff884ba31fed56e31202c70990ff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: baf2149ebca76caf83ac1453eef742a5aeb88936
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896119"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565319"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Generare e analizzare CLUSTER. LOG per un gruppo di disponibilità Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

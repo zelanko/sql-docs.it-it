@@ -1,6 +1,6 @@
 ---
 title: Configurare la scalabilità in lettura per un gruppo di disponibilità
-description: Configurare un gruppo di disponibilità Always On per i carichi di lavoro di scalabilità in lettura in Windows.
+description: Informazioni su come configurare il gruppo di disponibilità SQL Server Always On per i carichi di lavoro di scalabilità in lettura in Windows.
 ms.custom: seodec18
 author: MashaMSFT
 ms.author: mathoma
@@ -9,12 +9,12 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: ba7827a637c1317500894fcfda85cd1d5122cce7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 89dee4f1fbce612ec3200bf700302f98bd4f9f36
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888110"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565307"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>Configurare la scalabilità in lettura per un gruppo di disponibilità Always On
 

@@ -3,16 +3,16 @@ title: Note sulla versione di SQL Server 2019 in Linux
 description: Questo articolo contiene le note sulla versione e le funzionalità supportate per SQL Server 2019 in esecuzione in Linux. Sono incluse le note sulla versione per la versione più recente e per diverse versioni precedenti.
 author: VanMSFT
 ms.author: vanto
-ms.date: 06/22/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b9b16d15bd3b819e0e14932e42db791118cf4e1e
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 02ed1996d79b0c2760e91fd8c7fda593da145cca
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215825"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790364"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Note sulla versione di SQL Server 2019 in Linux
 
@@ -35,6 +35,7 @@ La tabella seguente elenca la cronologia delle versioni di SQL Server 2019.
 
 | Versione                   | Versione       | Data di rilascio |
 |---------------------------|---------------|--------------|
+| [CU6](#cu6)               | 15.0.4053.23  | 2020-08-04   |
 | [CU5](#cu5)               | 15.0.4043.16  | 2020-06-22   |
 | [CU4](#cu4)               | 15.0.4033.1   | 2020-03-31   |
 | [CU3](#cu3)               | 15.0.4023.6   | 2020-03-12   |
@@ -55,6 +56,25 @@ Se si aggiornano pacchetti di SQL Server esistenti, eseguire il comando di aggio
 - [Installare il supporto per R e Python per Machine Learning Services di SQL Server 2019 in Linux](sql-server-linux-setup-machine-learning.md)
 - [Installare il pacchetto PolyBase](../relational-databases/polybase/polybase-linux-setup.md)
 - [Abilitare SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu6-july-2020"></a><a id="cu6"></a> CU6 (luglio 2020)
+
+Questo è l'aggiornamento cumulativo 6 (CU6) di SQL Server 2019 (15.x). La versione del motore di database di SQL Server per questa versione è 15.0.4053.23. Per informazioni sulle correzioni e sui miglioramenti, vedere <https://support.microsoft.com/help/4563110>.
+
+### <a name="package-details"></a>Dettagli del pacchetto
+
+Per le installazioni dei pacchetti manuali o offline, è possibile scaricare i pacchetti RPM e Debian con le informazioni riportate nella tabella seguente:
+
+> [!NOTE]
+> A partire da CU1, i collegamenti per l'installazione offline dei pacchetti per Red Hat indirizzeranno ai pacchetti RHEL 8. Per scaricare i pacchetti RHEL 7, fare riferimento al percorso di download <https://packages.microsoft.com/rhel/7/mssql-server-2019/>
+>
+> **Ubuntu 18.04** è ora supportato in SQL Server 2019 a partire da CU3. I collegamenti per l'installazione di pacchetti offline per Ubuntu indirizzano a pacchetti Ubuntu 18.04. Per scaricare i pacchetti Ubuntu 16.04, fare riferimento al percorso di download <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/>
+
+| Pacchetto | Versione pacchetto | Download |
+|-----|-----|-----|
+| Pacchetto Red Hat RPM | 15.0.4053.23-2 | [Pacchetto RPM del motore](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4053.23-2.x86_64.rpm)</br>[Pacchetto RPM a disponibilità elevata](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4053.23-2.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4053.23-2.x86_64.rpm)</br>[Pacchetto RPM di estendibilità](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4053.23-2.x86_64.rpm)</br>[Pacchetto RPM di estendibilità Java](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4053.23-2.x86_64.rpm)</br>[Pacchetto RPM PolyBase](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4053.23-2.x86_64.rpm)|
+| Pacchetto SLES RPM | 15.0.4053.23-2 | [Pacchetto RPM del motore mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4053.23-2.x86_64.rpm)</br>[Pacchetto RPM a disponibilità elevata](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4053.23-2.x86_64.rpm)</br>[Pacchetto RPM di ricerca full-text](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4053.23-2.x86_64.rpm)</br>[Pacchetto RPM di estendibilità](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4053.23-2.x86_64.rpm)</br>[Pacchetto RPM di estendibilità Java](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4053.23-2.x86_64.rpm)</br>[Pacchetto RPM PolyBase](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4053.23-2.x86_64.rpm)|
+| Pacchetto Ubuntu 18.04 Debian | 15.0.4053.23-2 | [Pacchetto Debian del motore](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4053.23-2_amd64.deb)</br>[Pacchetto Debian a disponibilità elevata](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4053.23-2_amd64.deb)</br>[Pacchetto Debian di ricerca full-text](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4053.23-2_amd64.deb)</br>[Pacchetto Debian di estendibilità](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4053.23-2_amd64.deb)</br>[Pacchetto Debian di estendibilità Java](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4053.23-2_amd64.deb)</br>[Pacchetto RPM PolyBase](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4053.23-2_amd64.deb)|
 
 ## <a name="cu5-june-2020"></a><a id="cu5"></a> CU5 (giugno 2020)
 

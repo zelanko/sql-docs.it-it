@@ -15,12 +15,12 @@ ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 718c095fb544c2c0b9436a3cfa70040fcf31d71c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7b1338f4e935a2c7e8662a09aacff1cc4b7df9d3
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111736"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988816"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>Finestra di dialogo Proprietà sottoscrizione di replica di SQL Server 
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ La finestra di dialogo **Proprietà sottoscrizione** nel Sottoscrittore consente
   
 > [!NOTE]  
 >  - Se non è stato ancora creato un processo dell'agente di merge o di distribuzione per la sottoscrizione, numerose proprietà non verranno visualizzate. Per creare un processo dell'agente per una sottoscrizione pull, eseguire [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) in caso di una sottoscrizione a una pubblicazione transazionale o snapshot o [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) in caso di una sottoscrizione a una pubblicazione di tipo merge.  
-> - Un'istanza gestita di database SQL di Azure può essere un server di pubblicazione, un server di distribuzione e un Sottoscrittore per la replica snapshot e transazionale. I database singoli e in pool del database SQL di Azure possono essere solo sottoscrittori push per la replica snapshot e transazionale. Per altre informazioni, vedere [Replica transazionale con il database SQL di Azure](/azure/sql-database/sql-database-managed-instance-transactional-replication). 
+> - I database di Istanza gestita di SQL di Azure possono essere un server di pubblicazione, un server di distribuzione e un Sottoscrittore per la replica snapshot e transazionale. I database nel database SQL di Azure possono essere solo sottoscrittori push per la replica snapshot e transazionale. Per altre informazioni, vedere [Replica transazionale con il database SQL di Azure](/azure/sql-database/sql-database-managed-instance-transactional-replication). 
   
 ## <a name="publisher-options-for-all-subscriptions"></a>Opzioni del server di pubblicazione per tutte le sottoscrizioni  
  **Sicurezza**  

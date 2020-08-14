@@ -23,12 +23,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0505a5e6c715558b34d2f1a86e88a0b7b938e7d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 52a669c7a624b2bb88b9f392cf4ecc71be7d681a
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781707"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823981"
 ---
 # <a name="export-a-data-tier-application"></a>Esportazione di un'applicazione livello dati
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "85781707"
 ###  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  L'esportazione di un'applicazione livello dati richiede almeno le autorizzazioni ALTER ANY LOGIN e VIEW DEFINITION nell'ambito del database, oltre alle autorizzazioni SELECT su **sys.sql_expression_dependencies**. L'esportazione di un'applicazione livello dati può essere effettuata da membri del ruolo predefinito del server securityadmin che sono anche membri del ruolo predefinito del database database_owner nel database dal cui viene esportata l'applicazione livello dati. Possono esportare un'applicazione livello dati anche i membri del ruolo predefinito del server sysadmin o dell'account amministratore di sistema SQL Server predefinito denominato **sa** .
  
-Nel database SQL di Azure è necessario concedere **per ogni database** le autorizzazioni VIEW DEFINITION e SELECT per tutte le tabelle o tabelle specifiche
+Nel database SQL di Azure è necessario concedere **per ogni database** le autorizzazioni VIEW DEFINITION e SELECT per tutte le tabelle o per tabelle specifiche
 
   
 ##  <a name="using-the-export-data-tier-application-wizard"></a><a name="UsingDeployDACWizard"></a> Utilizzo della procedura guidata Esporta l'applicazione livello dati  

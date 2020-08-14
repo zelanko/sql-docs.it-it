@@ -41,7 +41,7 @@ IMPORTANCE è locale al pool di risorse. I gruppi di carico di lavoro con divers
 REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*</br>
 Specifica la quantità massima di memoria che una singola richiesta può accettare dal pool. *value* è una percentuale relativa alla dimensione del pool di risorse specificata da MAX_MEMORY_PERCENT.
 
-*value* è un intero fino a [!INCLUDE[ssSQL17](sssql17-md.md)] e un valore float a partire da [!INCLUDE[sql-server-2019](sssqlv15-md.md)] e in un'istanza gestita di [!INCLUDE[ssSDSfull](sssdsfull-md.md)]. Il valore predefinito è 25. L'intervallo consentito per *value* è compreso tra 1 e 100.
+*value* è un intero fino a [!INCLUDE[ssSQL17](sssql17-md.md)] e un valore float a partire da [!INCLUDE[sql-server-2019](sssqlv15-md.md)] e in Istanza gestita di SQL di Azure. Il valore predefinito è 25. L'intervallo consentito per *value* è compreso tra 1 e 100.
 
 > [!IMPORTANT]  
 > La quantità specificata si riferisce solo alla memoria di concessione per l'esecuzione della query.

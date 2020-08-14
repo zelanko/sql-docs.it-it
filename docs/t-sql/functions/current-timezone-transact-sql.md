@@ -24,21 +24,21 @@ helpviewer_keywords:
 - CURRENT_TIMEZONE function [SQL Server]
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 760da1491a7fbf4633cb02fe1fea8568e7ab9fa1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fb06761f06f315191234e5166f098182c515cd97
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85684492"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988819"
 ---
 # <a name="current_timezone-transact-sql"></a>CURRENT_TIMEZONE (Transact-SQL)
 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Questa funzione restituisce il nome del fuso orario osservato da un server o un'istanza. Per Istanza gestita di database SQL, il valore restituito è basato sul fuso orario dell'istanza stessa assegnato durante la creazione dell'istanza e non sul fuso orario del sistema operativo sottostante.
+Questa funzione restituisce il nome del fuso orario osservato da un server o un'istanza. Per Istanza gestita di SQL, il valore restituito è basato sul fuso orario dell'istanza stessa assegnato durante la creazione dell'istanza e non sul fuso orario del sistema operativo sottostante.
   
 > [!NOTE]  
-> Per i database SQL singolo e in pool il fuso orario è sempre impostato su UTC e `CURRENT_TIMEZONE` restituisce il nome del fuso orario UTC.
+> Per i database SQL, il fuso orario è sempre impostato su UTC e `CURRENT_TIMEZONE` restituisce il nome del fuso orario UTC.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -71,6 +71,6 @@ SELECT CURRENT_TIMEZONE();
   
 ## <a name="see-also"></a>Vedere anche
 
-[Fuso orario dell'istanza gestita di database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
+[Fuso orario di Istanza gestita di SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
 
 [CURRENT_TIMEZONE_ID()](https://docs.microsoft.com/sql/t-sql/functions/current-timezone-id-transact-sql)

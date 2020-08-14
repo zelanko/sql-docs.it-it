@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ba782e0a2eee78e6f308ffee0d493fbac2032ce
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 089265151307a72e2f029d016df216e077c2dd88
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113224"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864334"
 ---
 # <a name="restore-statements-transact-sql"></a>Istruzioni RESTORE (Transact-SQL)
 
@@ -64,7 +64,7 @@ Per altre informazioni sulle convenzioni di sintassi, vedere [Convenzioni della 
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Istanza gestita<br />database SQL](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [Database SQL<br />Istanza gestita](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Piattaforma di strumenti<br />analitici (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
@@ -739,7 +739,7 @@ RESTORE DATABASE Sales
         [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Istanza gestita<br />database SQL\*_**
+        **_\* Database SQL<br />Istanza gestita \*_**
     :::column-end:::
     :::column:::
         [Piattaforma di strumenti<br />analitici (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
@@ -748,7 +748,7 @@ RESTORE DATABASE Sales
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Istanza gestita di Database SQL di Azure
+## <a name="azure-sql-managed-instance"></a>Istanza gestita di SQL di Azure
 
 Questo comando consente di ripristinare un intero database da un backup completo del database (ripristino completo) dall'account di archiviazione BLOB di Azure.
 
@@ -760,7 +760,7 @@ Per informazioni sugli altri comandi RESTORE supportati, vedere:
 - [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
 
 > [!IMPORTANT]
-> Per eseguire il ripristino da backup automatici di un'istanza gestita di database SQL di Azure, vedere [Ripristino del database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups).
+> Per eseguire il ripristino dai backup automatici di Istanza gestita di SQL di Azure, vedere [Ripristino del database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -802,17 +802,17 @@ Le seguenti opzioni di database sono impostate/sottoposte a override e non posso
 - Il filegroup con ottimizzazione per la memoria viene aggiunto e denominato XTP se non era presente nel file con estensione bak di origine. Qualsiasi filegroup con ottimizzazione per la memoria esistente viene rinominato come XTP
 - Le opzioni SINGLE_USER e RESTRICTED_USER vengono convertite in MULTI_USER
 
-## <a name="limitations---sql-database-managed-instance"></a>Limitazioni - Istanza gestita di database SQL
+## <a name="limitations---sql-managed-instance"></a>Limitazioni - Istanza gestita di SQL
 
 Si applicano le seguenti limitazioni:
 
 - I file con estensione bak contenenti più set di backup non possono essere ripristinati.
 - I file con estensione bak contenenti più file di log non possono essere ripristinati.
 - Il ripristino non riesce se il file con estensione bak contiene dati FILESTREAM.
-- Non è possibile ripristinare i backup contenenti database con oggetti in memoria attivi in un'istanza gestita per utilizzo generico.
+- Non è possibile ripristinare i backup contenenti database con oggetti in memoria attivi in un livello di prestazioni Utilizzo generico.
 - Attualmente non è possibile ripristinare i backup contenenti database in modalità di sola lettura. Questa limitazione verrà rimossa a breve.
 
-Per altre informazioni, vedere [Istanza gestita](/azure/sql-database/sql-database-managed-instance)
+Per altre informazioni, vedere [Istanza gestita di SQL di Azure](/azure/sql-database/sql-database-managed-instance).
 
 ## <a name="restoring-an-encrypted-database"></a>Ripristino di un database crittografato
 Per ripristinare un database crittografato, è necessario poter accedere alla chiave asimmetrica o al certificato utilizzato per crittografare il database. Non è possibile effettuare l'operazione di ripristino del database senza almeno uno di questi due elementi. Di conseguenza, il certificato utilizzato per crittografare la chiave di crittografia del database deve essere conservato fino a quando il backup è necessario. Per altre informazioni, vedere [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).
@@ -886,7 +886,7 @@ WHERE r.command = 'RESTORE DATABASE'
         [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Istanza gestita<br />database SQL](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [Database SQL<br />Istanza gestita](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Piattaforma di strumenti<br />analitici (PDW) \*_**

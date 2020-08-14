@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 07/17/2020
-ms.openlocfilehash: b064c24ff7717fc5a03ee1413b1e85fbb71530dc
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 4a8f50b7a6558974c79f01f3d157715890beeb82
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411262"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988563"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
 
@@ -47,7 +47,7 @@ ms.locfileid: "87411262"
 | Aggiunta della presentazione delle nuove funzionalità | Dalla home page e dal riquadro comandi, gli utenti possono ora avviare una presentazione che illustra in modo dettagliato le funzionalità di uso comune, tra cui il viewlet Connessioni, il viewlet Notebooks e il Marketplace Estensioni |
 | Nuove funzionalità dei notebook | &bull; &nbsp; Supporto per le intestazione nella barra degli strumenti di Markdown<br/> &bull; &nbsp; Anteprima di Markdown affiancata nelle celle di testo
 | Trascinare colonne e tabelle nell'editor di query | Gli utenti possono ora trascinare colonne e tabelle direttamente dal viewlet Connessioni all'editor di query |
-| Aggiunta dell'icona Account Azure alla barra delle attività | Opzione per l'accesso ad Azure più facilmente individuabile |
+| Aggiunta dell'icona Account Azure alla barra delle attività | Gli utenti possono ora visualizzare facilmente la posizione da cui accedere ad Azure |
 | Bug e problemi risolti | Per un elenco completo delle correzioni, vedere i [bug e i problemi su GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed). |
 | &nbsp; | &nbsp; |
 
@@ -546,7 +546,7 @@ Versione disponibile a livello generale di Azure Data Studio (in precedenza SQL 
 | :----- | :------ |
 | Supporto delle funzionalità SQL Server 2019 (anteprima), incluso il supporto dei [cluster Big Data](../big-data-cluster/big-data-cluster-overview.md). | Capacità di connessione al gateway HDFS/Spark fornita con SQL Server 2019 (anteprima).<br/><br/>Possibilità di esplorare Hadoop Distributed File System (HDFS), caricare file, salvare file e avviare azioni utili come l'analisi nei notebook per i file CSV.<br/><br/>Invio di processi Spark dal dashboard o facendo clic con il pulsante destro del mouse su una connessione HDFS/Spark in Esplora oggetti. |
 | Notebook di Azure Data Studio. | Possibilità di creare o aprire notebook usando un visualizzatore notebook integrato. In questa versione il visualizzatore notebook supporta solo la connessione ai kernel locali e al cluster Big Data di SQL Server 2019.<br/><br/>Uso delle librerie dell'acceleratore di codice PROSE nei notebook per apprendere il formato file e i tipi di dati per la preparazione rapida dei dati. |
-| Azure Resource Explorer. | La visualizzazione Azure Resource Explorer consente di esplorare gli endpoint correlati ai dati per gli account Azure e di creare connessioni a tali endpoint in Esplora oggetti. In questa versione sono supportati server e database SQL di Azure. |
+| Azure Resource Explorer. | La visualizzazione Azure Resource Explorer consente di esplorare gli endpoint correlati ai dati per gli account Azure e di creare connessioni a tali endpoint in Esplora oggetti. In questa versione, il database SQL di Azure è supportato. |
 | Procedura guidata di creazione tabella esterna in SQL Server PolyBase. | Creazione di una tabella esterna e delle strutture di metadati di supporto con una procedura guidata di facile utilizzo. In questa versione sono supportati i server remoti SQL Server e Oracle. |
 | &nbsp; | &nbsp; |
 
