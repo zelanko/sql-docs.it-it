@@ -1,7 +1,7 @@
 ---
 title: sys. dm_resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 08/06/2020
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.reviewer: ''
@@ -19,13 +19,13 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ee42a9a7b4fe026df8e9a424ed25224e7a7edb7b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: bfc975662e2efef22957bb78b03125d67d2188d5
+ms.sourcegitcommit: cd1a5d152d05aeee3252ce313e63d396734f85bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88171016"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88239209"
 ---
 # <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>sys. dm_resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -44,16 +44,19 @@ Restituisce informazioni sullo stato corrente del pool di risorse esterne, la co
 | max_memory_percent|**int**|Configurazione corrente della percentuale di memoria totale del server utilizzabile dalle richieste in questo pool di risorse. Non ammette i valori Null. |
 | statistics_start_time|**datetime**|Ora di reimpostazione delle statistiche per questo pool. Non ammette i valori Null. 
 | peak_memory_kb|**bigint**|Quantità massima di memoria utilizzata, in kilobyte, per il pool di risorse. Non ammette i valori Null. |
-| write_io_count|**int**|Il totale degli I/O di scrittura generati dalla reimpostazione delle statistiche di Resource Govenor. Non ammette i valori Null. |
-| read_io_count|**int**|Il totale degli I/O di lettura generati dalla reimpostazione delle statistiche di Resource Govenor. Non ammette i valori Null. |
-| total_cpu_kernel_ms|**bigint**|Tempo del kernel utente della CPU cumulativa in millisecondi dal momento in cui sono state reimpostate le statistiche di Resource Govenor. Non ammette i valori Null. |
-| total_cpu_user_ms|**bigint**|Tempo utente cumulativo della CPU, in millisecondi, dopo la reimpostazione delle statistiche di Resource Govenor. Non ammette i valori Null. |
+| write_io_count|**int**|Il totale degli I/O di scrittura generati dalla reimpostazione delle statistiche di Resource Governor. Non ammette i valori Null. |
+| read_io_count|**int**|Il totale degli I/O di lettura generati dalla reimpostazione delle statistiche di Resource Governor. Non ammette i valori Null. |
+| total_cpu_kernel_ms|**bigint**|Tempo del kernel dell'utente della CPU cumulativo, espresso in millisecondi, dalla reimpostazione delle statistiche di Resource Governor. Non ammette i valori Null. |
+| total_cpu_user_ms|**bigint**|Tempo dell'utente della CPU cumulativo, espresso in millisecondi, dalla reimpostazione delle statistiche di Resource Governor. Non ammette i valori Null. |
 | active_processes_count|**int**|Numero di processi esterni in esecuzione al momento della richiesta. Non ammette i valori Null. |
 
  
 ## <a name="permissions"></a>Autorizzazioni
 
 È richiesta l'autorizzazione `VIEW SERVER STATE`.
+
+> [!NOTE]
+> SQL Machine Learning Services 2019 per Linux non supporta la possibilità di impostare l'affinità di CPU.
 
 ## <a name="see-also"></a>Vedere anche  
  [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
