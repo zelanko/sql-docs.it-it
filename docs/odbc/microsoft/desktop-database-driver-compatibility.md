@@ -1,4 +1,5 @@
 ---
+description: Compatibilità dei driver di database desktop
 title: Compatibilità del driver del database desktop | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dd695638-1a0b-4e27-8a6a-9510ebb5a5ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 89eea7ab112eaefdc73c7cbc72ee3555797c7efd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b15ec35a01b61eef401f217733917a80bbe32b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303522"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340777"
 ---
 # <a name="desktop-database-driver-compatibility"></a>Compatibilità dei driver di database desktop
 Unicode è un metodo di codifica dei caratteri software che considera tutti i caratteri con una larghezza fissa di due byte. Questo metodo viene usato come alternativa alla codifica dei caratteri ANSI di Windows, che, poiché rappresenta i caratteri in un byte, è limitato a 256 caratteri. Poiché Unicode può rappresentare più di 65.000 caratteri, include molti linguaggi i cui caratteri non sono rappresentati nella codifica ANSI.  

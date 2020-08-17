@@ -1,4 +1,5 @@
 ---
+description: Autorizzazioni membri gerarchie (Master Data Services)
 title: Autorizzazioni membri gerarchia
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 39470b09370db89cdba3e8c8f26e8b08376c1c07
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 3911b44ee31c0bb4cd4e8b829bf3d8e2c70e9913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344097"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Autorizzazioni membri gerarchie (Master Data Services)
 
@@ -41,8 +42,8 @@ ms.locfileid: "85813322"
 |----------------|-----------------|  
 |**Lettura**|I membri vengono visualizzati.<br /><br /> <br /><br /> Nota: se si assegna l'autorizzazione di **Read** a **Radice**, i membri in **Radice** sono di sola lettura. Nelle gerarchie esplicite e nelle raccolte l'utente può invece spostare i membri in **Radice** e aggiungere nuovi membri a **Radice**.|  
 |**Creare**|L'autorizzazione di creazione non è disponibile nell'autorizzazione dei membri della gerarchia.|  
-|**Update**|I membri vengono visualizzati e l'utente può modificarli. L'utente può inoltre spostare i membri in qualsiasi gerarchia o raccolta esplicita cui essi appartengono.|  
-|**Eliminazione**|I membri vengono visualizzati e l'utente può eliminarli.|  
+|**Aggiornamento**|I membri vengono visualizzati e l'utente può modificarli. L'utente può inoltre spostare i membri in qualsiasi gerarchia o raccolta esplicita cui essi appartengono.|  
+|**Elimina**|I membri vengono visualizzati e l'utente può eliminarli.|  
 |**Nega**|I membri non vengono visualizzati.|  
   
  Nella scheda **Membri gerarchia** le autorizzazioni assegnate non vengono applicate immediatamente. La frequenza con cui le autorizzazioni vengono applicate dipende dall'**impostazione relativa all'intervallo di elaborazione della sicurezza dei membri** nella tabella Impostazioni sistema del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . È possibile applicare immediatamente autorizzazioni di membri seguendo i passaggi descritti in [Applicare immediatamente autorizzazioni membri &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  

@@ -1,4 +1,5 @@
 ---
+description: sys.fulltext_document_types (Transact-SQL)
 title: sys. fulltext_document_types (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 454b1460b0f1db0da7298e640b7b4cf081bb90b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 05314ee0324683c712e72dc6b524030fc50a6c71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790542"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88323747"
 ---
 # <a name="sysfulltext_document_types-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85790542"
 |**class_id**|**uniqueidentifier**|GUID della classe IFilter che supporta l'estensione di file.|  
 |**path**|**nvarchar(260)**|Percorso della DLL dell'interfaccia IFilter. Il percorso è visibile solo ai membri del ruolo predefinito del server **serveradmin** .|  
 |**version**|**sysname**|Versione della DLL dell'interfaccia IFilter.|  
-|**Produttore**|**sysname**|Nome del produttore dell'interfaccia IFilter.<br /><br /> Nota: solo i documenti con il produttore [!INCLUDE[msCoName](../../includes/msconame-md.md)] sono supportati in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|  
+|**manufacturer**|**sysname**|Nome del produttore dell'interfaccia IFilter.<br /><br /> Nota: solo i documenti con il produttore [!INCLUDE[msCoName](../../includes/msconame-md.md)] sono supportati in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  

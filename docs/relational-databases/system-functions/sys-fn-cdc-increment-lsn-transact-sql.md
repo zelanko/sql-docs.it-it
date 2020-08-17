@@ -1,4 +1,5 @@
 ---
+description: sys.fn_cdc_increment_lsn (Transact-SQL)
 title: sys.fn_cdc_increment_lsn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6907b5df12a655d6444981afa4a84a2753d22f53
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4ad4595995bc6768c4b0b5e297155530316a9d04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321567"
 ---
 # <a name="sysfn_cdc_increment_lsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. fn_cdc_decrement_lsn &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md)   
+ [sys. fn_cdc_decrement_lsn &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md)   
  [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
  [CDC. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
  [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   

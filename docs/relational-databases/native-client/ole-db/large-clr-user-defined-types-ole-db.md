@@ -1,4 +1,5 @@
 ---
+description: Tipi CLR definiti dall'utente di grandi dimensioni in SQL Server Native Client (OLE DB)
 title: Tipi CLR definiti dall'utente di grandi dimensioni (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e851332ad3f8485e7c716101942b1cdc0c6838bb
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b5342dcab8dee628f074963a7ddc56a0ecc1d940
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243884"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328287"
 ---
 # <a name="large-clr-user-defined-types-in-sql-server-native-client-ole-db"></a>Tipi CLR definiti dall'utente di grandi dimensioni in SQL Server Native Client (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "87243884"
   
  Nella tabella seguente viene illustrato il mapping dei tipi di dati nei parametri e nei set di righe:  
   
-|Tipo di dati di SQL Server|Tipo di dati OLE DB|Layout in memoria|Valore|  
+|Tipo di dati di SQL Server|Tipo di dati OLE DB|Layout in memoria|valore|  
 |--------------------------|----------------------|-------------------|-----------|  
 |tipo CLR definito dall'utente|DBTYPE_UDT|BYTE[](matrice di byte\)|132 (oledb.h)|  
   
@@ -75,8 +76,8 @@ ms.locfileid: "87243884"
   
 |Tipo di colonna|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE|DBCOLUMN_FLAGS_ISLONG|DBCOLUMNS_ISSEARCHABLE|DBCOLUMN_OCTETLENGTH|  
 |-----------------|--------------------|--------------------------|-------------------------|---------------------|-----------------------------|-----------------------------|---------------------------|  
-|DBTYPE_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|DBTYPE_UDT|*n*|NULL|NULL|Cancella|DB_ALL_EXCEPT_LIKE|n|  
-|DBTYPE_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|DBTYPE_UDT|~0|NULL|NULL|Set|DB_ALL_EXCEPT_LIKE|0|  
+|DBTYPE_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|DBTYPE_UDT|*n*|NULL|NULL|Clear|DB_ALL_EXCEPT_LIKE|n|  
+|DBTYPE_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|DBTYPE_UDT|~0|NULL|NULL|Configurazione|DB_ALL_EXCEPT_LIKE|0|  
   
  Per i tipi definiti dall'utente vengono definite anche le colonne seguenti:  
   
@@ -92,16 +93,16 @@ ms.locfileid: "87243884"
   
 |Tipo di parametro|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
-|DBTYPE_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|DBTYPE_UDT|*n*|~0|~0|Cancella|  
-|DBTYPE_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|DBTYPE_UDT|~0|~0|~0|Set|  
+|DBTYPE_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|DBTYPE_UDT|*n*|~0|~0|Clear|  
+|DBTYPE_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|DBTYPE_UDT|~0|~0|~0|Configurazione|  
   
 ## <a name="columns-rowset-schema-rowsets"></a>Set di righe COLUMNS (set di righe dello schema)  
  Per i tipi definiti dall'utente vengono restituiti i valori di colonna seguenti:  
   
 |Tipo di colonna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_ISLONG|CHARACTER_OCTET_LENGTH|  
 |-----------------|----------------|-----------------------------------------|------------------------------|  
-|DBTYPE_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|DBTYPE_UDT|Cancella|*n*|  
-|DBTYPE_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|DBTYPE_UDT|Set|0|  
+|DBTYPE_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|DBTYPE_UDT|Clear|*n*|  
+|DBTYPE_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|DBTYPE_UDT|Configurazione|0|  
   
  Per i tipi definiti dall'utente vengono definite le colonne aggiuntive seguenti:  
   
@@ -165,14 +166,14 @@ ms.locfileid: "87243884"
 ## <a name="down-level-client-behavior-for-udts"></a>Comportamento dei client legacy per i tipi definiti dall'utente  
  I tipi definiti dall'utente sono soggetti al mapping dei tipi con i client legacy nel modo seguente:  
   
-|Versione client |DBTYPE_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|DBTYPE_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|  
+|Versione client|DBTYPE_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|DBTYPE_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|  
 |--------------------|------------------------------------------------------------------|---------------------------------------------------------|  
 |SQL Server 2005|UDT|varbinary(max)|  
 |SQL Server 2008 e versioni successive|UDT|UDT|  
   
  Quando **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) è impostato su "80", i tipi definiti dall'utente di grandi dimensioni vengono visualizzati ai client nello stesso modo in cui vengono visualizzati ai client legacy.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Tipi CLR definiti dall'utente di grandi dimensioni](~/relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

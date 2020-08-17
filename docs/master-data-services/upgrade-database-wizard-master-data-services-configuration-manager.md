@@ -1,4 +1,5 @@
 ---
+description: Aggiornamento guidato database (Gestione configurazione Master Data Services)
 title: Aggiornamento guidato database
 ms.custom: ''
 ms.date: 03/20/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 45b1cf5e98c06780c698c2d58d0430e9cab95391
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 42cc53149774051c38cd5b15b86d5f6aaff177ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812664"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88342307"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Aggiornamento guidato database (Gestione configurazione Master Data Services)
 

@@ -1,4 +1,5 @@
 ---
+description: sys.fn_cdc_decrement_lsn (Transact-SQL)
 title: sys.fn_cdc_decrement_lsn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 83c182ad-4713-439b-8769-9b7408aec8b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d3650074475fef2ed74dd589a53c78ce7090676
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6402fabc4904ca8d9c9953d8dddc6f4626d949dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898437"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321757"
 ---
 # <a name="sysfn_cdc_decrement_lsn-transact-sql"></a>sys.fn_cdc_decrement_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,9 +69,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. fn_cdc_increment_lsn &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)   
- [sys. fn_cdc_get_min_lsn &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
- [sys. fn_cdc_get_max_lsn &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
+ [sys. fn_cdc_increment_lsn &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)   
+ [sys. fn_cdc_get_min_lsn &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
+ [sys. fn_cdc_get_max_lsn &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [Informazioni su Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   

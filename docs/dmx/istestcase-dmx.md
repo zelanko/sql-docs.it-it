@@ -1,4 +1,5 @@
 ---
+description: IsTestCase (DMX)
 title: IsTestCase (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ef4dc17d77707ca5bf08f935fb4a62f6d979ae05
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 11795005d0a2a7cf97a515278a30a586ff640ef0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969561"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352277"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -49,7 +50,7 @@ FROM [Targeted Mailing].CASES
 WHERE IsTestCase()  
 ```  
   
- Per ulteriori informazioni su come eseguire una query sui case utilizzati in data mining, vedere [selezionare da &#60;modello&#62;. CASI &#40;&#41;DMX](../dmx/select-from-model-cases-dmx.md) e [selezionare &#60;struttura&#62;. CASI](../dmx/select-from-structure-cases.md).  
+ Per ulteriori informazioni su come eseguire una query sui case utilizzati in data mining, vedere [selezionare da &#60;modello&#62;. CASI &#40;&#41;DMX ](../dmx/select-from-model-cases-dmx.md) e [selezionare &#60;struttura&#62;. CASI](../dmx/select-from-structure-cases.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   

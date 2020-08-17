@@ -1,4 +1,5 @@
 ---
+description: Conversioni di SQL Server Native Client eseguite dal server al client
 title: Conversioni eseguite da server a client
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e4e183c58de8eb3749a01fc95c32a1b405e04e8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7960647af0d661d52fe6ebce467468691cc2e785
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328027"
 ---
 # <a name="sql-server-native-client-conversions-performed-from-server-to-client"></a>Conversioni di SQL Server Native Client eseguite dal server al client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "87245870"
 ## <a name="conversions"></a>Conversioni  
  Nella tabella seguente vengono descritte le conversioni tra il tipo restituito al client e il tipo presente nell'associazione. Per i parametri di output, se è stato chiamato ICommandWithParameters::SetParameterInfo e il tipo specificato in *pwszDataSourceType* non corrisponde al tipo di dati effettivo del server, il server esegue una conversione implicita e il tipo restituito al client corrisponderà a quello specificato tramite ICommandWithParameters::SetParameterInfo. Questo può causare risultati di conversione imprevisti quando le regole di conversione del server sono diverse da quelle descritte in questo argomento. Quando ad esempio è necessario specificare una data predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza 1900-1-1 anziché 1899-12-30.  
   
-|A -><br /><br /> Da|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
+|A -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
 |Data|1,7|OK|-|-|1|1,3|1,7|-|OK (VT_BSTR)|OK|OK|4|4|  
 |Tempo|5, 6, 7|-|9|OK|6|3, 6|5, 6|-|OK (VT_BSTR)|OK|OK|4|4|  
@@ -64,7 +65,7 @@ ms.locfileid: "87245870"
 |12|La stringa viene analizzata come valore letterale ISO e convertita nel tipo di destinazione. Se l'operazione non riesce, la stringa viene analizzata come valore letterale data OLE (che presenta anche componenti di ora) e convertita da data OLE (DBTYPE_DATE) nel tipo di destinazione. La stringa deve essere conforme alla sintassi per i valori letterali del tipo di destinazione consentiti per la riuscita dell'analisi del formato ISO. Perché l'analisi OLE riesca, è necessario che la stringa sia conforme alla sintassi riconosciuta da OLE. Se non è possibile analizzare la stringa, viene impostato DBSTATUS_E_CANTCONVERTVALUE. Se sono presenti valori di componente esterni all'intervallo, viene impostato DBSTATUS_E_DATAOVERFLOW.|  
 |13|La stringa viene analizzata come valore letterale ISO e convertita nel tipo di destinazione. Se l'operazione non riesce, la stringa viene analizzata come valore letterale data OLE (che presenta anche componenti di ora) e convertita da data OLE (DBTYPE_DATE) nel tipo di destinazione. La stringa deve essere conforme alla sintassi per i valori letterali di data e ora, a meno che la destinazione non sia DBTYPE_DATE o DBTYPE_DBTIMESTAMP. In questo caso, per la riuscita dell'analisi del formato ISO è consentito un valore letterale data e ora oppure ora. Perché l'analisi OLE riesca, è necessario che la stringa sia conforme alla sintassi riconosciuta da OLE. Se non è possibile analizzare la stringa, viene impostato DBSTATUS_E_CANTCONVERTVALUE. Se sono presenti valori di componente esterni all'intervallo, viene impostato DBSTATUS_E_DATAOVERFLOW.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Associazioni e conversioni &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
   
   

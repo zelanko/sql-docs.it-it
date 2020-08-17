@@ -1,4 +1,5 @@
 ---
+description: Supporto del set di righe dello schema in SQL Server Native Client (OLE DB)
 title: Supporto del set di righe dello schema (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faa764aae707ae785c7cfd1cb324427b9a941376
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 5ecbd97ecdd60a65fdc72a55b8669a72e4b37a7a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88327597"
 ---
 # <a name="schema-rowset-support-in-sql-server-native-client-ole-db"></a>Supporto del set di righe dello schema in SQL Server Native Client (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,6 +60,6 @@ ms.locfileid: "87243882"
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
- [Utilizzo dei tipi definiti dall'utente (UDT)](../../../relational-databases/native-client/features/using-user-defined-types.md)  
+ [Uso dei tipi definiti dall'utente](../../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   

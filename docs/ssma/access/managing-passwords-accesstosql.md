@@ -1,4 +1,5 @@
 ---
+description: Gestione delle password (AccessToSQL)
 title: Gestione delle password (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0023e6d04b2f339fbd67337b7b241da2df275a79
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: dc47389afdd9b8241a0d06960baf592639daa6cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938045"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372857"
 ---
 # <a name="managing-passwords-accesstosql"></a>Gestione delle password (AccessToSQL)
 In questa sezione viene illustrata la protezione delle password del database e la procedura per importarli o esportarli tra server:  

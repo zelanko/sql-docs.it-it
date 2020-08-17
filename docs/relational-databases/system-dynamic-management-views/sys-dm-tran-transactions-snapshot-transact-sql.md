@@ -1,4 +1,5 @@
 ---
+description: sys.dm_tran_transactions_snapshot (Transact-SQL)
 title: sys. dm_tran_transactions_snapshot (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
@@ -20,12 +21,12 @@ ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 257878b1995a779f7e6f317864a627eaa27f1e88
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f7497dbdce71e0989cc6bfa06da0acbaea118dbd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718700"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88323737"
 ---
 # <a name="sysdm_tran_transactions_snapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,7 +70,7 @@ transaction_sequence_num snapshot_id snapshot_sequence_num
 ## <a name="permissions"></a>Autorizzazioni
 
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
-Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
+Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l'  **amministratore del server** o un account **amministratore Azure Active Directory** .   
   
 ## <a name="remarks"></a>Osservazioni  
  Quando una transazione snapshot viene avviata, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] registra tutte le transazioni attive in quel momento. **sys. dm_tran_transactions_snapshot** segnala queste informazioni per tutte le transazioni snapshot attualmente attive.  
@@ -77,7 +78,7 @@ Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l
  Ogni transazione viene identificata da un numero di sequenza della transazione assegnato all'inizio della transazione. Le transazioni hanno inizio quando viene eseguita un'istruzione BEGIN TRANSACTION o BEGIN WORK. Tuttavia, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] assegna il numero di sequenza della transazione con l'esecuzione della prima istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che accede ai dati dopo l'istruzione BEGIN TRANSACTION o BEGIN WORK. I numeri di sequenza delle transazioni vengono aumentati di un'unità.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica relative alle transazioni &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

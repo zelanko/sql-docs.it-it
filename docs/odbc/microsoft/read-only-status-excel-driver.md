@@ -1,4 +1,5 @@
 ---
+description: Stato di sola lettura (driver Excel)
 title: Stato di sola lettura (driver Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef5d773b-4f8f-4005-b985-84b53d8e9f9b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb585d4712b6cac5e09b65ee8e13604763cd0164
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04a0c5d0cb2c9932d30c0edb900169d8c5e5f82b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340387"
 ---
 # <a name="read-only-status-excel-driver"></a>Stato di sola lettura (driver Excel)
 Quando si utilizza il driver Microsoft Excel, le tabelle di origine dati vengono aperte come di sola lettura per impostazione predefinita e possono essere aperte da un solo utente alla volta. Sebbene le tabelle abbiano stato di sola lettura, tuttavia, le applicazioni possono eseguire inserimenti e aggiornamenti per le tabelle di Microsoft Excel.  

@@ -1,4 +1,5 @@
 ---
+description: sys.database_mirroring_endpoints (Transact-SQL)
 title: sys. database_mirroring_endpoints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ec6735986626463a3e784ca4b87a9d50564d9b81
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 155dce156469f5ee629143b7613bbf5e6c174c71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895247"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88324067"
 ---
 # <a name="sysdatabase_mirroring_endpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,9 +61,9 @@ ms.locfileid: "85895247"
 ## <a name="see-also"></a>Vedere anche  
  [Specificare l'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)   
  [sys.availability_replicas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
- [sys. database_mirroring &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
- [sys. database_mirroring_witnesses &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
- [&#40;SQL Server dell'endpoint del mirroring del database&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [sys. database_mirroring &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
+ [sys. database_mirroring_witnesses &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
+ [Endpoint del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Domande frequenti sull'esecuzione di query sul catalogo di sistema di SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

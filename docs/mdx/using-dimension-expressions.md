@@ -1,4 +1,5 @@
 ---
+description: Utilizzo delle espressioni di dimensione
 title: Utilizzo di espressioni di dimensione | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0373bbda2d0c97946f15e048b7cc49175ca66669
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8fb367f0e4ab1cc99a1a84ed51e3cca3cab75ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341117"
 ---
 # <a name="using-dimension-expressions"></a>Utilizzo delle espressioni di dimensione
 
 
   In genere le espressioni di dimensione e di gerarchia vengono utilizzate per passare parametri a funzioni nelle espressioni MDX al fine di ottenere membri, set o tuple da una gerarchia.  
   
- Le espressioni di dimensione possono essere solo espressioni semplici perché rappresentano identificatori di oggetto. Per una spiegazione delle espressioni semplici e complesse, vedere [espressioni &#40;&#41;MDX](../mdx/expressions-mdx.md) .  
+ Le espressioni di dimensione possono essere solo espressioni semplici perché rappresentano identificatori di oggetto. Per una spiegazione delle espressioni semplici e complesse, vedere [espressioni &#40;&#41;MDX ](../mdx/expressions-mdx.md) .  
   
 ## <a name="dimension-expressions"></a>Espressioni di dimensione  
  Un'espressione di dimensione contiene un identificatore di dimensione o una funzione per le dimensioni.  

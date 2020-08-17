@@ -1,4 +1,5 @@
 ---
+description: Autorizzazioni per modelli e membri sovrapposte (Master Data Services)
 title: Autorizzazioni per modelli e membri sovrapposte
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0168bda2095d0286f184ba3f8530e51c4d7a1d42
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: d3de498043b5be0e6ad71a9e32b5abbc6db7ab21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812356"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88343227"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Autorizzazioni per modelli e membri sovrapposte (Master Data Services)
 

@@ -1,4 +1,5 @@
 ---
+description: Utilizzo di funzioni per dimensioni, gerarchie e livelli
 title: Utilizzo di funzioni di dimensioni, gerarchie e livelli | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8fa374ef93f56f8cddaed81bc9e3872d1eb206c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afb7d324a2a4450a4df09ec3493954f0566a2cfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097181"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341107"
 ---
 # <a name="using-dimension-hierarchy-and-level-functions"></a>Utilizzo di funzioni per dimensioni, gerarchie e livelli
 
 
   Le funzioni per dimensioni, gerarchie e livelli consentono di attraversare le strutture multidimensionali utilizzate Analysis Services. Tali funzioni vengono in genere utilizzate insieme ad altre funzioni, per ottenere informazioni sui membri di una dimensione, di una gerarchia o di un livello.  
   
- Nell'esempio seguente viene illustrato come utilizzare l'oggetto **. Dimensione** **. Gerarchia**, e **. **Funzioni di livello:  
+ Nell'esempio seguente viene illustrato come utilizzare l'oggetto **. Dimensione** **. Gerarchia**, e **. ** Funzioni di livello:  
   
  `WITH`  
   

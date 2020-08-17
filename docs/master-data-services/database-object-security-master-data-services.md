@@ -1,4 +1,5 @@
 ---
+description: Sicurezza di oggetti di database (Master Data Services)
 title: Sicurezza di oggetti di database
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 656b36f796d05d6ea7533c8c35e4b6ffe9572f99
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f9b2089b72f11872df0dc0c0b2758fb8272a4c06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811583"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344907"
 ---
 # <a name="database-object-security-master-data-services"></a>Sicurezza di oggetti di database (Master Data Services)
 
@@ -57,7 +58,7 @@ ms.locfileid: "85811583"
   
  Per altre informazioni, vedere [Panoramica: importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
-##  <a name="validating-data-against-business-rules"></a><a name="rules"></a>Convalida dei dati rispetto a regole business  
+##  <a name="validating-data-against-business-rules"></a><a name="rules"></a> Convalida dei dati rispetto a regole business  
   
 |Azione|Entità a protezione diretta|Autorizzazioni|  
 |------------|---------------|-----------------|  
@@ -65,7 +66,7 @@ ms.locfileid: "85811583"
   
  Per altre informazioni, vedere [Stored procedure di convalida &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
-##  <a name="deleting-versions"></a><a name="Versions"></a>Eliminazione di versioni  
+##  <a name="deleting-versions"></a><a name="Versions"></a> Eliminazione di versioni  
   
 |Azione|Entità a protezione diretta|Autorizzazioni|  
 |------------|----------------|-----------------|  
@@ -74,7 +75,7 @@ ms.locfileid: "85811583"
   
  Per altre informazioni, vedere [Eliminare una versione &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md).  
   
-##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a>Applicazione immediata di autorizzazioni membri gerarchia  
+##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a> Applicazione immediata di autorizzazioni membri gerarchia  
   
 |Azione|Entità a protezione diretta|Autorizzazioni|  
 |------------|----------------|-----------------|  
@@ -82,7 +83,7 @@ ms.locfileid: "85811583"
   
  Per altre informazioni, vedere [Applicare immediatamente autorizzazioni membri &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
-##  <a name="configuring-system-settings"></a><a name="SysSettings"></a>Configurazione delle impostazioni di sistema  
+##  <a name="configuring-system-settings"></a><a name="SysSettings"></a> Configurazione delle impostazioni di sistema  
  È possibile configurare alcune impostazioni di sistema per controllare il comportamento in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Queste impostazioni possono essere modificate in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] oppure, se si dispone dell'autorizzazione di accesso UPDATE, direttamente nella tabella di database mdm.tblSystemSetting. Per altre informazioni, vedere [Impostazioni di sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  

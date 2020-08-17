@@ -1,4 +1,5 @@
 ---
+description: Utilizzo di espressioni di cubo e sottocubo
 title: Utilizzo di espressioni di cubo e sottocubo | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7c656bdaa0de108ade568a22bbcc734f38d43bfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b431d82f24e5bf531dfa407d459ff9f36b543160
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341127"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>Utilizzo di espressioni di cubo e sottocubo
 
@@ -69,9 +70,9 @@ ms.locfileid: "68893532"
  Un identificatore di sottocubo viene visualizzato come *Subcube_Name*. nelle descrizioni della annotazione BNF delle istruzioni MDX.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query MDX di base &#40;&#41;MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
+ [Query MDX di base &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
  [Compilazione di sottocubi in MDX &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
- [Istruzione CREATE SUBCUBE &#40;&#41;MDX](../mdx/mdx-data-definition-create-subcube.md)   
+ [Istruzione CREATE SUBCUBE &#40;&#41;MDX ](../mdx/mdx-data-definition-create-subcube.md)   
  [Espressioni &#40;MDX&#41;](../mdx/expressions-mdx.md)   
  [Istruzione SCOPE &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
   

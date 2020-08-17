@@ -1,4 +1,5 @@
 ---
+description: Viste del catalogo Rilevamento modifiche-sys. change_tracking_databases
 title: sys. change_tracking_databases (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
@@ -21,12 +22,12 @@ ms.assetid: bb233baa-2991-4904-a0eb-3772b81121a4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 414286c06884721fad81ea25dd100fa5a7cd13b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f5bdc89402ed43464fb84c02177ca9e07de3a1cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753011"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88324567"
 ---
 # <a name="change-tracking-catalog-views---syschange_tracking_databases"></a>Viste del catalogo Rilevamento modifiche-sys. change_tracking_databases
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85753011"
  Gli stessi controlli dell'autorizzazione vengono effettuati per sys.change_tracking_databases, così come per sys.databases. Se il chiamante di sys.change_tracking_databases non è il proprietario del database, le autorizzazioni minime necessarie per visualizzare la riga corrispondente sono ALTER ANY DATABASE o VIEW ANY DATABASE a livello di server, oppure l'autorizzazione CREATE DATABASE nel database master o corrente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo di Rilevamento modifiche &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
+ [Viste del catalogo di Rilevamento modifiche &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
  [Rilevare le modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   
   

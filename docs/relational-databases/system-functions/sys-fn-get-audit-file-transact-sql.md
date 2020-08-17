@@ -1,4 +1,5 @@
 ---
+description: sys.fn_get_audit_file (Transact-SQL)
 title: sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/19/2020
@@ -21,12 +22,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 4d280a00eb9d972cea510ae650c4598561b77fef
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: cda66aed0e3ddea4bcb14bc30ca5805bf943afb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988788"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321797"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -51,7 +52,7 @@ fn_get_audit_file ( file_pattern,
     
     Questo argomento deve includere sia un percorso (lettera di unità o condivisione di rete) che un nome di file, che può includere un carattere jolly. È possibile utilizzare un singolo asterisco (*) per raccogliere più file da un set di file di controllo. Ad esempio:  
   
-    -   **\<path>\\\***-Raccoglie tutti i file di controllo nel percorso specificato.  
+    -   **\<path>\\\*** -Raccoglie tutti i file di controllo nel percorso specificato.  
   
     -   ** \<path> \ LOGINSAUDIT_ {GUID}***: raccoglie tutti i file di controllo con il nome e la coppia GUID specificati.  
   
@@ -61,7 +62,7 @@ fn_get_audit_file ( file_pattern,
  
     Questo argomento viene usato per specificare un URL BLOB (incluso l'endpoint di archiviazione e il contenitore). Sebbene non supporti un carattere jolly asterisco, è possibile usare un prefisso di nome di file parziale (BLOB), anziché il nome del BLOB completo, per raccogliere più file (BLOB) che iniziano con questo prefisso. Ad esempio:
  
-      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/**: raccoglie tutti i file di controllo (BLOB) per il database specifico.    
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/** : raccoglie tutti i file di controllo (BLOB) per il database specifico.    
       
       - ** \<Storage_endpoint\> / \<Container\> / \<ServerName\> / \<DatabaseName\> / \<AuditName\> / \<CreationDate\> / \<FileName\> . xel** : raccoglie un file di controllo specifico (BLOB).
   
@@ -102,8 +103,8 @@ fn_get_audit_file ( file_pattern,
 | event_time | **datetime2** | Data e ora di attivazione dell'azione controllabile. Non ammette i valori Null. |  
 | file_name | **varchar(260)** | Percorso e nome del file di log di controllo da cui proviene il record. Non ammette i valori Null. |
 | is_column_permission | **bit** | Flag che indica se si tratta di un'autorizzazione a livello di colonna. Non ammette i valori Null. Restituisce 0 quando permission_bitmask = 0.<br /> 1 = True<br /> 0 = False |
-| object_id | **int** | ID dell'entità in cui si è verificato il controllo. Sono inclusi gli elementi seguenti:<br /> Oggetti server<br /> Database<br /> Oggetti di database<br /> Oggetti dello schema<br /> Non ammette i valori Null. Restituisce 0 se l'entità è il server stesso o se il controllo non viene eseguito a livello di oggetto, ad esempio nel caso dell'autenticazione. |  
-| object_name | **sysname** | Nome dell'entità in cui si è verificato il controllo. Sono inclusi gli elementi seguenti:<br /> Oggetti server<br /> Database<br /> Oggetti di database<br /> Oggetti dello schema<br /> Ammette i valori Null. Restituisce NULL se l'entità è il server stesso o se il controllo non viene eseguito a livello di oggetto, ad esempio nel caso dell'autenticazione. |
+| object_id | **int** | ID dell'entità in cui si è verificato il controllo. Il comportamento predefinito include quanto segue:<br /> Oggetti server<br /> Database<br /> Oggetti di database<br /> Oggetti dello schema<br /> Non ammette i valori Null. Restituisce 0 se l'entità è il server stesso o se il controllo non viene eseguito a livello di oggetto, ad esempio nel caso dell'autenticazione. |  
+| object_name | **sysname** | Nome dell'entità in cui si è verificato il controllo. Il comportamento predefinito include quanto segue:<br /> Oggetti server<br /> Database<br /> Oggetti di database<br /> Oggetti dello schema<br /> Ammette i valori Null. Restituisce NULL se l'entità è il server stesso o se il controllo non viene eseguito a livello di oggetto, ad esempio nel caso dell'autenticazione. |
 | permission_bitmask | **varbinary(16)** | In alcune azioni, si tratta delle autorizzazioni concesse, negate o revocate. |
 | response_rows | **bigint** | **Si applica a**: database SQL di Azure e SQL istanza gestita<br /><br /> Numero di righe restituite nel set di risultati. |  
 | schema_name | **sysname** | Contesto dello schema in cui si è verificata l'azione. Ammette i valori Null. Restituisce NULL per i controlli che si verificano all'esterno di uno schema. |  
@@ -127,7 +128,7 @@ fn_get_audit_file ( file_pattern,
 | user_defined_information | **nvarchar(4000)** | **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, database SQL di Azure e SQL istanza gestita<br /><br /> Utilizzato per registrare eventuali informazioni aggiuntive che l'utente desidera registrare nel log di controllo utilizzando il **sp_audit_write** stored procedure. |  
 
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se l'argomento *file_pattern* passato a **fn_get_audit_file** fa riferimento a un percorso o a un file che non esiste o se il file non è un file di controllo, viene restituito il messaggio di errore **MSG_INVALID_AUDIT_FILE** .  
   
 ## <a name="permissions"></a>Autorizzazioni

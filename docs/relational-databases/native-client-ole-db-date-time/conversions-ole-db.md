@@ -1,4 +1,5 @@
 ---
+description: Conversioni di SQL Server Native Client (OLE DB)
 title: Associazioni e conversioni (OLE DB)
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dec84f95cf60818336956e2d6e86d871a3fdc00
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a513ca320f072dc74b525ae4511973fa438a7624
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245886"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328037"
 ---
 # <a name="sql-server-native-client-conversions-ole-db"></a>Conversioni di SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "87245886"
   
 -   Il formato delle stringhe **datetime** e **datetimeoffset** è:  
   
-     *aaaa* - *mm* - *DD*[ *HH*:*mm*:*SS*[.* 9999999*] [± *HH*:*mm*]]  
+     *aaaa*-*mm*-*gg*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
 -   Il formato delle stringe **time** è:  
   
@@ -39,7 +40,7 @@ ms.locfileid: "87245886"
   
 -   Il formato delle stringhe **date** è:  
   
-     *aaaa* - *mm* - *DD*  
+     *aaaa*-*mm*-*gg*  
   
 > [!NOTE]  
 >  Le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e SQLOLEDB implementano conversioni OLE se le conversioni standard non vengono eseguite correttamente. Di conseguenza, alcune conversioni eseguite in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 e versioni successive differiscono dalla specifica OLE DB.  
@@ -71,7 +72,7 @@ ms.locfileid: "87245886"
  [Conversioni eseguite da server a client](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-server-to-client.md)  
  Vengono descritte le conversioni di data/ora eseguite tra [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o versione successiva) e un'applicazione client scritta con la specifica OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Miglioramenti relativi a data e ora &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

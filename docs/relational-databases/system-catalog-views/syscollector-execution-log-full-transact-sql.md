@@ -1,4 +1,5 @@
 ---
+description: syscollector_execution_log_full (Transact-SQL)
 title: syscollector_execution_log_full (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 978066ab84368e7a483978e2eef500bcf1a1c7eb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0178d7e6458cc5cdf35e66313d00268f20b35363
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896766"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88375447"
 ---
 # <a name="syscollector_execution_log_full-transact-sql"></a>syscollector_execution_log_full (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85896766"
 |last_iteration_time|**datetime**|Per i pacchetti in esecuzione continua, l'ultimo orario in cui il pacchetto ha acquisito uno snapshot. Ammette i valori Null.|  
 |finish_time|**datetime**|Ora in cui è stata completata l'esecuzione per i pacchetti e i set di raccolta completati. Ammette i valori Null.|  
 |duration|**int**|Tempo di esecuzione del pacchetto o del set di raccolta, espresso in secondi. Ammette i valori Null.|  
-|failure_message|**nvarchar(2048)**|Se l'esecuzione di un set di raccolta o di un pacchetto non è riuscita, il messaggio di errore più recente per il componente. Ammette i valori Null. Per ottenere informazioni più dettagliate sull'errore, utilizzare la [fn_syscollector_get_execution_details &#40;funzione&#41;Transact-SQL](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) .|  
+|failure_message|**nvarchar(2048)**|Se l'esecuzione di un set di raccolta o di un pacchetto non è riuscita, il messaggio di errore più recente per il componente. Ammette i valori Null. Per ottenere informazioni più dettagliate sull'errore, utilizzare la [fn_syscollector_get_execution_details &#40;funzione&#41;Transact-SQL ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) .|  
 |operator|**nvarchar(128)**|Identifica chi ha avviato il pacchetto o il set di raccolta. Ammette i valori Null.|  
 |package_execution_id|**uniqueidentifier**|Fornisce un collegamento alla tabella di log [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Ammette i valori Null.|  
 |collection_set_id|**int**|Fornisce un collegamento alla tabella di configurazione della raccolta dati in msdb. Ammette i valori Null.|  
@@ -50,7 +51,7 @@ ms.locfileid: "85896766"
  Richiede SELECT per **dc_operator**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure dell'agente di raccolta dati &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Stored procedure dell'agente di raccolta dati &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Viste dell'agente di raccolta dati &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)  
   

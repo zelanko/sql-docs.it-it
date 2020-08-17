@@ -1,4 +1,5 @@
 ---
+description: Impostazione di dati di grandi dimensioni in SQL Server Native Client
 title: Impostazione di dati di grandi dimensioni (provider OLE DB Native Client)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01e0e20b410ddf2300779923ed317a897a74862d
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: ab0fb692b2d50dc99276a55ab4773962d757b2c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332177"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328327"
 ---
 # <a name="setting-large-data-in-sql-server-native-client"></a>Impostazione di dati di grandi dimensioni in SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "87332177"
 ## <a name="how-to-set-large-data"></a>Come impostare dati di grandi dimensioni  
  Per passare un puntatore al proprio oggetto di archiviazione, il consumer crea una funzione di accesso che associa il valore della colonna BLOB e quindi chiama il metodo **IRowsetChange::SetData** o **IRowsetChange::InsertRow**. Per impostare dati BLOB  
   
-1.  Creare una struttura DBOBJECT che descrive il modo in cui accedere alla colonna BLOB. Impostare l'elemento *dwFlag* della struttura DBOBJECT su STGM_READ e impostare l'elemento *IID* su IID_ISequentialStream (l'interfaccia da esporre).  
+1.  Creare una struttura DBOBJECT che descrive il modo in cui accedere alla colonna BLOB. Impostare l'elemento *dwFlag* della struttura DBOBJECT su STGM_READ e impostare l'elemento *iid* su IID_ISequentialStream (l'interfaccia da esporre).  
   
 2.  Impostare le proprietà nel gruppo di proprietà DBPROPSET_ROWSET in modo che il set di righe sia aggiornabile.  
   
@@ -720,8 +721,8 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Oggetti BLOB e OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
- [Utilizzo di tipi di dati per valori di grandi dimensioni](../../relational-databases/native-client/features/using-large-value-types.md)  
+ [Uso di tipi valore di grandi dimensioni](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

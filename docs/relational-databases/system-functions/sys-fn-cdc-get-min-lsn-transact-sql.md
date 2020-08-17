@@ -1,4 +1,5 @@
 ---
+description: sys.fn_cdc_get_min_lsn (Transact-SQL)
 title: sys.fn_cdc_get_min_lsn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6a777b64fbebc9a97762949ccbd895d052c6260
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 642a4e846e6da836ff296f8d271d21603ff84865
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898400"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321687"
 ---
 # <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -95,7 +96,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. fn_cdc_get_max_lsn &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
+ [sys. fn_cdc_get_max_lsn &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

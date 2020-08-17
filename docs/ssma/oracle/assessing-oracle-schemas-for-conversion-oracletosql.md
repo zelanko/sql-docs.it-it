@@ -1,4 +1,5 @@
 ---
+description: Valutazione degli schemi Oracle per la conversione (OracleToSQL)
 title: Valutazione degli schemi Oracle per la conversione (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ ms.assetid: 4de9bcf6-1346-4740-87f9-7f24a8226357
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: f8aaa58da9e9ace704d6214dcc56cab997fe082e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 641d97868dcd308dbe487d43b7eba84a8b772371
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935067"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320737"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>Valutazione degli schemi Oracle per la conversione (OracleToSQL)
 Prima di caricare oggetti e migrare i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario determinare la complessità della migrazione e il tempo necessario per la migrazione. SSMA è in grado di creare un report di valutazione che mostra la percentuale di oggetti che verranno convertiti correttamente. SSMA consente inoltre di visualizzare i problemi specifici che provocano errori di conversione.  

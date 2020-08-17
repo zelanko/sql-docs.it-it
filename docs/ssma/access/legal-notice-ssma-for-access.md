@@ -1,4 +1,5 @@
 ---
+description: Note legali (SSMA per l'accesso)
 title: Note legali (SSMA per l'accesso) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5c15aa77726228d4bb7e55cd450affdfe5e4da42
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e03216bca40411181135d42c6228591f99758346
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372887"
 ---
 # <a name="legal-notice-ssma-for-access"></a>Note legali (SSMA per l'accesso)
 La presente documentazione, incluse le applicazioni di esempio in essa contenute, viene fornita a scopo esclusivamente informativo e senza alcuna garanzia, espressa o implicita. Le informazioni contenute nella presente documentazione, compresi indirizzi URL e altri riferimenti a siti Web Internet, sono soggette a modifiche senza preavviso. L'utente utilizza la presente documentazione a proprio rischio.  

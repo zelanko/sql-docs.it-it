@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xtp_gc_queue_stats (Transact-SQL)
 title: sys. dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
@@ -19,12 +20,12 @@ ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 76acad96bb43b23487490cab79072311906f7e8e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ca5ac3081c1075c6252eb7f33480e47c22ea78bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322817"
 ---
 # <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 

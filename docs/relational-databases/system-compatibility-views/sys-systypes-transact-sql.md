@@ -1,4 +1,5 @@
 ---
+description: sys.systypes (Transact-SQL)
 title: Tipi di sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,11 +22,12 @@ ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f0e341c069b1ce7e095e5ee8e17c098f21fd088
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6b5e4f2d0974889d0ce4158648b2fc44692926b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85986989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88375227"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

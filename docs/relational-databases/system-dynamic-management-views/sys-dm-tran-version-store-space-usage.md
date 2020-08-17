@@ -1,4 +1,5 @@
 ---
+description: sys. dm_tran_version_store_space_usage (Transact-SQL)
 title: sys. dm_tran_version_store_space_usage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
@@ -20,12 +21,12 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a4fac732f784a401206f37fb2af9d3d8e0688ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3e40c6fd2ce7da44c2d6e347c7bcc0729ab0236
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262658"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322967"
 ---
 # <a name="sysdm_tran_version_store_space_usage-transact-sql"></a>sys. dm_tran_version_store_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -43,10 +44,10 @@ Poiché il record con versione viene archiviato come dato binario, non si verifi
 |**reserved_space_kb**|**bigint**|Spazio totale utilizzato in kilobyte in tempdb per i record dell'archivio versioni del database.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
+In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
 
 ## <a name="examples"></a>Esempi  
-La query seguente può essere utilizzata per determinare lo spazio utilizzato in tempdb, dall'archivio delle versioni di ogni database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza di. 
+La query seguente può essere utilizzata per determinare lo spazio utilizzato in tempdb, dall'archivio delle versioni di ogni database in un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza di. 
   
 ```sql  
 SELECT 
@@ -68,6 +69,6 @@ WideWorldImporters        20                   160
 ```
  
 ## <a name="see-also"></a>Vedere anche  
- [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica relative alle transazioni &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Finestra di dialogo di configurazione ODBC Visual FoxPro
 title: Finestra di dialogo di installazione di Visual FoxPro ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef7ac702a69342833c6dfffa0ffc9cdd0ac2857e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2083f76300ed19e047b0a138aed6c65ecef4da3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298081"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340707"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>Finestra di dialogo di configurazione ODBC Visual FoxPro
 La finestra di dialogo di **installazione di ODBC Visual FoxPro** consente di aggiungere o modificare un'origine dati Visual FoxPro.  
@@ -66,7 +67,7 @@ strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;
 SOURCETYPE=DBC;SOURCEDB=D:\Testdata.dbc;BACKGROUNDFETCH=NO;NULL=NO"  
 ```  
   
- **Eliminato**  
+ **Eliminata**  
  Determina se vengono restituite righe contrassegnate come eliminate. È anche possibile controllare questa opzione tramite una stringa di connessione passata come nel codice seguente:  
   
 ```  
