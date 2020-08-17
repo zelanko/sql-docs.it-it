@@ -1,4 +1,5 @@
 ---
+description: Autorizzazioni per raccolte (Master Data Services)
 title: Autorizzazioni per raccolte
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: efeb7025d9b0e959aba43cb172cdcb9d36d6c4c9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 04ffb34b92aa43c521a9a454a8068e74cf4fd615
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811620"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390287"
 ---
 # <a name="collection-permissions-master-data-services"></a>Autorizzazioni per raccolte (Master Data Services)
 
@@ -33,8 +34,8 @@ ms.locfileid: "85811620"
 |----------------|-----------------|  
 |**Lettura**|L'utente può leggere i membri della raccolta e gli attributi dei membri.|  
 |**Creare**|L'utente può creare i membri della raccolta e assegnare i valori di attributo.|  
-|**Update**|L'utente può aggiornare i membri della raccolta, gli attributi e le relazioni.|  
-|**Eliminazione**|L'utente può eliminare membri della raccolta.|  
+|**Aggiornamento**|L'utente può aggiornare i membri della raccolta, gli attributi e le relazioni.|  
+|**Elimina**|L'utente può eliminare membri della raccolta.|  
 |**Nega**|L'accesso ai membri della raccolta è negato.|  
   
  Le autorizzazioni di lettura, creazione, aggiornamento ed eliminazione possono essere combinate. Quando vengono assegnate le autorizzazioni di creazione, aggiornamento ed eliminazione, l'autorizzazione di lettura viene assegnata automaticamente.  

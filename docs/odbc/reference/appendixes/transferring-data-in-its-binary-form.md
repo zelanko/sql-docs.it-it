@@ -1,4 +1,5 @@
 ---
+description: Trasferimento dei dati in forma binaria
 title: Trasferimento dei dati nel formato binario | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4b12a9de-51d0-416a-87f4-9bf84959cad9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 53531ff4a3b2e1441fabf22ec7a3ce12b15540eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec858729e76c1e360ec0933eca3a29ab17542f4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301413"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386327"
 ---
 # <a name="transferring-data-in-its-binary-form"></a>Trasferimento dei dati in forma binaria
 Un'applicazione può trasferire in modo sicuro i dati (nel form interno usato da un DBMS specificato) tra due origini dati che usano la stessa piattaforma hardware e DBMS. Per una determinata porzione di dati, i tipi di dati SQL devono essere uguali nelle origini dati di origine e di destinazione. Il tipo di dati C è SQL_C_BINARY.  

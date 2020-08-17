@@ -1,4 +1,5 @@
 ---
+description: Definizione dei dati MDX - DROP ACTION
 title: Istruzione DROP ACTION (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 56884d76ff6b322b0ecc55e29fb2193183811fcf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bfd0bd642be12132e8e1a72a07ff38930d2d8109
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038249"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387247"
 ---
 # <a name="mdx-data-definition---drop-action"></a>Definizione dei dati MDX - DROP ACTION
 
@@ -37,6 +38,6 @@ DROP ACTION CURRENTCUBE | Cube_Name
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzione CREATE ACTION &#40;MDX&#41;](../mdx/mdx-data-definition-create-action.md)   
- [Istruzioni MDX per la definizione dei dati &#40;&#41;MDX](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Istruzioni MDX per la definizione dei dati &#40;&#41;MDX ](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

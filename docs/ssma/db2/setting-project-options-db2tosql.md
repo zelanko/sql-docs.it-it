@@ -1,4 +1,5 @@
 ---
+description: Impostazione delle opzioni del progetto (DB2ToSQL)
 title: Impostazione delle opzioni del progetto (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: be1cc5ca7d48d72ee9c87ceb2c421a0c411548dc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 307c726811d4071754ff118ebd56d7d43abd05f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936631"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321017"
 ---
 # <a name="setting-project-options-db2tosql"></a>Impostazione delle opzioni del progetto (DB2ToSQL)
 Per ogni progetto SSMA è possibile impostare le opzioni a livello di progetto. Queste opzioni specificano conversione di oggetti, caricamento di oggetti, interfaccia utente e impostazioni di migrazione dei dati. Prima di convertire gli oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o migrare i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , verificare che le opzioni di configurazione siano appropriate per il progetto.  
@@ -36,7 +37,7 @@ SSMA include cinque set di impostazioni di progetto:
   
 Sono inoltre disponibili quattro modalità per la configurazione di queste impostazioni:  
   
--   Impostazione predefinita  
+-   Predefinito  
   
 -   Optimistic  
   

@@ -1,4 +1,5 @@
 ---
+description: Modificare un'entità (Master Data Services)
 title: Modificare un'entità
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 484fdb93ac51f353de97333d115aed4591715e9a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a95b2515fd8840f3a5dc04b4276bfb0316535619
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389547"
 ---
 # <a name="edit-an-entity-master-data-services"></a>Modificare un'entità (Master Data Services)
 

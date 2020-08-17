@@ -1,4 +1,5 @@
 ---
+description: Termini di glossario ADO
 title: Termini di glossario ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4b92f9c8b65db459d46aff51b7aed58c3ff6e307
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b67f8f38a57d7918f2b6f79ed9a2a82dc00d4dee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76940429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355457"
 ---
 # <a name="ado-glossary-terms"></a>Termini di glossario ADO
 In questo argomento vengono definiti i termini rilevanti per ADO.
@@ -40,7 +41,7 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
 ## <a name="b"></a>b
  associazione di un mapping tra un campo di una tabella e una variabile. Nelle estensioni ADO Visual C++, viene eseguito il mapping dei campi **Recordset** alle variabili C/C++.
 
- maschera di bit di un valore numerico destinato a un valore bit per bit rispetto ad altri valori numerici, in genere per contrassegnare le opzioni nel parametro o nei valori restituiti. Questo confronto viene in genere eseguito con operatori logici bit per bit, ad esempio **and** e **&** **or** in Visual Basic e **&#124;** in C++.
+ maschera di bit di un valore numerico destinato a un valore bit per bit rispetto ad altri valori numerici, in genere per contrassegnare le opzioni nel parametro o nei valori restituiti. Questo confronto viene in genere eseguito con operatori logici bit per bit, ad esempio **and** e **or** in Visual Basic **&** e **&#124;** in C++.
 
  Ad esempio, i valori ADO **FieldAttributeEnum** possono essere utilizzati come maschere di maschera per determinare gli attributi di un campo. Si supponga di voler determinare se un campo è aggiornabile. Per eseguire questa operazione, è possibile usare l'espressione seguente in Visual Basic:`Field.Attributes AND adFldUpdatable`
 
@@ -77,7 +78,7 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
 
  operatore di confronto operatore che confronta due espressioni e restituisce un valore booleano.
 
- Parametro dei criteri che può essere espresso come ">" (maggiore di), "\<" (minore di), "=" (uguale), ">=" (maggiore o uguale a), "<=" (minore o uguale), "<>" (non uguale) o "like" (criteri di ricerca).
+ Parametro dei criteri che può essere espresso come ">" (maggiore di), " \<" (less than), "=" (equal), "> =" (maggiore o uguale a), "<=" (minore o uguale a), "<>" (non uguale) o "like" (criteri di ricerca).
 
  componente oggetto che incapsula sia i dati che il codice e fornisce un set ben definito di servizi disponibili pubblicamente.
 
@@ -119,7 +120,7 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
  proprietà dinamica una proprietà specifica di un provider di dati o del servizio Cursor. La raccolta **Properties** di un oggetto viene popolata automaticamente con questi oggetti ("in modo dinamico"). Un oggetto non dispone di proprietà dinamiche fino a quando non viene connesso a un'origine dati tramite un provider di dati specifico. Vedere anche provider di dati, cursore.
 
 ## <a name="e"></a>E
- Enumerazione di un elenco di costanti denominate. I valori enumerati non devono essere univoci. Tuttavia, il nome di ogni valore deve essere univoco all'interno dell'ambito in cui è definita l'enumerazione. In ADO, le enumerazioni vengono utilizzate per il parametro numerico e i valori restituiti, per aggiungere significato al codice ADO e per schermare lo sviluppatore dai valori numerici (che potrebbero variare da una versione all'altra). Per aprire un **Recordset**statico, ad esempio, usare il valore enumerato **adOpenStatic** :`Recordset.Open ,,adOpenStatic`
+ Enumerazione di un elenco di costanti denominate. I valori enumerati non devono essere univoci. Tuttavia, il nome di ogni valore deve essere univoco all'interno dell'ambito in cui è definita l'enumerazione. In ADO, le enumerazioni vengono utilizzate per il parametro numerico e i valori restituiti, per aggiungere significato al codice ADO e per schermare lo sviluppatore dai valori numerici (che potrebbero variare da una versione all'altra). Per aprire un **Recordset**statico, ad esempio, usare il valore enumerato **adOpenStatic** : `Recordset.Open ,,adOpenStatic`
 
  Definito anche come *costante enumerata*. Vedere anche *Constant*.
 

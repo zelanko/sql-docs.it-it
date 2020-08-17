@@ -1,4 +1,5 @@
 ---
+description: Lead (MDX)
 title: Lead (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cc4d362fbc7656e9427548a352b32d5d8297071e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca78bdeca6103758d5d102ed8b85eb00b3138e18
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905747"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387327"
 ---
 # <a name="lead-mdx"></a>Lead (MDX)
 
@@ -31,7 +32,7 @@ Member_Expression.Lead( Index )
  *Member_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
- *Indice*  
+ *Index*  
  Espressione numerica valida che specifica il numero di posizioni dei membri.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -41,7 +42,7 @@ Member_Expression.Lead( Index )
   
  Se il lead specificato è negativo, la funzione **Lead** restituisce un membro precedente.  
   
- `Lead(1)`equivale alla funzione [NextMember](../mdx/nextmember-mdx.md) . `Lead(-1)`equivale alla funzione [PrevMember](../mdx/prevmember-mdx.md) .  
+ `Lead(1)` equivale alla funzione [NextMember](../mdx/nextmember-mdx.md) . `Lead(-1)` equivale alla funzione [PrevMember](../mdx/prevmember-mdx.md) .  
   
  La funzione **Lead** è simile alla funzione [lag](../mdx/lag-mdx.md) , ad eccezione del fatto che la funzione **lag** Cerca nella direzione opposta rispetto alla funzione **Lead** . In altre parole, `Lead(n)` equivale a `Lag(-n)`.  
   
@@ -62,7 +63,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

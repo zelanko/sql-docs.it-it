@@ -1,4 +1,5 @@
 ---
+description: Leaves (MDX)
 title: Foglie (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d29c77250c23900d74d1969a6c37bc719c89cdd7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7beab859a2953b3eba52e74d97bed5718c59ea90
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387307"
 ---
 # <a name="leaves-mdx"></a>Leaves (MDX)
 
@@ -46,7 +47,7 @@ Leaves( [ Dimension_expression ] )
     > [!IMPORTANT]  
     >  Se la granularità nei gruppi di misure nell'ambito corrente non è la stessa per tutti gli attributi, viene generato un errore.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

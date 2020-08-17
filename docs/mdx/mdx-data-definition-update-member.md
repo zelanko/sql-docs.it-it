@@ -1,4 +1,5 @@
 ---
+description: Definizione dei dati MDX - UPDATE MEMBER
 title: Istruzione UPDATE MEMBER (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 73a2bf2973d8c4f8f9bf9ac886728fb45250343f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b1333a8784ea5427dec3ed7223a3c7c1a09120d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038140"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387065"
 ---
 # <a name="mdx-data-definition---update-member"></a>Definizione dei dati MDX - UPDATE MEMBER
 
@@ -64,12 +65,12 @@ UPDATE MEMBER Cube_Name.Member_Name
 |VISIBLE|Un valore che indica se il membro calcolato è visibile in un set di righe dello schema. I membri calcolati visibili possono essere aggiunti a un set con la funzione [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) . Un valore diverso da zero indica che il membro calcolato è visibile. Il valore predefinito per questa proprietà è *visibile*.<br /><br /> I membri calcolati non visibili, vengono in genere utilizzati come passaggi intermedi in membri calcolati più complessi. A tali membri calcolati è possibile fare riferimento anche da altri tipi di membri, ad esempio le misure.|  
 |NON_EMPTY_BEHAVIOR|La misura o il set che MDX utilizza per determinare il comportamento dei membri calcolati durante la risoluzione delle celle vuote.|  
 |CAPTION|Un valore di stringa che specifica la didascalia che può essere utilizzata dall'applicazione client per la visualizzazione del membro.|  
-|DISPLAY_FOLDER|Un valore di stringa che specifica il percorso della cartella di visualizzazione in cui il membro deve essere mostrato dall'applicazione client. Il separatore di livello delle cartelle è definito dall'applicazione client. Per gli strumenti e i client forniti [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]da, la barra\\rovesciata () come separatore del livello. Per fornire più cartelle di visualizzazione per un membro definito, utilizzare un punto e virgola (;) per separare le cartelle.|  
+|DISPLAY_FOLDER|Un valore di stringa che specifica il percorso della cartella di visualizzazione in cui il membro deve essere mostrato dall'applicazione client. Il separatore di livello delle cartelle è definito dall'applicazione client. Per gli strumenti e i client forniti da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , la barra rovesciata ( \\ ) come separatore del livello. Per fornire più cartelle di visualizzazione per un membro definito, utilizzare un punto e virgola (;) per separare le cartelle.|  
 |ASSOCIATED_MEASURE_GROUP|Il nome del gruppo di misure al quale questo membro è associato.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzione DROP MEMBER &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
  [Istruzione CREATE MEMBER &#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)   
- [Istruzioni MDX per la definizione dei dati &#40;&#41;MDX](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Istruzioni MDX per la definizione dei dati &#40;&#41;MDX ](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

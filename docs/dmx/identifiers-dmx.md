@@ -1,4 +1,5 @@
 ---
+description: Identificatori (DMX)
 title: Identificatori (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 980a13c88abc8d6cbe0fcb71f22f4c0a9f564094
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3a779e16b06b00cb925f28e8da34ce3959d7dc7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352887"
 ---
 # <a name="identifiers-dmx"></a>Identificatori (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "86969810"
   
  L'identificatore di un oggetto viene creato al momento della sua definizione e viene quindi utilizzato per farvi riferimento. Gli identificatori devono contenere al massimo 100 caratteri.  
   
-##  <a name="regular-identifiers"></a><a name="RegularIdentifiers"></a>Identificatori regolari  
+##  <a name="regular-identifiers"></a><a name="RegularIdentifiers"></a> Identificatori regolari  
  Gli identificatori regolari in DMX sono conformi alle regole di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per il formato degli identificatori. In DMX gli identificatori regolari non richiedono delimitatori. Di seguito è riportato un esempio di istruzione DMX che utilizza un identificatore regolare, non delimitato:  
   
 ```  
@@ -58,7 +59,7 @@ SELECT * FROM Clustering.CONTENT;
   
  Se in un'istruzione DMX si utilizza un identificatore che non rispetta queste regole, sarà necessario racchiuderlo tra parentesi quadre.  
   
-##  <a name="delimited-identifiers"></a><a name="DelimitedIdentifiers"></a>Identificatori delimitati  
+##  <a name="delimited-identifiers"></a><a name="DelimitedIdentifiers"></a> Identificatori delimitati  
  Gli identificatori delimitati sono racchiusi tra parentesi quadre ([ ]).  Di seguito è riportato un esempio di istruzione DMX con un identificatore delimitato conforme alle regole indicate.  
   
 ```  

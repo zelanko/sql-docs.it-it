@@ -1,4 +1,5 @@
 ---
+description: Uso degli identificatori dei tipi di dati
 title: Utilizzo degli identificatori dei tipi di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 467e0c0c-a818-4737-8a24-3d8e15c7e162
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8be8eef0441d48ed03ea6ccf8f656627c1dd9b63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54fe7267ea70dc50b0b40f16b27a1306fea533f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301422"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386277"
 ---
 # <a name="using-data-type-identifiers"></a>Uso degli identificatori dei tipi di dati
 Le applicazioni utilizzano gli identificatori dei tipi di dati in due modi: per descrivere i buffer al driver e per recuperare i metadati relativi al set di risultati dal driver, in modo che possano determinare il tipo di buffer C da usare per archiviare i dati. Per eseguire queste attività, le applicazioni chiamano le funzioni seguenti:  

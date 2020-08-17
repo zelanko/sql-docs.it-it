@@ -1,4 +1,5 @@
 ---
+description: Finestra di dialogo Crea sito Web (Gestione configurazione Master Data Services)
 title: Finestra di dialogo Crea sito Web
 ms.custom: seo-lt-2019
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c3d4063404a121c889dbbfd930429a586bf8969a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 16c3903d401409794ad65e1ccab6dfc006af19a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389937"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>Finestra di dialogo Crea sito Web (Gestione configurazione Master Data Services)
 

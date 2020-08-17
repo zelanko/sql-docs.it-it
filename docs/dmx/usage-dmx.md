@@ -1,4 +1,5 @@
 ---
+description: Utilizzo (DMX)
 title: Utilizzo (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cdbefcfeb6d638998ec2e0a01b8da5ca40f2aeaf
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3886cd500282d34ef07145913e036a6ab4ad4852
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394857"
 ---
 # <a name="usage-dmx"></a>Utilizzo (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Quando si utilizza DMX (Data Mining Extensions) per definire un nuovo modello di data mining in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , è necessario specificare il modo in cui l'algoritmo Data mining che compila il modello utilizzerà ogni colonna. Le colonne possono essere dei tipi seguenti:  
   
--   **Key**  
+-   **Chiave**  
   
 -   **Key Sequence**  
   
@@ -39,7 +40,7 @@ ms.locfileid: "86971573"
  Per ulteriori informazioni sui tipi di utilizzo delle colonne [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supportati da, vedere [colonne del modello di data mining](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Guida di riferimento alle estensioni di data mining &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;elementi della sintassi DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Guida di riferimento alle funzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   

@@ -1,4 +1,5 @@
 ---
+description: Funzionalità di Master Data Services non più supportate
 title: Funzionalità di Master Data Services non più supportate
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,12 +12,12 @@ ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: fc5445bda8cb42c3a8a14851ccbd395c30849968
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: d3ef05db1eacea89d10426ddb7b1c7e74e65ee53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389637"
 ---
 # <a name="discontinued-master-data-services-features"></a>Funzionalità di Master Data Services non più supportate
 

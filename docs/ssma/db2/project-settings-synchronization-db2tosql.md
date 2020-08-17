@@ -1,4 +1,5 @@
 ---
+description: Impostazioni progetto (sincronizzazione) (DB2ToSQL)
 title: Impostazioni progetto (sincronizzazione) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c66b7e9ad09c61b1ecfaddb21a9253ae6a6237c9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d6b4aef228ca1631bb550437ff0f66ff20555cb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933602"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321067"
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>Impostazioni progetto (sincronizzazione) (DB2ToSQL)
 La pagina sincronizzazione della finestra di dialogo **Impostazioni progetto** contiene impostazioni che consentono di personalizzare il modo in cui SSMA carica e aggiorna gli oggetti di database, ad esempio tabelle e stored procedure, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

@@ -1,4 +1,5 @@
 ---
+description: Autorizzazioni per file e cartelle [Master Data Services]
 title: Autorizzazioni per file e cartelle
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4183f8be34e7322af72a76297631df2b4060421c
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 0d06fb6aaacdac159ab9241209c862e22758e999
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811506"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388827"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>Autorizzazioni per file e cartelle [Master Data Services]
 
@@ -39,7 +40,7 @@ ms.locfileid: "85811506"
 |---------------------------|-----------------|  
 |CREATOR OWNER|Autorizzazioni speciali|  
 |SYSTEM|Autorizzazioni speciali|  
-|Administrators|Autorizzazioni speciali|  
+|Amministratori|Autorizzazioni speciali|  
 |Utenti|Lettura ed esecuzione, Visualizzazione contenuto cartella, Lettura|  
 |TrustedInstaller|Visualizzazione contenuto cartella, Autorizzazioni speciali|  
   
@@ -51,7 +52,7 @@ ms.locfileid: "85811506"
 |Nome di gruppo o di account|Autorizzazioni|  
 |---------------------------|-----------------|  
 |SYSTEM|Modifica, Lettura ed esecuzione, Visualizzazione contenuto cartella, Lettura, Scrittura|  
-|Administrators|Modifica, Lettura ed esecuzione, Visualizzazione contenuto cartella, Lettura, Scrittura|  
+|Amministratori|Modifica, Lettura ed esecuzione, Visualizzazione contenuto cartella, Lettura, Scrittura|  
 |MDS_ServiceAccounts|Modifica, Lettura ed esecuzione, Visualizzazione contenuto cartella, Lettura, Scrittura|  
   
 ###### <a name="webconfig-permissions"></a>Autorizzazioni di Web.config  
@@ -59,7 +60,7 @@ ms.locfileid: "85811506"
 |Nome di gruppo o di account|Autorizzazioni|  
 |---------------------------|-----------------|  
 |SYSTEM|Controllo completo, Modifica, Lettura ed esecuzione, Lettura, Scrittura|  
-|Administrators|Controllo completo, Modifica, Lettura ed esecuzione, Lettura, Scrittura|  
+|Amministratori|Controllo completo, Modifica, Lettura ed esecuzione, Lettura, Scrittura|  
 |MDS_ServiceAccounts|Lettura ed esecuzione, Lettura|  
   
  Per altre informazioni sul contenuto del file Web.config di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vedere [Guida di riferimento alla configurazione Web &#40;Master Data Services&#41;](../master-data-services/web-configuration-reference-master-data-services.md).  

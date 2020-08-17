@@ -1,4 +1,5 @@
 ---
+description: Metadati-parametro e set di righe in SQL Server Native Client
 title: Metadati di parametri e set di righe (provider di OLE DB di Native Client)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fb12ebfb1e158ae71c2e8bbc72a7159a10a91e5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f45147881ec8cc2c62f8d023a1fe443164682678
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245813"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88381747"
 ---
 # <a name="metadata---parameter-and-rowset-in-sql-server-native-client"></a>Metadati-parametro e set di righe in SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,12 +41,12 @@ ms.locfileid: "87245813"
   
 |Tipo di parametro|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Cancella|  
-|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Cancella|  
-|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|Cancella|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21.. 27|0..7|Set|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28.. 34|0..7|Set|  
+|Data|DBTYPE_DBDATE|6|10|0|Clear|  
+|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Configurazione|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
+|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21.. 27|0..7|Configurazione|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28.. 34|0..7|Configurazione|  
   
  Tenere presente che in alcuni casi gli intervalli di valori non sono continui Ciò è dovuto all'aggiunta di un separatore decimale quando la precisione frazionaria è maggiore di zero.  
   
@@ -57,7 +58,7 @@ ms.locfileid: "87245813"
 |*pwszDataSourceType*<br /><br /> (specifico del provider)|*pwszDataSourceType*<br /><br /> (generico di OLE DB)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|Ignorato|  
-|date|DBTYPE_DBDATE|6|Ignorato|  
+|Data|DBTYPE_DBDATE|6|Ignorato|  
 ||DBTYPE_DBTIME|10|Ignorato|  
 |time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|Ignorato|  
@@ -74,7 +75,7 @@ ms.locfileid: "87245813"
 |Tipo di associazione|*pwszDataSourceType*<br /><br /> (specifico del provider)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|date|  
+|DBTYPE_DBDATE|Data|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
@@ -85,12 +86,12 @@ ms.locfileid: "87245813"
   
 |Tipo di colonna|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Cancella|  
-|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Cancella|  
-|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|Cancella|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
+|Data|DBTYPE_DBDATE|6|10|0|Clear|  
+|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Configurazione|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
+|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Configurazione|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Configurazione|  
   
  In DBCOLUMN_FLAGS il valore di DBCOLUMNFLAGS_ISFIXEDLENGTH è sempre true per i tipi date/time e il valore dei flag seguenti è sempre false:  
   
@@ -119,12 +120,12 @@ ms.locfileid: "87245813"
   
 |Tipo di parametro|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Cancella|  
-|time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Cancella|  
-|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|Cancella|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
+|Data|DBTYPE_DBDATE|6|10|0|Clear|  
+|time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Configurazione|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
+|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Configurazione|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Configurazione|  
   
  In *dwFlags* il valore di DBCOLUMNFLAGS_ISFIXEDLENGTH è sempre true per i tipi date/time e il valore dei flag seguenti è sempre false:  
   

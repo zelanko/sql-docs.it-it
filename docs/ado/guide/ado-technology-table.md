@@ -1,4 +1,5 @@
 ---
+description: Tabella prodotti e tecnologie
 title: Tabella ADO Technology | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e0fb8e559dcf98f39b5f3783e3e43d5d10671cb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a524139113cffeaf437b91a41b4f10b4468d5fe4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761659"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355247"
 ---
 # <a name="products-and-technologies-table"></a>Tabella prodotti e tecnologie
 Nella tabella seguente sono elencati i prodotti, gli strumenti e le tecnologie Microsoft descritti nella Guida per programmatori di ADO. Fornisce i collegamenti, laddove possibile, agli argomenti pertinenti della guida.

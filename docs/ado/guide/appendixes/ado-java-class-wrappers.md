@@ -1,4 +1,5 @@
 ---
+description: Wrapper di classe Java ADO
 title: Wrapper della classe Java ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 485c53645387e5dafbe562442ec12503df0a6737
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c02865fc20d741fc8b3f80ccecd56fcb105ad45e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760557"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355217"
 ---
 # <a name="ado-java-class-wrappers"></a>Wrapper di classe Java ADO
 Questo codice dichiara un'istanza del wrapper della classe [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ADO e la inizializza, all sulla stessa riga di codice. Dichiara inoltre le variabili per ogni argomento nel metodo [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) , specialmente per [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) e [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (perché Java non supporta i tipi enumerati). Viene aperto e chiuso l'oggetto **Recordset** . Impostando RS1 su NULL si pianifica semplicemente la variabile da rilasciare quando Java esegue la versione sistematica e intermittente degli oggetti inutilizzati.  

@@ -1,4 +1,5 @@
 ---
+description: Colonne di tipo text e image associate e non associate
 title: Colonne di testo e di immagine non associato e associato | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,11 +22,12 @@ ms.assetid: ffd3442e-d880-46e9-b848-2365a09a2406
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11a7e27e7adce8f87986571c2029d37c82e319b3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 013e32489ba396f37260e5e614c4a21205d9f403
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012313"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88382497"
 ---
 # <a name="bound-vs-unbound-text-and-image-columns"></a>Colonne di tipo text e image associate e non associate
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,6 +38,6 @@ ms.locfileid: "86012313"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione delle colonne di testo e immagini](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)   
- [Comportamenti dei cursori](../../relational-databases/native-client-odbc-cursors/cursor-behaviors.md)  
+ [Comportamenti del cursore](../../relational-databases/native-client-odbc-cursors/cursor-behaviors.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Creare un flusso di lavoro personalizzato - Descrizione XML
 title: Descrizione XML del flusso di lavoro personalizzato
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f7c49f9b2831942552844e6bb479d139988d84c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c12348fc830a187a8d88841c15e25ba726bef968
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897420"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389787"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>Creare un flusso di lavoro personalizzato - Descrizione XML
 
@@ -65,7 +66,7 @@ ms.locfileid: "85897420"
   
  Nella tabella seguente vengono descritti alcuni dei tag contenuti nel codice XML:  
   
-|Tag|Description|  
+|Tag|Descrizione|  
 |---------|-----------------|  
 |\<Type>|Testo immesso nella casella di testo **Tipo di flusso di lavoro** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] per identificare l'assembly del flusso di lavoro personalizzato da caricare.|  
 |\<SendData>|Valore booleano gestito dalla casella di controllo **Includi dati membro nel messaggio** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Il valore 1 indica che la \<MemberData> sezione viene inviata; in caso contrario, la \<MemberData> sezione non viene inviata.|  

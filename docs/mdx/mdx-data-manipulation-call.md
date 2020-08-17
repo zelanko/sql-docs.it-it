@@ -1,4 +1,5 @@
 ---
+description: Manipolazione dei dati MDX - CALL
 title: Istruzione CALL (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: de74590ac4c43a9141c0ab2092babf41ffd23ba5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a8f3b550e3fed3fe28e74896c3c4ff764db8810
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68106305"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387041"
 ---
 # <a name="mdx-data-manipulation---call"></a>Manipolazione dei dati MDX - CALL
 
@@ -47,10 +48,10 @@ CALL SP_Name
  Se non viene specificato un cubo, l'istruzione esegue la stored procedure sul cubo corrente.  
   
 > [!NOTE]  
->  Se il stored procedure non è registrato sul client, l'istruzione **Call** tenta di chiamare il stored procedure da un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+>  Se il stored procedure non è registrato sul client, l'istruzione **Call** tenta di chiamare il stored procedure da un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzioni di manipolazione dei dati MDX &#40;&#41;MDX](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Istruzioni di manipolazione dei dati MDX &#40;&#41;MDX ](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [Uso di stored procedure &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)  
   
   

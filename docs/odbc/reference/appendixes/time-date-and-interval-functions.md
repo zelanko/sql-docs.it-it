@@ -1,4 +1,5 @@
 ---
+description: Funzioni di data, ora e intervallo
 title: Funzioni di ora, data e intervallo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aec3d6b23383edcc9659ff884e8cd71b0595dae1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dcbdf9f40a9cd1f1296920e3d2ea71fcb5ce6b39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386377"
 ---
 # <a name="time-date-and-interval-functions"></a>Funzioni di data, ora e intervallo
 Nella tabella seguente sono elencate le funzioni di data e ora incluse nel set di funzioni scalari ODBC. Un'applicazione può determinare quali funzioni di data e ora sono supportate da un driver chiamando **SQLGetInfo** con un *tipo di informazioni* SQL_TIMEDATE_FUNCTIONS.  

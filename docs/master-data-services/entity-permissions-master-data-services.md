@@ -1,4 +1,5 @@
 ---
+description: Autorizzazioni per le entità (Master Data Services)
 title: Autorizzazioni per le entità
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3a0ca2773d513137adeb9e803b66930536e3a28a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b71ffdf22c3a6758ee81d92f5f25300784d73fff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811952"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389187"
 ---
 # <a name="entity-permissions-master-data-services"></a>Autorizzazioni per le entità (Master Data Services)
 
@@ -41,8 +42,8 @@ ms.locfileid: "85811952"
 |----------------|-----------------|  
 |**Lettura**|L'utente può leggere i membri, gli attributi, le appartenenze a gerarchie o le appartenenze a raccolte.|  
 |**Creare**|L'utente può creare i membri e assegnare i valori di attributo durante la creazione.|  
-|**Update**|L'utente può aggiornare i membri, gli attributi, le appartenenze a gerarchie o le appartenenze a raccolte.|  
-|**Eliminazione**|L'utente può eliminare i membri.|  
+|**Aggiornamento**|L'utente può aggiornare i membri, gli attributi, le appartenenze a gerarchie o le appartenenze a raccolte.|  
+|**Elimina**|L'utente può eliminare i membri.|  
 |**Nega**|Nega ogni accesso all'entità.|  
   
  Le autorizzazioni di lettura, creazione, aggiornamento ed eliminazione possono essere combinate. Quando vengono assegnate le autorizzazioni di creazione, aggiornamento ed eliminazione, l'autorizzazione di lettura viene assegnata automaticamente.  

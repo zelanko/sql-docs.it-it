@@ -1,4 +1,5 @@
 ---
+description: Oggetti origine dati salvati in SQL Server Native Client
 title: Oggetti origine dati salvati in modo permanente (provider OLE DB di Native Client)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,19 +17,19 @@ ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a28fd6b4f3c7fc46223a75fdf96881a73739b8d7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 482762127b8daa9d3fad3e4a3fd79a6ad9d179ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242141"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88381477"
 ---
 # <a name="persisted-data-source-objects-in-sql-server-native-client"></a>Oggetti origine dati salvati in SQL Server Native Client 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta oggetti origine dati salvati in modo permanente con l'interfaccia **IPersistFile** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  **A. Rendere persistente l'inizializzazione dell'origine dati:**  
   
  In questo esempio viene illustrata una funzione che rende persistenti le proprietà di inizializzazione dell'origine dati definendo un server, un database e l'utilizzo della Modalità di autenticazione di Windows per la connessione. Il nome del server e il nome del database vengono ricevuti nei parametri *pLocation* e *pDatasource* della funzione.  
@@ -140,7 +141,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. Utilizzare l'inizializzazione dell'origine dati persistente:**  
+ **B. Usare l'inizializzazione dell'origine dati persistente:**  
   
  In questo esempio viene utilizzato un oggetto origine dati persistente con proprietà di inizializzazione aggiuntive che forniscono un account di accesso e una password di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -1,4 +1,5 @@
 ---
+description: Area funzionale Gestione integrazione (Gestione dati master)
 title: Area funzionale Gestione integrazione
 ms.custom: ''
 ms.date: 04/01/2016
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b859fe26c6daf5fd8b2b3135f833867a9c6d7020
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 616a8c01e568a4223f3ba120b3a2dbc21d30f890
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388717"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Area funzionale Gestione integrazione (Gestione dati master)
 

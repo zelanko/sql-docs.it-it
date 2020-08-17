@@ -1,4 +1,5 @@
 ---
+description: sys.endpoint_webmethods (Transact-SQL)
 title: sys. endpoint_webmethods (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7dad0cf6-eafa-47cf-98cc-75ba8d3c7959
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e5221cee27953e91015ca0b50075392c4314403f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2dba0b1984351c0197b55cc7c318bd8b6065e947
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893277"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88377857"
 ---
 # <a name="sysendpoint_webmethods-transact-sql"></a>sys.endpoint_webmethods (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85893277"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |endpoint_id|**int**|ID dell'endpoint in base al quale è definito il metodo Web.|  
-|spazio dei nomi|**nvarchar (384)**|Spazio dei nomi per il metodo Web.|  
+|namespace|**nvarchar (384)**|Spazio dei nomi per il metodo Web.|  
 |method_alias|**nvarchar (64)**|Alias del metodo.<br /><br /> Nota: gli [!INCLUDE[tsql](../../includes/tsql-md.md)] identificatori consentono caratteri non validi nei nomi di metodo WSDL.<br /><br /> L'alias viene utilizzato per eseguire il mapping del nome esposto nella descrizione WSDL dell'endpoint all'effettivo oggetto eseguibile [!INCLUDE[tsql](../../includes/tsql-md.md)] sottostante richiamato quando viene eseguita la chiamata al metodo Web.|  
 |object_name|**nvarchar (776)**|Nome dell'oggetto al quale il metodo Web è reindirizzato, come specificato dall'opzione NAME =. Le parti del nome sono separate da un punto (.) e delimitate tramite parentesi quadre, `[``]` .<br /><br /> Il nome dell'oggetto deve essere composto da tre parti, come specificato dall'opzione WSDL.|  
 |result_schema|**tinyint**|Opzione che determina l'eventuale schema XSD inviato assieme a una risposta.<br /><br /> 0 = Nessuna<br /><br /> 1 = Standard<br /><br /> 2 = Predefinito|  
@@ -50,7 +51,7 @@ ms.locfileid: "85893277"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo degli endpoint &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
+ [Viste del catalogo degli endpoint &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

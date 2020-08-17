@@ -1,4 +1,5 @@
 ---
+description: Transizioni di connessione
 title: Transizioni di connessione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 225f8517a78f8e9d4d765163649da174d72e490c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5f7fecf0ad25311e9d96f4db8554c1cdbf24e91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339447"
 ---
 # <a name="connection-transitions"></a>Transizioni di connessione
 Le connessioni ODBC hanno gli Stati seguenti.  
@@ -53,7 +54,7 @@ Le connessioni ODBC hanno gli Stati seguenti.
   
  [4] Questa riga Mostra le transizioni quando *HandleType* è stato SQL_HANDLE_DESC.  
   
- [5] la chiamata a **SQLAllocHandle** con *OutputHandlePtr* che punta a un handle valido sovrascrive tale handle senza considerare il contenuto precedente diquesto handle e potrebbe causare problemi per i driver ODBC. La programmazione di applicazioni ODBC non è corretta per chiamare **SQLAllocHandle** due volte con la stessa variabile dell'applicazione definita per * \*OutputHandlePtr* senza chiamare **SQLFreeHandle** per liberare l'handle prima della riallocazione. La sovrascrittura degli handle ODBC in questo modo può causare un comportamento incoerente o errori della parte dei driver ODBC.  
+ [5] la chiamata a **SQLAllocHandle** con *OutputHandlePtr* che punta a un handle valido sovrascrive tale handle senza considerare il contenuto precedente diquesto handle e potrebbe causare problemi per i driver ODBC. La programmazione di applicazioni ODBC non è corretta per chiamare **SQLAllocHandle** due volte con la stessa variabile dell'applicazione definita per * \* OutputHandlePtr* senza chiamare **SQLFreeHandle** per liberare l'handle prima della riallocazione. La sovrascrittura degli handle ODBC in questo modo può causare un comportamento incoerente o errori della parte dei driver ODBC.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   

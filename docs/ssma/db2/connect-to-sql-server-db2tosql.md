@@ -1,4 +1,5 @@
 ---
+description: Connetti a SQL Server (DB2ToSQL)
 title: Connetti a SQL Server (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: bc14a072-8949-4ee0-a4b4-ada55fe8df5c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: bd1b92f7daa49ea668a37f212f3fa338fbf3f97a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8b9d2fc6610ad7a0af9518bd91b270d914e9e622
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937317"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373007"
 ---
 # <a name="connect-to-sql-server-db2tosql"></a>Connetti a SQL Server (DB2ToSQL)
 Utilizzare la finestra di dialogo **Connetti a SQL Server** per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si desidera eseguire la migrazione. Per accedere alla finestra di dialogo **Connetti a SQL Server** , scegliere **Connetti a SQL Server**dal menu **file** .  

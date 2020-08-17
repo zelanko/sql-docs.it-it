@@ -1,4 +1,5 @@
 ---
+description: Modificare un pacchetto di distribuzione di modelli
 title: Modificare un pacchetto di distribuzione di modelli
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3de531d906608e32ea505a3a2383c0919b5165d8
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 81c8c6445041321adca7cfbc0761f0c396edb891
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389567"
 ---
 # <a name="edit-a-model-deployment-package"></a>Modificare un pacchetto di distribuzione di modelli
 

@@ -1,4 +1,5 @@
 ---
+description: Funzionalità ADO per ogni versione
 title: Cronologia ADO | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 726487d366450f003ca745624a916d400990723b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d97e81eca94867ad00317667d08ef6bdf4c6f058
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761709"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355427"
 ---
 # <a name="ado-features-for-each-release"></a>Funzionalità ADO per ogni versione
 
@@ -55,7 +56,7 @@ Un comando Shape annidato ora restituisce un massimo di 512 **Recordset**. Ciò 
 
  Dialetto proprietà **dialetto**_property_ [è una](../../ado/reference/ado-api/dialect-property.md) nuova proprietà che definisce la sintassi e le regole generali utilizzate dal provider per analizzare la stringa o il flusso.  
 
- _Metodo_ **Command. Execute**il [metodo Execute](../../ado/reference/ado-api/execute-method-ado-command.md) dell'oggetto **comando** ADO è stato migliorato in modo da usare i flussi per l'input e l'output.  
+ **Command.Exe**  _Metodo_ carino il [metodo Execute](../../ado/reference/ado-api/execute-method-ado-command.md) dell'oggetto **comando** ADO è stato migliorato in modo da usare i flussi per l'input e l'output.
 
  *Campo statusvalues* Se si verifica un errore DB_E_ERRORSOCCURRED durante la modifica di un **campo** di un **Recordset**, ADO compilerà la proprietà **Field. status** con le informazioni di stato appropriate, in modo che l'utente disponga di ulteriori informazioni su ciò che si è verificato. Vedere [proprietà Status (campo ADO)](../../ado/reference/ado-api/status-property-ado-field.md).
 

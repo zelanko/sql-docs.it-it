@@ -1,4 +1,5 @@
 ---
+description: sys. server_resource_stats (database SQL di Azure)
 title: sys. server_resource_stats (database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
@@ -19,12 +20,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 716d9703ca684adc653d1f43e674b7d99ae91765
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: ef3f27b814405cf6ca56a47ffcac8dd467f939f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88376707"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats (database SQL di Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -44,7 +45,7 @@ La vista **sys. server_resource_stats** ha definizioni diverse a seconda della v
 |resource_name|nvarchar(128)|Nome della risorsa.|
 |sku|nvarchar(128)|Istanza gestita livello di servizio dell'istanza. Di seguito sono indicati i valori possibili: <br><ul><li>Utilizzo generico</li></ul><ul><li>Business Critical</li></ul>|
 |hardware_generation|nvarchar(128)|Identificatore di generazione hardware: come gen 4 o gen 5|
-|virtual_core_count|int|Rappresenta il numero di core virtuali per istanza (8, 16 o 24 in anteprima pubblica)|
+|virtual_core_count|INT|Rappresenta il numero di core virtuali per istanza (8, 16 o 24 in anteprima pubblica)|
 |avg_cpu_percent|Decimal (5, 2)|Utilizzo medio del calcolo in percentuale del limite del livello di servizio Istanza gestita utilizzato dall'istanza. Viene calcolato come somma del tempo di CPU di tutti i pool di risorse per tutti i database nell'istanza e diviso per il tempo di CPU disponibile per tale livello nell'intervallo specificato.|
 |reserved_storage_mb|bigint|Archiviazione riservata per istanza (quantità di spazio di archiviazione acquistata dal cliente per l'istanza gestita)|
 |storage_space_used_mb|Decimal (18, 2)|Archiviazione usata da tutti i file di database in un'istanza gestita (inclusi i database utente e di sistema)|

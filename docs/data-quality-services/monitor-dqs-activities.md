@@ -1,4 +1,5 @@
 ---
+description: Monitorare le attività DQS
 title: Monitorare le attività DQS
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 92f0d05b8b7f6bc4e72c70c73d9b93f0e785206d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ea7afe223bdbeb1d6e85347fe34f7d103a39621d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353567"
 ---
 # <a name="monitor-dqs-activities"></a>Monitorare le attività DQS
 
@@ -116,7 +117,7 @@ ms.locfileid: "85897479"
 2.  Fare clic sull'icona **Aggiorna l'elenco di attività** per applicare il filtro e visualizzare solo le attività DQS filtrate.  
   
 ##  <a name="view-dqs-activity-details"></a><a name="ActivityDetails"></a> Visualizzare i dettagli delle attività DQS  
- È possibile visualizzare le informazioni dettagliate di un'attività DQS, ad esempio le fasi dell'attività e le informazioni sul profiler, nella schermata Monitoraggio attività. A tale scopo, procedere come indicato di seguito:  
+ È possibile visualizzare le informazioni dettagliate di un'attività DQS, ad esempio le fasi dell'attività e le informazioni sul profiler, nella schermata Monitoraggio attività. A tale scopo, procedere nel seguente modo:  
   
 1.  Selezionare un'attività DQS nella griglia di attività (nel riquadro superiore).  
   
@@ -127,7 +128,7 @@ ms.locfileid: "85897479"
     -   **Profiler**: vengono visualizzate le informazioni di profiling per le attività correnti e passate. Per le attività correnti, contiene informazioni parziali ma coerenti. Le informazioni di profiling di un'attività vengono esportate in un file di Excel quando si esportano i dettagli dell'attività corrispondenti in un file di Excel. Le informazioni sono disponibili nei fogli **Profiler-origine** e **Profiler-campi** del file di Excel esportato.  
   
 ##  <a name="export-dqs-activity-details"></a><a name="Export"></a> Esportare i dettagli delle attività DQS  
- È possibile esportare in un file di Excel le proprietà, i processi e le informazioni di profiling di un'attività presenti nella schermata Monitoraggio attività. A tale scopo, procedere come indicato di seguito:  
+ È possibile esportare in un file di Excel le proprietà, i processi e le informazioni di profiling di un'attività presenti nella schermata Monitoraggio attività. A tale scopo, procedere nel seguente modo:  
   
 1.  Selezionare un'attività nella griglia di attività (nel riquadro superiore).  
   
@@ -135,7 +136,7 @@ ms.locfileid: "85897479"
   
 3.  Viene richiesto di specificare un nome e un percorso per il file di Excel da salvare. Il file di Excel esportato contiene i fogli seguenti:  
   
-    |Nome foglio|Description|  
+    |Nome foglio|Descrizione|  
     |----------------|-----------------|  
     |Attività|Contiene le informazioni (colonne) sull'attività come riportato nella griglia di attività.|  
     |Processi|Contiene le informazioni (colonne) sui processi nell'attività come riportato nella scheda **Fasi attività** .|  

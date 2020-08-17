@@ -1,4 +1,5 @@
 ---
+description: Convalidare una versione rispetto a regole business (Master Data Services)
 title: Convalidare una versione rispetto a regole business
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 66a934d1cddad1e7fdb2e36291611fa50e9c8ce5
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 676a6fff88de31480737f1bb82cc0466605b4699
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388317"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>Convalidare una versione rispetto a regole business (Master Data Services)
 

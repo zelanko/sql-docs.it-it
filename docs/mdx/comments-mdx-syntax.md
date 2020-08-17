@@ -1,4 +1,5 @@
 ---
+description: Commenti (sintassi MDX)
 title: Commenti (sintassi MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1ffcb57a48c7d6e265daa786912cfd37f0b43754
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8fa1312e361bf0ef673254c0eb804ed7b8b7ca7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387676"
 ---
 # <a name="comments-mdx-syntax"></a>Commenti (sintassi MDX)
 
@@ -34,8 +35,8 @@ ms.locfileid: "68001523"
  -- (trattino doppio)  
  Questo indicatore di commento può essere utilizzato sulla stessa riga del codice da eseguire o su una riga a parte. Tutti i caratteri situati tra il trattino doppio e la fine della riga vengono trattati come commento. Per commenti su più righe, specificare il trattino doppio all'inizio di ogni riga di commento. Per ulteriori informazioni, vedere [&#40;commento&#41; &#40;&#41;MDX ](../mdx/comment-mdx-operator-reference.md).  
   
- /* ... \*/(coppie di caratteri barra-asterisco)  
- Questo indicatore di commento può essere utilizzato sulla stessa riga del codice da eseguire, su una riga a parte o all'interno del codice eseguibile. Tutti gli elementi della coppia di commenti (\*/) alla coppia di caratteri di\*chiusura (/) vengono considerati parte del commento. Per un commento su più righe, la coppia di caratteri di apertura del commento\*(/) deve iniziare il commento e la coppia di caratteri di chiusura\*-commento (/) deve terminare il commento. Nelle righe del commento non deve essere inserito nessun altro simbolo di commento. Per ulteriori informazioni, vedere [/*... / \*(Commento)](../mdx/comment-mdx.md).  
+ /* ... \* /(coppie di caratteri barra-asterisco)  
+ Questo indicatore di commento può essere utilizzato sulla stessa riga del codice da eseguire, su una riga a parte o all'interno del codice eseguibile. Tutti gli elementi della coppia di commenti (/ \* ) alla coppia di caratteri di chiusura ( \* /) vengono considerati parte del commento. Per un commento su più righe, la coppia di caratteri di apertura del commento (/ \* ) deve iniziare il commento e la coppia di caratteri di chiusura-commento ( \* /) deve terminare il commento. Nelle righe del commento non deve essere inserito nessun altro simbolo di commento. Per ulteriori informazioni, vedere [/*. \* .. /(Commento)](../mdx/comment-mdx.md).  
   
 ## <a name="example"></a>Esempio  
  Nella query seguente vengono illustrati esempi dei tre tipi di commento:  

@@ -1,4 +1,5 @@
 ---
+description: sys.spatial_index_tessellations (Transact-SQL)
 title: sys. spatial_index_tessellations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8b17a9a4-b57f-4220-8138-fc73581b1670
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 39c5022d5fa62688c931baed86aad062a65179b5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a86ba88f46944140da647133ab7f8a72a81dd279
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88376597"
 ---
 # <a name="sysspatial_index_tessellations-transact-sql"></a>sys.spatial_index_tessellations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,10 +41,10 @@ ms.locfileid: "85883777"
 |object_id|**int**|ID dell'oggetto in cui è definito l'indice. Ogni coppia (object_id, index_id) ha una voce corrispondente in [sys. spatial_indexes](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md).|  
 |index_id|**int**|ID dell'indice spaziale in cui è definita la colonna indicizzata.|  
 |tessellation_scheme|**sysname**|Nome dello schema a mosaico, uno di: GEOMETRY_GRID, GEOGRAPHY_GRID|  
-|bounding_box_xmin|**float (53)**|Coordinata x dell'angolo inferiore sinistro del rettangolo di delimitazione, uno di: NULL = non applicabile per uno schema a mosaico specificato (ad esempio GEOGRAPHY_GRID) *n* = Se tessellation_scheme è GEOMETRY_GRID, il valore della coordinata x-min.                     **Nota:** Le coordinate definite dai parametri del rettangolo di delimitazione vengono interpretate per ogni oggetto in base al relativo [identificatore SRID](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).|  
-|bounding_box_ymin|**float (53)**|Coordinata y dell'angolo inferiore sinistro del rettangolo di delimitazione, uno di: NULL = non applicabile per uno schema a mosaico specificato (ad esempio GEOGRAPHY_GRID) *n* = Se tessellation_scheme è GEOMETRY_GRID, il valore della coordinata y-min|  
-|bounding_box_xmax|**float (53)**|Coordinata x dell'angolo superiore destro del rettangolo di delimitazione, uno di: NULL = non applicabile per uno schema a mosaico specificato (ad esempio GEOGRAPHY_GRID) *n* = Se tessellation_scheme è GEOMETRY_GRID, il valore della coordinata x-max|  
-|bounding_box_ymax|**float (53)**|Coordinata y dell'angolo superiore destro del rettangolo di delimitazione, uno di: NULL = non applicabile per uno schema a mosaico specificato (ad esempio GEOGRAPHY_GRID) *n* = Se tessellation_scheme è GEOMETRY_GRID, il valore della coordinata y-max|  
+|bounding_box_xmin|**float(53)**|Coordinata x dell'angolo inferiore sinistro del rettangolo di delimitazione, uno di: NULL = non applicabile per uno schema a mosaico specificato (ad esempio GEOGRAPHY_GRID) *n* = Se tessellation_scheme è GEOMETRY_GRID, il valore della coordinata x-min.                     **Nota:** Le coordinate definite dai parametri del rettangolo di delimitazione vengono interpretate per ogni oggetto in base al relativo [identificatore SRID](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).|  
+|bounding_box_ymin|**float(53)**|Coordinata y dell'angolo inferiore sinistro del rettangolo di delimitazione, uno di: NULL = non applicabile per uno schema a mosaico specificato (ad esempio GEOGRAPHY_GRID) *n* = Se tessellation_scheme è GEOMETRY_GRID, il valore della coordinata y-min|  
+|bounding_box_xmax|**float(53)**|Coordinata x dell'angolo superiore destro del rettangolo di delimitazione, uno di: NULL = non applicabile per uno schema a mosaico specificato (ad esempio GEOGRAPHY_GRID) *n* = Se tessellation_scheme è GEOMETRY_GRID, il valore della coordinata x-max|  
+|bounding_box_ymax|**float(53)**|Coordinata y dell'angolo superiore destro del rettangolo di delimitazione, uno di: NULL = non applicabile per uno schema a mosaico specificato (ad esempio GEOGRAPHY_GRID) *n* = Se tessellation_scheme è GEOMETRY_GRID, il valore della coordinata y-max|  
 |level_1_grid|**smallint**|Densità della griglia di livello principale. Se tessellation_scheme è GEOMETRY_GRID o GEOGRAPHY_GRID, uno dei seguenti valori: 16 = 4 per 4 Grid (LOW) 64 = 8 by 8 Grid (media) 256 = 16 by 16 Grid (HIGH) NULL = not applicabile per il tipo di indice spaziale o lo schema a mosaico specificato.  Viene restituito NULL quando viene utilizzata la nuova suddivisione a mosaico di SQL Server 11.|  
 |level_1_grid_desc|**nvarchar(60)**|Densità della griglia di primo livello, ovvero uno dei seguenti valori: LOW media HIGH NULL = not applicabile per il tipo di indice spaziale o lo schema a mosaico specificato.  Viene restituito NULL quando viene utilizzata la nuova suddivisione a mosaico di SQL Server 11.|  
 |level_2_grid|**smallint**|Densità della griglia di secondo livello. Se tessellation_scheme è GEOMETRY_GRID o GEOGRAPHY_GRID, uno dei seguenti valori: 16 = 4 per 4 Grid (LOW) 64 = 8 by 8 Grid (media) 256 = 16 by 16 Grid (HIGH) NULL = not applicabile per il tipo di indice spaziale o lo schema a mosaico specificato.  Viene restituito NULL quando viene utilizzata la nuova suddivisione a mosaico di SQL Server 11.|  
@@ -58,11 +59,11 @@ ms.locfileid: "85883777"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Viste del catalogo dell'oggetto &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Panoramica degli indici spaziali](../../relational-databases/spatial/spatial-indexes-overview.md)   
- [sys. Objects &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys. spatial_indexes &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)   
- [sys. Indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys. Objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.spatial_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)   
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Manipolazione dei dati MDX - DRILLTHROUGH
 title: Istruzione drill-through (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ee90d2c367fa289e8255a84e4eb6da19b37933e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee68e6cbb22bc817d478490315ab88ccb87e4ad4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68891211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387040"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>Manipolazione dei dati MDX - DRILLTHROUGH
 
@@ -42,14 +43,14 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  Elenco delimitato da virgole di misure e attributi della dimensione.  
   
 ## <a name="remarks"></a>Osservazioni  
- Il drill-through è un'operazione con cui un utente finale seleziona una singola cella di un cubo e recupera un set di risultati dai dati di origine di tale cella allo scopo di ottenere informazioni più dettagliate. Per impostazione predefinita, il set di risultati di un drill-through è derivato dalle righe di tabella che sono state valutate per calcolare il valore della cella del cubo selezionata. Per il drill-through da parte degli utenti finali, è necessario che le relative applicazioni client supportino tale funzionalità. In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]i risultati vengono recuperati direttamente dall'archiviazione MOLAP, a meno che non vengano eseguite query su partizioni o dimensioni ROLAP.  
+ Il drill-through è un'operazione con cui un utente finale seleziona una singola cella di un cubo e recupera un set di risultati dai dati di origine di tale cella allo scopo di ottenere informazioni più dettagliate. Per impostazione predefinita, il set di risultati di un drill-through è derivato dalle righe di tabella che sono state valutate per calcolare il valore della cella del cubo selezionata. Per il drill-through da parte degli utenti finali, è necessario che le relative applicazioni client supportino tale funzionalità. In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] i risultati vengono recuperati direttamente dall'archiviazione MOLAP, a meno che non vengano eseguite query su partizioni o dimensioni ROLAP.  
   
 > [!IMPORTANT]  
 >  La sicurezza relativa al drill-through è basata sulle opzioni di sicurezza generali definite per il cubo. Se un utente non può ottenere alcuni dati tramite MDX, all'utente verranno applicate dal drill-through le stesse restrizioni.  
   
  La cella interessata è specificata da un'istruzione MDX. Il valore specificato dall'argomento **MaxRows** indica il numero massimo di righe che devono essere restituite dal set di righe risultante.  
   
- Per impostazione predefinita, il numero massimo di righe restituite è 10.000. Ciò significa che se si lascia **MaxRows** non specificato, si otterranno 10.000 righe o meno. Se questo valore è troppo basso per lo scenario in uso, è possibile impostare **MaxRows** su un numero maggiore, `MAXROWS 20000`ad esempio. Se il valore è troppo basso, è possibile aumentare il valore predefinito modificando la proprietà del server **OLAP\Query\DefaultDrillthroughMaxRows** . Per ulteriori informazioni sulla modifica di questa proprietà, vedere [proprietà del server in Analysis Services](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services).  
+ Per impostazione predefinita, il numero massimo di righe restituite è 10.000. Ciò significa che se si lascia **MaxRows** non specificato, si otterranno 10.000 righe o meno. Se questo valore è troppo basso per lo scenario in uso, è possibile impostare **MaxRows** su un numero maggiore, ad esempio `MAXROWS 20000` . Se il valore è troppo basso, è possibile aumentare il valore predefinito modificando la proprietà del server **OLAP\Query\DefaultDrillthroughMaxRows** . Per ulteriori informazioni sulla modifica di questa proprietà, vedere [proprietà del server in Analysis Services](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services).  
   
  Se non diversamente specificato, le colonne restituite includono tutti gli attributi di granularità per tutte le dimensioni correlate al gruppo di misure della misura specificata, tranne le dimensioni molti-a-molti. Le dimensioni del cubo sono precedute da $ per consentire la distinzione tra dimensioni e gruppi di misure. La clausola **return** viene utilizzata per specificare le colonne restituite dalla query drill-through. Le funzioni seguenti possono essere applicate a un singolo attributo o misura mediante la clausola **return** .  
   
@@ -97,6 +98,6 @@ RETURN
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzioni di manipolazione dei dati MDX &#40;&#41;MDX](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [Istruzioni di manipolazione dei dati MDX &#40;&#41;MDX ](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

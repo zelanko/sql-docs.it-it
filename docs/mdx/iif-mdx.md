@@ -1,4 +1,5 @@
 ---
+description: IIf (MDX)
 title: IIf (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ca6449308f9683bccf55e58d9cec6d5d5a97a59e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8a9a8da3ec20a34ba1dea30b1285d6a9c147e55d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387467"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 
@@ -39,7 +40,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
  *Hint expression2 [eager | Strict | Lazy]]*  
  Utilizzato quando l'espressione logica restituisce **false**. Expression2 deve essere un'espressione MDX (Multidimensional Expression) valida.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  La condizione specificata dall'espressione logica restituisce **false** quando il valore di questa espressione è zero. Qualsiasi altro valore restituisce **true**.  
   
  Quando la condizione è **true**, la funzione **IIf** restituisce la prima espressione. In caso contrario, la funzione restituisce la seconda espressione.  
@@ -65,7 +66,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  Per ulteriori informazioni, vedere [hint per la query della funzione IIF in SQL Server Analysis Services 2008](http://www.ssas-info.com/analysis-services-articles/50-mdx/1103-iif-function-query-hints-in-sql-server-analysis-services-2008) e [piani di esecuzione e hint di piano per la funzione MDX IIf e l'istruzione case](https://go.microsoft.com/fwlink/?LinkId=269565).  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nella query seguente viene illustrato un semplice utilizzo di **IIf** all'interno di una misura calcolata per restituire uno dei due valori stringa diversi quando la misura Internet Sales Amount è maggiore o minore di $10000:  
   
  `WITH MEMBER MEASURES.IIFDEMO AS`  
