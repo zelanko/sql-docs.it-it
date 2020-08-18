@@ -1,4 +1,5 @@
 ---
+description: TopSum (DMX)
 title: TopSum (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c8247440f0e9d074e24eab3e9836fdb46bd0855e
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 2406141d9ffe5846e4dd26e75d471391992d1490
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970237"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395187"
 ---
 # <a name="topsum-dmx"></a>TopSum (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

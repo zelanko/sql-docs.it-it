@@ -1,4 +1,5 @@
 ---
+description: UPDATE (DMX)
 title: AGGIORNAMENTO (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f77d71eab284b695171e923cfe53b53575d45d94
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: d74a59aaea079a5d3c1945b92813f6d276591b78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394877"
 ---
 # <a name="update-dmx"></a>UPDATE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,7 +38,7 @@ SET NODE_CAPTION='new caption'
  Stringa che contiene il nuovo nome per la colonna **NODE_CAPTION** .  
   
  *espressione della condizione*  
- facoltativo. Condizione per limitare i valori restituiti dall'elenco di colonne.  
+ Facoltativo. Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente, l'istruzione **Update** modifica il nome predefinito, `Cluster 1` , per il cluster `001` con il nome più descrittivo `Likely Customers` .  
