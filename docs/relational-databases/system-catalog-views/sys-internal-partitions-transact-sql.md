@@ -1,4 +1,5 @@
 ---
+description: sys. internal_partitions (Transact-SQL)
 title: sys. internal_partitions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
@@ -13,16 +14,17 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9da410954f4fedce101ca95a9a3571898b4cd349
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: abfff1a5f8a9ed447566e5f6a91fe23c51654890
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88401457"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>sys. internal_partitions (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  Restituisce una riga per ogni set di righe che tiene traccia dei dati interni per gli indici columnstore nelle tabelle basate su disco. Questi set di righe sono interni agli indici columnstore e tengono traccia delle righe eliminate, dei mapping rowgroup e dei RowGroups di archiviazione Delta. Consentono di tenere traccia dei dati per ogni partizione della tabella. ogni tabella include almeno una partizione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ricrea i set di righe ogni volta che viene ricompilato l'indice columnstore.   
+  Restituisce una riga per ogni set di righe che tiene traccia dei dati interni per gli indici columnstore nelle tabelle basate su disco. Questi set di righe sono interni agli indici columnstore e tengono traccia delle righe eliminate, dei mapping rowgroup e dei RowGroups di archiviazione Delta. Consentono di tenere traccia dei dati per ogni partizione della tabella. ogni tabella include almeno una partizione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ricrea i set di righe ogni volta che viene ricompilato l'indice columnstore.   
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +45,7 @@ ms.locfileid: "86002728"
  Richiede l'appartenenza al ruolo `public`. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ricrea nuovi indici interni columnstore ogni volta che crea o ricompila un indice columnstore.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ricrea nuovi indici interni columnstore ogni volta che crea o ricompila un indice columnstore.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -59,8 +61,8 @@ WHERE p.object_id = OBJECT_ID ( '<table name' ) ;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo dell'oggetto &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Domande frequenti sull'esecuzione di query sul catalogo di sistema di SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   
