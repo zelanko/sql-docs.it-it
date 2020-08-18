@@ -4,6 +4,8 @@
   href: ../sql-server/index.yml
 - name: Driver di SQL Server
   href: ../connect/sql-connection-libraries.md
+- name: Matrice di supporto delle funzionalità dei driver
+  href: ../connect/driver-feature-matrix.md
 - name: Cronologia dei driver SQL Server
   href: ../connect/connect-history.md
 - name: SQL Data Developer
@@ -30,6 +32,10 @@
           href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
         - name: Scaricare il provider di dati Microsoft SqlClient per SQL Server
           href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
+        - name: Abilitare la traccia eventi in SqlClient
+          href: ../connect/ado-net/enable-eventsource-tracing.md
+        - name: Opzioni di AppContext in SqlClient
+          href: ../connect/ado-net/appcontext-switches.md
         - name: Ciclo di vita del supporto per il driver SqlClient
           href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
         - name: Ricerca di informazioni aggiuntive sul driver SqlClient
@@ -60,7 +66,7 @@
               href: ../connect/ado-net/sql/compare-guid-uniqueidentifier-values.md
             - name: Dati relativi a data e ora
               href: ../connect/ado-net/sql/date-time-data.md
-            - name: Tipi definiti dall'utente di grandi dimensioni
+            - name: Tipi di grandi dimensioni definiti dall'utente
               href: ../connect/ado-net/sql/large-udts.md
             - name: Dati XML in SQL Server
               href: ../connect/ado-net/sql/xml-data-sql-server.md
@@ -92,7 +98,9 @@
                   href: ../connect/ado-net/sql/multiple-bulk-copy-operations.md
                 - name: Transazioni e operazioni di copia bulk
                   href: ../connect/ado-net/sql/transaction-bulk-copy-operations.md
-            - name: MARS (Multiple Active Result Sets)
+                - name: Suggerimenti per l'ordinamento per operazioni di copia bulk
+                  href: ../connect/ado-net/sql/bulk-copy-order-hints.md
+            - name: MARS (Multiple Active Result Set)
               href: ../connect/ado-net/sql/multiple-active-result-sets-mars.md
               items:
                 - name: Abilitazione di MARS (Multiple Active Result Set)
@@ -142,6 +150,15 @@
               href: ../connect/ado-net/sql/sqlclient-support-localdb.md
             - name: Supporto di SqlClient per Always Encrypted
               href: ../connect/ado-net/sql/sqlclient-support-always-encrypted.md
+              items:
+                - name: Sviluppare un'applicazione .NET usando Always Encrypted con enclave sicuri
+                  href: ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md
+                - name: Uso di Azure Key Vault con Always Encrypted
+                  href: ado-net/sql/azure-key-vault-example.md
+                - name: Uso di Azure Key Vault con Always Encrypted con enclave sicure
+                  href: ado-net/sql/azure-key-vault-enclave-example.md
+            - name: Individuazione dati e classificazione in SqlClient
+              href: ../connect/ado-net/sql/data-classification.md
 - name: JDBC
   items:
     - name: Microsoft JDBC Driver per SQL Server
@@ -2631,8 +2648,8 @@
         - name: Utilizzo di Always Encrypted con il JDBC Driver
           href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
           items:
-            - name: Always Encrypted con enclave sicuri
-              href: ../connect/jdbc/always-encrypted-with-secure-enclaves.md
+            - name: Uso di Always Encrypted con enclave sicure con il driver JDBC
+              href: ../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md
         - name: Articoli guida
           items:
             - name: Utilizzo di istruzioni SQL
@@ -2747,6 +2764,8 @@
               href: ../connect/jdbc/using-sql-escape-sequences.md
             - name: Utilizzo delle istruzioni con le stored procedure
               href: ../connect/jdbc/using-statements-with-stored-procedures.md
+            - name: Autenticazione del certificato client per scenari di loopback
+              href: ../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md
             - name: 'Esempi di Azure Key Vault, per la versione 7.0 e altre'
               href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
               items:
@@ -2758,11 +2777,11 @@
   items:
     - name: Driver Node.js per SQL Server
       href: ../connect/node-js/node-js-driver-for-sql-server.md
-    - name: 'Passaggio 1: Configurare l''ambiente di sviluppo per lo sviluppo Node.js'
+    - name: 'Passaggio 1:  Configurare l''ambiente di sviluppo per lo sviluppo Node.js'
       href: ../connect/node-js/step-1-configure-development-environment-for-node-js-development.md
     - name: 'Passaggio 2: Creare un database SQL per lo sviluppo Node.js'
       href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
-    - name: 'Passaggio 3: Modello di verifica per la connessione a SQL con Node.js'
+    - name: 'Passaggio 3: Modello di verifica per la connessione a SQL tramite Node.js'
       href: ../connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md
 - name: ODBC
   items:
@@ -2790,14 +2809,16 @@
               href: ../connect/odbc/linux-mac/programming-guidelines.md
             - name: Strumenti
               items:
-                - name: Connessione con bcp.exe
+                - name: Connessione a bcp
                   href: ../connect/odbc/linux-mac/connecting-with-bcp.md
-                - name: Connessione con sqlcmd.exe
+                - name: Connessione con sqlcmd
                   href: ../connect/odbc/linux-mac/connecting-with-sqlcmd.md
             - name: Uso dell'autenticazione integrata
               href: ../connect/odbc/linux-mac/using-integrated-authentication.md
         - name: Note sulla versione
           href: ../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md
+        - name: Note sulla versione (mssql-tools)
+          href: ../connect/odbc/linux-mac/release-notes-tools.md
         - name: Problemi noti
           href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
         - name: Domande frequenti su ODBC in Linux e macOS
@@ -2920,7 +2941,7 @@
                     - name: Architettura ODBC
                       href: ../odbc/reference/odbc-architecture.md
                       items:
-                        - name: APPLICAZIONI
+                        - name: Applicazioni
                           href: ../odbc/reference/applications.md
                         - name: Gestione driver
                           href: ../odbc/reference/the-driver-manager.md
@@ -3555,7 +3576,7 @@
                       items:
                         - name: Multithreading
                           href: ../odbc/reference/develop-app/multithreading.md
-                        - name: Alignment
+                        - name: Allineamento
                           href: ../odbc/reference/develop-app/alignment.md
                         - name: Unicode
                           href: ../odbc/reference/develop-app/unicode.md
@@ -3613,7 +3634,7 @@
                                   href: ../odbc/reference/develop-app/types-of-drivers.md
                                 - name: Matrice di compatibilità
                                   href: ../odbc/reference/develop-app/compatibility-matrix.md
-                            - name: Nuove funzionalità
+                            - name: Nuove funzioni e caratteristiche
                               href: ../odbc/reference/develop-app/new-features.md
                               items:
                                 - name: 'Cursori rettangolari, cursori scorrevoli e compatibilità con le versioni precedenti per le applicazioni ODBC 3.x'
@@ -3727,7 +3748,7 @@
                       items:
                         - name: Funzione SQLAsyncNotificationCallback
                           href: ../odbc/reference/develop-driver/sqlasyncnotificationcallback-function.md
-                - name: Informazioni di riferimento sulle API
+                - name: Riferimento API
                   href: ../odbc/reference/syntax/odbc-reference.md
                   items:
                     - name: Riepilogo delle funzioni
@@ -3784,7 +3805,7 @@
                           href: ../odbc/reference/syntax/sqlcopydesc-function.md
                         - name: Funzione SQLDataSources
                           href: ../odbc/reference/syntax/sqldatasources-function.md
-                        - name: Funzione SQLDescribeCol
+                        - name: 'Funzione SQLDescribeCol '
                           href: ../odbc/reference/syntax/sqldescribecol-function.md
                         - name: Funzione SQLDescribeParam
                           href: ../odbc/reference/syntax/sqldescribeparam-function.md
@@ -5111,6 +5132,8 @@
           href: ../connect/oledb/features/using-large-value-types.md
         - name: Utilizzo di MARS (Multiple Active Result Set)
           href: ../connect/oledb/features/using-multiple-active-result-sets-mars.md
+        - name: Uso della risoluzione dell'IP di rete trasparente
+          href: ../connect/oledb/features/using-transparent-network-ip-resolution.md
         - name: Utilizzo dei tipi definiti dall'utente (UDT)
           href: ../connect/oledb/features/using-user-defined-types.md
         - name: Utilizzo di tipi di dati XML
@@ -5142,7 +5165,7 @@
           href: ../connect/oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md
         - name: Uso dei file di intestazione e di libreria del driver OLE DB per SQL Server
           href: ../connect/oledb/applications/using-the-oledb-driver-for-sql-server-header-and-library-files.md
-    - name: Programmazione OLE DB
+    - name: programmazione OLE DB
       href: ../connect/oledb/ole-db/oledb-driver-for-sql-server-programming.md
       items:
         - name: Aree specifiche
@@ -5452,7 +5475,7 @@
   items:
     - name: Driver Microsoft per PHP per SQL Server
       href: ../connect/php/microsoft-php-driver-for-sql-server.md
-    - name: Introduzione
+    - name: Attività iniziali
       href: ../connect/php/getting-started-with-the-php-sql-driver.md
       items:
         - name: 'Passaggio 1: Configurare l''ambiente di sviluppo per lo sviluppo di PHP'
@@ -5490,9 +5513,9 @@
         - name: Connessione al server
           href: ../connect/php/connecting-to-the-server.md
           items:
-            - name: 'Procedura: Connessione con l''autenticazione di Windows'
+            - name: 'Procedura: Connettersi con l''autenticazione di Windows'
               href: ../connect/php/how-to-connect-using-windows-authentication.md
-            - name: 'Procedura: Connessione con l''autenticazione di SQL Server'
+            - name: 'Procedura: Connettersi con l''autenticazione di SQL Server'
               href: ../connect/php/how-to-connect-using-sql-server-authentication.md
             - name: 'Procedura: Connessione con l''autenticazione di Azure Active Directory'
               href: ../connect/php/azure-active-directory.md
@@ -5500,7 +5523,7 @@
               href: ../connect/php/how-to-connect-on-a-specified-port.md
             - name: Pool di connessioni
               href: ../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md
-            - name: 'Procedura: Disabilitare più set di risultati attivi (MARS)'
+            - name: 'Procedura: Disabilitare MARS (Multiple Active Result Set)'
               href: ../connect/php/how-to-disable-multiple-active-resultsets-mars.md
             - name: Opzioni di connessione
               href: ../connect/php/connection-options.md
@@ -5561,7 +5584,7 @@
               href: ../connect/php/how-to-send-data-as-a-stream.md
             - name: 'Procedura: Eseguire le transazioni'
               href: ../connect/php/how-to-perform-transactions.md
-        - name: Conversione dei tipi di dati
+        - name: Conversione del tipo di dati
           href: ../connect/php/converting-data-types.md
           items:
             - name: Tipi di dati di SQL Server predefiniti
@@ -5572,7 +5595,7 @@
               href: ../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md
             - name: 'Procedura: Specificare i tipi di dati PHP'
               href: ../connect/php/how-to-specify-php-data-types.md
-            - name: 'Procedura: Invio e recupero di dati UTF-8 con il supporto incorporato di UTF-8'
+            - name: 'Procedura: Inviare e recuperare dati UTF-8 con il supporto incorporato di UTF-8'
               href: ../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md
             - name: 'Procedura: Inviare e recuperare dati ASCII in Linux e macOS'
               href: ../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md
@@ -5723,7 +5746,7 @@
                   href: ../connect/php/pdostatement-setattribute.md
                 - name: 'PDOStatement::setFetchMode'
                   href: ../connect/php/pdostatement-setfetchmode.md
-    - name: Considerazioni relative alla sicurezza
+    - name: Considerazioni sulla sicurezza
       href: ../connect/php/security-considerations-for-php-sql-driver.md
     - name: Esempi di codice
       href: ../connect/php/code-samples-for-php-sql-driver.md
@@ -5907,7 +5930,7 @@
                   href: ../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md
                 - name: 'Aggiornamento dei risultati uniti in join: tabella univoca'
                   href: ../ado/guide/data/updating-joined-results-unique-table.md
-            - name: Elaborazione di transazioni
+            - name: Elaborazione delle transazioni
               href: ../ado/guide/data/transaction-processing.md
         - name: Persistenza dei dati
           href: ../ado/guide/data/persisting-data.md

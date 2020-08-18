@@ -102,7 +102,7 @@
   items:
     - name: Interfaccia utente grafica
       href: project-settings-gui-mysqltosql.md
-    - name: Database SQL di Azure
+    - name: database SQL di Azure
       href: project-settings-azure-sql-db-mysqltosql.md
     - name: Mapping dei tipi
       href: project-settings-type-mapping-mysqltosql.md

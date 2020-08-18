@@ -9,13 +9,13 @@ metadata:
   ms.topic: landing-page
   author: dphansen
   ms.author: davidph
-  ms.date: 04/24/2020
-  ms.openlocfilehash: 41832dfd555df827e14182900a4faa07ad22ab1e
-  ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+  ms.date: 05/27/2020
+  ms.openlocfilehash: 72f9fc36ace86dda5c38b7713376d83dbe1e8230
+  ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 05/19/2020
-  ms.locfileid: "83606825"
+  ms.lasthandoff: 07/20/2020
+  ms.locfileid: "86485302"
 landingContent:
 - title: Machine Learning in SQL Server
   linkLists:
@@ -65,11 +65,47 @@ landingContent:
       url: tutorials/quickstart-r-train-score-model.md
   - linkListType: tutorial
     links:
-    - text: Usare R in T-SQL
-      url: tutorials/sqldev-in-database-r-for-sql-developers.md
-    - text: Usare Machine Learning Services in R Tools
-      url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
-- title: ML in cluster Big Data
+    - text: Stimare il noleggio di sci con l'albero delle decisioni
+      url: tutorials/r-predictive-model-introduction.md
+    - text: Categorizzazione dei clienti tramite clustering K-means
+      url: tutorials/r-clustering-model-introduction.md
+- title: Istanza gestita di SQL di Azure
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Machine Learning Services in Istanza gestita di SQL di Azure
+      url: /azure/azure-sql/managed-instance/machine-learning-services-overview
+    - text: Differenze principali tra le funzionalità ML in Istanza gestita di SQL di Azure e SQL Server
+      url: /azure/azure-sql/managed-instance/machine-learning-services-differences
+  - linkListType: how-to-guide
+    links:
+    - text: Distribuire ed eseguire stime con un modello ONNX in Istanza gestita di SQL di Azure
+      url: /azure/azure-sql-edge/deploy-onnx?context=/azure/azure-sql/managed-instance/context/ml-context
+- title: Database SQL Edge di Azure
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Machine Learning e intelligenza artificiale con ONNX in database SQL Edge
+      url: /azure/sql-database-edge/onnx-overview
+  - linkListType: how-to-guide
+    links:
+    - text: Distribuire ed eseguire stime con un modello ONNX in database SQL Edge
+      url: /azure/sql-database-edge/deploy-onnx
+- title: Estensione ML di Azure Data Studio
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Che cos'è l'estensione Machine Learning per Azure Data Studio?
+      url: ../azure-data-studio/machine-learning-extension.md
+  - linkListType: how-to-guide
+    links:
+    - text: Gestire i pacchetti nel database
+      url: ../azure-data-studio/machine-learning-extension-manage-packages.md
+    - text: Effettuare stime
+      url: ../azure-data-studio/machine-learning-extension-predictions.md
+    - text: Importare o visualizzare modelli
+      url: ../azure-data-studio/machine-learning-extension-import-view-models.md
+- title: Cluster Big Data di SQL Server
   linkLists:
   - linkListType: overview
     links:
@@ -87,7 +123,7 @@ landingContent:
       url: ../big-data-cluster/sparklyr-from-rstudio.md
     - text: Integrare Spark con SQL Server
       url: ../big-data-cluster/spark-mssql-connector.md
-- title: ML in Azure Synapse Analytics
+- title: Azure Synapse Analytics
   linkLists:
   - linkListType: overview
     links:
@@ -101,13 +137,3 @@ landingContent:
     links:
     - text: Creare, sviluppare e gestire notebook di Azure Synapse Studio
       url: /azure/synapse-analytics/spark/apache-spark-development-using-notebooks
-- title: ML in database SQL Edge di Azure
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: Machine Learning e intelligenza artificiale con ONNX in database SQL Edge
-      url: /azure/sql-database-edge/onnx-overview
-  - linkListType: how-to-guide
-    links:
-    - text: Distribuire ed eseguire stime con un modello ONNX in database SQL Edge
-      url: /azure/sql-database-edge/deploy-onnx

@@ -124,7 +124,7 @@
       href: project-settings-type-mapping-sybasetosql.md
     - name: Synchronization
       href: project-settings-synchronization-sybasetosql.md
-    - name: Database SQL di Azure
+    - name: database SQL di Azure
       href: project-settings-azure-sql-db-sybasetosql.md
     - name: Migrazione
       href: project-settings-migration-sybasetosql.md

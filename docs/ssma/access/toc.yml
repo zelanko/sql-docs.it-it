@@ -112,7 +112,7 @@
       href: project-settings-gui-accesstosql.md
     - name: Conversione
       href: project-settings-conversion-accesstosql.md
-    - name: Database SQL di Azure
+    - name: database SQL di Azure
       href: project-settings-azure-sql-db-accesstosql.md
     - name: Mapping dei tipi
       href: project-settings-type-mapping-accesstosql.md
