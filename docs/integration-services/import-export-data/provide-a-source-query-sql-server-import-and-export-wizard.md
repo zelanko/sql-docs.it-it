@@ -1,4 +1,5 @@
 ---
+description: Impostazione query di origine (Importazione/Esportazione guidata SQL Server)
 title: Impostazione query di origine (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 267db7655133669266b9fc0c9f6b54819333a6fa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: edd3812cce0a5d0b956691f3a6bfb4f708495819
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347167"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Impostazione query di origine (Importazione/Esportazione guidata SQL Server)
 
@@ -50,7 +51,7 @@ Per altri esempi di query SELECT, vedere [Esempi di istruzioni SELECT &#40;Trans
 
 Se l'origine dati è Excel, vedere [Specificare una query di origine per Excel](#excelQueries) più avanti in questo argomento per informazioni su come specificare fogli di lavoro Excel e intervalli in una query.
   
- **Analizza**  
+ **Parse**.  
  Controlla la sintassi dell'istruzione SQL immessa nella casella di testo **Istruzione SQL** .  
   
 > [!NOTE]
@@ -65,7 +66,7 @@ Se l'origine dati è Excel, vedere [Specificare una query di origine per Excel](
 > Per informazioni dettagliate sulla connessione ai file di Excel e sulle limitazioni e i problemi noti per il caricamento di dati da o a file di Excel, vedere [Caricare i dati da o in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
 
 Le query possono essere eseguite in tre tipi di oggetti Excel.
--   **Foglio di lavoro.** Per eseguire una query in un foglio di lavoro, aggiungere il carattere $ alla fine del nome del foglio e aggiungere delimitatori all'inizio e alla fine della stringa, ad esempio **[Foglio1$]** .
+-   **Foglio di lavoro.** Per eseguire una query in un foglio di lavoro, aggiungere il carattere $ alla fine del nome del foglio e aggiungere delimitatori all'inizio e alla fine della stringa, ad esempio **[Foglio1$]**.
 
     ```sql
     SELECT * FROM [Sheet1$]
@@ -83,7 +84,7 @@ Le query possono essere eseguite in tre tipi di oggetti Excel.
     SELECT * FROM [Sheet1$A1:B4]
     ```
 
-## <a name="whats-next"></a>Quali sono le operazioni successive?  
+## <a name="whats-next"></a>Passaggi successivi  
  Dopo aver scritto e testato la query SQL che seleziona i dati da copiare, la pagina successiva dipende dalla destinazione dei dati.  
   
 -   Per la maggior parte delle destinazioni la pagina successiva è **Selezione tabelle e viste di origine**. In questa pagina è possibile esaminare la query specificata e, facoltativamente, scegliere le colonne da copiare e visualizzare un'anteprima dei dati di esempio. Per altre informazioni, vedere [Selezione tabelle e viste di origine](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md).  

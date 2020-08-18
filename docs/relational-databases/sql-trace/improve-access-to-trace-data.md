@@ -1,4 +1,5 @@
 ---
+description: Migliorare l'accesso ai dati della traccia
 title: Migliorare l'accesso ai dati della traccia | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c260c000-fd53-4831-993f-df6894f3228b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 55e903200e527dcd9c4c55f4696ea4213a82d673
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f2c85d7c440f32aee7b6b6fb76019fdb2eef2c2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750980"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88324879"
 ---
 # <a name="improve-access-to-trace-data"></a>Migliorare l'accesso ai dati della traccia
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: DROP SERVER AUDIT (Transact-SQL)
 title: DROP SERVER AUDIT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: faace8a3-daa9-4208-a2cd-4249eb32175c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 790a477ecda6380a779b08b6c09b52db1a5b0ab0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 589334b9834a6f64c2a50bed77d890c5da013efd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88304309"
 ---
 # <a name="drop-server-audit--transact-sql"></a>DROP SERVER AUDIT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,9 @@ DROP SERVER AUDIT audit_name
     [ ; ]  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Osservazioni
  È necessario impostare lo stato di un controllo sull'opzione OFF per apportare qualsiasi modifica a un controllo. Se DROP AUDIT viene eseguita quando un controllo è abilitato con qualsiasi altra opzione diversa da STATE=OFF, verrà visualizzato il messaggio di errore MSG_NEED_AUDIT_DISABLED.  
   
  DROP SERVER AUDIT rimuove i metadati per il controllo, ma non i dati di controllo raccolti prima dell'esecuzione del comando.  

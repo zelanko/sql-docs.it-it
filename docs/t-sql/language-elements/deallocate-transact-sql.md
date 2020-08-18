@@ -1,4 +1,5 @@
 ---
+description: DEALLOCATE (Transact-SQL)
 title: DEALLOCATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8470f4d370e3879f1bdaadee3b08b80f758ccadc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b29ee9539e8b6d4da64dfcc0da7c2ef9f4296a87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914077"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307743"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
  @*cursor_variable_name*  
  Nome di una variabile di **cursore**. @*cursor_variable_name* deve essere di tipo **cursor**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 Le istruzioni che hanno effetto sui cursori utilizzano un nome di cursore o una variabile di cursore per fare riferimento al cursore. L'istruzione `DEALLOCATE` elimina l'associazione tra un cursore e il nome di cursore o la variabile di cursore. Se il nome o la variabile è l'ultimo riferimento al cursore, il cursore viene deallocato e le risorse da esso utilizzate vengono rilasciate. I blocchi di scorrimento utilizzati per proteggere l'isolamento delle operazioni di recupero vengono rilasciati dall'istruzione `DEALLOCATE`. I blocchi a livello di transazione utilizzati per proteggere gli aggiornamenti, inclusi gli aggiornamenti posizionati eseguiti con il cursore, vengono mantenuti attivi fino al termine della transazione.  
   
 L'istruzione `DECLARE CURSOR` consente di allocare un cursore e di associarlo a un nome di cursore.  

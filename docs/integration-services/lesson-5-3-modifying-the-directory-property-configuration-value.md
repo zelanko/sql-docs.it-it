@@ -1,4 +1,5 @@
 ---
+description: 'Lezione 5-3: Modificare il valore di configurazione della proprietà Directory'
 title: 'Passaggio 3: Modificare il valore di configurazione della proprietà Directory | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/08/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5a609b6c5edc5518904432cc199e5e624fb114ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2a727a5c8d709e982582c26cff8d6cf09eb44ccc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88345697"
 ---
 # <a name="lesson-5-3-modify-the-directory-property-configuration-value"></a>Lezione 5-3: Modificare il valore di configurazione della proprietà Directory
 
@@ -29,7 +30,7 @@ In questa attività viene modificata l'impostazione di configurazione archiviata
   
 1.  In Blocco note, o un altro editor di testo, individuare e aprire il file di configurazione **SSISTutorial.dtsConfig** creato nell'attività precedente usando Configurazione guidata pacchetto.  
   
-2.  Modificare il valore dell'elemento **ConfiguredValue** in modo che corrisponda al percorso della cartella **New Sample Data** creata nell'attività precedente. Non racchiudere il percorso tra virgolette. Se la cartella **New Sample Data** si trova al livello radice dell'unità (ad esempio, **C:\\** ), il codice XML aggiornato deve essere simile a quello dell'esempio seguente:  
+2.  Modificare il valore dell'elemento **ConfiguredValue** in modo che corrisponda al percorso della cartella **New Sample Data** creata nell'attività precedente. Non racchiudere il percorso tra virgolette. Se la cartella **New Sample Data** si trova al livello radice dell'unità (ad esempio, **C:\\**), il codice XML aggiornato deve essere simile a quello dell'esempio seguente:  
   
     ```
     <?xml version="1.0"?>

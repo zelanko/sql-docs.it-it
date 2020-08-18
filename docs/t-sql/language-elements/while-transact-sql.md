@@ -1,4 +1,5 @@
 ---
+description: WHILE (Transact-SQL)
 title: WHILE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f11e2a6261976b3e96533647d37fcad3a1eaa792
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 78b7ac5ab0a9b65e50059f45e5bdca5e4219bf11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915315"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307329"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,7 +71,7 @@ WHILE Boolean_expression
  CONTINUE  
  Consente il riavvio del ciclo WHILE, ignorando tutte le istruzioni che seguono la parola chiave CONTINUE.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se due o più cicli WHILE sono nidificati, un'istruzione BREAK nel ciclo più interno passa al ciclo più esterno successivo. Vengono eseguite tutte le istruzioni successive al ciclo più interno, quindi viene riavviato il ciclo successivo più esterno.  
   
 ## <a name="examples"></a>Esempi  

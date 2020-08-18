@@ -1,4 +1,5 @@
 ---
+description: SUSER_SNAME (Transact-SQL)
 title: SUSER_SNAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -26,12 +27,12 @@ ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8dc14225d150bb3a8783ffa01e53f95a45f3673
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 570372e0ca0f40284f89e862eee75e5a3d419440
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88308417"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,17 +53,17 @@ SUSER_SNAME ( [ server_user_sid ] )
  *server_user_sid*  
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
- Numero identificativo di sicurezza facoltativo dell'account di accesso. *server_user_sid* è di tipo **varbinary(85)** . *server_user_sid* può essere l'ID di sicurezza (SID) di qualsiasi account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o di qualsiasi utente o gruppo di [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Se non si specifica *server_user_sid*, vengono restituite informazioni sull'utente corrente. Se nel parametro è inclusa la parola NULL, verrà restituito NULL.  
+ Numero identificativo di sicurezza facoltativo dell'account di accesso. *server_user_sid* è di tipo **varbinary(85)**. *server_user_sid* può essere l'ID di sicurezza (SID) di qualsiasi account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o di qualsiasi utente o gruppo di [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Se non si specifica *server_user_sid*, vengono restituite informazioni sull'utente corrente. Se nel parametro è inclusa la parola NULL, verrà restituito NULL.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La funzione SUSER_SNAME può essere utilizzata come vincolo DEFAULT nell'istruzione ALTER TABLE o CREATE TABLE. È possibile utilizzare SUSER_SNAME nell'elenco di selezione, nella clausola WHERE e in tutti i casi in cui è consentita un'espressione. SUSER_SNAME deve essere sempre seguita da una coppia di parentesi, anche se non si specifica alcun parametro.  
   
  Se chiamata senza argomenti, la funzione SUSER_SNAME restituisce il nome del contesto di sicurezza corrente. Se chiamata senza argomenti all'interno di un batch che ha cambiato contesto tramite EXECUTE AS, la funzione SUSER_SNAME restituisce il nome del contesto rappresentato. Se chiamata da un contesto rappresentato, ORIGINAL_LOGIN restituisce il nome del contesto originale.  
   
-## <a name="sssdsfull-remarks"></a>Osservazioni su [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+## <a name="sssdsfull-remarks"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Osservazioni  
  SUSER_NAME restituisce sempre il nome dell'account di accesso per il contesto di sicurezza corrente.  
   
  L'istruzione SUSER_SNAME non supporta l'esecuzione con un contesto di sicurezza rappresentato tramite EXECUTE AS.  

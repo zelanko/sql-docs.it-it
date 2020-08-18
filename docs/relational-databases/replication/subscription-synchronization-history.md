@@ -1,4 +1,5 @@
 ---
+description: Sottoscrizione, Cronologia sincronizzazione
 title: Sottoscrizione, Cronologia sincronizzazione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,16 +15,16 @@ ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b82300ff328470f0b195796385f29e651a1998b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db40c8e3848ee5dac3d770e77629555ea87814b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729333"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88326020"
 ---
 # <a name="subscription-synchronization-history"></a>Sottoscrizione, Cronologia sincronizzazione
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  La scheda **Cronologia sincronizzazione** visualizza informazioni dettagliate sull'agente di merge, tra cui lo stato, le statistiche degli articoli, la cronologia, i messaggi informativi e gli eventuali messaggi di errore.  
+   La scheda **Cronologia sincronizzazione** visualizza informazioni dettagliate sull'agente di merge, tra cui lo stato, le statistiche degli articoli, la cronologia, i messaggi informativi e gli eventuali messaggi di errore.  
   
 ## <a name="options"></a>Opzioni  
  Scegliere le sessioni dell'agente di merge da visualizzare dal menu **Visualizza** e quindi selezionare una sessione specifica nella griglia con l'etichetta **Sessioni dell'agente di merge**. Nella griglia con l'etichetta **Articoli elaborati nella sessione selezionata**vengono visualizzate informazioni dettagliate sulla sessione.  
@@ -36,7 +37,7 @@ ms.locfileid: "85729333"
   
 -   Errore  
   
--   Completi  
+-   Completato  
   
 -   Nuovo tentativo in corso  
   

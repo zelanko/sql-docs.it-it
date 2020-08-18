@@ -1,4 +1,5 @@
 ---
+description: Salva pacchetto SSIS (Importazione/Esportazione guidata SQL Server)
 title: Salvare il pacchetto SSIS (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8f354643c156024eeee1db53ad366dfb63f55859
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 379973cb0174e25a91b6a3dfb0ed7cc319efd842
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914378"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346817"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Salva pacchetto SSIS (Importazione/Esportazione guidata SQL Server)
 
@@ -110,11 +111,11 @@ L'immagine seguente illustra la pagina **Salva pacchetto SSIS** della procedura 
 ## <a name="customize-the-saved-package"></a>Personalizzazione del pacchetto salvato  
  Per informazioni su come personalizzare il pacchetto salvato, vedere [Pacchetti di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md).  
   
-## <a name="whats-next"></a>Quali sono le operazioni successive?  
+## <a name="whats-next"></a>Passaggi successivi  
  Dopo aver specificato le opzioni aggiuntive per il salvataggio del pacchetto, la pagina successiva è **Completare la procedura guidata**. In questa pagina è possibile rivedere le scelte effettuate nella procedura guidata, quindi di avviare l'operazione. Per altre informazioni, vedere [Completare la procedura guidata](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md).  
  
 ## <a name="see-also"></a>Vedere anche  
-[Salvare i pacchetti](../../integration-services/save-packages.md)  
+[Salvataggio di pacchetti](../../integration-services/save-packages.md)  
 [Eseguire pacchetti di Integration Services (SSIS)](../../integration-services/packages/run-integration-services-ssis-packages.md)  
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)
  

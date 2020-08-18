@@ -1,4 +1,5 @@
 ---
+description: GetAncestor (Motore di database)
 title: GetAncestor (motore di database) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a6bbdeb7e8f54bbdb02d7daff3b08f83bf0a98d1
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e377a022c4a027c64008b2a09ff58f2d7d27112c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88311737"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor (Motore di database)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,11 +37,11 @@ Restituisce un valore **hierarchyid** che rappresenta il valore *n* predecessore
 child.GetAncestor ( n )   
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 SqlHierarchyId GetAncestor ( int n )  
-```  
-  
+```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argomenti
@@ -52,7 +53,7 @@ Valore **int** che rappresenta il numero di livelli da salire nella gerarchia.
   
 **Tipo CLR restituito: SqlHierarchyId**
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 Utilizzato per testare se per ogni nodo nell'output il nodo corrente rappresenta un predecessore al livello specificato.
   
 Se viene passato un numero maggiore di [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md), viene restituito NULL.
@@ -118,7 +119,7 @@ Nel frammento di codice seguente viene chiamato il metodo `GetAncestor()`.
 this.GetAncestor(1)  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 [IsDescendantOf &#40;motore di database&#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
 [Guida di riferimento ai metodi per il tipo di dati hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Dati gerarchici &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  

@@ -1,4 +1,5 @@
 ---
+description: Documentazione per gli sviluppatori di Integration Services
 title: Documentazione per gli sviluppatori di Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21cb77e73651347d0a06be5aba0675372984948a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d5202d583a6b4b5ba0b27d25aa7c0a3ed87c9e6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919957"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346097"
 ---
 # <a name="integration-services-developer-documentation"></a>Documentazione per gli sviluppatori di Integration Services
 
@@ -76,7 +77,7 @@ ms.locfileid: "86919957"
  [Esecuzione e gestione dei pacchetti a livello di programmazione](../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
  Viene descritto come enumerare, eseguire e gestire i pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] a livello di programmazione.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Informazioni di riferimento  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
  Vengono elencati i codici di errore predefiniti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], oltre ai relativi nomi simbolici e descrizioni.  
   

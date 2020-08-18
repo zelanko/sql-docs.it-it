@@ -1,4 +1,5 @@
 ---
+description: DROP SEARCH PROPERTY LIST (Transact-SQL)
 title: DROP SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 72baa445ceca98fdf66877ae64340dc1fb94f0ae
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a214dff5fe12656cc4c0fb9c3ce72fef8e42b574
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88304953"
 ---
 # <a name="drop-search-property-list-transact-sql"></a>DROP SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ DROP SEARCH PROPERTY LIST property_list_name
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Non è possibile eliminare un elenco di proprietà di ricerca da un database se l'elenco è associato a un indice full-text e i relativi tentativi avranno esito negativo. Per eliminare un elenco di proprietà di ricerca da un indice full-text specificato, usare l'istruzione [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) e specificare la clausola SET SEARCH PROPERTY LIST con OFF o il nome di un altro elenco di proprietà di ricerca.  
   
  **Per visualizzare gli elenchi di proprietà in un'istanza del server**  

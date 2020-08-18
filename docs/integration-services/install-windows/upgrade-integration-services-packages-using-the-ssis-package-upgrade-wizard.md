@@ -1,4 +1,5 @@
 ---
+description: Aggiornare i pacchetti di Integration Services mediante l'Aggiornamento guidato pacchetti SSIS
 title: Aggiornare i pacchetti di Integration Services mediante l'Aggiornamento guidato pacchetti SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 452ad0e1fec7ac1f4773a1d6a2491ba903f83884
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0a9e27d3d7379ad4e0c16d47bcdb97abab38741e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915859"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346397"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>Aggiornare i pacchetti di Integration Services mediante l'Aggiornamento guidato pacchetti SSIS
 

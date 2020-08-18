@@ -1,4 +1,5 @@
 ---
+description: Broker:Remote Message Ack - classe di evento
 title: Classe di evento Broker:Remote Message Ack | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb2e8f7fa1f39fffecf72a8eb51fac5bf9bcce51
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 101aa4fd73e3481be1f98f4951561a3bf455dfe6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763006"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88330747"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack - classe di evento
 

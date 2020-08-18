@@ -1,4 +1,5 @@
 ---
+description: Verifica mapping tra i tipi di dati (Importazione/Esportazione guidata SQL Server)
 title: Verifica mapping tra i tipi di dati (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fa50c1de5a5cf1cd1963e60774617bd92713872
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2376f29d6e488af4481e245440e995fd584dfea1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920160"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347047"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Verifica mapping tra i tipi di dati (Importazione/Esportazione guidata SQL Server)
 
@@ -94,9 +95,9 @@ Questo esempio visualizza i valori predefiniti per le due opzioni di gestione de
  -   Generare un errore e arrestare il processo di importazione o esportazione. Si tratta del valore predefinito.
  -   Ignorare il troncamento e continuare il processo di importazione o esportazione.  
    
-## <a name="whats-next"></a>Quali sono le operazioni successive?  
+## <a name="whats-next"></a>Passaggi successivi  
  Dopo aver verificato gli avvisi e aver specificato le opzioni di conversione e gestione degli errori, dalla pagina **Verifica mapping tra i tipi di dati** tornare alla finestra di dialogo **Mapping colonne** . Per altre informazioni, vedere [Mapping colonne](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
  
- ## <a name="see-also"></a>Vedere anche
+ ## <a name="see-also"></a>Vedi anche
 [Mapping dei tipi di dati nell'Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
 

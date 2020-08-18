@@ -1,4 +1,5 @@
 ---
+description: TRIGGER_NESTLEVEL (Transact-SQL)
 title: TRIGGER_NESTLEVEL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 105e3ebe3b5d19461732dfcaaac415f707ea4e44
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 183d2e295fcdaf7de1bf20351272662979c888b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112339"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307571"
 ---
 # <a name="trigger_nestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
  **'** *trigger_event_category* **'**  
  Specifica se applicare TRIGGER_NESTLEVEL ai trigger DML o DDL. Specificare **DML** per i trigger DML. Specificare **DDL** per i trigger DDL. Se *trigger_event_category* viene specificato, deve essere specificato anche *trigger_type*. Se si specifica **DDL** è possibile specificare solo **AFTER** perché i trigger DDL possono essere solo trigger AFTER.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se non si specifica alcun parametro, TRIGGER_NESTLEVEL restituisce il numero totale di trigger nello stack di chiamate. Nel numero è incluso il parametro stesso. È possibile omettere i parametri quando un trigger esegue comandi che provocano l'attivazione di un altro trigger o crea una serie di attivazioni di trigger.  
   
  Per restituire il numero totale di trigger nello stack di chiamate per un tipo di trigger specifico o una categoria di eventi specifica, impostare *object_id* = 0.  

@@ -1,4 +1,5 @@
 ---
+description: Importazione/Esportazione guidata SQL Server
 title: Importazione/Esportazione guidata SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 02/15/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a18a16353ff2d015bdd5f19c59c6cf9d7fd279b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9d872657de8cb28a64d709eb458cffa7b6569a53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922860"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346207"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>Importazione/Esportazione guidata SQL Server
 
@@ -41,7 +42,7 @@ Lo screenshot seguente illustra la pagina **Importazione/Esportazione guidata SQ
 **Non visualizzare più questa pagina iniziale.**  
  Consente di evitare la visualizzazione della pagina di benvenuto alla successiva apertura della procedura guidata.  
   
-## <a name="whats-next"></a>Quali sono le operazioni successive?  
+## <a name="whats-next"></a>Passaggi successivi  
  Dopo la pagina iniziale, la pagina successiva è **Scelta origine dati**. In questa pagina è necessario fornire informazioni sull'origine dati e su come connettersi a tale origine. Per altre informazioni, vedere [Scelta origine dati](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
 
 ## <a name="related-tasks-and-content"></a><a name="related"></a> Attività e argomenti correlati  

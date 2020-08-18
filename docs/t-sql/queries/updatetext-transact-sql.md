@@ -1,4 +1,5 @@
 ---
+description: UPDATETEXT (Transact-SQL)
 title: UPDATETEXT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5da5354681ff38fbcf818294f85b9381db21659a
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c78bf19d7264d0f1c7d073cbe0ce76e2e5b6f4e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554742"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88306565"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  Nome della tabella e della colonna di tipo **text**, **ntext** o **image** da aggiornare. I nomi delle tabelle e delle colonne devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). I nomi del database e del proprietario sono facoltativi.  
   
  *dest_text_ptr*  
- Valore di un puntatore di testo, restituito dalla funzione TEXTPTR, che fa riferimento ai dati di tipo **text**, **ntext** o **image** da aggiornare. *dest_text_ptr* deve essere **binary(** 16 **)** .  
+ Valore di un puntatore di testo, restituito dalla funzione TEXTPTR, che fa riferimento ai dati di tipo **text**, **ntext** o **image** da aggiornare. *dest_text_ptr* deve essere **binary(** 16 **)**.  
   
  *insert_offset*  
  Posizione iniziale in base zero dell'aggiornamento. Per le colonne di tipo **text** o **image**, *insert_offset* rappresenta il numero di byte da ignorare a partire dall'inizio della colonna esistente prima di inserire nuovi dati. Per le colonne di tipo **ntext**, *insert_offset* è il numero di caratteri (ogni carattere **ntext** usa 2 byte). I dati di tipo **text**, **ntext**, o **image** esistenti che iniziano nella posizione iniziale in base zero specificata vengono spostati a destra per creare spazio per i nuovi dati. Il valore 0 inserisce i nuovi dati all'inizio dei dati esistenti. Il valore NULL accoda i nuovi dati al valore dei dati esistenti.  
@@ -74,7 +75,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  La registrazione è definita dal modello di recupero attivo nel database.  
   
  *inserted_data*  
- I dati da inserire nella colonna esistente di tipo **text**, **ntext** o **image** nel percorso *insert_offset*. Si tratta di un singolo valore di tipo **char**, **nchar**, **varchar**, **nvarchar**, **binary**,  **varbinary**, **text**, **ntext**, o **image**. *inserted_data* può essere un valore letterale o una variabile.  
+ I dati da inserire nella colonna esistente di tipo **text**, **ntext** o **image** nel percorso *insert_offset*. Si tratta di un singolo valore di tipo **char**, **nchar**, **varchar**, **nvarchar**, **binary**, ** varbinary**, **text**, **ntext**, o **image**. *inserted_data* può essere un valore letterale o una variabile.  
   
  *table_name.src_column_name*  
  Nome della tabella e della colonna di tipo **text**, **ntext** o **image** usata come origine dei dati inseriti. I nomi delle tabelle e delle colonne devono essere conformi alle regole per gli identificatori.  
@@ -85,7 +86,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!NOTE]  
 >  Il valore *scr_text_ptr* non deve essere identico al valore *dest_text_ptr*.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I dati inseriti possono essere una singola costante *inserted_data*, un nome di tabella o di colonna oppure un puntatore di testo.  
   
 |Operazione di aggiornamento|Parametri di UPDATETEXT|  

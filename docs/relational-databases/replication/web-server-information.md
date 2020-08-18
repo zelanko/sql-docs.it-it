@@ -1,4 +1,5 @@
 ---
+description: Informazioni server Web
 title: Informazioni server Web | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 86d72275-45c7-459f-98cf-f5a366ed279c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 50a480d13dca5053dd565323d96348476a4b33bf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ba110489a2ec2623018563257953d764ef371c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720569"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325961"
 ---
 # <a name="web-server-information"></a>Informazioni server Web
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

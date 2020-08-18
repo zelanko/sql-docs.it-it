@@ -1,4 +1,5 @@
 ---
+description: Istruzioni RESTORE - VERIFYONLY (Transact-SQL)
 title: RESTORE VERIFYONLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
@@ -23,12 +24,12 @@ ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6d3ceae764bd65d03d56db32fb28f8855cc2ebfe
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cfa7ad3f583eea2253c29042e0be3fbe58026b33
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634762"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88303939"
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>Istruzioni RESTORE - VERIFYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -112,7 +113,7 @@ FROM <backup_device> [ ,...n ]
 > [!NOTE]  
 >  Con i backup di snapshot, RESTORE VERIFYONLY conferma l'esistenza degli snapshot nei percorsi specificati nel file di backup. I backup di snapshot sono una nuova funzionalità di [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Per altre informazioni sul backup di snapshot, vedere [Backup di snapshot di file per i file di database in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  Per un'operazione di backup è possibile specificare password per un set di supporti o un set di backup oppure per entrambi. Se è stata impostata una password per un set di supporti o un set di backup, la password o le password corrette devono essere specificate nell'istruzione RESTORE. Queste password impediscono operazioni di ripristino non autorizzate e l'aggiunta non autorizzata di set di backup ai supporti tramite gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tuttavia, la password non impedisce la sovrascrittura dei supporti tramite l'opzione FORMAT dell'istruzione BACKUP.  
   
 > [!IMPORTANT]  

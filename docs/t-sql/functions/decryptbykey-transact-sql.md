@@ -1,4 +1,5 @@
 ---
+description: DECRYPTBYKEY (Transact-SQL)
 title: DECRYPTBYKEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 45808c6b9036c41c46cafedc286ec306b9a07e91
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 846a3d772c35d8d47aa0013b6d27b8c94f5cf6f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111069"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88310177"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +64,7 @@ Variabile contenente i dati dai quali derivare un autenticatore. Deve corrispond
 ## <a name="return-types"></a>Tipi restituiti  
 **varbinary** con un valore massimo di 8.000 byte. `DECRYPTBYKEY` restituisce NULL se la chiave simmetrica usata per crittografare i dati non è aperta o se *ciphertext* è NULL.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 `DECRYPTBYKEY` usa una chiave simmetrica. Il database deve avere la chiave simmetrica già aperta. `DECRYPTBYKEY` consente di avere più chiavi aperte contemporaneamente. Non è necessario aprire la chiave subito prima di decrittografare il testo crittografato.  
   
 La crittografia e la decrittografia simmetriche in genere operano in modo relativamente rapido e funzionano anche per le operazioni che includono volumi di dati di grandi dimensioni.  

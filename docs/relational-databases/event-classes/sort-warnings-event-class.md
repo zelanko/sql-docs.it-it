@@ -1,4 +1,5 @@
 ---
+description: Sort Warnings - classe di evento
 title: Classe di evento Sort Warnings | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d139be67f2dceef498267376cf5cb74d8eabb164
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4b6f1cb42d7cfab231bebeaf2f5e1396db4717a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717757"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88329797"
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

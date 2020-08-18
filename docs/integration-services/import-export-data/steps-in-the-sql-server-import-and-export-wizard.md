@@ -1,4 +1,5 @@
 ---
+description: Passaggi dell'Importazione/Esportazione guidata SQL Server
 title: Passaggi dell'Importazione/Esportazione guidata SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2020
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ee20fb7253e42a0bc6bf28f7beb790342ea6c581
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5799d85c7978505503fcbd56aa85eb693da6665e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346437"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>Passaggi dell'Importazione/Esportazione guidata SQL Server
 
@@ -32,7 +33,7 @@ Per esaminare rapidamente le diverse schermate visualizzate durante una normale 
 
 |Passaggio|Pagine della procedura guidata|  
 |----------|------------------|  
-|**Schermata iniziale**<br />Non è necessario eseguire alcuna operazione in questa pagina.|[Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)|  
+|**Pagina iniziale**<br />Non è necessario eseguire alcuna operazione in questa pagina.|[Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)|  
 |**Selezionare l'origine** dei dati.|[Scelta origine dati](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)|  
 |**Selezionare la destinazione** dei dati.|[Scegliere una destinazione](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)|  
 |**Configurare la destinazione** (passaggi facoltativi)<br /><br /> -   Creare un nuovo database di destinazione.<br />-   Se si stanno copiando dati in un file di testo, configurare impostazioni aggiuntive.|[Create Database](../../integration-services/import-export-data/create-database-sql-server-import-and-export-wizard.md)<br /><br />[Configurare la destinazione del file flat](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)|  

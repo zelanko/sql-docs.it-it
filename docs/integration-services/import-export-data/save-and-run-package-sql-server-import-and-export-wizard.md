@@ -1,4 +1,5 @@
 ---
+description: Salvare ed eseguire il pacchetto (Importazione/Esportazione guidata SQL Server)
 title: Salvare ed eseguire il pacchetto (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33e4ec58943372643ca25518634fdeea47047b27
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8739c955343207a9a91660a9f8643ea807741e0c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346887"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>Salvare ed eseguire il pacchetto (Importazione/Esportazione guidata SQL Server)
 
@@ -89,7 +90,7 @@ Se la procedura guidata è stata avviata da un progetto di Integration Services 
   
  Queste opzioni sono disponibili solo se si seleziona l'opzione **Salva pacchetto SSIS** in questa pagina.  
   
-## <a name="whats-next"></a>Quali sono le operazioni successive?  
+## <a name="whats-next"></a>Passaggi successivi  
  Dopo aver specificato se eseguire immediatamente l'operazione di copia e se si desidera salvare il pacchetto, la pagina successiva dipende dalle opzioni scelte.  
   
 -   Se è stata selezionata l'opzione per eseguire il pacchetto immediatamente ma senza salvarlo, la pagina successiva è **Completamento procedura guidata**. In questa pagina è possibile rivedere le scelte effettuate nella procedura guidata e quindi avviare l'operazione di copia. Per altre informazioni, vedere [Completare la procedura guidata](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md).  
@@ -97,7 +98,7 @@ Se la procedura guidata è stata avviata da un progetto di Integration Services 
 -   Se è stata seleziona l'opzione per salvare il pacchetto, la pagina successiva è **Salva pacchetto SSIS**. In questa pagina è necessario specificare opzioni aggiuntive per il salvataggio del pacchetto. Quindi, dopo aver salvato il pacchetto, la pagina successiva è **Completamento procedura guidata**. Per altre informazioni, vedere [Salva pacchetto SSIS](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Salvare i pacchetti](../../integration-services/save-packages.md)  
+[Salvataggio di pacchetti](../../integration-services/save-packages.md)  
 [Eseguire pacchetti di Integration Services (SSIS)](../../integration-services/packages/run-integration-services-ssis-packages.md)  
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
 [Iniziare con questo semplice esempio dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
