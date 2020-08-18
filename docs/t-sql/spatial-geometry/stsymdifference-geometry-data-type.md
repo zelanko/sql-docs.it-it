@@ -1,4 +1,5 @@
 ---
+description: STSymDifference (tipo di dati geometry)
 title: STSymDifference (tipo di dati geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/06/2020
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a6924bec676d8de525e29c8f124774b41edf0a2d
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 1a419562b8326cbdceee2be888c538e61bbedac3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554589"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88359627"
 ---
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference (tipo di dati geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "86554589"
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono. Il risultato può contenere segmenti di arco circolare solo se le istanze di input contengono segmenti di arco circolare.  
   
 ## <a name="examples"></a>Esempi  

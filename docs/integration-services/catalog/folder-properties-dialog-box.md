@@ -1,4 +1,5 @@
 ---
+description: Finestra di dialogo Proprietà cartella
 title: Finestra di dialogo Proprietà cartella | Microsoft Docs
 ms.custom: ''
 ms.date: 08/26/2016
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 334105bde7936543fd1dba3167fd61e1b440fd5e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 29fb988b6c326f9c6bb6ef39d5d1fc031d12f908
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922647"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351907"
 ---
 # <a name="folder-properties-dialog-box"></a>Finestra di dialogo Proprietà cartella
 
@@ -34,7 +35,7 @@ ms.locfileid: "86922647"
   
 2.  Nella pagina **Generale** selezionare **Descrizione** in **Generale** e immettere una descrizione facoltativa.  
   
-3.  Nella pagina **Autorizzazioni** fare clic su **Sfoglia...** , selezionare una o più entità di database e fare clic su **OK**.  
+3.  Nella pagina **Autorizzazioni** fare clic su **Sfoglia...**, selezionare una o più entità di database e fare clic su **OK**.  
   
 4.  Selezionare un nome in **Account di accesso o ruoli** e specificare le autorizzazioni appropriate in **Autorizzazioni**.  
   

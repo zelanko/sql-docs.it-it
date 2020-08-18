@@ -1,4 +1,5 @@
 ---
+description: VAR (Transact-SQL)
 title: VAR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,12 +21,12 @@ ms.assetid: 71dfc339-16c8-42f9-8555-ad45400f7f9b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a7e64d73c44bf76d45dd672970f1216f88412c6
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 45c786bf165a26fe4e5d4b9f2461a98615af655d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362477"
 ---
 # <a name="var-transact-sql"></a>VAR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87111302"
   
 ## <a name="syntax"></a>Sintassi  
   
-```    
+```syntaxsql    
 -- Aggregate Function Syntax   
 VAR ( [ ALL | DISTINCT ] expression )  
   
@@ -62,7 +63,7 @@ VAR ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="return-types"></a>Tipi restituiti  
  **float**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se la funzione VAR viene applicata a tutte le voci di un'istruzione SELECT, ogni valore nel set di risultati viene incluso nel calcolo. VAR può essere utilizzata solo con colonne numeriche. I valori Null vengono ignorati.  
   
  VAR è una funzione deterministica quando viene utilizzata senza le clausole ORDER BY e OVER. Non è deterministica quando viene specificata con le clausole ORDER BY e OVER. Per altre informazioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
@@ -72,7 +73,7 @@ VAR ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ### <a name="a-using-var"></a>A: Utilizzo di VAR  
  Nell'esempio seguente viene restituita la varianza per tutti i valori relativi ai premi di produttività nella tabella `SalesPerson` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 SELECT VAR(Bonus)  
 FROM Sales.SalesPerson;  
 GO  
@@ -83,7 +84,7 @@ GO
 ### <a name="b-using-var"></a>B: Utilizzo di VAR  
  L'esempio seguente restituisce la varianza statistica dei valori quota di vendite nella tabella `dbo.FactSalesQuota`. La prima colonna contiene la varianza di tutti i valori distinct e la seconda colonna contiene la varianza di tutti i valori, compresi eventuali valori duplicati.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT VAR(DISTINCT SalesAmountQuota)AS Distinct_Values, VAR(SalesAmountQuota) AS All_Values  
@@ -101,7 +102,7 @@ Distinct_Values   All_Values
 ### <a name="c-using-var-with-over"></a>C. Utilizzo di VAR con OVER  
  L'esempio seguente restituisce la varianza statistica dei valori quota di vendite per ogni trimestre in un anno di calendario. Si noti che ORDER BY nella clausola OVER ordina la varianza statistica e ORDER BY dell'istruzione SELECT ordina il set di risultati.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  

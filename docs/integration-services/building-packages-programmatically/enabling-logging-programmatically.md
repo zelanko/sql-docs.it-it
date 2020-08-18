@@ -1,4 +1,5 @@
 ---
+description: Abilitazione della registrazione a livello di programmazione
 title: Abilitazione della registrazione a livello di programmazione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 297b5730db79d1a47295a2e454f6bd3433c56d44
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 358bd8e70acba47961909583c153669e21389105
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922711"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352137"
 ---
 # <a name="enabling-logging-programmatically"></a>Abilitazione della registrazione a livello di programmazione
 

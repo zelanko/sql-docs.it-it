@@ -1,4 +1,5 @@
 ---
+description: Architettura di sistema del servizio Change Data Capture per Oracle di Attunity
 title: Architettura di sistema di Change Data Capture Service per Oracle di Attunity | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3aa815b1b6ad558ac5a7d2cf705c8d139dd1b25a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d5fa150f7477449c644c554b68c7703be8e44df1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912299"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351547"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Architettura di sistema del servizio Change Data Capture per Oracle di Attunity
 

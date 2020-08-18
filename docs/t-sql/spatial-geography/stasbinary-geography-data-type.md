@@ -1,4 +1,5 @@
 ---
+description: STAsBinary (tipo di dati geography)
 title: STAsBinary (tipo di dati geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 99602a62-265d-4aa4-a8dc-92992ca55ba4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f2b110b4ee7abafc2c38ebc774d3d1673f0586c7
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 7ae9c800cffd7df80ba8447c2e16de745a0009bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552899"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88359447"
 ---
 # <a name="stasbinary-geography-data-type"></a>STAsBinary (tipo di dati geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "86552899"
   
  Tipo CLR restituito: **SqlBytes**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il tipo OGC di un'istanza **geography** può essere determinato richiamando [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
   
 ## <a name="examples"></a>Esempi  
@@ -58,6 +59,6 @@ SELECT @g.STAsBinary();
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodi OGC sulle istanze geografiche](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Metodi OGC sulle istanze di geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

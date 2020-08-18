@@ -1,4 +1,5 @@
 ---
+description: Funzioni logiche - CHOOSE (Transact-SQL)
 title: CHOOSE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d5bd06dd57b1b5c8bc26acbe0c85af175ba9c8d8
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: cc63fcaa6e7419a37005817f3121a2b8851dc749
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110426"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363797"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>Funzioni logiche - CHOOSE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
 ## <a name="return-types"></a>Tipi restituiti  
  Restituisce il tipo di dati con precedenza maggiore nel set di tipi passato alla funzione. Per altre informazioni, vedere [Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  CHOOSE funziona come un indice in una matrice, dove la matrice è costituita dagli argomenti che seguono l'argomento dell'indice. L'argomento dell'indice determina quali tra i valori seguenti saranno restituiti.  
   
 ## <a name="examples"></a>Esempi  

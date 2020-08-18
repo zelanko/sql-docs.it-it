@@ -1,4 +1,5 @@
 ---
+description: VERIFYSIGNEDBYASYMKEY (Transact-SQL)
 title: VERIFYSIGNEDBYASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8404d41f9447eeafd30788c482abd7279c6b6c46
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0257bd8b66a915ec5d7f0b59e3aa85f197f38867
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112216"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362247"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
  *clear_text*  
  Dati non crittografati che si desidera verificare.  
   
- *signature*  
+ *URL REST*  
  Firma allegata ai dati firmati. *signature* è di tipo **varbinary**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
@@ -60,7 +61,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
   
  Restituisce 1 se le firme corrispondono. In caso contrario, 0.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **VerifySignedByAsymKey** decrittografa la firma dei dati usando la chiave pubblica della chiave asimmetrica specificata e confronta il valore decrittografato con un nuovo hash MD5 dei dati calcolato. Se i valori corrispondono, viene confermata la validità della firma.  
   
 ## <a name="permissions"></a>Autorizzazioni  

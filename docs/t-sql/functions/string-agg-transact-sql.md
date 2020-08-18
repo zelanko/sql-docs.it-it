@@ -1,4 +1,5 @@
 ---
+description: STRING_AGG (Transact-SQL)
 title: STRING_AGG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2017
@@ -16,12 +17,12 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7b87c06324bf168c9dce7441f14c78d89833f24
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3b8a92c7776251547934799b68f3dc6cf7ada2b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111316"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362497"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
 
@@ -74,7 +75,7 @@ Il tipo restituito dipende dal primo argomento (espressione). Se l'argomento di 
 |VARCHAR(1...8000) |VARCHAR(8000) |
 |int, bigint, smallint, tinyint, numeric, float, real, bit, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR(4000) |
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 `STRING_AGG` è una funzione di aggregazione che accetta tutte le espressioni dalle righe e le concatena in una stringa singola. I valori delle espressioni vengono convertiti in modo implicito nei tipi di stringa e successivamente concatenati. Per la conversione implicita in stringhe vengono seguite le regole esistenti per le conversioni dei tipi di dati. Per altre informazioni sulle conversioni dei tipi di dati, vedere [CAST e CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
@@ -189,7 +190,7 @@ GROUP BY City;
 > [!NOTE]
 > I risultati vengono visualizzati tagliati.
 
-|city |emails |
+|City |emails |
 |--- |--- |
 |Ballard|paige28@adventure-works.com;joshua24@adventure-works.com;javier12@adventure-works.com;...|
 |Baltimore|gilbert9@adventure-works.com|
@@ -223,7 +224,7 @@ GROUP BY City;
 > [!NOTE]
 > I risultati vengono visualizzati tagliati.
 
-|city |emails |
+|City |emails |
 |--- |--- |
 |Barstow|kristen4@adventure-works.com
 |Basingstoke Hants|dale10@adventure-works.com;heidi9@adventure-works.com

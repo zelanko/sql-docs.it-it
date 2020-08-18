@@ -1,4 +1,5 @@
 ---
+description: gestione connessione file
 title: Gestione connessione file | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11c5a2404ec0c5dd8a51f09b1b96a4b5518231ae
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 982ff5a4a48c22de9521d2df5d56cd31919794f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351437"
 ---
 # <a name="file-connection-manager"></a>gestione connessione file
 
@@ -79,7 +80,7 @@ ms.locfileid: "86920809"
  **Tipo di utilizzo**  
  Consente di specificare se **Gestione connessione file flat** deve connettersi a un file o a una cartella esistente o creare un nuovo file o cartella.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |Crea file|Consente di creare un nuovo file in fase di esecuzione.|  
 |File esistente|Consente di utilizzare un file esistente.|  

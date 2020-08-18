@@ -1,4 +1,5 @@
 ---
+description: SET DATEFORMAT (Transact-SQL)
 title: SET DATEFORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -27,12 +28,12 @@ ms.assetid: da217878-7ec4-477e-aa13-604073c948f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8983c1ffb63fae634fe86ffa8b90707d7242d014
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 9d7a2c4feb97c534dcef80c851e1df0ae2721a44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484656"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88357147"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,10 +56,10 @@ SET DATEFORMAT { format | @format_var }
  *format* |  **@** _format_var_  
  Ordine delle parti della data. I parametri validi sono **mdy**, **dmy**, **ymd**, **ydm**, **myd** e **dym**. Può essere un valore Unicode o un valore DBCS (Double Byte Character Set) convertito in Unicode. L'impostazione predefinita per l'inglese (Stati Uniti) è **mdy**. Per il valore predefinito di DATEFORMAT di tutte le lingue supportate, vedere [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il valore **ydm** di DATEFORMAT non è supportato per i tipi di dati **date**, **datetime2** e **datetimeoffset**.  
   
- L'impostazione DATEFORMAT può interpretare le stringhe di caratteri in modo diverso per i tipi di dati date, a seconda del relativo formato stringa. Ad esempio, le interpretazioni di **datetime** e **smalldatetime** potrebbero non corrispondere a **date**, **datetime2** o  **datetimeoffset**. DATEFORMAT influisce sull'interpretazione di stringhe di caratteri nel momento in cui queste vengono convertite in valori di data per il database. Non influisce sulla visualizzazione di valori del tipo di dati date o sul loro formato di archiviazione nel database.  
+ L'impostazione DATEFORMAT può interpretare le stringhe di caratteri in modo diverso per i tipi di dati date, a seconda del relativo formato stringa. Ad esempio, le interpretazioni di **datetime** e **smalldatetime** potrebbero non corrispondere a **date**, **datetime2** o ** datetimeoffset**. DATEFORMAT influisce sull'interpretazione di stringhe di caratteri nel momento in cui queste vengono convertite in valori di data per il database. Non influisce sulla visualizzazione di valori del tipo di dati date o sul loro formato di archiviazione nel database.  
   
  Alcuni formati delle stringhe di caratteri, ad esempio ISO 8601, sono interpretati indipendentemente dall'impostazione DATEFORMAT.  
   

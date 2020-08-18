@@ -1,4 +1,5 @@
 ---
+description: Flat File Connection Manager
 title: Gestione connessione file flat | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 210403386f169488773911b12fd881c4820d5a42
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 93890a2bf8fc0b9209eb9582c8129ee6856865ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914197"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351287"
 ---
 # <a name="flat-file-connection-manager"></a>Flat File Connection Manager
 
@@ -110,7 +111,7 @@ ms.locfileid: "86914197"
  **Formato**  
  Consente di indicare se il file utilizza il tipo di formattazione delimitato, a larghezza fissa o non allineato a destra.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |Delimitato|Le colonne sono separate dai delimitatori specificati nella pagina **Colonne** .|  
 |File a larghezza fissa|Le colonne hanno una larghezza fissa.|  
@@ -125,7 +126,7 @@ ms.locfileid: "86914197"
  **Delimitatore riga di intestazione**  
  Consente di selezionare il delimitatore per la riga di intestazione nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**{CR}{LF}**|La riga di intestazione è delimitata dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|La riga di intestazione è delimitata da un carattere di ritorno a capo.|  
@@ -159,7 +160,7 @@ ms.locfileid: "86914197"
  **Delimitatore di riga**  
  Consente di selezionare il delimitatore di riga desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|Le righe sono delimitate da un ritorno a capo.|  
@@ -173,7 +174,7 @@ ms.locfileid: "86914197"
  **Delimitatore di colonna**  
  Consente di selezionare il delimitatore di colonna desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|Le colonne sono delimitate da un ritorno a capo.|  
@@ -220,7 +221,7 @@ ms.locfileid: "86914197"
  **Delimitatore di riga**  
  Consente di selezionare il delimitatore di riga desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|Le righe sono delimitate da un ritorno a capo.|  
@@ -265,7 +266,7 @@ ms.locfileid: "86914197"
  **Nuovo**  
  Consente di aggiungere una **nuova**colonna. Per impostazione predefinita, il pulsante **Nuova** aggiunge una colonna alla fine dell'elenco. Il pulsante dispone inoltre delle opzioni seguenti, disponibili nell'elenco a discesa.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Aggiungi colonna**|Consente di aggiungere una nuova colonna alla fine dell'elenco.|  
 |**Inserisci prima**|Consente di inserire una nuova colonna prima di quella selezionata.|  

@@ -1,4 +1,5 @@
 ---
+description: STArea (tipo di dati geography)
 title: STArea (tipo di dati geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9b3b60616c146f668f7bc089a54d531ba6de78d4
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a8581700ea3145840684cce1e18e24c2f2e1cd3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88359737"
 ---
 # <a name="starea-geography-data-type"></a>STArea (tipo di dati geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **flo
   
 Tipo CLR restituito: **SqlDouble**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 STArea() restituisce 0 se un'istanza **geography** contiene solo figure zero-dimensionali e unidimensionali oppure se è vuota.  
   
 > [!NOTE]  
@@ -59,5 +60,5 @@ SELECT @g.STArea();
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Metodi OGC sulle istanze geografiche](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+[Metodi OGC sulle istanze di geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   

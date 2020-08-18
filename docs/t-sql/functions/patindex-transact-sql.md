@@ -1,4 +1,5 @@
 ---
+description: PATINDEX (Transact-SQL)
 title: PATINDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2016
@@ -22,12 +23,12 @@ ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12f1f710a78c6dcd059fbae5078b0b643296700e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c4d2ee21a4b2c2975fcead1e883cb28459c608dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111421"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363377"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,9 +56,9 @@ PATINDEX ( '%pattern%' , expression )
  [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) che in genere indica una colonna in cui viene cercato il modello specificato. *expression* appartiene alla categoria di tipi di dati per stringhe di caratteri.  
   
 ## <a name="return-types"></a>Tipi restituiti  
-**bigint** se *expression* è del tipo di dati **varchar(max)** o **nvarchar(max)** , in caso contrario **int**.  
+**bigint** se *expression* è del tipo di dati **varchar(max)** o **nvarchar(max)**, in caso contrario **int**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 Se *pattern* o *expression* è NULL, PATINDEX restituisce NULL.  
  
 La posizione iniziale per PATINDEX è 1.
@@ -67,7 +68,7 @@ L'istruzione PATINDEX consente di eseguire i confronti in base alle regole di co
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caratteri supplementari (coppie di surrogati)  
 Quando si usano le regole di confronto SC, qualsiasi coppia di surrogati UTF-16 nel parametro *expression* viene considerata come un singolo carattere dal valore restituito. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
-0x0000 (**char(0)** ) è un carattere non definito nelle regole di confronto di Windows e non può essere incluso in PATINDEX.  
+0x0000 (**char(0)**) è un carattere non definito nelle regole di confronto di Windows e non può essere incluso in PATINDEX.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -126,7 +127,7 @@ Il funzionamento di `PATINDEX` è uguale a quello di `LIKE`, pertanto è possibi
  A differenza di `LIKE`, `PATINDEX` restituisce una posizione, analogamente a `CHARINDEX`.  
 
 ### <a name="d-using-complex-wildcard-expressions-with-patindex"></a>D. Uso di espressioni con caratteri jolly complesse con PATINDEX 
-Nell'esempio seguente viene usato l'[operatore stringa](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md) `[^]` per trovare la posizione di un carattere diverso da un numero, una lettera o uno spazio.
+Nell'esempio seguente viene usato l' [operatore stringa](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)`[^]` per trovare la posizione di un carattere diverso da un numero, una lettera o uno spazio.
 
 ```sql
 SELECT position = PATINDEX('%[^ 0-9A-z]%', 'Please ensure the door is locked!'); 

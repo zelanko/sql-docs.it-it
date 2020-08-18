@@ -1,4 +1,5 @@
 ---
+description: SESSION_USER (Transact-SQL)
 title: SESSION_USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ ms.assetid: 3dbe8532-31b6-4862-8b2a-e58b00b964de
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82172de7034ad8579d4e1952ca23dae8f7002be1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5a69a4d5f7cd7153b6acd4b6d487fbb2a201deb1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112325"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362817"
 ---
 # <a name="session_user-transact-sql"></a>SESSION_USER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ SESSION_USER
 ## <a name="return-types"></a>Tipi restituiti
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare la funzione SESSION_USER con vincoli DEFAULT nell'istruzione CREATE TABLE o ALTER TABLE oppure come qualsiasi funzione standard. SESSION_USER può essere inserita in una tabella se non viene specificato alcun valore predefinito. Questa funzione non accetta argomenti e può essere utilizzata nelle query.  
   
  Se viene chiamata dopo uno scambio di contesto, la funzione SESSION_USER restituirà il nome utente del contesto rappresentato.  

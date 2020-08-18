@@ -1,4 +1,5 @@
 ---
+description: REVOKE (autorizzazioni di Service Broker) (Transact-SQL)
 title: REVOKE - autorizzazioni per Service Broker (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a3794c016c95be48cfe9e740ac22831641db0f3b
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 2d018e710bb272d9daa9eda7099d201b80ea3c1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483552"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88357117"
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE (autorizzazioni di Service Broker) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,13 +68,13 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  CONTRACT **::** _contract_name_  
  Specifica il contratto a cui viene revocata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
- MESSAGE TYPE **::** _message_type_name_  
+ MESSAGE TYPE **::**_message_type_name_  
  Specifica il tipo di messaggio a cui viene revocata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
- REMOTE SERVICE BINDING **::** _remote_binding_name_  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  Specifica l'associazione al servizio remoto a cui viene revocata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
- ROUTE **::** _route_name_  
+ ROUTE **::**_route_name_  
  Specifica la route a cui viene revocata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
  SERVICE **::** _message_type_name_  
@@ -123,7 +124,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   Utente del database sul quale non viene eseguito il mapping ad alcuna entità server  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="service-broker-contracts"></a>Contratti di Service Broker  
  Un contratto di [!INCLUDE[ssSB](../../includes/sssb-md.md)] è un'entità a sicurezza diretta a livello di database contenuta nel database padre nella gerarchia di autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che possono essere revocate per un contratto di [!INCLUDE[ssSB](../../includes/sssb-md.md)], con le autorizzazioni più generali in cui sono incluse in modo implicito.  

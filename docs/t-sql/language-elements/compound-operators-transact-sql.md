@@ -1,4 +1,5 @@
 ---
+description: Operatori composti (Transact-SQL)
 title: Operatori composti (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6fe313e317a2d57bbb8547f66ccac6f44eaad264
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e42ce0876a6354056ae13daea43878a231bd5306
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922959"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88361807"
 ---
 # <a name="compound-operators-transact-sql"></a>Operatori composti (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,14 +32,14 @@ ms.locfileid: "86922959"
   
 |Operatore|Collegamento a ulteriori informazioni|Azione|  
 |--------------|------------------------------|------------|  
-|+=|[+= &#40;assegnazione di addizione&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)|Aggiunge una quantità al valore originale e imposta il valore originale sul risultato.|  
+|+=|[+= &#40;Add Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)|Aggiunge una quantità al valore originale e imposta il valore originale sul risultato.|  
 |-=|[-= &#40;assegnazione di sottrazione&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)|Sottrae una quantità dal valore originale e imposta il valore originale sul risultato.|  
 |*=|[&#42;= &#40;assegnazione di moltiplicazione&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/multiply-equals-transact-sql.md)|Moltiplica una valore per una quantità e imposta il valore originale sul risultato.|  
 |/=|[&#40;assegnazione di divisione&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)|Divide un valore per una quantità e imposta il valore originale sul risultato.|  
 |%=|[Assegnazione di modulo &#40;Transact-SQL&#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)|Divide un valore per una quantità e imposta il valore originale sul modulo.|  
-|&=|[&= &#40;assegnazione di AND bit per bit&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)|Esegue un'operazione con AND bit per bit e imposta il valore originale sul risultato.|  
-|^=|[^= &#40;assegnazione di OR esclusivo bit per bit&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)|Esegue un'operazione con OR esclusivo bit per bit e imposta il valore originale sul risultato.|  
-|&#124;=|[&#124;= &#40;assegnazione di OR bit per bit&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)|Esegue un'operazione con OR bit per bit e imposta il valore originale sul risultato.|  
+|&=|[&= &#40;assegnazione AND bit per bit&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)|Esegue un'operazione con AND bit per bit e imposta il valore originale sul risultato.|  
+|^=|[^= &#40;Assegnazione OR esclusivo bit per bit&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)|Esegue un'operazione con OR esclusivo bit per bit e imposta il valore originale sul risultato.|  
+|&#124;=|[&#124;= &#40;Assegnazione OR bit per bit&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)|Esegue un'operazione con OR bit per bit e imposta il valore originale sul risultato.|  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -56,7 +57,7 @@ expression operator expression
 ## <a name="result-types"></a>Tipi restituiti  
  Restituisce il tipo di dati dell'argomento con la priorità più alta. Per altre informazioni, vedere [Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per ulteriori informazioni, vedere gli argomenti correlati a ogni operatore.  
   
 ## <a name="examples"></a>Esempi  

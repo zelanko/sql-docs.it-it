@@ -1,4 +1,5 @@
 ---
+description: VERIFYSIGNEDBYCERT (Transact-SQL)
 title: VERIFYSIGNEDBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2d214adb3915ab7d4df137c23cc7bcea31bb9b51
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 433ff155da65471abe8b3ebde3df437b0a3f55ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362057"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +54,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
  *signed_data*  
  Variabile di tipo **nvarchar**, **char**, **varchar** o **nchar** contenente i dati firmati con un certificato.  
   
- *signature*  
+ *URL REST*  
  Firma allegata ai dati firmati. *signature* è di tipo **varbinary**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
@@ -61,7 +62,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
   
  Restituisce 1 se i dati firmati risultano invariati; in caso contrario, restituisce 0.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **VerifySignedBycert** decrittografa la firma dei dati usando la chiave pubblica del certificato specificato e confronta il valore decrittografato con un nuovo hash MD5 dei dati calcolato. Se i valori corrispondono, viene confermata la validità della firma.  
   
 ## <a name="permissions"></a>Autorizzazioni  
