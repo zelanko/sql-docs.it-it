@@ -1,4 +1,5 @@
 ---
+description: Guida di riferimento a DMX (Data Mining Extensions)
 title: Guida di riferimento a DMX (Data Mining Extensions) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 02c7185ebbf264ebf8ed8adda4915170f888e74b
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6197fc8508e1334e5f8afdcb14aeaf7488890159
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971783"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414087"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>Guida di riferimento a DMX (Data Mining Extensions)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "86971783"
   
  **Per ulteriori informazioni: strutture di** [data mining &#40;Analysis Services-Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining)  
   
-##  <a name="dmx-statements"></a><a name="BKMK_DMXStatements"></a>Istruzioni DMX  
+##  <a name="dmx-statements"></a><a name="BKMK_DMXStatements"></a> Istruzioni DMX  
  È possibile utilizzare istruzioni DMX per creare, elaborare, eliminare, copiare ed esplorare modelli di data mining e generare stime basate su tali modelli. DMX include due tipi di istruzioni, le istruzioni per la definizione dei dati e istruzioni per la manipolazione dei dati. Ogni tipo di istruzione consente di eseguire attività diverse.  
   
  Ulteriori informazioni sull'utilizzo delle istruzioni DMX sono disponibili nelle sezioni seguenti:  
@@ -44,7 +45,7 @@ ms.locfileid: "86971783"
   
 -   [Nozioni fondamentali sulle query](#BKMK_Queries)  
   
-###  <a name="data-definition-statements"></a><a name="BKMK_DDL"></a>Istruzioni per la definizione dei dati  
+###  <a name="data-definition-statements"></a><a name="BKMK_DDL"></a> Istruzioni per la definizione dei dati  
  Le istruzioni DMX per la definizione dei dati consentono di creare e definire nuovi modelli e strutture di data mining, importare ed esportare modelli e strutture di data mining ed eliminare i modelli esistenti da un database. Le istruzioni DMX per la definizione dei dati fanno parte del linguaggio DDL (Data Definition Language).  
   
  Le istruzioni DMX per la definizione dei dati consentono di eseguire le attività seguenti:  
@@ -63,7 +64,7 @@ ms.locfileid: "86971783"
   
  [Torna a Istruzioni DMX](#BKMK_DMXStatements)  
   
-###  <a name="data-manipulation-statements"></a><a name="BKMK_DML"></a>Istruzioni di manipolazione dei dati  
+###  <a name="data-manipulation-statements"></a><a name="BKMK_DML"></a> Istruzioni di manipolazione dei dati  
  Le istruzioni DMX per la manipolazione dei dati consentono di utilizzare modelli di data mining esistenti, esplorare i modelli e creare stime basate su di essi. Le istruzioni DMX per la manipolazione dei dati fanno parte del linguaggio DML (Data Manipulation Language).  
   
  Le istruzioni DMX per la manipolazione dei dati consentono di eseguire le attività seguenti:  
@@ -90,7 +91,7 @@ ms.locfileid: "86971783"
   
  [Torna a Istruzioni DMX](#BKMK_DMXStatements)  
   
-###  <a name="dmx-query-fundamentals"></a><a name="BKMK_Queries"></a>Nozioni fondamentali sulle query DMX  
+###  <a name="dmx-query-fundamentals"></a><a name="BKMK_Queries"></a> Nozioni fondamentali sulle query DMX  
  L'istruzione SELECT costituisce la base per la maggior parte delle query DMX. A seconda delle clausole utilizzate con tale istruzione, è possibile visualizzare o copiare modelli di data mining oppure eseguire stime basate su tali modelli. La query di stima utilizza un modulo di selezione per creare stime basate su modelli di data mining esistenti. È inoltre possibile utilizzare funzioni per estendere oltre le capacità intrinseche del modello di data mining le funzionalità di esplorazione e per l'esecuzione di query sui modelli di data mining.  
   
  Le funzioni DMX consentono di calcolare nuove informazioni e di ottenere informazioni individuate durante il training dei modelli. È possibile utilizzare tali funzioni per vari scopi, inclusa la generazione di statistiche che descrivono i dati sottostanti o l'accuratezza di una stima oppure una descrizione dettagliata di una stima.  

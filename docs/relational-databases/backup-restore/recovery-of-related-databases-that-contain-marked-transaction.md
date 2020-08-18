@@ -21,14 +21,14 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4f959ddb388be7f0f21441629239a3d479a0c711
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 71241e4a76e90a7c42e4dbd6e176d43bb5281fdb
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85669812"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088169"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recupero di database correlati che contengono transazioni contrassegnate
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "85669812"
 ## <a name="transact-sql-syntax-for-inserting-named-marks-into-a-transaction-log"></a>Sintassi Transact-SQL per l'inserimento di contrassegni denominati in un log delle transazioni  
  Per inserire contrassegni nei log delle transazioni, usare l'istruzione [BEGIN TRANSACTION](../../t-sql/language-elements/begin-transaction-transact-sql.md) e la clausola WITH MARK [*description*]. Al contrassegno viene assegnato lo stesso nome della transazione. L'argomento *description* facoltativo è una descrizione testuale del contrassegno e non corrisponde al nome del contrassegno. Il nome sia della transazione sia del contrassegno creato nella seguente istruzione `BEGIN TRANSACTION` è ad esempio `Tx1`:  
   
-```wmimof  
+```sql  
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   

@@ -1,4 +1,5 @@
 ---
+description: SELECT FROM &lt; Model &gt; PREDICTION JOIN (DMX)
 title: SELECT FROM &lt; Model &gt; PREDICTION JOIN (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e3e4e9a4d929d9533b10d87654f685e45dafd238
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 033b610da29267cd07076c01157744441c4450d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970506"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413297"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt; Model &gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,7 +34,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>Argomenti  
  *n*  
- facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
+ Facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
   
  *Seleziona elenco di espressioni*  
  Elenco delimitato da virgole contenente espressioni e identificatori di colonna derivati dal modello di data mining.  
@@ -48,13 +49,13 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  Query di origine.  
   
  *elenco di mapping di join*  
- facoltativo. Espressione logica che confronta le colonne del modello con quelle della query di origine.  
+ Facoltativo. Espressione logica che confronta le colonne del modello con quelle della query di origine.  
   
  *espressione della condizione*  
- facoltativo. Condizione per limitare i valori restituiti dall'elenco di colonne.  
+ Facoltativo. Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
  *expression*  
- facoltativo. Espressione che restituisce un valore scalare.  
+ Facoltativo. Espressione che restituisce un valore scalare.  
   
 ## <a name="remarks"></a>Osservazioni  
  La clausola ON definisce il mapping tra le colonne della query di origine e quelle del modello di data mining. Tale mapping viene utilizzato per dirigere le colonne dalla query di origine alle colonne nel modello di data mining, di modo che possano essere utilizzate come input durante la creazione delle stime. Le colonne in \<*join mapping list*> sono correlate usando un segno di uguale (=), come illustrato nell'esempio seguente:  

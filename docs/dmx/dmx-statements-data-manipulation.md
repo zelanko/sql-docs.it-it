@@ -1,4 +1,5 @@
 ---
+description: Istruzioni di manipolazione dei dati (DMX)
 title: Istruzioni di manipolazione dei dati (DMX) | Microsoft Docs
 ms.date: 10/23/2019
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e4b87b8b77b5b8adae8bd549e25ff8a9dd2e223e
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 1ecf62e5cee883fa4fed63d7edcf6ab62ffbc0cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413348"
 ---
 # <a name="dmx-statements---data-manipulation"></a>Istruzioni DMX - Manipolazione dei dati
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

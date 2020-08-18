@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 34e33ea3fbb3ff0ef10e237bc7bdc0ad61c223db
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: ed29244d06e0fcf08c5f56af59c3e1f9feeb2883
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484626"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178256"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Installare SQL Server Machine Learning Services (Python e R) in Linux
 
-[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+[!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
 Questo articolo illustra l'installazione di [SQL Server Machine Learning Services](../machine-learning/index.yml) in Linux. Gli script Python e R possono essere eseguiti nel database usando Machine Learning Services.
 

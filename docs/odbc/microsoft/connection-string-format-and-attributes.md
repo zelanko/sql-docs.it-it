@@ -1,4 +1,5 @@
 ---
+description: Formato e attributi della stringa di connessione
 title: Formato e attributi della stringa di connessione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d95866976d2e83c058f83b3a0ae5e9a4e8888ed1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53efb4dd010913029185f0cbf27f0991f34815fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412933"
 ---
 # <a name="connection-string-format-and-attributes"></a>Formato e attributi della stringa di connessione
 > [!IMPORTANT]  
@@ -31,9 +32,9 @@ ms.locfileid: "81281151"
 ```  
   
 > [!NOTE]  
->  Microsoft ODBC driver for Oracle supporta il formato della stringa di connessione della prima versione del driver, che ha utilizzato `CONNECTSTRING`= anziché `SERVER=`.  
+>  Microsoft ODBC driver for Oracle supporta il formato della stringa di connessione della prima versione del driver, che ha utilizzato `CONNECTSTRING` = anziché `SERVER=` .  
   
- Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, `Trusted_Connection=yes` è necessario specificare al posto delle informazioni sull'ID utente e sulla password nella stringa di connessione.  
+ Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare al `Trusted_Connection=yes` posto delle informazioni sull'ID utente e sulla password nella stringa di connessione.  
   
  Se non si specificano gli attributi UID, PWD, SERVER (o CONNECTSTRING) e DRIVER, è necessario specificare il nome dell'origine dati. Tutti gli altri attributi, tuttavia, sono facoltativi. Se non si specifica un attributo, per impostazione predefinita l'attributo viene impostato su quello specificato nella scheda DSN pertinente della finestra di dialogo **Amministrazione origine dati ODBC** . Il valore dell'attributo può fare distinzione tra maiuscole e minuscole.  
   

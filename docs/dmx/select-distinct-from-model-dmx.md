@@ -1,4 +1,5 @@
 ---
+description: Selezionare DISTINCT FROM &lt; Model &gt; (DMX)
 title: Selezionare DISTINCT FROM &lt; Model &gt; (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3413ec29cb2f1f3e710a1d52037161094ab713ce
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3a8c65f6d0321ae74d18d32bd3c5208bbc2df5b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970631"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413267"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>Selezionare DISTINCT FROM &lt; Model &gt; (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -30,7 +31,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
 ## <a name="arguments"></a>Argomenti  
  *n*  
- facoltativo. Valore intero che specifica il numero di righe da restituire.  
+ Facoltativo. Valore intero che specifica il numero di righe da restituire.  
   
  *elenco di espressioni*  
  Elenco delimitato da virgole contenente espressioni o identificatori di colonne correlate (derivati dal modello).  
@@ -42,7 +43,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
  *expression*  
- facoltativo. Espressione che restituisce un valore scalare.  
+ Facoltativo. Espressione che restituisce un valore scalare.  
   
 ## <a name="remarks"></a>Osservazioni  
  L'istruzione **SELECT DISTINCT from** funziona solo con una singola colonna o con un set di colonne correlate. Non è possibile utilizzare questa clausola con un set di colonne non correlate.  

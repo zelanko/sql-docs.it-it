@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 29c0d209ada9ea624c588b4510191b8ae8b7e91c
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 24a203a45fac725a95402010531185705b3af5cd
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522873"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178266"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>Installare le estensioni del linguaggio di SQL Server in Linux
 
-[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+[!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
 Le estensioni del linguaggio sono un componente aggiuntivo del motore di database. Anche se è possibile [installare il motore di database e le estensioni del linguaggio simultaneamente](#install-all), è consigliabile installare e configurare prima il motore di database di SQL Server per poter risolvere eventuali problemi prima di aggiungere altri componenti. 
 

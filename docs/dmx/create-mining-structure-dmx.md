@@ -1,4 +1,5 @@
 ---
+description: CREATE MINING STRUCTURE (DMX)
 title: CREA STRUTTURA DI DATA MINING (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: efe160fc3bb50f80b70c0d510eedd880f985f9b9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 06f013ccb5c33dfbaba2fe0a0e102a448c17e036
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414027"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -106,7 +107,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  È possibile definire più valori dei flag di modellazione per una colonna. Tuttavia, è possibile disporre solo di un tipo di contenuto e di un tipo di dati per colonna.  
   
 ### <a name="column-relationships"></a>Relazioni tra colonne  
- Per descrivere la relazione tra due colonne, è possibile aggiungere una clausola a qualsiasi istruzione per la definizione di colonna. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]supporta l'utilizzo della clausola seguente \<column relationship> .  
+ Per descrivere la relazione tra due colonne, è possibile aggiungere una clausola a qualsiasi istruzione per la definizione di colonna. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta l'utilizzo della clausola seguente \<column relationship> .  
   
  **CORRELATO A**  
  Indica una gerarchia di valori. La destinazione di una colonna con clausola RELATED TO può essere una colonna chiave in una tabella nidificata, una colonna con valori discreti nella riga dei case oppure un'altra colonna con una clausola RELATED TO, che indica una gerarchia con più livelli.  

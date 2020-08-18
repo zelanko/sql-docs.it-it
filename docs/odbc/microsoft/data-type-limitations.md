@@ -1,4 +1,5 @@
 ---
+description: Limitazioni dei tipi di dati
 title: Limitazioni dei tipi di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81c4eab7-1f6b-47a0-b940-89d6c6a14dae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4beaf91a4ead743e3e8a2e32578796baba3c17be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4853846f21aa0ad763295bbdc4233c472ac53864
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280671"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412787"
 ---
 # <a name="data-type-limitations"></a>Limitazioni dei tipi di dati
 I driver di database di Microsoft ODBC Desktop impongono le seguenti limitazioni sui tipi di dati:  

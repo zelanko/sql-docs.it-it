@@ -1,4 +1,5 @@
 ---
+description: TopPercent (MDX)
 title: Percentuale (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: dcb01ae9771f748ad62faba37cea103f1c7acc8c
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 5f0ae1e59a46c03300018f3243926bb30cef0398
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412862"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -44,7 +45,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  La funzione **topercent** calcola la somma dell'espressione numerica specificata valutata sul set specificato, ordinando il set in ordine decrescente. La funzione restituisce quindi gli elementi con i valori più alti la cui percentuale cumulativa del valore sommato totale corrisponde almeno alla percentuale specificata. La funzione restituisce il subset più piccolo di un set il cui totale cumulativo corrisponde almeno alla percentuale specificata. Gli elementi restituiti sono ordinati dal più grande al più piccolo.  
   
 > [!WARNING]  
->  Se *Numeric_Expression* restituisce un valore negativo, il numero di **righe restituisce solo** una riga (1).  
+>  Se *Numeric_Expression*  restituisce un valore negativo, il numero di **righe restituisce solo** una riga (1).  
 >   
 >  Vedere il secondo esempio per una presentazione dettagliata di questo comportamento.  
   
@@ -67,7 +68,7 @@ WHERE([Product].[Product Categories].[Bikes])
   
  Tramite l'espressione sopra indicata vengono prodotti i risultati seguenti:  
   
-|Città|Reseller Sales Amount|  
+|City|Reseller Sales Amount|  
 |-|---------------------------|  
 |Toronto|$3.508.904,84|  
 |Londra|$1.521.530,09|  
@@ -126,7 +127,7 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157.444,56|$163.112,57|($5.668,01)|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
