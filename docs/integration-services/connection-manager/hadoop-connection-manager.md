@@ -1,4 +1,5 @@
 ---
+description: Gestione connessione Hadoop
 title: Gestione connessione Hadoop | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2020
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93565cbcc0140dd439dc2e7c52880879c6d815ba
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 72f5629e6ac5200324a149ff7242122b0ae0c16c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88350217"
 ---
 # <a name="hadoop-connection-manager"></a>Gestione connessione Hadoop
 
@@ -206,7 +207,7 @@ C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
 C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
 ```
 
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Attività Hive Hadoop](../../integration-services/control-flow/hadoop-hive-task.md)   
  [Attività Pig Hadoop](../../integration-services/control-flow/hadoop-pig-task.md)   
  [Attività File system Hadoop](../../integration-services/control-flow/hadoop-file-system-task.md)  

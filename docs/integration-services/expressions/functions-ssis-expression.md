@@ -1,4 +1,5 @@
 ---
+description: Funzioni (espressione SSIS)
 title: Funzioni (espressione SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 72f03d8d53e9d85b9b274ad1ac821fdfc79a6f24
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e0d2644192f6c38b98aaeec134b540ac269560d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917013"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348138"
 ---
 # <a name="functions-ssis-expression"></a>Funzioni (espressione SSIS)
 

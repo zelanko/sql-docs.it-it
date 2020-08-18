@@ -1,4 +1,5 @@
 ---
+description: Impostazione delle proprietà di un componente del flusso di dati
 title: Impostare le proprietà di un componente flusso di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae953f5267c9facc141c823941fae645a5d05e0e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c7799b5d2f5f541b6713821dccbec820697371ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348947"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Impostazione delle proprietà di un componente del flusso di dati
 
@@ -140,7 +141,7 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
 |PipelineVersion|Integer|Versione dell'attività Flusso di dati nella quale il componente è progettato per l'esecuzione.|  
 |UsesDispositions|Boolean|Indica se un componente ha un output degli errori.|  
 |ValidateExternalMetadata|Boolean|Indica se i metadati delle colonne esterne sono convalidati. Il valore predefinito di questa proprietà è **True**.|  
-|Versione|Integer|Versione di un componente.|  
+|Version|Integer|Versione di un componente.|  
   
 ###  <a name="input-properties"></a><a name="inputs"></a> Proprietà degli input  
  Nel modello a oggetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , le trasformazioni e le destinazioni includono input. L'input di un componente nel flusso di dati implementa l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>.  
@@ -254,7 +255,7 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
 |CodePage|Integer|Specifica la tabella codici per i dati stringa non Unicode.|  
 |DataType|Integer (enumerazione)|Tipo di dati [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] della colonna. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
 |Length|Integer|Lunghezza della colonna in caratteri.|  
-|Precision|Integer|Precisione di una colonna numerica.|  
+|Precisione|Integer|Precisione di una colonna numerica.|  
 |Scalabilità|Integer|Scala di una colonna numerica.|  
 
 ## <a name="custom-properties-of-data-flow-components"></a>Proprietà personalizzate dei componenti flusso di dati

@@ -1,4 +1,5 @@
 ---
+description: Proprietà personalizzate della destinazione elaborazione dimensione
 title: Proprietà personalizzate della destinazione elaborazione dimensione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9700f663-53f2-49b6-b1ef-92c7b752d6a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 09b9d0512fb92bcc5564dd107d5c6d7a91b2dc4f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6cc1b502a64a30b5035b95b7d36207bc1cc281d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916711"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348997"
 ---
 # <a name="dimension-processing-destination-custom-properies"></a>Proprietà personalizzate della destinazione elaborazione dimensione
 

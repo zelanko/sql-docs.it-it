@@ -1,4 +1,5 @@
 ---
+description: Elaborazione Analysis Services - attività
 title: Attività Elaborazione Analysis Services | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c39fdf1f63084d7f1340dae6b11f17124a52138
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2287bb2e429eba74f7ca98dcdf2b18b8d11cfda2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908647"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349987"
 ---
 # <a name="analysis-services-processing-task"></a>Elaborazione Analysis Services - attività
 
@@ -114,7 +115,7 @@ ms.locfileid: "86908647"
  **Nuovo**  
  Consente di creare una nuova gestione connessione Analysis Services.  
   
- **Argomenti correlati:** [Gestione connessione Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Argomenti correlati:** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Elenco oggetti**  
  

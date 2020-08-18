@@ -1,4 +1,5 @@
 ---
+description: Origine SAP BW
 title: Origine SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 894d94e277f1304a5d9d1e1986e5f769fbc5f4e9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0506eb531462702870ef726b585dd5f07c1d4db4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349027"
 ---
 # <a name="sap-bw-source"></a>Origine SAP BW
 
@@ -52,7 +53,7 @@ ms.locfileid: "86917820"
   
     2.  In **Tipo di attivazione**selezionare **Programma server registrato**.  
   
-    3.  In **Communication Type with Target System**(Tipo di comunicazione con sistema di destinazione) selezionare **Non-Unicode (Inactive MDMP Settings)** (Non Unicode (Impostazioni MDMP inattive)).  
+    3.  In **Communication Type with Target System**(Tipo di comunicazione con sistema di destinazione) selezionare **Non-Unicode (Inactive MDMP Settings)**(Non Unicode (Impostazioni MDMP inattive)).  
   
     4.  Assegnare un ID programma appropriato.  
   
@@ -60,15 +61,15 @@ ms.locfileid: "86917820"
   
     1.  Passare alla workbench dell'amministratore (codice di transazione RSA1) e, nel riquadro sinistro, selezionare **Open Hub Destination**(Destinazione hub aperto).  
   
-    2.  Nel riquadro centrale fare clic con il pulsante destro del mouse su un'InfoArea, quindi selezionare **"Create Open Hub Destination"** (Crea destinazione di hub aperto).  
+    2.  Nel riquadro centrale fare clic con il pulsante destro del mouse su un'InfoArea, quindi selezionare **"Create Open Hub Destination"**(Crea destinazione di hub aperto).  
   
-    3.  Per **Tipo destinazione**selezionare **"Strumento di terze parti"** , quindi immettere la destinazione RFC creata in precedenza.  
+    3.  Per **Tipo destinazione**selezionare **"Strumento di terze parti"**, quindi immettere la destinazione RFC creata in precedenza.  
   
     4.  Salvare e attivare la nuova destinazione di hub aperto.  
   
 3.  Creare un processo di trasferimento dati (DTP):  
   
-    1.  Nel riquadro centrale dell'InfoArea, fare clic con il pulsante destro del mouse sulla destinazione creata in precedenza, quindi selezionare **"Create data transfer process"** (Crea processo di trasferimento dati).  
+    1.  Nel riquadro centrale dell'InfoArea, fare clic con il pulsante destro del mouse sulla destinazione creata in precedenza, quindi selezionare **"Create data transfer process"**(Crea processo di trasferimento dati).  
   
     2.  Configurare, salvare e attivare il DTP.  
   
@@ -142,6 +143,6 @@ ms.locfileid: "86917820"
 -   [Anteprima](../../integration-services/data-flow/preview.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Componenti di Microsoft Connector per SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
+ [Componenti di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

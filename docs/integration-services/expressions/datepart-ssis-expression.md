@@ -1,4 +1,5 @@
 ---
+description: DATEPART (espressione SSIS)
 title: DATEPART (espressione SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d8a87b6ca0118d181c21e46620a3cfd5e4c050d2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3d4509e356193391b903b764771dca170c06026d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348247"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (espressione SSIS)
 
@@ -44,7 +45,7 @@ DATEPART(datepart, date)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_I4  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se l'argomento è Null, DATEPART restituirà Null.  
   
  Per i valori letterali di data è necessario eseguire il cast esplicito a uno dei tipi di dati date. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -58,7 +59,7 @@ DATEPART(datepart, date)
 |Month|mm, m|  
 |Dayofyear|dy, y|  
 |Giorno|dd, d|  
-|Week|wk, ww|  
+|Settimana|wk, ww|  
 |Giorno della settimana|dw|  
 |Ora|Hh|  
 |Minuto|mi, n|  

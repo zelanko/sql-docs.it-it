@@ -1,4 +1,5 @@
 ---
+description: Raggruppamento fuzzy - trasformazione
 title: Trasformazione Raggruppamento fuzzy | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c4e00be6f692bd3e4bec21acec6c2de6359622b7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e69c2b63e617e37fcd4dec1b7589e9b1808fefce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348447"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Raggruppamento fuzzy - trasformazione
 
@@ -97,7 +98,7 @@ ms.locfileid: "86919335"
 ## <a name="related-tasks"></a>Attività correlate  
  Per informazioni dettagliate sull'impostazione di questa attività, fare clic su uno degli argomenti seguenti:  
   
--   [Identificare righe di dati simili tramite la trasformazione Raggruppamento fuzzy](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
+-   [Identificazione di righe di dati simili tramite la trasformazione Raggruppamento fuzzy](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
@@ -148,7 +149,7 @@ ms.locfileid: "86919335"
  **Numerali**  
  Consente di specificare l'importanza dei numerali iniziali e finali nel confronto dei dati della colonna. Ad esempio, se i numerali iniziali sono significativi, "2005 Vendite" non verrà raggruppato con "2004 Vendite".  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Nessuno**|I numerali iniziali e finali non sono significativi.|  
 |**Iniziali**|Sono significativi solo i numerali iniziali.|  
