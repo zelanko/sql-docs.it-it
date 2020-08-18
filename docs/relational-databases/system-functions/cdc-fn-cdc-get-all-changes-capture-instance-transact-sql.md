@@ -1,4 +1,5 @@
 ---
+description: cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 title: cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4946bff122f64da126291bb797effe60c361663f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c3877214c5df16b8c9bf48f9ee20bd2ec83109d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898541"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397567"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +73,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|Numero LSN di commit associato alla modifica. Mantiene l'ordine del commit della modifica. Le modifiche di cui è stato eseguito il commit nella stessa transazione condividono lo stesso valore LSN di commit.|  
 |**__$seqval**|**binary(10)**|Valore di sequenza utilizzato per ordinare le modifiche a una riga all'interno di una transazione.|  
-|**_ _ $ operation**|**int**|Identifica l'operazione DML (Data Manipulation Language) necessaria per applicare la riga di dati di modifica all'origine dati di destinazione. Può essere uno dei seguenti:<br /><br /> 1 = eliminazione<br /><br /> 2 = inserimento<br /><br /> 3 = aggiornamento (i valori di colonna acquisiti sono quelli precedenti l'aggiornamento). Questo valore si applica solo quando è specificata l'opzione di filtro di riga 'all update old'.<br /><br /> 4 = aggiornamento (i valori di colonna acquisiti sono quelli successivi all'aggiornamento).|  
+|**__$operation**|**int**|Identifica l'operazione DML (Data Manipulation Language) necessaria per applicare la riga di dati di modifica all'origine dati di destinazione. Può essere uno dei valori seguenti:<br /><br /> 1 = eliminazione<br /><br /> 2 = inserimento<br /><br /> 3 = aggiornamento (i valori di colonna acquisiti sono quelli precedenti l'aggiornamento). Questo valore si applica solo quando è specificata l'opzione di filtro di riga 'all update old'.<br /><br /> 4 = aggiornamento (i valori di colonna acquisiti sono quelli successivi all'aggiornamento).|  
 |**__$update_mask**|**varbinary(128)**|Maschera di bit in cui a ogni colonna acquisita identificata per l'istanza di acquisizione corrisponde un bit. Tutti i bit definiti per questo valore sono impostati su 1 quando **_ _ $ operation** = 1 o 2. Quando **_ _ $ operation** = 3 o 4, solo i bit corrispondenti alle colonne modificate sono impostati su 1.|  
 |**\<captured source table columns>**|variabile|Le colonne rimanenti restituite dalla funzione sono le colonne acquisite identificate quando l'istanza di acquisizione è stata creata. Se nessuna colonna è stata specificata nell'elenco delle colonne acquisite, vengono restituite tutte le colonne nella tabella di origine.|  
   
@@ -106,10 +107,10 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [CDC. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [sys. fn_cdc_map_time_to_lsn &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
- [sys. sp_cdc_get_ddl_history &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)   
- [sys. sp_cdc_get_captured_columns &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
- [sys. sp_cdc_help_change_data_capture &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [sys. fn_cdc_map_time_to_lsn &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
+ [sys. sp_cdc_get_ddl_history &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)   
+ [sys. sp_cdc_get_captured_columns &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
+ [sys. sp_cdc_help_change_data_capture &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [Informazioni su Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

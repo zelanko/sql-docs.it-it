@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_latch_stats (Transact-SQL)
 title: sys. dm_os_latch_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc310a735c55bc2cdd248597a6cffe1d6f874d4f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59624b04e417f2b1b7713adec784abca60303504
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754139"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398527"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,11 +40,11 @@ Restituisce informazioni relative a tutte le attese di latch organizzate per cla
 |waiting_requests_count|**bigint**|Numero di attese di latch nella classe specifica. Questo contatore viene incrementato all'inizio di un'attesa di latch.|  
 |wait_time_ms|**bigint**|Tempo totale di attesa dei latch, espresso in millisecondi, nella classe specifica.<br /><br /> **Nota:** Questa colonna viene aggiornata ogni cinque minuti durante un'attesa di latch e al termine di un'attesa del latch.|  
 |max_wait_time_ms|**bigint**|Tempo massimo che un oggetto memoria ha atteso il latch specifico. Un valore insolitamente elevato può indicare un deadlock interno.|  
-|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
+|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
-Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
+Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l'  **amministratore del server** o un account **amministratore Azure Active Directory** .   
   
 ## <a name="remarks"></a>Osservazioni  
  È possibile utilizzare la vista sys.dm_os_latch_stats per identificare l'origine della contesa di latch mediante l'analisi dei numeri di attesa relativi e dei tempi di attesa per le varie classi di latch. In alcune situazioni è possibile risolvere o ridurre la contesa di latch. Si possono tuttavia presentare situazioni in cui è necessario contattare il Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
@@ -60,7 +61,7 @@ GO
 > [!NOTE]  
 >  Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene riavviato, le statistiche non sono persistenti. Tutti i dati sono cumulativi a partire dall'ultima reimpostazione delle statistiche oppure dall'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="latches"></a><a name="latches"></a>Fermi  
+## <a name="latches"></a><a name="latches"></a> Fermi  
  Un latch è un oggetto di sincronizzazione Lightweight interno simile a un blocco utilizzato da vari [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componenti. Un latch viene utilizzato principalmente per sincronizzare le pagine del database durante operazioni quali il buffer o l'accesso ai file. Ogni latch è associato a un'unica unità di allocazione. 
   
  Un'attesa di latch si verifica quando non è possibile concedere immediatamente una richiesta di latch perché il latch è mantenuto attivo da un altro thread con una modalità in conflitto. A differenza dei blocchi, i latch vengono rilasciati subito dopo l'operazione, anche nel caso di operazioni di scrittura.  
@@ -195,5 +196,5 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
 [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
-[SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+[SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
 [Oggetto Latch di SQL Server](../../relational-databases/performance-monitor/sql-server-latches-object.md)      

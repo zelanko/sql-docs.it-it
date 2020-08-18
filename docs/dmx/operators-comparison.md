@@ -1,4 +1,5 @@
 ---
+description: Operatori di confronto (DMX)
 title: Operatori di confronto (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 885285439721f017d1d6eaa5bb9eebd0a26c08a3
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 0be897f827740a2a27ce3376df36ec0e296951b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86968671"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395807"
 ---
 # <a name="operators---comparison"></a>Operatori di confronto
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

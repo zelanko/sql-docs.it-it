@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_memory_objects (Transact-SQL)
 title: sys. dm_os_memory_objects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,11 +21,12 @@ ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31af260a5290b899bb64fa3942d1e2aa0a076d31
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3378ee753ebc9205ac4607930801fdf3cc434b3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999041"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398067"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,14 +55,14 @@ ms.locfileid: "85999041"
 |**contention_factor**|**real**|**Si applica a**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] e versioni successive.<br /><br /> Valore che specifica la contesa in questo oggetto di memoria, con 0 che significa nessuna contesa. Il valore viene aggiornato ogni volta che viene eseguito un numero specificato di allocazioni di memoria che riflette la contesa durante tale periodo. Si applica solo agli oggetti di memoria thread-safe.|  
 |**waiting_tasks_count**|**bigint**|**Si applica a**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] e versioni successive.<br /><br /> Numero di attese in questo oggetto memoria. Questo contatore viene incrementato ogni volta che viene allocata memoria da questo oggetto memoria. L'incremento indica il numero di attività attualmente in attesa di accesso a questo oggetto memoria. Si applica solo agli oggetti di memoria thread-safe. Si tratta di un valore del massimo sforzo senza una garanzia di correttezza.|  
 |**exclusive_access_count**|**bigint**|**Si applica a**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] e versioni successive.<br /><br /> Specifica la frequenza con cui è stato eseguito l'accesso esclusivo a questo oggetto di memoria. Si applica solo agli oggetti di memoria thread-safe.  Si tratta di un valore del massimo sforzo senza una garanzia di correttezza.|  
-|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
+|**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
  **partition_type**, **contention_factor**, **waiting_tasks_count**e **exclusive_access_count** non sono ancora implementate in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] .  
   
 ## <a name="permissions"></a>Autorizzazioni
 
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
-Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
+Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l'  **amministratore del server** o un account **amministratore Azure Active Directory** .   
 
 ## <a name="remarks"></a>Osservazioni  
  Gli oggetti memoria sono heap. Le allocazioni implementate dagli oggetti sono caratterizzate da una maggiore granularità rispetto alle allocazioni implementate dai clerk di memoria. I componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzano oggetti memoria anziché clerk di memoria. Gli oggetti memoria utilizzano l'interfaccia dell'allocatore di pagine del clerk di memoria per allocare le pagine. Gli oggetti memoria non utilizzano interfacce di memoria virtuale o condivisa. In base al modello di allocazione, i componenti possono creare tipi diversi di oggetti memoria per allocare aree di dimensioni arbitrarie.  
@@ -82,7 +84,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-  [SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+  [SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
   
   

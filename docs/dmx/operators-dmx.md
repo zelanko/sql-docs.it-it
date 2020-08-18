@@ -1,4 +1,5 @@
 ---
+description: Operatori (DMX)
 title: Operatori (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f274ebc498e5b88b8ae1fbac17c3c972686e348f
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 4c523ea9150f7d3361f93582e01b703be35d2366
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395737"
 ---
 # <a name="operators-dmx"></a>Operatori (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -30,10 +31,10 @@ ms.locfileid: "86971603"
   
 |Categoria di operatori|Tipo di operazione|  
 |-----------------------|-----------------------|  
-|[Operatori aritmetici &#40;&#41;DMX](../dmx/operators-arithmetic.md)|Esecuzione di addizioni, sottrazioni, moltiplicazioni e divisioni.|  
+|[Operatori aritmetici &#40;&#41;DMX ](../dmx/operators-arithmetic.md)|Esecuzione di addizioni, sottrazioni, moltiplicazioni e divisioni.|  
 |[Operatori di confronto &#40;DMX&#41;](../dmx/operators-comparison.md)|Confronto di un valore con un altro valore o un'espressione.|  
-|[Operatori logici &#40;&#41;DMX](../dmx/operators-logical.md)|Stabilire se una condizione è vera, ad esempio AND, OR e NOT.|  
-|[Operatori unari &#40;&#41;DMX](../dmx/operators-unary.md)|Esecuzione di un'operazione su un singolo operando.|  
+|[Operatori logici &#40;&#41;DMX ](../dmx/operators-logical.md)|Stabilire se una condizione è vera, ad esempio AND, OR e NOT.|  
+|[Operatori unari &#40;&#41;DMX ](../dmx/operators-unary.md)|Esecuzione di un'operazione su un singolo operando.|  
   
  In DMX è possibile utilizzare gli operatori per combinare semplici espressioni in modo da ottenere espressioni più complesse. Nelle espressioni complesse gli operatori vengono valutati nell'ordine definito dalle regole di precedenza degli operatori di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Gli operatori con precedenza superiore vengono eseguiti prima di quelli con precedenza inferiore. Per ulteriori informazioni sulle espressioni, vedere [espressioni &#40;&#41;DMX ](../dmx/expressions-dmx.md).  
   

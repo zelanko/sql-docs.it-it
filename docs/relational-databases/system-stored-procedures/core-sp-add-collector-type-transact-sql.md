@@ -1,4 +1,5 @@
 ---
+description: core.sp_add_collector_type (Transact-SQL)
 title: Core. sp_add_collector_type (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1d981037-2147-464e-a456-7d8e479bce89
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 28353a7b2112be801f465b5a919b537f17a17f4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fcaf70019a38a0306d56c94e86ec6376626a2991
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397027"
 ---
 # <a name="coresp_add_collector_type-transact-sql"></a>core.sp_add_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,8 +67,8 @@ EXECUTE @RC = core.sp_add_collector_type @collector_type_uid;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Stored procedure dell'agente di raccolta dati &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [data warehouse di gestione](../../relational-databases/data-collection/management-data-warehouse.md)  
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure dell'agente di raccolta dati &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Data warehouse di gestione](../../relational-databases/data-collection/management-data-warehouse.md)  
   
   

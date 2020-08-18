@@ -1,4 +1,5 @@
 ---
+description: Apertura di una Knowledge Base
 title: Apertura di una Knowledge Base
 ms.date: 06/04/2013
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3eec1826d383f51933a9d47ae4acd932ebda7759
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5d93731b7e28aafbffdf659678c0017d37ce61db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395887"
 ---
 # <a name="open-a-knowledge-base"></a>Apertura di una Knowledge Base
 
@@ -34,7 +35,7 @@ ms.locfileid: "85882744"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per aprire una Knowledge Base è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="open-a-knowledge-base"></a><a name="Open"></a>Aprire una Knowledge base  
+##  <a name="open-a-knowledge-base"></a><a name="Open"></a> Aprire una Knowledge base  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -70,13 +71,13 @@ ms.locfileid: "85882744"
   
 -   Per aprire una Knowledge Base presente nell'elenco delle Knowledge Base recenti ma che è stata bloccata da un altro utente, contattare l'utente per richiederne lo sblocco.  
   
-##  <a name="follow-up-after-opening-a-knowledge-base"></a><a name="FollowUp"></a>Completamento: dopo l'apertura di una Knowledge base  
+##  <a name="follow-up-after-opening-a-knowledge-base"></a><a name="FollowUp"></a> Completamento: dopo l'apertura di una Knowledge base  
  Dopo avere aperto una Knowledge Base, questa viene collocata nello stato indicato nella colonna Stato della relativa tabella. Per le attività di individuazione delle informazioni e quelle relative ai criteri di corrispondenza, la Knowledge Base verrà aperta in una pagina di procedura guidata specifica. Per l'attività di gestione del dominio, la Knowledge Base verrà aperta nella pagina di gestione del dominio. Per altre informazioni sugli stati, vedere [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="if-the-knowledge-base-is-locked"></a><a name="Locked"></a>Se la Knowledge base è bloccata  
+##  <a name="if-the-knowledge-base-is-locked"></a><a name="Locked"></a> Se la Knowledge base è bloccata  
  L'icona di blocco nella prima colonna indica se la Knowledge Base è bloccata. Il nome di una Knowledge Base bloccata verrà visualizzato in colore rosso. Una Knowledge Base in corso di modifica da parte di un utente specifico tramite un'attività di Knowledge Base, viene contrassegnata come Bloccata. Una Knowledge Base bloccata non può essere modificata da un secondo utente. L'utente che sta lavorando alla Knowledge Base può sbloccarla facendo clic su di essa con il pulsante destro del mouse nella tabella presente nella pagina Apri Knowledge Base, quindi scegliendo **Sblocca**, oppure può sbloccarla effettuandone la pubblicazione. Quando si posiziona il cursore su una Knowledge Base bloccata, viene visualizzato un suggerimento in DQS che indica chi ha bloccato la Knowledge Base e quando.  
   
-##  <a name="state-of-a-knowledge-base"></a><a name="State"></a>Stato di una Knowledge base  
+##  <a name="state-of-a-knowledge-base"></a><a name="State"></a> Stato di una Knowledge base  
  Nel campo Stato viene indicata la fase di un'attività a cui si trova la Knowledge Base. Se si apre la Knowledge Base, verrà aperta in quella fase.  
   
 -   **\<Empty>**: Il campo stato è vuoto per una Knowledge base se la Knowledge base è stata pubblicata facendo clic su **pubblica** nell'attività Gestione dominio e quindi su **Sì-pubblica la Knowledge base e Chiudi**.  

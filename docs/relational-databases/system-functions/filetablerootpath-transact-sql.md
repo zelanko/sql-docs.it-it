@@ -1,4 +1,5 @@
 ---
+description: FileTableRootPath (Transact-SQL)
 title: FileTableRootPath (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1311ddfe90beafa3f3d89b27e510eac34aa5ae94
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 713b0612ecbe67669955290a3abbb47732fe82b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397197"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -105,6 +106,6 @@ SELECT FileTableRootPath(N'MyFileTable');
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzare directory e percorsi in FileTable](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
+ [Usare directory e percorsi in FileTable](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   
