@@ -1,4 +1,5 @@
 ---
+description: Importazione di un dominio da un file DQS
 title: Importazione di un dominio da un file DQS
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0ea84af0d6587399d1b5610a3b8cf6da31909cb4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c1d597c8ab750b5debe221d2cf68c231143736b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883157"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491529"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importazione di un dominio da un file DQS
 
@@ -36,7 +37,7 @@ ms.locfileid: "85883157"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per importare un dominio da un file DQS è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="import-a-domain-from-a-dqs-file"></a><a name="Import"></a>Importare un dominio da un file DQS  
+##  <a name="import-a-domain-from-a-dqs-file"></a><a name="Import"></a> Importare un dominio da un file DQS  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   

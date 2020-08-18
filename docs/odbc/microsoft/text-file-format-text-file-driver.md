@@ -1,4 +1,5 @@
 ---
+description: Formato file di testo (driver file di testo)
 title: Formato file di testo (driver file di testo) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5801433e0180bb07cb2d09a59db2bb74be012cdf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb402f0f186529da33974b77ffeecdd7ed788d53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303092"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449093"
 ---
 # <a name="text-file-format-text-file-driver"></a>Formato file di testo (driver file di testo)
 Il driver di testo ODBC supporta sia i file di testo delimitati che quelli a larghezza fissa. Un file di testo è costituito da una riga di intestazione facoltativa e da zero o più righe di testo.  
@@ -37,12 +38,12 @@ Il driver di testo ODBC supporta sia i file di testo delimitati che quelli a lar
   
  La grammatica seguente, scritta per i programmatori, definisce il formato di un file di testo che può essere letto dal driver di testo ODBC:  
   
-|Format|Rappresentazione|  
+|Formato|Rappresentazione|  
 |------------|--------------------|  
 |Non corsivo|Caratteri che devono essere immessi come illustrato|  
 |*corsivo*|Argomenti definiti altrove nella grammatica|  
 |parentesi quadre ([])|Elementi facoltativi|  
-|parentesi graffe ({})|Elenco di scelte che si escludono a vicenda|  
+|parentesi graffe ( {} )|Elenco di scelte che si escludono a vicenda|  
 |barre verticali (&#124;)|Separa le scelte che si escludono a vicenda|  
 |puntini di sospensione (...)|Elementi che possono essere ripetuti una o più volte|  
   
@@ -67,7 +68,7 @@ fixed-width-data ::= fixed-width-string | number | date | fixed-width-null
 ```  
   
 > [!NOTE]  
->  Nel file schema. ini viene specificata la larghezza di ogni colonna in un file di testo a larghezza fissa.  
+>  La larghezza di ogni colonna in un file di testo a larghezza fissa è specificata nel file di Schema.ini.  
   
 ```  
   
@@ -87,7 +88,7 @@ custom-delimitercustom-delimiter ::= any character except:
 ```  
   
 > [!NOTE]  
->  Il delimitatore in un file di testo con valori delimitati da Custom viene specificato nel file schema. ini.  
+>  Il delimitatore in un file di testo con valori delimitati da personalizzare viene specificato nel file di Schema.ini.  
   
 ```  
 quote-character ::= "  

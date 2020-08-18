@@ -1,4 +1,5 @@
 ---
+description: sys.sysindexes (Transact-SQL)
 title: Indici sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ae519a06d98c3c70cdd01064c220e5f2e4ed424
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4b78a272e9fa2ec3a0cc3d4418986078ff02f457
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786324"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399407"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -85,7 +86,7 @@ ms.locfileid: "85786324"
 -   Determinare il momento dell'aggiornamento delle statistiche utilizzando informazioni a livello di applicazione. Ad esempio, ogni volta che il valore massimo di una colonna **Identity** viene modificato di più di 10.000 o ogni volta che viene eseguita un'operazione di inserimento bulk.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Mapping di tabelle di sistema a viste di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   

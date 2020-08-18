@@ -1,4 +1,5 @@
 ---
+description: Attributi relativi ad ambiente, connessione e istruzioni
 title: Attributi dell'ambiente, della connessione e dell'istruzione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e15b276-3b7a-428a-b72f-a3ddfe1ba1ce
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 86cecaf0b82c7b6d15b3f37262507d2cff0c3c10
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6bc37e05f2c8847ff9a4828a5d2e9e7456732a41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300931"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482954"
 ---
 # <a name="environment-connection-and-statement-attributes"></a>Attributi relativi ad ambiente, connessione e istruzioni
 ODBC definisce un numero di attributi associati a ambienti, connessioni o istruzioni.  

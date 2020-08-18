@@ -1,4 +1,5 @@
 ---
+description: Nascondere o eliminare livelli di una gerarchia derivata (Master Data Services)
 title: Nascondere o eliminare i livelli di una gerarchia derivata
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e00582b9-9415-4b66-b4a7-9f590d83875f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3801704f26f0da82115ffaec6bd7e8078bf94f60
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 21d638e7a4600dfc818d1213c9cd72db588aaded
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471944"
 ---
 # <a name="hide-or-delete-levels-in-a-derived-hierarchy-master-data-services"></a>Nascondere o eliminare livelli di una gerarchia derivata (Master Data Services)
 

@@ -1,4 +1,5 @@
 ---
+description: Proprietà ProtocolDLL (classe ServerNetworkProtocol)
 title: Proprietà ProtocolDLL (ServerNetworkProtocol)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ac386558-392e-46f3-97f8-382f267b7fca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1bacdbc44963552bca0ded50290cbba3386c82e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f8353be8db9770595d560b662834d7c5f9e7f251
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472851"
 ---
 # <a name="protocoldll-property-servernetworkprotocol-class"></a>Proprietà ProtocolDLL (classe ServerNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

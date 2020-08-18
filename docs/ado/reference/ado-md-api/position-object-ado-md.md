@@ -1,4 +1,5 @@
 ---
+description: Oggetto Position (ADO MD)
 title: Oggetto Position (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46d619f268816b356e115a60d07a48fbe7e1d758
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 61b30ea92756de6f2ff4c9cf3d0e0b56cdedf155
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765032"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440773"
 ---
 # <a name="position-object-ado-md"></a>Oggetto Position (ADO MD)
 Rappresenta un set di uno o più membri di dimensioni diverse che definiscono un punto lungo un asse.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Con le proprietà e le raccolte di un oggetto **position** è possibile eseguire le operazioni seguenti:  
   
 -   Utilizzare la proprietà **ordinal** per restituire la posizione ordinale della **posizione** lungo l' [asse](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  

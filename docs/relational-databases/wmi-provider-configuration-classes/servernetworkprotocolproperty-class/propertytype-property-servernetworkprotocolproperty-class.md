@@ -1,4 +1,5 @@
 ---
+description: Proprietà PropertyType (classe ServerNetworkProtocolProperty)
 title: Proprietà PropertyType (ServerNetworkProtocolProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d4932eaf-da7c-4b09-8298-ffb6333dfba2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 74ad7baea446386659ab8a3774bcd313c8a6807d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6c86ed50cb4ee57cd2b1fbcdeb3de5578f383859
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472822"
 ---
 # <a name="propertytype-property-servernetworkprotocolproperty-class"></a>Proprietà PropertyType (classe ServerNetworkProtocolProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

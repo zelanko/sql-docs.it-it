@@ -1,4 +1,5 @@
 ---
+description: Tipi di dati (DMX)
 title: Tipi di dati (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4da4243aaf7592e7c5a8a9df63ed1aea352448f4
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 9658b148d2ce76d5e73f5deaf3abfa9542e79771
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491547"
 ---
 # <a name="data-types-dmx"></a>Tipi di dati (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -22,7 +23,7 @@ ms.locfileid: "86969882"
   
  I tipi di dati dipendono dall'algoritmo. Ogni algoritmo determina i tipi di dati supportati e le modalità con cui vengono utilizzati. Gli algoritmi Microsoft supportano i tipi di dati seguenti:  
   
--   Testo  
+-   Text  
   
 -   long  
   
@@ -35,7 +36,7 @@ ms.locfileid: "86969882"
  Per ulteriori informazioni sui tipi di dati [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supportati da, vedere [tipi di dati &#40;&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Guida di riferimento alle estensioni di data mining &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Guida di riferimento alle funzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Guida di riferimento agli operatori DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-operator-reference.md)   
