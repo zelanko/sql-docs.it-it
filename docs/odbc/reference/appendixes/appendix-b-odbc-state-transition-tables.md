@@ -1,4 +1,5 @@
 ---
+description: 'Appendice B: Tabelle della transizione di stato ODBC'
 title: 'Appendice B: tabelle di transizione dello stato ODBC | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: db20c492ababbe6bf8f065fce88067c643f2694d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b81b43d40d3552959ade377cb7b967eb7331b7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411617"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Appendice B: Tabelle della transizione di stato ODBC
 Nelle tabelle di questa appendice viene illustrato il modo in cui le funzioni ODBC determinano transizioni degli Stati dell'ambiente, della connessione, dell'istruzione e del descrittore. Lo stato dell'ambiente, della connessione, dell'istruzione o del descrittore determina in genere quando è possibile chiamare le funzioni che utilizzano il tipo di handle corrispondente (ambiente, connessione, istruzione o descrittore). Gli Stati dell'ambiente, della connessione, dell'istruzione e del descrittore si sovrappongono approssimativamente come illustrato nelle illustrazioni seguenti. Ad esempio, l'esatta sovrapposizione degli Stati di connessione C5 e C6 e gli Stati di istruzione da S1 a S12 sono dipendenti dall'origine dati, perché le transazioni iniziano in momenti diversi in origini dati diverse e lo stato del descrittore D1i (descrittore allocato in modo implicito) dipende dallo stato di qualsiasi istruzione. Per una descrizione di ogni stato, vedere [transizioni di ambiente](../../../odbc/reference/appendixes/environment-transitions.md), [transizioni di connessione](../../../odbc/reference/appendixes/connection-transitions.md), [transizioni di istruzioni](../../../odbc/reference/appendixes/statement-transitions.md)e [transizioni di descrittori](../../../odbc/reference/appendixes/descriptor-transitions.md), più avanti in questa appendice.  
@@ -42,7 +43,7 @@ Nelle tabelle di questa appendice viene illustrato il modo in cui le funzioni OD
   
  Ogni voce in una tabella di transizione può essere uno dei valori seguenti:  
   
--   **--**-Lo stato è invariato dopo l'esecuzione della funzione.  
+-   **--** -Lo stato è invariato dopo l'esecuzione della funzione.  
   
 -   **E**  
 
@@ -52,7 +53,7 @@ Nelle tabelle di questa appendice viene illustrato il modo in cui le funzioni OD
   
 -   **NS** : stato successivo. La transizione dell'istruzione è identica a quella di se l'istruzione non è passata attraverso gli Stati asincroni. Si supponga, ad esempio, che un'istruzione che crea un set di risultati entri nello stato S11 dallo stato S1 perché **SQLExecDirect** ha restituito SQL_STILL_EXECUTING. La notazione NS nello stato S11 indica che le transizioni per l'istruzione sono le stesse di quelle per un'istruzione nello stato S1 che consente di creare un set di risultati. Se **SQLExecDirect** restituisce un errore, l'istruzione rimane nello stato S1; Se ha esito positivo, l'istruzione passa allo stato S5; Se sono necessari dati, l'istruzione passa allo stato S8; Se è ancora in esecuzione, rimane nello stato S11.  
 
--   **_Xxxxx_** o **(*xxxxx*)** : valore SQLSTATE correlato alla tabella di transizione. Gli stati rilevati da Gestione driver sono racchiusi tra parentesi. La funzione ha restituito SQL_ERROR e il SQLSTATE specificato, ma lo stato non cambia. Se, ad esempio, viene chiamato **SQLExecute** prima di **SQLPrepare**, viene restituito SQLSTATE HY010 (errore della sequenza di funzioni).  
+-   **_Xxxxx_**  o **(*xxxxx*)** : valore SQLSTATE correlato alla tabella di transizione. Gli stati rilevati da Gestione driver sono racchiusi tra parentesi. La funzione ha restituito SQL_ERROR e il SQLSTATE specificato, ma lo stato non cambia. Se, ad esempio, viene chiamato **SQLExecute** prima di **SQLPrepare**, viene restituito SQLSTATE HY010 (errore della sequenza di funzioni).  
 
 > [!NOTE]  
 >  Nelle tabelle non vengono visualizzati errori non correlati alle tabelle di transizione che non modificano lo stato. Ad esempio, quando **SQLAllocHandle** viene chiamato nello stato dell'ambiente E1 e restituisce SQLSTATE HY001 (errore di allocazione della memoria), l'ambiente rimane nello stato E1; Questa operazione non viene visualizzata nella tabella di transizione dell'ambiente per **SQLAllocHandle**.  
@@ -72,7 +73,7 @@ Nelle tabelle di questa appendice viene illustrato il modo in cui le funzioni OD
 |o|Altra funzione. Un'altra funzione era in esecuzione in modo asincrono.|  
 |p|Preparato. L'istruzione è stata preparata.|  
 |r|Risultati. L'istruzione creerà o creerà un set di risultati (possibilmente vuoto).|  
-|s|Esito positivo. La funzione ha restituito SQL_SUCCESS_WITH_INFO o SQL_SUCCESS.|  
+|s|Operazione completata. La funzione ha restituito SQL_SUCCESS_WITH_INFO o SQL_SUCCESS.|  
 |v|Riga valida. Il cursore è stato posizionato in corrispondenza di una riga nel set di risultati e la riga è stata inserita correttamente, aggiornata correttamente oppure un'altra operazione sulla riga è stata completata correttamente. Se la matrice di stato della riga esiste, il valore nella matrice di stato della riga per la riga è SQL_ROW_ADDED, SQL_ROW_SUCCESS o SQL_ROW_UPDATED. La matrice di stato della riga fa riferimento all'attributo dell'istruzione SQL_ATTR_ROW_STATUS_PTR.|  
 |x|In esecuzione. La funzione ha restituito SQL_STILL_EXECUTING.|  
   

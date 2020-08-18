@@ -1,4 +1,5 @@
 ---
+description: SQLSetConnectOption (driver Paradox)
 title: SQLSetConnectOption (driver Paradox) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 050ee2be-594e-4dbd-af67-8b6aae756cd1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 06a90a83e2cbf24e6e85a67d961684c230bca924
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 650c23ac038c3dd937bd25731499fa75127e696c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411637"
 ---
 # <a name="sqlsetconnectoption-paradox-driver"></a>SQLSetConnectOption (driver Paradox)
 > [!NOTE]  
@@ -28,10 +29,10 @@ ms.locfileid: "81301492"
 |-------------|-------------|  
 |SQL_ACCESS_MODE|Il SQL_ACCESS_MODE fOption può essere impostato su SQL_MODE_READ_ONLY o SQL_MODE_READ_WRITE. Tuttavia, il driver non impedisce gli aggiornamenti se SQL_ACCESS_MODE è impostato su SQL_MODE_READ_ONLY.|  
 |SQL_AUTOCOMMIT|Il driver Paradox supporta solo SQL_AUTOCOMMIT sia impostato su ON (stato predefinito), perché non supportano le transazioni.|  
-|SQL_CURRENT_QUALIFIER|Supportato.|  
+|SQL_CURRENT_QUALIFIER|Supportata.|  
 |SQL_LOGIN_TIMEOUT|Non supportato.|  
-|SQL_OPT_TRACE|Supportato.|  
-|SQL_OPT_TRACEFILE|Supportato.|  
+|SQL_OPT_TRACE|Supportata.|  
+|SQL_OPT_TRACEFILE|Supportata.|  
 |SQL_PACKET_SIZE|Non supportato.|  
 |SQL_QUIET_MODE|Non supportato.|  
 |SQL_TRANSLATE_DLL|Non supportato.|  
