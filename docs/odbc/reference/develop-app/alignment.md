@@ -1,4 +1,5 @@
 ---
+description: Allineamento
 title: Allineamento | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 205cc3ff95dd60db215150f46ae894fbb99bd9ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1402eee289111ca100e80730d8df4a6d0e3299cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288606"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483144"
 ---
-# <a name="alignment"></a>Alignment
+# <a name="alignment"></a>Allineamento
 I problemi di allineamento in un'applicazione ODBC non sono in genere diversi da quelli presenti in altre applicazioni. Ovvero, la maggior parte delle applicazioni ODBC presenta pochi o nessun problema di allineamento. Le sanzioni per la mancata allineatura degli indirizzi variano a seconda dell'hardware e del sistema operativo e potrebbero essere meno lievi come una lieve riduzione delle prestazioni o come un errore irreversibile in fase di esecuzione. Pertanto, le applicazioni ODBC e le applicazioni ODBC portabili, in particolare, devono prestare attenzione a allineare correttamente i dati.  
   
  Un esempio di quando le applicazioni ODBC rilevano problemi di allineamento si verifica quando allocano un blocco di memoria di grandi dimensioni e associano parti diverse di tale memoria alle colonne di un set di risultati. Questa situazione si verifica con maggiore probabilità quando un'applicazione generica deve determinare la forma di un set di risultati in fase di esecuzione e allocare e associare la memoria di conseguenza.  

@@ -1,4 +1,5 @@
 ---
+description: Raccolta Hierarchies (ADO MD)
 title: Raccolta gerarchie (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: bef0fcb1-8060-4faa-84f0-3d52e9c4526f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7d8605b52ead95433548095015497b6b42220d8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 81161819bd03b4261a0da321579f6df32dd824ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753979"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441003"
 ---
 # <a name="hierarchies-collection-ado-md"></a>Raccolta Hierarchies (ADO MD)
 Contiene il set di oggetti [gerarchia](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) di una dimensione.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Le **gerarchie** sono una raccolta ADO standard. Con le proprietà e i metodi di una raccolta, è possibile eseguire le operazioni seguenti:  
   
 -   Ottenere il numero di oggetti nella raccolta con la proprietà [count](../../../ado/reference/ado-api/count-property-ado.md) .  

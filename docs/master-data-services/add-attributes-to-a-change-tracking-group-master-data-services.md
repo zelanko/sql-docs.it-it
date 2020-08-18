@@ -1,4 +1,5 @@
 ---
+description: Aggiungere attributi ad un gruppo rilevamento modifiche (Master Data Services)
 title: Aggiungere attributi a un gruppo di Rilevamento modifiche
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d9e277fb7609879c9baa1efc347773b855163b3b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 154dc5a555e97d4de56f3a40981aad71e64fe22c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491498"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>Aggiungere attributi ad un gruppo rilevamento modifiche (Master Data Services)
 

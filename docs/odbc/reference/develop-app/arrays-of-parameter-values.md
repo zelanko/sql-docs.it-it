@@ -1,4 +1,5 @@
 ---
+description: Matrici di valori di parametro
 title: Matrici di valori di parametri | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9b572c5b-1dfe-40af-bebd-051548ab6d90
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb9389c769e3a7bb0c39959a559531e8051a7bec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 230f15f1c9cae0509ba7d616ab61ed5d8d7a370b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483114"
 ---
 # <a name="arrays-of-parameter-values"></a>Matrici di valori di parametro
 Spesso è utile per le applicazioni passare matrici di parametri. Usando, ad esempio, matrici di parametri e un'istruzione **Insert** con parametri, un'applicazione può inserire un numero di righe in una sola volta. L'uso delle matrici presenta diversi vantaggi. In primo luogo, il traffico di rete viene ridotto perché i dati per molte istruzioni vengono inviati in un singolo pacchetto (se l'origine dati supporta le matrici di parametri in modo nativo). In secondo luogo, alcune origini dati possono eseguire istruzioni SQL utilizzando matrici più velocemente rispetto all'esecuzione dello stesso numero di istruzioni SQL separate. Infine, quando i dati vengono archiviati in una matrice, come spesso accade per i dati dello schermo, l'applicazione può associare tutte le righe di una determinata colonna con una singola chiamata a **SQLBindParameter** e aggiornarle eseguendo una singola istruzione.  

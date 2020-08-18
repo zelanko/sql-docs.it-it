@@ -1,4 +1,5 @@
 ---
+description: Modificare il mapping dei tipi (OracleToSQL)
 title: Modificare il mapping dei tipi (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 7078b4ed-c779-4bf3-8db8-f9dcb3edd50f
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 1df40b843064513f6b2c135355b26f745c336011
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7b90da225116a2221d5a2492e1b7e5bfdc33ab91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934933"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492395"
 ---
 # <a name="edit-type-mapping-oracletosql"></a>Modificare il mapping dei tipi (OracleToSQL)
 La finestra di dialogo **Modifica mapping tipi** consente di specificare la modalità di mapping dei tipi tra gli oggetti di database di origine e di destinazione.  
@@ -45,6 +46,6 @@ Consente di specificare la lunghezza massima consentita per questo mapping. Per 
   
 Se il tipo di dati è di lunghezza variabile, il campo seguente verrà visualizzato in **tipo di destinazione**:  
   
-**Sostituisci con**  
+**Replace with**  
 Specificare la lunghezza di destinazione per questo mapping. Per il tipo di dati **nvarchar** , ad esempio, è possibile immettere 20 per specificare che il tipo di dati di origine specificato deve essere mappato a **nvarchar (20)**.  
   

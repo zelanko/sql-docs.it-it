@@ -1,4 +1,5 @@
 ---
+description: Cursori rettangolari, cursori scorrevoli e compatibilità con le versioni precedenti
 title: Cursori a blocchi, cursori scorrevoli e compatibilità con le versioni precedenti | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9d271f6-d2d9-49b9-a365-4909ca06caae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe24362f1a49577a7fb494f768947080d0ab6e9e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 46f6d3611b0a55325387f2c7723734500d48af83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292311"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411297"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>Cursori rettangolari, cursori scorrevoli e compatibilità con le versioni precedenti
 L'esistenza di **SQLFetchScroll** e **SQLExtendedFetch** rappresenta la prima suddivisione chiara in ODBC tra l'API (Application Programming Interface), ovvero il set di funzioni chiamate dall'applicazione, e l'interfaccia del provider di servizi (SPI), ovvero il set di funzioni implementate dal driver. Questa suddivisione è necessaria in modo che ODBC *3. x*, che usa **SQLFetchScroll**, sia conforme agli standard e sia compatibile anche con ODBC *2. x*, che usa **SQLExtendedFetch**.  

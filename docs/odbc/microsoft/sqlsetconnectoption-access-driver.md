@@ -1,4 +1,5 @@
 ---
+description: SQLSetConnectOption (driver Access)
 title: SQLSetConnectOption (driver Access) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58399bc4-d0b1-4eaa-a474-c92b2d5855ea
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8e5f15575d34031d9886219af5677b4fc5f1d5aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a007693a59c190a29bf9895446e916d5c232bb9f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301534"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483314"
 ---
 # <a name="sqlsetconnectoption-access-driver"></a>SQLSetConnectOption (driver Access)
 > [!NOTE]  
@@ -28,10 +29,10 @@ ms.locfileid: "81301534"
 |-------------|-------------|  
 |SQL_ACCESS_MODE|Il SQL_ACCESS_MODE fOption può essere impostato su SQL_MODE_READ_ONLY o SQL_MODE_READ_WRITE. Tuttavia, il driver non impedisce gli aggiornamenti se SQL_ACCESS_MODE è impostato su SQL_MODE_READ_ONLY.|  
 |SQL_AUTOCOMMIT|Quando si utilizza il driver Microsoft Access, è possibile impostare l'opzione SQL_AUTOCOMMIT su SQL_AUTOCOMMIT_ON o SQL_AUTOCOMMIT_OFF, perché il driver Microsoft Access supporta le transazioni [1].|  
-|SQL_CURRENT_QUALIFIER|Supportato.|  
+|SQL_CURRENT_QUALIFIER|Supportata.|  
 |SQL_LOGIN_TIMEOUT|Non supportato.|  
-|SQL_OPT_TRACE|Supportato.|  
-|SQL_OPT_TRACEFILE|Supportato.|  
+|SQL_OPT_TRACE|Supportata.|  
+|SQL_OPT_TRACEFILE|Supportata.|  
 |SQL_PACKET_SIZE|Non supportato.|  
 |SQL_QUIET_MODE|Non supportato.|  
 |SQL_TRANSLATE_DLL|Non supportato.|  

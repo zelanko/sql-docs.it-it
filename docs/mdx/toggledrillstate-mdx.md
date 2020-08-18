@@ -1,4 +1,5 @@
 ---
+description: ToggleDrillState (MDX)
 title: ToggleDrillState (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ffe8cb97ffa8dd01b058d5cf71fc2f0922e11501
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e10c62742e28b69545efac51f70bf9628b43e08d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412911"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
 
@@ -45,7 +46,7 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
   
  Se viene usato il flag **RIcorsivo** facoltativo, il drill-up e il drill-down vengono applicati in modo ricorsivo. Per ulteriori informazioni sul flag ricorsivo, vedere le funzioni [DrillupMember](../mdx/drillupmember-mdx.md) e [DrilldownMember](../mdx/drilldownmember-mdx.md) .  
   
- Eseguendo una query sulla proprietà XMLA MdpropMdxDrillFunctions è possibile verificare il livello di supporto fornito dal server per le funzioni di drill-through. per informazioni dettagliate, vedere [Proprietà XMLA supportate &#40;&#41;XMLA](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
+ Eseguendo una query sulla proprietà XMLA MdpropMdxDrillFunctions è possibile verificare il livello di supporto fornito dal server per le funzioni di drill-through. per informazioni dettagliate, vedere [Proprietà XMLA supportate &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
  Vedere [database journal: funzioni set MDX: funzione ToggleDrillState ()](https://go.microsoft.com/fwlink/?LinkId=517759) per scenari ed esempi che coinvolgono questa funzione.  
   

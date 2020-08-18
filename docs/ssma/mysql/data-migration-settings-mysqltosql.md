@@ -1,4 +1,5 @@
 ---
+description: Impostazioni di migrazione dei dati (MySQLToSQL)
 title: Impostazioni di migrazione dei dati (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c8e673a4a12952303cb9b355698ed15742c9a704
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3dbf44933ae4abe26f5dacfc79bad0d971bfe5ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492445"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>Impostazioni di migrazione dei dati (MySQLToSQL)
   

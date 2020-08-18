@@ -1,4 +1,5 @@
 ---
+description: Procedure per l'utilizzo di ODBC
 title: Procedure per ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,11 +12,12 @@ ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9866c13f2a7385c008cc8fd98455e371ebd6f250
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 70ad00292ae7d5605b7cd54a2a04d040b94f8e20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460758"
 ---
 # <a name="odbc-how-to-topics"></a>Procedure per l'utilizzo di ODBC
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +44,7 @@ ms.locfileid: "86007908"
   
 -   [Procedure per la profilatura delle prestazioni del driver ODBC &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
--   [Elaborare gli errori ODBC &#40;&#41;ODBC](../../relational-databases/native-client-odbc-how-to/process-odbc-errors-odbc.md)  
+-   [Elaborare gli errori ODBC &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-how-to/process-odbc-errors-odbc.md)  
   
 -   [Procedure per la copia bulk con il driver ODBC di SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   

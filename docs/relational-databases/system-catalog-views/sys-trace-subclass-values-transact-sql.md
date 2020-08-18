@@ -1,4 +1,5 @@
 ---
+description: sys.trace_subclass_values (Transact-SQL)
 title: sys. trace_subclass_values (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 542b19ca-61c8-41ca-aa2e-0aba8906cc24
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f388aedf28a919428560089be50df184973dc056
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2c13e9d2f1ce861a2240495f504e945141a01c12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901739"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88400267"
 ---
 # <a name="systrace_subclass_values-transact-sql"></a>sys.trace_subclass_values (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,11 +48,11 @@ ms.locfileid: "85901739"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [sys. Traces &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
- [sys. trace_categories &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
- [sys. trace_columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)   
- [sys. trace_events &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-trace-events-transact-sql.md)   
- [sys. trace_event_bindings &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-trace-event-bindings-transact-sql.md)  
+ [Viste del catalogo dell'oggetto &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [sys. Traces &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
+ [sys. trace_categories &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
+ [sys. trace_columns &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)   
+ [sys. trace_events &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-trace-events-transact-sql.md)   
+ [sys. trace_event_bindings &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-trace-event-bindings-transact-sql.md)  
   
   

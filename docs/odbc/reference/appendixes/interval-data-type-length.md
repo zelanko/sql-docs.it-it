@@ -1,4 +1,5 @@
 ---
+description: Lunghezza del tipo di dati intervallo
 title: Lunghezza del tipo di dati interval | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9eb38d8-f9db-4401-8c62-aa394054cbbf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 68bb4daa47cb58d5a0ff7b680a2d2154fb14b345
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 589a13e0f0b2c6e6e42ade0f0dc32415556a0efc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483283"
 ---
 # <a name="interval-data-type-length"></a>Lunghezza del tipo di dati intervallo
 Le regole seguenti vengono utilizzate per determinare la lunghezza di un tipo di dati intervallo in caratteri. La lunghezza è espressa in numero di caratteri. Il numero di byte dipende dal set di caratteri. La lunghezza include i valori seguenti aggiunti insieme:  

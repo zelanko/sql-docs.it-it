@@ -1,4 +1,5 @@
 ---
+description: Marcatori di parametro
 title: Marcatori di parametro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 07213d04-cd31-45fd-a8c8-2e16e09eeaf4
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: ''
-ms.openlocfilehash: 132473de586094f79dd34c999d44f6dd59aefaef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a585fb983a8f1662cdd42d361f106a76bfd47cb6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483234"
 ---
 # <a name="parameter-markers"></a>Marcatori di parametro
 In conformità con la specifica SQL-92, un'applicazione non può inserire marcatori di parametro nei percorsi seguenti. Per un elenco più completo, vedere la specifica di SQL-92.  

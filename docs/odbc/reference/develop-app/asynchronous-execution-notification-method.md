@@ -1,4 +1,5 @@
 ---
+description: Esecuzione asincrona (metodo di notifica)
 title: Esecuzione asincrona (metodo di notifica) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 250e71dcb47d44a6e437d12c269ea23fa6fb3c2c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19c201d71d42c40277ad67cef25922e55e97de12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306412"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483124"
 ---
 # <a name="asynchronous-execution-notification-method"></a>Esecuzione asincrona (metodo di notifica)
 ODBC consente l'esecuzione asincrona di operazioni di connessione e istruzioni. Un thread dell'applicazione può chiamare una funzione ODBC in modalità asincrona e la funzione può restituire prima del completamento dell'operazione, consentendo al thread dell'applicazione di eseguire altre attività. In Windows 7 SDK, per le operazioni di connessione o di istruzione asincrone, un'applicazione ha determinato che l'operazione asincrona è stata completata utilizzando il metodo di polling. Per ulteriori informazioni, vedere [esecuzione asincrona (metodo di polling)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). A partire da Windows 8 SDK, è possibile determinare il completamento di un'operazione asincrona tramite il metodo di notifica.  
@@ -47,7 +48,7 @@ ODBC consente l'esecuzione asincrona di operazioni di connessione e istruzioni. 
   
  Prima di utilizzare questa funzionalità, è necessario che in un'applicazione venga verificata la versione di gestione driver. In caso contrario, se un driver scritto male non viene eliminato e la versione di gestione driver è precedente a ODBC 3,81, il comportamento non è definito.  
   
-## <a name="use-cases"></a>Modalità di utilizzo comuni  
+## <a name="use-cases"></a>Casi d'uso  
  In questa sezione vengono illustrati i casi di utilizzo per l'esecuzione asincrona e il meccanismo di polling.  
   
 ### <a name="integrate-data-from-multiple-odbc-sources"></a>Integrazione di dati da più origini ODBC  
@@ -328,9 +329,9 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
   
 |SQL_ATTR_ASYNC_ENABLE o SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT o SQL_ATTR_ASYNC_DBC_EVENT|Mode|  
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
-|Abilitare|non null|Notifica asincrona|  
-|Abilitare|Null|Polling asincrono|  
-|Disabilitazione|any|Sincrono|  
+|Abilita|non null|Notifica asincrona|  
+|Abilita|Null|Polling asincrono|  
+|Disabilita|any|Sincrono|  
   
  Un'applicazione può disabilitare temporaneamente la modalità operativa asincrona. ODBC ignora i valori di SQL_ATTR_ASYNC_DBC_EVENT se l'operazione asincrona a livello di connessione è disabilitata. ODBC ignora i valori di SQL_ATTR_ASYNC_STMT_EVENT se l'operazione asincrona a livello di istruzione è disabilitata.  
   

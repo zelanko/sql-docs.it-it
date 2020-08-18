@@ -1,4 +1,5 @@
 ---
+description: Elaborazione di istruzioni di eliminazione e aggiornamento posizionato
 title: Elaborazione delle istruzioni Update e Delete posizionate | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2975dd97-48e6-4d0a-a9c7-40759a7d94c8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4b3f20da018bcd4e28e8ffca097fb5a4373d7f42
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f11e5acd8afe46397126ddb4c1d4127eb99fc67a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81308022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483204"
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>Elaborazione di istruzioni di eliminazione e aggiornamento posizionato
 > [!IMPORTANT]  

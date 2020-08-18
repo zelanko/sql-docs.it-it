@@ -1,4 +1,5 @@
 ---
+description: Opzioni di distribuzione dei modelli (Master Data Services)
 title: Opzioni di distribuzione dei modelli
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b4de75b7f5cc65fa3d7a080f3317630a9af4d53a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: d6b2c29038934034c39ea7699328504d418989d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813267"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471917"
 ---
 # <a name="model-deployment-options-master-data-services"></a>Opzioni di distribuzione dei modelli (Master Data Services)
 
@@ -30,7 +31,7 @@ ms.locfileid: "85813267"
   
 -   Creare un pacchetto di un modello e distribuirlo come nuovo modello nello stesso ambiente. In questo caso, è necessario assegnare al modello un nuovo nome.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>Opzioni  
  Nel database MDS ogni oggetto modello dispone di un identificatore univoco (ID). Questi ID sono inclusi nei pacchetti di distribuzione dei modelli. Quando si distribuisce il pacchetto, è necessario scegliere come utilizzare questi ID.  
   
  Le informazioni nella tabella seguente consentono di determinare la scelta da effettuare quando si distribuisce un modello utilizzando la Distribuzione guidata modello di Amministrazione sistema o lo strumento MDSModelDeploy.  

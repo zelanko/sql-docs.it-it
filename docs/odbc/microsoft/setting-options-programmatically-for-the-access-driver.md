@@ -1,4 +1,5 @@
 ---
+description: Impostazione delle opzioni a livello di codice per il driver Access
 title: Impostazione delle opzioni a livello di codice per il driver di accesso | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a90f0a20569a2a0a5bb93dec7aa4b95b50093dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9ae798b3c3d91917e461bb6b5a58cb06734870d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412417"
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>Impostazione delle opzioni a livello di codice per il driver Access
 
@@ -35,5 +36,5 @@ ms.locfileid: "81300791"
 |Timeout pagina|Specifica il periodo di tempo, in millisecondi, durante il quale una pagina (se non utilizzata) rimane nel buffer prima di essere rimossa. Per il driver Microsoft Access, il valore predefinito è 500 millisecondi (0,5 secondi). Questa opzione si applica a tutte le origini dati che utilizzano il driver ODBC.<br /><br /> Il timeout della pagina non può essere 0 a causa di un ritardo intrinseco. Il timeout della pagina non può essere inferiore al ritardo intrinseco, anche se l'opzione Timeout pagina è impostata al di sotto di tale valore.|Per impostare questa opzione in modo dinamico, usare la parola chiave **PAGETIMEOUT** in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Sola lettura|Designa il database come di sola lettura.|Per impostare questa opzione in modo dinamico, usare la parola chiave **ReadOnly** in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Database di sistema|Percorso completo del database di sistema Microsoft Access da usare con il database di Microsoft Access a cui si vuole accedere.<br /><br /> Fare clic sul pulsante **database di sistema** per selezionare il database di sistema da utilizzare. Il driver ODBC Microsoft Access richiede un nome e una password per l'utente. Il nome predefinito è admin e la password predefinita in Microsoft Access per l'utente amministratore è una stringa vuota.<br /><br /> Per aumentare la sicurezza del database di Microsoft Access, creare un nuovo utente per sostituire l'utente amministratore ed eliminare l'utente amministratore oppure modificare gli oggetti a cui l'utente amministratore ha accesso.|Per impostare questa opzione in modo dinamico, usare la parola chiave **SYSTEMDB** in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
-|Thread|Numero di thread in background per il motore da usare. Per il driver Microsoft Access, il valore predefinito è 3, ma è possibile modificarlo. Se nel database è presente una grande quantità di attività, è possibile che l'utente desideri aumentare il numero di thread.<br /><br /> Questa opzione è inclusa nella finestra di dialogo **Imposta opzioni avanzate** per il driver Microsoft Access.|Per impostare questa opzione in modo dinamico, usare la parola chiave **Threads** in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
+|Threads|Numero di thread in background per il motore da usare. Per il driver Microsoft Access, il valore predefinito è 3, ma è possibile modificarlo. Se nel database è presente una grande quantità di attività, è possibile che l'utente desideri aumentare il numero di thread.<br /><br /> Questa opzione è inclusa nella finestra di dialogo **Imposta opzioni avanzate** per il driver Microsoft Access.|Per impostare questa opzione in modo dinamico, usare la parola chiave **Threads** in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |UserCommitSync|Determina se il driver Microsoft Access eseguirà in modo asincrono una transazione esplicita definita dall'utente. Questo valore inizialmente è impostato su "Sì", il che significa che il driver Microsoft Access attenderà il completamento dei commit in una transazione definita dall'utente.<br /><br /> L'impostazione di questa opzione su false può comportare conseguenze imprevedibili in un ambiente multiutente.|Per impostare questa opzione in modo dinamico, usare la parola chiave **USERCOMMITSYNC** in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|

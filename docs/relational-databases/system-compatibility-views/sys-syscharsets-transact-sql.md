@@ -1,4 +1,5 @@
 ---
+description: sys.syscharsets (Transact-SQL)
 title: sys.syscharsets (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,11 +22,12 @@ ms.assetid: f16d987c-bd19-4668-9ef7-785b8fb9ff5b
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 141a57db220be9d415febc5722eb34e313d6830f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 47e839f090a3a7420a3da01cb4d468d3da667314
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399697"
 ---
 # <a name="syssyscharsets-transact-sql"></a>sys.syscharsets (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +41,7 @@ ms.locfileid: "86009964"
 |**csid**|**tinyint**|Se la riga rappresenta un set di caratteri, questo campo non viene utilizzato. Se la riga rappresenta un tipo di ordinamento, questo campo contiene l'ID del set di caratteri in base al quale viene compilato il tipo di ordinamento. Si suppone che nella tabella esista una riga di set di caratteri a cui è associato questo ID.|  
 |**Stato**|**smallint**|Bit interni di informazioni sullo stato del sistema.|  
 |**nome**|**sysname**|Nome univoco del set di caratteri o del tipo di ordinamento. Questo campo può contenere solo lettere dalla A alla Z (maiuscole e minuscole), numeri da 0 a 9 e caratteri di sottolineatura (_) e deve iniziare con una lettera.|  
-|**Descrizione**|**nvarchar(255)**|Descrizione facoltativa delle funzionalità del set di caratteri o del tipo di ordinamento.|  
+|**description**|**nvarchar(255)**|Descrizione facoltativa delle funzionalità del set di caratteri o del tipo di ordinamento.|  
 |**binarydefinition**|**varbinary(6000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**definizione**|**image**|Definizione interna del set di caratteri o del tipo di ordinamento. La struttura dei dati in questo campo dipende dal tipo.|  
   

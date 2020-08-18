@@ -1,4 +1,5 @@
 ---
+description: Requisiti hardware e software (ODBC)
 title: Requisiti hardware e software (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6df2e9cd-de10-4629-97bd-32f2782616c7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe69775e379e9a9d661b4ddf81e577b738fcf34d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a0f88c8877161122c11fb65bcdb62fd4e7b684c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81295241"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412487"
 ---
 # <a name="hardware-and-software-requirements-odbc"></a>Requisiti hardware e software (ODBC)
 In questo argomento vengono elencati i requisiti per l'utilizzo dei driver di database desktop ODBC.  
@@ -39,7 +40,7 @@ In questo argomento vengono elencati i requisiti per l'utilizzo dei driver di da
   
 -   Driver ODBC.  
   
--   Gestione driver ODBC a 32 bit, versione 3,51 o successiva (odbc32. dll).  
+-   Gestione driver ODBC a 32 bit, versione 3,51 o successiva (Odbc32.dll).  
   
 -   Microsoft Windows 95 o versioni successive o Windows NT 4,0 o Windows 2000.  
   
@@ -53,4 +54,4 @@ In questo argomento vengono elencati i requisiti per l'utilizzo dei driver di da
   
 ## <a name="driver-specific-hardware-and-software-requirements"></a>Requisiti hardware e software specifici del driver  
   
--   MicrosoftAccess e dBASEdrivers possono richiedere modifiche nei file Autoexec. bat o config. sys.
+-   MicrosoftAccess e dBASEdrivers possono richiedere modifiche nei file Autoexec.bat o Config.sys.

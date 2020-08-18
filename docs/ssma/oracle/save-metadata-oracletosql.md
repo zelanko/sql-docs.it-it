@@ -1,4 +1,5 @@
 ---
+description: Salvare i metadati (OracleToSQL)
 title: Salvare i metadati (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 9e49c25f-9216-43f4-8e99-2eaab298e215
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: d7287c5ed79834629c5cded6e29b87cf46d0e9ef
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ceac171c2eed43e1ee0c1feff2db9a3b4f21e7e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492324"
 ---
 # <a name="save-metadata--oracletosql"></a>Salvare i metadati (OracleToSQL)
 La finestra di dialogo **Salva metadati** richiede di caricare i metadati nel progetto SSMA prima di salvarli. In questo modo è possibile disporre di un file di progetto completo che può essere utilizzato offline e inviato ad altri utenti, ad esempio il personale del supporto tecnico.  

@@ -1,4 +1,5 @@
 ---
+description: Utilizzo dei progetti SSMA (MySQLToSQL)
 title: Utilizzo dei progetti SSMA (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 98315541dc7eb2df1e77e32bcd34744b98708557
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d6a1bbc7b47531c66e27818e8673a7c6aa9723c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935120"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492422"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>Utilizzo dei progetti SSMA (MySQLToSQL)
 Per eseguire la migrazione di database MySQL a SQL Server o SQL Azure, è necessario creare prima un progetto SSMA. Il progetto è un file che contiene le informazioni seguenti:  
@@ -45,7 +46,7 @@ SSMA contiene diverse impostazioni per la conversione e il caricamento del datab
   
 3.  Nel riquadro sinistro fare clic su **conversione**.  
   
-4.  Nel riquadro destro esaminare e modificare le impostazioni secondo necessità. Per ulteriori informazioni su queste impostazioni, vedere [Impostazioni progetto &#40;conversione&#41; &#40;&#41;MySQLToSQL](../../ssma/mysql/project-settings-conversion-mysqltosql.md) .  
+4.  Nel riquadro destro esaminare e modificare le impostazioni secondo necessità. Per ulteriori informazioni su queste impostazioni, vedere [Impostazioni progetto &#40;conversione&#41; &#40;&#41;MySQLToSQL ](../../ssma/mysql/project-settings-conversion-mysqltosql.md) .  
   
 5.  Ripetere i passaggi 1-3 per le pagine migrazione, sincronizzazione, SQL Azure, GUI e mapping dei tipi.  
   
@@ -81,9 +82,9 @@ Per eseguire la migrazione dei dati da database MySQL a SQL Server o SQL Azure, 
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
-    -   Database SQL di Azure  
+    -   database SQL di Azure  
   
 E quindi fare clic su **OK**  
   
@@ -105,7 +106,7 @@ Se i database all'interno del progetto sono stati modificati o non sono stati co
   
 1.  Per ogni database che mostra lo stato dei **metadati mancanti**, selezionare la casella di controllo accanto al nome del database. Il salvataggio dei metadati potrebbe richiedere diversi minuti. Se non si desidera salvare i metadati in questa fase, non selezionare alcuna casella di controllo.  
   
-2.  Fare clic su **Save**.  
+2.  Fare clic su **Salva**.  
   
 SSMA analizzerà gli schemi MySQL e salverà i metadati nel file di progetto.  
   

@@ -1,4 +1,5 @@
 ---
+description: Impostazioni del progetto (sincronizzazione) (MySQLToSQL)
 title: Impostazioni progetto (sincronizzazione) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cbf4252f9d9fb71fe98755dfbba748ca15ca5657
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3ea89bcdf9b10fb50e74228a26bfcd5cead83aca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492384"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>Impostazioni del progetto (sincronizzazione) (MySQLToSQL)
 Le **impostazioni del progetto** di sincronizzazione consentono di configurare la modalità di sincronizzazione degli oggetti di database MySQL con SQL Server oggetti di database.  

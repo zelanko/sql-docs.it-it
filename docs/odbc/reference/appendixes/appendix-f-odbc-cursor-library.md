@@ -1,4 +1,5 @@
 ---
+description: 'Appendice F: Libreria di cursori ODBC'
 title: 'Appendice F: libreria di cursori ODBC | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec7982150bfa805c7093ab445400ef5ad1ee070c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 325c7cdc5d2fb185ef3dbd2500a20230d90193bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411427"
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>Appendice F: Libreria di cursori ODBC
 > [!IMPORTANT]  
 >  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità di cursore del driver.  
   
- La libreria di cursori ODBC (Odbccr32. dll) supporta i cursori scorrevoli a blocchi per qualsiasi driver conforme al livello di conformità dell'API di livello 1 e può essere ridistribuito dagli sviluppatori con le applicazioni o i driver. La libreria di cursori supporta inoltre le istruzioni Update e Delete posizionate per i set di risultati generati dalle istruzioni **Select** . Sebbene supporti solo cursori statici e di sola trasmissione, la libreria di cursori soddisfa le esigenze di molte applicazioni. Inoltre, può fornire buone prestazioni, soprattutto per set di risultati di dimensioni ridotte o medie, e per le applicazioni che non dispongono di un corretto supporto per i cursori.  
+ La libreria di cursori ODBC (Odbccr32.dll) supporta i cursori scorrevoli a blocchi per qualsiasi driver conforme al livello di conformità dell'API di livello 1 e può essere ridistribuito dagli sviluppatori con le applicazioni o i driver. La libreria di cursori supporta inoltre le istruzioni Update e Delete posizionate per i set di risultati generati dalle istruzioni **Select** . Sebbene supporti solo cursori statici e di sola trasmissione, la libreria di cursori soddisfa le esigenze di molte applicazioni. Inoltre, può fornire buone prestazioni, soprattutto per set di risultati di dimensioni ridotte o medie, e per le applicazioni che non dispongono di un corretto supporto per i cursori.  
   
  La libreria di cursori è una libreria di collegamento dinamico (DLL) che risiede tra Gestione driver e il driver. Quando un'applicazione chiama una funzione, gestione driver chiama la funzione nella libreria di cursori, che esegue la funzione o la chiama nel driver specificato. Per una determinata connessione, un'applicazione specifica se la libreria di cursori è sempre utilizzata, utilizzata se il driver non supporta i cursori scorrevoli o non viene mai usato.  
   
@@ -44,6 +45,6 @@ ms.locfileid: "81292431"
   
 -   [Esempio di codice della libreria di cursori](../../../odbc/reference/appendixes/cursor-library-code-example.md)  
   
--   [Note di implementazione](../../../odbc/reference/appendixes/implementation-notes.md)  
+-   [Note sull'implementazione](../../../odbc/reference/appendixes/implementation-notes.md)  
   
 -   [Codici di errore della libreria di cursori ODBC](../../../odbc/reference/appendixes/odbc-cursor-library-error-codes.md)

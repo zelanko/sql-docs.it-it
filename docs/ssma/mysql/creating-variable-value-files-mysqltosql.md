@@ -1,4 +1,5 @@
 ---
+description: Creazione di file di valori di variabile (MySQLToSQL)
 title: Creazione di file di valori di variabile (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1dc56a7b-8e3a-4576-ad4f-47050bf7e28a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b3b44a99893c2dbc3dbd3a0597e6600020211702
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cfcf6b812d820685fd2d960066b69037fc3ed5c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935710"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492464"
 ---
 # <a name="creating-variable-value-files-mysqltosql"></a>Creazione di file di valori di variabile (MySQLToSQL)
 Il file di valori di variabile è un file XML che include i valori dei parametri, ad esempio, il nome del server di origine o di destinazione che cambia di frequente da una migrazione del server a un'altra. Quando si verifica un numero elevato di migrazioni di database, vengono creati più file di variabili per l'archiviazione del valore di ogni server di origine a cui viene fatto riferimento in un file di script Master con l'opzione **-v** nella riga di comando. Questo consente di mantenere i valori statici in pochi file di script con i valori delle variabili in più file variabili.  

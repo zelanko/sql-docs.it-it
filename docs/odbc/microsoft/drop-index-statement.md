@@ -1,4 +1,5 @@
 ---
+description: Istruzione DROP INDEX
 title: Istruzione DROP INDEX | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd0ff767-9254-413b-bd1a-bed26c6774f5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 638bae6491c020519a0123ff56fe31e9a9ca1cf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 01b0c51d3fff15184b4542299c97423fbed15aa3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412677"
 ---
 # <a name="drop-index-statement"></a>Istruzione DROP INDEX
 Quando si usa il driver Microsoft Access, dBASE o Paradox, la sintassi dell'istruzione DROP INDEX è "DROP INDEX a on b", dove "a" è il nome dell'indice e "b" è il nome della tabella (non DROP INDEX *index-name*).  

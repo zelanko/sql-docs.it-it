@@ -1,4 +1,5 @@
 ---
+description: Proprietà, metodi ed eventi dell'oggetto Level
 title: Proprietà, metodi ed eventi dell'oggetto Level | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fdff70b0-95d0-447f-9359-97b8d159420d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 27b13f5f3163fa3d39c2e2bb7945a02e312e5f67
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ec04416433339fcec45da199fb3291154fce330a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440933"
 ---
 # <a name="level-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Level
 ## <a name="propertiescollections"></a>Proprietà/raccolte  
@@ -36,7 +37,7 @@ ms.locfileid: "82753473"
  [UniqueName (proprietà)](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>Metodi  
- No.  
+ Nessuno.  
   
 ## <a name="events"></a>Eventi  
  No.  

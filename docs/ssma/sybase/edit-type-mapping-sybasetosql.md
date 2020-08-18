@@ -1,4 +1,5 @@
 ---
+description: Modificare il mapping dei tipi (SybaseToSQL)
 title: Modificare il mapping dei tipi (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 513f071a-d5e6-4ed5-acca-269bf76323c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 043eb1a2eaf9325d8a252598b26317017d92fa94
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3f9f5e0f498dbe6a8fe45a9c80cbf3c512f04bac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931967"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492281"
 ---
 # <a name="edit-type-mapping-sybasetosql"></a>Modificare il mapping dei tipi (SybaseToSQL)
 La finestra di dialogo **Modifica mapping tipi** consente di specificare la modalità di mapping dei tipi tra gli oggetti di database di origine e di destinazione.  
@@ -44,6 +45,6 @@ Consente di specificare la lunghezza massima consentita per questo mapping. Per 
   
 Se il tipo di dati è di lunghezza variabile, il campo seguente verrà visualizzato in **tipo di destinazione**:  
   
-**Sostituisci con**  
+**Replace with**  
 Specificare la lunghezza di destinazione per questo mapping. Per il tipo di dati **nvarchar** , ad esempio, è possibile immettere 20 per specificare che il tipo di dati di origine specificato deve essere mappato a **nvarchar (20)**.  
   
