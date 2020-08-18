@@ -1,4 +1,5 @@
 ---
+description: sys. dm_column_store_object_pool (Transact-SQL)
 title: sys. dm_column_store_object_pool (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -13,11 +14,12 @@ ms.assetid: a8a58ca7-0a7d-4786-bfd9-e8894bd345dd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 720eebdbc1898d0b3ce34fb9a2205c41d4898dd2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8e9034e786c2e03038f808e8d5d7d2fe183362d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399532"
 ---
 # <a name="sysdm_column_store_object_pool-transact-sql"></a>sys. dm_column_store_object_pool (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -33,7 +35,7 @@ ms.locfileid: "86012900"
 |`column_id`|`int`|ID della colonna columnstore. Questo valore è NULL per DELETE_BITMAP.| 
 |`row_group_id`|`int`|ID di rowgroup.|
 |`object_type`|`smallint`|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
-|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT-un segmento di colonna. `object_id`ID del segmento. Un segmento archivia tutti i valori di una colonna all'interno di un rowgroup. Se, ad esempio, una tabella contiene 10 colonne, saranno presenti 10 segmenti di colonna per ogni rowgroup. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY: dizionario globale che contiene informazioni di ricerca per tutti i segmenti di colonna della tabella.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY: un dizionario locale associato a una colonna.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY: un'altra rappresentazione del dizionario globale. Questa operazione fornisce una ricerca inversa del valore da dictionary_id. Utilizzato per creare segmenti compressi come parte del motore di tupla o del caricamento bulk.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP: bitmap che tiene traccia delle eliminazioni di segmenti. Esiste una bitmap Delete per partizione.|  
+|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT-un segmento di colonna. `object_id` ID del segmento. Un segmento archivia tutti i valori di una colonna all'interno di un rowgroup. Se, ad esempio, una tabella contiene 10 colonne, saranno presenti 10 segmenti di colonna per ogni rowgroup. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY: dizionario globale che contiene informazioni di ricerca per tutti i segmenti di colonna della tabella.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY: un dizionario locale associato a una colonna.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY: un'altra rappresentazione del dizionario globale. Questa operazione fornisce una ricerca inversa del valore da dictionary_id. Utilizzato per creare segmenti compressi come parte del motore di tupla o del caricamento bulk.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP: bitmap che tiene traccia delle eliminazioni di segmenti. Esiste una bitmap Delete per partizione.|  
 |`access_count`|`int`|Numero di accessi in lettura o scrittura a questo oggetto.|  
 |`memory_used_in_bytes`|`bigint`|Memoria utilizzata da questo oggetto nel pool di oggetti.|  
 |`object_load_time`|`datetime`|Tempo di clock per il momento in cui object_id è stato introdotto nel pool di oggetti.|  
@@ -41,15 +43,15 @@ ms.locfileid: "86012900"
 ## <a name="permissions"></a>Autorizzazioni  
 
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
-Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
+Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l'  **amministratore del server** o un account **amministratore Azure Active Directory** .   
  
 ## <a name="see-also"></a>Vedere anche  
   
  [Funzioni a gestione dinamica e DMV correlate all'indice &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
- [sys. dm_db_index_operational_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys. Indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys. Objects &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys. dm_db_index_operational_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys. Objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [Monitoraggio e ottimizzazione delle prestazioni](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
   
   

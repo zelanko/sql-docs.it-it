@@ -1,4 +1,5 @@
 ---
+description: sys.dm_filestream_non_transacted_handles (Transact-SQL)
 title: sys. dm_filestream_non_transacted_handles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a2380091f44c4a78930cb3769e15b9cc9c176857
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d38b5e210e5a9c7a0b75d2ecb619ae84a61373e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398737"
 ---
 # <a name="sysdm_filestream_non_transacted_handles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85898880"
 |----------------|--------------|---------------------|  
 |database_id|INT|ID del database associato all'handle.|  
 |object_id|INT|ID oggetto della tabella FileTable a cui è associato l'handle.|  
-|handle_id|INT|Identificatore di contesto dell'handle univoco. Utilizzato dal [sp_kill_filestream_non_transacted_handles &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) stored procedure per terminare un handle specifico.|  
+|handle_id|INT|Identificatore di contesto dell'handle univoco. Utilizzato dal [sp_kill_filestream_non_transacted_handles &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) stored procedure per terminare un handle specifico.|  
 |file_object_type|INT|Tipo dell'handle. Indica il livello della gerarchia rispetto al quale è stato aperto l'handle, ovvero a livello di database o a livello di elemento.|  
 |file_object_type_desc|nvarchar(120)|"Undefined",<br />"SERVER_ROOT",<br />"DATABASE_ROOT",<br />"TABLE_ROOT",<br />"TABLE_ITEM"|  
 |correlation_process_id|varbinary (8)|Contiene un identificatore univoco per il processo da cui ha avuto origine la richiesta.|  

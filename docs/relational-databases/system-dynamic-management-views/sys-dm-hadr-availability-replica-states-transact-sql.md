@@ -1,4 +1,5 @@
 ---
+description: sys.dm_hadr_availability_replica_states (Transact-SQL)
 title: sys. dm_hadr_availability_replica_states (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/16/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b01d8ebe8f9a880e7f4a1dc06e324770dddaf1d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e8242f81b78c943590785aea03cbc798a7d632f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85676318"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398697"
 ---
 # <a name="sysdm_hadr_availability_replica_states-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "85676318"
 |**last_connect_error_description**|**nvarchar(1024)**|Testo del messaggio di **last_connect_error_number** .|  
 |**last_connect_error_timestamp**|**datetime**|Timestamp di data e ora che indica quando si è verificato l'errore **last_connect_error_number** .|  
   
-##  <a name="roles-and-operational-states"></a><a name="RolesAndOperationalStates"></a>Ruoli e stati operativi  
+##  <a name="roles-and-operational-states"></a><a name="RolesAndOperationalStates"></a> Ruoli e stati operativi  
  Il ruolo, **Role**, riflette lo stato di una determinata replica di disponibilità e lo stato operativo, **operational_state**, descrive se la replica è pronta per l'elaborazione delle richieste client per tutti i database della replica di disponibilità. Di seguito è riportato un riepilogo degli stati operativi possibili per ogni ruolo: risoluzione, primario e secondario.  
   
  **Risoluzione:** Quando una replica di disponibilità si trova nel ruolo di risoluzione, i possibili stati operativi sono i seguenti.  
