@@ -1,4 +1,5 @@
 ---
+description: Funzioni di sistema
 title: Funzioni di sistema | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 36614b4c-e037-43ef-8692-67f4861b144d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ca71687887444cafc502c15683f3972cf6308e6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1be058f5021c3f03242a09500150acd98cac8e70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386407"
 ---
 # <a name="system-functions"></a>Funzioni di sistema
 Nella tabella seguente sono elencate le funzioni di sistema incluse nel set di funzioni scalari ODBC. Chiamando **SQLGetInfo** con un *tipo di informazioni* SQL_SYSTEM_FUNCTIONS, un'applicazione può determinare quali funzioni di sistema sono supportate da un driver.  
@@ -31,6 +32,6 @@ Nella tabella seguente sono elencate le funzioni di sistema incluse nel set di f
   
 |Funzione|Descrizione|  
 |--------------|-----------------|  
-|**Database ()** (ODBC 1,0)|Restituisce il nome del database corrispondente all'handle di connessione. Il nome del database è disponibile anche chiamando **SQLGetConnectOption** con l'opzione di connessione SQL_CURRENT_QUALIFIER.|  
-|**IFNULL (** _Exp_,_valore_**)** (ODBC 1,0)|Se *Exp* è null, viene restituito *value* . Se *Exp* non è null, viene restituito *Exp* . Il tipo di dati o i tipi di *valore* possibili devono essere compatibili con il tipo di dati di *Exp*.|  
-|**Utente ()** (ODBC 1,0)|Restituisce il nome utente nel sistema DBMS. (Il nome utente è disponibile anche per mezzo di **SQLGetInfo** specificando il tipo di informazioni: SQL_USER_NAME.) Questo può essere diverso dal nome dell'account di accesso.|
+|**Database ()**  (ODBC 1,0)|Restituisce il nome del database corrispondente all'handle di connessione. Il nome del database è disponibile anche chiamando **SQLGetConnectOption** con l'opzione di connessione SQL_CURRENT_QUALIFIER.|  
+|**IFNULL (** _Exp_,_valore_**)**  (ODBC 1,0)|Se *Exp* è null, viene restituito *value* . Se *Exp* non è null, viene restituito *Exp* . Il tipo di dati o i tipi di *valore* possibili devono essere compatibili con il tipo di dati di *Exp*.|  
+|**Utente ()**  (ODBC 1,0)|Restituisce il nome utente nel sistema DBMS. (Il nome utente è disponibile anche per mezzo di **SQLGetInfo** specificando il tipo di informazioni: SQL_USER_NAME.) Questo può essere diverso dal nome dell'account di accesso.|

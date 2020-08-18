@@ -1,4 +1,5 @@
 ---
+description: Funzioni di stringa
 title: Funzioni stringa | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 270f669e-8aab-4db0-95a4-f2b3c69538b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d9323809028ad170a4811b1af8b6e276cdbb4293
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42a5301f49a033dbc6e84a5fe43d68c794a76e84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302842"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386477"
 ---
 # <a name="string-functions"></a>Funzioni di stringa
 Nella tabella seguente sono elencate le funzioni di modifica delle stringhe. Un'applicazione può determinare quali funzioni stringa sono supportate da un driver chiamando **SQLGetInfo** con un *tipo di informazioni* SQL_STRING_FUNCTIONS.  
@@ -36,14 +37,14 @@ Nella tabella seguente sono elencate le funzioni di modifica delle stringhe. Un'
   
 |Funzione|Descrizione|  
 |--------------|-----------------|  
-|**ASCII (** _string_exp_ **)** (ODBC 1,0)|Restituisce il codice ASCII del carattere più a sinistra di *string_exp* come valore integer.|  
-|**BIT_LENGTH (** _string_exp_ **)** (ODBC 3,0)|Restituisce la lunghezza in bit dell'espressione stringa.<br /><br /> Non funziona solo per i tipi di dati stringa, pertanto non convertirà in modo implicito *string_exp* in stringa ma restituirà la dimensione (interna) del tipo di dati specificato.|  
-|**Char (** _codice_ **)** (ODBC 1,0)|Restituisce il carattere che ha il valore del codice ASCII specificato dal *codice*. Il valore del *codice* deve essere compreso tra 0 e 255. in caso contrario, il valore restituito sarà dipendente dall'origine dati.|  
-|**CHAR_LENGTH (** _string_exp_ **)** (ODBC 3,0)|Restituisce la lunghezza in caratteri dell'espressione stringa, se l'espressione stringa è di un tipo di dati character. in caso contrario, restituisce la lunghezza in byte dell'espressione stringa (il valore integer più piccolo non inferiore al numero di bit diviso per 8). Questa funzione corrisponde alla funzione CHARACTER_LENGTH.|  
-|**CHARACTER_LENGTH (** _string_exp_ **)** (ODBC 3,0)|Restituisce la lunghezza in caratteri dell'espressione stringa, se l'espressione stringa è di un tipo di dati character. in caso contrario, restituisce la lunghezza in byte dell'espressione stringa (il valore integer più piccolo non inferiore al numero di bit diviso per 8). Questa funzione corrisponde alla funzione CHAR_LENGTH.|  
-|**Concat (** _string_exp1_,_string_exp2_**)** (ODBC 1,0)|Restituisce una stringa di caratteri che è il risultato della concatenazione *string_exp2* *string_exp1*. La stringa risultante dipende da DBMS. Se, ad esempio, la colonna rappresentata da *string_exp1* conteneva un valore null, DB2 restituirebbe null, ma SQL server restituirebbe la stringa non null.|  
-|**Differenza (** _string_exp1_,_string_exp2_**)** (ODBC 2,0)|Restituisce un valore intero che indica la differenza tra i valori restituiti dalla funzione SOUNDEX per *string_exp1* e *string_exp2*.|  
-|**Insert (** _string_exp1_, *Start*, *length*, _string_exp2_**)** (ODBC 1,0)|Restituisce una stringa di caratteri in cui i caratteri di *lunghezza* sono stati eliminati da *string_exp1* *, a partire dall'inizio e*in cui è stato inserito *string_exp2* in *string_exp,* *a partire dall'inizio.*|  
+|**ASCII (** _string_exp_ **)**  (ODBC 1,0)|Restituisce il codice ASCII del carattere più a sinistra di *string_exp* come valore integer.|  
+|**BIT_LENGTH (** _string_exp_ **)**  (ODBC 3,0)|Restituisce la lunghezza in bit dell'espressione stringa.<br /><br /> Non funziona solo per i tipi di dati stringa, pertanto non convertirà in modo implicito *string_exp* in stringa ma restituirà la dimensione (interna) del tipo di dati specificato.|  
+|**Char (** _codice_ **)**  (ODBC 1,0)|Restituisce il carattere che ha il valore del codice ASCII specificato dal *codice*. Il valore del *codice* deve essere compreso tra 0 e 255. in caso contrario, il valore restituito sarà dipendente dall'origine dati.|  
+|**CHAR_LENGTH (** _string_exp_ **)**  (ODBC 3,0)|Restituisce la lunghezza in caratteri dell'espressione stringa, se l'espressione stringa è di un tipo di dati character. in caso contrario, restituisce la lunghezza in byte dell'espressione stringa (il valore integer più piccolo non inferiore al numero di bit diviso per 8). Questa funzione corrisponde alla funzione CHARACTER_LENGTH.|  
+|**CHARACTER_LENGTH (** _string_exp_ **)**  (ODBC 3,0)|Restituisce la lunghezza in caratteri dell'espressione stringa, se l'espressione stringa è di un tipo di dati character. in caso contrario, restituisce la lunghezza in byte dell'espressione stringa (il valore integer più piccolo non inferiore al numero di bit diviso per 8). Questa funzione corrisponde alla funzione CHAR_LENGTH.|  
+|**Concat (** _string_exp1_,_string_exp2_**)**  (ODBC 1,0)|Restituisce una stringa di caratteri che è il risultato della concatenazione *string_exp2* *string_exp1*. La stringa risultante dipende da DBMS. Se, ad esempio, la colonna rappresentata da *string_exp1* conteneva un valore null, DB2 restituirebbe null, ma SQL server restituirebbe la stringa non null.|  
+|**Differenza (** _string_exp1_,_string_exp2_**)**  (ODBC 2,0)|Restituisce un valore intero che indica la differenza tra i valori restituiti dalla funzione SOUNDEX per *string_exp1* e *string_exp2*.|  
+|**Insert (** _string_exp1_, *Start*, *length*, _string_exp2_**)**  (ODBC 1,0)|Restituisce una stringa di caratteri in cui i caratteri di *lunghezza* sono stati eliminati da *string_exp1* *, a partire dall'inizio e*in cui è stato inserito *string_exp2* in *string_exp,* *a partire dall'inizio.*|  
 |**LCase (** _string_exp_ **)** (ODBC 1,0)|Restituisce una stringa uguale a quella in *string_exp*, con tutti i caratteri maiuscoli convertiti in minuscolo.|  
 |**Left (** _string_exp_, _conteggio_**)** (ODBC 1,0)|Restituisce i caratteri di *conteggio* più a sinistra del *string_exp*.|  
 |**Lunghezza (** _string_exp_ **)** (ODBC 1,0)|Restituisce il numero di caratteri in *string_exp,* esclusi gli spazi vuoti finali.<br /><br /> La **lunghezza** accetta solo stringhe. Quindi convertirà in modo implicito *string_exp* in una stringa e restituirà la lunghezza di questa stringa (non le dimensioni interne del tipo di dati).|  
