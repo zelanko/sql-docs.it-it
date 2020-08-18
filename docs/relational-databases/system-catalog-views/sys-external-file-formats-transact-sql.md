@@ -1,4 +1,5 @@
 ---
+description: sys. external_file_formats (Transact-SQL)
 title: sys. external_file_formats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: a89efb2c-0a3a-4b64-9284-6e93263e29ac
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75e3f884e09d41c2ae7aa5c7610b0c7ac24691a7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cfdbcd0d436176d11ba5702403a2fc032df28f25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828515"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88401508"
 ---
 # <a name="sysexternal_file_formats-transact-sql"></a>sys. external_file_formats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -42,11 +43,11 @@ ms.locfileid: "82828515"
 |data_compression|**nvarchar(255)**|Metodo di compressione dati per i dati esterni.|Per format_type = DELIMITEDTEXT:<br /><br /> -' org. Apache. Hadoop. io. Compress. DefaultCodec '<br />-' org. Apache. Hadoop. io. Compress. GzipCodec '<br /><br /> Per format_type = RCFILE:<br /><br /> -' org. Apache. Hadoop. io. Compress. DefaultCodec '<br /><br /> Per format_type = ORC:<br /><br /> -' org. Apache. Hadoop. io. Compress. DefaultCodec '<br />-' org. Apache. Hadoop. io. Compress. SnappyCodec '<br /><br /> Per format_type = PARQUET:<br /><br /> -' org. Apache. Hadoop. io. Compress. GzipCodec '<br />-' org. Apache. Hadoop. io. Compress. SnappyCodec '|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- La visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni.  Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ La visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. external_data_sources &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
- [sys. external_tables &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)   
+ [sys. external_data_sources &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
+ [sys. external_tables &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)  
   
   

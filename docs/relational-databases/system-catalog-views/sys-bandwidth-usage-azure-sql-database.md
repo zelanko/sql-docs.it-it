@@ -1,4 +1,5 @@
 ---
+description: sys.bandwidth_usage (Azure SQL Database)
 title: sys. bandwidth_usage (database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
@@ -19,12 +20,12 @@ ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 54151b817b443d43f64e119841a7b69df7436d93
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d39486a513e012fc53e66c408145bbf148696ff2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752918"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88402527"
 ---
 # <a name="sysbandwidth_usage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
@@ -44,7 +45,7 @@ ms.locfileid: "85752918"
 |**time**|Ora in cui la larghezza di banda è stata usata. Le righe di questa vista hanno base oraria. Ad esempio, 2009-09-19 02:00:00.000 indica che la larghezza di banda è stata usata il 19 settembre 2009 tra le 14.00 e le 3.00.|  
 |**database_name**|Nome del database che ha usato la larghezza di banda.|  
 |**direction**|Tipo di larghezza di banda usata, uno di:<br /><br /> In ingresso: dati spostati in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> In uscita: dati spostati all'esterno dell'oggetto [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .|  
-|**classe**|Classe di larghezza di banda usata, una di:<br />Internal: dati spostati all'interno della piattaforma Azure.<br />External: dati spostati all'esterno della piattaforma Azure.<br /><br /> Questa classe viene restituita solo se il database è occupato in una relazione di copia continua tra aree ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Se un determinato database non partecipa ad alcuna relazione di copia continua, le righe di "Interlink" non vengono restituite. Per ulteriori informazioni, vedere la sezione "Osservazioni" di seguito in questo argomento.|  
+|**class**|Classe di larghezza di banda usata, una di:<br />Internal: dati spostati all'interno della piattaforma Azure.<br />External: dati spostati all'esterno della piattaforma Azure.<br /><br /> Questa classe viene restituita solo se il database è occupato in una relazione di copia continua tra aree ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Se un determinato database non partecipa ad alcuna relazione di copia continua, le righe di "Interlink" non vengono restituite. Per ulteriori informazioni, vedere la sezione "Osservazioni" di seguito in questo argomento.|  
 |**time_period**|Il periodo di tempo in cui si è verificato l'utilizzo è Peak o OffPeak. L'ora Peak si basa sull'area geografica in cui è stato creato il server. Ad esempio, se un server è stato creato nell'area geografica "US_Northwest", l'ora Peak è compresa tra le 10.00 e le 18.00 PST.|  
 |**quantity**|La quantità di larghezza di banda, in kilobyte (KB), usata.|  
   
@@ -58,7 +59,7 @@ ms.locfileid: "85752918"
 
  Per ogni database utilizzato in un determinato momento, la vista **sys. bandwidth_usage** restituisce righe che mostrano la classe e la direzione dell'utilizzo della larghezza di banda. Nell'esempio seguente vengono illustrati i dati che possono essere esposti per un determinato database. In questo esempio, la data e l'ora sono 2012-04-21 17:00:00, che cade nel periodo di massima attività. Il nome del database è Db1. In questo esempio **sys. bandwidth_usage** ha restituito una riga per tutte e quattro le combinazioni delle direzioni in ingresso e in uscita e le classi esterne e interne, come indicato di seguito:  
   
-|time|database_name|direction|class|time_period|quantity|  
+|time|database_name|direction|classe|time_period|quantity|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  
 |2012-04-21 17:00:00|Db1|Dati in ingresso|Esterno|Peak|66|  
 |2012-04-21 17:00:00|Db1|Egress|Esterno|Peak|741|  

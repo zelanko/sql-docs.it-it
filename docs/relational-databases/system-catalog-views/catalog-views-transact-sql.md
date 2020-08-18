@@ -1,4 +1,5 @@
 ---
+description: Viste del catalogo di sistema (Transact-SQL)
 title: Viste del catalogo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/02/2016
@@ -23,12 +24,12 @@ ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7b106652573b5324794848dff69e9ae51c81a20
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6e0fd2e8ee936d9ecf9b7b433870edd3f6da19f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914307"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88402607"
 ---
 # <a name="system-catalog-views-transact-sql"></a>Viste del catalogo di sistema (Transact-SQL)
 
@@ -55,17 +56,17 @@ Le viste del catalogo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
         
         [Viste del catalogo del database SQL di Azure](../../relational-databases/system-catalog-views/azure-sql-database-catalog-views.md)
         
-        [Viste del catalogo di Rilevamento modifiche &#40;&#41;Transact-SQL](../system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)
+        [Viste del catalogo di Rilevamento modifiche &#40;&#41;Transact-SQL ](../system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)
         
-        [Viste del catalogo degli assembly CLR &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)
+        [Viste del catalogo degli assembly CLR &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)
         
         [Viste dell'agente di raccolta dati &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)
         
-        [Spazi dati &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/data-spaces-transact-sql.md)
+        [Spazi dati &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/data-spaces-transact-sql.md)
         
-        [Viste di Posta elettronica database &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/database-mail-views-transact-sql.md)
+        [Viste di Posta elettronica database &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/database-mail-views-transact-sql.md)
         
-        [Viste del catalogo del server di controllo del mirroring del database &#40;&#41;Transact-SQL](../system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)
+        [Viste del catalogo del server di controllo del mirroring del database &#40;&#41;Transact-SQL ](../system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)
         
         [Viste del catalogo di database e file &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
         
@@ -75,30 +76,30 @@ Le viste del catalogo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
         
         [Viste del catalogo delle proprietà estese &#40;Transact-SQL&#41;](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)
         
-        [Viste del catalogo delle operazioni esterne &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/external-operations-catalog-views-transact-sql.md)
+        [Viste del catalogo delle operazioni esterne &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/external-operations-catalog-views-transact-sql.md)
         
-        [Viste del catalogo FILESTREAM e FileTable &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+        [Viste del catalogo FILESTREAM e FileTable &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
         
         [Viste del catalogo di ricerca full-text e semantica &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)
         
-        [Viste del catalogo di server collegati &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)
+        [Viste del catalogo di server collegati &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)
     :::column-end:::
     :::column:::
         [Messaggi &#40;per errori&#41; viste del catalogo &#40;Transact-SQL&#41;](../system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)
         
         [Viste del catalogo dell'oggetto &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)
         
-        [Viste del catalogo delle funzioni di partizione &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/partition-function-catalog-views-transact-sql.md)
+        [Viste del catalogo delle funzioni di partizione &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/partition-function-catalog-views-transact-sql.md)
         
         [Viste di Gestione basata su criteri &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)
         
-        [Viste del catalogo di Resource Governor &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
+        [Viste del catalogo di Resource Governor &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
         
         [Viste del catalogo di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)
         
-        [Viste del catalogo di tipi scalari &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)
+        [Viste del catalogo di tipi scalari &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)
         
-        [Viste del catalogo degli schemi &#40;&#41;Transact-SQL](../system-catalog-views/schemas-catalog-views-sys-schemas.md)
+        [Viste del catalogo degli schemi &#40;&#41;Transact-SQL ](../system-catalog-views/schemas-catalog-views-sys-schemas.md)
         
         [Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
         
@@ -110,7 +111,7 @@ Le viste del catalogo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
         
         [Viste del catalogo di SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
         
-        [Viste del catalogo di Stretch Database &#40;&#41;Transact-SQL](../system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md)
+        [Viste del catalogo di Stretch Database &#40;&#41;Transact-SQL ](../system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md)
         
         [XML Schema &#40;viste del catalogo&#41; di sistema di tipo XML &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)
     :::column-end:::
@@ -118,6 +119,6 @@ Le viste del catalogo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Viste degli schemi delle informazioni &#40;&#41;Transact-SQL](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
+- [Viste degli schemi delle informazioni &#40;&#41;Transact-SQL ](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 - [Tabelle di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
 - [Domande frequenti sull'esecuzione di query sul catalogo di sistema di SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)
