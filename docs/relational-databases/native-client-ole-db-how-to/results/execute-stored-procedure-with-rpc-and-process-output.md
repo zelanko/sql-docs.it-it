@@ -1,4 +1,5 @@
 ---
+description: Eseguire SQL Server Native Client stored procedure con RPC e l'output del processo
 title: Stored procedure, RPC, output
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd73e4da91d94a920ca8463e1d8df905be343c6f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 950eedbbc453e0ce2df16bec101ab88840f403fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247014"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88407557"
 ---
 # <a name="execute-sql-server-native-client-stored-procedure-with-rpc-and-process-output"></a>Eseguire SQL Server Native Client stored procedure con RPC e l'output del processo
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

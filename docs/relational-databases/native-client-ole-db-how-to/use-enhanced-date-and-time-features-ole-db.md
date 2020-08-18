@@ -1,4 +1,5 @@
 ---
+description: Utilizzare le funzionalità avanzate di data e ora in SQL Server Native Client (OLE DB)
 title: Utilizzare le funzionalità avanzate di data e ora (provider OLE DB Native Client)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,12 +12,12 @@ ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 950f4d25cfdcd4bb8aee320ebfec8b6fd1b9c82b
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2df45f8cc716af1aaa8aafeccaafe95cda87eaa3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88407977"
 ---
 # <a name="use-enhanced-date-and-time-features-in-sql-server-native-client-ole-db"></a>Utilizzare le funzionalità avanzate di data e ora in SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "87396510"
  Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario salvare in modo permanente le credenziali, è necessario crittografarle con l' [API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Esempio  
  Il primo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) consente di creare una stored procedure usata dall'esempio.  
