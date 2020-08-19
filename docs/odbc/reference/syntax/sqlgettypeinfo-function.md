@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLGetTypeInfo
 title: Funzione SQLGetTypeInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 47273c75a005f11b33e9929977b57607b36898de
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 47ff65a1c7912aef196c79b9b26c8286fb05fef2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303262"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421195"
 ---
 # <a name="sqlgettypeinfo-function"></a>Funzione SQLGetTypeInfo
 **Conformità**  
  Versione introdotta: ODBC 1,0 Standard Compliance: ISO 92  
   
- **Riepilogo**  
+ **Summary**  
  **SQLGetTypeInfo** restituisce informazioni sui tipi di dati supportati dall'origine dati. Il driver restituisce le informazioni sotto forma di un set di risultati SQL. I tipi di dati devono essere utilizzati nelle istruzioni DDL (Data Definition Language).  
   
 > [!IMPORTANT]  
@@ -52,7 +53,7 @@ SQLRETURN SQLGetTypeInfo(
  *DataType*  
  Input Tipo di dati SQL. Deve essere uno dei valori nella sezione tipi di [dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) di Appendice D: tipi di dati o un tipo di dati SQL specifico del driver. SQL_ALL_TYPES specifica che devono essere restituite informazioni su tutti i tipi di dati.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
@@ -66,7 +67,7 @@ SQLRETURN SQLGetTypeInfo(
 |24000|Stato del cursore non valido|Un cursore è stato aperto in *statementHandle* e **SQLFetch** o **SQLFetchScroll** è stato chiamato. Questo errore viene restituito da Gestione driver se **SQLFetch** o **SQLFetchScroll** non ha restituito SQL_NO_DATA e viene restituito dal driver se **SQLFetch** o **SQLFetchScroll** ha restituito SQL_NO_DATA.<br /><br /> Un set di risultati è aperto in *statementHandle*, ma non è stato chiamato **SQLFetch** o **SQLFetchScroll** .|  
 |40001|Errore di serializzazione|È stato eseguito il rollback della transazione a causa di un deadlock delle risorse con un'altra transazione.|  
 |40003|Completamento istruzione sconosciuto|La connessione associata non è riuscita durante l'esecuzione di questa funzione e non è possibile determinare lo stato della transazione.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY004|Tipo di dati SQL non valido|Il valore specificato per *il tipo di dati dell'argomento non* è né un identificatore del tipo di dati ODBC SQL valido né un identificatore del tipo di dati specifico del driver supportato dal driver.|  
 |HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *statementHandle*, quindi la funzione è stata chiamata e, prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle*. La funzione è stata chiamata nuovamente in *statementHandle*.<br /><br /> La funzione è stata chiamata e, prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle* da un thread diverso in un'applicazione multithread.|  

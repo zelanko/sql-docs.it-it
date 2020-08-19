@@ -1,4 +1,5 @@
 ---
+description: Configurare Posta elettronica database
 title: Configurare Posta elettronica database | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -39,12 +40,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3c52311482f8ad7107e384e3ed8e20100c094243
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ecf2233470afe15337c41a0a6051b41f18e0f40f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737627"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421085"
 ---
 # <a name="configure-database-mail"></a>Configurare Posta elettronica database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85737627"
   
 -   **Prima di iniziare:**  [Limitazioni e restrizioni](#Restrictions), [Sicurezza](#Security)  
   
--   **Per configurare Posta elettronica database con:**  [Configurazione guidata Posta elettronica database](#DBWizard), [Modelli](#Template)  
+-   **Per configurare Posta elettronica database, usando:**  [Configurazione guidata Posta elettronica database](#DBWizard), [Utilizzo di modelli](#Template)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
  Usare l'opzione **Stored procedure estese di posta elettronica database** per abilitare Posta elettronica database nel server. Per altre informazioni, vedere l'argomento di riferimento [Opzione di configurazione del server Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
@@ -115,7 +116,7 @@ ms.locfileid: "85737627"
  Usare la pagina **Selezione attività di configurazione** per indicare quali attività verranno eseguite ogni volta che si usa la procedura guidata. Se si vuole cambiare tali attività prima del completamento della procedura guidata, fare clic sul pulsante **Indietro** per tornare in questa pagina e selezionare un'attività diversa.  
   
 > [!NOTE]  
->  Se la caratteristica Posta elettronica database non è stata abilitata, verrà visualizzato il messaggio: **La caratteristica Posta elettronica database non è disponibile.  Abilitarla?** L'opzione **Sì**equivale ad abilitare la funzionalità Posta elettronica database usando l'opzione [Stored procedure estese di posta elettronica database](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) della stored procedure di sistema **sp_configure** .  
+>  Se la funzionalità Posta elettronica database non è stata abilitata, verrà visualizzato il messaggio **La caratteristica Posta elettronica database non è disponibile.  Abilitarla?** L'opzione **Sì**equivale ad abilitare la funzionalità Posta elettronica database usando l'opzione [Stored procedure estese di posta elettronica database](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) della stored procedure di sistema **sp_configure** .  
   
  **Installa Posta elettronica database eseguendo le attività seguenti**  
  Consente di eseguire tutte le attività necessarie per installare Posta elettronica database per la prima volta. Questa opzione include tutte le altre tre.  
@@ -156,7 +157,7 @@ ms.locfileid: "85737627"
  **Nome server**  
  Digitare il nome o l'indirizzo IP del server SMTP utilizzato dall'account per l'invio della posta. In genere, presenta un formato simile a **smtp.** _<nome_società>_ **.com**. Per informazioni, rivolgersi all'amministratore del sistema di posta.  
   
- **Numero di porta**  
+ **Numero della porta**  
  Digitare il numero di porta del server SMTP per l'account. La maggior parte dei server SMTP utilizza la porta 25.  
   
  **Il server necessita di una connessione sicura (SSL)**  
@@ -165,7 +166,7 @@ ms.locfileid: "85737627"
  **Autenticazione di Windows con credenziali del servizio Motore di database**  
  Viene eseguita la connessione al server SMTP mediante le credenziali configurate per il servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
- **Autenticazione di base**  
+ **Autenticazione base**  
  Consente di specificare il nome utente e la password necessari per il server SMTP.  
   
  **Nome utente**  
@@ -206,7 +207,7 @@ ms.locfileid: "85737627"
  **Nome server**  
  Consente di visualizzare o aggiornare il nome del server SMTP utilizzato dall'account per l'invio della posta. In genere, presenta un formato simile a **smtp.<nome_società>.com**. Per informazioni, rivolgersi all'amministratore del sistema di posta.  
   
- **Numero di porta**  
+ **Numero della porta**  
  Consente di visualizzare o aggiornare il numero di porta del server SMTP di questo account. La maggior parte dei server SMTP utilizza la porta 25.  
   
  **Il server necessita di una connessione sicura (SSL)**  
@@ -215,7 +216,7 @@ ms.locfileid: "85737627"
  **Autenticazione di Windows con credenziali del servizio Motore di database**  
  Viene eseguita la connessione al server SMTP mediante le credenziali configurate per il servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
- **Autenticazione di base**  
+ **Autenticazione base**  
  Consente di specificare il nome utente e la password necessari per il server SMTP.  
   
  **Nome utente**  
@@ -320,7 +321,7 @@ ms.locfileid: "85737627"
 ###  <a name="manage-accounts-and-profiles-page"></a><a name="AccountsProfiles"></a> Pagina Gestisci account e profili  
  Utilizzare questa pagina per selezionare un'attività per la gestione di un profilo o di un account.  
   
- **Crea nuovo account**  
+ **Creare un nuovo account**  
  Consente di creare un nuovo account.  
   
  **Visualizza, modifica o elimina un account esistente**  
@@ -344,7 +345,7 @@ ms.locfileid: "85737627"
  **Pubblica**  
  Selezionare questa opzione per rendere pubblico il profilo specificato.  
   
- **Profile Name**  
+ **Nome profilo**  
  Consente di visualizzare il nome del profilo.  
   
  **Profilo predefinito**  
@@ -365,7 +366,7 @@ ms.locfileid: "85737627"
  **Nome utente**  
  Consente di selezionare il nome di un utente o di un ruolo nel database **msdb** .  
   
- **Accedere**  
+ **Accesso**  
  Consente di specificare se l'utente o il ruolo dispone dell'accesso al profilo specificato.  
   
  **Nome profilo**  
@@ -392,7 +393,7 @@ ms.locfileid: "85737627"
  Dimensioni massime di un allegato, in byte.  
   
  **Estensioni file allegati non consentite**  
- Elenco delimitato da virgole delle estensioni che non possono essere inviate come allegato a un messaggio di posta elettronica. Fare clic sul pulsante Sfoglia ( **...** ) per aggiungere altre estensioni.  
+ Elenco delimitato da virgole delle estensioni che non possono essere inviate come allegato a un messaggio di posta elettronica. Fare clic sul pulsante Sfoglia (**...**) per aggiungere altre estensioni.  
   
  **Durata minima eseguibile Posta elettronica database (secondi)**  
  Periodo minimo di tempo, in secondi, durante il quale il processo di posta elettronica esterno resta attivo. Il processo rimane attivo finché sono presenti messaggi di posta elettronica nella coda di Posta elettronica database. Questo parametro indica il periodo di tempo per cui il processo rimane attivo se non esiste alcun messaggio da elaborare.  
@@ -419,7 +420,7 @@ ms.locfileid: "85737627"
  [Configurazione guidata Posta elettronica database](#DBWizard)  
   
 ###  <a name="send-test-e-mail-page"></a><a name="TestEmail"></a> Send Test E-Mail Page  
- Usare la finestra di dialogo **Invia messaggio di prova da** _<nome_istanza>_ per inviare un messaggio di posta elettronica usando il profilo di Posta elettronica database specificato. Solo i membri del ruolo predefinito del server **sysadmin** possono inviare messaggi di posta elettronica di prova usando questa pagina.  
+ Usare la finestra di dialogo **Invia messaggio di prova da**_<nome_istanza>_ per inviare un messaggio di posta elettronica usando il profilo di Posta elettronica database specificato. Solo i membri del ruolo predefinito del server **sysadmin** possono inviare messaggi di posta elettronica di prova usando questa pagina.  
   
  **Profilo di Posta elettronica database**  
  Selezionare un profilo di Posta elettronica database nell'elenco. Questo campo è obbligatorio. Se non viene visualizzato alcun profilo, non esiste alcun profilo oppure non si dispone dell'autorizzazione per esso. Per creare e configurare profili, usare la **Configurazione guidata posta elettronica database** . Se non è elencato alcun profilo, utilizzare la Configurazione guidata posta elettronica database per crearne uno.  

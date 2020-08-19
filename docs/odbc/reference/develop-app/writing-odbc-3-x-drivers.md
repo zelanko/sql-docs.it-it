@@ -1,4 +1,5 @@
 ---
+description: Scrittura di driver ODBC 3.x
 title: Scrittura di driver ODBC 3. x | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 62f2a701fd5ac94c92d41494a4fd1ab023edaf25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c5fec9b94dbcf60868c44e49d92bddb4bb73e9cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300361"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421345"
 ---
 # <a name="writing-odbc-3x-drivers"></a>Scrittura di driver ODBC 3.x
 La tabella seguente illustra il supporto delle funzioni in un ODBC 3. driver *x* e un'applicazione ODBC e mapping eseguito da Gestione driver quando le funzioni vengono chiamate a un ODBC 3. driver *x* .  
   
-|Funzione|Supportato<br /><br /> da un<br /><br /> ODBC 3. *x*<br /><br /> driver?|Supportato<br /><br /> da un<br /><br /> ODBC 3. *x*<br /><br /> applicazione?|Mappato/supportato<br /><br /> da ODBC 3. *x*<br /><br /> Gestione driver a<br /><br /> ODBC 3. driver *x* ?|  
+|Funzione|Funzionalità supportata<br /><br /> da un<br /><br /> ODBC 3. *x*<br /><br /> driver?|Funzionalità supportata<br /><br /> da un<br /><br /> ODBC 3. *x*<br /><br /> applicazione?|Mappato/supportato<br /><br /> da ODBC 3. *x*<br /><br /> Gestione driver a<br /><br /> ODBC 3. driver *x* ?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
 |**SQLAllocConnect**|No|No [1]|Sì|  
 |**SQLAllocEnv**|No|No [1]|Sì|  
@@ -111,7 +112,7 @@ La tabella seguente illustra il supporto delle funzioni in un ODBC 3. driver *x*
   
  [3] i writer di driver devono tenere presente che ODBC 2. gli attributi di colonna *x* SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE e SQL_COLUMN_LENGTH devono essere supportati con **SQLColAttribute**.  
   
- [4] **SQLCopyDesc** viene implementato parzialmente da Gestione driver quando un descrittore viene copiato tra le connessioni che appartengono a driver diversi. I driver sono necessari per supportare **SQLCopyDesc** tra due connessioni. Le funzioni quali **SQLDrivers**, implementate esclusivamente da Gestione driver, non vengono visualizzate in questo elenco.  
+ [4]   **SQLCopyDesc** viene implementato parzialmente da Gestione driver quando un descrittore viene copiato tra le connessioni che appartengono a driver diversi. I driver sono necessari per supportare **SQLCopyDesc** tra due connessioni. Le funzioni quali **SQLDrivers**, implementate esclusivamente da Gestione driver, non vengono visualizzate in questo elenco.  
   
  [5] in determinate circostanze, potrebbe essere necessario che i driver supportino questa funzione. Per ulteriori informazioni, vedere la pagina di riferimento di questa funzione.  
   

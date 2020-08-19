@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLGetStmtOption
 title: Funzione SQLGetStmtOption | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: d69c2668-4260-4722-8c34-1c51caac307f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3e7bd7a48dbf2116702b52f4963bb545e809352
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc870dabcc6516f16d740e165964b650574b7484
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303283"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421205"
 ---
 # <a name="sqlgetstmtoption-function"></a>Funzione SQLGetStmtOption
 **Conformità**  
  Versione introdotta: conformità agli standard ODBC 1,0: deprecato  
   
- **Riepilogo**  
+ **Summary**  
  In ODBC 3. *x*, la funzione ODBC 2,0 **SQLGetStmtOption** è stata sostituita da **SQLGetStmtAttr**. Per ulteriori informazioni, vedere [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
   
 > [!NOTE]  

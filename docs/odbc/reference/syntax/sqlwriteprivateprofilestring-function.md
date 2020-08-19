@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLWritePrivateProfileString
 title: Funzione SQLWritePrivateProfileString | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b0de5ad074fb2b760420686feddff58b26887112
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1110b60d6dc0ba079804ba8a9f21c06f0c1f78d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286884"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420955"
 ---
 # <a name="sqlwriteprivateprofilestring-function"></a>Funzione SQLWritePrivateProfileString
 **Conformità**  
  Versione introdotta: ODBC 2,0  
   
- **Riepilogo**  
- **SQLWritePrivateProfileString** scrive i dati e il nome di un valore nella sottochiave ODBC. ini delle informazioni di sistema.  
+ **Summary**  
+ **SQLWritePrivateProfileString** scrive un nome di valore e i dati nella sottochiave Odbc.ini delle informazioni di sistema.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,11 +58,11 @@ BOOL SQLWritePrivateProfileString(
  *lpszFilename*  
  Output Punta a una stringa con terminazione null che denomina il file di inizializzazione.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  La funzione restituisce TRUE se ha esito positivo, FALSE in caso di esito negativo.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLWritePrivateProfileString** restituisce false, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i * \*valori pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLWritePrivateProfileString** restituisce false, è possibile ottenere un valore * \* pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i valori * \* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
@@ -70,9 +71,9 @@ BOOL SQLWritePrivateProfileString(
 |ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione non è riuscito a eseguire la funzione a causa di memoria insufficiente.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLWritePrivateProfileString** viene fornito come metodo semplice per trasferire i driver e le DLL di installazione dei driver da Microsoft® Windows® a Microsoft windows NT®/Windows 2000. Le chiamate a **WritePrivateProfileString** che scrivono una stringa del profilo nel file ODBC. ini devono essere sostituite con chiamate a **SQLWritePrivateProfileString**. **SQLWritePrivateProfileString** chiama funzioni nell'API Win32® per aggiungere il nome e i dati specificati alla sottochiave ODBC. ini delle informazioni di sistema.  
+ **SQLWritePrivateProfileString** viene fornito come metodo semplice per trasferire i driver e le DLL di installazione dei driver da Microsoft® Windows® a Microsoft windows NT®/Windows 2000. Le chiamate a **WritePrivateProfileString** che scrivono una stringa del profilo nel file di Odbc.ini devono essere sostituite con le chiamate a **SQLWritePrivateProfileString**. **SQLWritePrivateProfileString** chiama funzioni nell'API Win32® per aggiungere i dati e il nome del valore specificati alla sottochiave Odbc.ini delle informazioni di sistema.  
   
- Una modalità di configurazione indica il punto in cui la voce ODBC. ini che elenca i valori DSN è presente nelle informazioni sul sistema. Se il DSN è un DSN utente (la variabile di stato è USERDSN_ONLY), la funzione scrive nella voce ODBC. ini nel HKEY_CURRENT_USER. Se il DSN è un DSN di sistema (SYSTEMDSN_ONLY), la funzione scrive nella voce ODBC. ini nel HKEY_LOCAL_MACHINE. Se la variabile di stato è BOTHDSN, viene tentata HKEY_CURRENT_USER e, in caso di errore, viene utilizzato HKEY_LOCAL_MACHINE.  
+ Una modalità di configurazione indica il punto in cui la voce Odbc.ini elencando i valori DSN è presente nelle informazioni sul sistema. Se il DSN è un DSN utente (la variabile di stato è USERDSN_ONLY), la funzione scrive nella voce Odbc.ini in HKEY_CURRENT_USER. Se il DSN è un DSN di sistema (SYSTEMDSN_ONLY), la funzione scrive nella voce Odbc.ini in HKEY_LOCAL_MACHINE. Se la variabile di stato è BOTHDSN, viene tentata HKEY_CURRENT_USER e, in caso di errore, viene utilizzato HKEY_LOCAL_MACHINE.  
   
 ## <a name="related-functions"></a>Funzioni correlate  
   

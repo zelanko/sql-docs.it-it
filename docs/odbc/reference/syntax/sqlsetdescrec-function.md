@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLSetDescRec
 title: Funzione SQLSetDescRec | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b29879ff7635d6eb7d5a0f7489ff3994758d4a35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f0e423de06acf82e6c883531514c57c29d9407
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421125"
 ---
 # <a name="sqlsetdescrec-function"></a>Funzione SQLSetDescRec
 **Conformità**  
  Versione introdotta: ODBC 3,0 Standard Compliance: ISO 92  
   
- **Riepilogo**  
+ **Summary**  
  La funzione **SQLSetDescRec** imposta più campi di descrizione che influiscono sul tipo di dati e sul buffer associato a una colonna o a dati di parametro.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -58,7 +59,7 @@ SQLRETURN SQLSetDescRec(
  *RecNumber*  
  Input Indica il record del descrittore che contiene i campi da impostare. I record del descrittore sono numerati da 0, con il numero di record 0 che è il record del segnalibro. Questo argomento deve essere maggiore o uguale a 0. Se *RecNumber* è maggiore del valore di SQL_DESC_COUNT, SQL_DESC_COUNTis è stato modificato nel valore di *RecNumber*.  
   
- *Type*  
+ *Tipo*  
  Input Valore in cui impostare il campo SQL_DESC_TYPE per il record del descrittore.  
   
  *Sottotipo*  
@@ -70,7 +71,7 @@ SQLRETURN SQLSetDescRec(
  *Precisione*  
  Input Valore in cui impostare il campo SQL_DESC_PRECISION per il record del descrittore.  
   
- *Ridimensionare*  
+ *Ridimensionamento*  
  Input Valore in cui impostare il campo SQL_DESC_SCALE per il record del descrittore.  
   
  *DataPtr*  
@@ -84,7 +85,7 @@ SQLRETURN SQLSetDescRec(
  *IndicatorPtr*  
  [Input o output posticipato] Valore in cui impostare il campo SQL_DESC_INDICATOR_PTR per il record del descrittore. *IndicatorPtr* può essere impostato su un puntatore null per impostare il campo SQL_DESC_INDICATOR_PTR su un puntatore null.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
@@ -95,7 +96,7 @@ SQLRETURN SQLSetDescRec(
 |01000|Avviso generale|Messaggio informativo specifico del driver. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |07009|Indice del descrittore non valido|L'argomento *RecNumber* è stato impostato su 0 e il *DescriptorHandle* fa riferimento a un handle dpi.<br /><br /> L'argomento *RecNumber* è minore di 0.<br /><br /> L'argomento *RecNumber* è maggiore del numero massimo di colonne o parametri che l'origine dati può supportare e l'argomento *DescriptorHandle* è un oggetto APD, dpi o ARD.<br /><br /> L'argomento *RecNumber* è uguale a 0 e l'argomento *DescriptorHandle* fa riferimento a un oggetto APD allocato in modo implicito. Questo errore non si verifica con un descrittore di applicazione allocato in modo esplicito perché non è noto se un descrittore di applicazione allocato in modo esplicito è un valore APD o ARD fino alla fase di esecuzione.|  
 |08S01|Errore collegamento comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è riuscito prima del completamento dell'elaborazione della funzione.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY010|Errore sequenza funzione|(DM) *DescriptorHandle* è stato associato a un *statementHandle* per il quale è stata chiamata una funzione in esecuzione asincrona (non questa) ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per *statementHandle* a cui il *DescriptorHandle* è stato associato e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *DescriptorHandle*. Questa funzione Aynchronous era ancora in esecuzione quando è stata chiamata la funzione **SQLSetDescRec** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per uno degli handle di istruzione associati a *DescriptorHandle* e restituiti SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  

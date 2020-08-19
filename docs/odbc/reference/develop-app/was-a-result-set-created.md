@@ -1,4 +1,5 @@
 ---
+description: Verifica della creazione di un set di risultati
 title: Verifica della creazione di un set di risultati | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c171a154dd16a291c5dbe1dcade8c01ea95fb084
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57b65c254f48d9c3f5078c3b2c1f576ae54d4740
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294549"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421385"
 ---
 # <a name="was-a-result-set-created"></a>Verifica della creazione di un set di risultati
 Nella maggior parte dei casi, i programmatori di applicazioni sanno se le istruzioni eseguite dall'applicazione creeranno un set di risultati. Questa situazione si verifica se l'applicazione usa istruzioni SQL hardcoded scritte dal programmatore. Si tratta in genere del caso in cui l'applicazione costruisce istruzioni SQL in fase di esecuzione: il programmatore può includere facilmente il codice che contrassegna se viene costruita un'istruzione **Select** o un'istruzione **Insert** . In alcune situazioni, il programmatore non può sapere se un'istruzione creerà un set di risultati. Questo vale se l'applicazione consente all'utente di immettere ed eseguire un'istruzione SQL. È anche vero quando l'applicazione crea un'istruzione in fase di esecuzione per eseguire una procedura.  

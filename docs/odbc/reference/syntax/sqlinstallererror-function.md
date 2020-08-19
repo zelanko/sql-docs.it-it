@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLInstallerError
 title: Funzione SQLInstallerError | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e749237cf87c5054b8273f38531d9336d316e040
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fcc5f89a40802e6efa405771474cda3e86f4519c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302102"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421165"
 ---
 # <a name="sqlinstallererror-function"></a>Funzione SQLInstallerError
 **Conformità**  
  Versione introdotta: ODBC 3,0  
   
- **Riepilogo**  
+ **Summary**  
  **SQLInstallerError** restituisce informazioni sugli errori o sullo stato per le funzioni del programma di installazione ODBC.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -64,7 +65,7 @@ RETCODE SQLInstallerError(
  *pcbErrorMsg*  
  Output Puntatore al numero totale di byte, escluso il carattere di terminazione null, disponibile per restituire in *lpszErrorMsg*. Se il numero di byte disponibili per restituire è maggiore o uguale a *cbErrorMsgMax*, il testo del messaggio di errore in *lpszErrorMsg* viene troncato in *cbErrorMsgMax* meno i byte del carattere di terminazione null. L'argomento *pcbErrorMsg* può essere un puntatore null.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA o SQL_ERROR.  
   
 ## <a name="diagnostics"></a>Diagnostica  

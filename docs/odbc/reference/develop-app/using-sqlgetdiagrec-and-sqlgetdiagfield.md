@@ -1,4 +1,5 @@
 ---
+description: Uso di SQLGetDiagRec e SQLGetDiagField
 title: Uso di SQLGetDiagRec e SQLGetDiagField | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69a17086253b40469b0ed98cb6f870f319f03f52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 402cb326ac91e13db0d3ab5421bd5ddb097fb3db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421435"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>Uso di SQLGetDiagRec e SQLGetDiagField
 Le applicazioni chiamano **SQLGetDiagRec** o **SQLGetDiagField** per recuperare le informazioni di diagnostica. Queste funzioni accettano un handle di ambiente, connessione, istruzione o descrittore e restituiscono la diagnostica dalla funzione utilizzata per l'ultima volta. La diagnostica registrata su un particolare handle viene eliminata quando viene chiamata una nuova funzione con tale handle. Se la funzione ha restituito più record di diagnostica, l'applicazione chiama queste funzioni più volte; il numero totale di record di stato viene recuperato chiamando **SQLGetDiagField** per il record di intestazione (record 0) con l'opzione SQL_DIAG_NUMBER.  

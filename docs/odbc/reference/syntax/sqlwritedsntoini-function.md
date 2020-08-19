@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLWriteDSNToIni
 title: Funzione SQLWriteDSNToIni | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b8bb141c8f54c49ca3a5c6fc4bc15d434f91795c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08a1094d29bbba9dc52974bd1cef5cd6645aa5dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286961"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421015"
 ---
 # <a name="sqlwritedsntoini-function"></a>Funzione SQLWriteDSNToIni
 **Conformità**  
  Versione introdotta: ODBC 1,0  
   
- **Riepilogo**  
+ **Summary**  
  **SQLWriteDSNToIni** aggiunge un'origine dati alle informazioni sul sistema.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -49,11 +50,11 @@ BOOL SQLWriteDSNToIni(
  *lpszDriver*  
  Input Descrizione del driver (in genere il nome del DBMS associato) presentata agli utenti anziché al nome del driver fisico.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  La funzione restituisce TRUE se ha esito positivo, FALSE in caso di esito negativo.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLWriteDSNToIni** restituisce false, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i * \*valori pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLWriteDSNToIni** restituisce false, è possibile ottenere un valore * \* pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i valori * \* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  

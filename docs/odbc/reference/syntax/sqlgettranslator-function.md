@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLGetTranslator
 title: Funzione SQLGetTranslator | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bcd5aeebab8539b8b94db56ff30892f4a7dbbac1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d30268c846af4e95298d00edcd13def97c20c77d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303272"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421225"
 ---
 # <a name="sqlgettranslator-function"></a>Funzione SQLGetTranslator
 **Conformità**  
  Versione introdotta: ODBC 2,0  
   
- **Riepilogo**  
+ **Summary**  
  **SQLGetTranslator** Visualizza una finestra di dialogo da cui un utente può selezionare un convertitore.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -73,11 +74,11 @@ BOOL SQLGetTranslator(
  *pvOption*  
  [Output] opzione di conversione a 32 bit.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  La funzione restituisce TRUE se ha esito positivo, FALSE in caso di esito negativo o se l'utente annulla la finestra di dialogo.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLGetTranslator** restituisce false, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i * \*valori pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLGetTranslator** restituisce false, è possibile ottenere un valore * \* pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i valori * \* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
@@ -94,9 +95,9 @@ BOOL SQLGetTranslator(
   
  ![Finestra di dialogo Selezione convertitore](../../../odbc/reference/syntax/media/ch23j.gif "CH23J")  
   
- Se *lpszName* contiene un nome di traduttore valido, viene selezionato. In caso \<contrario, non viene selezionato alcun> di conversione.  
+ Se *lpszName* contiene un nome di traduttore valido, viene selezionato. In caso contrario, \<No Translator> viene selezionato.  
   
- \<Se l'utente non sceglie alcun traduttore>, il contenuto di *lpszName*, *lpszPath*e *pvOption* non viene toccato. **SQLGetTranslator** imposta *pcbNameOut* e *PCBPATHOUT* su 0 e restituisce true.  
+ Se l'utente sceglie \<No Translator> , il contenuto di *lpszName*, *lpszPath*e *pvOption* non viene toccato. **SQLGetTranslator** imposta *pcbNameOut* e *PCBPATHOUT* su 0 e restituisce true.  
   
  Se l'utente sceglie un convertitore, **SQLGetTranslator** chiama **ConfigTranslator** nella DLL di installazione del traduttore. Se **ConfigTranslator** restituisce false, **SQLGetTranslator** torna alla relativa finestra di dialogo. Se **ConfigTranslator** restituisce true, **SQLGetTranslator** restituisce true, insieme al nome del traduttore, al percorso e all'opzione di conversione selezionati.  
   

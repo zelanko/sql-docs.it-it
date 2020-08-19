@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLValidDSN
 title: Funzione SQLValidDSN | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6dfafca22d0b04f2147b1af24b53e787493efe67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4919887a6e0bad4526959d0cd31205019a597a0f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421025"
 ---
 # <a name="sqlvaliddsn-function"></a>Funzione SQLValidDSN
 **Conformità**  
  Versione introdotta: ODBC 2,0  
   
- **Riepilogo**  
+ **Summary**  
  **SQLValidDSN** controlla la lunghezza e la validità del nome dell'origine dati prima che il nome venga aggiunto alle informazioni di sistema.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -45,11 +46,11 @@ BOOL SQLValidDSN(
  *lpszDSN*  
  Input Nome dell'origine dati da controllare.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  La funzione restituisce TRUE se il nome dell'origine dati è valido. Restituisce FALSE se il nome dell'origine dati non è valido o la chiamata di funzione non è riuscita.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLValidDSN** restituisce false, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. Un * \*pfErrorCode* viene restituito solo se la chiamata di funzione ha esito negativo, non se è stato restituito false perché il nome dell'origine dati non è valido. La tabella seguente elenca i * \*valori pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLValidDSN** restituisce false, è possibile ottenere un valore * \* pfErrorCode* associato chiamando **SQLInstallerError**. Un * \* pfErrorCode* viene restituito solo se la chiamata di funzione ha esito negativo, non se è stato restituito false perché il nome dell'origine dati non è valido. La tabella seguente elenca i valori * \* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  

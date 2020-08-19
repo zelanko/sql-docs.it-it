@@ -1,4 +1,5 @@
 ---
+description: Applicazioni verticali
 title: Applicazioni verticali | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d50ea3e6-7a9e-4fb6-8cd8-1d429d2f7b3c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cc88f38fd1ffe8b2ee0033ad0a2abc4f15fd5cf3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a12be9247af3f273526dd08ee99ff7cc301af822
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421405"
 ---
 # <a name="vertical-applications"></a>Applicazioni verticali
 Le applicazioni verticali eseguono in genere un'attività ben definita in un singolo sistema DBMS. Un'applicazione Order entry, ad esempio, tiene traccia degli ordini in una società. Questo tipo di applicazioni in comune è che lo schema del database è in genere progettato dallo sviluppatore di applicazioni e, mentre l'applicazione potrebbe funzionare con una serie di DBMS diversi, funziona con un singolo sistema DBMS per un singolo cliente.  

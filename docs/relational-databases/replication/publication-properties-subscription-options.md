@@ -1,4 +1,5 @@
 ---
+description: Proprietà pubblicazione, Opzioni sottoscrizione
 title: Proprietà pubblicazione, Opzioni sottoscrizione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: cad5a65d4988dcc942f571e58abf576d8ba8e05a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8637bafe6433893b73e3dc2a7980c43f73fe19d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420495"
 ---
 # <a name="publication-properties-subscription-options"></a>Proprietà pubblicazione, Opzioni sottoscrizione
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -106,7 +107,7 @@ ms.locfileid: "85720870"
  **Segnala conflitti a livello centrale**  
  Determina se segnalare i conflitti generati dalle modifiche apportate ai dati solo nel server di pubblicazione o sia nel server di pubblicazione che nel Sottoscrittore. Questa opzione è di sola lettura, è impostata su **True** per impostazione predefinita per le pubblicazioni create con la Creazione guidata nuova pubblicazione e non può essere modificata dopo la creazione della pubblicazione. Il valore **True** indica che i conflitti vengono segnalati solo sul server di pubblicazione. I conflitti possono essere visualizzati solo sul server in cui vengono segnalati. Per ulteriori informazioni, vedere la sezione relativa alla visualizzazione dei conflitti in [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
-### <a name="filtering"></a>Filtri  
+### <a name="filtering"></a>Filtro  
  **Consenti filtri con parametri**  
  Viene impostata in base al fatto che una pubblicazione utilizzi i filtri con parametri. Questa opzione è sempre di sola lettura. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   

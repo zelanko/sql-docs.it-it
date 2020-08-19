@@ -1,4 +1,5 @@
 ---
+description: Piano di manutenzione (Proprietà sottopiano)
 title: Piano di manutenzione (Proprietà sottopiano) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,16 +14,16 @@ f1_keywords:
 ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 440afb0c0b2c3f43de0bca54339b0f87872e9a90
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d047b18ea2e749ff0a1bb624ba9b4ad197aec7b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754506"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420785"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>Piano di manutenzione (Proprietà sottopiano)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Usare la finestra di dialogo **Piano di manutenzione (Proprietà sottopiano)** per specificare il nome, la descrizione e la pianificazione per un sottopiano di un piano di manutenzione. Per visualizzare questa finestra di dialogo, fare clic su **Proprietà sottopiano** nella scheda **Progettazione** del piano di manutenzione o fare doppio clic su un sottopiano nella griglia della finestra di progettazione.  
+   Usare la finestra di dialogo **Piano di manutenzione (Proprietà sottopiano)** per specificare il nome, la descrizione e la pianificazione per un sottopiano di un piano di manutenzione. Per visualizzare questa finestra di dialogo, fare clic su **Proprietà sottopiano** nella scheda **Progettazione** del piano di manutenzione o fare doppio clic su un sottopiano nella griglia della finestra di progettazione.  
   
 ## <a name="options"></a>Opzioni  
  **Nome**  

@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLWriteFileDSN
 title: Funzione SQLWriteFileDSN | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e781f1be79e0079f33b3d0800c665f5f5e9fda4d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4bd63c368f4055821df41faceb7b9c33cf20bde3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286891"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421005"
 ---
 # <a name="sqlwritefiledsn-function"></a>Funzione SQLWriteFileDSN
 **Conformità**  
  Versione introdotta: ODBC 3,0  
   
- **Riepilogo**  
+ **Summary**  
  **SQLWriteFileDSN** scrive le informazioni in un DSN di file.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -57,11 +58,11 @@ BOOL SQLWriteFileDSN(
  *lpszString*  
  Output Punta alla stringa associata alla chiave da scrivere. La lunghezza massima della stringa a cui punta questo argomento è 32.767 byte.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  La funzione restituisce TRUE se ha esito positivo, FALSE in caso di esito negativo.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLWriteFileDSN** restituisce false, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i * \*valori pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLWriteFileDSN** restituisce false, è possibile ottenere un valore * \* pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i valori * \* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  

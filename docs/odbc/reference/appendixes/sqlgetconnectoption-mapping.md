@@ -1,4 +1,5 @@
 ---
+description: Mapping di SQLGetConnectOption
 title: Mapping di SQLGetConnectOption | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e3792fe4-a955-473a-a297-c1b2403660c4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8d2905bd6793d032e485183c8f553cef2cdefda3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fbb8578b881e8eb04ef3b699fa7030e4670fab4d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302002"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421475"
 ---
 # <a name="sqlgetconnectoption-mapping"></a>Mapping di SQLGetConnectOption
 Quando un'applicazione chiama **SQLGetConnectOption** tramite un driver ODBC *3. x* , la chiamata a  

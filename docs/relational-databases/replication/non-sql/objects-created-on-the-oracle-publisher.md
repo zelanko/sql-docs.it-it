@@ -1,4 +1,5 @@
 ---
+description: Oggetti creati nel server di pubblicazione Oracle
 title: Oggetti creati nel server di pubblicazione Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 405deb86567c596372777dff5e6ccb9dd2e95fb1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 744cf1e5878382e1eae804b4705e21d1fa21d098
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420455"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Oggetti creati nel server di pubblicazione Oracle
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -46,8 +47,8 @@ ms.locfileid: "85901231"
 |HREPL_ExecuteCommand|Procedura|Procedura definita all'esterno del codice del package di pubblicazione Oracle, utilizzata per eseguire un comando nel server di pubblicazione.|  
 |HREPL_ArticleN_Trigger_Row|Trigger|Trigger generato per ogni tabella pubblicata, utilizzato per rilevare le modifiche alle righe.|  
 |HREPL_ArticleN_Trigger_Stmt|Trigger|Trigger generato per ogni tabella pubblicata, utilizzato per rilevare le modifiche a livello di istruzione.|  
-|HREPL_Article_I_J|Visualizza|Vista creata per ogni tabella pubblicata, utilizzata per eseguire query sulla tabella pubblicata.|  
-|HREPL_Log_I_J_K|Visualizza|Vista creata per ogni tabella pubblicata, utilizzata per eseguire query sulla tabella di rilevamento delle modifiche.|  
+|HREPL_Article_I_J|Visualizzazione|Vista creata per ogni tabella pubblicata, utilizzata per eseguire query sulla tabella pubblicata.|  
+|HREPL_Log_I_J_K|Visualizzazione|Vista creata per ogni tabella pubblicata, utilizzata per eseguire query sulla tabella di rilevamento delle modifiche.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare un server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

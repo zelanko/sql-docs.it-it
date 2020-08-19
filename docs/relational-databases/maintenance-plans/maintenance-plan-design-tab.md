@@ -1,4 +1,5 @@
 ---
+description: Piano di manutenzione (scheda Progettazione)
 title: Piano di manutenzione (scheda Progettazione) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,16 +15,16 @@ f1_keywords:
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1bffeed97e9c56420750ce022c4fa5ec0a56f574
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e56d4d52cee3ac75354acd17d7496d062bc3ed73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666979"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420875"
 ---
 # <a name="maintenance-plan-design-tab"></a>Piano di manutenzione (scheda Progettazione)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Usare la finestra di dialogo **Piano di manutenzione (scheda Progettazione)** per specificare le proprietà di un piano di manutenzione e dei relativi sottopiani. Trascinare le attività dalla casella degli strumenti nella finestra di progettazione dei piani di manutenzione. Fare clic con il pulsante destro del mouse su gruppi di attività per creare percorsi di esecuzione con diramazioni. I piani di manutenzione vengono salvati come pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] eseguiti da processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+   Usare la finestra di dialogo **Piano di manutenzione (scheda Progettazione)** per specificare le proprietà di un piano di manutenzione e dei relativi sottopiani. Trascinare le attività dalla casella degli strumenti nella finestra di progettazione dei piani di manutenzione. Fare clic con il pulsante destro del mouse su gruppi di attività per creare percorsi di esecuzione con diramazioni. I piani di manutenzione vengono salvati come pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] eseguiti da processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opzioni  
  **Aggiungi sottopiano**  
@@ -69,7 +70,7 @@ ms.locfileid: "85666979"
   
  Dopo aver posizionato un'attività di manutenzione sull'area di progettazione, sarà possibile modificarne le proprietà in base alle esigenze. Ad esempio, il database specifico di cui eseguire il backup in un'Attività Backup database viene specificato dopo aver aggiunto l'attività al piano. Le attività non correttamente configurate presenti sull'area di progettazione contengono un'icona rossa con una X bianca.  
   
- Per aggiungere un'attività di manutenzione a un piano, trascinare l'icona dell'attività dalla casella degli strumenti **Attività piano di manutenzione** all'area di progettazione del piano oppure fare doppio clic sull'attività nella casella degli strumenti per aggiungere l'attività all'area di progettazione attiva. Se la casella degli strumenti **Attività piano di manutenzione** non è visualizzata, scegliere **Casella degli strumenti** dal menu [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Visualizza**di**. Espandere il nodo **Attività piano di manutenzione** nel riquadro **Casella degli strumenti** .  
+ Per aggiungere un'attività di manutenzione a un piano, trascinare l'icona dell'attività dalla casella degli strumenti **Attività piano di manutenzione** all'area di progettazione del piano oppure fare doppio clic sull'attività nella casella degli strumenti per aggiungere l'attività all'area di progettazione attiva. Se la casella degli strumenti **Attività piano di manutenzione** non è visualizzata, scegliere **Casella degli strumenti** dal menu [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Visualizza** di . Espandere il nodo **Attività piano di manutenzione** nel riquadro **Casella degli strumenti** .  
   
  Per rimuovere un'attività da un piano, selezionare l'attività nell'area di progettazione e premere **CANC** oppure fare clic con il pulsante destro del mouse sull'attività e quindi scegliere **Elimina**.  
   
@@ -93,7 +94,7 @@ ms.locfileid: "85666979"
  **Disable**  
  Gli oggetti non saranno quindi temporaneamente disponibili.  
   
- **Abilitazione**  
+ **Attiva**  
  Consente di ripristinare un'attività disabilitata.  
   
  **Gruppo**  

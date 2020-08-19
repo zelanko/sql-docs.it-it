@@ -1,4 +1,5 @@
 ---
+description: Sviluppo di un driver ODBC
 title: Sviluppo di un driver ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3225a011-5605-46ba-bb74-1ca6106a5271
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 57b5dc31cc78d105b2d044043c3e2a5e50982ddf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4e9f452b3186ab89de4e603eb9d3def575e2e77b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287896"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421335"
 ---
 # <a name="developing-an-odbc-driver"></a>Sviluppo di un driver ODBC
 In questa sezione sono inclusi argomenti in cui viene illustrato come sviluppare un driver ODBC.  

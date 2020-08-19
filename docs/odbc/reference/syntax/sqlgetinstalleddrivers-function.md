@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLGetInstalledDrivers
 title: Funzione SQLGetInstalledDrivers | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 24793473bf4f25253ac11673df852d10cfb2c558
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0599cb187dee9d3b860f619538b1e0dc148ad58d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303328"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421265"
 ---
 # <a name="sqlgetinstalleddrivers-function"></a>Funzione SQLGetInstalledDrivers
 **Conformità**  
  Versione introdotta: ODBC 1,0  
   
- **Riepilogo**  
+ **Summary**  
  **SQLGetInstalledDrivers** legge la sezione [driver ODBC] delle informazioni di sistema e restituisce un elenco di descrizioni dei driver installati.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -53,11 +54,11 @@ BOOL SQLGetInstalledDrivers(
  *pcbBufOut*  
  Output Numero totale di byte (escluso il byte di terminazione null) restituito in *lpszBuf*. Se il numero di byte disponibili per restituire è maggiore o uguale a *cbBufMax*, l'elenco di descrizioni dei driver in *lpszBuf* viene troncato a *cbBufMax* meno il carattere di terminazione null. L'argomento *pcbBufOut* può essere un puntatore null.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  La funzione restituisce TRUE se ha esito positivo, FALSE in caso di esito negativo.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLGetInstalledDrivers** restituisce false, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i * \*valori pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLGetInstalledDrivers** restituisce false, è possibile ottenere un valore * \* pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i valori * \* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  

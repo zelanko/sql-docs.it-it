@@ -1,4 +1,5 @@
 ---
+description: Scrittura di un'applicazione interoperativa
 title: Scrittura di un'applicazione interoperativa | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 553e718e0759e47701e7f8c04561693358d5dc52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d8bff1848e20705ab64b8284ed42331c80fb23a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81289083"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421365"
 ---
 # <a name="writing-an-interoperable-application"></a>Scrittura di un'applicazione interoperativa
 Ogni volta che un'applicazione utilizza lo stesso codice per più di un driver, il codice deve essere interoperativo tra i driver. Nella maggior parte dei casi, si tratta di un'attività semplice. Ad esempio, il codice per recuperare le righe con un cursore di sola trasmissione è lo stesso per tutti i driver. In alcuni casi può essere più difficile. Ad esempio, il codice per costruire identificatori da utilizzare nelle istruzioni SQL deve prendere in considerazione le convenzioni tra maiuscole e minuscole dell'identificatore, le virgolette e le convenzioni di denominazione in tre parti.  

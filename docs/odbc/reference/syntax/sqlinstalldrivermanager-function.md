@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLInstallDriverManager
 title: Funzione SQLInstallDriverManager | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0788de0493439a360c0446733b31606a02e12422
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b39e2c9304fd47394617d48f22ac91284af1b45d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421175"
 ---
 # <a name="sqlinstalldrivermanager-function"></a>Funzione SQLInstallDriverManager
 **Conformità**  
  Versione introdotta: ODBC 1,0: deprecato in Windows XP Service Pack 2, Windows Server 2003 Service Pack 1 e sistemi operativi successivi  
   
- **Riepilogo**  
+ **Summary**  
  **SQLInstallDriverManager** restituisce il percorso della directory di destinazione per l'installazione dei componenti di base di ODBC. Il programma chiamante deve effettivamente copiare i file di gestione driver nella directory di destinazione.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -53,11 +54,11 @@ BOOL SQLInstallDriverManager(
  *pcbPathOut*  
  Output Numero totale di byte (escluso il byte di terminazione null) restituito in *lpszPath*. Se il numero di byte disponibili per restituire è maggiore o uguale a *cbPathMax*, il percorso in *lpszPath* viene troncato a *cbPathMax* meno il carattere di terminazione null. L'argomento *pcbPathOut* può essere un puntatore null.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  La funzione restituisce TRUE se ha esito positivo, FALSE in caso di esito negativo.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLInstallDriverManager** restituisce false, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i * \*valori pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
+ Quando **SQLInstallDriverManager** restituisce false, è possibile ottenere un valore * \* pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i valori * \* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  

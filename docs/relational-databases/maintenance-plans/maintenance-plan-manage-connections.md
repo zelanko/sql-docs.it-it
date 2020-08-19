@@ -1,4 +1,5 @@
 ---
+description: Piano di manutenzione (Gestisci connessioni)
 title: Piano di manutenzione (Gestisci connessioni) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ f1_keywords:
 ms.assetid: 95ad9375-6584-423e-b9de-0e86782f8017
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 495ec4a69d960cfec8534b37490b10fe66c5934d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce9ac0469125a6077799e5bab0a69cdc1d06d82b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420835"
 ---
 # <a name="maintenance-plan-manage-connections"></a>Piano di manutenzione (Gestisci connessioni)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Utilizzare la finestra di dialogo **Gestisci connessioni** per specificare le proprietà delle connessioni utilizzate dai piani di manutenzione. Quando si crea un piano di manutenzione viene creata una connessione locale al server in cui è stato creato il piano. Utilizzare questa connessione per creare le attività che vengono eseguite nella connessione locale. Se richiesto, utilizzare la finestra di dialogo **Gestisci connessioni** per aggiungerle. Le connessioni aggiuntive configurate vengono visualizzate nella casella delle connessioni di ogni attività.  
+   Usare la finestra di dialogo **Gestisci connessioni** per specificare le proprietà delle connessioni usate dai piani di manutenzione. Quando si crea un piano di manutenzione viene creata una connessione locale al server in cui è stato creato il piano. Utilizzare questa connessione per creare le attività che vengono eseguite nella connessione locale. Se richiesto, utilizzare la finestra di dialogo **Gestisci connessioni** per aggiungerle. Le connessioni aggiuntive configurate vengono visualizzate nella casella delle connessioni di ogni attività.  
   
 ## <a name="options"></a>Opzioni  
  **Server**  

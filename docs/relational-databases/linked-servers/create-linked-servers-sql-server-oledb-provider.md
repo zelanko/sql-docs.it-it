@@ -1,4 +1,5 @@
 ---
+description: 'Query distribuite di Microsoft SQL Server: Connettività OLE DB'
 title: Creare provider di server collegati
 ms.date: 07/01/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ author: pmasl
 ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 528d1f6e1c7eea06b69fc60e2208eeb37ce3e36f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74096000"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420845"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Query distribuite di Microsoft SQL Server: Connettività OLE DB
 
@@ -200,16 +201,16 @@ Proprietà| Valore predefinito| Uso |
 |`DBPROP_NULLCOLLATION`|nessuno|Consente l'utilizzo dell'ordinamento/indice solo se `NULLCOLLATION` corrisponde al comportamento delle regole di confronto Null dell'istanza di SQL Server.|
 |`DBPROP_OLEOBJECTS`|nessuno|Determina se il provider supporta interfacce di archiviazione strutturate per colonne di oggetti dati di grandi dimensioni.|
 |`DBPROP_STRUCTUREDSTORAGE`|nessuno|Determina le interfacce di archiviazione strutturate supportate per i tipi di oggetti di grandi dimensioni (tra `ILockBytes`, `Istream`e `ISequentialStream`).|
-|`DBPROP_MULTIPLESTORAGEOBJECTS`|False|Determina se è possibile aprire più di una colonna di oggetti di grandi dimensioni nello stesso momento.|
+|`DBPROP_MULTIPLESTORAGEOBJECTS`|Falso|Determina se è possibile aprire più di una colonna di oggetti di grandi dimensioni nello stesso momento.|
 |`DBPROP_SQLSUPPORT`|nessuno|Determina se le query SQL possono essere inviate al provider.|
 |`DBPROP_CATALOGLOCATION`|`DBPROPVAL_CL_START`|Usata per costruire nomi di tabella multipart.
-|`SQLPROP_DYNAMICSQL`|False|Proprietà specifica di SQL Server: se restituisce `VARIANT_TRUE`, indica che i marcatori di parametro `?` sono supportati per l'esecuzione di query con parametri.
-|`SQLPROP_NESTEDQUERIES`|False|Proprietà specifica di SQL Server: se restituisce `VARIANT_TRUE`, indica che il provider supporta le istruzioni `SELECT` nidificate nella clausola `FROM`.
-|`SQLPROP_GROUPBY`|False|Proprietà specifica di SQL Server: se restituisce `VARIANT_TRUE`, indica che il provider supporta la clausola GROUP BY nell'istruzione `SELECT` come specificato dallo standard SQL-92.
-|`SQLPROP_DATELITERALS `|False|Proprietà specifica di SQL Server: se restituisce `VARIANT_TRUE`, indica che il provider supporta i valori letterali datetime in base alla sintassi Transact-SQL di SQL Server.
-|`SQLPROP_ANSILIKE `|False|Proprietà specifica di SQL Server: questa proprietà è adatta ai provider che supportano il livello SQL-Minimum e supporta l'operatore `LIKE` in base al livello SQL-92 (\'%\' e \'_\' come caratteri jolly).
-|`SQLPROP_SUBQUERIES `|False|Proprietà di SQL Server: Questa proprietà è adatta ai provider che supportano il livello SQL-Minimum. La proprietà indica che il provider supporta le sottoquery in base al livello SQL-92. Sono incluse le sottoquery nell'elenco `SELECT` e nella clausola `WHERE` con supporto per le sottoquery correlate e gli operatori `IN`, `EXISTS`, `ALL` e `ANY`.
-|`SQLPROP_INNERJOIN`|False|Proprietà specifica di SQL Server: Questa proprietà è adatta ai provider che supportano il livello SQL-Minimum. Questa proprietà indica il supporto per i join con più tabelle nella clausola `FROM`. ------ ---
+|`SQLPROP_DYNAMICSQL`|Falso|Proprietà specifica di SQL Server: se restituisce `VARIANT_TRUE`, indica che i marcatori di parametro `?` sono supportati per l'esecuzione di query con parametri.
+|`SQLPROP_NESTEDQUERIES`|Falso|Proprietà specifica di SQL Server: se restituisce `VARIANT_TRUE`, indica che il provider supporta le istruzioni `SELECT` nidificate nella clausola `FROM`.
+|`SQLPROP_GROUPBY`|Falso|Proprietà specifica di SQL Server: se restituisce `VARIANT_TRUE`, indica che il provider supporta la clausola GROUP BY nell'istruzione `SELECT` come specificato dallo standard SQL-92.
+|`SQLPROP_DATELITERALS `|Falso|Proprietà specifica di SQL Server: se restituisce `VARIANT_TRUE`, indica che il provider supporta i valori letterali datetime in base alla sintassi Transact-SQL di SQL Server.
+|`SQLPROP_ANSILIKE `|Falso|Proprietà specifica di SQL Server: questa proprietà è adatta ai provider che supportano il livello SQL-Minimum e supporta l'operatore `LIKE` in base al livello SQL-92 (\'%\' e \'_\' come caratteri jolly).
+|`SQLPROP_SUBQUERIES `|Falso|Proprietà di SQL Server: Questa proprietà è adatta ai provider che supportano il livello SQL-Minimum. La proprietà indica che il provider supporta le sottoquery in base al livello SQL-92. Sono incluse le sottoquery nell'elenco `SELECT` e nella clausola `WHERE` con supporto per le sottoquery correlate e gli operatori `IN`, `EXISTS`, `ALL` e `ANY`.
+|`SQLPROP_INNERJOIN`|Falso|Proprietà specifica di SQL Server: Questa proprietà è adatta ai provider che supportano il livello SQL-Minimum. Questa proprietà indica il supporto per i join con più tabelle nella clausola `FROM`. ------ ---
 
 I tre valori letterali seguenti vengono recuperati da `IDBInfo::GetLiteralInfo`: `DBLITERAL_CATALOG_SEPARATOR`, `DBLITERAL_SCHEMA_SEPARATOR` (per costruire un nome di oggetto completo con le parti del nome catalogo, schema e oggetto) e `DBLITERAL_QUOTE` (per delimitare i nomi degli identificatori in una query SQL inviata al provider).
 
@@ -262,7 +263,7 @@ Se `IDBSchemaRowset` non è supportato con i set di righe TABLES, COLUMNS, and T
 
 Se il provider supporta le statistiche di distribuzione nelle tabelle di base, SQL Server userà queste statistiche. Sono disponibili due tipi di statistiche utili per l'elaborazione di query di SQL Server:
 
-- **Cardinalità di colonne (o tuple)** . Si tratta del numero di valori univoci presenti in una colonna o in una combinazione di colonne di una tabella. Il numero può essere usato per stimare la selettività dei predicati nelle colonne. Un provider che supporta le statistiche di distribuzione deve supportare almeno un tipo di cardinalità.
+- **Cardinalità di colonne (o tuple)**. Si tratta del numero di valori univoci presenti in una colonna o in una combinazione di colonne di una tabella. Il numero può essere usato per stimare la selettività dei predicati nelle colonne. Un provider che supporta le statistiche di distribuzione deve supportare almeno un tipo di cardinalità.
 
 - **Istogrammi**. Se la distribuzione dei valori non è uniforme, il numero di valori univoci non è sufficiente per stimare con precisione la selettività dei predicati. In questo caso è possibile fornire un istogramma che offre informazioni specifiche sulla distribuzione dei valori di colonna in una tabella.
 
@@ -427,7 +428,7 @@ SQL Server usa l'oggetto errore OLE DB come specificato da OLE DB. Di seguito so
 
 Per altre informazioni sull'utilizzo dell'oggetto errore del provider, vedere la documentazione OLE DB.
 
-### <a name="security"></a>Security
+### <a name="security"></a>Sicurezza
 
 Quando un utente si connette a un provider OLE DB, il provider richiede in genere un ID utente e una password, a meno che l'utente non voglia essere autenticato come utente di sicurezza integrato. Nel caso di query distribuite, SQL Server agisce come utente del provider OLE DB per conto dell'account di accesso SQL Server che esegue la query distribuita. SQL Server esegue il mapping dell'account di accesso SQL Server corrente a un ID utente e una password nel server collegato.
 
