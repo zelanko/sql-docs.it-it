@@ -1,4 +1,5 @@
 ---
+description: Proprietà OriginalValue (ADO)
 title: Proprietà OriginalValue (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b46b9e76a397d81b339aef231634b3b16f717ce4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 13353013575db87f5ec30ceb8cf4a5aab6a06079
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762024"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443123"
 ---
 # <a name="originalvalue-property-ado"></a>Proprietà OriginalValue (ADO)
 Indica il valore di un [campo](../../../ado/reference/ado-api/field-object.md) esistente nel record prima che siano state apportate modifiche.  

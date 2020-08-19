@@ -1,4 +1,5 @@
 ---
+description: Proprietà Precision (ADO)
 title: Proprietà Precision (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a7a9b9a0a8416cb47adf8d959990ba1e39c60595
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4be9c3ae7e9f4cc8ac7f90b78b80ee96b64eaf5d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242595"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442703"
 ---
 # <a name="precision-property-ado"></a>Proprietà Precision (ADO)
 Indica il grado di precisione per i valori numerici in un oggetto [Parameter](../../../ado/reference/ado-api/parameter-object.md) o per gli oggetti [campo](../../../ado/reference/ado-api/field-object.md) numerico.  
@@ -29,7 +30,7 @@ Indica il grado di precisione per i valori numerici in un oggetto [Parameter](..
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **byte** che indica il numero massimo di cifre utilizzate per rappresentare i valori.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare la proprietà **Precision** per determinare il numero massimo di cifre utilizzate per rappresentare i valori per un **parametro** numerico o un oggetto **campo** .  
   
  Il valore è di lettura/scrittura su un oggetto **Parameter** .  

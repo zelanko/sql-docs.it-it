@@ -1,4 +1,5 @@
 ---
+description: ObjectProxy (sintassi ADO/WFC)
 title: ObjectProxy (sintassi ADO-WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ff9cd79b4ac787987ef44ea3f73cbd9fb102ae43
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7809c1b9ce4d090ed63465061045ea04000f47dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762320"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443033"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (sintassi ADO/WFC)
 Un oggetto **ObjectProxy** rappresenta un server e viene restituito dal metodo **CreateObject** dell'oggetto [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) . La classe ObjectProxy dispone di un metodo, **Call**, che può richiamare un metodo sul server e restituire un oggetto risultante da tale chiamata.  
@@ -49,4 +50,4 @@ public Object ObjectProxy.( String method, Object[] args)
  Stringa contenente il nome del metodo da richiamare sul server.  
   
  *args*  
- Facoltativa. Matrice di oggetti che sono argomenti del metodo nel server. I tipi di dati Java vengono automaticamente convertiti in tipi di dati appropriati per l'utilizzo nel server.
+ Facoltativo. Matrice di oggetti che sono argomenti del metodo nel server. I tipi di dati Java vengono automaticamente convertiti in tipi di dati appropriati per l'utilizzo nel server.

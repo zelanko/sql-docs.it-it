@@ -1,4 +1,5 @@
 ---
+description: Proprietà ParentURL (ADO)
 title: Proprietà ParentURL (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb0669abc03da183fc70c289631fed67bb41829d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8e8e171362e66c9809e646eb33cecfbad91f30df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442753"
 ---
 # <a name="parenturl-property-ado"></a>Proprietà ParentURL (ADO)
 Indica una stringa URL assoluta che punta al [record](../../../ado/reference/ado-api/record-object-ado.md) padre dell'oggetto **record** corrente.  

@@ -1,4 +1,5 @@
 ---
+description: Proprietà dinamica Prompt (ADO)
 title: Proprietà richiesta-dinamica (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e99273a94fc38779b50203d3dd5b78106f6a90c6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 337cfc2c0027f5c54ac5a9013975d50dc0f5d245
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761919"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442663"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Proprietà dinamica Prompt (ADO)
 Specifica se il provider di OLE DB deve richiedere all'utente le informazioni di inizializzazione.  
@@ -34,7 +35,7 @@ Specifica se il provider di OLE DB deve richiedere all'utente le informazioni di
 > [!NOTE]
 >  Non specificare che il provider deve richiedere all'utente in scenari in cui l'utente non sarà in grado di rispondere alla finestra di dialogo. Ad esempio, l'utente non sarà in grado di rispondere se l'applicazione è in esecuzione in un sistema server invece che nel client dell'utente oppure se l'applicazione è in esecuzione in un sistema senza utente connesso. In questi casi, l'applicazione attende indefinitamente una risposta e sembra bloccarsi.  
   
-## <a name="usage"></a>Usage  
+## <a name="usage"></a>Utilizzo  
   
 ```  
 Set cn = New Connection  

@@ -1,4 +1,5 @@
 ---
+description: Raccolta Parameters (ADO)
 title: Raccolta Parameters (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e087c769fe84e79ca9a41c33912f150249ab2cd9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 70a3554ed1ef0c94965e340f303cc3208c1962fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763392"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442763"
 ---
 # <a name="parameters-collection-ado"></a>Raccolta Parameters (ADO)
 Contiene tutti gli oggetti [Parameter](../../../ado/reference/ado-api/parameter-object.md) di un oggetto [Command](../../../ado/reference/ado-api/command-object-ado.md) .  

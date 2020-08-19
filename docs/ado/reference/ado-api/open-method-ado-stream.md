@@ -1,4 +1,5 @@
 ---
+description: Metodo Open (Stream - ADO)
 title: Metodo Open (flusso ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d59fcbbd7edea7ac87b2c080d27160cb98732759
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: baa3cb3eb5b2284a606362e31e0f185ab768c5f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442953"
 ---
 # <a name="open-method-ado-stream"></a>Metodo Open (Stream - ADO)
 Apre un oggetto [Stream](../../../ado/reference/ado-api/stream-object-ado.md) per modificare i flussi di dati binari o di testo.  
@@ -34,20 +35,20 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *origine*  
- Facoltativa. Valore **Variant** che specifica l'origine dei dati per il **flusso**. L' *origine* può contenere una stringa URL assoluta che punta a un nodo esistente in una struttura ad albero nota, ad esempio un messaggio di posta elettronica o un file System. È necessario specificare un URL tramite la parola chiave URL ("URL =*schema*://*Server* / *Folder*"). In alternativa, l' *origine* può contenere un riferimento a un oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) già aperto, che consente di aprire il flusso predefinito associato al **record**. Se l' *origine* non è specificata, per impostazione predefinita viene creata un'istanza e viene aperto un **flusso** , associato a nessuna origine sottostante. Per ulteriori informazioni sugli schemi URL e sui relativi provider associati, vedere [URL assoluto e relativo](../../../ado/guide/data/absolute-and-relative-urls.md).  
+ *Origine*  
+ Facoltativo. Valore **Variant** che specifica l'origine dei dati per il **flusso**. L' *origine* può contenere una stringa URL assoluta che punta a un nodo esistente in una struttura ad albero nota, ad esempio un messaggio di posta elettronica o un file System. È necessario specificare un URL tramite la parola chiave URL ("URL =*schema*://*Server* / *Folder*"). In alternativa, l' *origine* può contenere un riferimento a un oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) già aperto, che consente di aprire il flusso predefinito associato al **record**. Se l' *origine* non è specificata, per impostazione predefinita viene creata un'istanza e viene aperto un **flusso** , associato a nessuna origine sottostante. Per ulteriori informazioni sugli schemi URL e sui relativi provider associati, vedere [URL assoluto e relativo](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
  *Modalità*  
- Facoltativa. Valore [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) che specifica la modalità di accesso per il **flusso** risultante (ad esempio, di lettura/scrittura o di sola lettura). Il valore predefinito è **adModeUnknown**. Per ulteriori informazioni sulle modalità di accesso, vedere la proprietà [mode](../../../ado/reference/ado-api/mode-property-ado.md) . Se non si specifica *mode* , viene ereditato dall'oggetto di origine. Se, ad esempio, il **record** di origine viene aperto in modalità di sola lettura, per impostazione predefinita il **flusso** verrà aperto anche in modalità di sola lettura.  
+ Facoltativo. Valore [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) che specifica la modalità di accesso per il **flusso** risultante (ad esempio, di lettura/scrittura o di sola lettura). Il valore predefinito è **adModeUnknown**. Per ulteriori informazioni sulle modalità di accesso, vedere la proprietà [mode](../../../ado/reference/ado-api/mode-property-ado.md) . Se non si specifica *mode* , viene ereditato dall'oggetto di origine. Se, ad esempio, il **record** di origine viene aperto in modalità di sola lettura, per impostazione predefinita il **flusso** verrà aperto anche in modalità di sola lettura.  
   
  *OpenOptions*  
- Facoltativa. Valore [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) . Il valore predefinito è **adOpenStreamUnspecified**.  
+ Facoltativo. Valore [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) . Il valore predefinito è **adOpenStreamUnspecified**.  
   
- *Nome utente*  
- Facoltativa. Valore **stringa** che contiene l'identificazione dell'utente che, se necessario, accede all'oggetto **flusso** .  
+ *UserName*  
+ Facoltativo. Valore **stringa** che contiene l'identificazione dell'utente che, se necessario, accede all'oggetto **flusso** .  
   
  *Password*  
- Facoltativa. Valore **stringa** che contiene la password che, se necessaria, accede all'oggetto **flusso** .  
+ Facoltativo. Valore **stringa** che contiene la password che, se necessaria, accede all'oggetto **flusso** .  
   
 ## <a name="remarks"></a>Osservazioni  
  Quando un oggetto **record** viene passato come parametro di origine, i parametri *userid* e *password* non vengono utilizzati perché l'accesso all'oggetto **record** è già disponibile. Analogamente, la [modalità](../../../ado/reference/ado-api/mode-property-ado.md) dell'oggetto **record** viene trasferita all'oggetto **flusso** . Quando l' *origine* non è specificata, il **flusso** aperto non contiene dati e ha una [dimensione](../../../ado/reference/ado-api/size-property-ado-stream.md) pari a zero (0). Per evitare di perdere i dati scritti in questo **flusso** quando il **flusso** viene chiuso, salvare il **flusso** con i metodi [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) o [SaveToFile](../../../ado/reference/ado-api/savetofile-method.md) oppure salvarlo in un'altra posizione di memoria.  

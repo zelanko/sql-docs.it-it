@@ -1,4 +1,5 @@
 ---
+description: Proprietà Position (ADO)
 title: Proprietà Position (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f5669e22404ab75fc545708e1fc643cfefd3890a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d3402ebd39375957a224a020d441abbdc3379d71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442723"
 ---
 # <a name="position-property-ado"></a>Proprietà Position (ADO)
 Indica la posizione corrente all'interno di un oggetto [flusso](../../../ado/reference/ado-api/stream-object-ado.md) .  
