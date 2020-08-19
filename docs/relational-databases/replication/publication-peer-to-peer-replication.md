@@ -1,4 +1,5 @@
 ---
+description: Pubblicazione (replica peer-to-peer)
 title: Pubblicazione (replica peer-to-peer) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,16 +13,16 @@ f1_keywords:
 ms.assetid: 92794414-6e54-437a-88b6-3bf02d3802f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c7643560c893824247271f1eb56f2def90754c83
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0dd57684b0297596057b5288b5d7e8d81f26aa17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720899"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498621"
 ---
 # <a name="publication-peer-to-peer-replication"></a>Pubblicazione (replica peer-to-peer)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  La pagina **Pubblicazione** visualizza le pubblicazioni transazionali abilitate per la replica peer-to-peer. Le pubblicazioni vengono abilitate nella pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione** .  
+   La pagina **Pubblicazione** visualizza le pubblicazioni transazionali abilitate per la replica peer-to-peer. Le pubblicazioni vengono abilitate nella pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione** .  
   
 ## <a name="options"></a>Opzioni  
  **Autore**  

@@ -1,4 +1,5 @@
 ---
+description: Stored procedure-chiamata SQL Server Native Client
 title: Chiamata a una stored procedure (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -19,12 +20,12 @@ ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a08e03bf4fed86d7da0f341e6bf2b74d0ef84a9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3a2a97a7ac060e22ee352324a454f321e1c7d1f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243874"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498818"
 ---
 # <a name="stored-procedures---calling-in-sql-server-native-client"></a>Stored procedure-chiamata SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -122,7 +123,7 @@ ms.locfileid: "87243874"
 ### <a name="transact-sql-execute-statement"></a>Istruzione Transact-SQL EXECUTE  
  La sequenza di escape ODBC CALL e la sequenza di escape RPC rappresentano i metodi preferiti per la chiamata a una stored procedure rispetto all'istruzione [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native client utilizza il meccanismo RPC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per ottimizzare l'elaborazione del comando. Questo protocollo RPC migliora le prestazioni riducendo l'elaborazione dei parametri e l'analisi delle istruzioni eseguite sul server.  
   
- Di seguito è riportato un esempio dell'istruzione  **EXECUTE** di [!INCLUDE[tsql](../../../includes/tsql-md.md)]:  
+ Di seguito è riportato un esempio dell'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)]EXECUTE**di**:  
   
 ```  
 EXECUTE SalesByCategory 'Produce', '1995'  

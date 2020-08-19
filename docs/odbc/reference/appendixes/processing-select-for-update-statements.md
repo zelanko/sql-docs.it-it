@@ -1,4 +1,5 @@
 ---
+description: Elaborazione di istruzioni SELECT FOR UPDATE
 title: Elaborazione della selezione per le istruzioni UPDATE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8d2e79a4-5daf-458e-a536-d8b6e588753e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 904028cd7b3798fcac8f9e5afa6186fae3e9fa29
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 74d32298ca9303c0c82a0810e558cace6b957b8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81308012"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483187"
 ---
 # <a name="processing-select-for-update-statements"></a>Elaborazione di istruzioni SELECT FOR UPDATE
 > [!IMPORTANT]  

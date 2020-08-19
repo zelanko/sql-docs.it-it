@@ -1,4 +1,5 @@
 ---
+description: Confronto tra l'attività Script e il componente script
 title: Confronto tra l'attività Script e il componente script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 808e2fa48eee5deb6d9e612a1c2dd57e5d5b7813
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 732de7f6d7c9e75d436dca721b370f63a46a4c60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913467"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430323"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>Confronto tra l'attività Script e il componente script
 
@@ -32,7 +33,7 @@ ms.locfileid: "86913467"
 ## <a name="similarities-between-the-script-task-and-the-script-component"></a>Analogie tra l'attività Script e il componente script  
  L'attività Script e il componente Script condividono le caratteristiche comuni seguenti.  
   
-|Funzionalità|Descrizione|  
+|Feature|Descrizione|  
 |-------------|-----------------|  
 |Due modalità della fase di progettazione|Nell'attività e nel componente si inizia specificando proprietà nell'editor e quindi si passa all'ambiente di sviluppo per scrivere codice.|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)|L'attività e il componente utilizzano entrambi lo stesso IDE di VSTA e supportano codice scritto in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.|  
@@ -42,7 +43,7 @@ ms.locfileid: "86913467"
 ## <a name="differences-between-the-script-task-and-the-script-component"></a>Differenze tra l'attività Script e il componente script  
  L'attività Script e il componente script presentano le seguenti differenze di rilievo.  
   
-|Funzionalità|Attività Script|Componente script|  
+|Feature|Attività Script|Componente script|  
 |-------------|-----------------|----------------------|  
 |Flusso di controllo/flusso di dati|L'attività Script viene configurata nella scheda Flusso di controllo della finestra di progettazione e viene eseguita all'esterno del flusso di dati del pacchetto.|Il componente script viene configurato nella pagina Flusso di dati della finestra di progettazione e rappresenta un'origine, una trasformazione o una destinazione nell'attività Flusso di dati.|  
 |Scopo|Un'attività Script è in grado di completare qualsiasi attività generica.|È necessario specificare se si desidera creare un'origine, una trasformazione o una destinazione con il componente script.|  

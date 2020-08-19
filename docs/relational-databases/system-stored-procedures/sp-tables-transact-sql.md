@@ -1,4 +1,5 @@
 ---
+description: sp_tables (Transact-SQL)
 title: sp_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a11d686bef327e4e3daba1ed5365289f78169853
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 66081d1f9dd7af2e368aea4d00d645bf62317d83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173103"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469185"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,20 +49,20 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @table_name = ] 'name'`Tabella utilizzata per restituire le informazioni del catalogo. *Name* è di **tipo nvarchar (384)** e il valore predefinito è null. La ricerca con caratteri jolly è supportata.  
+`[ @table_name = ] 'name'` Tabella utilizzata per restituire le informazioni del catalogo. *Name* è di **tipo nvarchar (384)** e il valore predefinito è null. La ricerca con caratteri jolly è supportata.  
   
-`[ @table_owner = ] 'owner'`Proprietario della tabella utilizzata per restituire le informazioni del catalogo. *owner* è di **tipo nvarchar (384)** e il valore predefinito è null. La ricerca con caratteri jolly è supportata. Se owner viene omesso, vengono applicate le regole di visibilità della tabella predefinite nel sistema DBMS sottostante.  
+`[ @table_owner = ] 'owner'` Proprietario della tabella utilizzata per restituire le informazioni del catalogo. *owner* è di **tipo nvarchar (384)** e il valore predefinito è null. La ricerca con caratteri jolly è supportata. Se owner viene omesso, vengono applicate le regole di visibilità della tabella predefinite nel sistema DBMS sottostante.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se l'utente corrente è il proprietario di una tabella con il nome specificato, vengono restituite le colonne di tale tabella. Se owner viene omesso e l'utente corrente non è il proprietario di una tabella avente il nome specificato, viene eseguita la ricerca di una tabella avente il nome specificato e il cui proprietario corrisponde al proprietario del database. Se viene individuata, vengono restituite le colonne di tale tabella.  
   
-`[ @table_qualifier = ] 'qualifier'`Nome del qualificatore di tabella. *Qualifier* è di **tipo sysname**e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle (_qualificatore_**.** _proprietario_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
+`[ @table_qualifier = ] 'qualifier'` Nome del qualificatore di tabella. *Qualifier* è di **tipo sysname**e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle (_qualificatore_**.** _proprietario_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
-``[ , [ @table_type = ] "'type', 'type'" ]``Elenco di valori separati da virgole, che fornisce informazioni su tutte le tabelle dei tipi di tabella specificati. Sono incluse **Table**, **SYSTEMTABLE**e **View**. il *tipo* è **varchar (100)** e il valore predefinito è null.  
+``[ , [ @table_type = ] "'type', 'type'" ]`` Elenco di valori separati da virgole, che fornisce informazioni su tutte le tabelle dei tipi di tabella specificati. Sono incluse **Table**, **SYSTEMTABLE**e **View**. il *tipo* è **varchar (100)** e il valore predefinito è null.  
   
 > [!NOTE]  
 >  È necessario racchiudere ogni tipo di tabella tra virgolette singole e l'intero parametro tra virgolette doppie. I tipi di tabella devono essere specificati in maiuscolo. Se l'opzione SET QUOTED_IDENTIFIER è impostata su ON, è necessario sostituire le virgolette singole con quelle doppie e racchiudere l'intero parametro tra virgolette singole.  
   
-`[ @fUsePattern = ] 'fUsePattern'`Determina se i caratteri di sottolineatura (_), percentuale (%) e parentesi quadra ([o]) vengono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* è di **bit**e il valore predefinito è 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Determina se i caratteri di sottolineatura (_), percentuale (%) e parentesi quadra ([o]) vengono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* è di **bit**e il valore predefinito è 1.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  nessuno  
@@ -129,7 +130,7 @@ EXEC sp_tables
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. sinonimi &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
+ [sys. sinonimi &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Uso di file di Excel con l'attività Script
 title: Uso di file di Excel con l'attività Script | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2018
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f851b7a3cbbf665838a8b8c6d6af19cc0797040e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1016c9746ba1cfe266ef944eeb66f7c0327d69dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921084"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430353"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Uso di file di Excel con l'attività Script
 
@@ -90,7 +91,7 @@ ms.locfileid: "86921084"
   
          -oppure-  
   
-    -   Fare clic sul pulsante con i puntini di sospensione ( **...** ) accanto al campo della proprietà e selezionare la variabile **ExcelFileExists** nella finestra di dialogo **Seleziona variabili**.  
+    -   Fare clic sul pulsante con i puntini di sospensione (**...**) accanto al campo della proprietà e selezionare la variabile **ExcelFileExists** nella finestra di dialogo **Seleziona variabili**.  
   
 4.  Fare clic su **Modifica script** per aprire l'editor di script.  
   
@@ -152,7 +153,7 @@ public class ScriptMain
   
          -oppure-  
   
-    -   Fare clic sul pulsante con i puntini di sospensione ( **...** ) accanto al campo della proprietà e selezionare le variabili **ExcelTable** e **ExcelFile** nella finestra di dialogo **Seleziona variabili**.  
+    -   Fare clic sul pulsante con i puntini di sospensione (**...**) accanto al campo della proprietà e selezionare le variabili **ExcelTable** e **ExcelFile** nella finestra di dialogo **Seleziona variabili**.  
   
 3.  Fare clic su **ReadWriteVariables** e immettere il valore della proprietà usando uno dei metodi seguenti:  
   
@@ -160,7 +161,7 @@ public class ScriptMain
   
          -oppure-  
   
-    -   Fare clic sul pulsante con i puntini di sospensione ( **...** ) accanto al campo della proprietà e selezionare la variabile **ExcelTableExists** nella finestra di dialogo **Seleziona variabili**.  
+    -   Fare clic sul pulsante con i puntini di sospensione (**...**) accanto al campo della proprietà e selezionare la variabile **ExcelTableExists** nella finestra di dialogo **Seleziona variabili**.  
   
 4.  Fare clic su **Modifica script** per aprire l'editor di script.  
   
@@ -537,7 +538,7 @@ public class ScriptMain
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Caricare i dati da o in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
+ [Caricare dati da o in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
  [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
   

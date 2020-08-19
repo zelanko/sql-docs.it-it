@@ -1,4 +1,5 @@
 ---
+description: Utilizzo dei dati multidimensionali
 title: Utilizzo di dati multidimensionali | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dcd4839fc984dacddc79f54b350a98cdbe53355b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7c37f18f8bcaa3d0c1f78b3ddb8d0c6413fe7277
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452393"
 ---
 # <a name="working-with-multidimensional-data"></a>Utilizzo dei dati multidimensionali
 Un *celle* è il risultato di una query sui dati multidimensionali. È costituito da una raccolta di assi, in genere non più di quattro assi e in genere solo due o tre. Un *asse* è una raccolta di membri di una o più dimensioni, utilizzata per individuare o filtrare valori specifici in un cubo.  
@@ -30,7 +31,7 @@ Un *celle* è il risultato di una query sui dati multidimensionali. È costituit
   
  Un cubo, ad esempio, ha le sei dimensioni seguenti (si noti che questo schema del cubo è leggermente diverso dall'esempio fornito in [Panoramica di schemi e dati multidimensionali](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)):  
   
--   Addetto/a alle vendite  
+-   Salesperson  
   
 -   Geografia (gerarchia naturale)-continenti, Paesi, Stati e così via  
   

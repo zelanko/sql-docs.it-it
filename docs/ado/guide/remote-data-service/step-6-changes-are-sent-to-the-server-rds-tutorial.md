@@ -1,4 +1,5 @@
 ---
+description: 'Passaggio 6: Le modifiche vengono inviate al server (esercitazione su RDS)'
 title: 'Passaggio 6: le modifiche vengono inviate al server (esercitazione su RDS) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2094562f03f768ad6c98feccd0ed4a1e932a8fca
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e2a52faceafdde92acb3aed1e2a1b765594777e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764642"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451903"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Passaggio 6: Le modifiche vengono inviate al server (esercitazione su RDS)
 Se l'oggetto **Recordset** viene modificato, tutte le modifiche, ovvero le righe aggiunte, modificate o eliminate, possono essere inviate nuovamente al server.  

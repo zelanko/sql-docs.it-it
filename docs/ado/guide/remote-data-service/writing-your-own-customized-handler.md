@@ -1,4 +1,5 @@
 ---
+description: Scrittura di un gestore personalizzato
 title: Scrittura di un gestore personalizzato | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd7aec0e98afd09b30c4e4d67102d1333efdcdd6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 73e71438b7f49472dff8c3f4732c541222598b08
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747608"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451843"
 ---
 # <a name="writing-your-own-customized-handler"></a>Scrittura di un gestore personalizzato
 È possibile scrivere un gestore personalizzato se si è un amministratore del server IIS che desidera il supporto per Servizi Desktop remoto predefinito, ma maggiore controllo sulle richieste e sui diritti di accesso degli utenti.  
@@ -36,19 +37,19 @@ ms.locfileid: "82747608"
 ## <a name="getrecordset-method"></a>Metodo GetRecordSet  
  Questo metodo esegue una query sull'origine dati e crea un nuovo oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) usando gli argomenti forniti. Il **Recordset** deve essere aperto con **adLockBatchOptimistic** e non deve essere aperto in modo asincrono.  
   
-### <a name="arguments"></a>Arguments  
+### <a name="arguments"></a>Argomenti  
  ***conn***  Stringa di connessione.  
   
  ***argomenti***  Argomenti per il gestore.  
   
- ***query*** di  Testo del comando per eseguire una query.  
+ ***query***  di  Testo del comando per eseguire una query.  
   
  ***PPRS***  Puntatore in cui deve essere restituito il **Recordset** .  
   
 ## <a name="reconnect-method"></a>Metodo di riconnessione  
  Questo metodo aggiorna l'origine dati. Viene creato un nuovo oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) e il **Recordset**specificato viene collegato.  
   
-### <a name="arguments"></a>Arguments  
+### <a name="arguments"></a>Argomenti  
  ***conn***  Stringa di connessione.  
   
  ***argomenti***  Argomenti per il gestore.  

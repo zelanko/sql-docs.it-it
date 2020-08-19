@@ -1,4 +1,5 @@
 ---
+description: Considerazioni sulla sicurezza per XML
 title: Considerazioni sulla sicurezza XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab98aaf7bb2a0f4887df5a1c2276fe0df8862972
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 76ec899a26485a81a5ec81006d0dbd4c838738dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452493"
 ---
 # <a name="xml-security-considerations"></a>Considerazioni sulla sicurezza per XML
 I metodi ADO Save e Open sull'oggetto recordset non sono considerati operazioni sicure per l'esecuzione in Internet Explorer. Pertanto, se questi metodi vengono utilizzati in un codice di script in esecuzione in un'applicazione o in un controllo ospitato in un browser, la configurazione di sicurezza del browser avrà effetto sul comportamento.  

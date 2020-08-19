@@ -1,4 +1,5 @@
 ---
+description: Eseguire un pacchetto SSIS da SSMS con Transact-SQL
 title: Eseguire un pacchetto SSIS con Transact-SQL (SSMS) | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a2526e630468ca7b58a0b21c8d63845b6978fdd8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: afd8fb3bf9b77eaaf5ee69728fafd83ed4f63889
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430113"
 ---
 # <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>Eseguire un pacchetto SSIS da SSMS con Transact-SQL
 
@@ -24,7 +25,7 @@ Questa guida introduttiva illustra come usare SQL Server Management Studio (SSMS
 
 SQL Server Management Studio è un ambiente integrato per la gestione di qualsiasi infrastruttura SQL, da SQL Server al database SQL. Per altre informazioni su SSMS, vedere [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Prima di iniziare, verificare di avere l'ultima versione di SQL Server Management Studio (SSMS). Per scaricare SSMS, vedere [Scaricare SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 

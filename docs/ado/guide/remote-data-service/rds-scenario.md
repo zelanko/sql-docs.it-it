@@ -1,4 +1,5 @@
 ---
+description: Scenario RDS
 title: Scenario RDS | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d73bb03ceb08e61257c0e4fc6d3f6a627ddb746d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f5a1058b23c92160b039d2cb439d429b46bfcb98
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452093"
 ---
 # <a name="rds-scenario"></a>Scenario RDS
 > [!IMPORTANT]
@@ -35,13 +36,13 @@ ms.locfileid: "82763582"
   
  L'interfaccia dell'applicazione è costituita dalle parti seguenti:  
   
--   RDS non visuale **. **Oggetto di associazione dati DataControl utilizzato dal client per connettersi al database.  
+-   RDS non visuale **. ** Oggetto di associazione dati DataControl utilizzato dal client per connettersi al database.  
   
 -   Caselle di testo HTML che fungono da campi di input per i criteri di ricerca degli attributi Employee.  
   
 -   Pulsanti di comando HTML per compilare query, cancellare i campi di ricerca, aggiornare il database con le informazioni sui dipendenti, annullare le modifiche in sospeso e spostarsi tra le righe di dati visualizzate nella griglia.  
   
--   Il data binding DHTML per visualizzare i dati restituiti dalle query su un database back-end (tramite **RDS. **Oggetto di associazione dati di DataControl) in una tabella.  
+-   Il data binding DHTML per visualizzare i dati restituiti dalle query su un database back-end (tramite **RDS. ** Oggetto di associazione dati di DataControl) in una tabella.  
   
 -   Routine VBScript che connettono ogni elemento precedentemente indicato e consentono loro di interagire. Il codice VBScript viene utilizzato anche per inizializzare il Servizi Desktop remoto **. Oggetto DataControl** e creazione dinamica delle intestazioni di colonna nella tabella HTML dai nomi del Servizi Desktop remoto **. Campi recordset DataControl** .  
   

@@ -1,4 +1,5 @@
 ---
+description: 'Passaggio 2: Inizializzare la casella di riepilogo Main'
 title: 'Passaggio 2: inizializzare la casella di riepilogo principale | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6aaf4d87e4e01e6f32e1d681d93e5a2291c3999
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c6ad5bdd6b8fbf294a1c4f45a825910ec6a82af2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452803"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>Passaggio 2: Inizializzare la casella di riepilogo Main
 Per dichiarare oggetti record e recordset globali, inserire il codice seguente in (General) (dichiarazioni) per Form1:  

@@ -1,4 +1,5 @@
 ---
+description: Supporto delle transazioni locali in SQL Server Native Client
 title: Supporto di transazioni locali (provider OLE DB Native Client)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 78f2e5fc-b6fb-4eda-9f71-991a4d6c4902
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39de80135212acb962953c1054187e4d04e61af8
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: d39825cbf19ffdb00f1031c603fb99337f7c2eb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332278"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498944"
 ---
 # <a name="supporting-local-transactions-in-sql-server-native-client"></a>Supporto delle transazioni locali in SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -130,6 +131,6 @@ if (FAILED(hr))
   
 ## <a name="see-also"></a>Vedere anche  
  [Transazioni](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
- [Utilizzo dell'isolamento dello snapshot](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
+ [Uso dell'isolamento dello snapshot](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
   
   

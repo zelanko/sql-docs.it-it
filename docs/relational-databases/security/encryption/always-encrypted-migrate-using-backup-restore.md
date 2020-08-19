@@ -1,4 +1,5 @@
 ---
+description: Eseguire il backup e il ripristino di database con Always Encrypted
 title: Eseguire il backup e il ripristino di database con Always Encrypted | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2019
@@ -10,12 +11,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb529b9cc518cd7802dfdbbddba8b88e399dbcba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ff78b0f657e70a16051531f1a0bea3fdc5cfe7d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475520"
 ---
 # <a name="backup-and-restore-databases-using-always-encrypted"></a>Eseguire il backup e il ripristino di database con Always Encrypted 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +30,7 @@ Quando si ripristina un database, vengono ripristinati anche tutti i dati critto
 Se il database viene ripristinato in un altro server o con un nome diverso, non è necessario compiere alcuna operazione particolare per consentire all'applicazione di eseguire query sui dati crittografati nel database di destinazione, poiché le chiavi dei due database sono uguali.
 
 Per informazioni dettagliate su come eseguire il backup e il ripristino di un database, vedere:
-- [Panoramica del backup (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
+- [Backup Overview (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
 - [Ripristinare un database in un'istanza gestita](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started-restore)
 
 ## <a name="next-steps"></a>Passaggi successivi

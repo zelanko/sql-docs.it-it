@@ -1,4 +1,5 @@
 ---
+description: Scrittura di codice e debug dell'attività Script
 title: Codifica e debug dell'attività Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2ccf1b65fdbdd5493dd5e62e9e19b90fb72d8746
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 203c87b39165330d7d58106c4a4d888af11e9751
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915179"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430283"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Scrittura di codice e debug dell'attività Script
 

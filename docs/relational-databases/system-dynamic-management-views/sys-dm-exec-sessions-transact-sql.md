@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_sessions (Transact-SQL)
 title: sys. dm_exec_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
@@ -20,12 +21,12 @@ ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eff5e947caed2471d63c980418688f6945c78b21
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 364b8c255054d10d8ae7ee10d1231ade99615bde
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734683"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490021"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -88,13 +89,13 @@ ms.locfileid: "85734683"
 |database_id|**smallint**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> ID del database corrente per ogni sessione.|  
 |authenticating_database_id|**int**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> ID del database che ha eseguito l'autenticazione dell'entità. Per gli account di accesso, il valore sarà 0. Per gli utenti di database indipendenti, il valore sarà l'ID del database indipendente.|  
 |open_transaction_count|**int**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Numero di transazioni aperte per sessione.|  
-|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
+|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
 |page_server_reads|**bigint**|**Si applica a**: iperscalabilità del database SQL di Azure<br /><br /> Numero di letture di pagine del server eseguite dalle richieste della sessione durante la sessione. Non ammette i valori Null.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
 Tutti possono visualizzare le proprie informazioni sulla sessione.  
 ** [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] :** È richiesta l' `VIEW SERVER STATE` autorizzazione [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] per per visualizzare tutte le sessioni nel server.  
-** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Richiede `VIEW DATABASE STATE` per visualizzare tutte le connessioni al database corrente. `VIEW DATABASE STATE`non è possibile concedere nel `master` database. 
+** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Richiede `VIEW DATABASE STATE` per visualizzare tutte le connessioni al database corrente. `VIEW DATABASE STATE` non è possibile concedere nel `master` database. 
   
   
 ## <a name="remarks"></a>Osservazioni  
@@ -184,7 +185,7 @@ WHERE c.session_id = @@SPID;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

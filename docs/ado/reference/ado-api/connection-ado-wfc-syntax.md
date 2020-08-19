@@ -1,4 +1,5 @@
 ---
+description: Connection (sintassi ADO/WFC)
 title: Connection (sintassi ADO-WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b8602b170d4c067744fd002a98c949b8d0836d2e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4a9d467a2ab9073bd287fd0cf6a3fc36c60cabda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760307"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444523"
 ---
 # <a name="connection-ado---wfc-syntax"></a>Connection (sintassi ADO/WFC)
 ## <a name="package-commswfcdata"></a>pacchetto com. ms. wfc. Data  
@@ -44,7 +45,7 @@ public int executeUpdate(String commandText)
 public int executeUpdate(String commandText, int options)  
 ```  
   
- Il metodo **ExecuteUpdate** è un metodo di caso speciale che chiama il metodo ADO **Execute** sottostante con determinati parametri. Il **metodo ExecuteUpdate** non supporta la restituzione di un oggetto **Recordset** , quindi il parametro *options* del metodo **Execute** viene modificato con **AdoEnums. ExecuteOptions. NORECORDS**. Una volta completato il metodo **Execute** , il relativo parametro *RecordsAffected* aggiornato viene passato nuovamente al metodo **ExecuteUpdate** , che viene infine restituito come **int**.  
+ Il metodo **ExecuteUpdate** è un metodo di caso speciale che chiama il metodo ADO **Execute** sottostante con determinati parametri. Il **metodo ExecuteUpdate** non supporta la restituzione di un oggetto **Recordset** , quindi il parametro *options* del metodo **Execute** viene modificato con **AdoEnums.ExecuteOptions. NORECORDS**. Una volta completato il metodo **Execute** , il relativo parametro *RecordsAffected* aggiornato viene passato nuovamente al metodo **ExecuteUpdate** , che viene infine restituito come **int**.  
   
 ```  
 public void open()   

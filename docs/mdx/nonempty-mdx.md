@@ -1,4 +1,5 @@
 ---
+description: NonEmpty (MDX)
 title: Non Empty (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 45daf970f69322cad36bbe5419bf1dc8cc8009b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b887988327908f128633349de52f39a17d1e0978
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088337"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483724"
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (MDX)
 
@@ -38,7 +39,7 @@ NONEMPTY(set_expression1 [,set_expression2])
  Questa funzione restituisce le tuple del primo set specificato che risultano non vuote quando vengono valutate sulle tuple del secondo set. La funzione **NonEmpty** prende in considerazione i calcoli e conserva le tuple duplicate. Se non viene specificato un secondo set, l'espressione viene valutata nel contesto delle coordinate correnti dei membri delle gerarchie degli attributi e delle misure del cubo.  
   
 > [!NOTE]  
->  Usare questa funzione invece della funzione deprecata [NonEmptyCrossjoin &#40;&#41;MDX](../mdx/nonemptycrossjoin-mdx.md) .  
+>  Usare questa funzione invece della funzione deprecata [NonEmptyCrossjoin &#40;&#41;MDX ](../mdx/nonemptycrossjoin-mdx.md) .  
   
 > [!IMPORTANT]  
 >  Non sono le tuple a essere non vuote, bensì le celle a cui fanno riferimento le tuple.  
@@ -87,10 +88,10 @@ NONEMPTY(set_expression1 [,set_expression2])
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [DefaultMember &#40;&#41;MDX](../mdx/defaultmember-mdx.md)   
- [Filtrare &#40;&#41;MDX](../mdx/filter-mdx.md)   
+ [DefaultMember &#40;&#41;MDX ](../mdx/defaultmember-mdx.md)   
+ [Filtrare &#40;&#41;MDX ](../mdx/filter-mdx.md)   
  [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)   
- [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)   
- [NonEmptyCrossjoin &#40;&#41;MDX](../mdx/nonemptycrossjoin-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX ](../mdx/mdx-function-reference-mdx.md)   
+ [NonEmptyCrossjoin &#40;&#41;MDX ](../mdx/nonemptycrossjoin-mdx.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
 title: sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c1ec70cea37a8cfcb0b017a98989d00c445860d8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4591c3b20702923d7f9ea418951b8510977dc840
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891461"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469150"
 ---
 # <a name="sp_syspolicy_unsubscribe_from_policy_category-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_cat
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @policy_category = ] 'policy_category'`Nome della sottoscrizione di categoria di criteri che si desidera eliminare. *policy_category* è di **tipo sysname**ed è obbligatorio.  
+`[ @policy_category = ] 'policy_category'` Nome della sottoscrizione di categoria di criteri che si desidera eliminare. *policy_category* è di **tipo sysname**ed è obbligatorio.  
   
  Per ottenere i valori per *policy_category*, eseguire una query sulla vista di sistema msdb.dbo.syspolicy_policy_categories.  
   
@@ -64,7 +65,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure per la gestione basata su criteri &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_subscribe_to_policy_category &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-subscribe-to-policy-category-transact-sql.md)  
+ [Stored procedure per la gestione basata su criteri &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_subscribe_to_policy_category &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-subscribe-to-policy-category-transact-sql.md)  
   
   

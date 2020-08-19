@@ -1,4 +1,5 @@
 ---
+description: Origini dati di file
 title: Origini dati file | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0661aa424a7a118b8b12f4bf8433987ff83bd788
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d02c767adab90ee4a7b6ff93a34886c03b87780c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306652"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429043"
 ---
 # <a name="file-data-sources"></a>Origini dati di file
 Le *origini dati dei file* vengono archiviate in un file e consentono di usare le informazioni di connessione ripetutamente da un singolo utente o condivise tra più utenti. Quando si utilizza un'origine dati file, gestione driver esegue la connessione all'origine dati utilizzando le informazioni contenute in un file con estensione DSN. Questo file può essere modificato in modo analogo a qualsiasi altro file. Un'origine dati file non dispone di un nome di origine dati, così come un'origine dati del computer, e non è registrata per un utente o un computer.  

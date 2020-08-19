@@ -1,4 +1,5 @@
 ---
+description: Provider OLE DB per Internet Publishing
 title: Provider di OLE DB per la pubblicazione Internet | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 813b7e108f375fdbd22ba10761678907aea912f6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d7203dd65a652cfdc71c088777ac9dd42d1da098
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759057"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452733"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>Provider OLE DB per Internet Publishing
 Il [record](../../../ado/reference/ado-api/record-object-ado.md) ADO e gli oggetti [flusso](../../../ado/reference/ado-api/stream-object-ado.md) possono essere utilizzati con il provider Microsoft OLE DB per Internet Publishing (Internet Publishing Provider) per accedere e modificare le risorse, ad esempio le cartelle Web o i file serviti da Microsoft FrontPage. Con ADO è possibile specificare l'origine di un **record**, di un **flusso**o di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) come URL. È quindi possibile caricare, scaricare, spostare, copiare ed eliminare risorse oppure modificare direttamente le proprietà delle risorse.  

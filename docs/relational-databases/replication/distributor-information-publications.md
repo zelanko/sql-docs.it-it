@@ -1,4 +1,5 @@
 ---
+description: Informazioni sul server di distribuzione, Pubblicazioni
 title: Informazioni sul database di distribuzione, Pubblicazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 11/20/2018
@@ -17,12 +18,12 @@ ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 63d70982c38a84b4765331c4a978cc276fe749ac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e2cdb7832e97c575af79c322e1cd21d1d8f09f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498764"
 ---
 # <a name="distributor-information-publications"></a>Informazioni sul server di distribuzione, Pubblicazioni
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +43,7 @@ Nelle informazioni visualizzate relative alle pubblicazioni supportate dal serve
   Nelle informazioni per le sottoscrizioni delle pubblicazioni snapshot è incluso il nome del server di pubblicazione. In caso contrario, la funzionalità e le informazioni fornite in questa finestra di dialogo sono le stesse della vista Server di pubblicazione. Per altre informazioni su come usare questa finestra di dialogo, vedere [Informazioni sul server di pubblicazione, Elenco verifica sottoscrizioni &#40;pubblicazione snapshot, SQL Server 2005 e versioni successive&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md).  
 
 ## <a name="agents"></a>Agenti
-Nella scheda **Agenti** vengono visualizzate le informazioni sugli agenti e sui processi di manutenzione associati al server di pubblicazione e al Sottoscrittore.  
+ Nella scheda **Agenti** sono visualizzate le informazioni sugli agenti e sui processi di manutenzione associati al server di pubblicazione e al Sottoscrittore.  
   
  Tra gli agenti disponibili nella scheda **Agenti** per un server di distribuzione nella vista Server di distribuzione sono inclusi tutti gli agenti disponibili nella scheda **Agenti** per un server di pubblicazione. Tuttavia, in **tale scheda** sono inclusi anche un agente del server di distribuzione e un agente di merge.  
   
@@ -64,7 +65,7 @@ Nella scheda **Agenti** vengono visualizzate le informazioni sugli agenti e sui 
  **Autore**  
  Istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del server di pubblicazione.  
   
- **Pubblicazione**  
+ **Publication**  
  Nome della pubblicazione a cui è associato l'agente.  
   
  **Sottoscrizione**  
@@ -114,7 +115,7 @@ Nella scheda **Agenti** vengono visualizzate le informazioni sugli agenti e sui 
  **Autore**  
  Istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del server di pubblicazione.  
   
- **Pubblicazione**  
+ **Publication**  
  Nome della pubblicazione a cui è associato l'agente.  
   
  **Sottoscrizione**  

@@ -1,4 +1,5 @@
 ---
+description: Esempio del metodo AddNew (JScript)
 title: Esempio di metodo AddNew (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3943b06e623eca2e90a3a5a3aeefaf2dede83bb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3c1e4ca8f4019153620494a3b6d945d9fdb75338
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451573"
 ---
 # <a name="addnew-method-example-jscript"></a>Esempio del metodo AddNew (JScript)
 In questo esempio viene usato il metodo [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) per creare un nuovo record con il nome specificato. Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **AddNewJS. asp**.  

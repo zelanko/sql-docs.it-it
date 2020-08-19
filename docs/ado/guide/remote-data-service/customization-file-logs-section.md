@@ -1,4 +1,5 @@
 ---
+description: Sezione Logs del file di personalizzazione
 title: Sezione log file di personalizzazione | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3be02570fbff1efd9adb091c121d4eb1a8782817
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 365b57f174f289317a7e8b3e09fe0c29b051ef64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749961"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452253"
 ---
 # <a name="customization-file-logs-section"></a>Sezione Logs del file di personalizzazione
 La sezione **logs** contiene una voce del file di log che specifica il nome di un file che registra errori durante il funzionamento della **DataFactory**.  
@@ -36,7 +37,7 @@ FileName
   
 ```  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
   
 |Parte|Descrizione|  
 |----------|-----------------|  

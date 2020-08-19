@@ -1,4 +1,5 @@
 ---
+description: 'Errore del server Internet: Accesso negato'
 title: 'Errore del server Internet: accesso negato | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e5b43cfa-da8d-430d-a2ab-5443dda47a16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 93761afa168d8b6b2cd06cf5e1360d54fa5177c6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 970c9c09946cebe74684e6aecc997e56213b1a97
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452173"
 ---
 # <a name="internet-server-error-access-denied"></a>Errore del server Internet: Accesso negato
 Se viene visualizzato questo errore, in genere significa che Microsoft Internet Information Services (IIS) ha restituito lo stato seguente:  

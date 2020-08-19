@@ -1,4 +1,5 @@
 ---
+description: Elaborazione di istruzioni SQL
 title: Elaborazione di istruzioni SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 54dad6a3-e86c-477b-ba7c-4e95e0385ec1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eda640f6e810eeccbfa17ea2b6ba7c1b19b28e08
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 381bb7bbc27fc74b5d57fbb01b6a80f17305f5cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81308002"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483193"
 ---
 # <a name="processing-sql-statements"></a>Elaborazione di istruzioni SQL
 > [!IMPORTANT]  

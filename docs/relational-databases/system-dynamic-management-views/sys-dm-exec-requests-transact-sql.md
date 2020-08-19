@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_requests (Transact-SQL)
 title: sys. dm_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/01/2019
@@ -20,12 +21,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44c20aeed09468b9f2e0cc7047364f563e463daf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 375dc6e15f8bf592ff3d5d9e8f9388f188008d3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734687"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489966"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -104,7 +105,7 @@ Per eseguire codice esterno a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 Quando si eseguono richieste parallele in [modalità riga](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna un thread di lavoro per coordinare i thread di lavoro responsabili del completamento delle attività ad essi assegnati. In questa DMV solo il thread coordinatore è visibile per la richiesta. Le colonne **Read**, **writes**, **logical_reads**e **ROW_COUNT** **non vengono aggiornate** per il thread coordinatore. Le colonne **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**e **granted_query_memory** vengono **aggiornate solo** per il thread coordinatore. Per altre informazioni, vedere [Guida sull'architettura dei thread e delle attività](../../relational-databases/thread-and-task-architecture-guide.md).
 
 ## <a name="permissions"></a>Autorizzazioni
-Se l'utente dispone dell' `VIEW SERVER STATE` autorizzazione per il server, l'utente visualizzerà tutte le sessioni in esecuzione nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . in caso contrario, l'utente visualizzerà solo la sessione corrente. `VIEW SERVER STATE`non può essere concesso nel database SQL di Azure `sys.dm_exec_requests` , pertanto è sempre limitato alla connessione corrente.
+Se l'utente dispone dell' `VIEW SERVER STATE` autorizzazione per il server, l'utente visualizzerà tutte le sessioni in esecuzione nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . in caso contrario, l'utente visualizzerà solo la sessione corrente. `VIEW SERVER STATE` non può essere concesso nel database SQL di Azure `sys.dm_exec_requests` , pertanto è sempre limitato alla connessione corrente.
 
 Negli scenari always-on, se la replica secondaria è impostata **solo per finalità di lettura**, la connessione al database secondario deve specificare la finalità dell'applicazione nei parametri della stringa di connessione aggiungendo `applicationintent=readonly` . In caso contrario, il controllo di accesso per `sys.dm_exec_requests` non passerà per i database nel gruppo di disponibilità, anche se `VIEW SERVER STATE` è presente l'autorizzazione.
 

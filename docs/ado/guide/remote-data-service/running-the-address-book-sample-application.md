@@ -1,4 +1,5 @@
 ---
+description: Esecuzione dell'applicazione di esempio Address Book
 title: Esecuzione dell'applicazione di esempio Address Book | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e3a2c971f952a7c3f13b058bb3937201d323746d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1fddb0d0fb2d7a49c7b9983c03157922862f5d96
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452003"
 ---
 # <a name="running-the-address-book-sample-application"></a>Esecuzione dell'applicazione di esempio Address Book
 > [!IMPORTANT]

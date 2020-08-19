@@ -1,4 +1,5 @@
 ---
+description: Deadlock con livello di isolamento di lettura ripetibile
 title: Deadlock con livello di isolamento Repeatable Read | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 29f3683f-12f3-4304-8a54-fe133c25a423
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31c90281860473d43e0a6bde4d1dd9e64e39bb3f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 398fd636c7e7ebfce448d5b7ebfae7a62d7c1a2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749641"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452213"
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>Deadlock con livello di isolamento di lettura ripetibile
 Se un oggetto business personalizzato utilizza un livello di isolamento di Read ripetible per accedere a una SQL Server e l'oggetto business viene chiamato contemporaneamente da due client che inviano una query e aggiornano nella stessa transazione, è possibile che si verifichi un deadlock. Remote Data Service è progettato per consentire il timeout di uno dei processi per rilasciare il deadlock, ma l'aggiornamento avrà esito negativo per il client.  

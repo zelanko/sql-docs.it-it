@@ -1,4 +1,5 @@
 ---
+description: Esecuzione di oggetti business nei Servizi componenti
 title: Esecuzione di oggetti business in Servizi componenti | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f13e876cb5707b7e906235c5b12e5f019f7b5d60
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 52e90a1913a0500a174e335c178ea8a556d9659a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758997"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452013"
 ---
 # <a name="running-business-objects-in-component-services"></a>Esecuzione di oggetti business nei Servizi componenti
 > [!IMPORTANT]

@@ -1,4 +1,5 @@
 ---
+description: Pool di connessioni di Gestione driver
 title: Pool di connessioni di gestione driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 84ccc0db8f9a54eecc8337ca5efbc7b4c4baa239
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 397aed6cd2b2066bd73343ad861f0212e8357570
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483084"
 ---
 # <a name="driver-manager-connection-pooling"></a>Pool di connessioni di Gestione driver
 Il pool di connessioni consente a un'applicazione di usare una connessione da un pool di connessioni che non devono essere ristabilite per ogni uso. Dopo che una connessione è stata creata e inserita in un pool, un'applicazione può riutilizzare tale connessione senza eseguire il processo completo di connessione.  
@@ -30,7 +31,7 @@ Il pool di connessioni consente a un'applicazione di usare una connessione da un
  Oltre ai miglioramenti in termini di prestazioni, l'architettura del pool di connessioni consente di usare un ambiente e le connessioni associate da più componenti in un unico processo. Ciò significa che i componenti autonomi nello stesso processo possono interagire tra loro senza essere consapevoli gli uni dagli altri. Una connessione in un pool di connessioni può essere utilizzata ripetutamente da più componenti.  
   
 > [!NOTE]
->  Il pool di connessioni può essere utilizzato da un'applicazione ODBC che espone ODBC 2. comportamento *x* , purché l'applicazione possa chiamare *SQLSetEnvAttr*. Quando si utilizza il pool di connessioni, l'applicazione non deve eseguire istruzioni SQL che modificano il database o il contesto del database, ad esempio \<la modifica del *nome del database*>, che modifica il catalogo utilizzato da un'origine dati.  
+>  Il pool di connessioni può essere utilizzato da un'applicazione ODBC che espone ODBC 2. comportamento *x* , purché l'applicazione possa chiamare *SQLSetEnvAttr*. Quando si utilizza il pool di connessioni, l'applicazione non deve eseguire istruzioni SQL che modificano il database o il contesto del database, ad esempio la modifica di \<*database name*> , che modifica il catalogo utilizzato da un'origine dati.  
 
 
  Un driver ODBC deve essere completamente thread-safe e le connessioni non devono avere affinità di thread per supportare il pool di connessioni. Ciò significa che il driver è in grado di gestire una chiamata su qualsiasi thread in qualsiasi momento ed è in grado di connettersi a un thread, di usare la connessione su un altro thread e di disconnettersi su un terzo thread.  

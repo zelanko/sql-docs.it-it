@@ -1,4 +1,5 @@
 ---
+description: 'Passaggio 3: Popolare la casella di riepilogo Fields'
 title: 'Passaggio 3: popolare la casella di riepilogo campi | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2ecedd516891e2f99a800da452573717f211ff60
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d3a7378cfdce29094f5ae4271b9fe7bff7516753
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452793"
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>Passaggio 3: Popolare la casella di riepilogo Fields
 Per popolare la casella di riepilogo campi, inserire il codice seguente nel gestore eventi Click di `lstMain` :  
@@ -50,7 +51,7 @@ End Sub
   
  La riga corrispondente alla risorsa selezionata in `lstMain` viene resa la riga corrente di `grs` . La casella di riepilogo dettagli viene quindi deselezionata e `rec` viene aperta con la riga corrente di `grs` come origine.  
   
- Se la risorsa è un record di raccolta, come specificato da [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md), il recordset locale `rs` viene aperto sugli elementi figlio di REC. `lstDetails`Viene quindi compilato con i valori delle righe di `rs` .  
+ Se la risorsa è un record di raccolta, come specificato da [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md), il recordset locale `rs` viene aperto sugli elementi figlio di REC. `lstDetails` Viene quindi compilato con i valori delle righe di `rs` .  
   
  Se la risorsa è un record semplice, `recFields` viene chiamato il metodo. Per ulteriori informazioni su `recFields` , vedere il passaggio successivo.  
   

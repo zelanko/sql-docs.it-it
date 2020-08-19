@@ -1,4 +1,5 @@
 ---
+description: TYPE_NAME (Transact-SQL)
 title: TYPE_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ ms.assetid: e4075a2e-5f70-440f-986b-9ec8434e07c1
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da4c194a533f53704b5979dd88587869a1c67fb7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: def376308310d249dfe65f0a66d38095e67733eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459507"
 ---
 # <a name="type_name-transact-sql"></a>TYPE_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +60,7 @@ TYPE_NAME ( type_id )
 ## <a name="remarks"></a>Osservazioni  
  TYPE_NAME restituisce NULL quando *type_id* non è valido oppure quando il chiamante non dispone di autorizzazioni sufficienti per fare riferimento al tipo.  
   
- La funzione TYPE_NAME può essere utilizzata sia con tipi di dati di sistema che con tipi di dati definiti dall'utente. Il nome restituito è sempre non qualificato, indipendentemente dallo schema in cui il tipo è contenuto, e non include pertanto il prefisso _schema_ **.** biz:,  
+ La funzione TYPE_NAME può essere utilizzata sia con tipi di dati di sistema che con tipi di dati definiti dall'utente. Il nome restituito è sempre non qualificato, indipendentemente dallo schema in cui il tipo è contenuto, e non include pertanto il prefisso _schema_**.** biz:,  
   
  È possibile utilizzare funzioni di sistema nell'elenco di selezione, nella clausola WHERE e in tutti i casi in cui è consentita un'espressione. Per altre informazioni, vedere [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) e [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md).  
   

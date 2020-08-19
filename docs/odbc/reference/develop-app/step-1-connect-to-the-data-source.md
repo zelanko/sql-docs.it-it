@@ -1,4 +1,5 @@
 ---
+description: "Passaggio 1: Connettersi all'origine dati"
 title: "Passaggio 1: connettersi all'origine dati | Microsoft Docs"
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 84298664-4523-4149-b821-7b2e42c85281
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2a104733c0e5ec5acc87eeabd00c4e51d4bfd000
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9ac15eed6c84745dca6406ad8186f14c65798939
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482964"
 ---
 # <a name="step-1-connect-to-the-data-source"></a>Passaggio 1: Connettersi all'origine dati
 Il primo passaggio in qualsiasi applicazione è la connessione all'origine dati. Questa fase, incluse le funzioni richieste, è illustrata nella figura seguente.  

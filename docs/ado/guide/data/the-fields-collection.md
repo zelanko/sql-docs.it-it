@@ -1,4 +1,5 @@
 ---
+description: Raccolta Fields
 title: Raccolta Fields | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e249d22657718899c7838aa55a23a543389dc5a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 580ded2e3f2539d484d2a60c85adca56ac8e3ac1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452753"
 ---
 # <a name="the-fields-collection"></a>Raccolta Fields
 La raccolta **Fields** è una delle raccolte intrinseche di ADO. Una raccolta è un set ordinato di elementi a cui è possibile fare riferimento come unità. Per ulteriori informazioni sulle raccolte ADO, vedere [il modello a oggetti ADO](../../../ado/guide/data/ado-objects-and-collections.md).  

@@ -1,4 +1,5 @@
 ---
+description: Limitazioni dei nomi di colonna
 title: Limitazioni del nome di colonna | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5a339f61-c52f-40ad-8deb-d785f72753d4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 41d973afdac360af114da41620997cad23a2c740
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82cac260fc81ce5a2cfbbe3e4c3c0bdab5a47049
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483694"
 ---
 # <a name="column-name-limitations"></a>Limitazioni dei nomi di colonna
 I nomi di colonna possono contenere qualsiasi carattere valido, ad esempio spazi. Se i nomi di colonna contengono caratteri eccetto lettere, numeri e caratteri di sottolineatura, il nome deve essere racchiuso tra virgolette (').  

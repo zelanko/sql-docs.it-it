@@ -1,4 +1,5 @@
 ---
+description: Monitoraggio delle prestazioni con Monitoraggio replica
 title: Monitorare le prestazioni con Monitoraggio replica | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d98498fa2f63ef4e4c3cd977c7612fd3277fbf91
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a881bfd928d8a8d1c84d85ea8d226bc2751126a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918717"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498740"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Monitoraggio delle prestazioni con Monitoraggio replica
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,13 +62,13 @@ ms.locfileid: "86918717"
 ## <a name="view-performance-measurements"></a>Visualizzazione delle misurazioni delle prestazioni  
  In Monitoraggio replica vengono visualizzati i valori relativi alla qualità delle prestazioni per repliche transazionali e di tipo merge nelle colonne **Prestazioni medie correnti** e **Prestazioni peggiori correnti** per le pubblicazioni e nella colonna **Prestazioni** per le sottoscrizioni. I valori possibili sono:  
   
--   Eccellenti  
+-   Eccellente  
   
--   Buone  
+-   Buono  
   
--   Discrete  
+-   Sufficiente  
   
--   Scarse  
+-   Scarso  
   
 -   Critiche (solo per la replica transazionale)  
   
@@ -75,7 +76,7 @@ ms.locfileid: "86918717"
   
 -   Per la replica transazionale la qualità delle prestazioni viene determinata dalla soglia di latenza. Se la soglia non viene impostata, non verrà visualizzato alcun valore. Nella tabella seguente viene illustrata la correlazione tra la soglia e il valore della qualità delle prestazioni. Ad esempio, se la soglia è impostata su 60 secondi e la latenza attuale è di 30 secondi, la latenza rappresenta il 50% della soglia, producendo quindi il valore Buone.  
   
-    |Eccellenti|Buone|Discrete|Scarse|Critico|  
+    |Eccellente|Buono|Sufficiente|Scarso|Critico|  
     |---------------|----------|----------|----------|--------------|  
     |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
   
@@ -83,7 +84,7 @@ ms.locfileid: "86918717"
   
      Nella tabella seguente viene illustrata la correlazione tra le prestazioni medie e il valore della qualità delle prestazioni. Ad esempio, se dieci Sottoscrittori hanno eseguito la sincronizzazione tramite una connessione LAN con una velocità media di elaborazione di 100 righe al secondo e successivamente una delle sottoscrizioni esegue la sincronizzazione con una velocità di 125 righe al secondo, le prestazioni di sincronizzazione di quel Sottoscrittore saranno del 125% rispetto alla media, producendo quindi il valore Buone.  
   
-    |Eccellenti|Buone|Discrete|Scarse|  
+    |Eccellente|Buono|Sufficiente|Scarso|  
     |---------------|----------|----------|----------|  
     |151+%|76 – 150%|26 – 75%|0 – 25%|  
   
@@ -100,6 +101,6 @@ ms.locfileid: "86918717"
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio della replica](../../../relational-databases/replication/monitor/monitoring-replication.md)   
- [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Impostare valori di soglia e avvisi in Monitoraggio replica](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

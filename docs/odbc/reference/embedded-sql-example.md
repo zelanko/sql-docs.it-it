@@ -1,4 +1,5 @@
 ---
+description: Esempio di SQL incorporato
 title: Esempio di SQL incorporato | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 39ec504c423817c6a3e11bc954555b201b8b09c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fec0f3e3776b8ac70e85042c565343b35f8a893e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294172"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429063"
 ---
 # <a name="embedded-sql-example"></a>Esempio di SQL incorporato
 Il codice seguente è un semplice programma SQL incorporato, scritto in C. Nel programma sono illustrate molte, ma non tutte, le tecniche di SQL embedded. Il programma richiede all'utente un numero di ordine, recupera il numero del cliente, il venditore e lo stato dell'ordine e visualizza le informazioni recuperate sullo schermo.  

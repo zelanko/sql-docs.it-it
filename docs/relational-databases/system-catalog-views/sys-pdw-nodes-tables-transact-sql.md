@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_nodes_tables (Transact-SQL)
 title: sys. pdw_nodes_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -12,25 +13,25 @@ ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 78af01169c643acfc82f7a3db035ae32518695bd
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 7b50d1757371a1ca379a4cf8f79410ceaef9a614
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475365"
 ---
 # <a name="syspdw_nodes_tables-transact-sql"></a>sys. pdw_nodes_tables (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contiene una riga per ogni oggetto Table a cui appartiene un'entità o a cui l'entità ha concesso un'autorizzazione.  
   
-|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
+|Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |\<inherited columns>||Per un elenco di colonne ereditate da questa vista, vedere [sys. Objects](../system-catalog-views/sys-objects-transact-sql.md).||  
 |lob_data_space_id|**int**||Sempre 0.|  
-|filestream_data_space_id|**int**|ID spazio dati per un filegroup FILESTREAM o[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
+|filestream_data_space_id|**int**|ID spazio dati per un filegroup FILESTREAM o [!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|ID di colonna massimo utilizzato dalla tabella.||  
-|lock_on_bulk_load|**bit**|La tabella è bloccata durante il caricamento bulk.|DA DEFINIRE|  
+|lock_on_bulk_load|**bit**|La tabella è bloccata durante il caricamento bulk.|TBD|  
 |uses_ansi_nulls|**bit**|La tabella è stata creata con l'opzione di database SET ANSI_NULLS impostata su ON.|1|  
 |is_replicated|**bit**|1 = la tabella viene pubblicata utilizzando la replica.|0 la replica non è supportata.|  
 |has_replication_filter|**bit**|1 = La tabella è associata a un filtro di replica.|0|  

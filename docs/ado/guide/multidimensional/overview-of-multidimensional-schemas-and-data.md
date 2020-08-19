@@ -1,4 +1,5 @@
 ---
+description: Panoramica di schemi e dati multidimensionali
 title: Cenni preliminari su schemi e dati multidimensionali | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4a2f6dbd2c5d075bb888e61bb01e1094c8ef5c0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 449bfe5056cdf96f86b5371731c2d1c0b00ba31e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748083"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452423"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Panoramica di schemi e dati multidimensionali
 ## <a name="understanding-multidimensional-schemas"></a>Informazioni sugli schemi multidimensionali  
@@ -58,15 +59,15 @@ Hamburg, Munich, Stuttgart}
   
  Ogni livello dispone di un set di membri, come indicato di seguito:  
   
--   il mondo`= {All}`  
+-   il mondo `= {All}`  
   
--   Continenti`= {North America, Europe}`  
+-   Continenti `= {North America, Europe}`  
   
--   Paesi`= {Canada, USA, UK, Germany}`  
+-   Paesi `= {Canada, USA, UK, Germany}`  
   
--   Regioni`= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
+-   Regioni `= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
   
--   Città`= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
+-   Città `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
 ### <a name="members"></a>Membri  
  I membri a livello foglia di una gerarchia non hanno elementi figlio e i membri a livello radice non hanno elementi padre. Tutti gli altri membri hanno almeno un elemento padre e almeno un elemento figlio. Ad esempio, un attraversamento parziale dell'albero gerarchico nella dimensione Geography produce le relazioni padre-figlio seguenti:  

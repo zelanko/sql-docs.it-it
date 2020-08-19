@@ -1,4 +1,5 @@
 ---
+description: Riferimenti alle librerie ADO
 title: Riferimenti alle librerie ADO | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 573f8f27-babd-4e2f-bf9a-270ee7024975
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e37b092f2b89c2fad4699b49c674ff4255416bc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 41483483adf9a8b444466ad1b58215d984c12700
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452353"
 ---
 # <a name="referencing-the-ado-libraries"></a>Riferimenti alle librerie ADO
-La versione più recente di ADO viene assemblata come *msado15. dll*. Le versioni più recenti di ADO MD e ADOX vengono assemblate rispettivamente come *msadom. dll* e *msadox. dll*. Per impostazione predefinita, queste librerie vengono installate in *$InstallDir*, dove *$InstallDir* rappresenta il percorso della directory in cui è stata installata la libreria ADO nel computer. Per usare le librerie ADO nell'applicazione, è necessario farvi riferimento in modo esplicito nel progetto di applicazione.  
+La versione più recente di ADO viene assemblata come *msado15.dll*. Le versioni più recenti di ADO MD e ADOX vengono assemblate rispettivamente come *msadom.dll* e *msadox.dll*. Per impostazione predefinita, queste librerie vengono installate in *$InstallDir*, dove *$InstallDir* rappresenta il percorso della directory in cui è stata installata la libreria ADO nel computer. Per usare le librerie ADO nell'applicazione, è necessario farvi riferimento in modo esplicito nel progetto di applicazione.  
   
  Di seguito sono riportati i passaggi che è possibile eseguire per fare riferimento alle librerie ADO:  
   

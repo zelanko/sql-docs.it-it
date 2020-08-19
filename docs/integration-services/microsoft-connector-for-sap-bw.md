@@ -1,4 +1,5 @@
 ---
+description: Microsoft Connector for SAP BW
 title: Microsoft Connector per SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 12375a5d09c34ac9b9e79e99efdee3ccebbe823b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5b3784e4af35afe5fdf0b84290cdf33fc8c77496
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430153"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
 
@@ -49,10 +50,10 @@ ms.locfileid: "86918100"
 ## <a name="documentation"></a>Documentazione  
  Il file della Guida per [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW contiene gli argomenti e le sezioni indicate di seguito:  
   
- [Installazione di Microsoft Connector per SAP BW](../integration-services/installing-the-microsoft-connector-for-sap-bw.md)  
+ [Installazione di Microsoft Connector for SAP BW](../integration-services/installing-the-microsoft-connector-for-sap-bw.md)  
  Descrive i requisiti di installazione relativi a [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW.  
   
- [Componenti di Microsoft Connector per SAP BW](../integration-services/microsoft-connector-for-sap-bw-components.md)  
+ [Componenti di Microsoft Connector for SAP BW](../integration-services/microsoft-connector-for-sap-bw-components.md)  
  Descrive ogni componente di [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW.  
   
  [Guida sensibile al contesto di Microsoft Connector per SAP BW](../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  

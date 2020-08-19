@@ -1,4 +1,5 @@
 ---
+description: Funzionalità deprecate nella replica di SQL Server
 title: Funzionalità deprecate nella replica di SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2016
@@ -13,12 +14,12 @@ ms.assetid: 46bd3edd-d6de-40a6-a015-21cce8321feb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9e95b509ceac733ce540ecac067d78a757697af1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 10306a2d4cc8f447706581365d31617ac2a29220
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498774"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>Funzionalità deprecate nella replica di SQL Server
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

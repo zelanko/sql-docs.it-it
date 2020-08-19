@@ -1,4 +1,5 @@
 ---
+description: Trovare GUID del set di proprietà e ID di tipo integer delle proprietà per le proprietà di ricerca
 title: Trovare GUID del set di proprietà e ID di tipo integer delle proprietà per le proprietà di ricerca
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c7b613fc9b8b80169beab7d77fe52e5a9a37ad81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b405768f889e73d1885b67b05d8cf124d3f28d1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767595"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498618"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Trovare GUID del set di proprietà e ID di tipo integer delle proprietà per le proprietà di ricerca
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

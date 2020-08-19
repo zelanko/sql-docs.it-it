@@ -1,4 +1,5 @@
 ---
+description: SYSTEM_USER (Transact-SQL)
 title: SYSTEM_USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -26,12 +27,12 @@ ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93b31a9f6b86ed256f84fb1dba731e1d248c3c5d
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 02877aa808d53a586ae9191154dc0bfe3f9a785e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394196"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459547"
 ---
 # <a name="system_user-transact-sql"></a>SYSTEM_USER (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -51,12 +52,12 @@ SYSTEM_USER
 ## <a name="return-types"></a>Tipi restituiti  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile utilizzare la funzione SYSTEM_USER in combinazione con i vincoli DEFAULT nelle istruzioni CREATE TABLE e ALTER TABLE, nonché come qualsiasi funzione standard.  
   
  Se il nome utente e il nome dell'account di accesso sono diversi, SYSTEM_USER restituisce il nome dell'account di accesso.  
   
- Se l'utente corrente è connesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'autenticazione di Windows, SYSTEM_USER restituisce il nome di identificazione dell'account di accesso di Windows nel formato: *DOMAIN*\\*user_login_name*. Se l'utente invece è connesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'autenticazione di SQL Server, SYSTEM_USER restituisce il nome dell'identificazione dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio `WillisJo` per un utente connesso come `WillisJo`.  
+ Se l'utente corrente ha eseguito l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando l'autenticazione di Windows, SYSTEM_USER restituisce il nome di identificazione dell'account di accesso Windows nel formato: *DOMAIN*\\*nome_account_utente*. Se l'utente invece è connesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'autenticazione di SQL Server, SYSTEM_USER restituisce il nome dell'identificazione dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio `WillisJo` per un utente connesso come `WillisJo`.  
   
  SYSTEM_USER restituisce il nome del contesto di esecuzione corrente. Se l'istruzione EXECUTE AS è stata utilizzata per cambiare contesto, SYSTEM_USER restituirà il nome del contesto rappresentato.  
 

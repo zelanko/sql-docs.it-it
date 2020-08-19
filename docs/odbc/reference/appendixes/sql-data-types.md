@@ -1,4 +1,5 @@
 ---
+description: Tipi di dati SQL
 title: Tipi di dati SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3cc91213533aa39f30be1bc838cc014c20e70884
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8209463c3c316a5bd2e45a2d7b08eb65b3cb113d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305005"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483154"
 ---
 # <a name="sql-data-types"></a>Tipi di dati SQL
 Ogni DBMS definisce tipi SQL personalizzati. Ogni driver ODBC espone solo i tipi di dati SQL definiti dal DBMS associato. Informazioni sul modo in cui un driver esegue il mapping dei tipi SQL DBMS agli identificatori di tipo SQL definiti da ODBC e sul modo in cui un driver esegue il mapping dei tipi SQL DBMS ai propri identificatori di tipo SQL specifici del driver viene restituito tramite una chiamata a **SQLGetTypeInfo**. Un driver restituisce anche i tipi di dati SQL quando si descrivono i tipi di dati di colonne e parametri tramite chiamate a **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**e **SQLSpecialColumns**.  
@@ -42,11 +43,11 @@ Ogni DBMS definisce tipi SQL personalizzati. Ogni driver ODBC espone solo i tipi
 |SQL_WCHAR|WCHAR (*n*)|Stringa di caratteri Unicode con lunghezza stringa fissa *n*|  
 |SQL_WVARCHAR|VARWCHAR (*n*)|Stringa di caratteri a lunghezza variabile Unicode con lunghezza massima della stringa *n*|  
 |SQL_WLONGVARCHAR|LONGWVARCHAR|Dati di caratteri a lunghezza variabile Unicode. La lunghezza massima dipende dall'origine dati|  
-|SQL_DECIMAL|DECIMAL (*p*,*s*)|Valore numerico esatto con segno, precisione almeno *p* e scala *s.* (La precisione massima è definita dal driver). (1 <= *p* <= 15; *s* <= *p*). 4|  
-|SQL_NUMERIC|NUMERICO (*p*,*s*)|Valore numerico esatto con segno di precisione *p* e scala *s* (1 <= *p* <= 15; *s* <= *p*). 4|  
+|SQL_DECIMAL|DECIMAL (*p*,*s*)|Valore numerico esatto con segno, precisione almeno *p* e scala *s.* (La precisione massima è definita dal driver). (1 <= *p* <= 15; *s*  <=  *p*). 4|  
+|SQL_NUMERIC|NUMERICO (*p*,*s*)|Valore numerico esatto con segno di precisione *p* e scala *s* (1 <= *p* <= 15; *s*  <=  *p*). 4|  
 |SQL_SMALLINT|SMALLINT|Valore numerico esatto con precisione 5 e scala 0 (con segno:-32.768 <= *n* <= 32.767, senza segno: 0 <= *n* <= 65535) [3].|  
 |SQL_INTEGER|INTEGER|Valore numerico esatto con precisione 10 e scala 0 (con segno:-2 [31] <= *n* <= 2 [31]-1, senza segno: 0 <= *n* <= 2 [32]-1) [3].|  
-|SQL_REAL|real|Valore numerico con segno, approssimativo con una precisione binaria 24 (zero o valore assoluto 10 [-38] a 10 [38]).|  
+|SQL_REAL|REAL|Valore numerico con segno, approssimativo con una precisione binaria 24 (zero o valore assoluto 10 [-38] a 10 [38]).|  
 |SQL_FLOAT|FLOAT (*p*)|Valore numerico con segno, approssimativo con una precisione binaria di almeno *p*. (La precisione massima è definita dal driver). 5|  
 |SQL_DOUBLE|DOUBLE PRECISION|Valore numerico con segno, approssimativo con una precisione binaria 53 (zero o valore assoluto 10 [-308] a 10 [308]).|  
 |SQL_BIT|BIT|Dati binari a bit singolo. 8|  

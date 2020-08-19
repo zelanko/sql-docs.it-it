@@ -1,4 +1,5 @@
 ---
+description: Flussi e persistenza
 title: Flussi e persistenza | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e7c47c668bc2b64a511e316396da913d5dcb930
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 869c5ef7380c315b60d2cbf6ad11f0cf638a0d7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760757"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452773"
 ---
 # <a name="streams-and-persistence"></a>Flussi e persistenza
 L' [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto recordset [Salva](../../../ado/reference/ado-api/save-method.md) il metodo archivia o rende *permanente*un **Recordset** in un file e il metodo [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) ripristina il **Recordset** da tale file.  
@@ -104,7 +105,7 @@ Set rs = nothing
   
  Una nuova proprietà di RDS [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md), [URL](../../../ado/reference/rds-api/url-property-rds.md), punta alla pagina ASP che genera il **Recordset**. Ciò significa che è possibile ottenere un oggetto **Recordset** senza servizi desktop remoto usando l'oggetto [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) sul lato server o l'utente che scrive un oggetto business. In questo modo, il modello di programmazione RDS viene semplificato in modo significativo.  
   
- Codice lato server, denominatohttps://server/directory/recordset.asp:  
+ Codice lato server, denominato https://server/directory/recordset.asp:  
   
 ```  
 <%  

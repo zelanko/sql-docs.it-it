@@ -1,4 +1,5 @@
 ---
+description: Esempio della proprietà Count (VB)
 title: Esempio di proprietà Count (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8adf469970b6bfb75d4abe75694c99424768353b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2503065a7a8fceb590e0ad28e57f7ed0ae172589
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444343"
 ---
 # <a name="count-property-example-vb"></a>Esempio della proprietà Count (VB)
 In questo esempio viene illustrata la proprietà [count](../../../ado/reference/ado-api/count-property-ado.md) con due raccolte nel database ***Employee*** . La proprietà ottiene il numero di oggetti in ogni raccolta e imposta il limite superiore per i cicli che enumerano queste raccolte. Un altro modo per enumerare queste raccolte senza usare la proprietà **count** consiste nell'usare le `For Each...Next` istruzioni.  

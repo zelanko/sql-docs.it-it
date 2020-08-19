@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_health_alerts (Transact-SQL)
 title: sys. pdw_health_alerts (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f28f48d8530111e2de12bbb6f075b69147ad1cff
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 3b2da23d973042638f39e52ed7c1173422a97eeb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396042"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475409"
 ---
 # <a name="syspdw_health_alerts-transact-sql"></a>sys. pdw_health_alerts (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "87396042"
 |status|**nvarchar(32)**|Stato dell'avviso|NULL|  
 |condition_value|**bit**|Indica se l'avviso può verificarsi durante l'operazione di sistema.|NULL<br /><br /> Valori possibili<br /><br /> 0: l'avviso non viene generato.<br /><br /> 1: viene generato un avviso.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo di SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   
