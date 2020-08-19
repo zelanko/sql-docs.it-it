@@ -1,4 +1,5 @@
 ---
+description: DBCC CHECKALLOC (Transact-SQL)
 title: DBCC CHECKALLOC (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 3b85dbd8d97583b6895dfb61bf7d0f50197f0635
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b4631e88e76aeb9657327d9dbe4d6300b36b70df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485577"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459960"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 
@@ -153,7 +154,7 @@ DBCC CHECKALLOC fornisce inoltre per ogni indice e partizione di ogni file un ri
 |Partition ID|Solo per uso interno.|  
 |Alloc unit ID|Solo per uso interno.|  
 |Dati In-row|Pagine contenenti dati di indice o di heap.|  
-|Dati LOB|Pagine contenenti dati **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **text**, **ntext**, **xml** e **image**.|  
+|Dati LOB|Pagine contenenti dati **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext**, **xml** e **image**.|  
 |Dati Row-overflow|Pagine contenenti dati di colonne a lunghezza variabile spostati all'esterno di righe.|  
   
 DBCC CHECKALLOC restituisce il set di risultati seguente (i valori possono variare), tranne quando viene specificata la parola chiave ESTIMATEONLY o NO_INFOMSGS.

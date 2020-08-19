@@ -1,4 +1,5 @@
 ---
+description: Implementazione di una ricerca in modalità No Cache o Partial Cache
 title: Implementare una ricerca in modalità No Cache o Partial Cache | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a91460e1e357bb1fa0893de5f43ceab1e342ab39
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 75974b57a139413f43b44deebeb0e1488cfd5155
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430673"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementazione di una ricerca in modalità No Cache o Partial Cache
 

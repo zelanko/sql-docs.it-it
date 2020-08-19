@@ -1,4 +1,5 @@
 ---
+description: Cast (espressione SSIS)
 title: Cast (espressione SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c10996317ce033b6d6437ff989de8d66d31f006
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9a958fcc49fb5991baa770bc1c9609ebd13876dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917191"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430633"
 ---
 # <a name="cast-ssis-expression"></a>Cast (espressione SSIS)
 
@@ -48,7 +49,7 @@ ms.locfileid: "86917191"
 ## <a name="result-types"></a>Tipi restituiti  
  Tipo di dati *type_spec*. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Nella figura seguente vengono illustrate alcune operazioni di cast valide.  
   
  ![Cast validi e non validi tra tipi di dati](../../integration-services/expressions/media/data-conversion.gif "Cast validi e non validi tra tipi di dati")  
@@ -60,8 +61,8 @@ ms.locfileid: "86917191"
 |DT_STR|*charcount*<br /><br /> *codepage*|(DT_STR,30,1252): esegue il cast di 30 byte, ovvero 30 caratteri singoli, al tipo di dati DT_STR utilizzando la tabella codici 1252.|  
 |DT_WSTR|*Charcount*|(DT_WSTR,20): esegue il cast di 20 coppie di byte, ovvero 20 caratteri Unicode, al tipo di dati DT_WSTR.|  
 |DT_BYTES|*Bytecount*|(DT_BYTES,50): esegue il cast di 50 byte al tipo di dati DT_BYTES.|  
-|DT_DECIMAL|*Ridimensionare*|(DT_DECIMAL,2): esegue il cast di un valore numerico al tipo di dati DT_DECIMAL, utilizzando una scala pari a 2.|  
-|DT_NUMERIC|*Precisione*<br /><br /> *Ridimensionare*|(DT_NUMERIC,10,3): esegue il cast di un valore numerico al tipo di dati DT_NUMERIC, utilizzando una precisione pari a 10 e una scala pari a 3.|  
+|DT_DECIMAL|*Ridimensionamento*|(DT_DECIMAL,2): esegue il cast di un valore numerico al tipo di dati DT_DECIMAL, utilizzando una scala pari a 2.|  
+|DT_NUMERIC|*Precisione*<br /><br /> *Ridimensionamento*|(DT_NUMERIC,10,3): esegue il cast di un valore numerico al tipo di dati DT_NUMERIC, utilizzando una precisione pari a 10 e una scala pari a 3.|  
 |DT_TEXT|*Codepage*|(DT_TEXT,1252): esegue il cast di un valore al tipo di dati DT_TEXT utilizzando la tabella codici 1252.|  
   
  Quando si esegue il cast di una stringa a un tipo di dati DT_DATE, o viceversa, vengono utilizzate le impostazioni locali della trasformazione. Tuttavia, la data è nel formato ISO AAAA-MM-GG, indipendentemente dal fatto che le impostazioni locali utilizzino il formato ISO.  
@@ -150,6 +151,6 @@ ms.locfileid: "86917191"
  [Precedenza e associatività degli operatori](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operatori &#40;espressione SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)   
  [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Tipi di dati di Integration Services nelle espressioni](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
+ [Tipi di dati nelle espressioni di Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
   
   

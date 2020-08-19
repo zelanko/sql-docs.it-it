@@ -1,4 +1,5 @@
 ---
+description: DBCC CHECKFILEGROUP (Transact-SQL)
 title: DBCC CHECKFILEGROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: b194f23779914961899cdf8b07c82a4d0986aa79
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 15b156950ff752e96dc332c4071dbc748013aa3f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485285"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459895"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -94,7 +95,7 @@ DBCC CHECKFILEGROUP
 >  Se si specifica PHYSICAL_ONLY, DBCC CHECKFILEGROUP ignora tutti i controlli dei dati FILESTREAM.  
   
  MAXDOP  
- **Si applica a**: da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ **Si applica a**: da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 fino alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
  Esegue l'override dell'opzione di configurazione **Massimo grado di parallelismo** di **sp_configure** per l'istruzione. MAXDOP può superare il valore configurato con sp_configure. Se MAXDOP supera il valore configurato con Resource Governor, il motore di database usa il valore MAXDOP di Resource Governor descritto in ALTER WORKLOAD GROUP (Transact-SQL). Quando si utilizza l'hint per la query MAXDOP sono valide tutte le regole semantiche utilizzate con l'opzione di configurazione max degree of parallelism. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   

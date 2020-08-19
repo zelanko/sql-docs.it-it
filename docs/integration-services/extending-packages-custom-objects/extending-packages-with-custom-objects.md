@@ -1,4 +1,5 @@
 ---
+description: Estensione di pacchetti tramite oggetti personalizzati
 title: Estensione di pacchetti tramite oggetti personalizzati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 26616eb8-9e80-434d-b22a-ece1b00f449d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d2c6aa25210cff5f5663c4684728caee1f01db01
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3837f3fe73a3ee9d099199e959d65afd1df4e95b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902557"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430573"
 ---
 # <a name="extending-packages-with-custom-objects"></a>Estensione di pacchetti tramite oggetti personalizzati
 
@@ -53,7 +54,7 @@ ms.locfileid: "86902557"
  [Sviluppo di un componente flusso di dati personalizzato](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
  Viene descritto come programmare origini, trasformazioni e destinazioni personalizzate del flusso di dati.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Informazioni di riferimento  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
  Vengono elencati i codici di errore predefiniti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con i relativi nomi simbolici e le descrizioni.  
   

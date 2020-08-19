@@ -1,4 +1,5 @@
 ---
+description: Recupero di segnalibri
 title: Recupero di segnalibri | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a34c8f09-b786-4835-a44b-b7294c970aff
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d146b2fb9bfc0e7294709e971f1b6752dc99ab3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 22fba0ccc900d221e915fea939736aa87b101e80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300071"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429093"
 ---
 # <a name="retrieving-bookmarks"></a>Recupero di segnalibri
 Se l'applicazione utilizzerà segnalibri, è necessario impostare l'attributo SQL_ATTR_USE_BOOKMARKS istruzione su SQL_UB_VARIABLE prima di preparare o eseguire l'istruzione. Questa operazione è necessaria perché la compilazione e la gestione dei segnalibri può essere un'operazione costosa, quindi i segnalibri devono essere abilitati solo quando un'applicazione può utilizzarli in modo corretto.  

@@ -1,4 +1,5 @@
 ---
+description: Supportare più destinazioni in componenti personalizzati
 title: Supportare più destinazioni in componenti personalizzati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4020d295bc29fa3d240c0176611d446fcb427197
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7bfd8409894c1f98fe4d63efcd122b4bf8025aae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430463"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>Supportare più destinazioni in componenti personalizzati
 

@@ -1,4 +1,5 @@
 ---
+description: Divisione (espressione SSIS)
 title: Divisione (espressione SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fb89b3a5696e9e9d7cff33db13f272ca2ec00fcb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 516d8705f38f3bdd7234f1975f5188d32f501efe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430603"
 ---
 # <a name="divide-ssis-expression"></a>Divisione (espressione SSIS)
 
@@ -45,7 +46,7 @@ dividend / divisor
 ## <a name="result-types"></a>Tipi restituiti  
  Dipendenti dai tipi di dati dei due argomenti. Per altre informazioni, vedere [Tipi di dati nelle espressioni di Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se uno degli operandi è Null, il risultato sarà Null.  
   
  La divisione per zero non è consentita. A seconda della modalità con cui viene valutata la sottoespressione *divisor* , può verificarsi uno degli errori seguenti:  

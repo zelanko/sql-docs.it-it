@@ -1,4 +1,5 @@
 ---
+description: Guida di riferimento ai metodi per il tipo di dati hierarchyid
 title: hierarchyid (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dbbc15d64e2bc6ae3ad20689303e42712ffa17fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 367f467a7b4a4d497897adf1c56f8053600d0a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738217"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459973"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>Guida di riferimento ai metodi per il tipo di dati hierarchyid
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,14 +36,14 @@ Un valore del tipo di dati **hierarchyid** rappresenta una posizione in un alber
 -   Estremamente compresso  
      Il numero medio di bit richiesto per rappresentare un nodo in un albero con *n* nodi dipende dal fanout medio, ovvero il numero medio di elementi figlio di un nodo. Per i fanout di piccole dimensioni (0-7), la dimensione è approssimativamente 6\*logA*n* bit, dove A è il fanout medio. Un nodo in una gerarchia organizzativa di 100.000 persone con un fanout medio di 6 livelli richiede circa 38 bit. Viene arrotondato a 40 bit, o 5 byte, per l'archiviazione.  
 -   Il confronto avviene in ordine di scorrimento in profondità  
-     Dati due valori **hierarchyid** **a** e **b**, **a<b** indica che a precede b nell'attraversamento del primo livello di profondità dell'albero. Gli indici sui tipi di dati **hierarchyid** sono in ordine di scorrimento della profondità e i nodi l'uno vicino all'altro nell'attraversamento del primo livello di profondità della struttura sono archiviati l'uno vicino all'altro. Ad esempio, i figli di un record sono archiviati adiacenti al record specifico. Per altre informazioni, vedere [Dati gerarchici &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).  
+     Dati due valori **hierarchyid****a** e **b**, **a<b** indica che a precede b nell'attraversamento del primo livello di profondità dell'albero. Gli indici sui tipi di dati **hierarchyid** sono in ordine di scorrimento della profondità e i nodi l'uno vicino all'altro nell'attraversamento del primo livello di profondità della struttura sono archiviati l'uno vicino all'altro. Ad esempio, i figli di un record sono archiviati adiacenti al record specifico. Per altre informazioni, vedere [Dati gerarchici &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).  
 -   Supporto per eliminazioni e inserimenti arbitrari  
      Usando il metodo [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md) , è sempre possibile generare un elemento di pari livello a destra o a sinistra di un nodo oppure tra due elementi di pari livello. La proprietà del confronto è gestita quando un numero arbitrario di nodi viene inserito o eliminato dalla gerarchia. La maggior parte degli inserimenti e delle eliminazioni mantiene la proprietà di compattezza. Tuttavia, gli inserimenti tra due nodi produrranno i valori hierarchyid con una rappresentazione leggermente meno compatta.  
 -   La codifica usata nel tipo **hierarchyid** è limitata a 892 byte. I nodi che hanno troppi livelli nella rappresentazione per rientrare in 892 byte non possono di conseguenza essere rappresentati dal tipo **hierarchyid**.  
   
 Il tipo **hierarchyid** è disponibile per i client CLR come tipo di dati **SqlHierarchyId**.
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 Il tipo **hierarchyid** codifica logicamente le informazioni su un solo nodo in un albero gerarchico codificando il percorso dalla radice dell'albero al nodo. Tale percorso è rappresentato logicamente come una sequenza di etichette dei nodi di tutti gli elementi figlio visitati dopo la radice. La rappresentazione inizia con una barra. Un percorso che visita solo la radice è rappresentato da una singola barra. Per i livelli sotto la radice, ogni etichetta è codificata come una sequenza di numeri interi separata dai punti. Il confronto tra gli elementi figlio viene eseguito confrontando le sequenze di numeri interi separati da punti in base all'ordinamento del dizionario. Ogni livello è seguito da una barra. Una barra separa quindi i padri dai figli. Ad esempio, gli elementi seguenti sono percorsi **hierarchyid** validi rispettivamente di lunghezza di 1, 2, 2, 3 e 3 livelli:
   
 -   /  
@@ -55,11 +56,11 @@ Il tipo **hierarchyid** codifica logicamente le informazioni su un solo nodo in 
   
 -   /0.1/0.2/  
   
-I nodi possono essere inseriti in qualsiasi posizione. I nodi inseriti dopo **/1/2/** ma prima di **/1/3/** possono essere rappresentati come **/1/2.5/** . Nodi inseriti prima di 0 sono rappresentati logicamente come numero negativo. Ad esempio, un nodo che precede **/1/1/** può essere rappresentato come **/1/-1/** . Nei nodi non possono essere presenti zero iniziali. Ad esempio, **/1/1.1/** è valido, mentre **/1/1.01/** non è valido. Per evitare errori, inserire nodi usando il metodo [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md).
+I nodi possono essere inseriti in qualsiasi posizione. I nodi inseriti dopo **/1/2/** ma prima di **/1/3/** possono essere rappresentati come **/1/2.5/**. Nodi inseriti prima di 0 sono rappresentati logicamente come numero negativo. Ad esempio, un nodo che precede **/1/1/** può essere rappresentato come **/1/-1/**. Nei nodi non possono essere presenti zero iniziali. Ad esempio, **/1/1.1/** è valido, mentre **/1/1.01/** non è valido. Per evitare errori, inserire nodi usando il metodo [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md).
   
-## <a name="data-type-conversion"></a>Conversione del tipo di dati
+## <a name="data-type-conversion"></a>Conversione dei tipi di dati
 È possibile convertire il tipo di dati **hierarchyid** in altri tipi di dati come segue:
--   Usare il metodo [ToString()](../../t-sql/data-types/tostring-database-engine.md) per convertire il valore **hierarchyid** nella rappresentazione logica come tipo di dati **nvarchar(4000)** .  
+-   Usare il metodo [ToString()](../../t-sql/data-types/tostring-database-engine.md) per convertire il valore **hierarchyid** nella rappresentazione logica come tipo di dati **nvarchar(4000)**.  
 -   Usare [Read ()](../../t-sql/data-types/read-database-engine.md) e [Write ()](../../t-sql/data-types/write-database-engine.md) per convertire **hierarchyid** in **varbinary**.  
 -   Per trasmettere i parametri **hierarchyid** tramite SOAP, eseguire prima il cast dei parametri come stringhe.  
   

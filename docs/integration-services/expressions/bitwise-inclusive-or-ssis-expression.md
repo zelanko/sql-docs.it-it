@@ -1,4 +1,5 @@
 ---
+description: '| (OR inclusivo bit per bit) (espressione SSIS)'
 title: '| (OR inclusivo bit per bit) (espressione SSIS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 47a5ad352069006a43a3c2f24c89dae9caf09bc8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6736267708612a67314959b74cb4c91d0f6f39c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923491"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430623"
 ---
 # <a name="-bitwise-inclusive-or-ssis-expression"></a>| (OR inclusivo bit per bit) (espressione SSIS)
 
@@ -44,7 +45,7 @@ integer_expression1 | integer_expression2
 ## <a name="result-types"></a>Tipi restituiti  
  Dipendenti dai tipi di dati dei due argomenti. Per altre informazioni, vedere [Tipi di dati nelle espressioni di Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se una delle due condizioni è Null, il risultato dell'espressione sarà Null.  
   
 ## <a name="expression-examples"></a>Esempi di espressione  

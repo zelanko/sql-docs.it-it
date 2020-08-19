@@ -1,4 +1,5 @@
 ---
+description: Ricerca fuzzy - trasformazione
 title: Trasformazione Ricerca fuzzy | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -33,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4a9db9f2e015a75e4ad132c21bd770a27d70f487
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: df26e437d7c03510f7e634693296a928696a96b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919317"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430683"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Ricerca fuzzy - trasformazione
 
@@ -58,7 +59,7 @@ ms.locfileid: "86919317"
   
  Questa trasformazione include un input e un output.  
   
- Nella corrispondenza fuzzy è possibile usare solo colonne di input con tipo di dati **DT_WSTR** o **DT_STR** . Per la corrispondenza esatta è possibile usare qualsiasi tipo di dati DTS, ad eccezione di **DT_TEXT**, **DT_NTEXT**e **DT_IMAGE**. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../../integration-services/data-flow/integration-services-data-types.md). I tipi di dati delle colonne che partecipano al join tra l'input e la tabella di riferimento devono essere compatibili. È ad esempio corretto unire in join una colonna con tipo di dati DTS **DT_WSTR** e una colonna con tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]nvarchar**di**, ma non una colonna con tipo di dati **DT_WSTR** e una colonna con tipo di dati **int**.  
+ Nella corrispondenza fuzzy è possibile usare solo colonne di input con tipo di dati **DT_WSTR** o **DT_STR** . Per la corrispondenza esatta è possibile usare qualsiasi tipo di dati DTS, ad eccezione di **DT_TEXT**, **DT_NTEXT**e **DT_IMAGE**. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../../integration-services/data-flow/integration-services-data-types.md). I tipi di dati delle colonne che partecipano al join tra l'input e la tabella di riferimento devono essere compatibili. È ad esempio corretto unire in join una colonna con tipo di dati DTS **DT_WSTR** e una colonna con tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** di , ma non una colonna con tipo di dati **DT_WSTR** e una colonna con tipo di dati **int**.  
   
  È possibile personalizzare questa trasformazione specificando la quantità di memoria massima, l'algoritmo di confronto tra righe, nonché la memorizzazione nella cache delle tabelle di riferimento e degli indici utilizzati dalla trasformazione.  
   

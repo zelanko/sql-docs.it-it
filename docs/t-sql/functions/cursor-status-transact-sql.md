@@ -1,4 +1,5 @@
 ---
+description: CURSOR_STATUS (Transact-SQL)
 title: CURSOR_STATUS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63c1513e044b825ed3ffa036b1e7014e0e4d4a6f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ab7cbb48d371236d23d90de2347349318369f274
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112121"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459830"
 ---
 # <a name="cursor_status-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +74,7 @@ Nome di una variabile di cursore. Le variabili di cursore devono essere definite
 |-2|Non applicabile.|Ha una di queste possibilità:<br /><br /> La procedura chiamata in precedenza non ha assegnato un cursore a questa variabile di OUTPUT.<br /><br /> La procedura chiamata in precedenza ha assegnato un cursore a questa variabile di OUTPUT, ma al completamento della procedura il cursore era chiuso. Il cursore viene pertanto deallocato e non viene restituito alla procedura chiamante.<br /><br /> Alla variabile cursore dichiarata non è assegnato alcun cursore.|  
 |-3|Il cursore specificato non esiste.|La variabile cursore con il nome specificato non esiste oppure esiste ma a questa non è ancora stato allocato un cursore.|  
   
-\* I cursori dinamici non restituiscono mai questo risultato.
+* I cursori dinamici non restituiscono mai questo risultato.
   
 ## <a name="examples"></a>Esempi  
 Questo esempio usa la funzione `CURSOR_STATUS` per visualizzare lo stato di un cursore dopo la dichiarazione, dopo l'apertura e dopo la chiusura di questo.

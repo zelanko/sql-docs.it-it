@@ -1,4 +1,5 @@
 ---
+description: Classe SqlErrorLogEvent
 title: Classe SqlErrorLogEvent
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 37f5dfbdc8b6d962d6bff91491142b9190818bb9
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 133eb91aed4cff032afd1b83637d3e4d4efa2635
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442512"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460067"
 ---
 # <a name="sqlerrorlogevent-class"></a>Classe SqlErrorLogEvent
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ class SQLErrorLogEvent
 |FileName|Tipo di dati: **String**<br /><br /> Tipo di accesso: sola lettura<br /><br /> <br /><br /> Nome del file di log degli errori.|  
 |InstanceName|Tipo di dati: **String**<br /><br /> Tipo di accesso: sola lettura<br /><br /> Qualificatori: chiave<br /><br /> Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si trova il file di log.|  
 |LogDate|Tipo di dati: **DateTime**<br /><br /> Tipo di accesso: sola lettura<br /><br /> Qualificatori: chiave<br /><br /> <br /><br /> Data e ora della registrazione dell'evento nel file di log.|  
-|Message|Tipo di dati: **String**<br /><br /> Tipo di accesso: sola lettura<br /><br /> <br /><br /> Messaggio di evento.|  
+|Messaggio|Tipo di dati: **String**<br /><br /> Tipo di accesso: sola lettura<br /><br /> <br /><br /> Messaggio di evento.|  
 |ProcessInfo|Tipo di dati: **String**<br /><br /> Tipo di accesso: sola lettura<br /><br /> <br /><br /> Informazioni sull'ID del processo server di origine (SPID) per l'evento.|  
   
 ## <a name="remarks"></a>Osservazioni  
