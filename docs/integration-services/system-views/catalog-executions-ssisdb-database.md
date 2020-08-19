@@ -1,4 +1,5 @@
 ---
+description: catalog.executions (database SSISDB)
 title: catalog.executions (database SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33a7603502d1b43ea7cfdd1fa5f9c84720705ade
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 438d551f45447b0b03b075576af9cffb2bde8a36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912556"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425103"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (database SSISDB)
 
@@ -45,7 +46,7 @@ ms.locfileid: "86912556"
 |use32bitruntime|**bit**|Viene indicato se il runtime a 32 bit viene utilizzato per eseguire il pacchetto in un sistema operativo a 64 bit. Quando il valore è `1`, l'esecuzione avviene con il runtime a 32 bit. Quando il valore è `0`, l'esecuzione viene eseguita con il runtime a 64 bit.|  
 |object_type|**smallint**|Tipo di oggetto. Può trattarsi di un progetto (`20`) o di un pacchetto (`30`).|  
 |object_id|**bigint**|ID dell'oggetto interessato dall'operazione.|  
-|status|**int**|Lo stato dell'operazione. I valori possibili sono Creata (`1`), In esecuzione (`2`), Operazione annullata (`3`) Operazione non riuscita (`4`), In sospeso (`5`), Terminata in modo inatteso (`6`), Operazione riuscita (`7`), Arresto in corso (`8`) Operazione completata (`9`).|  
+|status|**int**|Stato dell'operazione. I valori possibili sono Creata (`1`), In esecuzione (`2`), Operazione annullata (`3`) Operazione non riuscita (`4`), In sospeso (`5`), Terminata in modo inatteso (`6`), Operazione riuscita (`7`), Arresto in corso (`8`) Operazione completata (`9`).|  
 |start_time|**datetimeoffset**|Ora di avvio dell'istanza di esecuzione.|  
 |end_time|**datetimeoffsset**|Ora di fine dell'istanza di esecuzione.|  
 |caller_sid|**varbinary(85)**|ID di sicurezza (SID) dell'utente se per l'accesso è stata utilizzata l'autenticazione di Windows.|  
@@ -62,7 +63,7 @@ ms.locfileid: "86912556"
 |machine_name|**nvarchar(128)**|Nome del computer in cui è in esecuzione l'istanza del server.|  
 |dump_id|**uniqueidentifier**|ID di un dump di esecuzione.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  In questa vista viene visualizzata una riga per ogni istanza di esecuzione nel catalogo.  
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -1,4 +1,5 @@
 ---
+description: Override della precisione iniziale e in secondi predefinita per i tipi di dati intervallo
 title: Eseguire l'override della precisione iniziali e secondi per i tipi di dati intervallo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3d65493f-dce7-4d29-9f59-c63a4e47918c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e60d5d8fc696ad8e2bd4cfb0c082ff214e066d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97375bf23a8530d78dea65dc75ce487cc4f807dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303602"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425003"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>Override della precisione iniziale e in secondi predefinita per i tipi di dati intervallo
 Quando il campo SQL_DESC_TYPE di un ARD è impostato su un tipo DateTime o Interval C, chiamando **SQLBindCol** o **SQLSetDescField**, il campo SQL_DESC_PRECISION, che contiene la precisione intervallo secondi, viene impostato sui valori predefiniti seguenti:  

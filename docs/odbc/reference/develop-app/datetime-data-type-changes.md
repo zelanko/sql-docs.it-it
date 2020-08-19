@@ -1,4 +1,5 @@
 ---
+description: Modifiche ai tipi di dati datetime
 title: Modifiche al tipo di dati DateTime | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c38c79f9-8bb0-4633-ac86-542366c09a95
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4f186047dd31aa2c4b66ec1ce73c8cb9fae31c04
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a36339f275ff03584a3682f9f57eeeb8445faf3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304644"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424753"
 ---
 # <a name="datetime-data-type-changes"></a>Modifiche ai tipi di dati datetime
 In ODBC *3. x*, gli identificatori per i tipi di dati di data, ora e timestamp SQL sono stati modificati da SQL_DATE, SQL_TIME e SQL_TIMESTAMP (con istanze di **#define** nel file di intestazione 9, 10 e 11) per SQL_TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP (con istanze di **#define** nel file di intestazione 91, 92 e 93), rispettivamente. Gli identificatori di tipo C corrispondenti sono stati modificati da SQL_C_DATE, SQL_C_TIME e SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME e SQL_C_TYPE_TIMESTAMP rispettivamente.  

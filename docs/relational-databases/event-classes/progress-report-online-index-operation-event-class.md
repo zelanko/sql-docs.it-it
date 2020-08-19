@@ -1,4 +1,5 @@
 ---
+description: 'Classe di evento Progress Report: Online Index Operation'
 title: 'Classe di evento Progress Report: Online Index Operation'
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,14 +13,14 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 69f03978dd362f706216d4d21cb1225ad2a8d10d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4dd043a813133a1e4d4d8e9c62b536d35e1db82a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424163"
 ---
-# <a name="progress-report-online-index-operation-event-class"></a>Classe di evento Progress Report: Online Index Operation
+# <a name="progress-report-online-index-operation-event-class"></a>Report di stato: Classe di evento Online Index Operation
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe di evento Progress Report: Online Index Operation indica lo stato di un'operazione di compilazione di un indice online durante l'esecuzione del processo di compilazione.  
   

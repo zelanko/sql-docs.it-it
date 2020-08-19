@@ -1,4 +1,5 @@
 ---
+description: == (uguale) (espressione SSIS)
 title: == (uguale) (espressione SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5a8e26da00bf530052b1ae7f342d40f922a71d25
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 65ef2568a30ada4503252adf404c24b2c8b5017d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86910847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425573"
 ---
 # <a name="-equal-ssis-expression"></a>== (uguale) (espressione SSIS)
 
@@ -44,7 +45,7 @@ expression1 == expression2
 ## <a name="result-types"></a>Tipi restituiti  
  DT_BOOL  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se una delle espressioni nel confronto è Null, il risultato del confronto sarà Null. Se entrambe le espressioni sono Null, il risultato sarà Null.  
   
  Il set di espressioni *expression1* e *expression2*deve seguire una di queste regole:  

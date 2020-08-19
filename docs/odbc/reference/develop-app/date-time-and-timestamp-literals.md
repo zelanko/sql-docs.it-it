@@ -1,4 +1,5 @@
 ---
+description: Valori letterali data, ora e timestamp
 title: Valori letterali data, ora e timestamp | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d899938be4689daab50a773f189219a797794006
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 10fb362a8ab61595a9b7205492de9c1115ae7013
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288297"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424783"
 ---
 # <a name="date-time-and-timestamp-literals"></a>Valori letterali data, ora e timestamp
 La sequenza di escape per i valori letterali data, ora e timestamp è  
@@ -28,9 +29,9 @@ La sequenza di escape per i valori letterali data, ora e timestamp è
   
 |*tipo di valore letterale*|Significato|Formato del *valore*|  
 |---------------------|-------------|-----------------------|  
-|**d**|Data|*aaaa*-*mm*mm-*GG*|  
+|**d**|Data|*aaaa* - *mm* - *DD*|  
 |**t**|Tempo|*HH*:*mm*:*SS*[1]|  
-|**ts**|Timestamp|*aaaa*-*mm*mm-*GG* *HH*:*mm*:*SS*[.* f...*] 1|  
+|**ts**|Timestamp|*aaaa* - *mm* - *DD* *HH*:*mm*:*SS*[.* f...*] 1|  
   
  [1] il numero di cifre a destra del separatore decimale in un valore letterale intervallo temporale o timestamp contenente un componente secondi dipende dalla precisione dei secondi, come contenuto nel campo del descrittore SQL_DESC_PRECISION. Per ulteriori informazioni, vedere [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).  
   

@@ -1,4 +1,5 @@
 ---
+description: Estensione del flusso di dati con il componente script
 title: Estensione del flusso di dati con il componente script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3f8818197bffefd42004dbd4d0cc4d1732d79029
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 82f34ab83935bee2972a4dbb2b007eb2632b9fba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913417"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425393"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Estensione del flusso di dati con il componente script
 
@@ -56,7 +57,7 @@ ms.locfileid: "86913417"
  [Informazioni sul modello a oggetti del componente script](../../../integration-services/extending-packages-scripting/data-flow-script-component/understanding-the-script-component-object-model.md)  
  Un nuovo progetto di componente script contiene tre elementi di progetto con diverse classi, nonché proprietà e metodi generati automaticamente.  
   
- [Uso di variabili nel componente script](../../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)  
+ [Utilizzo di variabili nel componente script](../../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)  
  L'elemento di progetto **ComponentWrapper** contiene le proprietà delle funzioni di accesso fortemente tipizzate per le variabili del pacchetto.  
   
  [Connessione a origini dati nel componente script](../../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)  
@@ -65,7 +66,7 @@ ms.locfileid: "86913417"
  [Generazione di eventi nel componente script](../../../integration-services/extending-packages-scripting/data-flow-script-component/raising-events-in-the-script-component.md)  
  È possibile generare eventi per fornire la notifica di problemi ed errori.  
   
- [Registrazione nel componente script](../../../integration-services/extending-packages-scripting/data-flow-script-component/logging-in-the-script-component.md)  
+ [Registrazione del componente script](../../../integration-services/extending-packages-scripting/data-flow-script-component/logging-in-the-script-component.md)  
  È possibile registrare informazioni nei provider di log abilitati nel pacchetto.  
   
  [Sviluppo di tipi specifici di componenti script](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)  

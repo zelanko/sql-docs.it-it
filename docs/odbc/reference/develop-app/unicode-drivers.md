@@ -1,4 +1,5 @@
 ---
+description: Driver di Unicode
 title: Driver Unicode | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3b4742d5-74fb-4aff-aa21-d83a0064d73d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aabdd899d78c1141716725d57e343dc002dc96ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1acdb0c630fe5f4b1b22f51015e7ee94e7d8a56a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284353"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424483"
 ---
 # <a name="unicode-drivers"></a>Driver di Unicode
 Se un driver deve essere un driver Unicode o un driver ANSI dipende interamente dalla natura dell'origine dati. Se l'origine dati supporta dati Unicode, il driver deve essere un driver Unicode. Se l'origine dati supporta solo dati ANSI, il driver deve rimanere un driver ANSI.  

@@ -1,4 +1,5 @@
 ---
+description: Esempio di esplorazione di SQL Server
 title: Esempio di esplorazione SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e0d5fd1-ec93-4348-a77a-08f5ba738bc6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7b15aa8e3d573660a312fceb5b9100a41f0384d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14016832989c6fcba1dc39bc64434e72b049c18a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424563"
 ---
 # <a name="sql-server-browsing-example"></a>Esempio di esplorazione di SQL Server
 Nell'esempio seguente viene illustrato come utilizzare **SQLBrowseConnect** per esplorare le connessioni disponibili con un driver per SQL Server. Per prima cosa, l'applicazione richiede un handle di connessione:  
@@ -38,7 +39,7 @@ SQLBrowseConnect(hdbc, "DRIVER={SQL Server};", SQL_NTS, BrowseResult,
  Poiché si tratta della prima chiamata a **SQLBrowseConnect**, gestione driver carica il driver SQL Server e chiama la funzione **SQLBrowseConnect** del driver con gli stessi argomenti ricevuti dall'applicazione.  
   
 > [!NOTE]  
->  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, `Trusted_Connection=yes` è necessario specificare al posto delle informazioni sull'ID utente e sulla password nella stringa di connessione.  
+>  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare al `Trusted_Connection=yes` posto delle informazioni sull'ID utente e sulla password nella stringa di connessione.  
   
  Il driver determina che si tratta della prima chiamata a **SQLBrowseConnect** e restituisce il secondo livello degli attributi di connessione: Server, nome utente, password, nome dell'applicazione e ID workstation. Per l'attributo Server restituisce un elenco di nomi di server validi. Il codice restituito da **SQLBrowseConnect** è SQL_NEED_DATA. Ecco la stringa di risultato Browse:  
   

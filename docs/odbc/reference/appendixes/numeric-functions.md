@@ -1,4 +1,5 @@
 ---
+description: Funzioni numeriche
 title: Funzioni numeriche | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 03da5b6644e0f7df3dc4e5e16a211cb503023bad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7575d55ad6632ffa511da32a7155ab8c4d0edf3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425023"
 ---
 # <a name="numeric-functions"></a>Funzioni numeriche
 Nella tabella seguente vengono descritte le funzioni numeriche incluse nel set di funzioni scalari ODBC. Chiamando **SQLGetInfo** con un *tipo di informazioni* SQL_NUMERIC_FUNCTIONS, un'applicazione può determinare quali funzioni numeriche sono supportate da un driver.  
@@ -35,27 +36,27 @@ Nella tabella seguente vengono descritte le funzioni numeriche incluse nel set d
   
 |Funzione|Descrizione|  
 |--------------|-----------------|  
-|**ABS (** _numeric_exp_ **)** (ODBC 1,0)|Restituisce il valore assoluto di *numeric_exp*.|  
-|**ARCCOS (** _float_exp_ **)** (ODBC 1,0)|Restituisce l'arcoseno di *float_exp* come angolo, espresso in radianti.|  
-|**Asin (** _float_exp_ **)** (ODBC 1,0)|Restituisce il arcoseno di *float_exp* come angolo, espresso in radianti.|  
-|**Atan (** _float_exp_ **)** (ODBC 1,0)|Restituisce il arcotangente di *float_exp* come angolo, espresso in radianti.|  
-|**Atan2 (** _float_exp1_, _float_exp2_**)** (ODBC 2,0)|Restituisce l'arcotangente delle coordinate *x* e *y* , specificate da *float_exp1* e *float_exp2*rispettivamente come angolo, espresso in radianti.|  
-|**Ceiling (** _numeric_exp_ **)** (ODBC 1,0)|Restituisce l'intero più piccolo maggiore o uguale a *numeric_exp*. Il valore restituito è dello stesso tipo di dati del parametro di input.|  
-|**Cos (** _float_exp_ **)** (ODBC 1,0)|Restituisce il coseno di *float_exp*, dove *float_exp* è un angolo espresso in radianti.|  
-|**Lettino (** _float_exp_ **)** (ODBC 1,0)|Restituisce la cotangente di *float_exp*, dove *float_exp* è un angolo espresso in radianti.|  
-|**Gradi (** _numeric_exp_ **)** (ODBC 2,0)|Restituisce il numero di gradi convertiti da *numeric_exp* radianti.|  
-|**Exp (** _float_exp_ **)** (ODBC 1,0)|Restituisce il valore esponenziale del *float_exp*.|  
-|**Floor (** _numeric_exp_ **)** (ODBC 1,0)|Restituisce l'intero più grande minore o uguale a *numeric_exp*. Il valore restituito è dello stesso tipo di dati del parametro di input.|  
-|**Log (** _float_exp_ **)** (ODBC 1,0)|Restituisce il logaritmo naturale della *float_exp*.|  
-|**Log10 (** _float_exp_ **)** (ODBC 2,0)|Restituisce il logaritmo in base 10 della *float_exp*.|  
-|**Mod (** _integer_exp1_, _integer_exp2_**)** (ODBC 1,0)|Restituisce il resto (modulo) del *integer_exp1* diviso per *integer_exp2*.|  
-|**Pi ()** (ODBC 1,0)|Restituisce il valore costante di pi greco come valore a virgola mobile.|  
-|**Power (** _numeric_exp_, _integer_exp_**)** (ODBC 2,0)|Restituisce il valore di *numeric_exp* alla potenza di *integer_exp*.|  
-|**Radianti (** _numeric_exp_ **)** (ODBC 2,0)|Restituisce il numero di radianti convertiti da *numeric_exp* gradi.|  
-|**Rand (**[*integer_exp*]**)** (ODBC 1,0)|Restituisce un valore a virgola mobile casuale utilizzando *integer_exp* come valore di inizializzazione facoltativo.|  
-|**Round (** _numeric_exp_, _integer_exp_**)** (ODBC 2,0)|Restituisce *numeric_exp* arrotondato alla *integer_exp* posizionata a destra del separatore decimale. Se *integer_exp* è un valore negativo, *numeric_exp* viene arrotondato a &#124;*integer_exp*&#124; posizioni a sinistra del separatore decimale.|  
-|**Sign (** _numeric_exp_ **)** (ODBC 1,0)|Restituisce un indicatore del segno di *numeric_exp*. Se *numeric_exp* è minore di zero, viene restituito-1. Se *numeric_exp* è uguale a zero, viene restituito 0. Se *numeric_exp* è maggiore di zero, viene restituito 1.|  
-|**Sin (** _float_exp_ **)** (ODBC 1,0)|Restituisce il seno di *float_exp*, dove *float_exp* è un angolo espresso in radianti.|  
-|**Sqrt (** _float_exp_ **)** (ODBC 1,0)|Restituisce la radice quadrata della *float_exp*.|  
-|**Tan (** _float_exp_ **)** (ODBC 1,0)|Restituisce la tangente di *float_exp*, dove *float_exp* è un angolo espresso in radianti.|  
-|**Truncate (** _numeric_exp_, _integer_exp_**)** (ODBC 2,0)|Restituisce *numeric_exp* troncato in *integer_exp* posiziona il punto decimale. Se *integer_exp* è un valore negativo, *numeric_exp* viene troncato &#124;*integer_exp*&#124; posizioni a sinistra del separatore decimale.|
+|**ABS (** _numeric_exp_ **)**  (ODBC 1,0)|Restituisce il valore assoluto di *numeric_exp*.|  
+|**ARCCOS (** _float_exp_ **)**  (ODBC 1,0)|Restituisce l'arcoseno di *float_exp* come angolo, espresso in radianti.|  
+|**Asin (** _float_exp_ **)**  (ODBC 1,0)|Restituisce il arcoseno di *float_exp* come angolo, espresso in radianti.|  
+|**Atan (** _float_exp_ **)**  (ODBC 1,0)|Restituisce il arcotangente di *float_exp* come angolo, espresso in radianti.|  
+|**Atan2 (** _float_exp1_, _float_exp2_**)**  (ODBC 2,0)|Restituisce l'arcotangente delle coordinate *x* e *y* , specificate da *float_exp1* e *float_exp2*rispettivamente come angolo, espresso in radianti.|  
+|**Ceiling (** _numeric_exp_ **)**  (ODBC 1,0)|Restituisce l'intero più piccolo maggiore o uguale a *numeric_exp*. Il valore restituito è dello stesso tipo di dati del parametro di input.|  
+|**Cos (** _float_exp_ **)**  (ODBC 1,0)|Restituisce il coseno di *float_exp*, dove *float_exp* è un angolo espresso in radianti.|  
+|**Lettino (** _float_exp_ **)**  (ODBC 1,0)|Restituisce la cotangente di *float_exp*, dove *float_exp* è un angolo espresso in radianti.|  
+|**Gradi (** _numeric_exp_ **)**  (ODBC 2,0)|Restituisce il numero di gradi convertiti da *numeric_exp* radianti.|  
+|**Exp (** _float_exp_ **)**  (ODBC 1,0)|Restituisce il valore esponenziale del *float_exp*.|  
+|**Floor (** _numeric_exp_ **)**  (ODBC 1,0)|Restituisce l'intero più grande minore o uguale a *numeric_exp*. Il valore restituito è dello stesso tipo di dati del parametro di input.|  
+|**Log (** _float_exp_ **)**  (ODBC 1,0)|Restituisce il logaritmo naturale della *float_exp*.|  
+|**Log10 (** _float_exp_ **)**  (ODBC 2,0)|Restituisce il logaritmo in base 10 della *float_exp*.|  
+|**Mod (** _integer_exp1_, _integer_exp2_**)**  (ODBC 1,0)|Restituisce il resto (modulo) del *integer_exp1* diviso per *integer_exp2*.|  
+|**Pi ()**  (ODBC 1,0)|Restituisce il valore costante di pi greco come valore a virgola mobile.|  
+|**Power (** _numeric_exp_, _integer_exp_**)**  (ODBC 2,0)|Restituisce il valore di *numeric_exp* alla potenza di *integer_exp*.|  
+|**Radianti (** _numeric_exp_ **)**  (ODBC 2,0)|Restituisce il numero di radianti convertiti da *numeric_exp* gradi.|  
+|**Rand (**[*integer_exp*]**)**  (ODBC 1,0)|Restituisce un valore a virgola mobile casuale utilizzando *integer_exp* come valore di inizializzazione facoltativo.|  
+|**Round (** _numeric_exp_, _integer_exp_**)**  (ODBC 2,0)|Restituisce *numeric_exp* arrotondato alla *integer_exp* posizionata a destra del separatore decimale. Se *integer_exp* è un valore negativo, *numeric_exp* viene arrotondato a &#124;*integer_exp*&#124; posizioni a sinistra del separatore decimale.|  
+|**Sign (** _numeric_exp_ **)**  (ODBC 1,0)|Restituisce un indicatore del segno di *numeric_exp*. Se *numeric_exp* è minore di zero, viene restituito-1. Se *numeric_exp* è uguale a zero, viene restituito 0. Se *numeric_exp* è maggiore di zero, viene restituito 1.|  
+|**Sin (** _float_exp_ **)**  (ODBC 1,0)|Restituisce il seno di *float_exp*, dove *float_exp* è un angolo espresso in radianti.|  
+|**Sqrt (** _float_exp_ **)**  (ODBC 1,0)|Restituisce la radice quadrata della *float_exp*.|  
+|**Tan (** _float_exp_ **)**  (ODBC 1,0)|Restituisce la tangente di *float_exp*, dove *float_exp* è un angolo espresso in radianti.|  
+|**Truncate (** _numeric_exp_, _integer_exp_**)**  (ODBC 2,0)|Restituisce *numeric_exp* troncato in *integer_exp* posiziona il punto decimale. Se *integer_exp* è un valore negativo, *numeric_exp* viene troncato &#124;*integer_exp*&#124; posizioni a sinistra del separatore decimale.|

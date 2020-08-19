@@ -1,4 +1,5 @@
 ---
+description: Valori letterali intervallo
 title: Valori letterali intervallo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c1761ac0acb57b3f375a7d19e9371384c000eca5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd065091127645a45b836781fc6edf6c701e6685
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425033"
 ---
 # <a name="interval-literals"></a>Valori letterali intervallo
 ODBC richiede che tutti i driver supportino la conversione del tipo di dati SQL_CHAR o SQL_VARCHAR a tutti i tipi di dati intervallo C. Se l'origine dati sottostante non supporta i tipi di dati interval, tuttavia, il driver deve essere in grado di individuare il formato corretto del valore nel campo SQL_CHAR per supportare tali conversioni. In modo analogo, ODBC richiede che qualsiasi tipo ODBC C sia convertibile in SQL_CHAR o SQL_VARCHAR, quindi un driver deve conoscere il formato di un intervallo archiviato nel campo carattere. In questa sezione viene descritta la sintassi dei valori letterali di intervallo, che il writer del driver deve utilizzare per convalidare i campi SQL_CHAR durante la conversione in o da tipi di dati intervallo C.  
@@ -37,7 +38,7 @@ INTERVAL[<sign>] 'value' <interval qualifier>
   
  dove "INTERVAL" indica che il valore letterale del carattere è un intervallo. Il segno può essere più o meno; si trova al di fuori della stringa dell'intervallo ed è facoltativa.  
   
- Il qualificatore di intervallo può essere un singolo campo DateTime o essere composto da due campi DateTime \<nel formato seguente> *leading field* \<campo *finale*>.  
+ Il qualificatore Interval può essere un singolo campo DateTime o essere composto da due campi DateTime, nel formato: \<*leading field*> a \<*trailing field*> .  
   
 -   Quando l'intervallo è costituito da un singolo campo, il campo singolo può essere un campo diverso da un secondo che può essere accompagnato da una precisione leader facoltativa tra parentesi. Il singolo campo DateTime può anche essere un secondo campo che può essere accompagnato dalla precisione leader facoltativa, la precisione frazionaria facoltativa dei secondi tra parentesi o entrambe. Se per un campo di secondi sono presenti sia una precisione iniziali che una precisione in secondi frazionari, queste sono separate da virgole. Se il campo secondi ha una precisione in secondi frazionari, deve avere anche una precisione principale.  
   
@@ -45,7 +46,7 @@ INTERVAL[<sign>] 'value' <interval qualifier>
   
  La stringa di intervallo in *valore* è racchiusa tra virgolette singole. Può essere un valore letterale di anno/mese o un valore letterale giorno-ora. Il formato della stringa in *valore* è determinato dalle regole seguenti:  
   
--   La stringa contiene un valore decimale per ogni campo che è implicito per il \< *qualificatore* di *intervallo*>.  
+-   La stringa contiene un valore decimale per ogni campo che è implicito da \<*interval* *qualifier*> .  
   
 -   Se la precisione dell'intervallo include i campi anno e mese, i valori di questi campi sono separati da un segno meno.  
   

@@ -1,4 +1,5 @@
 ---
+description: Stringhe di connessione
 title: Stringhe di connessione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 724c7b86-300a-4fa9-ad96-4afa0fdcb3e9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bbbb5b4672a8ea393380063887cfd77b3e910238
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fbb2d4b0c80a93b225bac754d2905b27e8844cbb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299031"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424773"
 ---
 # <a name="connection-strings"></a>Stringhe di connessione
 Una stringa di connessione contiene le informazioni utilizzate per stabilire una connessione. Una stringa di connessione completa contiene tutte le informazioni necessarie per stabilire una connessione. La stringa di connessione è una serie di coppie parola chiave/valore separate da punti e virgola. Per la sintassi completa di una stringa di connessione, vedere la descrizione della funzione [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) . La stringa di connessione viene utilizzata da:  

@@ -1,4 +1,5 @@
 ---
+description: Estensione del pacchetto con l'attività Script
 title: Estensione del pacchetto con l'attività Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c10db4b43ab6763d751af0eeb980979e74bf6c6e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c70136ad09aaa3cb24c04c2828e8335f96aef467
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917610"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425313"
 ---
 # <a name="extending-the-package-with-the-script-task"></a>Estensione del pacchetto con l'attività Script
 
@@ -48,7 +49,7 @@ ms.locfileid: "86917610"
  [Scrittura di codice e debug dell'attività Script](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)  
  Descrive come usare [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) per sviluppare gli script contenuti nell'attività Script.  
   
- [Uso delle variabili nell'attività Script](../../../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)  
+ [Utilizzo di variabili nell'attività Script](../../../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)  
  Viene descritto come utilizzare le variabili tramite la proprietà <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>.  
   
  [Connessione a origini dati nell'attività Script](../../../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)  
@@ -60,7 +61,7 @@ ms.locfileid: "86917610"
  [Registrazione nell'attività Script](../../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md)  
  Viene descritto come registrare informazioni tramite il metodo <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>.  
   
- [Restituzione di risultati dall'attività Script](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md)  
+ [Risultati restituiti dall'attività Script](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md)  
  Viene descritto come restituire risultati tramite le proprietà <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A> e <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>.  
   
  [Esempi di attività Script](../../../integration-services/extending-packages-scripting-task-examples/script-task-examples.md)  

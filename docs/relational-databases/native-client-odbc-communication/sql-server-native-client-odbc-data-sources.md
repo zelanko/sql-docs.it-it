@@ -1,4 +1,5 @@
 ---
+description: Origini dati ODBC di SQL Server Native Client
 title: Origini dei dati ODBC
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,11 +20,12 @@ ms.assetid: a6a50fd0-d439-43fd-b76f-16ec02f478c5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43a1b740f6d588ceb8b7ce5f2c2ee41696cb12b4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2f7ae0b959fc8e58d91280321bef6daa856ba59f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005867"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425053"
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>Origini dati ODBC di SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

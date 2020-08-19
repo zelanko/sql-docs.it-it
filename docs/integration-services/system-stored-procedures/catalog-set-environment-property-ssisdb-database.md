@@ -1,4 +1,5 @@
 ---
+description: catalog.set_environment_property (database SSISDB)
 title: catalog.set_environment_property (database SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: a345675b-d32e-4624-96cf-ec656730b114
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 71d673ddb0ebb66b22cee7651bc74bd44cf7e089
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ba69c12d93b683afa8d11669523153dc6d79d0c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912892"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425143"
 ---
 # <a name="catalogset_environment_property-ssisdb-database"></a>catalog.set_environment_property (database SSISDB)
 
@@ -43,10 +44,10 @@ catalog.set_environment_property [ @folder_name = ] folder_name
  Il nome dell'ambiente. *environment_name* è di tipo **nvarchar(128)** .  
   
  [ @property_name = ] *property_name*  
- Nome di una proprietà dell'ambiente. *property_name* è di tipo **nvarchar(128)** .  
+ Nome di una proprietà dell'ambiente. *property_name* è di tipo **nvarchar(128)**.  
   
  [ @property_value = ] *property_value*  
- Valore della proprietà dell'ambiente. *property_value* è di tipo **nvarchar(1024)** .  
+ Valore della proprietà dell'ambiente. *property_value* è di tipo **nvarchar(1024)**.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  
@@ -72,7 +73,7 @@ catalog.set_environment_property [ @folder_name = ] folder_name
   
 -   Nome dell'ambiente non valido  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  In questa versione è possibile impostare solo la proprietà `Description`. Il valore della proprietà `Description` non può superare i 4000 caratteri.  
   
   

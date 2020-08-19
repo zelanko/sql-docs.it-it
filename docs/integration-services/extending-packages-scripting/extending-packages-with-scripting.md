@@ -1,4 +1,5 @@
 ---
+description: Estensione di pacchetti tramite scripting
 title: Estensione di pacchetti tramite scripting | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e7721e38ca3f9e19ecf3d8d4ee6113f1768427b4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b0c4a0b243fbb6935a0d456955e70b58f6ac1394
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915955"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425333"
 ---
 # <a name="extending-packages-with-scripting"></a>Estensione di pacchetti tramite scripting
 
@@ -48,7 +49,7 @@ ms.locfileid: "86915955"
  [Estensione del flusso di dati con il componente script](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
  Viene descritto come creare origini, trasformazioni e destinazioni personalizzate del flusso di dati tramite il componente script. Un componente del flusso di dati viene in genere chiamato una volta per ogni riga di dati che viene elaborata.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Informazioni di riferimento  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
  Vengono elencati i codici di errore predefiniti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con i relativi nomi simbolici e le descrizioni.  
   

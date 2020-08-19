@@ -1,4 +1,5 @@
 ---
+description: SQLNativeSql (libreria di cursori)
 title: SQLNativeSql (libreria di cursori) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4459092-1177-4b2a-b7f5-e0083d3bf2b2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 41f7617530f34d49852ca67db9f47cab94292385
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6046c8dabbc128a3afae772730cbad9eacc4b61c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300571"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424906"
 ---
 # <a name="sqlnativesql-cursor-library"></a>SQLNativeSql (libreria di cursori)
 > [!IMPORTANT]  

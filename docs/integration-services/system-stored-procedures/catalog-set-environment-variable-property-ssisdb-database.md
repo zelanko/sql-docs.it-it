@@ -1,4 +1,5 @@
 ---
+description: catalog.set_environment_variable_property (database SSISDB)
 title: catalog.set_environment_variable_property (database SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: c1deb31e-b8d1-44ca-b355-570959bc6478
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: adb5a783c928cf9bac1f3ac9668306bff5eb8456
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f4cf7d169d9cdd3e319b243f831a76bb3fe3ab4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425123"
 ---
 # <a name="catalogset_environment_variable_property-ssisdb-database"></a>catalog.set_environment_variable_property (database SSISDB)
 
@@ -44,13 +45,13 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
  Il nome dell'ambiente. *environment_name* è di tipo **nvarchar(128)** .  
   
  [ @variable_name = ] *variable_name*  
- Nome della variabile di ambiente. *variable_name* è di tipo **nvarchar(128)** .  
+ Nome della variabile di ambiente. *variable_name* è di tipo **nvarchar(128)**.  
   
  [ @property_name = ] *property_name*  
- Nome della proprietà della variabile di ambiente. *property_name* è di tipo **nvarchar(128)** .  
+ Nome della proprietà della variabile di ambiente. *property_name* è di tipo **nvarchar(128)**.  
   
  [ @property_value = ] *property_value*  
- Valore della proprietà della variabile di ambiente. *property_value* è di tipo **nvarchar(4000)** .  
+ Valore della proprietà della variabile di ambiente. *property_value* è di tipo **nvarchar(4000)**.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  
@@ -80,7 +81,7 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
   
 -   Utente senza autorizzazioni appropriate.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  In questa versione è possibile impostare solo la proprietà `Description`. Il valore della proprietà `Description` non può superare i 4000 caratteri.  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Audit Login GDR - classe di evento
 title: Classe di evento Audit Login GDR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: cc0560d9-bbb9-4263-a1f3-827c80167f8c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a0e3cfda6f67bff76ce001cdf4b98bfdac0b215
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8a0d0eb1272e93b08d9dbe84608199cf26ebd3df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726370"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424263"
 ---
 # <a name="audit-login-gdr-event-class"></a>Audit Login GDR - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

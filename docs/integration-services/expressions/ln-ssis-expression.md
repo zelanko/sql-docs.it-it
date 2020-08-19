@@ -1,4 +1,5 @@
 ---
+description: LN (espressione SSIS)
 title: LN (espressione SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4c187eab1cae9c51106d30a71b4668f8a4cb0689
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ffacc162a2fdcad70fc432995168c743f232ca84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425413"
 ---
 # <a name="ln-ssis-expression"></a>LN (espressione SSIS)
 
@@ -41,7 +42,7 @@ LN(numeric_expression)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_R8  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Prima del calcolo del logaritmo viene eseguito il cast dell'espressione numerica al tipo di dati DT_R8. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Se tramite il parametro *numeric_expression* viene restituito zero o un valore negativo, il risultato sarà Null.  

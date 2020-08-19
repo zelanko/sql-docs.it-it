@@ -1,4 +1,5 @@
 ---
+description: Esecuzione di batch
 title: Esecuzione di batch | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0ce0c043fcfad41a624ad129a757a047d2c87fb6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3bb923f95dfcfb731d472aad8ead7ff35053171
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424643"
 ---
 # <a name="executing-batches"></a>Esecuzione di batch
 Prima di eseguire un batch di istruzioni, un'applicazione deve prima controllare se sono supportate. A tale scopo, l'applicazione chiama **SQLGetInfo** con le opzioni SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS e SQL_PARAM_ARRAY_SELECTS. La prima opzione restituisce un valore che indica se le istruzioni di generazione del conteggio delle righe e dei set di risultati sono supportate in batch e procedure esplicite, mentre le ultime due opzioni restituiscono informazioni sulla disponibilità dei conteggi delle righe e dei set di risultati nell'esecuzione con parametri.  

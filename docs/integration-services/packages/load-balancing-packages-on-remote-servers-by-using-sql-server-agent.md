@@ -1,4 +1,5 @@
 ---
+description: Bilanciamento del carico dei pacchetti su server remoti tramite SQL Server Agent
 title: Bilanciamento del carico dei pacchetti su server remoti tramite SQL Server Agent | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c4df8e04fc2ef1c68dd1759db2915a13e0bbaf67
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d80feda3402c1aedcc0c1016c3de903524f68f17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425213"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Bilanciamento del carico dei pacchetti su server remoti tramite SQL Server Agent
 
@@ -118,7 +119,7 @@ ms.locfileid: "86919187"
  In questo scenario l'eventuale esito negativo indica solamente che si è verificato un errore durante la chiamata remota al processo di SQL Server Agent. Questa situazione si presenta ad esempio quando il server remoto non è disponibile e l'agente non risponde. Finché l'agente è attivo, tuttavia, il pacchetto padre completa correttamente l'attività.  
   
 > [!NOTE]  
->  È possibile usare un'attività Esegui SQL contenente un'istruzione Transact-SQL **sp_start_job N'package_name'** . Per altre informazioni, vedere [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).  
+>  È possibile usare un'attività Esegui SQL contenente un'istruzione Transact-SQL **sp_start_job N'package_name'**. Per altre informazioni, vedere [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).  
   
 ### <a name="debugging-environment"></a>Ambiente di debug  
  Durante il test del pacchetto padre è possibile accedere all'ambiente di debug della finestra di progettazione scegliendo Avvia debug (F5) dal menu Debug. In alternativa, è possibile usare l'utilità della riga di comando **dtexec**. Per altre informazioni, vedere [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  

@@ -1,4 +1,5 @@
 ---
+description: Generatore di espressioni
 title: Generatore di espressioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0ebadab32a4f668cbcc523038634f171782602ec
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6f8eb6c6771e2684d03380a721c7ef96dcb08488
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425523"
 ---
 # <a name="expression-builder"></a>Generatore di espressioni
 

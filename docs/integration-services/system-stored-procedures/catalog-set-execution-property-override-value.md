@@ -1,4 +1,5 @@
 ---
+description: catalog.set_execution_property_override_value
 title: catalog.set_execution_property_override_value | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a009f23b1c6ca3520793a7c1f947afe0ff0516a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1d68015c56a6b5552ebee72f661c879c26aef4a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425083"
 ---
 # <a name="catalogset_execution_property_override_value"></a>catalog.set_execution_property_override_value 
 
@@ -40,7 +41,7 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  Identificatore univoco per l'istanza di esecuzione. *execution_id* è di tipo **bigint**.  
   
  [ @property_path = ] *property_path*  
- Percorso alla proprietà nel pacchetto. *property_path* è di tipo **nvarchar(4000)** .  
+ Percorso alla proprietà nel pacchetto. *property_path* è di tipo **nvarchar(4000)**.  
   
  [ @property_value = ] *property_value*  
  Valore di override da assegnare alla proprietà. *property_value* è di tipo **nvarchar(max)** .  
@@ -48,7 +49,7 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  [ @sensitive = ] *sensitive*  
  Quando il valore è 1, la proprietà è importante e viene crittografata quando viene archiviata. Quando il valore è 0, la proprietà non è importante e il valore viene archiviato non crittografato. L'argomento *sensitive* è di tipo **bit**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa routine esegue la stessa funzione della sezione **Override di proprietà** nella scheda **Avanzate** della finestra di dialogo **Esegui pacchetto**. Il percorso della proprietà deriva dalla proprietà **Percorso del pacchetto** dell'attività del pacchetto.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  

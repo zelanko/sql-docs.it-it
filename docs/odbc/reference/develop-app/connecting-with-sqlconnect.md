@@ -1,4 +1,5 @@
 ---
+description: Connessione con SQLConnect
 title: Connessione con SQLConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 25c1dca7324f73f6aacf472fb225a09424c73d3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 96667de75dfbe9c521b5f5e74ec4c1b366da725d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424833"
 ---
 # <a name="connecting-with-sqlconnect"></a>Connessione con SQLConnect
 **SQLConnect** è la funzione di connessione più semplice. Richiede un nome di origine dati e accetta un ID utente e una password facoltativi. Funziona bene per le applicazioni che codificano a livello di codice un nome di origine dati e non richiedono un ID utente o una password. Funziona anche per le applicazioni che desiderano controllare il proprio "aspetto" o che non hanno un'interfaccia utente. Tali applicazioni possono compilare un elenco di origini dati utilizzando **SQLDataSources**, richiedere all'utente l'origine dati, l'ID utente e la password, quindi chiamare **SQLConnect**.  

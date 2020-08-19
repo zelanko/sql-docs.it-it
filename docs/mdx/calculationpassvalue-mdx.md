@@ -1,4 +1,5 @@
 ---
+description: CalculationPassValue (MDX)
 title: CalculationPassValue (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ae667d2cecb65f2525aaf855d3d1b70d40a59b21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 98d30326b709f7bd651b7941e48d412a7b875ffd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425043"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
 
@@ -54,13 +55,13 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
   
  Se viene specificata un'espressione stringa, la funzione restituisce un valore stringa valutando l'espressione stringa MDX specificata nella sessione di calcolo specificata e, facoltativamente, modificata da un flag di accesso e da un modificatore di flag di accesso *.*  
   
- Con la risoluzione della ricorsione automatica in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], questa funzione non ha un uso pratico.  
+ Con la risoluzione della ricorsione automatica in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , questa funzione non ha un uso pratico.  
   
 > [!NOTE]  
 >  Solo gli amministratori possono utilizzare la funzione **CalculationPassValue** in uno script MDX. Se si esegue uno script MDX che contiene questa funzione nel contesto di un ruolo che non dispone di privilegi di amministratore, verrà generato un errore.  
   
 ## <a name="see-also"></a>Vedere anche  
- [CalculationCurrentPass &#40;&#41;MDX](../mdx/calculationcurrentpass-mdx.md)   
+ [CalculationCurrentPass &#40;&#41;MDX ](../mdx/calculationcurrentpass-mdx.md)   
  [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
  [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   

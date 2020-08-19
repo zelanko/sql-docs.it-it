@@ -1,4 +1,5 @@
 ---
+description: Disabilitazione di indici e vincoli
 title: Disabilitare indici e vincoli | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -24,12 +25,12 @@ ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6a012fc4aca38401a7476b759a9a13995dad87b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 464b8069b09af65c86521878803fdf1bd7744548
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424173"
 ---
 # <a name="disable-indexes-and-constraints"></a>Disabilitazione di indici e vincoli
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -93,7 +94,7 @@ ms.locfileid: "85629775"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per eseguire l'istruzione ALTER INDEX, è necessario disporre almeno dell'autorizzazione ALTER per la tabella o la vista.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-disable-an-index"></a>Per disabilitare un indice  
   
@@ -151,18 +152,18 @@ ms.locfileid: "85629775"
   
      Si è verificato un errore durante la disabilitazione degli indici e non è stato possibile completare correttamente l'operazione.  
   
--   **Stopped**  
+-   **Arrestato**  
   
      La disabilitazione dell'indice non è stata completata poiché l'operazione è stata arrestata dall'utente.  
   
- **Messaggio**  
+ **Message**  
  Visualizza il testo dei messaggi di errore generati durante l'operazione. Durante l'esecuzione dell'operazione, gli errori vengono visualizzati come collegamenti ipertestuali. Nel testo di tali collegamenti è descritto l'errore verificatosi. La colonna **Messaggio** in genere non è sufficientemente ampia per contenere il testo completo del messaggio. Per leggere il messaggio completo, eseguire una delle seguenti operazioni:  
   
 -   Spostare il puntatore del mouse sulla cella del messaggio per visualizzare una descrizione comando contenente il testo dell'errore.  
   
 -   Fare clic sul collegamento ipertestuale per visualizzare una finestra di dialogo contenente l'errore completo.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-disable-an-index"></a>Per disabilitare un indice  
   

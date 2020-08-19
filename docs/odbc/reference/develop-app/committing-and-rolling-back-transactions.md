@@ -1,4 +1,5 @@
 ---
+description: Esecuzione del commit e del rollback delle transazioni
 title: Esecuzione del commit e rollback delle transazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 800f2c1a-6f79-4ed1-830b-aa1a62ff5165
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1c272d60242d31622452c4dcb0f6a16c4838768f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b84be4d2734d9485748351c99ff2675bf3b54213
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299111"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424843"
 ---
 # <a name="committing-and-rolling-back-transactions"></a>Esecuzione del commit e del rollback delle transazioni
 Per eseguire il commit o il rollback di una transazione in modalità di commit manuale, un'applicazione chiama **SQLEndTran**. I driver per DBMS che supportano le transazioni in genere implementano questa funzione eseguendo un'istruzione **commit** o **rollback** . Gestione driver non chiama **SQLEndTran** quando la connessione è in modalità autocommit; restituisce semplicemente SQL_SUCCESS, anche se l'applicazione tenta di eseguire il rollback della transazione. Poiché i driver per DBMS che non supportano le transazioni sono sempre in modalità autocommit, possono implementare **SQLEndTran** per restituire SQL_SUCCESS senza eseguire alcuna operazione o non implementarlo affatto.  

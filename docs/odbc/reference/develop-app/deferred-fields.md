@@ -1,4 +1,5 @@
 ---
+description: Campi posticipati
 title: Campi posticipati | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 094aba353e10ed568e1959b1d655109296507dee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f8b313f2d77270e95830de1a524706aa7fe36e33
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305972"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424693"
 ---
 # <a name="deferred-fields"></a>Campi posticipati
 I valori dei *campi posticipati* non vengono usati quando sono impostati, ma il driver Salva gli indirizzi delle variabili per un effetto posticipato. Per un descrittore di parametri dell'applicazione, il driver utilizza il contenuto delle variabili al momento della chiamata a **SQLExecDirect** o **SQLExecute**. Nel caso di un descrittore di riga dell'applicazione, il driver usa il contenuto delle variabili al momento del recupero.  

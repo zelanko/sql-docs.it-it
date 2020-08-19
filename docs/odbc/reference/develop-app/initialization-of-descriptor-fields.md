@@ -1,4 +1,5 @@
 ---
+description: Inizializzazione dei campi di descrizione
 title: Inizializzazione dei campi del descrittore | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1da157cb-8ea9-4a56-983b-1c45650217c5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e4ed6479a60f1d0695107c216b2f0c94a55f68ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2537e5e74c600c72368e46bda7640b881d9a34df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300121"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424653"
 ---
 # <a name="initialization-of-descriptor-fields"></a>Inizializzazione dei campi di descrizione
 Quando viene allocato un descrittore di riga dell'applicazione, i relativi campi ricevono i valori iniziali come indicato in [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Il valore iniziale del campo SQL_DESC_TYPE è SQL_DEFAULT. In questo modo viene fornito un trattamento standard dei dati del database per la presentazione all'applicazione. L'applicazione può specificare diversi trattamenti dei dati impostando i campi del record del descrittore.  

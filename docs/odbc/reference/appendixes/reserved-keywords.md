@@ -1,4 +1,5 @@
 ---
+description: Parole chiave riservate
 title: Parole chiave riservate | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3c83df20d95b9fe968b7c1c01cd8a9031043c8ad
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: a469e48f9de46453f60cfcbb468110dfb1f5d9dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362986"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424983"
 ---
 # <a name="reserved-keywords"></a>Parole chiave riservate
 Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzioni di ODBC. Queste parole non vincolano la grammatica SQL minima; Tuttavia, per garantire la compatibilità con i driver che supportano la grammatica SQL di base, le applicazioni devono evitare di usare una di queste parole chiave. Il valore #**define** SQL_ODBC_KEYWORDS contiene un elenco delimitato da virgole di queste parole chiave.  
@@ -111,7 +112,7 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
         EXISTS  
         EXTERNAL  
         EXTRACT  
-        FALSE  
+        false  
         FETCH  
         FIRST  
         FLOAT  
@@ -184,7 +185,7 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
         ONLY  
         OPEN  
         OPTION  
-        o  
+        OR  
         ORDER  
         OUTER  
         OUTPUT  
@@ -246,7 +247,7 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
         TRANSLATE  
         TRANSLATION  
         TRIM  
-        TRUE  
+        true  
         UNION  
         UNIQUE  
         UNKNOWN  

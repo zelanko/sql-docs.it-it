@@ -1,4 +1,5 @@
 ---
+description: '&amp;&amp; (AND logico) (espressione SSIS)'
 title: '&amp;&amp; (AND logico) (espressione SSIS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 01e82c8971ae89580fa9613e3e9f94de11b6b4ac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: abb14eae98abaad9ebaaf70331abd42300ee4eee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425403"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (AND logico) (espressione SSIS)
 
@@ -42,17 +43,17 @@ boolean_expression1 && boolean_expression2
 ## <a name="result-types"></a>Tipi restituiti  
  DT_BOOL  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il risultato dell'operatore && è illustrato nella tabella seguente.  
   
 |Risultato|Expression|Expression|  
 |------------|----------------|----------------|  
-|TRUE|TRUE|TRUE|  
-|FALSE|TRUE|FALSE|  
+|TRUE|TRUE|true|  
+|false|true|FALSE|  
 |FALSE|FALSE|FALSE|  
 |NULL|NULL|NULL|  
 |NULL|NULL|TRUE|  
-|FALSE|NULL|FALSE|  
+|FALSE|NULL|false|  
   
 ## <a name="expression-examples"></a>Esempi di espressione  
  In questo esempio vengono usate le colonne **StandardCost** e **ListPrice** . Viene restituito TRUE se il valore della colonna **StandardCost** è minore di 300 e quello della colonna **ListPrice** è maggiore di 500.  

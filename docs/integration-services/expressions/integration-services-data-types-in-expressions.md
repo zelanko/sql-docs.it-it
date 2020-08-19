@@ -1,4 +1,5 @@
 ---
+description: Tipi di dati nelle espressioni di Integration Services
 title: Tipi di dati nelle espressioni di Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae5e95da6599c4af10513ec72194671ba71561b2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f1812ac61d34e5d2d25738cffed0b5caf117ee82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425533"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipi di dati nelle espressioni di Integration Services
 
@@ -27,7 +28,7 @@ ms.locfileid: "86914573"
 
   L'analizzatore di espressioni usa i tipi di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La prima volta che i dati entrano nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] il motore del flusso di dati converte i dati di tutte le colonne in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , mentre i dati delle colonne utilizzate da un'espressione hanno già un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Le espressioni utilizzate nelle trasformazioni Suddivisione condizionale e Colonna derivata possono fare riferimento alle colonne perché fanno parte di un flusso di dati che include dati di colonna.  
   
-## <a name="variables"></a>variables  
+## <a name="variables"></a>Variabili  
  Nelle espressioni è possibile utilizzare anche variabili. Le variabili hanno tipo di dati Variant e, prima di valutare l'espressione, l'analizzatore di espressioni converte il tipo di dati di una variabile da un sottotipo Variant a un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per le variabili è possibile usare solo un subset dei tipi di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per una variabile non è ad esempio possibile utilizzare un tipo di dati BLOB (Binary Large Object).  
   
  Per altre informazioni sui tipi di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e sul mapping dei tipi di dati Variant ai tipi di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  

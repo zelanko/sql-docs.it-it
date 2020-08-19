@@ -1,4 +1,5 @@
 ---
+description: Riavvio dei pacchetti tramite checkpoint
 title: Riavviare i pacchetti tramite checkpoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de6329a45f43d27dfcabb05252a17eb0ed3c6a2e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 090e89467a7916295abdc31305cbe993872ade60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425243"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Riavvio dei pacchetti tramite checkpoint
 
@@ -70,9 +71,9 @@ ms.locfileid: "86919174"
 ### <a name="checkpoint-usage"></a>Utilizzo dei checkpoint  
  I possibili valori della proprietà ForceExecutionResult sono i seguenti:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
-|**Never**|Specifica che il file del checkpoint non viene utilizzato e che il pacchetto viene eseguito dall'inizio del flusso di lavoro.|  
+|**Mai**|Specifica che il file del checkpoint non viene utilizzato e che il pacchetto viene eseguito dall'inizio del flusso di lavoro.|  
 |**Sempre**|Specifica che il file del checkpoint viene sempre utilizzato e che il pacchetto viene riavviato a partire dal punto in cui si è verificato l'errore. Se il file del checkpoint non viene individuato, il pacchetto ha esito negativo.|  
 |**IfExists**|Specifica che il file del checkpoint viene utilizzato, se disponibile. Se il file del checkpoint è disponibile, il pacchetto viene riavviato a partire dal punto in cui si è verificato l'errore. In caso contrario, viene eseguito dall'inizio del flusso di lavoro.|  
   

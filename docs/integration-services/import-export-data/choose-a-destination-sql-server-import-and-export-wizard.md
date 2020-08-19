@@ -1,4 +1,5 @@
 ---
+description: Scelta destinazione (Importazione/Esportazione guidata SQL Server)
 title: Scelta destinazione (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d0b5484de65a497df68ca4d87f6a67ec3581728c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f452ba87ccb9ac1b0552f600b554f23742d909c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923081"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425293"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Scelta destinazione (Importazione/Esportazione guidata SQL Server)
 
@@ -68,7 +69,7 @@ Per connettersi a una destinazione di uso comune, vedere una delle pagine seguen
 
 Per informazioni su come connettersi a una destinazione non elencata qui, vedere [The Connection Strings Reference](https://www.connectionstrings.com/). Questo sito di terze parti contiene stringhe di connessione di esempio e altre informazioni sui provider di dati e sulle informazioni di connessione richieste dai provider.
 
-## <a name="whats-next"></a>Quali sono le operazioni successive?  
+## <a name="whats-next"></a>Passaggi successivi  
  Dopo aver fornito informazioni sulla destinazione dei dati e su come connettersi a tale destinazione, la pagina successiva è **Impostazione copia tabella o query**. In questa pagina è possibile specificare se si vuole copiare un'intera tabella o solo alcune righe. Per altre informazioni, vedere [Impostazione copia tabella o query](../../integration-services/import-export-data/specify-table-copy-or-query-sql-server-import-and-export-wizard.md).  
 
 ## <a name="see-also"></a>Vedere anche

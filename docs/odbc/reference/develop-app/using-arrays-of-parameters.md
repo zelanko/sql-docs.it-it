@@ -1,4 +1,5 @@
 ---
+description: Uso delle matrici di parametri
 title: Uso di matrici di parametri | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b584dc3d635e9fa8ce3228e4e89b0f24451fe165
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1a592131165e7dc2370ab1d22a3d9eba5f9609dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424413"
 ---
 # <a name="using-arrays-of-parameters"></a>Uso delle matrici di parametri
 Per usare matrici di parametri, l'applicazione chiama **SQLSetStmtAttr** con un argomento *attribute* di SQL_ATTR_PARAMSET_SIZE per specificare il numero di set di parametri. Chiama **SQLSetStmtAttr** con un argomento *attribute* di SQL_ATTR_PARAMS_PROCESSED_PTR per specificare l'indirizzo di una variabile in cui il driver può restituire il numero di set di parametri elaborati, inclusi i set di errori. Chiama **SQLSetStmtAttr** con un argomento *attribute* di SQL_ATTR_PARAM_STATUS_PTR per puntare a una matrice in cui restituire informazioni sullo stato per ogni riga di valori di parametro. Il driver archivia questi indirizzi nella struttura che gestisce per l'istruzione.  

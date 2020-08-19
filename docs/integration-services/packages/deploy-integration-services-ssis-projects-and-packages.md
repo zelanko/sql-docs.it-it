@@ -1,4 +1,5 @@
 ---
+description: Distribuire progetti e pacchetti di Integration Services (SSIS)
 title: Distribuire progetti e pacchetti di Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/26/2019
@@ -18,12 +19,12 @@ f1_keywords:
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 962b1db12c1208ea70c7cb906eb904bf17538a64
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f31196ca74fa8aac69958ec47e084a3b63220ee7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920139"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425223"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Distribuire progetti e pacchetti di Integration Services (SSIS)
 
@@ -63,7 +64,7 @@ Per altre informazioni sul modello di distribuzione del pacchetto legacy, vedere
 ## <a name="features-of-project-deployment-model"></a>Funzionalità del modello di distribuzione del progetto  
  Nella tabella seguente sono elencate le funzionalità disponibili per i progetti sviluppati solo per il modello di distribuzione del progetto.  
   
-|Funzionalità|Descrizione|  
+|Feature|Descrizione|  
 |-------------|-----------------|  
 |Parametri|Un parametro specifica i dati che verranno utilizzati da un pacchetto. È possibile determinare l'ambito dei parametri a livello di pacchetto o di progetto, rispettivamente con i parametri di pacchetto e i parametri di progetto. I parametri possono essere utilizzati in espressioni o attività. Quando il progetto viene distribuito nel catalogo, è possibile assegnare un valore letterale a ogni parametro oppure utilizzare il valore predefinito assegnato in fase di progettazione. Al posto di un valore letterale, è anche possibile fare riferimento a una variabile di ambiente. I valori delle variabili di ambiente vengono risolti al momento dell'esecuzione del pacchetto.|  
 |Ambienti|Un ambiente è un contenitore di variabili a cui i progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] possono fare riferimento. Ogni progetto può presentare più riferimenti all'ambiente, tuttavia una singola istanza di esecuzione del pacchetto può fare riferimento solo alle variabili di un ambiente. Gli ambienti consentono di organizzare i valori assegnati a un pacchetto. È ad esempio possibile disporre di ambienti denominati "Dev", "test" e "Produzione".|  
@@ -86,7 +87,7 @@ Questo errore è in genere dovuto alla mancanza di autorizzazioni DCOM. Per corr
 1.  Aprire la console di **Servizi componenti** (o eseguire Dcomcnfg.exe).
 2.  Nella console di **Servizi componenti** espandere **Servizi componenti** > **Computer** > **Risorse del computer** > **Configurazione DCOM**.
 3.  Nell'elenco individuare **Microsoft SQL Server Integration Services xx.0** per la versione di SQL Server in uso. Per SQL Server 2016, ad esempio, la versione corretta è la 13.
-4.  Fare clic con il pulsante destro del mouse e selezionare **Proprietà**.
+4.  Fare clic con il pulsante destro del mouse e scegliere **Proprietà**.
 5.  Nella finestra di dialogo **Proprietà Microsoft SQL Server Integration Services 13.0** selezionare la scheda **Sicurezza**.
 6.  Per ognuno dei tre set di autorizzazioni (Avvio e attivazione, Accesso e Configurazione) selezionare **Personalizza** e quindi **Modifica** per aprire la finestra di dialogo**Autorizzazioni**.
 7.  Nella finestra di dialogo **Autorizzazioni** aggiungere l'account del servizio non predefinito e concedere autorizzazioni **Consenti** secondo le esigenze. In genere, un account ha le autorizzazioni **Avvio locale** e **Attivazione locale**.
@@ -300,7 +301,7 @@ Avviare la procedura guidata in uno dei due modi seguenti:
 
  - Cercare il file eseguibile **ISDeploymentWizard.exe** nella cartella di installazione di SQL Server, ad esempio: "C:\Programmi (x86)\Microsoft SQL Server\130\DTS\Binn". 
  
- > **NOTA** Se viene visualizzata la pagina **Introduzione** , fare clic su **Avanti** per passare alla pagina **Seleziona origine** . 
+ > **NOTA:** se viene visualizzata la pagina **Introduzione** , fare clic su **Avanti** per passare alla pagina **Seleziona origine** . 
  
  Le impostazioni in questa pagina sono diverse per ogni modello di distribuzione. Seguire la procedura nella sezione [Project Deployment Model](#ProjectModel) o nella sezione [Package Deployment Model](#PackageModel) in base al modello selezionato in questa pagina.  
   
@@ -609,7 +610,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Status**  
  Viene indicato se un pacchetto è pronto per la conversione nel modello di distribuzione del progetto.  
   
- **Messaggio**  
+ **Message**  
  Viene visualizzato un messaggio associato al pacchetto.  
   
  **Password**  
@@ -630,7 +631,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Percorso di output**  
  Digitare il percorso del file di distribuzione o passare al file facendo clic su **Sfoglia**.  
   
- **Nome del progetto**  
+ **Nome progetto**  
  Digitare il nome del progetto.  
   
  **Livello di protezione**  
@@ -644,7 +645,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 > [!NOTE]  
 >  La pagina **Specifica proprietà del progetto** è disponibile solo quando si esegue la procedura guidata da [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
- **Nome del progetto**  
+ **Nome progetto**  
  Viene elencato il nome del progetto.  
   
  **Livello di protezione**  
@@ -744,5 +745,5 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  La conversione del progetto non viene salvata fino al salvataggio del progetto in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
- **Salva report**  
+ **Salvare il report**  
  Fare clic su questa opzione per salvare un riepilogo della conversione del progetto in un file con estensione xml.  

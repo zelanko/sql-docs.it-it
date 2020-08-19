@@ -1,4 +1,5 @@
 ---
+description: Regole per le conversioni
 title: Regole per le conversioni | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c49177d62fffc3b3b5c47a25bf3fb421d7564245
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e3d9a931a960ce1bd404b6616b4a6e4f0d37c4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305087"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424953"
 ---
 # <a name="rules-for-conversions"></a>Regole per le conversioni
 Le regole in questa sezione sono valide per le conversioni che coinvolgono valori letterali numerici. Ai fini di queste regole, vengono definiti i termini seguenti:  

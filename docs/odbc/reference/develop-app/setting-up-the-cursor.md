@@ -1,4 +1,5 @@
 ---
+description: Configurazione del cursore
 title: Impostazione del cursore | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b80afb0e-ef2f-408f-86f5-a392edd99a56
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 805d8076c853513d86f9a3a92d9342d1224226c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 307245dc403167f5bd857005f084ed22498d3ee8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424583"
 ---
 # <a name="setting-up-the-cursor"></a>Configurazione del cursore
 L'applicazione può specificare il tipo di cursore prima di eseguire un'istruzione che crea un set di risultati. Questa operazione viene eseguita con l'attributo SQL_ATTR_CURSOR_TYPE Statement. Se l'applicazione non specifica in modo esplicito un tipo, verrà utilizzato un cursore di tipo "solo". Per ottenere un cursore misto, un'applicazione specifica un cursore gestito da keyset ma dichiara una dimensione del keyset inferiore alla dimensione del set di risultati.  

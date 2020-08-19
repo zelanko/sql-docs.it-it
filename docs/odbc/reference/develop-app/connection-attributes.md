@@ -1,4 +1,5 @@
 ---
+description: Attributi di connessione
 title: Attributi di connessione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e6d03089-30a3-4627-a642-591ba0980894
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c295ce88eedf1d4cddc4173f5dea39c44b01f83d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a7db2fb6361f114f4864436116f5b0f2f5651e79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299042"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424803"
 ---
 # <a name="connection-attributes"></a>Attributi di connessione
 Gli attributi di connessione sono caratteristiche della connessione. Poiché ad esempio le transazioni si verificano al livello della connessione, il livello di isolamento delle transazioni è un attributo di connessione. Analogamente, il timeout di accesso o il numero di secondi di attesa durante il tentativo di connessione prima del timeout, è un attributo di connessione.  

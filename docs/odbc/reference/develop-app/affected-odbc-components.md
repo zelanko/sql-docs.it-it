@@ -1,4 +1,5 @@
 ---
+description: Componenti ODBC interessati
 title: Componenti ODBC interessati | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 71fa6ea4-007c-4c2b-b5af-2cec6ea79b58
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8d9155fa1c9df5846f069e93a3db1b969e9219ed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4874a22d441ec856c25e08dc20cf04e0f0be89cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306475"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424863"
 ---
 # <a name="affected-odbc-components"></a>Componenti ODBC interessati
 La compatibilità con le versioni precedenti descrive il modo in cui le applicazioni, gestione driver e i driver sono interessati dall'introduzione di una nuova versione di gestione driver. Ciò influiscono sulle applicazioni e sui driver quando uno o entrambi i valori rimangono nella versione precedente. Ci sono pertanto tre tipi di compatibilità con le versioni precedenti da considerare, come illustrato nella tabella seguente.  

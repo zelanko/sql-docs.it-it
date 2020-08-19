@@ -1,4 +1,5 @@
 ---
+description: Identificatori dei tipi SQL
 title: Identificatori di tipo SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 22f6793b-2f43-4281-b35a-28f48e504dd8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 95bf46844e9ed91aac1ec6cb93a298995f0901d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 211cfdbe7805bade2875723a1cb62a02b5c876d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424513"
 ---
 # <a name="sql-type-identifiers"></a>Identificatori dei tipi SQL
 Ogni origine dati definisce i propri tipi di dati SQL. ODBC definisce gli identificatori di tipo e descrive le caratteristiche generali dei tipi di dati SQL di cui è possibile eseguire il mapping a ogni identificatore di tipo. Indica il modo in cui ogni tipo di dati nell'origine dati sottostante viene mappato a un identificatore di tipo SQL di ODBC.  

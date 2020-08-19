@@ -1,4 +1,5 @@
 ---
+description: Istruzioni DDL
 title: Istruzioni DDL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 96ac9859-5976-4b06-ae1f-2fec3231e266
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cae06efe6dd11e651e8553fa5c1004c2fa145478
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 395abe3eed64f37c000ecff6f0b68a6e0cb1d076
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424733"
 ---
 # <a name="ddl-statements"></a>Istruzioni DDL
 Le istruzioni DDL (Data Definition Language) variano notevolmente tra i sistemi DBMS. ODBC SQL definisce istruzioni per le operazioni più comuni di definizione dei dati: creazione ed eliminazione di tabelle, indici e viste; modifica di tabelle; e la concessione e la revoca dei privilegi. Tutte le altre istruzioni DDL sono specifiche dell'origine dati. Pertanto, le applicazioni interoperabili non possono eseguire alcune operazioni di definizione dei dati. In generale, questo non è un problema, perché tali operazioni tendono a essere specifiche del DBMS e sono più adatte al software di amministrazione del database proprietario fornito con la maggior parte dei DBMS o il programma di installazione fornito con il driver.  

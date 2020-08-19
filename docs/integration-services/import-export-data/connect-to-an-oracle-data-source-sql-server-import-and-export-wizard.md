@@ -1,4 +1,5 @@
 ---
+description: Connettersi a un'origine dati Oracle (Importazione/Esportazione guidata SQL Server)
 title: Connettersi a un'origine dati Oracle (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2020
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 202527022ccc78a4f0c89bb3cfbfe775ecde207b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 589010cedb022bfdaf22590eaeb92bea76b54420
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914129"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425273"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati Oracle (Importazione/Esportazione guidata SQL Server)
 
