@@ -1,4 +1,5 @@
 ---
+description: WRITETEXT (Transact-SQL)
 title: WRITETEXT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b264935bd4cbbeaffe9ad3228734cd7acc542476
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e55a8822677162472d9f005eec213e184003cf00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422395"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ WRITETEXT [BULK]
  Nome della tabella e della colonna di tipo **text**, **ntext** o **image** da aggiornare. I nomi delle tabelle e delle colonne devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). I nomi del database e del proprietario sono facoltativi.  
   
  *text_ptr*  
- Valore che contiene il puntatore nei dati di tipo **text**, **ntext** o **image**. *text_ptr* deve essere di tipo **binary(16)** . Per creare un puntatore di testo, eseguire un'istruzione [INSERT](../../t-sql/statements/insert-transact-sql.md) o [UPDATE](../../t-sql/queries/update-transact-sql.md) con dati non Null per la colonna di tipo **text**, **ntext** o **image**.  
+ Valore che contiene il puntatore nei dati di tipo **text**, **ntext** o **image**. *text_ptr* deve essere di tipo **binary(16)**. Per creare un puntatore di testo, eseguire un'istruzione [INSERT](../../t-sql/statements/insert-transact-sql.md) o [UPDATE](../../t-sql/queries/update-transact-sql.md) con dati non Null per la colonna di tipo **text**, **ntext** o **image**.  
   
  WITH LOG  
  Argomento ignorato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La registrazione è definita dal modello di recupero attivo nel database.  
@@ -70,7 +71,7 @@ WRITETEXT [BULK]
  *data*  
  Dati **text**, **ntext** o **image** effettivi da archiviare. *data* può essere un valore letterale o un parametro. La lunghezza massima consentita per il testo che è possibile inserire in modo interattivo tramite WRITETEXT è di circa 120 KB per i dati di tipo **text**, **ntext** e **image**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Usare WRITETEXT per sostituire i dati di tipo **text**, **ntext** e **image** e UPDATETEXT per modificare i dati di tipo **text**, **ntext** e **image**. UPDATETEXT risulta più flessibile poiché modifica solo una parte della colonna di tipo **text**, **ntext** o **image** anziché l'intera colonna.  
   
  Per ottimizzare le prestazioni, è consigliabile inserire o aggiornare i dati di tipo **text**, **ntext** e **image** in blocchi con dimensioni multiple di 8040 byte.  

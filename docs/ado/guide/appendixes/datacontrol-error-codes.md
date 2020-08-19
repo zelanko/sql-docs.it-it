@@ -1,4 +1,5 @@
 ---
+description: Codici di errore dell'oggetto DataControl
 title: Codici di errore del controllo DataControl | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 90501e24a9d4ec3dd5a68f641bf25c3adade1a62
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 057bd0f7a1023e32ef8bc9fd4da6aeca56e36a97
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760517"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422195"
 ---
 # <a name="datacontrol-object-error-codes"></a>Codici di errore dell'oggetto DataControl
-Nella tabella seguente sono elencati i Servizi Desktop remoto [. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)Codici di errore dell'oggetto DataControl. La conversione decimale positiva dei due byte bassi, la conversione decimale negativa del codice di errore completo e i valori esadecimali vengono visualizzati.
+Nella tabella seguente sono elencati i Servizi Desktop remoto [. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) Codici di errore dell'oggetto DataControl. La conversione decimale positiva dei due byte bassi, la conversione decimale negativa del codice di errore completo e i valori esadecimali vengono visualizzati.
 
-|RDS. Codici di errore di DataControl|Numero|Description|
+|RDS. Codici di errore di DataControl|Numero|Descrizione|
 |---------------------------------|------------|-----------------|
 |**IDS_AsyncPending**|4107-2146824175 0x800A1011|Non è possibile eseguire l'operazione mentre l'operazione asincrona è in sospeso.|
 |**IDS_BadInlineTablegram**|4105-2146824183 0x800A1009|TableGram inline non valido.|
@@ -44,7 +45,7 @@ Nella tabella seguente sono elencati i Servizi Desktop remoto [. ](../../../ado/
 |**IDS_RowsetNotUpdateable**|4104-2146824184 0x800A1008|Set di righe non aggiornabile.|
 |**IDS_UnexpectedError**|4351-2146823937 0x800A10FF|Errore imprevisto.|
 |**IDS_UpdatesFailed**|4098-2146824190 0x800A1002|Impossibile aggiornare il database.|
-|**IDS_URLMONNotFound**|4119-2146824169 0x800A1017|Per la proprietà **URL** DataControl è necessario il file di sistema Urlmon. dll, che non è stato trovato.|
+|**IDS_URLMONNotFound**|4119-2146824169 0x800A1017|Per la proprietà **URL** DataControl è necessario che il file di sistema Urlmon.dll, che non è stato trovato.|
 
 ## <a name="see-also"></a>Vedere anche
  [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)

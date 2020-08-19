@@ -1,4 +1,5 @@
 ---
+description: catalog.operations (database SSISDB)
 title: catalog.operations (database SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46f17290ddc026d66910e4a28c1ea36d7ad0286b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 231fa098ababe70c8a375e3f3f357bcbe90d6f09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422015"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations (database SSISDB)
 
@@ -36,8 +37,8 @@ ms.locfileid: "86912473"
 |created_time|**datetimeoffset**|Ora di creazione dell'operazione.|  
 |object_type|**smallint**|Tipo di oggetto interessato dall'operazione. L'oggetto può essere una cartella (`10`), un progetto (`20`), un pacchetto (`30`), un ambiente (`40`) o un'istanza di esecuzione (`50`).|  
 |object_id|**bigint**|ID dell'oggetto interessato dall'operazione.|  
-|object_name|**nvarchar(260)**|Nome dell'oggetto .|  
-|status|**int**|Lo stato dell'operazione. I valori possibili sono Creata (`1`), In esecuzione (`2`), Operazione annullata (`3`) Operazione non riuscita (`4`), In sospeso (`5`), Terminata in modo inatteso (`6`), Operazione riuscita (`7`), Arresto in corso (`8`) Operazione completata (`9`).|  
+|object_name|**nvarchar(260)**|Nome dell'oggetto.|  
+|status|**int**|Stato dell'operazione. I valori possibili sono Creata (`1`), In esecuzione (`2`), Operazione annullata (`3`) Operazione non riuscita (`4`), In sospeso (`5`), Terminata in modo inatteso (`6`), Operazione riuscita (`7`), Arresto in corso (`8`) Operazione completata (`9`).|  
 |start_time|**datetimeoffset**|Ora di inizio dell'operazione.|  
 |end_time|**datetimeoffsset**|Ora di fine dell'operazione.|  
 |caller_sid|**varbinary(85)**|ID di sicurezza (SID) dell'utente se per l'accesso è stata utilizzata l'autenticazione di Windows.|  

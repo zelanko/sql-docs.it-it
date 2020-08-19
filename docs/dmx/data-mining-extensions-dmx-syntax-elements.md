@@ -1,4 +1,5 @@
 ---
+description: Elementi della sintassi DMX (Data Mining Extensions)
 title: Elementi della sintassi DMX (Data Mining Extensions) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 16d77e459cc472430081e52b485763b4e0c62f50
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: c0e61dfab45640f9f06362405c4c37dbb9b95181
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971738"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422275"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>Elementi della sintassi DMX (Data Mining Extensions)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

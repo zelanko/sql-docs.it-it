@@ -1,4 +1,5 @@
 ---
+description: Guida sull'architettura di elaborazione delle query
 title: Guida sull'architettura di elaborazione delle query | Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2020
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b6964ee33ecbd52f538a60446c72d66bcde9927d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ddc409af7352ce7770d905b4bc5b859497123645
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423725"
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]

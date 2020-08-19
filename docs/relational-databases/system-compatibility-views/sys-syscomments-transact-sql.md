@@ -1,4 +1,5 @@
 ---
+description: sys.syscomments (Transact-SQL)
 title: sys.syscomments (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 767dd410-6bc9-4c4a-ab0f-6d2cf6163426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 49473b85d6c0a52f9c7ec7ed4bab519b19b04693
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3956dd945052a8977a2d9fccfefa6a34ea7b33fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423355"
 ---
 # <a name="syssyscomments-transact-sql"></a>sys.syscomments (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ ms.locfileid: "85883485"
 |**Stato**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**ctext**|**varbinary(8000)**|Byte non elaborati dell'istruzione di definizione SQL.|  
 |**texttype**|**smallint**|0 = Commento fornito dall'utente.<br /><br /> 1 = Commento fornito dal sistema.<br /><br /> 4 = Commento crittografato.|  
-|**lingua**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**language**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**crittografati**|**bit**|Indica se la definizione della stored procedure è offuscata.<br /><br /> 0 = Non offuscata<br /><br /> 1 = Offuscata<br /><br /> Importante per offuscare le definizioni di stored procedure, utilizzare create procedure con la parola chiave Encryption. ** \* \* \* \* **|  
-|**compressed**|**bit**|Restituisce sempre 0. Indica che la procedura è compressa.|  
+|**compressi**|**bit**|Restituisce sempre 0. Indica che la procedura è compressa.|  
 |**text**|**nvarchar(4000)**|Testo effettivo dell'istruzione di definizione SQL.<br /><br /> La semantica dell'espressione decodificata è equivalente al testo originale, tuttavia non è garantito che la sintassi venga mantenuta. Gli spazi vuoti vengono ad esempio eliminati dall'espressione decodificata.<br /><br /> Questa [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] vista compatibile con ottiene informazioni dalle strutture correnti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e può restituire più caratteri della definizione **nvarchar (4000)** . **sp_help** restituisce **nvarchar (4000)** come tipo di dati della colonna di testo. Quando si lavora con **syscomments** , è consigliabile usare **nvarchar (max)**. Per le nuove attività di sviluppo, non usare **syscomments**.|  
   
 ## <a name="see-also"></a>Vedere anche  

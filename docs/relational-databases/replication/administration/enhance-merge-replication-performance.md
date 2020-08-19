@@ -1,4 +1,5 @@
 ---
+description: Miglioramento delle prestazioni della replica di tipo merge
 title: Migliorare le prestazioni della replica di tipo merge | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eee65227e767ec92fbb6d2c9d0f304b29cbc6aaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 70399a3d0e21fc75014828837e7b4cb7738d9966
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423605"
 ---
 # <a name="enhance-merge-replication-performance"></a>Miglioramento delle prestazioni della replica di tipo merge
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Dopo aver valutato i suggerimenti relativi alle prestazioni generali descritti in [Miglioramento delle prestazioni generali della replica](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), è opportuno considerare questi ulteriori aspetti specifici della replica di tipo merge.  
+   Dopo aver valutato i suggerimenti relativi alle prestazioni generali descritti in [Miglioramento delle prestazioni generali della replica](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), è opportuno considerare questi ulteriori aspetti specifici della replica di tipo merge.  
   
 ## <a name="database-design"></a>Progettazione di database  
   
@@ -42,7 +43,7 @@ ms.locfileid: "85897882"
   
 -   ‏Si considerino le tabelle in fase di sovranormalizzazione che includono tipi di dati LOB (Large Object).  
   
-     Quando viene eseguita la sincronizzazione, è possibile che l'agente di merge debba leggere e trasferire l'intera riga di dati da un server di pubblicazione o un Sottoscrittore. Se la riga include colonne con dati LOB, questo processo può richiedere l'allocazione di memoria aggiuntiva e influire negativamente sulle prestazioni anche se tali colonne non sono state aggiornate. Per ridurre la probabilità di tale impatto negativo sulle prestazioni, è possibile inserire le colonne LOB in una tabella distinta utilizzando una relazione uno-a-uno con la parte rimanente della riga di dati. I tipi di dati **text**, **ntext**e **image** sono deprecati. Se è necessario includere dati LOB, è consigliabile utilizzare rispettivamente i tipi di dati **varchar(max)** , **nvarchar(max)** e **varbinary(max)** .  
+     Quando viene eseguita la sincronizzazione, è possibile che l'agente di merge debba leggere e trasferire l'intera riga di dati da un server di pubblicazione o un Sottoscrittore. Se la riga include colonne con dati LOB, questo processo può richiedere l'allocazione di memoria aggiuntiva e influire negativamente sulle prestazioni anche se tali colonne non sono state aggiornate. Per ridurre la probabilità di tale impatto negativo sulle prestazioni, è possibile inserire le colonne LOB in una tabella distinta utilizzando una relazione uno-a-uno con la parte rimanente della riga di dati. I tipi di dati **text**, **ntext**e **image** sono deprecati. Se è necessario includere dati LOB, è consigliabile utilizzare rispettivamente i tipi di dati **varchar(max)**, **nvarchar(max)** e **varbinary(max)**.  
   
 ## <a name="publication-design"></a>Progettazione della pubblicazione  
   

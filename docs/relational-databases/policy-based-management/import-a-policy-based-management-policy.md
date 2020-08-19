@@ -1,4 +1,5 @@
 ---
+description: Importare i criteri della gestione basata su criteri
 title: Importare i criteri della gestione basata su criteri | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2020
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 54e0ca12595b0ce8bdde128c9261918c910ffdcf
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 37f49a006b0fe17120af2309f9b3991ab594ebda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423715"
 ---
 # <a name="import-a-policy-based-management-policy"></a>Importare i criteri della gestione basata su criteri
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

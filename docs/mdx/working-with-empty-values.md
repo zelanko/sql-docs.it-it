@@ -1,4 +1,5 @@
 ---
+description: Utilizzo di valori vuoti
 title: Utilizzo di valori vuoti | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ae8d6262f6502add09376b76a767a3076c830cb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f497ba1ccf84ac642144340af4d5597d773dcadb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125853"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421895"
 ---
 # <a name="working-with-empty-values"></a>Utilizzo di valori vuoti
 
@@ -54,7 +55,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
 -   Quando il valore di cella vuota è un operando per l'operatore di concatenazione delle stringhe (+), verrà trattato come una stringa vuota se l'altro operando è un valore non vuoto. Se entrambi gli operandi sono vuoti, l'operatore di concatenazione delle stringhe restituirà il valore di cella vuota.  
   
--   Quando il valore di cella vuota è un operando per gli operatori di confronto (=. <>, >=, \<=, >, <), il valore di cella vuota viene considerato come zero o come una stringa vuota, a seconda che il tipo di dati dell'altro operando sia numerico o stringa, rispettivamente. Se entrambi gli operandi sono vuoti, verranno trattati come zero.  
+-   Quando il valore di cella vuota è un operando per gli operatori di confronto (=. <>, >=, \<=, > , <), il valore di cella vuota viene considerato come zero o come una stringa vuota, a seconda che il tipo di dati dell'altro operando sia numerico o stringa, rispettivamente. Se entrambi gli operandi sono vuoti, verranno trattati come zero.  
   
 -   Quando si confrontano valori numerici, il valore di cella vuota occupa la stessa posizione dello zero. Nel confronto tra il valore di cella vuota e lo zero, il valore di cella vuota precede lo zero.  
   
@@ -120,31 +121,31 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  Nella tabella seguente vengono indicati i risultati ottenuti quando si applica l'operatore AND a due operandi booleani.  
   
-|AND|TRUE|EMPTY|FALSE|  
+|AND|true|EMPTY|false|  
 |---------|----------|-----------|-----------|  
-|**TRUE**|TRUE|FALSE|FALSE|  
-|**VUOTO**|FALSE|EMPTY|FALSE|  
-|**FALSE**|FALSE|FALSE|FALSE|  
+|**TRUE**|true|false|false|  
+|**VUOTO**|false|EMPTY|false|  
+|**FALSE**|false|false|false|  
   
  Nella tabella seguente vengono indicati i risultati ottenuti quando si applica l'operatore OR a due operandi booleani.  
   
-|OR|TRUE|FALSE|  
+|OR|true|false|  
 |--------|----------|-----------|  
 |**TRUE**|TRUE|TRUE|  
 |**VUOTO**|TRUE|TRUE|  
-|**FALSE**|TRUE|FALSE|  
+|**FALSE**|true|false|  
   
  Nella tabella seguente viene illustrato come l'operatore NOT esegue la negazione, ovvero inverte, il risultato di un operatore booleano.  
   
 |Espressione booleana a cui viene applicato l'operatore NOT|Valutato su|  
 |-------------------------------------------------------------|------------------|  
-|TRUE|FALSE|  
+|true|false|  
 |EMPTY|EMPTY|  
-|FALSE|TRUE|  
+|false|true|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)   
- [Guida di riferimento agli operatori MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)   
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX ](../mdx/mdx-function-reference-mdx.md)   
+ [Guida di riferimento agli operatori MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)   
  [Espressioni &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

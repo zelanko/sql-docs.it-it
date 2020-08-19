@@ -1,4 +1,5 @@
 ---
+description: Miglioramenti relativi a data e ora (ODBC)
 title: Miglioramenti di data e ora (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,11 +15,12 @@ ms.assetid: e31d5ca5-2103-498f-954c-1ee93e217186
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ee9292901467ea496ebc66264ff194c9d55cf9f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5cbed5106fdea4a74cec0c4d08d0da653b03c1e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423863"
 ---
 # <a name="date-and-time-improvements-odbc"></a>Miglioramenti relativi a data e ora (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +33,7 @@ ms.locfileid: "86012724"
  [Supporto dei tipi di dati per i miglioramenti relativi a data e ora ODBC](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)  
  Vengono fornite informazioni sui tipi ODBC che supportano i tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di data e ora.  
   
- [Metadati &#40;&#41;ODBC](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
+ [Metadati &#40;&#41;ODBC ](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
  Vengono descritte le informazioni restituite nei campi del descrittore del parametro di implementazione (dpi) e del descrittore della riga di implementazione (IRD), nonché i metadati della colonna restituiti da **SQLColumns** e **SQLProcedureColumns**. Descrive anche i metadati del tipo di dati restituiti da **SQLGetTypeInfo**.  
   
  [conversioni di tipi di dati DateTime &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-odbc.md)  

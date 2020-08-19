@@ -1,4 +1,5 @@
 ---
+description: catalog.validations (database SSISDB)
 title: catalog.validations (database SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6847053a171fbfac422457de2411e8329e339ec8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c4bfa8f9b0ba11574059e3dc05ef7b731d259999
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421975"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (database SSISDB)
 
@@ -37,12 +38,12 @@ ms.locfileid: "86912460"
 |use32bitruntime|**bit**|Viene indicato se il runtime a 32 bit viene utilizzato per eseguire il pacchetto in un sistema operativo a 64 bit. Quando il valore è `1`, l'esecuzione avviene con il runtime a 32 bit. Quando il valore è `0`, l'esecuzione viene eseguita con il runtime a 64 bit.|  
 |reference_id|**bigint**|ID univoco del riferimento all'ambiente del progetto utilizzato dal progetto per fare riferimento a un ambiente.|  
 |operation_type|**smallint**|Tipo di operazione. Nelle operazioni visualizzate in questa vista sono incluse la convalida del progetto (`300`) e la convalida del pacchetto (`301`).|  
-|object_name|**nvarhcar(260)**|Nome dell'oggetto .|  
+|object_name|**nvarhcar(260)**|Nome dell'oggetto.|  
 |object_type|**smallint**|Tipo di oggetto. Può trattarsi di un progetto (`20`) o di un pacchetto (`30`).|  
 |object_id|**bigint**|ID dell'oggetto interessato dall'operazione.|  
 |start_time|**datetimeoffset(7)**|Ora di inizio dell'operazione.|  
 |end_time|**datetimeoffsset(7)**|Ora di fine dell'operazione.|  
-|status|**int**|Lo stato dell'operazione. I valori possibili sono Creata (`1`), In esecuzione (`2`), Operazione annullata (`3`) Operazione non riuscita (`4`), In sospeso (`5`), Terminata in modo inatteso (`6`), Operazione riuscita (`7`), Arresto in corso (`8`) Operazione completata (`9`).|  
+|status|**int**|Stato dell'operazione. I valori possibili sono Creata (`1`), In esecuzione (`2`), Operazione annullata (`3`) Operazione non riuscita (`4`), In sospeso (`5`), Terminata in modo inatteso (`6`), Operazione riuscita (`7`), Arresto in corso (`8`) Operazione completata (`9`).|  
 |caller_sid|**varbinary(85)**|ID di sicurezza (SID) dell'utente se per l'accesso è stata utilizzata l'autenticazione di Windows.|  
 |caller_name|**nvarchar(128)**|Nome dell'account tramite cui è stata eseguita l'operazione.|  
 |process_id|**int**|ID processo del programma esterno, se applicabile.|  

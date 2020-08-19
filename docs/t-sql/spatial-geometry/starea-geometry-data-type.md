@@ -1,4 +1,5 @@
 ---
+description: STArea (tipo di dati geometry)
 title: STArea (tipo di dati geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a7dd6083-c649-4ac3-885d-1234e0db62f1
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 95aa0235e1f9f2daa63a91b1765cfc548969a7b2
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 2dec51b1ce17ed52ed7c6bb6d601b5977eaf2172
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422285"
 ---
 # <a name="starea-geometry-data-type"></a>STArea (tipo di dati geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86554689"
   
  Tipo CLR restituito: **SqlDouble**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  `STArea()` restituisce 0 se un'istanza **geometry** contiene solo figure zero-dimensionali e uni-dimensionali oppure se è vuota. `STArea()` restituisce **NULL** se non è stata inizializzata l'istanza **geometry**.  
   
 ## <a name="examples"></a>Esempi  

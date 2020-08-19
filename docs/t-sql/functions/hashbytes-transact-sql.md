@@ -1,4 +1,5 @@
 ---
+description: HASHBYTES (Transact-SQL)
 title: HASHBYTES (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2016
@@ -19,12 +20,12 @@ ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c30f72c8b6fff2d22c3ff7b493d8ba126db91c6c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5c622d1c39668ee1e58c3eb1e60512d6f8d6f729
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113537"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422735"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 
@@ -64,7 +65,7 @@ Specifica un'espressione che restituisce un carattere o una stringa binaria di c
 ## <a name="return-value"></a>Valore restituito  
  **varbinary** (non più di 8000 byte)  
 
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 È consigliabile usare `CHECKSUM` o `BINARY_CHECKSUM` come alternative per calcolare un valore hash.
 
 Gli algoritmi MD2, MD4, MD5, SHA e SHA1 sono deprecati a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Usare invece SHA2_256 o SHA2_512. Gli algoritmi precedenti continueranno a funzionare, ma genereranno un evento Deprecation.

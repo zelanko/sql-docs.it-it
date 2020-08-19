@@ -1,4 +1,5 @@
 ---
+description: catalog.set_worker_agent_property (database SSISDB)
 title: catalog.set_worker_agent_property (database SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ddd2a534-6925-4d66-90e7-541c14f41de7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 121c39ddc217cbdc178ca8ea8221081ce33eee4b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b5981431210ba98c950b56b7621f3f9cc50586c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422115"
 ---
 # <a name="catalogset_worker_agent_property-ssisdb-database"></a>catalog.set_worker_agent_property (database SSISDB)
 
@@ -39,10 +40,10 @@ catalog.set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId
 ID agente di lavoro dello Scale Out Worker. *WorkerAgentId* è di tipo **uniqueidentifier**.
 
 [@PropertyName =] *PropertyName*  
-Nome della proprietà. *PropertyName* è di tipo **nvarchar(256)** .
+Nome della proprietà. *PropertyName* è di tipo **nvarchar(256)**.
 
 [@PropertyValue =] *PropertyValue*  
-Valore della proprietà. *PropertyValue* è di tipo **nvarchar(max)** .
+Valore della proprietà. *PropertyValue* è di tipo **nvarchar(max)**.
 
 ## <a name="remarks"></a>Osservazioni
 I nomi di proprietà validi sono **DisplayName**, **Description**, **Tags**.

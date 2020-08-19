@@ -1,4 +1,5 @@
 ---
+description: PredictStdev (DMX)
 title: PredictStdev (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 25dde754c2e71c6aa40d763d7e3a81c3edca6938
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 262533a9c5f4a799bad0f72aee51f1399ba2f483
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970709"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422245"
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

@@ -1,4 +1,5 @@
 ---
+description: Filtro dei dati pubblicati
 title: Filtrare i dati pubblicati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: cefde8d6bf6e947815894605cd385164aa673d9c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c52250061e78f663e4046d53b5c101f13367407d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423435"
 ---
 # <a name="filter-published-data"></a>Filtro dei dati pubblicati
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -81,7 +82,7 @@ ms.locfileid: "86915389"
 ## <a name="column-filters"></a>Filtri colonne  
  Nella figura seguente viene illustrata una pubblicazione in cui la colonna C viene esclusa tramite un filtro.  
   
- ![Applicazione di filtri alle colonne](../../../relational-databases/replication/publish/media/repl-17.gif "Applicazioni filtri alle colonne")  
+ ![Applicazioni filtri alle colonne](../../../relational-databases/replication/publish/media/repl-17.gif "Applicazioni filtri alle colonne")  
   
  È inoltre possibile utilizzare contemporaneamente il filtro di riga e di colonna, come illustrato di seguito.  
   

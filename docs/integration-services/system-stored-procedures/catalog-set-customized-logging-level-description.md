@@ -1,4 +1,5 @@
 ---
+description: catalog.set_customized_logging_level_description
 title: catalog.set_customized_logging_level_description | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 6ceaa39f-2439-457b-b99f-f12d88a1be32
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b5243a4caf0f380adb89e6fdcb4bdd689ac0a681
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 99d413f8447a79331f92229a295192b6c0c5ea72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912907"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422135"
 ---
 # <a name="catalogset_customized_logging_level_description"></a>catalog.set_customized_logging_level_description 
 
@@ -34,12 +35,12 @@ catalog.set_customized_logging_level_description [ @level_name = ] level_name
  [ @level_name = ] *level_name*  
  Nome di un livello di registrazione personalizzato esistente.  
   
- *level_name* è di tipo **nvarchar(128)** .  
+ *level_name* è di tipo **nvarchar(128)**.  
   
  [ @level_description = ] *level_description*  
  Nuova descrizione del livello di registrazione personalizzato specificato.  
   
- *level_description* è di tipo **nvarchar(1024)** .  
+ *level_description* è di tipo **nvarchar(1024)**.  
   
 ## <a name="remarks"></a>Osservazioni  
   

@@ -1,4 +1,5 @@
 ---
+description: Attività Esegui istruzione T-SQL (Piano di manutenzione)
 title: Attività Esegui istruzione T-SQL (Piano di manutenzione) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fef3e259-0c47-4f6e-ade0-aee95e3d6c1a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a38c1bcb1dc4f1aa48f69b2abd6c5d67924c7847
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d90a9aaa1b038d4d890c66ceb5f5e7b9c4befc81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85667077"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424063"
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>Attività Esegui istruzione T-SQL (Piano di manutenzione)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +59,7 @@ ms.locfileid: "85667077"
  Consente di specificare le opzioni di autenticazione per l'accesso al server.  
   
  **Usa la sicurezza integrata di Windows NT**  
- Consente di connettersi a un'istanza del [!INCLUDE[msCoName](../../includes/msconame-md.md)] di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usando l'autenticazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ Consente di connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di [!INCLUDE[msCoName](../../includes/msconame-md.md)] usando l'autenticazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Usa nome utente e password specifici**  
  Consente di connettersi a un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa opzione non è disponibile.  

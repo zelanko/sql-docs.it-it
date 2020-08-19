@@ -1,4 +1,5 @@
 ---
+description: Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text
 title: Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text
 ms.date: 02/02/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 3f3274fa08c121fc9dfd3ee4c5268c975eca2661
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dad86600ba067bd0e03eb0e9b8a05be49593bf7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423385"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -127,7 +128,7 @@ Usare l'[opzione di configurazione del server transform noise words](../../datab
 |Istruzioni|1|  
 |non|2|  
 |valide|3|  
-|to|4|  
+|su|4|  
 |questi|5|  
 |modelli|6|  
 |Adventure|7|  

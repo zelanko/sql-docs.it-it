@@ -1,4 +1,5 @@
 ---
+description: catalog.set_object_parameter_value (database SSISDB)
 title: catalog.set_object_parameter_value (database SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3ee0158f8d04405aef6ea0fd70f6a63f942471a1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a6991d846ffd6dd4673f3faca443c1bd1578ecaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422125"
 ---
 # <a name="catalogset_object_parameter_value-ssisdb-database"></a>catalog.set_object_parameter_value (database SSISDB)
 
@@ -49,16 +50,16 @@ catalog.set_object_parameter_value [ @object_type = ] object_type
  Nome del progetto in cui è contenuto il parametro. *project_name* è di tipo **nvarchar(128)** .  
   
  [@parameter_name =] *parameter_name*  
- Nome del parametro. *parameter_name* è di tipo **nvarchar(128)** .  
+ Nome del parametro. *parameter_name* è di tipo **nvarchar(128)**.  
   
  [@parameter_value =] *parameter_value*  
  Valore del parametro. *parameter_value* è di tipo **sql_variant**.  
   
  [@object_name =] *object_name*  
- Nome del pacchetto. Questo argomento è necessario quando il parametro è un parametro del pacchetto. *object_name* è di tipo **nvarchar(260)** .  
+ Nome del pacchetto. Questo argomento è necessario quando il parametro è un parametro del pacchetto. *object_name* è di tipo **nvarchar(260)**.  
   
  [@value_type =] *value_type*  
- Tipo di valore del parametro. Usare il carattere `V` per indicare che *parameter_value* è un valore letterale che viene usato per impostazione predefinita quando non viene assegnato nessun altro valore prima dell'esecuzione. Usare il carattere `R` per indicare che *parameter_value* è un valore di riferimento ed è stato impostato sul nome di una variabile di ambiente. Questo argomento è facoltativo. Per impostazione predefinita, viene utilizzato il carattere `V`. *value_type* è di tipo **char(1)** .  
+ Tipo di valore del parametro. Usare il carattere `V` per indicare che *parameter_value* è un valore letterale che viene usato per impostazione predefinita quando non viene assegnato nessun altro valore prima dell'esecuzione. Usare il carattere `R` per indicare che *parameter_value* è un valore di riferimento ed è stato impostato sul nome di una variabile di ambiente. Questo argomento è facoltativo. Per impostazione predefinita, viene utilizzato il carattere `V`. *value_type* è di tipo **char(1)**.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  

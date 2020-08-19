@@ -1,4 +1,5 @@
 ---
+description: catalog.set_environment_variable_value (database SSISDB)
 title: catalog.set_environment_variable_value (database SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 1d493dad-9d9c-4f0a-87e2-20a2d4a35f99
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa933da5806b916cc200881c880f49ccaa01d746
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 35d7408a5ad925673f68ce9c66c90768f7fe2f06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422145"
 ---
 # <a name="catalogset_environment_variable_value-ssisdb-database"></a>catalog.set_environment_variable_value (database SSISDB)
 
@@ -43,7 +44,7 @@ catalog.set_environment_variable_value [ @folder_name = ] folder_name
  Il nome dell'ambiente. *environment_name* è di tipo **nvarchar(128)** .  
   
  [ @variable _name = ] *variable _name*  
- Nome della variabile di ambiente. *variable_name* è di tipo **nvarchar(128)** .  
+ Nome della variabile di ambiente. *variable_name* è di tipo **nvarchar(128)**.  
   
  [ @value = ] *value*  
  Valore della variabile di ambiente. *value* è di tipo **sql_variant**.  

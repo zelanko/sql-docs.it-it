@@ -1,4 +1,5 @@
 ---
+description: PredictTimeSeries (DMX)
 title: PredictTimeSeries (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bf63bb1002e1e4ae467838b84314e1cbaaf93275
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 13655aadf5f95b776b83e48791e4f423d6ccc355
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422264"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -67,7 +68,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="return-type"></a>Tipo restituito  
  Oggetto \<*table expression*>.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  L'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series non supporta la stima cronologica quando i dati nuovi sono aggiunti mediante l'istruzione PREDICTION JOIN.  
   
  In un'istruzione PREDICTION JOIN, il processo di stima inizia sempre immediatamente dopo la fine della serie di training originale anche se si aggiungono dati nuovi. Pertanto, i valori dei parametri *n* e *n-Start* devono essere un numero intero maggiore di 0.  
@@ -147,7 +148,7 @@ ON
   
  Stime originali:  
   
-|Model Region|ReportingDate|Quantità|  
+|Model Region|ReportingDate|Quantity|  
 |-|-|-|  
 |M200 Pacific|7/25/2008 12:00:00 AM|46|  
 |M200 Pacific|8/25/2008 12:00:00 AM|44|  
@@ -155,7 +156,7 @@ ON
   
  Stime aggiornate:  
   
-|Model Region|ReportingDate|Quantità|  
+|Model Region|ReportingDate|Quantity|  
 |-|-|-|  
 |M200 Pacific|7/25/2008 12:00:00 AM|91|  
 |M200 Pacific|8/25/2008 12:00:00 AM|89|  
@@ -199,7 +200,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
  Quantità: M200 Europe. EXTEND_MODEL_CASES:  
   
-|$TIME|Quantità|  
+|$TIME|Quantity|  
 |-----------|--------------|  
 |7/25/2008 0:00|10|  
 |8/25/2008 0:00|15|  
@@ -209,7 +210,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
  Quantità: M200 Pacific. EXTEND_MODEL_CASES:  
   
-|$TIME|Quantità|  
+|$TIME|Quantity|  
 |-----------|--------------|  
 |7/25/2008 0:00|46|  
 |8/25/2008 0:00|44|  

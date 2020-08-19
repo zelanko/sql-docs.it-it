@@ -1,4 +1,5 @@
 ---
+description: Convalidare, eseguire query e modificare i dati JSON con funzioni predefinite (SQL Server)
 title: Convalidare, eseguire query e modificare i dati JSON con funzioni predefinite
 ms.date: 06/03/2020
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9819b334dfa5b6c9d2b9a91fb80293a40b4a4e67
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 76644f677a03f34312e6731f5a973167313ad22a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725201"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424093"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>Convalidare, eseguire query e modificare i dati JSON con funzioni predefinite (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -174,7 +175,7 @@ I risultati di questa query sono riportati nella tabella seguente:
 | familyName | childGivenName | childFirstName | petName |
 | --- | --- | --- | --- |
 | AndersenFamily | Jesse | Merriam | Goofy |
-| AndersenFamily | Jesse | Merriam | Shadow |
+| AndersenFamily | Jesse | Merriam | Ombreggiatura |
 | AndersenFamily | Lisa | Miller| `NULL` |
 
 Il documento radice viene unito in join alle due righe `children` restituite dalla prima chiamata di `OPENJSON(children)` che crea due righe (o tuple). Ogni riga viene quindi unita in join alle nuove righe generate da `OPENJSON(pets)` tramite l'operatore `OUTER APPLY`. Jesse ha due animali domestici, quindi `(AndersenFamily, Jesse, Merriam)` viene unito in join alle due righe generate per Goofy e Shadow. Lisa non ha animali domestici, quindi non sono presenti righe restituite da `OPENJSON(pets)` per questa tupla. Tuttavia, dal momento che si usa `OUTER APPLY`, si ottiene `NULL` nella colonna. Specificando `CROSS APPLY` invece di `OUTER APPLY`, Lisa non verrebbe inclusa nel risultato perché non sono presenti righe di animali domestici che possono essere unite in join con questa tupla.
@@ -194,7 +195,7 @@ Si consideri il testo JSON di esempio seguente.
   
 In questo testo JSON di esempio i membri dati "a" e "c" sono valori stringa, mentre il membro dati "b" è una matrice. **JSON_VALUE** e **JSON_QUERY** restituiscono i risultati seguenti:  
   
-|Path|**JSON_VALUE** restituisce|**JSON_QUERY** restituisce|  
+|Percorso|**JSON_VALUE** restituisce|**JSON_QUERY** restituisce|  
 |-----------|-----------------------------|-----------------------------|  
 |**$**|NULL o errore|`{ "a": "[1,2]", "b": [1,2], "c":"hi"}`|  
 |**$.a**|[1,2]|NULL o errore|  

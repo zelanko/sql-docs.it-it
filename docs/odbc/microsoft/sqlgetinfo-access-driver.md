@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo (driver Access)
 title: SQLGetInfo (driver Access) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a9208ce32faa221d543baf62e2169e4523ae437
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11e725665171b85f994e45bc071b7cd2d9f01880
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298591"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421775"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (driver Access)
 > [!NOTE]  

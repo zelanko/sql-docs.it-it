@@ -1,4 +1,5 @@
 ---
+description: Eseguire un pacchetto SSIS con PowerShell
 title: Eseguire un pacchetto SSIS con PowerShell | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a86309c484cac3538b48c797665661341ca6648
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 659fb23619eeb8f4f74c43307a03b082dfca1919
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422175"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>Eseguire un pacchetto SSIS con PowerShell
 
@@ -22,7 +23,7 @@ ms.locfileid: "86921870"
 
 Questa guida introduttiva illustra come usare uno script di PowerShell per connettersi a un server di database ed eseguire un pacchetto SSIS.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Un server di Database SQL di Azure è in ascolto sulla porta 1433. Se si sta provando a connettersi a un server di database SQL di Azure dall'interno di un firewall aziendale, per stabilire correttamente la connessione questa porta deve essere aperta nel firewall aziendale.
 
@@ -57,7 +58,7 @@ Ecco un esempio di base su come eseguire un pacchetto SSIS in un catalogo pacche
 WHERE { $_.Name -eq 'Package.dtsx' }).Execute("false", $null)
 ```
 
-## <a name="powershell-script"></a>Script di PowerShell
+## <a name="powershell-script"></a>Script PowerShell
 Specificare i valori appropriati per le variabili nella parte superiore dello script seguente e quindi eseguire lo script per eseguire il pacchetto SSIS.
 
 > [!NOTE]
