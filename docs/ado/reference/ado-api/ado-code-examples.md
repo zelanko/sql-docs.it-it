@@ -1,4 +1,5 @@
 ---
+description: Esempi di codice ADO
 title: Esempi di codice ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: eb16724f-6fca-4873-b005-68626a8999b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3671bb7ffcb1d51f6bb7582d8cce50e5e28e330a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d8e9550a0b410964d88d0755832350a9346048b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749367"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451483"
 ---
 # <a name="ado-code-examples"></a>Esempi di codice ADO
 Usare gli esempi di codice seguenti per informazioni su come usare gli oggetti, i metodi, le proprietà e gli eventi ADO.  

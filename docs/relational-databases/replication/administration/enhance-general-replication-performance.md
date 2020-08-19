@@ -1,4 +1,5 @@
 ---
+description: Miglioramento delle prestazioni generali della replica
 title: Migliorare le prestazioni generali della replica | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 47ce98ee7bb1e4cacc82b2125c0da08f5487c444
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 307d27f85d5643b837298418279e22dc9225ac67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423585"
 ---
 # <a name="enhance-general-replication-performance"></a>Miglioramento delle prestazioni generali della replica
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -82,7 +83,7 @@ ms.locfileid: "86902202"
   
 -   Limitare l'utilizzo dei tipi di dati LOB (Large Object).  
   
-     Tali dati richiedono uno spazio di archiviazione e un'elaborazione maggiori rispetto ad altri tipi di dati di colonna. Non includere queste colonne negli articoli a meno che non sia necessario per l'applicazione in uso. I tipi di dati **text**, **ntext**e **image** sono deprecati. Se è necessario includere dati LOB, è consigliabile utilizzare rispettivamente i tipi di dati **varchar(max)** , **nvarchar(max)** e **varbinary(max)** .  
+     Tali dati richiedono uno spazio di archiviazione e un'elaborazione maggiori rispetto ad altri tipi di dati di colonna. Non includere queste colonne negli articoli a meno che non sia necessario per l'applicazione in uso. I tipi di dati **text**, **ntext**e **image** sono deprecati. Se è necessario includere dati LOB, è consigliabile utilizzare rispettivamente i tipi di dati **varchar(max)**, **nvarchar(max)** e **varbinary(max)**.  
   
      Per la replica transazionale, provare a utilizzare il profilo dell'agente di distribuzione denominato **Profilo di distribuzione per flussi OLEDB**. Per altre informazioni, vedere [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

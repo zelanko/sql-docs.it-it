@@ -1,4 +1,5 @@
 ---
+description: 'Esercitazione di T-SQL: Creare ed eseguire query di oggetti di database'
 title: 'Esercitazione di T-SQL: Creare ed eseguire query per oggetti di database | Microsoft Docs'
 ms.custom: ''
 ms.date: 07/30/2018
@@ -10,12 +11,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a8691ed6a84fce3eb12c8e13b2235356486c42f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3a489da04d7a65bf854cebf06e8103e22c1abc12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248703"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459175"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Lezione 1: Creare ed eseguire query per oggetti di database
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +35,7 @@ Il codice viene eseguito in [!INCLUDE[ssDE](../includes/ssde-md.md)] nello stess
   
 Per eseguire le istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], aprire [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] e connettersi a un'istanza di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 Per completare questa esercitazione è necessario avere SQL Server Management Studio e l'accesso a un'istanza di SQL Server. 
 
 - Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
@@ -101,7 +102,7 @@ Nella finestra dell'editor di query digitare ed eseguire il codice seguente per 
 ## <a name="insert-and-update-data-in-a-table"></a>Inserire e aggiornare dati in una tabella
 Dopo aver creato la tabella **Products** è possibile inserirvi dati con l'istruzione INSERT. Dopo aver inserito i dati, si procederà alla modifica del contenuto di una riga mediante l'istruzione UPDATE. Per limitare l'operazione di aggiornamento a una sola riga verrà utilizzata la clausola WHERE dell'istruzione UPDATE. Le quattro istruzioni immetteranno i dati seguenti.  
   
-|ProductID|ProductName|Price|ProductDescription|  
+|ProductID|ProductName|Prezzo|ProductDescription|  
 |-------------|---------------|---------|----------------------|  
 |1|Clamp|12.48|Workbench clamp|  
 |50|Screwdriver|3,17|Flat head|  
@@ -251,7 +252,7 @@ Sulle viste è possibile eseguire query come con le tabelle, ad eccezione del fa
   
 In questo esempio si userà CREATE VIEW per creare una vista che seleziona solo due delle colonne incluse nella tabella **Products** . Si utilizzerà quindi CREATE PROCEDURE per creare una stored procedure che accetta un parametro di prezzo e restituisce solo i prodotti il cui costo è inferiore al valore di tale parametro.  
   
-### <a name="create-a-view"></a>Creare una vista  
+### <a name="create-a-view"></a>Creare una visualizzazione  
   
 Eseguire l'istruzione seguente per creare un vista che esegue un'istruzione SELECT e restituisce i nomi e i prezzi dei prodotti.  
   

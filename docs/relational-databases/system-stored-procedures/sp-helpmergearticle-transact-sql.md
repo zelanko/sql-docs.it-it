@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergearticle (Transact-SQL)
 title: sp_helpmergearticle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 814ed354c296d1f9860b3abf92a7208cdecdacf7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ec07e77bcc2dbf3c0503e348b509848880705424
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485964"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione per cui si desidera recuperare informazioni. *Publication*è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutti gli articoli di tipo merge contenuti in tutte le pubblicazioni del database corrente.  
+`[ @publication = ] 'publication'` Nome della pubblicazione per cui si desidera recuperare informazioni. *Publication*è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutti gli articoli di tipo merge contenuti in tutte le pubblicazioni del database corrente.  
   
-`[ @article = ] 'article'`Nome dell'articolo per cui si desidera ottenere informazioni. *article*è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutti gli articoli di tipo merge nella pubblicazione specificata.  
+`[ @article = ] 'article'` Nome dell'articolo per cui si desidera ottenere informazioni. *article*è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutti gli articoli di tipo merge nella pubblicazione specificata.  
   
 ## <a name="result-set"></a>Set di risultati  
   
@@ -52,7 +53,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**source_object**|**sysname**|Nome dell'oggetto di origine da cui aggiungere l'articolo.|  
 |**sync_object_owner**|**sysname**|Nome del proprietario della vista che definisce l'articolo pubblicato.|  
 |**sync_object**|**sysname**|Nome dell'oggetto personalizzato utilizzato per stabilire i dati iniziali per la partizione.|  
-|**Descrizione**|**nvarchar(255)**|Descrizione dell'articolo.|  
+|**description**|**nvarchar(255)**|Descrizione dell'articolo.|  
 |**Stato**|**tinyint**|Stato dell'articolo. I possibili valori sono i seguenti:<br /><br /> **1** = inattivo<br /><br /> **2** = attivo<br /><br /> **5** = operazione di Data Definition Language (DDL) in sospeso<br /><br /> **6** = operazione DDL con uno snapshot appena generato<br /><br /> Nota: quando un articolo viene reinizializzato, i valori **5** e **6** vengono modificati in **2**.|  
 |**creation_script**|**nvarchar(255)**|Percorso e nome di uno script di schema dell'articolo facoltativo utilizzato per la creazione dell'articolo nel database di sottoscrizione.|  
 |**conflict_table**|**nvarchar (270)**|Nome della tabella in cui sono archiviati i conflitti di inserimento o aggiornamento.|  
@@ -98,9 +99,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le proprietà degli articoli](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
- [sp_addmergearticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [sp_changemergearticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
- [sp_dropmergearticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
+ [sp_addmergearticle &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_changemergearticle &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
+ [sp_dropmergearticle &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

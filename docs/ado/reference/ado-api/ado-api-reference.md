@@ -1,4 +1,5 @@
 ---
+description: Informazioni di riferimento sull'API ADO
 title: Informazioni di riferimento sulle API ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ee4fc69164dcfc5d19643fc9e6ce496a5b3489c6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 760510fba2f7a06a28e0c0804670d609b8ddc91d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760597"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451533"
 ---
 # <a name="ado-api-reference"></a>Informazioni di riferimento sull'API ADO
 In questa sezione della documentazione di ADO sono contenuti argomenti per ogni oggetto ADO, raccolta, proprietà, proprietà dinamica, metodo, evento ed enumerazione. Contiene inoltre un elenco di indici di sintassi ADO da usare con Microsoft Visual C++ e le classi Windows Foundation (WFC).  

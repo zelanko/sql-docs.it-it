@@ -1,4 +1,5 @@
 ---
+description: Metodo Cancel (ADO)
 title: Metodo Cancel (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25b6de609d286847fe7458353203dd7f4b9c7b4b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 24d4beba2c703d2c8e21f51dd5bac9d06444a651
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242427"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451063"
 ---
 # <a name="cancel-method-ado"></a>Metodo Cancel (ADO)
 Annulla l'esecuzione di una chiamata al metodo asincrono in sospeso.  
@@ -65,7 +66,7 @@ object.Cancel
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esempio di metodo Cancel (VB)](../../../ado/reference/ado-api/cancel-method-example-vb.md)   
  [Esempio di metodo Cancel (VBScript)](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
  [Esempio di metodo Cancel (VC + +)](../../../ado/reference/ado-api/cancel-method-example-vc.md)   

@@ -1,4 +1,5 @@
 ---
+description: Disconnessione da un'origine dati o driver
 title: Disconnessione da un'origine dati o da un driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 83dbf0bf-b400-41fb-8537-9b016050dc3c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 154a571bce3a337d539216ce89c32420ab981bd8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fc14ca0ebf29a2ab203a4408db4b5681ad667497
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300461"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476693"
 ---
 # <a name="disconnecting-from-a-data-source-or-driver"></a>Disconnessione da un'origine dati o driver
 Quando un'applicazione ha terminato di usare un'origine dati, chiama **SQLConnect**. **SQLConnect** libera tutte le istruzioni allocate sulla connessione e disconnette il driver dall'origine dati. Restituisce un errore se una transazione è in corso.  

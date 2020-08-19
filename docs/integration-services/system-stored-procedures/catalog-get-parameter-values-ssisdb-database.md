@@ -1,4 +1,5 @@
 ---
+description: catalog.get_parameter_values (database SSISDB)
 title: catalog.get_parameter_values (database SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 947b8607c54e3cb2022b32be0f68bab0dc53ffee
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 349a68fa94cfb479c6c3823b2b295a3a65498692
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913014"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495419"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values (database SSISDB)
 
@@ -44,7 +45,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
  Nome del progetto in cui si trovano i parametri. *project_name* è di tipo **nvarchar(128)** .  
   
  [ @package_name = ] *package_name*  
- Nome del pacchetto. Specificare il nome del pacchetto per recuperare tutti i parametri del progetto e i parametri da un pacchetto specifico. *package_name* è di tipo **nvarchar(260)** .  
+ Nome del pacchetto. Specificare il nome del pacchetto per recuperare tutti i parametri del progetto e i parametri da un pacchetto specifico. *package_name* è di tipo **nvarchar(260)**.  
   
  [ @reference_id = ] *reference_id*  
  Identificatore univoco di un riferimento all'ambiente. Questo parametro è facoltativo e, *reference_id* è di tipo **bigint**.  
@@ -62,7 +63,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 |parameter_name|**sysname**|Nome del parametro.|  
 |parameter_value|**sql_variant**|Valore del parametro.|  
 |sensitive|**bit**|Quando il valore è `1`, il valore del parametro è importante. In caso contrario, il valore è `0`.|  
-|obbligatorio|**bit**|Quando il valore è `1`, il valore del parametro è necessario per avviare l'esecuzione. In caso contrario, il valore è `0`.|  
+|necessario|**bit**|Quando il valore è `1`, il valore del parametro è necessario per avviare l'esecuzione. In caso contrario, il valore è `0`.|  
 |value_set|**bit**|Quando il valore è `1`, il valore del parametro è stato assegnato. In caso contrario, il valore è `0`.|  
   
 > [!NOTE]  

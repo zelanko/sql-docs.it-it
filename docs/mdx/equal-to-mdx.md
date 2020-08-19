@@ -1,4 +1,5 @@
 ---
+description: = (uguale a) (MDX)
 title: = (Uguale a) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 189facb54de244ff220b41ec08c8b02faf5a2c27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ec3cbcb928926d02dd6597116f8ce9af00bf8e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494934"
 ---
 # <a name="-equal-to-mdx"></a>= (uguale a) (MDX)
 
@@ -21,7 +22,7 @@ ms.locfileid: "68139321"
   Esegue un'operazione di confronto che determina se il valore di un'espressione MDX (Multidimensional Expression) è uguale a quello di un'altra espressione MDX.  
   
 > [!NOTE]  
->  Per confrontare gli oggetti, utilizzare l'operatore [&#41;&#40;MDX](../mdx/is-mdx.md) . Ad esempio, utilizzare l'operatore IS per controllare se il membro corrente su un asse della query è un membro specifico.  
+>  Per confrontare gli oggetti, utilizzare l'operatore [&#41;&#40;MDX ](../mdx/is-mdx.md) . Ad esempio, utilizzare l'operatore IS per controllare se il membro corrente su un asse della query è un membro specifico.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -75,6 +76,6 @@ MDX_Expression = MDX_Expression
  `From [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento agli operatori MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
+ [Guida di riferimento agli operatori MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)  
   
   

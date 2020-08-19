@@ -1,4 +1,5 @@
 ---
+description: Campi del descrittore
 title: Campi del descrittore | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d363c3e42a97c5d520c1a693ebed935b202b7247
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 56ca1fa7d558101774d10c8daa530fa32f3f7d21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362561"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476733"
 ---
 # <a name="descriptor-fields"></a>Campi del descrittore
 I descrittori contengono campi di *intestazione* e *record* che descrivono completamente colonne o parametri.  

@@ -1,4 +1,5 @@
 ---
+description: Informazioni sul file di personalizzazione
 title: Informazioni sul file di personalizzazione | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2edcfaaae08da97eccfe7b9a570716a2dfedfc2c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 59c0f32f7e5ba467fd1b90a348a78432a16621ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451873"
 ---
 # <a name="understanding-the-customization-file"></a>Informazioni sul file di personalizzazione
 Ogni intestazione di sezione nel file di personalizzazione è costituita da parentesi quadre (**[]**) contenenti un tipo e un parametro. I quattro tipi di sezione sono indicati dalle stringhe letterali **Connect**, **SQL**, **Users**o **logs**. Il parametro è la stringa letterale, l'impostazione predefinita, un identificatore specificato dall'utente o Nothing.  
@@ -47,7 +48,7 @@ identifier
 |**SQL**|Stringa letterale che modifica una stringa di comando.|  
 |**UserList**|Stringa letterale che modifica i diritti di accesso di un utente specifico.|  
 |**log**|Stringa letterale che specifica un file di log che registra errori operativi.|  
-|**predefinita**|Stringa letterale utilizzata se non viene specificato o trovato alcun identificatore.|  
+|**default**|Stringa letterale utilizzata se non viene specificato o trovato alcun identificatore.|  
 |*identificatore*|Stringa che corrisponde a una stringa nella stringa di **connessione** o di **comando** .<br /><br /> -Usare questa sezione se l'intestazione della sezione contiene **Connect** e la stringa dell'identificatore si trova nella stringa di connessione.<br />-Usare questa sezione se l'intestazione della sezione contiene **SQL** e la stringa dell'identificatore si trova nella stringa di comando.<br />-Usare questa sezione se l'intestazione della sezione contiene **Users** e la stringa dell'identificatore corrisponde a un identificatore di sezione **Connect** .|  
   
  **DataFactory** chiama il gestore, passando i parametri client. Il gestore cerca le stringhe intere nei parametri client che corrispondono agli identificatori nelle intestazioni di sezione appropriate. Se viene trovata una corrispondenza, il contenuto della sezione viene applicato al parametro client.  

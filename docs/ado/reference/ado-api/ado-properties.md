@@ -1,4 +1,5 @@
 ---
+description: Proprietà ADO
 title: Proprietà ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef825848ee0e2c43a1a70441009a590c41ce5526
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 72a14ac3114a3b27a7570bc5961b9bd6ffff51cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242841"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451363"
 ---
 # <a name="ado-properties"></a>Proprietà ADO
 
@@ -31,7 +32,7 @@ ms.locfileid: "87242841"
 |[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)|Indica la lunghezza effettiva del valore di un campo.|  
 |[Attributes (Attributi)](../../../ado/reference/ado-api/attributes-property-ado.md)|Indica una o più caratteristiche di un oggetto.|  
 |[BOF e EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|**BOF** indica che la posizione del record corrente precede il primo record in un oggetto recordset.<br /><br /> **EOF** indica che la posizione corrente del record è successiva all'ultimo record in un oggetto recordset.|  
-|[Segnalibro](../../../ado/reference/ado-api/bookmark-property-ado.md)|Indica un segnalibro che identifica in modo univoco il record corrente in un oggetto **Recordset** o imposta il record corrente in un oggetto **Recordset** sul record identificato da un segnalibro valido.|  
+|[Creare un segnalibro](../../../ado/reference/ado-api/bookmark-property-ado.md)|Indica un segnalibro che identifica in modo univoco il record corrente in un oggetto **Recordset** o imposta il record corrente in un oggetto **Recordset** sul record identificato da un segnalibro valido.|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|Indica il numero di record di un oggetto **Recordset** memorizzati nella cache localmente in memoria.|  
 |[Capitolo](../../../ado/reference/ado-api/chapter-property-ado.md)|Ottiene o imposta un oggetto OLE DB **capitolo** da/su un oggetto **ADORecordsetConstruction** .|  
 |[CharSet](../../../ado/reference/ado-api/charset-property-ado.md)|Indica il set di caratteri in cui deve essere convertito il contenuto di un **flusso** di testo.|  
@@ -96,7 +97,7 @@ ms.locfileid: "87242841"
 |[Valore](../../../ado/reference/ado-api/value-property-ado.md)|Indica il valore assegnato a un **campo**, un **parametro**o un oggetto **proprietà** .|  
 |[Version](../../../ado/reference/ado-api/version-property-ado.md)|Indica il numero di versione ADO.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Riferimento all'API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Raccolte ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Proprietà dinamiche ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

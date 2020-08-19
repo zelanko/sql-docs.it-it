@@ -1,4 +1,5 @@
 ---
+description: catalog.validate_package (database SSISDB)
 title: catalog.validate_package (database SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34a5d09a65238ff469877138bf3de5e23cf46836
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 632a0039692cbb6d22dba736f268bffff9be6f74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912737"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495391"
 ---
 # <a name="catalogvalidate_package-ssisdb-database"></a>catalog.validate_package (database SSISDB)
 
@@ -49,7 +50,7 @@ catalog.validate_package [ @folder_name = ] folder_name
  Nome del progetto in cui è contenuto il pacchetto. *project_name* è di tipo **nvarchar(128)** .  
   
  [ @package_name = ] *package_name*  
- Nome del pacchetto. *package_name* è di tipo **nvarchar(260)** .  
+ Nome del pacchetto. *package_name* è di tipo **nvarchar(260)**.  
   
  [ @validation_id = ] *validation_id*  
  Viene restituito l'identificatore (ID) univoco della convalida. *validation_id* è di tipo **bigint**.  
@@ -95,7 +96,7 @@ catalog.validate_package [ @folder_name = ] folder_name
   
 -   Riferimento alla variabili effettuato nei parametri del pacchetto, ma nessuna inclusione di ambienti di riferimento nella convalida.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La convalida consente di identificare i problemi che possono impedire la corretta esecuzione del pacchetto. Usare la vista [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) o [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) per monitorare lo stato della convalida.  
   
   

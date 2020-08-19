@@ -1,4 +1,5 @@
 ---
+description: Esempio del metodo Clone (VB)
 title: Esempio di metodo Clone (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64cb1753-e074-4a2d-8b74-7c35f3f6f64d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d42d0d9fb4cfc0a46c703e9f7f8be213d5a1a0b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7b58f1f0de4bf3a001d990e34a6f284a3940641b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450973"
 ---
 # <a name="clone-method-example-vb"></a>Esempio del metodo Clone (VB)
 In questo esempio viene usato il metodo [Clone](../../../ado/reference/ado-api/clone-method-ado.md) per creare copie di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e quindi si consente all'utente di posizionare il puntatore del record di ogni copia in modo indipendente.  

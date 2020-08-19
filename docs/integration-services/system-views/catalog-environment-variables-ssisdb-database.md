@@ -1,4 +1,5 @@
 ---
+description: catalog.environment_variables (database SSISDB)
 title: catalog.environment_variables (database SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de22e52f25658f467ed21952b1eb32356e4ff5af
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b76045d5f901fa1444fd016d1c7673f46170332d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912670"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495332"
 ---
 # <a name="catalogenvironment_variables-ssisdb-database"></a>catalog.environment_variables (database SSISDB)
 
@@ -36,7 +37,7 @@ ms.locfileid: "86912670"
 |sensitive|**bit**|Quando il valore è `1`, la variabile è importante e viene crittografata quando viene archiviata. Quando il valore è `0`, la variabile non è importante e il valore viene archiviato non crittografato.|  
 |Valore|**sql_variant**|Valore della variabile di ambiente. Quando sensitive è `0`, viene visualizzato il valore non crittografato. Quando sensitive è `1`, viene visualizzato il valore **NULL**.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  In questa vista viene visualizzata una riga per ogni variabile di ambiente nel catalogo.  
   
 ## <a name="permissions"></a>Autorizzazioni  

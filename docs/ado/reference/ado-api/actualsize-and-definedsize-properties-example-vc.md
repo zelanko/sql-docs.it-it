@@ -1,4 +1,5 @@
 ---
+description: Esempio di proprietà ActualSize e DefinedSize (VC + +)
 title: Esempio di proprietà ActualSize e DefinedSize (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 092c67ec3fef6705d103e87cd5e47adc37397475
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b8a69e5ad4f31891ec93e84e835a6c0d1ffdcdce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451643"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>Esempio di proprietà ActualSize e DefinedSize (VC + +)
 In questo esempio vengono usate le proprietà [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) e [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) per visualizzare le dimensioni definite e le dimensioni effettive di un campo.  

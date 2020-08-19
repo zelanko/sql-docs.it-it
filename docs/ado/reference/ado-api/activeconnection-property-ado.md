@@ -1,4 +1,5 @@
 ---
+description: Proprietà ActiveConnection (ADO)
 title: Proprietà ActiveConnection (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 375f0a0b81f71294b67200f8137ee381a638b8ac
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 058f1e16c6bdd84978c1131c436764f584fd80c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242911"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451673"
 ---
 # <a name="activeconnection-property-ado"></a>Proprietà ActiveConnection (ADO)
 Indica a quale oggetto [connessione](../../../ado/reference/ado-api/connection-object-ado.md) appartiene attualmente il [comando](../../../ado/reference/ado-api/command-object-ado.md), il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)o l'oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) specificato.  
@@ -30,7 +31,7 @@ Indica a quale oggetto [connessione](../../../ado/reference/ado-api/connection-o
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **stringa** che contiene una definizione per una connessione se la connessione viene chiusa o una **variante** contenente l'oggetto **connessione** corrente se la connessione è aperta. Il valore predefinito è un riferimento a un oggetto null. Vedere la proprietà [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare la proprietà **ActiveConnection** per determinare l'oggetto **connessione** in cui verrà eseguito l'oggetto **comando** specificato oppure verrà aperto il **Recordset** specificato.  
   
 ## <a name="command"></a>Comando  

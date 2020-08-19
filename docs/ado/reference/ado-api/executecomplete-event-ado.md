@@ -1,4 +1,5 @@
 ---
+description: Evento ExecuteComplete (ADO)
 title: Evento ExecuteComplete (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae8b426a0e4b95498cb0d4f9a4590c3aaf30196d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4e7b800f7dba925230ade048f3792020ad8a44ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760137"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443843"
 ---
 # <a name="executecomplete-event-ado"></a>Evento ExecuteComplete (ADO)
 L'evento **ExecuteComplete** viene chiamato dopo il completamento dell'esecuzione di un comando.  
@@ -46,7 +47,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  Prima della restituzione di questo evento, impostare questo parametro su **adStatusUnwantedEvent** per impedire le notifiche successive.  
   
  *pCommand*  
- Oggetto [Command](../../../ado/reference/ado-api/command-object-ado.md) eseguito. Contiene un oggetto **Command** anche quando si **chiama Connection. Execute** o **Recordset. Open** senza creare esplicitamente un **comando**, nel qual caso l'oggetto **Command** viene creato internamente da ADO.  
+ Oggetto [Command](../../../ado/reference/ado-api/command-object-ado.md) eseguito. Contiene un oggetto **Command** anche quando si ** chiamaConnection.Execute** o **Recordset. Open** senza creare esplicitamente un **comando**. in questo caso l'oggetto **Command** viene creato internamente da ADO.  
   
  *pRecordset*  
  Oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) che è il risultato del comando eseguito. Questo **Recordset** può essere vuoto. Non eliminare mai questo oggetto recordset dall'interno di questo gestore eventi. Questa operazione comporterà una violazione di accesso quando ADO tenterà di accedere a un oggetto che non esiste più.  
@@ -54,7 +55,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  *pConnection*  
  Oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Connessione su cui è stata eseguita l'operazione.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Un evento **ExecuteComplete** può verificarsi a causa della **connessione.** [Eseguire](../../../ado/reference/ado-api/execute-method-ado-connection.md)il **comando.** [Eseguire](../../../ado/reference/ado-api/execute-method-ado-command.md), **Recordset.** [Aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md), **Recordset.** [Eseguire una query](../../../ado/reference/ado-api/requery-method.md)o un **Recordset.** Metodi [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) .  
   
 ## <a name="see-also"></a>Vedere anche  

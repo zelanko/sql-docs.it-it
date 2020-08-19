@@ -1,4 +1,5 @@
 ---
+description: bit (Transact-SQL)
 title: bit (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -18,19 +19,19 @@ ms.assetid: 40adfd08-a31c-49cb-a172-386bcaa6edee
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 167f17d793bcc8d65c1104b70a6188782543c544
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4fdedaaf6645980793bb5baf6ebe02344c3d2b7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002529"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422965"
 ---
 # <a name="bit-transact-sql"></a>bit (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Tipo di dati integer che può accettare un valore di 1, 0 o NULL.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ottimizza l'archiviazione delle colonne di tipo **bit**. Se una tabella contiene al massimo 8 colonne di tipo **bit**, le colonne vengono archiviate come singolo byte. Se la tabella contiene da 9 a 16 colonne di tipo **bit**, le colonne vengono archiviate in 2 byte e così via.
   
 I valori di stringa TRUE e FALSE possono essere convertiti in valori di tipo **bit**: TRUE viene convertito in 1 e FALSE viene convertito in 0.

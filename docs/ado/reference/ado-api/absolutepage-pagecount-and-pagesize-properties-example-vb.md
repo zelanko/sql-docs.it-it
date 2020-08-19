@@ -1,4 +1,5 @@
 ---
+description: Esempio di proprietà AbsolutePage, PageCount e PageSize (VB)
 title: Esempio di proprietà AbsolutePage, PageCount e PageSize (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5aaada64-5115-4adc-8668-827348f32566
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7516023fe006caa9761d9547e995007047c6f382
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6896f47b29b4ad65e63ba999d2699e7f92231500
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747571"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451813"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vb"></a>Esempio di proprietà AbsolutePage, PageCount e PageSize (VB)
 ```  

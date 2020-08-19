@@ -1,4 +1,5 @@
 ---
+description: catalog.delete_project (database SSISDB)
 title: catalog.delete_project (database SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f23b9eb8b082b69486130e147d92bc16b63e13c2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 40e9a9a404c17b1a86b48fef45cdc32bf399ace3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495447"
 ---
 # <a name="catalogdelete_project-ssisdb-database"></a>catalog.delete_project (database SSISDB)
 
@@ -34,10 +35,10 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 ## <a name="arguments"></a>Argomenti  
  [ @folder_name = ] *folder_name*  
- Nome della cartella in cui è contenuto il progetto. *folder_name* è di tipo **nvarchar(128)** .  
+ Nome della cartella in cui è contenuto il progetto. *folder_name* è di tipo **nvarchar(128)**.  
   
  [ @project_name = ] *project_name*  
- Nome del progetto che deve essere eliminato. *project_name* è di tipo **nvarchar(128)** .  
+ Nome del progetto che deve essere eliminato. *project_name* è di tipo **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  

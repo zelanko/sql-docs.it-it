@@ -1,4 +1,5 @@
 ---
+description: catalog.get_project (database SSISDB)
 title: catalog.get_project (database SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c9cf4af9eb84c725b8807329713a3cd62e42558a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d26de0736fc41d3b39f0f6c3e149b044c538ba41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913011"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495392"
 ---
 # <a name="catalogget_project-ssisdb-database"></a>catalog.get_project (database SSISDB)
 
@@ -34,16 +35,16 @@ catalog.get_project [ @folder_name = ] folder_name , [ @project_name = ] project
   
 ## <a name="arguments"></a>Argomenti  
  [ @folder_name = ] *folder_name*  
- Nome della cartella in cui è contenuto il progetto. *folder_name* è di tipo **nvarchar(128)** .  
+ Nome della cartella in cui è contenuto il progetto. *folder_name* è di tipo **nvarchar(128)**.  
   
  [ @project_name = ] *project_name*  
- Nome del progetto. *project_name* è di tipo **nvarchar(128)** .  
+ Nome del progetto. *project_name* è di tipo **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Il flusso binario del progetto viene restituito come **varbinary(MAX)** . Non viene restituito alcun risultato se la cartella o il progetto non viene trovato.  
+ Il flusso binario del progetto viene restituito come **varbinary(MAX)**. Non viene restituito alcun risultato se la cartella o il progetto non viene trovato.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  

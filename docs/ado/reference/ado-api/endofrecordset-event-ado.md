@@ -1,4 +1,5 @@
 ---
+description: Evento EndOfRecordset (ADO)
 title: Evento EndOfRecordset (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd7710ebc7a5af323c247860baedd4b30d91fe21
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d96d11333c47aeb190cd2842a5a65a832642eb8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765552"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444033"
 ---
 # <a name="endofrecordset-event-ado"></a>Evento EndOfRecordset (ADO)
 L'evento **EndOfRecordset** viene chiamato quando si tenta di spostarsi in una riga oltre la fine del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -47,7 +48,7 @@ EndOfRecordset fMoreData, adStatus, pRecordset
  *pRecordset*  
  Oggetto **Recordset** . **Recordset** per il quale si è verificato l'evento.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se l'operazione [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) ha esito negativo, è possibile che si verifichi un evento **EndOfRecordset** .  
   
  Questo gestore eventi viene chiamato quando viene effettuato un tentativo di spostarsi oltre la fine dell'oggetto **Recordset** , probabilmente in seguito alla chiamata a **MoveNext**. Tuttavia, in questo caso, è possibile recuperare più record da un database e aggiungerli alla fine del **Recordset**. In tal caso, impostare *fMoreData* su VARIANT_TRUE e restituire da **EndOfRecordset**. Chiamare quindi di nuovo **MoveNext** per accedere ai record appena recuperati.  
