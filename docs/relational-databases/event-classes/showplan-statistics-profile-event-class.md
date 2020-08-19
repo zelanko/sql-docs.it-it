@@ -1,4 +1,5 @@
 ---
+description: Showplan Statistics Profile - classe di evento
 title: Classe di evento Showplan Statistics Profile | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: fa9e1330-a217-491c-ad7c-2c1c4015d1bb
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 470f1a6b694db95d9a58169b9b3b11b7d45768ca
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6cd4b9cdde57c6515adca2ab69358226b28a59b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726177"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88409697"
 ---
 # <a name="showplan-statistics-profile-event-class"></a>Showplan Statistics Profile - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

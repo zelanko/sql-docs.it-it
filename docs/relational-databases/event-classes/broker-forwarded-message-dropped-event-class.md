@@ -1,4 +1,5 @@
 ---
+description: Broker:Forwarded Message Dropped - classe di evento
 title: Classe di evento Broker:Forwarded Message Dropped | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11ac4c7c86b2add288271d56b91f7d9ab0848476
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6fe9b893b04f48a582e0ff0125c1fc33b77a16f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715407"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88409867"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped - classe di evento
 
@@ -49,7 +50,7 @@ ms.locfileid: "85715407"
 |ObjectId|**int**|Valore di durata (TTL) del messaggio inoltrato.|22|No|  
 |ObjectName|**nvarchar**|ID del messaggio inoltrato.|34|No|  
 |OwnerName|**nvarchar**|Identificatore dell'istanza di Service Broker che rappresenta la destinazione del messaggio.|37|No|  
-|RoleName|**nvarchar**|Ruolo dell'handle di conversazione. Uno dei valori possibili:<br /><br /> \- Iniziatore. Istanza di Service Broker che ha iniziato la conversazione.<br /><br /> \- Destinazione. Istanza di Service Broker che funge da destinazione della conversazione.|38|No|  
+|RoleName|**nvarchar**|Ruolo dell'handle di conversazione. Uno dei valori possibili:<br /><br /> - Iniziatore. Istanza di Service Broker che ha iniziato la conversazione.<br /><br /> - Destinazione. Istanza di Service Broker che funge da destinazione della conversazione.|38|No|  
 |ServerName|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
 |Gravità|**int**|Numero di gravità per il testo dell'evento.|29|No|  
 |SPID|**int**|ID del processo server assegnato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al processo associato al client.|12|Sì|  

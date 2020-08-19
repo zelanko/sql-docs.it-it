@@ -1,4 +1,5 @@
 ---
+description: Broker:Conversation Group  - classe di evento
 title: Classe di evento Broker:Conversation Group | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: 6595bef6-9d40-42eb-a934-735622dd23fb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c767f77683c46151fd0d9804a35f838d88ca0f0a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 68afde98f2e219cacf20175bfa0cb71ad7afa90a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679318"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410127"
 ---
 # <a name="brokerconversation-group-event-class"></a>Broker:Conversation Group  - classe di evento
 
@@ -34,7 +35,7 @@ ms.locfileid: "85679318"
 |**DatabaseID**|**int**|ID del database specificato nell'istruzione USE *database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *database* . [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |**EventClass**|**int**|Tipo di classe di evento acquisita. Per **Broker:Conversation Group** è sempre **136**.|27|No|  
 |**EventSequence**|**int**|Numero di sequenza dell'evento.|51|No|  
-|**EventSubClass**|**nvarchar**|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> **Crea**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha creato un nuovo gruppo di conversazioni.<br /><br /> **Elimina**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha eliminato un gruppo di conversazioni.|21|Sì|  
+|**EventSubClass**|**nvarchar**|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> **Create**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha creato un nuovo gruppo di conversazioni.<br /><br /> **Elimina**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha eliminato un gruppo di conversazioni.|21|Sì|  
 |**GUID**|**uniqueidentifier**|Identificatore del gruppo di conversazioni descritto dall'evento.|54|No|  
 |**HostName**|**nvarchar**|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |**IsSystem**|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|No|  

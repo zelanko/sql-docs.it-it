@@ -1,4 +1,5 @@
 ---
+description: Showplan All for Query Compile - classe di evento
 title: Classe di evento Showplan All for Query Compile | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 582efa7068b9e4ebadc4cdfd9f10ee93eb2774df
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c828eae145f5d3eacf3c6fd938c4f92b72f343d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726191"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88409857"
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

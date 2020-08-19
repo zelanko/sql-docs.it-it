@@ -1,4 +1,5 @@
 ---
+description: Indici
 title: Indici | Microsoft Docs
 ms.custom: ''
 ms.date: 12/21/2016
@@ -13,12 +14,12 @@ ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e980013658fd83c4f8c934e6e8b2b51d27783893
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b8487f821b698974744fdc18453a2a5c8285d889
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408007"
 ---
 # <a name="indexes"></a>Indici
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,8 +29,8 @@ Nella tabella seguente sono inclusi i tipi di indici disponibili in [!INCLUDE[ss
   
 |Tipo di indice|Descrizione|Informazioni aggiuntive|  
 |----------------|-----------------|----------------------------|  
-|Hash|Con un indice hash l'accesso ai dati viene eseguito tramite una tabella hash in memoria. Gli indici hash utilizzano una quantità di memoria fissa (una funzione del numero di bucket).|[Linee guida per l'uso di indici nelle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [Linee guida per la progettazione di indici hash](../../relational-databases/sql-server-index-design-guide.md#hash_index)|  
-|Non cluster ottimizzato per la memoria|Per gli indici non cluster ottimizzati per la memoria, l'utilizzo della memoria è una funzione del conteggio delle righe e della dimensione delle colonne chiave di indice|[Linee guida per l'uso di indici nelle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [Linee guida per la progettazione di indici non cluster ottimizzati per la memoria](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)|  
+|Hash|Con un indice hash l'accesso ai dati viene eseguito tramite una tabella hash in memoria. Gli indici hash utilizzano una quantità di memoria fissa (una funzione del numero di bucket).|[Linee guida per l'utilizzo di indici nelle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [Linee guida per la progettazione di indici hash](../../relational-databases/sql-server-index-design-guide.md#hash_index)|  
+|Non cluster ottimizzato per la memoria|Per gli indici non cluster ottimizzati per la memoria, l'utilizzo della memoria è una funzione del conteggio delle righe e della dimensione delle colonne chiave di indice|[Linee guida per l'utilizzo di indici nelle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [Linee guida per la progettazione di indici non cluster ottimizzati per la memoria](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)|  
 |Cluster|Un indice cluster ordina e archivia le righe di dati della tabella o della vista in base alle chiavi di indice cluster. L'indice cluster viene implementato come albero B che supporta il recupero rapido delle righe in base ai rispettivi valori delle chiavi di indice cluster.|[Descrizione di indici cluster e non cluster.](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)<br /><br /> [Creare indici cluster](../../relational-databases/indexes/create-clustered-indexes.md)<br /><br /> [Linee guida per la progettazione di indici cluster](../../relational-databases/sql-server-index-design-guide.md#Clustered)|  
 |Non cluster|Un indice non cluster può essere definito in una tabella o vista con un indice cluster o in un heap. Ogni riga di indice nell'indice non cluster contiene il valore della chiave non cluster e un indicatore di posizione delle righe. Questo indicatore punta alla riga di dati nell'indice cluster o nell'heap contenente il valore della chiave. Le righe dell'indice vengono archiviate in base all'ordine dei valori delle chiavi di indice, ma non è possibile garantire che le righe di dati abbiano un ordine specifico, a meno che nella tabella non venga creato un indice cluster.|[Descrizione di indici cluster e non cluster.](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)<br /><br /> [Creare indici non cluster](../../relational-databases/indexes/create-nonclustered-indexes.md)<br /><br /> [Linee guida per la progettazione di indici non cluster](../../relational-databases/sql-server-index-design-guide.md#Nonclustered)|  
 |Univoco|Un indice univoco garantisce che la chiave di indice non contenga alcun valore duplicato e che pertanto ogni riga della tabella o della vista sia univoca.<br /><br /> L'univocità può essere una proprietà sia degli indici cluster che degli indici non cluster.|[Creare indici univoci](../../relational-databases/indexes/create-unique-indexes.md)<br /><br /> [Linee guida per la progettazione di indici univoci](../../relational-databases/sql-server-index-design-guide.md#Unique)|  
