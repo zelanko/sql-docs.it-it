@@ -1,4 +1,5 @@
 ---
+description: Installazione di SMO (SQL Server Management Objects)
 title: Installazione di SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -15,11 +16,12 @@ ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1a0c23d91785a453bcbf7857211e524b15a4ec3f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1b98ce67e61c1fe6f9370508d34cecc8d9289a44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420265"
 ---
 # <a name="installing-smo"></a>Installazione di SMO (SQL Server Management Objects)
 
@@ -42,5 +44,5 @@ Vedere [NuGet avvio rapido: usare un pacchetto](https://docs.microsoft.com/nuget
   
 ## <a name="system-requirements"></a>Requisiti di sistema
   
- SMO richiede [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] l'esecuzione di 4,0 o .NET Core 2,0, pertanto tutte le applicazioni che lo utilizzano devono assicurarsi che i computer client dispongano di tale versione o versione successiva. Alcuni file binari nativi installati con le librerie SMO NetFx richiedono anche l'installazione del runtime VC 2013; il runtime non è incluso nel pacchetto. È possibile scaricare il redist appropriato per l'architettura di destinazione dahttps://www.microsoft.com/download/details.aspx?id=40784
+ SMO richiede [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] l'esecuzione di 4,0 o .NET Core 2,0, pertanto tutte le applicazioni che lo utilizzano devono assicurarsi che i computer client dispongano di tale versione o versione successiva. Alcuni file binari nativi installati con le librerie SMO NetFx richiedono anche l'installazione del runtime VC 2013; il runtime non è incluso nel pacchetto. È possibile scaricare il redist appropriato per l'architettura di destinazione da https://www.microsoft.com/download/details.aspx?id=40784
   

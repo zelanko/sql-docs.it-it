@@ -1,4 +1,5 @@
 ---
+description: Impostazione dell'account del servizio dell'Utilità di avvio del daemon di filtri full-text
 title: Impostare l'account del servizio per l'Utilità di avvio del daemon filtri full-text
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4603d4a14461bb05576a6f6ffe34db4968223718
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db5d05ce1b3712eebbd77d34e8ae0b380e18dcbf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628940"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420375"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Impostazione dell'account del servizio dell'Utilità di avvio del daemon di filtri full-text
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,6 +80,6 @@ Il servizio Utilità di avvio del daemon filtri full-text di SQL è un servizio 
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedure per la gestione dei servizi &#40;Gestione configurazione SQL Server&#41;](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)   
- [Aggiornare la ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md)  
+ [Aggiornamento della ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: agente snapshot
 title: Agente snapshot | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -15,16 +16,16 @@ ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bcd2ee4bc1f193716b084bf816d27a5107e27a84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 532917bc211dcc281dd65ebb6229febc953d5805
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767641"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420385"
 ---
 # <a name="snapshot-agent"></a>agente snapshot
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Nella finestra di dialogo **Agente snapshot** vengono visualizzate informazioni dettagliate sull'agente snapshot, inclusi lo stato, la cronologia, i messaggi informativi e tutti quelli di errore.  
+   La finestra di dialogo **Agente snapshot** mostra informazioni dettagliate sull'agente di snapshot, inclusi lo stato, la cronologia, i messaggi informativi e gli eventuali messaggi di errore.  
   
 ## <a name="options"></a>Opzioni  
  Scegliere le sessioni dell'agente snapshot da visualizzare dal menu **Visualizza** e quindi selezionare una specifica sessione nella griglia con etichetta **Sessioni dell'agente snapshot**. Nella griglia con etichetta **Azioni nella sessione selezionata**verranno visualizzate informazioni dettagliate sulla sessione selezionata. Se la sessione selezionata è terminata con un errore, verrà inoltre visualizzata l'area di testo con etichetta **Messaggio o dettagli errore della sessione selezionata** .  
@@ -41,7 +42,7 @@ ms.locfileid: "85767641"
   
 -   Non in esecuzione  
   
--   Completi  
+-   Completato  
   
  **Start Time**  
  Ora di inizio della sessione.  
