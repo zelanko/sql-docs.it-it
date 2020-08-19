@@ -1,4 +1,5 @@
 ---
+description: Background Job Error - classe di evento
 title: Classe di evento Background Job Error | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5524bd8ed316780a9b0b8babd66e2c2582fb0585
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 532a24d0cb2b3e30a5e513b4feab522ef45e34d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763092"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410427"
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85763092"
 |**IntegerData2**|**int**|Numero di sequenza del processo.|55|Sì|  
 |**ObjectID**|**int**|ID dell'oggetto assegnato dal sistema.|22|Sì|  
 |**SessionLoginName**|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, **SessionLoginName** indica Login1 e **LoginName** indica Login2. In questa colonna vengono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|64|Sì|  
-|**Severity**|**int**|Livello di gravità dell'errore all'ultimo tentativo (solo**EventSubClass** 1).|20|Sì|  
+|**Gravità**|**int**|Livello di gravità dell'errore all'ultimo tentativo (solo**EventSubClass** 1).|20|Sì|  
 |**StartTime**|**datetime**|Istante in cui è stato creato il processo.|14|Sì|  
 |**State**|**int**|Stato dell'errore all'ultimo tentativo (solo**EventSubClass** 1).|30|Sì|  
 |**TextData**|**ntext**|Descrizione testuale del valore di sottoclasse dell'evento.|1|Sì|  
