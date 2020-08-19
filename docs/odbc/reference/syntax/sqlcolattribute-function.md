@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLColAttribute
 title: Funzione SQLColAttribute | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c94de3dfc7036277f8be56c401326cdab07a9606
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d5cc7020300fd9099b70ed6f33716f343d47d571
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301291"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448816"
 ---
 # <a name="sqlcolattribute-function"></a>Funzione SQLColAttribute
 **Conformità**  
  Versione introdotta: ODBC 3,0 Standard Compliance: ISO 92  
   
- **Riepilogo**  
+ **Summary**  
  **SQLColAttribute** restituisce informazioni sul descrittore per una colonna in un set di risultati. Le informazioni sul descrittore vengono restituite come una stringa di caratteri, un valore dipendente dal descrittore o un valore integer.  
   
 > [!NOTE]  
@@ -130,7 +131,7 @@ SQLRETURN SQLColAttribute (
  ODBC 3. il driver *x* deve restituire un valore per ogni campo del descrittore. Se un campo del descrittore non è applicabile a un driver o a un'origine dati e se non diversamente specificato, il driver restituisce 0 in \* *StringLengthPtr* o una stringa vuota in **CharacterAttributePtr*.  
   
 ## <a name="backward-compatibility"></a>Backward Compatibility  
- ODBC 3. la funzione *x* **SQLColAttribute** sostituisce la deprecata ODBC 2. **SQLColAttributes**funzione *x* . Quando si esegue il mapping di **SQLColAttributes** a **SQLCOLATTRIBUTE** (quando ODBC 2.* *l'applicazione x funziona con ODBC 3. driver *x* ) o mapping di **SQLColAttribute** a **SQLColAttributes** (quando ODBC 3.* *l'applicazione x funziona con ODBC 2. driver *x* ), la gestione driver passa il valore di *FieldIdentifier* tramite, ne esegue il mapping a un nuovo valore o restituisce un errore, come indicato di seguito:  
+ ODBC 3. la funzione *x* **SQLColAttribute** sostituisce la deprecata ODBC 2. **SQLColAttributes**funzione *x* . Quando si esegue il mapping di **SQLColAttributes** a **SQLCOLATTRIBUTE** (quando ODBC 2.* * l'applicazione x funziona con ODBC 3. driver *x* ) o mapping di **SQLColAttribute** a **SQLColAttributes** (quando ODBC 3.* * l'applicazione x funziona con ODBC 2. driver *x* ), la gestione driver passa il valore di *FieldIdentifier* tramite, ne esegue il mapping a un nuovo valore o restituisce un errore, come indicato di seguito:  
   
 > [!NOTE]  
 >  Prefisso utilizzato nei valori *FieldIdentifier* in ODBC 3. *x* è stato modificato rispetto a quello utilizzato in ODBC 2. *x*. Il nuovo prefisso è "SQL_DESC"; il prefisso precedente è "SQL_COLUMN".  
@@ -145,7 +146,7 @@ SQLRETURN SQLColAttribute (
   
  Nella tabella seguente sono elencati i tipi di descrittori restituiti da **SQLColAttribute**. Il tipo per i valori *NumericAttributePtr* è **SQLLEN \* **.  
   
-|*FieldIdentifier*|Informazioni<br /><br /> restituito in|Description|  
+|*FieldIdentifier*|Informazioni<br /><br /> restituito in|Descrizione|  
 |-----------------------|---------------------------------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1,0)|*NumericAttributePtr*|SQL_TRUE se la colonna è una colonna a incremento automatico.<br /><br /> SQL_FALSE se la colonna non è una colonna a incremento automatico o non è numerica.<br /><br /> Questo campo è valido solo per le colonne con tipi di dati numerici. Un'applicazione può inserire valori in una riga contenente una colonna AutoIncrement, ma in genere non può aggiornare i valori nella colonna.<br /><br /> Quando viene eseguita un'istruzione INSERT in una colonna AutoIncrement, viene inserito un valore univoco nella colonna in fase di inserimento. L'incremento non è definito, ma è specifico dell'origine dati. Un'applicazione non deve presupporre che una colonna AutoIncrement venga avviata in un determinato punto o incrementi di un determinato valore.|  
 |SQL_DESC_BASE_COLUMN_NAME (ODBC 3,0)|*CharacterAttributePtr*|Nome della colonna di base per la colonna del set di risultati. Se non esiste un nome di colonna di base (come nel caso di colonne che sono espressioni), questa variabile contiene una stringa vuota.<br /><br /> Queste informazioni vengono restituite dal campo SQL_DESC_BASE_COLUMN_NAME record di IRD, che è un campo di sola lettura.|  

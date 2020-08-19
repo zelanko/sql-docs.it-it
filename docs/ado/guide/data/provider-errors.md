@@ -1,4 +1,5 @@
 ---
+description: Errori del provider
 title: Errori del provider | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2fce89dd6df633f8cdcf78271c63336b3ecc7b05
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9588ddddf094f391f442dd7ad9c4172cce70970e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760997"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453023"
 ---
 # <a name="provider-errors"></a>Errori del provider
 Quando si verifica un errore del provider, viene restituito un errore di run-time di-2147467259. Quando viene visualizzato questo errore, controllare la raccolta di **errori** dell'oggetto **connessione** attivo, che conterrà uno o più errori che descrivono cosa si è verificato.  
@@ -64,13 +65,13 @@ End Function
 ## <a name="the-error-object"></a>Oggetto Error  
  Esaminando un oggetto **Error** è possibile determinare l'errore che si è verificato e, più importante, l'applicazione o l'oggetto che ha causato l'errore. L'oggetto **Error** presenta le proprietà seguenti:  
   
-|Nome proprietà|Description|  
+|Nome proprietà|Descrizione|  
 |-------------------|-----------------|  
 |**Descrizione**|Descrizione testuale dell'errore che si è verificato.|  
 |**HelpContext, fileguida**|Si riferisce all'argomento della guida e al file della guida che contengono una descrizione dell'errore che si è verificato.|  
 |**NativeError**|Numero di errore specifico del provider.|  
-|**Numero**|Valore long integer che rappresenta il numero (elencato in **ErrorValueEnum**) dell'errore che si è verificato.|  
-|**origine**|Indica il nome dell'oggetto o dell'applicazione che ha generato un errore.|  
+|**Number**|Valore long integer che rappresenta il numero (elencato in **ErrorValueEnum**) dell'errore che si è verificato.|  
+|**Origine**|Indica il nome dell'oggetto o dell'applicazione che ha generato un errore.|  
 |**SQLState**|Codice di errore di cinque caratteri restituito dal provider durante il processo di un'istruzione SQL.|  
   
  L'oggetto **errore** ADO è molto simile all'oggetto Visual Basic **Err** standard. Le relative proprietà descrivono l'errore che si è verificato. Oltre al numero dell'errore, si ricevono anche due informazioni correlate. La proprietà **NativeError** contiene un numero di errore specifico per il provider in uso. Nell'esempio precedente, il provider è il provider di OLE DB Microsoft per SQL Server, quindi **NativeError** conterrà errori specifici per SQL Server. La proprietà **SQLSTATE** include un codice di cinque lettere che descrive un errore in un'istruzione SQL.  

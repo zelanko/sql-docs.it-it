@@ -1,4 +1,5 @@
 ---
+description: Recupero di righe (provider OLE DB Native Client)
 title: Recupero di righe (provider OLE DB Native Client) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a200f97395336abd5425793393401ac4ab0c9346
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: dafe6b863b19a555b62b46227f470a6ea03fb133
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243627"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448368"
 ---
 # <a name="fetching-rows-native-client-ole-db-provider"></a>Recupero di righe (provider OLE DB Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +65,7 @@ ms.locfileid: "87243627"
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Posizione del recupero successivo](../../relational-databases/native-client-ole-db-rowsets/fetching-rows-next-fetch-position.md)  
+-   [posizione del recupero successivo](../../relational-databases/native-client-ole-db-rowsets/fetching-rows-next-fetch-position.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di righe](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  

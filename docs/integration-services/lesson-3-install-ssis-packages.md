@@ -1,4 +1,5 @@
 ---
+description: 'Lezione 3: Installare i pacchetti SSIS'
 title: 'Lezione 3: Installare i pacchetti SSIS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4db3158c378d32dd472a9845e785be95130780b6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a56687640190b5f129071c6ad2836b3013ae2ac0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922169"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449718"
 ---
 # <a name="lesson-3-install-ssis-packages"></a>Lezione 3: Installare i pacchetti SSIS
 

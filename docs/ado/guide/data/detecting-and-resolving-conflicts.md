@@ -1,4 +1,5 @@
 ---
+description: Rilevamento e risoluzione di conflitti
 title: Rilevamento e risoluzione dei conflitti | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3b3a9f4c5482d0171c59a734aa6139bc2239c55
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c9ab7dd72816d47b4f8a1c7aa55ba8751399e41a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761087"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453513"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Rilevamento e risoluzione di conflitti
 Se si sta lavorando con il recordset in modalità immediata, è possibile che si verifichino problemi di concorrenza. D'altra parte, se l'applicazione usa l'aggiornamento in modalità batch, è possibile che un utente possa modificare un record prima che vengano salvate le modifiche apportate da un altro utente che modifica lo stesso record. In tal caso, si desidera che l'applicazione gestisca normalmente il conflitto. Potrebbe essere necessario che l'ultima persona invii un aggiornamento al server "WINS". In alternativa, è possibile consentire all'utente più recente di decidere quale aggiornamento deve avere la precedenza, offrendogli una scelta tra i due valori in conflitto.  

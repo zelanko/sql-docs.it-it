@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLColAttributes
 title: Funzione SQLColAttributes | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 3ece37af-db56-47fc-bc9d-6a7d0d8a00ec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef2dc0b9007542d5bf71f06a742cc58c0ae5f4ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c404a4f8ef1dd9bef246e811e200eed3d431c29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448797"
 ---
 # <a name="sqlcolattributes-function"></a>Funzione SQLColAttributes
 **Conformità**  
  Versione introdotta: conformità agli standard ODBC 1,0: deprecato  
   
- **Riepilogo**  
+ **Summary**  
  In ODBC 3. *x*, la funzione ODBC 2,0 **SQLColAttributes** è stata sostituita da **SQLColAttribute**. Per altre informazioni, vedere [funzione SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md).  
   
 > [!NOTE]  

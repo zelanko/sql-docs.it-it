@@ -1,4 +1,5 @@
 ---
+description: Funzionamento dei comandi con parametri
 title: Operazione di comandi con parametri | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 17d2d282eddcd358d8b3efe90ffda2d40e9e1574
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 36934de15041ddec97b0cc266a980f4908518a24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453103"
 ---
 # <a name="operation-of-parameterized-commands"></a>Funzionamento dei comandi con parametri
 Se si utilizza un **Recordset**figlio di grandi dimensioni, in particolare rispetto alle dimensioni del **Recordset**padre, ma è necessario accedere solo a pochi capitoli figlio, potrebbe risultare più efficiente utilizzare un comando con parametri.  
@@ -74,7 +75,7 @@ Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.
   
  Utilizzando una gerarchia senza parametri, non è possibile correlare le tabelle teams e Games in modo tale che il **Recordset** figlio per ogni team contenga la pianificazione completa. È possibile creare capitoli che contengono la pianificazione Home o la pianificazione stradale, ma non entrambi. Ciò è dovuto al fatto che la clausola RELATE consente di limitare le relazioni padre-figlio del form (PC1 = CC1) e (PC2 = PC2). Quindi, se il comando includesse "CORRELAre team_id a home_team, team_id a visiting_team", si otterrebbero solo giochi in cui un team stava giocando a se stesso. Si vuole usare "(team_id = home_team) o (team_id = visiting_team)", ma il provider di forme non supporta la clausola o.  
   
- Per ottenere il risultato desiderato, è possibile usare un comando con parametri. ad esempio:  
+ Per ottenere il risultato desiderato, è possibile usare un comando con parametri. Ad esempio:  
   
 ```  
 SHAPE {SELECT * FROM teams}   

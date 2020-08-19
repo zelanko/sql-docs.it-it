@@ -1,4 +1,5 @@
 ---
+description: Funzionamento dei comandi senza parametri
 title: Operazione di comandi senza parametri | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d69ff29f0baabc770da8a62b56962bdc44619b1e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ec2dbf3dfb24fc484368f3fa2e2c2e950dbd20ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759127"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453113"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Funzionamento dei comandi senza parametri
 Per i comandi senza parametri, vengono eseguiti tutti i comandi del provider e i **Recordset** vengono creati durante l'esecuzione del comando. Se il comando viene eseguito in modo sincrono, tutti i **Recordset** verranno popolati in modo completo. Se è stata selezionata una modalità di popolamento asincrono, lo stato popolato dei **Recordset** dipenderà dalla modalità di popolamento e dalle dimensioni dei **Recordset**.  

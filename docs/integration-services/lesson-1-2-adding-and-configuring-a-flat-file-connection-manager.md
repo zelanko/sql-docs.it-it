@@ -1,4 +1,5 @@
 ---
+description: 'Lezione 1-2: Aggiungere e configurare una gestione connessione file flat'
 title: 'Passaggio 2: Aggiungere e configurare una gestione connessione file flat | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d03808293d5edbc9ae0be48b28f86df725304059
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d83b2c6a19b7a73be4293dcb66edc6cbc22909d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917426"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449733"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>Lezione 1-2: Aggiungere e configurare una gestione connessione file flat
 
@@ -99,7 +100,7 @@ Per impostazione predefinita, le quattro colonne sono inizialmente impostate su 
 ## <a name="go-to-next-task"></a>Esecuzione del passaggio successivo
 [Passaggio 3: Aggiungere e configurare una gestione connessione OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Gestione connessione file flat](../integration-services/connection-manager/flat-file-connection-manager.md)  
 [Tipi di dati di Integration Services](../integration-services/data-flow/integration-services-data-types.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Lezione 1-3 - Aggiunta di pacchetti e altri file
 title: 'Passaggio 3: Aggiunta di pacchetti e altri file | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 58cafdb2a547f5c911d2b53575327dc278d2ed61
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 38d062e21ec2bd7eb0e9314f5e108ea785e5428a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917397"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449719"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>Lezione 1-3 - Aggiunta di pacchetti e altri file
 
@@ -69,10 +70,10 @@ Nell'attività successiva si procederà all'aggiunta delle configurazioni per i 
   
 3.  Nella finestra di dialogo **Aggiungi elemento esistente - Deployment Tutorial** passare a C:\Programmi\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\\, selezionare Readme.txt e fare clic su **Aggiungi**.  
   
-4.  Scegliere **Salva tutto**dal menu File.  
+4.  Scegliere Salva tutti dal menu **File**.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
-[Passaggio 4: Aggiunta delle configurazioni dei pacchetti](../integration-services/lesson-1-4-adding-package-configurations.md)  
+[Passaggio 4: Aggiunta di configurazioni pacchetto](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
   
   

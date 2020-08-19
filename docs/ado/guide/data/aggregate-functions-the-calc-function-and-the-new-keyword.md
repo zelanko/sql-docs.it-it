@@ -1,4 +1,5 @@
 ---
+description: Funzioni di aggregazione, funzione CALC e parola chiave NEW
 title: Funzioni di aggregazione, funzione CALC e parola chiave NEW | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bda85bae42b294fa63c67adfe51d8c60c5b56af
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ad6bf4b041fbae0f30e327bd32dd067c1e9c429a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761277"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453753"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Funzioni di aggregazione, funzione CALC e parola chiave NEW
 Data Shaping supporta le funzioni seguenti. Il nome assegnato al capitolo contenente la colonna da operare è l' *alias del capitolo*.  
   
  Un alias del capitolo può essere completo, costituito da ogni nome di colonna del capitolo che conduce al capitolo contenente il *nome della colonna,* tutti separati da punti. Se, ad esempio, il capitolo padre, chap1, contiene un capitolo figlio CHAP2 con una colonna Amount, AMT, il nome completo sarà chap1. CHAP2. AMT.  
   
-|Funzioni di aggregazione|Description|  
+|Funzioni di aggregazione|Descrizione|  
 |-------------------------|-----------------|  
 |SUM (*Chapter-alias*.* Nome colonna*)|Calcola la somma di tutti i valori nella colonna specificata.|  
 |AVG (*Chapter-alias*.* Nome colonna*)|Calcola la media di tutti i valori nella colonna specificata.|  
@@ -37,11 +38,11 @@ Data Shaping supporta le funzioni seguenti. Il nome assegnato al capitolo conten
 |STDEV (*Chapter-alias*.* Nome colonna*)|Calcola la deviazione standard nella colonna specificata.|  
 |ANY (*alias del capitolo*.* Nome colonna*)|Valore della colonna specificata. ANY presenta un valore stimabile solo quando il valore della colonna è lo stesso per tutte le righe del capitolo.<br /><br /> **Nota** Se la colonna non contiene lo stesso valore per tutte le righe nel capitolo, il comando SHAPE restituisce arbitrariamente uno dei valori in modo che corrisponda al valore della funzione ANY.|  
   
-|Espressione calcolata|Description|  
+|Espressione calcolata|Descrizione|  
 |---------------------------|-----------------|  
 |CALCOLO (*espressione*)|Calcola un'espressione arbitraria, ma solo sulla riga del **Recordset** che contiene la funzione Calc. È consentita qualsiasi espressione che utilizza queste [funzioni Visual Basic, Applications Edition (VBA)](../../../ado/guide/data/visual-basic-for-applications-functions.md) .|  
   
-|NUOVA parola chiave|Description|  
+|NUOVA parola chiave|Descrizione|  
 |-----------------|-----------------|  
 |NUOVO *tipo di campo* [(*width* &#124; *scale* &#124; *Precision* &#124; *Error* [, *scale* &#124; *Error*])]|Aggiunge al **Recordset**una colonna vuota del tipo specificato.|  
   

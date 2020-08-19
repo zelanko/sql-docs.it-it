@@ -1,4 +1,5 @@
 ---
+description: 'Lezione 1-1: Creazione di un nuovo progetto di Integration Services'
 title: 'Passaggio 1: Creare un nuovo progetto di Integration Services | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 235d3682f7955201d6699e70197c2879ba0832b6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 575353cd2cf770ed42d439fd31647ccaef3e01bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917449"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449751"
 ---
 # <a name="lesson-1-1-create-a-new-integration-services-project"></a>Lezione 1-1: Creazione di un nuovo progetto di Integration Services
 
@@ -34,7 +35,7 @@ I pacchetti usati nelle lezioni da 2 a 6 vengono copiati dal pacchetto creato in
 
 ## <a name="create-a-new-integration-services-project"></a>Creazione di un nuovo progetto di Integration Services  
   
-1.  Nel menu **Start** di Windows cercare e selezionare **Visual Studio (SSDT)** .  
+1.  Nel menu **Start** di Windows cercare e selezionare **Visual Studio (SSDT)**.  
   
 2.  In Visual Studio selezionare **File** > **Nuovo** > **Progetto** per creare un nuovo progetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   

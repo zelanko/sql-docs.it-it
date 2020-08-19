@@ -1,4 +1,5 @@
 ---
+description: Sezione di dati
 title: Sezione Data | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d6b03137e920be036d1dd47cb4612076247fa3f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: abf0202e75ef64825d6dc815624adc1c1d337174
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761097"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453573"
 ---
 # <a name="data-section"></a>Sezione di dati
 La sezione Data definisce i dati del set di righe insieme a tutti gli aggiornamenti, gli inserimenti o le eliminazioni in sospeso. La sezione dei dati può contenere zero o più righe. Può contenere solo dati di un set di righe in cui la riga è definita dallo schema. Inoltre, come indicato in precedenza, le colonne senza dati possono essere omesse. Se nella sezione dati viene utilizzato un attributo o un sottoelemento e tale costrutto non è stato definito nella sezione schema, viene ignorato automaticamente.  
   
-## <a name="string"></a>String  
+## <a name="string"></a>string  
  I caratteri XML riservati nei dati di testo devono essere sostituiti con le entità carattere appropriate. Ad esempio, nel nome della società "garage di Joe", la virgoletta singola deve essere sostituita da un'entità. La riga effettiva sarà simile alla seguente:  
   
 ```  
 <z:row CompanyName="Joe's Garage"/>  
 ```  
   
- I seguenti caratteri sono riservati in XML e devono essere sostituiti da entità carattere: {', ", &, \< , >}.  
+ I seguenti caratteri sono riservati in XML e devono essere sostituiti da entità carattere: {', ", &, \<,> }.  
   
 ## <a name="binary"></a>Binary  
  I dati binari sono con codifica bin. Hex, ovvero un byte viene mappato a due caratteri, un carattere per ogni bocconcino.  

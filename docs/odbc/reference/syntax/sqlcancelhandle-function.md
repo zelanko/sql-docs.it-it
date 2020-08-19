@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLCancelHandle
 title: Funzione SQLCancelHandle | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b3f9dcb6ccdef290b937b1317271758dddc0e848
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 3f466f63d6da9aa9a96b9e929ea2b59a3e43491d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279601"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448851"
 ---
 # <a name="sqlcancelhandle-function"></a>Funzione SQLCancelHandle
 **Conformità**  
@@ -27,7 +28,7 @@ ms.locfileid: "86279601"
   
  Si prevede che la maggior parte dei driver ODBC 3,8 (e versioni successive) implementerà questa funzione. Se non è presente un driver, una chiamata a **SQLCancelHandle** con un handle di connessione nel parametro *handle* restituirà SQL_ERROR con un valore SQLSTATE di IM001 e il driver message ' non supporta questa funzione '' una chiamata a **SQLCancelHandle** con un handle di istruzione perché il parametro *handle* verrà mappato a una chiamata a **SQLCancel** da Gestione driver e può essere elaborato se il driver implementa **SQLCancel**. Un'applicazione può usare **SQLGetFunctions** per determinare se un driver supporta **SQLCancelHandle**.  
   
- **Riepilogo**  
+ **Summary**  
  **SQLCancelHandle** Annulla l'elaborazione in una connessione o in un'istruzione. Gestione driver esegue il mapping di una chiamata a **SQLCancelHandle** a una chiamata a **SQLCancel** quando *HandleType* è SQL_HANDLE_STMT.  
   
 ## <a name="syntax"></a>Sintassi  

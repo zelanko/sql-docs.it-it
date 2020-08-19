@@ -1,4 +1,5 @@
 ---
+description: Call Level Interface
 title: Interfacce a livello di chiamata | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4288a278f745d533c92d3d45892753ef1a74c2b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad1e89f945dbb739c4c20103fc2330cbf4e562b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306542"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448959"
 ---
 # <a name="call-level-interfaces"></a>Call Level Interface
 La tecnica finale per l'invio di istruzioni SQL al sistema DBMS è tramite un'interfaccia CLI (Call-Level Interface). Un'interfaccia a livello di chiamata fornisce una libreria di funzioni DBMS che possono essere chiamate dal programma applicativo. Quindi, invece di provare a combinare SQL con un altro linguaggio di programmazione, un'interfaccia a livello di chiamata è simile alle librerie di routine che la maggior parte dei programmatori sono abituati a usare, ad esempio la stringa, le operazioni di I/O o le librerie matematiche in C. si noti che i DBMS che supportano SQL embedded hanno già un'interfaccia a livello di chiamata, le chiamate a Tuttavia, queste chiamate non sono documentate e sono soggette a modifiche senza preavviso.  

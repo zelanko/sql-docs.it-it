@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLColumns
 title: Funzione SQLColumns | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 26d71bbe370e41683da44aafecd32c9e3050a223
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: d5fc96b275badf5eab68f78e863648c3a73eaab6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362757"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448774"
 ---
 # <a name="sqlcolumns-function"></a>Funzione SQLColumns
 **Conformità**  
@@ -166,7 +167,7 @@ SQLRETURN SQLColumns(
 
  Nella tabella seguente sono elencate le colonne del set di risultati. È possibile definire colonne aggiuntive oltre la colonna 18 (IS_NULLABLE) dal driver. Un'applicazione deve ottenere l'accesso alle colonne specifiche del driver eseguendo il conteggio a discesa dalla fine del set di risultati anziché specificare una posizione ordinale esplicita. Per ulteriori informazioni, vedere [dati restituiti da funzioni di catalogo](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
-|Nome colonna|Colonna<br /><br /> Numero|Tipo di dati|Commenti|  
+|Nome colonna|Colonna<br /><br /> d'acquisto|Tipo di dati|Commenti|  
 |-----------------|-----------------------|---------------|--------------|  
 |TABLE_CAT (ODBC 1,0)|1|Varchar|Nome catalogo; NULL se non è applicabile all'origine dati. Se un driver supporta i cataloghi per alcune tabelle ma non per altri, ad esempio quando il driver recupera dati da DBMS diversi, restituisce una stringa vuota ("") per le tabelle che non contengono cataloghi.|  
 |TABLE_SCHEM (ODBC 1,0)|2|Varchar|Nome schema; NULL se non è applicabile all'origine dati. Se un driver supporta schemi per alcune tabelle ma non per altri, ad esempio quando il driver recupera dati da DBMS diversi, restituisce una stringa vuota ("") per le tabelle che non dispongono di schemi.|  

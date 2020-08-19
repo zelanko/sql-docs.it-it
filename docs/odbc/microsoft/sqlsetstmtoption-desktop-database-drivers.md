@@ -1,4 +1,5 @@
 ---
+description: SQLSetStmtOption (driver di database desktop)
 title: SQLSetStmtOption (driver di database desktop) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 98db9631-eb9b-4962-abe4-96f495133a5d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69b386aee3f95fd047f72510dce7658130ac7aa5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0696ee98dd88f1c23120ef1d96c6e8d93751f76e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449153"
 ---
 # <a name="sqlsetstmtoption-desktop-database-drivers"></a>SQLSetStmtOption (driver di database desktop)
 

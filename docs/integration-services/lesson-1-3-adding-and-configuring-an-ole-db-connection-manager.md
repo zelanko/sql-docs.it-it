@@ -1,4 +1,5 @@
 ---
+description: 'Lezione 1-3: Aggiungere e configurare una gestione connessione OLE DB'
 title: 'Passaggio 3: Aggiungere e configurare una gestione connessione OLE DB | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 65ddfa851cce882d4106408ea99700d2cc57457c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 33eeb6e462c096505fc4fbd1088e7f5b36b37618
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449688"
 ---
 # <a name="lesson-1-3-add-and-configure-an-ole-db-connection-manager"></a>Lezione 1-3: Aggiungere e configurare una gestione connessione OLE DB
 
@@ -55,6 +56,6 @@ In questa attività verrà creata una gestione connessione OLE DB che usa l'aute
 ## <a name="go-to-next-task"></a>Esecuzione del passaggio successivo
 [Passaggio 4: Aggiungere un'attività Flusso di dati al pacchetto](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Gestione connessione OLE DB](../integration-services/connection-manager/ole-db-connection-manager.md)  
   

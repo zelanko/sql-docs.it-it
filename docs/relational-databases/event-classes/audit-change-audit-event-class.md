@@ -1,4 +1,5 @@
 ---
+description: Audit Change Audit - classe di evento
 title: Classe di evento Audit Change Audit | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 8cfacc82-cee8-4199-a69e-acedecfc0b3b
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28009f6a84ef11668b84ae5fd8ff5c6f08a6a9aa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7255e91ed01ed5800053a274831e43aebaf8e1e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85693324"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448682"
 ---
 # <a name="audit-change-audit-event-class"></a>Audit Change Audit - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

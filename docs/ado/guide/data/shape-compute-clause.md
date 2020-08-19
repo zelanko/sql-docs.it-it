@@ -1,4 +1,5 @@
 ---
+description: Clausola COMPUTE di Shape
 title: Clausola COMPUTE di Shape | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44ccd2c978cb0356a2fcab75daa860db0f4f77f5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9513666eca4d9e191b74b8a1a25dd8a9da051ee8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452843"
 ---
 # <a name="shape-compute-clause"></a>Clausola COMPUTE di Shape
 Una clausola COMPUTE di forma genera un **Recordset**padre, le cui colonne sono costituite da un riferimento al **Recordset**figlio. colonne facoltative il cui contenuto è il capitolo, il nuovo o le colonne calcolate oppure il risultato dell'esecuzione di funzioni di aggregazione sul **Recordset** figlio o su un **Recordset**precedentemente definito. e tutte le colonne del **Recordset** figlio elencate nella clausola facoltativa by.  
@@ -76,7 +77,7 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
   
  Si supponga, ad esempio, di disporre di una tabella, denominata demografia, costituita da campi stato, città e popolazione. (Le figure della popolazione nella tabella sono fornite esclusivamente come esempio).  
   
-|State|city|Popolazione|  
+|State|City|Popolazione|  
 |-----------|----------|----------------|  
 |WA|Seattle|700.000|  
 |OR|Medford|200.000|  
@@ -112,21 +113,21 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ## <a name="child1"></a>Child1  
   
-|State|city|Popolazione|  
+|State|City|Popolazione|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800.000|  
 |CA|San Diego|600.000|  
   
 ## <a name="child2"></a>Child2  
   
-|State|city|Popolazione|  
+|State|City|Popolazione|  
 |-----------|----------|----------------|  
 |WA|Seattle|700.000|  
 |WA|Tacoma|500.000|  
   
 ## <a name="child3"></a>Child3  
   
-|State|city|Popolazione|  
+|State|City|Popolazione|  
 |-----------|----------|----------------|  
 |OR|Medford|200.000|  
 |OR|Portland|400.000|  

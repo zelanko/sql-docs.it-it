@@ -1,4 +1,5 @@
 ---
+description: Comandi Shape in generale
 title: Comandi per la forma in generale | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0554da0486b58aff8da6fcf012732b6012f70ae6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7a0364d3b123f5d042a6e008a4312217e746b5b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760857"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452853"
 ---
 # <a name="shape-commands-in-general"></a>Comandi Shape in generale
 Data Shaping definisce le colonne di un **Recordset**con forma, le relazioni tra le entità rappresentate dalle colonne e il modo in cui il **Recordset** viene popolato con i dati.  
   
  Un **Recordset** con forma può essere costituito dai tipi di colonne seguenti.  
   
-|Tipo di colonna|Description|  
+|Tipo di colonna|Descrizione|  
 |-----------------|-----------------|  
 |data|Campi da un **Recordset** restituito da un comando di query a un provider di dati, a una tabella o a un **Recordset**precedentemente definito.|  
 |capitolo|Un riferimento a un altro **Recordset**, denominato *capitolo*. Le colonne del capitolo consentono di definire una relazione *padre-figlio* in cui *l'elemento padre* è il **Recordset** che contiene la colonna del capitolo e l' *elemento figlio* è il **Recordset** rappresentato dal capitolo.|  

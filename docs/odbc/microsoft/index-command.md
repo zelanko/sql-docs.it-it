@@ -1,4 +1,5 @@
 ---
+description: INDEX (comando)
 title: Comando INDEX | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bcb30a49cb9f11ddd4c61621116aa4bd8ddcf186
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec9ed3c0ec0e91f3c4fd3a0019c8ac463a8620c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300031"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449523"
 ---
 # <a name="index-command"></a>INDEX (comando)
 Consente di creare un file di indice per visualizzare e accedere ai record di tabella in ordine logico.  

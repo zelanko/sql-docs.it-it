@@ -1,4 +1,5 @@
 ---
+description: Modificare i valori di dominio
 title: Modificare i valori di dominio
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b07dd7b8d121d1be70a6522e716fc304bbf3d9f1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: eb96c88be0b92752e514eb34ac59233d4fae36a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901116"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450023"
 ---
 # <a name="change-domain-values"></a>Modificare i valori di dominio
 
@@ -44,7 +45,7 @@ ms.locfileid: "85901116"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per modificare i valori di dominio, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="change-domain-values"></a><a name="Change"></a>Modificare i valori di dominio  
+##  <a name="change-domain-values"></a><a name="Change"></a> Modificare i valori di dominio  
  Nella tabella **Valore** vengono visualizzate le informazioni aggiunte alla Knowledge Base per un singolo dominio. È possibile selezionare un dominio diverso nell'elenco di domini in qualsiasi momento per visualizzare i valori di tale dominio. Le colonne del campo sono le seguenti:  
   
 -   Nella colonna **Valore** vengono visualizzati tutti i valori aggiunti dal processo di individuazione al dominio selezionato da un campo nei dati di esempio. Qualsiasi valore indicato come in errore verrà visualizzato come sinonimo di un valore indicato come corretto.  
@@ -118,7 +119,7 @@ ms.locfileid: "85901116"
   
  Quando si esegue la pulizia interattiva dei dati nella pagina **Gestisci e visualizza risultati** dell'attività **Pulizia** , nella scheda **Non validi** della pagina **Gestisci e visualizza risultati** vengono inclusi sia i valori in errore che quelli non validi.  
   
-##  <a name="how-to-display-the-appropriate-values"></a><a name="Display"></a>Come visualizzare i valori appropriati  
+##  <a name="how-to-display-the-appropriate-values"></a><a name="Display"></a> Come visualizzare i valori appropriati  
  È possibile modificare la visualizzazione come segue:  
   
 -   **Filtrare** i risultati desiderati nella tabella, in base al relativo stato, selezionando lo stato nell'elenco a discesa **Filtro** .  

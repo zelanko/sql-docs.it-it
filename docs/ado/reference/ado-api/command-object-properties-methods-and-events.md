@@ -1,4 +1,5 @@
 ---
+description: Proprietà, metodi ed eventi dell'oggetto Command
 title: Proprietà, metodi ed eventi dell'oggetto Command | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0389f21c-06da-4090-9da1-28d912f888d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 51cf4c6d8c9f2b96e7fb718fda244d3a05eed0f0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ffdbe71126c4574da16b0e9244e2632efcf03f43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450873"
 ---
 # <a name="command-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Command
 ## <a name="propertiescollections"></a>Proprietà/raccolte  

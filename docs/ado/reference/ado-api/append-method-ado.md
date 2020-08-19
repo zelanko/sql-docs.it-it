@@ -1,4 +1,5 @@
 ---
+description: Metodo Append (ADO)
 title: Metodo Append (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d0d94cf40a397ca030a9ea975a02962d6ab9489
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: dd3ee907aa2a7081ca7204dcc1b0b3b069581832
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746919"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451263"
 ---
 # <a name="append-method-ado"></a>Metodo Append (ADO)
 Accoda un oggetto a una raccolta. Se la raccolta è [Fields](../../../ado/reference/ado-api/fields-collection-ado.md), è possibile creare un nuovo oggetto [campo](../../../ado/reference/ado-api/field-object.md) prima che venga aggiunto alla raccolta.  
@@ -40,25 +41,25 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *campi*  
  Raccolta di **campi** .  
   
- *oggetto*  
+ *object*  
  Variabile oggetto che rappresenta l'oggetto da accodare.  
   
  *Nome*  
  Valore **stringa** che contiene il nome del nuovo oggetto **campo** e non deve essere lo stesso nome di un altro oggetto nei *campi*.  
   
- *Type*  
+ *Tipo*  
  Valore [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) , il cui valore predefinito è **adEmpty**, che specifica il tipo di dati del nuovo campo. I tipi di dati seguenti non sono supportati da ADO e non devono essere utilizzati per l'aggiunta di nuovi campi a un [oggetto recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md): **adIDispatch**, **adIUnknown**, **adVariant**.  
   
  *DefinedSize*  
- Facoltativa. Valore **Long** che rappresenta la dimensione definita, in caratteri o byte, del nuovo campo. Il valore predefinito per questo parametro è derivato dal *tipo*. I campi con un *DefinedSize* maggiore di 255 byte vengono trattati come colonne a lunghezza variabile. Il valore predefinito per *DefinedSize* non è specificato.  
+ Facoltativo. Valore **Long** che rappresenta la dimensione definita, in caratteri o byte, del nuovo campo. Il valore predefinito per questo parametro è derivato dal *tipo*. I campi con un *DefinedSize* maggiore di 255 byte vengono trattati come colonne a lunghezza variabile. Il valore predefinito per *DefinedSize* non è specificato.  
   
  *Attrib*  
- Facoltativa. Valore [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) , il cui valore predefinito è **adFldDefault**, che specifica gli attributi per il nuovo campo. Se questo valore non è specificato, il campo conterrà gli attributi derivati dal *tipo*.  
+ Facoltativo. Valore [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) , il cui valore predefinito è **adFldDefault**, che specifica gli attributi per il nuovo campo. Se questo valore non è specificato, il campo conterrà gli attributi derivati dal *tipo*.  
   
  *FieldValue*  
- Facoltativa. **Variant** che rappresenta il valore per il nuovo campo. Se non è specificato, il campo viene aggiunto con un valore null.  
+ Facoltativo. **Variant** che rappresenta il valore per il nuovo campo. Se non è specificato, il campo viene aggiunto con un valore null.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="parameters-collection"></a>Raccolta Parameters  
  È necessario impostare la proprietà [Type](../../../ado/reference/ado-api/type-property-ado.md) di un oggetto [Parameter](../../../ado/reference/ado-api/parameter-object.md) prima di aggiungerla alla raccolta [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) . Se si seleziona un tipo di dati a lunghezza variabile, è necessario impostare anche la proprietà [size](../../../ado/reference/ado-api/size-property-ado-parameter.md) su un valore maggiore di zero.  

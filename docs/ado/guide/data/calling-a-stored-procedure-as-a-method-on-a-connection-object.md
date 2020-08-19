@@ -1,4 +1,5 @@
 ---
+description: Chiamata di una stored procedure come metodo in un oggetto Connection
 title: Chiamata di una stored procedure come metodo in un oggetto Connection | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bb81e82e27decadbf6d31ce9bc391023474ecba
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8e5e019760c4496b7dab769cb96fbd7b2eab4f47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761237"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453703"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Chiamata di una stored procedure come metodo in un oggetto Connection
 È possibile chiamare un stored procedure come se fosse un metodo nativo sull'oggetto **connessione** aperto associato. Questa operazione è simile alla chiamata di un comando denominato nell'oggetto **Connection** .  

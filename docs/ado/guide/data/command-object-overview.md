@@ -1,4 +1,5 @@
 ---
+description: Panoramica dell'oggetto Command
 title: Cenni preliminari sull'oggetto Command | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e84a14b1-3c2a-4f7d-a966-9e08a93948df
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0048765d3a5f5cb57419f9dbd755790c9931e218
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d44c727a69dc74bf243bc2f2c0204cb41cd9f585
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761197"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453683"
 ---
 # <a name="command-object-overview"></a>Panoramica dell'oggetto Command
 Con un oggetto **Command** è possibile eseguire le operazioni seguenti:  

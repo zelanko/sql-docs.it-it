@@ -1,4 +1,5 @@
 ---
+description: Sottochiave origini dati ODBC
 title: Sottochiave origini dati ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 09/23/2019
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0a8ccb80-c573-4418-84e5-f04a2b0e2ac1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c5e97e643a78187b15e91833c832cd16ca435c7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9897c68d110f59d03ac8e1b3e403ed21844082fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304059"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448933"
 ---
 # <a name="odbc-data-sources-subkey"></a>Sottochiave origini dati ODBC
 

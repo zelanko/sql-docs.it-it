@@ -1,4 +1,5 @@
 ---
+description: Record e campi specificati dal provider
 title: Record e campi forniti dal provider | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abfa226c5bc6c94613a5d45c48a351811235455f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6cd737ce36a53643503a5c76dfaafe2127c93f9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764792"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453003"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Record e campi specificati dal provider
 Quando un oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) viene aperto, la relativa origine può essere la riga corrente di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)aperto, un URL assoluto o un URL relativo insieme a un oggetto di [connessione](../../../ado/reference/ado-api/connection-object-ado.md) aperto.  
@@ -55,7 +56,7 @@ Quando un oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) 
 ## <a name="resource-recordset-columns"></a>Colonne recordset di risorse  
  Un *Recordset di risorse* è costituito dalle colonne seguenti.  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|Di sola lettura. Indica l'URL della risorsa.|  
 |RESOURCE_PARENTNAME|AdVarWChar|Di sola lettura. Indica l'URL assoluto del record padre.|  
@@ -72,7 +73,7 @@ Quando un oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) 
 |RESOURCE_ISCOLLECTION|AdBoolean|Di sola lettura. True se la risorsa è una raccolta, ad esempio una directory. False se la risorsa è un file semplice.|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|AdBoolean|True se la risorsa è un documento strutturato. False se la risorsa non è un documento strutturato. Potrebbe trattarsi di una raccolta o di un semplice file.|  
 |DEFAULT_DOCUMENT|AdVarWChar|Di sola lettura. Indica che questa risorsa contiene un URL del documento semplice predefinito di una cartella o di un documento strutturato. Utilizzato quando il flusso predefinito viene richiesto da una risorsa. Questa proprietà è vuota per un file semplice.|  
-|CHAPTERED_CHILDREN|AdChapter|Di sola lettura. Facoltativa. Indica il capitolo del set di righe che contiene gli elementi figlio della risorsa. Il *provider di OLE DB per la pubblicazione Internet* non utilizza questa colonna.|  
+|CHAPTERED_CHILDREN|AdChapter|Di sola lettura. Facoltativo. Indica il capitolo del set di righe che contiene gli elementi figlio della risorsa. Il *provider di OLE DB per la pubblicazione Internet* non utilizza questa colonna.|  
 |RESOURCE_DISPLAYNAME|AdVarWChar|Di sola lettura. Indica il nome visualizzato della risorsa.|  
 |RESOURCE_ISROOT|AdBoolean|Di sola lettura. True se la risorsa è la radice di una raccolta o di un documento strutturato.|  
   

@@ -1,4 +1,5 @@
 ---
+description: "Lezione 1-4: Aggiungere un'attività Flusso di dati al pacchetto"
 title: "Passaggio 4: Aggiungere un'attività Flusso di dati al pacchetto | Microsoft Docs"
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ba3ef8fe03b0f3057dbb443dfbf5ab257a70983
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4d920b5f78d2d3e6dd3e557cbac4e50ad7952884
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449680"
 ---
 # <a name="lesson-1-4-add-a-data-flow-task-to-the-package"></a>Lezione 1-4: Aggiungere un'attività Flusso di dati al pacchetto
 
@@ -46,7 +47,7 @@ Dopo aver creato le gestioni connessioni per i dati di origine e di destinazione
 ## <a name="go-to-next-task"></a>Esecuzione del passaggio successivo
 [Passaggio 5: Aggiungere e configurare l'origine file flat](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Attività Flusso di dati](../integration-services/control-flow/data-flow-task.md)  
   
   

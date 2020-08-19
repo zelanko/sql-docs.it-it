@@ -1,4 +1,5 @@
 ---
+description: Supporto di regole, trigger, valori predefiniti e stored procedure (driver ODBC Visual FoxPro)
 title: Supporto per regole, trigger, valori predefiniti e stored procedure | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a02aeea8f33e3a4d87fc771a7b0fa7b1a0067b6d
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 56b1a2e50f26da8ce5ef581f8eda7c6a96afd741
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363361"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449113"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Supporto di regole, trigger, valori predefiniti e stored procedure (driver ODBC Visual FoxPro)
 Non è possibile creare regole, trigger, valori predefiniti o stored procedure Visual FoxPro utilizzando il driver ODBC Visual FoxPro. Tuttavia, l'applicazione potrebbe interagire con regole, trigger, valori predefiniti o stored procedure esistenti durante l'inserimento, l'aggiornamento o l'eliminazione dei dati Visual FoxPro archiviati in un database.  

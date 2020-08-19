@@ -1,4 +1,5 @@
 ---
+description: 'HelloData: applicazione ADO semplice'
 title: 'HelloData: semplice applicazione ADO | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18f9f0cd227a258b1d2d9cd2d201527f614bcc49
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c2ac1d2ed987b1385c581f147431eaa208b035fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453283"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: applicazione ADO semplice
 Questa semplice applicazione illustra le quattro operazioni ADO principali: recupero, analisi, modifica e aggiornamento dei dati. Queste operazioni vengono eseguite sul database di esempio Northwind incluso in Microsoft® SQL Server. Per concentrarsi sulle nozioni di base di ADO e per impedire confusione del codice, la gestione degli errori nell'esempio è minima.  
@@ -45,7 +46,7 @@ Questa semplice applicazione illustra le quattro operazioni ADO principali: recu
 |Tipo di controllo|Proprietà|Valore|  
 |------------------|--------------|-----------|  
 |Form|Nome|Form1|  
-||Altezza:|6500|  
+||Altezza|6500|  
 ||Larghezza|6500|  
 |DataGrid di MS|Nome|grdDisplay1|  
 |TextBox|Nome|txtDisplay1|  

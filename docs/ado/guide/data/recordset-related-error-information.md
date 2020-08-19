@@ -1,4 +1,5 @@
 ---
+description: Informazioni sugli errori correlati ai recordset
 title: Informazioni sugli errori correlati a recordset | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7e103574-59ad-4790-b5f9-fa8d715e711e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb51fa80cff0a17340e289886f0315ea167b88b0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7806d446c200f4d90ec458ceea268435ad9994e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760957"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452953"
 ---
 # <a name="recordset-related-error-information"></a>Informazioni sugli errori correlati ai recordset
 Durante l'elaborazione batch, la proprietà **status** dell'oggetto **Recordset** fornisce informazioni sui singoli record nel **Recordset**. Prima di eseguire un aggiornamento batch, la proprietà **status** del **Recordset** riflette le informazioni sui record da aggiungere, modificare ed eliminare. Dopo la chiamata di **UpdateBatch** , la proprietà **status** indica l'esito positivo o negativo dell'operazione. Quando si passa da record a record nel **Recordset**, il valore della proprietà **status** viene modificato per descrivere lo stato del record corrente.

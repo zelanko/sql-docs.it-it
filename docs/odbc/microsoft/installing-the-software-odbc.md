@@ -1,4 +1,5 @@
 ---
+description: Installazione del software (ODBC)
 title: Installazione del software (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dfac8ade-eebe-4ebe-a199-feb740ed5bae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9bddfd9947017cc94214e57948e495b06cccc1cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fe161ef45ef91f67317d7a0b465e00d3d2045c40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449473"
 ---
 # <a name="installing-the-software-odbc"></a>Installazione del software (ODBC)
 > [!IMPORTANT]  

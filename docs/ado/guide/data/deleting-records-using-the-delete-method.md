@@ -1,4 +1,5 @@
 ---
+description: Eliminazione di record con il metodo Delete
 title: Eliminazione di record tramite il metodo Delete | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8da01b9c92aeec9c01527370e19c8edfb751da9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3d8a29f2e1f35ddddc28e4aa3fb3c52c649e3056
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763622"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453533"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Eliminazione di record con il metodo Delete
 L'utilizzo del metodo **Delete** contrassegna il record corrente o un gruppo di record in un oggetto **Recordset** per l'eliminazione. Se l'oggetto **Recordset** non consente l'eliminazione dei record, si verificherà un errore. Se si è in modalità di aggiornamento immediato, le eliminazioni vengono eseguite immediatamente nel database. Se un record non può essere eliminato correttamente (ad esempio, a causa di violazioni di integrità del database), il record rimarrà in modalità di modifica dopo la chiamata a **Update.** Ciò significa che è necessario annullare l'aggiornamento usando [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) prima di spostare il record corrente (ad esempio, con [Close](../../../ado/reference/ado-api/close-method-ado.md), [Move](../../../ado/reference/ado-api/move-method-ado.md)o [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  

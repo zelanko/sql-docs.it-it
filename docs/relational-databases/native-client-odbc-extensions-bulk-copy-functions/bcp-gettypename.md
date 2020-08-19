@@ -1,4 +1,5 @@
 ---
+description: bcp_gettypename
 title: bcp_gettypename | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,11 +19,12 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b443a3ecd3e96740939a1cbef3f2a732a129d9a8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d8956677e62c3f4a824e704c0905c7970cf9e913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010094"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448575"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -79,8 +81,8 @@ RETCODE bcp_gettypename (
 |**SQLDATETIMN**|Prima o dopo|**datetime-null**|  
 |**SQLMONEYN**|Prima o dopo|**money-null**|  
 |**SQLFLTN**|Prima o dopo|**float-null**|  
-|**SQLAOPSUM**|Prima o dopo|**Somma**|  
-|**SQLAOPAVG**|Prima o dopo|**AVG**|  
+|**SQLAOPSUM**|Prima o dopo|**Sum**|  
+|**SQLAOPAVG**|Prima o dopo|**Avg**|  
 |**SQLAOPCNT**|Prima o dopo|**Numero**|  
 |**SQLAOPMIN**|Prima o dopo|**Min**|  
 |**SQLAOPMAX**|Prima o dopo|**Max**|  
@@ -103,7 +105,7 @@ RETCODE bcp_gettypename (
 |**SQLVARBINARY**|Sì|**varbinary(max)**|  
 |**SQLNCHAR**|Sì|**nvarchar(max)**|  
 |**SQLNVARCHAR**|Sì|**nvarchar(max)**|  
-|**SQLXML**|Sì|**XML**|  
+|**SQLXML**|Sì|**Xml**|  
 |**SQLUDT**|Prima o dopo|**UDT**|  
   
 ## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>Supporto di bcp_gettypename per le caratteristiche avanzate di data e ora  

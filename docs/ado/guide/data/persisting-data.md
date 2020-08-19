@@ -1,4 +1,5 @@
 ---
+description: Persistenza dei dati
 title: Salvataggio permanente dei dati | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60b3a9e036bb199b72373055b299f262862a5d16
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a1487cdbba81677cd58e3f130f5d05a8b9337588
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759117"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453083"
 ---
 # <a name="persisting-data"></a>Persistenza dei dati
 Il computer portatile, ad esempio l'utilizzo di computer portatili, ha generato la necessità di applicazioni che possono essere eseguite sia in stato connesso che in stato disconnesso. ADO ha aggiunto il supporto a questo scopo, offrendo allo sviluppatore la possibilità di salvare un **Recordset** del cursore client su disco e di ricaricarlo in un secondo momento.  

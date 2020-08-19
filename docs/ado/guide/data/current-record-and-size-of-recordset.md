@@ -1,4 +1,5 @@
 ---
+description: Record corrente e dimensioni del recordset
 title: Record e dimensioni correnti del recordset | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 30b669a566270a0eff5d6cf93abb5b0acb7ff3c2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 12d4b9803682e94326636dd27bbc3f134eea23d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761127"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453603"
 ---
 # <a name="current-record-and-size-of-recordset"></a>Record corrente e dimensioni del recordset
 In questa sezione viene descritto come individuare la posizione corrente del cursore nel **Recordset** di esempio nell' [esempio di codice JScript per restituire un recordset](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  
   
 ## <a name="current-record"></a>Record corrente  
- Il record corrente nel set di dati corrisponde a quello indicato dalla posizione del cursore dell'oggetto **Recordset** . Quando un oggetto **Recordset** viene restituito dall'origine dati come risultato della chiamata a **Recordset. Open**, **Command. Execute**o **Connection. Execute** (incluso Connection. **NamedCommand** e **Connection. StoredProcedure**), il cursore è impostato in modo da puntare al primo record. Nel set di dati di esempio, il record corrente iniziale è l'elemento "pera" biologico a secco "di Uncle Bob.  
+ Il record corrente nel set di dati corrisponde a quello indicato dalla posizione del cursore dell'oggetto **Recordset** . Quando un oggetto **Recordset** viene restituito dall'origine dati come risultato della chiamata a **Recordset. Open**, **Command.Execute**o **Connection.Execute** (compresi **Connection. NamedCommand** e **Connection. StoredProcedure**), il cursore è impostato in modo da puntare al primo record. Nel set di dati di esempio, il record corrente iniziale è l'elemento "pera" biologico a secco "di Uncle Bob.  
   
 ## <a name="size-of-recordset"></a>Dimensioni del recordset  
  Per individuare le dimensioni di un oggetto **Recordset** , ottenere il valore della proprietà **Recordset. RecordCount** . Questo valore è un valore long integer che indica il numero di record nel **Recordset**. Se il set di dati viene restituito dal provider OLEDB per Microsoft SQL Server, questo valore restituisce il numero di righe restituite. La lettura della proprietà **RecordCount** in un **Recordset** chiuso causa un errore.  

@@ -1,4 +1,5 @@
 ---
+description: Log File Auto Grow - classe di evento
 title: Classe di evento Log File Auto Grow | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: e9b023db-6944-4035-9a83-300f34a58454
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fda4e9cce7d090873ea016e7df71f52fa5ba2f19
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 78704ae9dfd932f18dcc4afa2152ee55fbccb734
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85641984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448625"
 ---
 # <a name="log-file-auto-grow-event-class"></a>Log File Auto Grow - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La classe di evento **Log File Auto Grow** indica che le dimensioni del file di log sono aumentate automaticamente. L'evento non viene generato se le dimensioni del file di log vengono incrementate in modo esplicito tramite ALTER DATABASE.  
+   La classe di evento **Log File Auto Grow** indica che le dimensioni del file di log sono aumentate automaticamente. L'evento non viene generato se le dimensioni del file di log vengono incrementate in modo esplicito tramite ALTER DATABASE.  
   
  Includere la classe di evento **Log File Auto Grow** nelle tracce che eseguono il monitoraggio dell'aumento di dimensioni del file di log. Se questa classe di evento viene inclusa in una traccia, l'overhead generato sarà ridotto a meno che le dimensioni del file di log vengano aumentate automaticamente di frequente.  
   

@@ -1,4 +1,5 @@
 ---
+description: Altri metodi per lo spostamento in un recordset
 title: Altri modi per spostarsi in un recordset | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d68fb018e3b72e193127f8f49160813c06a1332
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 847fe5406fcdcd75010a0f4836c6f35df4ab1da1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453163"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>Altri metodi per lo spostamento in un recordset
 I quattro metodi seguenti vengono usati per spostarsi o scorrere nel **Recordset**: [MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). Alcuni di questi metodi non sono disponibili per i cursori di sola trasmissione.  

@@ -1,4 +1,5 @@
 ---
+description: Clausola APPEND di Shape
 title: Clausola APPEND di forma | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d26f83985ce74edc0581ff9ff8fee31d5064c7e5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f2a04e532256de30295f2179f7b15386bceaa8b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760867"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452863"
 ---
 # <a name="shape-append-clause"></a>Clausola APPEND di Shape
 La clausola SHAPE Command APPEND Accoda una colonna o colonne a un **Recordset**. Spesso queste colonne sono colonne del capitolo, che fanno riferimento a un **Recordset**figlio.  

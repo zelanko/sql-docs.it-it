@@ -1,4 +1,5 @@
 ---
+description: Spazi dei nomi
 title: Spazi dei nomi | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f3261b7b68213205dbcc51e155832242aa42747
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a4ab26dd8f767315a3392a2434689561fdb391d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453143"
 ---
 # <a name="namespaces"></a>Spazi dei nomi
 Il formato di persistenza XML in ADO utilizza i quattro spazi dei nomi seguenti.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Il formato di persistenza XML in ADO utilizza i quattro spazi dei nomi seguenti.  
   
 |Prefisso|Descrizione|  

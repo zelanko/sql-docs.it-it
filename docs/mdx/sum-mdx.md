@@ -1,4 +1,5 @@
 ---
+description: Sum (MDX)
 title: Sum (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: eb4e9d55ef2228404dd9113170066e4a3612a0a1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f65525836157f5ac106cfa7ba0d5458689583def
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036670"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449623"
 ---
 # <a name="sum-mdx"></a>Sum (MDX)
 

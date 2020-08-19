@@ -1,4 +1,5 @@
 ---
+description: Configurare le impostazioni avanzate per i file di log DQS
 title: Configurare le impostazioni avanzate per i file di log DQS
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 95ddeb5c193e8b45cda0670419c890e503bbe05b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 48e953ae4cd86ba19edbcbadce68d12d1268d15a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894228"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449923"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configurare le impostazioni avanzate per i file di log DQS
 
@@ -38,7 +39,7 @@ ms.locfileid: "85894228"
   
 -   Per configurare le impostazioni di registrazione del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , è necessario avere eseguito l'accesso come membro del gruppo Administrators al computer in cui si modifica il file DQLog.Client.xml.  
   
-##  <a name="configure-data-quality-server-log-settings"></a><a name="DQSServer"></a>Configurare le impostazioni del log del server Data Quality  
+##  <a name="configure-data-quality-server-log-settings"></a><a name="DQSServer"></a> Configurare le impostazioni del log del server Data Quality  
  Le impostazioni di log del [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] sono presenti in formato XML nella colonna **VALUE** della riga **ServerLogging** nella tabella A_CONFIGURATION del database DQS_MAIN. Per visualizzare le informazioni di configurazione, è possibile eseguire la query SQL seguente:  
   
 ```  
@@ -114,7 +115,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
 > [!NOTE]  
 >  La configurazione delle impostazioni di registrazione del [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] viene generata dinamicamente e viene archiviata nel file DQS_MAIN.Log, disponibile in genere in C:\Programmi\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log se è stata installata l'istanza predefinita di SQL Server. Tuttavia, le modifiche effettuate direttamente in questo file non vengono conservate e vengono sovrascritte dalle impostazioni di configurazione nella tabella A_CONFIGURATION del database DQS_MAIN.  
   
-##  <a name="configure-data-quality-client-log-settings"></a><a name="DQSClient"></a>Configurare le impostazioni del log Data Quality Client  
+##  <a name="configure-data-quality-client-log-settings"></a><a name="DQSClient"></a> Configurare le impostazioni del log Data Quality Client  
  Il [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] file di configurazione delle impostazioni di log, DQLog.Client.xml, è disponibile in genere in C:\Programmi\Microsoft SQL Server\130\Tools\Binn\DQ\config. Il contenuto del file XML è simile al file XML modificato in precedenza per le [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] impostazioni di configurazione del log. Per configurare le impostazioni di log del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] :  
   
 1.  Eseguire un qualsiasi strumento di modifica dei file XML o Blocco note come amministratore.  

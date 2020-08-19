@@ -1,4 +1,5 @@
 ---
+description: Esempio di codice JScript per la restituzione di un recordset
 title: Esempio di codice JScript per la restituzione di un recordset | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bffe36980f06bc187bdaf819b373cdb547ecc92
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e6aea6b2e423dab4fb58b3e683081f7d3fdb6850
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453203"
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>Esempio di codice JScript per la restituzione di un recordset
-## <a name="jscript-code-rsjs"></a>Codice JScript (RS. js)  
+## <a name="jscript-code-rsjs"></a>Codice JScript (rs.js)  
   
 ```  
 main();  
@@ -81,8 +82,8 @@ function alert(str)
   
 #### <a name="try-it"></a>Prova  
   
-1.  Salvare il codice sopra riportato in un file di testo. Salvare il file come RS. js.  
+1.  Salvare il codice sopra riportato in un file di testo. Salvare il file come rs.js.  
   
-2.  Aprire un prompt dei comandi e un CD nella directory in cui è stato salvato il file JScript (RS. js).  
+2.  Aprire un prompt dei comandi e un CD nella directory in cui è stato salvato il file JScript (rs.js).  
   
 3.  Digitare `CScript rs.js` dal prompt dei comandi.

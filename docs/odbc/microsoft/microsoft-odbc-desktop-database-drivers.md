@@ -1,4 +1,5 @@
 ---
+description: Driver di database desktop ODBC Microsoft
 title: Driver di database per desktop ODBC Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 99da8943f738d879a0a1bb66f6cfdbd6156c17ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e60052bda67b792cbba81447d6ae20ebdeb565bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449433"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Driver di database desktop ODBC Microsoft
 ODBC è un'API che utilizza Structured Query Language (SQL) come linguaggio di accesso al database. È possibile accedere a un'ampia gamma di sistemi di gestione di database (DBMS) con lo stesso codice sorgente ODBC incorporato direttamente nel codice sorgente di un'applicazione. Con i driver di database di Microsoft ODBC desktop, un utente di un'applicazione abilitata per ODBC può aprire, eseguire query e aggiornare un database desktop tramite l'interfaccia ODBC.  
@@ -37,7 +38,7 @@ ODBC è un'API che utilizza Structured Query Language (SQL) come linguaggio di a
   
 -   dBASE  
   
--   Testo  
+-   Text  
   
  Per la documentazione dettagliata sul driver ODBC di Microsoft Visual FoxPro®, vedere [driver ODBC Visual FoxPro](../../odbc/microsoft/visual-foxpro-odbc-driver.md) .  
   

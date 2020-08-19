@@ -1,4 +1,5 @@
 ---
+description: Esempio di data shaping
 title: Esempio di data shaping | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f5f4095cc8c6d3d70bdb5d1e388532cefb7e76a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3f3b10494a9ae9fb49de6bf2779395f9eb065cd9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763632"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453563"
 ---
 # <a name="data-shaping-example"></a>Esempio di data shaping
 Il seguente comando data shaping Mostra come compilare un **Recordset** gerarchico dalle tabelle **Customers** e **Orders** del database Northwind.  

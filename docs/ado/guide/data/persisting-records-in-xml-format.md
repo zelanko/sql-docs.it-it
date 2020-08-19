@@ -1,4 +1,5 @@
 ---
+description: Persistenza di record in formato XML
 title: Salvataggio permanente di record in formato XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3afbec77df9a80ab7e304d2e3101e795b939eef2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b88bef75b0cbe13402d90264b766adf5a3005efd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453043"
 ---
 # <a name="persisting-records-in-xml-format"></a>Persistenza di record in formato XML
-Analogamente al formato ADTG, la persistenza del **Recordset** in formato XML viene implementata con il provider di persistenza di Microsoft OLE DB. Questo provider genera un set di righe di sola lettura e di sola lettura da un file o un flusso XML salvato che contiene le informazioni sullo schema generate da ADO. Analogamente, può assumere un **Recordset**ADO, generare codice XML e salvarlo in un file o in qualsiasi oggetto che implementi l'interfaccia **IStream** com. In realtà, un file è semplicemente un altro esempio di oggetto che supporta **IStream**. Per le versioni 2,5 e successive, ADO si basa su Microsoft XML Parser (MSXML) per caricare il codice XML nel **Recordset**; pertanto MSXML. dll è obbligatorio.  
+Analogamente al formato ADTG, la persistenza del **Recordset** in formato XML viene implementata con il provider di persistenza di Microsoft OLE DB. Questo provider genera un set di righe di sola lettura e di sola lettura da un file o un flusso XML salvato che contiene le informazioni sullo schema generate da ADO. Analogamente, può assumere un **Recordset**ADO, generare codice XML e salvarlo in un file o in qualsiasi oggetto che implementi l'interfaccia **IStream** com. In realtà, un file è semplicemente un altro esempio di oggetto che supporta **IStream**. Per le versioni 2,5 e successive, ADO si basa su Microsoft XML Parser (MSXML) per caricare il codice XML nel **Recordset**; pertanto msxml.dll è obbligatorio.  
   
 > [!NOTE]
 >  Alcune limitazioni si applicano quando si salvano **Recordset** gerarchici (forme dati) in formato XML. Non è possibile salvare in XML se il **Recordset** gerarchico contiene aggiornamenti in sospeso e non è possibile salvare un **Recordset**gerarchico con parametri. Per ulteriori informazioni, vedere la pagina relativa alla [permanenza dei recordset filtrati e gerarchici](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md).  
@@ -72,7 +73,7 @@ rs.Save "btitles.sav", adPersistXML
   
 -   [Formato di persistenza XML](../../../ado/guide/data/xml-persistence-format.md)  
   
--   [Spazi dei nomi](../../../ado/guide/data/namespaces.md)  
+-   [Namespaces](../../../ado/guide/data/namespaces.md) (Spazi dei nomi)  
   
 -   [Sezione schema](../../../ado/guide/data/schema-section.md)  
   

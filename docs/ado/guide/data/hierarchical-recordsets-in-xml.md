@@ -1,4 +1,5 @@
 ---
+description: Recordset gerarchici in XML
 title: Recordset gerarchici in XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24a5303f4ecd43293508f117b795d389a7608285
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cd1e9e9b2dd1dc3512c95100baed0c83745250bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762742"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453263"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>Recordset gerarchici in XML
 ADO consente la persistenza degli oggetti recordset gerarchici in XML. Con gli oggetti recordset gerarchici, il valore di un campo nel recordset padre è un altro recordset. Tali campi sono rappresentati come elementi figlio nel flusso XML anziché come attributo.  

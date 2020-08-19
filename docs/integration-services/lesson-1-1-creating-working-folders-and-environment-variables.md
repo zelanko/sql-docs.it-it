@@ -1,4 +1,5 @@
 ---
+description: 'Passaggio 1-1: Creazione di cartelle di lavoro e variabili di ambiente'
 title: 'Passaggio 1: Creazione di cartelle di lavoro e variabili di ambiente | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 32e0f638af3978a0bf9b938b7131b7e86431f6a6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c91be2fffde29a362dd73da41159b4a4658bce3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917440"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449746"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Passaggio 1-1: Creazione di cartelle di lavoro e variabili di ambiente
 
@@ -36,9 +37,9 @@ Se si prevede di distribuire i pacchetti in un altro computer, è necessario cre
   
 1.  Fare clic con il pulsante destro del mouse sul menu Start e quindi scegliere Esplora.  
   
-2.  Fare clic su **Disco locale (C:)** .  
+2.  Fare clic su **Disco locale (C:)**.  
   
-3.  Scegliere **Nuovo** dal menu **File**e fare clic su **Cartella**.  
+3.  Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Cartella**.  
   
 4.  Assegnare a Nuova cartella il nome **DeploymentTutorial**.  
   

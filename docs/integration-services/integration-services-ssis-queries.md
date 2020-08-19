@@ -1,4 +1,5 @@
 ---
+description: Query di Integration Services (SSIS)
 title: Query di Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 01a292229c29720b91d66d1f607b375b759e75fe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 79d6e93c536828e0de44c77ebd1377fab5021d69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917497"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449801"
 ---
 # <a name="integration-services-ssis-queries"></a>Query di Integration Services (SSIS)
 
@@ -94,7 +95,7 @@ Utilizzare la finestra di dialogo **Generatore query** per creare una query da u
  **Barra degli strumenti**  
  Utilizzare la barra degli strumenti per gestire set di dati, selezionare i riquadri da visualizzare e controllare le funzioni di query.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Mostra/Nascondi riquadro diagramma**|Consente di visualizzare o nascondere il riquadro **diagramma**.|  
 |**Mostra/Nascondi riquadro griglia**|Consente di visualizzare o nascondere il riquadro **griglia**.|  

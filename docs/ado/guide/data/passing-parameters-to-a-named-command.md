@@ -1,4 +1,5 @@
 ---
+description: Passaggio di parametri a un comando con nome
 title: Passaggio di parametri a un comando denominato | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: afa230584bd7ee93d56f814a998c886e433a9417
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fa6ac56c3bb3e632ace019a2c8b2a97c96262421
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453073"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Passaggio di parametri a un comando con nome
 Proprio come il risultato del comando viene passato come variabile *out* del comando denominato, i parametri per un comando con parametri possono essere passati come *nelle* variabili al comando denominato.  

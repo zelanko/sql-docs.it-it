@@ -1,4 +1,5 @@
 ---
+description: Variabili di Integration Services (SSIS)
 title: Variabili di Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d4ee6dda0fbd91649a085cfda429ea3e554a83d4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c27f3936edfc031f336b487d90e185a56d366363
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917487"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449772"
 ---
 # <a name="integration-services-ssis-variables"></a>Variabili di Integration Services (SSIS)
 
@@ -135,7 +136,7 @@ Il valore di una variabile definita dall'utente può essere un valore letterale 
 
 | Tipo di dati | Valore predefinito |
 |---|---|
-| Boolean | False |
+| Boolean | Falso |
 | Tipi di dati numerici e binari | 0 (zero) |
 | Tipi di dati char e stringa | (stringa vuota) |
 | Oggetto | System.Object |

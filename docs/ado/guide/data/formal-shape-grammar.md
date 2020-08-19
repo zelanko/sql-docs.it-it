@@ -1,4 +1,5 @@
 ---
+description: Grammatica formale per Shape
 title: Grammatica forma formale | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce65f6961502a5bfe43278e4a29a11c4210d4af8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6a8d92abc3a1b0d7e6d39ac4149c186c5a2fc2eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758257"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453373"
 ---
 # <a name="formal-shape-grammar"></a>Grammatica formale per Shape
 Si tratta della grammatica formale per la creazione di qualsiasi comando Shape:  
@@ -41,31 +42,31 @@ Si tratta della grammatica formale per la creazione di qualsiasi comando Shape:
   
 |Termine|Definizione|  
 |----------|----------------|  
-|\<Shape-comando>|SHAPE [ \< Table-exp> [[As] \< alias>]] [ \< shape-Action>]|  
-|\<tabella-> exp|{ \< provider-comando-testo>} &#124;<br /><br /> ( \< Shape-command>) &#124;<br /><br /> TABELLA con \< virgolette-nome> &#124;<br /><br /> \<nome tra virgolette>|  
-|\<forma-azione>|ACCODAre gli \< alias-field-list> &#124;<br /><br /> Compute \< Aliased-field-list> [by \< field-list>]|  
-|\<con alias-Field-List>|\<con alias-Field> [, con \< alias-Field... >]|  
-|\<con alias-Field>|\<Field-exp> [[AS] \< alias>]|  
-|\<campo-> exp|( \< relazione-exp>) &#124;<br /><br /> \<calcolato-exp> &#124;<br /><br /> \<aggregazione-> &#124; exp<br /><br /> \<nuovo-> exp|  
-|<relation_exp>|\<Table-exp> [[AS] \< alias>]<br /><br /> CORRELAre \< Relation-cond-list>|  
-|\<relazione-cond-list>|\<relation-cond> [, \< relazione-cond>...]|  
-|\<relazione-> cond|\<Nome-campo> al \<> di riferimento figlio|  
-|\<> di riferimento figlio|\<Nome campo> &#124;<br /><br /> PARAMETRO \< param-ref>|  
-|\<> param-Ref|\<numero>|  
-|\<> elenco campi|\<Nome-campo> [, \< nome-campo>]|  
-|\<aggregazione-> exp|SUM ( \< Qualified-Field-name>) &#124;<br /><br /> MEDIA ( \< Qualified-Field-name>) &#124;<br /><br /> MIN ( \< Qualified-Field-name>) &#124;<br /><br /> MAX ( \< Qualified-Field-name>) &#124;<br /><br /> COUNT ( \< qualified-alias> &#124; \< Qualified-Name>) &#124;<br /><br /> STDEV ( \< Qualified-Field-name>) &#124;<br /><br /> ANY ( \< Qualified-Field-name>)|  
-|\<calcolato-exp>|CALCOLO ( \< espressione>)|  
-|\<Qualified-Field-Name>|\<> alias. [ \< alias>...] \< Nome campo>|  
-|\<> alias|\<nome tra virgolette>|  
-|\<Nome campo>|\<nome tra virgolette> [[AS] \< alias>]|  
-|\<nome tra virgolette>|" \< string>" &#124;<br /><br /> ' \< string>' &#124;<br /><br /> [ \< string>] &#124;<br /><br /> \<nome>|  
-|\<nome qualificato>|alias [. alias...]|  
-|\<nome>|alfa [alpha &#124; digit &#124; _ &#124; # &#124;: &#124;...]|  
-|\<numero>|digit [digit...]|  
-|\<nuovo-> exp|NUOVO \< tipo di campo> [( \< numero> [, \< numero>])]|  
-|\<> di tipo campo|Tipo di dati OLE DB o ADO.|  
-|\<> stringa|Unicode-char [Unicode-char...]|  
-|\<> espressione|Espressione Visual Basic, Applications Edition i cui operandi sono altre colonne non di calcolo nella stessa riga.|  
+|\<shape-command>|SHAPE [ \<table-exp> [[As]] \<alias> ] [ \<shape-action> ]|  
+|\<table-exp>|{ \<provider-command-text> } &#124;<br /><br /> ( \<shape-command> ) &#124;<br /><br /> \<quoted-name>&#124; tabella<br /><br /> \<quoted-name>|  
+|\<shape-action>|ACCODA \<aliased-field-list> &#124;<br /><br /> Compute \<aliased-field-list> [by \<field-list> ]|  
+|\<aliased-field-list>|\<aliased-field> [, \<aliased-field...>]|  
+|\<aliased-field>|\<field-exp> [[AS] \<alias> ]|  
+|\<field-exp>|( \<relation-exp> ) &#124;<br /><br /> \<calculated-exp> &#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
+|<relation_exp>|\<table-exp> [[AS] \<alias> ]<br /><br /> CORRELATI \<relation-cond-list>|  
+|\<relation-cond-list>|\<relation-cond> [, \<relation-cond>...]|  
+|\<relation-cond>|\<field-name> A \<child-ref>|  
+|\<child-ref>|\<field-name> &#124;<br /><br /> PARAMETRO \<param-ref>|  
+|\<param-ref>|\<number>|  
+|\<field-list>|\<field-name> [, \<field-name>]|  
+|\<aggregate-exp>|&#124; SUM ( \<qualified-field-name> )<br /><br /> &#124; AVG ( \<qualified-field-name> )<br /><br /> &#124; MIN ( \<qualified-field-name> )<br /><br /> &#124; MAX ( \<qualified-field-name> )<br /><br /> CONTEGGIO ( \<qualified-alias> &#124; \<qualified-name> ) &#124;<br /><br /> STDEV ( \<qualified-field-name> ) &#124;<br /><br /> ANY ( \<qualified-field-name> )|  
+|\<calculated-exp>|CALCOLO ( \<expression> )|  
+|\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
+|\<alias>|\<quoted-name>|  
+|\<field-name>|\<quoted-name> [[AS] \<alias> ]|  
+|\<quoted-name>|" \<string> " &#124;<br /><br /> ' \<string> ' &#124;<br /><br /> [ \<string> ] &#124;<br /><br /> \<name>|  
+|\<qualified-name>|alias [. alias...]|  
+|\<name>|alfa [alpha &#124; digit &#124; _ &#124; # &#124;: &#124;...]|  
+|\<number>|digit [digit...]|  
+|\<new-exp>|NUOVO \<field-type> [( \<number> [, \<number> ])]|  
+|\<field-type>|Tipo di dati OLE DB o ADO.|  
+|\<string>|Unicode-char [Unicode-char...]|  
+|\<expression>|Espressione Visual Basic, Applications Edition i cui operandi sono altre colonne non di calcolo nella stessa riga.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Accesso alle righe in un recordset gerarchico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
