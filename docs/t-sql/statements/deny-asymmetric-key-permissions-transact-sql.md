@@ -1,4 +1,5 @@
 ---
+description: DENY - autorizzazioni per chiavi asimmetriche (Transact-SQL)
 title: DENY (autorizzazioni per chiavi asimmetriche) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 37093e542ad865025ceb7d87c382cfb94c52cee8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: d678397ca184e6b94925ec43d0f07f3e6368f614
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484957"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444770"
 ---
 # <a name="deny-asymmetric-key-permissions-transact-sql"></a>DENY - autorizzazioni per chiavi asimmetriche (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -95,7 +96,7 @@ DENY { permission  [ ,...n ] }
   
 -   utente del database non mappato ad alcuna entità server.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Una chiave asimmetrica è un'entità a protezione diretta a livello di database contenuta nel database padre nella gerarchia delle autorizzazioni. Di seguito sono indicate le autorizzazioni più specifiche e limitate che è possibile concedere per una chiave asimmetrica, insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
 |Autorizzazione della chiave asimmetrica|Autorizzazione della chiave asimmetrica in cui è inclusa.|Autorizzazione del database in cui è inclusa|  

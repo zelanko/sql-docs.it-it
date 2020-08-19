@@ -1,4 +1,5 @@
 ---
+description: Mapping colonne (Importazione/Esportazione guidata SQL Server)
 title: Mapping colonne (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 144476d52d8577d59691a42b12a276f5cfc080b2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9b74aaec705f3de493f105218adedffb173090ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913367"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484134"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Mapping colonne (Importazione/Esportazione guidata SQL Server)
 
@@ -108,15 +109,15 @@ L'elenco **Mapping** contiene le colonne seguenti.
 -    **Precisione**  
     Specificare la precisione dei dati numerici nella colonna di destinazione, ovvero il numero di cifre, se applicabile.  
   
- -   **Ridimensionare**  
+ -   **Ridimensionamento**  
     Specificare la scala dei dati numerici nella colonna di destinazione, ovvero il numero di cifre decimali, se applicabile.  
   
-## <a name="whats-next"></a>Quali sono le operazioni successive?  
+## <a name="whats-next"></a>Passaggi successivi  
  Dopo aver esaminato e configurato le colonne di destinazione per ricevere i dati copiati dalle colonne di origine e aver fatto clic su **OK** sarà possibile passare dalla finestra di dialogo **Mapping colonne** alla pagina **Seleziona tabelle e viste di origine** o alla pagina **Configurare la destinazione del file flat**. Per altre informazioni, vedere [Seleziona tabelle e viste di origine](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) o [Configurare la destinazione del file flat](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).  
   
  Se nell'elenco **Mapping** è stato specificato un mapping che potrebbe non avvenire con successo, la finestra di dialogo **Mapping colonne** riporta alla pagina **Verifica mapping tra i tipi di dati** . In questa pagina, esaminare gli avvisi, specificare le opzioni di conversione e anche come gestire gli errori. Per altre informazioni, vedere [Verifica mapping tra i tipi di dati](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md).  
  
- ## <a name="see-also"></a>Vedere anche
+ ## <a name="see-also"></a>Vedi anche
 [Mapping dei tipi di dati nell'Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)  
 [Iniziare con questo semplice esempio dell'Importazione/Esportazione guidata](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 

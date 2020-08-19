@@ -1,4 +1,5 @@
 ---
+description: Nozioni fondamentali su ADOX
 title: Nozioni fondamentali su ADOX | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 131df9d5712bf89c28e1b8e7eae30217b6c16947
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 74b7f3a17bddb068d82f4e05b13a28abff219c2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748181"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452463"
 ---
 # <a name="adox-fundamentals"></a>Nozioni fondamentali su ADOX
 Microsoft® ActiveX® Data Objects Extensions for Data Definition Language and Security (ADOX) è un'estensione degli oggetti ADO e del modello di programmazione. ADOX include oggetti per la creazione e la modifica dello schema, nonché per la sicurezza. Poiché si tratta di un approccio basato su oggetti alla manipolazione dello schema, è possibile scrivere codice che funzionerà su varie origini dati indipendentemente dalle differenze nelle relative sintassi native.  
   
  ADOX è una libreria complementare agli oggetti ADO di base. Espone oggetti aggiuntivi per la creazione, la modifica e l'eliminazione di oggetti dello schema, ad esempio tabelle e procedure. Include inoltre oggetti di sicurezza per gestire utenti e gruppi e per concedere e revocare le autorizzazioni per gli oggetti.  
   
- Per usare ADOX con lo strumento di sviluppo, è necessario definire un riferimento alla libreria dei tipi ADOX. La descrizione della libreria ADOX è "Microsoft ADO Ext. per DDL e sicurezza". Il nome del file della libreria ADOX è msadox. dll e l'ID del programma (ProgID) è "ADOX". Per ulteriori informazioni sulla definizione dei riferimenti alle librerie, vedere la documentazione dello strumento di sviluppo.  
+ Per usare ADOX con lo strumento di sviluppo, è necessario definire un riferimento alla libreria dei tipi ADOX. La descrizione della libreria ADOX è "Microsoft ADO Ext. per DDL e sicurezza". Il nome del file della libreria ADOX è Msadox.dll e l'ID del programma (ProgID) è "ADOX". Per ulteriori informazioni sulla definizione dei riferimenti alle librerie, vedere la documentazione dello strumento di sviluppo.  
   
  Il provider Microsoft OLE DB per Microsoft Jet motore di database supporta completamente ADOX. Alcune funzionalità di ADOX potrebbero non essere supportate, a seconda del provider di dati.  
   

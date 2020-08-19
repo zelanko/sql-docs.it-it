@@ -1,4 +1,5 @@
 ---
+description: 'Lezione 2-3: Modificare la gestione connessione file flat'
 title: 'Passaggio 3: Modificare la gestione connessione file flat | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 348b7e9b948443f1cfd14390f30c58ab17d08ec6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bbe7698c4b97a11fd9b2b4dba581fbad5a8be8df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921512"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484108"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>Lezione 2-3: Modificare la gestione connessione file flat
 
@@ -31,7 +32,7 @@ Modificando la gestione connessione in modo che usi il valore della variabile de
 
 2.  Nella finestra **Proprietà** assicurarsi che **PackagePath** inizi con **\Package.Connections**. In caso contrario, nel riquadro **Gestioni connessioni** fare clic con il pulsante destro del mouse su **Sample Flat File Source Data** e scegliere **Converti in connessione pacchetto**
   
-3.  Nella finestra **Proprietà** fare clic sulla cella vuota relativa a **Espressioni** e fare clic sul pulsante con i puntini di sospensione **(...)** .  
+3.  Nella finestra **Proprietà** fare clic sulla cella vuota relativa a **Espressioni** e fare clic sul pulsante con i puntini di sospensione **(...)**.  
   
 4.  Nella colonna **Proprietà** della finestra di dialogo **Editor espressioni di proprietà** selezionare **ConnectionString**.  
   

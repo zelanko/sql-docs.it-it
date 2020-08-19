@@ -1,4 +1,5 @@
 ---
+description: Definizione dei dati MDX - CREATE SESSION CUBE
 title: Istruzione CREATE SESSION CUBE (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ac95afcebcf07a5d691db5f2599b3290b9587d44
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 33cdbc4a018245249771ff350227d13f4e0f772e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038366"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483874"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>Definizione dei dati MDX - CREATE SESSION CUBE
 
@@ -101,13 +102,13 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  dimension_name  
  Nome della dimensione nel cubo di sessione.  
   
- DALLA \<clausola dim from>  
+ FROM \<dim from clause>  
  Specifica valida solo per la definizione di una dimensione derivata.  
   
  NOT_RELATED_TO_FACTS  
  Specifica valida solo per la definizione di una dimensione derivata.  
   
- \<tipo di livello>  
+ \<level type>  
  Specifica valida solo per la definizione di una dimensione derivata.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -199,7 +200,7 @@ CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzioni MDX per la definizione dei dati &#40;&#41;MDX](../mdx/mdx-data-definition-statements-mdx.md)   
- [Istruzione CREATE GLOBAL CUBE &#40;&#41;MDX](../mdx/mdx-data-definition-create-global-cube.md)  
+ [Istruzioni MDX per la definizione dei dati &#40;&#41;MDX ](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Istruzione CREATE GLOBAL CUBE &#40;&#41;MDX ](../mdx/mdx-data-definition-create-global-cube.md)  
   
   

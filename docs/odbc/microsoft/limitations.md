@@ -1,4 +1,5 @@
 ---
+description: Limitazioni
 title: Limitazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8d71c2a-23c8-4e9b-b5f7-aca51c5a4721
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 92605f083cb0e49381b7d309e05b2c93944d3c36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7fe340faaf8841b0674c8c2e7031a2d00cd78db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302695"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483504"
 ---
 # <a name="limitations"></a>Limitazioni
 In questa sezione vengono descritte le limitazioni dei driver di database desktop ODBC per quanto riguarda gli argomenti seguenti:  
@@ -34,7 +35,7 @@ In questa sezione vengono descritte le limitazioni dei driver di database deskto
 ||[DROP TABLE-istruzione](../../odbc/microsoft/drop-table-statement-limitations.md)|[Parole riservate](../../odbc/microsoft/reserved-word-limitations.md)|  
 ||[Istruzione INSERT](../../odbc/microsoft/insert-statement-limitations.md)|[Predicato AND](../../odbc/microsoft/and-predicate-limitations.md)|  
 ||[Seleziona istruzione DISTINCT](../../odbc/microsoft/select-distinct-limitations.md)|[Parola chiave DISTINCT](../../odbc/microsoft/distinct-keyword-limitations.md)|  
-||[SELECT (istruzione)](../../odbc/microsoft/select-statement-limitations.md)|[Clausola FROM](../../odbc/microsoft/from-clause-limitations.md)|  
+||[Istruzione SELECT](../../odbc/microsoft/select-statement-limitations.md)|[Clausola FROM](../../odbc/microsoft/from-clause-limitations.md)|  
 ||[Istruzione UPDATE](../../odbc/microsoft/update-statement-limitations.md)|[Clausola HAVING](../../odbc/microsoft/having-clause-limitations.md)|  
 |||[Predicato LIKE](../../odbc/microsoft/like-predicate-limitations.md)|  
 |||[NOT NULL](../../odbc/microsoft/not-null-limitations.md)|  

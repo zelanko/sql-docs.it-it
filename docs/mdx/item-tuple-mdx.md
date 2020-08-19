@@ -1,4 +1,5 @@
 ---
+description: Item (Tuple) (MDX)
 title: Elemento (tupla) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5740095752b482430cd718d0e2bff813449d92ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e98e6901c018a6c8be5187024e5462cc8d19547
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483954"
 ---
 # <a name="item-tuple-mdx"></a>Item (Tuple) (MDX)
 
@@ -41,7 +42,7 @@ Set_Expression.Item(String_Expression1 [ ,String_Expression2,...n])
  *String_Expression2*  
  Espressione stringa valida che in genere è una tupla espressa come stringa.  
   
- *Indice*  
+ *Index*  
  Espressione numerica valida che specifica la tupla in base alla posizione all'interno del set da restituire.  
   
 ## <a name="remarks"></a>Osservazioni  

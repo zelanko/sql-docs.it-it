@@ -1,4 +1,5 @@
 ---
+description: Metodi ADO
 title: Metodi ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a08f7c896b48f6cb76c9805d3bea9910a8f5bda8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 10f9aaf7aefa87586df77dd0da5ac1be336d4f53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242861"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451383"
 ---
 # <a name="ado-methods"></a>Metodi ADO
 
 |Metodo|Descrizione|  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Crea un nuovo record per un oggetto **Recordset** aggiornabile.|  
-|[Append](../../../ado/reference/ado-api/append-method-ado.md)|Accoda un oggetto a una raccolta. Se la raccolta è **Fields**, è possibile creare un nuovo oggetto **campo** prima che venga aggiunto alla raccolta.|  
+|[Accoda](../../../ado/reference/ado-api/append-method-ado.md)|Accoda un oggetto a una raccolta. Se la raccolta è **Fields**, è possibile creare un nuovo oggetto **campo** prima che venga aggiunto alla raccolta.|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|Accoda i dati a un **campo**di dati di testo o binario di grandi dimensioni o a un oggetto **Parameter** .|  
 |[BeginTrans, CommitTrans e RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Gestisce l'elaborazione delle transazioni all'interno di un oggetto **connessione** come indicato di seguito:<br /><br /> **BeginTrans** : inizia una nuova transazione.<br /><br /> **CommitTrans** -Salva le modifiche e termina la transazione corrente. Potrebbe inoltre avviare una nuova transazione.<br /><br /> **RollbackTrans** : Annulla tutte le modifiche e termina la transazione corrente. Potrebbe inoltre avviare una nuova transazione.|  
 |[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|Annulla l'esecuzione di una chiamata al metodo asincrona in sospeso.|  
@@ -44,7 +45,7 @@ ms.locfileid: "87242861"
 |[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)|Elimina un file o una directory e tutte le relative sottodirectory.|  
 |[Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Esegue la query, l'istruzione SQL o stored procedure specificata nella proprietà **CommandText** .|  
 |[Execute (connessione ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Esegue la query, l'istruzione SQL, il stored procedure o il testo specifico del provider specificato.|  
-|[Find](../../../ado/reference/ado-api/find-method-ado.md)|Esegue la ricerca di un **Recordset** per la riga che soddisfa i criteri specificati.|  
+|[Trovare](../../../ado/reference/ado-api/find-method-ado.md)|Esegue la ricerca di un **Recordset** per la riga che soddisfa i criteri specificati.|  
 |[Svuotamento](../../../ado/reference/ado-api/flush-method-ado.md)|Impone il contenuto del **flusso** rimanente nel buffer ADO all'oggetto sottostante a cui è associato il **flusso** .|  
 |[Metodo get_OLEDBCommand](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Restituisce il comando OLEDB sottostante, propagando prima di tutto le informazioni sui parametri impostate nel comando ADO al comando OLEDB.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|Restituisce un **Recordset** le cui righe rappresentano i file e le sottodirectory della directory rappresentata da questo **record**.|  

@@ -1,4 +1,5 @@
 ---
+description: Formato di persistenza XML
 title: Formato di persistenza XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb3abca1aabccd45bc76c4ec0ee5742531c47e28
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7a014addf2d3ff6c7b02ed9abc103cdbd7b2ecb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748312"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452513"
 ---
 # <a name="xml-persistence-format"></a>Formato di persistenza XML
 ADO usa la codifica UTF-8 per il flusso XML che rende permanente.  
   
  Il formato XML ADO è suddiviso in due sezioni, una sezione dello schema seguita dalla sezione Data. Di seguito è riportato un esempio di file XML per la tabella Shippers del database Northwind. Le varie parti del codice XML sono illustrate dopo l'esempio.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"   
@@ -68,7 +69,7 @@ xmlns:z="#RowsetSchema">
   
  Le definizioni dello schema sono conformi alla [specifica W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/) e possono essere completamente convalidate (sebbene la convalida non venga eseguita in Internet Explorer 5). XML-Data è attualmente l'unico formato di schema supportato per la persistenza dei recordset.  
   
- La sezione Data contiene tre righe contenenti informazioni sui mittenti. Per un set di righe vuoto, la sezione dei dati può essere vuota, ma \< devono essere presenti i tag RS: data>. Senza dati, è possibile scrivere l'abbreviazione di tag semplicemente \< RS: data/>. Qualsiasi tag con prefisso "RS" indica che si trova nello spazio dei nomi definito da urn: schemas-microsoft-com: rowset.  
+ La sezione Data contiene tre righe contenenti informazioni sui mittenti. Per un set di righe vuoto, la sezione dei dati può essere vuota, ma i \<rs:data> tag devono essere presenti. Senza dati, è possibile scrivere l'abbreviazione di tag semplicemente \<rs:data/> . Qualsiasi tag con prefisso "RS" indica che si trova nello spazio dei nomi definito da urn: schemas-microsoft-com: rowset.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Persistenza di record in formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

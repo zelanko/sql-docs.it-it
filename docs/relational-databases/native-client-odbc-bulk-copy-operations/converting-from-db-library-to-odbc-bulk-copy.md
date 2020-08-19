@@ -1,4 +1,5 @@
 ---
+description: Conversione della copia bulk da DB-Library a ODBC
 title: Conversione dalla copia bulk DB-Library a ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,11 +18,12 @@ ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 09726fbbbb1ba1ecd1516dc56ae084897aafff5c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ed2fce2e56d0d4bc8a1776bdc57f70446dc0919c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475773"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Conversione della copia bulk da DB-Library a ODBC
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +47,7 @@ ms.locfileid: "86006605"
     |-------------------------|--------------------------------|-------------------------|  
     |Valori Null forniti|0|-1 (SQL_NULL_DATA)|  
     |Dati variabili forniti|-1|-10 (SQL_VARLEN_DATA)|  
-    |Carattere di lunghezza zero o stringa binaria|ND|0|  
+    |Carattere di lunghezza zero o stringa binaria|N/D|0|  
   
      In DB-Library, un valore *varlen* pari a-1 indica che vengono forniti dati a lunghezza variabile, che in ODBC *cbData* viene interpretato per indicare che vengono forniti solo valori null. Modificare le specifiche *VARLEN* DB-Library di-1 in SQL_VARLEN_DATA e tutte le specifiche *varlen* da 0 a SQL_NULL_DATA.  
   

@@ -1,4 +1,5 @@
 ---
+description: Uso delle pagine
 title: Uso di pagine | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 442b08c5-ccc7-4192-a1cc-22f250867782
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6542cb23deef9f10979e3bdb90c0820d84c0f150
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 71a4c9524090c85881e3aa194f7afbb3c11f0678
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763032"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452573"
 ---
 # <a name="using-pages"></a>Uso delle pagine
 Utilizzare la proprietà **PageCount** per determinare il numero di pagine di dati presenti nell'oggetto **Recordset** . Le *pagine* sono gruppi di record la cui dimensione è uguale all'impostazione della proprietà **pageSize** . Anche se l'ultima pagina è incompleta perché sono presenti meno record del valore **pageSize** , viene conteggiata come pagina aggiuntiva nel valore **PageCount** . Se l'oggetto **Recordset** non supporta questa proprietà, **PageCount** sarà-1 per indicare che **PageCount** è determinabile.  

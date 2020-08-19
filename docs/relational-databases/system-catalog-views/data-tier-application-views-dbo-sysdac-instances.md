@@ -1,4 +1,5 @@
 ---
+description: Viste dell'applicazione livello dati-dbo.sysdac_instances
 title: dbo.sysdac_instances (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 18031fac584eea39e5901276b597fc556263b18e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 77aafe21c2aa67b55d7c2d9319ab2699585c697c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475514"
 ---
 # <a name="data-tier-application-views---dbosysdac_instances"></a>Viste dell'applicazione livello dati-dbo.sysdac_instances
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,6 +53,6 @@ ms.locfileid: "85752977"
   
 ## <a name="see-also"></a>Vedere anche  
  [Applicazioni livello dati](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [Viste dell'applicazione livello dati &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
+ [Viste dell'applicazione livello dati &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
   
   

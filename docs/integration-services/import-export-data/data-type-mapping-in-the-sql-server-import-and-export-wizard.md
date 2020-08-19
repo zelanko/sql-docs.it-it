@@ -1,4 +1,5 @@
 ---
+description: Mapping tra i tipi di dati nell'Importazione/Esportazione guidata SQL Server
 title: Mapping tra i tipi di dati nell'Importazione/Esportazione guidata SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 73c837f4bbdd8cb7c7a6060beaea6bc97eba0a02
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 946bb57a3d821186ebcca132539713cf515ab20f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484090"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Mapping tra i tipi di dati nell'Importazione/Esportazione guidata SQL Server
 
@@ -25,13 +26,13 @@ ms.locfileid: "86922387"
   
 ##  <a name="how-does-the-wizard-map-data-types-between-source-and-destination"></a><a name="wizardMapping"></a> Come viene eseguito il mapping dei tipi di dati tra origine e destinazione durante la procedura guidata?
 La procedura guidata usa file di mapping installati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per eseguire il mapping dei tipi di dati da un tipo o una versione di database a un altro. Ad esempio, può eseguire il mapping da tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a tipi di dati Oracle. Per impostazione predefinita, i file di mapping in formato XML sono installati nelle cartelle seguenti.
--   **C:\Programmi\Microsoft SQL Server\130\DTSMappingFiles\\** (per 64 bit)
--   **C:\Programmi (x86)\Microsoft SQL Server\130\DTSMappingFiles\\** (per 32 bit)  
+-   **C:\Programmi\Microsoft SQL Server\130\DTS\MappingFiles\\** (per 64 bit)
+-   **C:\Programmi (x86)\Microsoft SQL Server\130\DTS\MappingFiles\\** (per 32 bit)  
   
  Se si modifica un file di mapping esistente o si aggiunge un nuovo file di mapping alla cartella, è necessario chiudere e riaprire l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per caricare il file di mapping nuovo o modificato.  
  
 ## <a name="you-can-change-an-existing-mapping-file"></a>È possibile modificare un file di mapping esistente
-Se sono necessari modelli di mapping diversi tra i tipi di dati, è possibile aggiornare i file di mapping per modificare i modelli di mapping usati dalla procedura guidata. Se, ad esempio, si vuole eseguire il mapping del tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nchar**di** al tipo di dati **GRAPHIC** di DB2 anziché al tipo di dati **VARGRAPHIC** di DB2 durante il trasferimento di dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a DB2, è possibile modificare il mapping di **nchar** nel file di mapping **SqlClientToIBMDB2.xml** in modo da usare **GRAPHIC** anziché **VARGRAPHIC**.  
+Se sono necessari modelli di mapping diversi tra i tipi di dati, è possibile aggiornare i file di mapping per modificare i modelli di mapping usati dalla procedura guidata. Se, ad esempio, si vuole eseguire il mapping del tipo di dati  **nchar** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al tipo di dati **GRAPHIC** di DB2 anziché al tipo di dati **VARGRAPHIC** di DB2 durante il trasferimento di dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a DB2, è possibile modificare il mapping di **nchar** nel file di mapping **SqlClientToIBMDB2.xml** in modo da usare **GRAPHIC** anziché **VARGRAPHIC**.  
   
 ## <a name="you-can-add-a-new-mapping-file"></a>È possibile aggiungere un nuovo file di mapping
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installa i tipi di mapping tra le combinazioni di origine e destinazione più comuni. È comunque possibile aggiungere nuovi file di mapping alla directory **MappingFiles** per supportare anche altre combinazioni di origine e destinazione. I nuovi file di mapping devono essere conformi allo schema XSD pubblicato ed eseguire il mapping tra una combinazione univoca di origine e destinazione. Lo schema per i file di mapping, **DataTypeMapping.xsd**, è disponibile [qui](https://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd).

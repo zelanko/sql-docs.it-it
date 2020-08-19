@@ -1,4 +1,5 @@
 ---
+description: SQLGetDiagField
 title: SQLGetDiagField | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -14,11 +15,12 @@ ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f609a066d06a82edfb8961222d94d0d92cf0915
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d3983a7319f887bb92215f0efe2bebf6170666fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475848"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +39,7 @@ ms.locfileid: "86010101"
   
  Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client segnala i codici di funzione dinamica aggiuntivi seguenti che identificano l'ultima istruzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tentata. Il codice di funzione dinamica viene restituito nell'intestazione (record 0) del set di record di diagnostica ed è pertanto disponibile a ogni esecuzione, indipendentemente dall'esito di quest'ultima.  
   
-|Codice di funzione dinamica|Codice sorgente|  
+|Codice di funzione dinamica|Source (Sorgente)|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE - istruzione|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|Istruzione CHECKPOINT|  

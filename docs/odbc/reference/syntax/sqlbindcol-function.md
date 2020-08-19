@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLBindCol
 title: Funzione SQLBindCol | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 90bb1c1aa4dbfa2614f689faa47eb0c41a6cecd6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 84793bdd1261c4a2f65b1bdb60eec4a516a1a1d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298741"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476169"
 ---
 # <a name="sqlbindcol-function"></a>Funzione SQLBindCol
 **Conformità**  
  Versione introdotta: ODBC 1,0 Standard Compliance: ISO 92  
   
- **Riepilogo**  
+ **Summary**  
  **SQLBindCol** associa i buffer di dati dell'applicazione alle colonne nel set di risultati.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -55,7 +56,7 @@ SQLRETURN SQLBindCol(
  Input Numero della colonna del set di risultati da associare. Le colonne sono numerate in base a un ordine crescente di colonne a partire da 0, dove la colonna 0 è la colonna del segnalibro. Se non vengono utilizzati segnalibri, ovvero l'attributo SQL_ATTR_USE_BOOKMARKS istruzione è impostato su SQL_UB_OFF, i numeri di colonna iniziano da 1.  
   
  *TargetType*  
- Input Identificatore del tipo di dati C del \*buffer *TargetValuePtr* . Quando si recuperano dati dall'origine dati con **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**o **SQLSetPos**, il driver converte i dati in questo tipo; Quando invia dati all'origine dati con **SQLBulkOperations** o **SQLSetPos**, il driver converte i dati da questo tipo. Per un elenco dei tipi di dati C e degli identificatori di tipi validi, vedere la sezione tipi di dati [c](../../../odbc/reference/appendixes/c-data-types.md) in Appendice D: tipi di dati.  
+ Input Identificatore del tipo di dati C del \* buffer *TargetValuePtr* . Quando si recuperano dati dall'origine dati con **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**o **SQLSetPos**, il driver converte i dati in questo tipo; Quando invia dati all'origine dati con **SQLBulkOperations** o **SQLSetPos**, il driver converte i dati da questo tipo. Per un elenco dei tipi di dati C e degli identificatori di tipi validi, vedere la sezione tipi di dati [c](../../../odbc/reference/appendixes/c-data-types.md) in Appendice D: tipi di dati.  
   
  Se l'argomento *targetType* è un tipo di dati interval, per i dati vengono utilizzati rispettivamente la precisione principale (2) e la precisione dell'intervallo predefinito (6), come impostato nei campi SQL_DESC_DATETIME_INTERVAL_PRECISION e SQL_DESC_PRECISION di ARD. Se l'argomento *targetType* è SQL_C_NUMERIC, per i dati viene usata la precisione predefinita (definita dal driver) e la scala predefinita (0), come impostato nei campi SQL_DESC_PRECISION e SQL_DESC_SCALE di ARD. Se la precisione o la scala predefinita non è appropriata, l'applicazione deve impostare in modo esplicito il campo del descrittore appropriato mediante una chiamata a **SQLSetDescField** o **SQLSetDescRec**.  
   
@@ -67,9 +68,9 @@ SQLRETURN SQLBindCol(
  Se *TargetValuePtr* è un puntatore null, il driver Annulla l'associazione del buffer dei dati per la colonna. Un'applicazione può annullare il binding di tutte le colonne chiamando **SQLFreeStmt** con l'opzione SQL_UNBIND. Un'applicazione può disassociare il buffer dei dati per una colonna, ma è ancora associato a un buffer di lunghezza/indicatore per la colonna, se l'argomento *TargetValuePtr* nella chiamata a **SQLBindCol** è un puntatore null, ma l'argomento *StrLen_or_IndPtr* è un valore valido.  
   
  *BufferLength*  
- Input Lunghezza del \*buffer *TargetValuePtr* in byte.  
+ Input Lunghezza del buffer \* *TargetValuePtr* in byte.  
   
- Il driver usa *bufferLength* per evitare di scrivere oltre la fine del \*buffer *TargetValuePtr* quando restituisce dati a lunghezza variabile, ad esempio dati di tipo carattere o binario. Si noti che il driver conta il carattere di terminazione null quando restituisce dati di tipo \*carattere a *TargetValuePtr*. \**TargetValuePtr* deve quindi contenere spazio per il carattere di terminazione null oppure il driver tronca i dati.  
+ Il driver usa *bufferLength* per evitare di scrivere oltre la fine del \* buffer *TargetValuePtr* quando restituisce dati a lunghezza variabile, ad esempio dati di tipo carattere o binario. Si noti che il driver conta il carattere di terminazione null quando restituisce dati di tipo carattere a \* *TargetValuePtr*. \**TargetValuePtr* deve quindi contenere spazio per il carattere di terminazione null oppure il driver tronca i dati.  
   
  Quando il driver restituisce dati a lunghezza fissa, ad esempio un numero intero o una struttura di data, il driver ignora *bufferLength* e presuppone che il buffer sia sufficientemente grande da consentire l'inserimento dei dati. Pertanto, è importante che l'applicazione allochi un buffer sufficientemente grande per i dati a lunghezza fissa o che il driver scriva oltre la fine del buffer.  
   
@@ -108,7 +109,7 @@ SQLRETURN SQLBindCol(
   
  Vedere [informazioni su ODBC 64 bit](../../../odbc/reference/odbc-64-bit-information.md), se l'applicazione viene eseguita su un sistema operativo a 64 bit.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
@@ -119,7 +120,7 @@ SQLRETURN SQLBindCol(
 |01000|Avviso generale|Messaggio informativo specifico del driver. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |07006|Violazione dell'attributo del tipo di dati con restrizioni|(DM) l'argomento *ColumnNumber* è 0 e l'argomento *targetType* non è stato SQL_C_BOOKMARK o SQL_C_VARBOOKMARK.|  
 |07009|Indice del descrittore non valido|Il valore specificato per l'argomento *ColumnNumber* supera il numero massimo di colonne nel set di risultati.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY003|Tipo di buffer dell'applicazione non valido|L'argomento *targetType* non è né un tipo di dati valido né SQL_C_DEFAULT.|  
 |HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione asincrona era ancora in esecuzione quando è stato chiamato **SQLBindCol** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per *statementHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.|  
@@ -232,7 +233,7 @@ SQLRETURN SQLBindCol(
 ## <a name="buffer-addresses"></a>Indirizzi buffer  
  L' *indirizzo del buffer* è l'indirizzo effettivo del buffer di dati o di lunghezza/indicatore. Il driver calcola l'indirizzo del buffer appena prima di scrivere nei buffer, ad esempio durante il recupero. Viene calcolato dalla formula seguente, che usa gli indirizzi specificati negli argomenti *TargetValuePtr* e *StrLen_or_IndPtr* , l'offset dell'associazione e il numero di riga:  
   
- *Bound Address* + *Offset associazione* indirizzo associato + ((*numero di righe* -1) x *dimensione elemento*)  
+ *Indirizzo associato*  +  *Offset binding* + ((*numero di riga* -1) x *dimensioni elemento*)  
   
  dove le variabili della formula sono definite come descritto nella tabella seguente.  
   

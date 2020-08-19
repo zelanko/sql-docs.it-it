@@ -1,4 +1,5 @@
 ---
+description: Utilizzo dei recordset
 title: Utilizzo di recordset | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07f970dd557d381280f5a9dbdd52eb015de0df75
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 84f60e269bcd01bdacc7647f1498c588620f049e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748338"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452523"
 ---
 # <a name="working-with-recordsets"></a>Utilizzo dei recordset
 L'oggetto **Recordset** dispone di funzionalità predefinite che consentono di riorganizzare l'ordine dei dati nel set di risultati, di cercare un record specifico in base ai criteri forniti dall'utente e anche di ottimizzare le operazioni di ricerca usando gli indici. Se queste funzionalità sono disponibili per l'uso dipendono dal provider e in alcuni casi, ad esempio quella della proprietà [index](../../../ado/reference/ado-api/index-property.md) , ovvero la struttura dell'origine dati stessa.  
@@ -48,12 +49,12 @@ L'oggetto **Recordset** dispone di funzionalità predefinite che consentono di r
   
  Il metodo **Find** limita la ricerca al contenuto di un campo. Il metodo **Seek** richiede un indice e presenta anche altre limitazioni. Se è necessario eseguire la ricerca in più campi che non sono la base di un indice o se il provider non supporta gli indici, è possibile limitare i risultati utilizzando la proprietà **Filter** dell'oggetto **Recordset** .  
   
-### <a name="find"></a>Trova  
+### <a name="find"></a>Find  
  Il metodo **Find** esegue la ricerca di un **Recordset** per la riga che soddisfa un criterio specificato. Facoltativamente, è possibile specificare la direzione della ricerca, la riga iniziale e l'offset dalla riga iniziale. Se il criterio viene raggiunto, la posizione della riga corrente viene impostata sul record trovato; in caso contrario, la posizione viene impostata sull'estremità (o inizio) del **Recordset**, a seconda della direzione di ricerca.  
   
  Per il criterio è possibile specificare solo un nome di colonna singola. In altre parole, questo metodo non supporta le ricerche multicolonna.  
   
- L'operatore di confronto per il criterio può essere " **>** " (maggiore di), " **\<** " (minore di), "=" (uguale), ">=" (maggiore o uguale a), "<=" (minore o uguale a), "<>" (non uguale) o "like" (criteri di ricerca).  
+ L'operatore di confronto per il criterio può essere " **>** " (maggiore di), "* * \<**" (less than), "=" (equal), "> =" (maggiore o uguale a), "<=" (minore o uguale a), "<>" (non uguale) o "like" (criteri di ricerca).  
   
  Il valore del criterio può essere una stringa, un numero a virgola mobile o una data. I valori stringa sono delimitati da virgolette singole o contrassegni "#" (simbolo di cancelletto), ad esempio "state =' WA '" o "state = #WA #". I valori di data sono delimitati dai contrassegni "#" (simbolo di cancelletto), ad esempio "start_date > #7/22/97 #".  
   
@@ -87,7 +88,7 @@ L'oggetto **Recordset** dispone di funzionalità predefinite che consentono di r
   
 -   *FieldName* deve essere un nome di campo valido del **Recordset**. Se il nome del campo contiene spazi, è necessario racchiudere il nome tra parentesi quadre.  
   
--   L' *operatore* deve essere uno dei seguenti: **\<** , **>** , **\<=** , **>=** , **<>** , **=** o **like**.  
+-   L' *operatore* deve essere uno dei seguenti: **\<**, **>** , **\<=**, **>=** , **<>** , **=** o **like**.  
   
 -   *Value* è il valore con cui si confronteranno i valori dei campi (ad esempio,,, `'Smith'` `#8/24/95#` `12.345` o `$50.00` ). Usare le virgolette singole (') con le stringhe e i segni di cancelletto ( `#` ) con le date. Per i numeri, è possibile usare separatori decimali, simboli del dollaro e notazione scientifica. Se *operator* è **simile a**, *value* può utilizzare caratteri jolly. Solo l'asterisco ( \* ) e il segno di percentuale (%) i caratteri jolly sono consentiti e devono essere l'ultimo carattere della stringa. Il *valore* non può essere null.  
   

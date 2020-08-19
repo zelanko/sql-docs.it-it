@@ -1,4 +1,5 @@
 ---
+description: Esercitazione su RDS
 title: Esercitazione su RDS | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f646bd95e3ae9cb809f04c2ef66c47386fbde6c6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: aedb4037d4f6c37ad70086a4e2a51a6210c219c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452073"
 ---
 # <a name="rds-tutorial"></a>Esercitazione su RDS
 In questa esercitazione viene illustrato l'utilizzo del modello di programmazione RDS per eseguire query e aggiornare un'origine dati. In primo luogo, vengono descritti i passaggi necessari per eseguire questa attività. L'esercitazione viene quindi ripetuta in Microsoft® Visual Basic Scripting Edition (con ADO for Windows Foundation Classes (ADO/WFC)).  

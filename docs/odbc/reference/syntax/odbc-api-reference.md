@@ -1,4 +1,5 @@
 ---
+description: Informazioni di riferimento sull'API ODBC
 title: Informazioni di riferimento sulle API ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6065db0ea99efaec11190902ec9268db63a6d255
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1627838d3f34f8092dce2806a1b1d8f885b9bf6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476182"
 ---
 # <a name="odbc-api-reference"></a>Informazioni di riferimento sull'API ODBC
 Negli argomenti di questa sezione viene descritta ogni funzione ODBC in ordine alfabetico. Ogni funzione è definita come funzione del linguaggio di programmazione C. Sono incluse le descrizioni seguenti:  
@@ -94,7 +95,7 @@ Negli argomenti di questa sezione viene descritta ogni funzione ODBC in ordine a
   
 -   [Funzione SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)  
   
--   [SQLDriverConnect Function](../../../odbc/reference/syntax/sqldriverconnect-function.md)  
+-   [Funzione SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)  
   
 -   [Funzione SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)  
   

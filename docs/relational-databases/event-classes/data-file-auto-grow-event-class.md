@@ -1,4 +1,5 @@
 ---
+description: Data File Auto Grow - classe di evento
 title: Classe di evento Data File Auto Grow | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 63701c20-7886-454a-936f-7aea9d042cf7
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80cbbaab89417573c8da438176d23955c9fe2279
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 44d5684243d7a0ebd3a3c1356b642497ec229297
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719855"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475964"
 ---
 # <a name="data-file-auto-grow-event-class"></a>Data File Auto Grow - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La classe di evento **Data File Auto Grow** indica che le dimensioni del file di dati sono aumentate automaticamente. Questo evento non viene generato se le dimensioni del file vengono incrementate in modo esplicito tramite l'istruzione ALTER DATABASE.  
+   La classe di evento **Data File Auto Grow** indica che le dimensioni del file di dati sono aumentate automaticamente. Questo evento non viene generato se le dimensioni del file vengono incrementate in modo esplicito tramite l'istruzione ALTER DATABASE.  
   
  Includere la classe di evento **Data File Auto Grow** nelle tracce che eseguono il monitoraggio dell'aumento delle dimensioni del file di dati.  
   

@@ -1,4 +1,5 @@
 ---
+description: Scenario di persistenza di recordset XML
 title: Scenario di persistenza recordset XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a1110db8505a2a721c3503e51276cfb895fb965
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2c61663a1fc88f4e8efe464da0220df22133bdc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748311"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452503"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Scenario di persistenza di recordset XML
 In questo scenario verrà creata un'applicazione di Active Server Pages (ASP) che salva il contenuto di un oggetto recordset direttamente nell'oggetto risposta ASP.  
@@ -38,7 +39,7 @@ In questo scenario verrà creata un'applicazione di Active Server Pages (ASP) ch
 -   Ricevere e visualizzare i dati  
   
 ## <a name="step-1-set-up-the-application"></a>Passaggio 1: configurare l'applicazione  
- Creare una directory virtuale IIS denominata "xmlpermanente" con autorizzazioni di script. Creare due nuovi file di testo nella cartella a cui punta la directory virtuale, uno denominato "XMLResponse. asp", l'altro denominato "default. htm".  
+ Creare una directory virtuale IIS denominata "xmlpermanente" con autorizzazioni di script. Creare due nuovi file di testo nella cartella a cui punta la directory virtuale, uno denominato "XMLResponse. asp", l'altro denominato "Default.htm".  
   
 ## <a name="step-2-get-the-data"></a>Passaggio 2: ottenere i dati  
  In questo passaggio verrà scritto il codice per aprire un recordset ADO e prepararsi per inviarlo al client. Aprire il file XMLResponse. asp con un editor di testo, ad esempio Blocco note, e inserire il codice seguente.  
@@ -89,7 +90,7 @@ In questo scenario verrà creata un'applicazione di Active Server Pages (ASP) ch
  Salvare e chiudere XMLResponse. asp prima di andare al passaggio successivo. Copiare inoltre il file Adovbs. Inc dalla cartella di installazione predefinita della libreria ADO alla stessa cartella in cui è stato salvato il file XMLResponse. ASP.  
   
 ## <a name="step-4-receive-and-display-the-data"></a>Passaggio 4: ricevere e visualizzare i dati  
- In questo passaggio verrà creato un file HTML con un oggetto [datacontrollo incorporato (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) che punta al file XMLResponse. asp per ottenere il recordset. Aprire default. htm con un editor di testo, ad esempio Blocco note, e aggiungere il codice seguente. Sostituire "SqlServer" nell'URL con il nome del server.  
+ In questo passaggio verrà creato un file HTML con un oggetto [datacontrollo incorporato (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) che punta al file XMLResponse. asp per ottenere il recordset. Aprire default.htm con un editor di testo, ad esempio Blocco note, e aggiungere il codice seguente. Sostituire "SqlServer" nell'URL con il nome del server.  
   
 ```  
 <HTML>  
@@ -110,7 +111,7 @@ In questo scenario verrà creata un'applicazione di Active Server Pages (ASP) ch
 </HTML>  
 ```  
   
- Chiudere il file default. htm e salvarlo nella stessa cartella in cui è stato salvato XMLResponse. ASP. Utilizzando Internet Explorer 4,0 o versione successiva, aprire l'URL https://*SqlServer*/XMLPersist/default.htm e osservare i risultati. I dati vengono visualizzati in una tabella DHTML associata. A questo punto aprire l'URL https:// *SqlServer* /XMLPersist/XMLResponse.asp e osservare i risultati. Viene visualizzato il codice XML.  
+ Chiudere il file di default.htm e salvarlo nella stessa cartella in cui è stato salvato XMLResponse. ASP. Utilizzando Internet Explorer 4,0 o versione successiva, aprire l'URL https://*SqlServer*/XMLPersist/default.htm e osservare i risultati. I dati vengono visualizzati in una tabella DHTML associata. A questo punto aprire l'URL https:// *SqlServer* /XMLPersist/XMLResponse.asp e osservare i risultati. Viene visualizzato il codice XML.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Save (metodo)](../../../ado/reference/ado-api/save-method.md)   

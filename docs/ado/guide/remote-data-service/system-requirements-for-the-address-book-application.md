@@ -1,4 +1,5 @@
 ---
+description: Requisiti di sistema per l'applicazione Address Book
 title: Requisiti di sistema per l'applicazione Rubrica | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8aec1ebbb5d83829431e1045e746c99f1569dc48
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0c2eb347c7bd4b4bd39e6d85690e9646784077ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764632"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451893"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>Requisiti di sistema per l'applicazione Address Book
 Per configurare l'applicazione di esempio Address Book, è necessario soddisfare i requisiti software e di database seguenti:  

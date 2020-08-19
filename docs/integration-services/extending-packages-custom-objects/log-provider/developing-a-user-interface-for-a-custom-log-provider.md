@@ -1,4 +1,5 @@
 ---
+description: Sviluppo di un'interfaccia utente per un provider di log personalizzato
 title: Sviluppo di un'interfaccia utente per un provider di log personalizzato | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6fd2d269-d87a-4134-82a1-40a09b3b5453
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8ffd790e725daa8aaf40f0c2c54724bd5d42876b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a4b1807cc004c21d58b75ef25713b7fdb62ac8b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430483"
 ---
 # <a name="developing-a-user-interface-for-a-custom-log-provider"></a>Sviluppo di un'interfaccia utente per un provider di log personalizzato
 

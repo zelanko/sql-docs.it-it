@@ -1,4 +1,5 @@
 ---
+description: Ottenere un cursore FAST_FORWARD (provider OLE DB di Native Client)
 title: Ottenere un cursore FAST_FORWARD (provider OLE DB di Native Client)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,22 +14,22 @@ ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3864444202d96ae5e2bd8a1e80eaac6cc26d8535
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b1f330308b276aa82d7c936d53614fd2b603b8e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244026"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475697"
 ---
 # <a name="obtain-a-fast_forward-cursor-native-client-ole-db-provider"></a>Ottenere un cursore FAST_FORWARD (provider OLE DB di Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Per ottenere un cursore forward-only di sola lettura, impostare le proprietà del set di righe DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT e DBPROP_OWNUPDATEDELETE su VARIANT_TRUE.  
   
- In un esempio completo viene illustrato come impostare le proprietà del set di righe per ottenere un cursore FAST_FORWARD. Una volta impostate le proprietà, viene eseguita un'istruzione SELECT per recuperare e visualizzare la colonna **Name** della tabella **Purchasing. Vendor** del database **AdventureWorks** .  
+ In un esempio completo viene illustrato come impostare le proprietà del set di righe per ottenere un cursore FAST_FORWARD. Dopo che le proprietà sono state impostate, viene eseguita un'istruzione SELECT per recuperare e visualizzare la colonna **Name** della tabella **Purchasing.Vendor** del database **AdventureWorks**.  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario salvare in modo permanente le credenziali, è necessario crittografarle con l' [API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-obtain-fast_forward-cursor"></a>Per ottenere un cursore FAST_FORWARD  
   
@@ -43,7 +44,7 @@ ms.locfileid: "87244026"
   
  Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
- Compilare il listato di codice C++ seguente con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L "(local)" in L "(local) \\ \name", dove name è l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
+ Compilare il listato di codice C++ seguente con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" a L"(local)\\\nome", dove nome è l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

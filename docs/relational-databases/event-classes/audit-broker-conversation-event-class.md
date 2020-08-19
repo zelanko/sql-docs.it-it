@@ -1,4 +1,5 @@
 ---
+description: Audit Broker Conversation - classe di evento
 title: Classe di evento Audit Broker Conversation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22dba70f903d19a0be15bfe7acb440dd1b1f4b1a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 910d0aba243c7d42cd0866d516ae392320913cd8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85693777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476002"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85693777"
 |**ObjectId**|**int**|ID utente del servizio di destinazione.|22|No|  
 |**RoleName**|**nvarchar**|Ruolo dell'handle di conversazione. I valori possibili sono **initiator** o **target**.|38|No|  
 |**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
-|**Severity**|**int**|Gravità dell'errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se l'evento indica un errore.|29|No|  
+|**Gravità**|**int**|Gravità dell'errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se l'evento indica un errore.|29|No|  
 |**SPID**|**int**|ID del processo server assegnato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al processo associato al client.|12|Sì|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
 |**State**|**int**|Indica la posizione che ha generato l'evento all'interno del codice sorgente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni punto che può generare questo evento è contraddistinto da un codice di stato diverso. Questo codice di stato consente al supporto tecnico Microsoft di individuare la posizione in cui è stato generato l'evento.|30|No|  

@@ -1,4 +1,5 @@
 ---
+description: CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 title: CREATE SERVER AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6cc72e48eea68aa97323fc30bdad083fd79d391e
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: c398b8a3ae8204e202954f667db1c99dc08a477a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444827"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -60,7 +61,7 @@ FOR SERVER AUDIT audit_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  Abilita o disabilita la raccolta di record mediante il controllo per questa specifica del controllo.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È necessario che un controllo esista prima che sia possibile creare la specifica del controllo del server. Quando viene creata una specifica del controllo del server, il relativo stato è disabilitato.  
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -1,4 +1,5 @@
 ---
+description: Uso dei segnalibri
 title: Uso di segnalibri | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ebf38cb9afaabef6d1af4e941cf02df1947c7b73
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 98c8f08d6d60a47da2cdf4de6459e90cee4d716e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763052"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452593"
 ---
 # <a name="using-bookmarks"></a>Uso dei segnalibri
 Spesso è utile tornare direttamente a un record specifico dopo aver spostato il **Recordset** senza dover scorrere ogni record e confrontare i valori. Se, ad esempio, si tenta di cercare un record utilizzando il metodo **Find** , ma la ricerca non restituisce alcun record, si viene posizionati automaticamente a una delle estremità del **Recordset**. Se il provider li supporta, è possibile usare i segnalibri per contrassegnare il posto prima di usare il metodo **Find** , in modo da poter tornare al percorso. Un segnalibro è un valore di tipo **Variant** che identifica in modo univoco un record in un oggetto **Recordset** .  
