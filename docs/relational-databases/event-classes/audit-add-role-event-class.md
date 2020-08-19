@@ -1,4 +1,5 @@
 ---
+description: Audit Add Role - classe di evento
 title: Classe di evento Audit Add Role | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 4ea55922-608c-4db2-8b3f-873862755bba
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6cccc2d27ad65278a0c229992c138e8321a626d1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ae486a3b57bf620b2e4c3ba094d372281cd04aea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630515"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88385317"
 ---
 # <a name="audit-add-role-event-class"></a>Audit Add Role - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

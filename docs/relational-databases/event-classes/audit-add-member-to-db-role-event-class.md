@@ -1,4 +1,5 @@
 ---
+description: Audit Add Member to DB Role - classe di evento
 title: Classe di eventi Audit Add Member to DB Role | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: a5ac46b6-765b-4424-b6c7-4d5a1b898d65
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: daea91039b7166036a105fa55b3951fcfda04ea6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: deb927a3cc76cbb30c6c7e3b39562decb2c2a66a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85635704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88384877"
 ---
 # <a name="audit-add-member-to-db-role-event-class"></a>Audit Add Member to DB Role - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La classe di evento **Audit Add Member to DB Role** si verifica ogni volta che un account di accesso viene aggiunto o rimosso da un ruolo del database. Questa classe di evento è usata con le stored procedure **sp_addrolemember**, **sp_changegroup**e **sp_droprolemember** .  
+   La classe di evento **Audit Add Member to DB Role** si viene generata ogni volta che un account di accesso viene aggiunto o rimosso da un ruolo del database. Questa classe di evento è usata con le stored procedure **sp_addrolemember**, **sp_changegroup**e **sp_droprolemember** .  
   
 ## <a name="audit-add-member-to-db-role-event-class-data-columns"></a>Colonne di dati della classe di evento Audit Add Member to DB Role  
   

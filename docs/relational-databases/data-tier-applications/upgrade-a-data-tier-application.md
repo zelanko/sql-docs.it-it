@@ -1,4 +1,5 @@
 ---
+description: Upgrade a Data-tier Application
 title: Aggiornare un'applicazione livello dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ed1b1698fb945d92fce7cb2a0d1a9d0e2713afb5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0cba55e7c9f979098b9f761fbc43cad7a8edc2b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781629"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386447"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85781629"
   
 -   **Prima di iniziare:**  [Scelta delle opzioni di aggiornamento dell'applicazione livello dati](#ChoseDACUpgOptions), [Limitazioni e restrizioni](#LimitationsRestrictions), [Prerequisiti](#Prerequisites), [Sicurezza](#Security), [Autorizzazioni](#Permissions)  
   
--   **Per aggiornare un'applicazione livello dati tramite la:**  [Procedura guidata Aggiorna applicazione livello dati](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **Per aggiornare un'applicazione livello dati, usare: **  [la procedura guidata Aggiorna applicazione livello dati](#UsingDACUpgradeWizard)[, PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
  Un aggiornamento dell'applicazione livello dati è un processo sul posto che consente di modificare lo schema del database esistente affinché corrisponda allo schema definito in una nuova versione dell'applicazione livello dati. La nuova versione dell'applicazione livello dati è fornita in un file del pacchetto di applicazione livello dati. Per altre informazioni sulla creazione di un pacchetto di applicazione livello dati, vedere [Applicazioni livello dati](../../relational-databases/data-tier-applications/data-tier-applications.md).  
@@ -105,7 +106,7 @@ ms.locfileid: "85781629"
   
  **Non visualizzare più questa pagina** - Fare clic sulla casella di controllo per evitare che la pagina venga visualizzata nuovamente in futuro.  
   
- **Avanti >** : consente di passare alla pagina **Seleziona pacchetto**.  
+ **Avanti >**: consente di passare alla pagina **Seleziona pacchetto**.  
   
  **Annulla** : consente di terminare la procedura guidata senza aggiornare l'applicazione livello dati.  
   
@@ -125,7 +126,7 @@ ms.locfileid: "85781629"
   
  **< Indietro**: consente di tornare alla pagina **Introduzione**.  
   
- **Avanti >** : consente di visualizzare un indicatore di stato per la verifica della validità del file selezionato come pacchetto di applicazione livello dati.  
+ **Avanti >**: consente di visualizzare un indicatore di stato per la verifica della validità del file selezionato come pacchetto di applicazione livello dati.  
   
  **Annulla** : consente di terminare la procedura guidata senza aggiornare l'applicazione livello dati.  
   
@@ -136,7 +137,7 @@ ms.locfileid: "85781629"
   
  **< Indietro**: consente di tornare allo stato iniziale della pagina **Seleziona pacchetto**.  
   
- **Avanti >** : consente di passare alla versione finale della pagina **Seleziona pacchetto**.  
+ **Avanti >**: consente di passare alla versione finale della pagina **Seleziona pacchetto**.  
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
@@ -149,7 +150,7 @@ ms.locfileid: "85781629"
   
  **< Indietro**: consente di tornare alla pagina **Seleziona pacchetto**.  
   
- **Avanti >** : consente di passare alla pagina **Rileva modifiche**.  
+ **Avanti >**: consente di passare alla pagina **Rileva modifiche**.  
   
  **Annulla** : consente di terminare la procedura guidata senza aggiornare l'applicazione livello dati.  
   
@@ -170,7 +171,7 @@ ms.locfileid: "85781629"
   
  **< Indietro**: consente di tornare alla pagina **Selezione pacchetto di applicazione livello dati**.  
   
- **Avanti >** : consente di passare alla pagina **Opzioni**.  
+ **Avanti >**: consente di passare alla pagina **Opzioni**.  
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
@@ -183,7 +184,7 @@ ms.locfileid: "85781629"
   
  **< Indietro**: consente di tornare alla pagina **Rileva modifiche**.  
   
- **Avanti >** : consente di passare alla pagina **Revisione del piano di aggiornamento**.  
+ **Avanti >**: consente di passare alla pagina **Revisione del piano di aggiornamento**.  
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
@@ -204,7 +205,7 @@ ms.locfileid: "85781629"
   
  **< Indietro**: consente di tornare alla pagina **Rileva modifiche**.  
   
- **Avanti >** : consente di passare alla pagina **Riepilogo**.  
+ **Avanti >**: consente di passare alla pagina **Riepilogo**.  
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
@@ -215,7 +216,7 @@ ms.locfileid: "85781629"
   
  **< Indietro**: consente di tornare alla pagina **Revisione del piano di aggiornamento**.  
   
- **Avanti >** : consente di distribuire l'applicazione livello dati e visualizzare i risultati nella pagina **Aggiorna applicazione livello dati**.  
+ **Avanti >**: consente di distribuire l'applicazione livello dati e visualizzare i risultati nella pagina **Aggiorna applicazione livello dati**.  
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   

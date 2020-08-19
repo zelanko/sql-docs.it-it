@@ -1,4 +1,5 @@
 ---
+description: Dati gerarchici [SQL Server]
 title: Dati gerarchici (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/04/2019
@@ -18,12 +19,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 137557b633b80067205be1cdea9f0b7c6cfd82bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1638e581a384f79842109c83352fc7292fa15de7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640767"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88382527"
 ---
 # <a name="hierarchical-data-sql-server"></a>Dati gerarchici [SQL Server]
 
@@ -54,7 +55,7 @@ ms.locfileid: "85640767"
   
 -   Il confronto avviene in ordine di scorrimento in profondità  
   
-     Dati due valori **hierarchyid** **a** e **b**, **a<b** indica che a precede b nell'attraversamento del primo livello di profondità dell'albero. Gli indici sui tipi di dati **hierarchyid** sono in ordine di scorrimento della profondità e i nodi l'uno vicino all'altro nell'attraversamento del primo livello di profondità della struttura sono archiviati l'uno vicino all'altro. Ad esempio, i figli di un record sono archiviati adiacenti al record specifico.  
+     Dati due valori **hierarchyid****a** e **b**, **a<b** indica che a precede b nell'attraversamento del primo livello di profondità dell'albero. Gli indici sui tipi di dati **hierarchyid** sono in ordine di scorrimento della profondità e i nodi l'uno vicino all'altro nell'attraversamento del primo livello di profondità della struttura sono archiviati l'uno vicino all'altro. Ad esempio, i figli di un record sono archiviati adiacenti al record specifico.  
   
 -   Supporto per eliminazioni e inserimenti arbitrari  
   
@@ -540,7 +541,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai metodi per il tipo di dati hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
- [Esercitazione: Utilizzo del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Esercitazione: Uso del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

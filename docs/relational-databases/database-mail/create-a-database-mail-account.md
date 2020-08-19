@@ -1,4 +1,5 @@
 ---
+description: Creare un account di Posta elettronica database.
 title: Creare un account di Posta elettronica database | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6a35d325e976d0fc7ec75f348efb53c39b7bc51c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e80df479a6fbd13e51e69ebddff5634ce7a0c3b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88385737"
 ---
 # <a name="create-a-database-mail-account"></a>Creare un account di Posta elettronica database.
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Per creare un account di Posta elettronica database, utilizzare la **Configurazione guidata Posta elettronica database** o [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+   Per creare un account di Posta elettronica database, usare la **Configurazione guidata Posta elettronica** database o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   **Prima di iniziare:**  [Prerequisiti](#Prerequisites)  
   
@@ -55,7 +56,7 @@ ms.locfileid: "85737615"
   
 -   Per completare la creazione del nuovo account, rivedere le azioni da eseguire nella pagina **Completamento procedura guidata** quindi fare clic su **Fine** .  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per creare un account di Posta elettronica database utilizzando Transact-SQL**  
   
  Eseguire la stored procedure **msdb.dbo.sysmail_add_account_sp** per creare l'account, specificando le seguenti informazioni:  

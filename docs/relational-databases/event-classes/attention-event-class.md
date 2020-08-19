@@ -1,4 +1,5 @@
 ---
+description: Attention - classe di evento
 title: Classe di evento Attention | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,18 +13,18 @@ ms.assetid: da996305-181b-4cec-8388-c3b66677ed27
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d7d4d938bb2f214b540c4795b4318693a1cfdb1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1836698d7ecf718a3866175f21309daf3dcc8153
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85635874"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88385407"
 ---
 # <a name="attention-event-class"></a>Attention - classe di evento
 
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
 
-  La classe di evento **Attention** indica che è stato generato un evento di attenzione, ad esempio un'operazione di annullamento, una richiesta di interrupt del client o l'interruzione di una connessione client. Le operazioni di annullamento possono essere considerate inoltre parte integrante dell'implementazione di timeout del driver per l'accesso ai dati.  
+   La classe di evento **Attention** indica che è stato generato un evento di attenzione, ad esempio un'operazione di annullamento, una richiesta di interrupt del client o l'interruzione di una connessione client. Le operazioni di annullamento possono essere considerate inoltre parte integrante dell'implementazione di timeout del driver per l'accesso ai dati.  
   
 ## <a name="attention-event-class-data-columns"></a>Colonne di dati della classe di evento Attention  
   

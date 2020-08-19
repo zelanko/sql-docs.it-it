@@ -1,4 +1,5 @@
 ---
+description: Showplan XML Statistics Profile - classe di evento
 title: Classe di evento Showplan XML Statistics Profile | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 77e8ca69-d98a-4acd-9d6a-f825bf079d84
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d54c21b5eba94bab12292ca856a5b00fc60c8d74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d575705919219b038c3fd98126c0b751bf496a57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88383970"
 ---
 # <a name="showplan-xml-statistics-profile-event-class"></a>Showplan XML Statistics Profile - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "85717764"
   
  La classe di evento Showplan XML Statistics Profile visualizza informazioni complete sulla fase di compilazione e pertanto è possibile che per le tracce che la contengono si verifichi un overhead di prestazioni significativo. Per ridurre al minimo l'overhead generato, limitare l'utilizzo di questa classe di evento alle tracce che eseguono il monitoraggio di problemi specifici per brevi periodi di tempo.  
   
- Ai documenti creati tramite Showplan XML è associato uno schema. È possibile trovare questo schema nel [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkId=41740)o come parte dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Ai documenti creati tramite Showplan XML è associato uno schema. È possibile trovare questo schema nel [sito Web di Microsoft](https://go.microsoft.com/fwlink/?LinkId=41740) o come parte dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="showplan-xml-statistics-profile-event-class-data-columns"></a>Colonne di dati della classe di evento Showplan XML Statistics Profile  
   

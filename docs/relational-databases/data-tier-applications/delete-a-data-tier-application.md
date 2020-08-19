@@ -1,4 +1,5 @@
 ---
+description: Eliminazione di un'applicazione livello dati
 title: Eliminare un'applicazione livello dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 555867ca058b1249c30dc330512a8e6bc0fe3d76
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2bde888ff6091ae8d05445acce1afb1469843c18
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781723"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386637"
 ---
 # <a name="delete-a-data-tier-application"></a>Eliminazione di un'applicazione livello dati
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -83,7 +84,7 @@ ms.locfileid: "85781723"
   
  **Non visualizzare più questa pagina** - Fare clic sulla casella di controllo per evitare che la pagina venga visualizzata nuovamente in futuro.  
   
- **Avanti >** : consente di passare alla pagina **Seleziona metodo**.  
+ **Avanti >**: consente di passare alla pagina **Seleziona metodo**.  
   
  **Annulla** : consente di terminare la procedura guidata senza eliminare un'applicazione livello dati o un database.  
   
@@ -104,7 +105,7 @@ ms.locfileid: "85781723"
   
  **< Indietro**: consente di tornare alla pagina **Introduzione**.  
   
- **Avanti >** : consente di passare alla pagina **Riepilogo**.  
+ **Avanti >**: consente di passare alla pagina **Riepilogo**.  
   
  **Annulla** : consente di terminare la procedura guidata senza eliminare l'applicazione livello dati o il database.  
   
@@ -117,7 +118,7 @@ ms.locfileid: "85781723"
   
  **< Indietro**: consente di tornare alla pagina **Seleziona metodo** per selezionare un altro metodo di eliminazione.  
   
- **Avanti >** : consente di eliminare l'istanza DAC usando il metodo selezionato nella pagina precedente e passare alla pagina **Elimina applicazione del livello dati**.  
+ **Avanti >**: consente di eliminare l'istanza DAC usando il metodo selezionato nella pagina precedente e passare alla pagina **Elimina applicazione del livello dati**.  
   
  **Annulla** : consente di terminare la procedura guidata senza eliminare l'istanza di applicazione livello dati.  
   

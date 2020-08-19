@@ -1,4 +1,5 @@
 ---
+description: Database Mirroring State Change - classe di evento
 title: Classe di evento Database Mirroring State Change | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,16 +15,16 @@ ms.assetid: f936a99e-2a81-4768-8177-5c969bbe2e04
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7c1e9d1fe55b36560eb71675b3714b999d2512d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7c63c19ac6a6d80d7c61f8b2cdccc1b46871c145
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756059"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88384307"
 ---
 # <a name="database-mirroring-state-change-event-class"></a>Database Mirroring State Change - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La classe di evento **Database Mirroring State Change** indica la variazione dello stato di un database con mirroring. Includere questa classe di evento nelle tracce che eseguono il monitoraggio delle condizioni dei database con mirroring.  
+   La classe di evento **Database Mirroring State Change** indica la variazione dello stato di un database con mirroring. Includere questa classe di evento nelle tracce che eseguono il monitoraggio delle condizioni dei database con mirroring.  
   
  Quando la classe di evento **Database Mirroring State Change** viene inclusa in una traccia, il relativo overhead è ridotto. L'overhead può essere maggiore se il valore dello stato dei database con mirroring aumenta.  
   
