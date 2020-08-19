@@ -1,4 +1,5 @@
 ---
+description: sysmail_allitems (Transact-SQL)
 title: sysmail_allitems (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ba169522f0deac50dd840a5eeceff63c9eb178e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0c5a41e6f0c150638eeed8e1c7cdd4fbb3c6bf2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419915"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85891958"
 |**destinatari**|**ntext**|Indirizzi di posta elettronica dei destinatari del messaggio.|  
 |**copy_recipients**|**ntext**|Indirizzi di posta elettronica degli utenti che ricevono una copia del messaggio.|  
 |**blind_copy_recipients**|**ntext**|Indirizzi di posta elettronica degli utenti che ricevono una copia del messaggio, ma i cui nomi non sono indicati nell'intestazione del messaggio.|  
-|**Oggetto**|**nvarchar (510)**|Oggetto del messaggio.|  
+|**subject**|**nvarchar (510)**|Oggetto del messaggio.|  
 |**body**|**ntext**|Corpo del messaggio.|  
 |**body_format**|**varchar (20)**|Formato del corpo del messaggio. I possibili valori sono TEXT e HTML.|  
 |**importance**|**varchar (6)**|Parametro di **importanza** del messaggio.|  

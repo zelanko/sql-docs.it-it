@@ -1,4 +1,5 @@
 ---
+description: Modifica dei dati in una tabella temporale con controllo delle versioni di sistema
 title: Modifica dei dati in una tabella temporale con controllo delle versioni di sistema | Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2016
@@ -11,12 +12,12 @@ ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a0860b822341fb3c974fbdd80726082cd3b1abbf
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 654648ba7206c3d5ce01a715a0ee24eae2d3212b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555276"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419005"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>Modifica dei dati in una tabella temporale con controllo delle versioni di sistema
 
@@ -36,7 +37,7 @@ Quando si inseriscono nuovi dati è necessario tenere conto delle colonne **PERI
 
   ```sql
   -- Insert with column list and without period columns
-  INSERT INTO [dbo].[Department]0
+  INSERT INTO [dbo].[Department]
     (  [DeptID]
           , [DeptName]
           , [ManagerID]

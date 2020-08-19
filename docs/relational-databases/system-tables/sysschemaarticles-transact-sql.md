@@ -1,4 +1,5 @@
 ---
+description: sysschemaarticles (Transact-SQL)
 title: sysschemaarticles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 67a1c039-c283-4a9c-bacc-b9b3973590c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 89a9c9e8034fecad29cdd1f1c6c469e40c613436
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f82f2a75d33eab462385f063ccba404781ed531a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881294"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419055"
 ---
 # <a name="sysschemaarticles-transact-sql"></a>sysschemaarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85881294"
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|ID dell'articolo.|  
 |**creation_script**|**nvarchar(255)**|Percorso e nome di uno script di schema dell'articolo utilizzato per la creazione della tabella di destinazione.|  
-|**Descrizione**|**nvarchar(255)**|Voce descrittiva per l'articolo.|  
+|**description**|**nvarchar(255)**|Voce descrittiva per l'articolo.|  
 |**dest_object**|**sysname**|Nome dell'oggetto del database di sottoscrizione se l'articolo è relativo solo allo schema, quali articoli di stored procedure, viste e funzioni definite dall'utente.|  
 |**nome**|**sysname**|Nome dell'articolo relativo solo allo schema in una pubblicazione.|  
 |**objid**|**int**|Identificatore dell'oggetto di base dell'articolo. Può corrispondere all'identificatore di oggetto di una procedura, vista, vista indicizzata o funzione definita dall'utente.|  
@@ -45,7 +46,7 @@ ms.locfileid: "85881294"
 |**dest_owner**|**sysname**|Proprietario della tabella nel database di destinazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelle di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste della replica &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

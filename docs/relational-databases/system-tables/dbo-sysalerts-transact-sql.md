@@ -1,4 +1,5 @@
 ---
+description: dbo.sysalerts (Transact-SQL)
 title: Avvisi di dbo.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6113a7d05c7128df4b7691bd7f72d09ba8f0548b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 509e401f70aadc8f4dc2eb625fb5b9cf1dcda5d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419245"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,8 +37,8 @@ ms.locfileid: "85890532"
 |**id**|**int**|ID dell'avviso.|  
 |**nome**|**sysname**|Nome dell'avviso.|  
 |**event_source**|**nvarchar (100)**|Origine dell'evento: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**event_category_id**|**int**|Riservato per utilizzi futuri.|  
-|**event_id**|**int**|Riservato per utilizzi futuri.|  
+|**event_category_id**|**int**|Riservato per usi futuri.|  
+|**event_id**|**int**|Riservato per usi futuri.|  
 |**message_id**|**int**|ID messaggio definito dall'utente o riferimento al messaggio **sysmessages** che attiva questo avviso.|  
 |**severity**|**int**|Livello di gravità che attiva l'avviso.|  
 |**abilitato**|**tinyint**|Stato dell'avviso:<br /><br /> **0** = disabilitato.<br /><br /> **1** = abilitata.|  

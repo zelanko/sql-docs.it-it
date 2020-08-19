@@ -1,4 +1,5 @@
 ---
+description: MSpublications (Transact-SQL)
 title: MSpublications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b26ba7da6099f402aa8902a6ce2dafda8a4d2d71
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99cf9a95cb61cc0efcd40c29019c038248b6102d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889586"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419135"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85889586"
 |**allow_push**|**bit**|Indica se è possibile creare sottoscrizioni di tipo push per la pubblicazione specificata.|  
 |**allow_pull**|**bit**|Indica se è possibile creare sottoscrizioni di tipo pull per la pubblicazione specificata.|  
 |**allow_anonymous**|**bit**|Indica se è possibile creare sottoscrizioni anonime per la pubblicazione specificata.|  
-|**Descrizione**|**nvarchar(255)**|Descrizione della pubblicazione.|  
+|**description**|**nvarchar(255)**|Descrizione della pubblicazione.|  
 |**vendor_name**|**nvarchar (100)**|Nome del produttore se il server di pubblicazione non è un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**conservazione**|**int**|Periodo di memorizzazione della pubblicazione in ore.|  
 |**sync_method**|**int**|Metodo di sincronizzazione:<br /><br /> **0** = nativo (genera l'output della copia bulk in modalità nativa di tutte le tabelle).<br /><br /> **1** = character (genera un output per la copia bulk in modalità carattere per tutte le tabelle).<br /><br /> **3** = simultanea (genera l'output della copia bulk in modalità nativa di tutte le tabelle, ma non blocca la tabella durante lo snapshot).<br /><br /> **4** = concurrent_c (genera un output per la copia bulk in modalità carattere di tutte le tabelle, ma non blocca la tabella durante lo snapshot)<br /><br /> I valori **3** e **4** sono disponibili per la replica transazionale e per la replica di tipo merge, ma non per la replica snapshot.|  
@@ -52,7 +53,7 @@ ms.locfileid: "85889586"
 |**options**|**int**|Informazioni non disponibili in questa versione.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelle di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste della replica &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

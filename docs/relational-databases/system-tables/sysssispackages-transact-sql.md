@@ -1,4 +1,5 @@
 ---
+description: sysssispackages (Transact-SQL)
 title: sysssispackages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1fa0f587fc5939135b3d88b15066de29be6d8a7c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d1a1bda3bfea233f7a586a8147f268fbdb1e6ade
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889240"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419035"
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85889240"
 |-----------------|---------------|-----------------|  
 |**nome**|**sysname**|Identificatore univoco del pacchetto.|  
 |**id**|**uniqueidentifier**|GUID del pacchetto.|  
-|**Descrizione**|**nvarchar**|Descrizione del pacchetto (facoltativa).|  
+|**description**|**nvarchar**|Descrizione del pacchetto (facoltativa).|  
 |**CreateDate**|**datetime**|Data di creazione del pacchetto.|  
 |**FolderId**|**uniqueidentifier**|GUID della cartella logica in cui [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] elenca il pacchetto.|  
 |**ownersid**|**varbinary**|ID di sicurezza (SID) univoco dell'utente che ha creato il pacchetto.|  

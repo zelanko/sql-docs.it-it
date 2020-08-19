@@ -1,4 +1,5 @@
 ---
+description: managed_backup. fn_get_health_status (Transact-SQL)
 title: managed_backup. fn_get_health_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f5f155837f1e5dd9057c376152ceae56bce33d74
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 4aa10efc95af42c7793fb37b49a72061353b0ee0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053437"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419555"
 ---
 # <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup. fn_get_health_status (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -42,12 +44,12 @@ ms.locfileid: "86053437"
 managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 'time_2')  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Argomenti  
+##  <a name="arguments"></a><a name="Arguments"></a> Argomenti  
  [@begin_time]  
  L'inizio del periodo di tempo a partire dal quale viene eseguito il conteggio aggregato degli errori.  Il @begin_time parametro è DateTime. Il valore predefinito è NULL. Quando il valore è NULL, la funzione elabora gli eventi restituiti fino a 30 minuti prima dell'ora corrente.  
   
  [ @end_time]  
- La fine del periodo di tempo nel quale viene eseguito il conteggio aggregato degli errori. Il @end_time parametro è di tipo DateTime e il valore predefinito è null. Quando il valore è NULL, la funzione elabora gli eventi estesi fino all'ora corrente.  
+ La fine del periodo di tempo nel quale viene eseguito il conteggio aggregato degli errori. Il @end_time  parametro è di tipo DateTime e il valore predefinito è null. Quando il valore è NULL, la funzione elabora gli eventi estesi fino all'ora corrente.  
   
 ## <a name="table-returned"></a>Tabella restituita  
   

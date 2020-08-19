@@ -1,4 +1,5 @@
 ---
+description: xp_msver (Transact-SQL)
 title: xp_msver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 995668cb4b36e7086c2777d9cb7cd663e7d33ef4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 93223f6d7c63402161e48b0359bf735b14593c9d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419225"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,12 +43,12 @@ xp_msver [ optname ]
  *optname*  
  Nome di un'opzione. I possibili valori sono i seguenti.  
   
-|Opzione/nome colonna|Description|  
+|Opzione/nome colonna|Descrizione|  
 |-------------------------|-----------------|  
 |**ProductName**|Nome prodotto; ad esempio, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**ProductVersion**|Versione del prodotto.|  
 |**Lingua**|Lingua della versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Platform**|Nome del sistema operativo, del produttore e del tipo di chip del computer che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Piattaforma**|Nome del sistema operativo, del produttore e del tipo di chip del computer che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Commenti**|Informazioni varie relative a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**CompanyName**|Nome del produttore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation.|  
 |**FileDescription**|Sistema operativo.|  
@@ -76,7 +77,7 @@ xp_msver [ optname ]
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Stored procedure estese generali &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [@@VERSION &#40;Transact-SQL&#41;](../../t-sql/functions/version-transact-sql-configuration-functions.md)  
   

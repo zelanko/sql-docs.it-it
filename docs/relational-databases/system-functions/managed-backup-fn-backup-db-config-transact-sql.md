@@ -1,4 +1,5 @@
 ---
+description: managed_backup. fn_backup_db_config (Transact-SQL)
 title: managed_backup. fn_backup_db_config (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4147d01936fbdd3a14e479a7b560d5368a5110ec
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 551e66e532cb42b5db906f1a87f19107c022fcc1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053709"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419545"
 ---
 # <a name="managed_backupfn_backup_db_config-transact-sql"></a>managed_backup. fn_backup_db_config (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,7 +43,7 @@ ms.locfileid: "86053709"
 managed_backup.fn_backup_db_config ('database_name' | '' | NULL)  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Argomenti  
+##  <a name="arguments"></a><a name="Arguments"></a> Argomenti  
  @db_name  
  Nome del database. Il @db_name parametro è di **tipo sysname**. Se una stringa vuota o un valore NULL viene passato a questo parametro, vengono restituite le informazioni su tutti i database nell'istanza di SQL Server.  
   

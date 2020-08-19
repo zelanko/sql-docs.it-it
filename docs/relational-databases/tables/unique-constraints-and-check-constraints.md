@@ -1,4 +1,5 @@
 ---
+description: Vincoli UNIQUE e CHECK
 title: Vincoli UNIQUE e CHECK | Microsoft Docs
 ms.custom: ''
 ms.date: 06/27/2017
@@ -14,12 +15,12 @@ ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6339bdedffb2f2ee2f8379f63e123ab2e1d71c15
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: efd7fb070a81715b88d6949fac47c972bdd0643d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727115"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418965"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Vincoli UNIQUE e CHECK
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -96,10 +97,10 @@ DELETE CheckTbl WHERE col1 = 10;
 |----------|-----------|  
 |Viene descritto come creare un vincolo UNIQUE.|[Creare vincoli UNIQUE](../../relational-databases/tables/create-unique-constraints.md)|  
 |Viene descritto come modificare un vincolo UNIQUE.|[Modificare vincoli UNIQUE](../../relational-databases/tables/modify-unique-constraints.md)|  
-|Viene descritto come eliminare un vincolo UNIQUE.|[Eliminare vincoli UNIQUE](../../relational-databases/tables/delete-unique-constraints.md)|  
+|Viene descritto come eliminare un vincolo UNIQUE.|[Eliminazione di vincoli univoci](../../relational-databases/tables/delete-unique-constraints.md)|  
 |Viene descritto come disabilitare un vincolo CHECK quando un agente di replica inserisce o aggiorna i dati nella tabella.|[Disabilitare un vincolo CHECK per la replica](../../relational-databases/tables/disable-check-constraints-for-replication.md)|  
-|Viene descritto come disabilitare un vincolo CHECK quando vengono aggiunti, aggiornati o eliminati dati in una tabella.|[Disabilitare i vincoli CHECK con le istruzioni INSERT e UPDATE](../../relational-databases/tables/disable-check-constraints-with-insert-and-update-statements.md)|  
-|Viene descritto come modificare l'espressione del vincolo o le opzioni che abilitano o disabilitano il vincolo se si verificano determinate condizioni.|[Modificare vincoli CHECK](../../relational-databases/tables/modify-check-constraints.md)|  
+|Viene descritto come disabilitare un vincolo CHECK quando vengono aggiunti, aggiornati o eliminati dati in una tabella.|[Disabilitazione di vincoli CHECK con le istruzioni INSERT e UPDATE](../../relational-databases/tables/disable-check-constraints-with-insert-and-update-statements.md)|  
+|Viene descritto come modificare l'espressione del vincolo o le opzioni che abilitano o disabilitano il vincolo se si verificano determinate condizioni.|[Modifica di vincoli CHECK](../../relational-databases/tables/modify-check-constraints.md)|  
 |Viene descritto come eliminare un vincolo CHECK.|[Eliminare vincoli CHECK](../../relational-databases/tables/delete-check-constraints.md)|  
 |Viene descritto come visualizzare le proprietà di un vincolo CHECK.|[Vincoli UNIQUE e CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md)|  
   

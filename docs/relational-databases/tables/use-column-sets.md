@@ -1,4 +1,5 @@
 ---
+description: Utilizzare set di colonne
 title: Usare set di colonne | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2015
@@ -14,12 +15,12 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a45bfb98fa5b8d5a9ce5c640d07c3c13ab7d5284
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 6082c8ffbdf2a2eaba1d24f64a85cfcbed393984
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396171"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418975"
 ---
 # <a name="use-column-sets"></a>Utilizzare set di colonne
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -112,7 +113,7 @@ GO
 ## <a name="using-the-sql_variant-data-type"></a>Utilizzo del tipo di dati sql_variant  
  Il tipo di dati **sql_variant** consente di archiviare più tipi di dati diversi, ad esempio **int**, **char**e **date**. I set di colonne restituiscono informazioni sul tipo di dati, ad esempio scala, precisione e informazioni sulle impostazioni locali, associate a un valore **sql_variant** come attributi nella colonna XML generata. Se si tenta di specificare questi attributi un'istruzione XML generata dall'utente come input per un'operazione di inserimento o di aggiornamento su un set di colonne, alcuni di questi attributi risultano obbligatori e ad alcuni di essi viene assegnato un valore predefinito. Nella tabella seguente vengono elencati i tipi di dati e i valori predefiniti generati dal server quando il valore non viene specificato.  
   
-|Tipo di dati|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Lunghezza massima|Precision|Scalabilità|  
+|Tipo di dati|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Lunghezza massima|Precisione|Scalabilità|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
 |**char**, **varchar**, **binary**|-1|Impostazione predefinita|0|0|8000|Non applicabile**|Non applicabile|  
 |**nvarchar**|-1|Impostazione predefinita|0|0|4000|Non applicabile|Non applicabile|  
@@ -128,7 +129,7 @@ GO
   
  ** Non applicabile = Non viene restituito alcun valore per questi attributi durante un'operazione di selezione sul set di colonne. Quando per questo attributo viene specificato un valore dal chiamante nella rappresentazione XML fornita per un set di colonne in un'operazione di inserimento o di aggiornamento, viene generato un errore.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  Il funzionamento del modello di sicurezza per un set di colonne è analogo a quello del modello di sicurezza che esiste tra una tabella e le relative colonne. I set di colonne possono essere visualizzati come una tabella di dimensioni ridotte e un'operazione di selezione è analoga a un'operazione SELECT * eseguita su tale tabella. La relazione tra il set di colonne e le colonne di tipo sparse, tuttavia, rappresenta un raggruppamento anziché rappresentare esclusivamente un contenitore. Il modello controlla la sicurezza sulla colonna del set di colonne e applica le operazioni DENY sulle colonne di tipo sparse sottostanti. Di seguito sono riportate le caratteristiche aggiuntive del modello di sicurezza.  
   
 -   È possibile concedere e revocare le autorizzazioni di sicurezza alla colonna del set di colonne, analogamente a qualsiasi altra colonna della tabella.  
@@ -258,6 +259,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Usare le colonne di tipo sparse](../../relational-databases/tables/use-sparse-columns.md)  
+ [Utilizzo di colonne di tipo sparse](../../relational-databases/tables/use-sparse-columns.md)  
   
   

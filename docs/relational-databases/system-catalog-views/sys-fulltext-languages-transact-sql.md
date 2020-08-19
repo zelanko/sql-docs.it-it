@@ -1,4 +1,5 @@
 ---
+description: sys.fulltext_languages (Transact-SQL)
 title: sys. fulltext_languages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 545b729a5d89a258c38d7eb180ee2f3400ebd67c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab4f793c243671edeaf2684d40b87c40cddaf8cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764705"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420165"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -104,8 +105,8 @@ ms.locfileid: "85764705"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_fulltext_load_thesaurus_file &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
- [sp_fulltext_service &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
+ [sp_fulltext_load_thesaurus_file &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
+ [sp_fulltext_service &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [Configurare e gestire Word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurare e gestire i file del thesaurus per la ricerca full-text](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
  [Configurare e gestire parole non significative e elenchi per la ricerca full-text](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   

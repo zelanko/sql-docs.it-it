@@ -1,4 +1,5 @@
 ---
+description: Appendice-1 (AccessToSQL)
 title: Appendice-1 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 00665e16-2990-4bfc-8e17-d97ca9fb4999
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: debeb7ee176cd2127a74ba896de839b1f30ca4cc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ea9a89eadfd03f31573fd3a25e41e8bb8c1ed73f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418577"
 ---
 # <a name="appendix---1-accesstosql"></a>Appendice-1 (AccessToSQL)
 Visualizzazione rapida delle opzioni della riga di comando della console SSMA:  

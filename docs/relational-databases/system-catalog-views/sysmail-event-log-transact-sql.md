@@ -1,4 +1,5 @@
 ---
+description: sysmail_event_log (Transact-SQL)
 title: sysmail_event_log (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68ef84e8efb3606042afbcf8579cf285a2077ab7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3f104ab706e269fb7e14c9783777384aee9db090
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901043"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419825"
 ---
 # <a name="sysmail_event_log-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85901043"
 |**Log_id**|**int**|Identificatore degli elementi nel log.|  
 |**event_type**|**varchar (11)**|Tipo di avviso inserito nel log. I possibili valori sono errori, avvisi, messaggi informativi, messaggi di operazione riuscita e altri messaggi interni.|  
 |**log_date**|**datetime**|Data e ora di creazione della voce del log.|  
-|**Descrizione**|**nvarchar(max)**|Testo del messaggio registrato.|  
+|**description**|**nvarchar(max)**|Testo del messaggio registrato.|  
 |**process_id**|**int**|ID di processo del programma esterno Posta elettronica database. In genere, viene modificato a ogni avvio del programma esterno Posta elettronica database.|  
 |**mailitem_id**|**int**|Identificatore dell'elemento di posta nella coda della posta. Se il messaggio non è correlato a un elemento di posta elettronica specifico, viene restituito NULL.|  
 |**account_id**|**int**|**Account_id** dell'account correlato all'evento. Se il messaggio non è correlato a un account specifico, viene restituito NULL.|  
@@ -50,7 +51,7 @@ ms.locfileid: "85901043"
  Per accedere a questa vista, è necessario essere un membro del ruolo predefinito del server **sysadmin** o del ruolo del database **DatabaseMailUserRole** . I membri di **DatabaseMailUserRole** che non sono membri del ruolo **sysadmin** possono visualizzare solo gli eventi relativi ai messaggi di posta elettronica che inviano.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sysmail_faileditems &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
+ [sysmail_faileditems &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
  [Programma esterno di Posta elettronica database](../../relational-databases/database-mail/database-mail-external-program.md)  
   
   

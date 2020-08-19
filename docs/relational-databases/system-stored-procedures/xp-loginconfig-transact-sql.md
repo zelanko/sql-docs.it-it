@@ -1,4 +1,5 @@
 ---
+description: xp_loginconfig (Transact-SQL)
 title: xp_loginconfig (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: afef091db5038a6ca302c07a6171557577d46797
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9e86352f992698387334531398bafc5bdfdc2d61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419255"
 ---
 # <a name="xp_loginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ xp_loginconfig ['config_name']
  **'** *config_name* **'**  
  Valore di configurazione da visualizzare. Se *config_name* viene omesso, vengono restituiti tutti i valori di configurazione. *config_name* è di **tipo sysname**e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**login mode**|Modalità di sicurezza dell'account di accesso. I valori possibili sono **mixed** e **l'autenticazione di Windows**.<br /><br /> Sostituito da:<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
 |**default login**|Nome dell'ID di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito per gli utenti autorizzati su connessioni trusted (ovvero gli utenti che non dispongono di un nome di account di accesso corrispondente). L'account di accesso predefinito è **Guest**. Questo valore è disponibile per compatibilità con le versioni precedenti.|  
@@ -93,10 +94,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_denylogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
- [sp_grantlogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_revokelogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [xp_logininfo &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
+ [sp_denylogin &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
+ [sp_grantlogin &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sp_revokelogin &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [xp_logininfo &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

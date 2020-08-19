@@ -1,4 +1,5 @@
 ---
+description: xp_logininfo (Transact-SQL)
 title: xp_logininfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b5a1a7067e1ebda150d0236020288514eb90a8fc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 44b76081c7ec5fdd3496b670b1884347d1a84d1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890731"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419215"
 ---
 # <a name="xp_logininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,12 +42,12 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @acctname = ] 'account_name'`Nome di un utente o gruppo di Windows a cui è stato concesso l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *account_name* è di **tipo sysname**e il valore predefinito è null. Se *account_name* non è specificato, vengono restituiti tutti i gruppi di Windows e gli utenti di Windows a cui sono state concesse in modo esplicito le autorizzazioni di accesso. *account_name* deve essere completo. ad esempio ADVWKS4\macraes o BUILTIN\Administrators.  
+`[ @acctname = ] 'account_name'` Nome di un utente o gruppo di Windows a cui è stato concesso l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *account_name* è di **tipo sysname**e il valore predefinito è null. Se *account_name* non è specificato, vengono restituiti tutti i gruppi di Windows e gli utenti di Windows a cui sono state concesse in modo esplicito le autorizzazioni di accesso. *account_name* deve essere completo. ad esempio ADVWKS4\macraes o BUILTIN\Administrators.  
   
  **' all'**  |  **' members '**  
  Specifica se devono essere restituite informazioni su tutti i percorsi di autorizzazione per l'account oppure sui membri del gruppo di Windows. ** \@ Option** è di tipo **varchar (10)** e il valore predefinito è null. A meno che non sia specificato **All** , viene visualizzato solo il primo percorso di autorizzazione.  
   
-`[ @privilege = ] variable_name`Parametro di output che restituisce il livello di privilegio dell'account di Windows specificato. *variable_name* è di tipo **varchar (10)** e il valore predefinito è "not wanted". Il livello di privilegio restituito è **User**, **admin**o **null**.  
+`[ @privilege = ] variable_name` Parametro di output che restituisce il livello di privilegio dell'account di Windows specificato. *variable_name* è di tipo **varchar (10)** e il valore predefinito è "not wanted". Il livello di privilegio restituito è **User**, **admin**o **null**.  
   
  OUTPUT  
  Quando specificato, inserisce *variable_name* nel parametro di output.  
@@ -86,10 +87,10 @@ EXEC xp_logininfo 'BUILTIN\Administrators';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_denylogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
- [sp_grantlogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [sp_revokelogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sp_denylogin &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
+ [sp_grantlogin &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_revokelogin &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Stored procedure estese generali &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

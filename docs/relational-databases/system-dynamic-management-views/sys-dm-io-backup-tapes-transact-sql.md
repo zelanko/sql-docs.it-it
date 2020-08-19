@@ -1,4 +1,5 @@
 ---
+description: sys.dm_io_backup_tapes (Transact-SQL)
 title: sys. dm_io_backup_tapes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5f20a55b0203486abd8fd67657ce91ccfc16ce74
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 13c44e5a65f351661d2d3b642beb7e08fe0604c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419705"
 ---
 # <a name="sysdm_io_backup_tapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85898809"
 |**mount_request_time**|**datetime**|Data e ora in cui il montaggio è stato richiesto. NULL se non è presente alcun montaggio in sospeso (**status! = 2**). Ammette i valori Null.|  
 |**mount_expiration_time**|**datetime**|Data e ora di scadenza della richiesta di montaggio (timeout). NULL se non è presente alcun montaggio in sospeso (**status! = 2**). Ammette i valori Null.|  
 |**database_name**|**nvarchar(256)**|Database di cui eseguire il backup nel dispositivo. Ammette i valori Null.|  
-|**SPID**|**int**|ID di sessione. Identifica l'utente del nastro. Ammette i valori Null.|  
+|**spid**|**int**|ID di sessione. Identifica l'utente del nastro. Ammette i valori Null.|  
 |**command**|**int**|Comando che esegue il backup. Ammette i valori Null.|  
 |**command_desc**|**nvarchar(120)**|Descrizione del comando. Ammette i valori Null.|  
 |**media_family_id**|**int**|Indice del gruppo di supporti (1..* . n*), *n* è il numero di gruppi di supporti nel set di supporti. Ammette i valori Null.|  
@@ -55,7 +56,7 @@ ms.locfileid: "85898809"
  L'utente deve disporre dell'autorizzazione VIEW SERVER STATE nel server.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica relative a I/O &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

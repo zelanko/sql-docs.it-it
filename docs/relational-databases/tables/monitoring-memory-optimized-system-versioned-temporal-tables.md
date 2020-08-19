@@ -1,4 +1,5 @@
 ---
+description: Monitoraggio di una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria
 title: Monitoraggio di una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2016
@@ -11,12 +12,12 @@ ms.assetid: 7a06785d-dbcb-44de-b95c-26b131471bee
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6e00ccde6b0b0788c9007a26cb922ccfcecdc21
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 57ef17e8580246a56ce0582e4a0fa69a013de2d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555896"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418985"
 ---
 # <a name="monitoring-memory-optimized-system-versioned-temporal-tables"></a>Monitoraggio di una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria
 

@@ -1,4 +1,5 @@
 ---
+description: IHarticles (Transact-SQL)
 title: IHarticles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 252b68ea2f6512f2acbc9bbb7555eae172a641ef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1ef51387b774f8961cb7abe30f2af4615adc0973
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419235"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "85890330"
 |**tablespace_name**|**nvarchar(255)**|Identifica lo spazio tabella utilizzato dalla tabella di registrazione per l'articolo.|  
 |**objid**|**int**|Questa colonna non viene utilizzata ed è inclusa solo per rendere la vista [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) della tabella **IHarticles** compatibile con la vista [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) utilizzata per gli articoli di SQL Server ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
 |**sync_objid**|**int**|Questa colonna non viene utilizzata ed è inclusa solo per rendere la vista [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) della tabella **IHarticles** compatibile con la vista [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) utilizzata per gli articoli di SQL Server ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
-|**Descrizione**|**nvarchar(255)**|Voce descrittiva per l'articolo.|  
+|**description**|**nvarchar(255)**|Voce descrittiva per l'articolo.|  
 |**publisher_status**|**int**|Viene utilizzato per indicare se la vista che definisce l'articolo pubblicato è stata definita chiamando [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md).<br /><br /> **0**  =  [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) è stato chiamato.<br /><br /> **1**  =  [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) non è stato chiamato.|  
 |**article_view_owner**|**nvarchar(255)**|Proprietario dell'oggetto di sincronizzazione nel server di pubblicazione utilizzato dall'agente di lettura log.|  
 |**article_view**|**nvarchar(255)**|Oggetto di sincronizzazione nel server di pubblicazione utilizzato dall'agente di lettura log.|  
@@ -67,9 +68,9 @@ ms.locfileid: "85890330"
   
 ## <a name="see-also"></a>Vedere anche  
  [Replica di database eterogenei](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Viste di replica &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addarticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [Tabelle di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Viste di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addarticle &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Funzioni dell'agente di raccolta dati (Transact-SQL)
 title: Funzioni dell'agente di raccolta dati (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8efe8bb4-face-4608-83f4-cc7c6e9faf31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe7194b4a69a453245f80f9aee2b49ede42d54cb
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f4a2dbefedf57dc634a9bd14eab5738ba2b03ccd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419585"
 ---
 # <a name="data-collector-functions--transact-sql"></a>Funzioni dell'agente di raccolta dati (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

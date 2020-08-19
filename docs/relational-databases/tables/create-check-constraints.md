@@ -1,4 +1,5 @@
 ---
+description: Creare vincoli CHECK
 title: Creare vincoli CHECK | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2017
@@ -17,12 +18,12 @@ ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3c631e4c733c87662ab1a582f1388913f0c2b3f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 177caf959cd9f957525dd50a0b63a0dc2b304115
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419045"
 ---
 # <a name="create-check-constraints"></a>Creare vincoli CHECK
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,13 +49,13 @@ ms.locfileid: "85753834"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessario disporre delle autorizzazioni ALTER per la tabella.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-create-a-new-check-constraint"></a>Per creare un nuovo vincolo CHECK  
   
 1.  In **Esplora oggetti**espandere la tabella a cui si vuole aggiungere un vincolo CHECK, fare clic con il pulsante destro del mouse su **Vincoli** e scegliere **Nuovo vincolo**.  
   
-2.  Nella finestra di dialogo **Vincoli CHECK** fare clic nel campo **Espressione** e quindi sui puntini di sospensione **(...)** .  
+2.  Nella finestra di dialogo **Vincoli CHECK** fare clic nel campo **Espressione** e quindi sui puntini di sospensione **(...)**.  
   
 3.  Nella finestra di dialogo **Espressione vincolo CHECK** immettere le espressioni SQL per il vincolo CHECK: Ad esempio per limitare le voci nella colonna `SellEndDate` della tabella `Product` a un valore che è maggiore o uguale alla data nella colonna `SellStartDate` o è un valore NULL, digitare:  
   
@@ -77,7 +78,7 @@ ms.locfileid: "85753834"
   
 6.  Nella categoria **Progettazione tabelle** è possibile impostare quando deve essere applicato il vincolo.  
   
-    |**A:**|**Selezionare Sì nei seguenti campi:**|  
+    |**In:**|**Selezionare Sì nei seguenti campi:**|  
     |-------------|---------------------------------------------|  
     |Testare il vincolo su dati che esistevano prima di creare il vincolo|**Verificare i dati esistenti durante la creazione o l'abilitazione**|  
     |Applicare il vincolo quando si verifica un'operazione di replica su questa tabella|**Applicare per replica**|  
@@ -85,7 +86,7 @@ ms.locfileid: "85753834"
   
 7.  Fare clic su **Close**.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-a-new-check-constraint"></a>Per creare un nuovo vincolo CHECK  
   

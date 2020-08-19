@@ -1,4 +1,5 @@
 ---
+description: Trigger DDL
 title: Trigger DDL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89845e119f40b0a339bdeb7d6809ad0c017afc0d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e70bf690c7e236bbe52eae905730dec8f9ac48a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418955"
 ---
 # <a name="ddl-triggers"></a>Trigger DDL
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -114,10 +115,10 @@ GO
 |Attività|Argomento|  
 |----------|-----------|  
 |Vengono descritte le procedure di creazione, modifica e disabilitazione dei trigger DDL.|[Implementare trigger DDL](../../relational-databases/triggers/implement-ddl-triggers.md)|  
-|Viene illustrato come creare un trigger CLR DDL.|[Creare trigger CLR](../../relational-databases/triggers/create-clr-triggers.md)|  
-|Viene descritto come restituire informazioni sui trigger DDL.|[Recuperare informazioni sui trigger DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md)|  
-|Viene descritto come restituire informazioni relative a un evento che attiva un trigger DDL utilizzando la funzione EVENTDATA.|[Usare la funzione EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md)|  
-|Viene descritto come gestire la sicurezza dei trigger.|[Gestire la sicurezza dei trigger](../../relational-databases/triggers/manage-trigger-security.md)|  
+|Viene illustrato come creare un trigger CLR DDL.|[Creazione di trigger CLR](../../relational-databases/triggers/create-clr-triggers.md)|  
+|Viene descritto come restituire informazioni sui trigger DDL.|[Ottenere informazioni sui trigger DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md)|  
+|Viene descritto come restituire informazioni relative a un evento che attiva un trigger DDL utilizzando la funzione EVENTDATA.|[Utilizzo della funzione EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md)|  
+|Viene descritto come gestire la sicurezza dei trigger.|[Gestione della sicurezza dei trigger](../../relational-databases/triggers/manage-trigger-security.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Trigger DML](../../relational-databases/triggers/dml-triggers.md)   

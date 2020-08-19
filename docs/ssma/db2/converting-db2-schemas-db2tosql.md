@@ -1,4 +1,5 @@
 ---
+description: Conversione di schemi DB2 (DB2ToSQL)
 title: Conversione di schemi DB2 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 13afcabf85515b211d8493990a59950dc97d72f5
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9dbf89c8027737a02d4eded9dc2e743e683b65e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418557"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Conversione di schemi DB2 (DB2ToSQL)
 Dopo la connessione a DB2, la connessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'impostazione delle opzioni di mapping dei dati e del progetto, è possibile convertire gli oggetti di database DB2 in oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
@@ -35,7 +36,7 @@ Nella tabella seguente vengono indicati gli oggetti DB2 convertiti e gli oggetti
 |Tipi di dati|**SSMA esegue il mapping di ogni tipo, ad eccezione di quanto indicato di seguito:**<br /><br />CLOB: alcune funzioni native per l'utilizzo di questo tipo non sono supportate (ad esempio CLOB_EMPTY ())<br /><br />BLOB: alcune funzioni native per l'utilizzo di questo tipo non sono supportate (ad esempio BLOB_EMPTY ())<br /><br />DBLOB: alcune funzioni native per l'utilizzo di questo tipo non sono supportate (ad esempio DBLOB_EMPTY ())|  
 |Tipi definiti dall'utente|**SSMA esegue il mapping dei seguenti elementi definiti dall'utente:**<br /><br />Tipo distinct<br /><br />Tipo strutturato<br /><br />Tipi di dati di SQL PL-Nota: il tipo di cursore debole non è supportato.|  
 |Registri speciali|**SSMA esegue il mapping solo di registri elencati di seguito:**<br /><br />TIMESTAMP CORRENTE<br /><br />DATA CORRENTE<br /><br />ORA CORRENTE<br /><br />FUSO ORARIO CORRENTE<br /><br />UTENTE CORRENTE<br /><br />SESSION_USER e utente<br /><br />SYSTEM_USER<br /><br />CLIENT_APPLNAME CORRENTE<br /><br />CLIENT_WRKSTNNAME CORRENTE<br /><br />TIMEOUT BLOCCO CORRENTE<br /><br />SCHEMA CORRENTE<br /><br />SERVER CORRENTE<br /><br />ISOLAMENTO CORRENTE<br /><br />Non è stato eseguito il mapping di altri registri speciali alla semantica di SQL Server.|  
-|CREATE TABLE|**SSMA esegue il mapping di CREATE TABLE con le eccezioni seguenti:**<br /><br />Tabelle di clustering multidimensionali (MDC)<br /><br />Tabelle con intervallo cluster (RCT)<br /><br />Tabelle partizionate<br /><br />Tabella scollegata<br /><br />Clausola di acquisizione dati<br /><br />Opzione IMPLICITamente nascosta<br /><br />Opzione VOLATILE|  
+|CREA TABELLA|**SSMA esegue il mapping di CREATE TABLE con le eccezioni seguenti:**<br /><br />Tabelle di clustering multidimensionali (MDC)<br /><br />Tabelle con intervallo cluster (RCT)<br /><br />Tabelle partizionate<br /><br />Tabella scollegata<br /><br />Clausola di acquisizione dati<br /><br />Opzione IMPLICITamente nascosta<br /><br />Opzione VOLATILE|  
 |CREATE VIEW|SSMA Maps crea la vista con l'opzione ' WITH LOCAL CHECK OPTION ', ma non è stato eseguito il mapping di altre opzioni alla semantica di SQL Server|  
 |CREATE INDEX|**SSMA Maps CREATE INDEX con le eccezioni seguenti:**<br /><br />Indice XML<br /><br />Opzione BUSINESS_TIME senza sovrapposizioni<br /><br />Clausola PARTITIONed<br /><br />Opzione solo specifica<br /><br />Estendi USING (opzione)<br /><br />MINPCTUSED-opzione<br /><br />Opzione di suddivisione pagina|  
 |Trigger|**SSMA esegue il mapping della semantica del trigger seguente:**<br /><br />Trigger AFTER/per ogni riga<br /><br />DOPO/FOR ogni istruzione viene attivata<br /><br />BEFORe/FOR ogni riga e anziché/per ogni trigger di riga|  
@@ -66,7 +67,7 @@ Nella tabella seguente vengono indicati gli oggetti DB2 convertiti e gli oggetti
 |Istruzione WHILE|Viene mappato.|  
 |OTTENERE l'istruzione di diagnostica|**SSMA Maps GET Diagnostics con le eccezioni seguenti:**<br /><br />Viene eseguito il mapping di ROW_COUNT.<br /><br />Viene eseguito il mapping di DB2_RETURN_STATUS.<br /><br />Viene eseguito il mapping di MESSAGE_TEXT.<br /><br />DB2_SQL_NESTING_LEVEL: non esegue il mapping alla semantica di SQL Server<br /><br />DB2_TOKEN_STRING: non esegue il mapping alla semantica di SQL Server|  
 |Cursori|**SSMA esegue il mapping dei CURSORi con le eccezioni seguenti:**<br /><br />Istruzione ALLOCAte CURSOR-non viene mappata alla semantica SQL Server<br /><br />Istruzione ASSOCIATE LOCATORs: non esegue il mapping alla semantica di SQL Server<br /><br />Istruzione DECLARE CURSOR-la clausola restituzione non è mappata alla semantica di SQL Server<br /><br />Istruzione FETCH-mapping parziale. Le variabili come destinazione sono supportate solo. Il descrittore SQLDA non è mappato alla semantica di SQL Server|  
-|Variabili|Viene mappato.|  
+|variables|Viene mappato.|  
 |Eccezioni, gestori e condizioni|**SSMA esegue il mapping di "gestione delle eccezioni" con le eccezioni seguenti:**<br /><br />Gestori di uscita-mappati.<br /><br />Gestori di annullamento-mappati.<br /><br />Gestori continua-non è stato eseguito il mapping.<br /><br />Condizioni: non viene mappata alla semantica di SQL Server.|  
 |SQL dinamica|Non mappato.|  
 |Alias|Viene mappato.|  
