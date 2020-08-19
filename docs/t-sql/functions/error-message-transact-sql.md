@@ -1,5 +1,6 @@
 ---
-title: ERROR_MESSAGE (Transact-SQL) | Microsoft Docs
+description: ERROR_MESSAGE (Transact-SQL)
+title: ERROR_MESSAGE (Transact-SQL)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ ms.assetid: f32877a6-5f17-418c-a32c-5a1a344b3c45
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a6eac4fa014241d99824ce90b13ca9877a36e4a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 71a281b8af7d4532701a09cf1da274f523350f9f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111610"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366147"
 ---
 # <a name="error_message-transact-sql"></a>ERROR_MESSAGE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +42,7 @@ Questa funzione restituisce il testo del messaggio dell'errore che ha causato l'
 ```  
 ERROR_MESSAGE ( )   
 ```  
-  
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>Tipi restituiti
