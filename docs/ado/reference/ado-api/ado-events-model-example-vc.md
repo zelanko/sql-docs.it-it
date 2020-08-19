@@ -1,4 +1,5 @@
 ---
+description: Esempio del modello di eventi ADO (VC++)
 title: Esempio di modello di eventi ADO (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bce894f1e0cce8c8d8800b2633924f9cc5bc6bd9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2bdb668584a0a725add4decc0bd64217d5dacbb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747345"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451433"
 ---
 # <a name="ado-events-model-example-vc"></a>Esempio del modello di eventi ADO (VC++)
 La sezione Visual C++ della [creazione di un'istanza dell'evento ADO per lingua](../../../ado/guide/data/ado-event-instantiation-by-language.md) fornisce una descrizione generale di come creare un'istanza del modello di eventi ADO. Di seguito è riportato un esempio specifico di creazione di un'istanza del modello di eventi all'interno dell'ambiente creato dalla direttiva **#import** .  

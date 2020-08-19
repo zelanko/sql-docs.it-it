@@ -1,4 +1,5 @@
 ---
+description: Interfaccia ADOStreamConstruction
 title: Interfaccia ADOStreamConstruction | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75af8d899c4fb0b97f4ee09795888ef773999b60
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f911be2784e849c8feb271127e2a83ed1ce90c4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451313"
 ---
 # <a name="adostreamconstruction-interface"></a>Interfaccia ADOStreamConstruction
 L'interfaccia **ADOStreamConstruction** viene utilizzata per costruire un oggetto **flusso** ADO da un oggetto OLE DB **IStream** in un'applicazione C/C++.  
@@ -32,7 +33,7 @@ L'interfaccia **ADOStreamConstruction** viene utilizzata per costruire un oggett
 |[Flusso](../../../ado/reference/ado-api/stream-property.md)|Lettura/Scrittura. Ottiene o imposta un oggetto **flusso** OLE DB.|  
   
 ## <a name="methods"></a>Metodi  
- No.  
+ Nessuno.  
   
 ## <a name="events"></a>Eventi  
  No.  

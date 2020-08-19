@@ -1,4 +1,5 @@
 ---
+description: Metodo DeleteRecord (ADO)
 title: Metodo DeleteRecord (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 550638de710f709616e03cb79afd69f1e533ce9e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94423c36dd89d6ea14ea39b7546ef1a5bef7c620
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755320"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444103"
 ---
 # <a name="deleterecord-method-ado"></a>Metodo DeleteRecord (ADO)
 Elimina un'entità rappresentata da un [record](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -34,11 +35,11 @@ Record.DeleteRecord Source, Async
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *origine*  
- Facoltativa. Valore **stringa** che contiene un URL che identifica l'entità, ad esempio il file o la directory, da eliminare. Se *source* viene omesso o specifica una stringa vuota, l'entità rappresentata dal [record](../../../ado/reference/ado-api/record-object-ado.md) corrente viene eliminata. Se il record è un record di raccolta ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) di **adCollectionRecord**, ad esempio una directory), verranno eliminati anche tutti gli elementi figlio, ad esempio le sottodirectory.  
+ *Origine*  
+ Facoltativo. Valore **stringa** che contiene un URL che identifica l'entità, ad esempio il file o la directory, da eliminare. Se *source* viene omesso o specifica una stringa vuota, l'entità rappresentata dal [record](../../../ado/reference/ado-api/record-object-ado.md) corrente viene eliminata. Se il record è un record di raccolta ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) di **adCollectionRecord**, ad esempio una directory), verranno eliminati anche tutti gli elementi figlio, ad esempio le sottodirectory.  
   
- *Async*  
- Facoltativa. Valore **booleano** che, se impostato su **true**, specifica che l'operazione di eliminazione è asincrono.  
+ *Asincrona*  
+ Facoltativo. Valore **booleano** che, se impostato su **true**, specifica che l'operazione di eliminazione è asincrono.  
   
 ## <a name="remarks"></a>Osservazioni  
  Le operazioni sull'oggetto rappresentato da questo **record** possono avere esito negativo dopo il completamento di questo metodo. Dopo la chiamata a **DeleteRecord**, il **record** deve essere chiuso perché il comportamento del **record** può diventare imprevedibile in base al momento in cui il provider aggiorna il **record** con l'origine dati.  

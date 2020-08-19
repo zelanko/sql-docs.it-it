@@ -1,4 +1,5 @@
 ---
+description: Gestione delle pubblicazioni
 title: Gestire le pubblicazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ ms.assetid: d5bf7340-2b0b-4593-965c-de04ae628344
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bde5ff877ff6ddbcb9e4e5b69953e20853a8d3e0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 429b1693f2acbb233565ac834783b0727b49746b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915377"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423425"
 ---
 # <a name="maintain-publications"></a>Gestione delle pubblicazioni
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

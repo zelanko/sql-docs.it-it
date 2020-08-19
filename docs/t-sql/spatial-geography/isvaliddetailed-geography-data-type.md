@@ -1,4 +1,5 @@
 ---
+description: IsValidDetailed (tipo di dati geography)
 title: IsValidDetailed (tipo di dati geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9022b3a86910ac8430b408de30dee3dfbcca4254
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6e272d607592660c123a25847143a4aeff075fc7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422355"
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed (tipo di dati geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86555219"
   
  Tipo CLR restituito: **string**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Nella tabella seguente sono elencati i valori restituiti possibili:  
   
 |Valore restituito|Descrizione|  
@@ -67,7 +68,7 @@ ms.locfileid: "86555219"
 |24416|Non valido perché nella curva {0} il bordo che inizia al punto {1} è una linea o un arco degenerato con estremità diametralmente opposte.|  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente di oggetto spaziale non valido illustra il comportamento del metodo **IsValidDetailed()** .  
+ L'esempio seguente di oggetto spaziale non valido illustra il comportamento del metodo **IsValidDetailed()**.  
   
 ```sql  
 DECLARE @p GEOGRAPHY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  

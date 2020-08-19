@@ -1,4 +1,5 @@
 ---
+description: catalog.move_environment (database SSISDB)
 title: catalog.move_environment (database SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 128970f410897b9c9797b27a6d1e3af28407f1f5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2c8fd91f3b37aa410ca3aa86d2825c27a78e1217
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912993"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430093"
 ---
 # <a name="catalogmove_environment-ssisdb-database"></a>catalog.move_environment (database SSISDB)
 
@@ -36,13 +37,13 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>Argomenti  
  [ @source_folder = ] *source_folder*  
- Nome della cartella di origine, in cui si trova l'ambiente prima dello spostamento. *source_folder* è di tipo **nvarchar(128)** .  
+ Nome della cartella di origine, in cui si trova l'ambiente prima dello spostamento. *source_folder* è di tipo **nvarchar(128)**.  
   
  [ @environment_name = ] *environment_name*  
  Nome dell'ambiente che deve essere spostato. *environment_name* è di tipo **nvarchar(128)** .  
   
  [ @destination_folder = ] *destination_folder*  
- Nome della cartella di destinazione, in cui si trova l'ambiente dopo lo spostamento. *destination_folder* è di tipo **nvarchar(128)** .  
+ Nome della cartella di destinazione, in cui si trova l'ambiente dopo lo spostamento. *destination_folder* è di tipo **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  
@@ -68,7 +69,7 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 -   Utente senza autorizzazioni appropriate.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I riferimenti all'ambiente dai progetti non seguono l'ambiente durante lo spostamento, pertanto è necessario aggiornarli di conseguenza. Questa stored procedure verrà completata anche se i riferimenti all'ambiente vengono interrotti spostando un ambiente. I riferimenti all'ambiente devono essere aggiornati dopo il completamento di questa stored procedure.  
   
 > [!NOTE]  

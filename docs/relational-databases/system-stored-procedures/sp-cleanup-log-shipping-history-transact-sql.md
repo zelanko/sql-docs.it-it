@@ -1,4 +1,5 @@
 ---
+description: sp_cleanup_log_shipping_history (Transact-SQL)
 title: sp_cleanup_log_shipping_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d7b69c82e4e2043c8647ba19a8b40306d6836307
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 42edf059f077f0896cd3c62b1420658c982b3d5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486149"
 ---
 # <a name="sp_cleanup_log_shipping_history-transact-sql"></a>sp_cleanup_log_shipping_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_cleanup_log_shipping_history
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @agent_id = ] 'agent_id',`ID primario per il backup o ID secondario per la copia o il ripristino. *agent_id* è di tipo **uniqueidentifier** e non può essere null.  
+`[ @agent_id = ] 'agent_id',` ID primario per il backup o ID secondario per la copia o il ripristino. *agent_id* è di tipo **uniqueidentifier** e non può essere null.  
   
-`[ @agent_type = ] 'agent_type'`Tipo di log shipping processo. 0 = Backup, 1 = Copia, 2 = Ripristino. *agent_type* è di **tinyint** e non può essere null.  
+`[ @agent_type = ] 'agent_type'` Tipo di log shipping processo. 0 = Backup, 1 = Copia, 2 = Ripristino. *agent_type* è di **tinyint** e non può essere null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

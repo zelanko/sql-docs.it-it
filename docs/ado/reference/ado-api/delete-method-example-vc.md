@@ -1,4 +1,5 @@
 ---
+description: Esempio del metodo Delete (VC++)
 title: Esempio di metodo Delete (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7cc78fb5-2701-49dc-bc22-06613b10cecb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 121db203f5f30abe54bf021f1ecf52784215074d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d67a0a5c73c258bbd2f176897acefd7f2cd8464d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755347"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444113"
 ---
 # <a name="delete-method-example-vc"></a>Esempio del metodo Delete (VC++)
 In questo esempio viene usato il metodo [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) per rimuovere un record specificato da un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

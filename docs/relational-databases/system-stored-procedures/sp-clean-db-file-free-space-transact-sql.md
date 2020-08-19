@@ -1,4 +1,5 @@
 ---
+description: sp_clean_db_file_free_space (Transact-SQL)
 title: sp_clean_db_file_free_space (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d8c45d25dd63149145fc732642b873bc4e7a6193
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 834521f77db142d8aba63f5638df05bd83b64811
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122450"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486186"
 ---
 # <a name="sp_clean_db_file_free_space-transact-sql"></a>sp_clean_db_file_free_space (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +43,13 @@ sp_clean_db_file_free_space
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- @dbname='*database_name*'  
+ @dbname ='*database_name*'  
  Nome del database da pulire. *dbname* è di **tipo sysname** e non può essere null.  
   
- @fileid='*file_number*'  
+ @fileid ='*file_number*'  
  ID del file di dati su cui eseguire la pulizia. *file_number* è di **tipo int** e non può essere null.  
   
- @cleaning_delay='*delay_in_seconds*'  
+ @cleaning_delay ='*delay_in_seconds*'  
  Specifica un intervallo di ritardo tra le pulizie delle pagine per ridurre l'impatto sul sistema di I/O. *delay_in_seconds* è di **tipo int** e il valore predefinito è 0.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
@@ -76,7 +77,7 @@ EXEC sp_clean_db_file_free_space @dbname = N'AdventureWorks2012', @fileid = 1;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Guida al processo di pulizia fantasma](../ghost-record-cleanup-process-guide.md)    
  [sp_clean_db_free_space (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md)
    

@@ -1,4 +1,5 @@
 ---
+description: Eseguire la migrazione di dati da o verso colonne usando Always Encrypted con l'Importazione/Esportazione guidata SQL Server
 title: Eseguire la migrazione di dati da o verso colonne usando Always Encrypted con l'Importazione/Esportazione guidata SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 10/31/2019
@@ -16,12 +17,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42898b255427c5f3d870a21e17e2cdeb17039919
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 89592db85cd95996274484d17fd968d70a552373
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627315"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423375"
 ---
 # <a name="migrate-data-to-or-from-columns-using-always-encrypted-with-sql-server-import-and-export-wizard"></a>Eseguire la migrazione di dati da o verso colonne usando Always Encrypted con l'Importazione/Esportazione guidata SQL Server 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -75,8 +76,8 @@ Per crittografare o decrittografare i dati archiviati in un database di SQL Serv
 
 - **Archivio certificati - Computer locale**: è necessario avere accesso in lettura al certificato usato come chiave master della colonna o essere l'amministratore del computer.
 - **Azure Key Vault**: sono necessarie le autorizzazioni _get_, _unwrapKey_ e _verify_ per l'insieme di credenziali contenente la chiave master della colonna.
-- **Provider dell'archivio chiavi (CNG)** : l'autorizzazione e le credenziali necessarie; potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.
-- **Provider del servizio di crittografia (CAPI)** : l'autorizzazione e le credenziali necessarie; potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
+- **Provider dell'archivio chiavi (CNG)**: l'autorizzazione e le credenziali necessarie; potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.
+- **Provider del servizio di crittografia (CAPI)**: l'autorizzazione e le credenziali necessarie; potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
 Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ## <a name="next-steps"></a>Passaggi successivi

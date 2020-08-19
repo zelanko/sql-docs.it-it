@@ -1,4 +1,5 @@
 ---
+description: Metodo CancelUpdate (ADO)
 title: Metodo CancelUpdate (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ecc08dde974826846058d4d8927df202367d28d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 6482336ceed00e131da38b151a8b6ffe33b3638c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451023"
 ---
 # <a name="cancelupdate-method-ado"></a>Metodo CancelUpdate (ADO)
 Annulla tutte le modifiche apportate alla riga corrente o nuova di un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oppure alla raccolta di [campi](../../../ado/reference/ado-api/fields-collection-ado.md) di un oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) , prima di chiamare il metodo [Update](../../../ado/reference/ado-api/update-method.md) .  
@@ -55,7 +56,7 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esempio di metodi Update e CancelUpdate (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [Esempio di metodi Update e CancelUpdate (VC + +)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
  [Metodo AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   

@@ -1,4 +1,5 @@
 ---
+description: Generazione e definizione di eventi in un'attività personalizzata
 title: Generazione e definizione di eventi in un'attività personalizzata | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a0cdd94e6ad739b24eccc5ce466a4e916850674
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 69f2f6c7f27f4a199ff96661595bb03b3eaafb62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916318"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477375"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>Generazione e definizione di eventi in un'attività personalizzata
 
@@ -47,7 +48,7 @@ ms.locfileid: "86916318"
   
  L'esempio di codice seguente illustra il metodo **InitializeTask** di un'attività personalizzata, in cui vengono creati due eventi e vengono impostate le relative proprietà. I nuovi eventi vengono quindi aggiunti alla raccolta <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos>.  
   
- Il primo evento personalizzato presenta un elemento *eventName* di "**OnBeforeIncrement**" e un elemento *description* di "**Fires after the initial value is updated.** " Il parametro successivo, il valore **true**, indica che questo evento deve consentire la creazione di un contenitore del gestore eventi per gestire l’evento. Il gestore eventi è un contenitore che fornisce la struttura in un pacchetto e servizi alle attività, analogamente ad altri contenitori come Sequence, ForLoop e ForEachLoop. Quando il parametro *allowEventHandlers*è **true**, gli oggetti <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> vengono creati per l'evento. I parametri definiti per l'evento sono ora disponibili per <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> nella raccolta di variabili di <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
+ Il primo evento personalizzato presenta un elemento *eventName* di "**OnBeforeIncrement**" e un elemento *description* di "**Fires after the initial value is updated.**" Il parametro successivo, il valore **true**, indica che questo evento deve consentire la creazione di un contenitore del gestore eventi per gestire l’evento. Il gestore eventi è un contenitore che fornisce la struttura in un pacchetto e servizi alle attività, analogamente ad altri contenitori come Sequence, ForLoop e ForEachLoop. Quando il parametro *allowEventHandlers*è **true**, gli oggetti <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> vengono creati per l'evento. I parametri definiti per l'evento sono ora disponibili per <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> nella raccolta di variabili di <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  

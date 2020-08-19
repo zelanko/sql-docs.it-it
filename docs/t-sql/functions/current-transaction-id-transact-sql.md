@@ -1,5 +1,6 @@
 ---
-title: CURRENT_TRANSACTION_ID (Transact-SQL) | Microsoft Docs
+description: CURRENT_TRANSACTION_ID (Transact-SQL)
+title: CURRENT_TRANSACTION_ID (Transact-SQL)
 ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
@@ -17,14 +18,15 @@ helpviewer_keywords:
 ms.assetid: 82cd9f92-d935-45a0-a433-620d6e15b467
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3304e738d93aa019f43505352d9491c6ccc42c9d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7dfe1927254c29b4a6f0d80adeef7652c7fd9477
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468121"
 ---
 # <a name="current_transaction_id-transact-sql"></a>CURRENT_TRANSACTION_ID (Transact-SQL)
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Questa funzione restituisce l'ID della transazione corrente nella sessione corrente.
@@ -33,7 +35,7 @@ Questa funzione restituisce l'ID della transazione corrente nella sessione corre
   
 ## <a name="syntax"></a>Sintassi  
   
-```sql
+```syntaxsql
 CURRENT_TRANSACTION_ID( )  
   
 ```  
@@ -55,11 +57,11 @@ Questo esempio restituisce l'ID transazione della sessione corrente:
 SELECT CURRENT_TRANSACTION_ID();  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 [sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)  
 [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md)  
 [Sicurezza a livello di riga](../../relational-databases/security/row-level-security.md)  
-[CONTEXT_INFO  &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)  
+[CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)  
 [SET CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)
   
   

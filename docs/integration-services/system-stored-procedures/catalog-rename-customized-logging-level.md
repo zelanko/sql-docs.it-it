@@ -1,4 +1,5 @@
 ---
+description: catalog.rename_customized_logging_level
 title: catalog.rename_customized_logging_level | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: b1a57d5e-3f03-4901-8b2b-bb8b371b595b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2640a8a44472036b564a926a9f613cefead1922c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5b6b4770034771049d19e3a1eb3e8c43205aad46
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430083"
 ---
 # <a name="catalogrename_customized_logging_level"></a>catalog.rename_customized_logging_level 
 
@@ -34,14 +35,14 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
  [ @old_name = ] *old_name*  
  Nome del livello di registrazione personalizzato esistente da rinominare.  
   
- *old_name* è di tipo **nvarchar(128)** .  
+ *old_name* è di tipo **nvarchar(128)**.  
   
  [ @new_name = ] *new_name*  
  Nuovo nome del livello di registrazione personalizzato specificato.  
   
- *new_name* è di tipo **nvarchar(128)** .  
+ *new_name* è di tipo **nvarchar(128)**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="return-codes"></a>Codici restituiti  
  0 (esito positivo)  

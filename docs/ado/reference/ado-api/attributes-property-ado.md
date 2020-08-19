@@ -1,4 +1,5 @@
 ---
+description: Proprietà Attributes (ADO)
 title: Proprietà Attributes (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe649e6636f33dfc73ee5aac949830b4175cd3ec
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 43f374429d38cb4d3cb4516d640b6d05ef8e3efb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451203"
 ---
 # <a name="attributes-property-ado"></a>Proprietà Attributes (ADO)
 Indica una o più caratteristiche di un oggetto.  
@@ -38,7 +39,7 @@ Indica una o più caratteristiche di un oggetto.
   
  Per un oggetto [Proprietà](../../../ado/reference/ado-api/property-object-ado.md) , la proprietà **Attributes** è di sola lettura e il relativo valore può essere la somma di uno o più valori [PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md) .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare la proprietà **Attributes** per impostare o restituire le caratteristiche di oggetti **connessione** , oggetti **parametro** , oggetti **campo** o oggetti **Property** .  
   
  Quando si impostano più attributi, è possibile sommare le costanti appropriate. Se si imposta il valore della proprietà su una somma, incluse le costanti incompatibili, si verificherà un errore.  

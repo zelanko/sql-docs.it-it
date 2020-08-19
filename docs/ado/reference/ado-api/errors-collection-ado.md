@@ -1,4 +1,5 @@
 ---
+description: Raccolta Errors (ADO)
 title: Raccolta Errors (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c8f60951646e635d6124c9fe0fd4290c261c959
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6f4719c9dcf182b6840ad950373b35c7ea8f0361
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443953"
 ---
 # <a name="errors-collection-ado"></a>Raccolta Errors (ADO)
 Contiene tutti gli oggetti [Error](../../../ado/reference/ado-api/error-object.md) creati in risposta a un singolo errore correlato al provider.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Tutte le operazioni che coinvolgono oggetti ADO possono generare uno o più errori del provider. Quando si verifica un errore, è possibile inserire uno o più oggetti **Error** nella raccolta **Errors** dell'oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Quando un'altra operazione ADO genera un errore, la raccolta **Errors** viene cancellata e il nuovo set di oggetti **Error** può essere inserito nella raccolta **Errors** .  
   
  Ogni oggetto **Error** rappresenta un errore specifico del provider, non un errore ADO. Gli errori ADO vengono esposti al meccanismo di gestione delle eccezioni in fase di esecuzione. In Microsoft Visual Basic, ad esempio, l'occorrenza di un errore specifico di ADO attiverà un evento [OnError](../../../ado/reference/rds-api/onerror-event-rds.md) e verrà visualizzato nell'oggetto **Err** .  

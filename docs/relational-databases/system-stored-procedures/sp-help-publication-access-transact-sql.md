@@ -1,4 +1,5 @@
 ---
+description: sp_help_publication_access (Transact-SQL)
 title: sp_help_publication_access (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 11571a7a3fb97a164291a3f3949d30205305daf7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a40f12ade4dcbb08609da6184fa0a96ca9926cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485984"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,13 +41,13 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione a cui accedere. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione a cui accedere. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @return_granted = ] 'return_granted'`ID di accesso. *return_granted* è di **bit**e il valore predefinito è 1. Se viene specificato **0** e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene utilizzata l'autenticazione, vengono restituiti gli account di accesso disponibili visualizzati nel server di pubblicazione, ma non nel server di distribuzione. Se viene specificato **0** e viene utilizzata l'autenticazione di Windows, vengono restituiti gli account di accesso non autorizzati in modo specifico al server di pubblicazione o al server di distribuzione.  
+`[ @return_granted = ] 'return_granted'` ID di accesso. *return_granted* è di **bit**e il valore predefinito è 1. Se viene specificato **0** e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene utilizzata l'autenticazione, vengono restituiti gli account di accesso disponibili visualizzati nel server di pubblicazione, ma non nel server di distribuzione. Se viene specificato **0** e viene utilizzata l'autenticazione di Windows, vengono restituiti gli account di accesso non autorizzati in modo specifico al server di pubblicazione o al server di distribuzione.  
   
-`[ @login = ] 'login'`ID di accesso di sicurezza standard. *login* è di **tipo sysname**e il valore predefinito è **%** .  
+`[ @login = ] 'login'` ID di accesso di sicurezza standard. *login* è di **tipo sysname**e il valore predefinito è **%** .  
   
-`[ @initial_list = ] initial_list`Specifica se restituire tutti i membri con accesso alla pubblicazione o solo quelli che hanno eseguito l'accesso prima che nuovi membri siano stati aggiunti all'elenco. *initial_list* è di bit e il valore predefinito è **0**.  
+`[ @initial_list = ] initial_list` Specifica se restituire tutti i membri con accesso alla pubblicazione o solo quelli che hanno eseguito l'accesso prima che nuovi membri siano stati aggiunti all'elenco. *initial_list* è di bit e il valore predefinito è **0**.  
   
  **1** restituisce informazioni per tutti i membri del ruolo predefinito del server **sysadmin** con account di accesso validi nel server di distribuzione esistente al momento della creazione della pubblicazione, nonché l'account di accesso corrente.  
   
@@ -72,8 +73,8 @@ sp_help_publication_access [ @publication = ] 'publication'
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_help_publication_access**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_grant_publication_access &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
- [sp_revoke_publication_access &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
+ [sp_grant_publication_access &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
+ [sp_revoke_publication_access &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

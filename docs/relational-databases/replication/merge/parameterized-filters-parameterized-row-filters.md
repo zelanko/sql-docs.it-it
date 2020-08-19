@@ -1,4 +1,5 @@
 ---
+description: Filtri con parametri - Filtri di riga con parametri
 title: Filtri di riga con parametri | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e7d5eae242525d57618050516f6368f016e3d89
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 656f36cce2c1b458f2eb85c734709691b59a82bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882301"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423545"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtri con parametri - Filtri di riga con parametri
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

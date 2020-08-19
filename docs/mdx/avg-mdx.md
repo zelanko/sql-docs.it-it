@@ -1,4 +1,5 @@
 ---
+description: Avg (MDX)
 title: Media (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: aa8817e35a589def4631bd455637d05fc62d3a0f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5cac19b597139274502d455fb5f8f4e5087c8a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477063"
 ---
 # <a name="avg-mdx"></a>Avg (MDX)
 
@@ -80,7 +81,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  `WHERE ([Geography].[Geography].[NW Region Avg])`  
   
- Nell'esempio seguente viene restituita la media giornaliera `Measures.[Gross Profit Margin]` della misura, calcolata nei giorni di ogni mese dell'anno fiscale 2003, dal cubo **Adventure Works** . La funzione **AVG** calcola la media dal set di giorni contenuti in ogni mese della `[Ship Date].[Fiscal Time]` gerarchia. La prima e la seconda versione del calcolo sono esemplificative del comportamento predefinito della funzione Avg relativo rispettivamente all'esclusione e all'inclusione nella media dei giorni in cui non sono state registrate vendite.  
+ Nell'esempio seguente viene restituita la media giornaliera della `Measures.[Gross Profit Margin]` misura, calcolata nei giorni di ogni mese dell'anno fiscale 2003, dal cubo **Adventure Works** . La funzione **AVG** calcola la media dal set di giorni contenuti in ogni mese della `[Ship Date].[Fiscal Time]` gerarchia. La prima e la seconda versione del calcolo sono esemplificative del comportamento predefinito della funzione Avg relativo rispettivamente all'esclusione e all'inclusione nella media dei giorni in cui non sono state registrate vendite.  
   
  `WITH MEMBER Measures.[Avg Gross Profit Margin] AS`  
   
@@ -126,7 +127,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  `WHERE([Product].[Product Categories].[Product].&[344])`  
   
- Nell'esempio seguente viene restituita la media giornaliera `Measures.[Gross Profit Margin]` della misura, calcolata nei giorni di ogni semestre dell'anno fiscale 2003, dal cubo **Adventure Works** .  
+ Nell'esempio seguente viene restituita la media giornaliera della `Measures.[Gross Profit Margin]` misura, calcolata nei giorni di ogni semestre dell'anno fiscale 2003, dal cubo **Adventure Works** .  
   
 ```  
 WITH MEMBER Measures.[Avg Gross Profit Margin] AS  

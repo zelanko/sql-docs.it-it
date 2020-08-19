@@ -1,4 +1,5 @@
 ---
+description: Eseguire un pacchetto SSIS con codice C# in un'app .NET
 title: Eseguire un progetto SSIS con codice .NET (C#) | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dbc0cfc7a5ef22487a22ade0f65cbf76ac78645c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 03be806b29fa46c04b38bab822c848f96a0c516d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921842"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477213"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>Eseguire un pacchetto SSIS con codice C# in un'app .NET
 
@@ -44,7 +45,7 @@ Per eseguire il pacchetto nel database SQL di Azure, ottenere le informazioni di
 ## <a name="create-a-new-visual-studio-project"></a>Creare un nuovo progetto Visual Studio
 
 1. In Visual Studio scegliere **File**, **Nuovo**, **Progetto**. 
-2. Nella finestra di dialogo **Nuovo progetto** espandere **Visual C#** .
+2. Nella finestra di dialogo **Nuovo progetto** espandere **Visual C#**.
 3. Selezionare **Applicazione console** e immettere *run_ssis_project* come nome del progetto.
 4. Fare clic su **OK** per creare e aprire il nuovo progetto in Visual Studio.
 
@@ -114,7 +115,7 @@ namespace run_ssis_package
 
 ## <a name="run-the-code"></a>Eseguire il codice
 
-1. Premere **F5** per eseguire l'applicazione.
+1. Per eseguire l'applicazione, premere **F5**.
 2. Verificare che il pacchetto venga eseguito come previsto e quindi chiudere la finestra dell'applicazione.
 
 ## <a name="next-steps"></a>Passaggi successivi

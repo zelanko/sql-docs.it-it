@@ -1,4 +1,5 @@
 ---
+description: sp_enum_login_for_proxy (Transact-SQL)
 title: sp_enum_login_for_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: cd65937894956ff008a08ea6f15222d6d020ba2e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7707843979bd0c741ade8e4ae6759d265eb13d06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891957"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486061"
 ---
 # <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 
@@ -42,11 +43,11 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name = ] 'name'`Nome di un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entità, di un account di accesso, di un ruolo del server o di un ruolo del database **msdb** per cui elencare i proxy. Il nome è di **tipo nvarchar (256)** e il valore predefinito è null.  
+`[ @name = ] 'name'` Nome di un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entità, di un account di accesso, di un ruolo del server o di un ruolo del database **msdb** per cui elencare i proxy. Il nome è di **tipo nvarchar (256)** e il valore predefinito è null.  
   
-`[ @proxy_id = ] id`Numero di identificazione del proxy per cui elencare le informazioni. Il *proxy_id* è di **tipo int**e il valore predefinito è null. È possibile specificare l' *ID* o il *proxy_name* .  
+`[ @proxy_id = ] id` Numero di identificazione del proxy per cui elencare le informazioni. Il *proxy_id* è di **tipo int**e il valore predefinito è null. È possibile specificare l' *ID* o il *proxy_name* .  
   
-`[ @proxy_name = ] 'proxy_name'`Nome del proxy per cui elencare le informazioni. Il *proxy_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare l' *ID* o il *proxy_name* .  
+`[ @proxy_name = ] 'proxy_name'` Nome del proxy per cui elencare le informazioni. Il *proxy_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare l' *ID* o il *proxy_name* .  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -99,8 +100,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_help_proxy &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)   
- [sp_grant_login_to_proxy &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
- [sp_revoke_login_from_proxy &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
+ [sp_help_proxy &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)   
+ [sp_grant_login_to_proxy &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
+ [sp_revoke_login_from_proxy &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   
   

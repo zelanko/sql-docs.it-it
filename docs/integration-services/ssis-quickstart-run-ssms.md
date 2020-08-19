@@ -1,4 +1,5 @@
 ---
+description: Eseguire un pacchetto SSIS con SQL Server Management Studio (SSMS)
 title: Eseguire un pacchetto SSIS con SSMS | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e89ca342011010eebb330eb20319a2bf9a8d9ba
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d884f38d93d7e79094fd1e2074e92e37050ddfd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477249"
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>Eseguire un pacchetto SSIS con SQL Server Management Studio (SSMS)
 
@@ -24,7 +25,7 @@ Questa guida introduttiva illustra come usare SQL Server Management Studio (SSMS
 
 SQL Server Management Studio è un ambiente integrato per la gestione di qualsiasi infrastruttura SQL, da SQL Server al database SQL. Per altre informazioni su SSMS, vedere [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Prima di iniziare, verificare di avere l'ultima versione di SQL Server Management Studio (SSMS). Per scaricare SSMS, vedere [Scaricare SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
@@ -75,7 +76,7 @@ Usare SQL Server Management Studio per stabilire una connessione al catalogo SSI
 
 2. Fare clic con il pulsante destro del mouse e selezionare **Esegui**. Viene visualizzata la finestra di dialogo **Esegui pacchetto**.
 
-3.  Configurare l'esecuzione del pacchetto usando le impostazioni delle schede **Parametri**, **Gestioni connessioni** e **Avanzate** della finestra di dialogo Esegui pacchetto.
+3.  Configurare l'esecuzione del pacchetto usando le impostazioni sulle schede **Parametri**, **Gestioni connessioni**e **Avanzate** nella finestra di dialogo Esegui pacchetto .
 
 4.  Fare clic su OK per eseguire il pacchetto.
 

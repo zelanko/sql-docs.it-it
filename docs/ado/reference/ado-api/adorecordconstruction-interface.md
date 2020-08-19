@@ -1,4 +1,5 @@
 ---
+description: Interfaccia ADORecordConstruction
 title: Interfaccia ADORecordConstruction | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4dca796e9ba3c353d48fd3620c34a141c35a3fe8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a52b8006ed97809690ec874c27e20ee8f1b05d0f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451333"
 ---
 # <a name="adorecordconstruction-interface"></a>Interfaccia ADORecordConstruction
 L'interfaccia **ADORecordConstruction**viene utilizzata per costruire un oggetto **record** ADO da un oggetto OLE DB **Row** in un'applicazione C/C++.  
@@ -35,7 +36,7 @@ L'interfaccia **ADORecordConstruction**viene utilizzata per costruire un oggetto
 |[Riga](../../../ado/reference/ado-api/row-property-ado.md)|Lettura/Scrittura.<br />Ottiene o imposta un oggetto OLE DB **riga** da/in questo oggetto **record** ADO.|  
   
 ## <a name="methods"></a>Metodi  
- No.  
+ Nessuno.  
   
 ## <a name="events"></a>Eventi  
  No.  

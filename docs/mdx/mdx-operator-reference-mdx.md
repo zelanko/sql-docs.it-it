@@ -1,4 +1,5 @@
 ---
+description: Guida di riferimento agli operatori MDX (MDX)
 title: Guida di riferimento agli operatori MDX (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c026da3551448faf7cf204dbdde1e794d5b12967
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c6fe11ee3022c07560435b13a72273962ba6a4b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68033915"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429773"
 ---
 # <a name="mdx-operator-reference-mdx"></a>Guida di riferimento agli operatori MDX (MDX)
 
@@ -34,7 +35,7 @@ ms.locfileid: "68033915"
 |[^ &#40;Power&#41; &#40;MDX&#41;](../mdx/power-mdx.md)|Esegue un'operazione aritmetica che eleva un numero a un altro numero.|  
 |[Commento &#40;MDX&#41;](../mdx/comment-mdx.md)|Indica un testo di commento specificato dall'utente.|  
 |[&#40;commento&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)|Evidenzia il testo inserito dall'utente.|  
-|[: Intervallo di &#40;&#41; &#40;&#41;MDX](../mdx/range-mdx.md)|Esegue un'operazione sui set che restituisce un set ordinato in modo naturale, in cui i due membri specificati costituiscono gli endpoint e tutti i membri compresi tra questi ultimi vengono inclusi come membri del set.|  
+|[: Intervallo di &#40;&#41; &#40;&#41;MDX ](../mdx/range-mdx.md)|Esegue un'operazione sui set che restituisce un set ordinato in modo naturale, in cui i due membri specificati costituiscono gli endpoint e tutti i membri compresi tra questi ultimi vengono inclusi come membri del set.|  
 |[+ &#40;aggiungere&#41; &#40;MDX&#41;](../mdx/add-mdx.md)|Esegue un'operazione aritmetica di somma di due numeri.|  
 |[+ &#40;positivo&#41; &#40;MDX&#41;](../mdx/positive-mdx.md)|Esegue un'operazione unaria che restituisce il valore positivo di un'espressione numerica.|  
 |[+ &#40;concatenazione di stringhe&#41; &#40;MDX&#41;](../mdx/string-concatenation-mdx.md)|Esegue un'operazione di stringa che concatena due o più tuple o stringhe di caratteri oppure una combinazione di stringhe e tuple.|  
@@ -42,13 +43,13 @@ ms.locfileid: "68033915"
 |[&#60; &#40;inferiore&#41; &#40;MDX&#41;](../mdx/less-than-mdx.md)|Esegue un'operazione di confronto che determina se il valore di un'espressione MDX è minore di quello di un'altra espressione MDX.|  
 |[&#60;= &#40;minore o uguale a&#41; &#40;MDX&#41;](../mdx/less-than-or-equal-to-mdx.md)|Esegue un'operazione di confronto che determina se il valore di un'espressione MDX è minore o uguale a quello di un'altra espressione MDX.|  
 |[&#60;&#62; &#40;diverso da&#41; &#40;MDX&#41;](../mdx/not-equal-to-mdx.md)|Esegue un'operazione di confronto che determina se il valore di un'espressione MDX è diverso da quello di un'altra espressione MDX.|  
-|[= &#40;uguale&#41; &#40;&#41;MDX](../mdx/equal-to-mdx.md)|Esegue un'operazione di confronto che determina se il valore di un'espressione MDX è uguale a quello di un'altra espressione MDX.|  
+|[= &#40;uguale&#41; &#40;&#41;MDX ](../mdx/equal-to-mdx.md)|Esegue un'operazione di confronto che determina se il valore di un'espressione MDX è uguale a quello di un'altra espressione MDX.|  
 |[&#62; &#40;maggiore di&#41; &#40;MDX&#41;](../mdx/greater-than-mdx.md)|Esegue un'operazione di confronto che determina se il valore di un'espressione MDX è maggiore di quello di un'altra espressione MDX.|  
 |[&#62;= &#40;maggiore o uguale a&#41; &#40;MDX&#41;](../mdx/greater-than-or-equal-to-mdx.md)|Esegue un'operazione di confronto che determina se il valore di un'espressione MDX è maggiore o uguale a quello di un'altra espressione MDX.|  
-|[E &#40;&#41;MDX](../mdx/and-mdx.md)|Esegue la congiunzione logica di due espressioni numeriche.|  
-|[&#40;&#41;MDX](../mdx/is-mdx.md)|Esegue un confronto logico tra due espressioni di oggetto.|  
-|[NON &#40;&#41;MDX](../mdx/not-mdx.md)|Esegue la negazione logica di un'espressione numerica.|  
-|[O &#40;&#41;MDX](../mdx/or-mdx.md)|Esegue la disgiunzione logica di due espressioni numeriche.|  
+|[E &#40;&#41;MDX ](../mdx/and-mdx.md)|Esegue la congiunzione logica di due espressioni numeriche.|  
+|[&#40;&#41;MDX ](../mdx/is-mdx.md)|Esegue un confronto logico tra due espressioni di oggetto.|  
+|[NON &#40;&#41;MDX ](../mdx/not-mdx.md)|Esegue la negazione logica di un'espressione numerica.|  
+|[O &#40;&#41;MDX ](../mdx/or-mdx.md)|Esegue la disgiunzione logica di due espressioni numeriche.|  
 |[XOR &#40;MDX&#41;](../mdx/xor-mdx.md)|Esegue un'operazione di esclusione logica tra due espressioni numeriche.|  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,4 +1,5 @@
 ---
+description: sp_dsninfo (Transact-SQL)
 title: sp_dsninfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 59d0b995103ab01d3bf3b7ec5336ad16b97b1e6f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 378b50379ab03124db37c296be273f0a68db59d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486075"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,24 +42,24 @@ sp_dsninfo [ @dsn =] 'dsn'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @dsn = ] 'dsn'`Nome del DSN ODBC o del server OLE DB collegato. *DSN* è di tipo **varchar (128)** e non prevede alcun valore predefinito.  
+`[ @dsn = ] 'dsn'` Nome del DSN ODBC o del server OLE DB collegato. *DSN* è di tipo **varchar (128)** e non prevede alcun valore predefinito.  
   
-`[ @infotype = ] 'info_type'`Tipo di informazioni da restituire. Se *info_type* non viene specificato o se viene specificato null, vengono restituiti tutti i tipi di informazioni. *info_type* è di tipo **varchar (128)** e il valore predefinito è null. i possibili valori sono i seguenti.  
+`[ @infotype = ] 'info_type'` Tipo di informazioni da restituire. Se *info_type* non viene specificato o se viene specificato null, vengono restituiti tutti i tipi di informazioni. *info_type* è di tipo **varchar (128)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**DBMS_NAME**|Specifica il nome del produttore dell'origine dati.|  
 |**DBMS_VERSION**|Specifica la versione dell'origine dati.|  
 |**DATABASE_NAME**|Specifica il nome del database.|  
 |**SQL_SUBSCRIBER**|Specifica che l'origine dati può essere un Sottoscrittore.|  
   
-`[ @login = ] 'login'`Account di accesso per l'origine dati. Se l'origine dati include un account di accesso, specificare NULL oppure omettere il parametro. *login*è di tipo **varchar (128)** e il valore predefinito è null.  
+`[ @login = ] 'login'` Account di accesso per l'origine dati. Se l'origine dati include un account di accesso, specificare NULL oppure omettere il parametro. *login*è di tipo **varchar (128)** e il valore predefinito è null.  
   
-`[ @password = ] 'password'`Password per l'account di accesso. Se l'origine dati include un account di accesso, specificare NULL oppure omettere il parametro. *password*è di tipo **varchar (128)** e il valore predefinito è null.  
+`[ @password = ] 'password'` Password per l'account di accesso. Se l'origine dati include un account di accesso, specificare NULL oppure omettere il parametro. *password*è di tipo **varchar (128)** e il valore predefinito è null.  
   
-`[ @dso_type = ] dso_type`Tipo di origine dati. *dso_type* è di **tipo int**. i possibili valori sono i seguenti.  
+`[ @dso_type = ] dso_type` Tipo di origine dati. *dso_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1** (impostazione predefinita)|Origine dati ODBC|  
 |**3**|Origine dati OLE DB|  
@@ -82,7 +83,7 @@ sp_dsninfo [ @dsn =] 'dsn'
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_dsninfo**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_enumdsn &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
+ [sp_enumdsn &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

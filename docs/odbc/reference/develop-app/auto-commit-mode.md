@@ -1,4 +1,5 @@
 ---
+description: Modalità autocommit
 title: Modalità autocommit | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c8de5b60-d147-492d-b601-2eeae8511d00
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6f19053eec7a48eba7a51425b01744f3acd10015
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af4b532a2163f0c30a3bdb792cfada6bdf806c43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285111"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476893"
 ---
 # <a name="auto-commit-mode"></a>Modalità autocommit
 *In modalità autocommit,* ogni operazione di database è una transazione di cui viene eseguito il commit al momento dell'esecuzione. Questa modalità è adatta per molte transazioni reali costituite da una singola istruzione SQL. Non è necessario delimitare o specificare il completamento di queste transazioni. Nei database senza supporto delle transazioni, la modalità di commit automatico è l'unica modalità supportata. In tali database, viene eseguito il commit delle istruzioni quando vengono eseguite e non è possibile eseguirne il rollback; sono pertanto sempre in modalità autocommit.  

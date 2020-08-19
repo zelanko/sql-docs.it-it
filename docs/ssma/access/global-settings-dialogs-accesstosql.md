@@ -1,4 +1,5 @@
 ---
+description: Impostazioni globali (finestre di dialogo) (AccessToSQL)
 title: Impostazioni globali (finestre di dialogo) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6c2204f2-d49e-49ba-9c0f-f14cf07fa561
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5424bb29fa88b36e1cd12dd915586080d99d2e47
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 43158757be3b64cbd761e8fec8bc878dae4f68c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938441"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423025"
 ---
 # <a name="global-settings-dialogs-accesstosql"></a>Impostazioni globali (finestre di dialogo) (AccessToSQL)
 Utilizzare la pagina finestre di dialogo della finestra di dialogo **Impostazioni globali** per specificare le impostazioni predefinite per l'azione e l'avviso dell'utente per SSMA.  

@@ -1,4 +1,5 @@
 ---
+description: catalog.clear_object_parameter_value (database SSISDB)
 title: catalog.clear_object_parameter_value (database SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3f9da77639358fbf154057789f8840cdefc1350d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 16435fdd9ccb57b648f8073290ead5eca6ae393b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477173"
 ---
 # <a name="catalogclear_object_parameter_value-ssisdb-database"></a>catalog.clear_object_parameter_value (database SSISDB)
 
@@ -47,10 +48,10 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
  Tipo di oggetto. Nei valori validi sono inclusi `20` per un progetto e `30` per un pacchetto. *object_type* è di tipo **smallInt**.  
   
  [ \@ object _name = ] *object _name*  
- Nome del pacchetto. *object_name* è di tipo **nvarchar(260)** .  
+ Nome del pacchetto. *object_name* è di tipo **nvarchar(260)**.  
   
  [ \@parameter_ name = ] *parameter_name*  
- Nome del parametro. *parameter_ name* è di tipo **nvarchar(128)** .  
+ Nome del parametro. *parameter_ name* è di tipo **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  

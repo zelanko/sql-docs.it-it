@@ -1,4 +1,5 @@
 ---
+description: Metodo Close (ADO)
 title: Metodo Close (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 939bf1d65c73b2aa83c54c7a5b936e3228719ba5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2cfdee50d0b5699e1f6eca4eb8e22375e4e5a672
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450953"
 ---
 # <a name="close-method-ado"></a>Metodo Close (ADO)
 Chiude un oggetto aperto e tutti gli oggetti dipendenti.  

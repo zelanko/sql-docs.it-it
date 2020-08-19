@@ -1,4 +1,5 @@
 ---
+description: Costanti enumerate ADO
 title: Costanti enumerate ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74d3cc347d14a1d02ae5953b7762513b252493e6
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7d126d0783e448dab786a228b4e10a8ec7c0f840
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451443"
 ---
 # <a name="ado-enumerated-constants"></a>Costanti enumerate ADO
 Per semplificare il debug, le enumerazioni ADO elencano un valore per ogni costante. Tuttavia, questo valore è puramente consultivo e può variare da una versione di ADO a un'altra. Il codice deve dipendere solo dal nome, non dal valore effettivo, di ogni costante enumerata.  

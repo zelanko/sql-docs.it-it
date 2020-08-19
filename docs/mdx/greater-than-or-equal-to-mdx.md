@@ -1,4 +1,5 @@
 ---
+description: '&gt;= (Maggiore o uguale a) (MDX)'
 title: '&gt;= (Maggiore o uguale a) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0e8599378367dd47bd5858c09327795a25852105
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e9ce7d9f7e372ac9193751c258af63ba6f300fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005843"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429933"
 ---
 # <a name="gt-greater-than-or-equal-to-mdx"></a>&gt;= (Maggiore o uguale a) (MDX)
 
@@ -61,6 +62,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento agli operatori MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
+ [Guida di riferimento agli operatori MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)  
   
   

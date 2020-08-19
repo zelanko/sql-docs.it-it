@@ -1,4 +1,5 @@
 ---
+description: STMLineFromWKB (tipo di dati geography)
 title: STMLineFromWKB (tipo di dati geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 05ca6d65-4799-4b9a-9672-cfebae95f23e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 35c2776a6749f4f087cc32daa5abf3ddd121cc9f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 65f2b438840d113041bd14457ecad7036e184f80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459049"
 ---
 # <a name="stmlinefromwkb-geography-data-type"></a>STMLineFromWKB (tipo di dati geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
 
 ## <a name="arguments"></a>Argomenti
  *WKB_multilinestring*  
- Rappresentazione WKB dell'istanza **geographyMultiLineString** da restituire. *WKB_multilinestring* è un'espressione **varbinary(max)** .  
+ Rappresentazione WKB dell'istanza **geographyMultiLineString** da restituire. *WKB_multilinestring* è un'espressione **varbinary(max)**.  
   
  *SRID*  
  Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geographyMultiLineString** da restituire.  

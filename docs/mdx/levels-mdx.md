@@ -1,4 +1,5 @@
 ---
+description: Levels (MDX)
 title: Livelli (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 24e15602593f9116d499345ffca093f86ecfa135
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3b0a7eaea166fdefbfd947faf95b58f74bdb8be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905640"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429873"
 ---
 # <a name="levels-mdx"></a>Levels (MDX)
 
@@ -68,7 +69,7 @@ SELECT [Geography].[Geography].Levels('Country') ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
