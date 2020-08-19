@@ -1,4 +1,5 @@
 ---
+description: DENY (autorizzazioni di Service Broker) (Transact-SQL)
 title: DENY - autorizzazioni per Service Broker (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 360c83ddf14139665c6ab1132c84b4e3b608e735
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 8043eb95855e463c63bf4667209d47b293a492e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483823"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426603"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY (autorizzazioni di Service Broker) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,13 +63,13 @@ DENY permission  [ ,...n ] ON
  CONTRACT **::** _contract_name_  
  Specifica il contratto per il quale viene negata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
- MESSAGE TYPE **::** _message_type_name_  
+ MESSAGE TYPE **::**_message_type_name_  
  Specifica il tipo di messaggio per il quale viene negata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
- REMOTE SERVICE BINDING **::** _remote_binding_name_  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  Specifica l'associazione al servizio remoto per la quale viene negata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
- ROUTE **::** _route_name_  
+ ROUTE **::**_route_name_  
  Specifica la route per la quale viene negata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
  SERVICE **::** _message_type_name_  
@@ -101,7 +102,7 @@ CASCADE
 -   Utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
 -   Utente del database sul quale non viene eseguito il mapping ad alcuna entità server  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="service-broker-contracts"></a>Contratti di Service Broker  
  Un contratto di [!INCLUDE[ssSB](../../includes/sssb-md.md)] è un'entità a sicurezza diretta a livello di database contenuta nel database padre nella gerarchia di autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che possono essere negate per un contratto di [!INCLUDE[ssSB](../../includes/sssb-md.md)] assieme alle autorizzazioni più generali incluse in modo implicito.  

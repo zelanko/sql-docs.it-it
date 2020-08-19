@@ -1,4 +1,5 @@
 ---
+description: DROP TABLE (Transact-SQL)
 title: DROP TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/12/2017
@@ -37,12 +38,12 @@ ms.assetid: 0b6f2b6f-3aa3-4767-943f-43df3c3c5cfd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e0c7cc3432a18ad0203816523dc02cba6b56788
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: c8153dcaf2935163bd8991a9a2086f6d3e39a0c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485450"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426583"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +87,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
  *table_name*  
  Nome della tabella da rimuovere.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Non è possibile utilizzare l'istruzione DROP TABLE per eliminare una tabella a cui fa riferimento un vincolo FOREIGN KEY. È prima necessario eliminare il vincolo FOREIGN KEY o la tabella di riferimento. Se con la stessa istruzione DROP TABLE si eliminano sia la tabella di riferimento che la tabella che contiene la chiave primaria, è necessario indicare la tabella di riferimento per prima nell'elenco.  
   
  Si possono eliminare più tabelle in qualsiasi database. Se una tabella da eliminare fa riferimento alla chiave primaria di un'altra tabella, anch'essa da eliminare, è necessario indicare la tabella di riferimento con la chiave esterna prima della tabella contenente la chiave primaria a cui fa riferimento la prima tabella.  
@@ -110,22 +111,22 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
 ### <a name="a-dropping-a-table-in-the-current-database"></a>R. Eliminazione di una tabella dal database corrente  
  Nell'esempio seguente vengono eliminati la tabella `ProductVendor1` e i dati e gli indici corrispondenti dal database corrente.  
   
-```  
+```sql  
 DROP TABLE ProductVendor1 ;  
 ```  
   
 ### <a name="b-dropping-a-table-in-another-database"></a>B. Eliminazione di una tabella da un database diverso da quello corrente  
  Nell'esempio seguente viene eliminata la tabella `SalesPerson2` nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. È possibile eseguire questo esempio da qualsiasi database nell'istanza del server.  
   
-```  
+```sql  
 DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;  
 ```  
   
 ### <a name="c-dropping-a-temporary-table"></a>C. Eliminazione di una tabella temporanea  
  Nell'esempio seguente viene creata una tabella temporanea, ne viene controllata l'esistenza, quindi la tabella viene eliminata e viene eseguito un ulteriore controllo dell'esistenza. Questo esempio non usa la sintassi **IF EXISTS**, disponibile a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
-```  
-CREATE TABLE #temptable (col1 int);  
+```sql  
+CREATE TABLE #temptable (col1 INT);  
 GO  
 INSERT INTO #temptable  
 VALUES (10);  
@@ -137,7 +138,6 @@ DROP TABLE #temptable;
 GO  
 --Test the drop.  
 SELECT * FROM #temptable;  
-  
 ```  
   
 ### <a name="d-dropping-a-table-using-if-exists"></a>D. Eliminazione di una tabella usando IF EXISTS  
@@ -146,8 +146,8 @@ SELECT * FROM #temptable;
   
  Nell'esempio seguente viene creato un pool di risorse denominato T1. Quindi la seconda istruzione elimina la tabella. La terza istruzione non esegue alcuna azione perché la tabella è già stata eliminata, ma non produce un errore.  
   
-```  
-CREATE TABLE T1 (Col1 int);  
+```sql  
+CREATE TABLE T1 (Col1 INT);  
 GO  
 DROP TABLE IF EXISTS T1;  
 GO  

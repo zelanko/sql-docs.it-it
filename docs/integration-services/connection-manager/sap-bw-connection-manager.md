@@ -1,4 +1,5 @@
 ---
+description: Gestione connessione SAP BW
 title: Gestione connessione SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.sapbwconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c619db7e6386bb31b39b7a347f319ae45ddfacbc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6a67889df1635e2654adc80151e33a1c137985d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921437"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426003"
 ---
 # <a name="sap-bw-connection-manager"></a>Gestione connessione SAP BW
 
@@ -152,6 +153,6 @@ ms.locfileid: "86921437"
  Verificare la connessione utilizzando i valori forniti. Dopo avere fatto clic su **Test connessione**viene visualizzata una finestra di messaggio che indica se la connessione ha avuto esito positivo o negativo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Componenti di Microsoft Connector per SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
+ [Componenti di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

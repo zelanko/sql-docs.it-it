@@ -1,4 +1,5 @@
 ---
+description: Opzioni di Richiesta profilo Criteri di ricerca colonna (Attività Profiling dati)
 title: Opzioni di Richiesta profilo Criteri di ricerca colonna (Attività Profiling dati) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0119d52241741d318f4fd6aba17467144d3e9fb0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 85beabd085481a48d6681bbaf2d2d381a1d0df93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425973"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Criteri di ricerca colonna (Attività Profiling dati)
 
@@ -49,19 +50,19 @@ ms.locfileid: "86915793"
   
 |Tag|Termine|  
 |---------|----------|  
-|Direction|East|  
-|Direction|West|  
-|Direction|North|  
-|Direction|South|  
+|Direzione|East|  
+|Direzione|West|  
+|Direzione|North|  
+|Direzione|South|  
   
  È possibile utilizzare un altro tag per raggruppare le parole diverse che esprimono la nozione di strada negli indirizzi stradali:  
   
 |Tag|Termine|  
 |---------|----------|  
 |Street|Street|  
-|Street|Avenue|  
-|Street|Posizione|  
-|Street|Way|  
+|Via|Avenue|  
+|Via|Posizione|  
+|Via|Way|  
   
  In base a questa combinazione di tag, il criterio di ricerca risultante per un indirizzo stradale potrebbe essere simile al seguente:  
   
@@ -126,7 +127,7 @@ ms.locfileid: "86915793"
  **CaseSensitive**  
  Indica se i criteri di ricerca devono applicare la distinzione tra maiuscole e minuscole. Il valore predefinito di questa opzione è **False**.  
   
- **Delimiters**  
+ **Delimitatori**  
  Elenco dei caratteri che devono essere considerati spazi tra parole quando il testo viene suddiviso in token. Per impostazione predefinita, l'elenco **Delimiters** contiene i caratteri seguenti: spazio, tabulazione orizzontale (\t), nuova riga (\n) e ritorno a capo (\r). È possibile specificare delimitatori aggiuntivi, ma non è possibile rimuovere i delimitatori predefiniti.  
   
  Per ulteriori informazioni, tornare alla sezione "Informazioni sull'utilizzo di delimitatori e simboli" di questo argomento.  

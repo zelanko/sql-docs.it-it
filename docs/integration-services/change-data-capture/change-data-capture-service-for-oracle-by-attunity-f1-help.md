@@ -1,4 +1,5 @@
 ---
+description: Guida del servizio Change Data Capture per Oracle di Attunity
 title: Guida di Change Data Capture Service per Oracle di Attunity | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 0617fca6-1bc1-4ad2-9986-fab94ea0a6f0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 92a393f944729270239e1470f3cb9972bca21c55
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f7ad3930220a4f88c3d3386c763c4e418e6cc2d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918656"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426113"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Guida del servizio Change Data Capture per Oracle di Attunity
 
@@ -34,12 +35,12 @@ ms.locfileid: "86918656"
   
 -   [Creare e modificare un servizio Oracle CDC](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
--   [Gestire un servizio Oracle CDC](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
+-   [Manage an Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
 -   [Preparare SQL Server per CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
   
 -   [Preparare SQL Server per lo script di visualizzazione di Oracle CDC](../../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md)  
   
--   [Usare i servizi CDC](../../integration-services/change-data-capture/work-with-cdc-services.md)  
+-   [Utilizzare i servizi CDC](../../integration-services/change-data-capture/work-with-cdc-services.md)  
   
   

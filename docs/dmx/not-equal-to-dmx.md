@@ -1,5 +1,6 @@
 ---
-title: '&lt;&gt;(Diverso da) (DMX) | Microsoft Docs'
+description: '&lt;&gt; (Diverso da) DMX'
+title: '&lt;&gt; (Diverso da) (DMX) | Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +9,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1181e781da0e752cb68f0fbf1d8c84d257407a3e
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8aebff9e74a7c310a2af650c0cebbcaed2c91e9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86968510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426223"
 ---
-# <a name="ltgt-not-equal-to-dmx"></a>&lt;&gt;(Diverso da) DMX
+# <a name="ltgt-not-equal-to-dmx"></a>&lt;&gt; (Diverso da) DMX
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Esegue un'operazione di confronto che determina se il valore di un'espressione DMX (Data Mining Extensions) è diverso da quello di un'altra espressione DMX.  

@@ -1,4 +1,5 @@
 ---
+description: Origine OData
 title: Origine OData | Microsoft Docs
 ms.date: 09/17/2018
 ms.prod: sql
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e06cb4ec3bbc74779ad2fcb4f36d6e75a4e7cb55
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8f74fa8478953c4c1353d35f49250896ab2a7ab8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916213"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425823"
 ---
 # <a name="odata-source"></a>Origine OData
 
@@ -64,7 +65,7 @@ Per il tipo di dati **Decimale**, la precisione e la scala vengono determinate d
   
 ## <a name="related-topics-in-this-section"></a>Argomenti correlati in questa sezione  
   
--   [Esercitazione: Uso dell'origine OData](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
+-   [Esercitazione: uso dell'origine OData](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
   
 -   [Modificare la query di origine OData in fase di esecuzione](../../integration-services/data-flow/modify-odata-source-query-at-runtime.md)  
   
@@ -107,7 +108,7 @@ Per il tipo di dati **Decimale**, la precisione e la scala vengono determinate d
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>Usa percorso risorsa o raccolta = Percorso risorsa  
  **Resource path**  
- Digitare un percorso della risorsa. Ad esempio: Employees  
+ Digitare un percorso della risorsa. Ad esempio: Dipendenti  
   
 ## <a name="odata-source-editor-columns-page"></a>Editor origine OData (pagina Colonne)
   Usare la pagina **Colonne** della finestra di dialogo **Editor origine OData** per selezionare le colonne esterne (di origine) da includere nell'output ed eseguirne il mapping alle colonne di output.  

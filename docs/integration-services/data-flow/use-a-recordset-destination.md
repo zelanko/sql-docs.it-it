@@ -1,4 +1,5 @@
 ---
+description: Utilizzo di una destinazione recordset
 title: Usare una destinazione recordset | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 605cdbdc7b813fbbecb819bd31bde42f8f5afdc7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4d823048d128d8837c80c724064ea0d8afe1a5a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916655"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425603"
 ---
 # <a name="use-a-recordset-destination"></a>Utilizzo di una destinazione recordset
 
@@ -157,7 +158,7 @@ ms.locfileid: "86916655"
   
     5.  Per **MessageSourceType**selezionare **Input diretto**.  
   
-5.  Nella pagina **Espressioni** di **Editor attività Invia messaggi**fare clic sul pulsante con i puntini di sospensione ( **...** ) per aprire **Editor espressioni di proprietà**.  
+5.  Nella pagina **Espressioni** di **Editor attività Invia messaggi**fare clic sul pulsante con i puntini di sospensione (**...**) per aprire **Editor espressioni di proprietà**.  
   
 6.  In **Editor espressioni di proprietà**immettere le informazioni seguenti:  
   

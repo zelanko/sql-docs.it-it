@@ -1,4 +1,5 @@
 ---
+description: Proprietà personalizzate della destinazione SQL Server
 title: Proprietà personalizzate della destinazione SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 28b2257dc78950815fd65682c57713486993aaf9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 06ca0836b3c588e8b598ae60b47e540562f18802
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425793"
 ---
 # <a name="sql-server-destination-custom-properties"></a>Proprietà personalizzate della destinazione SQL Server
 

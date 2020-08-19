@@ -1,4 +1,5 @@
 ---
+description: Origine XML
 title: Origine XML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 310381f04bc48eeb3d4732ea1e9b0d7fd99aed43
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 14aeae01cecd283ae480b337543fa0e1c4fe8bfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920297"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425613"
 ---
 # <a name="xml-source"></a>Origine XML
 
@@ -97,7 +98,7 @@ ms.locfileid: "86920297"
  **Modalità di accesso ai dati**  
  Consente di specificare il metodo per la selezione dei dati dall'origine.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |Percorso file XML|Consente di recuperare i dati da un file XML.|  
 |File XML da variabile|Consente di specificare il nome del file XML in una variabile.<br /><br /> **Informazioni correlate**: [Uso di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -173,4 +174,4 @@ ms.locfileid: "86920297"
  Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Estrarre i dati tramite l'origine XML](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
+ [Estrazione dei dati tramite l'origine XML](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  

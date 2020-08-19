@@ -1,4 +1,5 @@
 ---
+description: Vincoli di precedenza
 title: Vincoli di precedenza | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ba2b9f0e9dbf23eea54da531305553db712ad677
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ee2c1ffab719566875a7c9f7f6090a12aef5675f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921196"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425913"
 ---
 # <a name="precedence-constraints"></a>Vincoli di precedenza
 
@@ -120,7 +121,7 @@ Utilizzare la finestra di dialogo **Editor vincoli di precedenza** per configura
  Specificare il valore del vincolo: **Esito positivo**, **Esito negativo** o **Completamento**.  
   
 > [!NOTE]  
->  La riga del vincolo di precedenza è di colore verde in caso di **Esito positivo**, evidenziata per **Esito negativo**e blu per **Completamento**.  
+>   La riga del vincolo di precedenza è di colore verde in caso di **Esito positivo**, evidenziata per **Esito negativo**e blu per **Completamento**.  
   
  **Espressione**  
  Se si usano le operazioni **Espressione**, **Espressione e vincolo**o **Espressione o vincolo**, digitare un'espressione o avviare Generatore di espressioni per creare l'espressione. L'espressione deve restituire un valore booleano.  
@@ -158,7 +159,7 @@ Utilizzare la finestra di dialogo **Editor vincoli di precedenza** per configura
     |LogicalAnd|Impostare **LogicalAnd** in modo da specificare se il vincolo di precedenza viene valutato insieme ad altri vincoli di precedenza, quando più eseguibili precedono e sono collegati all'eseguibile soggetto al vincolo|  
     |Nome|Aggiornare il nome del vincolo di precedenza.|  
     |ShowAnnotation|Specificare il tipo di annotazione da utilizzare. Selezionare **Never** per disabilitare le annotazioni, **AsNeeded** per attivare le annotazioni su richiesta, **ConstraintName** per aggiungere automaticamente annotazioni usando il valore della proprietà Name, **ConstraintDescription** per aggiungere automaticamente annotazioni usando il valore della proprietà Description e **ConstraintOptions** per aggiungere automaticamente annotazioni usando i valori delle proprietà Value ed Expression.|  
-    |valore|Se l'operazione di valutazione specificata nella proprietà EvalOP include un vincolo, selezionare il risultato dell'esecuzione dell'eseguibile vincolante.|  
+    |Valore|Se l'operazione di valutazione specificata nella proprietà EvalOP include un vincolo, selezionare il risultato dell'esecuzione dell'eseguibile vincolante.|  
   
 5.  Chiudere la finestra Proprietà.  
   
@@ -217,12 +218,12 @@ Utilizzare la finestra di dialogo **Editor vincoli di precedenza** per configura
 |Operazioni di valutazione|Valore restituito dal vincolo|Valore restituito dall'espressione|Esecuzione eseguibile soggetto al vincolo|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
 |Vincolo|True|N/D|True|  
-|Vincolo|False|N/D|False|  
+|Vincolo|Falso|N/D|Falso|  
 |Expression|N/D|True|True|  
 |Expression|N/D|False|False|  
 |Vincolo ed espressione|True|True|True|  
 |Vincolo ed espressione|True|False|False|  
-|Vincolo ed espressione|False|True|False|  
+|Vincolo ed espressione|False|True|Falso|  
 |Vincolo ed espressione|False|False|False|  
 |Vincolo o espressione|True|True|True|  
 |Vincolo o espressione|True|False|True|  

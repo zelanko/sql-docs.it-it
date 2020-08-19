@@ -1,4 +1,5 @@
 ---
+description: SQL Server - destinazione
 title: Destinazione SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 278cfb16ddc6c00fba9570d7912a6d5fa3a31727
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dbd48bf2dee8268fa87209ab3d4283938961c918
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917767"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425803"
 ---
 # <a name="sql-server-destination"></a>SQL Server - destinazione
 
@@ -68,7 +69,7 @@ ms.locfileid: "86917767"
   
  Per altre informazioni sulle opzioni di caricamento bulk, vedere [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-#### <a name="performance-improvements"></a>Miglioramenti alle prestazioni  
+#### <a name="performance-improvements"></a>Miglioramenti delle prestazioni  
  Per migliorare le prestazioni dell'inserimento bulk e dell'accesso ai dati delle tabelle durante un'operazione di inserimento bulk, modificare le opzioni predefinite nel modo seguente:  
   
 -   Non verificare i vincoli sulla tabella o vista di destinazione durante l'operazione di importazione bulk.  

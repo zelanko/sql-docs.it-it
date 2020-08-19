@@ -1,4 +1,5 @@
 ---
+description: PredictAdjustedProbability (DMX)
 title: PredictAdjustedProbability (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 735df047307f78c238fbf29669f0e0b1e0933e37
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e923e96aec1f001818f5dcff300de0d13af2f5a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971565"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426183"
 ---
 # <a name="predictadjustedprobability-dmx"></a>PredictAdjustedProbability (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

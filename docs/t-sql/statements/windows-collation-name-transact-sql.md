@@ -1,4 +1,5 @@
 ---
+description: Windows_collation_name (Transact-SQL)
 title: Nome delle regole di confronto di Windows (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2019
@@ -18,12 +19,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe6578107f87eddb62f5f31efd93778f8c2af96
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 2a95152ded1edc82ea153c40b6f9df68c1d3dea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484060"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426523"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows_collation_name (Transact-SQL)
 
@@ -74,12 +75,12 @@ Omettendo questa opzione si specifica che la distinzione Kana non è rilevante. 
 Omettendo questa opzione si specifica che la distinzione di larghezza non è rilevante. **WS** specifica che la distinzione di larghezza è rilevante.
 
 *VariationSelectorSensitivity*  
-- **Si applica a** : a partire da [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **Si applica a**: A partire da [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
 - Omettendo questa opzione si specifica che il selettore di variazione non è rilevante, **VSS** specifica che il selettore di variazione è rilevante.
 
 **UTF8**  
-- **Si applica a** : a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **Si applica a**: A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
 - Specifica la codifica UTF-8 da usare per i tipi di dati idonei. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
 
@@ -89,7 +90,7 @@ Specifica che deve essere usato il tipo di ordinamento binario compatibile con l
 **BIN2**  
 Specifica l'ordinamento binario che utilizza la semantica del confronto dei punti di codice.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 A seconda della versione delle regole di confronto, per alcuni punti di codice potrebbero non essere stati definiti pesi di ordinamento e/o il mapping tra caratteri maiuscoli e minuscoli. Ad esempio, confrontare l'output della funzione `LOWER` quando viene assegnato lo stesso carattere, ma con versioni diverse delle stesse regole di confronto:
 
 ```sql
@@ -155,7 +156,7 @@ Nella tabella seguente vengono elencate tutte le regole di confronto di Windows 
 |Croato (Bosnia ed Erzegovina, alfabeto latino)|Croatian_100_|Non disponibile|
 |Dari (Afghanistan)|Dari_100_|Non disponibile|
 |Inglese (India)|Latin1_General_100_|Non disponibile|
-|Inglese (Malesia)|Latin1_General_100_|Non disponibile|
+|Inglese (Malaysia)|Latin1_General_100_|Non disponibile|
 |Inglese (Singapore)|Latin1_General_100_|Non disponibile|
 |Filippino (Filippine)|Latin1_General_100_|Non disponibile|
 |Frisone (Paesi Bassi)|Frisian_100_|Non disponibile|

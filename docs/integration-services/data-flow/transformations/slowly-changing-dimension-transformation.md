@@ -1,4 +1,5 @@
 ---
+description: Dimensione a modifica lenta - trasformazione
 title: Trasformazione Dimensione a modifica lenta | Microsoft Docs
 ms.custom: ''
 ms.date: 08/31/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 71fdb19fb47f953ceb6266be38d5c3b191a30f91
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d037d4f8a002a0c5636d005ec7b0be28adf3a1b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425713"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Dimensione a modifica lenta - trasformazione
 

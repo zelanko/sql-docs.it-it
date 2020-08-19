@@ -1,4 +1,5 @@
 ---
+description: ALTER SERVER ROLE (Transact-SQL)
 title: ALTER SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/16/2020
@@ -19,12 +20,12 @@ ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e16c698947dbe8ad6c324f16e644b2dd43276435
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c79b8ad73bc939354d3b9078c9486531ec8b01ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426813"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -67,7 +68,7 @@ Rimuove l'entità server specificata dal ruolo del server. *server_principal* pu
 WITH NAME **=** _new_server_role_name_  
 Specifica il nuovo nome del ruolo del server definito dall'utente. Il nome non deve essere già esistente nel server.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 La modifica del nome di un ruolo del server definito dall'utente non comporta la modifica del numero di ID, del proprietario o delle autorizzazioni del ruolo.  
   
 Per la modifica dell'appartenenza al ruolo, `ALTER SERVER ROLE` sostituisce sp_addsrvrolemember e sp_dropsrvrolemember. Queste stored procedure sono deprecate.  
