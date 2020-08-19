@@ -1,4 +1,5 @@
 ---
+description: Attività di Integration Services
 title: Attività di Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b36f709ecde7aa2fb4d47b2b1f092bc92bde682c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d54d80276714bdc1427c2c01be0f9620acc32c8f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915445"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392647"
 ---
 # <a name="integration-services-tasks"></a>Attività di Integration Services
 
@@ -86,6 +87,6 @@ ms.locfileid: "86915445"
  Le attività possono essere raggruppate ed eseguite come una singola unità di lavoro oppure ripetute in un ciclo. Per altre informazioni, vedere [Contenitore Ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md), [Contenitore Ciclo For](../../integration-services/control-flow/for-loop-container.md)e [Contenitore Sequenza](../../integration-services/control-flow/sequence-container.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Aggiungere o eliminare un'attività o un contenitore in un flusso di controllo](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+ [Aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
   

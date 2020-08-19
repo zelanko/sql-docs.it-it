@@ -1,4 +1,5 @@
 ---
+description: Attività Espressione
 title: Attività Espressione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 988157321eff73ecc9e4a77db9b09a52281f3f40
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 52ed6a20fa7b125b3d95d854a6e380512cc1e424
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917907"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393867"
 ---
 # <a name="expression-task"></a>Attività Espressione
 
@@ -34,7 +35,7 @@ ms.locfileid: "86917907"
  Per esempi di utilizzo di espressioni per impostare le proprietà, vedere " **Espressioni di proprietà di esempio** in [Use Property Expressions in Packages](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Usare un'espressione in un componente flusso di dati](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Utilizzo di un'espressione in un componente flusso di dati](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](https://go.microsoft.com/fwlink/?LinkId=746575)sul sito Web pragmaticworks.com  

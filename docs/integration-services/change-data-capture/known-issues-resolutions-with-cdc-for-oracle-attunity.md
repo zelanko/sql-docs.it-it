@@ -1,4 +1,5 @@
 ---
+description: Errori noti e soluzioni con Change Data Capture per Oracle di Attunity
 title: Errori noti e soluzioni con Change Data Capture per Oracle di Attunity | Microsoft Docs
 ms.date: 07/23/2019
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ee1e8f3ae65b4a906d42a4b00644456d89f9b900
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6841092edcb5eac4005d0a068f31c768aedf5bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71713426"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394387"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Errori noti e soluzioni con Change Data Capture per Oracle di Attunity
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
@@ -144,7 +145,7 @@ Si tratta di un errore comune visualizzato nel campo del messaggio **Status** (S
 
 Questo errore si verifica quando l'account Oracle che si connette dall'istanza di CDC al server Oracle non è autorizzato a visualizzare le viste del registro di sistema. 
 
-### <a name="resolution"></a>Risoluzione
+### <a name="resolution"></a>Soluzione
 
 Per correggere l'errore, concedere all'utente attualmente configurato le autorizzazioni appropriate all'interno del sistema di database Oracle o cambiare l'account usato per la connessione al server Oracle dall'istanza di CDC. 
 
@@ -156,7 +157,7 @@ L'elenco di tutte le autorizzazioni necessarie è riportato nei dettagli nel fil
 
 
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Tenere traccia delle modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Informazioni su Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Usare Change Data &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

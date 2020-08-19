@@ -1,4 +1,5 @@
 ---
+description: Trasformazione Ricerca in modalità Full Cache - Gestione connessione della cache
 title: Trasformazione Ricerca in modalità Full Cache - Gestione connessione della cache | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4e37921c8844b94c3974682ab8b088b0015c5ac6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8c4bd90a73c0723baf716b5c503f18d1f690d77e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394217"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Trasformazione Ricerca in modalità Full Cache - Gestione connessione della cache
 
@@ -63,7 +64,7 @@ ms.locfileid: "86923138"
   
 -   [Attività Esegui pacchetto](../../integration-services/control-flow/execute-package-task.md)  
   
--   [Contenitore Sequenza](../../integration-services/control-flow/sequence-container.md)  
+-   [Sequenza - contenitore](../../integration-services/control-flow/sequence-container.md)  
   
  Per visualizzare un video che illustra come implementare una trasformazione Ricerca in modalità Full Cache usando la gestione connessione della cache, vedere [How to: Implement a Lookup Transformation in Full Cache Mode (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=131031)(Procedura: Implementare una trasformazione Ricerca nella modalità Full Cache).  
   

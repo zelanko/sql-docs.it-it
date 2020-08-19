@@ -1,4 +1,5 @@
 ---
+description: Attività Hive Hadoop
 title: Attività Hive Hadoop | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9a6a0bcdfcaa6e1ac287ef22c8515eef92c123d1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e8b6d1e651d6854fba575460a141f9e325e7f12f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393257"
 ---
 # <a name="hadoop-hive-task"></a>Attività Hive Hadoop
 

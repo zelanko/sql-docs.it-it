@@ -1,4 +1,5 @@
 ---
+description: Opzioni di Richiesta profilo Dipendenza funzionale (Attività Profiling dati)
 title: Opzioni di Richiesta profilo Dipendenza funzionale (Attività Profiling dati) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b2f4f0f63aa108f16a8649007c200d8f93261367
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1fa83e2b75860730f4e3d9b419a2ca8ca374ba31
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918216"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393427"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Dipendenza funzionale (Attività Profiling dati)
 
@@ -88,7 +89,7 @@ ms.locfileid: "86918216"
 > [!NOTE]  
 >  Quando si usa il carattere jolly **(\*)** per **ColumnName**, **CompareOptions** è di sola lettura ed è impostato su **Default**.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Default**|Ordina e confronta i dati in base alle regole di confronto della colonna nella tabella di origine.|  
 |**BinarySort**|Ordina e confronta i dati di in base ai modelli di bit definiti per ogni carattere. L'ordinamento binario supporta la distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati e rappresenta inoltre il tipo di ordinamento più rapido.|  
@@ -96,7 +97,7 @@ ms.locfileid: "86918216"
   
  Se si seleziona **DictionarySort**, è inoltre possibile selezionare qualsiasi combinazione delle opzioni elencate nella tabella seguente. Per impostazione predefinita, nessuna di queste opzioni aggiuntive è selezionata.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**IgnoreCase**|Specifica se nel confronto viene fatta distinzione tra lettere maiuscole e minuscole. Se questa opzione è impostata, nel confronto tra stringhe verrà ignorata la combinazione di maiuscole e minuscole. Ad esempio, la stringa "ABC" verrà considerata identica alla stringa "abc".|  
 |**IgnoreNonSpace**|Specifica se nel confronto viene fatta distinzione tra i caratteri con spaziatura e quelli con segni diacritici. Se questa opzione è impostata, nel confronto verranno ignorati i segni diacritici. Ad esempio, il carattere "Ã¥" verrà considerato uguale al carattere "a".|  
@@ -111,7 +112,7 @@ ms.locfileid: "86918216"
  **ThresholdSetting**  
  Consente di specificare l'impostazione della soglia. Il valore predefinito di questa proprietà è **Specified**.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Nessuno**|Non specifica alcuna soglia. Il livello di attendibilità della dipendenza funzionale viene segnalato indipendentemente dal valore.|  
 |**Specified**|Consente di usare la soglia specificata in **FDStrengthThreshold**. Il livello di attendibilità della dipendenza funzionale viene segnalato solo se è maggiore della soglia.|  

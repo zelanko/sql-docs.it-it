@@ -1,4 +1,5 @@
 ---
+description: Eseguire un ciclo su file e tabelle di Excel con un contenitore Ciclo Foreach
 title: Eseguire un ciclo su file e tabelle di Excel con un contenitore Ciclo Foreach | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2018
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6bdcfd84f1b12c48e31bd9d56fe6db3e4155c543
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0eaa6b0cbe19656096cdb47a31ec73b5fd4ade7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915427"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392627"
 ---
 # <a name="loop-through-excel-files-and-tables-with-a-foreach-loop-container"></a>Eseguire un ciclo su file e tabelle di Excel con un contenitore Ciclo Foreach
 
@@ -98,7 +99,7 @@ ms.locfileid: "86915427"
 9. Creare attività nel contenitore Ciclo Foreach che utilizzano la gestione connessione Excel per eseguire le stesse operazioni in ogni tabella di Excel inclusa nella cartella di lavoro specificata. Se per esaminare il nome della tabella enumerata o per lavorare con ogni tabella si usa un'attività Script, ricordarsi di aggiungere la variabile stringa alla proprietà ReadOnlyVariables dell'attività Script.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Caricare i dati da o in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
+ [Caricare dati da o in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
  [Configurare un contenitore Ciclo Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
  [Aggiungere o modificare un'espressione di proprietà](../../integration-services/expressions/add-or-change-a-property-expression.md)   
  [Gestione connessione Excel](../../integration-services/connection-manager/excel-connection-manager.md)   

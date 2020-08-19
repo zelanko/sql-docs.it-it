@@ -1,4 +1,5 @@
 ---
+description: destinazione elaborazione dimensione
 title: Destinazione elaborazione dimensione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f3458ea4fd1a8c82896fd1c06a76ee4bfd8074bb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5531a102eb4ec24fde1c9693c8f9939eb63b4335
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916729"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392637"
 ---
 # <a name="dimension-processing-destination"></a>destinazione elaborazione dimensione
 
@@ -73,7 +74,7 @@ ms.locfileid: "86916729"
  **Metodo di elaborazione**  
  Consente di selezionare la modalità di elaborazione da applicare alla dimensione selezionata nell'elenco. Il valore predefinito di questa opzione è **Completo**.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Aggiunta (incrementale)**|Consente di eseguire un'elaborazione incrementale della dimensione.|  
 |**Completo**|Consente di eseguire un'elaborazione completa della dimensione.|  
@@ -105,7 +106,7 @@ ms.locfileid: "86916729"
  **Azione per errore chiave**  
  Consente di specificare la modalità di gestione dei record che hanno valori di chiave non validi.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Consente di convertire il valore di chiave non valido nel valore **UnknownMember** .|  
 |**DiscardRecord**|Consente di scartare il record.|  
@@ -122,7 +123,7 @@ ms.locfileid: "86916729"
  **Azione in caso di errore**  
  Consente di specificare l'azione che deve essere intrapresa al raggiungimento della soglia di errore quando è stata selezionata l'opzione **Arresta in caso di errore**.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**StopProcessing**|Consente di arrestare l'elaborazione.|  
 |**StopLogging**|Consente di arrestare la registrazione degli errori.|  
@@ -130,7 +131,7 @@ ms.locfileid: "86916729"
  **Chiave non trovata**  
  Consente di specificare l'azione che deve essere intrapresa per un errore di chiave non trovata. Il valore predefinito è **ReportAndContinue**.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
 |**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
@@ -139,7 +140,7 @@ ms.locfileid: "86916729"
  **Chiave duplicata**  
  Consente di specificare l'azione che deve essere intrapresa per un errore di chiave duplicata. Il valore predefinito è **IgnoreError**.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
 |**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
@@ -148,7 +149,7 @@ ms.locfileid: "86916729"
  **Chiave Null convertita in sconosciuta**  
  Consente di specificare l'azione che deve essere intrapresa quando una chiave Null è stata convertita nel valore **UnknownMember** . Il valore predefinito è **IgnoreError**.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
 |**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
@@ -157,14 +158,14 @@ ms.locfileid: "86916729"
  **Chiave Null non consentita**  
  Consente di specificare l'azione che deve essere intrapresa quando viene incontrata una chiave Null e le chiavi Null non sono consentite. Il valore predefinito è **ReportAndContinue**.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
 |**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
 |**ReportAndStop**|Consente di segnalare l'errore e arrestare l'elaborazione.|  
   
  **Percorso log degli errori**  
- Consente di digitare il percorso del log degli errori o di selezionare una destinazione con il pulsante **Sfoglia (...)** .  
+ Consente di digitare il percorso del log degli errori o di selezionare una destinazione con il pulsante **Sfoglia (...)**.  
   
  **Sfoglia (...)**  
  Consente di selezionare il percorso del log degli errori.  

@@ -1,4 +1,5 @@
 ---
+description: Eliminazione di pacchetti
 title: Eliminare pacchetti | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3e7d3c0f25f34685af4531e5d59541f028098291
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2c7bdaa7f8d7a049794f3965b3fe9d50b3dbb958
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916649"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391717"
 ---
 # <a name="delete-packages"></a>Eliminazione di pacchetti
 

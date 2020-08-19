@@ -1,4 +1,5 @@
 ---
+description: Controllo - trasformazione
 title: Trasformazione Controllo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e0f716564eee0d867081576a36eba81735966c5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e04af79dc2020a2273717785fca57aac5e4de451
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392277"
 ---
 # <a name="audit-transformation"></a>Controllo - trasformazione
 
@@ -70,7 +71,7 @@ ms.locfileid: "86915749"
  **Tipo di controllo**  
  Consente di selezionare una variabile di sistema disponibile per visualizzare le informazioni di controllo.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**GUID istanza esecuzione**|Consente di specificare il GUID che identifica in modo univoco l'istanza di esecuzione del pacchetto.|  
 |**ID pacchetto**|Consente di specificare il GUID che identifica in modo univoco il pacchetto.|  

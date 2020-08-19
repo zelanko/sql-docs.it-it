@@ -1,4 +1,5 @@
 ---
+description: ABS (espressione SSIS)
 title: ABS (espressione SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8ba53861748db3d8b1d0a75800f4aa0151e81b2a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cc19d31e89795ab2af731deac610656e61f61062
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914377"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391337"
 ---
 # <a name="abs-ssis-expression"></a>ABS (espressione SSIS)
 
@@ -41,7 +42,7 @@ ABS(numeric_expression)
 ## <a name="result-types"></a>Tipi restituiti  
  Tipo di dati dell'espressione numerica inviata alla funzione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se l'argomento è Null, ABS restituirà Null.  
   
 ## <a name="expression-examples"></a>Esempi di espressione  

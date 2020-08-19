@@ -1,4 +1,5 @@
 ---
+description: "Lezione 1-5: Aggiungere e configurare l'origine file flat"
 title: "Passaggio 5: Aggiungere e configurare l'origine file flat | Microsoft Docs"
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 44750102897653d8ec1329e66ecf3fc78165db79
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cfc6ffa21bf3f6c1205b1c9c667cc6e75868cece
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917367"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390867"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>Lezione 1-5: Aggiungere e configurare l'origine file flat
 
@@ -44,12 +45,12 @@ Per questa attività verrà configurata l'origine file flat in modo da usare la 
   
 8.  Fare clic con il pulsante destro del mouse sull'origine file flat e selezionare **Proprietà**.  
   
-9. Nella finestra **Proprietà** verificare che la proprietà **LocaleID** sia impostata su **Inglese (Stati Uniti)** .  
+9. Nella finestra **Proprietà** verificare che la proprietà **LocaleID** sia impostata su **Inglese (Stati Uniti)**.  
   
 ## <a name="go-to-next-task"></a>Esecuzione del passaggio successivo
 [Passaggio 6: Aggiungere e configurare le trasformazioni Ricerca](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Origine file flat](../integration-services/data-flow/flat-file-source.md)  
 [Gestione connessione file flat](../integration-services/connection-manager/flat-file-connection-manager.md)  
   
