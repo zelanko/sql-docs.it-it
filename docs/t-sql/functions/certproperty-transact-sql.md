@@ -1,4 +1,5 @@
 ---
+description: CERTPROPERTY (Transact-SQL)
 title: CERTPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0323bb93388010c1ba9c20176893674aff03760a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: bbba412b97f88d52afa9a304c3cbbb101f74772b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112166"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88367277"
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -78,7 +79,7 @@ Il tipo restituito dipende dalla proprietà specificata nella chiamata alla funz
 -   *Cert_Serial_Number*, *Issuer_Name*, *String_SID* e *Subject* restituiscono tutti **nvarchar**.  
 -   *SID* restituisce un valore **varbinary**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 Le informazioni sui certificati sono disponibili nella vista del catalogo [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md).
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -103,7 +104,7 @@ PRINT CONVERT(nvarchar, @CertSubject);
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
 [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)  
 [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)

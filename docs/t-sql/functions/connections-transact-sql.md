@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;CONNECTIONS (Transact-SQL)'
 title: '@@CONNECTIONS (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c59836a8-443c-4b9a-8b96-8863ada97ac7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1865e3c12a468b8d9483e221f9aacaa2bca666c2
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 48279ffe9c454a32545d28c7ed74556ba3f93157
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111644"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366927"
 ---
 # <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONNECTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ Questa funzione restituisce il numero di tentativi di connessione, sia con esito
 ## <a name="return-types"></a>Tipi restituiti
 **integer**
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 Le connessioni sono distinte dagli utenti. Un'applicazione, ad esempio, può aprire più connessioni a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza che siano visibili all'utente.
   
 Eseguire **sp_monitor** per un report contenente dati statistici relativi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], compreso il conteggio dei tentativi di connessione.
@@ -70,7 +71,7 @@ Today's Date and Time  Login Attempts
 12/5/2006 10:32:45 AM  211023         
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 [Funzioni statistiche di sistema &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
 [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
   

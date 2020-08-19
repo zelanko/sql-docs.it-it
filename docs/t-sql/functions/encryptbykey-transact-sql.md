@@ -1,4 +1,5 @@
 ---
+description: ENCRYPTBYKEY (Transact-SQL)
 title: ENCRYPTBYKEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: da36a011f2999527218e668755a8c1d10c9ce692
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c90d864c80c3e54b8ea0cf1e1efcc51881e9eb80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366467"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +75,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  
  Restituisce NULL se il valore *cleartext* è NULL.
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  EncryptByKey usa una chiave simmetrica. Tale chiave deve essere aperta. Se la chiave simmetrica è già aperta nella sessione corrente, non è necessario aprirla nuovamente nel contesto della query.  
   
  L'autenticatore consente di ridurre la sostituzione di valori interi dei campi crittografati. Si consideri, ad esempio, la tabella seguente contenente dati relativi alle retribuzioni.  
