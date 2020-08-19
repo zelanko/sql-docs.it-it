@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
 title: sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
 ms.custom: seo-dt-2019
 ms.date: 03/09/2017
@@ -12,12 +13,12 @@ ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 64d74d28c4b99e75c114effdf651a58d01a614d6
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 41c43a39c85c05dcb0155c90fea74c5899445527
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394046"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475366"
 ---
 # <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "87394046"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|ID oggetto per il database. Si noti che questo valore non corrisponde a un database_id nella vista [&#41;Transact-SQL &#40;sys. databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .|  
+|database_id|**int**|ID oggetto per il database. Si noti che questo valore non corrisponde a un database_id nella vista [&#41;Transact-SQL &#40;sys. databases ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .|  
 |physical_name|**sysname**|Nome fisico del database nei nodi della shell/calcolo. Questo valore è uguale a un valore nella colonna physical_name della vista [&#41;Transact-SQL sys. pdw_database_mappings &#40;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) .|  
 |pdw_node_id|**int**|ID numerico univoco associato al nodo.|  
   
@@ -85,10 +86,10 @@ SELECT TOP 1 encryption_state
        ORDER BY (CASE encryption_state WHEN 3 THEN -1 ELSE encryption_state END) DESC;  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo di SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys. pdw_database_mappings &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
+ [sys. pdw_database_mappings &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
   
 

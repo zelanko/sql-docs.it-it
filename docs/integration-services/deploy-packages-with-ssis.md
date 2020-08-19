@@ -1,4 +1,5 @@
 ---
+description: 'Esercitazione SSIS: Distribuzione di pacchetti'
 title: 'Esercitazione SSIS: Distribuzione di pacchetti | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/20/2018
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9d6636cbd74f31448381b1f6cb2c3dd3826324a5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4ba92220b368e1ef7ee1218d972e6113e1378d27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916647"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430653"
 ---
 # <a name="deploy-packages-with-ssis"></a>Esercitazione SSIS: Distribuzione di pacchetti
 
@@ -51,7 +52,7 @@ L'obiettivo di questa esercitazione è simulare la complessità delle problemati
 ## <a name="what-you-learn"></a>Informazioni ottenute dall'esercitazione    
 Il modo più efficace per acquisire familiarità con i nuovi strumenti e controlli e con le caratteristiche disponibili in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è quello di usarli. Questa esercitazione consente di eseguire in modo semplificato i passaggi necessari per creare un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e quindi aggiungervi i pacchetti e gli altri file necessari. Dopo aver completato il progetto, si procederà alla creazione di un pacchetto di distribuzione, alla copia del pacchetto nel computer di destinazione e quindi all'installazione in quest'ultimo dei pacchetti.    
     
-## <a name="prerequisites"></a>Prerequisites    
+## <a name="prerequisites"></a>Prerequisiti    
 Questa esercitazione è destinata agli utenti già esperti nelle operazioni di base sul file system, ma con una limitata conoscenza delle nuove caratteristiche disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Ai fini dell'apprendimento dei concetti di base di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] che verranno usati in questa esercitazione, potrebbe risultare utile completare prima la seguente esercitazione di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] : [Esercitazione SSIS: Creazione di un pacchetto ETL semplice](../integration-services/ssis-how-to-create-an-etl-package.md).    
     
 ### <a name="on-the-source-computer"></a>Nel computer di origine
@@ -66,7 +67,7 @@ Nel computer in cui si crea il pacchetto di distribuzione **devono essere instal
 
 -   È necessario avere le autorizzazioni per creare ed eliminare tabelle nel database AdventureWorks.
     
--   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).    
+-   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) .    
     
 ### <a name="on-the-destination-computer"></a>Nel computer di destinazione
 

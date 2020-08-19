@@ -1,4 +1,5 @@
 ---
+description: STGeometryType (tipo di dati geography)
 title: STGeometryType (tipo di dati geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3e169ead-a98e-44af-8d33-fd59a955cae4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 957615b665641afd3ffbfbcac8d789a2426b35cc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 082c6ede155c04f9ea323db2c345a690a2d39a7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555406"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445269"
 ---
 # <a name="stgeometrytype-geography-data-type"></a>STGeometryType (tipo di dati geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86555406"
   
  Tipo CLR restituito: **SqlString**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I nomi dei tipi OGC che possono essere restituiti da `STGeometryType()` sono **Point**, **LineString**, **CircularString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString**, **MultiPolygon** e **FullGlobe**.  
   
 ## <a name="examples"></a>Esempi  
@@ -56,6 +57,6 @@ SELECT @g.STGeometryType();
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodi OGC sulle istanze geografiche](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Metodi OGC sulle istanze di geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Esempi di codice ADO in Visual Basic
 title: Esempi di codice ADO in Visual Basic | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f09b1827ae26f5ba8b8168e9c53809120bce6133
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 105cc4eb8fe9584497c3029d5c5ddd81a49c6e82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760577"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451513"
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>Esempi di codice ADO in Visual Basic
 Usare gli esempi di codice seguenti per informazioni su come usare i metodi, le proprietà e gli eventi ADO durante la scrittura in Visual Basic.  

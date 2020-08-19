@@ -1,4 +1,5 @@
 ---
+description: Aggiornamento della ricerca full-text
 title: Aggiornare la ricerca full-text | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 841c5bd53f2498a6e057495e3953744784beb211
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 763184ba374d004001b33357591a89668c3dd0a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629034"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490592"
 ---
 # <a name="upgrade-full-text-search"></a>Aggiornamento della ricerca full-text
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -123,7 +124,7 @@ Quando un database viene aggiornato a [!INCLUDE[ssCurrent](../../includes/sscurr
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)]: usare l'azione **upgrade\_option** di [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** usare **Opzione di aggiornamento full-text** nella finestra di dialogo **Proprietà server**. Per altre informazioni, vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Usare l'opzione di **aggiornamento full-text** della finestra di dialogo **Proprietà server** . Per altre informazioni, vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
 ##  <a name="considerations-for-restoring-a-ssversion2005-full-text-catalog-to-sscurrent"></a><a name="Considerations_for_Restore"></a> Considerazioni per il ripristino di un catalogo full-text di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Un metodo di aggiornamento dei dati full-text da un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] consiste nel ripristinare il backup completo di un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

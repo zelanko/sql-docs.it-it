@@ -1,4 +1,5 @@
 ---
+description: FILEGROUPPROPERTY (Transact-SQL)
 title: FILEGROUPPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 48c0d9a2a3b83256e8ae32a13d615e3a36b10ccb
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5992e56da8ae602d2e681265b63b52f6415f9374
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468021"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

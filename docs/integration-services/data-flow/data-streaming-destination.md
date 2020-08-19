@@ -1,4 +1,5 @@
 ---
+description: Destinazione flusso di dati
 title: Destinazione flusso di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3dd1ae26ab126e87a8f239597a573d24dbc8b3e1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 34f4ba8e001f43d4c29379dac0de36b595163679
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916768"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430903"
 ---
 # <a name="data-streaming-destination"></a>Destinazione flusso di dati
 
@@ -34,7 +35,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ```  
   
 ## <a name="data-feed-publishing-components"></a>Componenti di pubblicazione del feed di dati  
- I componenti di pubblicazione del feed di dati includono i seguenti: provider OLE DB per SSIS, Destinazione flusso di dati e procedura guidata di pubblicazione di pacchetti SSIS. La procedura guidata consente di pubblicare un pacchetto SSIS come vista SQL in un'istanza del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La procedura agevola la creazione di un server collegato che usa il provider OLE DB per SSIS e di una vista SQL che rappresenta la query sul server collegato. La vista consente di visualizzare i risultati della query dal pacchetto SSIS come set di dati tabulari.  
+ I componenti di pubblicazione del feed di dati includono il provider OLE DB per SSIS, Destinazione flusso di dati e Pubblicazione guidata di pacchetti SSIS. La procedura guidata consente di pubblicare un pacchetto SSIS come vista SQL in un'istanza del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La procedura agevola la creazione di un server collegato che usa il provider OLE DB per SSIS e di una vista SQL che rappresenta la query sul server collegato. La vista consente di visualizzare i risultati della query dal pacchetto SSIS come set di dati tabulari.  
   
  Per verificare l'installazione del provider SSISOLEDB, in SQL Server Management Studio espandere **Oggetti server**, **Server collegati**, **Provider**e quindi accertarsi che il provider **SSISOLEDB** sia visibile. Fare doppio clic su **SSISOLEDB**, abilitare l'opzione **Consenti in-process** se non è abilitata e quindi fare clic su **OK**.  
   
@@ -50,7 +51,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 3.  Eseguire la vista SQL in SQL Server Management Studio ed esaminare i risultati dal pacchetto SSIS. La vista invia la query al provider OLE DB per SSIS usando il server collegato che è stato creato. Il provider OLE DB per SSIS esegue il pacchetto specificato nella query e restituisce il set di risultati tabulare alla query.  
   
 > [!IMPORTANT]  
->  Per informazioni dettagliate, vedere [Procedura dettagliata: Pubblicare un pacchetto SSIS come vista SQL](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md).  
+>   Per altre informazioni, vedere [Walkthrough: Publish an SSIS Package as a SQL View](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md).  
 
 ## <a name="configure-data-streaming-destination"></a>Configurare Destinazione flusso di dati
   Per configurare Destinazione del flusso di dati si usa la finestra di dialogo **Editor avanzato per Destinazione flusso di dati** . Per aprire questa finestra di dialogo, fare doppio clic sul componente oppure fare clic con il pulsante destro del mouse sul componente nella finestra di progettazione del flusso di dati e quindi scegliere **Modificare**.  

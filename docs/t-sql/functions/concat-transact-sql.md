@@ -1,4 +1,5 @@
 ---
+description: CONCAT (Transact-SQL)
 title: CONCAT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -18,12 +19,12 @@ ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fe0c77173c617bc4f1003c31724af5dca32af28
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: d0cf8a5da8735015aaabc9760abc08edcf5c3e15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394266"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468226"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +43,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 
 ## <a name="arguments"></a>Argomenti
 *string_value*  
-Valore stringa da concatenare agli altri valori. La funzione `CONCAT` richiede almeno due, ma non più di 254, argomenti *string_value*.
+Valore stringa da concatenare agli altri valori. La funzione `CONCAT` richiede almeno due, ma non più di 254, argomenti ** string_value**.
   
 ## <a name="return-types"></a>Tipi restituiti  
 *string_value*  
@@ -56,9 +57,9 @@ Il tipo restituito dipende dal tipo degli argomenti. Nella tabella seguente vien
 |Tipo di input|Tipo di output e lunghezza|  
 |---|---|
 |1. Qualsiasi argomento di<br><br />un tipo di sistema CLR SQL<br><br />un UDT CLR SQL<br><br />o<br><br />`nvarchar(max)`|**nvarchar(max)**|  
-|2. In alternativa, qualsiasi argomento di tipo<br><br />**varbinary(max)**<br><br />o<br><br />**ntext**|**varchar(max)** , a meno che uno dei parametri non sia un tipo **nvarchar** di qualsiasi lunghezza. In questo caso `CONCAT` restituisce un risultato di tipo **nvarchar(max)** .|  
+|2. In alternativa, qualsiasi argomento di tipo<br><br />**varbinary(max)**<br><br />o<br><br />**ntext**|**varchar(max)** , a meno che uno dei parametri non sia un tipo **nvarchar** di qualsiasi lunghezza. In questo caso `CONCAT` restituisce un risultato di tipo **nvarchar(max)**.|  
 |3. In alternativa, qualsiasi argomento di tipo **nvarchar** di 4000 caratteri al massimo<br><br />( **nvarchar**(<= 4000) )|**nvarchar**(<= 4000)|  
-|4. In tutti gli altri casi|**varchar**(<= 8000) (un elemento **varchar** di 8000 caratteri al massimo), a meno che uno dei parametri non sia un tipo nvarchar di qualsiasi lunghezza. In questo caso, `CONCAT` restituisce un risultato di tipo **nvarchar(max)** .|  
+|4. In tutti gli altri casi|**varchar**(<= 8000) (un elemento **varchar** di 8000 caratteri al massimo), a meno che uno dei parametri non sia un tipo nvarchar di qualsiasi lunghezza. In questo caso, `CONCAT` restituisce un risultato di tipo **nvarchar(max)**.|  
   
 Quando `CONCAT` riceve argomenti di input **nvarchar** di lunghezza < = 4000 caratteri, o argomenti di input **varchar** di lunghezza < = 8000 caratteri, le conversioni implicite possono influire sulla lunghezza del risultato. Gli altri tipi di dati hanno lunghezze diverse quando vengono convertiti in modo implicito in stringhe. Ad esempio un tipo **int** (14) ha una lunghezza stringa 12, mentre un tipo **float** ha una lunghezza stringa 32. Pertanto, una concatenazione di due interi restituisce un risultato con una lunghezza non inferiore a 24.
   

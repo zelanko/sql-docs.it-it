@@ -1,4 +1,5 @@
 ---
+description: Informazioni sui blocchi
 title: Informazioni sui blocchi | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df46dd1ba112dfc592dee34bc37e50c5b727fed7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: db730cbda8ad0d24aa7d1400e67919ad37f987ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452533"
 ---
 # <a name="what-is-a-lock"></a>Informazioni sui blocchi
 Il blocco è il processo mediante il quale un DBMS limita l'accesso a una riga in un ambiente multiutente. Quando una riga o una colonna è bloccata in modo esclusivo, gli altri utenti non possono accedere ai dati bloccati fino a quando il blocco non viene rilasciato. Ciò garantisce che due utenti non possano aggiornare contemporaneamente la stessa colonna in una riga.  

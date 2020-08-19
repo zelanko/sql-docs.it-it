@@ -1,4 +1,5 @@
 ---
+description: 'Passaggio 2: Richiamare il programma del server (esercitazione su RDS)'
 title: 'Passaggio 2: richiamare il programma del server (esercitazione su RDS) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0e85b276ed8cc38419035d48357180c7952ff98
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b864578b67eda29c703bcf4952a9a2878aafe9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451943"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Passaggio 2: Richiamare il programma del server (esercitazione su RDS)
 Quando si richiama un metodo sul *proxy*client, il programma effettivo sul server esegue il metodo. In questo passaggio verrà eseguita una query sul server.  
@@ -27,7 +28,7 @@ Quando si richiama un metodo sul *proxy*client, il programma effettivo sul serve
   
  **Parte A** Se non si usa [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) in questa esercitazione, il modo più pratico per eseguire questo passaggio consiste nell'usare [RDS. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) . **RDS. DataControl** combina il passaggio precedente della creazione di un proxy, con questo passaggio, eseguendo la query.  
   
- Impostare **RDS. **Proprietà del [Server](../../../ado/reference/rds-api/server-property-rds.md) oggetti DataControl per identificare la posizione in cui deve essere creata un'istanza del programma server. proprietà [Connect](../../../ado/reference/rds-api/connect-property-rds.md) per specificare la stringa di connessione per l'accesso all'origine dati. e la proprietà [SQL](../../../ado/reference/rds-api/sql-property.md) per specificare il testo del comando di query. Eseguire quindi il metodo [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) per fare in modo che il programma server si connetta all'origine dati, recuperi le righe specificate dalla query e restituisca un oggetto **Recordset** al client.  
+ Impostare **RDS. ** Proprietà del [Server](../../../ado/reference/rds-api/server-property-rds.md) oggetti DataControl per identificare la posizione in cui deve essere creata un'istanza del programma server. proprietà [Connect](../../../ado/reference/rds-api/connect-property-rds.md) per specificare la stringa di connessione per l'accesso all'origine dati. e la proprietà [SQL](../../../ado/reference/rds-api/sql-property.md) per specificare il testo del comando di query. Eseguire quindi il metodo [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) per fare in modo che il programma server si connetta all'origine dati, recuperi le righe specificate dalla query e restituisca un oggetto **Recordset** al client.  
   
  Questa esercitazione non usa Servizi Desktop remoto **. DataControl**, ma questo è il modo in cui l'aspetto sarebbe stato:  
   

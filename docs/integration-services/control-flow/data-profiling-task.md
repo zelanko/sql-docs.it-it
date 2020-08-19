@@ -1,4 +1,5 @@
 ---
+description: Attività Profiling dati
 title: Attività Profiling dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e8076ccc258b7de7075bafc9f0a0f5c9bed6d6a0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 60e136951deb8701893ea3d611597e8388909816
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430993"
 ---
 # <a name="data-profiling-task"></a>Attività Profiling dati
 
@@ -90,13 +91,13 @@ ms.locfileid: "86914827"
   
  I tipi integer includono **bit**, **tinyint**, **smallint**, **int**e **bigint**.  
   
- I tipi di carattere includono **char**, **nchar**, **varchar**e **nvarchar** , ma non **varchar(max)** e **nvarchar(max)** .  
+ I tipi di carattere includono **char**, **nchar**, **varchar**e **nvarchar** , ma non **varchar(max)** e **nvarchar(max)**.  
   
  I tipi di data e ora includono **datetime**, **smalldatetime**e **timestamp**.  
   
  I tipi numerici includono **integer** (tranne **bit**), **money**, **smallmoney**, **decimal**, **float**, **real**e **numeric**.  
   
- \*\***image**, **text**, **XML**, **udt** e **variant** non sono supportati per profili diversi dal profilo del rapporto di valori di colonna Null.  
+ \*\* **image**, **text**, **XML**, **udt** e **variant** non sono supportati per profili diversi dal profilo del rapporto di valori di colonna Null.  
   
 ### <a name="valid-tables-and-columns"></a>Tabelle e colonne valide  
  Se la tabella o la colonna è vuota, l'attività Profiling dati esegue le seguenti azioni:  

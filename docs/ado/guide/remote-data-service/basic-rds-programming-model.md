@@ -1,4 +1,5 @@
 ---
+description: Modello di programmazione RDS di base
 title: Modello di programmazione RDS di base | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 441d3f9f2de12e269839c3561dd0d202121018be
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5c29bb00ed7cf8ff914373f026d252880d6bdbb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750183"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452313"
 ---
 # <a name="basic-rds-programming-model"></a>Modello di programmazione RDS di base
 > [!IMPORTANT]

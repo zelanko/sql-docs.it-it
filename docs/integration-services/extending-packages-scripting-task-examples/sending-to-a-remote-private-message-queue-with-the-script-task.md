@@ -1,4 +1,5 @@
 ---
+description: Invio di messaggi a una coda privata remota tramite l'attività Script
 title: Invio di messaggi a una coda privata remota tramite l'attività Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 58fc117593359bf8e06b7d38a3eb0510a44de09a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5bc25b37bb4dfac2aa03795972edb56eb406aebd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921087"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430343"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>Invio di messaggi a una coda privata remota tramite l'attività Script
 

@@ -1,4 +1,5 @@
 ---
+description: Registrazione di un oggetto business personalizzato
 title: Registrazione di un oggetto business personalizzato | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f110447fbb0f00c037361b00945b228449caf4f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: df390d9e02f31913f74b82ed6196bc2442d1591a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747718"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452053"
 ---
 # <a name="registering-a-custom-business-object"></a>Registrazione di un oggetto business personalizzato
 Per avviare correttamente un oggetto business personalizzato (file con estensione dll o exe) tramite il server Web, è necessario immettere il ProgID dell'oggetto business nel registro di sistema, come illustrato in questa procedura. Questa funzionalità RDS protegge la sicurezza del server Web eseguendo solo file eseguibili approvati.  

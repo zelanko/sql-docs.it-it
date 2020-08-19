@@ -1,4 +1,5 @@
 ---
+description: Utilizzare l'Indicizzazione guidata full-text
 title: Usare l'Indicizzazione guidata full-text | Microsoft Docs
 ms.date: 08/19/2016
 ms.prod: sql
@@ -23,12 +24,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2531d7f8034440b48a032ee1e9e74ae7fdb9df73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 24903e075fc7ce38e79c0b99a559afac194638bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490572"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Utilizzare l'Indicizzazione guidata full-text
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +63,7 @@ ms.locfileid: "85628803"
      **Automatico**  
      Selezionare questo pulsante di opzione per aggiornare automaticamente l'indice full-text a mano a mano che le modifiche vengono apportate ai dati sottostanti.  
   
-     **Manualmente**  
+     **Operazione manuale**  
      Selezionare questo pulsante di opzione se non si desidera che l'indice full-text venga aggiornato automaticamente a mano a mano che le modifiche vengono apportate ai dati sottostanti. Le modifiche apportate ai dati sottostanti vengono mantenute. Tuttavia, per applicare le modifiche all'indice full-text è necessario avviare o pianificare il processo in modo manuale.  
   
      **Non rilevare modifiche**  
@@ -80,7 +81,7 @@ ms.locfileid: "85628803"
 
      **Selezione catalogo:** consente di selezionare un catalogo full-text dall'elenco. Il catalogo predefinito del database corrisponderà all'elemento selezionato per impostazione predefinita nell'elenco. Se non è disponibile alcun catalogo, l'elenco sarà disabilitato e la casella di controllo **Crea un nuovo catalogo** sarà selezionata e disabilitata.  
   
-  o
+  OR
   
  10. **Crea un nuovo catalogo**
  - Selezionare un catalogo full-text.  

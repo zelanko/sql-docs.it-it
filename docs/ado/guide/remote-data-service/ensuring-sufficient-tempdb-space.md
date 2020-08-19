@@ -1,4 +1,5 @@
 ---
+description: Garantire spazio sufficiente per TempDB
 title: Verifica dello spazio TempDB sufficiente | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a783c6b6cecbd1fb4139d0ffd3af1a960347f968
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a84bec7cbd7a79fadf4ea5b11d486e7daf6aa9ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749578"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452193"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>Garantire spazio sufficiente per TempDB
 Se si verificano errori durante la gestione di oggetti [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) che richiedono spazio di elaborazione in Microsoft SQL Server 6,5, potrebbe essere necessario aumentare le dimensioni di tempdb. Per alcune query è necessario uno spazio di elaborazione temporaneo. ad esempio, una query con una clausola ORDER BY richiede un tipo di **Recordset**, che richiede uno spazio temporaneo.  

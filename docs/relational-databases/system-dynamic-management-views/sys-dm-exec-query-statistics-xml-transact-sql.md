@@ -1,4 +1,5 @@
 ---
+description: sys. dm_exec_query_statistics_xml (Transact-SQL)
 title: sys. dm_exec_query_statistics_xml (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 3b1621a89d38e8e241b69aadfb3f2016b63cdb7d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 250b97f93eb7a40fe23b44da4b760ce4681f33aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005203"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490216"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>sys. dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -56,7 +58,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 ## <a name="remarks"></a>Osservazioni
 Questa funzione di sistema è disponibile a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. Vedere KB [3190871](https://support.microsoft.com/help/3190871)
 
-Questa funzione di sistema funziona con l'infrastruttura di profilatura delle statistiche di esecuzione di query **standard** e **Lightweight** . Per altre informazioni, vedere [query profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).  
+Questa funzione di sistema funziona con l'infrastruttura di profilatura delle statistiche di esecuzione di query **standard** e **Lightweight** . Per altre informazioni, vedere [Infrastruttura di profilatura query](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
 Nelle condizioni seguenti non viene restituito alcun output Showplan nella colonna **query_plan** della tabella restituita per **sys. dm_exec_query_statistics_xml**:  
   
@@ -97,6 +99,6 @@ GO
   
 ## <a name="see-also"></a>Vedere anche
   [Flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
- [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Viste a gestione dinamica relative ai database &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Viste a gestione dinamica relative ai database &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
 

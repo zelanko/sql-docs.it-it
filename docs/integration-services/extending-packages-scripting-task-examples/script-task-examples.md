@@ -1,4 +1,5 @@
 ---
+description: Esempi di attività Script
 title: Esempi di attività Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa626ad14f1b7f467c84557ea22fcd12d95b3ca3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f001a8b784af159efff980a4fa1ca966af0892e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914128"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430383"
 ---
 # <a name="script-task-examples"></a>Esempi di attività Script
 
@@ -68,7 +69,7 @@ ms.locfileid: "86914128"
 ### <a name="other-examples"></a>Altri esempi  
  Anche gli argomenti riportati di seguito contengono esempi di codice da utilizzare con l'attività Script:  
   
- [Uso delle variabili nell'attività Script](../../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)  
+ [Utilizzo di variabili nell'attività Script](../../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)  
  Viene chiesta la conferma dell'utente per continuare o meno l'esecuzione del pacchetto, in base al valore di una variabile del pacchetto che potrebbe superare il limite specificato in un'altra variabile.  
   
  [Connessione a origini dati nell'attività Script](../../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)  

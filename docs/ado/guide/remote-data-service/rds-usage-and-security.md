@@ -1,4 +1,5 @@
 ---
+description: Utilizzo e sicurezza per RDS
 title: Utilizzo e sicurezza di RDS | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 601dce83ad5dc71a015c2fa8a66c85f975521d96
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9bdcecf462476b7f2fecfea48f174e0b4b2c499e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764702"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452063"
 ---
 # <a name="rds-usage-and-security"></a>Utilizzo e sicurezza per RDS
 Utilizzare le informazioni contenute in questa sezione per configurare il server e utilizzare RDS rapidamente. In questa sezione sono inclusi i passaggi di configurazione specifici che potrebbero essere necessari per l'implementazione di Servizi Desktop remoto, vengono descritte alcune delle principali relazioni tra Servizi Desktop remoto e altre tecnologie e viene facilitata l'identificazione delle soluzioni ai problemi che potrebbero verificarsi durante la configurazione di una soluzione Servizi Desktop remoto.  

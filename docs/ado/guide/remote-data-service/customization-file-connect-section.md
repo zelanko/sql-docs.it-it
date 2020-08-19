@@ -1,4 +1,5 @@
 ---
+description: Sezione sulla connessione del file di personalizzazione
 title: Sezione connessione file di personalizzazione | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9dab615fd861252832abe83d4b0ae736e2189180
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 02377ff40a56c8169576a5653ac21953946aaa1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452263"
 ---
 # <a name="customization-file-connect-section"></a>Sezione sulla connessione del file di personalizzazione
 Il comportamento predefinito del gestore è negare tutte le connessioni. La sezione **Connect** specifica le eccezioni al comportamento. Se, ad esempio, tutte le sezioni di **connessione** sono assenti o vuote, per impostazione predefinita non è possibile effettuare alcuna connessione.  
@@ -51,7 +52,7 @@ connectionString
   
 ```  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
   
 |Parte|Descrizione|  
 |----------|-----------------|  

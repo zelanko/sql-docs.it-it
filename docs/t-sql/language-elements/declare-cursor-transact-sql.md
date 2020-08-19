@@ -1,4 +1,5 @@
 ---
+description: DECLARE CURSOR (Transact-SQL)
 title: DECLARE CURSOR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3544d4a9530be4ff90609593e8335c725a4f1a22
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ecef1c20be4350646cb98fb96db8152074a97dda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445504"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -77,7 +78,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  READ ONLY  
  Impedisce gli aggiornamenti eseguiti tramite il cursore. Non è possibile fare riferimento al cursore in una clausola `WHERE CURRENT OF` di un'istruzione `UPDATE` o `DELETE`. Questa opzione è prioritaria rispetto alla funzionalità di aggiornamento predefinita di un cursore.  
   
- UPDATE [OF *column_name* [ **,** ...*n*]]  
+ UPDATE [OF *column_name* [**,**...*n*]]  
  Definisce le colonne aggiornabili nel cursore. Se è specificato l'argomento OF <column_name> [, <... n>], è possibile apportare modifiche solo nelle colonne elencate. Se si specifica `UPDATE` senza un elenco di colonne, è possibile aggiornare tutte le colonne.  
   
 *cursor_name*  
@@ -136,10 +137,10 @@ Specifica che gli aggiornamenti o le eliminazioni posizionate eseguite tramite i
   
 Se le clausole nell'argomento *select_statement* sono in conflitto con la funzionalità del tipo di cursore richiesto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte il cursore in modo implicito in un altro tipo. Per ulteriori informazioni, vedere l'argomento relativo alla conversione implicita dei cursori.  
   
-FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
+FOR UPDATE [OF *column_name* [**,**...*n*]]  
 Definisce le colonne aggiornabili nel cursore. Se si specifica `OF <column_name> [, <... n>]`, è possibile apportare modifiche solo nelle colonne elencate. Se l'istruzione `UPDATE` viene specificata senza un elenco di colonne, è possibile aggiornare tutte le colonne, a meno che non sia stata specificata l'opzione di concorrenza `READ_ONLY`.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 `DECLARE CURSOR` definisce gli attributi di un cursore server [!INCLUDE[tsql](../../includes/tsql-md.md)], ad esempio il comportamento dello scorrimento e la query usata per compilare il set di risultati su cui il cursore opera. L'istruzione `OPEN` popola il set di risultati e l'istruzione `FETCH` restituisce una riga di questo set. L'istruzione `CLOSE` rilascia il set di risultati corrente associato al cursore. L'istruzione `DEALLOCATE` rilascia le risorse usate dal cursore.  
   
 La prima forma dell'istruzione `DECLARE CURSOR` dichiara il funzionamento del cursore tramite la sintassi ISO. La seconda forma dell'istruzione `DECLARE CURSOR` usa estensioni di [!INCLUDE[tsql](../../includes/tsql-md.md)] che consentono di definire cursori in base allo stesso tipo di cursore usato nelle funzioni di cursore delle API di database ODBC o ADO.  

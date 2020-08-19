@@ -1,4 +1,5 @@
 ---
+description: Proprietà URL (Servizi Desktop remoto)
 title: Proprietà URL (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 09785fde3531d50f33064415ddc769eb07f0fec2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5c7201f300dce88cb512ff9168504b0e720881e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438533"
 ---
 # <a name="url-property-rds"></a>Proprietà URL (Servizi Desktop remoto)
 Indica una stringa che contiene un URL relativo o assoluto.  
@@ -43,7 +44,7 @@ Run time: DataControl.URL="Server"
  *DataControl*  
  Variabile oggetto che rappresenta un oggetto **DataControl** .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  In genere, l'URL identifica un file di pagina Active Server (. asp) che può produrre e restituire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Pertanto, l'utente può ottenere un **Recordset** senza dover richiamare l'oggetto [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) sul lato server oppure programmare un oggetto business personalizzato.  
   
  Se è stata impostata la proprietà **URL** , [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) invierà le modifiche al percorso specificato dall'URL.  

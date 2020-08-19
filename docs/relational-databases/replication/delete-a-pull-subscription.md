@@ -1,4 +1,5 @@
 ---
+description: Eliminazione di una sottoscrizione pull
 title: Eliminare una sottoscrizione pull | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 78c9ee665d35e4e6777186db9c506de16e02acf8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9f0044a9b4f07fe2b3dd8b04e435bea5bfa8baa8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85654093"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498796"
 ---
 # <a name="delete-a-pull-subscription"></a>Eliminazione di una sottoscrizione pull
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85654093"
   
      [Oggetti RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  Eliminare una sottoscrizione pull nel server di pubblicazione, dalla cartella **Pubblicazioni locali** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o nel Sottoscrittore, dalla cartella **Sottoscrizioni locali** . Se si elimina una sottoscrizione, gli oggetti o i dati non vengono rimossi automaticamente dalla sottoscrizione, ma è necessario rimuoverli manualmente.  
   
 #### <a name="to-delete-a-pull-subscription-at-the-publisher"></a>Per eliminare una sottoscrizione pull nel server di pubblicazione  
@@ -62,7 +63,7 @@ ms.locfileid: "85654093"
   
 4.  Nella finestra di dialogo di conferma specificare se connettersi al server di pubblicazione per eliminare le informazioni sulla sottoscrizione. Se si deseleziona la casella di controllo **Connetti al server di pubblicazione** , sarà necessario connettersi al server di pubblicazione in seguito per eliminare le informazioni.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  È possibile eliminare sottoscrizioni pull a livello di programmazione tramite le stored procedure di replica. Le stored procedure utilizzate dipenderanno dal tipo di pubblicazione a cui appartiene la sottoscrizione.  
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Per eliminare una sottoscrizione pull di una pubblicazione snapshot o transazionale  

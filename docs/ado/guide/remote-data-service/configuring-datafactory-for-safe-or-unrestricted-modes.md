@@ -1,4 +1,5 @@
 ---
+description: Configurazione di DataFactory per la modalità sicura o senza restrizioni
 title: Configurazione di DataFactory per modalità sicure o senza restrizioni | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cff72ed7c02cb4f0e9dc2a719ee7e82b55e44408
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a0b01eada84095b94740319a6d63ed6b0066425d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750077"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452303"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>Configurazione di DataFactory per la modalità sicura o senza restrizioni
 > [!IMPORTANT]
@@ -29,7 +30,7 @@ ms.locfileid: "82750077"
   
 2.  Il gestore predefinito, msdfmap. Handler, viene registrato, presente nell'elenco dei gestori di sicurezza e contrassegnato come gestore predefinito.  
   
-3.  Il file msdfmap. ini viene installato nella directory Windows. È necessario configurare il file in base alle proprie esigenze, prima di utilizzare Servizi Desktop remoto in modalità a tre livelli.  
+3.  Msdfmap.ini file viene installato nella directory Windows. È necessario configurare il file in base alle proprie esigenze, prima di utilizzare Servizi Desktop remoto in modalità a tre livelli.  
   
  Facoltativamente, è possibile configurare un'installazione di **DataFactory** senza restrizioni. **DataFactory** può essere usato direttamente senza il gestore personalizzato. Gli utenti possono comunque utilizzare un gestore personalizzato modificando le stringhe di connessione, ma non è obbligatorio. Per ulteriori informazioni sulle implicazioni dell'utilizzo dell'oggetto **RDSServer. DataFactory** , vedere [protezione delle applicazioni RDS](../../../ado/guide/remote-data-service/securing-rds-applications.md).  
   

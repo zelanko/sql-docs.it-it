@@ -1,4 +1,5 @@
 ---
+description: STMPolyFromText (tipo di dati geometry)
 title: STMPolyFromText (tipo di dati geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f087a61c-f063-4fb8-8f1c-251a2fed76a1
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 015de9248eb9e3af834a2c595abc8efdc2fc3794
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: aeced0be88d4be33cf5bd46debac8dd455609e1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554979"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445051"
 ---
 # <a name="stmpolyfromtext-geometry-data-type"></a>STMPolyFromText (tipo di dati geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Argomenti
  *multipolygon_tagged_text*  
- Rappresentazione WKT dell'istanza **geometryMultiPolygon** da restituire. *multipolygon_tagged_text* è un'espressione **nvarchar(max)** .  
+ Rappresentazione WKT dell'istanza **geometryMultiPolygon** da restituire. *multipolygon_tagged_text* è un'espressione **nvarchar(max)**.  
   
  *SRID*  
  Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geometryMultiPolygon** da restituire.  
@@ -52,7 +53,7 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
   
  Tipo OGC: **MultiPolygon**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questo metodo genererà un'eccezione **FormatException** se l'input non è formattato in modo corretto.  
   
 ## <a name="examples"></a>Esempi  

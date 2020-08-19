@@ -1,4 +1,5 @@
 ---
+description: Trasformazione Mappa caratteri
 title: Trasformazione Mappa caratteri | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46d4833b6879330e62b89470b8a542f8f6ed910e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 84e3e3593e2a3cbee72d6df5cc7565bb908a8b53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922458"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430713"
 ---
 # <a name="character-map-transformation"></a>Trasformazione Mappa caratteri
 
@@ -100,15 +101,15 @@ ms.locfileid: "86922458"
  **Destinazione**  
  Consente di specificare se salvare i risultati delle operazioni di stringa sul posto, utilizzando la colonna esistente, o se salvare i dati modificati come nuova colonna.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |Nuova colonna|Consente di salvare i dati in una nuova colonna. Assegnare il nome alla colonna in **Alias di output**.|  
 |Modifica sul posto|Consente di salvare i dati modificati nella colonna esistente.|  
   
- **operazione**  
+ **Operazione**  
  Consente di selezionare nell'elenco le funzioni per i valori stringa da applicare ai dati della colonna.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |Lettere minuscole|Consente di convertire la stringa in caratteri minuscoli.|  
 |Maiuscolo|Consente di convertire la stringa in caratteri maiuscoli.|  

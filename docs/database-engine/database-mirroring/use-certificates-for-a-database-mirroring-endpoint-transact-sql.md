@@ -1,4 +1,5 @@
 ---
+description: Utilizzare certificati per un endpoint del mirroring del database (Transact-SQL)
 title: Usare certificati per un endpoint del mirroring del database
 descriptoin: Steps to configure the use of a certificate on both inbound and outbound connections for a SQL Server database mirroring endpoint.
 ms.custom: seo-lt-2019
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f7c23cc2-48dc-4b78-b441-89ca29a0bd9e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c3c3d611937bcdf85c05d61e6cbbc1c3033941c2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c6e225e3202e0fe7cdd33bac38b86dda5283aae0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758197"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431243"
 ---
 # <a name="use-certificates-for-a-database-mirroring-endpoint-transact-sql"></a>Utilizzare certificati per un endpoint del mirroring del database (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ ms.locfileid: "85758197"
   
  Per altre informazioni, vedere [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in ingresso &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  A meno che la sicurezza della rete in uso non sia già garantita, è consigliabile utilizzare la crittografia per le connessioni per il mirroring del database. Per altre informazioni, vedere [Endpoint del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
   
  Quando si copia un certificato in un altro sistema, utilizzare un metodo di copia sicuro. È estremamente importante garantire la protezione di tutti i certificati.  

@@ -1,4 +1,5 @@
 ---
+description: DENY (autorizzazioni per certificati) (Transact-SQL)
 title: DENY (autorizzazioni per certificati) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4bbf8f2aa031b7f8a33993d6054d27137011814c
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: feec699a67378db5a7cdd1c169e507c72859b639
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444757"
 ---
 # <a name="deny-certificate-permissions-transact-sql"></a>DENY (autorizzazioni per certificati) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +50,7 @@ DENY permission  [ ,...n ]
  *permission*  
  Specifica un'autorizzazione che può essere negata per un certificato. Vedere l'elenco riportato di seguito.  
   
- ON CERTIFICATE **::** _certificate_name_  
+ ON CERTIFICATE **::**_certificate_name_  
  Specifica il certificato per cui viene negata l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
  *database_principal*  
@@ -93,7 +94,7 @@ DENY permission  [ ,...n ]
   
 -   utente del database non mappato ad alcuna entità server.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Un certificato è un'entità a sicurezza diretta a livello di database contenuta nel database padre nella gerarchia di autorizzazioni. Di seguito sono elencate le autorizzazioni più specifiche e limitate che è possibile negare per un certificato, insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
 |Autorizzazione del certificato|Autorizzazione del certificato in cui è inclusa|Autorizzazione del database in cui è inclusa|  

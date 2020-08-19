@@ -1,4 +1,5 @@
 ---
+description: sys.dm_filestream_file_io_handles (Transact-SQL)
 title: sys. dm_filestream_file_io_handles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -18,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 56e498fb942b87f187ae53a04ec1b240b71d2c96
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 543d74e0c62c80ea768009b6a7c9c9f965acbd54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898874"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489915"
 ---
 # <a name="sysdm_filestream_file_io_handles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Vengono visualizzati gli handle di file conosciuti dal proprietario dello spazio dei nomi (NSO, Namespace Owner). Gli handle FileStream che un client ha ottenuto utilizzando **OpenSqlFilestream** vengono visualizzati da questa visualizzazione.  
   
-|Colonna|Type|Description|  
+|Colonna|Type|Descrizione|  
 |------------|----------|-----------------|  
 |**handle_context_address**|**varbinary (8)**|Mostra l'indirizzo della struttura NSO interna associata all'handle del client. Ammette i valori Null.|  
 |**creation_request_id**|**int**|Viene mostrato un campo della richiesta di I/O REQ_PRE_CREATE utilizzata per creare questo handle. Non ammette i valori Null.|  
@@ -47,6 +48,6 @@ ms.locfileid: "85898874"
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste a gestione dinamica FILESTREAM e FileTable &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica FILESTREAM e FileTable &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
   
   

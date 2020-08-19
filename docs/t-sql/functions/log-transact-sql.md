@@ -1,4 +1,5 @@
 ---
+description: LOG (Transact-SQL)
 title: LOG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -20,12 +21,12 @@ ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb06ff97c4972507e63b8990c9d70c8598e8e2c2
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4c962baabeaccdd2c2cbf517cab5894458046bb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468016"
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,10 +63,10 @@ LOG ( float_expression )
 ## <a name="return-types"></a>Tipi restituiti  
  **float**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per impostazione predefinita, **LOG()** restituisce il logaritmo naturale. A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] è possibile impostare la base del logaritmo su un altro valore usando il parametro *base* facoltativo.  
   
- Il logaritmo naturale è il logaritmo in base **e**, dove **e** è una costante non razionale approssimativamente uguale a 2,718281828.  
+ Il logaritmo naturale è il logaritmo per la base **e**, in cui **e** è una costante irrazionale equivalente approssimativamente a 2,718281828.  
   
  Il logaritmo naturale del valore esponenziale di un numero è il numero stesso: LOG( EXP( *n* ) ) = *n*. Il valore esponenziale del logaritmo naturale di un numero è il numero stesso: EXP( LOG( *n* ) ) = *n*.  
   

@@ -1,4 +1,5 @@
 ---
+description: Training modello di data mining - destinazione
 title: Destinazione Training modello di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5332b93b6f51204700473d2faadbde39458db4fe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9e79b6190a8e3659b97f3e8f1c82533f3270bd42
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916786"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430913"
 ---
 # <a name="data-mining-model-training-destination"></a>Training modello di data mining - destinazione
 

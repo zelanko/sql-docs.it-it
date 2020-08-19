@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_database_mappings (Transact-SQL)
 title: sys. pdw_database_mappings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/17/2017
@@ -12,12 +13,12 @@ ms.assetid: 4ae2c71e-dd56-41ea-a16b-64936175b459
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 013a6bcbba5e7647db1bec04204f8e8fec710c16
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: c406f00d6ee9848ab5f09631d77436ef6b6dbddf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396092"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490289"
 ---
 # <a name="syspdw_database_mappings-transact-sql"></a>sys. pdw_database_mappings (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -42,11 +43,11 @@ JOIN sys.pdw_nodes_pdw_physical_databases AS Phys
 ORDER BY DB.database_id, Phys.pdw_node_id;  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo di SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [sys. pdw_index_mappings &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)   
- [sys. pdw_table_mappings &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)   
- [sys. pdw_nodes_pdw_physical_databases &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md)  
+ [sys. pdw_index_mappings &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)   
+ [sys. pdw_table_mappings &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)   
+ [sys. pdw_nodes_pdw_physical_databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md)  
   
   
 

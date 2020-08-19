@@ -1,4 +1,5 @@
 ---
+description: Opzioni di Richiesta profilo Inclusione valore (Attività Profiling dati)
 title: Opzioni di Richiesta profilo Inclusione valore (Attività Profiling dati) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0bebe29e50ad4adaa6152eaef17de64a926433c8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2c30a5e35a3c3e5b8e127a317e6d44880dee2e7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430933"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Inclusione valore (Attività Profiling dati)
 
@@ -106,7 +107,7 @@ ms.locfileid: "86913831"
 > [!NOTE]  
 >  Quando si usa il carattere jolly **(\*)** per **ColumnName**, **CompareOptions** è di sola lettura ed è impostato su **Default**.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Default**|Ordina e confronta i dati in base alle regole di confronto della colonna nella tabella di origine.|  
 |**BinarySort**|Ordina e confronta i dati di in base ai modelli di bit definiti per ogni carattere. L'ordinamento binario supporta la distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati e rappresenta inoltre il tipo di ordinamento più rapido.|  
@@ -114,7 +115,7 @@ ms.locfileid: "86913831"
   
  Se si seleziona **DictionarySort**, è inoltre possibile selezionare qualsiasi combinazione delle opzioni elencate nella tabella seguente. Per impostazione predefinita, nessuna di queste opzioni aggiuntive è selezionata.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**IgnoreCase**|Specifica se nel confronto viene fatta distinzione tra lettere maiuscole e minuscole. Se questa opzione è impostata, nel confronto tra stringhe verrà ignorata la combinazione di maiuscole e minuscole. Ad esempio, la stringa "ABC" verrà considerata identica alla stringa "abc".|  
 |**IgnoreNonSpace**|Specifica se nel confronto viene fatta distinzione tra i caratteri con spaziatura e quelli con segni diacritici. Se questa opzione è impostata, nel confronto verranno ignorati i segni diacritici. Ad esempio, il carattere "Ã¥" verrà considerato uguale al carattere "a".|  
@@ -129,7 +130,7 @@ ms.locfileid: "86913831"
  **InclusionThresholdSetting**  
  Selezionare l'impostazione di soglia per ridefinire l'output del profilo. Il valore predefinito di questa proprietà è **Specified**. Per ulteriori informazioni, vedere la sezione "Informazioni sulle impostazioni di soglia" riportata in precedenza in questo argomento.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Nessuno**|Non specifica alcuna soglia. Il livello di attendibilità della chiave viene segnalato indipendentemente dal valore.|  
 |**Specified**|Consente di usare la soglia specificata in **InclusionStrengthThreshold**. Il livello di attendibilità dell'inclusione viene segnalato solo se è maggiore della soglia.|  
@@ -143,7 +144,7 @@ ms.locfileid: "86913831"
  **SupersetColumnsKeyThresholdSetting**  
  Consente di specificare la soglia del superset. Il valore predefinito di questa proprietà è **Specified**. Per ulteriori informazioni, vedere la sezione "Informazioni sulle impostazioni di soglia" riportata in precedenza in questo argomento.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Nessuno**|Non specifica alcuna soglia. Il livello di attendibilità dell'inclusione viene segnalato indipendentemente dall'attendibilità della chiave nella colonna del superset.|  
 |**Specified**|Consente di usare la soglia specificata in **SupersetColumnsKeyThreshold**. Il livello di attendibilità dell'inclusione viene segnalato solo se l'attendibilità della chiave nella colonna del superset è maggiore della soglia.|  

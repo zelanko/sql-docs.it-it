@@ -1,4 +1,5 @@
 ---
+description: STMPointFromWKB (tipo di dati geometry)
 title: STMPointFromWKB (tipo di dati geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 01d4117f-01a0-4bc3-8762-7382a1cdbd6c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f538896347f5ca9148b422d992450314a6cde50f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a80aba8159be4697861ee9d80bcf2a18f7c59c8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445003"
 ---
 # <a name="stmpointfromwkb-geometry-data-type"></a>STMPointFromWKB (tipo di dati geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
 
 ## <a name="arguments"></a>Argomenti
  *WKB_multipoint*  
- Rappresentazione WKB dell'istanza **geometryMultiPoint** da restituire. *WKB_multipoint* è un'espressione **varbinary(max)** .  
+ Rappresentazione WKB dell'istanza **geometryMultiPoint** da restituire. *WKB_multipoint* è un'espressione **varbinary(max)**.  
   
  *SRID*  
  Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geometryMultiPoint** da restituire.  
@@ -52,7 +53,7 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
   
  Tipo OGC: **MultiPoint**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questo metodo genererà un'eccezione **FormatException** se l'input non è formattato in modo corretto.  
   
 ## <a name="examples"></a>Esempi  

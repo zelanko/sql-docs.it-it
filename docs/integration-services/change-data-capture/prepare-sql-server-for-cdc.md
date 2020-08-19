@@ -1,4 +1,5 @@
 ---
+description: Preparare SQL Server per CDC
 title: Preparare SQL Server per CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8b17436de4950b4dcda69e4c381477640821c9a2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9a98ff226c4e2e861b60d04cb50e8b201035c16a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431083"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>Preparare SQL Server per CDC
 
@@ -40,7 +41,7 @@ ms.locfileid: "86921752"
   
 -   **Autenticazione di Windows**  
   
--   **Autenticazione di SQL Server**: se si seleziona questa opzione, è necessario digitare il **nome utente** e la **password** dell'utente nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui si effettua la connessione.  
+-   **Autenticazione di SQL Server**: se si seleziona questa opzione, è necessario digitare **Nome utente** e **Password** per l'utente nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui si esegue la connessione.  
   
  Per preparare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per Oracle CDC, l'account di accesso deve disporre di autorizzazioni di scrittura per il database MSXDBCDC. Immettere le credenziali per un account di accesso che dispone di autorizzazioni per il database MSXDBCDC, ad esempio un membro del ruolo `sysasmin` .  
   
@@ -51,9 +52,9 @@ ms.locfileid: "86921752"
   
 -   **Timeout connessione** (Timeout esecuzione): Digitare il tempo, in secondi, di attesa del servizio Windows Oracle CDC per l'esecuzione di un comando prima che si verifichi un errore di timeout. Il valore predefinito è **30**.  
   
--   **Encrypt Connection** (Crittografia connessione): selezionare **Encrypt Connection** (Crittografa connessione) per la comunicazione tra il servizio Oracle CDC e l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione tramite una connessione crittografata.  
+-   **Encrypt Connection**: selezionare **Encrypt Connection** per la comunicazione tra il servizio Oracle CDC e l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione tramite una connessione crittografata.  
   
--   **Avanzate**: digitare eventuali proprietà di connessione aggiuntive, se necessario.  
+-   **Advanced**: digitare eventuali proprietà di connessione aggiuntive, se necessario.  
   
 ### <a name="view-script"></a>View Script  
  Fare clic su **Visualizza script** per visualizzare una versione di sola lettura dello script di impostazione. Se necessario, un amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può copiare questo script nella console di gestione di SQL Server per modificarlo. Per altre informazioni sulla preparazione di SQL Server per lo script, vedere [Preparare SQL Server per lo script di visualizzazione di Oracle CDC](../../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md).  

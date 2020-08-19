@@ -1,4 +1,5 @@
 ---
+description: ALTER MESSAGE TYPE (Transact-SQL)
 title: ALTER MESSAGE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e0e9e6a6d8e0f4b976775271532fc61b03b199fa
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 25553c83a9d564be0ea2ef6a5bb845c750d4f589
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381175"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444911"
 ---
 # <a name="alter-message-type-transact-sql"></a>ALTER MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -56,7 +57,7 @@ ALTER MESSAGE TYPE message_type_name
  VALIDATION  
  Specifica la modalità con cui [!INCLUDE[ssSB](../../includes/sssb-md.md)] convalida il corpo dei messaggi di questo tipo.  
   
- Nessuno  
+ NONE  
  Non viene eseguita alcuna convalida. Il corpo del messaggio può contenere dati oppure può essere NULL.  
   
  EMPTY  
@@ -68,7 +69,7 @@ ALTER MESSAGE TYPE message_type_name
  VALID_XML_WITH_SCHEMA = *schema_collection_name*  
  Il corpo del messaggio deve contenere dati XML conformi a uno schema incluso nella raccolta di schemi specificata. *schema_collection_name* deve corrispondere al nome di una raccolta di XML Schema esistente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La modifica del tipo di messaggio non influisce sui messaggi che sono già stati recapitati a una coda.  
   
  Per modificare AUTHORIZATION per un tipo di messaggio, utilizzare l'istruzione ALTER AUTHORIZATION.  

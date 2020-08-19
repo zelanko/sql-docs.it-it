@@ -1,4 +1,5 @@
 ---
+description: Controllo dell'accesso per dati sensibili nei pacchetti
 title: Controllo dell'accesso per dati sensibili nei pacchetti | Microsoft Docs
 ms.custom: security
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6b5347b8b3d241bc7d65fb4d344b74822150185e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 01e2b133fcd1e4fbf008ae591c92cb549b22479a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922065"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430133"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Controllo dell'accesso per dati sensibili nei pacchetti
 
@@ -160,6 +161,6 @@ ms.locfileid: "86922065"
   
 ## <a name="see-also"></a>Vedere anche  
  [Pacchetti di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
- [Panoramica della sicurezza &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
+ [Panoramica sulla sicurezza &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
  [Utilità dtutil](../../integration-services/dtutil-utility.md)  
   

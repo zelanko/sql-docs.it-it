@@ -1,4 +1,5 @@
 ---
+description: STMPolyFromWKB (tipo di dati geometry)
 title: STMPolyFromWKB (tipo di dati geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cac25868-08ef-46fc-9c3d-a15e43794a7a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: e551d74df5418ca16c4428531ea1d4beeed6f478
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: dc49ab21f8cb21d3039c020dedc16d95b7301ec5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445045"
 ---
 # <a name="stmpolyfromwkb-geometry-data-type"></a>STMPolyFromWKB (tipo di dati geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
 
 ## <a name="arguments"></a>Argomenti
  *WKB_multipolygon*  
- Rappresentazione WKB dell'istanza **geometryMultiPolygon** da restituire. *WKB_multipolygon* è un'espressione **varbinary(max)** .  
+ Rappresentazione WKB dell'istanza **geometryMultiPolygon** da restituire. *WKB_multipolygon* è un'espressione **varbinary(max)**.  
   
  *SRID*  
  Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geometryMultiPolygon** da restituire.  
@@ -52,7 +53,7 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
   
  Tipo OGC: **MultiPolygon**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato il metodo `STMPolyFromWKB()` per creare un'istanza `geometry`.  

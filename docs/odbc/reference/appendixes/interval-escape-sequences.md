@@ -1,4 +1,5 @@
 ---
+description: Sequenze di escape intervallo
 title: Sequenze di escape intervallo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 303e8dab-8f13-4fa5-857f-15cc1f75bdd6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9fe7f6941e9ec9fba8b6698faaa18a678732dd6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e2ef792403352568ce5f8d92c07a5b0e1027b507
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304956"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483294"
 ---
 # <a name="interval-escape-sequences"></a>Sequenze di escape intervallo
 ODBC utilizza sequenze di escape per i valori letterali di intervallo. La sintassi di questa sequenza di escape è la seguente:  

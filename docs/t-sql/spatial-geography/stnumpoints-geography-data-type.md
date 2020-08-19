@@ -1,4 +1,5 @@
 ---
+description: STNumPoints (tipo di dati geography)
 title: STNumPoints (tipo di dati geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 372dea8b43f386795d49274ed63d62b862ecff43
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6dbbf84ae21589d6428528d1599fe65eba7704f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552457"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445176"
 ---
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints (tipo di dati geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86552457"
   
  Tipo CLR restituito: **SqlInt32**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questo metodo conta i punti nella descrizione di un'istanza **geography**. Vengono contati anche i punti duplicati; tuttavia, i punti di connessione tra i segmenti vengono contati una sola volta. Se questa istanza è una raccolta, il metodo restituisce il numero totale di punti nella raccolta.  
   
 ## <a name="examples"></a>Esempi  
@@ -75,6 +76,6 @@ SELECT @g.STNumPoints();
  ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodi OGC sulle istanze geografiche](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Metodi OGC sulle istanze di geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

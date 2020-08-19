@@ -1,4 +1,5 @@
 ---
+description: Trovare frasi chiave nei documenti mediante ricerca semantica
 title: Trovare frasi chiave nei documenti tramite la ricerca semantica
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: ac80ea56e1ba6cf3adcb0f913325b0347ade455e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 62a0ba559733c42ddf25b5d40896c4e53bdcf7b7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490562"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>Trovare frasi chiave nei documenti mediante ricerca semantica
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85730187"
 > [!IMPORTANT]  
 >  Per le colonne di destinazione deve essere abilitata l'indicizzazione full-text e semantica.  
   
-###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a> Example 1: Find the top key phrases in a specific document  
+###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a> Esempio 1: Trovare le principali frasi chiave in un documento specifico  
  L'esempio seguente recupera le prime 10 frasi chiave dal documento specificato tramite la variabile @DocumentId nella colonna Document della tabella Production.Document del database di esempio AdventureWorks. La variabile @DocumentId rappresenta un valore della colonna chiave dell'indice full-text.  
   
 ```sql  

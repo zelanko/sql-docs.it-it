@@ -1,4 +1,5 @@
 ---
+description: Argomenti nelle funzioni di catalogo
 title: Argomenti nelle funzioni di catalogo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 819c10d0b137d5e0999c1e10bf22810392509f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef53514f41d28e93648970b03fa53927529d8344
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288167"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483134"
 ---
 # <a name="arguments-in-catalog-functions"></a>Argomenti nelle funzioni di catalogo
 Tutte le funzioni di catalogo accettano argomenti con cui un'applicazione può limitare l'ambito dei dati restituiti. La prima e la seconda chiamata a **SQLTables** nel codice seguente, ad esempio, restituiscono un set di risultati contenente informazioni su tutte le tabelle, mentre la terza chiamata restituisce informazioni sulla tabella Orders:  

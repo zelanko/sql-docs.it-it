@@ -1,4 +1,5 @@
 ---
+description: DROP FUNCTION (Transact-SQL)
 title: DROP FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/11/2020
@@ -22,12 +23,12 @@ ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d0f955bbb373c48f55b9769485354050c2c86a3
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4dfb731f2ce4bd0ed1beeea64aacf071267a7efb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444640"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,6 +56,8 @@ DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 ```  
    
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argomenti
  *IF EXISTS*    
  Rimuove in modo condizionale la funzione solo se esiste già. Disponibile a partire da [!INCLUDE[ssnoversion_md](../../includes/ssnoversion-md.md)] 2016 e [!INCLUDE[sssds_md](../../includes/sssds-md.md)].
@@ -65,7 +68,7 @@ DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
  *function_name*  
  Nome della funzione o delle funzioni definite dall'utente che si desidera rimuovere. Il nome dello schema è facoltativo. Non è possibile specificare il nome del server e il nome del database.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  DROP FUNCTION ha esito negativo se nel database esistono funzioni o viste [!INCLUDE[tsql](../../includes/tsql-md.md)] che fanno riferimento a questa funzione e sono state create con l'opzione SCHEMABINDING oppure se esistono colonne calcolate, vincoli CHECK o vincoli DEFAULT che fanno riferimento a questa funzione.  
   
  DROP FUNCTION ha esito negativo se esistono colonne calcolate che fanno riferimento a questa funzione e sono state indicizzate.  

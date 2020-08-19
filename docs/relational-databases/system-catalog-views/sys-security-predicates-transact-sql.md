@@ -1,4 +1,5 @@
 ---
+description: sys. security_predicates (Transact-SQL)
 title: sys. security_predicates (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ ms.assetid: c7a2f28c-98da-463d-8b8a-8e5619e2c6a6
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80ca5a060d464562b9b97d2931082af98f3df785
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: c2ba8b6c9c4a2fc2f6b3beb562edfac0728678fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395234"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490135"
 ---
 # <a name="syssecurity_predicates-transact-sql"></a>sys. security_predicates (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "87395234"
 |predicate_definition|**nvarchar(max)**|Nome completo della funzione che verrà usata come predicato di sicurezza, inclusi gli argomenti. Si noti che il nome `schema.function` può essere normalizzato (vale a dire preceduto da un carattere di escape) come qualsiasi altro elemento nel testo per la coerenza. Ad esempio:<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
 |predicate_type|**int**|Tipo di predicato utilizzato dai criteri di sicurezza:<br /><br /> 0 = PREDICATO DEL FILTRO<br /><br /> 1 = PREDICATO DI BLOCCO|  
 |predicate_type_desc|**nvarchar(60)**|Tipo di predicato utilizzato dai criteri di sicurezza:<br /><br /> FILTER<br /><br /> BLOCCA|  
-|operazione|**int**|Tipo di operazione specificata per il predicato:<br /><br /> NULL = tutte le operazioni applicabili<br /><br /> 1 = DOPO L'INSERIMENTO<br /><br /> 2 = DOPO L'AGGIORNAMENTO<br /><br /> 3 = PRIMA DELL'AGGIORNAMENTO<br /><br /> 4 = PRIMA DELL'ELIMINAZIONE|  
+|operation|**int**|Tipo di operazione specificata per il predicato:<br /><br /> NULL = tutte le operazioni applicabili<br /><br /> 1 = DOPO L'INSERIMENTO<br /><br /> 2 = DOPO L'AGGIORNAMENTO<br /><br /> 3 = PRIMA DELL'AGGIORNAMENTO<br /><br /> 4 = PRIMA DELL'ELIMINAZIONE|  
 |operation_desc|**nvarchar(60)**|Tipo di operazione specificata per il predicato:<br /><br /> NULL<br /><br /> DOPO L'INSERIMENTO<br /><br /> AFTER UPDATE<br /><br /> PRIMA DELL'AGGIORNAMENTO<br /><br /> PRIMA DELL'ELIMINAZIONE|  
   
 ## <a name="permissions"></a>Autorizzazioni  

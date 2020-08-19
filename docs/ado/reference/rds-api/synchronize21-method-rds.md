@@ -1,4 +1,5 @@
 ---
+description: Metodo Synchronize21 (Servizi Desktop remoto)
 title: Metodo Synchronize21 (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 454b012b8027b86256215721bdfca17122713c75
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4627ac4b67e31861ff91cb516076a561a7a315e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750556"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438563"
 ---
 # <a name="synchronize21-method-rds"></a>Metodo Synchronize21 (Servizi Desktop remoto)
 Sincronizzare il recordset specificato con il database specificato dalla stringa di connessione per l'utilizzo con ADO 2,1.  
@@ -57,8 +58,8 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  *pStatusArray*  
  Variante utilizzata per restituire una matrice sicura di Stati di riga per le righe interessate dalla sincronizzazione. Non impostato se nessuna delle seguenti opzioni di sincronizzazione è impostata: *RefreshWithUpdate*, *Refresh* e *RefreshConflicts*.  
   
-## <a name="remarks"></a>Commenti  
- Il parametro *HandlerString* può essere null. Ciò che accade in questo caso dipende dalla modalità di configurazione del server RDS. Una stringa del gestore "MSDFMAP. handler" indica che deve essere usato il gestore fornito da Microsoft (msdfmap. dll). Una stringa del gestore "MASDFMAP. Handler, Sample. ini" indica che è necessario utilizzare il gestore msdfmap. dll e che l'argomento "Sample. ini" deve essere passato al gestore. Msdfmap. dll interpreterà quindi l'argomento come direzione per utilizzare Sample. ini per verificare la connessione e le stringhe di query.  
+## <a name="remarks"></a>Osservazioni  
+ Il parametro *HandlerString* può essere null. Ciò che accade in questo caso dipende dalla modalità di configurazione del server RDS. Una stringa del gestore "MSDFMAP. handler" indica che deve essere utilizzato il gestore fornito da Microsoft (Msdfmap.dll). Una stringa del gestore "MASDFMAP. Handler, sample.ini" indica che è necessario utilizzare il gestore di Msdfmap.dll e che l'argomento "sample.ini" deve essere passato al gestore. Msdfmap.dll interpreterà quindi l'argomento come direzione per usare il sample.ini per verificare le stringhe di connessione e di query.  
   
 > [!NOTE]
 >  Il metodo **Synchronize21** è semplicemente una versione del [metodo Synchronize (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md). Quando è necessario usare il metodo **Synchronize** per comunicare con ADO 2,1, è possibile chiamare il metodo **Synchronize21** . Le funzionalità del metodo **Synchronize** in ADO 2,5 e versioni successive sono un superset delle funzionalità fornite per lo stesso metodo in ADO 2,1.  

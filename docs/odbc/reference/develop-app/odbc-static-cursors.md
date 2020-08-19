@@ -1,4 +1,5 @@
 ---
+description: Cursori statici ODBC
 title: Cursori statici ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 28cb324c-e1c3-4b5c-bc3e-54df87037317
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b99566c473e88684e8b092a5ac9fc899e7dce177
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9689badd39e21f82c268be904b29ffb1fa90a8ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429163"
 ---
 # <a name="odbc-static-cursors"></a>Cursori statici ODBC
 Un cursore statico è quello in cui il set di risultati sembra essere statico. Non rileva in genere le modifiche apportate all'appartenenza, all'ordine o ai valori del set di risultati dopo l'apertura del cursore. Si supponga, ad esempio, che un cursore statico recuperi una riga e un'altra applicazione aggiorni la riga. Se il cursore statico recupera la riga, i valori che visualizza sono invariati, nonostante le modifiche apportate dall'altra applicazione.  

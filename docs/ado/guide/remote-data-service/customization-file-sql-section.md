@@ -1,4 +1,5 @@
 ---
+description: Sezione SQL del file di personalizzazione
 title: Sezione SQL del file di personalizzazione | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 934b982004bf27e28a8daeed09061101886ce444
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3ceb97d4859126c2116383196db5e6c71affb77f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452243"
 ---
 # <a name="customization-file-sql-section"></a>Sezione SQL del file di personalizzazione
 La sezione **SQL** può contenere una nuova stringa SQL che sostituisce la stringa di comando del client. Se nella sezione non è presente alcuna stringa SQL, la sezione verrà ignorata.  
