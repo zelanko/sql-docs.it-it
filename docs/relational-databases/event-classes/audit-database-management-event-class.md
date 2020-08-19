@@ -1,4 +1,5 @@
 ---
+description: Audit Database Management - classe di evento
 title: Classe di evento Audit Database Management | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 3e3de528-c3f8-413f-a6b9-d324ca95ad8e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 97f3909a80f6acf43c5b5540c8c828ced50a1056
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e5219d71f7752db32b0b9050f95bb39696f9da8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630535"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428633"
 ---
 # <a name="audit-database-management-event-class"></a>Audit Database Management - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

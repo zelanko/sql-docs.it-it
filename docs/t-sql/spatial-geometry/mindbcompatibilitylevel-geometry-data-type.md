@@ -1,4 +1,5 @@
 ---
+description: MinDbCompatibilityLevel (tipo di dati geometry)
 title: MinDbCompatibilityLevel (tipo di dati geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c848b974-8ccb-4c5c-a7eb-b019a9538d99
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 373c9eb4a1482bf92ae41c39af2f8852d19aac9f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 0136c2f53b70b6180bb380d72e1c9e4d70351ffb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427053"
 ---
 # <a name="mindbcompatibilitylevel-geometry-data-type"></a>MinDbCompatibilityLevel (tipo di dati geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ Restituisce il livello minimo di compatibilità del database che riconosce l'ist
   
  Tipo CLR restituito: **int**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare `MinDbCompatibilityLevel()` per verificare la compatibilità di un oggetto spaziale prima di modificare il livello di compatibilità in un database.  
   
 ## <a name="examples"></a>Esempi  

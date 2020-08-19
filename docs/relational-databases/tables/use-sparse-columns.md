@@ -1,4 +1,5 @@
 ---
+description: Utilizzo di colonne di tipo sparse
 title: Usare le colonne di tipo sparse | Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2016
@@ -15,12 +16,12 @@ ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee869a8bc2842bcc56fd0e8ab79c7668c28b50a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e2b1acccba4fe2f9a9285160bfc25071d7399873
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999861"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427463"
 ---
 # <a name="use-sparse-columns"></a>Utilizzo di colonne di tipo sparse
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

@@ -1,4 +1,5 @@
 ---
+description: Funzione ConfigDriver
 title: Funzione ConfigDriver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6a2da5fd5ce01bd97f13d7c8d805c615c1ac436a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d59765d1b6a6a662c02b459e07bac10895838a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303962"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428953"
 ---
 # <a name="configdriver-function"></a>Funzione ConfigDriver
 **Conformità**  
  Versione introdotta: ODBC 2,5  
   
- **Riepilogo**  
+ **Summary**  
  **ConfigDriver** consente a un programma di installazione di eseguire le funzioni di installazione e disinstallazione senza richiedere al programma di chiamare **ConfigDSN**. Questa funzione eseguirà funzioni specifiche del driver, ad esempio la creazione di informazioni di sistema specifiche del driver e l'esecuzione di conversioni DSN durante l'installazione, nonché la pulizia delle modifiche delle informazioni di sistema durante la disinstallazione. Questa funzione è esposta dalla DLL di installazione del driver o da una DLL di installazione separata.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -61,7 +62,7 @@ BOOL ConfigDriver(
  Questa opzione può anche essere specifica del driver, nel qual caso l'argomento *fRequest* per la prima opzione deve iniziare da ODBC_CONFIG_DRIVER_MAX + 1. L'argomento *fRequest* per qualsiasi opzione aggiuntiva deve iniziare anche da un valore maggiore di ODBC_CONFIG_DRIVER_MAX + 1.  
   
  *lpszDriver*  
- Input Nome del driver registrato nella chiave Odbcinst. ini delle informazioni sul sistema.  
+ Input Nome del driver registrato nella chiave Odbcinst.ini delle informazioni sul sistema.  
   
  *lpszArgs*  
  Input Stringa con terminazione null che contiene gli argomenti per un *fRequest*specifico del driver.  
@@ -77,11 +78,11 @@ BOOL ConfigDriver(
   
  Se il numero di byte disponibili per restituire è maggiore o uguale a *cbMsgMax*, il messaggio di output in *lpszMsg* viene troncato in *cbMsgMax* meno il carattere di terminazione null. L'argomento *pcbMsgOut* può essere un puntatore null.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  La funzione restituisce TRUE se ha esito positivo, FALSE in caso di esito negativo.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **ConfigDriver** restituisce false, un valore * \*pfErrorCode* associato viene inserito nel buffer di errore del programma di installazione mediante una chiamata a **SQLPostInstallerError** e può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i * \*valori pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
+ Quando **ConfigDriver** restituisce false, un valore * \* pfErrorCode* associato viene inserito nel buffer di errore del programma di installazione mediante una chiamata a **SQLPostInstallerError** e può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i valori * \* pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  

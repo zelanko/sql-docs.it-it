@@ -1,4 +1,5 @@
 ---
+description: Funzione SQLDisconnect
 title: Funzione Disconnect | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: 9e84a58e-db48-4821-a0cd-5c711fcbe36b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a5ea73919fbe90719d881fb43108ab1934933708
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 604f5af6f425506996e7e15b7db73878f3d8b2c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428943"
 ---
 # <a name="sqldisconnect-function"></a>Funzione SQLDisconnect
 **Conformità**  
  Versione introdotta: ODBC 1,0 Standard Compliance: ISO 92  
   
- **Riepilogo**  
+ **Summary**  
  **Disconnect** chiude la connessione associata a un handle di connessione specifico.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -46,7 +47,7 @@ SQLRETURN SQLDisconnect(
  *ConnectionHandle*  
  [Input] Handle di connessione.  
   
-## <a name="returns"></a>Valori di codice restituiti  
+## <a name="returns"></a>Restituisce  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE o SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Diagnostica  
@@ -58,7 +59,7 @@ SQLRETURN SQLDisconnect(
 |01002|Errore di disconnessione|Si è verificato un errore durante la disconnessione. Tuttavia, la disconnessione è riuscita. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
 |08003|Connessione non aperta|(DM) la connessione specificata nell'argomento *connectionHandle* non è stata aperta.|  
 |25000|Stato della transazione non valido|Transazione in corso sulla connessione specificata dall'argomento *connectionHandle*. La transazione rimane attiva.|  
-|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel buffer * \* MessageText* descrive l'errore e la sua origine.|  
 |HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *connectionHandle*. La funzione è stata chiamata e prima di finshed l'esecuzione della [funzione SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) è stata chiamata su *connectionHandle*. La funzione è stata chiamata nuovamente in *connectionHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione di **SQLCancelHandle** è stato chiamato su *connectionHandle* da un thread diverso in un'applicazione multithread.|  
 |HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per un *statementHandle* associato a *connectionHandle* ed è ancora in esecuzione quando è stato chiamato **SqlConnection** .<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *connectionHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per un *statementHandle* associato a *connectionHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.|  
@@ -90,7 +91,7 @@ SQLRETURN SQLDisconnect(
 |---------------------------|---------|  
 |Allocazione di un handle|[Funzione SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |Connessione a un'origine dati|[Funzione SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|  
-|Connessione a un'origine dati utilizzando una stringa di connessione o una finestra di dialogo|[SQLDriverConnect Function](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|Connessione a un'origine dati utilizzando una stringa di connessione o una finestra di dialogo|[Funzione SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |Esecuzione di un'operazione di commit o rollback|[SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md)|  
 |Liberazione di un handle di connessione|[Funzione SQLFreeConnect](../../../odbc/reference/syntax/sqlfreeconnect-function.md)|  
   

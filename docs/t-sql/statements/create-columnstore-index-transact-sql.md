@@ -1,4 +1,5 @@
 ---
+description: CREATE COLUMNSTORE INDEX (Transact-SQL)
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/25/2019
@@ -29,12 +30,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7125460527a0ca6aa231d771cff8714db7891b09
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9f352de797fbdf228cd83ab1a26725ff4a8aa81a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396265"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426873"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -111,7 +112,9 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 [;]  
 
 ```
-## <a name="arguments"></a>Argomenti  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argomenti
 
 Alcune opzioni non sono disponibili in tutte le versioni del motore di database. La tabella seguente elenca le versioni in cui le opzioni vengono introdotte negli indici COLUMNSTORE CLUSTERED e COLUMNSTORE NONCLUSTERED:
 
@@ -311,13 +314,13 @@ Le opzioni SET nella colonna Valore obbligatorio sono richieste ogni volta che s
   
     |Opzioni SET|Valore richiesto|Valore server predefinito|Predefinito<br /><br /> OLE DB e ODBC predefinito|Predefinito<br /><br /> DB-Library predefinito|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
-    |ANSI_NULLS|ATTIVA|ATTIVA|ATTIVA|OFF|  
-    |ANSI_PADDING|ATTIVA|ATTIVA|ATTIVA|OFF|  
-    |ANSI_WARNINGS*|ATTIVA|ATTIVA|ATTIVA|OFF|  
-    |ARITHABORT|ATTIVA|ATTIVA|OFF|OFF|  
-    |CONCAT_NULL_YIELDS_NULL|ATTIVA|ATTIVA|ATTIVA|OFF|  
+    |ANSI_NULLS|ATTIVA|ATTIVA|ON|OFF|  
+    |ANSI_PADDING|ATTIVA|ATTIVA|ON|OFF|  
+    |ANSI_WARNINGS*|ATTIVA|ATTIVA|ON|OFF|  
+    |ARITHABORT|ATTIVA|ON|OFF|OFF|  
+    |CONCAT_NULL_YIELDS_NULL|ATTIVA|ATTIVA|ON|OFF|  
     |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-    |QUOTED_IDENTIFIER|ATTIVA|ATTIVA|ATTIVA|OFF|   
+    |QUOTED_IDENTIFIER|ATTIVA|ATTIVA|ON|OFF|   
   
      *Quando il livello di compatibilità del database è impostato su 90 o su un valore maggiore, l'impostazione di ANSI_WARNINGS su ON comporta anche l'impostazione implicita di ARITHABORT su ON. Se il livello di compatibilità del database è impostato su 80 o su un valore inferiore, l'opzione ARITHABORT deve essere impostata su ON in modo esplicito.  
   
@@ -423,10 +426,10 @@ Le limitazioni seguenti si applicano solo a [!INCLUDE[ssSQL14](../../includes/ss
   
 ```sql  
 CREATE TABLE SimpleTable(  
-    ProductKey [int] NOT NULL,   
-    OrderDateKey [int] NOT NULL,   
-    DueDateKey [int] NOT NULL,   
-    ShipDateKey [int] NOT NULL);  
+    ProductKey [INT] NOT NULL,   
+    OrderDateKey [INT] NOT NULL,   
+    DueDateKey [INT] NOT NULL,   
+    ShipDateKey [INT] NOT NULL);  
 GO  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_Simple ON SimpleTable;  
 GO  
@@ -437,10 +440,10 @@ GO
   
 ```sql  
 CREATE TABLE SimpleTable (  
-    ProductKey [int] NOT NULL,   
-    OrderDateKey [int] NOT NULL,   
-    DueDateKey [int] NOT NULL,   
-    ShipDateKey [int] NOT NULL);  
+    ProductKey [INT] NOT NULL,   
+    OrderDateKey [INT] NOT NULL,   
+    DueDateKey [INT] NOT NULL,   
+    ShipDateKey [INT] NOT NULL);  
 GO  
 CREATE CLUSTERED INDEX cl_simple ON SimpleTable (ProductKey);  
 GO  
@@ -459,10 +462,10 @@ GO
 ```sql  
 --Create the table for use with this example.  
 CREATE TABLE SimpleTable (  
-    ProductKey [int] NOT NULL,   
-    OrderDateKey [int] NOT NULL,   
-    DueDateKey [int] NOT NULL,   
-    ShipDateKey [int] NOT NULL);  
+    ProductKey [INT] NOT NULL,   
+    OrderDateKey [INT] NOT NULL,   
+    DueDateKey [INT] NOT NULL,   
+    ShipDateKey [INT] NOT NULL);  
 GO  
   
 --Create two nonclustered indexes for use with this example  
@@ -491,10 +494,10 @@ GO
     ```sql  
     --Create a rowstore table with a clustered index and a nonclustered index.  
     CREATE TABLE MyFactTable (  
-        ProductKey [int] NOT NULL,  
-        OrderDateKey [int] NOT NULL,  
-         DueDateKey [int] NOT NULL,  
-         ShipDateKey [int] NOT NULL )  
+        ProductKey [INT] NOT NULL,  
+        OrderDateKey [INT] NOT NULL,  
+         DueDateKey [INT] NOT NULL,  
+         ShipDateKey [INT] NOT NULL )  
     )  
     WITH (  
         CLUSTERED INDEX ( ProductKey )  
@@ -608,10 +611,10 @@ WITH ( DROP_EXISTING = ON );
   
 ```sql  
 CREATE TABLE SimpleTable  
-(ProductKey [int] NOT NULL,   
-OrderDateKey [int] NOT NULL,   
-DueDateKey [int] NOT NULL,   
-ShipDateKey [int] NOT NULL);  
+(ProductKey [INT] NOT NULL,   
+OrderDateKey [INT] NOT NULL,   
+DueDateKey [INT] NOT NULL,   
+ShipDateKey [INT] NOT NULL);  
 GO  
 CREATE CLUSTERED INDEX cl_simple ON SimpleTable (ProductKey);  
 GO  

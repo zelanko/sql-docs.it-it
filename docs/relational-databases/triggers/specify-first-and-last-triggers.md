@@ -1,4 +1,5 @@
 ---
+description: Specifica dei primi e degli ultimi trigger
 title: Specificare i primi e gli ultimi trigger | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -16,12 +17,12 @@ ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cac5567670887a0e0a996b6aed690e17adbbf9a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 98269d555a7cd639589544dbf8c645eb08ed5cb7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427353"
 ---
 # <a name="specify-first-and-last-triggers"></a>Specifica dei primi e degli ultimi trigger
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

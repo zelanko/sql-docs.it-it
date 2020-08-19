@@ -1,4 +1,5 @@
 ---
+description: Log File Auto Shrink - classe di evento
 title: Classe di evento Log File Auto Shrink | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 4bf82a13-9985-4f20-9ef8-0083f104d124
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af32d9a61ef21e6bc09e114c4b8d55e56b7f0d2d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2d6d626eac5b4a6277d9c9c527b8db22e10b567c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737186"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428503"
 ---
 # <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La classe di evento **Log File Auto Shrink** indica che il file di log è stato compattato automaticamente. Questo evento non viene generato se il file di log viene compattato a causa di un'istruzione ALTER DATABASE esplicita.  
+   La classe di evento **Log File Auto Shrink** indica che il file di log è stato compattato automaticamente. Questo evento non viene generato se il file di log viene compattato a causa di un'istruzione ALTER DATABASE esplicita.  
   
  Includere la classe di evento **Log File Auto Shrink** nelle tracce che consentono di monitorare la compattazione del file di log. Quando questa classe di evento viene inclusa in una traccia, la quantità di overhead è bassa, a meno che il file non venga compattato con una certa frequenza.  
   

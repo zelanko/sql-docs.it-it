@@ -1,4 +1,5 @@
 ---
+description: Profili degli agenti di replica
 title: Profili degli agenti di replica | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -21,12 +22,12 @@ ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 95166948ff2d447eaac439442230af91d75c1bf3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 49fc84b9ac85d17d85f63372c8bdd57d0619413d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922848"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427983"
 ---
 # <a name="replication-agent-profiles"></a>Profili degli agenti di replica
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

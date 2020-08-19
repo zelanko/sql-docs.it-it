@@ -1,4 +1,5 @@
 ---
+description: Modifica mapping dei tipi (AccessToSQL)
 title: Modificare il mapping dei tipi (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8a5406bd58e62e34bfaaa6046bd2feb9f58f73a7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 246c8187a35b5990497712ab5b83ea4cb3acf59f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934060"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427063"
 ---
 # <a name="edit-type-mapping-accesstosql"></a>Modifica mapping dei tipi (AccessToSQL)
 La finestra di dialogo **Modifica mapping tipi** consente di specificare la modalità di mapping dei tipi tra gli oggetti di database di origine e di destinazione.  
@@ -44,6 +45,6 @@ Consente di specificare la lunghezza massima consentita per questo mapping. Per 
   
 Se il tipo di dati è di lunghezza variabile, il campo seguente verrà visualizzato in **tipo di destinazione**:  
   
-**Sostituisci con**  
+**Replace with**  
 Specificare la lunghezza di destinazione per questo mapping. Per il tipo di dati **nvarchar** , ad esempio, è possibile immettere 20 per specificare che il tipo di dati di origine specificato deve essere mappato a **nvarchar (20)**.  
   

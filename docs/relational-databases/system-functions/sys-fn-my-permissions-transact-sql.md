@@ -1,4 +1,5 @@
 ---
+description: sys.fn_my_permissions (Transact-SQL)
 title: sys.fn_my_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9bb57e2d01c4942955e838cf358444636bf7aedb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75ff0dfb3355158a3dedbc9d5e066dbce0ac441f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427753"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ fn_my_permissions ( securable , 'securable_class' )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *a protezione diretta*  
+ *securable*  
  Nome dell'entità a protezione diretta. Se l'entità a sicurezza diretta è il server o un database, questo valore deve essere impostato su NULL. *securable* è un'espressione scalare di tipo **sysname**. l' *entità a protezione diretta* può essere un nome in più parti.  
   
  '*securable_class*'  
@@ -51,7 +52,7 @@ fn_my_permissions ( securable , 'securable_class' )
 ## <a name="columns-returned"></a>Colonne restituite  
  Nella tabella seguente sono elencate le colonne restituite da **fn_my_permissions** . Ogni riga restituita descrive un'autorizzazione assegnata al contesto di sicurezza corrente per l'entità a protezione diretta. Restituisce NULL se la query non viene eseguita correttamente.  
   
-|Nome colonna|Type|Description|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |nome_entità|**sysname**|Nome dell'entità a sicurezza diretta per la quale sono state concesse le autorizzazioni valide elencate.|  
 |subentity_name|**sysname**|Nome della colonna nel caso in cui l'entità a sicurezza diretta contenga colonne. In caso contrario, NULL.|  
@@ -160,12 +161,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni di sicurezza &#40;&#41;Transact-SQL](../../t-sql/functions/security-functions-transact-sql.md)   
+ [Funzioni di sicurezza &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
  [Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Oggetti proteggibili](../../relational-databases/security/securables.md)   
- [Gerarchia delle autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [sys. fn_builtin_permissions &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [Viste del catalogo di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Securables](../../relational-databases/security/securables.md)   
+ [Gerarchia delle autorizzazioni &#40;Motore di database&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+ [Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: dbo.sysjobservers (Transact-SQL)
 title: dbo.sysjobservers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/26/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3b02aa88951f7dd4e82ab26fcd54d715027b1ab7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b4df04c6a9564c2912f39173f71735162e7dc1cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890448"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427663"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,4 +50,4 @@ Un valore superiore a *4* indica che l'agente SQL non conosce lo stato del proce
 
 ## <a name="see-also"></a>Vedere anche
 
-[SQL Server Agent tabelle &#40;&#41;Transact-SQL](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
+[SQL Server Agent tabelle &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  

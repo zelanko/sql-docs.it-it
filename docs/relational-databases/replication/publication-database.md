@@ -1,4 +1,5 @@
 ---
+description: Database di pubblicazione
 title: Database di pubblicazione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ ms.assetid: a9fafc9b-9963-4b59-97a0-3472158fa665
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0aad24f326eb3c0dd61138408ceedf275cdd816b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b57b93d976f7b8e9d1a2e6e26bc19b9633afc4f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85721003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427973"
 ---
 # <a name="publication-database"></a>Database di pubblicazione
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,4 +1,5 @@
 ---
+description: Funzioni di sistema per categoria per Transact-SQL
 title: Funzioni di sistema per categoria
 ms.date: 11/02/2016
 ms.prod: sql
@@ -14,17 +15,17 @@ ms.assetid: 8ad860e7-e054-4186-80a2-03977e42531d
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2c86e7920fadb2447fd0daa134370f4bd70ddc71
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2bb8db369904a011b96e3c36deef5f6e90419db5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738554"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427733"
 ---
 # <a name="system-functions-by-category-for-transact-sql"></a>Funzioni di sistema per categoria per Transact-SQL
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in sono disponibili i seguenti gruppi di funzioni di sistema.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in sono disponibili i seguenti gruppi di funzioni di sistema.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Funzioni di gruppi di disponibilità Always On](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)  

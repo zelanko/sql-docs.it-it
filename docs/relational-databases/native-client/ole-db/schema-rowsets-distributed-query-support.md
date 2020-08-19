@@ -1,4 +1,5 @@
 ---
+description: Set di righe dello schema-supporto delle query distribuite in SQL Server Native Client
 title: Supporto di query distribuite nei set di righe dello schema | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd4d2bb25f1f576c83e35fe57de4d3de99cc4bc4
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a09330a2ce78c9282a0980897df65d65e10a73c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428063"
 ---
 # <a name="schema-rowsets---distributed-query-support-in-sql-server-native-client"></a>Set di righe dello schema-supporto delle query distribuite in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "87243844"
  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client definisce il set di righe dello schema LinkedServers, restituendo un elenco di OLE DB origini dati registrate come server collegati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [&#40;OLE DB di supporto per set di righe dello schema&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)   
+ [Supporto del set di righe dello schema &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)   
  [Set di righe LINKEDSERVERS &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Aggiornamento di un'applicazione da SQL Server 2005 Native Client
 title: Aggiornamento da SQL 2005
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,11 +13,12 @@ ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 540816610dacdd14ca47ba07c34c2752abc3dcbb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b192f9080973c34ca5c054595b586bd9aa14f7e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005710"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428223"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Aggiornamento di un'applicazione da SQL Server 2005 Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +32,7 @@ ms.locfileid: "86005710"
 |Differenze di comportamento in SQL Server Native Client nelle versione successive a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|Descrizione|  
 |------------------------------------------------------------------------------------|-----------------|  
 |In OLE DB viene applicato il riempimento solo in base alla scala definita.|Per le conversioni in cui i dati convertiti vengono inviati al server, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (a partire da [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ) assorbe gli zeri finali nei dati solo fino alla lunghezza massima dei valori **DateTime** . In SQL Server Native Client 9.0 viene applicato un riempimento fino a un massimo di 9 cifre.|  
-|Convalida di DBTYPE_DBTIMESTAMP per ICommandWithParameter::SetParameterInfo.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client (a partire da [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ) implementa il requisito OLE DB per *BScale* in ICommandWithParameter:: separameterinfo da impostare sulla precisione frazionaria dei secondi per DBTYPE_DBTIMESTAMP.|  
+|Convalida di DBTYPE_DBTIMESTAMP per ICommandWithParameter::SetParameterInfo.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (a partire da [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ) implementa il requisito OLE DB per *BScale* in ICommandWithParameter:: separameterinfo da impostare sulla precisione frazionaria dei secondi per DBTYPE_DBTIMESTAMP.|  
 |La stored procedure **sp_columns** restituisce ora **"NO"** anziché **"NO "** per la colonna IS_NULLABLE.|A partire da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10,0 ( [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ), **sp_columns** stored procedure ora restituisce **"No"** invece di **"No"** per una colonna IS_NULLABLE.|  
 |SQLSetDescRec, SQLBindParameter e SQLBindCol eseguono ora la verifica della coerenza.|Prima di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10,0, l'impostazione SQL_DESC_DATA_PTR non ha provocato una verifica di coerenza per qualsiasi tipo di descrittore in SQLSetDescRec, SQLBindParameter o SQLBindCol.|  
 |SQLCopyDesc ora esegue la verifica della coerenza del descrittore.|Prima di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10,0, SQLCopyDesc non esegue una verifica di coerenza quando il campo SQL_DESC_DATA_PTR è stato impostato su un record specifico.|  

@@ -1,4 +1,5 @@
 ---
+description: Gestione driver
 title: Gestione driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 559e4de1-16c9-4998-94f5-6431122040cd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 686a2b9673fb392f969a42f4cc86dd95a95668a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70508eba3f5fce81c6f6185f0ec6befbe0d33b26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286795"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428873"
 ---
 # <a name="the-driver-manager"></a>Gestione driver
 *Gestione driver* è una libreria che gestisce la comunicazione tra le applicazioni e i driver. In Microsoft® Windows® Platforms, ad esempio, gestione driver è una libreria di collegamento dinamico (DLL), scritta da Microsoft, che può essere ridistribuita dagli utenti di MDAC 2,8 SP1 SDK ridistribuibile.  
@@ -33,6 +34,6 @@ ms.locfileid: "81286795"
   
  Nella maggior parte dei casi, gestione driver passa semplicemente le chiamate di funzione dall'applicazione al driver corretto. Implementa tuttavia anche alcune funzioni (**SQLDataSources**, **SQLDrivers**e **SQLGetFunctions**) ed esegue il controllo degli errori di base. Gestione driver, ad esempio, verifica che gli handle non siano puntatori null, che le funzioni vengano chiamate nell'ordine corretto e che alcuni argomenti della funzione siano validi. Per una descrizione completa degli errori controllati da Gestione driver, vedere la sezione di riferimento per ogni funzione e [Appendice B: tabelle di transizione dello stato ODBC](../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
- Il ruolo principale finale di gestione driver è il caricamento e lo scaricamento dei driver. L'applicazione carica e Scarica solo Gestione driver. Quando si desidera utilizzare un determinato driver, viene chiamata una funzione di connessione (**SQLConnect**, **SQLDriverConnect**o **SQLBrowseConnect**) in Gestione driver e viene specificato il nome di un'origine dati o di un driver specifico, ad esempio "contabilità" o "SQL Server". Con questo nome, gestione driver esegue la ricerca delle informazioni sull'origine dati per il nome file del driver, ad esempio sqlsrvr. dll. Viene quindi caricato il driver (presupponendo che non sia già caricato), viene archiviato l'indirizzo di ogni funzione nel driver e viene chiamata la funzione di connessione nel driver, che quindi si inizializza e si connette all'origine dati.  
+ Il ruolo principale finale di gestione driver è il caricamento e lo scaricamento dei driver. L'applicazione carica e Scarica solo Gestione driver. Quando si desidera utilizzare un determinato driver, viene chiamata una funzione di connessione (**SQLConnect**, **SQLDriverConnect**o **SQLBrowseConnect**) in Gestione driver e viene specificato il nome di un'origine dati o di un driver specifico, ad esempio "contabilità" o "SQL Server". Con questo nome, gestione driver esegue la ricerca delle informazioni sull'origine dati per il nome file del driver, ad esempio Sqlsrvr.dll. Viene quindi caricato il driver (presupponendo che non sia già caricato), viene archiviato l'indirizzo di ogni funzione nel driver e viene chiamata la funzione di connessione nel driver, che quindi si inizializza e si connette all'origine dati.  
   
  Quando l'applicazione viene eseguita utilizzando il driver, viene chiamato **SQLConnect** in Gestione driver. Gestione driver chiama questa funzione nel driver, che si disconnette dall'origine dati. Tuttavia, gestione driver mantiene il driver in memoria nel caso in cui l'applicazione si riconnetta. Scarica il driver solo quando l'applicazione libera la connessione utilizzata dal driver o utilizza la connessione per un driver diverso e nessuna altra connessione utilizza il driver. Per una descrizione completa del ruolo di gestione driver per il caricamento e lo scaricamento dei driver, vedere [ruolo di gestione driver nel processo di connessione](../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).

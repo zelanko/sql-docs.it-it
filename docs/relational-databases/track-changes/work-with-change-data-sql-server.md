@@ -1,4 +1,5 @@
 ---
+description: Utilizzare i dati delle modifiche (SQL Server)
 title: Utilizzo dei dati delle modifiche
 ms.custom: seo-dt-2019
 ms.date: 01/02/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18002782d7d34b88706b227cf8ac828f9da4976a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 90513b794e7d7125e46aa5f1d6cdb2d85ad34880
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889095"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427373"
 ---
 # <a name="work-with-change-data-sql-server"></a>Utilizzare i dati delle modifiche (SQL Server)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "85889095"
  Vedere il modello Enumerate Net Changes Using TRY CATCH per una dimostrazione di come vengono intercettati questi errori noti relativi alle funzioni con valori di tabella e come vengono restituite informazioni più significative relative all'errore.  
   
 > [!NOTE]  
->  Per trovare i modelli di Change Data Capture in SQL Server Management Studio, scegliere **Esplora modelli** dal menu **Visualizza**, espandere **Modelli di SQL Server** , quindi espandere la cartella **Change Data Capture** .  
+>   Per trovare i modelli di Change Data Capture in SQL Server Management Studio, scegliere **Esplora modelli** dal menu **Visualizza**, espandere **Modelli di SQL Server** , quindi espandere la cartella **Change Data Capture** .  
   
 ##  <a name="query-functions"></a><a name="Functions"></a> Funzioni di query  
  A seconda delle caratteristiche della tabella di origine per cui viene eseguito il rilevamento delle modifiche e del modo in cui la relativa istanza di acquisizione viene configurata, vengono generate una o due funzioni con valori di tabella per l'esecuzione di query sui dati delle modifiche.  

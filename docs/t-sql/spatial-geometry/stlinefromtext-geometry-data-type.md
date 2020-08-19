@@ -1,4 +1,5 @@
 ---
+description: STLineFromText (tipo di dati geometry)
 title: STLineFromText (tipo di dati geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d050440ae605b5bb43cb3ac5c423929088a48626
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 77d76ddaeab5952db35f6395d0d2b14a5b904290
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554622"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427043"
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText (tipo di dati geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Argomenti
  *linestring_tagged_text*  
- Rappresentazione WKT dell'istanza **geometryLineString** da restituire. *linestring_tagged_text* è un'espressione **nvarchar(max)** .  
+ Rappresentazione WKT dell'istanza **geometryLineString** da restituire. *linestring_tagged_text* è un'espressione **nvarchar(max)**.  
   
  *SRID*  
  Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geometryLineString** da restituire.  
@@ -52,7 +53,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
   
  Tipo OGC: **LineString**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 Questo metodo genera un'eccezione **FormatException** se l'input non è formattato in modo corretto. La notazione WKT per geometria misurata tridimensionale in base alla specifica Simple Features per SQL versione 1.2.1. di Open Geospatial Consortium (OGC) non è supportata. Vedere gli esempi per la rappresentazione supportata dei valori Z (elevazione) e M (misura).
   
 ## <a name="examples"></a>Esempi  

@@ -1,4 +1,5 @@
 ---
+description: Structured Query Language (SQL)
 title: Structured Query Language (SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bebfd93e-0dc0-46b3-a531-518beb7ea976
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c669b4424271fc1a3c91dea37159474fb52b97cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c68f14bd3e1ae5df29f52332d29393bf15c3b665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81293391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428973"
 ---
 # <a name="structured-query-language-sql"></a>Structured Query Language (SQL)
 Un DBMS tipico consente agli utenti di archiviare, accedere e modificare i dati in modo organizzato ed efficiente. In origine, gli utenti dei sistemi DBMS erano programmatori. Per accedere ai dati archiviati è necessario scrivere un programma in un linguaggio di programmazione, ad esempio COBOL. Sebbene questi programmi fossero spesso scritti per presentare un'interfaccia intuitiva a un utente non tecnico, l'accesso ai dati stessi richiedeva i servizi di un programmatore esperto. L'accesso informale ai dati non è pratico.  

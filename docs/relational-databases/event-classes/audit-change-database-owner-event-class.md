@@ -1,4 +1,5 @@
 ---
+description: Audit Change Database Owner - classe di evento
 title: Classe di evento Audit Change Database Owner | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 2f1dd4fc-2540-423c-80ad-c5bc712c42e0
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9d850cc7b19d3470fe4e57f4b81e7b6eda13cd0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 199c4ab91dd39e19bfd37d4336878bab711c6b4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85693234"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428653"
 ---
 # <a name="audit-change-database-owner-event-class"></a>Audit Change Database Owner - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: Ridenominazione di colonne (motore di database)
 title: Rinominare colonne (motore di database) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -15,12 +16,12 @@ ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1d24cbf22eb8c188237931daa49e50cdc0648ee
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d2a3c92773a3dd2f36ce7591324dd8505d02abdd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011105"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427443"
 ---
 # <a name="rename-columns-database-engine"></a>Ridenominazione di colonne (motore di database)
 
@@ -54,7 +55,7 @@ Se una colonna viene ridenominata, i riferimenti a tale colonna non vengono ride
 
 È necessario disporre dell'autorizzazione ALTER per l'oggetto.
 
-## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio
 
 ### <a name="to-rename-a-column-using-object-explorer"></a>Per rinominare una colonna utilizzando Esplora oggetti
 
@@ -71,7 +72,7 @@ Se una colonna viene ridenominata, i riferimenti a tale colonna non vengono ride
 > [!NOTE]
 > Per cambiare il nome di una colonna, è anche possibile utilizzare la scheda **Proprietà colonne** . A tale scopo, selezionare la colonna di cui si desidera cambiare il nome e digitare un nuovo valore per **Nome**.
 
-## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL
 
 **Per rinominare una colonna**
 

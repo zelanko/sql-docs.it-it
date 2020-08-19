@@ -1,4 +1,5 @@
 ---
+description: Introduzione con SSMA per la console di accesso (AccessToSQL)
 title: Introduzione con SSMA per la console di accesso (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e9ca0ef87aac60849d114d0e43dd349e063e8c83
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1923323699282e40fcca8afa1a8079edd8163c09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938511"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426983"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Introduzione con SSMA per la console di accesso (AccessToSQL)
 In questa sezione viene descritta la procedura per avviare e iniziare a usare l'applicazione console di accesso. Sono inoltre elencate le convenzioni usate in una tipica finestra di output della console di SSMA.  
@@ -54,7 +55,7 @@ Interpretazione dei colori dell'output della console nella tabella seguente:
   
 |Colore|Descrizione|  
 |---------|---------------|  
-|Red|Errore irreversibile durante l'esecuzione|  
+|Rosso|Errore irreversibile durante l'esecuzione|  
 |Grigio|Indicatore di data e ora, messaggio all'utente|  
 |White|Comandi file script, tipo di messaggio|  
 |Giallo|Avviso|  

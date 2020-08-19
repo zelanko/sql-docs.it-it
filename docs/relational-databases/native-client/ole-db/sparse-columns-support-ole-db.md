@@ -1,4 +1,5 @@
 ---
+description: Supporto delle colonne di tipo sparse nei SQL Server Native Client (OLE DB)
 title: Supporto di colonne di tipo sparse (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -11,12 +12,12 @@ ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19c005c2aa07048d95e52bf35c33d2aa1c1487bf
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f402e4a676ad87dd376901199fc4f7537d089b89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428133"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client-ole-db"></a>Supporto delle colonne di tipo sparse nei SQL Server Native Client (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

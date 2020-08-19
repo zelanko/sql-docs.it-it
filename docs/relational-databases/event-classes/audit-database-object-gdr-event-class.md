@@ -1,4 +1,5 @@
 ---
+description: Audit Database Object GDR - classe di evento
 title: Classe di evento Audit Database Object GDR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 2289aab5-e048-4288-bcae-aaf768ca014a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b75ca42a906069969527d0803699e4c04b372dbb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cc47dbc1513716da3979111a60304fb1c9337d96
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85635635"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428613"
 ---
 # <a name="audit-database-object-gdr-event-class"></a>Audit Database Object GDR - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

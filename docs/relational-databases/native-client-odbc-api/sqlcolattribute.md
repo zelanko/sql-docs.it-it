@@ -1,4 +1,5 @@
 ---
+description: SQLColAttribute
 title: SQLColAttribute | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,11 +15,12 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1815a76dcfde42e45cb3b2ca1ffe4186ff52a238
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 86590239e22f19ba0858af583193675bc711a0ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428343"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +42,7 @@ ms.locfileid: "86012435"
 |SQL_DESC_TABLE_NAME|Disponibile nei set di risultati recuperati da istruzioni che generano cursori server o in istruzioni SELECT eseguite contenenti una clausola FOR BROWSE.|  
 |SQL_DESC_UNNAMED|SQL_NAMED per tutte le colonne in un set di risultati, a meno che una colonna non sia il risultato di un'espressione che non contiene un'assegnazione di etichetta come parte dell'espressione. Quando SQL_DESC_UNNAMED restituisce SQL_UNNAMED, tutti gli attributi di identificazione di colonna ODBC contengono stringhe di lunghezza zero per la colonna.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Il driver ODBC di Native client utilizza l'istruzione SET FMTONLY per ridurre l'overhead del server quando **SQLColAttribute** viene chiamato per istruzioni preparate ma non eseguite.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il driver ODBC di Native client utilizza l'istruzione SET FMTONLY per ridurre l'overhead del server quando **SQLColAttribute** viene chiamato per istruzioni preparate ma non eseguite.  
   
  Per i tipi di valore di grandi dimensioni, **SQLColAttribute** restituirà i valori seguenti:  
   
@@ -73,9 +75,9 @@ ms.locfileid: "86012435"
 |SQL_CA_SS_NUM_COMPUTES|Numero di clausole COMPUTE specificate nell'istruzione Transact-SQL SELECT corrente.|  
 |SQL_CA_SS_NUM_ORDERS|Numero di colonne specificate in una clausola ORDER BY di un'istruzione ODBC o Transact-SQL SELECT.|  
   
- \*Disponibile se l'attributo Statement SQL_SOPT_SS_HIDDEN_COLUMNS è impostato su SQL_HC_ON.  
+ \*   Disponibile se l'attributo Statement SQL_SOPT_SS_HIDDEN_COLUMNS è impostato su SQL_HC_ON.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]sono stati introdotti campi di descrizione specifici del driver per fornire informazioni aggiuntive per indicare rispettivamente il nome della raccolta XML Schema, il nome dello schema e il nome del catalogo. Tali proprietà non richiedono virgolette o un carattere di escape se contengono caratteri non alfanumerici. Nella tabella seguente sono inclusi i nuovi campi di descrizione:  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono stati introdotti campi di descrizione specifici del driver per fornire informazioni aggiuntive per indicare rispettivamente il nome della raccolta XML Schema, il nome dello schema e il nome del catalogo. Tali proprietà non richiedono virgolette o un carattere di escape se contengono caratteri non alfanumerici. Nella tabella seguente sono inclusi i nuovi campi di descrizione:  
   
 |Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  

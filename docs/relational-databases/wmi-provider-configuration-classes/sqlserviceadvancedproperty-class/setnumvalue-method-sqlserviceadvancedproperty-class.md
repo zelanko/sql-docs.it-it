@@ -1,4 +1,5 @@
 ---
+description: Metodo SetNumValue (classe SqlServiceAdvancedProperty)
 title: Metodo SetNumValue (SqlServiceAdvancedProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a5e1056b-0b75-4ad6-99c1-89246010d815
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 619b06f1279c36716538535050b4e2795724dad7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a67607dcf70b5d8a77eba098ba3090bd1ec552f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888296"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427153"
 ---
 # <a name="setnumvalue-method-sqlserviceadvancedproperty-class"></a>Metodo SetNumValue (classe SqlServiceAdvancedProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ object.SetNumValue(NumValue)
   
 #### <a name="parameters"></a>Parametri  
   
-|Parametro|Description|  
+|Parametro|Descrizione|  
 |---------------|-----------------|  
 |*NumValue*|Valore **uint32** che specifica il valore della proprietà avanzata.|  
   

@@ -1,4 +1,5 @@
 ---
+description: OLEDB QueryInterface - classe di evento
 title: Classe di evento OLEDB QueryInterface | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18b6122d9128d42b49da2d041c19a07dcf51fa8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c9332af1ac716b9112686de7232f48c2b8347994
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428463"
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

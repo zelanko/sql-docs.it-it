@@ -1,4 +1,5 @@
 ---
+description: Deprecation - categoria di eventi
 title: Categoria di eventi Deprecation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 49364423-6aa9-40f3-914a-eca37be12b88
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 210cafe436036219cf3ece8ec67d7db0ff7ee5da
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 92d5cee81367ed2567f9f6a1db1970a3ef2723a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756040"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428543"
 ---
 # <a name="deprecation-event-category"></a>Deprecation - categoria di eventi
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La categoria di eventi **Deprecation** contiene eventi generali relativi a elementi deprecati.  
+   La categoria di eventi **Deprecation** contiene eventi generali relativi a elementi deprecati.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   

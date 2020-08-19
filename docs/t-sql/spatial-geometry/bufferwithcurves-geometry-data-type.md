@@ -1,4 +1,5 @@
 ---
+description: BufferWithCurves (tipo di dati geometry)
 title: BufferWithCurves (tipo di dati geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,12 +16,12 @@ ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c49d71c0e7e149ed66d699e04126cdd1f6f9b726
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 9a3a8ff7006a2ac48f8b357cd820d0c47e162885
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442342"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427073"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (tipo di dati geometry)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -29,16 +30,17 @@ ms.locfileid: "87442342"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
+```syntaxsql
 .BufferWithCurves ( distance )  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argomenti  
  *distance*  
  Valore **float** che indica la distanza massima a cui possono trovarsi i punti che compongono il buffer dall'istanza **geometry**.  
   
-## <a name="return-types"></a>Tipi restituiti  
+## <a name="return-types"></a>Tipi restituiti
 Tipo SQL Server restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
@@ -52,7 +54,7 @@ Tipo SQL Server restituito: **geometry**
   
 -   **NULL** viene passato al metodo, ad esempio `@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Nell'illustrazione seguente viene mostrato un esempio di un'istanza di geometria restituita da questo metodo.  
   
  ![BufferedCurve](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
@@ -62,7 +64,7 @@ Tipo SQL Server restituito: **geometry**
 |Valore del parametro distance|Dimensioni tipo|Tipo spaziale restituito|  
 |--------------------|---------------------|---------------------------|  
 |distance < 0|Zero o uno|Istanza **GeometryCollection** vuota|  
-|distance < 0|Due o più|Istanza **CurvePolygon** o **GeometryCollection** con buffer negativo. **Nota:** è possibile che un buffer negativo crei un'istanza **GeometryCollection** vuota.|  
+|distance < 0|Due o più|Istanza **CurvePolygon** o **GeometryCollection** con buffer negativo. **Nota:** è possibile che un buffer negativo crei un'istanza **GeometryCollection** vuota|  
 |distance = 0|Tutte le dimensioni|Copia dell'istanza **geometry** di chiamata|  
 |distance > 0|Tutte le dimensioni|Istanza **CurvePolygon** o **GeometryCollection**|  
   

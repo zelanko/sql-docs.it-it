@@ -1,4 +1,5 @@
 ---
+description: Uso delle origini dati
 title: Uso di origini dati | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d5550619-22b2-4b16-bd08-fbabb6554c40
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: df9b09e4c5519e0fff44902bd83b8e3d92a67ca8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 162f1c2bf8d75757ac2c29d60f675ac07ba8b00d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286552"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428833"
 ---
 # <a name="using-data-sources"></a>Uso delle origini dati
 Le origini dati vengono in genere create dall'utente finale o da un tecnico con un programma denominato *amministratore ODBC*. L'amministratore ODBC chiede all'utente di usare e quindi chiama tale driver. Il driver Visualizza una finestra di dialogo che richiede le informazioni necessarie per la connessione all'origine dati. Dopo che l'utente immette le informazioni, il driver lo archivia nel sistema.  
