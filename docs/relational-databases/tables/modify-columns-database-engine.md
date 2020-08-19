@@ -1,4 +1,5 @@
 ---
+description: Modificare colonne (motore di database)
 title: Modificare colonne (motore di database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baf0b580ab18334fcffbbe6b16ddd9e04cf42290
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0f306dd339ed7e91a1d54195dc32346c9139c809
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394496"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460213"
 ---
 # <a name="modify-columns-database-engine"></a>Modificare colonne (motore di database)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "87394496"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-modify-the-data-type-of-a-column"></a>Per modificare il tipo di dati di una colonna  
   
@@ -59,7 +60,7 @@ ms.locfileid: "87394496"
   
 3.  Nella scheda **Proprietà colonne** fare clic sulla cella della griglia relativa alla proprietà **Tipo di dati** , quindi selezionare un nuovo tipo di dati dall'elenco a discesa.  
   
-4.  Scegliere **Salva**_nome tabella_ dal menu **File**.  
+4.  Nel menu **File** fare clic su **Salva**_nome tabella_.  
   
 > [!NOTE]  
 >  Quando si modifica il tipo di dati di una colonna, in Progettazione tabelle verrà applicata la lunghezza predefinita del tipo di dati selezionato, anche se ne è stata già specificata un'altra. È pertanto opportuno impostare sempre la lunghezza del tipo di dati per il valore desiderato dopo avere specificato il tipo di dati.  
@@ -67,7 +68,7 @@ ms.locfileid: "87394496"
 > [!WARNING]  
 >  Se si tenta di modificare il tipo di dati di una colonna correlata alle altre tabelle, Progettazione tabelle chiede all'utente di confermare anche la modifica da apportare alle colonne nelle altre tabelle.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-modify-the-data-type-of-a-column"></a>Per modificare il tipo di dati di una colonna  
   

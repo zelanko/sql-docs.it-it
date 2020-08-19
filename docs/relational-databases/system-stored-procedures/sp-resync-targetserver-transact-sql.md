@@ -1,4 +1,5 @@
 ---
+description: sp_resync_targetserver (Transact-SQL)
 title: sp_resync_targetserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 868e203866890c1f13405ddc7ed3949487e821da
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 858c2ffe0740c43892ff2245047823c9cecbd12a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899239"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469215"
 ---
 # <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @server_name = ] 'server'`Nome del server da risincronizzare. *server* è di tipo **sysname**e non prevede alcun valore predefinito. Se si specifica **All** , tutti i server di destinazione vengono risincronizzati.  
+`[ @server_name = ] 'server'` Nome del server da risincronizzare. *server* è di tipo **sysname**e non prevede alcun valore predefinito. Se si specifica **All** , tutti i server di destinazione vengono risincronizzati.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -67,8 +68,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_help_downloadlist &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)   
- [sp_post_msx_operation &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)   
+ [sp_help_downloadlist &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)   
+ [sp_post_msx_operation &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

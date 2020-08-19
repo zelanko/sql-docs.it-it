@@ -1,4 +1,5 @@
 ---
+description: Trasformazione Colonna derivata
 title: Trasformazione Colonna derivata | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 82ef2a3959f1f3ae0d18aca2e8049f5a30f4a91f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 93548684fb17ce59e5cee78e2a7a268dfce903ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430693"
 ---
 # <a name="derived-column-transformation"></a>Trasformazione Colonna derivata
 
@@ -109,7 +110,7 @@ ms.locfileid: "86919387"
  **Precisione**  
  Se si aggiungono dati a una nuova colonna, nella finestra di dialogo **Editor trasformazione Colonna derivata** viene impostata automaticamente la precisione per i dati numerici in base al tipo di dati. Il valore di questa colonna è di sola lettura.  
   
- **Ridimensionare**  
+ **Ridimensionamento**  
  Se si aggiungono dati a una nuova colonna, nella finestra di dialogo **Editor trasformazione Colonna derivata** viene impostata automaticamente la scala per i dati numerici in base al tipo di dati. Il valore di questa colonna è di sola lettura.  
   
  **Tabella codici**  

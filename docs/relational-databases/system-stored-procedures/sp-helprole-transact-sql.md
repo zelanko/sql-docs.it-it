@@ -1,4 +1,5 @@
 ---
+description: sp_helprole (Transact-SQL)
 title: sp_helprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc4cb9acc25255988d46e4e4bb5a922eb23a98fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36414885089de27fc06dc4029ee57ef341707912
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749300"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469272"
 ---
 # <a name="sp_helprole-transact-sql"></a>sp_helprole (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @rolename = ] 'role'`Nome di un ruolo nel database corrente. *Role* è di **tipo sysname**e il valore predefinito è null. il *ruolo* deve esistere nel database corrente. Se *Role* non è specificato, vengono restituite informazioni su tutti i ruoli nel database corrente.  
+`[ @rolename = ] 'role'` Nome di un ruolo nel database corrente. *Role* è di **tipo sysname**e il valore predefinito è null. il *ruolo* deve esistere nel database corrente. Se *Role* non è specificato, vengono restituite informazioni su tutti i ruoli nel database corrente.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -67,14 +68,14 @@ EXEC sp_helprole
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sicurezza &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Ruoli a livello di server](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [Ruoli a livello di database](../../relational-databases/security/authentication-access/database-level-roles.md)   
- [sp_addapprole &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
- [sp_addrole &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
- [sp_droprole &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
- [sp_helprolemember &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
- [sp_helpsrvrolemember &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
+ [sp_addapprole &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
+ [sp_addrole &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
+ [sp_droprole &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
+ [sp_helprolemember &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+ [sp_helpsrvrolemember &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_helplinkedsrvlogin (Transact-SQL)
 title: sp_helplinkedsrvlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8aa2ba45d45ee2518102d8e2ec7d60a3299fca88
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86a77a797d8da80746410b9f8a697b747f93242c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469276"
 ---
 # <a name="sp_helplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @rmtsrvname = ] 'rmtsrvname'`Nome del server collegato a cui viene applicato il mapping degli account di accesso. *rmtsrvname* è di **tipo sysname**e il valore predefinito è null. NULL indica che vengono restituiti i mapping degli account di accesso definiti per tutti i server collegati nel computer locale in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione.  
+`[ @rmtsrvname = ] 'rmtsrvname'` Nome del server collegato a cui viene applicato il mapping degli account di accesso. *rmtsrvname* è di **tipo sysname**e il valore predefinito è null. NULL indica che vengono restituiti i mapping degli account di accesso definiti per tutti i server collegati nel computer locale in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione.  
   
-`[ @locallogin = ] 'locallogin'`Account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso nel server locale con mapping al server collegato *rmtsrvname*. *locallogin* è di **tipo sysname**e il valore predefinito è null. NULL specifica che vengono restituiti tutti i mapping degli account di accesso definiti in *rmtsrvname* . Se non è NULL, è necessario che esista già un mapping di *locallogin* a *rmtsrvname* . *locallogin* può essere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o un utente di Windows. È necessario che l'utente di Windows disponga dell'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ottenuto tramite concessione diretta o in base all'appartenenza a un gruppo di Windows che dispone dell'accesso.  
+`[ @locallogin = ] 'locallogin'` Account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso nel server locale con mapping al server collegato *rmtsrvname*. *locallogin* è di **tipo sysname**e il valore predefinito è null. NULL specifica che vengono restituiti tutti i mapping degli account di accesso definiti in *rmtsrvname* . Se non è NULL, è necessario che esista già un mapping di *locallogin* a *rmtsrvname* . *locallogin* può essere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o un utente di Windows. È necessario che l'utente di Windows disponga dell'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ottenuto tramite concessione diretta o in base all'appartenenza a un gruppo di Windows che dispone dell'accesso.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -124,9 +125,9 @@ Sales            Mary          0               sa
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sicurezza &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addlinkedserver &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_droplinkedsrvlogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [sp_droplinkedsrvlogin &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

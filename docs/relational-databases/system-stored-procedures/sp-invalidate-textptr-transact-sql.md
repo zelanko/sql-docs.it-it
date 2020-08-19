@@ -1,4 +1,5 @@
 ---
+description: sp_invalidate_textptr (Transact-SQL)
 title: sp_invalidate_textptr (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 269a49f76bd583c2233cf3720818590ca132c6a3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4e14b6032da5d793631f75cd0617ee3a341d9196
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469231"
 ---
 # <a name="sp_invalidate_textptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @TextPtrValue = ] textptr_value`Puntatore di testo all'interno di righe che deve essere invalidato. *textptr_value* è di tipo **varbinary (** 16 **)** e il valore predefinito è null. Se è NULL, **sp_invalidate_textptr** invalida tutti i puntatori di testo all'interno di righe nella transazione.  
+`[ @TextPtrValue = ] textptr_value` Puntatore di testo all'interno di righe che deve essere invalidato. *textptr_value* è di tipo **varbinary (** 16 **)** e il valore predefinito è null. Se è NULL, **sp_invalidate_textptr** invalida tutti i puntatori di testo all'interno di righe nella transazione.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -53,10 +54,10 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_tableoption &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
- [TEXTPTR &#40;&#41;Transact-SQL](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sp_tableoption &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
+ [TEXTPTR &#40;&#41;Transact-SQL ](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [TEXTVALID &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textvalid-transact-sql.md)  
   
   

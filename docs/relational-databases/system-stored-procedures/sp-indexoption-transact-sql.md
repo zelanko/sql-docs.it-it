@@ -1,4 +1,5 @@
 ---
+description: sp_indexoption (Transact-SQL)
 title: sp_indexoption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc11f219d98e4b8018bc7d763345feb279790e13
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 509d58a28f768fe774c813a8235ae4c0d9cd718a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893238"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469246"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85893238"
  In [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] le opzioni per il blocco a livello di pagina, riga e tabella vengono configurate automaticamente. Non è necessario impostare queste opzioni manualmente. **sp_indexoption** viene fornito per gli utenti esperti che sanno con certezza che un particolare tipo di blocco è sempre appropriato.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]Utilizzare invece [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Utilizzare invece [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,18 +47,18 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @IndexNamePattern = ] 'table_or_index_name'`Nome completo o non qualificato di una tabella o di un indice definito dall'utente. *table_or_index_name* è di **tipo nvarchar (1035)** e non prevede alcun valore predefinito. Se si specifica un nome qualificato di indice o tabella, le virgolette sono obbligatorie. Nel caso di un nome qualificato di tabella, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. Se un nome di tabella viene specificato senza alcun indice, il valore dell'opzione specificata viene impostato per tutti gli indici in tale tabella e nella tabella stessa se non esistono indici cluster.  
+`[ @IndexNamePattern = ] 'table_or_index_name'` Nome completo o non qualificato di una tabella o di un indice definito dall'utente. *table_or_index_name* è di **tipo nvarchar (1035)** e non prevede alcun valore predefinito. Se si specifica un nome qualificato di indice o tabella, le virgolette sono obbligatorie. Nel caso di un nome qualificato di tabella, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. Se un nome di tabella viene specificato senza alcun indice, il valore dell'opzione specificata viene impostato per tutti gli indici in tale tabella e nella tabella stessa se non esistono indici cluster.  
   
-`[ @OptionName = ] 'option_name'`Nome dell'opzione di indice. *option_name* è di tipo **varchar (35)** e non prevede alcun valore predefinito. *option_name* possibile avere uno dei valori seguenti.  
+`[ @OptionName = ] 'option_name'` Nome dell'opzione di indice. *option_name* è di tipo **varchar (35)** e non prevede alcun valore predefinito. *option_name* possibile avere uno dei valori seguenti.  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**AllowRowLocks**|Se è TRUE, i blocchi a livello di riga sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando usare blocchi di riga. Se è FALSE, i blocchi a livello di riga non vengono utilizzati. Il valore predefinito è TRUE.|  
 |**AllowPageLocks**|Se è TRUE, i blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi a livello di pagina. Se è FALSE, i blocchi a livello di pagina non vengono utilizzati. Il valore predefinito è TRUE.|  
 |**DisAllowRowLocks**|Se è TRUE, i blocchi a livello di riga non vengono utilizzati. Se è FALSE, i blocchi a livello di riga sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando usare blocchi di riga.|  
 |**DisAllowPageLocks**|Se è TRUE, i blocchi a livello di pagina non vengono utilizzati. Se è FALSE, i blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi a livello di pagina.|  
   
-`[ @OptionValue = ] 'value'`Specifica se l'impostazione *option_name* è abilitata (true, on, Yes o 1) oppure disabilitata (false, off, no o 0). *value* è di tipo **varchar (12)** e non prevede alcun valore predefinito.  
+`[ @OptionValue = ] 'value'` Specifica se l'impostazione *option_name* è abilitata (true, on, Yes o 1) oppure disabilitata (false, off, no o 0). *value* è di tipo **varchar (12)** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o maggiore di 0 (esito negativo)  
@@ -139,8 +140,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [INDEXPROPERTY &#40;&#41;Transact-SQL](../../t-sql/functions/indexproperty-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   

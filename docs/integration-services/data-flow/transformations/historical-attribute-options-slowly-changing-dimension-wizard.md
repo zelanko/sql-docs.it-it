@@ -1,4 +1,5 @@
 ---
+description: Opzioni attributi cronologici (Configurazione guidata dimensioni a modifica lenta)
 title: Opzioni attributi cronologici (Configurazione guidata dimensioni a modifica lenta) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4dfa3579fb37fab94f8bc5731738ed024676018e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9610a734543c9199e54d3f8489d86e03089f10ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919307"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430703"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>Opzioni attributi cronologici (Configurazione guidata dimensioni a modifica lenta)
 
@@ -48,6 +49,6 @@ ms.locfileid: "86919307"
 |**Variabile per l'impostazione dei valori di data**|Consente di selezionare una variabile per la data nell'elenco.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare gli output tramite Configurazione guidata dimensioni a modifica lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+ [Configurazione degli output tramite Configurazione guidata dimensioni a modifica lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   
