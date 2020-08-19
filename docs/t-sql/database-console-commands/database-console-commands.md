@@ -1,4 +1,5 @@
 ---
+description: Database Console Command
 title: Database Console Command
 ms.custom: ''
 ms.date: 07/16/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: 02265d6f-44fb-4e28-af58-115ba1ef6c75
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 569e880557399ec23ad9b4e34a962d35842092ac
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 14a3e171459af062c197145c9f5175b8b0a0445f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485082"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88367997"
 ---
 # <a name="database-console-commands"></a>Database Console Command
 

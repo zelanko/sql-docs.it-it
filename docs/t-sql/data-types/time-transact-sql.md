@@ -1,4 +1,5 @@
 ---
+description: time (Transact-SQL)
 title: time (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/07/2017
@@ -22,12 +23,12 @@ ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ce15115e059018e7065f2a3fefc6943a110cf97
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fe87d9a583c60ba6d627168ade3eef07a47467b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88368257"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 
@@ -57,7 +58,7 @@ ms.locfileid: "86007988"
 |Considerazione e conservazione delle differenze di fuso orario|No|  
 |Considerazione dell'ora legale|No|  
   
-|Scala specificata|Risultato (precisione, scala)|Lunghezza della colonna (byte)|Precisione<br /><br /> secondi<br /><br /> precision|  
+|Scala specificata|Risultato (precisione, scala)|Lunghezza della colonna (byte)|Precisione<br /><br /> secondi<br /><br /> precisione|  
 |---------------------|---------------------------------|-----------------------------|------------------------------------------|  
 |**time**|(16,7) [(12,3) in Informatica]|5 (4 in Informatica)|7 (3 in Informatica)|  
 |**time(0)**|(8,0)|3|0-2|  
@@ -166,7 +167,7 @@ SELECT @time AS '@time', @smalldatetime AS '@smalldatetime';
   
 ```  
   
- Se viene eseguita la conversione in **datetimeoffset(n)** , la data viene impostata su "1900-01-01" e l'ora viene copiata. La differenza di fuso orario è impostata su +00:00. Quando la precisione dei secondi frazionari del valore **time(n)** è maggiore di quella del valore **datetimeoffset(n)** , la prima precisione verrà arrotondata per rispettare la seconda. Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `time(4)` in un tipo `datetimeoffset(3)`.  
+ Se viene eseguita la conversione in **datetimeoffset(n)**, la data viene impostata su "1900-01-01" e l'ora viene copiata. La differenza di fuso orario è impostata su +00:00. Quando la precisione dei secondi frazionari del valore **time(n)** è maggiore di quella del valore **datetimeoffset(n)**, la prima precisione verrà arrotondata per rispettare la seconda. Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `time(4)` in un tipo `datetimeoffset(3)`.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -183,7 +184,7 @@ SELECT @time AS '@time', @datetimeoffset AS '@datetimeoffset';
   
 ```  
   
- Quando viene eseguita la conversione in **datetime2(n)** , la data viene impostata su "1900-01-01", il componente relativo all'ora viene copiato e la differenza di fuso orario viene impostata su 00:00. Quando la precisione dei secondi frazionari del valore **datetime2(n)** è maggiore di quella del valore **time(n)** , la prima precisione verrà arrotondata per rispettare la seconda.  Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `time(4)` in un valore `datetime2(2)`.  
+ Quando viene eseguita la conversione in **datetime2(n)**, la data viene impostata su "1900-01-01", il componente relativo all'ora viene copiato e la differenza di fuso orario viene impostata su 00:00. Quando la precisione dei secondi frazionari del valore **datetime2(n)** è maggiore di quella del valore **time(n)**, la prima precisione verrà arrotondata per rispettare la seconda.  Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `time(4)` in un valore `datetime2(2)`.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
