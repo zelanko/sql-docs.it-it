@@ -1,4 +1,5 @@
 ---
+description: Esempio della proprietà ParentCatalog (VB)
 title: Esempio di proprietà ParentCatalog (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38dad31ffcdd134acef35ce397ac3ee10b5cc3a7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c4093cfbd1ca5372d86fd07b6fc7716d484c4f51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439713"
 ---
 # <a name="parentcatalog-property-example-vb"></a>Esempio della proprietà ParentCatalog (VB)
 Nel codice seguente viene illustrato come utilizzare la proprietà [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) per accedere a una proprietà specifica del provider prima di aggiungere una tabella a un catalogo. La proprietà è **AutoIncrement**, che consente di creare un campo di incremento automatico in un database Microsoft Jet.  

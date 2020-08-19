@@ -1,4 +1,5 @@
 ---
+description: Attività Backup database
 title: Attività Backup database | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d10f1ceab3ddb56ae8edbd06b2226fad2646c586
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 291a9fd0e0138eeb7b304e673f404163217f9ae5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918878"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431073"
 ---
 # <a name="back-up-database-task"></a>Attività Backup database
 

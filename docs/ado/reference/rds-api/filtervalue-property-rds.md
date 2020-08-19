@@ -1,4 +1,5 @@
 ---
+description: Proprietà FilterValue (Servizi Desktop remoto)
 title: Proprietà FilterValue (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 28f17186-b842-4cf9-b320-a9bb941c481b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 17d4585a237b2dcd32df1508aeb85b291d4d9296
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b8e80ffc13f4c1bae1d668bb85317345288caa2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751994"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438983"
 ---
 # <a name="filtervalue-property-rds"></a>Proprietà FilterValue (Servizi Desktop remoto)
 Indica il valore con cui filtrare i record.  
@@ -40,7 +41,7 @@ DataControl.FilterValue = String
  *Stringa*  
  Valore **stringa** che rappresenta un valore di dati con il quale filtrare i record, ad esempio `'Programmer'` o `125` .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Le proprietà [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), **FilterValue**, [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)e [FilterColumn offrono](../../../ado/reference/rds-api/filtercolumn-property-rds.md) forniscono funzionalità di ordinamento e filtro nella cache sul lato client. La funzionalità di ordinamento ordina i record in base ai valori di una colonna. La funzionalità di filtro Visualizza un subset di record in base ai criteri di ricerca, mentre il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) completo viene mantenuto nella cache. Il metodo [Reset](../../../ado/reference/rds-api/reset-method-rds.md) eseguirà i criteri e sostituirà il **Recordset** corrente con un **Recordset**aggiornabile.  
   
  I valori null generano un errore di mancata corrispondenza del tipo.  

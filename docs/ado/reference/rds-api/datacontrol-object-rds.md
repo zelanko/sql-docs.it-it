@@ -1,4 +1,5 @@
 ---
+description: Oggetto DataControl (Servizi Desktop remoto)
 title: Oggetto DataControl (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bc9482c6626de36d9e45b2a2968b504b0793746
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6643fe176ef6281afa39845310812f5f6981d16b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746113"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439143"
 ---
 # <a name="datacontrol-object-rds"></a>Oggetto DataControl (Servizi Desktop remoto)
 Associa un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) di query di dati a uno o più controlli, ad esempio una casella di testo, un controllo griglia o una casella combinata, per visualizzare i dati del **Recordset** in una pagina Web.  
@@ -51,7 +52,7 @@ Associa un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) d
  Tutte le proprietà in Servizi Desktop remoto **. DataControl** è facoltativo perché gli oggetti business personalizzati possono sostituire le proprie funzionalità.  
   
 > [!NOTE]
->  Se si eseguono query per più risultati, viene restituito solo il primo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) . Se sono necessari più set di risultati, assegnare ognuno a un proprio **DataControl**. Di seguito è riportato un esempio di query per più risultati:`"Select * from Authors, Select * from Topics"`  
+>  Se si eseguono query per più risultati, viene restituito solo il primo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) . Se sono necessari più set di risultati, assegnare ognuno a un proprio **DataControl**. Di seguito è riportato un esempio di query per più risultati: `"Select * from Authors, Select * from Topics"`  
   
  Aggiunta di "DFMode = 20;" alla stringa di connessione quando si utilizza **RDS. L'oggetto DataControl** può migliorare le prestazioni del server quando si aggiornano i dati. Con questa impostazione, l'oggetto **RDSServer. DataFactory** sul server usa una modalità con utilizzo intensivo di risorse minore. Tuttavia, le funzionalità seguenti non sono disponibili in questa configurazione:  
   

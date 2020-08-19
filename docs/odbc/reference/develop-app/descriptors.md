@@ -1,4 +1,5 @@
 ---
+description: Descrittori
 title: Descrittori | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef2cbb93-cd00-40f8-b1d2-5f5723a991aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ca8299daae744fb9398ed6ffc99c838ce8edff48
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae01f093ef1b67f1326f8aa7719b74100fcba462
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305902"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429333"
 ---
 # <a name="descriptors"></a>Descrittori
 Un handle descrittore fa riferimento a una struttura di dati che include informazioni su colonne o parametri dinamici.  

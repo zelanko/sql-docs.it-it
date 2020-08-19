@@ -1,4 +1,5 @@
 ---
+description: Operazioni della libreria di cursori
 title: Operazioni della libreria di cursori | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 04d514b1-dc4d-4b84-bf35-60f4657ef1f6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a2297e72aacad7ea91b7af934a47bebbc61f0686
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: efe3191e264fe45307ef90624f6b6e76d4ccaff6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301618"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429413"
 ---
 # <a name="cursor-library-operations"></a>Operazioni della libreria di cursori
 > [!IMPORTANT]  

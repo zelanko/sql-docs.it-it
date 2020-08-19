@@ -1,4 +1,5 @@
 ---
+description: Metodo SetObjectOwner
 title: Metodo SetObjectOwner | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 615e62ad8a22c50851ea50a2a8511e0859b54652
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 216a01a6a182e7d2fad97a8ed88e6ca09719a33e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763312"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439533"
 ---
 # <a name="setobjectowner-method"></a>Metodo SetObjectOwner
 Specifica il proprietario di un oggetto in un [Catalogo](../../../ado/reference/adox-api/catalog-object-adox.md).  
@@ -44,7 +45,7 @@ Catalog.SetObjectOwner ObjectName, ObjectType, OwnerName [,ObjectTypeId]
  Valore **stringa** che specifica il [nome](../../../ado/reference/adox-api/name-property-adox.md) dell' [utente](../../../ado/reference/adox-api/user-object-adox.md) o del [gruppo](../../../ado/reference/adox-api/group-object-adox.md) per il proprietario dell'oggetto.  
   
  *ObjectTypeId*  
- Facoltativa. Valore **Variant** che specifica il GUID per un tipo di oggetto provider non definito dalla specifica OLE DB. Questo parametro è obbligatorio se *ObjectType* è impostato su **adPermObjProviderSpecific**; in caso contrario, non viene utilizzato.  
+ Facoltativo. Valore **Variant** che specifica il GUID per un tipo di oggetto provider non definito dalla specifica OLE DB. Questo parametro è obbligatorio se *ObjectType* è impostato su **adPermObjProviderSpecific**; in caso contrario, non viene utilizzato.  
   
 ## <a name="remarks"></a>Osservazioni  
  Si verificherà un errore se il provider non supporta la specifica di proprietari di oggetti.  

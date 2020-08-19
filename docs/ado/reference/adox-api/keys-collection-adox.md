@@ -1,4 +1,5 @@
 ---
+description: Raccolta Keys (ADOX)
 title: Raccolta Keys (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1a7bebc1c05ab195d3b23c5c0894d4fcce967625
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 05e36f05cd59cc099abf0b1fa1f96418ccea8bf5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439813"
 ---
 # <a name="keys-collection-adox"></a>Raccolta Keys (ADOX)
 Contiene tutti gli oggetti [chiave](../../../ado/reference/adox-api/key-object-adox.md) di una [tabella](../../../ado/reference/adox-api/table-object-adox.md).  
   
-## <a name="remarks"></a>Commenti  
- Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) per una [raccolta di chiavi](../../../ado/reference/adox-api/keys-collection-adox.md) è univoco per ADOX. È possibile scegliere:  
+## <a name="remarks"></a>Osservazioni  
+ Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) per una [raccolta di chiavi](../../../ado/reference/adox-api/keys-collection-adox.md) è univoco per ADOX. È possibile:  
   
 -   Aggiungere una nuova chiave alla raccolta con il metodo [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) .  
   
- Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile scegliere:  
+ Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile:  
   
 -   Accedere a una chiave nella raccolta con la proprietà [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   

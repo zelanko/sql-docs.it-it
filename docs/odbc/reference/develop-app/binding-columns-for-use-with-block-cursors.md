@@ -1,4 +1,5 @@
 ---
+description: Associazione di colonne per l'uso con cursori rettangolari
 title: Associazione di colonne da utilizzare con cursori a blocchi | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 231beede-cdfa-4e28-8b10-2760b983250f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc7e527658a7d6945921510de898c648075c41fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a58e6359bd7b0ad5d44f75a3d844ef2e9872f2a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284901"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429443"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>Associazione di colonne per l'uso con cursori rettangolari
 Poiché i cursori a blocchi restituiscono più righe, le applicazioni che le utilizzano devono associare una matrice di variabili a ogni colonna anziché a una singola variabile. Queste matrici sono note collettivamente come buffer del *set di righe*. Di seguito sono riportati i due stili di associazione:  

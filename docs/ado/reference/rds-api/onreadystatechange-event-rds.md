@@ -1,4 +1,5 @@
 ---
+description: Evento onReadyStateChange (Servizi Desktop remoto)
 title: Evento onReadyStateChange (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bf2ae3ac-bfe4-4709-b50a-ea7c282c3164
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 00eb7b7084506de78262f4df2a4606c6756bbacb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 482f4376f8e33a185e3dcf8327f50321c6663172
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751445"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438873"
 ---
 # <a name="onreadystatechange-event-rds"></a>Evento onReadyStateChange (Servizi Desktop remoto)
 L'evento **onReadyStateChange** viene chiamato ogni volta che viene modificato il valore della proprietà [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) .  
@@ -36,7 +37,7 @@ onReadyStateChange
 #### <a name="parameters"></a>Parametri  
  No.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  La proprietà **ReadyState** riflette lo stato di un [RDS. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) in quanto recupera i dati in modo asincrono nell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) . Usare l'evento **onReadyStateChange** per monitorare le modifiche apportate alla proprietà **ReadyState** quando si verificano. Questa operazione è più efficiente rispetto al controllo periodico del valore della proprietà.  
   
 ## <a name="applies-to"></a>Si applica a  

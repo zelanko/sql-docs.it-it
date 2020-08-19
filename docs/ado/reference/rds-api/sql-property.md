@@ -1,4 +1,5 @@
 ---
+description: Proprietà SQL
 title: Proprietà SQL | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb860ed19386b73d90fc26dab8fa96f4b9672a73
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c21e12d3601f40b1749067f04ce3d655ea0c1109
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438603"
 ---
 # <a name="sql-property"></a>Proprietà SQL
 Indica la stringa di query utilizzata per recuperare il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- È possibile impostare la proprietà **SQL** in fase di progettazione in Servizi Desktop remoto [. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)Tag Object dell'oggetto DataControl o in fase di esecuzione nel codice di scripting.  
+ È possibile impostare la proprietà **SQL** in fase di progettazione in Servizi Desktop remoto [. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) Tag Object dell'oggetto DataControl o in fase di esecuzione nel codice di scripting.  
   
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  

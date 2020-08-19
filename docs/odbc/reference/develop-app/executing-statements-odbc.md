@@ -1,4 +1,5 @@
 ---
+description: Esecuzione di istruzioni (ODBC)
 title: Esecuzione di istruzioni ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 09063f43-f5f0-4cf0-baa9-12fec8898997
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f34053646c9a279a95740132fcb7a046c559795c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97bd1b12ba275fa066c07d0bd936447c2ab77570
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305702"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429293"
 ---
 # <a name="executing-statements-odbc"></a>Esecuzione di istruzioni (ODBC)
 Le applicazioni ODBC eseguono quasi tutti gli accessi al database eseguendo istruzioni SQL. La sequenza generale degli eventi prevede l'allocazione di un handle di istruzione, l'impostazione di qualsiasi attributo di istruzione, l'esecuzione dell'istruzione, il recupero di tutti i risultati e l'impostazione dell'handle dell'istruzione.  

@@ -1,4 +1,5 @@
 ---
+description: Mapping di funzioni deprecate
 title: Mapping di funzioni deprecate | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a4e89cd9281520e70ec5fb289c6050e77ec6194c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c990646c54fd0d0698482c5f8dc3f87df80fe93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429613"
 ---
 # <a name="mapping-deprecated-functions"></a>Mapping di funzioni deprecate
 In questa sezione viene descritto il mapping delle funzioni deprecate da parte di gestione driver ODBC *3. x* per garantire la compatibilità con le versioni precedenti dei driver ODBC *3. x* utilizzati con le applicazioni ODBC *2. x* . Gestione driver esegue questo mapping indipendentemente dalla versione dell'applicazione. Poiché ogni funzione ODBC *2. x* nell'elenco seguente viene mappata alla funzione ODBC *3. x* corrispondente quando viene chiamata in un driver ODBC *3. x* , non è necessario che il driver ODBC *3. x* implementi le funzioni ODBC *2. x* .  

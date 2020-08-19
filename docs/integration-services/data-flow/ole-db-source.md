@@ -1,4 +1,5 @@
 ---
+description: Origine OLE DB
 title: Origine OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a19cee0b650c82c513bd6f4d9d0b7afd11184b3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cd306ce541f3fe4f6cf352421e0087afb595c41e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430813"
 ---
 # <a name="ole-db-source"></a>Origine OLE DB
 

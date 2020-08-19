@@ -1,4 +1,5 @@
 ---
+description: Proprietà personalizzate dell'attività di controllo CDC
 title: Proprietà personalizzate dell'attività di controllo CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ce75fa54fab43d7f84defd065ffd88111ffda542
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 305c48c44b6db9f6cc8cbff05cbaebc48eee6b7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431053"
 ---
 # <a name="cdc-control-task-custom-properties"></a>Proprietà personalizzate dell'attività di controllo CDC
 

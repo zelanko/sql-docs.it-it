@@ -1,4 +1,5 @@
 ---
+description: ClusterDistance (DMX)
 title: ClusterDistance (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5a4e589455a86f4ffe47e34a6d74d0b6890a5528
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 2c87da38fb2f13c0c79dfc777b52e19139db584c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431133"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -125,7 +126,7 @@ NATURAL PREDICTION JOIN
 |0.97008209236394|  
   
 ## <a name="see-also"></a>Vedere anche  
- [&#40;&#41;DMX del cluster](../dmx/cluster-dmx.md)   
+ [&#40;&#41;DMX del cluster ](../dmx/cluster-dmx.md)   
  [Guida di riferimento alle funzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Contenuto dei modelli di data mining per i modelli di clustering &#40;Analysis Services - Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  

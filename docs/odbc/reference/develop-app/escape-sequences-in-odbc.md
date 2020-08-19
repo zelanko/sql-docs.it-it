@@ -1,4 +1,5 @@
 ---
+description: Sequenze di escape in ODBC
 title: Sequenze di escape in ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d41b0c03ecbe6de63cba1a28a1f39f12a42dc86
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62745b749870fa33151fc1a5f6bd3a1bfc344ad7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300421"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429313"
 ---
 # <a name="escape-sequences-in-odbc"></a>Sequenze di escape in ODBC
 Diverse funzionalità del linguaggio, ad esempio outer join e chiamate di funzioni scalari, sono comunemente implementate da DBMS. Tuttavia, le sintassi per queste funzionalità tendono a essere specifiche di DBMS, anche quando le sintassi standard sono definite dai vari corpi degli standard. Per questo motivo, ODBC definisce sequenze di escape che contengono sintassi standard per le funzionalità del linguaggio seguenti:  
@@ -46,9 +47,9 @@ Diverse funzionalità del linguaggio, ad esempio outer join e chiamate di funzio
  La sequenza di escape viene riconosciuta e analizzata dai driver, che sostituiscono le sequenze di escape con la grammatica specifica di DBMS. Per ulteriori informazioni sulla sintassi della sequenza di escape, vedere [sequenze di escape ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) nell'Appendice C: grammatica SQL.  
   
 > [!NOTE]  
->  In ODBC 2. *x*, questa è la sintassi standard della sequenza di escape: **--(\*fornitore (**_nome-fornitore_**),****)**_estensione_ ** \*** prodotto (_nome prodotto_))--  
+>  In ODBC 2. *x*, questa è la sintassi standard della sequenza di escape: **--( \* Fornitore (**_nome-fornitore_**), estensione prodotto (**_nome prodotto_**)**_extension_ ** \* )--**  
 >   
->  Oltre a questa sintassi, è stata definita una sintassi abbreviata nel formato: **{**_Extension_**}**  
+>  Oltre a questa sintassi, è stata definita una sintassi abbreviata nel formato:            **{**_Extension_**}**  
 >   
 >  In ODBC 3. *x*, la forma estesa della sequenza di escape è stata deprecata e il form abbreviato viene usato in modo esclusivo.  
   

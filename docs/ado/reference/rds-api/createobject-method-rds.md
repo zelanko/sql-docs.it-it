@@ -1,4 +1,5 @@
 ---
+description: Metodo CreateObject (Servizi Desktop remoto)
 title: Metodo CreateObject (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b8cf7f5629158ccd1bdd74e30b7ba9bc5bb6942
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 430031bab7e644278693aa26095aaa1724b715ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439203"
 ---
 # <a name="createobject-method-rds"></a>Metodo CreateObject (Servizi Desktop remoto)
 Crea il proxy per l'oggetto business di destinazione e restituisce un puntatore a tale oggetto. Il proxy esegue il marshalling dei dati e li esegue il marshalling sullo Stub lato server per le comunicazioni con l'oggetto business per inviare richieste e dati tramite Internet. Per gli oggetti componente in-process non vengono usati proxy, ma viene fornito solo un puntatore all'oggetto.  
@@ -37,7 +38,7 @@ Crea il proxy per l'oggetto business di destinazione e restituisce un puntatore 
 |In-Process|Set object = DataSpace.CreateObject("ProgId", "")|  
   
 ## <a name="parameters"></a>Parametri  
- *Oggetto*  
+ *Object*  
  Variabile oggetto che restituisce un oggetto che corrisponde al tipo specificato in *ProgID*.  
   
  *DataSpace*  

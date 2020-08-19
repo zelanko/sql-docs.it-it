@@ -1,4 +1,5 @@
 ---
+description: Proprietà FilterColumn (Servizi Desktop remoto)
 title: Proprietà FilterColumn offrono (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a5473e8-8ce6-4518-83fb-4920b827e285
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53b53bcadc90c8c27027f593014ffab204dc78fa
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1d86d772d14150b09992433648a24994f14fc9df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752113"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439003"
 ---
 # <a name="filtercolumn-property-rds"></a>Proprietà FilterColumn (Servizi Desktop remoto)
 Indica la colonna in cui valutare i criteri di filtro.  
@@ -40,7 +41,7 @@ DataControl.FilterColumn = String
  *Stringa*  
  Valore **stringa** che specifica la colonna in cui valutare i criteri di filtro. I criteri di filtro vengono specificati nella proprietà [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md) .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Le proprietà [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)e **FilterColumn offrono** forniscono funzionalità di ordinamento e filtro nella cache sul lato client. La funzionalità di ordinamento ordina i record in base ai valori di una colonna. La funzionalità di filtro Visualizza un subset di record in base ai criteri di ricerca, mentre il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) completo viene mantenuto nella cache. Il metodo [Reset](../../../ado/reference/rds-api/reset-method-rds.md) eseguirà i criteri e sostituirà il **Recordset** corrente con un **Recordset**aggiornabile.  
   
 ## <a name="applies-to"></a>Si applica a  

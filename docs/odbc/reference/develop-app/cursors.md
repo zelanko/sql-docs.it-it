@@ -1,4 +1,5 @@
 ---
+description: Cursori (ODBC)
 title: Cursori (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2457667e374587e5e91a4c758dfbe641a0b02f78
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 10dbd2517c29bcd02d1d39abe0b2caec1bf03312
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247121"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429403"
 ---
 # <a name="odbc-cursors"></a>Cursori ODBC
 Un'applicazione recupera i dati con un *cursore*. Un cursore è diverso da un set di risultati: un set di risultati è il set di righe che corrisponde a criteri di ricerca specifici, mentre un cursore è il software che restituisce tali righe all'applicazione. Il cursore del nome *,* come si applica ai database, probabilmente è stato originato dal cursore lampeggiante su un terminale del computer. Così come il cursore indica la posizione corrente sullo schermo e il punto in cui le parole digitate verranno visualizzate successivamente, un cursore in un set di risultati indicherà la posizione corrente nel set di risultati e la riga che verrà restituita successivamente.  

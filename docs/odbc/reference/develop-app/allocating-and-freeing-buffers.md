@@ -1,4 +1,5 @@
 ---
+description: Allocazione e rilascio di buffer
 title: Allocazione e liberazione di buffer | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6aab888d24fcbc987b3db921436f14812618519
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 629c613e8c0aba4675b2b95c9c9ccd82fb7cdfb6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429473"
 ---
 # <a name="allocating-and-freeing-buffers"></a>Allocazione e rilascio di buffer
 Tutti i buffer vengono allocati e liberati dall'applicazione. Se un buffer non è rinviato, è necessario che esista solo per la durata della chiamata a una funzione. Ad esempio, **SQLGetInfo** restituisce il valore associato a una particolare opzione nel buffer a cui punta l'argomento *InfoValuePtr* . Questo buffer può essere liberato immediatamente dopo la chiamata a **SQLGetInfo**, come illustrato nell'esempio di codice seguente:  
@@ -34,7 +35,7 @@ SQLGetInfo(hdbc, SQL_DBMS_NAME, (SQLPOINTER)InfoValuePtr, 50,
 free(InfoValuePtr);                        // OK to free InfoValuePtr.  
 ```  
   
- Poiché i buffer posticipati vengono specificati in una funzione e usati in un altro, si tratta di un errore di programmazione dell'applicazione che consente di liberare un buffer posticipato mentre il driver si aspetta ancora che esista. Ad esempio, l'indirizzo \*del buffer *ValuePtr* viene passato a **SQLBindCol** per un uso successivo da parte di **SQLFetch**. Questo buffer non può essere liberato finché la colonna non è associata, ad esempio con una chiamata a **SQLBindCol** o **SQLFreeStmt** , come illustrato nell'esempio di codice seguente:  
+ Poiché i buffer posticipati vengono specificati in una funzione e usati in un altro, si tratta di un errore di programmazione dell'applicazione che consente di liberare un buffer posticipato mentre il driver si aspetta ancora che esista. Ad esempio, l'indirizzo del buffer \* *ValuePtr* viene passato a **SQLBindCol** per un uso successivo da parte di **SQLFetch**. Questo buffer non può essere liberato finché la colonna non è associata, ad esempio con una chiamata a **SQLBindCol** o **SQLFreeStmt** , come illustrato nell'esempio di codice seguente:  
   
 ```  
 SQLRETURN    rc;  

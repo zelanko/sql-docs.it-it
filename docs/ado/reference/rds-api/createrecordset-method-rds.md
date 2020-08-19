@@ -1,4 +1,5 @@
 ---
+description: Metodo CreateRecordset (Servizi Desktop remoto)
 title: Metodo CreateRecordset (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53a391ccb25a32d628703543d95dc8e24668fcd5
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: f9e993d547e6f28c9fc17e074d005af67f6d7a4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439153"
 ---
 # <a name="createrecordset-method-rds"></a>Metodo CreateRecordset (Servizi Desktop remoto)
 Crea un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)vuoto e disconnesso.  
@@ -49,8 +50,8 @@ object.CreateRecordset(ColumnInfos)
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |Nome|Nome dell'intestazione di colonna.|  
-|Tipo|Integer del tipo di dati.|  
-|Dimensioni|Integer della larghezza in caratteri, indipendentemente dal tipo di dati.|  
+|Type|Integer del tipo di dati.|  
+|Dimensione|Integer della larghezza in caratteri, indipendentemente dal tipo di dati.|  
 |Supporto di valori Null|.|  
 |Scala (facoltativo)|Questo attributo facoltativo definisce la scala per i campi numerici. Se questo valore non viene specificato, i valori numerici verranno troncati a una scala di tre. La precisione non è interessata, ma il numero di cifre che seguono il separatore decimale verrà troncato a tre.|  
   
@@ -65,28 +66,28 @@ object.CreateRecordset(ColumnInfos)
   
  Per alcuni tipi di dati delle variabili, il tipo può essere assegnato al tipo indicato nella colonna di sostituzione. Le sostituzioni non vengono visualizzate finché non viene creato e compilato il **Recordset** . È quindi possibile verificare il tipo di dati effettivo, se necessario.  
   
-|Lunghezza|Costante|Number|Sostituzione|  
+|Length|Costante|Numero|Sostituzione|  
 |------------|--------------|------------|------------------|  
-|Correzione|**adTinyInt**|16||  
-|Correzione|**adSmallInt**|2||  
-|Correzione|**adInteger**|3||  
-|Correzione|**adBigInt**|20||  
-|Correzione|**adUnsignedTinyInt**|17||  
-|Correzione|**adUnsignedSmallInt**|18||  
-|Correzione|**adUnsignedInt**|19||  
-|Correzione|**adUnsignedBigInt**|21||  
-|Correzione|**adSingle**|4||  
-|Correzione|**adDouble**|5||  
-|Correzione|**adCurrency**|6||  
-|Correzione|**adDecimal**|14||  
-|Correzione|**adNumeric**|131||  
-|Correzione|**adBoolean**|11||  
-|Correzione|**adError**|10||  
-|Correzione|**adGuid**|72||  
-|Correzione|**adDate**|7||  
-|Correzione|**adDBDate**|133||  
-|Correzione|**adDBTime**|134||  
-|Correzione|**adDBTimestamp**|135|7|  
+|Fisso|**adTinyInt**|16||  
+|Fisso|**adSmallInt**|2||  
+|Fisso|**adInteger**|3||  
+|Fisso|**adBigInt**|20||  
+|Fisso|**adUnsignedTinyInt**|17||  
+|Fisso|**adUnsignedSmallInt**|18||  
+|Fisso|**adUnsignedInt**|19||  
+|Fisso|**adUnsignedBigInt**|21||  
+|Fisso|**adSingle**|4||  
+|Fisso|**adDouble**|5||  
+|Fisso|**adCurrency**|6||  
+|Fisso|**adDecimal**|14||  
+|Fisso|**adNumeric**|131||  
+|Fisso|**adBoolean**|11||  
+|Fisso|**adError**|10||  
+|Fisso|**adGuid**|72||  
+|Fisso|**adDate**|7||  
+|Fisso|**adDBDate**|133||  
+|Fisso|**adDBTime**|134||  
+|Fisso|**adDBTimestamp**|135|7|  
 |Variabile|**adBSTR**|8|130|  
 |Variabile|**adChar**|129|200|  
 |Variabile|**adVarChar**|200||  

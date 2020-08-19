@@ -1,4 +1,5 @@
 ---
+description: Raccolta Procedures (ADOX)
 title: Raccolta Procedures (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91ce9f74f0198c52ecce404cb0145e33b941271c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3719107d002e91880d59b0ba33c25c09596a80b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439623"
 ---
 # <a name="procedures-collection-adox"></a>Raccolta Procedures (ADOX)
 Contiene tutti gli oggetti [procedure](../../../ado/reference/adox-api/procedure-object-adox.md) di un catalogo.  
   
 ## <a name="remarks"></a>Osservazioni  
- Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) per una raccolta **Procedures** è univoco per ADOX. È possibile scegliere:  
+ Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) per una raccolta **Procedures** è univoco per ADOX. È possibile:  
   
 -   Aggiungere una nuova routine alla raccolta con il metodo **Append** .  
   
- Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile scegliere:  
+ Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile:  
   
 -   Accedere a una routine della raccolta con la proprietà [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   

@@ -1,4 +1,5 @@
 ---
+description: Tipo di buffer di dati
 title: Tipo di buffer di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b98ed2ab0865b98884f6dfa1ff20142540ff314
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1a3edf66a8f3684fdf8389d16c08f62682907ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305247"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429353"
 ---
 # <a name="data-buffer-type"></a>Tipo di buffer di dati
 Il tipo di dati C di un buffer viene specificato dall'applicazione. Con una singola variabile, questo errore si verifica quando l'applicazione alloca la variabile. Con la memoria generica, ovvero la memoria a cui punta un puntatore di tipo void, questo errore si verifica quando l'applicazione esegue il cast della memoria a un particolare tipo. Il driver individua questo tipo in due modi:  

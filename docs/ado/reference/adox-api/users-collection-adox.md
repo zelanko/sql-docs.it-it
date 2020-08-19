@@ -1,4 +1,5 @@
 ---
+description: Raccolta Users (ADOX)
 title: Raccolta Users (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4befb68c861edee0f5c1423e86ee1fb21067c2a5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e69ecbf642982d6465c12e225f45199a0c1b33e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753175"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439373"
 ---
 # <a name="users-collection-adox"></a>Raccolta Users (ADOX)
 Contiene tutti gli oggetti [utente](../../../ado/reference/adox-api/user-object-adox.md) archiviati di un [Catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) o di un [gruppo](../../../ado/reference/adox-api/group-object-adox.md).  
@@ -30,11 +31,11 @@ Contiene tutti gli oggetti [utente](../../../ado/reference/adox-api/user-object-
 ## <a name="remarks"></a>Osservazioni  
  La raccolta **Users** di un [Catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) rappresenta tutti gli utenti del catalogo. La raccolta **Users** per un [gruppo](../../../ado/reference/adox-api/group-object-adox.md) rappresenta solo gli utenti che dispongono di un'appartenenza al gruppo specifico.  
   
- Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-users.md) per una raccolta **Users** è univoco per ADOX. È possibile scegliere:  
+ Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-users.md) per una raccolta **Users** è univoco per ADOX. È possibile:  
   
 -   Aggiungere un nuovo utente alla raccolta usando il metodo **Append** .  
   
- Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile scegliere:  
+ Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile:  
   
 -   Accedere a un utente nella raccolta con la proprietà [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   

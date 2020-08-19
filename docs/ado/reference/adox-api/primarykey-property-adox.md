@@ -1,4 +1,5 @@
 ---
+description: Proprietà PrimaryKey (ADOX)
 title: Proprietà PrimaryKey (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 30185312-5e09-4804-852d-e505d660113a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc9c4e847ff75b12e3d0c2b69db7dfc47a6b4877
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ab3a4f6bd28c74dadb82d7e388866b4bf6100a06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763702"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439663"
 ---
 # <a name="primarykey-property-adox"></a>Proprietà PrimaryKey (ADOX)
 Indica se l'indice rappresenta la chiave primaria nella tabella.  

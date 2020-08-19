@@ -1,4 +1,5 @@
 ---
+description: Metodo CancelUpdate (Servizi Desktop remoto)
 title: Metodo CancelUpdate (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76d8a6e9-bc6c-4ea0-8e7a-2bae5ed06650
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 05426b2d4fba81e70a8bae35db215bcd750d3169
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7e3f7180b812aab47f9388e25a64d9445e9b5c9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746342"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439233"
 ---
 # <a name="cancelupdate-method-rds"></a>Metodo CancelUpdate (Servizi Desktop remoto)
 Annulla tutte le modifiche apportate alla riga corrente o nuova di un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -37,7 +38,7 @@ DataControl.CancelUpdate
  *DataControl*  
  Variabile oggetto che rappresenta un Servizi Desktop remoto [. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Il servizio cursore per OLE DB mantiene una copia dei valori originali e una cache di modifiche. Quando si chiama **CancelUpdate**, la cache delle modifiche viene reimpostata su Empty e tutti i controlli associati vengono aggiornati con i dati originali.  
   
 ## <a name="applies-to"></a>Si applica a  

@@ -1,4 +1,5 @@
 ---
+description: BottomCount (DMX)
 title: BottomCount (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: db7e660b5b92d49f5a5151d5d71e9ac31f9e9013
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: a2b810d2b268e12c97857475e474d3ed597978ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431173"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

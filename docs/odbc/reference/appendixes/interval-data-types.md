@@ -1,4 +1,5 @@
 ---
+description: Tipi di dati intervallo
 title: Tipi di dati interval | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ee4a6e845e0bc0830f514b2e768075dd75bcf6e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b54996c2f2897e47e05088b1985d190acafaad3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304967"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429673"
 ---
 # <a name="interval-data-types"></a>Tipi di dati intervallo
 Un intervallo viene definito come la differenza tra due date e ore. Gli intervalli sono espressi in uno dei due modi diversi. Uno è un intervallo di *anno del mese* che esprime gli intervalli in termini di anni e un numero integrale di mesi. L'altro è un intervallo di *tempo* che esprime gli intervalli in termini di giorni, minuti e secondi. Questi due tipi di intervalli sono distinti e non possono essere misti, perché i mesi possono avere un numero di giorni variabile.  
@@ -41,7 +42,7 @@ Un intervallo viene definito come la differenza tra due date e ore. Gli interval
   
  Sono disponibili 13 tipi di dati SQL intervallo e 13 tipi di dati intervallo C. Ognuno dei tipi di dati intervallo C utilizza la stessa struttura, SQL_INTERVAL_STRUCT, per contenere i dati relativi all'intervallo. Per ulteriori informazioni, vedere la sezione successiva, [struttura intervallo C](../../../odbc/reference/appendixes/c-interval-structure.md). Per ulteriori informazioni sui tipi di dati SQL, vedere [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md). Per ulteriori informazioni sui tipi di dati C, vedere [tipi di dati c](../../../odbc/reference/appendixes/c-data-types.md).  
   
-|Identificatore di tipo|Classe|Descrizione|  
+|Identificatore di tipo|Class|Descrizione|  
 |---------------------|-----------|-----------------|  
 |MONTH|Anno mese|Numero di mesi tra due date.|  
 |YEAR|Anno mese|Numero di anni tra due date.|  

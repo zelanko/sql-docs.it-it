@@ -1,4 +1,5 @@
 ---
+description: Oggetto Index (ADOX)
 title: Oggetto index (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 840484cbfcb1feeb56022835b6c1b3157101edb8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 81f0bf8d07bbb89105a0ceab421d8433d52f1672
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439943"
 ---
 # <a name="index-object-adox"></a>Oggetto Index (ADOX)
 Rappresenta un indice di una tabella di database.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Il codice seguente crea un nuovo **Indice**:  
   
 ```  

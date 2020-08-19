@@ -1,4 +1,5 @@
 ---
+description: Determinazione dei DBMS e dei driver di destinazione
 title: Determinazione dei sistemi DBMS e dei driver di destinazione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f8811e4d289a8fc89c2c3773aab973df523025f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8dfbc11e96577e9027d1cc6e17701a82b89061be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429323"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>Determinazione dei DBMS e dei driver di destinazione
 La domanda successiva da considerare è, quali sono i DBMS di destinazione per l'applicazione e quali sono i driver disponibili che supportano questi sistemi DBMS? Poiché le applicazioni generiche tendono a essere altamente interoperative, la questione dei DBMS di destinazione è la più applicabile alle applicazioni personalizzate e verticali. Tuttavia, la domanda dei driver di destinazione si applica a tutte le applicazioni, perché i driver variano notevolmente in velocità, qualità, supporto delle funzionalità e disponibilità. Inoltre, se i driver devono essere ridistribuiti con l'applicazione, è necessario prendere in considerazione il costo e la disponibilità dei piani di licenza.  

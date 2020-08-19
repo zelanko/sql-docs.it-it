@@ -1,4 +1,5 @@
 ---
+description: Data Profiling Task Editor (Profile Requests Page)
 title: Editor attività Profiling dati (pagina Richieste profilo) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6716457b994721da54c1f42fe8057fda67f7e4be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3365f6540a95639f2f6d4c607bfdee094c550c1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921720"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431003"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
 
@@ -52,15 +53,15 @@ ms.locfileid: "86921720"
 ### <a name="requests-pane-columns"></a>Colonne del riquadro delle richieste  
  Le colonne visualizzate nel riquadro delle richieste dipendono dall'opzione **Visualizza** selezionata:  
   
--   Se si seleziona **Tutte le richieste**, nel riquadro delle richieste verranno visualizzate due colonne: **Tipo di profilo** e **ID richiesta**.  
+-   Se si seleziona **Tutte le richieste**, nel riquadro delle richieste verranno visualizzate due colonne: **Tipo profilo** e **ID richiesta**.  
   
--   Se si sceglie di visualizzare uno dei cinque profili di colonna, nel riquadro delle richieste verranno visualizzate quattro colonne: **Tipo profilo**, **Tabella o vista**, **Colonna** e **ID richiesta**.  
+-   Se si sceglie di visualizzare uno dei cinque profili di colonna, nel riquadro delle richieste verranno visualizzate quattro colonne: **Tipo profilo**, **Tabella o vista**, **Colonna**e **ID richiesta**.  
   
--   Se si sceglie di visualizzare un profilo Chiave candidata, nel riquadro delle richieste verranno visualizzate quattro colonne: **Tipo profilo**, **Tabella o vista**, **KeyColumns** e **ID richiesta**.  
+-   Se si sceglie di visualizzare un profilo Chiave candidata, nel riquadro delle richieste verranno visualizzate quattro colonne: **Tipo profilo**, **Tabella o vista**, **Colonne chiave**e **ID richiesta**.  
   
--   Se si sceglie di visualizzare un profilo Dipendenza funzionale, nel riquadro delle richieste verranno visualizzate cinque colonne: **Tipo di profilo**, **Tabella o vista**, **Colonne determinanti**, **Colonna dipendente** e **ID richiesta**.  
+-   Se si sceglie di visualizzare un profilo Dipendenza funzionale, nel riquadro delle richieste verranno visualizzate cinque colonne: **Tipo profilo**, **Tabella o vista**, **Colonne determinanti**, **Colonna dipendente**e **ID richiesta**.  
   
--   Se si sceglie di visualizzare un profilo Inclusione valore, nel riquadro delle richieste verranno visualizzate sei colonne: **Tipo profilo**, **Tabella o vista lato subset**, **Tabella o vista lato superset**, **Colonne lato subset**, **Colonne lato superset** e **ID richiesta**.  
+-   Se si sceglie di visualizzare un profilo Inclusione valore, nel riquadro delle richieste verranno visualizzate sei colonne: **Tipo profilo**, **Tabella o vista lato subset**, **Tabella o vista lato superset**, **Colonne lato subset**, **Colonne lato superset**e **ID richiesta**.  
   
  Nelle sezioni seguenti vengono descritte tutte le colonne indicate in precedenza.  
   
@@ -68,7 +69,7 @@ ms.locfileid: "86921720"
  **Tipo profilo**  
  Selezionare un profilo dati nelle opzioni seguenti:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Richiesta profilo Chiave candidata**|Consente di calcolare un profilo Chiave candidata.<br /><br /> Questo profilo segnala se una colonna o un set di colonne è una chiave, o una chiave approssimativa, per la tabella selezionata. consente inoltre di identificare eventuali problemi nei dati, ad esempio i valori duplicati in una possibile colonna chiave.|  
 |**Richiesta profilo Distribuzione lunghezze di colonna**|Consente di calcolare un profilo Distribuzione lunghezze di colonna.<br /><br /> Il profilo Distribuzione lunghezze di colonna segnala tutte le singole lunghezze dei valori stringa nella colonna selezionata e la percentuale di righe nella tabella rappresentata da ogni lunghezza. e consente di identificare eventuali problemi nei dati, ad esempio i valori non validi. Si analizza, ad esempio, una colonna di codici a due caratteri degli stati degli Stati Uniti e si individuano valori con lunghezza maggiore di due caratteri.|  
@@ -110,7 +111,7 @@ ms.locfileid: "86921720"
  **Colonne determinanti**  
  Visualizza le colonne selezionate per il profiling come colonna o colonne determinanti. Nell'esempio in cui il codice postale ZIP (Stati Uniti) determina lo stato degli Stati Uniti, la colonna determinante è quella contenente i codici postali.  
   
- **Dependent column**  
+ **Colonna dipendente**  
  Visualizza le colonne selezionate per il profiling come colonne dipendenti. Nell'esempio in cui il codice postale ZIP (Stati Uniti) determina lo stato degli Stati Uniti, la colonna dipendente è quella contenente gli stati.  
   
 #### <a name="columns-specific-to-the-value-inclusion-profile"></a>Colonne specifiche del profilo Inclusione valore  
@@ -130,7 +131,7 @@ ms.locfileid: "86921720"
  Il riquadro **Proprietà richiesta** viene visualizzato al di sotto del riquadro delle richieste. Questo riquadro contiene le opzioni per il profilo selezionato nel riquadro delle richieste.  
   
 > [!NOTE]  
->  Dopo avere specificato l'opzione **Tipo profilo**, è necessario selezionare il campo **ID richiesta** per visualizzare le proprietà per la richiesta di profilo nel riquadro **Proprietà richiesta** .  
+>   Dopo avere specificato l'opzione **Tipo profilo**, è necessario selezionare il campo **ID richiesta** per visualizzare le proprietà per la richiesta di profilo nel riquadro **Proprietà richiesta** .  
   
  Queste opzioni variano in base al profilo selezionato. Per informazioni sulle opzioni specifiche per singoli tipi di profilo, vedere gli argomenti seguenti.  
   

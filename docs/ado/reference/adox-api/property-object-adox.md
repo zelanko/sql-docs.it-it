@@ -1,4 +1,5 @@
 ---
+description: Oggetto Property (ADOX)
 title: Oggetto Property (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f866b20bb8157239a6deb7fd37a1ec044e27479
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5a836b5b0778aea77732036d1951db81aa790198
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748562"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439603"
 ---
 # <a name="property-object-adox"></a>Oggetto Property (ADOX)
 Rappresenta una caratteristica di un oggetto ADOX.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Gli oggetti ADOX hanno due tipi di proprietà: incorporata e dinamica.  
   
  Le proprietà predefinite sono tali proprietà immediatamente disponibili per qualsiasi nuovo oggetto, utilizzando la sintassi myObject. Property. Non vengono visualizzati come oggetti proprietà nella [raccolta delle proprietà](../../../ado/reference/ado-api/properties-collection-ado.md)di un oggetto, quindi, sebbene sia possibile modificarne i valori, non è possibile modificarne le caratteristiche.  

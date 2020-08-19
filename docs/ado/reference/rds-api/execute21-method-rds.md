@@ -1,4 +1,5 @@
 ---
+description: Metodo Execute21 (Servizi Desktop remoto)
 title: Metodo Execute21 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e7f006d0a833b8c370e6d80045a873c4ca2b16b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 412401ba2b1d5a676b5f5172c59c6e4ffc5cce7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752634"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439053"
 ---
 # <a name="execute21-method-rds"></a>Metodo Execute21 (Servizi Desktop remoto)
 Esegue la richiesta e crea un recordset ADO da utilizzare in ADO 2,1.  
@@ -43,7 +44,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *QueryString*  
  Comando nel linguaggio di comando supportato dal provider OLE DB identificato nella stringa di connessione. Per i provider basati su SQL, potrebbe contenere un' [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzione Command, ma per i provider non SQL (ad esempio, MSDataShape) potrebbe non essere un' [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzione di query.  
   
- Inoltre, se viene utilizzato un gestore (ed è consigliabile utilizzare un gestore), il gestore può modificare o sostituire il valore specificato qui. Ad esempio, il gestore in genere sostituisce *QueryString* con una stringa di query dal relativo file ini. Per impostazione predefinita, viene usato il file msdfmap. ini.  
+ Inoltre, se viene utilizzato un gestore (ed è consigliabile utilizzare un gestore), il gestore può modificare o sostituire il valore specificato qui. Ad esempio, il gestore in genere sostituisce *QueryString* con una stringa di query dal relativo file ini. Per impostazione predefinita, viene usato il file di Msdfmap.ini.  
   
  *lMarshalOptions*  
  Consente di impostare le opzioni di marshalling sul set di righe o sul recordset restituito.  
@@ -69,8 +70,8 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *pParameters*  
  Variant che contiene una matrice sicura di definizioni di parametri. Se l'opzione *GetInfo* è stata specificata in *lExecuteOptions*, questo parametro viene utilizzato per restituire le definizioni dei parametri ottenute dal provider OLE DB. In caso contrario, questo parametro può essere vuoto.  
   
-## <a name="remarks"></a>Commenti  
- Il parametro *HandlerString* può essere null. Ciò che si verifica in questo caso dipende dalla modalità di configurazione del server RDS. Una stringa del gestore "MSDFMAP. handler" indica che deve essere usato il gestore fornito da Microsoft (msdfmap. dll). Una stringa del gestore "MASDFMAP. Handler, Sample. ini" indica che è necessario utilizzare il gestore msdfmap. dll e che l'argomento "Sample. ini" deve essere passato al gestore. MSDFMAP. dll interpreterà l'argomento come direzione per utilizzare Sample. ini per verificare le stringhe di connessione e di query.  
+## <a name="remarks"></a>Osservazioni  
+ Il parametro *HandlerString* può essere null. Ciò che si verifica in questo caso dipende dalla modalità di configurazione del server RDS. Una stringa del gestore "MSDFMAP. handler" indica che deve essere utilizzato il gestore fornito da Microsoft (Msdfmap.dll). Una stringa del gestore "MASDFMAP. Handler, sample.ini" indica che è necessario utilizzare il gestore di Msdfmap.dll e che l'argomento "sample.ini" deve essere passato al gestore. MSDFMAP.dll interpreterà l'argomento come direzione per utilizzare l'sample.ini per verificare le stringhe di connessione e di query.  
   
 > [!NOTE]
 >  Il metodo **Execute21** è una versione del [metodo Execute (RDS)](../../../ado/reference/rds-api/execute-method-rds.md). Quando è necessario usare il metodo **Execute** per comunicare con ADO 2,1, è possibile chiamare il metodo **Execute21** . Le funzionalità del metodo **Execute** in ADO 2,5 e versioni successive sono un superset delle funzionalità fornite per lo stesso metodo in ADO 2,1.  

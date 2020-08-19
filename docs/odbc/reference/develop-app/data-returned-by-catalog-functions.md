@@ -1,4 +1,5 @@
 ---
+description: Dati restituiti dalle funzioni catalogo
 title: Dati restituiti dalle funzioni del catalogo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a0d9b63de04f79fd95c1b06d8e84d85c6f4fea02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c42319520696060cd52c14c46f968badee27e20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305230"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429363"
 ---
 # <a name="data-returned-by-catalog-functions"></a>Dati restituiti dalle funzioni catalogo
 Ogni funzione di catalogo restituisce i dati come un set di risultati. Questo set di risultati non è diverso da qualsiasi altro set di risultati. Viene in genere generato da un'istruzione **Select** con parametri predefinita che è hardcoded nel driver o archiviata in una procedura nell'origine dati. Per informazioni sul recupero di dati da un set di risultati, vedere la pagina relativa alla [creazione di un set di risultati](../../../odbc/reference/develop-app/was-a-result-set-created.md).  

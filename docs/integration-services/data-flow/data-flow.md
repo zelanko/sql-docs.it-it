@@ -1,4 +1,5 @@
 ---
+description: Flusso di dati
 title: Flusso di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 757015f38213730973ec67c014f5b17d00fbce0b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fa3fff63528c11e57c6517393c28a5deb2acfcfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916837"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430963"
 ---
 # <a name="data-flow"></a>Flusso di dati
 
@@ -122,7 +123,7 @@ ms.locfileid: "86916837"
   
 -   [Trasformazione Colonna derivata](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
--   [Trasformazione Raggruppamento fuzzy](../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)  
+-   [Raggruppamento fuzzy - trasformazione](../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)  
   
 -   [Trasformazione Ricerca fuzzy](../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)  
   
@@ -216,7 +217,7 @@ ms.locfileid: "86916837"
 ## <a name="related-tasks"></a>Attività correlate  
  [Aggiunta o eliminazione di un componente in un flusso di dati](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)  
   
- [Connettere componenti in un flusso di dati](../../integration-services/data-flow/connect-components-in-a-data-flow.md)  
+ [Connessione di componenti in un flusso di dati](../../integration-services/data-flow/connect-components-in-a-data-flow.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  Video sulle [prestazioni del connettore Microsoft per Oracle di Attunity (video di SQL Server)](https://go.microsoft.com/fwlink/?LinkID=210369)sul sito Web technet.microsoft.com.  

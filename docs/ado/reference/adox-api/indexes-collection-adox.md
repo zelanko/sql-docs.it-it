@@ -1,4 +1,5 @@
 ---
+description: Raccolta Indexes (ADOX)
 title: Raccolta Indexes (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af209229519470b121e3c69ba857b145c0874e73
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 916671fdf9722c7894ee122f3d68167a8047b72c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439913"
 ---
 # <a name="indexes-collection-adox"></a>Raccolta Indexes (ADOX)
 Contiene tutti gli oggetti [Indice](../../../ado/reference/adox-api/index-object-adox.md) di una tabella.  
   
-## <a name="remarks"></a>Commenti  
- Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) per una raccolta **indexes** è univoco per ADOX. È possibile scegliere:  
+## <a name="remarks"></a>Osservazioni  
+ Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) per una raccolta **indexes** è univoco per ADOX. È possibile:  
   
 -   Aggiungere un nuovo indice alla raccolta con il metodo **Append** .  
   
- Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile scegliere:  
+ Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile:  
   
 -   Accedere a un indice nella raccolta con la proprietà [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   

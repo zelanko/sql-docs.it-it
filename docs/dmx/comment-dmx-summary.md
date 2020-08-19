@@ -1,4 +1,5 @@
 ---
+description: --(Commento) (DMX) Riepilogo
 title: --(Commento) (DMX) Riepilogo | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4f0f01b0dc3550c6b09e6c2342232e6b7c7fac8f
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 260a3f5c8a6d1badb90349396db6f2b716380aa7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969912"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431093"
 ---
 # <a name="---comment-dmx-summary"></a>--(Commento) (DMX) Riepilogo
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

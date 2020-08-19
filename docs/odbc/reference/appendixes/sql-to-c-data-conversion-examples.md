@@ -1,4 +1,5 @@
 ---
+description: Esempi di conversione di dati da SQL a C
 title: Esempi di conversione di dati da SQL a C | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 0190c76c-7f9b-42f4-be9d-cef7284840fd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 96b10dd93c807aaa49a7e10e198f789fb47ccdeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a7a3d70a6f74a814262ddad580b5e5a2b0d79927
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429583"
 ---
 # <a name="sql-to-c-data-conversion-examples"></a>Esempi di conversione di dati da SQL a C
 
 Gli esempi illustrati nella tabella seguente illustrano il modo in cui il driver converte i dati SQL in dati C:  
   
-|Tipo SQL<br /><br /> identificatore|SQL data<br /><br /> value|Tipo C<br /><br /> identificatore|Buffer<br /><br /> length|**TargetValuePtr*|SQLSTATE|  
+|Tipo SQL<br /><br /> identificatore|SQL data<br /><br /> Valore|Tipo C<br /><br /> identificatore|Buffer<br /><br /> length|**TargetValuePtr*|SQLSTATE|  
 |-----------------------------|------------------------|---------------------------|-----------------------|------------------------|--------------|  
 |SQL_CHAR|abcdef|SQL_C_CHAR|7|abcdef\0 [a]|n/d|  
 |SQL_CHAR|abcdef|SQL_C_CHAR|6|abcde\0 [a]|01004|  

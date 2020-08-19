@@ -1,4 +1,5 @@
 ---
+description: Attività Query di data mining
 title: Attività Query di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e678774a8da38b8ff2e8c64adc7309828d6dffb6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 285bc5e3b2bdf9dfb1497539def56ecbaa77ccb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919837"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431023"
 ---
 # <a name="data-mining-query-task"></a>Attività Query di data mining
 
@@ -124,7 +125,7 @@ ms.locfileid: "86919837"
  **Compila nuova query**  
  Consente di creare una query di data mining utilizzando uno strumento grafico.  
   
- **Argomenti correlati:** [Query di data mining](../../integration-services/control-flow/data-mining-query.md)  
+ **Argomenti correlati:** [Data Mining Query](../../integration-services/control-flow/data-mining-query.md)  
   
 ### <a name="parameter-mapping-tab-options"></a>Opzioni della scheda Mapping parametri  
  **Nome parametro**  

@@ -1,4 +1,5 @@
 ---
+description: Esempio del metodo Refresh di Views (VB)
 title: Esempio di metodo Refresh views (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4b807bbadb5a9b4c8278be8ae895cd6ce4309c0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3112670df34b0e74e359ef0e514d9acdc8620788
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752941"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439273"
 ---
 # <a name="views-refresh-method-example-vb"></a>Esempio del metodo Refresh di Views (VB)
 Nel codice seguente viene illustrato come aggiornare la raccolta [views](../../../ado/reference/adox-api/views-collection-adox.md) di un [Catalogo](../../../ado/reference/adox-api/catalog-object-adox.md). Questa operazione è necessaria prima che sia possibile accedere agli oggetti di [visualizzazione](../../../ado/reference/adox-api/view-object-adox.md) del **Catalogo** .  

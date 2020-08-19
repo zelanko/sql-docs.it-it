@@ -1,4 +1,5 @@
 ---
+description: Proprietà RelatedColumn (ADOX)
 title: Proprietà RelatedColumn (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 666e18344a409ce66132108ef7de3afab82c2086
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d59969ed52f7b26e1b104a8ee40ff3e16a49c4a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748542"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439573"
 ---
 # <a name="relatedcolumn-property-adox"></a>Proprietà RelatedColumn (ADOX)
 Indica il nome dell' [oggetto colonna correlato (ADOX)](../../../ado/reference/adox-api/column-object-adox.md) nella tabella correlata (solo colonne chiave).  
@@ -32,7 +33,7 @@ Indica il nome dell' [oggetto colonna correlato (ADOX)](../../../ado/reference/a
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta e restituisce un valore **stringa** che rappresenta il nome della colonna correlata nella tabella correlata.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Il valore predefinito è una stringa vuota ("").  
   
  Questa proprietà è di sola lettura per gli oggetti [Column](../../../ado/reference/adox-api/column-object-adox.md) già accodati a una raccolta.  

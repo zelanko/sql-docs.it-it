@@ -1,4 +1,5 @@
 ---
+description: Proprietà SortDirection (Servizi Desktop remoto)
 title: Proprietà SortDirection (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d9d8715-e4ad-4ff3-bf7f-f1dc0532d8c2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 15c914344e526d24c737a7076929f0610aedb9e8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 264cf997d3dc7448be90d5e3115bb54053a107b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750719"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438623"
 ---
 # <a name="sortdirection-property-rds"></a>Proprietà SortDirection (Servizi Desktop remoto)
 Indica se un ordinamento è crescente o decrescente.  

@@ -1,4 +1,5 @@
 ---
+description: Proprietà personalizzate del file flat
 title: Proprietà personalizzate del file flat | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eef1dd7c7cf1a977f8443f22e7bf3af9158b8ae7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9c20e9a830439e8065a1bbccfe7d25540c9ae639
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430853"
 ---
 # <a name="flat-file-custom-properties"></a>Proprietà personalizzate del file flat
 

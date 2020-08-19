@@ -1,4 +1,5 @@
 ---
+description: Raccolta Tables (ADOX)
 title: Raccolta Tables (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f788376d76692f3dc86011cc1d35b293116250a3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9d959578d647e74248fdb58b8c27269c0454c304
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763282"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439473"
 ---
 # <a name="tables-collection-adox"></a>Raccolta Tables (ADOX)
 Contiene tutti gli oggetti [tabella](../../../ado/reference/adox-api/table-object-adox.md) di un catalogo.  
   
 ## <a name="remarks"></a>Osservazioni  
- Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) per una raccolta **Tables** è univoco per ADOX. È possibile scegliere:  
+ Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) per una raccolta **Tables** è univoco per ADOX. È possibile:  
   
 -   Aggiungere una nuova tabella alla raccolta con il metodo **Append** .  
   
- Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile scegliere:  
+ Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile:  
   
 -   Accedere a una tabella nella raccolta con la proprietà [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   
