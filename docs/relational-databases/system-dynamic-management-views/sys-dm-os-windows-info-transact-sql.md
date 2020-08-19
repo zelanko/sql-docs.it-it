@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_windows_info (Transact-SQL)
 title: sys. dm_os_windows_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 26cf5253d95a1c716c3c2ecfc1be0d9f99897832
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 567da3021d443b2d8c6d6eeeca30401618c67360
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447523"
 ---
 # <a name="sysdm_os_windows_info-transact-sql"></a>sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +64,7 @@ FROM sys.dm_os_windows_info;
  `6.0              Service Pack 2                4            1033`  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. dm_os_sys_info &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
+ [sys. dm_os_sys_info &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_os_host_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)  
   
   

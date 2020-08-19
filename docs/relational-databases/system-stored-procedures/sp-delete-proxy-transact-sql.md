@@ -1,4 +1,5 @@
 ---
+description: sp_delete_proxy (Transact-SQL)
 title: sp_delete_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d037718577e57887e8ba27787fade5b8d08abc28
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe7fa16aa15e20be9419a3cb3705bc40d4bba9f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862526"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447294"
 ---
 # <a name="sp_delete_proxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @proxy_id = ] id`Numero di identificazione del proxy da rimuovere. Il *proxy_id* è di **tipo int**e il valore predefinito è null.  
+`[ @proxy_id = ] id` Numero di identificazione del proxy da rimuovere. Il *proxy_id* è di **tipo int**e il valore predefinito è null.  
   
-`[ @proxy_name = ] 'proxy_name'`Nome del proxy da rimuovere. Il *proxy_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @proxy_name = ] 'proxy_name'` Nome del proxy da rimuovere. Il *proxy_name* è di **tipo sysname**e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -71,6 +72,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_proxy &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)  
+ [sp_add_proxy &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)  
   
   

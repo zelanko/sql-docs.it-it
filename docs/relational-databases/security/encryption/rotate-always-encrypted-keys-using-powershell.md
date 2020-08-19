@@ -1,4 +1,5 @@
 ---
+description: Ruotare le chiavi Always Encrypted con PowerShell
 title: Ruotare le chiavi Always Encrypted con PowerShell | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
@@ -11,12 +12,12 @@ ms.assetid: 5117b4fd-c8d3-48d5-87c9-756800769f31
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f5e9cbaffe30849f5e2bb2385f49fabd603bc1f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1f2010ad30f38d2e7bf89a18b833d93e00aec1f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448113"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Ruotare le chiavi Always Encrypted con PowerShell
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -94,7 +95,7 @@ Il flusso di lavoro della rotazione delle chiavi master della colonna descritto 
 > [!IMPORTANT]
 > Prima di eseguire passaggi in cui *Accede a chiavi di testo non crittografato/archivio chiavi*=**Sì** (passaggi che accedono a chiavi di testo non crittografato/archivio chiavi), assicurarsi che l'ambiente PowerShell venga eseguito su un computer protetto diverso da un computer che ospita il database. Per altre informazioni, vedere [Considerazioni sulla sicurezza per la gestione delle chiavi](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management).
 
-### <a name="part-1-dba"></a>Parte 1: DBA
+### <a name="part-1-dba"></a>Parte 1: Amministratore di database
 
 Un amministratore di database recupera metadati sulla chiave master della colonna da ruotare e sulle relative chiavi di crittografia associate alla chiave master della colonna corrente. L'amministratore di database condivide tutte queste informazioni con un amministratore della sicurezza.
 
@@ -119,13 +120,13 @@ L'amministratore della sicurezza genera una nuova chiave master della colonna, r
 |Passaggio 4. Creare un oggetto SqlColumnMasterKeySettings che includa informazioni sul percorso della chiave master **precedente** della colonna. In PowerShell SqlColumnMasterKeySettings è un oggetto presente in memoria |New-SqlColumnMasterKeySettings| No | No
 |Passaggio 5. Creare un oggetto SqlColumnMasterKeySettings che includa informazioni sul percorso della **nuova** chiave master della colonna. In PowerShell SqlColumnMasterKeySettings è un oggetto presente in memoria Per crearlo, è necessario usare il cmdlet specifico dell'archivio chiavi. | [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)| No | No
 |Passaggio 6. Eseguire l'autenticazione in Azure, se la chiave master precedente (corrente) o nuova della colonna è archiviata nell'insieme di credenziali delle chiavi di Azure. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Sì | No
-|Passaggio 7. Crittografare nuovamente ogni valore della chiave di crittografia della colonna, attualmente protetta con la chiave master precedente della colonna, usando la nuova chiave master della colonna. | [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)<br><br>**Nota:** quando si esegue questo cmdlet, passare gli oggetti SqlColumnMasterKeySettings per la chiave master precedente e nuova della colonna, insieme a un valore della chiave di crittografia della colonna da crittografare di nuovo.|Sì|No
+|Passaggio 7. Crittografare nuovamente ogni valore della chiave di crittografia della colonna, attualmente protetta con la chiave master precedente della colonna, usando la nuova chiave master della colonna. | [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)<br><br>**Nota:** quando si esegue questo cmdlet, è possibile eseguire il passaggio degli oggetti SqlColumnMasterKeySettings per la chiave master precedente e nuova della colonna, insieme a un valore della chiave di crittografia della colonna da crittografare di nuovo.|Sì|No
 |Passaggio 8. Condividere il percorso della nuova chiave master della colonna (nome del provider e percorso della chiave master della colonna) e il set di nuovi valori crittografati delle chiavi di crittografia della colonna con l'amministratore del database.| Vedere gli esempi seguenti. | No | No
 
 > [!NOTE]
 > Si consiglia di non eliminare definitivamente la chiave master precedente della colonna dopo la rotazione. È opportuno invece conservare la chiave master precedente della colonna nell'archivio chiavi corrente o archiviarla in un altro posto sicuro. Se si ripristina il database da un file di backup creato *prima* che la nuova chiave master della colonna sia stata configurata, è necessaria la chiave precedente per accedere ai dati.
 
-### <a name="part-3-dba"></a>Parte 3: DBA
+### <a name="part-3-dba"></a>Parte 3: Amministratore di database
 
 L'amministratore di database crea metadati per la nuova chiave master della colonna e aggiorna i metadati delle chiavi di crittografia delle colonne interessate per aggiungere il set nuovo di valori crittografati. In questo passaggio, l'amministratore di database interagisce anche con gli amministratori delle applicazioni che eseguono query sulle colonne di crittografia, i quali assicurano che l'applicazione può accedere alla nuova chiave master della colonna. Dopo che tutte le applicazioni sono configurate per usare la nuova chiave master della colonna, l'amministratore di database rimuove il set precedente di valori crittografati e i metadati della chiave master precedente della colonna.
 
@@ -146,7 +147,7 @@ L'amministratore di database crea metadati per la nuova chiave master della colo
 
 Lo script seguente è un esempio end-to-end per la generazione di una nuova chiave master della colonna (certificato nell'archivio certificati di Windows), il quale ruota la chiave master esistente (corrente) della colonna per sostituirla con la nuova chiave master della colonna. Questo script presuppone che il database di destinazione contenga la chiave master della colonna, denominata CMK1 (da ruotare), che crittografa alcune chiavi di crittografia della colonna.
 
-Parte 1: DBA
+Parte 1: Amministratore di database
 
 ```powershell
 # Import the SqlServer module.
@@ -233,7 +234,7 @@ $newCmkSettings.KeyStoreProviderName +", " + $newCmkSettings.KeyPath >> $newCmkD
 ```
 
 
-Parte 3: DBA
+Parte 3: Amministratore di database
 
 ```powershell
 # Obtain the location of the new column master key and the new encrypted values of the corresponding column encryption keys, from your Security Administrator, via a CSV file on a share drive.

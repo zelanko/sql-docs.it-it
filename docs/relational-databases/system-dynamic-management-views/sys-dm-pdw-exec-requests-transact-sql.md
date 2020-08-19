@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_exec_requests (Transact-SQL)
 title: sys. dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/05/2019
@@ -12,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a377c33424ae589fa796b6f382e936426ead006d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 2892e881434cad1fca2686b6522938584b221045
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197069"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447469"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-SQL)
 
@@ -25,7 +26,7 @@ ms.locfileid: "86197069"
 
   Include informazioni su tutte le richieste attualmente o di recente attive in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . Elenca una riga per ogni richiesta/query.  
   
-|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
+|Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Chiave per questa visualizzazione. ID numerico univoco associato alla richiesta.|Univoco tra tutte le richieste nel sistema.|  
 |session_id|**nvarchar(32)**|ID numerico univoco associato alla sessione in cui è stata eseguita la query. Vedere [sys. dm_pdw_exec_sessions &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  

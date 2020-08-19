@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_workers (Transact-SQL)
 title: sys. dm_os_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,11 +21,12 @@ ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 38fcf821327fb0f7e95734f5d9a3ac47e41ac93c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a7b685cbbed2dad2c96d84e09e8921b56d8d7ed2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010952"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447561"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,7 +75,7 @@ ms.locfileid: "86010952"
 |signal_worker_address|**varbinary (8)**|Indirizzo di memoria del thread di lavoro che ha segnalato per ultimo l'oggetto. Per ulteriori informazioni, vedere [sys. dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
 |scheduler_address|**varbinary (8)**|Indirizzo di memoria dell'utilità di pianificazione. Per ulteriori informazioni, vedere [sys. dm_os_schedulers &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
 |processor_group|**smallint**|Archivia l'ID del gruppo di processori assegnato a questo thread.|  
-|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
+|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Se lo stato del thread di lavoro è RUNNING e il thread di lavoro è in esecuzione in modalità non preemptive, l'indirizzo del thread di lavoro corrisponde alla colonna active_worker_address in sys.dm_os_schedulers.  
@@ -82,7 +84,7 @@ ms.locfileid: "86010952"
   
 ## <a name="permissions"></a>Autorizzazioni
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
-Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' `Server Admin` appartenenza al ruolo o un `Azure Active Directory admin` account.   
+Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l'  `Server Admin` appartenenza al ruolo o un `Azure Active Directory admin` account.   
 
 ## <a name="examples"></a>Esempi  
  La query seguente consente di determinare per quanto tempo un thread di lavoro è rimasto in esecuzione in stato SUSPENDED o RUNNABLE.  
@@ -135,6 +137,6 @@ SELECT
  Nell'output, i valori equivalenti di `w_runnable` e `w_suspended` indicano il tempo durante cui il thread di lavoro rimane in stato SUSPENDED. In tutti gli altri casi `w_runnable` rappresenta il tempo trascorso dal thread di lavoro in stato RUNNABLE. Nell'output la sessione `52` è in stato `SUSPENDED` per `35,094` millisecondi.  
   
 ## <a name="see-also"></a>Vedere anche  
-[SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+[SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
 [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#DOP)       
 [Guida sull'architettura dei thread e delle attività](../../relational-databases/thread-and-task-architecture-guide.md)    

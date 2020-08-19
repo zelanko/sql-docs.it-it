@@ -1,4 +1,5 @@
 ---
+description: sp_get_redirected_publisher (Transact-SQL)
 title: sp_get_redirected_publisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ac8b37eb3c21a9dbe7fa69eb6805a502993b7b1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1019f42b7edb8a82a3f655632aee64a61fbbcb99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757892"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447108"
 ---
 # <a name="sp_get_redirected_publisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,11 +39,11 @@ sp_get_redirected_publisher
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @original_publisher = ] 'original_publisher'`Nome dell'istanza di SQL Server che ha pubblicato originariamente il database. *original_publisher* è di **tipo sysname**e non prevede alcun valore predefinito.
+`[ @original_publisher = ] 'original_publisher'` Nome dell'istanza di SQL Server che ha pubblicato originariamente il database. *original_publisher* è di **tipo sysname**e non prevede alcun valore predefinito.
   
-`[ @publisher_db = ] 'publisher_db'`Nome del database da pubblicare. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database da pubblicare. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @bypass_publisher_validation = ] [0 | 1 ]`Utilizzato per ignorare la convalida del server di pubblicazione reindirizzato. Se è 0, viene eseguita la convalida. Se pari a 1, non viene eseguita la convalida. *bypass_publisher_validation* è di **bit**e il valore predefinito è 0.  
+`[ @bypass_publisher_validation = ] [0 | 1 ]` Utilizzato per ignorare la convalida del server di pubblicazione reindirizzato. Se è 0, viene eseguita la convalida. Se pari a 1, non viene eseguita la convalida. *bypass_publisher_validation* è di **bit**e il valore predefinito è 0.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -69,9 +70,9 @@ sp_get_redirected_publisher
  Il chiamante deve essere un membro del ruolo predefinito del server **sysadmin** , il **db_owner** ruolo predefinito del database per il database di distribuzione o un membro di un elenco di accesso alla pubblicazione per una pubblicazione definita associata al database del server di pubblicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di replica &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_validate_redirected_publisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
- [sp_redirect_publisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
- [sp_validate_replica_hosts_as_publishers &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
+ [Stored procedure di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [sp_validate_redirected_publisher &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
+ [sp_redirect_publisher &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
+ [sp_validate_replica_hosts_as_publishers &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
   
   

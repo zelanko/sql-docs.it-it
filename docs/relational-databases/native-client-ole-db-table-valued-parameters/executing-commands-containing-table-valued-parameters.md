@@ -1,4 +1,5 @@
 ---
+description: Esecuzione di comandi SQL Server Native Client contenenti parametri con valori di tabella
 title: Comandi con parametri con valori di tabella
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ ms.assetid: 7ecba6f6-fe7a-462a-9aa3-d5115b6d4529
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85dfdf19da0187832fcec316099688d2807de65b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: dfacff2fb4c09f3b2bff6230d0963bef292c1266
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448313"
 ---
 # <a name="executing-sql-server-native-client-commands-containing-table-valued-parameters"></a>Esecuzione di comandi SQL Server Native Client contenenti parametri con valori di tabella
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "87246776"
   
 -   I dati saranno inviati al server per le colonne con DBPROP_COL_AUTOINCREMENT o SSPROP_COL_COMPUTED, a meno che non sia impostata anche la proprietà SSPROP_PARAM_TABLE_DEFAULT.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Parametri con valori di tabella &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [Usare parametri con valori di tabella &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

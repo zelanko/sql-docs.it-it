@@ -1,4 +1,5 @@
 ---
+description: sp_detach_schedule (Transact-SQL)
 title: sp_detach_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 19988c59d020d0f77d1f23bf0a210f2ae1488933
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3f81a771e8dc40d6eb27cb68ea3a62e37c3b6b99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85860821"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447263"
 ---
 # <a name="sp_detach_schedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,21 +43,21 @@ sp_detach_schedule
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id`Numero di identificazione del processo da cui rimuovere la pianificazione. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
+`[ @job_id = ] job_id` Numero di identificazione del processo da cui rimuovere la pianificazione. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
   
-`[ @job_name = ] 'job_name'`Nome del processo da cui rimuovere la pianificazione. *job_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @job_name = ] 'job_name'` Nome del processo da cui rimuovere la pianificazione. *job_name* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
 >  È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi.  
   
-`[ @schedule_id = ] schedule_id`Numero di identificazione della pianificazione da rimuovere dal processo. *schedule_id* è di **tipo int**e il valore predefinito è null.  
+`[ @schedule_id = ] schedule_id` Numero di identificazione della pianificazione da rimuovere dal processo. *schedule_id* è di **tipo int**e il valore predefinito è null.  
   
-`[ @schedule_name = ] 'schedule_name'`Nome della pianificazione da rimuovere dal processo. *schedule_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @schedule_name = ] 'schedule_name'` Nome della pianificazione da rimuovere dal processo. *schedule_name* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
 >  È necessario specificare *schedule_id* o *schedule_name* , ma non è possibile specificarli entrambi.  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule`Specifica se eliminare le pianificazioni di processi non utilizzate. *delete_unused_schedule* è di **bit**e il valore predefinito è **0**, che indica che verranno mantenute tutte le pianificazioni, anche se non vi sono processi che vi fanno riferimento. Se impostato su **1**, le pianificazioni dei processi non utilizzate vengono eliminate se non vi sono processi che vi fanno riferimento.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` Specifica se eliminare le pianificazioni di processi non utilizzate. *delete_unused_schedule* è di **bit**e il valore predefinito è **0**, che indica che verranno mantenute tutte le pianificazioni, anche se non vi sono processi che vi fanno riferimento. Se impostato su **1**, le pianificazioni dei processi non utilizzate vengono eliminate se non vi sono processi che vi fanno riferimento.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -93,8 +94,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

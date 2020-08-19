@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_connections (Transact-SQL)
 title: sys. dm_exec_connections (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2017
@@ -20,12 +21,12 @@ ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d128ee81a4465bdb24b9e6fde48d5dbe8cc8b8cc
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: a2e283d084fc5b76340e3b37253e3506ecd5ce3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447640"
 ---
 # <a name="sysdm_exec_connections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,12 +60,12 @@ ms.locfileid: "86942363"
 |connection_id|**uniqueidentifier**|Identifica in modo univoco ogni connessione. Non ammette i valori Null.|  
 |parent_connection_id|**uniqueidentifier**|Identifica la connessione primaria utilizzata dalla sessione MARS. Ammette i valori Null.|  
 |most_recent_sql_handle|**varbinary(64)**|Handle SQL dell'ultima richiesta eseguita sulla connessione. La colonna most_recent_sql_handle è sempre sincronizzata con la colonna most_recent_session_id. Ammette i valori Null.|  
-|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
+|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
 ## <a name="permissions"></a>Autorizzazioni
 
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
-Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
+Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l'  **amministratore del server** o un account **amministratore Azure Active Directory** .   
 
 ## <a name="physical-joins"></a>Join fisici  
  ![Join per sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/media/join-dm-exec-connections-1.gif "Join per sys.dm_exec_connections")  

@@ -1,4 +1,5 @@
 ---
+description: sp_cycle_errorlog (Transact-SQL)
 title: sp_cycle_errorlog (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ad631a10998f3628084581ea25faa53151f12af0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5f950b15772f30e914f425261f84591deb0f822d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85868261"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447341"
 ---
 # <a name="sp_cycle_errorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_cycle_agent_errorlog &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-cycle-agent-errorlog-transact-sql.md)  
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sp_cycle_agent_errorlog &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-cycle-agent-errorlog-transact-sql.md)  
   
   

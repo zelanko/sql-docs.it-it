@@ -1,4 +1,5 @@
 ---
+description: Replica di tabelle e indici partizionati
 title: Replicare tabelle e indici partizionati | Microsoft Docs
 ms.custom: ''
 ms.date: 09/10/2015
@@ -17,12 +18,12 @@ ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6d4e7dc85c98e368217b7d556e4c0a8fbd2501e7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c8d6d59dc29060a10fc0ad15f1b2fbbfbba5fb34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448180"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Replica di tabelle e indici partizionati
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

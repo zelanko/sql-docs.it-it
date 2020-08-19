@@ -1,4 +1,5 @@
 ---
+description: sys. dm_db_column_store_row_group_physical_stats (Transact-SQL)
 title: sys. dm_db_column_store_row_group_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/05/2017
@@ -20,11 +21,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db8bfa11e87e4a8f595c559444907aef3c3e3e81
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cabadc5cd42afa7a001d27f55e22c138bb6f9002
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447696"
 ---
 # <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys. dm_db_column_store_row_group_physical_stats (Transact-SQL)
 
@@ -85,13 +87,13 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)      
+ [Viste del catalogo dell'oggetto &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)      
  [Architettura degli indici columnstore](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)         
  [Domande frequenti sull'esecuzione di query sul catalogo di sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [sys. Columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys. all_columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys. computed_columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
- [sys. column_store_dictionaries &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   
+ [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys. all_columns &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys. computed_columns &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
+ [sys. column_store_dictionaries &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   
  [sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
   

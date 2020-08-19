@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_wait_stats (Transact-SQL)
 title: sys. dm_os_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2019
@@ -20,11 +21,12 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4a381c891c7cab2f4c14baaf87e9c5108cea714
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: a10193722529fabd7cce09569107520fe1b6410d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447581"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,14 +43,14 @@ Restituisce informazioni su tutte le attese rilevate dai thread eseguiti. È pos
 |wait_time_ms|**bigint**|Tempo di attesa totale, espresso in millisecondi, per il tipo di attesa specifico. Il tempo comprende signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Tempo di attesa massimo per il tipo di attesa specifico.|  
 |signal_wait_time_ms|**bigint**|Differenza tra il momento in cui è stato rilevato il thread in attesa e quello in cui è stata avviata l'esecuzione del thread.|  
-|pdw_node_id|**int**|Identificatore del nodo su cui si trova questa distribuzione. <br/> **Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|pdw_node_id|**int**|Identificatore del nodo su cui si trova questa distribuzione. <br/> **Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>Autorizzazioni
 
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
-Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
+Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l'  **amministratore del server** o un account **amministratore Azure Active Directory** .   
 
-##  <a name="types-of-waits"></a><a name="WaitTypes"></a>Tipi di attese  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a> Tipi di attese  
  **Attese risorse** Le attese di risorse si verificano quando un thread di lavoro richiede l'accesso a una risorsa che non è disponibile perché la risorsa è utilizzata da un altro thread di lavoro o non è ancora disponibile. Un esempio di attesa di risorse è rappresentato da blocchi, latch e attese di I/O su rete e su disco. Le attese di blocchi e latch sono attese a livello di oggetti di sincronizzazione.  
   
 **Attesa di code**  
@@ -87,7 +89,7 @@ Questo comando reimposta tutti i contatori su 0.
   
  Nella tabella seguente sono elencati i tipi di attesa rilevati dalle attività.  
 
-|tipo |Descrizione| 
+|type |Descrizione| 
 |-------------------------- |--------------------------| 
 |ABR |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| | 
 |AM_INDBUILD_ALLOCATION |Solo per uso interno. <br />**Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
@@ -166,8 +168,8 @@ Questo comando reimposta tutti i contatori su 0.
 |CONNECTION_ENDPOINT_LOCK |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e versioni successive.| 
 |COUNTRECOVERYMGR |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |CREATE_DATINISERVICE |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
-|CXCONSUMER<a name="cxconsumer"></a>|Si verifica con piani di query paralleli quando un thread consumer (padre) attende che un thread producer invii righe. Le attese CXCONSUMER sono causate da un iteratore di scambio che esaurisce le righe dal thread producer. Si tratta di una parte normale dell'esecuzione di query parallele. <br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3),[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET<a name="cxpacket"></a>|Si verifica con piani di query paralleli quando si sincronizza l'iteratore di scambio di query processor e durante la produzione e l'utilizzo di righe. Se l'attesa è eccessiva e non può essere ridotta ottimizzando la query, ad esempio aggiungendo indici, è consigliabile modificare la soglia dei costi per il parallelismo o abbassare il grado massimo di parallelismo (MaxDOP).<br /> **Nota:** A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] CXPACKET si riferiscono solo alla sincronizzazione dell'iteratore di scambio di query processor e alla produzione di righe. Se i thread consumer sono troppo lenti, il buffer dell'iteratore di Exchange potrebbe essere pieno e causare CXPACKET attese. I thread consumer vengono rilevati separatamente nel tipo di attesa CXCONSUMER.| 
+|CXCONSUMER <a name="cxconsumer"></a>|Si verifica con piani di query paralleli quando un thread consumer (padre) attende che un thread producer invii righe. Le attese CXCONSUMER sono causate da un iteratore di scambio che esaurisce le righe dal thread producer. Si tratta di una parte normale dell'esecuzione di query parallele. <br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET <a name="cxpacket"></a>|Si verifica con piani di query paralleli quando si sincronizza l'iteratore di scambio di query processor e durante la produzione e l'utilizzo di righe. Se l'attesa è eccessiva e non può essere ridotta ottimizzando la query, ad esempio aggiungendo indici, è consigliabile modificare la soglia dei costi per il parallelismo o abbassare il grado massimo di parallelismo (MaxDOP).<br /> **Nota:** A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] CXPACKET si riferiscono solo alla sincronizzazione dell'iteratore di scambio di query processor e alla produzione di righe. Se i thread consumer sono troppo lenti, il buffer dell'iteratore di Exchange potrebbe essere pieno e causare CXPACKET attese. I thread consumer vengono rilevati separatamente nel tipo di attesa CXCONSUMER.| 
 |CXROWSET_SYNC |Si verifica durante un'analisi di intervalli parallela.| 
 |DAC_INIT |Si verifica durante l'inizializzazione della connessione amministrativa dedicata.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
@@ -943,7 +945,7 @@ Questo comando reimposta tutti i contatori su 0.
 |WAIT_XTP_CKPT_CLOSE |Si verifica durante l'attesa del completamento di un checkpoint. <br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
 |WAIT_XTP_CKPT_ENABLED |Si verifica quando il checkpoint è disabilitato e in attesa dell'abilitazione del checkpoint. <br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
 |WAIT_XTP_CKPT_STATE_LOCK |Si verifica durante la sincronizzazione del controllo dello stato del checkpoint. <br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
-|WAIT_XTP_COMPILE_WAIT |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e versioni successive.| 
+|WAIT_XTP_COMPILE_WAIT |Solo per uso interno. <br /> **SI APPLICA A**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e versioni successive.| 
 |WAIT_XTP_GUEST |Si verifica quando l'allocatore di memoria del database deve interrompere la ricezione di notifiche a memoria insufficiente. <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e versioni successive.| 
 |WAIT_XTP_HOST_WAIT |Si verifica quando le attese vengono attivate dal motore di database e implementate dall'host. <br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.| 
@@ -1026,8 +1028,8 @@ Questo comando reimposta tutti i contatori su 0.
   
 ## <a name="see-also"></a>Vedere anche  
     
- [SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys. dm_exec_session_wait_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
+ [SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [sys. dm_exec_session_wait_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
  [sys. dm_db_wait_stats &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sys. dm_db_log_info (Transact-SQL)
 title: sys. dm_db_log_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
@@ -20,12 +21,12 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cb87d2d5677085edc8e6bd998f20c3c45013823
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aba965d4a0289db9ef7def58b90f15a1479cb485
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262085"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447663"
 ---
 # <a name="sysdm_db_log_info-transact-sql"></a>sys. dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ sys.dm_db_log_info ( database_id )
  
  Specificare NULL per restituire le informazioni VLF del database corrente.
 
- È possibile specificare la funzione predefinita [DB_ID](../../t-sql/functions/db-id-transact-sql.md). Quando si `DB_ID` utilizza senza specificare un nome di database, il livello di compatibilità del database corrente deve essere 90 o superiore.  
+ È possibile specificare la funzione predefinita [DB_ID](../../t-sql/functions/db-id-transact-sql.md). Quando `DB_ID` si utilizza senza specificare un nome di database, il livello di compatibilità del database corrente deve essere 90 o superiore.  
 
 ## <a name="table-returned"></a>Tabella restituita  
 
@@ -63,7 +64,7 @@ sys.dm_db_log_info ( database_id )
 |vlf_encryptor_thumbprint|**varbinary(20)**| **Si applica a:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Mostra l'identificazione digitale del VLF se VLF è crittografato con [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md); in caso contrario, null. |
 
 ## <a name="remarks"></a>Osservazioni
-La `sys.dm_db_log_info` funzione a gestione dinamica sostituisce `DBCC LOGINFO` l'istruzione.    
+La `sys.dm_db_log_info` funzione a gestione dinamica sostituisce l' `DBCC LOGINFO` istruzione.    
  
 ## <a name="permissions"></a>Autorizzazioni  
 Richiede l' `VIEW DATABASE STATE` autorizzazione nel database.  
@@ -110,8 +111,8 @@ GO
 ```
 
 ## <a name="see-also"></a>Vedere anche  
-[Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[Viste a gestione dinamica relative ai database &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys. dm_db_log_space_usage &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
+[Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Viste a gestione dinamica relative ai database &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
 [sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
 

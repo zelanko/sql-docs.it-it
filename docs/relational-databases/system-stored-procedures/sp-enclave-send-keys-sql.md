@@ -1,4 +1,5 @@
 ---
+description: sp_enclave_send_keys (Transact-SQL)
 title: sp_enclave_send_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/19/2019
@@ -19,23 +20,23 @@ helpviewer_keywords:
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 57a7af110956bdf557ad751723f2497b6aa3ede0
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 09409a3c3b71a668d897d50d6bb22e51f21e51d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279562"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447195"
 ---
 # <a name="sp_enclave_send_keys-transact-sql"></a>sp_enclave_send_keys (Transact-SQL)
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Invia le chiavi di crittografia delle colonne, definite nel database, all'enclave protetta lato server utilizzata con [Always Encrypted con enclave sicure](../security/encryption/always-encrypted-enclaves.md).
 
-`sp_enclave_send_keys`Invia solo le chiavi che sono abilitate per l'enclave e crittografano le colonne che usano la crittografia casuale e contengono indici. Per una query utente normale, un driver client fornisce all'enclave le chiavi necessarie per i calcoli nella query. `sp_enclave_send_keys`Invia tutte le chiavi di crittografia della colonna definite nel database e utilizzate per le colonne crittografate degli indici. 
+`sp_enclave_send_keys` Invia solo le chiavi che sono abilitate per l'enclave e crittografano le colonne che usano la crittografia casuale e contengono indici. Per una query utente normale, un driver client fornisce all'enclave le chiavi necessarie per i calcoli nella query. `sp_enclave_send_keys` Invia tutte le chiavi di crittografia della colonna definite nel database e utilizzate per le colonne crittografate degli indici. 
 
-`sp_enclave_send_keys`fornisce un modo semplice per inviare chiavi all'enclave e popolare la cache della chiave di crittografia della colonna per le operazioni di indicizzazione successive. Usare `sp_enclave_send_keys` per abilitare:
+`sp_enclave_send_keys` fornisce un modo semplice per inviare chiavi all'enclave e popolare la cache della chiave di crittografia della colonna per le operazioni di indicizzazione successive. Usare `sp_enclave_send_keys` per abilitare:
 - Un amministratore di database per la ricompilazione o la modifica di indici o statistiche per le colonne del database crittografato, se l'amministratore di database non ha accesso alle chiavi master della colonna. Vedere [richiamare operazioni di indicizzazione usando chiavi di crittografia di colonna memorizzate nella cache](../security/encryption/always-encrypted-enclaves-create-use-indexes.md#invoke-indexing-operations-using-cached-column-encryption-keys).
-- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]per completare il ripristino degli indici nelle colonne crittografate. Vedere [ripristino del database](../security/encryption/always-encrypted-enclaves.md#database-recovery).
+- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] per completare il ripristino degli indici nelle colonne crittografate. Vedere [ripristino del database](../security/encryption/always-encrypted-enclaves.md#database-recovery).
 - Un'applicazione che utilizza .NET Framework provider di dati per SQL Server eseguire il caricamento bulk dei dati nelle colonne crittografate.
 
 Per richiamare correttamente `sp_enclave_send_keys` , è necessario connettersi al database con Always Encrypted e i calcoli dell'enclave abilitati per la connessione al database. È anche necessario avere accesso alle chiavi master della colonna, proteggere le chiavi di crittografia della colonna, si intende inviare ed è necessario disporre delle autorizzazioni per accedere Always Encrypted metadati della chiave nel database. 
@@ -69,7 +70,7 @@ Questa stored procedure non include set di risultati.
 EXEC sp_enclave_send_keys;  
 ```
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 - [Always Encrypted con enclave sicuri](../security/encryption/always-encrypted-enclaves.md) 
  
 - [Creare e usare indici in colonne usando Always Encrypted con enclave sicuri](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)

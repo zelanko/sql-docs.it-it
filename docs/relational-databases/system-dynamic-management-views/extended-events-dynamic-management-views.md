@@ -1,4 +1,5 @@
 ---
+description: Viste a gestione dinamica degli eventi estesi
 title: Viste a gestione dinamica degli eventi estesi | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6d337c2f-71e9-4e0c-8877-9780baa7699d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4cc30d3abd721d7e7b889c29b017cf31c5efdde8
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 344f84ed228b9dd632f6461e272e89b3cd614da4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942608"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447743"
 ---
 # <a name="extended-events-dynamic-management-views"></a>Viste a gestione dinamica degli eventi estesi
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: sys. dm_exec_compute_node_errors (Transact-SQL)
 title: sys. dm_exec_compute_node_errors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -22,23 +23,23 @@ ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5de36530fcf50a403558cb97fa72ad6a2d126e32
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5a08f64df5f50fda1f23f4e3b30add9e96e0670e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447653"
 ---
 # <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys. dm_exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Restituisce gli errori che si verificano nei nodi di calcolo di base.  
   
-|Nome colonna|Tipo di dati|Description|Range|  
+|Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|ID numerico univoco associato all'errore.|Univoco in tutti gli errori di query nel sistema|  
-|origine|`nvarchar(255)`|Descrizione del processo o del thread di origine||  
-|tipo|`nvarchar(255)`|Tipo di errore.||  
+|source|`nvarchar(255)`|Descrizione del processo o del thread di origine||  
+|type|`nvarchar(255)`|Tipo di errore.||  
 |create_time|`datetime`|Data e ora dell'occorrenza dell'errore||  
 |compute_node_id|`int`|Identificatore del nodo di calcolo specifico|Vedere compute_node_id di [sys. dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|`nvarchar(36)`|Identificatore della query di polibase, se disponibile.||  
@@ -50,7 +51,7 @@ ms.locfileid: "82830690"
   
 ## <a name="see-also"></a>Vedere anche  
  [Risoluzione dei problemi di polibase con viste a gestione dinamica](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Viste a gestione dinamica relative ai database &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Viste a gestione dinamica relative ai database &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

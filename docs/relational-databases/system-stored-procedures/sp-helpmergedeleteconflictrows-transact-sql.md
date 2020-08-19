@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergedeleteconflictrows (Transact-SQL)
 title: sp_helpmergedeleteconflictrows (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4c0712dc9b72d9a515dce7f5948c81f49d509a49
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c4cda70ec894a50561cd62dc459bac915f437cc3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893550"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447032"
 ---
 # <a name="sp_helpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **%** . Se la pubblicazione viene specificata, vengono restituiti tutti i conflitti risultanti corrispondenti.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **%** . Se la pubblicazione viene specificata, vengono restituiti tutti i conflitti risultanti corrispondenti.  
   
-`[ @source_object = ] 'source_object'`Nome dell'oggetto di origine. *source_object* è di **tipo nvarchar (386)** e il valore predefinito è null.  
+`[ @source_object = ] 'source_object'` Nome dell'oggetto di origine. *source_object* è di **tipo nvarchar (386)** e il valore predefinito è null.  
   
-`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @publisher_db = ] 'publisher_db'`Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e il valore predefinito è null.  
   
 ## <a name="result-sets"></a>Set di risultati  
   

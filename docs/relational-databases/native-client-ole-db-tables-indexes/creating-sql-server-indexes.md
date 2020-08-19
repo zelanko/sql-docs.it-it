@@ -1,4 +1,5 @@
 ---
+description: Creazione di indici SQL Server (provider OLE DB di Native Client)
 title: Creazione di indici SQL Server (provider OLE DB di Native Client) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: 6239d440-2818-4b98-bb79-732dced41952
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e5dff60a0605e059c32edd3d4e8501036a42405
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4850e0de477378b403c5443dc9dcd3ecf952321d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87241791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448267"
 ---
 # <a name="creating-sql-server-native-client-indexes"></a>Creazione di indici SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,23 +46,23 @@ ms.locfileid: "87241791"
   
 |ID proprietà|Descrizione|  
 |-----------------|-----------------|  
-|DBPROP_INDEX_AUTOUPDATE|R/W (L/S): Lettura/Scrittura<br /><br /> Impostazione predefinita: nessuna<br /><br /> Descrizione: il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non supporta questa proprietà. I tentativi di impostare la proprietà in **CreateIndex** determinano un valore restituito DB_S_ERRORSOCCURRED. Il membro *dwStatus* della struttura di proprietà indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_AUTOUPDATE|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: nessuno<br /><br /> Descrizione: il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non supporta questa proprietà. I tentativi di impostare la proprietà in **CreateIndex** determinano un valore restituito DB_S_ERRORSOCCURRED. Il membro *dwStatus* della struttura di proprietà indica DBPROPSTATUS_BADVALUE.|  
 |DBPROP_INDEX_CLUSTERED|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: VARIANT_FALSE<br /><br /> Descrizione: controlla il clustering dell'indice.<br /><br /> VARIANT_TRUE: il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client tenta di creare un indice cluster nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta al massimo un indice con cluster su una tabella.<br /><br /> VARIANT_FALSE: il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client tenta di creare un indice non cluster nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella.|  
-|DBPROP_INDEX_FILLFACTOR|R/W (L/S): Lettura/Scrittura<br /><br /> Impostazione predefinita: 0<br /><br /> Descrizione: specifica la percentuale di una pagina di indice utilizzata per l'archiviazione. Per altre informazioni, vedere [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md).<br /><br /> Il tipo della variante è VT_I4. Deve essere maggiore o uguale a 1 e minore o uguale a 100.|  
-|DBPROP_INDEX_INITIALIZE|R/W (L/S): Lettura/Scrittura<br /><br /> Impostazione predefinita: nessuna<br /><br /> Descrizione: il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non supporta questa proprietà. I tentativi di impostare la proprietà in **CreateIndex** determinano un valore restituito DB_S_ERRORSOCCURRED. Il membro *dwStatus* della struttura di proprietà indica DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_NULLCOLLATION|R/W (L/S): Lettura/Scrittura<br /><br /> Impostazione predefinita: nessuna<br /><br /> Descrizione: il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non supporta questa proprietà. I tentativi di impostare la proprietà in **CreateIndex** determinano un valore restituito DB_S_ERRORSOCCURRED. Il membro *dwStatus* della struttura di proprietà indica DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_NULLS|R/W (L/S): Lettura/Scrittura<br /><br /> Impostazione predefinita: nessuna<br /><br /> Descrizione: il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non supporta questa proprietà. I tentativi di impostare la proprietà in **CreateIndex** determinano un valore restituito DB_S_ERRORSOCCURRED. Il membro *dwStatus* della struttura di proprietà indica DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_PRIMARYKEY|R/W (L/S): Lettura/Scrittura<br /><br /> Impostazione predefinita: descrizione VARIANT_FALSE: crea l'indice come integrità referenziale, vincolo PRIMARY KEY.<br /><br /> VARIANT_TRUE: l'indice viene creato per supportare il vincolo PRIMARY KEY della tabella. È necessario che le colonne non ammettano valori Null.<br /><br /> VARIANT_FALSE: l'indice non viene utilizzato come vincolo PRIMARY KEY per i valori di riga nella tabella.|  
-|DBPROP_INDEX_SORTBOOKMARKS|R/W (L/S): Lettura/Scrittura<br /><br /> Impostazione predefinita: nessuna<br /><br /> Descrizione: il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non supporta questa proprietà. I tentativi di impostare la proprietà in **CreateIndex** determinano un valore restituito DB_S_ERRORSOCCURRED. Il membro *dwStatus* della struttura di proprietà indica DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_TEMPINDEX|R/W (L/S): Lettura/Scrittura<br /><br /> Impostazione predefinita: nessuna<br /><br /> Descrizione: il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non supporta questa proprietà. I tentativi di impostare la proprietà in **CreateIndex** determinano un valore restituito DB_S_ERRORSOCCURRED. Il membro *dwStatus* della struttura di proprietà indica DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_TYPE|R/W (L/S): Lettura/Scrittura<br /><br /> Impostazione predefinita: nessuna<br /><br /> Descrizione: il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non supporta questa proprietà. I tentativi di impostare la proprietà in **CreateIndex** determinano un valore restituito DB_S_ERRORSOCCURRED. Il membro *dwStatus* della struttura di proprietà indica DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_UNIQUE|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: VARIANT_FALSE<br /><br /> Descrizione: crea l'indice come vincolo UNIQUE nella colonna o nelle colonne utilizzate.<br /><br /> VARIANT_TRUE: l'indice viene utilizzato per vincolare in modo univoco i valori della tabella.<br /><br /> VARIANT_FALSE: l'indice non vincola in modo univoco i valori di riga.|  
+|DBPROP_INDEX_FILLFACTOR|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: 0<br /><br /> Descrizione: specifica la percentuale di una pagina di indice usata per l'archiviazione. Per altre informazioni, vedere [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md).<br /><br /> Il tipo della variante è VT_I4. Deve essere maggiore o uguale a 1 e minore o uguale a 100.|  
+|DBPROP_INDEX_INITIALIZE|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: nessuno<br /><br /> Descrizione: il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non supporta questa proprietà. I tentativi di impostare la proprietà in **CreateIndex** determinano un valore restituito DB_S_ERRORSOCCURRED. Il membro *dwStatus* della struttura di proprietà indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_NULLCOLLATION|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: nessuno<br /><br /> Descrizione: il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non supporta questa proprietà. I tentativi di impostare la proprietà in **CreateIndex** determinano un valore restituito DB_S_ERRORSOCCURRED. Il membro *dwStatus* della struttura di proprietà indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_NULLS|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: nessuno<br /><br /> Descrizione: il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non supporta questa proprietà. I tentativi di impostare la proprietà in **CreateIndex** determinano un valore restituito DB_S_ERRORSOCCURRED. Il membro *dwStatus* della struttura di proprietà indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_PRIMARYKEY|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: VARIANT_FALSE Descrizione: crea l'indice come integrità referenziale, vincolo PRIMARY KEY.<br /><br /> VARIANT_TRUE: l'indice viene creato per supportare il vincolo PRIMARY KEY della tabella. È necessario che le colonne non ammettano valori Null.<br /><br /> VARIANT_FALSE: l'indice non viene usato come vincolo PRIMARY KEY per i valori di riga nella tabella.|  
+|DBPROP_INDEX_SORTBOOKMARKS|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: nessuno<br /><br /> Descrizione: il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non supporta questa proprietà. I tentativi di impostare la proprietà in **CreateIndex** determinano un valore restituito DB_S_ERRORSOCCURRED. Il membro *dwStatus* della struttura di proprietà indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_TEMPINDEX|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: nessuno<br /><br /> Descrizione: il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non supporta questa proprietà. I tentativi di impostare la proprietà in **CreateIndex** determinano un valore restituito DB_S_ERRORSOCCURRED. Il membro *dwStatus* della struttura di proprietà indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_TYPE|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: nessuno<br /><br /> Descrizione: il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client non supporta questa proprietà. I tentativi di impostare la proprietà in **CreateIndex** determinano un valore restituito DB_S_ERRORSOCCURRED. Il membro *dwStatus* della struttura di proprietà indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_UNIQUE|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: VARIANT_FALSE<br /><br /> Descrizione: crea l'indice come vincolo UNIQUE nella colonna o nelle colonne usate.<br /><br /> VARIANT_TRUE: l'indice viene usato per vincolare in modo univoco i valori di riga della tabella.<br /><br /> VARIANT_FALSE: l'indice non vincola in modo univoco i valori di riga.|  
   
  Nel set di proprietà specifico del provider DBPROPSET_SQLSERVERINDEX, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client definisce la seguente proprietà delle informazioni sull'origine dati.  
   
 |ID proprietà|Descrizione|  
 |-----------------|-----------------|  
-|SSPROP_INDEX_XML|Tipo: VT_BOOL (L/S)<br /><br /> Predefinito: VARIANT_FALSE<br /><br /> Descrizione: quando questa proprietà viene specificata con un valore VARIANT_TRUE con IIndexDefinition::CreateIndex, determina la creazione di un indice xml primario corrispondente alla colonna indicizzata. Se questa proprietà è VARIANT_TRUE, cIndexColumnDescs deve essere 1, in caso contrario si tratta di un errore.|  
+|SSPROP_INDEX_XML|Digitare: VT_BOOL (R/W)<br /><br /> Predefinito: VARIANT_FALSE<br /><br /> Descrizione: quando questa proprietà viene specificata con un valore VARIANT_TRUE con IIndexDefinition::CreateIndex, determina la creazione di un indice xml primario corrispondente alla colonna da indicizzare. Se questa proprietà è VARIANT_TRUE, cIndexColumnDescs deve essere 1, in caso contrario si tratta di un errore.|  
   
  In questo esempio viene creato un indice di chiave primaria:  
   
@@ -154,7 +155,7 @@ HRESULT CreatePrimaryKey
     }  
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Tabelle e indici](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
   

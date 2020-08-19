@@ -1,4 +1,5 @@
 ---
+description: sp_grantlogin (Transact-SQL)
 title: sp_grantlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: de02d84d781c5db2d86902034b500c6b4a02ea2f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ddca7a999c1095bc1f6da91e62bd675c736dd96b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447068"
 ---
 # <a name="sp_grantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
 
@@ -31,7 +32,7 @@ ms.locfileid: "85891810"
   Crea un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]In alternativa, usare [Create Login](../../t-sql/statements/create-login-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, usare [Create Login](../../t-sql/statements/create-login-transact-sql.md) .  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ sp_grantlogin [@loginame=] 'login'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @loginame = ] 'login'`Nome di un utente o di un gruppo di Windows. L'utente o il gruppo di Windows deve essere qualificato con un nome di dominio Windows *Domain*nel formato \\ *utente*dominio, ad esempio **London\JoeB**. *login* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @loginame = ] 'login'` Nome di un utente o di un gruppo di Windows. L'utente o il gruppo di Windows deve essere qualificato con un nome di dominio Windows *Domain*nel formato \\ *utente*dominio, ad esempio **London\JoeB**. *login* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -64,8 +65,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sicurezza &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Crea account di accesso &#40;&#41;Transact-SQL](../../t-sql/statements/create-login-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

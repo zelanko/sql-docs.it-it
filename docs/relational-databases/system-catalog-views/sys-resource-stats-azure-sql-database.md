@@ -1,4 +1,5 @@
 ---
+description: sys.resource_stats (Database SQL di Azure)
 title: sys. resource_stats (database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2018
@@ -19,12 +20,12 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: be336780f5bbfd45660ea376c0d689b577f052da
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 29862abf480aa5470314a531558839154886cc04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822907"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447849"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Database SQL di Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "87822907"
 |max_session_percent|**Decimal (5, 2)**|Numero massimo di sessioni simultanee in percentuale in base al limite del livello di servizio del database.<br /><br /> Il valore massimo è attualmente calcolato per l'intervallo di cinque minuti in base agli esempi di 15 secondi relativi ai conteggi delle sessioni simultanee.|  
 |dtu_limit|**int**|Impostazione DTU database Max corrente per questo database durante questo intervallo. |
 |xtp_storage_percent|**Decimal (5, 2)**|Utilizzo dello spazio di archiviazione per OLTP in memoria, in percentuale rispetto al limite del livello di servizio (alla fine dell'intervallo di Reporting). Ciò include la memoria usata per l'archiviazione dei seguenti oggetti di OLTP in memoria: tabelle ottimizzate per la memoria, indici e variabili di tabella. Include inoltre la memoria utilizzata per l'elaborazione delle operazioni ALTER TABLE.<br /><br /> Restituisce 0 se OLTP in memoria non viene utilizzato nel database.|
-|avg_login_rate_percent|**Decimal (5, 2)**|Identificato solo a scopo informativo. Non supportata. Non è garantita la compatibilità con le versioni future.|
+|avg_login_rate_percent|**Decimal (5, 2)**|Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.|
 |avg_instance_cpu_percent|**Decimal (5, 2)**|Utilizzo medio della CPU del database come percentuale del processo del database SQL.|
 |avg_instance_memory_percent|**Decimal (5, 2)**|Utilizzo medio della memoria del database come percentuale del processo del database SQL.|
 |cpu_limit|**Decimal (5, 2)**|Numero di Vcore per il database durante questo intervallo. Per i database che usano il modello basato su DTU, questa colonna è NULL.|

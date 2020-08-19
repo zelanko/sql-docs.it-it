@@ -1,4 +1,5 @@
 ---
+description: sp_helpstats (Transact-SQL)
 title: sp_helpstats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 00ab3cfd-2736-4fc0-b1b2-16dd49fb2fe5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cc07dec5878e0d31a325aa75af483ab4b1b04e58
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f88558a41c4a169ca61ec7cc615cd0ba5b991589
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736967"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447046"
 ---
 # <a name="sp_helpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85736967"
   Restituisce informazioni statistiche sulle colonne e gli indici della tabella specificata.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]Per ottenere informazioni sulle statistiche, eseguire una query sulle viste del catalogo [sys. stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) e [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Per ottenere informazioni sulle statistiche, eseguire una query sulle viste del catalogo [sys. stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) e [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) .  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,9 +45,9 @@ sp_helpstats[ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @objname = ] 'object_name'`Specifica la tabella in cui fornire le informazioni sulle statistiche. *object_name* è di **tipo nvarchar (520)** e non può essere null. È possibile specificare un nome composto da una o due parti.  
+`[ @objname = ] 'object_name'` Specifica la tabella in cui fornire le informazioni sulle statistiche. *object_name* è di **tipo nvarchar (520)** e non può essere null. È possibile specificare un nome composto da una o due parti.  
   
-`[ @results = ] 'value'`Specifica l'estensione delle informazioni da fornire. Le voci valide sono **All** e **stats**. **All** elenca le statistiche per tutti gli indici e le colonne con statistiche create. **Statistiche** elenca solo le statistiche non associate a un indice. *value* è di **tipo nvarchar (5)** e il valore predefinito è stats.  
+`[ @results = ] 'value'` Specifica l'estensione delle informazioni da fornire. Le voci valide sono **All** e **stats**. **All** elenca le statistiche per tutti gli indici e le colonne con statistiche create. **Statistiche** elenca solo le statistiche non associate a un indice. *value* è di **tipo nvarchar (5)** e il valore predefinito è stats.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -99,7 +100,7 @@ EXEC sp_helpstats
  `PK_Customer_CustomerID        CustomerID`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

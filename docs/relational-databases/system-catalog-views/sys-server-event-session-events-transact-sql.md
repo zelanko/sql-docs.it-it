@@ -1,4 +1,5 @@
 ---
+description: sys.server_event_session_events (Transact-SQL)
 title: sys. server_event_session_events (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 18a39be6519d22e8a568e48be616c57bc1b6a069
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: cc4b6f67d282ce838ab5a5b8a401ade3a5e2e4c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447773"
 ---
 # <a name="sysserver_event_session_events-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -48,13 +49,13 @@ ms.locfileid: "87442492"
 ## <a name="remarks"></a>Osservazioni  
  Questa vista ha le cardinalità della relazione seguenti.  
   
-| Da | To | Relazione |
+| From | A | Relazione |
 | ---- | -- | ------------ |
 |sys.server_event_session_events.event_session_id|sys. server_event_sessions. event_session_id|Molti-a-uno|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Viste del catalogo degli eventi estesi &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [Viste del catalogo degli eventi estesi &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)  
   
   

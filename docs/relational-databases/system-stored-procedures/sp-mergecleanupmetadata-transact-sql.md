@@ -1,4 +1,5 @@
 ---
+description: sp_mergecleanupmetadata (Transact-SQL)
 title: sp_mergecleanupmetadata (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 385176695fe9600250eaa5b6a839ebd833910618
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 356c0aefb862d37d4c87af995e3b8d676a33e8a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891620"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446944"
 ---
 # <a name="sp_mergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **%** , che consente di pulire i metadati per tutte le pubblicazioni. Se viene specificata in modo esplicito, la pubblicazione deve essere esistente.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **%** , che consente di pulire i metadati per tutte le pubblicazioni. Se viene specificata in modo esplicito, la pubblicazione deve essere esistente.  
   
-`[ @reinitialize_subscriber = ] 'subscriber'`Specifica se reinizializzare il Sottoscrittore. *Subscriber* è **di tipo nvarchar (5)**. può essere **true** o **false**e il valore predefinito è **true**. Se **true**, le sottoscrizioni vengono contrassegnate per la reinizializzazione. Se **false**, le sottoscrizioni non vengono contrassegnate per la reinizializzazione.  
+`[ @reinitialize_subscriber = ] 'subscriber'` Specifica se reinizializzare il Sottoscrittore. *Subscriber* è **di tipo nvarchar (5)**. può essere **true** o **false**e il valore predefinito è **true**. Se **true**, le sottoscrizioni vengono contrassegnate per la reinizializzazione. Se **false**, le sottoscrizioni non vengono contrassegnate per la reinizializzazione.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -100,7 +101,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
     EXEC central..sp_changemergepublication @publication = 'dynpart_pubn', @property = 'status', @value = 'inactive'  
     ```  
   
- Dopo aver completato il passaggio 3 dell'esecuzione di **sp_mergecleanupmetadata**, riprendere le unioni in modalità continua in base a come sono state arrestate. È possibile:   
+ Dopo aver completato il passaggio 3 dell'esecuzione di **sp_mergecleanupmetadata**, riprendere le unioni in modalità continua in base a come sono state arrestate. Una delle due versioni seguenti:  
   
 -   Aggiungere di nuovo il parametro **-Continuous** per la agente di merge.  
   
@@ -116,8 +117,8 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
  Per utilizzare questa stored procedure, il server di pubblicazione deve eseguire [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. I Sottoscrittori devono eseguire [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0, Service Pack 2.  
   
 ## <a name="see-also"></a>Vedere anche  
- [MSmerge_genhistory &#40;&#41;Transact-SQL](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
- [MSmerge_contents &#40;&#41;Transact-SQL](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
- [MSmerge_tombstone &#40;&#41;Transact-SQL](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
+ [MSmerge_genhistory &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
+ [MSmerge_contents &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
+ [MSmerge_tombstone &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_help_notification (Transact-SQL)
 title: sp_help_notification (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b9fad9d93a1c0d4781f792fedfe3fe7649e17c98
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2e680c10037119020a1f667e40a7f77817a08cdf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891734"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447057"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,28 +45,28 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @object_type = ] 'object_type'`Tipo di informazioni da restituire. *object_type*è **char (9)** e non prevede alcun valore predefinito. *object_type* possono essere avvisi, che elenca gli avvisi assegnati al nome dell'*operatore o agli operatori specificati, che* elenca gli operatori responsabili del nome di avviso specificato *.*  
+`[ @object_type = ] 'object_type'` Tipo di informazioni da restituire. *object_type*è **char (9)** e non prevede alcun valore predefinito. *object_type* possono essere avvisi, che elenca gli avvisi assegnati al nome dell'*operatore o agli operatori specificati, che* elenca gli operatori responsabili del nome di avviso specificato *.*  
   
-`[ @name = ] 'name'`Nome di un operatore (se *object_type* è Operators) o nome di un avviso (se *object_type* è alerts). *Name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @name = ] 'name'` Nome di un operatore (se *object_type* è Operators) o nome di un avviso (se *object_type* è alerts). *Name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @enum_type = ] 'enum_type'`Informazioni *object_type*restituite. nella maggior parte dei casi *enum_type* è effettivo. *enum_type*è di **carattere (10)** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
+`[ @enum_type = ] 'enum_type'` Informazioni *object_type*restituite. nella maggior parte dei casi *enum_type* è effettivo. *enum_type*è di **carattere (10)** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |ACTUAL|Elenca solo le *object_types* associate al *nome*.|  
 |ALL|Elenca tutti i*object_types* inclusi quelli non associati al *nome*.|  
 |TARGET|Elenca solo le *object_types* che corrispondono al *target_name*fornito, indipendentemente dall'associazione con il*nome*.|  
   
-`[ @notification_method = ] notification_method`Valore numerico che determina le colonne del metodo di notifica da restituire. *notification_method* è di **tinyint**. i possibili valori sono i seguenti.  
+`[ @notification_method = ] notification_method` Valore numerico che determina le colonne del metodo di notifica da restituire. *notification_method* è di **tinyint**. i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Posta elettronica: restituisce solo la colonna **use_email** .|  
 |**2**|Cercapersone: restituisce solo la colonna **use_pager** .|  
 |**4**|NetSend: restituisce solo la colonna **use_netsend** .|  
 |**7**|Tutto: restituisce tutte le colonne.|  
   
-`[ @target_name = ] 'target_name'`Nome dell'avviso da cercare (se *object_type* è alerts) o nome di un operatore da cercare (se *object_type* è Operators). *target_name* è necessario solo se *ENUM_TYPE* è la destinazione. *target_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @target_name = ] 'target_name'` Nome dell'avviso da cercare (se *object_type* è alerts) o nome di un operatore da cercare (se *object_type* è Operators). *target_name* è necessario solo se *ENUM_TYPE* è la destinazione. *target_name* è di **tipo sysname**e il valore predefinito è null.  
   
 ## <a name="return-code-valves"></a>Valori restituiti  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -136,9 +137,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_notification &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_delete_notification &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_update_notification &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+ [sp_add_notification &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_delete_notification &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_update_notification &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

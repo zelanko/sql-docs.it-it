@@ -1,4 +1,5 @@
 ---
+description: sp_fkeys (Transact-SQL)
 title: sp_fkeys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
@@ -18,12 +19,12 @@ ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18a4a5c25c791122191c07e5bb63a6fc6c32cba0
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: dce5453de0dc41f00e1b6c622397972e635df97e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180060"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447229"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -121,9 +122,9 @@ EXEC sp_fkeys @pktable_name = N'DimDate;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_pkeys &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  
+ [Stored procedure del catalogo &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sp_pkeys &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  
   
   
 

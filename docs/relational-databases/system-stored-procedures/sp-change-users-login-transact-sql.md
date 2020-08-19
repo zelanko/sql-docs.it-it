@@ -1,4 +1,5 @@
 ---
+description: sp_change_users_login (Transact-SQL)
 title: sp_change_users_login (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/13/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ecd2576cac046984394b093832769363968e637a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c82241030646e2ef20c978cb1905cf836f9a589b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715895"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447411"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85715895"
   Viene eseguito il mapping di un utente di database esistente a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
  > [!IMPORTANT]
- > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]In alternativa, usare [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) .  
+ > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, usare [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) .  
   
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -50,7 +51,7 @@ sp_change_users_login [ @Action = ] 'action'
  [ @Action =]'*azione*'  
  Descrive l'azione che deve essere eseguita dalla procedura. *Action* è di tipo **varchar (10)**. l' *azione* può avere uno dei valori seguenti.  
   
-|Valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Auto_Fix**|Collega una voce utente presente nella vista del catalogo di sistema sys.database_principals del database corrente a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con lo stesso nome. Se non esiste un account di accesso con lo stesso nome, ne verrà creato uno. Esaminare il risultato dell'istruzione **Auto_Fix** per verificare che sia effettivamente stato eseguito il collegamento corretto. Evitare l'uso di **Auto_Fix** in situazioni sensibili alla sicurezza.<br /><br /> Quando si utilizza **Auto_Fix**, è necessario specificare *utente* e *password* se l'account di accesso non esiste già. in caso contrario, è necessario specificare l' *utente* , ma la *password* verrà ignorata. l' *account di accesso* deve essere null. l' *utente* deve essere un utente valido nel database corrente. Non è possibile eseguire il mapping dell'account di accesso a un altro utente.|  
 |**Report**|Elenca gli utenti e gli ID di sicurezza (SID) corrispondenti disponibili nel database corrente e non collegati ad alcun account di accesso. l' *utente*, l' *account di accesso*e la *password* devono essere null o non specificati.<br /><br /> Per sostituire l'opzione del report con una query utilizzando le tabelle di sistema, confrontare le voci in **sys. server_prinicpals** con le voci in **sys. database_principals**.|  
@@ -123,11 +124,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sicurezza &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Crea account di accesso &#40;&#41;Transact-SQL](../../t-sql/statements/create-login-transact-sql.md)   
- [sp_adduser &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_helplogins &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
+ [sp_helplogins &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   
   

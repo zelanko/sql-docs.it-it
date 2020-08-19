@@ -1,4 +1,5 @@
 ---
+description: sys. query_store_wait_stats (Transact-SQL)
 title: sys. query_store_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2019
@@ -19,12 +20,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5af0f04d9fce1fbcb455590d0e68a79bd98bdd73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 41f66150a3a5c604889dc29d96abaea6d0418c6f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717627"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447844"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats (Transact-SQL)
 
@@ -46,7 +47,7 @@ ms.locfileid: "85717627"
 |**last_query_wait_time_ms**|**bigint**|Durata dell'ultima attesa per il piano di query all'interno dell'intervallo di aggregazione e della categoria di attesa (in millisecondi).|
 |**min_query_wait_time_ms**|**bigint**|`CPU wait`Tempo minimo per il piano di query all'interno dell'intervallo di aggregazione e della categoria di attesa (in millisecondi).|
 |**max_query_wait_time_ms**|**bigint**|`CPU wait`Tempo massimo per il piano di query all'interno dell'intervallo di aggregazione e della categoria di attesa (in millisecondi).|
-|**stdev_query_wait_time_ms**|**float**|`Query wait`deviazione standard della durata per il piano di query entro l'intervallo di aggregazione e la categoria di attesa (in millisecondi).|
+|**stdev_query_wait_time_ms**|**float**|`Query wait` deviazione standard della durata per il piano di query entro l'intervallo di aggregazione e la categoria di attesa (in millisecondi).|
 
 ## <a name="wait-categories-mapping-table"></a>Tabella di mapping delle categorie di attesa
 
@@ -54,7 +55,7 @@ ms.locfileid: "85717627"
   
 |Valore Integer|Categoria di attesa|I tipi di attesa includono nella categoria|  
 |-----------------|---------------|-----------------|  
-|**0**|**Sconosciuto**|Sconosciuto |  
+|**0**|**Unknown**|Unknown |  
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**Thread di lavoro**|THREADPOOL|
 |**3**|**Lock**|LCK_M_%|
@@ -70,7 +71,7 @@ ms.locfileid: "85717627"
 |**13**|**Service Broker**|BROKER_% **(ma non BROKER_RECEIVE_WAITFOR)**|
 |**14**|**IO log i/o**|LOGMGR, LOGBUFFER, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, CHKPT, WRITELOG|
 |**15**|**IO rete**|ASYNC_NETWORK_IO, NET_WAITFOR_PACKET, PROXY_NETWORK_IO, EXTERNAL_SCRIPT_NETWORK_IOF|
-|**16**|**Parallelismo**|CXPACKET, EXCHANGE, HT%, BMP%, BP%|
+|**16**|**Parallelism**|CXPACKET, EXCHANGE, HT%, BMP%, BP%|
 |**17**|**Memoria**|RESOURCE_SEMAPHORE, CMEMTHREAD, CMEMPARTITIONED, EE_PMOLOCK, MEMORY_ALLOCATION_EXT, RESERVED_MEMORY_ALLOCATION_EXT MEMORY_GRANT_UPDATE|
 |**18**|**Attesa utente**|ASPETTER, WAIT_FOR_RESULTS, BROKER_RECEIVE_WAITFOR|
 |**19**|**Traccia**|TRACEWRITE, SQLTRACE_LOCK, SQLTRACE_FILE_BUFFER, SQLTRACE_FILE_WRITE_IO_COMPLETION, SQLTRACE_FILE_READ_IO_COMPLETION, SQLTRACE_PENDING_BUFFER_WRITERS, SQLTRACE_SHUTDOWN, QUERY_TRACEOUT, TRACE_EVTNOTIFF|

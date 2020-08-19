@@ -1,4 +1,5 @@
 ---
+description: sp_monitor (Transact-SQL)
 title: sp_monitor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 400d6f484ee80d9b4b1244aad6b91c8836aa95d4
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 6722a59873dcf672fe2c1b953931f44da4515a8e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977712"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446989"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ sp_monitor
 |**total_errors**|Numero di errori rilevati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante la lettura e la scrittura.|  
 |**connessioni**|Numero di accessi o tentativi di accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Tramite una serie di funzioni, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene tenuto traccia della quantità di operazioni eseguite. L'esecuzione di **sp_monitor** Visualizza i valori correnti restituiti da queste funzioni e Mostra la quantità di modifiche apportate dall'ultima esecuzione della stored procedure.  
   
  Per ogni colonna, la statistica viene stampata nel formato *numero*(*numero*):*numero*% o *numero*(*numero*). Il primo *numero* indica il numero di secondi (per **CPU_BUSY**, **IO_BUSY**e **Idle**) oppure il numero totale (per le altre variabili) dopo il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riavvio di. Il *numero* tra parentesi si riferisce al numero di secondi o al numero totale dall'ultima volta in cui è stato eseguito **sp_monitor** . La percentuale è la percentuale di tempo trascorso dall'ultima esecuzione **sp_monitor** . Se, ad esempio, il report Mostra **CPU_BUSY** come 4250 (215)-68%, la CPU è stata occupata 4250 secondi dall' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ultimo avvio, 215 secondi dall'ultima esecuzione di **sp_monitor** e 68% del tempo totale trascorso dall'ultima esecuzione di **sp_monitor** .  
@@ -67,7 +68,7 @@ sp_monitor
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite informazioni relative all'attività di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```console
@@ -96,7 +97,7 @@ total_read     total_write   total_errors    connections
 ```
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_who &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [sp_who &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

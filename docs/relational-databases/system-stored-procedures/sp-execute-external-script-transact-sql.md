@@ -1,4 +1,5 @@
 ---
+description: sp_execute_external_script (Transact-SQL)
 title: sp_execute_external_script (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2020
@@ -20,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 074836973123ae4f0f49acf72cf7bf6f56b17cf5
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b820003b3039a8561dd299a7fb85c1d52b043bda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180258"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447196"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -49,7 +50,7 @@ Per eseguire **sp_execute_external_script**, è necessario innanzitutto installa
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Il **sp_execute_external_script** stored procedure esegue uno script fornito come argomento di input per la stored procedure e viene usato con [R Services](../../machine-learning/r/sql-server-r-services.md) in SQL Server 2016.
 
-Per R Services, [r](../../machine-learning/concepts/extension-r.md) è il linguaggio supportato.
+Per R Services,  [r](../../machine-learning/concepts/extension-r.md) è il linguaggio supportato.
 
 Per eseguire **sp_execute_external_script**, è necessario innanzitutto installare R Services. Per altre informazioni, vedere [Install SQL Server Machine Learning Services (Python and R) in Windows](../../machine-learning/install/sql-r-services-windows-install.md).
 ::: moniker-end
@@ -114,27 +115,27 @@ sp_execute_external_script
 
  ** \@ script = n'** script '*script*' linguaggio esterno specificato come input letterale o variabile. *lo script* è **nvarchar (max)**.  
 
-`[ @input_data_1 =  N'input_data_1' ]`Specifica i dati di input usati dallo script esterno sotto forma di [!INCLUDE[tsql](../../includes/tsql-md.md)] query. Il tipo di dati di *input_data_1* è **nvarchar (max)**.
+`[ @input_data_1 =  N'input_data_1' ]` Specifica i dati di input usati dallo script esterno sotto forma di [!INCLUDE[tsql](../../includes/tsql-md.md)] query. Il tipo di dati di *input_data_1* è **nvarchar (max)**.
 
-`[ @input_data_1_name = N'input_data_1_name' ]`Specifica il nome della variabile utilizzata per rappresentare la query definita da @input_data_1 . Il tipo di dati della variabile nello script esterno dipende dalla lingua. Nel caso di R, la variabile di input è un frame di dati. Nel caso di Python, l'input deve essere tabulare. *input_data_1_name* è di **tipo sysname**.  Il valore predefinito è *InputDataSet*.  
+`[ @input_data_1_name = N'input_data_1_name' ]` Specifica il nome della variabile utilizzata per rappresentare la query definita da @input_data_1 . Il tipo di dati della variabile nello script esterno dipende dalla lingua. Nel caso di R, la variabile di input è un frame di dati. Nel caso di Python, l'input deve essere tabulare. *input_data_1_name* è di **tipo sysname**.  Il valore predefinito è *InputDataSet*.  
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-`[ @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]`Utilizzato per compilare modelli per partizione. Specifica il nome della colonna utilizzata per ordinare il set di risultati, ad esempio in base al nome del prodotto. Il tipo di dati della variabile nello script esterno dipende dalla lingua. Nel caso di R, la variabile di input è un frame di dati. Nel caso di Python, l'input deve essere tabulare.
+`[ @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]` Utilizzato per compilare modelli per partizione. Specifica il nome della colonna utilizzata per ordinare il set di risultati, ad esempio in base al nome del prodotto. Il tipo di dati della variabile nello script esterno dipende dalla lingua. Nel caso di R, la variabile di input è un frame di dati. Nel caso di Python, l'input deve essere tabulare.
 
-`[ @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]`Utilizzato per compilare modelli per partizione. Specifica il nome della colonna usata per segmentare i dati, ad esempio l'area geografica o la data. Il tipo di dati della variabile nello script esterno dipende dalla lingua. Nel caso di R, la variabile di input è un frame di dati. Nel caso di Python, l'input deve essere tabulare. 
+`[ @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]` Utilizzato per compilare modelli per partizione. Specifica il nome della colonna usata per segmentare i dati, ad esempio l'area geografica o la data. Il tipo di dati della variabile nello script esterno dipende dalla lingua. Nel caso di R, la variabile di input è un frame di dati. Nel caso di Python, l'input deve essere tabulare. 
 ::: moniker-end
 
-`[ @output_data_1_name =  N'output_data_1_name' ]`Specifica il nome della variabile nello script esterno che contiene i dati da restituire al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] completamento della chiamata stored procedure. Il tipo di dati della variabile nello script esterno dipende dalla lingua. Per R, l'output deve essere un frame di dati. Per Python, l'output deve essere un frame di dati Pandas. *output_data_1_name* è di **tipo sysname**.  Il valore predefinito è *OutputDataSet*.  
+`[ @output_data_1_name =  N'output_data_1_name' ]` Specifica il nome della variabile nello script esterno che contiene i dati da restituire al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] completamento della chiamata stored procedure. Il tipo di dati della variabile nello script esterno dipende dalla lingua. Per R, l'output deve essere un frame di dati. Per Python, l'output deve essere un frame di dati Pandas. *output_data_1_name* è di **tipo sysname**.  Il valore predefinito è *OutputDataSet*.  
 
-`[ @parallel = 0 | 1 ]`Abilitare l'esecuzione parallela di script R impostando il `@parallel` parametro su 1. Il valore predefinito per questo parametro è 0 (nessun parallelismo). Se `@parallel = 1` e l'output viene trasmesso direttamente al computer client, la `WITH RESULT SETS` clausola è obbligatoria ed è necessario specificare uno schema di output.  
+`[ @parallel = 0 | 1 ]` Abilitare l'esecuzione parallela di script R impostando il `@parallel` parametro su 1. Il valore predefinito per questo parametro è 0 (nessun parallelismo). Se `@parallel = 1` e l'output viene trasmesso direttamente al computer client, la `WITH RESULT SETS` clausola è obbligatoria ed è necessario specificare uno schema di output.  
 
- + Per gli script R che non usano funzioni RevoScaleR, l'uso del `@parallel` parametro può essere utile per l'elaborazione di set di impostazioni di grandi dimensioni, supponendo che lo script possa essere trivialmente parallelo. Ad esempio, quando si usa la `predict` funzione R con un modello per generare nuove stime, impostare `@parallel = 1` come hint per il motore di query. Se la query può essere eseguita in parallelo, le righe vengono distribuite in base all'impostazione **MAXDOP** .  
+ + Per gli script R che non usano funzioni RevoScaleR, l'uso del  `@parallel` parametro può essere utile per l'elaborazione di set di impostazioni di grandi dimensioni, supponendo che lo script possa essere trivialmente parallelo. Ad esempio, quando si usa la `predict` funzione R con un modello per generare nuove stime, impostare `@parallel = 1` come hint per il motore di query. Se la query può essere eseguita in parallelo, le righe vengono distribuite in base all'impostazione **MAXDOP** .  
   
  + Per gli script R che usano funzioni RevoScaleR, l'elaborazione parallela viene gestita automaticamente e non è necessario specificare `@parallel = 1` alla chiamata **sp_execute_external_script** .  
   
-`[ @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ]`Elenco di dichiarazioni di parametro di input utilizzate nello script esterno.  
+`[ @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ]` Elenco di dichiarazioni di parametro di input utilizzate nello script esterno.  
   
-`[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]`Elenco di valori per i parametri di input utilizzati dallo script esterno.  
+`[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]` Elenco di valori per i parametri di input utilizzati dallo script esterno.  
 
 ## <a name="remarks"></a>Osservazioni
 

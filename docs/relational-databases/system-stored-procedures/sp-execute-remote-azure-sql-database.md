@@ -1,4 +1,5 @@
 ---
+description: sp_execute_remote (database SQL di Azure)
 title: sp_execute_remote (database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2017
@@ -15,12 +16,12 @@ ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9d257f5b52c6dfea82868b69570f2655675bb7ca
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1642baedb44cc6eab4474616d03abd2f429f4276
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720289"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447158"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (database SQL di Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -50,7 +51,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  Stringa Unicode che contiene un' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o un batch. \@stmt deve essere una costante Unicode o una variabile Unicode. Non sono consentite le espressioni Unicode più complesse, ad esempio per la concatenazione di due stringhe tramite l'operatore +. Le costanti di tipo carattere non sono consentite. Se viene specificata una costante Unicode, è necessario che sia preceduta da un valore **N**. La costante Unicode **N'sp_who '** , ad esempio, è valida, ma la costante carattere **' sp_who '** non lo è. Le dimensioni massime della stringa dipendono dalla memoria disponibile nel server di database. Nei server a 64 bit, le dimensioni della stringa sono limitate a 2 GB, ovvero la dimensione massima di **nvarchar (max)**.  
   
 > [!NOTE]  
->  \@stmt può contenere parametri con lo stesso formato di un nome di variabile, ad esempio:`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  \@stmt può contenere parametri con lo stesso formato di un nome di variabile, ad esempio: `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
  Ogni parametro incluso in \@ stmt deve avere una voce corrispondente nell'elenco di \@ definizioni dei parametri params e nell'elenco dei valori dei parametri.  
   
@@ -73,13 +74,13 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  È richiesta l'autorizzazione `ALTER ANY EXTERNAL DATA SOURCE`.  
   
 ## <a name="remarks"></a>Osservazioni  
- `sp_execute_remote`i parametri devono essere specificati nell'ordine specifico, come descritto nella sezione precedente della sintassi. Se i parametri non vengono immessi in ordine, verrà visualizzato un messaggio di errore.  
+ `sp_execute_remote` i parametri devono essere specificati nell'ordine specifico, come descritto nella sezione precedente della sintassi. Se i parametri non vengono immessi in ordine, verrà visualizzato un messaggio di errore.  
   
- `sp_execute_remote`ha lo stesso comportamento di [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md) per quanto riguarda i batch e l'ambito dei nomi. L'istruzione o il batch Transact-SQL nel sp_execute_remote parametro * \@ stmt* non viene compilato finché non viene eseguita l'istruzione sp_execute_remote.  
+ `sp_execute_remote` ha lo stesso comportamento di [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md) per quanto riguarda i batch e l'ambito dei nomi. L'istruzione o il batch Transact-SQL nel sp_execute_remote parametro * \@ stmt* non viene compilato finché non viene eseguita l'istruzione sp_execute_remote.  
   
- `sp_execute_remote`aggiunge una colonna aggiuntiva al set di risultati denominato ' $ShardName ' contenente il nome del database remoto che ha prodotto la riga.  
+ `sp_execute_remote` aggiunge una colonna aggiuntiva al set di risultati denominato ' $ShardName ' contenente il nome del database remoto che ha prodotto la riga.  
   
- `sp_execute_remote`può essere utilizzato in modo analogo a [sp_executesql &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).  
+ `sp_execute_remote` può essere utilizzato in modo analogo a [sp_executesql &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
 ### <a name="simple-example"></a>Esempio semplice  

@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_node_status (Transact-SQL)
 title: sys. dm_pdw_node_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8e13043774528228eaa46e70abe5ee00f9e51ac9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: b93d177ad3f73982386407e019629401d70ec57f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447496"
 ---
 # <a name="sysdm_pdw_node_status-transact-sql"></a>sys. dm_pdw_node_status (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "87395935"
 |received_time|**datetime**|Ora dell'ultima ricezione di un pacchetto di rete da questo nodo.||  
 |error_id|**nvarchar (36)**|Identificatore univoco dell'ultimo errore che si è verificato in questo nodo.||  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL Data Warehouse e Parallel data warehouse viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_datatype_info_90 (SQL Data Warehouse)
 title: sp_datatype_info_90 (SQL Data Warehouse) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -11,12 +12,12 @@ ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: aef742c3dd6993830e1402a041979ca73a2a4ea0
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d86602d1bbbc308abe13cf2daac8429207d28d4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180180"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447324"
 ---
 # <a name="sp_datatype_info_90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -35,9 +36,9 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @data_type = ] data_type`Numero di codice per il tipo di dati specificato. Per ottenere un elenco di tutti i tipi di dati, omettere questo parametro. *data_type* è di **tipo int**e il valore predefinito è 0.  
+`[ @data_type = ] data_type` Numero di codice per il tipo di dati specificato. Per ottenere un elenco di tutti i tipi di dati, omettere questo parametro. *data_type* è di **tipo int**e il valore predefinito è 0.  
   
-`[ @ODBCVer = ] odbc_version`Versione di ODBC utilizzata. *odbc_version* è di **tinyint**e il valore predefinito è 2.  
+`[ @ODBCVer = ] odbc_version` Versione di ODBC utilizzata. *odbc_version* è di **tinyint**e il valore predefinito è 2.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  nessuno  

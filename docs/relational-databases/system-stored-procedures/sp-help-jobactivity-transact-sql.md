@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobactivity (Transact-SQL)
 title: sp_help_jobactivity (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84dee2f945feaa59d96adb03fc6d531d7f2fd925
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7dc9650d715468bb66b5594100b0ce605083328e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893702"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447083"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +41,14 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id`Numero di identificazione del processo. *job_id*è di tipo **uniqueidentifier**e il valore predefinito è null.  
+`[ @job_id = ] job_id` Numero di identificazione del processo. *job_id*è di tipo **uniqueidentifier**e il valore predefinito è null.  
   
-`[ @job_name = ] 'job_name'`Nome del processo. *job_name*è di **tipo sysname**e il valore predefinito è null.  
+`[ @job_name = ] 'job_name'` Nome del processo. *job_name*è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
 >  È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi.  
   
-`[ @session_id = ] session_id`ID della sessione per cui segnalare le informazioni. *session_id* è di **tipo int**e il valore predefinito è null.  
+`[ @session_id = ] session_id` ID della sessione per cui segnalare le informazioni. *session_id* è di **tipo int**e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -109,6 +110,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di SQL Server Agent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [Stored procedure di SQL Server Agent &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

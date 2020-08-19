@@ -1,4 +1,5 @@
 ---
+description: sys. dm_os_spinlock_stats (Transact-SQL)
 title: sys. dm_os_spinlock_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
@@ -22,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: 8343a5aa5d8e95474fb87c1b6a39e2a013323295
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: df183fe9b6ee5365f623e59dd1c94738afe5df8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447591"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-SQL)
 
@@ -48,7 +49,7 @@ Restituisce informazioni su tutte le attese di SpinLock organizzate in base al t
 
 ## <a name="permissions"></a>Autorizzazioni  
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
-Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .    
+Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l'  **amministratore del server** o un account **amministratore Azure Active Directory** .    
   
 ## <a name="remarks"></a>Osservazioni  
  
@@ -408,7 +409,7 @@ GO
  
  [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  
- [SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
 
  [Quando SpinLock rappresenta un driver significativo di utilizzo della CPU in SQL Server?](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 

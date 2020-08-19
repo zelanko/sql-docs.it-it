@@ -1,4 +1,5 @@
 ---
+description: sp_help_spatial_geometry_histogram (Transact-SQL)
 title: sp_help_spatial_geometry_histogram (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8829d5f259f9a2e2b26b1e3252907ba9bd0b25dd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6d6e17d2e4ae048c563a2130918d137d5c186b60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733254"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447034"
 ---
 # <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,23 +45,23 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @tabname = ] 'tabname'`Nome completo o non qualificato della tabella per la quale è stato specificato l'indice spaziale.  
+`[ @tabname = ] 'tabname'` Nome completo o non qualificato della tabella per la quale è stato specificato l'indice spaziale.  
   
  Le virgolette sono necessarie solo se viene specificata una tabella qualificata. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. *TabName* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @colname = ] 'colname'`Nome della colonna spaziale specificata. *colname* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @colname = ] 'colname'` Nome della colonna spaziale specificata. *colname* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @resolution = ] 'resolution'`Risoluzione del rettangolo di delimitazione. I valori validi sono compresi tra 10 e 5000. la *risoluzione* è di **tinyint**e non prevede alcun valore predefinito.  
+`[ @resolution = ] 'resolution'` Risoluzione del rettangolo di delimitazione. I valori validi sono compresi tra 10 e 5000. la *risoluzione* è di **tinyint**e non prevede alcun valore predefinito.  
   
-`[ @xmin = ] 'xmin'`Proprietà del rettangolo di delimitazione X-Minimum. *xmin* è di tipo **float**e non prevede alcun valore predefinito.  
+`[ @xmin = ] 'xmin'` Proprietà del rettangolo di delimitazione X-Minimum. *xmin* è di tipo **float**e non prevede alcun valore predefinito.  
   
-`[ @ymin = ] 'ymin'`Proprietà del rettangolo delimitatore Y minimo. *yMin* è di tipo **float**e non prevede alcun valore predefinito.  
+`[ @ymin = ] 'ymin'` Proprietà del rettangolo delimitatore Y minimo. *yMin* è di tipo **float**e non prevede alcun valore predefinito.  
   
-`[ @xmax = ] 'xmax'`Proprietà del rettangolo di delimitazione X-Maximum. *Xmax* è di tipo **float**e non prevede alcun valore predefinito.  
+`[ @xmax = ] 'xmax'` Proprietà del rettangolo di delimitazione X-Maximum. *Xmax* è di tipo **float**e non prevede alcun valore predefinito.  
   
-`[ @ymax = ] 'ymax'`Proprietà del valore massimo di Y del rettangolo di delimitazione. *yMax* è di tipo **float**e non prevede alcun valore predefinito.  
+`[ @ymax = ] 'ymax'` Proprietà del valore massimo di Y del rettangolo di delimitazione. *yMax* è di tipo **float**e non prevede alcun valore predefinito.  
   
-`[ @sample = ] 'sample'`Percentuale della tabella utilizzata. I valori validi sono compresi tra 0 e 100. *esempio* è un valore **float**. Il valore predefinito è 100.  
+`[ @sample = ] 'sample'` Percentuale della tabella utilizzata. I valori validi sono compresi tra 0 e 100. *esempio* è un valore **float**. Il valore predefinito è 100.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Viene restituito un valore di tabella. Nella griglia seguente viene descritto il contenuto delle colonne della tabella.  
@@ -68,7 +69,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Rappresenta l'ID univoco di ciascuna cella. Il conteggio inizia da 1.|  
-|**cella**|**Geometry**|Poligono rettangolare che rappresenta ciascuna cella. La forma della cella è identica alla forma della cella utilizzata per l'indicizzazione spaziale.|  
+|**cella**|**geometry**|Poligono rettangolare che rappresenta ciascuna cella. La forma della cella è identica alla forma della cella utilizzata per l'indicizzazione spaziale.|  
 |**row_count**|**bigint**|Indica il numero di oggetti spaziali che toccano o contengono la cella.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -147,6 +148,6 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
  `GO`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di indice spaziale &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
+ [Stored procedure di indice spaziale &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
   
   

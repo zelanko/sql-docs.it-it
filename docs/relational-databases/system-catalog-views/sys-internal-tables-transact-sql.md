@@ -1,4 +1,5 @@
 ---
+description: sys.internal_tables (Transact-SQL)
 title: sys. internal_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58e6166060c5e2099051403361b2eb2c51ad4c18
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 73be0af1fd81cfc415417ff2ff233bbfa5e6ca41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898916"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447936"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85898916"
 |**parent_id**|**int**|ID del padre, indipendentemente dal fatto che sia definito o meno a livello di ambito dello schema. 0 in assenza del padre.<br /><br /> **queue_messages**  =  **object_id** della coda<br /><br /> **xml_index_nodes**  =  **object_id** dell'indice XML<br /><br /> **fulltext_catalog_freelist**  =  **fulltext_catalog_id** del catalogo full-text<br /><br /> **fulltext_index_map**  =  **object_id** dell'indice full-text<br /><br /> **query_notification**o **service_broker_map** = 0<br /><br /> **extended_indexes**  =  **object_id** di un indice esteso, ad esempio un indice spaziale<br /><br /> **object_id** della tabella per cui è abilitato il rilevamento della tabella = **CHANGE_TRACKING**|  
 |**parent_minor_id**|**int**|ID secondario del padre.<br /><br /> **xml_index_nodes**  =  **index_id** dell'indice XML<br /><br /> **extended_indexes**  =  **index_id** di un indice esteso, ad esempio un indice spaziale<br /><br /> 0 = **queue_messages**, **fulltext_catalog_freelist**, **fulltext_index_map**, **query_notification**, **service_broker_map**o **CHANGE_TRACKING**|  
 |**lob_data_space_id**|**int**|Un valore diverso da zero rappresenta l'ID dello spazio dei dati (filegroup o schema di partizione) contenente i dati LOB (Large Object) per questa tabella.|  
-|**filestream_data_space_id**|**int**|Riservato per utilizzi futuri.|  
+|**filestream_data_space_id**|**int**|Riservato per usi futuri.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -174,7 +175,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Viste del catalogo dell'oggetto &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

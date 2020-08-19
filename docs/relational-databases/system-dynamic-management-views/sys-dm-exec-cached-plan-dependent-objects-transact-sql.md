@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)
 title: sys. dm_exec_cached_plan_dependent_objects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -20,12 +21,12 @@ ms.assetid: 9b6cf5f7-b267-44fb-aac8-f49c9aa10cc1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba7ea5697888a421c5cf9902d795b837aff352fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d69d1e26e5cfb6a7352f92851527b69954a7261
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447675"
 ---
 # <a name="sysdm_exec_cached_plan_dependent_objects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,9 +51,9 @@ Il *plan_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti
   
 -   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [sys. dm_exec_procedure_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [sys. dm_exec_procedure_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [sys. dm_exec_trigger_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
+-   [sys. dm_exec_trigger_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
@@ -76,7 +77,7 @@ Il *plan_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Viste a gestione dinamica e funzioni &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [sys.syscacheobjects &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)  
+ [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [sys.syscacheobjects &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_helpindex (Transact-SQL)
 title: sp_helpindex (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: c7f73ba0-ec35-4b10-aa5f-f1487e51fbf7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43bf9b75af8cc43af8c45e4cc2fe4f9d4e66e595
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b73c4a9e15feddb0d52d7ccdaaaf1132e71996f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733173"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447003"
 ---
 # <a name="sp_helpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ sp_helpindex [ @objname = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @objname = ] 'name'`Nome completo o non qualificato di una tabella o di una vista definita dall'utente. Le virgolette sono necessarie solo se viene specificato un nome di tabella o di vista completo. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. *Name* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito.  
+`[ @objname = ] 'name'` Nome completo o non qualificato di una tabella o di una vista definita dall'utente. Le virgolette sono necessarie solo se viene specificato un nome di tabella o di vista completo. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. *Name* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -74,10 +75,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys. Indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys. index_columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
   
   

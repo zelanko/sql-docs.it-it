@@ -1,4 +1,5 @@
 ---
+description: sp_depends (Transact-SQL)
 title: sp_depends (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5133cd72de0f5b812b8425b6fb1b7f8ae82d8241
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ba819cdb8b3e9108fbae3e6405a87b78964931a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861396"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447264"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85861396"
   Visualizza informazioni sulle dipendenze degli oggetti di database, ad esempio le viste e le procedure che dipendono da una tabella o da una vista e le tabelle e le viste da cui esse dipendono. I riferimenti agli oggetti esterni al database corrente non vengono riportati.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]In alternativa, utilizzare [sys. dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md) e [sys. dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, utilizzare [sys. dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md) e [sys. dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) .  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,7 +70,7 @@ sp_depends [ @objname = ] '<object>'
 |-----------------|---------------|-----------------|  
 |**nome**|**nvarchar (257** **)**|Nome dell'elemento a cui è associata una dipendenza.|  
 |**type**|**nvarchar (16)**|Tipo di elemento.|  
-|**informazioni aggiornate**|**nvarchar (7)**|Specifica se l'elemento è aggiornato.|  
+|**Aggiornato**|**nvarchar (7)**|Specifica se l'elemento è aggiornato.|  
 |**selezionato**|**nvarchar(8)**|Specifica se l'elemento viene utilizzato in un'istruzione SELECT.|  
 |**column**|**sysname**|Colonna o parametro in cui esiste la dipendenza.|  
   
@@ -102,10 +103,10 @@ EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sql_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   
   

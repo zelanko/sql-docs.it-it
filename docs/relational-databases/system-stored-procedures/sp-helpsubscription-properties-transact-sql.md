@@ -1,4 +1,5 @@
 ---
+description: sp_helpsubscription_properties (Transact-SQL)
 title: sp_helpsubscription_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ebef567c36028f63317be3e00ea4c8078a765b6f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa2eb1c4389c6dd5f3f30b42967aa7cec82808d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446988"
 ---
 # <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,13 +41,13 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutti i server di pubblicazione.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutti i server di pubblicazione.  
   
-`[ @publisher_db = ] 'publisher_db'`Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutti i database del server di pubblicazione.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutti i database del server di pubblicazione.  
   
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutte le pubblicazioni.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutte le pubblicazioni.  
   
-`[ @publication_type = ] publication_type`Tipo di pubblicazione. *publication_type* è di **tipo int**e il valore predefinito è null. Se specificato, *publication_type* deve essere uno dei valori seguenti:  
+`[ @publication_type = ] publication_type` Tipo di pubblicazione. *publication_type* è di **tipo int**e il valore predefinito è null. Se specificato, *publication_type* deve essere uno dei valori seguenti:  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  

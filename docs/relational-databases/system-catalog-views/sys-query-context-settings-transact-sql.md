@@ -1,4 +1,5 @@
 ---
+description: sys. query_context_settings (Transact-SQL)
 title: sys. query_context_settings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/29/2018
@@ -20,12 +21,12 @@ ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2413e629e969fb0aa7dff93dc2959f1b7a007b10
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: fff1697d8452bac65f3af00dab1e373103f97f13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394011"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447901"
 ---
 # <a name="sysquery_context_settings-transact-sql"></a>sys. query_context_settings (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87394011"
 |-----------------|---------------|-----------------|  
 |**context_settings_id**|**bigint**|Chiave primaria. Questo valore è esposto nel codice XML Showplan per le query.|  
 |**set_options**|**varbinary (8)**|Maschera di bit che riflette lo stato di diverse opzioni SET. Per ulteriori informazioni, vedere [sys. dm_exec_plan_attributes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).|  
-|**language_id**|**smallint**|ID della lingua. Per ulteriori informazioni, vedere [linguaggisys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
+|**language_id**|**smallint**|ID della lingua. Per ulteriori informazioni, vedere [ linguaggisys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |**date_format**|**smallint**|Formato della data. Per altre informazioni, vedere [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |**date_first**|**tinyint**|Primo valore di data. Per altre informazioni, vedere [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
 |**Stato**|**varbinary (2)**|Campo della maschera di maschera che indica il tipo di query o il contesto in cui è stata eseguita la query. <br />Il valore della colonna può essere una combinazione di più flag (espressa in formato esadecimale):<br /><br /> 0x0-query regolare (nessun flag specifico)<br /><br /> 0x1-query eseguita tramite una delle stored procedure delle API del cursore<br /><br /> 0x2-query per la notifica<br /><br /> 0x4-query interna<br /><br /> 0x8-query con parametri automatico senza parametrizzazione universale<br /><br /> 0x10-query di aggiornamento recupero cursori<br /><br /> 0x20-query utilizzata nelle richieste di aggiornamento del cursore<br /><br /> 0x40-il set di risultati iniziale viene restituito all'apertura di un cursore (recupero automatico del cursore)<br /><br /> 0x80-query crittografata<br /><br /> 0x100-query nel contesto del predicato di sicurezza a livello di riga|  
@@ -50,14 +51,14 @@ ms.locfileid: "87394011"
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione **View database state** .  
   
-## <a name="see-also"></a>Vedi anche  
- [sys. database_query_store_options &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys. query_store_plan &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys. query_store_query &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys. query_store_query_text &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys. query_store_runtime_stats &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
- [sys. query_store_wait_stats &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)   
- [sys. query_store_runtime_stats_interval &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+## <a name="see-also"></a>Vedere anche  
+ [sys. database_query_store_options &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys. query_store_plan &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [sys. query_store_query &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys. query_store_query_text &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [sys. query_store_runtime_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [sys. query_store_wait_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)   
+ [sys. query_store_runtime_stats_interval &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Stored procedure di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   

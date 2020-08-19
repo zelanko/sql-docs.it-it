@@ -1,4 +1,5 @@
 ---
+description: Supporto del tipo di parametro con valori di tabella OLE DB in SQL Server Native Client (metodi)
 title: OLE DB tipo di parametro con valori di tabella (metodi)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: e3c2a450-8fd4-44cb-93d8-affe1b65c68e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a74ae3951e9fa17ddd42d6ed54dc73abc17d485c
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4552440a8c4b970fbbf95af4cf084dace53d17d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246737"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448288"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-in-sql-server-native-client-methods"></a>Supporto del tipo di parametro con valori di tabella OLE DB in SQL Server Native Client (metodi)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,8 +40,8 @@ ms.locfileid: "87246737"
 |||
 
 ## <a name="see-also"></a>Vedere anche  
- [Supporto del tipo di parametro con valori di tabella OLE DB](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
- [Creazione di set di righe di parametri con valori di tabella](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md)   
+ [Supporto dei tipi di parametri con valori di tabella OLE DB](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
+ [Creazione di un set di righe di parametri con valori di tabella](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md)   
  [Usare parametri con valori di tabella &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

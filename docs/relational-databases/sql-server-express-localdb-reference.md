@@ -1,4 +1,5 @@
 ---
+description: Riferimento al database locale di SQL Server Express
 title: Informazioni di riferimento su SQL Server Express LocalDB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,20 +11,20 @@ ms.topic: reference
 ms.assetid: 25b71829-bdb1-46f4-ac36-80ddced52f3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 465b78999808a8b44f05861251da43a2e6f0ee72
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b176dd15896cae3335ea606b4aa06cc95bb06df4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913927"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447954"
 ---
 # <a name="sql-server-express-localdb-reference"></a>Riferimento al database locale di SQL Server Express
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   In questa sezione sono contenute informazioni sul database locale di SQL Server Express:  
   
--   [Informazioni di riferimento sui messaggi di errore di SQL Server Express LocalDB](../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md)  
+-   [Riferimento ai messaggi di errore del database locale di SQL Server Express](../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md)  
   
--   [Informazioni si riferimento sull'API dell'istanza di SQL Server Express LocalDB](../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md)  
+-   [Riferimento all'API dell'istanza del database locale di SQL Server ExpressSQL Server](../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md)  
   
 ## <a name="code-sample"></a>Codice di esempio  
  Nell'esempio seguente viene illustrata l'API LocalDB.  Prima di eseguire questo esempio, verificare che LocalDB sia installata nel computer in uso.  È possibile installare LocalDB dal programma di installazione di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Express.  

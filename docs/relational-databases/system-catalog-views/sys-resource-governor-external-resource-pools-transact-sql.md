@@ -1,4 +1,5 @@
 ---
+description: sys. resource_governor_external_resource_pools (Transact-SQL)
 title: sys. resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/13/2017
@@ -18,11 +19,12 @@ helpviewer_keywords:
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65fcc8dc4054c3aa7b55a543acb1aeebc9bd3bcd
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 6e75047b9f65136a4b41f248ee948555fdb526e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447863"
 ---
 # <a name="sysresource_governor_external_resource_pools-transact-sql"></a>sys. resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -47,13 +49,13 @@ Restituisce la configurazione del pool di risorse esterne archiviato in [!INCLUD
 
 [Governance delle risorse per Machine Learning in SQL Server](../../machine-learning/administration/resource-governor.md)
 
-[Viste del catalogo di Resource Governor &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
+[Viste del catalogo di Resource Governor &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
 
 [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)
 
 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)
 
-[sys. dm_resource_governor_resource_pool_affinity &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
+[sys. dm_resource_governor_resource_pool_affinity &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
 
 [Opzione di configurazione del server external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
 

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_resource_governor_resource_pools (Transact-SQL)
 title: sys. dm_resource_governor_resource_pools (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
@@ -20,12 +21,12 @@ ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4bf49fd0d828bd4f287431f2b95c47e07315448
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f19c80cd75788a2bc0f5bad73e0eb0098f9a8315
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447541"
 ---
 # <a name="sysdm_resource_governor_resource_pools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -76,7 +77,7 @@ ms.locfileid: "87396724"
 |write_io_stall_queued_ms|**bigint**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.<br /><br /> Il tempo totale espresso in millisecondi tra l'arrivo degli I/O di scrittura e il problema. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O. Vale a dire che l'impostazione MIN_IOPS_PER_VOLUME del pool di risorse e l'impostazione MAX_IOPS_PER_VOLUME sono 0.<br /><br /> Si tratta del ritardo introdotto dalla governance delle risorse di I/O.|  
 |io_issue_violations_total|**int**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.<br /><br /> Totale delle violazioni di generazione di I/O. Vale a dire, il numero di volte che la frequenza di generazione di I/O era inferiore alla frequenza riservata. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O. Vale a dire che l'impostazione MIN_IOPS_PER_VOLUME del pool di risorse e l'impostazione MAX_IOPS_PER_VOLUME sono 0.|  
 |io_issue_delay_total_ms|**bigint**|**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.<br /><br /> Il tempo totale espresso in millisecondi tra la generazione pianificata e quella effettiva degli I/O. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O. Vale a dire che l'impostazione MIN_IOPS_PER_VOLUME del pool di risorse e l'impostazione MAX_IOPS_PER_VOLUME sono 0.|  
-|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
+|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
 ## <a name="remarks"></a>Osservazioni  
  I gruppi del carico di lavoro e i pool di risorse di Resource Governor presentano un mapping molti-a-uno. Di conseguenza, molte delle statistiche dei pool di risorse derivano da quelle del gruppo del carico di lavoro.  
@@ -86,10 +87,10 @@ ms.locfileid: "87396724"
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE.  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [sys. dm_resource_governor_workload_groups &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [sys. resource_governor_resource_pools &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
+ [sys. dm_resource_governor_workload_groups &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
+ [sys. resource_governor_resource_pools &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   
