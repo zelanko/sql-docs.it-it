@@ -1,4 +1,5 @@
 ---
+description: Esempio del metodo GetRows (JScript)
 title: Esempio di metodo GetRows (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ba091ff7db668cc049c50eeb26492a2c9ee3422
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 80f2727ae8254665bc39a42d635860f390224f25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760027"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443553"
 ---
 # <a name="getrows-method-example-jscript"></a>Esempio del metodo GetRows (JScript)
 Questo esempio usa il metodo [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) per recuperare tutte le righe della tabella *Custiomers* da un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e per riempire una matrice con i dati risultanti. Il metodo **GetRows** restituirà un numero di righe inferiore al numero desiderato in due casi: se è stato raggiunto [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) o se **GetRows** ha tentato di recuperare un record eliminato da un altro utente. La funzione restituisce **false** solo se si verifica il secondo caso. Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **GetRowsJS. asp**.  

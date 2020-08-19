@@ -1,4 +1,5 @@
 ---
+description: Esempio di metodi MoveFirst, MoveLast, MoveNext e MovePrevious (VC + +)
 title: Esempio di spostare il puntatore del record del recordset (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7f8aea7b-9183-4b29-8ac0-a393ed2e8bd5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 625bf0eddf76fb0acf7afdf790d8f88d41409b5f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0c528cf280e5bb011f558f72a74290ff7f690170
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762452"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443163"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vc"></a>Esempio di metodi MoveFirst, MoveLast, MoveNext e MovePrevious (VC + +)
 Questo esempio usa i metodi [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)e [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) per spostare il puntatore di record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in base al comando fornito. Per eseguire questo esempio, è necessaria la funzione MoveAny.  

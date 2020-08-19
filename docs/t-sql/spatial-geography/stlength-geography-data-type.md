@@ -1,4 +1,5 @@
 ---
+description: STLength (tipo di dati geography)
 title: STLength (tipo di dati geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a2f1fa88c2e0e6243e471c88ee7c0158d28eb797
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 5fe53017aa78bd4025a251611fd6f50c67d4401a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556102"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445173"
 ---
 # <a name="stlength-geography-data-type"></a>STLength (tipo di dati geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86556102"
   
  Tipo CLR restituito: **SqlDouble**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se un'istanza **geography** è chiusa, la lunghezza viene calcolata come lunghezza totale lungo l'istanza. La lunghezza di qualsiasi poligono è il relativo perimetro e la lunghezza di un punto è 0. La lunghezza di un oggetto **GeometryCollection** viene calcolata eseguendo la somma delle lunghezze di tutte le istanze **geography** contenute nella raccolta.  
   
  STLength() può essere utilizzato con oggetti LineString validi e non validi. In genere, un oggetto LineString non è valido a causa di segmenti sovrapposti dovuti ad anomalie, ad esempio tracce GPS imprecise. STLength() non rimuove i segmenti sovrapposti o non validi, i quali vengono inclusi nel valore di lunghezza restituito. È possibile rimuovere i segmenti sovrapposti da un oggetto LineString con il metodo MakeValid().  
@@ -58,6 +59,6 @@ SELECT @g.STLength();
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodi OGC sulle istanze geografiche](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Metodi OGC sulle istanze di geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

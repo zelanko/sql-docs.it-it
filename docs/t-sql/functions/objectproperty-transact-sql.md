@@ -1,4 +1,5 @@
 ---
+description: OBJECTPROPERTY (Transact-SQL)
 title: OBJECTPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 762cfe49193118072bbd165556b6b35163dee15c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: cae6d8b524e12a959ec373549a7be0af75aa16b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445743"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -115,7 +116,7 @@ OBJECTPROPERTY ( id , property )
 |IsTrigger|Qualsiasi oggetto con ambito schema|Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUniqueCnst|Qualsiasi oggetto con ambito schema|Vincolo UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|Tabella|Tabella definita dall'utente.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsView|Visualizza|Vista.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|IsView|Visualizzazione|Vista.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |OwnerId|Qualsiasi oggetto con ambito schema|Proprietario dell'oggetto.<br /><br /> **Nota:** Il proprietario dello schema non deve necessariamente corrispondere al proprietario dell'oggetto. Ad esempio, gli oggetti figlio (per i quali il parametro *parent_object_id* è impostato su un valore diverso da Null) restituiscono sempre lo stesso ID di proprietario del padre.<br /><br /> Valore non Null = ID utente del database per il proprietario dell'oggetto.|  
 |SchemaId|Qualsiasi oggetto con ambito schema| ID dello schema a cui appartiene l'oggetto.| 
 |TableDeleteTrigger|Tabella|La tabella include un trigger DELETE.<br /><br /> >1 = ID del primo trigger del tipo specificato.|  
@@ -168,7 +169,7 @@ OBJECTPROPERTY ( id , property )
   
  Un utente può visualizzare esclusivamente i metadati delle entità a sicurezza diretta di cui è proprietario o per cui ha ricevuto un'autorizzazione. Di conseguenza, le funzioni predefinite di creazione dei metadati come OBJECTPROPERTY possono restituire NULL se l'utente non dispone di alcuna autorizzazione per l'oggetto. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] presuppone che *object_id* si trovi nel contesto di database corrente. Una query in cui viene fatto riferimento a un *object_id* in un altro database restituisce NULL oppure risultati non corretti. Nella query seguente, ad esempio, il contesto di database corrente è il database master. [!INCLUDE[ssDE](../../includes/ssde-md.md)] tenterà di restituire il valore della proprietà per *object_id* specificato in quel database invece del database specificato nella query. La query restituisce risultati non corretti perché la vista `vEmployee` non si trova nel database master.  
   
 ```  

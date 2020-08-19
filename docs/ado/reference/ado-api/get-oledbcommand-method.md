@@ -1,4 +1,5 @@
 ---
+description: Metodo get_OLEDBCommand
 title: Metodo get_OLEDBCommand | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23d551f5-3d5b-434b-ade6-fef15f1710e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 043e432bfef39f90fbeb5b147487272c4d284bdb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 562b10fa67b04926e512833248c99ecb7b55a1fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760077"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443603"
 ---
 # <a name="get_oledbcommand-method"></a>Metodo get_OLEDBCommand
 Restituisce il comando OLE DB sottostante, propagando prima di tutto le informazioni sui parametri impostate nel comando ADO al comando OLE DB.  

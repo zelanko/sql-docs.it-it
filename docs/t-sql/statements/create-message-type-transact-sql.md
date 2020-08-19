@@ -1,4 +1,5 @@
 ---
+description: CREATE MESSAGE TYPE (Transact-SQL)
 title: CREATE MESSAGE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/10/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 70cdaf07914a409e83c8fc291964d79ce706a808
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 4966690508bdc48b73471519595b3010443128b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393189"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444861"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -67,7 +68,7 @@ CREATE MESSAGE TYPE message_type_name
  VALIDATION  
  Specifica la modalità con cui [!INCLUDE[ssSB](../../includes/sssb-md.md)] convalida il corpo dei messaggi di questo tipo. Se questa clausola non viene specificata, l'impostazione predefinita per la convalida è NONE.  
   
- Nessuno  
+ NONE  
  Specifica che non viene eseguita alcuna convalida. Il corpo del messaggio può contenere dati oppure può essere NULL.  
   
  EMPTY  
@@ -79,7 +80,7 @@ CREATE MESSAGE TYPE message_type_name
  VALID_XML WITH SCHEMA COLLECTION *schema_collection_name*  
  Specifica che il corpo del messaggio deve contenere dati XML conformi a uno schema incluso nella raccolta di schemi specificata. *schema_collection_name* deve corrispondere al nome di una raccolta di XML Schema esistente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] convalida i messaggi in arrivo. Se il corpo di un messaggio non è conforme al tipo di convalida specificato, [!INCLUDE[ssSB](../../includes/sssb-md.md)] elimina il messaggio non valido e restituisce un errore al servizio che ha inviato il messaggio.  
   
  In entrambi i lati di una conversazione deve essere definito lo stesso nome per un tipo di messaggio. Per semplificare la risoluzione dei problemi, per entrambi i lati di una conversazione viene in genere specificata la stessa convalida per il tipo di messaggio, sebbene questo non sia un requisito di [!INCLUDE[ssSB](../../includes/sssb-md.md)].  

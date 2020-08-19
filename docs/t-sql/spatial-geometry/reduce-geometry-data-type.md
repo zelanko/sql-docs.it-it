@@ -1,4 +1,5 @@
 ---
+description: Reduce (tipo di dati geometry)
 title: Reduce (tipo di dati geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 16ac1ced9d2bfbfa8de4b2c8cc577aeb83d15be0
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 704df574cc67a4321faea90795b248adb2859123
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445093"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (tipo di dati geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ Restituisce un'approssimazione dell'istanza **geometry** specificata. L'approssi
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per i tipi di raccolta, questo algoritmo opera in modo indipendente su ogni elemento **geometry** contenuto nell'istanza.  
   
  Questo algoritmo non modifica le istanze **Point**.  

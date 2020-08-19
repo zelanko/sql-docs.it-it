@@ -1,4 +1,5 @@
 ---
+description: DATETIME2FROMPARTS (Transact-SQL)
 title: DATETIME2FROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -18,12 +19,12 @@ ms.assetid: 632b757d-d2d1-43a5-b870-792a779ae204
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97c4158d8c425a252d3bb0c09743706422761af5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2183bdd6d636ec7b8a63cc6bc73896de3eb69981
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396951"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445799"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,7 +69,7 @@ Espressione Integer che specifica la precisione del valore **datetime2** che ver
 ## <a name="return-types"></a>Tipi restituiti
 **datetime2(** *precision* **)**
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 `DATETIME2FROMPARTS` restituisce un valore di tipo **datetime2** completamente inizializzato. `DATETIME2FROMPARTS` genererà un errore se almeno un argomento obbligatorio ha un valore non valido. `DATETIME2FROMPARTS` restituisce null se almeno un argomento obbligatorio ha un valore null. Se tuttavia l'argomento *precision* ha un valore null, `DATETIME2FROMPARTS` genererà un errore.
 
 L'argomento *fractions* dipende dall'argomento *precision*. Ad esempio, per un valore di *precision* pari a 7, ogni frazione rappresenta 100 nanosecondi, mentre per *precision* pari a 3, ogni frazione rappresenta un millisecondo. Per un valore di *precision* pari a zero, anche il valore di *fractions* deve essere zero. In caso contrario, `DATETIME2FROMPARTS` genererà un errore.
@@ -128,7 +129,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 [datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)
   
   

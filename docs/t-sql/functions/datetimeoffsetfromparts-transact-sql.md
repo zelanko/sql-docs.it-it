@@ -1,4 +1,5 @@
 ---
+description: DATETIMEOFFSETFROMPARTS (Transact-SQL)
 title: DATETIMEOFFSETFROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -18,12 +19,12 @@ ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0a383d6a9405d0aa80b8f0c1e4f3c2bc98c9667
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: bcb6fea31efdc42e95f28fba01b416b00cee7038
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445813"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +76,7 @@ Valore letterale Integer che specifica la precisione del valore **datetimeoffset
 ## <a name="return-types"></a>Tipi restituiti
 **datetimeoffset(** *precision* **)**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 
 `DATETIMEOFFSETFROMPARTS` restituisce un tipo di dati **datetimeoffset** completamente inizializzato. Gli argomenti di offset rappresentano la differenza di fuso orario. Per gli argomenti di offset omessi, `DATETIMEOFFSETFROMPARTS` presuppone una differenza di fuso orario pari a `00:00`, ovvero nessuna differenza di fuso orario. Per gli argomenti di offset specificati, `DATETIMEOFFSETFROMPARTS` prevede per entrambi gli argomenti valori entrambi positivi o entrambi negativi. Se *minute_offset* ha un valore e *hour_offset* non ha valori, `DATETIMEOFFSETFROMPARTS` genererà un errore. `DATETIMEOFFSETFROMPARTS` genererà un errore se gli altri argomenti hanno valori non validi. Se almeno un argomento obbligatorio ha un valore `NULL`, `DATETIMEOFFSETFROMPARTS` restituirà `NULL`. Se tuttavia l'argomento *precision* ha un valore `NULL`, `DATETIMEOFFSETFROMPARTS` genererà un errore.  
   
@@ -137,7 +138,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 [datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
 [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   

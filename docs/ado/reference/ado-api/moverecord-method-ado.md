@@ -1,4 +1,5 @@
 ---
+description: Metodo MoveRecord (ADO)
 title: Metodo MoveRecord (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e5c63bbd29bef1d7b0b7d7650c32fcfe2245f7a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 270d93169c5c1d91c35a58a36be9a4577e25e7d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443153"
 ---
 # <a name="moverecord-method-ado"></a>Metodo MoveRecord (ADO)
 Sposta l'entità rappresentata da un [record](../../../ado/reference/ado-api/record-object-ado.md) in un'altra posizione.  
@@ -34,23 +35,23 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *origine*  
- Facoltativa. Valore **stringa** che contiene un URL che identifica il **record** da spostare. Se *source* viene omesso o specifica una stringa vuota, l'oggetto rappresentato da questo **record** viene spostato. Se, ad esempio, il **record** rappresenta un file, il contenuto del file viene spostato nel percorso specificato da *destinazione*.  
+ *Origine*  
+ Facoltativo. Valore **stringa** che contiene un URL che identifica il **record** da spostare. Se *source* viene omesso o specifica una stringa vuota, l'oggetto rappresentato da questo **record** viene spostato. Se, ad esempio, il **record** rappresenta un file, il contenuto del file viene spostato nel percorso specificato da *destinazione*.  
   
  *Destinazione*  
- Facoltativa. Valore **stringa** che contiene un URL che specifica la posizione in cui verrà spostato l'oggetto di *origine* .  
+ Facoltativo. Valore **stringa** che contiene un URL che specifica la posizione in cui verrà spostato l'oggetto di *origine* .  
   
- *Nome utente*  
- Facoltativa. Valore **stringa** che contiene l'ID utente che, se necessario, autorizza l'accesso alla *destinazione*.  
+ *UserName*  
+ Facoltativo. Valore **stringa** che contiene l'ID utente che, se necessario, autorizza l'accesso alla *destinazione*.  
   
  *Password*  
- Facoltativa. **Stringa** che contiene la password che, se necessario, verifica il *nome utente*.  
+ Facoltativo. **Stringa** che contiene la password che, se necessario, verifica il *nome utente*.  
   
  *Opzioni*  
- Facoltativa. Valore [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) il cui valore predefinito è **adMoveUnspecified**. Specifica il comportamento di questo metodo.  
+ Facoltativo. Valore [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) il cui valore predefinito è **adMoveUnspecified**. Specifica il comportamento di questo metodo.  
   
- *Async*  
- Facoltativa. Valore **booleano** che, se impostato su **true**, specifica che questa operazione deve essere asincrona.  
+ *Asincrona*  
+ Facoltativo. Valore **booleano** che, se impostato su **true**, specifica che questa operazione deve essere asincrona.  
   
 ## <a name="return-value"></a>Valore restituito  
  Valore **String**. In genere, viene restituito il valore di *Destination* . Tuttavia, il valore esatto restituito è dipendente dal provider.  

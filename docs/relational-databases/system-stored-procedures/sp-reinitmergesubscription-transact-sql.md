@@ -1,4 +1,5 @@
 ---
+description: sp_reinitmergesubscription (Transact-SQL)
 title: sp_reinitmergesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fbdcd6435b9fab8e65c39b97a6aaa1ac69a1e9dc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8712640a1f5f1b2dd53e49d09610dd30b192b4cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901400"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446850"
 ---
 # <a name="sp_reinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **All**.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **All**.  
   
-`[ @subscriber = ] 'subscriber'`Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**e il valore predefinito è **All**.  
+`[ @subscriber = ] 'subscriber'` Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**e il valore predefinito è **All**.  
   
-`[ @subscriber_db = ] 'subscriber_db'`Nome del database Sottoscrittore. *subscriber_db* è di **tipo sysname**e il valore predefinito è **All**.  
+`[ @subscriber_db = ] 'subscriber_db'` Nome del database Sottoscrittore. *subscriber_db* è di **tipo sysname**e il valore predefinito è **All**.  
   
-`[ @upload_first = ] 'upload_first'`Indica se le modifiche nel Sottoscrittore vengono caricate prima della reinizializzazione della sottoscrizione. *upload_first* è di **tipo nvarchar (5)** e il valore predefinito è false. Se **true**, le modifiche vengono caricate prima della reinizializzazione della sottoscrizione. Se **false**, le modifiche non vengono caricate.  
+`[ @upload_first = ] 'upload_first'` Indica se le modifiche nel Sottoscrittore vengono caricate prima della reinizializzazione della sottoscrizione. *upload_first* è di **tipo nvarchar (5)** e il valore predefinito è false. Se **true**, le modifiche vengono caricate prima della reinizializzazione della sottoscrizione. Se **false**, le modifiche non vengono caricate.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -68,7 +69,7 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_reinitmergesubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Reinizializza sottoscrizioni](../../relational-databases/replication/reinitialize-subscriptions.md)   
+ [Reinizializzare le sottoscrizioni](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

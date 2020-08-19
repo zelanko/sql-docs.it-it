@@ -1,4 +1,5 @@
 ---
+description: GetLevel (Motore di database)
 title: GetLevel (motore di database) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f205c91f7375e52a944dbcc18c026edb9712d944
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d2a8f93d51cd61e9a6a7654472fabbab95475913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445924"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel (Motore di database)
 
@@ -49,7 +50,7 @@ SqlInt16 GetLevel ( )
   
 **Tipo CLR restituito: SqlInt16**
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 Utilizzato per determinare il livello di uno o più nodi o per filtrare i nodi sui membri di un livello specificato. La radice della gerarchia si trova a livello 0.
   
 GetLevel è utile per indici di ricerca breadth-first. Per altre informazioni, vedere [Dati gerarchici &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).

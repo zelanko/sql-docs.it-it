@@ -1,4 +1,5 @@
 ---
+description: Esempio del metodo Find (VB)
 title: Esempio di metodo Find (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e3495e26fa4b71563716877db501299873aff532
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b57772085e93d03c7ca40364e3074e3bc8228e02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760107"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443623"
 ---
 # <a name="find-method-example-vb"></a>Esempio del metodo Find (VB)
 In questo esempio viene utilizzato il metodo [Find](../../../ado/reference/ado-api/find-method-ado.md) dell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per individuare e contare il numero di titoli aziendali nel database ***pubs*** . Nell'esempio si presuppone che il provider sottostante non supporti funzionalità simili.  

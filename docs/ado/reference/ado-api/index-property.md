@@ -1,4 +1,5 @@
 ---
+description: Proprietà Index
 title: Proprietà index | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a77aa3c2e144859eaead332e71c5c4c8776608c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 80d15588279e584ec4d63d4336239952f22405cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443463"
 ---
 # <a name="index-property"></a>Proprietà Index
 Indica il nome dell'indice attualmente attivo per un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  

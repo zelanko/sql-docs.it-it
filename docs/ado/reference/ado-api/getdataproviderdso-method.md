@@ -1,4 +1,5 @@
 ---
+description: Metodo GetDataProviderDSO
 title: Metodo GetDataProviderDSO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a4c6bd5-0c79-4f81-a977-0561392d8d50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55272fdbcd0aacfc8e98cb4e38ae19270b3b461a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1a45d78960b8b6b1ba2534e39f080a6c94fc0655
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443573"
 ---
 # <a name="getdataproviderdso-method"></a>Metodo GetDataProviderDSO
 Recupera l'oggetto origine dati OLE DB sottostante dal provider di forme.  
@@ -35,7 +36,7 @@ HRESULT GetDataProviderDSO(
  *ppDataProviderDSOIUnknown*  
  out  Puntatore a un puntatore che restituisce l'IUnknown dell'oggetto origine dati OLE DB sottostante.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo non AddRef il puntatore di interfaccia. Se il chiamante prevede di mantenere il puntatore, il chiamante deve eseguire il AddRef e il rilascio richiesti.  
   
 ## <a name="applies-to"></a>Si applica a  

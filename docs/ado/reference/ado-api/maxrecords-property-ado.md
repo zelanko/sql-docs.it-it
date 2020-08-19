@@ -1,4 +1,5 @@
 ---
+description: Proprietà MaxRecords (ADO)
 title: Proprietà MaxRecords (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20c76571-8c9a-482c-a99e-726ab1d93f8b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9e4beaaa4b38a26089d1136d1b32090ea12231f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 905897cfa08591aaefce3aceb46e1892d41d3d7a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754372"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443273"
 ---
 # <a name="maxrecords-property-ado"></a>Proprietà MaxRecords (ADO)
 Indica il numero massimo di record da restituire a un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) da una query.  
@@ -28,7 +29,7 @@ Indica il numero massimo di record da restituire a un [Recordset](../../../ado/r
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **Long** che indica il numero massimo di record da restituire. Il valore predefinito è zero (**0**), che indica nessun limite.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare la proprietà **maxRecords** per limitare il numero di record restituiti dal provider dall'origine dati. L'impostazione predefinita di questa proprietà è zero, il che significa che il provider restituisce tutti i record richiesti.  
   
  La proprietà **maxRecords** è in lettura/scrittura quando il **Recordset** è chiuso e in sola lettura quando è aperto.  

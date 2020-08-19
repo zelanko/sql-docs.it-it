@@ -1,4 +1,5 @@
 ---
+description: CREATE MASTER KEY (Transact-SQL)
 title: CREATE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2019
@@ -24,12 +25,12 @@ ms.assetid: 1710a305-1a4f-48ec-836c-11ffd0356d76
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bd067638bdcf9ee624fa714334ff8c8a78c0e69
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 1f9a640dff75d54a4377f512b3a1e17200f48377
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393209"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444905"
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY (Transact-SQL)
 
@@ -52,7 +53,7 @@ CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 
 PASSWORD ='*password*' Password usata per crittografare la chiave master nel database. *password* deve soddisfare i requisiti per i criteri password di Windows del computer che sta eseguendo l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *password* è facoltativo in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 La chiave master del database è una chiave simmetrica utilizzata per proteggere le chiavi private dei certificati e le chiavi asimmetriche presenti nel database. Al momento della creazione, la chiave master viene crittografata con l'algoritmoAES_256 e una password specificata dall'utente. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] viene utilizzato l'algoritmo Triple DES. Per consentire la decrittografia automatica della chiave master, una copia della chiave viene crittografata con la chiave master del servizio e archiviata sia nel database che nel database master. La copia archiviata nel database master viene generalmente aggiornata in modo automatico in seguito a ogni modifica della chiave master. È possibile modificare questa impostazione predefinita usando l'opzione DROP ENCRYPTION BY SERVICE MASTER KEY dell'istruzione [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md). Per aprire una chiave master non crittografata con la chiave master del servizio, è necessario usare l'istruzione [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) e una password.
 

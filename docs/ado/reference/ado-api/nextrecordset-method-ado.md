@@ -1,4 +1,5 @@
 ---
+description: Metodo NextRecordset (ADO)
 title: Metodo NextRecordset (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f6eaf12308db09c81b426b33f0002cd4664f62b8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8ec3bb3a6c5f7e4f6d6654ca059e7ace7d97d9da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762392"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443093"
 ---
 # <a name="nextrecordset-method-ado"></a>Metodo NextRecordset (ADO)
 Cancella l'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) corrente e restituisce il **Recordset** successivo avanzando attraverso una serie di comandi.  
@@ -39,7 +40,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
   
 #### <a name="parameters"></a>Parametri  
  *RecordsAffected*  
- Facoltativa. Variabile **Long** a cui il provider restituisce il numero di record interessati dall'operazione corrente.  
+ Facoltativo. Variabile **Long** a cui il provider restituisce il numero di record interessati dall'operazione corrente.  
   
 > [!NOTE]
 >  Questo parametro restituisce solo il numero di record interessati da un'operazione. non restituisce un conteggio dei record da un'istruzione SELECT utilizzata per generare il **Recordset**.  

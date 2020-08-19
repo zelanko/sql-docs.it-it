@@ -1,4 +1,5 @@
 ---
+description: Esempio della proprietà MaxRecords (VB)
 title: Esempio di proprietà MaxRecords (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38812977823e514b63a558640df86c08265257df
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 023519763173c26465cef568345990221b4a0e1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443283"
 ---
 # <a name="maxrecords-property-example-vb"></a>Esempio della proprietà MaxRecords (VB)
 In questo esempio viene usata la proprietà [maxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) per aprire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contenente i 10 titoli più costosi nella tabella ***titles*** .  

@@ -1,4 +1,5 @@
 ---
+description: sp_update_alert (Transact-SQL)
 title: sp_update_alert (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36b04c00625792fc34b3fc833ea07a3ea2e71dab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a7abcc7d0f4ad148f18e90a29a8f411804e0d4a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891371"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446723"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,23 +63,23 @@ sp_update_alert
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name = ] 'name'`Nome dell'avviso da aggiornare. *Name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @name = ] 'name'` Nome dell'avviso da aggiornare. *Name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @new_name = ] 'new_name'`Nuovo nome per l'avviso. Il nome deve essere univoco. *new_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @new_name = ] 'new_name'` Nuovo nome per l'avviso. Il nome deve essere univoco. *new_name* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @enabled = ] enabled`Specifica se l'avviso è abilitato (**1**) o non abilitato (**0**). *Enabled* è di **tinyint**e il valore predefinito è null. Per consentire la generazione di un avviso, è necessario che l'avviso sia abilitato.  
+`[ @enabled = ] enabled` Specifica se l'avviso è abilitato (**1**) o non abilitato (**0**). *Enabled* è di **tinyint**e il valore predefinito è null. Per consentire la generazione di un avviso, è necessario che l'avviso sia abilitato.  
   
-`[ @message_id = ] message_id`Nuovo messaggio o numero di errore per la definizione di avviso. In genere, *message_id* corrisponde a un numero di errore nella tabella **sysmessages** . *message_id* è di **tipo int**e il valore predefinito è null. Un ID messaggio può essere utilizzato solo se l'impostazione del livello di gravità per l'avviso è **0**.  
+`[ @message_id = ] message_id` Nuovo messaggio o numero di errore per la definizione di avviso. In genere, *message_id* corrisponde a un numero di errore nella tabella **sysmessages** . *message_id* è di **tipo int**e il valore predefinito è null. Un ID messaggio può essere utilizzato solo se l'impostazione del livello di gravità per l'avviso è **0**.  
   
-`[ @severity = ] severity`Un nuovo livello di gravità (da **1** a **25**) per la definizione di avviso. Qualsiasi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] messaggio inviato al registro applicazioni di Windows con il livello di gravità specificato attiverà l'avviso. *gravità* è di **tipo int**e il valore predefinito è null. È possibile utilizzare un livello di gravità solo se l'impostazione dell'ID messaggio per l'avviso è **0**.  
+`[ @severity = ] severity` Un nuovo livello di gravità (da **1** a **25**) per la definizione di avviso. Qualsiasi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] messaggio inviato al registro applicazioni di Windows con il livello di gravità specificato attiverà l'avviso. *gravità* è di **tipo int**e il valore predefinito è null. È possibile utilizzare un livello di gravità solo se l'impostazione dell'ID messaggio per l'avviso è **0**.  
   
-`[ @delay_between_responses = ] delay_between_responses`Nuovo periodo di attesa, in secondi, tra le risposte all'avviso. *delay_between_responses* è di **tipo int**e il valore predefinito è null.  
+`[ @delay_between_responses = ] delay_between_responses` Nuovo periodo di attesa, in secondi, tra le risposte all'avviso. *delay_between_responses* è di **tipo int**e il valore predefinito è null.  
   
-`[ @notification_message = ] 'notification_message'`Testo modificato di un messaggio aggiuntivo inviato all'operatore come parte della notifica tramite posta elettronica, **net send**o cercapersone. *notification_message* è di **tipo nvarchar (512)** e il valore predefinito è null.  
+`[ @notification_message = ] 'notification_message'` Testo modificato di un messaggio aggiuntivo inviato all'operatore come parte della notifica tramite posta elettronica, **net send**o cercapersone. *notification_message* è di **tipo nvarchar (512)** e il valore predefinito è null.  
   
-`[ @include_event_description_in = ] include_event_description_in`Specifica se la descrizione dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] errore dal registro applicazioni di Windows deve essere inclusa nel messaggio di notifica. *include_event_description_in* è di **tinyint**e il valore predefinito è null. i possibili valori sono i seguenti.  
+`[ @include_event_description_in = ] include_event_description_in` Specifica se la descrizione dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] errore dal registro applicazioni di Windows deve essere inclusa nel messaggio di notifica. *include_event_description_in* è di **tinyint**e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|nessuno|  
 |**1**|Posta elettronica|  
@@ -86,43 +87,43 @@ sp_update_alert
 |**4**|**net send**|  
 |**7**|Tutti|  
   
-`[ @database_name = ] 'database'`Nome del database in cui deve verificarsi l'errore affinché l'avviso venga generato. il *database* è di **tipo sysname.** I nomi racchiusi tra parentesi quadre ([ ]) non sono ammessi. Il valore predefinito è NULL.  
+`[ @database_name = ] 'database'` Nome del database in cui deve verificarsi l'errore affinché l'avviso venga generato. il *database* è di **tipo sysname.** I nomi racchiusi tra parentesi quadre ([ ]) non sono ammessi. Il valore predefinito è NULL.  
   
-`[ @event_description_keyword = ] 'event_description_keyword'`Sequenza di caratteri che è necessario trovare nella descrizione dell'errore nel log dei messaggi di errore. È possibile utilizzare i caratteri dei criteri di ricerca dell'espressione LIKE [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword* è di **tipo nvarchar (100)** e il valore predefinito è null. Questo parametro è utile per filtrare i nomi degli oggetti (ad esempio, **% customer_table%**).  
+`[ @event_description_keyword = ] 'event_description_keyword'` Sequenza di caratteri che è necessario trovare nella descrizione dell'errore nel log dei messaggi di errore. È possibile utilizzare i caratteri dei criteri di ricerca dell'espressione LIKE [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword* è di **tipo nvarchar (100)** e il valore predefinito è null. Questo parametro è utile per filtrare i nomi degli oggetti (ad esempio, **% customer_table%**).  
   
-`[ @job_id = ] job_id`Numero di identificazione del processo. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null. Se *job_id* è specificato, è necessario omettere *job_name* .  
+`[ @job_id = ] job_id` Numero di identificazione del processo. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null. Se *job_id* è specificato, è necessario omettere *job_name* .  
   
-`[ @job_name = ] 'job_name'`Nome del processo eseguito in risposta a questo avviso. *job_name* è di **tipo sysname**e il valore predefinito è null. Se *job_name* è specificato, è necessario omettere *job_id* .  
+`[ @job_name = ] 'job_name'` Nome del processo eseguito in risposta a questo avviso. *job_name* è di **tipo sysname**e il valore predefinito è null. Se *job_name* è specificato, è necessario omettere *job_id* .  
   
-`[ @occurrence_count = ] occurrence_count`Reimposta il numero di volte in cui si è verificato l'avviso. *occurrence_count* è di **tipo int**e il valore predefinito è null. può essere impostato solo su **0**.  
+`[ @occurrence_count = ] occurrence_count` Reimposta il numero di volte in cui si è verificato l'avviso. *occurrence_count* è di **tipo int**e il valore predefinito è null. può essere impostato solo su **0**.  
   
-`[ @count_reset_date = ] count_reset_date`Reimposta la data dell'ultima reimpostazione del numero di occorrenze. *count_reset_date* è di **tipo int**e il valore predefinito è null.  
+`[ @count_reset_date = ] count_reset_date` Reimposta la data dell'ultima reimpostazione del numero di occorrenze. *count_reset_date* è di **tipo int**e il valore predefinito è null.  
   
-`[ @count_reset_time = ] count_reset_time`Reimposta l'ora dell'ultima reimpostazione del numero di occorrenze. *count_reset_time* è di **tipo int**e il valore predefinito è null.  
+`[ @count_reset_time = ] count_reset_time` Reimposta l'ora dell'ultima reimpostazione del numero di occorrenze. *count_reset_time* è di **tipo int**e il valore predefinito è null.  
   
-`[ @last_occurrence_date = ] last_occurrence_date`Reimposta la data dell'ultima volta in cui l'avviso è stato generato. *last_occurrence_date* è di **tipo int**e il valore predefinito è null. può essere impostato solo su **0**.  
+`[ @last_occurrence_date = ] last_occurrence_date` Reimposta la data dell'ultima volta in cui l'avviso è stato generato. *last_occurrence_date* è di **tipo int**e il valore predefinito è null. può essere impostato solo su **0**.  
   
-`[ @last_occurrence_time = ] last_occurrence_time`Reimposta l'ora dell'ultima verifica dell'avviso. *last_occurrence_time* è di **tipo int**e il valore predefinito è null. può essere impostato solo su **0**.  
+`[ @last_occurrence_time = ] last_occurrence_time` Reimposta l'ora dell'ultima verifica dell'avviso. *last_occurrence_time* è di **tipo int**e il valore predefinito è null. può essere impostato solo su **0**.  
   
-`[ @last_response_date = ] last_response_date`Reimposta la data dell'ultima risposta all'avviso da parte del servizio SQLServerAgent. *last_response_date* è di **tipo int**e il valore predefinito è null. può essere impostato solo su **0**.  
+`[ @last_response_date = ] last_response_date` Reimposta la data dell'ultima risposta all'avviso da parte del servizio SQLServerAgent. *last_response_date* è di **tipo int**e il valore predefinito è null. può essere impostato solo su **0**.  
   
-`[ @last_response_time = ] last_response_time`Reimposta l'ora dell'ultima risposta all'avviso da parte del servizio SQLServerAgent. *last_response_time* è di **tipo int**e il valore predefinito è null. può essere impostato solo su **0**.  
+`[ @last_response_time = ] last_response_time` Reimposta l'ora dell'ultima risposta all'avviso da parte del servizio SQLServerAgent. *last_response_time* è di **tipo int**e il valore predefinito è null. può essere impostato solo su **0**.  
   
-`[ @raise_snmp_trap = ] raise_snmp_trap`Riservati.  
+`[ @raise_snmp_trap = ] raise_snmp_trap` Riservati.  
   
-`[ @performance_condition = ] 'performance_condition'`Valore espresso nel formato **'**_itemcomparatorvalue_**'**. *performance_condition* è di **tipo nvarchar (512)** e il valore predefinito è null ed è costituito da questi elementi.  
+`[ @performance_condition = ] 'performance_condition'` Valore espresso nel formato **'**_itemcomparatorvalue_**'**. *performance_condition* è di **tipo nvarchar (512)** e il valore predefinito è null ed è costituito da questi elementi.  
   
-|Componente del formato|Description|  
+|Componente del formato|Descrizione|  
 |--------------------|-----------------|  
 |*Elemento*|Oggetto prestazioni, contatore delle prestazioni o istanza denominata del contatore|  
-|*Confronto*|Uno di questi operatori: **>** , **<** ,**=**|  
+|*Confronto*|Uno di questi operatori: **>** , **<** , **=**|  
 |*Valore*|Valore numerico del contatore|  
   
-`[ @category_name = ] 'category'`Nome della categoria di avvisi. *Category* è di **tipo sysname** e il valore predefinito è null.  
+`[ @category_name = ] 'category'` Nome della categoria di avvisi. *Category* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @wmi_namespace = ] 'wmi_namespace'`Spazio dei nomi WMI in cui eseguire query per gli eventi. *wmi_namespace* è di **tipo sysname**e il valore predefinito è null.  
+`[ @wmi_namespace = ] 'wmi_namespace'` Spazio dei nomi WMI in cui eseguire query per gli eventi. *wmi_namespace* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @wmi_query = ] 'wmi_query'`Query che specifica l'evento WMI per l'avviso. *wmi_query* è di **tipo nvarchar (512)** e il valore predefinito è null.  
+`[ @wmi_query = ] 'wmi_query'` Query che specifica l'evento WMI per l'avviso. *wmi_query* è di **tipo nvarchar (512)** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -149,8 +150,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_alert &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [sp_help_alert &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
+ [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
+ [sp_help_alert &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

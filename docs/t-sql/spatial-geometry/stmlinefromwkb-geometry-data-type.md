@@ -1,4 +1,5 @@
 ---
+description: STMLineFromWKB (tipo di dati geometry)
 title: STMLineFromWKB (tipo di dati geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 00a8a8e7-11d6-47a0-b971-00e60f7877ce
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b0d9da3d43d82cce37ce12b60c84572af7541f2b
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 675a76c43e34367586c1042aaa830679940223a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445022"
 ---
 # <a name="stmlinefromwkb-geometry-data-type"></a>STMLineFromWKB (tipo di dati geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
 
 ## <a name="arguments"></a>Argomenti
  *WKB_multilinestring*  
- Rappresentazione WKB dell'istanza **geometryMultiLineString** da restituire. *WKB_multilinestring* è un'espressione **varbinary(max)** .  
+ Rappresentazione WKB dell'istanza **geometryMultiLineString** da restituire. *WKB_multilinestring* è un'espressione **varbinary(max)**.  
   
  *SRID*  
  Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geometryMultiLineString** da restituire.  
@@ -52,7 +53,7 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
   
  Tipo OGC: **MultiLineString**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questo metodo genererà un'eccezione **FormatException** se l'input non è formattato in modo corretto.  
   
 ## <a name="examples"></a>Esempi  

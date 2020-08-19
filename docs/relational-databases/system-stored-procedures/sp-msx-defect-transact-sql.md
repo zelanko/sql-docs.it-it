@@ -1,4 +1,5 @@
 ---
+description: sp_msx_defect (Transact-SQL)
 title: sp_msx_defect (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5968f8ae8c44f5a20ca93b10c653c950c842cadc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8ad8a12d53113f394e2df1a70456261867471ab5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446891"
 ---
 # <a name="sp_msx_defect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @forced_defection = ] forced_defection`Specifica se forzare o meno l'esclusione se il SQLServerAgent master è stato perduto definitivamente a causa di un database **msdb** danneggiato in modo irreversibile oppure se non è stato eseguito alcun backup del database **msdb** . *forced_defection*è di **bit**e il valore predefinito è **0**, che indica che non deve verificarsi alcuna esclusione forzata. Il valore **1** impone la defezione.  
+`[ @forced_defection = ] forced_defection` Specifica se forzare o meno l'esclusione se il SQLServerAgent master è stato perduto definitivamente a causa di un database **msdb** danneggiato in modo irreversibile oppure se non è stato eseguito alcun backup del database **msdb** . *forced_defection*è di **bit**e il valore predefinito è **0**, che indica che non deve verificarsi alcuna esclusione forzata. Il valore **1** impone la defezione.  
   
  Dopo aver forzato un'esclusione eseguendo **sp_msx_defect**, un membro del ruolo predefinito del server **sysadmin** nel SQLServerAgent master deve eseguire il comando seguente per completare l'esclusione:  
   
@@ -63,7 +64,7 @@ EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defec
  Per eseguire questa stored procedure, è necessario che gli utenti siano membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_msx_enlist &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)   
+ [sp_msx_enlist &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

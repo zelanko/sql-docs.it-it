@@ -1,4 +1,5 @@
 ---
+description: sp_register_custom_scripting (Transact-SQL)
 title: sp_register_custom_scripting (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80736db0e2356d3592744393ff8964ac6f6073c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 35e70da9de3239fa7f147acf8ffe5a6ecc724606
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891506"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446865"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,25 +41,25 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @type = ] 'type'`Tipo di stored procedure o script personalizzato da registrare. il *tipo* è **varchar (16)** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
+`[ @type = ] 'type'` Tipo di stored procedure o script personalizzato da registrare. il *tipo* è **varchar (16)** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
-|**inserire**|La stored procedure personalizzata registrata viene eseguita quando viene replicata un'istruzione INSERT.|  
+|**insert**|La stored procedure personalizzata registrata viene eseguita quando viene replicata un'istruzione INSERT.|  
 |**update**|La stored procedure personalizzata registrata viene eseguita quando viene replicata un'istruzione UPDATE.|  
 |**delete**|La stored procedure personalizzata registrata viene eseguita quando viene replicata un'istruzione DELETE.|  
 |**custom_script**|Lo script viene eseguito alla fine del trigger DDL (Data Definition Language).|  
   
-`[ @value = ] 'value'`Nome di un stored procedure o nome e percorso completo del [!INCLUDE[tsql](../../includes/tsql-md.md)] file di script in fase di registrazione. *value* è di **tipo nvarchar (1024)** e non prevede alcun valore predefinito.  
+`[ @value = ] 'value'` Nome di un stored procedure o nome e percorso completo del [!INCLUDE[tsql](../../includes/tsql-md.md)] file di script in fase di registrazione. *value* è di **tipo nvarchar (1024)** e non prevede alcun valore predefinito.  
   
 > [!NOTE]  
 >  Se si specifica NULL per il parametro *value*, verrà annullata la registrazione di uno script precedentemente registrato, che corrisponde all'esecuzione [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  
   
  Quando il valore di *tipo* è **custom_script**, è previsto il nome e il percorso completo di un [!INCLUDE[tsql](../../includes/tsql-md.md)] file di script. In caso contrario, il *valore* deve corrispondere al nome di un stored procedure registrato.  
   
-`[ @publication = ] 'publication'`Nome della pubblicazione per cui viene registrato lo script o la stored procedure personalizzata. *Publication* è di **tipo sysname**e il valore predefinito è **null**.  
+`[ @publication = ] 'publication'` Nome della pubblicazione per cui viene registrato lo script o la stored procedure personalizzata. *Publication* è di **tipo sysname**e il valore predefinito è **null**.  
   
-`[ @article = ] 'article'`Nome dell'articolo per cui viene registrato lo script o la stored procedure personalizzata. *article* è di **tipo sysname**e il valore predefinito è **null**.  
+`[ @article = ] 'article'` Nome dell'articolo per cui viene registrato lo script o la stored procedure personalizzata. *article* è di **tipo sysname**e il valore predefinito è **null**.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -72,6 +73,6 @@ sp_register_custom_scripting [ @type  = ] 'type'
  Solo i membri del ruolo predefinito del server **sysadmin** , del ruolo predefinito del database **db_owner** o del ruolo predefinito del database **db_ddladmin** possono eseguire **sp_register_custom_scripting**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_unregister_custom_scripting &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  
+ [sp_unregister_custom_scripting &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  
   
   

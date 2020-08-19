@@ -1,4 +1,5 @@
 ---
+description: sp_refreshview (Transact-SQL)
 title: sp_refreshview (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dbc12b5e9013e8cbb5fb223f473e68c2e1cab445
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 11b605bd505a88215258afc39c24735d95e56ab6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891517"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446911"
 ---
 # <a name="sp_refreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_refreshview [ @viewname = ] 'viewname'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @viewname = ] 'viewname'`Nome della vista. *viewName* è di **tipo nvarchar**e non prevede alcun valore predefinito. *viewName* può essere un identificatore multipart, ma può fare riferimento solo alle viste nel database corrente.  
+`[ @viewname = ] 'viewname'` Nome della vista. *viewName* è di **tipo nvarchar**e non prevede alcun valore predefinito. *viewName* può essere un identificatore multipart, ma può fare riferimento solo alle viste nel database corrente.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o un numero diverso da zero (esito negativo)  
@@ -75,9 +76,9 @@ WHERE so.type = 'V' AND sed.referenced_id = OBJECT_ID('Person.Person');
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
- [sp_refreshsqlmodule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
+ [sp_refreshsqlmodule &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
   
   

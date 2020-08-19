@@ -1,4 +1,5 @@
 ---
+description: RECONFIGURE (Transact-SQL)
 title: RECONFIGURE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/20/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44ccb855d3a9a4d545d2c882b1d3ff7b788419d2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bab30e48ce9b9452ab3e8c28ad409df30a6516aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915617"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445473"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ RECONFIGURE [ WITH OVERRIDE ]
     
  Praticamente qualsiasi opzione di configurazione può essere riconfigurata tramite l'opzione WITH OVERRIDE, salvo alcuni casi che possono generare errori irreversibili. Ad esempio l'opzione **min server memory** non può essere configurata con un valore superiore a quello specificato nell'opzione di configurazione **max server memory**.
       
-## <a name="remarks"></a>Osservazioni    
+## <a name="remarks"></a>Commenti    
  **sp_configure** non accetta nuovi valori di opzioni di configurazione non compresi nell'intervallo valido previsto per ogni opzione di configurazione.    
     
  L'istruzione RECONFIGURE non è consentita in una transazione esplicita o implicita. Quando si riconfigurano diverse opzioni contemporaneamente, in caso di esito negativo di una o più delle operazioni di riconfigurazione nessuna delle operazioni di riconfigurazione avrà effetto.    

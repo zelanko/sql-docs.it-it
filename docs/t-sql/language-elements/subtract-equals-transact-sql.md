@@ -1,4 +1,5 @@
 ---
+description: -= (assegnazione di sottrazione) (Transact-SQL)
 title: -= (assegnazione di sottrazione) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -22,12 +23,12 @@ ms.assetid: 2a2056b5-1dfa-4ea8-8cfc-6331a2f94da9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9eda430651a7894fe55e1ab626d579cd8a9d4a22
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: b7afd8322e6f5388c9000bbed4521121de38448d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445382"
 ---
 # <a name="--subtraction-assignment-transact-sql"></a>-= (assegnazione di sottrazione) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +50,7 @@ expression -= expression
 ## <a name="result-types"></a>Tipi restituiti  
  Restituisce il tipo di dati dell'argomento con la priorità più alta. Per altre informazioni, vedere [Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per altre informazioni, vedere [- &#40;sottrazione&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/subtract-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  

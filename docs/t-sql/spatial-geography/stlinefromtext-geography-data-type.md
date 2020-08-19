@@ -1,4 +1,5 @@
 ---
+description: STLineFromText (tipo di dati geography)
 title: STLineFromText (tipo di dati geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e0c05bde-077d-4ce2-b4ec-8861db9b996d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5a18ea2d855cd40c15eb3659a782a706139f7a4f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e4eaf35bb927fc876725a134f50b74bf73e5c48f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552482"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445169"
 ---
 # <a name="stlinefromtext-geography-data-type"></a>STLineFromText (tipo di dati geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Argomenti
  *linestring_tagged_text*  
- Rappresentazione WKT dell'istanza **geographyLineString** da restituire. *linestring_tagged_text* è un'espressione **nvarchar(max)** .  
+ Rappresentazione WKT dell'istanza **geographyLineString** da restituire. *linestring_tagged_text* è un'espressione **nvarchar(max)**.  
   
  *SRID*  
  Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geographyLineString** da restituire.  
@@ -52,7 +53,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
   
  Tipo OGC: **LineString**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questo metodo genera un'eccezione **FormatException** se l'input non è formattato in modo corretto.  
   
 ## <a name="examples"></a>Esempi  

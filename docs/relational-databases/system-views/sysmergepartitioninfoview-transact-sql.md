@@ -1,4 +1,5 @@
 ---
+description: sysmergepartitioninfoview (Transact-SQL)
 title: sysmergepartitioninfoview (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4b48506662283ab71516affa7665a6b0c0af9d3c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c194b2442762f2ec9373cc730cbc4835bce45983
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881245"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446519"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85881245"
 |**sync_objid**|**int**|ID di oggetto della vista che rappresenta il set di dati sincronizzato.|  
 |**view_type**|**tinyint**|Tipo di vista:<br /><br /> **0** = non è una vista; utilizzare tutti gli oggetti di base.<br /><br /> **1** = visualizzazione permanente.<br /><br /> **2** = visualizzazione temporanea.|  
 |**artid**|**uniqueidentifier**|Identificatore univoco per l'articolo specificato.|  
-|**Descrizione**|**nvarchar(255)**|Breve descrizione dell'articolo.|  
+|**description**|**nvarchar(255)**|Breve descrizione dell'articolo.|  
 |**pre_creation_command**|**tinyint**|Azione predefinita da eseguire quando viene creato l'articolo nel database di sottoscrizione:<br /><br /> **0** = nessuna: se la tabella esiste già nel Sottoscrittore, non viene eseguita alcuna azione.<br /><br /> **1** = Drop: Elimina la tabella prima di ricrearla.<br /><br /> **2** = Delete: rilascia un'eliminazione in base alla clausola WHERE nel filtro di subset.<br /><br /> **3** = troncamento: uguale a 2, ma elimina pagine anziché righe. La clausola WHERE in questo caso non viene utilizzata.|  
 |**pubid**|**uniqueidentifier**|ID della pubblicazione a cui appartiene l'articolo corrente.|  
 |**Nickname**|**int**|Mapping di un nome alternativo per l'identificazione dell'articolo.|  
@@ -108,9 +109,9 @@ ms.locfileid: "85881245"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestire le partizioni per una pubblicazione di tipo merge con filtri con parametri](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
- [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Viste di replica &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addmergepartition &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
- [sp_helpmergepartition &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)  
+ [Tabelle di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Viste di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addmergepartition &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
+ [sp_helpmergepartition &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)  
   
   

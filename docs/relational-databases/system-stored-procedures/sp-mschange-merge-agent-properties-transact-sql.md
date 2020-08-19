@@ -1,4 +1,5 @@
 ---
+description: sp_MSchange_merge_agent_properties (Transact-SQL)
 title: sp_MSchange_merge_agent_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65cb1e298293c0be44439fb732554baa2914788a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7e81812af12cf7789c48d890ced2aa06a5829ad0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893507"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446918"
 ---
 # <a name="sp_mschange_merge_agent_properties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,23 +44,23 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publisher_db = ] 'publisher_db'`Nome del database di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @subscriber = ] 'subscriber'`Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @subscriber = ] 'subscriber'` Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @subscriber_db = ] 'subscriber_db'`Nome del database di sottoscrizione. *subscriber_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @subscriber_db = ] 'subscriber_db'` Nome del database di sottoscrizione. *subscriber_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @property = ] 'property'`Proprietà della pubblicazione da modificare. *Property* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @property = ] 'property'` Proprietà della pubblicazione da modificare. *Property* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @value = ] 'value'`Nuovo valore della proprietà. *value* è di **tipo nvarchar (524)** e il valore predefinito è null.  
+`[ @value = ] 'value'` Nuovo valore della proprietà. *value* è di **tipo nvarchar (524)** e il valore predefinito è null.  
   
  Nella tabella seguente vengono descritte le proprietà del processo dell'agente di merge che è possibile modificare e le limitazioni previste per i valori di tali proprietà.  
   
-|Proprietà|valore|Description|  
+|Proprietà|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**description**||Breve descrizione della sottoscrizione.|  
 |**merge_job_login**||Account di accesso per l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzato per l'esecuzione dell'agente.|  
@@ -88,7 +89,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
  Solo i membri del ruolo predefinito del server **sysadmin** nel server di distribuzione possono eseguire **sp_MSchange_merge_agent_properties**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addmergepushsubscription_agent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
- [sp_addmergesubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
+ [sp_addmergepushsubscription_agent &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
+ [sp_addmergesubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
   
   

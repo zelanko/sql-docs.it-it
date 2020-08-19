@@ -1,4 +1,5 @@
 ---
+description: IHpublications (Transact-SQL)
 title: IHpublications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3297f557e170a9f9cb8f67d10b9339997fa184d4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0192dc6d2d01900b58a8dcb5fde34d46384adc50
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890296"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446608"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "85890296"
 |**queue_type**|**int**|Specifica il tipo di coda da utilizzare. I possibili valori sono i seguenti:<br /><br /> **1** = MSMQ, che usa [!INCLUDE[msCoName](../../includes/msconame-md.md)] Accodamento messaggi per archiviare le transazioni.<br /><br /> **2** = SQL, che usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per archiviare le transazioni.<br /><br /> Questa colonna non viene utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editori non.<br /><br /> Nota: l'utilizzo [!INCLUDE[msCoName](../../includes/msconame-md.md)] di Accodamento messaggi è stato deprecato e non è più supportato.<br /><br /> *Questa colonna non è supportata per i Publisher non SQL.*|  
 |**ad_guidname**|**sysname**|Specifica se la pubblicazione è pubblicata in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Un identificatore univoco globale (GUID) valido indica che la pubblicazione è pubblicata nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory e il GUID è l'oggetto di pubblicazione Active Directory corrispondente **objectGUID**. Se il valore è NULL, la pubblicazione non è pubblicata in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. *Questa colonna non è supportata per server di pubblicazione non SQL.*|  
 |**backward_comp_level**|**int**|Livello di compatibilità del database. I possibili valori sono i seguenti:<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .<br /><br /> *Questa colonna non è supportata per server di pubblicazione non SQL.*|  
-|**Descrizione**|**nvarchar(255)**|Voce descrittiva della pubblicazione.|  
+|**description**|**nvarchar(255)**|Voce descrittiva della pubblicazione.|  
 |**independent_agent**|**bit**|Specifica se per la pubblicazione è disponibile un agente di distribuzione autonomo.<br /><br /> **0** = la pubblicazione utilizza un agente di distribuzione condiviso e ogni coppia database del server di pubblicazione/database del Sottoscrittore dispone di un solo agente condiviso.<br /><br /> **1** = è presente una agente di distribuzione autonoma per questa pubblicazione.|  
 |**immediate_sync**|**bit**|Indica se i file di sincronizzazione vengono creati o ricreati ogni volta che viene eseguita la agente di snapshot, dove **1** indica che vengono creati ogni volta che viene eseguito l'agente.|  
 |**allow_push**|**bit**|Indica se le sottoscrizioni push sono consentite nella pubblicazione, dove **1** indica che sono consentite.|  
@@ -73,12 +74,12 @@ ms.locfileid: "85890296"
 |**options**|**int**|Mappa di bit che specifica opzioni di pubblicazione aggiuntive. I possibili valori delle opzioni bit per bit sono i seguenti:<br /><br /> **0x1** : abilitata per la replica peer-to-peer.<br /><br /> **0x2** -pubblica solo le modifiche locali.<br /><br /> **0x4** : abilitata per Sottoscrittori non SQL Server.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Viste di replica &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addpublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_changepublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_helppublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
- [syspublications &#40;vista di sistema&#41; &#40;&#41;Transact-SQL](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)   
- [syspublications &#40;&#41;Transact-SQL](../../relational-databases/system-tables/syspublications-transact-sql.md)  
+ [Tabelle di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Viste di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addpublication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_changepublication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
+ [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
+ [syspublications &#40;vista di sistema&#41; &#40;&#41;Transact-SQL ](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)   
+ [syspublications &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/syspublications-transact-sql.md)  
   
   

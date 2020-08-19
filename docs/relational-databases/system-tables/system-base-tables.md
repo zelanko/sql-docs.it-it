@@ -1,4 +1,5 @@
 ---
+description: Tabelle di base di sistema
 title: Tabelle di base di sistema | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cd89fffb6513306c8877ce6b02a3fadfceb6f1cf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c60aad12977f5260cc108697e52245bc8a37d9d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889229"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446538"
 ---
 # <a name="system-base-tables"></a>Tabelle di base di sistema
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,10 +43,10 @@ ms.locfileid: "85889229"
 ## <a name="system-base-tables"></a>Tabelle di base di sistema  
  Nella tabella seguente viene indicata e descritta ogni un tabella di base sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Tabella di base|Description|  
+|Tabella di base|Descrizione|  
 |----------------|-----------------|  
 |**sys.sysschobjs**|Esiste in ogni database. Ogni riga rappresenta un oggetto del database.|  
-|**sys.sysbinobjs**|Esiste in ogni database. Contiene una riga per ogni entità Service Broker del database. Le entità Service Broker includono gli elementi seguenti:<br /><br /> Tipo di messaggio<br /><br /> Contratto servizio<br /><br /> Service<br /><br /> I nomi e i tipi utilizzano regole di confronto binarie predefinite.|  
+|**sys.sysbinobjs**|Esiste in ogni database. Contiene una riga per ogni entità Service Broker del database. Le entità Service Broker includono gli elementi seguenti:<br /><br /> Tipo di messaggio<br /><br /> Contratto servizio<br /><br /> Servizio<br /><br /> I nomi e i tipi utilizzano regole di confronto binarie predefinite.|  
 |**sys.sysclsobjs**|Esiste in ogni database. Contiene una riga per ogni entità classificata che condivide le stesse proprietà comuni che includono gli elementi seguenti:<br /><br /> Assembly<br /><br /> Dispositivo di backup<br /><br /> Catalogo full-text<br /><br /> Funzione di partizione<br /><br /> Schema di partizione<br /><br /> Filegroup<br /><br /> Chiave di offuscamento|  
 |**sys.sysnsobjs**|Esiste in ogni database. Contiene una riga per ogni entità dell'ambito dello spazio dei nomi. Questa tabella viene utilizzata per archiviare le entità di raccolta XML.|  
 |**sys.syscolpars**|Esiste in ogni database. Contiene una riga per ogni colonna di una tabella, vista o funzione con valori di tabella. Contiene anche righe per ogni parametro di una procedura o funzione.|  

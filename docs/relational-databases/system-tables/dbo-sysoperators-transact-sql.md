@@ -1,4 +1,5 @@
 ---
+description: dbo.sysoperators (Transact-SQL)
 title: Operatori di dbo.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7581d1456524c8294e470a952fb55f6f052973b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a16b2af8e9752b0df51a1cc60a227e0b055b798
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446633"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,6 +56,6 @@ ms.locfileid: "85890469"
 |**category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Agent tabelle &#40;&#41;Transact-SQL](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
+ [SQL Server Agent tabelle &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
   
   

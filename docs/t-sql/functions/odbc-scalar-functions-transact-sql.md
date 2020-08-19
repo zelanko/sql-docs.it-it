@@ -1,4 +1,5 @@
 ---
+description: Funzioni scalari ODBC (Transact-SQL)
 title: Funzioni scalari ODBC (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -52,12 +53,12 @@ ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebe21e82e6065aa28e4967b7d2f4d13f0fafe9d6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4ce160465056b18c7f6f347b0587603dd489fa06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003819"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445693"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>Funzioni scalari ODBC (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

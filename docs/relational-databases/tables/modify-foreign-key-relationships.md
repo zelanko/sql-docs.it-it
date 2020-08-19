@@ -1,4 +1,5 @@
 ---
+description: Modifica di relazioni di chiave esterna
 title: Modificare relazioni di chiave esterna | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2017
@@ -17,12 +18,12 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d0c35f9ed49e8b11faf515ab7d270d2737a22d97
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cfad7e7107c5391280331846e9275ef10112adb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007091"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446403"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modifica di relazioni di chiave esterna
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -81,7 +82,7 @@ ms.locfileid: "86007091"
      **Categoria Generale**  
      Viene espansa per visualizzare **Verifica dati esistenti durante la creazione o la riabilitazione** e **Specifica tabelle e colonne**.  
   
-     **Check Existing Data on Creation or Re-Enabling**  
+     **Verifica dati esistenti durante la creazione o la riabilitazione**  
      Consente di verificare in base al vincolo tutti i dati esistenti nella tabella prima della creazione o della riabilitazione del vincolo.  
   
      **Categoria Specifica tabelle e colonne**  
@@ -142,7 +143,7 @@ ms.locfileid: "86007091"
   
     -   **Imposta predefinito** Viene impostato il valore predefinito stabilito per la colonna se per tutte le colonne chiave esterna della tabella sono stati impostati valori predefiniti.  
   
-4.  Scegliere **Salva**_nome tabella_ dal menu **File**.  
+4.  Nel menu **File** fare clic su **Salva**_nome tabella_.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per modificare una chiave esterna**  

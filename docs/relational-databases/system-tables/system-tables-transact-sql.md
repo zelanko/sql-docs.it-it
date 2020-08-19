@@ -1,4 +1,5 @@
 ---
+description: Tabelle di sistema (Transact-SQL)
 title: Tabelle di sistema (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bcd2869c583f51b5ab9d00a7bbb68e9dd47b534d
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: bb4aba7e3ad13edd1d71266b96d6ef956a162cba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122762"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446593"
 ---
 # <a name="system-tables-transact-sql"></a>Tabelle di sistema (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,22 +60,22 @@ ms.locfileid: "87122762"
 
         [Tabelle Change Data Capture &#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)
 
-        [Tabelle del piano di manutenzione del database &#40;&#41;Transact-SQL](../../relational-databases/system-tables/database-maintenance-plan-tables-transact-sql.md)
+        [Tabelle del piano di manutenzione del database &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/database-maintenance-plan-tables-transact-sql.md)
 
         [Tabelle degli eventi estesi di SQL Server &#40;Transact-SQL&#41;](../../relational-databases/extended-events/xevents-references-system-objects.md#system-tables)
 
-        [Integration Services tabelle &#40;&#41;Transact-SQL](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)
+        [Integration Services tabelle &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)
     :::column-end:::
     :::column:::
         [Tabelle di log shipping &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)
 
         [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)
 
-        [SQL Server Agent tabelle &#40;&#41;Transact-SQL](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)
+        [SQL Server Agent tabelle &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)
 
-        [sys.sysoledbusers &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysoledbusers-transact-sql.md)
+        [sys.sysoledbusers &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-sysoledbusers-transact-sql.md)
 
-        [systranschemas &#40;&#41;Transact-SQL](../../relational-databases/system-views/systranschemas-transact-sql.md)
+        [systranschemas &#40;&#41;Transact-SQL ](../../relational-databases/system-views/systranschemas-transact-sql.md)
     :::column-end:::
 :::row-end:::
 

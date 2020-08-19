@@ -1,4 +1,5 @@
 ---
+description: Funzioni delle regole di confronto - TERTIARY_WEIGHTS (Transact-SQL)
 title: TERTIARY_WEIGHTS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ ms.assetid: 7e1f5350-260b-4c61-8c84-69bb1a214f1f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f202d45b9c815154f252c0c016fe4931dbef069e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 1a6cf4546193b02050c0559765fe3fa4ad368e02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112140"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445895"
 ---
 # <a name="collation-functions---tertiary_weights-transact-sql"></a>Funzioni delle regole di confronto - TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,9 +48,9 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 Un'[espressione](../../t-sql/language-elements/expressions-transact-sql.md) stringa di tipo **char**, **varchar** o **varchar(max)** definita tramite una regola di confronto SQL terziaria. Per un elenco di queste regole di confronto, vedere la sezione Osservazioni.
   
 ## <a name="return-types"></a>Tipi restituiti
-`TERTIARY_WEIGHTS` restituisce **varbinary** quando *non_Unicode_character_string_expression* è **char** o **varchar** e restituisce **varbinary(max)** quando *non_Unicode_character_string_expression* ha il tipo di dati **varchar(max)** .
+`TERTIARY_WEIGHTS` restituisce **varbinary** quando *non_Unicode_character_string_expression* è **char** o **varchar** e restituisce **varbinary(max)** quando *non_Unicode_character_string_expression* ha il tipo di dati **varchar(max)**.
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 `TERTIARY_WEIGHTS` restituisce NULL quando una raccolta SQL terziaria non definisce *non_Unicode_character_string_expression*. La tabella seguente elenca le regole di confronto SQL terziarie:
   
 |ID tipo di ordinamento|Regole di confronto SQL|  
@@ -87,7 +88,7 @@ Un'[espressione](../../t-sql/language-elements/expressions-transact-sql.md) stri
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-Usare `TERTIARY_WEIGHTS` per la definizione di una colonna calcolata definita in base ai valori di una colonna di tipo **char**, **varchar** o **varchar(max)** . La definizione dell'indice sia nella colonna calcolata che nella colonna di tipo **char**, **varchar** o **varchar(max)** può migliorare le prestazioni quando la clausola ORDER BY di una query specifica quella colonna **char**, **varchar** o **varchar(max)** .
+Usare `TERTIARY_WEIGHTS` per la definizione di una colonna calcolata definita in base ai valori di una colonna di tipo **char**, **varchar** o **varchar(max)**. La definizione dell'indice sia nella colonna calcolata che nella colonna di tipo **char**, **varchar** o **varchar(max)** può migliorare le prestazioni quando la clausola ORDER BY di una query specifica quella colonna **char**, **varchar** o **varchar(max)**.
   
 ## <a name="examples"></a>Esempi  
 In questo esempio viene creata una colonna calcolata in una tabella in cui la funzione `TERTIARY_WEIGHTS` viene applicata ai valori di una colonna di tipo `char`:
@@ -99,7 +100,7 @@ Col2 AS TERTIARY_WEIGHTS(Col1));
 GO   
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 [Clausola ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
   
   

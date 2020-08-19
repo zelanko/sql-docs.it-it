@@ -1,4 +1,5 @@
 ---
+description: sp_restoremergeidentityrange (Transact-SQL)
 title: sp_restoremergeidentityrange (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3051a630fe797e6856f110348af945a681bb83ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1858ef748ebf063fe3e541542003f46861821eeb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899258"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446811"
 ---
 # <a name="sp_restoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **All**. Se viene specificato questo parametro, vengono ripristinati solo gli intervalli di valori Identity per la pubblicazione specificata.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **All**. Se viene specificato questo parametro, vengono ripristinati solo gli intervalli di valori Identity per la pubblicazione specificata.  
   
-`[ @article = ] 'article'`Nome dell'articolo. *article* è di **tipo sysname**e il valore predefinito è **All**. Se specificato, vengono ripristinati solo gli intervalli di valori Identity per l'articolo specificato.  
+`[ @article = ] 'article'` Nome dell'articolo. *article* è di **tipo sysname**e il valore predefinito è **All**. Se specificato, vengono ripristinati solo gli intervalli di valori Identity per l'articolo specificato.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -54,8 +55,8 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_restoremergeidentityrange**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addmergearticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [sp_changemergearticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
- [Replica colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md)  
+ [sp_addmergearticle &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_changemergearticle &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
+ [Replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
   

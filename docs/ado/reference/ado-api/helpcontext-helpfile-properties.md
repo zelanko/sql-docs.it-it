@@ -1,4 +1,5 @@
 ---
+description: Proprietà HelpContext e HelpFile
 title: HelpContext, proprietà di filelima | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13fb3f0b5bf55ac9acb525183eba6d8645f4de62
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 628d3c0d01cc1b62304627fb310705b093976f8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758717"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443483"
 ---
 # <a name="helpcontext-helpfile-properties"></a>Proprietà HelpContext e HelpFile
 Indica il file della guida e l'argomento associato a un oggetto [Error](../../../ado/reference/ado-api/error-object.md) .  

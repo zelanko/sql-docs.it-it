@@ -1,4 +1,5 @@
 ---
+description: Esempio di metodi Execute, Requery e Clear (VB)
 title: Esempio di metodi Execute, Requery e Clear (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ac9a84c9b4780ad149d3c614b9e3c52494ace8b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3e3a1690414f136adb9de3f54b48720b298f20c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760167"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443873"
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>Esempio di metodi Execute, Requery e Clear (VB)
 Questo esempio illustra il metodo **Execute** quando viene eseguito da un oggetto [Command](../../../ado/reference/ado-api/command-object-ado.md) e da un oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . USA anche il metodo [Requery](../../../ado/reference/ado-api/requery-method.md) per recuperare i dati correnti in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e il metodo [Clear](../../../ado/reference/ado-api/clear-method-ado.md) per cancellare il contenuto della raccolta [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) . La raccolta **Errors** è accessibile tramite l'oggetto **Connection** della proprietà [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Per eseguire questa procedura, sono necessarie le procedure ExecuteCommand e PrintOutput.  

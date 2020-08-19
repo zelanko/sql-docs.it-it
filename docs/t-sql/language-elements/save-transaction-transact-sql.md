@@ -1,4 +1,5 @@
 ---
+description: SAVE TRANSACTION (Transact-SQL)
 title: SAVE TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5b19832b7bf14cf872e6d90db53b72ea3ac703a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 03af390ecf43a70d3d80ad876e1d9944cd9297bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445458"
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +57,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
  @*savepoint_variable*  
  Nome di una variabile definita dall'utente contenente un nome di punto di salvataggio valido. La variabile deve essere dichiarata con un tipo di dati **char**, **varchar**, **nchar** o **nvarchar**. È possibile passare alla variabile più di 32 caratteri, ma in tal caso verranno utilizzati solo i primi 32.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Un utente può impostare un punto di salvataggio o marcatore all'interno di una transazione. Il punto di salvataggio consente di contrassegnare il punto fino a cui conservare una transazione se parte della transazione viene annullata in modo condizionale. Se si esegue il rollback di una transazione fino a un punto di salvataggio, è necessario che la transazione venga completata (se necessario con più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e con un'istruzione COMMIT TRANSACTION) oppure annullata completamente (tramite il rollback fino all'inizio della transazione). Per annullare un'intera transazione, usare la sintassi ROLLBACK TRANSACTION *transaction_name*. In tal caso, verranno annullate tutte le istruzioni o procedure della transazione.  
   
  In una transazione è consentito l'utilizzo di nomi di punto di salvataggio duplicati. Un'istruzione ROLLBACK TRANSACTION contenente un nome di punto di salvataggio, tuttavia, eseguirà il rollback della transazione solo fino all'istruzione SAVE TRANSACTION più recente che utilizza tale nome.  

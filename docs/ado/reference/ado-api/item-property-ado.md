@@ -1,4 +1,5 @@
 ---
+description: Proprietà Item (ADO)
 title: Proprietà Item (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -45,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bc6cb28823a2b8faf79e4bf44fb405446e12514
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d2581d0834325d56daa8ea1043ac3915942961eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242661"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443403"
 ---
 # <a name="item-property-ado"></a>Proprietà Item (ADO)
 Indica un membro specifico di una raccolta, in base al nome o al numero ordinale.  
@@ -68,7 +69,7 @@ Set object = collection.Item ( Index )
  *Index*  
  Espressione **Variant** che restituisce il nome o il numero ordinale di un oggetto in una raccolta.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare la proprietà **Item** per restituire un oggetto specifico in una raccolta. Se **Item** non riesce a trovare un oggetto nella raccolta corrispondente all'argomento *index* , si verificherà un errore. Inoltre, alcune raccolte non supportano gli oggetti denominati; per queste raccolte, è necessario usare i riferimenti numerici ordinali.  
   
  La proprietà **Item** è la proprietà predefinita per tutte le raccolte. Pertanto, i seguenti formati di sintassi sono intercambiabili:  

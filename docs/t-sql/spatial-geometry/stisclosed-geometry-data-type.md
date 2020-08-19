@@ -1,4 +1,5 @@
 ---
+description: STIsClosed (tipo di dati geometry)
 title: STIsClosed (tipo di dati geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 14edbb22-df7b-4b8a-b16c-ac477a5d32c1
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 61c72f4953bfad6d54c46b3b710d2f9c0b9f98d7
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c92d311ba67c71f77fef8052bcfe8e5938d1f1b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445039"
 ---
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed (tipo di dati geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ Restituisce 1 se i punti di inizio e di fine dell'istanza **geometry** specifica
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questo metodo restituisce 0 se una figura di un'istanza **geometry** è costituita da punti o se l'istanza è vuota.  
   
  Tutte le istanze **Polygon** sono considerate chiuse.  

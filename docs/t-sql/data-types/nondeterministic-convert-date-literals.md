@@ -1,4 +1,5 @@
 ---
+description: Conversione non deterministica di stringhe di valori letterali data in valori DATE
 title: Conversione non deterministica di valori letterali data | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2018
@@ -12,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eba0e28d8f2d5587a07308a4ffcbf5f7eaedf278
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c1d50cc58995479aa61b4c62639f9d13de6f400
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68119846"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445869"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Conversione non deterministica di stringhe di valori letterali data in valori DATE
 
@@ -81,7 +82,7 @@ The preceding claim of "no guarantee" might be incorrect, in the minds of the SQ
 
 In Cina e in Giappone, il formato DATEFORMAT usato è **ymd**. Le parti del formato sono in una sequenza ragionevole, dalla più grande alla più piccola. Di conseguenza, l'ordinamento di questo formato è efficiente. Questo formato viene considerato il formato _internazionale_. Le quattro cifre dell'anno, infatti, non lasciano spazio ad ambiguità e nessun paese al mondo usa il formato desueto **ydm**.
 
-In altri paesi, ad esempio Germania e Francia, DATEFORMAT è **dmy**, ovvero **'gg-mm-aaaa'** . Il formato **dmy** non consente un ordinamento efficiente, ma rappresenta una sequenza ragionevole, dall'unità più piccola alla più grande.
+In altri paesi, ad esempio Germania e Francia, DATEFORMAT è **dmy**, ovvero **'gg-mm-aaaa'**. Il formato **dmy** non consente un ordinamento efficiente, ma rappresenta una sequenza ragionevole, dall'unità più piccola alla più grande.
 
 Stati Uniti e Stati Federati di Micronesia sono gli unici paesi che usano il formato **mdy**, che non consente l'ordinamento. La sequenza mista del formato corrisponde al modello di pronuncia colloquiale delle date.
 
@@ -142,7 +143,7 @@ Anche la conversione di dati di tipo carattere non Unicode tra regole di confron
 
 
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Impostazione di una lingua di sessione](../../relational-databases/collations/set-a-session-language.md)
 - [Funzioni e tipi di dati di data e ora (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md)

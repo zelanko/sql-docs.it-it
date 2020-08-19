@@ -1,4 +1,5 @@
 ---
+description: nchar e nvarchar (Transact-SQL)
 title: nchar e nvarchar (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2019
@@ -16,12 +17,12 @@ ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63673258e2fa368544c6cc43158025770861a8f9
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 30a696079d07f0b4dc6c76ee78a712a553b10ef6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555606"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445943"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar e nvarchar (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +36,7 @@ Dati stringa a dimensione fissa. *n* definisce le dimensioni della stringa in co
 **nvarchar** [ ( n | **max** ) ]  
 Dati stringa a dimensione variabile. *n* definisce le dimensioni della stringa in coppie di byte e può essere un valore compreso tra 1 e 4.000. **max** indica che le dimensioni di archiviazione massime sono pari a 2^30-1 caratteri (2 GB). Le dimensioni di archiviazione, espresse in byte, sono pari al doppio di *n* byte + 2 byte. Per la codifica [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF), le dimensioni di archiviazione sono pari al doppio di *n* byte + 2 byte e anche il numero di caratteri che possono essere archiviati è *n*. Per la codifica UTF-16, le dimensioni di archiviazione sono ancora pari al doppio di *n* byte + 2 byte, ma il numero di caratteri che possono essere archiviati può essere inferiore a *n* perché i caratteri supplementari usano due coppie di byte, dette anche [coppie di surrogati](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF). I sinonimi ISO per **nvarchar** sono **national char varying** e **national character varying**.
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 Si pensa comunemente che in [NCHAR(*n*) e NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), *n* definisca il numero di caratteri. Invece in [NCHAR(*n*) e NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)*n* definisce la lunghezza della stringa in **coppie di byte** (da 0 a 4.000). *n* non definisce mai il numero di caratteri che è possibile archiviare, analogamente alla definizione di [CHAR(*n*) e VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md).   
 Si tende a pensare così perché quando si usano i caratteri definiti nell'intervallo Unicode (da 0 a 65.535), è possibile archiviare un carattere per ogni coppia di byte. Tuttavia, negli intervalli Unicode più elevati (65.536-1.114.111) un carattere può usare due coppie di byte. Ad esempio in una colonna definita come NCHAR(10) [!INCLUDE[ssde_md](../../includes/ssde_md.md)] può archiviare 10 caratteri che usano una coppia di byte (intervallo Unicode 0-65.535), ma meno di 10 caratteri quando usano due coppie di byte (intervallo Unicode 65.536-1.114.111). Per altre informazioni sull'archiviazione Unicode e sugli intervalli di caratteri, vedere [Differenze nell'archiviazione tra UTF-8 e UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).     
 
@@ -46,7 +47,7 @@ Se si usa **nchar** oppure **nvarchar**, si consiglia di:
 - Usare **nvarchar** quando le dimensioni delle voci di dati delle colonne presentano notevoli differenze.  
 - Usare **nvarchar(max)** quando le dimensioni delle voci di dati delle colonne variano in modo significativo e la lunghezza delle stringhe potrebbe essere superiore a 4.000 coppie di byte.  
   
-**sysname** è un tipo di dati di sistema definito dall'utente equivalente dal punto di vista funzionale a **nvarchar(128)** , anche se non ammette valori Null. **sysname** viene usato per fare riferimento a nomi di oggetti di database.
+**sysname** è un tipo di dati di sistema definito dall'utente equivalente dal punto di vista funzionale a **nvarchar(128)**, anche se non ammette valori Null. **sysname** viene usato per fare riferimento a nomi di oggetti di database.
   
 Agli oggetti che usano **nchar** o **nvarchar** vengono assegnate le regole di confronto predefinite del database, a meno che non vengano assegnate regole di confronto specifiche tramite la clausola COLLATE.
   

@@ -1,4 +1,5 @@
 ---
+description: OBJECTPROPERTYEX (Transact-SQL)
 title: OBJECTPROPERTYEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5083f6e8bf8fd47dfca6f5191a8ed9702714461c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 197b3c2f473a9711f2bf79e94d400f85224d8235
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445680"
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -120,15 +121,15 @@ OBJECTPROPERTYEX ( id , property )
 |IsView|Visualizzazione|Vista.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Tipo di dati di base: **int**|  
 |OwnerId|Qualsiasi oggetto con ambito schema|Proprietario dell'oggetto.<br /><br /> **Nota:** Il proprietario dello schema non corrisponde necessariamente al proprietario dell'oggetto. Ad esempio, gli oggetti figlio (per i quali il parametro *parent_object_id* è impostato su un valore diverso da Null) restituiscono sempre lo stesso ID di proprietario del padre.<br /><br /> Valore diverso da Null = ID utente del database del proprietario dell'oggetto.<br /><br /> NULL = Tipo di oggetto non supportato oppure ID di oggetto non valido.<br /><br /> Tipo di dati di base: **int**|  
 |SchemaId|Qualsiasi oggetto con ambito schema|ID dello schema associato all'oggetto.<br /><br /> Valore diverso da Null = ID dello schema dell'oggetto.<br /><br /> Tipo di dati di base: **int**|  
-|SystemDataAccess|Funzione, vista|L'oggetto accede a dati di sistema, cataloghi di sistema o tabelle di sistema virtuali nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0 = Nessuno<br /><br /> 1 = Lettura<br /><br /> Tipo di dati di base: **int**|  
+|SystemDataAccess|Funzione, vista|L'oggetto accede a dati di sistema, cataloghi di sistema o tabelle di sistema virtuali nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0 = Nessuna<br /><br /> 1 = Lettura<br /><br /> Tipo di dati di base: **int**|  
 |TableDeleteTrigger|Tabella|La tabella include un trigger DELETE.<br /><br /> >1 = ID del primo trigger del tipo specificato.<br /><br /> Tipo di dati di base: **int**|  
 |TableDeleteTriggerCount|Tabella|La tabella include il numero specificato di trigger DELETE.<br /><br /> Valore diverso da Null = Numero di trigger DELETE.<br /><br /> Tipo di dati di base: **int**|  
 |TableFullTextMergeStatus|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Indica se una tabella dispone di un indice full-text su cui è attualmente in corso un'operazione di unione.<br /><br /> 0 = La tabella non dispone di un indice full-text o sull'indice full-text non è in corso un'operazione di unione.<br /><br /> 1 = Sull'indice full-text è in corso un'operazione di unione.|  
 |TableFullTextBackgroundUpdateIndexOn|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Nella tabella è abilitato l'indice full-text ad aggiornamento in background (rilevamento automatico delle modifiche).<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> Tipo di dati di base: **int**|  
 |TableFulltextCatalogId|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> ID del catalogo full-text contenente i dati dell'indice full-text per la tabella.<br /><br /> Valore diverso da zero = ID del catalogo full-text associato all'indice univoco che identifica le righe di una tabella con indicizzazione full-text.<br /><br /> 0 = La tabella non include un indice full-text.<br /><br /> Tipo di dati di base: **int**|  
 |TableFullTextChangeTrackingOn|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Nella tabella è abilitato il rilevamento delle modifiche full-text.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> Tipo di dati di base: **int**|  
-|TableFulltextDocsProcessed|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Numero di righe elaborate dopo l'avvio dell'indicizzazione full-text. In una tabella sottoposta a indicizzazione ai fini della ricerca full-text tutte le colonne di una riga vengono considerate come appartenenti a un unico documento da indicizzare.<br /><br /> 0 = Nessuna ricerca per indicizzazione attiva oppure l'indicizzazione full-text è stata completata.<br /><br /> > 0 = Può essere uno dei valori seguenti (A or B): A) Numero di documenti elaborati dalle operazioni di inserimento o aggiornamento dopo l'avvio del popolamento con rilevamento delle modifiche completo, incrementale o manuale; B) Numero di righe elaborate da operazioni di inserimento o aggiornamento dopo l'attivazione del rilevamento delle modifiche con popolamento dell'indice di aggiornamento in background, la modifica dello schema dell'indice full-text, la ricompilazione del catalogo full-text o il riavvio dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e così via.<br /><br /> NULL = La tabella non include un indice full-text.<br /><br /> Tipo di dati di base: **int**<br /><br /> **Note** Questa proprietà non monitora né conta le righe eliminate.|  
-|TableFulltextFailCount|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Numero di righe non indicizzate dalla ricerca full-text.<br /><br /> 0 = Popolamento completato.<br /><br /> >0 = Uno dei valori seguenti (A o B): A) Numero di documenti non indicizzati dopo l'avvio del popolamento di aggiornamento con rilevamento delle modifiche completo, incrementale e manuale; B) Per il rilevamento delle modifiche con aggiornamento indice in background, numero di righe non indicizzate dopo l'inizio del popolamento o il riavvio del popolamento. La mancata indicizzazione potrebbe essere dovuta a una modifica dello schema, alla ricompilazione del catalogo, al riavvio del server e così via.<br /><br /> NULL = La tabella non include un indice full-text.<br /><br /> Tipo di dati di base: **int**|  
+|TableFulltextDocsProcessed|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Numero di righe elaborate dopo l'avvio dell'indicizzazione full-text. In una tabella sottoposta a indicizzazione ai fini della ricerca full-text tutte le colonne di una riga vengono considerate come appartenenti a un unico documento da indicizzare.<br /><br /> 0 = Nessuna ricerca per indicizzazione attiva oppure l'indicizzazione full-text è stata completata.<br /><br /> > 0 = uno dei seguenti (A o B): A) Numero di documenti elaborati dalle operazioni di inserimento o aggiornamento dopo l'avvio del popolamento con rilevamento delle modifiche completo, incrementale o manuale ; B) Numero di righe elaborate da operazioni di inserimento o aggiornamento dopo l'attivazione del rilevamento delle modifiche con popolamento dell'indice di aggiornamento in background, la modifica dello schema dell'indice full-text, la ricompilazione del catalogo full-text o il riavvio dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e così via.<br /><br /> NULL = La tabella non include un indice full-text.<br /><br /> Tipo di dati di base: **int**<br /><br /> **Note** Questa proprietà non monitora né conta le righe eliminate.|  
+|TableFulltextFailCount|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Numero di righe non indicizzate dalla ricerca full-text.<br /><br /> 0 = Popolamento completato.<br /><br /> > 0 = una delle seguenti opzioni (A o B): A) Numero di documenti non indicizzati dopo l'avvio del popolamento di aggiornamento con rilevamento delle modifiche completo, incrementale e manuale; B) Per il rilevamento delle modifiche con aggiornamento indice in background, numero di righe non indicizzate dopo l'inizio del popolamento o il riavvio del popolamento. La mancata indicizzazione potrebbe essere dovuta a una modifica dello schema, alla ricompilazione del catalogo, al riavvio del server e così via.<br /><br /> NULL = La tabella non include un indice full-text.<br /><br /> Tipo di dati di base: **int**|  
 |TableFulltextItemCount|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Valore diverso da Null = Numero di righe per cui l'indicizzazione full-text ha avuto esito positivo.<br /><br /> NULL = La tabella non include un indice full-text.<br /><br /> Tipo di dati di base: **int**|  
 |TableFulltextKeyColumn|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> ID della colonna associata all'indice univoco costituito da una sola colonna che fa parte della definizione di un indice full-text e di un indice semantico.<br /><br /> 0 = La tabella non include un indice full-text.<br /><br /> Tipo di dati di base: **int**|  
 |TableFulltextPendingChanges|Tabella|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Numero di voci in sospeso del rilevamento delle modifiche da elaborare.<br /><br /> 0 = Il rilevamento delle modifiche non è abilitato.<br /><br /> NULL = La tabella non include un indice full-text.<br /><br /> Tipo di dati di base: **int**|  
@@ -161,7 +162,7 @@ OBJECTPROPERTYEX ( id , property )
 |TableTextInRowLimit|Tabella|Per la tabella è stata impostata l'opzione text in row.<br /><br /> > 0 = Numero massimo di byte consentito per l'opzione text in row.<br /><br /> 0 = L'opzione Text in row non è impostata.<br /><br /> Tipo di dati di base: **int**|  
 |TableUpdateTrigger|Tabella|La tabella include un trigger UPDATE.<br /><br /> > 1 = ID del primo trigger del tipo specificato.<br /><br /> Tipo di dati di base: **int**|  
 |TableUpdateTriggerCount|Tabella|La tabella include il numero specificato di trigger UPDATE.<br /><br /> > 0 = Numero di trigger UPDATE.<br /><br /> Tipo di dati di base: **int**|  
-|UserDataAccess|Funzione, vista|L'oggetto accede a dati utente (tabelle utente) nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Lettura<br /><br /> 0 = Nessuno<br /><br /> Tipo di dati di base: **int**|  
+|UserDataAccess|Funzione, vista|L'oggetto accede a dati utente (tabelle utente) nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Lettura<br /><br /> 0 = Nessuna<br /><br /> Tipo di dati di base: **int**|  
 |TableHasColumnSet|Tabella|Indica se la tabella include un set di colonne.<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> Per altre informazioni, vedere [Usare set di colonne](../../relational-databases/tables/use-column-sets.md).|  
 |Cardinalità|Tabella (definita dal sistema o dall'utente), vista o indice|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Numero di righe nell'oggetto specificato.|  
 |TableTemporalType|Tabella|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.<br /><br /> Specifica il tipo di tabella.<br /><br /> 0 = tabella non temporale<br /><br /> 1 = tabella di cronologia per tabella con controllo delle versioni di sistema<br /><br /> 2 = tabella temporale con controllo delle versioni di sistema|  
@@ -174,7 +175,7 @@ OBJECTPROPERTYEX ( id , property )
   
  Un utente può visualizzare esclusivamente i metadati delle entità a sicurezza diretta di cui è proprietario o per cui ha ricevuto un'autorizzazione. Di conseguenza, le funzioni predefinite di creazione dei metadati come OBJECTPROPERTYEX possono restituire NULL se l'utente non dispone di alcuna autorizzazione per l'oggetto. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] presuppone che *object_id* si trovi nel contesto di database corrente. Una query in cui viene fatto riferimento a un *object_id* in un altro database restituisce NULL oppure risultati non corretti. Nella query seguente, ad esempio, il contesto di database corrente è il database master. [!INCLUDE[ssDE](../../includes/ssde-md.md)] tenterà di restituire il valore della proprietà per l'*object_id* specificato in tale database anziché nel database specificato nella query. La query restituisce risultati non corretti perché la vista `vEmployee` non si trova nel database master.  
   
 ```  
@@ -239,7 +240,7 @@ GO
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-finding-the-base-type-of-an-object"></a>D: Ricerca del tipo di base di un oggetto  
+### <a name="d-finding-the-base-type-of-an-object"></a>D. Ricerca del tipo di base di un oggetto  
  Nell'esempio seguente viene restituito il tipo di base dell'oggetto `dbo.DimReseller`.  
   
 ```  

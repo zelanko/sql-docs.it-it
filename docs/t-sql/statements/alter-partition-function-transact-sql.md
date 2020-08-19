@@ -1,4 +1,5 @@
 ---
+description: ALTER PARTITION FUNCTION (Transact-SQL)
 title: ALTER PARTITION FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8751da646792fc170b017039d6e5d1465e8b5ed
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: efac16278bec7099024cb5f9e7cc2480013728cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444893"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +71,7 @@ L'istruzione ALTER PARTITION SCHEME può aggiungere un filegroup oppure selezion
 Se si creano tutte le partizioni nello stesso filegroup, quest'ultimo verrà inizialmente assegnato automaticamente al successivo filegroup NEXT USED. Tuttavia, dopo l'esecuzione dell'operazione di divisione, non è più presente un filegroup NEXT USED selezionato. Assegnare in modo esplicito il filegroup come filegroup NEXT USED tramite l'istruzione ALTER PARTITION SCHEME. In caso contrario, le successive operazioni di divisione avranno esito negativo.  
   
 > [!NOTE]  
->  Limitazioni per l'indice columnstore: quando la tabella include un indice columnstore è possibile dividere solo le partizioni vuote. Prima di eseguire questa operazione è necessario eliminare o disabilitare l'indice columnstore.  
+>  Limitazioni per l'indice columnstore: quando la tabella include un indice columnstore è possibile suddividere solo partizioni vuote. Prima di eseguire questa operazione è necessario eliminare o disabilitare l'indice columnstore.  
   
 MERGE [ RANGE ( *boundary_value*) ]  
 Elimina una partizione e unisce i valori esistenti in tale partizione in una delle partizioni rimanenti. RANGE (*boundary_value*) deve essere un valore limite esistente nel quale vengono uniti i valori della partizione eliminata. Questo argomento rimuove il filegroup che originariamente conteneva *boundary_value* dallo schema di partizione a meno che non sia usato da una partizione rimanente oppure non sia contrassegnato con la proprietà NEXT USED. La partizione unita esiste nel filegroup che non conteneva *boundary_value* inizialmente. *boundary_value* è un'espressione costante che può fare riferimento a variabili (incluse le variabili di tipo definito dall'utente) o funzioni (incluse le funzioni definite dall'utente). Non può fare riferimento a un'espressione [!INCLUDE[tsql](../../includes/tsql-md.md)]. *boundary_value* deve corrispondere al tipo di dati della colonna di partizionamento corrispondente o deve poter essere convertito in modo implicito in tale tipo di dati. Non è inoltre possibile troncare *boundary_value* durante la conversione implicita in modo che le dimensioni e la scala del valore non corrispondano a quelle del relativo *input_parameter_type*.  

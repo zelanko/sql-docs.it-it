@@ -1,4 +1,5 @@
 ---
+description: STPointN (tipo di dati geometry)
 title: STPointN (tipo di dati geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8f0bb3b7-5cd9-42c2-b9f8-f04628653bd0
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: eced8c5e3c7d42abf8974af1efc9202bd30bed27
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 751fc973188d7fe12ea0034a14c4620808912545
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554923"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444923"
 ---
 # <a name="stpointn-geometry-data-type"></a>STPointN (tipo di dati geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +50,7 @@ Restituisce un punto specificato in un'istanza **geometry**.
   
  Tipo OGC (Open Geospatial Consortium): **Point**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se un'istanza **geometry** è creata dall'utente, `STPointN()` restituisce il punto specificato da *expression* ordinando i punti con l'ordine di immissione originale.  
   
  Se un'istanza **geometry** è stata costruita dal sistema, `STPointN()` restituisce il punto specificato da *expression* ordinando tutti i punti nello stesso ordine di restituzione, ovvero prima in base alla geometria, quindi in base all'anello all'interno della geometria (se appropriato), infine in base ai punti all'interno dell'anello. Questo ordine è deterministico.  

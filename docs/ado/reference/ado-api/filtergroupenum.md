@@ -1,4 +1,5 @@
 ---
+description: FilterGroupEnum
 title: FilterGroupEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7b6a8d449d27539100f467da1eea19ec42e0a72
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f8d3c510cfd9fa6c4a28f78005021465b9b0917b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764512"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443663"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
 Specifica il gruppo di record da filtrare da un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

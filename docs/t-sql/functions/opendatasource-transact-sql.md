@@ -1,4 +1,5 @@
 ---
+description: OPENDATASOURCE (Transact-SQL)
 title: OPENDATASOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/26/2019
@@ -23,12 +24,12 @@ ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0efa5662c4ba7110f9e699baf6289ed9c2789fce
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a10994ac46bc1070304823dd5ae698a5b94c017d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445649"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -68,7 +69,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
 |Catalogo|DBPROP_INIT_CATALOG|Nome del catalogo iniziale o predefinito nella connessione all'origine dei dati.|  
 |Sicurezza integrata|DBPROP_AUTH_INTEGRATED|SSPI per specificare l'autenticazione di Windows.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 `OPENROWSET` eredita sempre le regole di confronto dell'istanza, indipendentemente dalle regole di confronto impostate per le colonne.
 
 È possibile usare `OPENDATASOURCE` per accedere ai dati remoti da origini dati OLE DB solo se l'opzione del Registro di sistema DisallowAdhocAccess è impostata esplicitamente su 0 per il provider specificato e l'opzione di configurazione avanzata Ad Hoc Distributed Queries è abilitata. Quando queste opzioni non vengono impostate, il comportamento predefinito non consente l'accesso ad hoc.  

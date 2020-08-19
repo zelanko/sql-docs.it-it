@@ -1,4 +1,5 @@
 ---
+description: sp_replqueuemonitor (Transact-SQL)
 title: sp_replqueuemonitor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73b999f1f6ee2ba49209f5763be6bb42e777ef78
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b8b0f11e5b0f62c1e874dbeba947ea136f7ee274
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626923"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446833"
 ---
 # <a name="sp_replqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,15 +42,15 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è null. Il server deve essere configurato per la pubblicazione. Il valore NULL indica tutti i server di pubblicazione.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è null. Il server deve essere configurato per la pubblicazione. Il valore NULL indica tutti i server di pubblicazione.  
   
-`[ @publisherdb = ] 'publisher_db' ]`Nome del database di pubblicazione. *publisher_db* è di **tipo sysname**e il valore predefinito è null. che indica tutti i database di pubblicazione.  
+`[ @publisherdb = ] 'publisher_db' ]` Nome del database di pubblicazione. *publisher_db* è di **tipo sysname**e il valore predefinito è null. che indica tutti i database di pubblicazione.  
   
-`[ @publication = ] 'publication' ]`Nome della pubblicazione. *Publication*è di **tipo sysname**e il valore predefinito è null. che indica tutte le pubblicazioni.  
+`[ @publication = ] 'publication' ]` Nome della pubblicazione. *Publication*è di **tipo sysname**e il valore predefinito è null. che indica tutte le pubblicazioni.  
   
-`[ @tranid = ] 'tranid' ]`ID della transazione. *tranid*è di **tipo sysname**e il valore predefinito è null. che indica tutte le transazioni.  
+`[ @tranid = ] 'tranid' ]` ID della transazione. *tranid*è di **tipo sysname**e il valore predefinito è null. che indica tutte le transazioni.  
   
-`[ @queuetype = ] 'queuetype' ]`Tipo di coda in cui vengono archiviate le transazioni. *QueueType* è di **tinyint** e il valore predefinito è **0**. i possibili valori sono i seguenti.  
+`[ @queuetype = ] 'queuetype' ]` Tipo di coda in cui vengono archiviate le transazioni. *QueueType* è di **tinyint** e il valore predefinito è **0**. i possibili valori sono i seguenti.  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
@@ -67,7 +68,7 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_replqueuemonitor**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sottoscrizioni aggiornabili per la replica transazionale](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

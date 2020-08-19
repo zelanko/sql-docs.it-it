@@ -1,4 +1,5 @@
 ---
+description: Proprietà Filter
 title: Proprietà Filter | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b69826fbbc45751247ce2eba6fe74ad251189dea
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a97db427db3c0dc42e004e1b0fcd0a889c9d6c5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443683"
 ---
 # <a name="filter-property"></a>Proprietà Filter
 Indica un filtro per i dati in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -35,7 +36,7 @@ Imposta o restituisce un valore **Variant** , che può contenere uno degli eleme
   
 -   Valore [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) .  
   
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Utilizzare la proprietà **Filter** per schermare selettivamente i record in un oggetto **Recordset** . Il **Recordset** filtrato diventa il cursore corrente. Sono interessate anche altre proprietà che restituiscono valori basati sul **cursore** corrente, ad esempio la [proprietà AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), la [Proprietà AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), la [proprietà RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)e la [proprietà PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). Se si imposta la proprietà **Filter** su un nuovo valore specifico, il record corrente viene spostato sul primo record che soddisfa il nuovo valore.
   
@@ -56,7 +57,7 @@ La stringa di criteri è costituita da clausole nel formato *FieldName-operator-
 -   Al contrario, è necessario creare questo filtro come  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   In una clausola **like** è possibile usare un carattere jolly all'inizio e alla fine del modello. È ad esempio possibile usare `LastName Like '*mit*'`. Oppure con **like** è possibile usare un carattere jolly solo alla fine del modello. Ad esempio: `LastName Like 'Smit*'`.  
+-   In una clausola **like** è possibile usare un carattere jolly all'inizio e alla fine del modello. È ad esempio possibile usare `LastName Like '*mit*'`. Oppure con **like** è possibile usare un carattere jolly solo alla fine del modello. Ad esempio `LastName Like 'Smit*'`.  
   
  Le costanti di filtro semplificano la risoluzione dei singoli conflitti di record durante la modalità di aggiornamento batch consentendo di visualizzare, ad esempio, solo i record interessati durante l'ultima chiamata al metodo [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) .  
   

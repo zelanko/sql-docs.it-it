@@ -1,4 +1,5 @@
 ---
+description: STNumCurves (tipo di dati geometry)
 title: STNumCurves (tipo di dati geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 95e43dfb8bad1dfc505fb65a28674f813418f5d4
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: fe3418284131577051e48f8300bd89df2abc0ec1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555965"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444963"
 ---
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves (tipo di dati geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ Questo metodo restituisce il numero di curve di un'istanza **geometry** quando l
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Un'istanza **geometry** unidimensionale vuota restituisce 0. Viene restituito **NULL** quando l'istanza **geometry** non è un'istanza unidimensionale oppure è un'istanza non inizializzata.  
   
 ## <a name="examples"></a>Esempi  

@@ -1,4 +1,5 @@
 ---
+description: CONTEXT_INFO (Transact-SQL)
 title: CONTEXT_INFO (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9b53dab8d51f251721b205b4da4171ca91188e97
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c8b4f5b2fa72f6122f457f2b86ccfe7ec399e2bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445881"
 ---
 # <a name="context_info--transact-sql"></a>CONTEXT_INFO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ Se **context_info** non è stato impostato:
 -   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce NULL.  
 -   In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] restituisce un GUID univoco specifico della sessione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 Grazie alla funzionalità MARS (Multiple Active Result Set) le applicazioni possono eseguire più batch o richieste contemporaneamente usando la stessa connessione. Se uno dei batch in una connessione MARS esegue SET CONTEXT_INFO, la funzione `CONTEXT_INFO` restituisce il nuovo valore del contesto, quando la funzione `CONTEXT_INFO` viene eseguita nello stesso batch dell'istruzione SET. Se la funzione `CONTEXT_INFO` viene eseguita in uno o più degli altri batch nella connessione, `CONTEXT_FUNCTION` restituisce il nuovo valore solo se tali batch sono stati avviati dopo il completamento del batch che ha eseguito l'istruzione SET.
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -69,7 +70,7 @@ SELECT CONTEXT_INFO();
 GO  
 ```  
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 [SET CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_rename_policy_category (Transact-SQL)
 title: sp_syspolicy_rename_policy_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a9c4a3a-91e8-435e-b721-e0293c92be3e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d1098b01a4be513d2f81d15a1cb11c370cfa7f00
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b350a19bb19defbd1510f7ce13a82729c2cbe779
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892707"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446745"
 ---
 # <a name="sp_syspolicy_rename_policy_category-transact-sql"></a>sp_syspolicy_rename_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +41,11 @@ sp_syspolicy_rename_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name = ] 'name'`Nome della categoria di criteri che si desidera rinominare. *Name* è di **tipo sysname**e deve essere specificato se *policy_category_id* è null.  
+`[ @name = ] 'name'` Nome della categoria di criteri che si desidera rinominare. *Name* è di **tipo sysname**e deve essere specificato se *policy_category_id* è null.  
   
-`[ @policy_category_id = ] policy_category_id`Identificatore della categoria di criteri che si desidera rinominare. *policy_category_id* è di **tipo int**e deve essere specificato se il *nome* è null.  
+`[ @policy_category_id = ] policy_category_id` Identificatore della categoria di criteri che si desidera rinominare. *policy_category_id* è di **tipo int**e deve essere specificato se il *nome* è null.  
   
-`[ @new_name = ] 'new_name'`Nuovo nome della categoria di criteri. *new_name* è di **tipo sysname**ed è obbligatorio. Non può essere NULL o una stringa vuota.  
+`[ @new_name = ] 'new_name'` Nuovo nome della categoria di criteri. *new_name* è di **tipo sysname**ed è obbligatorio. Non può essere NULL o una stringa vuota.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -71,9 +72,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure per la gestione basata su criteri &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_add_policy_category &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-transact-sql.md)   
- [sp_syspolicy_delete_policy_category &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)   
- [sp_syspolicy_update_policy_category &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md)  
+ [Stored procedure per la gestione basata su criteri &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_add_policy_category &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-transact-sql.md)   
+ [sp_syspolicy_delete_policy_category &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)   
+ [sp_syspolicy_update_policy_category &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md)  
   
   

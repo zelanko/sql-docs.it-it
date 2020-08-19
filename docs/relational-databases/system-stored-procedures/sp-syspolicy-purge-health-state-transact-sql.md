@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_purge_health_state (Transact-SQL)
 title: sp_syspolicy_purge_health_state (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ba4aa91-4c19-41c7-b70d-5fd9d0e89a5e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6c07d71e2ab4c9fe39882476eef25674718a17c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a01ee9be75223a081d19a9b71eb4d69ec150235c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639566"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446753"
 ---
 # <a name="sp_syspolicy_purge_health_state-transact-sql"></a>sp_syspolicy_purge_health_state (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'`Rappresenta il nodo in Esplora oggetti in cui si desidera cancellare lo stato di integrità. *target_tree_root_with_id* è di **tipo nvarchar (400)** e il valore predefinito è null.  
+`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` Rappresenta il nodo in Esplora oggetti in cui si desidera cancellare lo stato di integrità. *target_tree_root_with_id* è di **tipo nvarchar (400)** e il valore predefinito è null.  
   
  È possibile specificare i valori della colonna target_query_expression_with_id nella vista di sistema msdb.dbo.syspolicy_system_health_state.  
   
@@ -67,6 +68,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure per la gestione basata su criteri &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
+ [Stored procedure per la gestione basata su criteri &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

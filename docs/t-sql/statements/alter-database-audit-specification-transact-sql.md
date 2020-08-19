@@ -1,4 +1,5 @@
 ---
+description: ALTER DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 title: ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f4262b850a2afc9799c15d3a4155c9ab85432366
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 5c4eef4555867208ae71b0495dfd9393c2459ca3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301940"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444961"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -86,7 +87,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  Abilita o disabilita la raccolta di record mediante il controllo per questa specifica del controllo. Le modifiche relative allo stato della specifica di controllo devono essere apportate all'esterno di una transazione utente e non possono contenere altre modifiche nella stessa istruzione in presenza di una transizione da ON a OFF.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Le specifiche del controllo del database sono oggetti non a sicurezza diretta che risiedono in un database specifico. È necessario impostare lo stato di una specifica di controllo sull'opzione OFF per apportare modifiche a una specifica del controllo del database. Se ALTER DATABASE AUDIT SPECIFICATION viene eseguita quando un controllo è abilitato con qualsiasi altra opzione diversa da STATE=OFF, verrà visualizzato un messaggio di errore. Per altre informazioni, vedere [tempdb Database](../../relational-databases/databases/tempdb-database.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  

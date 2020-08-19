@@ -1,4 +1,5 @@
 ---
+description: sp_refresh_parameter_encryption (Transact-SQL)
 title: sp_refresh_parameter_encryption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
@@ -19,11 +20,12 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4d6914ce4b46a7fc787b496ebf6b23036b9c21c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1af6c8584c9190bd4611eed4875ec146b6f3656b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446909"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -45,9 +47,9 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>Argomenti
 
-`[ @name = ] 'module_name'`Nome del stored procedure, funzione definita dall'utente, vista, trigger DML, trigger DDL a livello di database o trigger DDL a livello di server. *module_name* non può essere un stored procedure di Common Language Runtime (CLR) o una funzione CLR. *module_name* non possono essere associati a schema. *module_name* è `nvarchar` di e non prevede alcun valore predefinito. *module_name* può essere un identificatore in più parti, ma può fare riferimento solo agli oggetti nel database corrente.
+`[ @name = ] 'module_name'` Nome del stored procedure, funzione definita dall'utente, vista, trigger DML, trigger DDL a livello di database o trigger DDL a livello di server. *module_name* non può essere un stored procedure di Common Language Runtime (CLR) o una funzione CLR. *module_name* non possono essere associati a schema. *module_name* è `nvarchar` di e non prevede alcun valore predefinito. *module_name* può essere un identificatore in più parti, ma può fare riferimento solo agli oggetti nel database corrente.
 
-`[ @namespace = ] ' < class > '`È la classe del modulo specificato. Quando *module_name* è un trigger DDL, `<class>` è obbligatorio. `<class>` è `nvarchar(20)`. Gli input validi sono `DATABASE_DDL_TRIGGER` e `SERVER_DDL_TRIGGER` .    
+`[ @namespace = ] ' < class > '` È la classe del modulo specificato. Quando *module_name* è un trigger DDL, `<class>` è obbligatorio. `<class>` è `nvarchar(20)`. Gli input validi sono `DATABASE_DDL_TRIGGER` e `SERVER_DDL_TRIGGER` .    
 
 ## <a name="return-code-values"></a>Valori del codice restituito  
 
@@ -62,7 +64,7 @@ I metadati di crittografia per i parametri di un modulo possono diventare obsole
 
 Quando si modificano le proprietà di crittografia di una tabella, è `sp_refresh_parameter_encryption` necessario eseguire per tutti i moduli direttamente o indirettamente che fanno riferimento alla tabella. Questo stored procedure può essere chiamato su tali moduli in qualsiasi ordine, senza richiedere all'utente di aggiornare prima di tutto il modulo interno prima di trasferirsi ai chiamanti.
 
-`sp_refresh_parameter_encryption`non influisce sulle autorizzazioni, sulle proprietà estese o sulle `SET` opzioni associate all'oggetto. 
+`sp_refresh_parameter_encryption` non influisce sulle autorizzazioni, sulle proprietà estese o sulle `SET` opzioni associate all'oggetto. 
 
 Per aggiornare un trigger DDL a livello di server, eseguire questa stored procedure dal contesto di un qualsiasi database.
 

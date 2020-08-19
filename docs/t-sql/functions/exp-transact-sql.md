@@ -1,4 +1,5 @@
 ---
+description: EXP (Transact-SQL)
 title: EXP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ ms.assetid: 5a9b8c52-6fb6-4e33-8b02-a878785b2f51
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 949a07ae18a46101ea7ae905812aa5cd2072c37a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a866a13a9abf74781e114a1fab4928a0c2cb1042
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445814"
 ---
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ EXP ( float_expression )
 ## <a name="return-types"></a>Tipi restituiti  
  **float**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La costante **e** (2,718281...) è la base dei logaritmi naturali.  
   
  L'esponente di un numero è la costante **e** elevata alla potenza del numero. Ad esempio, EXP(1.0) = e^1.0 = 2.71828182845905 ed EXP(10) = e^10 = 22026.4657948067.  

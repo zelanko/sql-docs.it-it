@@ -1,4 +1,5 @@
 ---
+description: Esempio della proprietà MarshalOptions (VB)
 title: Esempio di proprietà MarshalOptions (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cedf7562c1ab0bc5c7582aec7e7409cb18cf256a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6004df68918c166e3964cb10222b2117210430c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754392"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443313"
 ---
 # <a name="marshaloptions-property-example-vb"></a>Esempio della proprietà MarshalOptions (VB)
 In questo esempio viene usata la proprietà [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) per specificare quali righe vengono restituite al server, tutte le righe o solo le righe modificate.  

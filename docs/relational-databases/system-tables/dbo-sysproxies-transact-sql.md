@@ -1,4 +1,5 @@
 ---
+description: dbo.sysproxies (Transact-SQL)
 title: Proxy di dbo.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f4bcebbdb3926b6444f647f57b3a82c1f9dcb622
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 40ffbc10351cf4ca0cccc54e810a358da9a3e9f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890459"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446618"
 ---
 # <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85890459"
 |**nome**|**sysname**|ID dell'account proxy.|  
 |**credential_id**|**int**|ID delle credenziali utilizzate dall'account proxy.|  
 |**abilitato**|**tinyint**|Stato dell'account proxy.<br /><br /> **0** = disabilitato. **1** = abilitata.|  
-|**Descrizione**|**nvarchar(512)**|Descrizione immessa dall'utente al momento della creazione dell'account proxy.|  
+|**description**|**nvarchar(512)**|Descrizione immessa dall'utente al momento della creazione dell'account proxy.|  
 |**user_sid**|**varbinary (85)**|Microsoft Windows *security_identifier* dell'utente o del gruppo associato alla credenziale proxy.|  
 |**credential_date_created**|**datetime**|Data e ora di creazione delle credenziali.|  
   
@@ -45,8 +46,8 @@ ms.locfileid: "85890459"
  Solo i membri del ruolo predefinito del server **sysadmin** possono accedere alla tabella **sysproxies** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [dbo.sysproxylogin &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysproxylogin-transact-sql.md)   
- [dbo.sysproxysubsystem &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
- [Sottosistemidbo.sys&#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)  
+ [dbo.sysproxylogin &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/dbo-sysproxylogin-transact-sql.md)   
+ [dbo.sysproxysubsystem &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
+ [ Sottosistemidbo.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)  
   
   
