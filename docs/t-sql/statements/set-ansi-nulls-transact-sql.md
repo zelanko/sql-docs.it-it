@@ -1,4 +1,5 @@
 ---
+description: SET ANSI_NULLS (Transact-SQL)
 title: SET ANSI_NULLS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/24/2020
@@ -25,12 +26,12 @@ ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current || azuresqldb-current'
-ms.openlocfilehash: 5a00bccbb5de02e49579bf7ada5ef13e96e57ed9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 493c92c8e49a5b341306513f7db43f5e25b9a3c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397072"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416157"
 ---
 # <a name="set-ansi_nulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +54,9 @@ SET ANSI_NULLS { ON | OFF }
 SET ANSI_NULLS ON
 ```
 
-## <a name="remarks"></a>Osservazioni  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Osservazioni
 Quando l'opzione ANSI_NULLS è impostata su ON, un'istruzione SELECT che usa WHERE *column_name* = **NULL** non restituisce alcuna riga anche se *column_name* include valori Null. Un'istruzione SELECT che usa WHERE *column_name* <> **NULL** non restituisce alcuna riga anche se *column_name* include valori non Null.  
   
 Quando l'opzione ANSI_NULLS è impostata su OFF, gli operatori uguale a (=) e diverso da (<>) non seguono lo standard ISO. Un'istruzione SELECT che usa WHERE *column_name* = **NULL** restituisce le righe con valori Null in *column_name*. Un'istruzione SELECT che usa WHERE *column_name* <> **NULL** restituisce le righe con valori non Null nella colonna. Inoltre un'istruzione SELECT che usa WHERE *column_name* <> *XYZ_value* restituisce tutte le righe che non sono *XYZ_value* e non sono NULL.  

@@ -1,4 +1,5 @@
 ---
+description: Risoluzione dei problemi (MySQLToSQL)
 title: Risoluzione dei problemi (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9435f6c2-16e7-41b1-906d-d9f09b336f8f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a1430b3b26f3cde59160a353bf922e8ce480a33f
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8e89304026d93135508139530564ca46d255dc85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935090"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418397"
 ---
 # <a name="troubleshooting-mysqltosql"></a>Risoluzione dei problemi (MySQLToSQL)
 Non è insolito che si verifichino problemi di migrazione a metà dell'esecuzione di comandi o script della console.  
@@ -25,7 +26,7 @@ Gli errori di risolvibili possono essere correlati a:
   
 2.  Procedura  
   
-3.  Visualizzazione  
+3.  Visualizza  
   
 4.  Trigger  
   

@@ -1,4 +1,5 @@
 ---
+description: DBCC TRACESTATUS (Transact-SQL)
 title: DBCC TRACESTATUS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 2ae272f6d60670ffd1f3841e45b5b15fac9cc42d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 046c8fa60fc4bc4930089d8c7e9a87a3480bff23
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417597"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,7 +56,7 @@ Numero del flag di traccia per cui è visualizzato lo stato. Se non vengono spec
 Segnaposto che indica la possibilità di specificare più flag di traccia.
   
 -1  
-Visualizza lo stato dei flag di traccia abilitati a livello globale. Se viene specificato -1 senza *trace#* , vengono visualizzati tutti i flag di traccia abilitati.
+Visualizza lo stato dei flag di traccia abilitati a livello globale. Se viene specificato -1 senza *trace#*, vengono visualizzati tutti i flag di traccia abilitati.
   
 WITH NO_INFOMSGS  
 Evita la visualizzazione di tutti i messaggi informativi con livello di gravità compreso tra 0 e 10.

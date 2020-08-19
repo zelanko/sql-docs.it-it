@@ -1,4 +1,5 @@
 ---
+description: datetimeoffset (Transact-SQL)
 title: datetimeoffset (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -23,12 +24,12 @@ ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 274af7a5c9a1e8f12f661305e1e2d1206bf64664
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d58c0b86f5a3d46764d3be1e70444139b599172d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008046"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417667"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 
@@ -131,7 +132,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @date AS 'date';
   
 ```  
   
-Se viene eseguita la conversione in **time(n)** , vengono copiati ora, minuti, secondi e secondi frazionari. Il valore del fuso orario viene troncato. Quando la precisione del valore **datetimeoffset(n)** è maggiore di quella del valore **time(n)** , la prima precisione viene arrotondata. Nel codice seguente vengono illustrati i risultati della conversione di un valore `datetimeoffset(4)` in un valore `time(3)`.
+Se viene eseguita la conversione in **time(n)**, vengono copiati ora, minuti, secondi e secondi frazionari. Il valore del fuso orario viene troncato. Quando la precisione del valore **datetimeoffset(n)** è maggiore di quella del valore **time(n)**, la prima precisione viene arrotondata. Nel codice seguente vengono illustrati i risultati della conversione di un valore `datetimeoffset(4)` in un valore `time(3)`.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  
@@ -181,7 +182,7 @@ SELECT @datetimeoffset AS '@datetimeoffset', @smalldatetime AS '@smalldatetime';
 --(1 row(s) affected)  
 ```  
   
-Se la conversione viene eseguita in **datetime2(n)** , data e ora vengono copiate nel valore **datetime2** e il fuso orario viene troncato. Se la precisione del valore **datetime2(n)** è maggiore di quella del valore **datetimeoffset(n)** , i secondi frazionari vengono troncati. Nel codice seguente vengono illustrati i risultati della conversione di un valore `datetimeoffset(4)` in un valore `datetime2(3)`.
+Se la conversione viene eseguita in **datetime2(n)**, data e ora vengono copiate nel valore **datetime2** e il fuso orario viene troncato. Se la precisione del valore **datetime2(n)** è maggiore di quella del valore **datetimeoffset(n)**, i secondi frazionari vengono troncati. Nel codice seguente vengono illustrati i risultati della conversione di un valore `datetimeoffset(4)` in un valore `datetime2(3)`.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '1912-10-25 12:24:32.1277 +10:0';  

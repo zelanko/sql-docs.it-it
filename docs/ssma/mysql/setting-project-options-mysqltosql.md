@@ -1,4 +1,5 @@
 ---
+description: Impostazione delle opzioni progetto (MySQLToSQL)
 title: Impostazione delle opzioni del progetto (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cf8ac834b014fe49a851d3887fb36e29f59e069e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 642d6df01fc5855ece9bd06ea2860de076f754bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935129"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418427"
 ---
 # <a name="setting-project-options-mysqltosql"></a>Impostazione delle opzioni progetto (MySQLToSQL)
 Per ogni progetto SSMA, è possibile impostare le opzioni a livello di progetto. Queste opzioni specificano la modalità di conversione degli oggetti, la modalità di migrazione dei dati e la modalità di mapping dei tipi di dati di origine ai tipi di dati di destinazione.  Prima di convertire gli oggetti in SQL Server o SQL Azure o migrare i dati in SQL Server o SQL Azure, verificare che le opzioni di configurazione siano appropriate per il progetto.  
@@ -38,7 +39,7 @@ SSMA include cinque set di impostazioni di progetto:
   
 Le impostazioni del progetto possono essere configurate in quattro modi:  
   
--   Impostazione predefinita  
+-   Predefinito  
   
 -   Optimistic  
   

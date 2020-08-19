@@ -1,4 +1,5 @@
 ---
+description: COLUMNPROPERTY (Transact-SQL)
 title: COLUMNPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d62953d88773c6f378590db64aeeb3f94d6fe22
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 360089db91ed52ba90f0566868b4f1c87eb2fd8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111095"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417427"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +74,7 @@ Per l'argomento *id*, l'argomento *property* specifica il tipo di informazioni c
 |**IsSystemVerified**|Le proprietà di determinismo e precisione della colonna possono essere verificate dal [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Questa proprietà è applicabile solo alle colonne calcolate e alle colonne di viste.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
 |**IsXmlIndexable**|La colonna XML può essere utilizzata in un indice XML|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
 |**Precisione**|Lunghezza del tipo di dati della colonna o del parametro.|Lunghezza del tipo di dati specificato per la colonna.<br /><br /> -1: **xml** o tipi di dati per valori di grandi dimensioni<br /><br /> NULL: input non valido.|  
-|**Ridimensionare**|Scala del tipo di dati della colonna o del parametro.|Valore di scalabilità<br /><br /> NULL: input non valido.|  
+|**Ridimensionamento**|Scala del tipo di dati della colonna o del parametro.|Valore di scalabilità<br /><br /> NULL: input non valido.|  
 |**StatisticalSemantics**|La colonna è abilitata per l'indicizzazione semantica.|1: TRUE<br /><br /> 0: FALSE|  
 |**SystemDataAccess**|La colonna deriva da una funzione che accede ai dati nei cataloghi di sistema o nelle tabelle virtuali di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa proprietà è applicabile solo alle colonne calcolate e alle colonne di viste.|1 TRUE (accesso di sola lettura).<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  
 |**UserDataAccess**|La colonna deriva da una funzione che accede ai dati nelle tabelle utente, incluse le tabelle temporanee e le viste, archiviate nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa proprietà è applicabile solo alle colonne calcolate e alle colonne di viste.|1 TRUE (accesso di sola lettura).<br /><br /> 0: FALSE<br /><br /> NULL: input non valido.|  

@@ -1,4 +1,5 @@
 ---
+description: APPLOCK_TEST (Transact-SQL)
 title: APPLOCK_TEST (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 05a4130eada097acc754f4392927db76b8bfc079
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: fa4c73e5a6830b3274e3e388679dd4e5f935f17c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113172"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417537"
 ---
 # <a name="applock_test-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +64,7 @@ Proprietario del blocco, ovvero il valore di *lock_owner* al momento della richi
 0 se il blocco non può essere concesso al proprietario specificato. In caso contrario, restituisce 1.
   
 ## <a name="function-properties"></a>Proprietà delle funzioni
-**Nondeterministic**
+**Non deterministica**
   
 **Nonindexable**
   

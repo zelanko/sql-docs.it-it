@@ -1,4 +1,5 @@
 ---
+description: Impostazioni del progetto (interfaccia utente grafica) (SybaseToSQL)
 title: Impostazioni progetto (GUI) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbd6ddc9-8abd-4fa9-bffd-631e54894ce8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c709be1a8f455e4d2e50f60c3b31ba182192803c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2361f480d5f148140caa8e4fcbcb4d22374d9e04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930783"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418257"
 ---
 # <a name="project-settings-gui-sybasetosql"></a>Impostazioni del progetto (interfaccia utente grafica) (SybaseToSQL)
 Le impostazioni del progetto GUI consentono di configurare il modo in cui i dati vengono visualizzati nella scheda **dati** e se visualizzare il report di valutazione dopo la conversione.  

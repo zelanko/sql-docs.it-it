@@ -1,4 +1,5 @@
 ---
+description: Gestire i metadati quando si rende disponibile un database in un altro server
 title: Gestire i metadati quando si rende disponibile un database in un altro server
 ms.date: 06/03/2020
 ms.prod: sql
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], metadata
 - credentials [SQL Server], metadata
 - copying databases
-ms.openlocfilehash: 0d0a777b42bc601d2f656cfbf3c31d488a3732e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3dc93671874de47f45bd26ae12fa9ded44c9a4fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726447"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412847"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Gestire i metadati quando si rende disponibile un database in un altro server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -106,7 +107,7 @@ ms.locfileid: "85726447"
   
  Per altre informazioni su questa funzionalità, vedere [Credenziali &#40;Motore di database&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
-> **NOTA** Gli account proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilizzano credenziali. Per conoscere l'ID delle credenziali di un account proxy, utilizzare la tabella di sistema [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) .  
+> **NOTA:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usano credenziali. Per conoscere l'ID delle credenziali di un account proxy, utilizzare la tabella di sistema [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) .  
   
   
 ##  <a name="cross-database-queries"></a><a name="cross_database_queries"></a> Cross-Database Queries  
@@ -129,7 +130,7 @@ ms.locfileid: "85726447"
   
  Per abilitare la decrittografia automatica della chiave master del database in un'istanza del server, viene crittografata una copia di questa chiave utilizzando la chiave master del servizio. Questa copia crittografata viene archiviata sia nel database che nel database **master**. La copia archiviata nel database **master** viene generalmente aggiornata in modo automatico in seguito a ogni modifica della chiave master. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si tenta innanzitutto di decrittografare la chiave master del database con la chiave master del servizio dell'istanza. Se il tentativo non riesce, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si esegue una ricerca nell'archivio delle credenziali per individuare le credenziali di chiave master con lo stesso GUID del database per cui è richiesta la chiave master. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si tenta quindi di decrittografare la chiave master del database con ogni credenziale corrispondente fino a quando non si riesce a completare l'operazione o non sono disponibili altre credenziali da provare. Per aprire una chiave master non crittografata con la chiave master del servizio, è necessario utilizzare l'istruzione OPEN MASTER KEY e una password.  
   
- Quando viene copiato, ripristinato o collegato un database crittografato in una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], una copia della chiave master del database crittografata dalla chiave master del servizio non viene archiviata nel database **master** nell'istanza del server di destinazione. Nell'istanza del server di destinazione, è necessario aprire la chiave master del database. Per aprire la chiave master, eseguire l'istruzione seguente: OPEN MASTER KEY DECRYPTION BY PASSWORD **='** _password_ **'** . È quindi consigliabile abilitare la decrittografia automatica della chiave master del database eseguendo l'istruzione seguente: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. L'istruzione ALTER MASTER KEY fornisce all'istanza del server una copia della chiave master del database crittografata con la chiave master del servizio. Per altre informazioni, vedere [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
+ Quando viene copiato, ripristinato o collegato un database crittografato in una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], una copia della chiave master del database crittografata dalla chiave master del servizio non viene archiviata nel database **master** nell'istanza del server di destinazione. Nell'istanza del server di destinazione, è necessario aprire la chiave master del database. Per aprire la chiave master, eseguire l'istruzione seguente: OPEN MASTER KEY DECRYPTION BY PASSWORD **='** _password_ **'** . È quindi consigliabile abilitare la decrittografia automatica della chiave master del database eseguendo l'istruzione ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. L'istruzione ALTER MASTER KEY fornisce all'istanza del server una copia della chiave master del database crittografata con la chiave master del servizio. Per altre informazioni, vedere [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
  Per informazioni sull'abilitazione della decrittografia automatica della chiave master del database di un database mirror, vedere [Impostare un database mirror crittografato](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
@@ -156,7 +157,7 @@ ms.locfileid: "85726447"
 ### <a name="windows-management-instrumentation-wmi-events"></a>Eventi di Strumentazione gestione Windows (WMI)  
  Il provider WMI per eventi del server consente di utilizzare il servizio Strumentazione gestione Windows (WMI) per monitorare eventi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Qualsiasi applicazione che si basi su eventi a livello di server esposti tramite il provider WMI utilizzato da un database deve essere definita nel computer dell'istanza del server di destinazione. Il provider di eventi WMI crea le notifiche degli eventi con un servizio di destinazione definito nel database **msdb**.  
   
-> **NOTA** Per altre informazioni, vedere [Concetti relativi al provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md).  
+> **NOTA:** per altre informazioni, vedere [Concetti relativi al provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md).  
   
  **Per creare un avviso di WMI utilizzando SQL Server Management Studio**  
   
@@ -193,7 +194,7 @@ ms.locfileid: "85726447"
   
  Se le versioni del componente [word breaker e stemmer](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) o del componente [filtri di ricerca full-text](../../relational-databases/search/configure-and-manage-filters-for-search.md) sono diverse nelle istanze del server originale e del server di destinazione, l'indice e le query full-text possono comportarsi in modo diverso. Anche il [thesaurus](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) viene archiviato in file specifici dell'istanza. È necessario trasferire una copia di questi file in un percorso equivalente nell'istanza del server di destinazione oppure ricrearli nella nuova istanza.  
   
-> **NOTA** Quando si collega un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] contenente file di cataloghi full-text in un'istanza del server di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , i file di catalogo vengono collegati dal percorso precedente insieme agli altri file del database, come in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per altre informazioni, vedere [Aggiornamento della ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md).  
+> **NOTA:** quando si collega un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] contenente file di catalogo full-text in un'istanza del server di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , i file di catalogo vengono collegati dal percorso precedente insieme agli altri file del database, come in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per altre informazioni, vedere [Aggiornamento della ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md).  
   
  Per ulteriori informazioni, vedere anche:  
   
@@ -259,7 +260,7 @@ ms.locfileid: "85726447"
   
  Per generare uno script per tutti gli oggetti nella copia originale del database o per alcuni di essi, è possibile utilizzare Generazione guidata script e, nella finestra di dialogo **Selezione opzioni generazione script** , impostare l'opzione **Script per account di accesso** su **True**.  
   
-> **NOTA** per informazioni su come configurare gli account di accesso per un database con mirroring, vedere [Configurare gli account di accesso per il mirroring del database o i gruppi di disponibilità Always On (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) e [Gestione di account di accesso e di processi dopo un cambio di ruolo &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
+> **NOTA:** Per informazioni su come configurare gli account di accesso per un database con mirroring, vedere [Configurare gli account di accesso per il mirroring del database o i gruppi di disponibilità Always On (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) e [Gestione di account di accesso e di processi dopo un cambio di ruolo &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
   
 ##  <a name="permissions"></a><a name="permissions"></a> Autorizzazioni  
@@ -287,7 +288,7 @@ ms.locfileid: "85726447"
 #### <a name="server-level-permissions-for-a-certificate-or-asymmetric-key"></a>Autorizzazioni a livello del server per un certificato o una chiave asimmetrica  
  Non è possibile concedere autorizzazioni a livello del server direttamente a un certificato o a una chiave asimmetrica. Le autorizzazioni a livello del server vengono viceversa concesse a un account di accesso con mapping creato esclusivamente per un certificato o una chiave asimmetrica specifica. Ogni certificato o chiave asimmetrica che richiede autorizzazioni a livello del server richiede quindi un proprio *account di accesso con mapping al certificato* o un *account di accesso con mapping alla chiave asimmetrica*. Per concedere autorizzazioni a livello del server per un certificato o una chiave asimmetrica, concedere le autorizzazioni al relativo account di accesso con mapping.  
   
-> **NOTA** Un account di accesso con mapping viene utilizzato solo per l'autorizzazione del codice firmato con il certificato o la chiave asimmetrica corrispondente. Gli account di accesso con mapping non possono essere utilizzati per l'autenticazione.  
+> **NOTA:** un account di accesso con mapping viene usato solo per l'autorizzazione del codice firmato con il certificato o la chiave asimmetrica corrispondente. Gli account di accesso con mapping non possono essere utilizzati per l'autenticazione.  
   
  L'account di accesso con mapping e le relative autorizzazioni risiedono nel database **master**. Se un certificato o una chiave asimmetrica risiede in un database diverso da **master**è necessario ricreare tale certificato o chiave asimmetrica nel database **master** ed eseguirne il mapping a un account di accesso. Se si sposta, copia o ripristina il database in un'altra istanza del server, è necessario ricreare tale certificato o chiave asimmetrica nel database **master** dell'istanza del server di destinazione, eseguirne il mapping a un account di accesso e concedere le autorizzazioni a livello del server richieste all'account di accesso.  
   

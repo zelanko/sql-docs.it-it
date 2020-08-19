@@ -1,4 +1,5 @@
 ---
+description: Creazione di test case (OracleToSQL)
 title: Creazione di test case (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 270d904c11df5ab28062cd83672071319ca6f17f
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4f7183089fd67f413515034a557e4b73388f950f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418387"
 ---
 # <a name="creating-test-cases-oracletosql"></a>Creazione di test case (OracleToSQL)
 Utilizzare la procedura guidata test case per creare un test. Questa procedura guidata consente di creare test case scegliendo oggetti testati e verificati e specificando i parametri di test.  

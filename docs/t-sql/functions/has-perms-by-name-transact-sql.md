@@ -1,4 +1,5 @@
 ---
+description: HAS_PERMS_BY_NAME (Transact-SQL)
 title: HAS_PERMS_BY_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7ca0bb9b4fb03cc3f567c6c642a3593d23963993
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e2fa743ae09dc8a09a8edbc8e4a6e3b5cf8415db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417347"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +52,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Nome dell'entità a protezione diretta. Se l'entità a protezione diretta è il server stesso, questo valore deve essere impostato su NULL. *securable* è un'espressione scalare di tipo **sysname**. Non prevede alcun valore predefinito.  
   
  *securable_class*  
- Nome della classe dell'entità a protezione diretta in cui viene testata l'autorizzazione. *securable_class* è un'espressione scalare di tipo **nvarchar(60)** .  
+ Nome della classe dell'entità a protezione diretta in cui viene testata l'autorizzazione. *securable_class* è un'espressione scalare di tipo **nvarchar(60)**.  
   
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] l'argomento securable_class deve essere impostato su uno dei seguenti valori **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** o **USER**.  
   
@@ -62,7 +63,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Espressione scalare facoltativa di tipo **sysname** che rappresenta il nome della sottoentità a protezione diretta in cui viene testata l'autorizzazione. Il valore predefinito è NULL.  
   
 > [!NOTE]  
->  Nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e successive, le sottoentità a protezione diretta non possono usare le parentesi nel formato **'[** _nome secondario_ **]'** . È necessario usare invece **'** _nome secondario_ **'** .  
+>  Nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e successive, le sottoentità a protezione diretta non possono usare le parentesi nel formato **'[**_nome secondario_**]'**. È necessario usare invece **'** _nome secondario_ **'** .  
   
  *sub-securable_class*  
  Espressione scalare facoltativa di tipo **nvarchar(60)** che rappresenta la classe della sottoentità a protezione diretta in cui viene testata l'autorizzazione. Il valore predefinito è NULL.  

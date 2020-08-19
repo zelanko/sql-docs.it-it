@@ -1,4 +1,5 @@
 ---
+description: NEXT VALUE FOR (Transact-SQL)
 title: NEXT VALUE FOR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cb3fd2d18f5602030de6231a0dbbcc92a200a5fc
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8d383cc1530835635cc4c25957c25221a653dbfa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112905"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417277"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -151,7 +152,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
 ## <a name="metadata"></a>Metadati  
  Per informazioni sulle sequenze, eseguire una query nella vista del catalogo [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione **UPDATE** per l'oggetto sequenza o per lo schema della sequenza. Per un esempio relativo alla concessione di autorizzazioni, vedere l'esempio F più avanti in questo argomento.  

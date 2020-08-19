@@ -1,4 +1,5 @@
 ---
+description: Importare un file BACPAC per creare un nuovo database utente
 title: Importare un file BACPAC per creare un nuovo database utente
 ms.date: 06/03/2020
 ms.prod: sql
@@ -25,12 +26,12 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed5a14278e9114b9408406a103553280dd9e4f8f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5e02041dd6801f5ab0b819f4bffd91ca8ba38e8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781671"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412437"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importare un file BACPAC per creare un nuovo database utente
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,10 +55,10 @@ ms.locfileid: "85781671"
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  È possibile importare un'applicazione livello dati in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o in un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in cui è in esecuzione [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o versioni successive. Se si esporta un'applicazione livello dati da una versione successiva, è possibile che nell'applicazione in questione siano contenuti oggetti non supportati da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Non è possibile distribuire tali applicazioni livello dati a istanze di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  È consigliabile evitare di importare file di esportazione dell'applicazione livello dati provenienti da origini sconosciute o non attendibili. Tali file potrebbero contenere codice dannoso che potrebbe eseguire codice Transact-SQL indesiderato o causare errori modificando lo schema. Prima di usare un file di esportazione proveniente da un'origine sconosciuta o non attendibile, decomprimere l'applicazione livello dati e controllare il codice, ad esempio le stored procedure e altro codice definito dall'utente. Per altre informazioni su come eseguire questi controlli, vedere [Validate a DAC Package](validate-a-dac-package.md).  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  Per migliorare la sicurezza, gli account di accesso dell'autenticazione di SQL Server vengono archiviati in un file di esportazione dell'applicazione livello dati senza password. Quando il file viene importato, l'account di accesso viene creato come account disabilitato con una password generata. Per abilitare gli account di accesso è necessario accedere usando un account con l'autorizzazione ALTER ANY LOGIN e usare ALTER LOGIN per abilitare l'account di accesso e assegnare una nuova password che può essere comunicata all'utente. Questa operazione non è necessaria per gli account di accesso dell'autenticazione di Windows, in quanto le relative password non sono gestite da SQL Server.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -140,10 +141,10 @@ ms.locfileid: "85781671"
 ###  <a name="results-page"></a><a name="Results"></a> Pagina Risultati  
  In questa pagina viene riportato l'esito positivo o negativo delle operazioni di impostazione e creazione del database, con l'indicazione dei risultati positivi o negativi di ogni azione. Ogni azione che ha rilevato un errore avrà un collegamento nella colonna **Risultato** . Fare clic sul collegamento per visualizzare un report dell'errore relativo all'azione.  
   
- Fare clic su **Chiudi** per chiudere la procedura guidata.  
+ Fare clic su **Chiudi** per uscire dalla procedura guidata.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Importare un file BACPAC per creare un database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
+[Importare un file BACPAC per creare un nuovo database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
  [Applicazioni livello dati](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Esportazione di un'applicazione livello dati](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
   

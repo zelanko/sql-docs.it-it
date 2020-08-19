@@ -1,4 +1,5 @@
 ---
+description: Transazioni (SQL Data Warehouse)
 title: Transazioni (SQL Data Warehouse) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ac7b9a500bb87dca74082c9d16874131eb82402d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 4e2912d3bb0608a105c4f68c857b2ea679a86c2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197413"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417067"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transazioni (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -55,7 +56,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
  SET AUTOCOMMIT { **ON** | OFF }  
  Determina la modalità di inizio e di fine delle transazioni.  
   
- ATTIVA  
+ ON  
  Ogni istruzione viene eseguita in una transazione specifica. Non è necessaria un'istruzione COMMIT o ROLLBACK esplicita. Se AUTOCOMMIT corrisponde a ON, le transazioni esplicite sono consentite.  
   
  OFF  
@@ -78,7 +79,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  Se una transazione esplicita non viene eseguita correttamente a causa di un errore non correlato all'esecuzione di un'istruzione, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] esegue automaticamente il rollback della transazione e libera tutte le risorse usate dalla transazione stessa. Se ad esempio viene interrotta la connessione di rete tra il client e un'istanza di [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o se il client si disconnette dall'applicazione, quando la rete notifica l'interruzione all'istanza viene eseguito il rollback di tutte le transazioni della connessione di cui non è ancora stato eseguito il commit.  
   
- Se si verifica un errore durante l'esecuzione di un'istruzione in un batch, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] si comporta in modo coerente con l'impostazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]XACT_ABORT**su**ON**in** e viene eseguito il rollback dell'intera transazione. Per altre informazioni sull'impostazione **XACT_ABORT**, vedere [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
+ Se si verifica un errore durante l'esecuzione di un'istruzione in un batch, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] si comporta in modo coerente con l'impostazione di **XACT_ABORT** su **ON** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene eseguito il rollback dell'intera transazione. Per altre informazioni sull'impostazione **XACT_ABORT**, vedere [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  In un momento specifico, una sessione può eseguire solo una transazione. I punti di salvataggio e le transazioni annidate non sono supportati.  
@@ -103,7 +104,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
 ### <a name="a-using-an-explicit-transaction"></a>R. Uso di una transazione esplicita  
   
-```  
+```sql  
 BEGIN TRANSACTION;  
 DELETE FROM HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;  
@@ -113,8 +114,8 @@ COMMIT;
 ### <a name="b-rolling-back-a-transaction"></a>B. Rollback di una transazione  
  Nell'esempio seguente viene illustrato l'effetto del rollback di una transazione.  In questo esempio l'istruzione ROLLBACK esegue il rollback dell'istruzione INSERT, ma la tabella creata sarà ancora presente.  
   
-```  
-CREATE TABLE ValueTable (id int);  
+```sql  
+CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  
        INSERT INTO ValueTable VALUES(2);  
@@ -124,21 +125,21 @@ ROLLBACK;
 ### <a name="c-setting-autocommit"></a>C. Impostazione di AUTOCOMMIT  
  L'esempio seguente imposta AUTOCOMMIT su `ON`.  
   
-```  
+```sql  
 SET AUTOCOMMIT ON;  
 ```  
   
  L'esempio seguente imposta AUTOCOMMIT su `OFF`.  
   
-```  
+```sql  
 SET AUTOCOMMIT OFF;  
 ```  
   
 ### <a name="d-using-an-implicit-multi-statement-transaction"></a>D. Uso di una transazione implicita con istruzioni multiple  
   
-```  
+```sql  
 SET AUTOCOMMIT OFF;  
-CREATE TABLE ValueTable (id int);  
+CREATE TABLE ValueTable (id INT);  
 INSERT INTO ValueTable VALUES(1);  
 INSERT INTO ValueTable VALUES(2);  
 COMMIT;  

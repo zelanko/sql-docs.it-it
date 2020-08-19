@@ -1,4 +1,5 @@
 ---
+description: Uso di repository test (SybaseToSQL)
 title: Uso di repository di test (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ba0879ca35e40d7ea2d1466db97cabd3cb6abd18
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b05dac0ec74bb6c0cd9c9e99d8bb631b0a242eb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934552"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418247"
 ---
 # <a name="using-test-repositories-sybasetosql"></a>Uso di repository test (SybaseToSQL)
 Il repository di test di SSMA archivia i test case e i risultati dei test di SSMA tester per un uso successivo. I dati del repository vengono salvati nelle tabelle SQL Server **TestCaseRepository** e **RunTestCaseResultRepository** nella **ssma_sybase_utilities** dello schema di **ssmatesterdb_syb** database.  

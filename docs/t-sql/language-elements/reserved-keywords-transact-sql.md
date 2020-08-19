@@ -1,4 +1,5 @@
 ---
+description: Parole chiave riservate (Transact-SQL)
 title: Parole chiave riservate (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f963294781eea57c7957000d0daa1d149be3cd89
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 70b2e52af1ae87f4cacdb2189609c3ead2e3bc4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396354"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417107"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Parole chiave riservate (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -436,7 +437,7 @@ ms.locfileid: "87396354"
         NOCHECK
     :::column-end:::
     :::column:::
-        A
+        TO
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -447,7 +448,7 @@ ms.locfileid: "87396354"
         NONCLUSTERED
     :::column-end:::
     :::column:::
-        Torna all'inizio
+        TOP
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -518,10 +519,10 @@ ms.locfileid: "87396354"
 :::row-end:::  
 :::row:::
     :::column:::
-        Elimina
+        DELETE
     :::column-end:::
     :::column:::
-        ATTIVA
+        ON
     :::column-end:::
     :::column:::
         UNION
@@ -598,7 +599,7 @@ ms.locfileid: "87396354"
         DROP
     :::column-end:::
     :::column:::
-        o
+        OR
     :::column-end:::
     :::column:::
         VALUES
@@ -628,7 +629,7 @@ ms.locfileid: "87396354"
 :::row-end:::  
 :::row:::
     :::column:::
-        END
+        FINE
     :::column-end:::
     :::column:::
         OVER
@@ -770,7 +771,7 @@ La tabella seguente elenca le parole chiave riservate esclusive di **Azure SQL D
 :::row-end:::  
 :::row:::
     :::column:::
-        **ADD**
+        **AGGIUNGI**
     :::column-end:::
     :::column:::
         **EXTERNAL**
@@ -847,7 +848,7 @@ La tabella seguente elenca le parole chiave riservate esclusive di **Azure SQL D
 :::row-end:::  
 :::row:::
     :::column:::
-        **Analysis Services**
+        **AS**
     :::column-end:::
     :::column:::
         **FOREIGN**
@@ -1249,7 +1250,7 @@ La tabella seguente elenca le parole chiave riservate esclusive di **Azure SQL D
         **LEFT**
     :::column-end:::
     :::column:::
-        **ORA**
+        **TIME**
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -1436,7 +1437,7 @@ La tabella seguente elenca le parole chiave riservate esclusive di **Azure SQL D
         **NONE**
     :::column-end:::
     :::column:::
-        **USER**
+        **UTENTE**
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -1944,7 +1945,7 @@ La tabella seguente elenca le parole chiave riservate esclusive di **Azure SQL D
         MATCH
     :::column-end:::
     :::column:::
-        STATE
+        STATO
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -2128,7 +2129,7 @@ La tabella seguente elenca le parole chiave riservate esclusive di **Azure SQL D
         CURRENT_PATH
     :::column-end:::
     :::column:::
-        Nessuno
+        NONE
     :::column-end:::
     :::column:::
         TRAILING
@@ -2175,7 +2176,7 @@ La tabella seguente elenca le parole chiave riservate esclusive di **Azure SQL D
         OCCURRENCES_REGEX
     :::column-end:::
     :::column:::
-        TRUE
+        true
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -2252,7 +2253,7 @@ La tabella seguente elenca le parole chiave riservate esclusive di **Azure SQL D
         OUTPUT
     :::column-end:::
     :::column:::
-        VALORE
+        VALUE
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -2271,7 +2272,7 @@ La tabella seguente elenca le parole chiave riservate esclusive di **Azure SQL D
         DEREF
     :::column-end:::
     :::column:::
-        PARAMETRO
+        PARAMETER
     :::column-end:::
     :::column:::
         VAR_SAMP
@@ -2455,7 +2456,7 @@ La tabella seguente elenca le parole chiave riservate esclusive di **Azure SQL D
 :::row-end:::  
 :::row:::
     :::column:::
-        FALSE
+        false
     :::column-end:::
     :::column:::
         READS
@@ -2469,7 +2470,7 @@ La tabella seguente elenca le parole chiave riservate esclusive di **Azure SQL D
         FILTER
     :::column-end:::
     :::column:::
-        real
+        REAL
     :::column-end:::
     :::column:::
         XMLEXISTS

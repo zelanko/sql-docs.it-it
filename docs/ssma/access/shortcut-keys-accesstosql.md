@@ -1,4 +1,5 @@
 ---
+description: Tasti di scelta rapida (AccessToSQL)
 title: Tasti di scelta rapida (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 25a06221-0045-4fb6-a150-1245649768ab
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ac23b2e17227bbb85612148deb685c0cb668ca77
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ce07766ba9a10a8f9a0c7be38b8d263d371afd19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933886"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418537"
 ---
 # <a name="shortcut-keys-accesstosql"></a>Tasti di scelta rapida (AccessToSQL)
 È possibile usare i tasti di scelta rapida per spostarsi all'interno dell'applicazione SSMA. Per ulteriori informazioni, vedere gli argomenti seguenti.  

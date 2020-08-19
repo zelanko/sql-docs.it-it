@@ -1,4 +1,5 @@
 ---
+description: INDEXPROPERTY (Transact-SQL)
 title: INDEXPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
@@ -20,12 +21,12 @@ ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: deeed76ed033531695b321c3e185e03dd988739c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 065b792b1e9edec5bc8e1b12859e9152797ebfb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113442"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417367"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,10 +48,10 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  Espressione che contiene il numero di identificazione della tabella o vista indicizzata di cui si desidera ottenere informazioni sulla proprietà dell'indice. *object_ID* è di tipo **int**.  
   
  *index_or_statistics_name*  
- Espressione che contiene il nome dell'indice o delle statistiche per cui si desidera ottenere informazioni sulle proprietà. *index_or_statistics_name* è di tipo **nvarchar(128)** .  
+ Espressione che contiene il nome dell'indice o delle statistiche per cui si desidera ottenere informazioni sulle proprietà. *index_or_statistics_name* è di tipo **nvarchar(128)**.  
   
  *property*  
- Espressione che contiene il nome della proprietà del database da restituire. *property* è di tipo **varchar(128)** . I valori possibili sono i seguenti.  
+ Espressione che contiene il nome della proprietà del database da restituire. *property* è di tipo **varchar(128)**. I valori possibili sono i seguenti.  
   
 > [!NOTE]  
 >  Se non specificato diversamente, viene restituito NULL quando *property* non è un nome di proprietà valido, *object_ID* non è un ID di oggetto valido, *object_ID* è un tipo di oggetto non supportato per la proprietà specificata oppure il chiamante non ha l'autorizzazione necessaria per visualizzare i metadati dell'oggetto.  
