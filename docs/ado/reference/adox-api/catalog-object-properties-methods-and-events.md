@@ -1,4 +1,5 @@
 ---
+description: Proprietà, metodi ed eventi dell'oggetto Catalog
 title: Proprietà, metodi ed eventi dell'oggetto Catalog | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aedafb6e8753838c9911c0ff961b0c9181fd181c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3b1496230281d7199774475437c0d12be67e7cfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440403"
 ---
 # <a name="catalog-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Catalog
 ## <a name="propertiescollections"></a>Proprietà/raccolte  

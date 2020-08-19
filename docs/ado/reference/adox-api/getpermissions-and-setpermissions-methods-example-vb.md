@@ -1,4 +1,5 @@
 ---
+description: Esempio dei metodi GetPermissions e SetPermissions (VB)
 title: Esempio di metodi GetPermissions e sepermissions (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f87e7f9b32c123cae2918f89b92ac2928bb65c65
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 59984877f4c8d86b9adc18b841b17c92740e8602
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764895"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440053"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>Esempio dei metodi GetPermissions e SetPermissions (VB)
 In questo esempio vengono illustrati i metodi [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) e [sepermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) . Il codice seguente fornisce l'accesso completo per la tabella Orders all'utente amministratore.  

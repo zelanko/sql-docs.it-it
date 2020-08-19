@@ -1,4 +1,5 @@
 ---
+description: Metodo Append (raccolta Views ADOX)
 title: Metodo Append (viste ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 540ff52141139f4748cb2cd4c8979f5f8b55b230
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e022afd65b6ea37eda07f6ddb4d35ab135664a8f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764002"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440453"
 ---
 # <a name="append-method-adox-views"></a>Metodo Append (raccolta Views ADOX)
 Crea un nuovo oggetto [visualizzazione](../../../ado/reference/adox-api/view-object-adox.md) e lo aggiunge alla raccolta [views](../../../ado/reference/adox-api/views-collection-adox.md) .  
@@ -40,7 +41,7 @@ Views.Append Name, Command
  *Comando*  
  Oggetto [comando](../../../ado/reference/ado-api/command-object-ado.md) ADO che rappresenta la visualizzazione da creare.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Crea una nuova visualizzazione nell'origine dati con il nome e gli attributi specificati nell'oggetto **comando** .  
   
  Se il testo del comando specificato dall'utente rappresenta una procedura anziché una vista, il comportamento dipende dal provider. L' **Accodamento** avrà esito negativo se il provider non supporta la persistenza dei comandi.  

@@ -1,4 +1,5 @@
 ---
+description: Metodo Append (raccolta Users ADOX)
 title: Metodo Append (utenti ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c010b291468432544a037d15fbaa790fc3ee789d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e774ab590e3f405cab157293405eba5e575ecb52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440463"
 ---
 # <a name="append-method-adox-users"></a>Metodo Append (raccolta Users ADOX)
 Aggiunge un nuovo oggetto [utente](../../../ado/reference/adox-api/user-object-adox.md) alla raccolta [Users](../../../ado/reference/adox-api/users-collection-adox.md) .  
@@ -38,9 +39,9 @@ Users.Append User[,Password]
  Valore **Variant** che contiene l'oggetto **utente** da accodare o il nome dell'utente da creare e accodare.  
   
  *Password*  
- Facoltativa. Valore **stringa** che contiene la password per l'utente. Il parametro *password* corrisponde al valore specificato dal metodo [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) di un oggetto **utente** .  
+ Facoltativo. Valore **stringa** che contiene la password per l'utente. Il parametro *password* corrisponde al valore specificato dal metodo [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) di un oggetto **utente** .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  La raccolta **Users** di un [Catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) rappresenta tutti gli utenti del catalogo. La raccolta **Users** per un [gruppo](../../../ado/reference/adox-api/group-object-adox.md) rappresenta solo gli utenti che dispongono di un'appartenenza al gruppo specifico.  
   
  Se il provider non supporta la creazione di utenti, si verificherà un errore.  

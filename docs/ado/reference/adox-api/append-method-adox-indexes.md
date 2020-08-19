@@ -1,4 +1,5 @@
 ---
+description: Metodo Append (raccolta Indexes ADOX)
 title: Metodo Append (indici ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6996f3a0a3ad9f2ffa727a6cbd7b48d3fbf32777
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b13115a657f3bc25ae79cf3ba92a7fe339492536
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764062"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440543"
 ---
 # <a name="append-method-adox-indexes"></a>Metodo Append (raccolta Indexes ADOX)
 Aggiunge un nuovo oggetto [index](../../../ado/reference/adox-api/index-object-adox.md) alla raccolta [indexes](../../../ado/reference/adox-api/indexes-collection-adox.md) .  
@@ -33,13 +34,13 @@ Indexes.Append Index [,Columns]
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Indice*  
+ *Index*  
  Oggetto **index** da accodare o il nome dell'indice da creare e accodare.  
   
  *Colonne*  
- Facoltativa. Valore **Variant** che specifica il nome o i nomi delle colonne da indicizzare. Il parametro *Columns* corrisponde ai valori della proprietà [Name](../../../ado/reference/adox-api/name-property-adox.md) di un oggetto [colonna](../../../ado/reference/adox-api/column-object-adox.md) o di oggetti.  
+ Facoltativo. Valore **Variant** che specifica il nome o i nomi delle colonne da indicizzare. Il parametro *Columns* corrisponde ai valori della proprietà [Name](../../../ado/reference/adox-api/name-property-adox.md) di un oggetto [colonna](../../../ado/reference/adox-api/column-object-adox.md) o di oggetti.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Il parametro *Columns* può assumere il nome di una colonna o una matrice di nomi di colonna.  
   
  Se il provider non supporta la creazione di indici, si verificherà un errore.  

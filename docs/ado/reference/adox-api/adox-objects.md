@@ -1,4 +1,5 @@
 ---
+description: Oggetti ADOX
 title: Oggetti ADOX | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2969927d6221f45bff027b97f6e6468ab63baa86
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0d67a9d7fa099b0b716d0c2769a1af0cbf64abdb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440563"
 ---
 # <a name="adox-objects"></a>Oggetti ADOX
 ## <a name="adox-object-summary"></a>Riepilogo oggetto ADOX  
@@ -28,10 +29,10 @@ ms.locfileid: "82764112"
 |[Catalogo](../../../ado/reference/adox-api/catalog-object-adox.md)|Contiene le raccolte che descrivono il catalogo dello schema di un'origine dati.|  
 |[Colonna](../../../ado/reference/adox-api/column-object-adox.md)|Rappresenta una colonna di una tabella, un indice o una chiave.|  
 |[Gruppo](../../../ado/reference/adox-api/group-object-adox.md)|Rappresenta un account di gruppo che dispone di autorizzazioni di accesso all'interno di un database protetto.|  
-|[Indice](../../../ado/reference/adox-api/index-object-adox.md)|Rappresenta un indice di una tabella di database.|  
-|[Codice](../../../ado/reference/adox-api/key-object-adox.md)|Rappresenta un campo chiave primaria, esterna o univoca di una tabella di database.|  
+|[Index](../../../ado/reference/adox-api/index-object-adox.md)|Rappresenta un indice di una tabella di database.|  
+|[Chiave](../../../ado/reference/adox-api/key-object-adox.md)|Rappresenta un campo chiave primaria, esterna o univoca di una tabella di database.|  
 |[Procedura](../../../ado/reference/adox-api/procedure-object-adox.md)|Rappresenta un stored procedure.|  
-|[tavolo](../../../ado/reference/adox-api/table-object-adox.md)|Rappresenta una tabella di database, inclusi colonne, indici e chiavi.|  
+|[Tabella](../../../ado/reference/adox-api/table-object-adox.md)|Rappresenta una tabella di database, inclusi colonne, indici e chiavi.|  
 |[Utente](../../../ado/reference/adox-api/user-object-adox.md)|Rappresenta un account utente che dispone di autorizzazioni di accesso all'interno di un database protetto.|  
 |[Visualizza](../../../ado/reference/adox-api/view-object-adox.md)|Rappresenta un set filtrato di record o una tabella virtuale.|  
   

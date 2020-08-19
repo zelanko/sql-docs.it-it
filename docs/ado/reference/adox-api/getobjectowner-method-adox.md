@@ -1,4 +1,5 @@
 ---
+description: Metodo GetObjectOwner (ADOX)
 title: Metodo GetObjectOwner (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c9892ddc3be28e63dae0f3f6440cc4a668498e3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f4acea759ba213eac4365d79fa040c20e5a673cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440043"
 ---
 # <a name="getobjectowner-method-adox"></a>Metodo GetObjectOwner (ADOX)
 Restituisce il proprietario di un oggetto in un [Catalogo](../../../ado/reference/adox-api/catalog-object-adox.md).  
@@ -44,9 +45,9 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
  Valore **Long** che può essere una delle costanti [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) , che specifica il tipo dell'oggetto per il quale ottenere il proprietario.  
   
  *ObjectTypeId*  
- Facoltativa. Valore **Variant** che specifica il GUID per un tipo di oggetto provider non definito dalla specifica OLE DB. Questo parametro è obbligatorio se *ObjectType* è impostato su **adPermObjProviderSpecific**; in caso contrario, non viene utilizzato.  
+ Facoltativo. Valore **Variant** che specifica il GUID per un tipo di oggetto provider non definito dalla specifica OLE DB. Questo parametro è obbligatorio se *ObjectType* è impostato su **adPermObjProviderSpecific**; in caso contrario, non viene utilizzato.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Se il provider non supporta la restituzione di proprietari di oggetti, si verificherà un errore.  
   
 ## <a name="applies-to"></a>Si applica a  

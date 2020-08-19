@@ -1,4 +1,5 @@
 ---
+description: Esempio dei metodi Append di Groups e Users e del metodo ChangePassword (VC++)
 title: Accodamento di gruppi e utenti, esempio di Metodi ChangePassword (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e7067d0-6405-4c09-bff3-b1c2f2d783e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e11cb872d01182f037dd84ab3dd676e4f35e508
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 51601cc45aa0c595b3df617848ce66f114e1df63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764884"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439973"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>Esempio dei metodi Append di Groups e Users e del metodo ChangePassword (VC++)
 Questo esempio illustra il metodo [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) dei [gruppi](../../../ado/reference/adox-api/groups-collection-adox.md), nonché il metodo [Append](../../../ado/reference/adox-api/append-method-adox-users.md) degli [utenti](../../../ado/reference/adox-api/users-collection-adox.md) aggiungendo un nuovo [gruppo](../../../ado/reference/adox-api/group-object-adox.md) e un nuovo [utente](../../../ado/reference/adox-api/user-object-adox.md) al sistema. Il nuovo **gruppo** viene aggiunto alla raccolta di **gruppi** del nuovo **utente**. Di conseguenza, il nuovo **utente** viene aggiunto al **gruppo**. Inoltre, il metodo [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) viene utilizzato per specificare la password **utente** .  

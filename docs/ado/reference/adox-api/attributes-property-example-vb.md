@@ -1,4 +1,5 @@
 ---
+description: Esempio della proprietà Attributes (VB)
 title: Esempio di proprietà Attributes (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d951722b341d073364efd699021215cb99001613
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3d1067f47d50b344731c0f270671861f381a3242
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763972"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440433"
 ---
 # <a name="attributes-property-example-vb"></a>Esempio della proprietà Attributes (VB)
 In questo esempio viene illustrata la proprietà [Attributes](../../../ado/reference/adox-api/attributes-property-adox.md) di una [colonna](../../../ado/reference/adox-api/column-object-adox.md). Impostando il valore su **adColNullable** , l'utente può impostare il valore di un [campo](../../../ado/reference/ado-api/field-object.md) [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) su una stringa vuota. In questa situazione, l'utente può distinguere tra un record in cui i dati non sono noti e un record in cui i dati non sono applicabili.  

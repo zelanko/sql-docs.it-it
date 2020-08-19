@@ -1,4 +1,5 @@
 ---
+description: Proprietà DeleteRule (ADOX)
 title: Proprietà DeleteRule (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 508225919ae71461ef2e122171beede5cb7141c0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 23262afa30ca28c226964ebc17d4a3ac52971d5c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763892"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440073"
 ---
 # <a name="deleterule-property-adox"></a>Proprietà DeleteRule (ADOX)
 Indica l'azione eseguita quando viene eliminata una chiave primaria.  
@@ -32,7 +33,7 @@ Indica l'azione eseguita quando viene eliminata una chiave primaria.
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta e restituisce un valore **Long** che può essere una delle costanti [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) . Il valore predefinito è **adRINone**.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Questa proprietà è di sola lettura sugli oggetti [chiave](../../../ado/reference/adox-api/key-object-adox.md) già accodati a una raccolta.  
   
 ## <a name="applies-to"></a>Si applica a  

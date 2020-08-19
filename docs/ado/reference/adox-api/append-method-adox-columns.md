@@ -1,4 +1,5 @@
 ---
+description: Metodo Append (raccolta Columns ADOX)
 title: Metodo Append (colonne ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e69f2510e825a935cf7eb34951051c1e3848bb9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bd33dc71c9adcbe8e6ed25f965b227fbc76d96fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764042"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440523"
 ---
 # <a name="append-method-adox-columns"></a>Metodo Append (raccolta Columns ADOX)
 Aggiunge un nuovo oggetto [Column](../../../ado/reference/adox-api/column-object-adox.md) alla raccolta [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) .  
@@ -37,11 +38,11 @@ Columns.Append Column [,Type] [,DefinedSize]
  *Colonna*  
  Oggetto **colonna** da aggiungere o nome della colonna da creare e aggiungere.  
   
- *Type*  
- Facoltativa. Valore **Long** che specifica il tipo di dati della colonna. Il parametro di *tipo* corrisponde alla proprietà [Type](../../../ado/reference/adox-api/type-property-column-adox.md) di un oggetto **Column** .  
+ *Tipo*  
+ Facoltativo. Valore **Long** che specifica il tipo di dati della colonna. Il parametro di *tipo* corrisponde alla proprietà [Type](../../../ado/reference/adox-api/type-property-column-adox.md) di un oggetto **Column** .  
   
  *DefinedSize*  
- Facoltativa. Valore **Long** che specifica le dimensioni della colonna. Il parametro *DefinedSize* corrisponde alla proprietà [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) di un oggetto **Column** .  
+ Facoltativo. Valore **Long** che specifica le dimensioni della colonna. Il parametro *DefinedSize* corrisponde alla proprietà [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) di un oggetto **Column** .  
   
 > [!NOTE]
 >  Si verificherà un errore durante l'aggiunta di una **colonna** alla raccolta **Columns** di un [Indice](../../../ado/reference/adox-api/index-object-adox.md) se la **colonna** non esiste in una [tabella](../../../ado/reference/adox-api/table-object-adox.md) già accodata alla raccolta [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) .  

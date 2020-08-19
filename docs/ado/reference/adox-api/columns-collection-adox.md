@@ -1,4 +1,5 @@
 ---
+description: Raccolta Columns (ADOX)
 title: Raccolta Columns (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46168e694f87c4a8a827420f8b395b843da1d29b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 01598bb9c9b7258b33f66df6bf00db9b892f4ec5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759337"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440283"
 ---
 # <a name="columns-collection-adox"></a>Raccolta Columns (ADOX)
 Contiene tutti gli oggetti [colonna](../../../ado/reference/adox-api/column-object-adox.md) di una tabella, un indice o una chiave.  
   
-## <a name="remarks"></a>Commenti  
- Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) per una raccolta **Columns** è univoco per ADOX. È possibile scegliere:  
+## <a name="remarks"></a>Osservazioni  
+ Il metodo [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) per una raccolta **Columns** è univoco per ADOX. È possibile:  
   
 -   Aggiungere una nuova colonna alla raccolta con il metodo **Append** .  
   
- Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile scegliere:  
+ Le proprietà e i metodi rimanenti sono standard per le raccolte ADO. È possibile:  
   
 -   Accedere a una colonna della raccolta con la proprietà [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   

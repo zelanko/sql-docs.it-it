@@ -1,4 +1,5 @@
 ---
+description: Oggetto Group (ADOX)
 title: Oggetto Group (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b0cd75780abe01edc6f2e90258cc7d24f5eae016
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: aeeaf4d849efbfe2549a1c4f20b3689048b43a24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440013"
 ---
 # <a name="group-object-adox"></a>Oggetto Group (ADOX)
 Rappresenta un account di gruppo che dispone di autorizzazioni di accesso all'interno di un database protetto.  
