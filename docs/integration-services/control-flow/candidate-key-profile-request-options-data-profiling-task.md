@@ -1,4 +1,5 @@
 ---
+description: Opzioni di Richiesta profilo Chiave candidata (Attività Profiling dati)
 title: Opzioni di Richiesta profilo Chiave candidata (Attività Profiling dati) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 41f3c9d4fef15a99592421b3762515a15ef33b7b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 499f56a0ce11bc68ad046035ff0a43d80ae4bfe7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913980"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431043"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Chiave candidata (Attività Profiling dati)
 
@@ -80,7 +81,7 @@ ms.locfileid: "86913980"
  Visualizza il nome della tabella selezionata. Questa opzione è di sola lettura.  
   
 #### <a name="keycolumns-options"></a>Opzioni KeyColumns  
- Le opzioni seguenti sono disponibili per ogni colonna selezionata per l'analisi in **KeyColumns** o per l'opzione **(\*)** .  
+ Le opzioni seguenti sono disponibili per ogni colonna selezionata per l'analisi in **KeyColumns** o per l'opzione **(\*)**.  
   
  Per ulteriori informazioni, vedere la sezione "Informazioni sulla selezione di colonne per la proprietà KeyColumns" riportata in precedenza in questo argomento.  
   
@@ -96,7 +97,7 @@ ms.locfileid: "86913980"
 > [!NOTE]  
 >  Quando si usa il carattere jolly **(\*)** per **ColumnName**, la proprietà **CompareOptions** è di sola lettura ed è impostata su **Default**.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Default**|Ordina e confronta i dati in base alle regole di confronto della colonna nella tabella di origine.|  
 |**BinarySort**|Ordina e confronta i dati di in base ai modelli di bit definiti per ogni carattere. L'ordinamento binario supporta la distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati e rappresenta inoltre il tipo di ordinamento più rapido.|  
@@ -104,7 +105,7 @@ ms.locfileid: "86913980"
   
  Se si seleziona **DictionarySort**, è inoltre possibile selezionare qualsiasi combinazione delle opzioni elencate nella tabella seguente. Per impostazione predefinita, nessuna di queste opzioni aggiuntive è selezionata.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**IgnoreCase**|Specifica se nel confronto viene fatta distinzione tra lettere maiuscole e minuscole. Se questa opzione è impostata, nel confronto tra stringhe verrà ignorata la combinazione di maiuscole e minuscole. Ad esempio, la stringa "ABC" verrà considerata identica alla stringa "abc".|  
 |**IgnoreNonSpace**|Specifica se nel confronto viene fatta distinzione tra i caratteri con spaziatura e quelli con segni diacritici. Se questa opzione è impostata, nel confronto verranno ignorati i segni diacritici. Ad esempio, il carattere "Ã¥" verrà considerato uguale al carattere "a".|  
@@ -119,7 +120,7 @@ ms.locfileid: "86913980"
  **ThresholdSetting**  
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente. Il valore predefinito di questa proprietà è **Specified**.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Nessuno**|Non viene specificata alcuna soglia. Il livello di attendibilità della chiave viene segnalato indipendentemente dal valore.|  
 |**Specified**|Viene specificata una soglia in **KeyStrengthThreshold**. Il livello di attendibilità della chiave viene segnalato solo se è maggiore della soglia.|  

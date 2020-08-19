@@ -1,4 +1,5 @@
 ---
+description: EVENTDATA (Transact-SQL)
 title: EVENTDATA (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 95996934e6d8334376533b4abf04e2cc7607fd78
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32cfa9a876d13a1c8827649c3fe8ad145b4cb8da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784583"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459775"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,11 +41,12 @@ Questa funzione restituisce informazioni sugli eventi del server o del database.
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
-EVENTDATA( )  
-```  
-  
+```syntaxsql
+EVENTDATA( )
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>Osservazioni  
 `EVENTDATA` restituisce dati solo se usata direttamente in un trigger DDL o LOGON. `EVENTDATA` restituisce Null se chiamata da altre routine, anche se queste routine sono chiamate da un trigger DDL o LOGON.
   
@@ -111,7 +113,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Per la restituzione dei dati evento, usare il metodo XQuery **value()** invece del metodo **query()** . Il metodo **query()** restituisce istanze XML e CR/LF (ritorno a capo/avanzamento riga) trasformate con il carattere di escape e commerciale (&amp;) nell'output, mentre il metodo **value()** rende le istanze CR/LF invisibili nell'output.  
+>  Per la restituzione dei dati evento, usare il metodo XQuery **value()** invece del metodo **query()**. Il metodo **query()** restituisce istanze XML e CR/LF (ritorno a capo/avanzamento riga) trasformate con il carattere di escape e commerciale (&amp;) nell'output, mentre il metodo **value()** rende le istanze CR/LF invisibili nell'output.  
   
 ### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>B. Creazione di una tabella di log con dati di eventi in un trigger DDL  
 Questo esempio crea una tabella per l'archiviazione di informazioni su tutti gli eventi a livello di database e tale tabella viene popolata con un trigger DDL. L'uso di XQuery sui dati XML generai da `EVENTDATA` consente di acquisire il tipo di evento e l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)].  

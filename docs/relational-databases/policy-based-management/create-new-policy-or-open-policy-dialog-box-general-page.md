@@ -1,4 +1,5 @@
 ---
+description: Finestra di dialogo Crea nuovi criteri o Apri criteri, pagina Generale
 title: Finestra di dialogo "Crea nuovi criteri" o "Apri criteri", pagina Generale
 descripton: Describes the 'General Page' of the 'Create New Policy' and 'Open Policy' dialog boxes for Policy-Based Management in SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 110cdd1ac1a74986178b6d96803d20a1fc6284a1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 24d6ed05b1419c399f0a11d7de590a25f3d77077
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475643"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>Finestra di dialogo Crea nuovi criteri o Apri criteri, pagina Generale
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85749476"
  I criteri eseguiti in modalità di valutazione **Su richiesta** non utilizzano questa casella di controllo.  
   
  **Condizioni di controllo**  
- Selezionare la condizione della gestione basata su criteri utilizzata dai criteri correnti. Vengono elencate tutte le condizioni del server relative al facet della gestione basata su criteri associato. Fare clic su **Nuova condizione** per creare una nuova condizione. Fare clic sul pulsante con i puntini di sospensione ( **...** ) per modificarla.  
+ Selezionare la condizione della gestione basata su criteri utilizzata dai criteri correnti. Vengono elencate tutte le condizioni del server relative al facet della gestione basata su criteri associato. Fare clic su **Nuova condizione** per creare una nuova condizione. Fare clic sul pulsante con i puntini di sospensione (**...**) per modificarla.  
   
  **In base alle destinazioni**  
  Selezionare i tipi di destinazione disponibili per il facet per completare un'espressione di filtro.  

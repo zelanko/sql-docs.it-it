@@ -1,4 +1,5 @@
 ---
+description: Metodo CopyRecord (ADO)
 title: Metodo CopyRecord (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fc8cfec5752f88909214301931c69dddfe89dc5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b6519ba504056966b8e237f73209e96855dd6c11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444383"
 ---
 # <a name="copyrecord-method-ado"></a>Metodo CopyRecord (ADO)
 Copia un'entità rappresentata da un [record](../../../ado/reference/ado-api/record-object-ado.md) in un'altra posizione.  
@@ -34,23 +35,23 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *origine*  
- Facoltativa. Valore **stringa** che contiene un URL che specifica l'entità da copiare, ad esempio un file o una directory. Se l' *origine* viene omessa o specifica una stringa vuota, il file o la directory rappresentata dal [record](../../../ado/reference/ado-api/record-object-ado.md) corrente verrà copiato.  
+ *Origine*  
+ Facoltativo. Valore **stringa** che contiene un URL che specifica l'entità da copiare, ad esempio un file o una directory. Se l' *origine* viene omessa o specifica una stringa vuota, il file o la directory rappresentata dal [record](../../../ado/reference/ado-api/record-object-ado.md) corrente verrà copiato.  
   
  *Destinazione*  
- Facoltativa. Valore **stringa** che contiene un URL che specifica il percorso in cui verrà copiato il *codice sorgente* .  
+ Facoltativo. Valore **stringa** che contiene un URL che specifica il percorso in cui verrà copiato il *codice sorgente* .  
   
- *Nome utente*  
- Facoltativa. Valore **stringa** che contiene l'ID utente che, se necessario, autorizza l'accesso alla *destinazione*.  
+ *UserName*  
+ Facoltativo. Valore **stringa** che contiene l'ID utente che, se necessario, autorizza l'accesso alla *destinazione*.  
   
  *Password*  
- Facoltativa. Valore **stringa** che contiene la password che, se necessario, verifica il *nome utente*.  
+ Facoltativo. Valore **stringa** che contiene la password che, se necessario, verifica il *nome utente*.  
   
  *Opzioni*  
- Facoltativa. Valore [CopyRecordOptionsEnum uguale al](../../../ado/reference/ado-api/copyrecordoptionsenum.md) il cui valore predefinito è **adCopyUnspecified**. Specifica il comportamento di questo metodo.  
+ Facoltativo. Valore [CopyRecordOptionsEnum uguale al](../../../ado/reference/ado-api/copyrecordoptionsenum.md) il cui valore predefinito è **adCopyUnspecified**. Specifica il comportamento di questo metodo.  
   
- *Async*  
- Facoltativa. Valore **booleano** che, se impostato su **true**, specifica che questa operazione deve essere asincrona.  
+ *Asincrona*  
+ Facoltativo. Valore **booleano** che, se impostato su **true**, specifica che questa operazione deve essere asincrona.  
   
 ## <a name="return-value"></a>Valore restituito  
  Valore **stringa** che restituisce in genere il valore di *Destination*. Tuttavia, il valore esatto restituito è dipendente dal provider.  

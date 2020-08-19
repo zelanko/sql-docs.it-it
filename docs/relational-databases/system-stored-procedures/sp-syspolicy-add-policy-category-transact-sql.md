@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_add_policy_category (Transact-SQL)
 title: sp_syspolicy_add_policy_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ca8eca5643fb0021111c00abdce45e6de2c09878
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2722671523f14177a92084a4d896eec3ccdd6e2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892767"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469164"
 ---
 # <a name="sp_syspolicy_add_policy_category-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name = ] 'name'`Nome della categoria di criteri. *Name* è di **tipo sysname**ed è obbligatorio. il *nome* non può essere null o una stringa vuota.  
+`[ @name = ] 'name'` Nome della categoria di criteri. *Name* è di **tipo sysname**ed è obbligatorio. il *nome* non può essere null o una stringa vuota.  
   
-`[ @mandate_database_subscriptions = ] mandate_database_subscriptions`Determina se la sottoscrizione di database è obbligatoria per la categoria di criteri. *mandate_database_subscriptions* è un valore di **bit** e il valore predefinito è 1 (abilitato).  
+`[ @mandate_database_subscriptions = ] mandate_database_subscriptions` Determina se la sottoscrizione di database è obbligatoria per la categoria di criteri. *mandate_database_subscriptions* è un valore di **bit** e il valore predefinito è 1 (abilitato).  
   
-`[ @policy_category_id = ] policy_category_id`Identificatore della categoria di criteri. *policy_category_id* è di **tipo int**e viene restituito come output.  
+`[ @policy_category_id = ] policy_category_id` Identificatore della categoria di criteri. *policy_category_id* è di **tipo int**e viene restituito come output.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -74,8 +75,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure per la gestione basata su criteri &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_add_policy_category_subscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
- [sp_syspolicy_delete_policy_category &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)  
+ [Stored procedure per la gestione basata su criteri &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_add_policy_category_subscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
+ [sp_syspolicy_delete_policy_category &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)  
   
   

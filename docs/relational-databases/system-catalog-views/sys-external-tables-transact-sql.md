@@ -1,4 +1,5 @@
 ---
+description: sys. external_tables (Transact-SQL)
 title: sys. external_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -11,12 +12,12 @@ ms.assetid: fac4720c-b679-4ab2-864b-ff7810a9b559
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e0341c16a8aa78497aa0e1e347d5cc079a26b6b
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: dd2f6156737f55cd4a3f238a78c1ed61de2a3265
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394090"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490345"
 ---
 # <a name="sysexternal_tables-transact-sql"></a>sys. external_tables (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -43,9 +44,9 @@ ms.locfileid: "87394090"
 ## <a name="permissions"></a>Autorizzazioni  
  La visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Vedi anche  
- [sys. external_file_formats &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
- [sys. external_data_sources &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
+## <a name="see-also"></a>Vedere anche  
+ [sys. external_file_formats &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
+ [sys. external_data_sources &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Pulsanti di spostamento di Address Book
 title: Pulsanti di spostamento della Rubrica | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fcb9ef043f27cd36c57b35605c8bf8257613af5d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f1c5aee050caf603c3e1512d9098b7684a5ff917
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764712"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452323"
 ---
 # <a name="address-book-navigation-buttons"></a>Pulsanti di spostamento di Address Book
 L'applicazione Address Book Visualizza i pulsanti di spostamento nella parte inferiore della pagina Web. È possibile utilizzare i pulsanti di navigazione per spostarsi tra i dati nella visualizzazione della griglia HTML selezionando la prima o l'ultima riga di dati o le righe adiacenti alla selezione corrente.  

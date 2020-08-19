@@ -1,4 +1,5 @@
 ---
+description: Ricerca di stampanti installate con l'attività Script
 title: Ricerca di stampanti installate con l'attività Script| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb51bfe4ae9edb47203419f63a22ee61c12f71f7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9311883463a4c7ca1b065ab31dcdd84c1cac0ce6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430423"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>Ricerca di stampanti installate con l'attività Script
 

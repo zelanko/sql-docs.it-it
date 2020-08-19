@@ -1,4 +1,5 @@
 ---
+description: Esempio della proprietà SQL (VBScript)
 title: Esempio di proprietà SQL (VBScript) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 759dff00a5ae540a535c51d55b51c454cd2353d9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bd2d1079e8718d7c863bb3d23c6ce96b28464cf1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438613"
 ---
 # <a name="sql-property-example-vbscript"></a>Esempio della proprietà SQL (VBScript)
 > [!IMPORTANT]

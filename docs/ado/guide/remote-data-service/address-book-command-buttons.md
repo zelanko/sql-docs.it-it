@@ -1,4 +1,5 @@
 ---
+description: Pulsanti di comando di Address Book
 title: Pulsanti di comando Rubrica | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04f896b4a799e527e2442ef17e69a33f576950dd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2c2c3b0880a940b0f3388aced46c0cd9c888b786
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764742"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452333"
 ---
 # <a name="address-book-command-buttons"></a>Pulsanti di comando di Address Book
 L'applicazione Address Book include i pulsanti di comando seguenti:  
@@ -62,7 +63,7 @@ End Sub
 ```  
   
 ## <a name="update-profile-button"></a>Pulsante Aggiorna profilo  
- Se si fa clic sul pulsante **Aggiorna profilo** , viene attivata la subroutine Update_OnClick VBScript, che esegue il Servizi Desktop remoto [. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)Metodi dell'oggetto DataControl ( `DC1` ) [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) e [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) .  
+ Se si fa clic sul pulsante **Aggiorna profilo** , viene attivata la subroutine Update_OnClick VBScript, che esegue il Servizi Desktop remoto [. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) Metodi dell'oggetto DataControl ( `DC1` ) [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) e [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) .  
   
 ```vb
 Sub Update_OnClick  
@@ -71,7 +72,7 @@ Sub Update_OnClick
 End Sub  
 ```  
   
- Quando `DC1.SubmitChanges` viene eseguito, il servizio dati remoto crea il pacchetto di tutte le informazioni di aggiornamento e le invia al server tramite http. L'aggiornamento è All-or-Nothing; Se una parte dell'aggiornamento ha esito negativo, non viene apportata alcuna modifica e viene restituito un messaggio di stato. `DC1.Refresh`non è necessario dopo **SubmitChanges** con Remote Data Service, ma garantisce l'aggiornamento dei dati.  
+ Quando `DC1.SubmitChanges` viene eseguito, il servizio dati remoto crea il pacchetto di tutte le informazioni di aggiornamento e le invia al server tramite http. L'aggiornamento è All-or-Nothing; Se una parte dell'aggiornamento ha esito negativo, non viene apportata alcuna modifica e viene restituito un messaggio di stato. `DC1.Refresh` non è necessario dopo **SubmitChanges** con Remote Data Service, ma garantisce l'aggiornamento dei dati.  
   
 ## <a name="cancel-changes-button"></a>Pulsante Annulla modifiche  
  Se si fa clic su **Annulla modifiche** , viene attivata la subroutine Cancel_OnClick VBScript, che esegue il Servizi Desktop remoto [. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) (metodo `DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) .  

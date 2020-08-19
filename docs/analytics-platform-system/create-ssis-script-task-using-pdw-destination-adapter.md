@@ -1,4 +1,5 @@
 ---
+description: Creazione di un'attività script che utilizza l'adapter di destinazione data warehouse parallelo SSIS
 title: Creare un'attività script con l'adattatore di destinazione di SSIS PDW
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
@@ -9,12 +10,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4bc719d44d9a19da5706d20f16fa519352a04a6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 857dbc39906f57da39de623daecf18e5be0d28f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401225"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438523"
 ---
 # <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Creazione di un'attività script che utilizza l'adapter di destinazione data warehouse parallelo SSIS
 Questo codice script del pacchetto SSIS è un esempio di codice per l'uso dell'adapter di destinazione di SSIS PDW.  L'attività script di Integration Services consente di eseguire praticamente qualsiasi operazione che può essere eseguita in un'applicazione .NET all'interno del contesto di un flusso di controllo SSIS. 
@@ -27,7 +28,7 @@ Questo codice script del pacchetto SSIS è un esempio di codice per l'uso dell'a
   
 3.  Modificare lo script in modo da usare il codice riportato di seguito. Personalizzare lo script nell'ambiente apportando le modifiche seguenti:  
   
-    -   È necessario mantenere lo spazio dei nomi dello script creato dall'attività script. Annotare il nome dello `namespace ST_<GUID>` spazio dei nomi e modificare lo script seguente, modificando *ST_<GUID> * al *GUID* originale dell'attività script.  
+    -   È necessario mantenere lo spazio dei nomi dello script creato dall'attività script. Annotare il nome dello spazio dei nomi `namespace ST_<GUID>` e modificare lo script seguente, modificando * <GUID> ST_* al *GUID* originale dell'attività script.  
   
     -   Sostituire quattro occorrenze del valore del segnaposto *xxxxxxxx* con i valori appropriati per l'ambiente e l'azione desiderata.  
   

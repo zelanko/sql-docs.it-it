@@ -1,4 +1,5 @@
 ---
+description: Monitoraggio dei contatori delle prestazioni con l'attività Script
 title: Monitoraggio dei contatori delle prestazioni con l'attività Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a58e920e749709097ef70a0a6eac49acf8cb056b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 58ca41882200dbf8689b3d3b093b2191d904dc40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430413"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>Monitoraggio dei contatori delle prestazioni con l'attività Script
 

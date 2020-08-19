@@ -1,4 +1,5 @@
 ---
+description: Proprietà CursorLocation (ADO)
 title: Proprietà CursorLocation (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9aa95b7633d5dfa3a484dd97289c15c5737af986
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 92567057acad1edb0a0571a0057a11a47a3c65d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242741"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444303"
 ---
 # <a name="cursorlocation-property-ado"></a>Proprietà CursorLocation (ADO)
 Indica la posizione del servizio del cursore.  
@@ -29,7 +30,7 @@ Indica la posizione del servizio del cursore.
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **Long** che può essere impostato su uno dei valori [CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md) .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Questa proprietà consente di scegliere tra varie librerie di cursori accessibili per il provider. In genere, è possibile scegliere di utilizzare una libreria di cursori sul lato client o un'altra che si trova nel server.  
   
  Questa impostazione di proprietà influiscono sulle connessioni stabilite solo dopo l'impostazione della proprietà. La modifica della proprietà **CursorLocation** non ha effetto sulle connessioni esistenti.  

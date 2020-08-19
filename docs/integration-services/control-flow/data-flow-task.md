@@ -1,4 +1,5 @@
 ---
+description: Attività Flusso di dati
 title: Attività Flusso di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4bc62cfc37e6a69f34faabf8a9622f5c0d79d5f8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 21ef6f741ebfdd035630a40aba431c08a1ff9341
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919864"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431033"
 ---
 # <a name="data-flow-task"></a>Attività Flusso di dati
 
@@ -92,7 +93,7 @@ ms.locfileid: "86919864"
   
  Nella tabella seguente viene ad esempio illustrato il messaggio "Sono state passate righe come input per un componente del flusso di dati. :  : 1185 : Output origine OLE DB : 1180 : Ordinamento : 1181 : Input ordinamento : 76", scomposto in colonne. Il messaggio è stato scritto dall'evento **OnPipelineRowsSent** quando le righe sono state inviate dall'origine OLE DB alla trasformazione Ordinamento.  
   
-|Colonna|Descrizione|valore|  
+|Colonna|Descrizione|Valore|  
 |------------|-----------------|-----------|  
 |**PathID**|Valore della proprietà **ID** del percorso tra l'origine OLE DB e la trasformazione Ordinamento.|1185|  
 |**PathName**|Valore della proprietà **Name** del percorso.|Output origine OLE DB|  

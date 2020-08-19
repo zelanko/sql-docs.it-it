@@ -1,4 +1,5 @@
 ---
+description: Proprietà Server (Servizi Desktop remoto)
 title: Proprietà Server (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5cd4f578a8146a8fa7d45dcfd8e2b58f795def13
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: eb7ebc994d252fc8806c133c61239cce67b693bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750858"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438653"
 ---
 # <a name="server-property-rds"></a>Proprietà Server (Servizi Desktop remoto)
 Indica il nome del Internet Information Services (IIS) e il protocollo di comunicazione.  
@@ -110,14 +111,14 @@ DataControl.Server=""
  *awebsrvr*o *nomecomputer*  
  Valore **stringa** che contiene un percorso Internet o Intranet oppure un nome computer se il server si trova in un computer remoto; oppure una stringa vuota se il server si trova nel computer locale.  
   
- *porta*  
- Facoltativa. Porta utilizzata per la connessione a un server che esegue IIS. Il numero di porta è impostato in Internet Explorer. scegliere **Opzioni**dal menu **Visualizza** , quindi selezionare la scheda **connessione** oppure in IIS.  
+ *port*  
+ Facoltativo. Porta utilizzata per la connessione a un server che esegue IIS. Il numero di porta è impostato in Internet Explorer. scegliere **Opzioni**dal menu **Visualizza** , quindi selezionare la scheda **connessione** oppure in IIS.  
   
  *DataControl*  
  Variabile oggetto che rappresenta un Servizi Desktop remoto **. Oggetto DataControl** .  
   
-## <a name="remarks"></a>Commenti  
- Il server è il percorso in cui **RDS. **Viene elaborata la richiesta DataControl, ovvero una query o un aggiornamento. Per impostazione predefinita, tutte le richieste vengono elaborate dall'oggetto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) , [MSDFMAP. ](../../../ado/guide/remote-data-service/datafactory-customization.md)Componente del gestore e [MSDFMAP. File INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) nel server specificato. Tenere presente che quando si modificano i server per riconciliare le impostazioni nel vecchio e nel nuovo **MSDFMAP. File INI** . Le incompatibilità possono causare errori delle richieste che hanno esito positivo su un server in un altro. Se la proprietà server è impostata sulla stringa vuota "", questi oggetti verranno utilizzati nel computer locale.  
+## <a name="remarks"></a>Osservazioni  
+ Il server è il percorso in cui **RDS. ** Viene elaborata la richiesta DataControl, ovvero una query o un aggiornamento. Per impostazione predefinita, tutte le richieste vengono elaborate dall'oggetto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) , [MSDFMAP. ](../../../ado/guide/remote-data-service/datafactory-customization.md) Componente del gestore e file di [MSDFMAP.INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) nel server specificato. Tenere presente che quando si modificano i server per riconciliare le impostazioni nei file **MSDFMAP.INI** vecchi e nuovi. Le incompatibilità possono causare errori delle richieste che hanno esito positivo su un server in un altro. Se la proprietà server è impostata sulla stringa vuota "", questi oggetti verranno utilizzati nel computer locale.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

@@ -1,4 +1,5 @@
 ---
+description: Destinazione Oracle
 title: Destinazione Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f09d0cc0ad4a8d6ee1230bd846375b5b340cd4fe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e029637f90afbb27e4b27c79c8a515a2e3aad823
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430783"
 ---
 # <a name="oracle-destination"></a>Destinazione Oracle
 
@@ -141,8 +142,8 @@ Consente di selezionare il metodo per la selezione dei dati dall'origine. Le opz
 
 |Opzione|Descrizione|
 |:-|:-|
-|Nome tabella|Configurare la destinazione Oracle per il funzionamento in modalità batch. Opzioni:<br><br> **Nome tabella o vista**: selezionare una tabella o vista disponibile dal database nell'elenco.<br><br> **Dimensioni transazione**: immettere il numero di inserimenti che possono essere eseguiti in una singola transazione. Il valore predefinito è **BatchSize**.<br><br> **Dimensioni batch**: tipo di dimensioni (numero di righe caricate) del batch per il caricamento bulk.
-|Nome tabella - Caricamento rapido|Configurare la destinazione Oracle per il funzionamento in modalità di caricamento rapido (percorso diretto). <br><br>Sono disponibili le opzioni seguenti:<br><br> **Nome tabella o vista**: selezionare una tabella o vista disponibile dal database nell'elenco.<br><br> **Caricamento parallelo**: indica se il caricamento parallelo è abilitato. Per altre informazioni, vedere [Parallelismo](#parallelism).<br><br> **Nessuna registrazione**: questa casella di controllo consente di disabilitare la registrazione del database. Questa registrazione è un database Oracle usato a scopo di ripristino, non correlato alla traccia.<br><br> **Numero massimo di errori**: numero massimo di errori che possono verificarsi prima dell'arresto del flusso di dati. Il valore predefinito è 0, ovvero nessun limite per il numero di errori.<br><br> Tutti gli errori che si verificano sono restituiti nell'output degli errori.<br><br> **Dimensioni buffer di trasferimento (KB)** : immettere le dimensioni del buffer di trasferimento. Il valore predefinito è 64 KB.|
+|Nome tabella|Configurare la destinazione Oracle per il funzionamento in modalità batch. Opzioni:<br><br> **Nome tabella o vista**: selezionare una tabella o vista disponibile del database dall'elenco.<br><br> **Dimensioni transazione**: immettere il numero di inserimenti che possono essere eseguiti in una singola transazione. Il valore predefinito è **BatchSize**.<br><br> **Dimensioni batch**: tipo di dimensioni (numero di righe caricate) del batch per il caricamento bulk.
+|Nome tabella - Caricamento rapido|Configurare la destinazione Oracle per il funzionamento in modalità di caricamento rapido (percorso diretto). <br><br>Sono disponibili le opzioni seguenti:<br><br> **Nome tabella o vista**: selezionare una tabella o vista disponibile del database dall'elenco.<br><br> **Caricamento parallelo**: indica se il caricamento parallelo è abilitato. Per altre informazioni, vedere [Parallelismo](#parallelism).<br><br> **Nessuna registrazione**: questa casella di controllo consente di disabilitare la registrazione del database. Questa registrazione è un database Oracle usato a scopo di ripristino, non correlato alla traccia.<br><br> **Numero massimo di errori**: numero massimo di errori che possono verificarsi prima dell'arresto del flusso di dati. Il valore predefinito è 0, ovvero nessun limite per il numero di errori.<br><br> Tutti gli errori che si verificano sono restituiti nell'output degli errori.<br><br> **Dimensioni buffer di trasferimento (KB)** : immettere le dimensioni del buffer di trasferimento. Il valore predefinito è 64 KB.|
 
 **Visualizza dati esistenti**
 

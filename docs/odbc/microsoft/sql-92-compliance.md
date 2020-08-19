@@ -1,4 +1,5 @@
 ---
+description: Conformità SQL-92
 title: Conformità SQL-92 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 50c8c7df-df01-4f4d-ad62-d059cf29d73a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9ac0ae5873e545afb8fcac9dd003c984b1ed303a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d978b236c45d442732cd3602c3fbbb6d16dfd8f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300701"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483434"
 ---
 # <a name="sql-92-compliance"></a>Conformità SQL-92
 I driver del database desktop ODBC e il motore Microsoft Jet sottostante non sono conformi a SQL-92. Supportano numerose funzionalità definite in SQL-92. Alcune funzionalità supportate nel driver non sono supportate in SQL-92. Per ulteriori informazioni, vedere la *Guida per programmatori Microsoft Jet motore di database*. Di seguito sono riportate le principali differenze tra le due:  

@@ -1,4 +1,5 @@
 ---
+description: Esempio del metodo CreateRecordset (VB)
 title: Esempio di metodo CreateRecordset (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d520e58866e7092f6e11807bca8c9407c6b16ca
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e91e1c0801cb8062bca89968d0345f5bbcee1220
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760197"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444313"
 ---
 # <a name="createrecordset-method-example-vb"></a>Esempio del metodo CreateRecordset (VB)
 È possibile creare un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e specificare le informazioni sulla colonna. È quindi possibile inserire i dati nell'oggetto **Recordset** ; il set di righe sottostante memorizza nel buffer gli inserimenti.  
