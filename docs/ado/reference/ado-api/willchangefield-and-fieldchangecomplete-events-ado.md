@@ -1,4 +1,5 @@
 ---
+description: Eventi WillChangeField e FieldChangeComplete (ADO)
 title: Eventi WillChangeField e FieldChangeComplete (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4a4fb74e95bf0e1ba9dc9d0001b3d653f9294c1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: be000a8ff9154c79c2b98c9bc57f79f3537743c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441533"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>Eventi WillChangeField e FieldChangeComplete (ADO)
 L'evento **WillChangeField** viene chiamato prima che un'operazione in sospeso modifichi il valore di uno o più oggetti [Field](../../../ado/reference/ado-api/field-object.md) nel [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). L'evento **FieldChangeComplete** viene chiamato dopo che il valore di uno o più oggetti **Field** è stato modificato.  
@@ -61,7 +62,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *pRecordset*  
  Oggetto **Recordset** . **Recordset** per il quale si è verificato l'evento.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  È possibile che si verifichi un evento **WillChangeField** o **FieldChangeComplete** quando si imposta la proprietà [value](../../../ado/reference/ado-api/value-property-ado.md) e si chiama il metodo [Update](../../../ado/reference/ado-api/update-method.md) con i parametri di matrice Field e value.  
   
 ## <a name="see-also"></a>Vedere anche  

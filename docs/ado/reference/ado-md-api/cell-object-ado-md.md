@@ -1,4 +1,5 @@
 ---
+description: Oggetto Cell (ADO MD)
 title: Oggetto Cell (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d309ba98c1e50d8eb6fbe47fb9452f8ea7df35ba
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a6cb4d32a4a527cce7bc69eb39f8829bbf5cf58a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441243"
 ---
 # <a name="cell-object-ado-md"></a>Oggetto Cell (ADO MD)
 Rappresenta i dati all'intersezione delle coordinate dell'asse contenute in un oggetto Cell.  
@@ -42,7 +43,7 @@ Rappresenta i dati all'intersezione delle coordinate dell'asse contenute in un o
   
  La raccolta **Properties** contiene proprietà fornite dal provider. Nella tabella seguente sono elencate le proprietà che potrebbero essere disponibili. L'elenco di proprietà effettivo può variare a seconda dell'implementazione del provider. Per un elenco più completo delle proprietà disponibili, vedere la documentazione relativa al provider.  
   
-|Nome|Description|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |ColoreSfondo|Colore di sfondo utilizzato per la visualizzazione della cella.|  
 |FontFlags|Maschera di maschera che illustra in dettaglio gli effetti sul tipo di carattere.|  

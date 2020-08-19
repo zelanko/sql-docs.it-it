@@ -1,4 +1,5 @@
 ---
+description: Proprietà LevelName (ADO MD)
 title: Proprietà LevelName (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bf3b4466-9a0b-446e-9e04-fed944e3a493
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65905444e291a602e0ff0d1d76f4208bbe436a79
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 59317faca648592630df8e5ca8b483faf9521082
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753421"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440903"
 ---
 # <a name="levelname-property-ado-md"></a>Proprietà LevelName (ADO MD)
 Indica il nome del livello di un [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
@@ -29,7 +30,7 @@ Indica il nome del livello di un [membro](../../../ado/reference/ado-md-api/memb
 ## <a name="return-values"></a>Valori restituiti  
  Restituisce una **stringa** ed è di sola lettura.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare la proprietà **LevelName** per recuperare il nome del livello a cui appartiene un membro. Corrisponde alla proprietà [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) di un oggetto [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) .  
   
 ## <a name="applies-to"></a>Si applica a  

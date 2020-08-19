@@ -1,4 +1,5 @@
 ---
+description: Evento WillExecute (ADO)
 title: Evento WillExecute (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef47b4bac626d82754ce01685504b4a48303a4b4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: dd217597018b4cb5aa4764955fdd1795371a040c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764452"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441473"
 ---
 # <a name="willexecute-event-ado"></a>Evento WillExecute (ADO)
 L'evento **WillExecute** viene chiamato immediatamente prima dell'esecuzione di un comando in sospeso in una connessione.  
@@ -34,7 +35,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *origine*  
+ *Origine*  
  **Stringa** che contiene un comando SQL o un nome di stored procedure.  
   
  *CursorType*  
@@ -58,8 +59,8 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *pConnection*  
  Oggetto di [connessione (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) per il quale viene applicata la notifica degli eventi.  
   
-## <a name="remarks"></a>Commenti  
- Un evento **WillExecute** può verificarsi a causa di una connessione.  Metodo [Execute (connessione ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md), metodo [Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)o metodo [Open (recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) il parametro *pConnection* deve sempre contenere un riferimento valido a un oggetto **Connection** . Se l'evento è dovuto a **Connection. Execute**, i parametri *pRecordset* e *pCommand* sono impostati su **Nothing**. Se l'evento è dovuto a **Recordset. Open**, il parametro *pRecordset* fa riferimento all'oggetto **Recordset** e il parametro *pCommand* è impostato su **Nothing**. Se l'evento è dovuto a **Command. Execute**, il parametro *pCommand* fa riferimento all'oggetto **Command** e il parametro *pRecordset* è impostato su **Nothing**.  
+## <a name="remarks"></a>Osservazioni  
+ Un evento **WillExecute** può verificarsi a causa di una connessione.  Metodo [Execute (connessione ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md), metodo [Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)o metodo [Open (recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) il parametro *pConnection* deve sempre contenere un riferimento valido a un oggetto **Connection** . Se l'evento è dovuto a **Connection.Execute**, i parametri *pRecordset* e *pCommand* sono impostati su **Nothing**. Se l'evento è dovuto a **Recordset. Open**, il parametro *pRecordset* fa riferimento all'oggetto **Recordset** e il parametro *pCommand* è impostato su **Nothing**. Se l'evento è dovuto a **Command.Execute**, il parametro *pCommand* fa riferimento all'oggetto **Command** e il parametro *pRecordset* è impostato su **Nothing**.  
   
  **WillExecute** consente di esaminare e modificare i parametri di esecuzione in sospeso. Questo evento può restituire una richiesta di annullamento del comando in sospeso.  
   

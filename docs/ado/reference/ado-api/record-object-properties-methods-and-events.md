@@ -1,4 +1,5 @@
 ---
+description: Proprietà, metodi ed eventi dell'oggetto Record
 title: Proprietà, metodi ed eventi dell'oggetto record | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 156861996bc62e968c192fdd8687c7654e0d2b60
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a354504bcc81d73f3856c8265da908f84e1b019e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754034"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442503"
 ---
 # <a name="record-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Record
 ## <a name="propertiescollections"></a>Proprietà/raccolte  

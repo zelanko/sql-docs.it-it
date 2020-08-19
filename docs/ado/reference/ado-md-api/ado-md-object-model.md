@@ -1,4 +1,5 @@
 ---
+description: Modello a oggetti ADO MD
 title: Modello a oggetti ADO MD | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 69536f73c26a51debe4e53ea123c8b73fcd0488e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: acd8895c8fa727d3be71712c575e3edaee445ec6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765272"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441373"
 ---
 # <a name="ado-md-object-model"></a>Modello a oggetti ADO MD
 In questo argomento viene descritto il modo in cui gli oggetti sono rappresentati e correlati in ADO MD.  

@@ -1,4 +1,5 @@
 ---
+description: Metodo Supports
 title: Metodo Supports | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3fbfbf28c430fb698f5e024fe3359027c84512c0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8b0c05118b0f4b8f952b933bc2474bd1f0879865
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441753"
 ---
 # <a name="supports-method"></a>Metodo Supports
 Determina se un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) specificato supporta un particolare tipo di funzionalità.  
@@ -40,7 +41,7 @@ boolean = recordset.Supports(CursorOptions )
  *CursorOptions*  
  Espressione **Long** costituita da uno o più valori [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) .  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare il metodo **Supports** per determinare i tipi di funzionalità supportati da un oggetto **Recordset** . Se l'oggetto **Recordset** supporta le funzionalità le cui costanti corrispondenti si trovano in *CursorOptions*, il metodo **Supports** restituisce **true**. In caso contrario, restituisce **false**.  
   
 > [!NOTE]

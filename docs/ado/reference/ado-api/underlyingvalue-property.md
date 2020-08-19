@@ -1,4 +1,5 @@
 ---
+description: Proprietà UnderlyingValue
 title: Proprietà UnderlyingValue | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 67dd3f7a6892d4fa139ffd14b3dc33e4231a6cb2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 12788438d7db4cf51df564ea7d262bb4e7ef693d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441703"
 ---
 # <a name="underlyingvalue-property"></a>Proprietà UnderlyingValue
 Indica il valore corrente di un oggetto [campo](../../../ado/reference/ado-api/field-object.md) nel database.  

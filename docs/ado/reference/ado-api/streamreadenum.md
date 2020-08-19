@@ -1,4 +1,5 @@
 ---
+description: StreamReadEnum
 title: StreamReadEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92c599665548c36b8349290b02d197393f707fbf
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 1aa8ff80f02d84aaa69904d914e0e40da44da930
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441813"
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
 Specifica se l'intero flusso o la riga successiva devono essere letti da un oggetto [flusso](../../../ado/reference/ado-api/stream-object-ado.md) .  

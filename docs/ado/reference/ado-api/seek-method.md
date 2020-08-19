@@ -1,4 +1,5 @@
 ---
+description: Metodo Seek
 title: Metodo Seek | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a96c8054d83fa0ecff4cc3fed3a1227f300f7e2e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b9eecf5caee690687adaffda7ccd56d869abb9e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765402"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442097"
 ---
 # <a name="seek-method"></a>Metodo Seek
 Esegue una ricerca nell'indice di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per individuare rapidamente la riga che corrisponde ai valori specificati e imposta la posizione della riga corrente su quella riga.  
@@ -40,7 +41,7 @@ recordset.Seek KeyValues, SeekOption
  *SeekOption*  
  Valore [SeekEnum](../../../ado/reference/ado-api/seekenum.md) che specifica il tipo di confronto da eseguire tra le colonne dell'indice e i relativi *valori*di base.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare il metodo **Seek** insieme alla proprietà [index](../../../ado/reference/ado-api/index-property.md) se il provider sottostante supporta indici nell'oggetto **Recordset** . Utilizzare il metodo [Supports](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** per determinare se il provider sottostante supporta **Seek**e il metodo **Supports (adIndex)** per determinare se il provider supporta gli indici. Ad esempio, il [provider di OLE DB per Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) supporta la **ricerca** e l' **Indice**.  
   
  Se **Seek** non trova la riga desiderata, non si verifica alcun errore e la riga viene posizionata alla fine del **Recordset**. Impostare la proprietà **index** sull'indice desiderato prima di eseguire questo metodo.  

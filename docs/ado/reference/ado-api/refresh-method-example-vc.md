@@ -1,4 +1,5 @@
 ---
+description: Esempio del metodo Refresh (VC++)
 title: Esempio di metodo Refresh (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abd6a67cdec9e330cb2f21baeedfe3518fd3b7d0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 521ed958411e2943d0f01d25cb417aee569f1912
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442333"
 ---
 # <a name="refresh-method-example-vc"></a>Esempio del metodo Refresh (VC++)
 Questo esempio illustra l'uso del metodo [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) per aggiornare la raccolta [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) per un oggetto stored procedure [comando](../../../ado/reference/ado-api/command-object-ado.md) .  

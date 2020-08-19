@@ -1,4 +1,5 @@
 ---
+description: Proprietà Rowset (ADO)
 title: Proprietà Rowset (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3eb383bb0e5cadf557ff67a1e97d1b6b5a6bf988
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8f6342de5be5b2c6ba6e1bf58408cfabc6e31088
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756001"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442233"
 ---
 # <a name="rowset-property-ado"></a>Proprietà Rowset (ADO)
 Ottiene o imposta un oggetto OLE DB **set di righe** da/in un oggetto **ADORecordsetConstruction** . Quando si utilizza put_Rowset, il set di righe viene trasformato in un oggetto **Recordset** ADO.  

@@ -1,4 +1,5 @@
 ---
+description: Esempio della proprietà Status (Field) (VB)
 title: Esempio di proprietà Status (Field) (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2263f72311111ef7f63d006e085165ec2ab492c3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 66fab5cee49adf89bffee79f5b51b13780d5d982
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759707"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441943"
 ---
 # <a name="status-property-example-field-vb"></a>Esempio della proprietà Status (Field) (VB)
 Nell'esempio seguente viene aperto un documento da una cartella di lettura/scrittura utilizzando il [provider di pubblicazione Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). La proprietà [status](../../../ado/reference/ado-api/status-property-ado-field.md) di un [oggetto campo](../../../ado/reference/ado-api/field-object.md) del [record](../../../ado/reference/ado-api/record-object-ado.md) verrà prima impostata su **adFieldPendingInsert**, quindi verrà aggiornata in **adFieldOK**.  

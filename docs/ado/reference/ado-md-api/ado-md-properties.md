@@ -1,4 +1,5 @@
 ---
+description: Proprietà ADO MD
 title: Proprietà ADO MD | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70153e52186ac4f15629b32cca0c303fc81209a9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e05befd8346dd66337be0b876d493b9b5a6fed19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441334"
 ---
 # <a name="ado-md-properties"></a>Proprietà ADO MD
 
@@ -50,7 +51,7 @@ ms.locfileid: "87242531"
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|Indica un nome non ambiguo per l'oggetto corrente.|  
 |[Valore](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Indica il valore della cella corrente.|  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni di riferimento sull'API ADO MD](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [Esempi di codice ADO MD](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [Raccolte di ADO MD](../../../ado/reference/ado-md-api/ado-md-collections.md)   

@@ -1,4 +1,5 @@
 ---
+description: Esempio del metodo Supports (VB)
 title: Esempio di metodo Supports (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e5b9fd4327a25af3faf87b966c510d1d4016c89d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4042f1a7bffc935333232a6267d06d905a34545f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441773"
 ---
 # <a name="supports-method-example-vb"></a>Esempio del metodo Supports (VB)
 In questo esempio viene utilizzato il metodo [Supports](../../../ado/reference/ado-api/supports-method.md) per visualizzare le opzioni supportate da un recordset aperto con tipi di cursore diversi. Per eseguire questa procedura, è necessaria la procedura DisplaySupport.  

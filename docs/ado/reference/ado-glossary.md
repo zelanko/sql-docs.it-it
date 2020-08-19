@@ -1,4 +1,5 @@
 ---
+description: Glossario di ADO
 title: Glossario ADO | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b6bd1cb1f5b0461236c0604bb5818d9dcbadd2a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: aa3afd41a64b35cca0e3ffc4e676939dd2920ee9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441433"
 ---
 # <a name="ado-glossary"></a>Glossario di ADO
 In questo argomento vengono definiti i termini rilevanti per ADO.  
   
-## <a name="a"></a>Una   
+## <a name="a"></a>Una  
  URL assoluto  
  URL completo che specifica il percorso di una risorsa che risiede in Internet o in una rete Intranet. Vedere anche *URL* e *URL relativo*.  
   
@@ -100,7 +101,7 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
  operatore di confronto  
  Operatore che confronta due espressioni e restituisce un valore booleano.  
   
- Parametro dei criteri che può essere espresso come ">" (maggiore di), " \< " (minore di), "=" (uguale), ">=" (maggiore o uguale a), "<=" (minore o uguale), "<>" (non uguale) o "like" (criteri di ricerca).  
+ Parametro dei criteri che può essere espresso come ">" (maggiore di), " \<" (less than), "=" (equal), "> =" (maggiore o uguale a), "<=" (minore o uguale a), "<>" (non uguale) o "like" (criteri di ricerca).  
   
  component  
  Oggetto che incapsula sia i dati che il codice e fornisce un set ben definito di servizi disponibili pubblicamente.  
@@ -160,7 +161,7 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
   
 ## <a name="e"></a>E  
  Enumerazione  
- Elenco di costanti denominate. I valori enumerati non devono essere univoci. Tuttavia, il nome di ogni valore deve essere univoco all'interno dell'ambito in cui è definita l'enumerazione. In ADO, le enumerazioni vengono utilizzate per il parametro numerico e i valori restituiti, per aggiungere significato al codice ADO e per schermare lo sviluppatore dai valori numerici (che potrebbero variare da una versione all'altra). Per aprire un **Recordset**statico, ad esempio, usare il valore enumerato **adOpenStatic** :`Recordset.Open ,,adOpenStatic`  
+ Elenco di costanti denominate. I valori enumerati non devono essere univoci. Tuttavia, il nome di ogni valore deve essere univoco all'interno dell'ambito in cui è definita l'enumerazione. In ADO, le enumerazioni vengono utilizzate per il parametro numerico e i valori restituiti, per aggiungere significato al codice ADO e per schermare lo sviluppatore dai valori numerici (che potrebbero variare da una versione all'altra). Per aprire un **Recordset**statico, ad esempio, usare il valore enumerato **adOpenStatic** : `Recordset.Open ,,adOpenStatic`  
   
  Definito anche come *costante enumerata*. Vedere anche *Constant*.  
   
@@ -263,7 +264,7 @@ In questo argomento vengono definiti i termini rilevanti per ADO.
  Set di righe di un'origine dati con lo stesso schema di campo. Un set di righe può rappresentare tutti o alcuni campi di una tabella. Un set di righe può anche rappresentare una tabella virtuale, creata da una query o un join di due o più tabelle. In ADO i set di righe sono rappresentati da oggetti **Recordset** .  
   
 ## <a name="s"></a>S  
- Ambito  
+ Scope  
  Intervallo di riferimento per un oggetto o una variabile oppure un intervallo di record in una vista o in una tabella. È ad esempio possibile fare riferimento alle variabili locali solo all'interno della routine in cui sono state definite. Le variabili pubbliche sono accessibili da qualsiasi punto dell'applicazione. Gli oggetti, ad esempio il database corrente, si trovano nell'ambito se si trovano nel percorso di ricerca definito. Gli intervalli di record possono essere specificati con una clausola SCOPE in molti comandi.  
   
  provider di servizi  

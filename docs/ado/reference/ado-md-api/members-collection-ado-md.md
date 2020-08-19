@@ -1,4 +1,5 @@
 ---
+description: Raccolta Members (ADO MD)
 title: Raccolta Members (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e8337bfd2e7fb8ece226709f86c3b57ef746baca
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a39565e51270684a5514d499c658f950fe473a1e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765121"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440873"
 ---
 # <a name="members-collection-ado-md"></a>Raccolta Members (ADO MD)
 Contiene gli oggetti [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) di un livello o di una posizione lungo un asse.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Una raccolta **Members** viene utilizzata per contenere i seguenti tipi di membri:  
   
 -   Membri che costituiscono un livello in un cubo. Questi sono contenuti nella raccolta **Members** di un oggetto [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) . Ad esempio, usando l'esempio da [Panoramica di schemi e dati multidimensionali](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md), i quattro membri del livello paesi sono Canada, USA, Regno Unito e Germania.  

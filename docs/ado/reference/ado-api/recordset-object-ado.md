@@ -1,4 +1,5 @@
 ---
+description: Oggetto Recordset (ADO)
 title: Oggetto recordset (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd92fc3d88372047262b91378341bc9aadcb35ef
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3750a779c434810856e1cae979b7471aa3f8428c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442423"
 ---
 # <a name="recordset-object-ado"></a>Oggetto Recordset (ADO)
 Rappresenta l'intero set di record di una tabella di base o i risultati di un comando eseguito. In qualsiasi momento, l'oggetto **Recordset** fa riferimento solo a un singolo record all'interno del set come record corrente.  

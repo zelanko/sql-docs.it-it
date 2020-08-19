@@ -1,4 +1,5 @@
 ---
+description: Metodo Save
 title: Metodo Save | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db4b5d86c59e35ac3a7aa66684115668d19ead42
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 09b8ce2c2b8f6388e300a0034c0ea72b795bded1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442213"
 ---
 # <a name="save-method"></a>Metodo Save
 Salva il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in un oggetto file o [flusso](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -35,10 +36,10 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Parametri  
  *Destinazione*  
- facoltativo. **Variant** che rappresenta il nome percorso completo del file in cui deve essere salvato il **Recordset** o un riferimento a un oggetto **flusso** .  
+ Facoltativo. **Variant** che rappresenta il nome percorso completo del file in cui deve essere salvato il **Recordset** o un riferimento a un oggetto **flusso** .  
   
  *PersistFormat*  
- facoltativo. Valore [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) che specifica il formato in cui deve essere salvato il **Recordset** (XML o ADTG). Il valore predefinito è **adPersistADTG**.  
+ Facoltativo. Valore [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) che specifica il formato in cui deve essere salvato il **Recordset** (XML o ADTG). Il valore predefinito è **adPersistADTG**.  
   
 ## <a name="remarks"></a>Osservazioni  
  Il metodo [Save](../../../ado/reference/ado-api/save-method.md) può essere richiamato solo su un **Recordset**aperto. Utilizzare il metodo [Open (recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) per ripristinare successivamente il **Recordset** dalla *destinazione*.  
@@ -98,7 +99,7 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Esempio di metodi Save e Open (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
  [Esempio di metodi Save e Open (VC + +)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
  [Metodo Open (recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   

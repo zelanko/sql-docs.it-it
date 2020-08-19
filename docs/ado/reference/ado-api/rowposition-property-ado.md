@@ -1,4 +1,5 @@
 ---
+description: Proprietà RowPosition (ADO)
 title: Proprietà RowPosition (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f2621e82fef8d7e9baffa9d6cc8c30c65ea476ea
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 330c090c9e4eedd6a083d58a55243d470514541f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442463"
 ---
 # <a name="rowposition-property-ado"></a>Proprietà RowPosition (ADO)
 Ottiene o imposta un OLE DB oggetto **RowPosition** da/in un oggetto **ADORecordsetConstruction** . Quando si utilizza **put_RowPosition** per impostare l'oggetto **RowPosition** , l'oggetto **Recordset** risultante utilizza l'oggetto **RowPosition** per determinare la riga corrente.  
@@ -48,7 +49,7 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
 ## <a name="return-values"></a>Valori restituiti  
  Questo metodo di proprietà restituisce i valori HRESULT standard, inclusi S_OK e E_FAIL.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Quando questa proprietà è impostata, se l'oggetto **set di righe** nell'oggetto **RowPosition** è diverso dall'oggetto **set di righe** nell'oggetto **Recordset** , il primo esegue l'override di quest'ultimo. Lo stesso comportamento si applica anche al **capitolo** corrente di **RowPosition** .  
   
 ## <a name="applies-to"></a>Si applica a  

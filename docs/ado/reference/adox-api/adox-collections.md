@@ -1,4 +1,5 @@
 ---
+description: Raccolte ADOX
 title: Raccolte ADOX | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e6b0846433b317bb1ced7de284113377e4b4528
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e5616b0855aa05bf8e3899df9b411f02eb7bb4a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440603"
 ---
 # <a name="adox-collections"></a>Raccolte ADOX
 

@@ -1,4 +1,5 @@
 ---
+description: Esempio di metodo Seek e proprietà index (VB)
 title: Esempio di metodo Seek e proprietà index (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9d82cda586f5694b9f7644ca01eff781ea3e79d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 88121d2f736d76eec80146c49c727cd0d27399b7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765422"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442143"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Esempio di metodo Seek e proprietà index (VB)
 In questo esempio vengono utilizzati il metodo [Seek](../../../ado/reference/ado-api/seek-method.md) dell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e la proprietà [index](../../../ado/reference/ado-api/index-property.md) insieme a un determinato ***ID dipendente***, per individuare il nome del dipendente nella tabella ***Employees*** del database Nwind. mdb.  

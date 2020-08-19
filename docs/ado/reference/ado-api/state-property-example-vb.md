@@ -1,4 +1,5 @@
 ---
+description: Esempio della proprietà State (VB)
 title: Esempio di proprietà state (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9da6db50-d9bb-47e1-ae8b-be3c9b88cf9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e03f64c5f5312bc6f3f0409cb5b701e854919b0e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0ee0adf7b308ada45eee0c21c44f2a38a2e8a0b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759747"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441973"
 ---
 # <a name="state-property-example-vb"></a>Esempio della proprietà State (VB)
 In questo esempio viene utilizzata la proprietà [state](../../../ado/reference/ado-api/state-property-ado.md) per visualizzare un messaggio durante l'apertura delle connessioni asincrone e l'esecuzione di comandi asincroni.  

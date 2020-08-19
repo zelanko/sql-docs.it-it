@@ -1,4 +1,5 @@
 ---
+description: Esempio della proprietà Version (VB)
 title: Esempio di proprietà Version (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7392a6cf04ee2951cb0d9064d9321f75bb2db395
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 839137cb2787ec35f8a49d6f66a8577e4d9d959a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758617"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441553"
 ---
 # <a name="version-property-example-vb"></a>Esempio della proprietà Version (VB)
 In questo esempio viene utilizzata la proprietà [Version](../../../ado/reference/ado-api/version-property-ado.md) di un oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) per visualizzare la versione ADO corrente. USA inoltre diverse proprietà dinamiche per mostrare:  

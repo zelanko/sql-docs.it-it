@@ -1,4 +1,5 @@
 ---
+description: Esempio del metodo Resync (VC++)
 title: Esempio di metodo Resync (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d34dfd26-9ca7-4c9c-a918-396f05fecca9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f777d3b7af34fe29e9794bb470ba90e71b8b9dd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e846743090f84419d824f60de47edb0f0060d509
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442283"
 ---
 # <a name="resync-method-example-vc"></a>Esempio del metodo Resync (VC++)
 In questo esempio viene illustrato l'utilizzo del metodo [Resync](../../../ado/reference/ado-api/resync-method.md) per aggiornare i dati in un recordset statico.  

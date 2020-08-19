@@ -1,4 +1,5 @@
 ---
+description: Proprietà dinamica Update Resync (ADO)
 title: Proprietà di Update Resync-Dynamic (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8a3bb608-66d7-4128-a3ef-84cb0556de0d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e9d000150cc86a8c838ac5dea827b5c376f3a79f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 43657b3dddcf53f9aa9df507c646b7f23088f0ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759487"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441633"
 ---
 # <a name="update-resync-property-dynamic-ado"></a>Proprietà dinamica Update Resync (ADO)
 Specifica se il metodo [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) è seguito da un'operazione implicita di [Risincronizzazione](../../../ado/reference/ado-api/resync-method.md) del metodo e, in tal caso, dall'ambito di tale operazione.  

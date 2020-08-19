@@ -1,4 +1,5 @@
 ---
+description: Proprietà, metodi ed eventi della raccolta Levels
 title: Proprietà, metodi ed eventi della raccolta levels | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7fba3296-5bd0-4f9e-8f63-9565fe1ee15f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ab039aaaf03d3121a46eaa9789b72a89693cc59
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7fb8f1d2bfe324b4d4a10c120f39dbbeb474f563
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753263"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440883"
 ---
 # <a name="levels-collection-properties-methods-and-events"></a>Proprietà, metodi ed eventi della raccolta Levels
 ## <a name="properties"></a>Proprietà  

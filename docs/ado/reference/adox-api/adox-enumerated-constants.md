@@ -1,4 +1,5 @@
 ---
+description: Costanti enumerate ADOX
 title: Costanti enumerate ADOX | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84a03af49152bc305f62aceb149d904ef0acf9a0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 555c1a83946cdb764f77085b31e83935e4fa2a2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764142"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440593"
 ---
 # <a name="adox-enumerated-constants"></a>Costanti enumerate ADOX
 Per facilitare il debug, le costanti enumerate ADOX elencano un valore per ogni costante. Tuttavia, questo valore è puramente consultivo e può variare da una versione di ADOX a un'altra. Il codice deve dipendere solo dal nome, non dal valore effettivo, delle costanti enumerate.  

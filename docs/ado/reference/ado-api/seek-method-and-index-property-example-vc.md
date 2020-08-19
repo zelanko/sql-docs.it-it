@@ -1,4 +1,5 @@
 ---
+description: Esempio del metodo Seek e della proprietà Index (VC++)
 title: Esempio di metodo Seek e proprietà index (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6176f607ea338f4686e0a5c23a824d916f501b14
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 93e4a003e2234c0ee8eb537bc8ee09cdef1869d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765412"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442263"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Esempio del metodo Seek e della proprietà Index (VC++)
 In questo esempio vengono utilizzati il metodo [Seek](../../../ado/reference/ado-api/seek-method.md) dell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e la proprietà [index](../../../ado/reference/ado-api/index-property.md) insieme a un determinato ***ID dipendente***, per individuare il nome del dipendente nella tabella ***Employees*** del database Nwind. mdb.  

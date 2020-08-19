@@ -1,4 +1,5 @@
 ---
+description: Proprietà Description (ADO MD)
 title: Proprietà Description (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7a338d3e157c39389a7f6911dd04d9c5fb25740
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 262d83f37157af43a91c508daaa31127247588d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242511"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441123"
 ---
 # <a name="description-property-ado-md"></a>Proprietà Description (ADO MD)
 Restituisce una spiegazione del testo dell'oggetto corrente.  

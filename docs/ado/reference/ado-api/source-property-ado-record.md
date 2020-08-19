@@ -1,4 +1,5 @@
 ---
+description: Proprietà Source (Record - ADO)
 title: Proprietà Source (record ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 32b329d8365370560f51503129ac2c8d85517527
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1f8fb7ece2d2046706df91814b2d098e0a900d18
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442043"
 ---
 # <a name="source-property-ado-record"></a>Proprietà Source (Record - ADO)
 Indica l'origine dati o l'oggetto rappresentato dal [record](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -33,7 +34,7 @@ Indica l'origine dati o l'oggetto rappresentato dal [record](../../../ado/refere
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **Variant** che indica l'entità rappresentata dal **record**.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  La proprietà **source** restituisce l'argomento di *origine* del metodo di [apertura](../../../ado/reference/ado-api/open-method-ado-record.md) dell'oggetto **record** . Può contenere una stringa URL assoluta o relativa. È possibile utilizzare un URL assoluto senza impostare la proprietà [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) per aprire direttamente l'oggetto **record** . In questo caso viene creato un oggetto **connessione** implicito.  
   
  La proprietà **source** può inoltre contenere un riferimento a un **Recordset**già aperto, che consente di aprire un oggetto **record** che rappresenta la riga corrente nel **Recordset**.  

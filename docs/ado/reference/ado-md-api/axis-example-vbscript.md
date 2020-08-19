@@ -1,4 +1,5 @@
 ---
+description: Esempio di Axis (VBScript)
 title: Esempio di asse (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4647211-2566-4657-ae7b-3dd761457d7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53e27109028204739a9de245d28909405cf939e4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9625b9e84ae9f7e4ffbe6b9134200f3dc666c9ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441319"
 ---
 # <a name="axis-example-vbscript"></a>Esempio di Axis (VBScript)
 In questa pagina Active Server vengono visualizzati i dati OLAP da una stringa di query MDX e viene scritto il cellgroup risultante in una struttura di tabella HTML.  

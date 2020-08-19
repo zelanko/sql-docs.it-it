@@ -1,4 +1,5 @@
 ---
+description: Oggetto Record (ADO)
 title: Oggetto record (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a6a7c3b44498dee88be8dc3f37cd713038375753
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 384b7285832cd03b1220e7b261f027c220d7f80c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442513"
 ---
 # <a name="record-object-ado"></a>Oggetto Record (ADO)
 Rappresenta una riga di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) o del provider di dati oppure un oggetto restituito da un provider di dati semistrutturato, ad esempio un file o una directory.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Un oggetto **record** rappresenta una riga di dati e presenta alcune somiglianze concettuali con un **Recordset**a una riga. A seconda delle funzionalità del provider, gli oggetti **record** possono essere restituiti direttamente dal provider anziché da un **Recordset**di una riga, ad esempio quando viene eseguita una query SQL che seleziona solo una riga. In alternativa, è possibile ottenere un oggetto **record** direttamente da un oggetto **Recordset** . In alternativa, è possibile restituire un **record** direttamente da un provider ai dati semistrutturati, ad esempio il provider di OLE DB di Microsoft Exchange.  
   
  È possibile visualizzare i campi associati all'oggetto **record** per mezzo della raccolta [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) nell'oggetto **record** . ADO consente colonne con valori di oggetto, inclusi **Recordset**, **SAFEARRAY**e valori scalari nella raccolta **Fields** di oggetti **record** .  

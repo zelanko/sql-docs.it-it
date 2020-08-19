@@ -1,4 +1,5 @@
 ---
+description: Recordset (sintassi ADO per Visual C++)
 title: Recordset (sintassi ADO per Visual C++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: affc847c-a533-4c8a-bdff-3682fdb5df5f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13a094c5cbbc6af8e61bd221f06ff197a00d2524
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f411d7cc7856799e923fb75e7e1ca2ba6717d44c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761889"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442443"
 ---
 # <a name="recordset-ado-for-visual-c-syntax"></a>Recordset (sintassi ADO per Visual C++)
 ## <a name="methods"></a>Metodi  

@@ -1,4 +1,5 @@
 ---
+description: Metodo SaveToFile
 title: Metodo SaveToFile | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c8434841442ee61b31d021e5f2c46f57f1d2b147
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2a46604cb33d5f52a6f889da5b3b28ef6dc38254
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755830"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442183"
 ---
 # <a name="savetofile-method"></a>Metodo SaveToFile
 Salva il contenuto binario di un [flusso](../../../ado/reference/ado-api/stream-object-ado.md) in un file.  
@@ -43,7 +44,7 @@ Stream.SaveToFile FileName, SaveOptions
 > [!NOTE]
 >  Se si sovrascrive un file esistente (quando **adSaveCreateOverwrite** è impostato), **SaveToFile** tronca tutti i byte del file esistente originale che seguono la nuova [EOS](../../../ado/reference/ado-api/eos-property.md).  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **SaveToFile** può essere utilizzato per copiare il contenuto di un oggetto **flusso** in un file locale. Non sono state apportate modifiche al contenuto o alle proprietà dell'oggetto **flusso** . L'oggetto **flusso** deve essere aperto prima di chiamare **SaveToFile**.  
   
  Questo metodo non modifica l'associazione dell'oggetto **flusso** alla relativa origine sottostante. L'oggetto **Stream** sarà comunque associato all'URL o al **record** originale che era l'origine all'apertura.  

@@ -1,4 +1,5 @@
 ---
+description: Esempio di Members (VBScript)
 title: Esempio di members (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87bbd4ad-bb1a-4123-93ef-99ef47fd970b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3064c920c8d18e702541138de9f2151f5d8fbb03
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e1da649b752739f9e36fe22ac2c3e61d8b4fba14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765110"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440853"
 ---
 # <a name="members-example-vbscript"></a>Esempio di Members (VBScript)
 In questo esempio viene utilizzata una stringa di query MDX per recuperare i dati OLAP e il tipo di celle risultante viene scritto in una struttura di tabella HTML utilizzando le funzionalità di spanning delle colonne per celle a più dimensioni.  

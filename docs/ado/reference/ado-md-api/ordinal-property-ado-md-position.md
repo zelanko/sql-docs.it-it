@@ -1,4 +1,5 @@
 ---
+description: Proprietà Ordinal (Position - ADO MD)
 title: Proprietà ordinale (posizione ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6efe8b5d-a2d5-43a9-a5ea-f9244f8d4ec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 51b7adb9a82b03af32c38c11a03c05d2291e04d8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c5c1dafd64a78d2dfaa485954b1a1846fc1447a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765062"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440803"
 ---
 # <a name="ordinal-property-ado-md-position"></a>Proprietà Ordinal (Position - ADO MD)
 Identifica in modo univoco una [posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md) lungo un asse.  
@@ -29,7 +30,7 @@ Identifica in modo univoco una [posizione](../../../ado/reference/ado-md-api/pos
 ## <a name="return-values"></a>Valori restituiti  
  Restituisce un valore **Long** integer ed è di sola lettura.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  La proprietà **ordinale** di un oggetto [position](../../../ado/reference/ado-md-api/position-object-ado-md.md) corrisponde all'indice della **posizione** all'interno dell' [insieme Positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) .  
   
  È possibile recuperare rapidamente una cella utilizzando il **numero ordinale** della **posizione** lungo ogni asse con la proprietà [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) dell'oggetto [cellt](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) .  

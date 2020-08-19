@@ -1,4 +1,5 @@
 ---
+description: Esempio della proprietà Sort (VC++)
 title: Esempio di proprietà Sort (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4c01370efddbd4163459d694772f3e581ddeadd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ad4474e72485e8b69cc4c9f40f790e11fc6145d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442073"
 ---
 # <a name="sort-property-example-vc"></a>Esempio della proprietà Sort (VC++)
 In questo esempio viene utilizzata la proprietà di [ordinamento](../../../ado/reference/ado-api/sort-property.md) dell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per riordinare le righe di un **Recordset** derivato dalla tabella ***authors*** del database **pubs** . Una routine di utilità secondaria stampa ogni riga.  

@@ -1,4 +1,5 @@
 ---
+description: Esempio della proprietà Sort (VB)
 title: Esempio di proprietà Sort (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a2ae26c61534996fcfb5094432ff2e0e81c90c9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b7821e971d32f855fc219a2883f4190b9434d998
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759857"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442083"
 ---
 # <a name="sort-property-example-vb"></a>Esempio della proprietà Sort (VB)
 In questo esempio viene utilizzata la proprietà di [ordinamento](../../../ado/reference/ado-api/sort-property.md) dell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per riordinare le righe di un **Recordset** derivato dalla tabella ***authors*** del database ***pubs*** . Una routine di utilità secondaria stampa ogni riga.  

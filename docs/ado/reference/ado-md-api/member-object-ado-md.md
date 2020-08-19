@@ -1,4 +1,5 @@
 ---
+description: Oggetto Member (ADO MD)
 title: Oggetto member (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4d512d651c8162124c935ffdb260c4abe4ecb14
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6e0797a4d273c51b950e3973d1864480755a20d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753203"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440923"
 ---
 # <a name="member-object-ado-md"></a>Oggetto Member (ADO MD)
 Rappresenta un membro di un livello in un cubo, gli elementi figlio di un membro di un livello o un membro di una posizione lungo un asse di un insieme di celle.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Le proprietà di un **membro** variano a seconda del contesto in cui viene utilizzata. Un **membro** di un [livello](../../../ado/reference/ado-md-api/level-object-ado-md.md) in un [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) ha una proprietà [Children](../../../ado/reference/ado-md-api/children-property-ado-md.md) che restituisce i **membri** al livello inferiore successivo della gerarchia dal **membro**corrente. Per un **membro** di una [posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md), la raccolta **Children** è sempre vuota. Inoltre, la proprietà [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) si applica solo ai **membri** di un **livello**.  
   
  Un **membro** di **position** dispone di due proprietà che risultano utili quando si visualizzano le [celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) e [ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Si verificherà un errore se si accede a queste proprietà in un **membro** di un **livello**.  

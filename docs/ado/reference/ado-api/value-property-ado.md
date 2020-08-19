@@ -1,4 +1,5 @@
 ---
+description: Proprietà Value (ADO)
 title: Proprietà Value (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c84ab6806924649bdad9bb712f730c24011cdb38
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 719a647f42c66e73b9bd55ed0a7476dfb95934e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243162"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441593"
 ---
 # <a name="value-property-ado"></a>Proprietà Value (ADO)
 
@@ -31,7 +32,7 @@ Indica il valore assegnato a un [campo](../../../ado/reference/ado-api/field-obj
 
 Imposta o restituisce un valore **Variant** che indica il valore dell'oggetto. Il valore predefinito dipende dalla proprietà [Type](../../../ado/reference/ado-api/type-property-ado.md) .
   
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
 Utilizzare la proprietà **value** per impostare o restituire dati da oggetti **campo** , per impostare o restituire valori di parametro con oggetti **Parameter** oppure per impostare o restituire le impostazioni delle proprietà con oggetti **Property** . Il fatto che la proprietà **value** sia di lettura/scrittura o di sola lettura dipenda da numerosi fattori. Per ulteriori informazioni, vedere gli argomenti relativi agli oggetti.
 

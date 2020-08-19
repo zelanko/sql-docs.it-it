@@ -1,4 +1,5 @@
 ---
+description: Proprietà ActiveConnection (ADO MD)
 title: Proprietà ActiveConnection (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e504b442116f0a137d40a0932b00e51753deae5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3f226f9687f1bce3def616739f43f4d283d019ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441443"
 ---
 # <a name="activeconnection-property-ado-md"></a>Proprietà ActiveConnection (ADO MD)
 Indica a quale oggetto della [connessione](../../../ado/reference/ado-api/connection-object-ado.md) ADO appartiene attualmente il Cell o il catalogo corrente.  
@@ -30,7 +31,7 @@ Indica a quale oggetto della [connessione](../../../ado/reference/ado-api/connec
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce una **variante** che contiene una stringa che definisce una connessione o un oggetto **connessione** . Il valore predefinito è vuoto.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  È possibile impostare questa proprietà su un oggetto **connessione** ADO valido o su una stringa di connessione valida. Quando questa proprietà è impostata su una stringa di connessione, il provider crea un nuovo oggetto **connessione** utilizzando questa definizione e apre la connessione.  
   
  Se si usa l'argomento *ActiveConnection* del metodo [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md) per aprire un oggetto [cellt](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) , la proprietà **ActiveConnection** erediterà il valore dell'argomento.  

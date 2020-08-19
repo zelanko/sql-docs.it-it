@@ -1,4 +1,5 @@
 ---
+description: Proprietà Type (ADO MD)
 title: Proprietà Type (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 34698910-64b9-41d8-8531-9de12f2b1e32
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d30eb44561793b237bea159bdc64c46a3549073
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2e5f02b6467a5b826e7f35e12482c1575e60c087
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764972"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440733"
 ---
 # <a name="type-property-ado-md"></a>Proprietà Type (ADO MD)
 Indica il tipo del [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md)corrente.  
@@ -29,7 +30,7 @@ Indica il tipo del [membro](../../../ado/reference/ado-md-api/member-object-ado-
 ## <a name="return-values"></a>Valori restituiti  
  Restituisce un valore [MemberTypeEnum](../../../ado/reference/ado-md-api/membertypeenum.md) ed è di sola lettura.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Questa proprietà è supportata solo per gli oggetti [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) che appartengono a un oggetto [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) . Si verifica un errore quando si fa riferimento a questa proprietà dagli oggetti **membro** che appartengono a un oggetto [position](../../../ado/reference/ado-md-api/position-object-ado-md.md) .  
   
 ## <a name="applies-to"></a>Si applica a  
