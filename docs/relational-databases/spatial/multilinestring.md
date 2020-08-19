@@ -1,4 +1,5 @@
 ---
+description: MultiLineString
 title: MultiLineString | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d357ccd46daa402d43d66df76d4955f9dc6349d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c7193675df9f142977325a1c198343497b9b7501
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403269"
 ---
 # <a name="multilinestring"></a>MultiLineString
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Un'istanza **MultiLineString** è una raccolta di zero o più istanze di tipo **geometry** o **geographyLineString** .  
+   Un'istanza **MultiLineString** è una raccolta di zero o più istanze di tipo **geometry** o **geographyLineString**.  
   
 ## <a name="multilinestring-instances"></a>Istanze MultiLineString  
  La figura seguente illustra esempi di istanze **MultiLineString** .  

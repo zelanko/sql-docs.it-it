@@ -1,4 +1,5 @@
 ---
+description: Ripristinare un'installazione non riuscita di SQL Server
 title: Ripristinare un'installazione non riuscita di SQL Server | Microsoft Docs
 deescription: This article describes the scenarios where you can try a repair operation to fix failed SQL Server installation.
 ms.custom: ''
@@ -11,12 +12,12 @@ ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3ba82179f31d8e6cef2e3e318187c26f448e8219
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b350c746d498dbaeb63f952f1ca172d4ffeaefff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395877"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>Ripristinare un'installazione non riuscita di SQL Server
 
@@ -63,7 +64,7 @@ L'operazione di ripristino può essere utilizzata negli scenari seguenti:
   
 4. Verranno eseguite la regola di supporto dell'installazione e le routine dei file per garantire che nel sistema siano installati i prerequisiti e che il computer passi le regole di convalida dell'installazione. Fare clic su **OK** o **Installa** per continuare. 
   
-5. Nella pagina Seleziona istanza selezionare l'istanza da ripristinare, quindi fare clic su **Avanti** per continuare. 
+5. Nella pagina Seleziona istanza selezionare l'istanza da ripristinare e quindi fare clic su **Avanti** per continuare. 
   
 6. Verranno eseguite le regole di ripristino per convalidare l'operazione. Scegliere **Avanti**per continuare. 
   

@@ -1,4 +1,5 @@
 ---
+description: Dati spaziali (SQL Server)
 title: Dati spaziali (SQL Server) | Microsoft Docs
 ms.date: 10/11/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32014323cf9921cdbff9db6235e6625b4dc431ec
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 38df38923b69bf24432cf4d5d162187c0962fcfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725875"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403347"
 ---
 # <a name="spatial-data-sql-server"></a>Dati spaziali (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,16 +40,16 @@ ms.locfileid: "85725875"
  Entrambi i tipi di dati sono implementati come tipi di dati Common Language Runtime (CLR) .NET in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="related-tasks"></a><a name="reltasks"></a> Attività correlate  
- [Creare, costruire ed eseguire query di istanze di geometria](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  
+ [Creazione, costruzione e query di istanze geometry](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  
  Vengono descritti i metodi da utilizzare con le istanze del tipo di dati geometry.  
   
  [Creare, costruire ed eseguire query di istanze geografiche](../../relational-databases/spatial/create-construct-and-query-geography-instances.md)  
  Vengono descritti i metodi che è possibile utilizzare con istanze del tipo di dati geography.  
   
- [Eseguire query dei dati spaziali per Nearest Neighbor](../../relational-databases/spatial/query-spatial-data-for-nearest-neighbor.md)  
+ [Query dei dati spaziali per Nearest Neighbor](../../relational-databases/spatial/query-spatial-data-for-nearest-neighbor.md)  
  Viene descritto il modello di query utilizzato per trovare gli oggetti spaziali più vicini a un oggetto spaziale specifico.  
   
- [Creare, modificare ed eliminare indici spaziali](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md)  
+ [Creazione, modifica ed eliminazione di indici spaziali](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md)  
  Fornisce informazioni sulla creazione, la modifica e il rilascio di un indice spaziale.  
   
 ## <a name="related-content"></a>Contenuto correlato  

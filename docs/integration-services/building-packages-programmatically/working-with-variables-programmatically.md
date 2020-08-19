@@ -1,4 +1,5 @@
 ---
+description: Utilizzo delle variabili a livello di programmazione
 title: Uso di variabili a livello di programmazione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e2eaa85cc4c4fe7a93ffe962b74527031bd7938e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8691874f1dc93371730b22f9ccaaa3d62cf84521
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394997"
 ---
 # <a name="working-with-variables-programmatically"></a>Utilizzo delle variabili a livello di programmazione
 
@@ -166,7 +167,7 @@ End Module
   
  Le variabili di sistema disponibili variano a seconda del tipo di contenitore. Per un elenco delle variabili di sistema disponibili per pacchetti, contenitori, attività e gestori di eventi, vedere [Variabili di sistema](../../integration-services/system-variables.md).  
   
-## <a name="value"></a>valore  
+## <a name="value"></a>Valore  
  Il valore di una variabile personalizzata può essere un valore letterale o un'espressione:  
   
 -   Se si desidera che la variabile contenga un valore letterale, impostare il valore della relativa proprietà <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A>.  

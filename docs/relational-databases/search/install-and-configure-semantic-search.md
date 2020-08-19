@@ -1,4 +1,5 @@
 ---
+description: Installazione e configurazione della ricerca semantica
 title: Installare e configurare la ricerca semantica | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 50686881f950d16fb0fc7b5f8bb2dc5a3c63c1c1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 089d8f5a3c39cd29e04a342e19c29bfbafc7b712
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404077"
 ---
 # <a name="install-and-configure-semantic-search"></a>Installazione e configurazione della ricerca semantica
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
