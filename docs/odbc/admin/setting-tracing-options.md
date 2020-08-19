@@ -1,4 +1,5 @@
 ---
+description: Impostazione delle opzioni di traccia
 title: Impostazione delle opzioni di traccia | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 21bee5d903459423a134389e62db844f5f63c9c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 72e3805eded00b1bfa0c984d5ff0ace1ae1494fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307198"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476953"
 ---
 # <a name="setting-tracing-options"></a>Impostazione delle opzioni di traccia
 La scheda **traccia** della finestra di dialogo **Amministrazione origine dati ODBC** consente di configurare il modo in cui vengono tracciate le chiamate alle funzioni ODBC.  
@@ -42,7 +43,7 @@ La scheda **traccia** della finestra di dialogo **Amministrazione origine dati O
   
 2.  In strumenti di amministrazione aprire Amministrazione origine dati ODBC.  
   
-3.  Fare clic sulla scheda **traccia** .  
+3.  Fare clic sulla scheda **Traccia**.  
   
 4.  Configurare la modalità di traccia tramite la casella **di controllo traccia a livello di computer per tutte le identità utente** :  
   

@@ -1,4 +1,5 @@
 ---
+description: Associazione di parametri in base al nome (parametri denominati)
 title: Associazione di parametri in base al nome (parametri denominati) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e2c3da5a-6c10-4dd5-acf9-e951eea71a6b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a1e214f50488c4600ed39f76e91618cc5ce53de4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75227b26b5f9f060089e6568e233d327e3f7faa7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306372"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476843"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>Associazione di parametri in base al nome (parametri denominati)
 Alcuni DBMS consentono a un'applicazione di specificare i parametri per un stored procedure in base al nome invece che in base alla posizione nella chiamata di procedura. Tali parametri sono denominati *parametri denominati*. ODBC supporta l'utilizzo di parametri denominati. In ODBC i parametri denominati vengono utilizzati solo nelle chiamate alle stored procedure e non possono essere utilizzati in altre istruzioni SQL.  
@@ -38,7 +39,7 @@ Alcuni DBMS consentono a un'applicazione di specificare i parametri per un store
 CREATE PROCEDURE test @title_id int = 1, @quote char(30) AS <blah>  
 ```  
   
- In questa procedura, il primo parametro, @title_id, ha un valore predefinito di 1. Un'applicazione può usare il codice seguente per richiamare questa procedura in modo da specificare un solo parametro dinamico. Questo parametro è un parametro denominato con il nome "\@quote".  
+ In questa procedura, il primo parametro, @title_id , ha un valore predefinito di 1. Un'applicazione può usare il codice seguente per richiamare questa procedura in modo da specificare un solo parametro dinamico. Questo parametro è un parametro denominato con il nome " \@ quote".  
   
 ```  
 // Prepare the procedure invocation statement.  

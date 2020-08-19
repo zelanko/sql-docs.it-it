@@ -1,4 +1,5 @@
 ---
+description: Utilizzo delle funzioni sui set
 title: Utilizzo di funzioni set | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 52e0c140acb944a774f5ab167bb81c662e3e32d7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1325055017eeee392cd098d9168dd247a2664aa4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038048"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476983"
 ---
 # <a name="using-set-functions"></a>Utilizzo delle funzioni sui set
 
@@ -22,7 +23,7 @@ ms.locfileid: "68038048"
   
  Le funzioni sui set, come le funzioni membro e le funzioni di tupla, sono essenziali per la negoziazione delle strutture multidimensionali utilizzate in Analysis Services. Le funzioni sui set sono essenziali anche per ottenere risultati dalle query MDX, perché le espressioni set definiscono gli assi di una query MDX.  
   
- Una delle funzioni set più comuni è rappresentata dai [membri &#40;impostare&#41; &#40;funzione&#41;MDX](../mdx/members-set-mdx.md) , che consente di recuperare un set contenente tutti i membri di una dimensione, una gerarchia o un livello. Nell'esempio seguente viene illustrato l'utilizzo di questa funzione all'interno di una query:  
+ Una delle funzioni set più comuni è rappresentata dai [membri &#40;impostare&#41; &#40;funzione&#41;MDX ](../mdx/members-set-mdx.md) , che consente di recuperare un set contenente tutti i membri di una dimensione, una gerarchia o un livello. Nell'esempio seguente viene illustrato l'utilizzo di questa funzione all'interno di una query:  
   
  `SELECT`  
   

@@ -1,4 +1,5 @@
 ---
+description: Diagnostica
 title: Diagnostica | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a09f46d3fd6aa2f9b9c7310af6d3ddc90f78389f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 918dce41ca1c7e7b43c1a6d25de2c75a83312715
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476713"
 ---
 # <a name="diagnostics"></a>Diagnostica
 Le funzioni in ODBC restituiscono informazioni di diagnostica in due modi. Il codice restituito indica l'esito positivo o negativo complessivo della funzione, mentre i record di diagnostica forniscono informazioni dettagliate sulla funzione. Almeno un record di diagnostica, ovvero il record di intestazione, viene restituito anche se la funzione ha esito positivo.  

@@ -1,4 +1,5 @@
 ---
+description: sp_cursorunprepare (Transact-SQL)
 title: sp_cursorunprepare (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b46d4813-c4a9-4f9d-9979-2b5082ecf06a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c7db4e004f3a350454e25ceefb6c195839e2f6f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0662e6f600e9627c3d3498144425f34917d6cfb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85868431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486137"
 ---
 # <a name="sp_cursorunprepare-transact-sql"></a>sp_cursorunprepare (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ sp_cursorunprepare handle
  Valore dell' *handle* restituito da sp_cursorprepare quando l'istruzione viene preparata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_cursorprepare &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
+ [sp_cursorprepare &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

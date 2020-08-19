@@ -1,4 +1,5 @@
 ---
+description: Istruzioni SQL hard-coded
 title: Istruzioni SQL hardcoded | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c7a092742e5f0151b7b08f434b453645cbd804a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 341dc642f0529fd779eccf9f2d1d1b50a4977479
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300201"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476663"
 ---
 # <a name="hard-coded-sql-statements"></a>Istruzioni SQL hard-coded
 Le applicazioni che eseguono un'attività fissa contengono in genere istruzioni SQL hardcoded. Ad esempio, un sistema di immissione degli ordini può utilizzare la chiamata seguente per elencare gli ordini di vendita aperti:  

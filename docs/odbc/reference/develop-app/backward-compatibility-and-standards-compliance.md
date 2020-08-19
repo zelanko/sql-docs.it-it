@@ -1,4 +1,5 @@
 ---
+description: Compatibilità con le versioni precedenti e conformità agli standard
 title: Compatibilità con le versioni precedenti e conformità agli standard | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b5eee7be-28ed-4467-8cf1-2205e2010a53
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b46b9f5b72117fd978a78b765d09aafd5dc84b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bab7e7777cd5750c86ffbfc3cc87a97ea31ebca4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476863"
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>Compatibilità con le versioni precedenti e conformità agli standard
 La compatibilità con le versioni precedenti è la possibilità che i componenti ODBC più recenti funzionino con i componenti ODBC precedenti. Nelle sezioni seguenti viene illustrato il modo in cui questi componenti sono interessati dalle modifiche apportate a ODBC *3. x*. Le informazioni contenute in essi riguardano principalmente la scrittura di un'applicazione ODBC *3. x* e il modo in cui i problemi di compatibilità con le versioni precedenti vengono gestiti dai driver ODBC. Per linee guida specifiche su come i problemi di compatibilità con le versioni precedenti influiscono sulla scrittura di un driver ODBC *3. x* , vedere [Appendice G: linee guida per la compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  

@@ -1,5 +1,6 @@
 ---
-title: GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL) | Microsoft Docs
+description: GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
+title: GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fcb526d6737624aee12e900f3b9b7db1f2e7f69e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 329fdde13e276726f616a7d7fe56893d28172b38
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898997"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422755"
 ---
 # <a name="get_filestream_transaction_context-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,18 +34,20 @@ ms.locfileid: "85898997"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```syntaxsql
   
 GET_FILESTREAM_TRANSACTION_CONTEXT ()  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-type"></a>Tipo restituito  
  **varbinary(max)**  
   
 ## <a name="return-value"></a>Valore restituito  
  Se la transazione non è stata avviata o se è stata annullata oppure se ne è stato eseguito il commit, viene restituito Null.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La transazione deve essere esplicita. Utilizzare BEGIN TRANSACTION seguita da COMMIT TRANSACTION o ROLLBACK TRANSACTION.  
   
  Quando si chiama GET_FILESTREAM_TRANSACTION_CONTEXT, al chiamante viene concesso l'accesso al file system relativo alla transazione per la durata della transazione stessa. Per consentire a un altro utente di accedere alla transazione tramite il file system, utilizzare EXECUTE AS per eseguire GET_FILESTREAM_TRANSACTION_CONTEXT come un altro utente.  

@@ -1,4 +1,5 @@
 ---
+description: Impostazioni del progetto (conversione) (SybaseToSQL)
 title: Impostazioni progetto (conversione) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1d2f1c02b9a9400236381cdd30fb3deb570500c1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 61795be0d1f851792846f2ede8c38eca1f3801b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934653"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468796"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Impostazioni del progetto (conversione) (SybaseToSQL)
 La pagina conversione della finestra di dialogo **Impostazioni progetto** contiene impostazioni che consentono di personalizzare il modo in cui SSMA converte la sintassi di Sybase Adaptive Server Enterprise (ASE) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure la sintassi.  
@@ -241,9 +242,9 @@ Quando si seleziona una modalità di conversione nella casella **modalità** , S
 **Archiviare oggetti temporanei definiti nelle procedure**  
 Questa impostazione specifica se le definizioni degli oggetti temporanei visualizzate nelle procedure devono essere archiviate nei metadati di origine durante la conversione.  
   
--   Selezionare **Sì** per archiviare i metadati.  
+-   Selezionare **Sì**  per archiviare i metadati.  
   
--   Selezionare **No** se gli oggetti non devono essere archiviati.  
+-   Selezionare **No**  se gli oggetti non devono essere archiviati.  
   
 **Modalità predefinita/ottimistica:** Sì  
   
@@ -261,7 +262,7 @@ Quando si seleziona una modalità di conversione nella casella **modalità** , S
 **Modalità predefinita/ottimistica/completa:** Contrassegno con errore  
   
 **Numero del messaggio di base RAISERROR**  
-I messaggi utente dell'ambiente del servizio app vengono archiviati in ogni database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]i messaggi utente vengono archiviati centralmente e resi disponibili tramite la vista del catalogo **sys. messages** . Inoltre, i messaggi utente dell'ambiente del servizio app iniziano da 20000, ma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i messaggi di errore iniziano con 50001.  
+I messaggi utente dell'ambiente del servizio app vengono archiviati in ogni database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i messaggi utente vengono archiviati centralmente e resi disponibili tramite la vista del catalogo **sys. messages** . Inoltre, i messaggi utente dell'ambiente del servizio app iniziano da 20000, ma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i messaggi di errore iniziano con 50001.  
   
 Questa impostazione specifica il numero da aggiungere al numero del messaggio utente dell'ambiente del servizio app per convertirlo in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] messaggio utente. Se il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone di messaggi utente nella vista del catalogo **sys. messages** , potrebbe essere necessario modificare questo numero in un valore superiore. In questo modo i numeri di messaggio convertiti non sono in conflitto con i numeri dei messaggi esistenti.  
   
@@ -324,7 +325,7 @@ Quando si seleziona una modalità di conversione nella casella **modalità** , S
 **Modalità completa:** Replace (funzione)  
   
 **DATALENGTH - funzione**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure e l'ambiente del servizio app differiscono nel valore restituito dalla funzione DATALENGTH quando il valore è uno spazio singolo. In questo caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure restituisce 0 e ASE restituisce 1.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure e l'ambiente del servizio app differiscono nel valore restituito dalla funzione DATALENGTH quando il valore è uno spazio singolo. In questo caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure restituisce 0 e ASE restituisce 1.  
   
 -   Per usare il comportamento dell'ambiente del servizio app, selezionare **Sostituisci funzione**. Tutte le chiamate alla funzione DATALENGTH vengono sostituite con l'espressione CASE per emulare il comportamento di Sybase ASE.  
   

@@ -1,4 +1,5 @@
 ---
+description: Metodo CancelBatch (ADO)
 title: Metodo CancelBatch (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2e9f3b57137b4c113b9e177e9fecefec4070ac0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f8fa4d02dd10325726c83a6b645ebdd5b94397f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763172"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451033"
 ---
 # <a name="cancelbatch-method-ado"></a>Metodo CancelBatch (ADO)
 Annulla un aggiornamento batch in sospeso.  
@@ -35,7 +36,7 @@ recordset.CancelBatchAffectRecords
   
 #### <a name="parameters"></a>Parametri  
  *AffectRecords*  
- Facoltativa. Valore [AffectEnum](../../../ado/reference/ado-api/affectenum.md) che indica il numero di record su cui avrà effetto il metodo **CancelBatch** .  
+ Facoltativo. Valore [AffectEnum](../../../ado/reference/ado-api/affectenum.md) che indica il numero di record su cui avrà effetto il metodo **CancelBatch** .  
   
 ## <a name="remarks"></a>Osservazioni  
  Usare il metodo **CancelBatch** per annullare gli aggiornamenti in sospeso in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in modalità di aggiornamento batch. Se il **Recordset** è in modalità di aggiornamento immediato, la chiamata a **CancelBatch** senza **adAffectCurrent** genera un errore.  

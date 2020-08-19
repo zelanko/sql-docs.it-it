@@ -1,4 +1,5 @@
 ---
+description: Esempio di proprietà BOF, EOF e segnalibro (VC + +)
 title: Esempio di proprietà BOF, EOF e Bookmark (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0654d6874c898102d6a85cadd70e821f8530a876
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 33bd0bf737b6c586c0cb97072b28650898e86696
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762662"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451143"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>Esempio di proprietà BOF, EOF e segnalibro (VC + +)
 La prima funzione di questo esempio usa le proprietà [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) per visualizzare un messaggio se un utente tenta di spostarsi oltre il primo o l'ultimo record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa la proprietà [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) per consentire all'utente di contrassegnare un record in un **Recordset** e tornare in un secondo momento.  

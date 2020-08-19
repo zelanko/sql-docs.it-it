@@ -1,4 +1,5 @@
 ---
+description: sp_help (Transact-SQL)
 title: sp_help (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
@@ -18,17 +19,17 @@ ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57a435db1aca6c2ab9f093792e26f7e88dcbf21a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 85fd7be3a9f82b43c19e344602a85e1adf06c68a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727178"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486050"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Restituisce informazioni su un oggetto di database (qualsiasi oggetto elencato nella visualizzazione di compatibilità **degli oggettisys.sys** ), un tipo di dati definito dall'utente o un tipo di dati.  
+  Restituisce informazioni su un oggetto di database (qualsiasi oggetto elencato nella visualizzazione di compatibilità ** degli oggettisys.sys** ), un tipo di dati definito dall'utente o un tipo di dati.  
   
  
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -41,7 +42,7 @@ sp_help [ [ @objname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @objname = ] 'name'`Nome di qualsiasi oggetto, in **sysobjects** o qualsiasi tipo di dati definito dall'utente nella tabella **systypes** . *Name* è di **tipo nvarchar (** 776 **)** e il valore predefinito è null. I nomi di database non sono validi.  I nomi in due o tre parti devono essere delimitati, ad esempio 'Person.AddressType' o [Person.AddressType].   
+`[ @objname = ] 'name'` Nome di qualsiasi oggetto, in **sysobjects** o qualsiasi tipo di dati definito dall'utente nella tabella **systypes** . *Name* è di **tipo nvarchar (** 776 **)** e il valore predefinito è null. I nomi di database non sono validi.  I nomi in due o tre parti devono essere delimitati, ad esempio 'Person.AddressType' o [Person.AddressType].   
    
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
@@ -106,7 +107,7 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**Identità**|**nvarchar (** 128 **)**|Nome della colonna il cui tipo di dati viene dichiarato come Identity.|  
         |**Inizializzazione**|**numeric**|Valore iniziale per la colonna Identity.|  
-        |**Incremento**|**numeric**|Incremento da utilizzare per i valori della colonna.|  
+        |**Incremento valore Identity**|**numeric**|Incremento da utilizzare per i valori della colonna.|  
         |**Non per la replica**|**int**|La proprietà IDENTITY non viene applicata quando un account di accesso per la replica, ad esempio **sqlrepl**, inserisce i dati nella tabella:<br /><br /> 1 = True<br /><br /> 0 = False|  
   
     -   Set di risultati aggiuntivo restituito per le colonne  
@@ -191,13 +192,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_helpindex &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
- [sp_helprotect &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [sp_helpserver &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sp_helpindex &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
+ [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
- [sp_helpuser &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Oggettisys.sys&#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
+ [sp_helpuser &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [ Oggettisys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

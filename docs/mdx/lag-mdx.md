@@ -1,4 +1,5 @@
 ---
+description: Lag (MDX)
 title: Lag (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c7e95af96249b64f86bb1466283e8a1a38a32d90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc9beb8215d8d690f2d4ccdf43c3aaf03096b9d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905768"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477043"
 ---
 # <a name="lag-mdx"></a>Lag (MDX)
 
@@ -31,7 +32,7 @@ Member_Expression.Lag(Index)
  *Member_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
- *Indice*  
+ *Index*  
  Espressione numerica valida che specifica il numero di posizioni tra i membri.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -41,7 +42,7 @@ Member_Expression.Lag(Index)
   
  Se il ritardo specificato è negativo, la funzione **lag** restituisce un membro successivo.  
   
- `Lag(1)`equivale alla funzione [PrevMember](../mdx/prevmember-mdx.md) . `Lag(-1)`equivale alla funzione [NextMember](../mdx/nextmember-mdx.md) .  
+ `Lag(1)` equivale alla funzione [PrevMember](../mdx/prevmember-mdx.md) . `Lag(-1)` equivale alla funzione [NextMember](../mdx/nextmember-mdx.md) .  
   
  La funzione **lag** è simile alla funzione [Lead](../mdx/lead-mdx.md) , ad eccezione del fatto che la funzione **Lead** Cerca nella direzione opposta rispetto alla funzione **lag** . In altre parole, `Lag(n)` equivale a `Lead(-n)`.  
   
@@ -62,7 +63,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Vedi anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

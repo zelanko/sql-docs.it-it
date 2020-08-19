@@ -1,4 +1,5 @@
 ---
+description: catalog.deploy_project (database SSISDB)
 title: catalog.deploy_project (database SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b2578745d445c1f2ac91b037ac7ce8e694687a16
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6a8bb809f349ce68b12abaee171928805d1fe0df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430043"
 ---
 # <a name="catalogdeploy_project-ssisdb-database"></a>catalog.deploy_project (database SSISDB)
 
@@ -76,7 +77,7 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   Utente senza autorizzazioni sufficienti.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Durante la distribuzione o aggiornamento di un progetto, il livello di protezione dei singoli pacchetti non viene controllato dalla stored procedure.  
   
   

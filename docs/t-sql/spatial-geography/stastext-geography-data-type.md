@@ -1,4 +1,5 @@
 ---
+description: STAsText (tipo di dati geography)
 title: STAsText (tipo di dati geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d3d2635d-ca6c-4205-9d6c-eb939ee314fd
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 17a7d957b5c85ef21889af21de03f6cc2154ac62
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f89f2c2889d880388f74b563abc9aefe1eb28c82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555175"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422315"
 ---
 # <a name="stastext-geography-data-type"></a>STAsText (tipo di dati geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "86555175"
   
  Tipo CLR restituito: **SqlChars**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Il tipo OGC di un'istanza **geography** può essere determinato richiamando [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
   
  In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], il set di possibili risultati restituito nel server è stato esteso alle istanze **FullGlobe**.  
@@ -60,6 +61,6 @@ SELECT @g.STAsText();
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodi OGC sulle istanze geografiche](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Metodi OGC sulle istanze di geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Eliminazione di righe nel set di righe con SQLSetPos
 title: Eliminazione di righe nel set di righe con SQLSetPos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3117a47d-e179-4f76-89d0-656582f1c9bb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 940bcc3e2ee6a042394797d6038028cce64862f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42b61aa9af15526420b6f2d4ef7e8c945e0da105
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305952"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476773"
 ---
 # <a name="deleting-rows-in-the-rowset-with-sqlsetpos"></a>Eliminazione di righe nel set di righe con SQLSetPos
 L'operazione di eliminazione di **SQLSetPos** consente all'origine dati di eliminare una o più righe selezionate di una tabella. Per eliminare righe con **SQLSetPos**, l'applicazione chiama **SQLSetPos** con *Operation* set su SQL_DELETE e *RowNumber* impostato sul numero della riga da eliminare. Se *RowNumber* è 0, vengono eliminate tutte le righe del set di righe.  

@@ -1,4 +1,5 @@
 ---
+description: Proprietà DefaultDatabase
 title: Proprietà DefaultDatabase | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41e8a8dd-e69c-4a09-8736-93502e01961c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5a68a41985515e63e6e8520c30fc662c69e1ced6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d7e16a5a5bc3a711477cca1507c889bd15e0f37a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757447"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444193"
 ---
 # <a name="defaultdatabase-property"></a>Proprietà DefaultDatabase
 Indica il database predefinito per un oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) .  
@@ -28,7 +29,7 @@ Indica il database predefinito per un oggetto [Connection](../../../ado/referenc
 ## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
  Imposta o restituisce un valore **stringa** che restituisce il nome di un database disponibile dal provider.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare la proprietà **DefaultDatabase** per impostare o restituire il nome del database predefinito in un oggetto **connessione** specifico.  
   
  Se è presente un database predefinito, le stringhe SQL possono utilizzare una sintassi non qualificata per accedere agli oggetti in tale database. Per accedere agli oggetti in un database diverso da quello specificato nella proprietà **DefaultDatabase** , è necessario qualificare i nomi degli oggetti con il nome del database desiderato. Al momento della connessione, il provider scriverà le informazioni predefinite sul database nella proprietà **DefaultDatabase** . Alcuni provider consentono un solo database per connessione, nel qual caso non è possibile modificare la proprietà **DefaultDatabase** .  

@@ -1,4 +1,5 @@
 ---
+description: Salvare i metadati (SybaseToSQL)
 title: Salvare i metadati (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b2517735-dd19-449f-8cee-08e68ca89d3a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8321c6e8a63eb4baabde580a911dccec6ab9ff3e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8b43cbdcac7a983047d8c454e5bfc9e3a31ce102
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468722"
 ---
 # <a name="save-metadata--sybasetosql"></a>Salvare i metadati (SybaseToSQL)
 La finestra di dialogo **Salva metadati** richiede di caricare i metadati nel progetto SSMA prima di salvarli. In questo modo è possibile disporre di un file di progetto completo che può essere utilizzato offline e inviato ad altri utenti, ad esempio il personale del supporto tecnico.  

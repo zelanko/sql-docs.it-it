@@ -1,4 +1,5 @@
 ---
+description: Hierarchize (MDX)
 title: Hierarchize (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8ab2c866f201c53684c316282a143b4f672cb8e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c1683819420d150e2f9b330ba94bc9e228d167f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105427"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429913"
 ---
 # <a name="hierarchize-mdx"></a>Hierarchize (MDX)
 
@@ -58,7 +59,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- Nell'esempio seguente viene restituita la somma `Measures.[Order Quantity]` del membro, aggregato sui primi nove mesi di 2003 contenuti nella `Date` dimensione, dal cubo **Adventure Works** . La funzione **PeriodsToDate** definisce le tuple nel set su cui opera la funzione di aggregazione. La funzione **Hierarchize** organizza i membri del set specificato di membri dalla dimensione Product in ordine gerarchico.  
+ Nell'esempio seguente viene restituita la somma del `Measures.[Order Quantity]` membro, aggregato sui primi nove mesi di 2003 contenuti nella `Date` dimensione, dal cubo **Adventure Works** . La funzione **PeriodsToDate** definisce le tuple nel set su cui opera la funzione di aggregazione. La funzione **Hierarchize** organizza i membri del set specificato di membri dalla dimensione Product in ordine gerarchico.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  

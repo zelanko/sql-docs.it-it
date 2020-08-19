@@ -1,4 +1,5 @@
 ---
+description: sp_changesubscription (Transact-SQL)
 title: sp_changesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2015
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b33103bc84e6354e99ac04e73fa20a0f99725a6a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 57844d95977ed2a56324698037fb576678b0f8fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486244"
 ---
 # <a name="sp_changesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,17 +49,17 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione da modificare. *Publication*è di **tipo sysname**e non prevede alcun valore predefinito  
+`[ @publication = ] 'publication'` Nome della pubblicazione da modificare. *Publication*è di **tipo sysname**e non prevede alcun valore predefinito  
   
-`[ @article = ] 'article'`Nome dell'articolo da modificare. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @article = ] 'article'` Nome dell'articolo da modificare. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @subscriber = ] 'subscriber'`Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @subscriber = ] 'subscriber'` Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @destination_db = ] 'destination_db'`Nome del database di sottoscrizione. *destination_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @destination_db = ] 'destination_db'` Nome del database di sottoscrizione. *destination_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @property = ] 'property'`Proprietà da modificare per la sottoscrizione specificata. *Property* è di **tipo nvarchar (30)**. i possibili valori sono i valori della tabella.  
+`[ @property = ] 'property'` Proprietà da modificare per la sottoscrizione specificata. *Property* è di **tipo nvarchar (30)**. i possibili valori sono i valori della tabella.  
   
-`[ @value = ] 'value'`Nuovo valore per la *Proprietà*specificata. *value* è di **tipo nvarchar (4000)**. i possibili valori sono i valori della tabella.  
+`[ @value = ] 'value'` Nuovo valore per la *Proprietà*specificata. *value* è di **tipo nvarchar (4000)**. i possibili valori sono i valori della tabella.  
   
 |Proprietà|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
@@ -78,7 +79,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**3**|Provider OLE DB|  
 |**memory_optimized**|**bit**|Indica che la sottoscrizione supporta le tabelle con ottimizzazione per la memoria. *memory_optimized* è di **bit**, dove 1 è uguale a true (la sottoscrizione supporta le tabelle con ottimizzazione per la memoria).|  
   
-`[ @publisher = ] 'publisher'`Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
 >  il *Server* di pubblicazione non deve essere specificato per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
@@ -97,7 +98,7 @@ sp_changesubscription [ @publication = ] 'publication'
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_changesubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_dropsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
+ [sp_addsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   
   

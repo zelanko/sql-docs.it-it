@@ -1,4 +1,5 @@
 ---
+description: catalog.validate_project (database SSISDB)
 title: catalog.validate_project (database SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8dfda68b04a898efc7aa87e5a821e79717113544
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c491a8914fb11da815d0887ae5b2248f1e2a7c19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912727"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495354"
 ---
 # <a name="catalogvalidate_project-ssisdb-database"></a>catalog.validate_project (database SSISDB)
 
@@ -46,7 +47,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  Nome del progetto. *project_name* è di tipo **nvarchar(128)** .  
   
  [ @validate_type = ] *validate_type*  
- Viene indicato il tipo di convalida da eseguire. Utilizzare il carattere `F` per eseguire una convalida completa. Questo parametro è facoltativo. Per impostazione predefinita, verrà utilizzato il carattere `F`. *validate_type* è di tipo **char(1)** .  
+ Viene indicato il tipo di convalida da eseguire. Utilizzare il carattere `F` per eseguire una convalida completa. Questo parametro è facoltativo. Per impostazione predefinita, verrà utilizzato il carattere `F`. *validate_type* è di tipo **char(1)**.  
   
  [ @validation_id = ] *validation_id*  
  Viene restituito l'identificatore (ID) univoco della convalida. *validation_id* è di tipo **bigint**.  
@@ -88,7 +89,7 @@ catalog.validate_project [ @folder_name = ] folder_name
   
 -   Utente senza autorizzazioni appropriate.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La convalida consente di identificare i problemi che impediscono il completamento dell'esecuzione dei pacchetti nel progetto. Usare la vista [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) o [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) per monitorare lo stato della convalida.  
   
  Solo ambienti che sono accessibili dall'utente possono essere utilizzati nella convalida. L'output della convalida viene inviato al client come set di risultati.  

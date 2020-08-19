@@ -1,4 +1,5 @@
 ---
+description: MakeValid (tipo di dati geography)
 title: MakeValid (tipo di dati geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 86fb119dfaac7f8069aba96402b5f2a0bab31a88
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 7a3ca43dea611fb3fb74167032bd72f045e39b41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556163"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422415"
 ---
 # <a name="makevalid-geography-data-type"></a>MakeValid (tipo di dati geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "86556163"
  Se l'istanza spaziale non valida interseca l'equatore e dispone di EnvelopeAngle() = 180, verrà restituita un'istanza **FullGlobe**. Il metodo con tipo di dati **geography**`MakeValid()` prova a restituire istanze valide, ma non vi è garanzia che i risultati siano accurati o precisi.  
   
 > [!NOTE]  
->  È possibile archiviare gli oggetti non validi nel database. I metodi che possono essere eseguiti sulle istanze non valide, ovvero le istanze per cui STIsValid() restituisce False, controllano la validità o consentono l'esportazione: STIsValid(), MakeValid(), STAsText(), STAsBinary(), ToString(), AsTextZM(), e AsGml().  
+>  È possibile archiviare gli oggetti non validi nel database. I metodi che possono essere eseguiti sulle istanze non valide (istanze per cui STIsValid() restituisce False) sono metodi che controllano la validità o consentono l'esportazione: STIsValid(), MakeValid(), STAsText(), STAsBinary(), ToString(), AsTextZM() e AsGml().  
   
  Il metodo non è preciso.  
   

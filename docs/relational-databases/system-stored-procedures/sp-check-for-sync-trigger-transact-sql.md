@@ -1,4 +1,5 @@
 ---
+description: sp_check_for_sync_trigger (Transact-SQL)
 title: sp_check_for_sync_trigger (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6fd7af5a486928e0dca9f5b2281e0b53c5038e74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1e55fd24c9d4df46cb4703af31d2eda802a458ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771340"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486210"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,7 +53,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 |**CANC**|Trigger DELETE|  
 |NULL (predefinito)||  
   
-`[ @fonpublisher = ] fonpublisher`Specifica il percorso in cui viene eseguita la stored procedure. *fonpublisher* è di **bit**e il valore predefinito è 0. 0 indica che l'esecuzione avviene nel Sottoscrittore, mentre 1 indica che avviene nel server di pubblicazione.  
+`[ @fonpublisher = ] fonpublisher` Specifica il percorso in cui viene eseguita la stored procedure. *fonpublisher* è di **bit**e il valore predefinito è 0. 0 indica che l'esecuzione avviene nel Sottoscrittore, mentre 1 indica che avviene nel server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 indica che la stored procedure non viene richiamata nel contesto di un trigger per l'aggiornamento immediato. 1 indica che è in corso la chiamata nel contesto di un trigger ad aggiornamento immediato ed è il tipo di trigger restituito in * \@ trigger_op*.  

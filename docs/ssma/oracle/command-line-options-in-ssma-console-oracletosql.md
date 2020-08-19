@@ -1,4 +1,5 @@
 ---
+description: Opzioni della riga di comando nella console SSMA (OracleToSQL)
 title: Opzioni della riga di comando nella console SSMA (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -15,12 +16,12 @@ ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 6bddaddeda73133b83d6a7669c98fd89af96cd2c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1a950ff2e2870519ae7063bfc0df615fd971187b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934990"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468840"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>Opzioni della riga di comando nella console SSMA (OracleToSQL)
 Microsoft offre un'affidabile serie di opzioni della riga di comando per l'esecuzione e il controllo delle attività SSMA. Le sezioni seguenti illustrano in dettaglio lo stesso.  

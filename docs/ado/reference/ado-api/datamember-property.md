@@ -1,4 +1,5 @@
 ---
+description: Proprietà DataMember
 title: Proprietà DataMember | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87d525907edde2e3dc99b78eb827c571c604d8b7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f698c4a20fb76839460ca0930d45b8d18b2738be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763482"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444233"
 ---
 # <a name="datamember-property"></a>Proprietà DataMember
 Indica il nome del membro dati che verrà recuperato dal [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) a cui fa riferimento la proprietà [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) .  
@@ -35,7 +36,7 @@ Indica il nome del membro dati che verrà recuperato dal [Recordset](../../../ad
   
  La proprietà **DataMember** determina quale oggetto specificato dalla proprietà **DataSource** verrà rappresentato come un oggetto **Recordset** . Per impostare questa proprietà, è necessario che l'oggetto **Recordset** sia chiuso. Viene generato un errore se la proprietà **DataMember** non viene impostata prima della proprietà **DataSource** oppure se il nome del **membro** dati non è riconosciuto dall'oggetto specificato nella proprietà **DataSource** .  
   
-## <a name="usage"></a>Usage  
+## <a name="usage"></a>Utilizzo  
   
 ```  
 Dim rs as New ADODB.Recordset  

@@ -1,5 +1,6 @@
 ---
-title: COLUMNS_UPDATED (Transact-SQL) | Microsoft Docs
+description: COLUMNS_UPDATED (Transact-SQL)
+title: COLUMNS_UPDATED (Transact-SQL)
 ms.custom: ''
 ms.date: 07/25/2017
 ms.prod: sql
@@ -20,14 +21,15 @@ helpviewer_keywords:
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f0eca52b39980b3b4f97276be3dcd2289a0e527
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: af91c04f85eae26326ab05e2deb83030267cc7fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732624"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422825"
 ---
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Questa funzione restituisce uno schema di bit **varbinary** che indica le colonne inserite o aggiornate in una tabella o vista. Usare `COLUMNS_UPDATED` in qualsiasi punto all'interno del corpo di un trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT o UPDATE per controllare se il trigger deve eseguire operazioni specifiche.
@@ -39,7 +41,9 @@ Questa funzione restituisce uno schema di bit **varbinary** che indica le colonn
 ```sql
 COLUMNS_UPDATED ( )   
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>Tipi restituiti
 **varbinary**
   

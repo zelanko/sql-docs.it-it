@@ -1,4 +1,5 @@
 ---
+description: Manipolazione dei dati MDX - SELECT
 title: Istruzione SELECT (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f56d5cbbc8e6653b4844e1b5e48b08911307395a
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 623d798a3794da7577cf036cb8a32b2cf9cd7b84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477013"
 ---
 # <a name="mdx-data-manipulation---select"></a>Manipolazione dei dati MDX - SELECT
 
@@ -109,14 +110,14 @@ FROM
  *MemberProperty_Name*  
  Stringa valida che rappresenta la proprietà di un membro.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  L'espressione `<SELECT slicer axis clause>` deve contenere membri di dimensioni e gerarchie diverse da quelle a cui fanno riferimento le espressioni `<SELECT query axis clause>` specificate.  
   
  Se nelle espressioni `<SELECT query axis clause>` specificate e nel valore `<SELECT slicer axis clause>` viene omesso un attributo del cubo, il membro predefinito dell'attributo viene aggiunto in modo implicito all'asse di sezionamento.  
   
  L'opzione NON VISUAL nell'istruzione sub-SELECT consente di filtrare i membri mentre e mantenere i totali veri anziché i totali filtrati. In tal modo è possibile eseguire una query per le prime dieci vendite (persone/prodotti/aree) e ottenere il totale vero delle vendite per tutti i membri inclusi nella query, anziché il valore totale delle vendite dei primi dieci restituiti. Per ulteriori informazioni, vedere gli esempi seguenti.  
   
- I membri calcolati possono essere inclusi in \<SELECT query axis clause> ogni volta che la connessione è stata aperta utilizzando il parametro della stringa di connessione *sottoquery = 1*; vedere le [proprietà XMLA supportate &#40;&#41;XMLA](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> per l'utilizzo dei parametri. Un esempio è fornito sui membri calcolati nelle sub-SELECT.  
+ I membri calcolati possono essere inclusi in \<SELECT query axis clause> ogni volta che la connessione è stata aperta utilizzando il parametro della stringa di connessione *sottoquery = 1*; vedere le [proprietà XMLA supportate &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> per l'utilizzo dei parametri. Un esempio è fornito sui membri calcolati nelle sub-SELECT.  
   
 ## <a name="autoexists"></a>Auto Exist  
  Quando in un'istruzione SELECT vengono utilizzati due o più attributi della dimensione, Analysis Services valuta le espressioni degli attributi per verificare che i relativi membri siano correttamente limitati per soddisfare i criteri di tutti gli altri attributi. Si supponga ad esempio di utilizzare gli attributi della dimensione Geografia. Se una delle espressioni restituisce tutti i membri dell'attributo Città e un'altra limita i membri dell'attributo Paese a tutti i paesi Europai, allora i membri di Città saranno limitati alle sole città che appartengono a paesi Europai. Questa caratteristica di Analysis Services, denominata Auto Exist, si applica solo agli attributi della stessa dimensione, un quanto tenta di impedire che i record di dimensioni esclusi nell'espressione di un attributo vengano inclusi dalle espressioni di altri attributi. La caratteristica Auto Exist può inoltre essere interpretata come l'intersezione risultante da diverse espressioni di attributi su record di dimensioni. Vedere gli esempi seguenti:  
@@ -334,9 +335,9 @@ FROM
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
   
- Il comportamento di Auto Exist può essere modificato utilizzando il parametro auto EXISTs = [1 | 2 | 3] nella stringa di connessione. vedere [Proprietà XMLA supportate &#40;&#41;XMLA](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> per l'utilizzo dei parametri.  
+ Il comportamento di Auto Exist può essere modificato utilizzando il parametro auto EXISTs = [1 | 2 | 3] nella stringa di connessione. vedere [Proprietà XMLA supportate &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) e <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> per l'utilizzo dei parametri.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituita la somma del `Measures.[Order Quantity]` membro, aggregata nei primi otto mesi dell'anno di calendario 2003 contenuti nella `Date` dimensione, dal cubo **Adventure Works** .  
   
 ```  
@@ -393,7 +394,7 @@ WHERE
   
  Produce i risultati seguenti:  
   
-|Tipo di business + categoria|All Products|Accessori|Clothing|  
+|Tipo di business + categoria|All Products|Accessories|Clothing|  
 |-|-|-|-|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
@@ -419,7 +420,7 @@ WHERE
   
  La query precedente produce i seguenti risultati:  
   
-|Tipo di business + categoria|All Products|Accessori|Clothing|  
+|Tipo di business + categoria|All Products|Accessories|Clothing|  
 |-|-|-|-|  
 |All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
@@ -455,7 +456,7 @@ WHERE
   
 ## <a name="see-also"></a>Vedere anche  
  [Concetti chiave di MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
- [Istruzioni di manipolazione dei dati MDX &#40;&#41;MDX](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Istruzioni di manipolazione dei dati MDX &#40;&#41;MDX ](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [Restrizione della query con gli assi della query e di sezionamento &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   

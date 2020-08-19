@@ -1,4 +1,5 @@
 ---
+description: sp_check_subset_filter (Transact-SQL)
 title: sp_check_subset_filter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f006cba8bfe0abecce995753863944f7d5bf0b71
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 55b5160842e5be4bda385fd23afd22d304dc2dae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486181"
 ---
 # <a name="sp_check_subset_filter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,11 +45,11 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @filtered_table = ] 'filtered_table'`Nome di una tabella filtrata. *filtered_table* è di **tipo nvarchar (400)** e non prevede alcun valore predefinito.  
+`[ @filtered_table = ] 'filtered_table'` Nome di una tabella filtrata. *filtered_table* è di **tipo nvarchar (400)** e non prevede alcun valore predefinito.  
   
-`[ @subset_filterclause = ] 'subset_filterclause'`Clausola di filtro sottoposta a test. *subset_filterclause* è di **tipo nvarchar (1000)** e non prevede alcun valore predefinito.  
+`[ @subset_filterclause = ] 'subset_filterclause'` Clausola di filtro sottoposta a test. *subset_filterclause* è di **tipo nvarchar (1000)** e non prevede alcun valore predefinito.  
   
-`[ @has_dynamic_filters = ] has_dynamic_filters`Indica se la clausola di filtro è un filtro di riga con parametri. *has_dynamic_filters* è di **bit**e il valore predefinito è null ed è un parametro di output. Restituisce un valore pari a **1** quando la clausola di filtro è un filtro di riga con parametri.  
+`[ @has_dynamic_filters = ] has_dynamic_filters` Indica se la clausola di filtro è un filtro di riga con parametri. *has_dynamic_filters* è di **bit**e il valore predefinito è null ed è un parametro di output. Restituisce un valore pari a **1** quando la clausola di filtro è un filtro di riga con parametri.  
   
 ## <a name="result-sets"></a>Set di risultati  
   

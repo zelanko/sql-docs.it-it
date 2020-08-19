@@ -1,4 +1,5 @@
 ---
+description: catalog.event_message_context
 title: catalog.event_message_context | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: efba3eecba580293397848a52bce40980f42987f
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: e8728d1ddbc8ae7643d0ee660266357d42125c89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472201"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495321"
 ---
 # <a name="catalogevent_message_context"></a>catalog.event_message_context 
 

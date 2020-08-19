@@ -1,4 +1,5 @@
 ---
+description: Selezione e configurazione degli oggetti interessati (SybaseToSQL)
 title: Selezione e configurazione degli oggetti interessati (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c9efc329f80e880a58ec9926db677c4a71604e2c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 793430d548053b8d4c1cbf8dd07dd4e7d691c6d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930442"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468743"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Selezione e configurazione degli oggetti interessati (SybaseToSQL)
 In questa pagina è possibile selezionare le tabelle e le chiavi esterne, che devono essere confrontate quando SSMA verifica i risultati dell'esecuzione per gli oggetti scelti nel passaggio precedente. Inoltre, è possibile personalizzare i parametri di verifica.  
@@ -39,7 +40,7 @@ La scheda tabella contiene la visualizzazione griglia della tabella selezionata.
   
 -   Regola  
   
--   Impostazione predefinita  
+-   Predefinito  
   
 -   Identità  
   

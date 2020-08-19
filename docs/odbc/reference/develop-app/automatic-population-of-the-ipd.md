@@ -1,4 +1,5 @@
 ---
+description: Popolamento automatico dell'IPD
 title: Popolamento automatico del dispositivo dpi | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1184a7d8-d557-4140-843b-6633ae6deacc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1998ea1992ee7f14d87d01e348d955b017166088
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 73c0456f1c78ccc19f1ff55a1ab288baedae2e14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285071"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476883"
 ---
 # <a name="automatic-population-of-the-ipd"></a>Popolamento automatico dell'IPD
 Alcuni driver sono in grado di impostare i campi del dip dopo che è stata preparata una query con parametri. I campi del descrittore vengono popolati automaticamente con informazioni sul parametro, inclusi il tipo di dati, la precisione, la scala e altre caratteristiche. Questa operazione equivale a supportare **SQLDescribeParam**. Queste informazioni possono essere particolarmente utili per un'applicazione quando non sono disponibili altri modi per individuarle, ad esempio quando viene eseguita una query ad hoc con i parametri di cui l'applicazione non è a conoscenza.  

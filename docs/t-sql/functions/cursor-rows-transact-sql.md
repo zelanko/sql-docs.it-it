@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;CURSOR_ROWS (Transact-SQL)'
 title: '@@CURSOR_ROWS (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/18/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a35f2e2e75b29a28ed56fc7c5cdaa3e9c2244d6d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ea10c7ada51794a26fd08cf265bfa78953856abc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112069"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422805"
 ---
 # <a name="x40x40cursor_rows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +55,7 @@ Restituisce il numero delle righe attualmente risultanti nell'ultimo cursore ape
 |0|Non è stato aperto alcun cursore, nessuna riga è stata restituita per l'ultimo cursore aperto oppure l'ultimo cursore aperto è chiuso o deallocato.|  
 |*n*|Il cursore è completamente popolato. Il valore restituito (*n*) corrisponde al numero totale di righe nel cursore.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 `@@CURSOR_ROWS` restituisce un numero negativo se l'ultimo cursore è stato aperto in modalità asincrona. I driver del set di chiavi o i cursori statici si aprono in modo asincrono se il valore della soglia del cursore sp_configure è maggiore di 0 e il numero di righe nel set di risultati del cursore è maggiore del valore soglia del cursore.
   
 ## <a name="examples"></a>Esempi  

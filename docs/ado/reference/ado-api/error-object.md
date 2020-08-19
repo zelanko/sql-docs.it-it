@@ -1,4 +1,5 @@
 ---
+description: Oggetto Error
 title: Oggetto Error | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 717a3af4bec62725cc4cf5da8621163f24c2ab3f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0f243fba25a185025c51fb53c030a360a062ef78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443973"
 ---
 # <a name="error-object"></a>Oggetto Error
 Contiene informazioni dettagliate sugli errori di accesso ai dati relativi a una singola operazione che interessa il provider.  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  Tutte le operazioni che coinvolgono oggetti ADO possono generare uno o più errori del provider. Quando si verifica ogni errore, uno o più oggetti **Error** vengono inseriti nella raccolta [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) dell'oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Quando un'altra operazione ADO genera un errore, la raccolta **Errors** viene cancellata e il nuovo set di oggetti **Error** viene inserito nella raccolta **Errors** .  
   
 > [!NOTE]

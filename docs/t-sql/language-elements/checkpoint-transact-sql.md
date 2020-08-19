@@ -1,4 +1,5 @@
 ---
+description: CHECKPOINT (Transact-SQL)
 title: CHECKPOINT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
-ms.openlocfilehash: ec484e698234dc71282a11b07555be73cd2c694d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: da05183ae2b331f78f9692acc6aaff66a9455092
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923373"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459403"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,7 +65,7 @@ CHECKPOINT [ checkpoint_duration ]
 ##  <a name="security"></a><a name="Security"></a> Sicurezza  
   
 ### <a name="permissions"></a>Autorizzazioni  
- Le autorizzazioni per l'istruzione CHECKPOINT vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e dei ruoli predefiniti del database **db_owner** e **db_backupoperator** e non sono trasferibili.  
+ Le autorizzazioni per l'istruzione CHECKPOINT vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e dei ruoli predefiniti del database **db_owner** e **db_backupoperator**. Non sono trasferibili.  
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

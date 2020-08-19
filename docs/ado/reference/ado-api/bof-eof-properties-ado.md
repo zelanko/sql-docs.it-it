@@ -1,4 +1,5 @@
 ---
+description: Proprietà BOF ed EOF (ADO)
 title: Proprietà BOF, EOF (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9496a4e2115cb686764981e8a5fae3ecfe59401e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a10ef4731db0e469743d09d9e3b35463d03e7020
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451130"
 ---
 # <a name="bof-eof-properties-ado"></a>Proprietà BOF ed EOF (ADO)
 -   **BOF** Indica che la posizione del record corrente è prima del primo record in un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
