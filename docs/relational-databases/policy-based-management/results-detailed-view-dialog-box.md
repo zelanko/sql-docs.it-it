@@ -1,4 +1,5 @@
 ---
+description: Finestra di dialogo Visualizzazione dettagliata risultati
 title: Finestra di dialogo Visualizzazione dettagliata risultati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,16 +14,16 @@ f1_keywords:
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5b9681bc22ea07ed3bed1d218ba752c2d4d6a666
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 38102297ee7ac0a29bbe37e83d1bfe834d9faaa4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716849"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88380737"
 ---
 # <a name="results-detailed-view-dialog-box"></a>Finestra di dialogo Visualizzazione dettagliata risultati
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  In questa finestra di dialogo vengono visualizzati i risultati della valutazione dei criteri avviata utilizzando la finestra di dialogo **Valuta criteri** e facendo clic su **Valuta**. Questa finestra di dialogo, il cui contenuto è di sola lettura, consente di identificare la parte di un'espressione di proprietà in cui può essersi verificato un errore.  
+   Questa finestra di dialogo mostra i risultati della valutazione dei criteri avviata usando la finestra di dialogo **Valuta criteri** e facendo clic su **Valuta**. Questa finestra di dialogo, il cui contenuto è di sola lettura, consente di identificare la parte di un'espressione di proprietà in cui può essersi verificato un errore.  
   
 ## <a name="options"></a>Opzioni  
  **AndOr**  
