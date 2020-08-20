@@ -1,4 +1,5 @@
 ---
+description: sp_prepare (Transact SQL)
 title: sp_prepare (Transact SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2018
@@ -18,17 +19,17 @@ ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9095536219fc0cdc419a0952217b0eeb2ef19f5
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b3ccb20945f47aa7094de832faa8eb246022819a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489180"
 ---
 # <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-Prepara un'istruzione con parametri [!INCLUDE[tsql](../../includes/tsql-md.md)] e restituisce un *handle* di istruzione per l'esecuzione.  `sp_prepare`viene richiamato specificando ID = 11 in un pacchetto TDS (Tabular Data Stream).  
+Prepara un'istruzione con parametri [!INCLUDE[tsql](../../includes/tsql-md.md)] e restituisce un *handle* di istruzione per l'esecuzione.  `sp_prepare` viene richiamato specificando ID = 11 in un pacchetto TDS (Tabular Data Stream).  
   
  ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +52,7 @@ sp_prepare handle OUTPUT, params, stmt, options
  *options*  
  Parametro facoltativo tramite cui viene restituita una descrizione delle colonne dei set di risultati del cursore. *options* richiede il valore di input int seguente:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   

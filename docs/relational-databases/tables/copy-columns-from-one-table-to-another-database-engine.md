@@ -1,4 +1,5 @@
 ---
+description: Copia di colonne da una tabella a un'altra (Motore di database)
 title: Copiare colonne da una tabella a un'altra (motore di database) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2016
@@ -14,12 +15,12 @@ ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3195e1f826dde57dba9113efa51733b2a3bd1dd
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f1952dc72148ee9e8d0d68b375f39f5fc3bedfc3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488634"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copia di colonne da una tabella a un'altra (Motore di database)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -88,7 +89,7 @@ ms.locfileid: "87395832"
 9.  Eseguire la query per inserire i dati dalla tabella di origine alla tabella di destinazione.
 
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Per copiare le definizioni delle colonne tra tabelle  
   

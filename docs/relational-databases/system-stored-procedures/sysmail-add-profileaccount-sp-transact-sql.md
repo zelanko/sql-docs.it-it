@@ -1,4 +1,5 @@
 ---
+description: sysmail_add_profileaccount_sp (Transact-SQL)
 title: sysmail_add_profileaccount_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3de6a0b8ed5cbabd37cfa18f3b107c90121fe459
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a393c3902d8ee9c5af45a10358fbb9fa371af18e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891004"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489003"
 ---
 # <a name="sysmail_add_profileaccount_sp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_id = ] profile_id`ID del profilo a cui aggiungere l'account. *profile_id* è di **tipo int**e il valore predefinito è null. È necessario specificare il *profile_id* o l' *profile_name* .  
+`[ @profile_id = ] profile_id` ID del profilo a cui aggiungere l'account. *profile_id* è di **tipo int**e il valore predefinito è null. È necessario specificare il *profile_id* o l' *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'`Nome del profilo a cui aggiungere l'account. *profile_name* è di **tipo sysname**e il valore predefinito è null. È necessario specificare il *profile_id* o l' *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Nome del profilo a cui aggiungere l'account. *profile_name* è di **tipo sysname**e il valore predefinito è null. È necessario specificare il *profile_id* o l' *profile_name* .  
   
-`[ @account_id = ] account_id`ID dell'account da aggiungere al profilo. *account_id* è di **tipo int**e il valore predefinito è null. È necessario specificare il *account_id* o l' *account_name* .  
+`[ @account_id = ] account_id` ID dell'account da aggiungere al profilo. *account_id* è di **tipo int**e il valore predefinito è null. È necessario specificare il *account_id* o l' *account_name* .  
   
-`[ @account_name = ] 'account_name'`Nome dell'account da aggiungere al profilo. *account_name* è di **tipo sysname**e il valore predefinito è null. È necessario specificare il *account_id* o l' *account_name* .  
+`[ @account_name = ] 'account_name'` Nome dell'account da aggiungere al profilo. *account_name* è di **tipo sysname**e il valore predefinito è null. È necessario specificare il *account_id* o l' *account_name* .  
   
-`[ @sequence_number = ] sequence_number`Numero di sequenza dell'account all'interno del profilo. *sequence_number* è di **tipo int**e non prevede alcun valore predefinito. Il numero di sequenza determina l'ordine in cui gli account sono utilizzati nel profilo.  
+`[ @sequence_number = ] sequence_number` Numero di sequenza dell'account all'interno del profilo. *sequence_number* è di **tipo int**e non prevede alcun valore predefinito. Il numero di sequenza determina l'ordine in cui gli account sono utilizzati nel profilo.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -82,6 +83,6 @@ EXECUTE msdb.dbo.sysmail_add_profileaccount_sp
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)   
  [Creazione di un account Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Oggetti di configurazione Posta elettronica database](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Stored procedure di Posta elettronica database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Stored procedure di Posta elettronica database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

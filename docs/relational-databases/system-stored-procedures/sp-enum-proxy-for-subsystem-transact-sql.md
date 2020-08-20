@@ -1,4 +1,5 @@
 ---
+description: sp_enum_proxy_for_subsystem (Transact-SQL)
 title: sp_enum_proxy_for_subsystem (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 21df62ff7ab60933281ca0dce0e7bc2bc2b3b7c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f484764e05a23594c32494934a9c366154e02aeb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891919"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489437"
 ---
 # <a name="sp_enum_proxy_for_subsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 
@@ -43,13 +44,13 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @proxy_id = ] proxy_id`Numero di identificazione del proxy per cui elencare le informazioni. Il *proxy_id* è di **tipo int**e il valore predefinito è null. È possibile specificare l' *ID* o il *proxy_name* .  
+`[ @proxy_id = ] proxy_id` Numero di identificazione del proxy per cui elencare le informazioni. Il *proxy_id* è di **tipo int**e il valore predefinito è null. È possibile specificare l' *ID* o il *proxy_name* .  
   
-`[ @proxy_name = ] 'proxy_name'`Nome del proxy per cui elencare le informazioni. Il *proxy_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare l' *ID* o il *proxy_name* .  
+`[ @proxy_name = ] 'proxy_name'` Nome del proxy per cui elencare le informazioni. Il *proxy_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare l' *ID* o il *proxy_name* .  
   
-`[ @subsystem_id = ] subsystem_id`Numero di identificazione del sottosistema per cui elencare le informazioni. Il *subsystem_id* è di **tipo int**e il valore predefinito è null. È possibile specificare il *subsystem_id* o l' *subsystem_name* .  
+`[ @subsystem_id = ] subsystem_id` Numero di identificazione del sottosistema per cui elencare le informazioni. Il *subsystem_id* è di **tipo int**e il valore predefinito è null. È possibile specificare il *subsystem_id* o l' *subsystem_name* .  
   
-`[ @subsystem_name = ] 'subsystem_name'`Nome del sottosistema per cui elencare le informazioni. Il *subsystem_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare il *subsystem_id* o l' *subsystem_name* .  
+`[ @subsystem_name = ] 'subsystem_name'` Nome del sottosistema per cui elencare le informazioni. Il *subsystem_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare il *subsystem_id* o l' *subsystem_name* .  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -103,6 +104,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_grant_proxy_to_subsystem &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
+ [sp_grant_proxy_to_subsystem &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

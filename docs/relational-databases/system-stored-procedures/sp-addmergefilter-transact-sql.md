@@ -1,4 +1,5 @@
 ---
+description: sp_addmergefilter (Transact-SQL)
 title: sp_addmergefilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0ac36d85a08763903cb42a5b48d0280a6366a1e9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d1149db6cfbebcc1dc1ec2b62fcbb0ce02b93fad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716577"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489662"
 ---
 # <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,34 +46,34 @@ sp_addmergefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione in cui viene aggiunto il filtro di merge. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione in cui viene aggiunto il filtro di merge. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'`Nome dell'articolo in cui viene aggiunto il filtro di merge. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @article = ] 'article'` Nome dell'articolo in cui viene aggiunto il filtro di merge. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @filtername = ] 'filtername'`Nome del filtro. *FilterName* è un parametro obbligatorio. *FilterName*è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @filtername = ] 'filtername'` Nome del filtro. *FilterName* è un parametro obbligatorio. *FilterName*è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @join_articlename = ] 'join_articlename'`Articolo padre al quale l'articolo figlio, specificato da *article*, deve essere unito utilizzando la clausola join specificata da *join_filterclause*per determinare le righe dell'articolo figlio che soddisfano il criterio di filtro del filtro di merge. *join_articlename* è di **tipo sysname**e non prevede alcun valore predefinito. È necessario che l'articolo sia presente nella pubblicazione fornita dalla *pubblicazione*.  
+`[ @join_articlename = ] 'join_articlename'` Articolo padre al quale l'articolo figlio, specificato da *article*, deve essere unito utilizzando la clausola join specificata da *join_filterclause*per determinare le righe dell'articolo figlio che soddisfano il criterio di filtro del filtro di merge. *join_articlename* è di **tipo sysname**e non prevede alcun valore predefinito. È necessario che l'articolo sia presente nella pubblicazione fornita dalla *pubblicazione*.  
   
-`[ @join_filterclause = ] join_filterclause`Clausola join che deve essere utilizzata per unire in join l'articolo figlio specificato dall' *articolo e l'* articolo padre specificato da *join_article*per determinare le righe che qualificano il filtro di merge. *join_filterclause* è di **tipo nvarchar (1000)**.  
+`[ @join_filterclause = ] join_filterclause` Clausola join che deve essere utilizzata per unire in join l'articolo figlio specificato dall' *articolo e l'* articolo padre specificato da *join_article*per determinare le righe che qualificano il filtro di merge. *join_filterclause* è di **tipo nvarchar (1000)**.  
   
-`[ @join_unique_key = ] join_unique_key`Specifica se il join tra l'articolo *dell'articolo figlio e l'* articolo padre *join_article*è uno-a-molti, uno-a-uno, molti-a-uno o molti-a-molti. *join_unique_key* è di **tipo int**e il valore predefinito è 0. **0** indica un join molti-a-uno o molti-a-molti. **1** indica un join uno-a-uno o uno-a-molti. Questo valore è **1** quando le colonne di join formano una chiave univoca in *join_article*o se *join_filterclause* tra una chiave esterna in un *articolo* e una chiave primaria in *join_article*.  
+`[ @join_unique_key = ] join_unique_key` Specifica se il join tra l'articolo *dell'articolo figlio e l'* articolo padre *join_article*è uno-a-molti, uno-a-uno, molti-a-uno o molti-a-molti. *join_unique_key* è di **tipo int**e il valore predefinito è 0. **0** indica un join molti-a-uno o molti-a-molti. **1** indica un join uno-a-uno o uno-a-molti. Questo valore è **1** quando le colonne di join formano una chiave univoca in *join_article*o se *join_filterclause* tra una chiave esterna in un *articolo* e una chiave primaria in *join_article*.  
   
 > [!CAUTION]  
 >  Impostare questo parametro su **1** solo se si dispone di un vincolo nella colonna di join nella tabella sottostante per l'articolo padre che garantisce l'univocità. Se *join_unique_key* è impostato su **1** in modo errato, è possibile che si verifichi la non convergenza dei dati.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Conferma che l'azione eseguita da questo stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**e il valore predefinito è **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Conferma che l'azione eseguita da questo stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**e il valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo di merge non saranno valide per lo snapshot. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   
  **1** specifica che le modifiche apportate all'articolo di merge potrebbero invalidare lo snapshot e, se sono presenti sottoscrizioni che richiedono un nuovo snapshot, consente di contrassegnare lo snapshot esistente come obsoleto e di generare un nuovo snapshot.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`Conferma che l'azione eseguita da questo stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è di **bit**e il valore predefinito è 0.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Conferma che l'azione eseguita da questo stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è di **bit**e il valore predefinito è 0.  
   
  **0** specifica che le modifiche apportate all'articolo di merge non comporteranno la reinizializzazione della sottoscrizione. Se la stored procedure rileva che la modifica richiede la reinizializzazione delle sottoscrizioni, viene generato un errore e non viene apportata alcuna modifica.  
   
  **1** specifica che le modifiche apportate all'articolo di merge causeranno la reinizializzazione delle sottoscrizioni esistenti e consentirà di eseguire la reinizializzazione della sottoscrizione.  
   
-`[ @filter_type = ] filter_type`Specifica il tipo di filtro da aggiungere. *filter_type* è di **tinyint**. i possibili valori sono i seguenti.  
+`[ @filter_type = ] filter_type` Specifica il tipo di filtro da aggiungere. *filter_type* è di **tinyint**. i possibili valori sono i seguenti.  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
@@ -107,12 +108,12 @@ sp_addmergefilter [ @publication = ] 'publication'
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_addmergefilter**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Definire un articolo](../../relational-databases/replication/publish/define-an-article.md)   
- [Definire e modificare un filtro di join tra articoli di merge](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Filtri join](../../relational-databases/replication/merge/join-filters.md)   
- [sp_changemergefilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [sp_dropmergefilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [Definizione e modifica di un filtro di join tra articoli di merge](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
+ [sp_changemergefilter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
+ [sp_dropmergefilter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

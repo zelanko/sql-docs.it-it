@@ -1,4 +1,5 @@
 ---
+description: 'Lezione 1: Conversione di una tabella in una struttura gerarchica'
 title: 'Lezione 1: Conversione di una tabella in una struttura gerarchica | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/22/2018
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 18a7ad2ca8c66f2960fae9a051d0d2546adb02f5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1a4d64425d6d02fbc57bde9f84159c4f09f4929
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757710"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488577"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Lezione 1: Conversione di una tabella in una struttura gerarchica
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,7 +95,7 @@ Con la clausola **ORDER BY** , i report diretti di ogni livello di gestione veng
 
 
 ## <a name="populate-a-table-with-existing-hierarchical-data"></a>Popolare una tabella con dati gerarchici esistenti
-Questa attività consente di creare una nuova tabella e popolarla con i dati della tabella **EmployeeDemo** . Questa attività prevede i passaggi seguenti:  
+ Questa attività consente di creare una nuova tabella e popolarla con i dati della tabella **EmployeeDemo**. Questa attività prevede i passaggi seguenti:  
   
 -   Creare una tabella nuova contenente una colonna **hierarchyid** . Questa colonna può sostituire le colonne **EmployeeID** e **ManagerID** esistenti. Tuttavia, tali colonne verranno mantenute. Questo avviene perché le applicazioni esistenti potrebbero riferirsi a tali colonne e potrebbero aiutare a capire i dati dopo il trasferimento. La definizione della tabella specifica che **OrgNode** è la chiave primaria che richiede alla colonna di contenere i valori univoci. L'indice cluster della colonna **OrgNode** archivierà la data nella sequenza **OrgNode** .    
 -   Creare una tabella temporanea utilizzata per rilevare il numero di dipendenti che riportano direttamente a ogni responsabile. 
@@ -223,7 +224,7 @@ Questa attività consente di creare una nuova tabella e popolarla con i dati del
     ```  
   
 ## <a name="optimizing-the-neworg-table"></a>Ottimizzazione della tabella NewOrg
-La tabella **NewOrd** creata nell'attività [Popolamento di una tabella con dati gerarchici esistenti](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) contiene tutte le informazioni sul personale e rappresenta la struttura gerarchica usando un tipo di dati **hierarchyid** . Questa attività aggiunge indici nuovi per supportare ricerche nella colonna **hierarchyid** .  
+ La tabella **NewOrd** creata nell'attività [Popolamento di una tabella con dati gerarchici esistenti](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) contiene tutte le informazioni sul personale e rappresenta la struttura gerarchica usando un tipo di dati **hierarchyid**. Questa attività aggiunge indici nuovi per supportare ricerche nella colonna **hierarchyid** .  
   
 
 La colonna **hierarchyid** (**OrgNode**) è la chiave primaria della tabella **NewOrg** . Quando la tabella è stata creata, conteneva un indice cluster denominato **PK_NewOrg_OrgNode** per applicare l'univocità della colonna **OrgNode** . Questo indice cluster supporta anche una ricerca in profondità nella tabella.  

@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobs_in_schedule (Transact-SQL)
 title: sp_help_jobs_in_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55dbd9d513383fc4ed299dd56be5022b68f68bac
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2c314f209e1b020598d1a0ab2ef946f2494ca989
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893649"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489374"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @schedule_id = ] schedule_id`Identificatore della pianificazione per cui elencare le informazioni. *schedule_id* è di **tipo int**e non prevede alcun valore predefinito. È possibile specificare *schedule_id* o *schedule_name* .  
+`[ @schedule_id = ] schedule_id` Identificatore della pianificazione per cui elencare le informazioni. *schedule_id* è di **tipo int**e non prevede alcun valore predefinito. È possibile specificare *schedule_id* o *schedule_name* .  
   
-`[ @schedule_name = ] 'schedule_name'`Nome della pianificazione per cui elencare le informazioni. *schedule_name* è di **tipo sysname**e non prevede alcun valore predefinito. È possibile specificare *schedule_id* o *schedule_name* .  
+`[ @schedule_name = ] 'schedule_name'` Nome della pianificazione per cui elencare le informazioni. *schedule_name* è di **tipo sysname**e non prevede alcun valore predefinito. È possibile specificare *schedule_id* o *schedule_name* .  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -57,7 +58,7 @@ sp_help_jobs_in_schedule
 |**originating_server**|**nvarchar(30)**|Nome del server di provenienza del processo.|  
 |**nome**|**sysname**|Nome del processo.|  
 |**abilitato**|**tinyint**|Indica se il processo è abilitato per l'esecuzione.|  
-|**Descrizione**|**nvarchar(512)**|Descrizione del processo.|  
+|**description**|**nvarchar(512)**|Descrizione del processo.|  
 |**start_step_id**|**int**|ID del passaggio del processo da cui deve iniziare l'esecuzione.|  
 |**category**|**sysname**|Categoria del processo.|  
 |**proprietario**|**sysname**|Proprietario del processo.|  
@@ -115,10 +116,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di SQL Server Agent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_detach_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+ [Stored procedure di SQL Server Agent &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_add_schedule &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

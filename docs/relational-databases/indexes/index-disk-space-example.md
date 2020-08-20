@@ -1,4 +1,5 @@
 ---
+description: Esempio di spazio su disco per gli indici
 title: Esempio di spazio su disco per gli indici | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1d85fecce4c5b97154312922ed96f988754f88e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d12125849b83fb6701b18bd3d7c46b9d9b9828a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85668285"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490971"
 ---
 # <a name="index-disk-space-example"></a>Esempio di spazio su disco per gli indici
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -110,17 +111,17 @@ ms.locfileid: "85668285"
   
 |Operazione sull'indice|Requisiti di spazio su disco per i percorsi delle strutture seguenti|  
 |---------------------|---------------------------------------------------------------------------|  
-|Operazione sull'indice offline con SORT_IN_TEMPDB = ON|Spazio totale durante l'operazione: 1.018 MB<br /><br /> \- Tabella e indici esistenti: 363 MB\*<br /><br /> -<br />                    **tempdb**: 202 MB*<br /><br /> \- Nuovi indici: 453 MB<br /><br /> Spazio totale necessario dopo l'operazione: 453 MB|  
-|Operazione sull'indice offline con SORT_IN_TEMPDB = OFF|Spazio totale durante l'operazione: 816 MB<br /><br /> \- Tabella e indici esistenti: 363 MB*<br /><br /> \- Nuovi indici: 453 MB<br /><br /> Spazio totale necessario dopo l'operazione: 453 MB|  
-|Operazione sull'indice online con SORT_IN_TEMPDB = ON|Spazio totale durante l'operazione: 1.058 MB<br /><br /> \- Tabella e indici esistenti: 363 MB\*<br /><br /> -<br />                    **tempdb** (include l'indice di mapping): 242 MB*<br /><br /> \- Nuovi indici: 453 MB<br /><br /> Spazio totale necessario dopo l'operazione: 453 MB|  
-|Operazione sull'indice online con SORT_IN_TEMPDB = OFF|Spazio totale durante l'operazione: 856 MB<br /><br /> \- Tabella e indici esistenti: 363 MB*<br /><br /> \- Indice di mapping temporaneo: 40 MB\*<br /><br /> \- Nuovi indici: 453 MB<br /><br /> Spazio totale necessario dopo l'operazione: 453 MB|  
+|Operazione sull'indice offline con SORT_IN_TEMPDB = ON|Spazio totale durante l'operazione: 1.018 MB<br /><br /> - Tabella e indici esistenti: 363 MB\*<br /><br /> -<br />                    **tempdb**: 202 MB*<br /><br /> - Nuovi indici: 453 MB<br /><br /> Spazio totale necessario dopo l'operazione: 453 MB|  
+|Operazione sull'indice offline con SORT_IN_TEMPDB = OFF|Spazio totale durante l'operazione: 816 MB<br /><br /> - Tabella e indici esistenti: 363 MB*<br /><br /> - Nuovi indici: 453 MB<br /><br /> Spazio totale necessario dopo l'operazione: 453 MB|  
+|Operazione sull'indice online con SORT_IN_TEMPDB = ON|Spazio totale durante l'operazione: 1.058 MB<br /><br /> - Tabella e indici esistenti: 363 MB\*<br /><br /> -<br />                    **tempdb** (include l'indice di mapping): 242 MB*<br /><br /> - Nuovi indici: 453 MB<br /><br /> Spazio totale necessario dopo l'operazione: 453 MB|  
+|Operazione sull'indice online con SORT_IN_TEMPDB = OFF|Spazio totale durante l'operazione: 856 MB<br /><br /> - Tabella e indici esistenti: 363 MB*<br /><br /> - Indice di mapping temporaneo: 40 MB\*<br /><br /> - Nuovi indici: 453 MB<br /><br /> Spazio totale necessario dopo l'operazione: 453 MB|  
   
  *Questo spazio viene deallocato dopo il commit dell'operazione sull'indice.  
   
  In questo esempio non viene considerato lo spazio su disco temporaneo aggiuntivo necessario in **tempdb** per i record delle versioni creati dalle operazioni simultanee di aggiornamento ed eliminazione.  
   
 ## <a name="related-content"></a>Contenuto correlato  
- [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+ [Requisiti di spazio su disco per operazioni DDL sugli indici](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
  [Spazio su disco per il log delle transazioni per operazioni sugli indici](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   

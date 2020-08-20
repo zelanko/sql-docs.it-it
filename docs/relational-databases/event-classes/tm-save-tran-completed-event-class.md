@@ -1,4 +1,5 @@
 ---
+description: 'TM: Save Tran Completed - classe di evento'
 title: 'Classe di evento TM: Save Tran Completed | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: e6b37780-5ad8-4d50-89a3-d8a22496faac
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d42d182b1026e72ffe4a4ab17722eaf49a50d657
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 232e4637a9a88ecbf813adfcdbc53055a7f6215b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790826"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491017"
 ---
 # <a name="tm-save-tran-completed-event-class"></a>TM: Save Tran Completed - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: sp_columns (Transact-SQL)
 title: sp_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/17/2016
@@ -18,12 +19,12 @@ ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ac9e5647193899335af494ac87f8ecdafe6390d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5dec6803d57bbb67286dc7b9ceb1b573644c2863
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180286"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489554"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,17 +46,17 @@ sp_columns [ @table_name = ] object
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ \@table_name = ] object`Nome dell'oggetto utilizzato per restituire le informazioni del catalogo. l' *oggetto* può essere una tabella, una vista o un altro oggetto con colonne quali funzioni con valori di tabella. l' *oggetto* è di **tipo nvarchar (384)** e non prevede alcun valore predefinito. La ricerca con caratteri jolly è supportata.  
+`[ \@table_name = ] object` Nome dell'oggetto utilizzato per restituire le informazioni del catalogo. l' *oggetto* può essere una tabella, una vista o un altro oggetto con colonne quali funzioni con valori di tabella. l' *oggetto* è di **tipo nvarchar (384)** e non prevede alcun valore predefinito. La ricerca con caratteri jolly è supportata.  
   
-`[ \@table_owner = ] owner`Proprietario dell'oggetto utilizzato per restituire le informazioni del catalogo. *owner* è di **tipo nvarchar (384)** e il valore predefinito è null. La ricerca con caratteri jolly è supportata. Se il *proprietario* non è specificato, vengono applicate le regole di visibilità degli oggetti predefinite del sistema DBMS sottostante.  
+`[ \@table_owner = ] owner` Proprietario dell'oggetto utilizzato per restituire le informazioni del catalogo. *owner* è di **tipo nvarchar (384)** e il valore predefinito è null. La ricerca con caratteri jolly è supportata. Se il *proprietario* non è specificato, vengono applicate le regole di visibilità degli oggetti predefinite del sistema DBMS sottostante.  
   
  Se l'utente corrente è il proprietario di un oggetto con il nome specificato, vengono restituite le colonne di tale oggetto. Se *owner* viene omesso e l'utente corrente non è il proprietario di un oggetto con l' *oggetto*specificato, **sp_columns** Cerca un oggetto con l' *oggetto* specificato di proprietà del proprietario del database. Se viene individuato, vengono restituite le colonne di tale oggetto.  
   
-`[ \@table_qualifier = ] qualifier`Nome del qualificatore dell'oggetto. *Qualifier* è di **tipo sysname**e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per gli oggetti (_qualificatore_**.** _proprietario_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database dell'oggetto.  
+`[ \@table_qualifier = ] qualifier` Nome del qualificatore dell'oggetto. *Qualifier* è di **tipo sysname**e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per gli oggetti (_qualificatore_**.** _proprietario_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database dell'oggetto.  
   
-`[ \@column_name = ] column`È una singola colonna e viene utilizzata quando si desidera una sola colonna di informazioni di catalogo. *Column* è di **tipo nvarchar (384)** e il valore predefinito è null. Se la *colonna* non è specificata, vengono restituite tutte le colonne. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la *colonna* rappresenta il nome della colonna elencato nella tabella **syscolumns** . La ricerca con caratteri jolly è supportata. Per ottenere la massima interoperabilità, è consigliabile che nel client di gateway siano utilizzati solo i caratteri jolly standard di SQL-92, ovvero i caratteri % e _.  
+`[ \@column_name = ] column` È una singola colonna e viene utilizzata quando si desidera una sola colonna di informazioni di catalogo. *Column* è di **tipo nvarchar (384)** e il valore predefinito è null. Se la *colonna* non è specificata, vengono restituite tutte le colonne. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la *colonna* rappresenta il nome della colonna elencato nella tabella **syscolumns** . La ricerca con caratteri jolly è supportata. Per ottenere la massima interoperabilità, è consigliabile che nel client di gateway siano utilizzati solo i caratteri jolly standard di SQL-92, ovvero i caratteri % e _.  
   
-`[ \@ODBCVer = ] ODBCVer`Versione di ODBC in uso. *ODBCVer* è di **tipo int**e il valore predefinito è 2. che indica ODBC versione 2. I valori validi sono 2 e 3. Per le differenze di comportamento tra le versioni 2 e 3, vedere la specifica ODBC **SQLColumns** .  
+`[ \@ODBCVer = ] ODBCVer` Versione di ODBC in uso. *ODBCVer* è di **tipo int**e il valore predefinito è 2. che indica ODBC versione 2. I valori validi sono 2 e 3. Per le differenze di comportamento tra le versioni 2 e 3, vedere la specifica ODBC **SQLColumns** .  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  nessuno  
@@ -114,8 +115,8 @@ EXEC sp_columns @table_name = N'DimEmployee',
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_tables &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
- [Stored procedure del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [sp_tables &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
+ [Stored procedure del catalogo &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

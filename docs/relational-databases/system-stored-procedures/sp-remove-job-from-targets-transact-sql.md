@@ -1,4 +1,5 @@
 ---
+description: sp_remove_job_from_targets (Transact-SQL)
 title: sp_remove_job_from_targets (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de4d2686066e10f1eb9f80862241d1d1a47cf6b7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d40f7d8812fe83648871bedbb3538202f5c519a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891491"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489152"
 ---
 # <a name="sp_remove_job_from_targets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +43,13 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id`Numero di identificazione del processo da cui rimuovere i server di destinazione o i gruppi di server di destinazione specificati. È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
+`[ @job_id = ] job_id` Numero di identificazione del processo da cui rimuovere i server di destinazione o i gruppi di server di destinazione specificati. È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
   
-`[ @job_name = ] 'job_name'`Nome del processo da cui rimuovere i server di destinazione o i gruppi di server di destinazione specificati. È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi. *job_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @job_name = ] 'job_name'` Nome del processo da cui rimuovere i server di destinazione o i gruppi di server di destinazione specificati. È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi. *job_name* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @target_server_groups = ] 'target_server_groups'`Elenco delimitato da virgole dei gruppi di server di destinazione da rimuovere dal processo specificato. *target_server_groups* è di **tipo nvarchar (1024)** e il valore predefinito è null.  
+`[ @target_server_groups = ] 'target_server_groups'` Elenco delimitato da virgole dei gruppi di server di destinazione da rimuovere dal processo specificato. *target_server_groups* è di **tipo nvarchar (1024)** e il valore predefinito è null.  
   
-`[ @target_servers = ] 'target_servers'`Elenco delimitato da virgole dei server di destinazione da rimuovere dal processo specificato. *target_servers* è di **tipo nvarchar (1024)** e il valore predefinito è null.  
+`[ @target_servers = ] 'target_servers'` Elenco delimitato da virgole dei server di destinazione da rimuovere dal processo specificato. *target_servers* è di **tipo nvarchar (1024)** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -71,8 +72,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_apply_job_to_targets &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
- [sp_delete_jobserver &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [sp_apply_job_to_targets &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [sp_delete_jobserver &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_requestpeerresponse (Transact-SQL)
 title: sp_requestpeerresponse (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: adcf5709bc3bf086123324095a796e024a08911e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2114460ca878b45bb0b850c066e1fd9356504a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489201"
 ---
 # <a name="sp_requestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione in una topologia peer-to-peer per la quale è in corso la verifica dello stato. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione in una topologia peer-to-peer per la quale è in corso la verifica dello stato. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @description = ] 'description'`Informazioni definite dall'utente che possono essere utilizzate per identificare le singole richieste di stato. *Description* è di **tipo nvarchar (4000)** e il valore predefinito è null.  
+`[ @description = ] 'description'` Informazioni definite dall'utente che possono essere utilizzate per identificare le singole richieste di stato. *Description* è di **tipo nvarchar (4000)** e il valore predefinito è null.  
   
-`[ @request_id = ] request_id`Restituisce l'ID della nuova richiesta. *request_id* è di **tipo int** ed è un parametro di output. Questo valore può essere utilizzato durante l'esecuzione di [sp_helppeerresponses &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) per visualizzare tutte le risposte a una richiesta di stato.  
+`[ @request_id = ] request_id` Restituisce l'ID della nuova richiesta. *request_id* è di **tipo int** ed è un parametro di output. Questo valore può essere utilizzato durante l'esecuzione di [sp_helppeerresponses &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) per visualizzare tutte le risposte a una richiesta di stato.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -59,7 +60,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_requestpeerresponse**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_deletepeerrequesthistory &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
- [sp_helppeerrequests &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
+ [sp_deletepeerrequesthistory &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [sp_helppeerrequests &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sysmail_add_principalprofile_sp (Transact-SQL)
 title: sysmail_add_principalprofile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dac2c362e2aac2b09969ba7193e44b06facebb51
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7e3c8085bdbdf45deac3fe6190bbad263e4d7d5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891019"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489044"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @principal_id = ] principal_id`ID dell'utente del database o del ruolo nel database **msdb** per l'associazione. *principal_id* è di **tipo int**e il valore predefinito è null. È necessario specificare *principal_id* o *principal_name* . Un *principal_id* di **0** rende questo profilo un profilo pubblico, concedendo l'accesso a tutte le entità nel database.  
+`[ @principal_id = ] principal_id` ID dell'utente del database o del ruolo nel database **msdb** per l'associazione. *principal_id* è di **tipo int**e il valore predefinito è null. È necessario specificare *principal_id* o *principal_name* . Un *principal_id* di **0** rende questo profilo un profilo pubblico, concedendo l'accesso a tutte le entità nel database.  
   
-`[ @principal_name = ] 'principal_name'`Nome dell'utente del database o del ruolo nel database **msdb** per l'associazione. *principal_name* è di **tipo sysname**e il valore predefinito è null. È necessario specificare *principal_id* o *principal_name* . Un *principal_name* di **' Public '** rende questo profilo un profilo pubblico, concedendo l'accesso a tutte le entità nel database.  
+`[ @principal_name = ] 'principal_name'` Nome dell'utente del database o del ruolo nel database **msdb** per l'associazione. *principal_name* è di **tipo sysname**e il valore predefinito è null. È necessario specificare *principal_id* o *principal_name* . Un *principal_name* di **' Public '** rende questo profilo un profilo pubblico, concedendo l'accesso a tutte le entità nel database.  
   
-`[ @profile_id = ] profile_id`ID del profilo per l'associazione. *profile_id* è di **tipo int**e il valore predefinito è null. È necessario specificare *profile_id* o *profile_name* .  
+`[ @profile_id = ] profile_id` ID del profilo per l'associazione. *profile_id* è di **tipo int**e il valore predefinito è null. È necessario specificare *profile_id* o *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'`Nome del profilo per l'associazione. *profile_name* è di **tipo sysname**e non prevede alcun valore predefinito. È necessario specificare *profile_id* o *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Nome del profilo per l'associazione. *profile_name* è di **tipo sysname**e non prevede alcun valore predefinito. È necessario specificare *profile_id* o *profile_name* .  
   
-`[ @is_default = ] is_default`Specifica se il profilo è il profilo predefinito per l'entità. A un'entità può essere associato un solo profilo predefinito. *is_default* è di **bit**e non prevede alcun valore predefinito.  
+`[ @is_default = ] is_default` Specifica se il profilo è il profilo predefinito per l'entità. A un'entità può essere associato un solo profilo predefinito. *is_default* è di **bit**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -92,6 +93,6 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
 ## <a name="see-also"></a>Vedere anche  
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)   
  [Oggetti di configurazione Posta elettronica database](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Stored procedure di Posta elettronica database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Stored procedure di Posta elettronica database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

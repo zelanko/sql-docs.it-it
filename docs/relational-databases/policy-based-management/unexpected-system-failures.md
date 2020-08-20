@@ -1,4 +1,5 @@
 ---
+description: Errori di sistema imprevisti
 title: Errori di sistema imprevisti | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1679bf9e-a2ef-4f90-8907-a002f7341a7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 84fe7ae204c14a0ecaebb3141d4f08175bfee793
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6b1a4f991bf531b109fd76665be43274c68f2a88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490679"
 ---
 # <a name="unexpected-system-failures"></a>Errori di sistema imprevisti
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: Classe CInstance - Metodo SetDefaults
 title: Metodo sedefaults (CInstance)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 452b4e1a869eaf2b133d62c9ba8a1847d1891c86
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5c74d4d45b374ae9c33b38a9872526333890856
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488529"
 ---
 # <a name="cinstance-class---setdefaults-method"></a>Classe CInstance - Metodo SetDefaults
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ object.SetDefaults(OverwriteAll)
   
 #### <a name="parameters"></a>Parametri  
   
-|Parametro|Description|  
+|Parametro|Descrizione|  
 |---------------|-----------------|  
 |*OverwriteAll*|Valore booleano che specifica se sovrascrivere i valori esistenti nell'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client: **true** per sovrascrivere i dati esistenti oppure **false** se i dati esistenti non devono essere sovrascritti.|  
   
@@ -51,6 +52,6 @@ object.SetDefaults(OverwriteAll)
 ## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
- [configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_helplogins (Transact-SQL)
 title: sp_helplogins (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f88a0248d6e3afbfb3b654bd56de01cecfc7f872
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68a90477996c9782722e1a9c0b50f82fd5cf408e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489341"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @LoginNamePattern = ] 'login'`Nome dell'account di accesso. *login* è di tipo **sysname** e il valore predefinito è NULL. Se specificato, deve esistere un *account di accesso* . Se *login* viene omesso, vengono restituite informazioni su tutti gli account di accesso.  
+`[ @LoginNamePattern = ] 'login'` Nome dell'account di accesso. *login* è di tipo **sysname** e il valore predefinito è NULL. Se specificato, deve esistere un *account di accesso* . Se *login* viene omesso, vengono restituite informazioni su tutti gli account di accesso.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -62,7 +63,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nome dell'account di accesso.|  
 |**DBName**|**sysname**|Database predefinito utilizzato da **LoginName** per la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**Nome utente**|**sysname**|Account utente a cui è stato eseguito il mapping di **LoginName** in **dbname**e i ruoli di cui è membro **LoginName** in **dbname**.|  
+|**UserName**|**sysname**|Account utente a cui è stato eseguito il mapping di **LoginName** in **dbname**e i ruoli di cui è membro **LoginName** in **dbname**.|  
 |**UserOrAlias**|**carattere (8)**|Membro = **username** è un ruolo.<br /><br /> User = **username** è un account utente.|  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -100,9 +101,9 @@ John        pubs     John       User
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sicurezza &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_helpdb &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
- [sp_helpuser &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_helpdb &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
+ [sp_helpuser &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

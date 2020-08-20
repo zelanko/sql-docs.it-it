@@ -1,4 +1,5 @@
 ---
+description: Espressioni di percorso JSON (SQL Server)
 title: Espressioni di percorso JSON
 ms.date: 06/03/2020
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90f30c6fc18915b96f17ddf8e775e06bf94559a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8be99986e6ca9ded5bb28e53b5c3ae166e8b86b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715366"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490948"
 ---
 # <a name="json-path-expressions-sql-server"></a>Espressioni di percorso JSON (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -89,7 +90,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info');
   
  La tabella seguente illustra alcuni esempi di espressioni di percorso.  
   
-|Espressione di percorso|valore|  
+|Espressione di percorso|Valore|  
 |---------------------|-----------|  
 |$.people[0].name|John|  
 |$.people[1]|{ "name": "Jane",  "surname": null, "active": true }|  

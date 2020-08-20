@@ -1,4 +1,5 @@
 ---
+description: Finestra di dialogo Esporta come criteri
 title: Finestra di dialogo Esporta come criteri | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 40fe56e0cd726ca9dd3c129bd46dabd38c4aecfa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a866e30681ec9d224af77e19cbf74909c6b8f104
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490648"
 ---
 # <a name="export-as-policy-dialog-box"></a>Finestra di dialogo Esporta come criteri
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85749415"
  Selezionare questa opzione per salvare i criteri nell'istanza del server locale.  
   
  **Al file**  
- Per salvare i criteri come file XML, digitare il percorso e il nome del file oppure usare il pulsante Sfoglia ( **...** ).  
+ Per salvare i criteri come file XML, digitare il percorso e il nome del file oppure usare il pulsante Sfoglia (**...**).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Amministrazione di server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

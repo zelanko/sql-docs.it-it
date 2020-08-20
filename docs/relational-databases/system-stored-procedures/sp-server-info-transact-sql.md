@@ -1,4 +1,5 @@
 ---
+description: sp_server_info (Transact-SQL)
 title: sp_server_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a711624214b262560766f49e8294b36291ad9d91
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 09a7f0e7b0496d3f38ca31bc4a1df369133bb548
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489143"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
 
@@ -40,7 +41,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @attribute_id = ] 'attribute_id'`ID di tipo integer dell'attributo. *Attribute_ID* è di **tipo int**e il valore predefinito è null.  
+`[ @attribute_id = ] 'attribute_id'` ID di tipo integer dell'attributo. *Attribute_ID* è di **tipo int**e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  nessuno  
@@ -53,7 +54,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**ATTRIBUTE_NAME**|**varchar (** 60 **)**|Nome dell'attributo.|  
 |**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|Impostazione corrente dell'attributo.|  
   
- Nella tabella seguente sono elencati gli attributi. [!INCLUDE[msCoName](../../includes/msconame-md.md)]Le librerie client ODBC attualmente utilizzano gli attributi **1**, **2**, **18**, **22**e **500** in fase di connessione.  
+ Nella tabella seguente sono elencati gli attributi. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Le librerie client ODBC attualmente utilizzano gli attributi **1**, **2**, **18**, **22**e **500** in fase di connessione.  
   
 |ATTRIBUTE_ID|Descrizione ATTRIBUTE_NAME|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
@@ -94,7 +95,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
  È richiesta l'autorizzazione SELECT per lo schema.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Stored procedure del catalogo &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Specificare le colonne calcolate in una tabella
 title: Specificare le colonne calcolate in una tabella | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 546490349b2d80135c873ff0917ab571f3cae830
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee1d32ce60064d6ab42b04a9aeddec4a6252d479
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488602"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Specificare le colonne calcolate in una tabella
 
@@ -75,7 +76,7 @@ Una colonna calcolata è una colonna virtuale che non viene archiviata fisicamen
 2. Fare clic con il pulsante destro del mouse sulla colonna per cui si vuole specificare una formula di colonna calcolata e scegliere **Elimina**. Fare clic su **OK**.
 3. Aggiungere una nuova colonna e specificare la formula della colonna calcolata attenendosi alla procedura precedente per aggiungere una nuova colonna calcolata.
 
-## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL
 
 ### <a name="to-add-a-computed-column-when-creating-a-table"></a>Per aggiungere una colonna calcolata quando si crea una tabella
 

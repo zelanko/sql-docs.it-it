@@ -1,4 +1,5 @@
 ---
+description: sp_addmergepartition (Transact-SQL)
 title: sp_addmergepartition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a4f4743efbd0ee3b7a57cb4fab02c98a2680a870
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1bf10e593c23b4f31f418df45e9ad0fe03dbdcdf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786270"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489642"
 ---
 # <a name="sp_addmergepartition-transact-sql"></a>sp_addmergepartition (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,11 +40,11 @@ sp_addmergepartition [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Pubblicazione di tipo merge in cui viene creata la partizione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito. Se *SUSER_SNAME* è specificato, il valore del *nome host* deve essere null.  
+`[ @publication = ] 'publication'` Pubblicazione di tipo merge in cui viene creata la partizione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito. Se *SUSER_SNAME* è specificato, il valore del *nome host* deve essere null.  
   
-`[ @suser_sname = ] 'suser_sname'`Valore utilizzato per la creazione della partizione per una sottoscrizione filtrata in base al valore della funzione [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) nel Sottoscrittore. *SUSER_SNAME* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @suser_sname = ] 'suser_sname'` Valore utilizzato per la creazione della partizione per una sottoscrizione filtrata in base al valore della funzione [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) nel Sottoscrittore. *SUSER_SNAME* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @host_name = ] 'host_name'`Valore utilizzato per la creazione della partizione per una sottoscrizione filtrata in base al valore della funzione [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) nel Sottoscrittore. *HOST_NAME* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @host_name = ] 'host_name'` Valore utilizzato per la creazione della partizione per una sottoscrizione filtrata in base al valore della funzione [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) nel Sottoscrittore. *HOST_NAME* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  

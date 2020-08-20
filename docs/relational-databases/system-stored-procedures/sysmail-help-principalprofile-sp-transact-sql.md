@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_principalprofile_sp (Transact-SQL)
 title: sysmail_help_principalprofile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9f4d5af37675811b978e444e40e730ad59fd823b
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 8325480c2869f9b3e35caab51935eba36d888afb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122738"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488960"
 ---
 # <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +42,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @principal_id = ] principal_id`ID dell'utente del database o del ruolo nel database **msdb** per l'associazione all'elenco. *principal_id* è di **tipo int**e il valore predefinito è null. È possibile specificare *principal_id* o *principal_name* .  
+`[ @principal_id = ] principal_id` ID dell'utente del database o del ruolo nel database **msdb** per l'associazione all'elenco. *principal_id* è di **tipo int**e il valore predefinito è null. È possibile specificare *principal_id* o *principal_name* .  
   
-`[ @principal_name = ] 'principal_name'`Nome dell'utente del database o del ruolo nel database **msdb** per l'associazione all'elenco. *principal_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare *principal_id* o *principal_name* .  
+`[ @principal_name = ] 'principal_name'` Nome dell'utente del database o del ruolo nel database **msdb** per l'associazione all'elenco. *principal_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare *principal_id* o *principal_name* .  
   
-`[ @profile_id = ] profile_id`ID del profilo per l'associazione da elencare. *profile_id* è di **tipo int**e il valore predefinito è null. È possibile specificare *profile_id* o *profile_name* .  
+`[ @profile_id = ] profile_id` ID del profilo per l'associazione da elencare. *profile_id* è di **tipo int**e il valore predefinito è null. È possibile specificare *profile_id* o *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'`Nome del profilo per l'associazione da elencare. *profile_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare *profile_id* o *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Nome del profilo per l'associazione da elencare. *profile_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare *profile_id* o *profile_name* .  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -108,6 +109,6 @@ principal_id principal_name     profile_id  profile_name                   is_de
   
 ## <a name="see-also"></a>Vedere anche  
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)   
- [Stored procedure di Posta elettronica database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Stored procedure di Posta elettronica database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_set_config_enabled (Transact-SQL)
 title: sp_syspolicy_set_config_enabled (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ddace1cc-ff23-4b61-8efb-8ded3df438bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b8e210356b970bc0abe1644d8a5912cec39c1d9a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4dc99203ea2d0b14e27020d5c93c4923520a1e7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489106"
 ---
 # <a name="sp_syspolicy_set_config_enabled-transact-sql"></a>sp_syspolicy_set_config_enabled (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_syspolicy_set_config_enabled [ @value = ] value
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @value = ] value`Determina se la gestione basata su criteri è abilitata. il *valore* è **SqlVariant**. i possibili valori sono i seguenti:  
+`[ @value = ] value` Determina se la gestione basata su criteri è abilitata. il *valore* è **SqlVariant**. i possibili valori sono i seguenti:  
   
 -   0 (o 'false') = Disabilitata  
   
@@ -67,7 +68,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure per la gestione basata su criteri &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_configure &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
+ [Stored procedure per la gestione basata su criteri &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_configure &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
   
   

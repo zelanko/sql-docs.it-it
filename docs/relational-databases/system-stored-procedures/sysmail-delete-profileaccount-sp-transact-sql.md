@@ -1,4 +1,5 @@
 ---
+description: sysmail_delete_profileaccount_sp (Transact-SQL)
 title: sysmail_delete_profileaccount_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27568d450bed5a937931164ed1c04cd09d0b7c2f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5d24b5ac22b944fde36f9588036c78698b570ad8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890931"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489000"
 ---
 # <a name="sysmail_delete_profileaccount_sp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_id = ] profile_id`ID del profilo da eliminare. *profile_id* è di **tipo int**e il valore predefinito è null. È possibile specificare il *profile_id* o l' *profile_name* .  
+`[ @profile_id = ] profile_id` ID del profilo da eliminare. *profile_id* è di **tipo int**e il valore predefinito è null. È possibile specificare il *profile_id* o l' *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'`Nome del profilo da eliminare. *profile_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare il *profile_id* o l' *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Nome del profilo da eliminare. *profile_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare il *profile_id* o l' *profile_name* .  
   
-`[ @account_id = ] account_id`ID dell'account da eliminare. *account_id* è di **tipo int**e il valore predefinito è null. È possibile specificare il *account_id* o l' *account_name* .  
+`[ @account_id = ] account_id` ID dell'account da eliminare. *account_id* è di **tipo int**e il valore predefinito è null. È possibile specificare il *account_id* o l' *account_name* .  
   
-`[ @account_name = ] 'account_name'`Nome dell'account da eliminare. *account_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare il *account_id* o l' *account_name* .  
+`[ @account_name = ] 'account_name'` Nome dell'account da eliminare. *account_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare il *account_id* o l' *account_name* .  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -79,6 +80,6 @@ EXECUTE msdb.dbo.sysmail_delete_profileaccount_sp
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)   
  [Creazione di un account Posta elettronica database](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Oggetti di configurazione Posta elettronica database](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Stored procedure di Posta elettronica database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Stored procedure di Posta elettronica database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

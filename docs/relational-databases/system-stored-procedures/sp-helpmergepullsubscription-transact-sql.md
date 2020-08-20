@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergepullsubscription (Transact-SQL)
 title: sp_helpmergepullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db4ae46a9436ceb960a32764a95467116ce537e0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fde1ffb997d476cc114b7bac3f3a6d32ad208dd2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489322"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>Argomento  
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **%** . Se la *pubblicazione* è **%** , vengono restituite informazioni su tutte le pubblicazioni e le sottoscrizioni di tipo merge nel database corrente.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è **%** . Se la *pubblicazione* è **%** , vengono restituite informazioni su tutte le pubblicazioni e le sottoscrizioni di tipo merge nel database corrente.  
   
-`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher*è di **tipo sysname**e il valore predefinito è **%** .  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher*è di **tipo sysname**e il valore predefinito è **%** .  
   
-`[ @publisher_db = ] 'publisher_db'`Nome del database del server di pubblicazione. *publisher_db*è di **tipo sysname**e il valore predefinito è **%** .  
+`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db*è di **tipo sysname**e il valore predefinito è **%** .  
   
-`[ @subscription_type = ] 'subscription_type'`Indica se visualizzare le sottoscrizioni pull. *subscription_type*è di **tipo nvarchar (10)** e il valore predefinito è **' pull '**. I valori validi sono **' push '**, **' pull '** o **' both '**.  
+`[ @subscription_type = ] 'subscription_type'` Indica se visualizzare le sottoscrizioni pull. *subscription_type*è di **tipo nvarchar (10)** e il valore predefinito è **' pull '**. I valori validi sono **' push '**, **' pull '** o **' both '**.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -61,9 +62,9 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**Stato**|**int**|Stato della sottoscrizione:<br /><br /> **0** = sottoscrizione inattiva<br /><br /> **1** = sottoscrizione attiva<br /><br /> **2** = sottoscrizione eliminata<br /><br /> **3** = sottoscrizione scollegata<br /><br /> **4** = sottoscrizione collegata<br /><br /> **5** = la sottoscrizione è stata contrassegnata per la reinizializzazione con il caricamento<br /><br /> **6** = connessione della sottoscrizione non riuscita<br /><br /> **7** = sottoscrizione ripristinata dal backup|  
 |**subscriber_type**|**int**|Tipo di Sottoscrittore:<br /><br /> **1** = globale<br /><br /> **2** = locale<br /><br /> **3** = Anonimo|  
 |**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = Anonimo|  
-|**priority**|**float (8)**|Priorità della sottoscrizione. Il valore deve essere minore di **100,00**.|  
+|**priorità**|**float (8)**|Priorità della sottoscrizione. Il valore deve essere minore di **100,00**.|  
 |**sync_type**|**tinyint**|Tipo di sincronizzazione per la sottoscrizione:<br /><br /> **1** = automatico<br /><br /> **2** = lo snapshot non viene utilizzato.|  
-|**Descrizione**|**nvarchar(255)**|Breve descrizione della sottoscrizione pull.|  
+|**description**|**nvarchar(255)**|Breve descrizione della sottoscrizione pull.|  
 |**merge_jobid**|**binary(16)**|ID di processo dell'agente di merge.|  
 |**enabled_for_syncmgr**|**int**|Indica se è possibile sincronizzare la sottoscrizione tramite Gestione sincronizzazione [!INCLUDE[msCoName](../../includes/msconame-md.md)].|  
 |**last_updated**|**nvarchar (26)**|Ora in cui l'agente di merge ha eseguito l'ultima sincronizzazione della sottoscrizione.|  
@@ -108,9 +109,9 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
  Solo i membri del ruolo predefinito del server **sysadmin** e del ruolo predefinito del database **db_owner** possono eseguire **sp_helpmergepullsubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addmergepullsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_changemergepullsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

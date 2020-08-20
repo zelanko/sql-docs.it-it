@@ -1,4 +1,5 @@
 ---
+description: Creare vincoli univoci
 title: Creare vincoli univoci | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2020
@@ -17,12 +18,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef372c63ec954a0be878d013f4198ee6f5656a53
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: aa8ab586235c33d6620bbce15676f226a85779d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488620"
 ---
 # <a name="create-unique-constraints"></a>Creare vincoli univoci
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "86002153"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-a-unique-constraint"></a>Per creare un vincolo univoco  
   
@@ -63,7 +64,7 @@ ms.locfileid: "86002153"
   
 4.  Nella griglia in **Generale**fare clic su **Tipo** e selezionare **Chiave univoca** dall'elenco a discesa a destra della proprietà.  
   
-5.  Scegliere **Salva**_nome tabella_ dal menu **File**.  
+5.  Nel menu **File** fare clic su **Salva**_nome tabella_.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
