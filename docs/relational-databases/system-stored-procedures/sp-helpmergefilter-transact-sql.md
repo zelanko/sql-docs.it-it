@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergefilter (Transact-SQL)
 title: sp_helpmergefilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc32ca9d211ea818c8a0febdd5dda2e46b1b7fcf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7051213a6543a1dc964fe011f95f48d15cd788ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474013"
 ---
 # <a name="sp_helpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'`Nome dell'articolo. *article* è di **tipo sysname**e il valore predefinito è **%** , che restituisce i nomi di tutti gli articoli.  
+`[ @article = ] 'article'` Nome dell'articolo. *article* è di **tipo sysname**e il valore predefinito è **%** , che restituisce i nomi di tutti gli articoli.  
   
-`[ @filtername = ] 'filtername'`Nome del filtro su cui si desidera ottenere informazioni. *FilterName* è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutti i filtri definiti per l'articolo o la pubblicazione.  
+`[ @filtername = ] 'filtername'` Nome del filtro su cui si desidera ottenere informazioni. *FilterName* è di **tipo sysname**e il valore predefinito è **%** , che restituisce informazioni su tutti i filtri definiti per l'articolo o la pubblicazione.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -71,9 +72,9 @@ sp_helpmergefilter [ @publication= ] 'publication'
  Solo i membri del ruolo predefinito del server **sysadmin** e del ruolo predefinito del database **db_owner** possono eseguire **sp_helpmergefilter**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addmergefilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
- [sp_changemergefilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [sp_dropmergefilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
+ [sp_addmergefilter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
+ [sp_changemergefilter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
+ [sp_dropmergefilter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

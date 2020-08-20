@@ -1,4 +1,5 @@
 ---
+description: sp_helptrigger (Transact-SQL)
 title: sp_helptrigger (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 546e980aeb021f57a0267d1f668f7acd181b4dcf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5e79a0a06b812fedd98ed558c17f00d026bae8ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719278"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473971"
 ---
 # <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,11 +42,11 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @tabname = ] 'table'`Nome della tabella del database corrente per cui si desidera ottenere informazioni sul trigger. *Table* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito.  
+`[ @tabname = ] 'table'` Nome della tabella del database corrente per cui si desidera ottenere informazioni sul trigger. *Table* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito.  
   
-`[ @triggertype = ] 'type'`Tipo di trigger DML per cui restituire informazioni. il *tipo* è **char (6)** e il valore predefinito è null. i possibili valori sono i seguenti.  
+`[ @triggertype = ] 'type'` Tipo di trigger DML per cui restituire informazioni. il *tipo* è **char (6)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**DELETE**|Restituisce informazioni sui trigger DELETE.|  
 |**INSERT**|Restituisce informazioni sui trigger INSERT.|  
@@ -81,7 +82,7 @@ EXEC sp_helptrigger 'Person.Person';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

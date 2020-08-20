@@ -1,4 +1,5 @@
 ---
+description: sp_lookupcustomresolver (Transact-SQL)
 title: sp_lookupcustomresolver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fafdcdd2d0fea423ddf44058e7615aff7241565e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75f030013417d3cb5f68f8349d36cb26f9971a88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899372"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473953"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,17 +43,17 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @article_resolver = ] 'article_resolver'`Specifica il nome della logica di business personalizzata di cui è in corso l'annullamento della registrazione. *article_resolver* è di **tipo nvarchar (255)** e non prevede alcun valore predefinito. Se la logica di business in fase di rimozione è un componente COM, questo parametro è il nome descrittivo del componente. Se la logica di business è un assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, questo parametro è il nome dell'assembly.  
+`[ @article_resolver = ] 'article_resolver'` Specifica il nome della logica di business personalizzata di cui è in corso l'annullamento della registrazione. *article_resolver* è di **tipo nvarchar (255)** e non prevede alcun valore predefinito. Se la logica di business in fase di rimozione è un componente COM, questo parametro è il nome descrittivo del componente. Se la logica di business è un assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, questo parametro è il nome dell'assembly.  
   
-`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT`È il valore CLSID dell'oggetto COM associato al nome della logica di business personalizzata specificata nel parametro *article_resolver* . *resolver_clsid* è di **tipo nvarchar (50)** e il valore predefinito è null.  
+`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` È il valore CLSID dell'oggetto COM associato al nome della logica di business personalizzata specificata nel parametro *article_resolver* . *resolver_clsid* è di **tipo nvarchar (50)** e il valore predefinito è null.  
   
-`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT`Specifica il tipo di logica di business personalizzata in fase di registrazione. *is_dotnet_assembly* è di **bit**e il valore predefinito è 0. **1** indica che la logica di business personalizzata in fase di registrazione è un assembly del gestore della logica di business. **0** indica che si tratta di un componente com.  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` Specifica il tipo di logica di business personalizzata in fase di registrazione. *is_dotnet_assembly* è di **bit**e il valore predefinito è 0. **1** indica che la logica di business personalizzata in fase di registrazione è un assembly del gestore della logica di business. **0** indica che si tratta di un componente com.  
   
-`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT`Nome dell'assembly che implementa il gestore della logica di business. *dotnet_assembly_name* è di **tipo nvarchar (255)** e il valore predefinito è null.  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` Nome dell'assembly che implementa il gestore della logica di business. *dotnet_assembly_name* è di **tipo nvarchar (255)** e il valore predefinito è null.  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT`Nome della classe che esegue l'override <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> di per implementare il gestore della logica di business. *dotnet_class_name* è di **tipo nvarchar (255)** e il valore predefinito è null.  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` Nome della classe che esegue l'override <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> di per implementare il gestore della logica di business. *dotnet_class_name* è di **tipo nvarchar (255)** e il valore predefinito è null.  
   
-`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è null. Utilizzare questo parametro quando la stored procedure non viene chiamata dal server di pubblicazione. Se omesso, si presuppone che il server locale è il server di pubblicazione.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è null. Utilizzare questo parametro quando la stored procedure non viene chiamata dal server di pubblicazione. Se omesso, si presuppone che il server locale è il server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -68,12 +69,12 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
  Solo i membri del ruolo predefinito del database **db_owner** nel database di pubblicazione possono eseguire **sp_lookupcustomresolver**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Rilevamento e risoluzione dei conflitti di replica di tipo merge avanzati](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Eseguire la logica di business durante la sincronizzazione di tipo merge](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
  [Implementare un gestore della logica di business per un articolo di merge](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [Specificare un sistema di risoluzione dell'articolo di merge](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)   
- [sp_registercustomresolver &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
- [sp_unregistercustomresolver &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
+ [sp_registercustomresolver &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
+ [sp_unregistercustomresolver &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

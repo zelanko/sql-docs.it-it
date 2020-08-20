@@ -1,4 +1,5 @@
 ---
+description: sp_deletepeerrequesthistory (Transact-SQL)
 title: sp_deletepeerrequesthistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fe3a7edbb00eb7d3a4da1aa78689685a54e56277
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 11773aa1e2a03ccc9b729c902a99cda10088c718
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861417"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474354"
 ---
 # <a name="sp_deletepeerrequesthistory-transact-sql"></a>sp_deletepeerrequesthistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione per cui è stata effettuata la richiesta di stato. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione per cui è stata effettuata la richiesta di stato. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @request_id = ] request_id`Specifica una singola richiesta di stato in modo che tutte le risposte a questa richiesta verranno eliminate. *request_id* è di **tipo int**e il valore predefinito è null.  
+`[ @request_id = ] request_id` Specifica una singola richiesta di stato in modo che tutte le risposte a questa richiesta verranno eliminate. *request_id* è di **tipo int**e il valore predefinito è null.  
   
-`[ @cutoff_date = ] cutoff_date`Specifica una data di taglio, prima della quale vengono eliminati tutti i record di risposta precedenti. *cutoff_date* è di tipo **DateTime**e il valore predefinito è null.  
+`[ @cutoff_date = ] cutoff_date` Specifica una data di taglio, prima della quale vengono eliminati tutti i record di risposta precedenti. *cutoff_date* è di tipo **DateTime**e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -57,8 +58,8 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_deletepeerrequesthistory**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_helppeerrequests &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)   
- [sp_helppeerresponses &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)   
- [sp_requestpeerresponse &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)  
+ [sp_helppeerrequests &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)   
+ [sp_helppeerresponses &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)   
+ [sp_requestpeerresponse &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)  
   
   

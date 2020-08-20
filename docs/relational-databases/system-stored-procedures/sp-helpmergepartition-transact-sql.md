@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergepartition (Transact-SQL)
 title: sp_helpmergepartition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 276e1a886a999858585533ee35b6c5f3cf109657
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e7824eb6e547b8bacec2cae297e5f236376d0aa0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474031"
 ---
 # <a name="sp_helpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,14 +40,14 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @suser_sname = ] 'suser_sname'`Valore SUSER_SNAME utilizzato per definire una partizione. *SUSER_SNAME* è di **tipo sysname**e il valore predefinito è null. Specificare questo parametro per limitare il set di risultati alle partizioni in cui SUSER_SNAME corrisponde al valore specificato.  
+`[ @suser_sname = ] 'suser_sname'` Valore SUSER_SNAME utilizzato per definire una partizione. *SUSER_SNAME* è di **tipo sysname**e il valore predefinito è null. Specificare questo parametro per limitare il set di risultati alle partizioni in cui SUSER_SNAME corrisponde al valore specificato.  
   
 > [!NOTE]  
 >  Quando viene specificato *SUSER_SNAME* , *HOST_NAME* deve essere null  
   
-`[ @host_name = ] 'host_name'`Valore HOST_NAME utilizzato per definire una partizione. *HOST_NAME* è di **tipo sysname**e il valore predefinito è null. Specificare questo parametro per limitare il set di risultati alle partizioni in cui HOST_NAME corrisponde al valore specificato.  
+`[ @host_name = ] 'host_name'` Valore HOST_NAME utilizzato per definire una partizione. *HOST_NAME* è di **tipo sysname**e il valore predefinito è null. Specificare questo parametro per limitare il set di risultati alle partizioni in cui HOST_NAME corrisponde al valore specificato.  
   
 > [!NOTE]  
 >  Quando viene specificato *SUSER_SNAME* , *HOST_NAME* deve essere null  
@@ -72,7 +73,7 @@ sp_helpmergepartition [ @publication= ] 'publication'
  Solo i membri del ruolo predefinito del server **sysadmin** e del ruolo predefinito del database **db_owner** possono eseguire **sp_helpmergepartition**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addmergepartition &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
- [sp_dropmergepartition &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)  
+ [sp_addmergepartition &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
+ [sp_dropmergepartition &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)  
   
   

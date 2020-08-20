@@ -1,4 +1,5 @@
 ---
+description: sp_helpconstraint (Transact-SQL)
 title: sp_helpconstraint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4da545089c2fba177c25c6ea00b49efa6464426c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7d743730b70559d928f4fd46db67e9602168c139
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634061"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474108"
 ---
 # <a name="sp_helpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,9 +42,9 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @objname = ] 'table'`Tabella in cui vengono restituite le informazioni sui vincoli. La tabella specificata deve essere locale rispetto al database corrente. *Table* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito.  
+`[ @objname = ] 'table'` Tabella in cui vengono restituite le informazioni sui vincoli. La tabella specificata deve essere locale rispetto al database corrente. *Table* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito.  
   
-`[ @nomsg = ] 'no_message'`È un parametro facoltativo che stampa il nome della tabella. *no_message* è di tipo **varchar (5)** e il valore predefinito è **msg**. **nomsg Annulla** disattiva la stampa.  
+`[ @nomsg = ] 'no_message'` È un parametro facoltativo che stampa il nome della tabella. *no_message* è di tipo **varchar (5)** e il valore predefinito è **msg**. **nomsg Annulla** disattiva la stampa.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -67,13 +68,13 @@ EXEC sp_helpconstraint 'Production.Product';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys. key_constraints &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
- [sys. check_constraints &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
- [sys. default_constraints &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sys. key_constraints &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
+ [sys. check_constraints &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
+ [sys. default_constraints &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_dropdevice (Transact-SQL)
 title: sp_dropdevice (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9be64080f6e1c56daa0901dbdc174c83d40cf541
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd4c4a02e581b743b780db715b61f06ef7f22413
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85859987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474294"
 ---
 # <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @logicalname = ] 'device'`Nome logico del dispositivo di database o del dispositivo di backup elencato in **master.dbo.sysDevices.Name**. il *dispositivo* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @logicalname = ] 'device'` Nome logico del dispositivo di database o del dispositivo di backup elencato in **master.dbo.sysDevices.Name**. il *dispositivo* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @delfile = ] 'delfile'`Specifica se il file del dispositivo di backup fisico deve essere eliminato. *delfile* è di tipo **varchar (7)**. Se specificato come **delfile**, il file su disco del dispositivo di backup fisico viene eliminato.  
+`[ @delfile = ] 'delfile'` Specifica se il file del dispositivo di backup fisico deve essere eliminato. *delfile* è di tipo **varchar (7)**. Se specificato come **delfile**, il file su disco del dispositivo di backup fisico viene eliminato.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -68,8 +69,8 @@ EXEC sp_dropdevice 'tapedump1';
  [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Eliminare un dispositivo di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
- [sp_helpdb &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
- [sp_helpdevice &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdevice-transact-sql.md)   
+ [sp_helpdb &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
+ [sp_helpdevice &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpdevice-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

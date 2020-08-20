@@ -1,4 +1,5 @@
 ---
+description: sp_helpdistpublisher (Transact-SQL)
 title: sp_helpdistpublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ada6e3bd06cdc915f8d34b18434994e9cc662a5e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cb9bfd2bebe5220d992b92251c79df957f3d7077
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749334"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474083"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +39,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'`Server di pubblicazione per il quale vengono restituite le proprietà. *Publisher* è di **tipo sysname**e il valore predefinito è **%** .  
+`[ @publisher = ] 'publisher'` Server di pubblicazione per il quale vengono restituite le proprietà. *Publisher* è di **tipo sysname**e il valore predefinito è **%** .  
   
 `[ @check_user = ] check_user` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -71,9 +72,9 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
  I membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_helpdistpublisher** per tutti i server di pubblicazione che utilizzano il server locale come server di distribuzione. I membri del ruolo predefinito del database **db_owner** o del ruolo **replmonitor** in un database di distribuzione possono eseguire **sp_helpdistpublisher** per tutti i server di pubblicazione che utilizzano il database di distribuzione. Gli utenti nell'elenco di accesso alla pubblicazione per una pubblicazione nel *Server* di pubblicazione specificato possono eseguire **sp_helpdistpublisher**. Se il *server di pubblicazione* non è specificato, vengono restituite informazioni per tutti i server di pubblicazione per i quali l'utente dispone dei diritti di accesso.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzare e modificare le proprietà del server di distribuzione e dell'editore](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistpublisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_changedistpublisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
+ [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [sp_adddistpublisher &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_changedistpublisher &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
+ [sp_dropdistpublisher &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
   
   

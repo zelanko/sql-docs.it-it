@@ -1,4 +1,5 @@
 ---
+description: sp_helparticle (Transact-SQL)
 title: sp_helparticle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e863c10b3f2086d6318d6c53b599c7ad186572c6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ca400eb6fc015acff452ca4ae6a7658a05145f8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474158"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,18 +42,18 @@ sp_helparticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'`Nome di un articolo della pubblicazione. *article* è di **tipo sysname**e il valore predefinito è **%** . Se l' *articolo* non viene specificato, vengono restituite informazioni su tutti gli articoli relativi alla pubblicazione specificata.  
+`[ @article = ] 'article'` Nome di un articolo della pubblicazione. *article* è di **tipo sysname**e il valore predefinito è **%** . Se l' *articolo* non viene specificato, vengono restituite informazioni su tutti gli articoli relativi alla pubblicazione specificata.  
   
-`[ @returnfilter = ] returnfilter`Specifica se deve essere restituita la clausola di filtro. *returnfilter* è di **bit**e il valore predefinito è **1**, che restituisce la clausola di filtro.  
+`[ @returnfilter = ] returnfilter` Specifica se deve essere restituita la clausola di filtro. *returnfilter* è di **bit**e il valore predefinito è **1**, che restituisce la clausola di filtro.  
   
-`[ @publisher = ] 'publisher'`Specifica un server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
 >  Impossibile specificare *Publisher* quando si richiedono informazioni su un articolo pubblicato da un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione.  
   
-`[ @found = ] found OUTPUT`Solo per uso interno.  
+`[ @found = ] found OUTPUT` Solo per uso interno.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -66,7 +67,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**type**|**smallint**|Tipo di articolo:<br /><br /> **1** = basato su log.<br /><br /> **3** = basato su log con filtro manuale.<br /><br /> **5** = basato su log con vista manuale.<br /><br /> **7** = basato su log con filtro manuale e vista manuale.<br /><br /> **8** = esecuzione di stored procedure.<br /><br /> **24** = esecuzione stored procedure serializzabile.<br /><br /> **32** = stored procedure (solo schema).<br /><br /> **64** = View (solo schema).<br /><br /> **96** = funzione di aggregazione (solo schema).<br /><br /> **128** = funzione (solo schema).<br /><br /> **257** = vista indicizzata basata su log.<br /><br /> **259** = vista indicizzata basata su log con filtro manuale.<br /><br /> **261** = vista indicizzata basata su log con vista manuale.<br /><br /> **263** = vista indicizzata basata su log con filtro manuale e vista manuale.<br /><br /> **320** = vista indicizzata (solo schema).<br /><br />|  
 |**Stato**|**tinyint**|Può essere il risultato [& (and bit per bit)](../../t-sql/language-elements/bitwise-and-transact-sql.md) di una o più proprietà di articolo:<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = l'articolo è attivo.<br /><br /> **0x08** = include il nome della colonna nelle istruzioni INSERT.<br /><br /> **0x16** = usa istruzioni con parametri.<br /><br /> **0x32** = usa istruzioni con parametri e include il nome della colonna nelle istruzioni INSERT.|  
 |**filtro**|**nvarchar (257)**|Stored procedure utilizzata per filtrare la tabella in senso orizzontale. Questa stored procedure deve essere stata creata con la clausola FOR REPLICATION.|  
-|**Descrizione**|**nvarchar(255)**|Voce descrittiva per l'articolo.|  
+|**description**|**nvarchar(255)**|Voce descrittiva per l'articolo.|  
 |**insert_command**|**nvarchar(255)**|Tipo di comando di replica utilizzato per la replica degli inserimenti con articoli di tabella. Per altre informazioni, vedere [Specificare la modalità di propagazione delle modifiche per gli articoli transazionali](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**update_command**|**nvarchar(255)**|Tipo di comando di replica utilizzato per la replica degli aggiornamenti con articoli di tabella. Per altre informazioni, vedere [Specificare la modalità di propagazione delle modifiche per gli articoli transazionali](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**delete_command**|**nvarchar(255)**|Tipo di comando di replica utilizzato per la replica delle eliminazioni con articoli di tabella. Per altre informazioni, vedere [Specificare la modalità di propagazione delle modifiche per gli articoli transazionali](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
@@ -103,10 +104,10 @@ sp_helparticle [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le proprietà degli articoli](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
- [sp_addarticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articlecolumn &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
- [sp_changearticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
- [sp_droparticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
+ [sp_addarticle &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_articlecolumn &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
+ [sp_changearticle &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
+ [sp_droparticle &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   
