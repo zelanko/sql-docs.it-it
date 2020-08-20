@@ -1,4 +1,5 @@
 ---
+description: Funzione di conversione esplicita del tipo di dati
 title: Funzione di conversione del tipo di dati esplicita | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ed0a1e9155eeb3e2147bed3dd31e78176bdc38d2
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: da897469d26cd0403dc023cfcd3f3e03bfceeba4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466188"
 ---
 # <a name="explicit-data-type-conversion-function"></a>Funzione di conversione esplicita del tipo di dati
 La conversione esplicita del tipo di dati viene specificata in termini di definizioni del tipo di dati SQL.  

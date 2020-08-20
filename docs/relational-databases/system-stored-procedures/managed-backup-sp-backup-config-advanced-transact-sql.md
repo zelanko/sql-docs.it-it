@@ -1,4 +1,5 @@
 ---
+description: managed_backup. sp_backup_config_advanced (Transact-SQL)
 title: managed_backup. sp_backup_config_advanced (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 786028df8e421580b5a994175223d21a20d44f41
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: d092851d710de96e9c1b06d2866183a7dfac01bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053508"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464693"
 ---
 # <a name="managed_backupsp_backup_config_advanced-transact-sql"></a>managed_backup. sp_backup_config_advanced (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -44,7 +46,7 @@ EXEC managed_backup.sp_backup_config_advanced
     ,[@local_cache_path = ] 'NOT AVAILABLE'  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Argomenti  
+##  <a name="arguments"></a><a name="Arguments"></a> Argomenti  
  @database_name  
  Nome del database per l'abilitazione del backup gestito in un database specifico. Se è NULL o *, questo backup gestito si applica a tutti i database nel server.  
   
@@ -69,7 +71,7 @@ EXEC managed_backup.sp_backup_config_advanced
  @encryptor_name  
  Nome di un certificato o una chiave asimmetrica esistente da utilizzare per crittografare il backup. @encryptor_nameÈ di **tipo sysname**. Se si utilizza una chiave asimmetrica, deve essere configurata con Extensible Key Management (EKM). Questo parametro è facoltativo se si specifica NO_ENCRYPTION per il @encryption_algorithm parametro.  
   
- Per altre informazioni, vedere [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ Per ulteriori informazioni, vedere [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
  @local_cache_path  
  Questo parametro non è ancora supportato.  

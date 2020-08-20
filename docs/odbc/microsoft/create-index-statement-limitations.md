@@ -1,4 +1,5 @@
 ---
+description: Limitazioni dell'istruzione CREATE INDEX
 title: Limitazioni dell'istruzione CREATE INDEX | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 832dcda1-e452-48e6-8adb-7fb33c4fb4ff
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 053287d5087b377429221c31dd4e6b20f24248e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: db2b346afa13e7f7f37151d6d4fa8efdca9fa230
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466453"
 ---
 # <a name="create-index-statement-limitations"></a>Limitazioni dell'istruzione CREATE INDEX
 L'istruzione CREATE INDEX non è supportata per i driver di Microsoft Excel o di testo.  
@@ -27,7 +28,7 @@ L'istruzione CREATE INDEX non è supportata per i driver di Microsoft Excel o di
   
  Il driver dBASE non è in grado di creare un indice in una colonna logica.  
   
- Quando si usa il driver dBASE, il tempo di risposta per i file di grandi dimensioni può essere migliorato creando un indice MDX (o. NDX) nella colonna (campo) specificata nelle clausole WHERE di un'istruzione SELECT. Gli indici MDX esistenti verranno applicati automaticamente per gli operatori =, \<>,, >=, =< e tra gli operatori in una clausola WHERE e come i predicati, nonché nei predicati di join.  
+ Quando si usa il driver dBASE, il tempo di risposta per i file di grandi dimensioni può essere migliorato creando un indice MDX (o. NDX) nella colonna (campo) specificata nelle clausole WHERE di un'istruzione SELECT. Gli indici MDX esistenti verranno applicati automaticamente per gli operatori =, >, \<, > =, =< e tra gli operatori in una clausola WHERE e come i predicati, nonché nei predicati di join.  
   
  Quando si usa il driver dBASE, l'indice creato da un'istruzione CREATE UNIQUE INDEX è in realtà non univoco e i valori duplicati possono essere inseriti nella colonna indicizzata. All'indice è possibile aggiungere un solo record di un set con valori di chiave identici.  
   

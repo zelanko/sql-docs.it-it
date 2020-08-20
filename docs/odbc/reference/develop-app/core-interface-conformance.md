@@ -1,4 +1,5 @@
 ---
+description: Conformità di interfaccia Core
 title: Conformità dell'interfaccia Core | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 886ded1cd79b35488c0d47df3dbd8055dc6a8016
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ca38e2b616c39839cfe813dad984f7eba3796a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465843"
 ---
 # <a name="core-interface-conformance"></a>Conformità di interfaccia Core
 Tutti i driver ODBC devono presentare almeno la conformità dell'interfaccia di base. Poiché le funzionalità del livello di base sono quelle richieste dalla maggior parte delle applicazioni interoperative generiche, il driver può funzionare con tali applicazioni. Le funzionalità del livello di base corrispondono anche alle funzionalità definite nella specifica dell'interfaccia della riga di comando ISO e alle funzionalità non facoltative definite nella specifica CLI del gruppo aperto. Un driver ODBC conforme all'interfaccia di livello principale consente all'applicazione di eseguire le operazioni seguenti:  

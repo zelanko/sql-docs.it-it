@@ -1,4 +1,5 @@
 ---
+description: Posizione del catalogo
 title: Posizione Catalogo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5bc5f64b-c75a-43d2-8745-102ec7a49000
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0305d978dc4ecd21892a0be3916fa5072b7be95a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 513c2449d296d167c499942636cbb94d637a2ede
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465963"
 ---
 # <a name="catalog-position"></a>Posizione del catalogo
-La posizione di un nome di catalogo in un identificatore e il modo in cui è separata dal resto dell'identificatore variano a seconda dell'origine dati. Ad esempio, in un'origine dati Xbase il nome del catalogo è una directory e, in Microsoft® Windows®, è separato dal nome della tabella, ovvero un nome di file, da una barra rovesciata (\\). Nella figura seguente viene illustrata questa condizione.  
+La posizione di un nome di catalogo in un identificatore e il modo in cui è separata dal resto dell'identificatore variano a seconda dell'origine dati. Ad esempio, in un'origine dati Xbase il nome del catalogo è una directory e, in Microsoft® Windows®, è separato dal nome della tabella, ovvero un nome di file, da una barra rovesciata ( \\ ). Nella figura seguente viene illustrata questa condizione.  
   
  ![Posizione catalogo: Xbase](../../../odbc/reference/develop-app/media/ch0801.gif "ch0801")  
   
@@ -36,7 +37,7 @@ La posizione di un nome di catalogo in un identificatore e il modo in cui è sep
   
  Per determinare il separatore di catalogo e il percorso del nome del catalogo, un'applicazione chiama **SQLGetInfo** con le opzioni SQL_CATALOG_NAME_SEPARATOR e SQL_CATALOG_LOCATION. Le applicazioni interoperative devono costruire gli identificatori in base a questi valori.  
   
- Quando si citano identificatori che contengono più di una parte, le applicazioni devono prestare attenzione a racchiudere separatamente ogni parte e non racchiudere il carattere che separa gli identificatori. Ad esempio, l'istruzione seguente per selezionare tutte le righe e le colonne di una tabella Xbase cita i nomi di catalogo (\XBASE\SALES\CORP) e Table (Parts. dbf), ma non il separatore di catalogo (\\):  
+ Quando si citano identificatori che contengono più di una parte, le applicazioni devono prestare attenzione a racchiudere separatamente ogni parte e non racchiudere il carattere che separa gli identificatori. Ad esempio, l'istruzione seguente per selezionare tutte le righe e le colonne di una tabella Xbase cita i nomi di catalogo (\XBASE\SALES\CORP) e Table (Parts. dbf), ma non il separatore di catalogo ( \\ ):  
   
 ```  
 SELECT * FROM "\XBASE\SALES\CORP"\"PARTS.DBF"  

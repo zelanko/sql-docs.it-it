@@ -1,4 +1,5 @@
 ---
+description: Dimensione del set di righe
 title: Dimensioni set di righe | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 11b95768934f96e1587b3c570b2510f3c2849239
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d915d6e11fc7678312eab60c3316815cfabab38e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304242"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465609"
 ---
 # <a name="rowset-size"></a>Dimensione del set di righe
 Le dimensioni del set di righe da utilizzare dipendono dall'applicazione. Le applicazioni basate su schermo seguono comunemente una delle due strategie. Il primo consiste nell'impostare le dimensioni del set di righe sul numero di righe visualizzate sullo schermo; Se l'utente ridimensiona la schermata, l'applicazione modifica le dimensioni del set di righe di conseguenza. Il secondo consiste nell'impostare le dimensioni del set di righe su un numero maggiore, ad esempio 100, che riduce il numero di chiamate all'origine dati. Quando possibile, l'applicazione scorre localmente all'interno del set di righe e recupera le nuove righe solo quando scorre all'esterno del set di righe.  

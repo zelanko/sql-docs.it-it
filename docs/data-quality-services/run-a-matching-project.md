@@ -1,4 +1,5 @@
 ---
+description: Eseguire un progetto corrispondente
 title: Eseguire un progetto corrispondente
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0a8a71349a5948c4ac162b82bd92d3b022446cb0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f1d75abc4a4e7f5221c500c211e915fa51bd49b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883333"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466683"
 ---
 # <a name="run-a-matching-project"></a>Eseguire un progetto corrispondente
 
@@ -43,7 +44,7 @@ ms.locfileid: "85883333"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per eseguire un progetto corrispondente, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="first-step-starting-a-matching-project"></a><a name="StartingaMatchingProject"></a>Primo passaggio: avvio di un progetto corrispondente  
+##  <a name="first-step-starting-a-matching-project"></a><a name="StartingaMatchingProject"></a> Primo passaggio: avvio di un progetto corrispondente  
  L'attività di corrispondenza viene eseguita in un progetto Data Quality creato nell'applicazione client DQS.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -75,7 +76,7 @@ ms.locfileid: "85883333"
     > [!NOTE]  
     >  Fare clic su **Chiudi** per salvare la fase del progetto di corrispondenza e tornare alla home page di DQS. Alla successiva apertura, il progetto verrà avviato dalla stessa fase. Fare clic su **Annulla** per terminare l'attività di corrispondenza e tornare alla home page di DQS.  
   
-##  <a name="matching-stage"></a><a name="MatchingStage"></a>Fase corrispondente  
+##  <a name="matching-stage"></a><a name="MatchingStage"></a> Fase corrispondente  
  In questa fase si esegue un processo di corrispondenza computerizzato che indica il numero di corrispondenze presenti nei dati di origine in base alle regole di corrispondenza. Questo processo genererà una tabella dei risultati di corrispondenza in cui vengono mostrati i cluster identificati da DQS, ogni record presente nel cluster con il relativo ID e il punteggio corrispondente nonché il record iniziale per il cluster. Il record iniziale nel cluster viene selezionato casualmente. Il record superstite viene determinato selezionando la regola di sopravvivenza nella pagina **Esporta** quando si esegue il progetto corrispondente. Ogni riga aggiuntiva in un cluster viene considerata una corrispondenza; il punteggio corrispondente, rispetto al record iniziale, viene riportato nella tabella dei risultati. Il numero del cluster corrisponde all'ID record relativo al record iniziale del cluster.  
   
  Nei risultati di corrispondenza è possibile applicare un filtro per i dati desiderati e rifiutare le corrispondenze non desiderate. È possibile visualizzare i dati di profiling per il processo di corrispondenza nel loro insieme, le specifiche sulle regole di corrispondenza applicate e le statistiche sui risultati di corrispondenza nel loro insieme. Il processo di corrispondenza può identificare i cluster sovrapposti e quelli non sovrapposti e in caso di più esecuzioni può essere eseguito sui dati appena copiati dall'origine e reindicizzati o sui dati precedenti.  
@@ -104,7 +105,7 @@ ms.locfileid: "85883333"
   
 12. Fare clic su **Avanti** per passare alla fase di sopravvivenza e di esportazione.  
   
-##  <a name="survivorship-and-exporting-stage"></a><a name="SurvivorshipandExportStage"></a>Fase di sopravvivenza e di esportazione  
+##  <a name="survivorship-and-exporting-stage"></a><a name="SurvivorshipandExportStage"></a> Fase di sopravvivenza e di esportazione  
  Nel processo di sopravvivenza Data Quality Services consente di determinare un record superstite per ogni cluster, che sostituirà gli altri record corrispondenti nel cluster. I risultati di sopravvivenza e/o di corrispondenza vengono quindi esportati in una tabella del database di SQL Server, in un file CSV o in un file di Excel.  
   
  La sopravvivenza è facoltativa. È possibile esportare i risultati senza eseguire la sopravvivenza. In tal caso viene utilizzato il record pivot definito nell'analisi di corrispondenza. Se due o più record in un cluster soddisfano la regola di sopravvivenza, il processo di sopravvivenza selezionerà l'ID record minore tra i record in conflitto come superstite. È possibile esportare i superstiti in diversi file o tabelle utilizzando regole di sopravvivenza diverse.  
@@ -166,10 +167,10 @@ ms.locfileid: "85883333"
     > [!NOTE]  
     >  Se un progetto corrispondente viene completato e quindi riutilizzato, verrà utilizzata la stessa Knowledge Base di quando il progetto è stato pubblicato. Non verrà utilizzata alcuna modifica apportata alla Knowledge Base dopo il completamento del progetto. Per utilizzare tali modifiche o una nuova Knowledge Base, sarà necessario creare un nuovo progetto corrispondente. Se invece il progetto corrispondente è stato creato ma non completato, verranno utilizzate tutte le modifiche pubblicate nei criteri di corrispondenza quando si esegue la corrispondenza nel progetto.  
   
-##  <a name="follow-up-after-running-a-matching-project"></a><a name="FollowUp"></a>Completamento: fasi successive all'esecuzione di un progetto corrispondente  
+##  <a name="follow-up-after-running-a-matching-project"></a><a name="FollowUp"></a> Completamento: fasi successive all'esecuzione di un progetto corrispondente  
  Dopo avere eseguito un progetto corrispondente, è possibile modificare i criteri di corrispondenza nella Knowledge Base e creare ed eseguire un altro progetto corrispondente in base ai criteri di corrispondenza aggiornati. Per altre informazioni, vedere [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="profiler-and-results-tabs"></a><a name="Profiler"></a>Schede Profiler e risultati  
+##  <a name="profiler-and-results-tabs"></a><a name="Profiler"></a> Schede Profiler e risultati  
  Le schede Profiler e Risultati contengono le statistiche del processo di corrispondenza.  
   
 ### <a name="profiler-tab"></a>Scheda Profiler  

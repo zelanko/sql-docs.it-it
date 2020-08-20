@@ -1,4 +1,5 @@
 ---
+description: Selezionare da &lt; modello &gt; . CASI (DMX)
 title: Selezionare da &lt; modello &gt; . CASI (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1fa1da730fc370995b22927604f9550c865877f4
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6d20c04b6771b0f6a5893868d7484d2cae6ae47f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466525"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>Selezionare da &lt; modello &gt; . CASI (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,7 +38,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
   
 ## <a name="arguments"></a>Argomenti  
  *n*  
- facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
+ Facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
   
  *elenco di espressioni*  
  Elenco di espressioni separate da virgola. Un'espressione può includere identificatori di colonna, funzioni definite dall'utente (UDF), funzioni VBA e altro.  
@@ -51,7 +52,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
  *expression*  
- facoltativo. Espressione che restituisce un valore scalare.  
+ Facoltativo. Espressione che restituisce un valore scalare.  
   
 ## <a name="remarks"></a>Osservazioni  
  Se il drill-through è attivato sia nella struttura di data mining che nel modello di data mining, gli utenti membri di un ruolo con autorizzazioni drill-through sul modello e sulla struttura possono accedere alle colonne della struttura di data mining che non sono incluse nel modello di data mining. Pertanto, per proteggere dati sensibili o informazioni personali, è necessario costruire la vista origine dati in modo da mascherare le informazioni personali e concedere l'autorizzazione **AllowDrillThrough** per una struttura di data mining solo quando è necessario.  

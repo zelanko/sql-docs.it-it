@@ -1,4 +1,5 @@
 ---
+description: Associazione per riga
 title: Associazione per riga | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a63565590bbafc6f3a8740dd7cf7d4acbfd4f80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b30d2426a8fb2a2bd0f0cb89c2de5bc326b67dfa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304272"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465621"
 ---
 # <a name="row-wise-binding"></a>Associazione per riga
 Quando si utilizza l'associazione per riga, un'applicazione definisce una struttura contenente uno o due elementi, oppure, in alcuni casi, tre elementi per ogni colonna per cui devono essere restituiti i dati. Il primo elemento include il valore dei dati e il secondo elemento include il buffer di lunghezza/indicatore. Gli indicatori e i valori di lunghezza possono essere archiviati in buffer distinti impostando i campi SQL_DESC_INDICATOR_PTR e descrittore SQL_DESC_OCTET_LENGTH_PTR su valori diversi. Se questa operazione viene eseguita, la struttura contiene un terzo elemento. L'applicazione quindi alloca una matrice di queste strutture, che contiene il numero di elementi presenti nel set di righe.  

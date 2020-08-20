@@ -1,4 +1,5 @@
 ---
+description: Backup e ripristino di indici e cataloghi full-text
 title: Eseguire backup e ripristino di cataloghi full-text e indici
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 3458c111b32ae42a71d062df091b01b4723fc6d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 37a8ab93e1a7f4747167dc6a69acf173c318751f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729248"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464996"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Backup e ripristino di indici e cataloghi full-text
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -103,6 +104,6 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione e monitoraggio della ricerca full-text per un'istanza del server](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)   
- [Aggiornare la ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md)  
+ [Aggiornamento della ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md)  
   
   

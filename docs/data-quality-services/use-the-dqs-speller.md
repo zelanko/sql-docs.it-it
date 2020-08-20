@@ -1,4 +1,5 @@
 ---
+description: Utilizzare il correttore ortografico DQS
 title: Utilizzare il correttore ortografico DQS
 ms.date: 11/08/2011
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ca84d1706641c15d7043e96ead0013fef3ed606a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5da3a38baa2038f923df5365b4eacb0bc60dcea0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883287"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466633"
 ---
 # <a name="use-the-dqs-speller"></a>Utilizzare il correttore ortografico DQS
 
@@ -40,7 +41,7 @@ ms.locfileid: "85883287"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per eseguire il correttore ortografico, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="enable-the-speller"></a><a name="Enable"></a>Abilitare il correttore ortografico  
+##  <a name="enable-the-speller"></a><a name="Enable"></a> Abilitare il correttore ortografico  
   
 1.  Per abilitare il correttore ortografico nel [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], aprire la Knowledge Base nell'attività **Gestione dominio** , selezionare il dominio desiderato e fare clic su **Abilita correttore ortografico** nella pagina **Proprietà dominio** . In **Lingua**selezionare la lingua da utilizzare con il correttore ortografico.  
   

@@ -1,4 +1,5 @@
 ---
+description: Valori letterali numerici
 title: Valori letterali numerici | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9dc23656-61e1-4b62-a07f-64ab716e45d2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 994bbed6ed3454c6213b16faabf5a0de7eeabbf9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 471d70b2bee7cb554b00b63ce9734ebf5459402a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466146"
 ---
 # <a name="numeric-literals"></a>Valori letterali numerici
 I valori letterali numerici vengono usati quando i valori di dati numerici vengono archiviati in stringhe di caratteri. Per la conversione di dati SQL numerici in una stringa SQL_C_CHAR o la conversione di dati C numerici in una stringa SQL_CHAR o SQL_VARCHAR, viene usata la sintassi numerica letterale per specificare gli elementi archiviati nella destinazione. Per la conversione di un valore numerico archiviato come stringa di SQL_C_CHAR in dati SQL numerici o un valore numerico archiviato come stringa di SQL_CHAR in dati numerici C, questa sintassi viene usata per convalidare ciò che viene archiviato nell'origine.  

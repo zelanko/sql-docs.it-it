@@ -1,4 +1,5 @@
 ---
+description: Selettori
 title: Handle | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 713c2a71ec195b75d682b97239413e98d07b5861
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e9d2445dbbd676e8d48be519c1649d550fd89c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465763"
 ---
 # <a name="handles"></a>Selettori
 Gli handle sono valori opachi, a 32 bit che identificano un particolare elemento; in ODBC questo elemento può essere un ambiente, una connessione, un'istruzione o un descrittore. Quando l'applicazione chiama **SQLAllocHandle**, il driver o la gestione driver crea un nuovo elemento del tipo specificato e ne restituisce l'handle per l'applicazione. Nell'applicazione in un secondo momento viene utilizzato l'handle per identificare l'elemento durante la chiamata di funzioni ODBC. Gestione driver e driver utilizzano l'handle per individuare le informazioni sull'elemento.  

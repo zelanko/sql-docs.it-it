@@ -1,4 +1,5 @@
 ---
+description: Servizi dati di riferimento in DQS
 title: Servizi dati di riferimento in DQS
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ecae6543a0a83084bbabb141339464d56b36c753
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e382be5f109efff9a0a08eb434017334fe54d2c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466736"
 ---
 # <a name="reference-data-services-in-dqs"></a>Servizi dati di riferimento in DQS
 
@@ -32,7 +33,7 @@ ms.locfileid: "85883364"
   
 -   Supporta l'uso di dati di riferimento da Azure Marketplace e direttamente da provider di dati di riferimento di terze parti.  
   
-##  <a name="using-reference-data-from-azure-marketplace"></a><a name="Marketplace"></a>Uso dei dati di riferimento da Azure Marketplace  
+##  <a name="using-reference-data-from-azure-marketplace"></a><a name="Marketplace"></a> Uso dei dati di riferimento da Azure Marketplace  
  DQS supporta l'utilizzo di dati di riferimento da Azure Marketplace per consentire ai provider di contenuti di fornire servizi dati di riferimento tramite il Marketplace. Marketplace è un servizio Microsoft che fornisce un singolo marketplace e canale di recapito per dati e applicazioni di alta qualità come servizi cloud. Per ulteriori informazioni su Marketplace, vedere informazioni [sulle Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/about) ( https://azuremarketplace.microsoft.com/about) .
   
  La perfetta integrazione tra Marketplace e DQS semplifica i passaggi associati all'individuazione, all'esplorazione e all'acquisizione di informazioni per i progetti Data Quality dall'interno di DQS. I dati vengono utilizzati in DQS e aiutano gli utenti di DQS a ottenere un'elevata qualità dei dati unendo in modo del tutto innovativo le funzionalità di DQS, Marketplace e dei provider di servizi dati di riferimento.  

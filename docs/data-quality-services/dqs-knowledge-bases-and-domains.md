@@ -1,4 +1,5 @@
 ---
+description: Knowledge Base e domini DQS
 title: Knowledge Base e domini DQS
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: c677a999454f307f90b0f0444e67069ce81dfcc3
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: e27c84f54901bb66e2d934af661c3aac20aea384
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362499"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466810"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Knowledge Base e domini DQS
 
@@ -69,7 +70,7 @@ ms.locfileid: "87362499"
   
  Tuttavia, è possibile controllare le maiuscole/minuscole dei valori che si esportano nei risultati della pulizia. A tale scopo, impostare la proprietà di dominio **Formato output in** (vedere [Impostare le proprietà di un dominio](../data-quality-services/set-domain-properties.md)) e usare la casella di controllo **Standardizzare output** quando si esportano i risultati della pulizia (vedere [Pulire i dati mediante DQS &#40;informazioni interne&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)).  
   
-##  <a name="domain-management"></a><a name="Domains"></a>Gestione del dominio  
+##  <a name="domain-management"></a><a name="Domains"></a> Gestione del dominio  
  L'attività di gestione del dominio consente all'amministratore dei dati di modificare e aumentare in modo interattivo i metadati generati dall'attività di individuazione delle informazioni assistita da computer. Ogni modifica apportata è destinata a un dominio della Knowledge Base. Nell'attività di gestione del dominio è possibile effettuare le operazioni seguenti:  
   
 -   Creare un nuovo dominio. Il nuovo dominio può essere collegato o copiato da un dominio esistente.  
@@ -138,7 +139,7 @@ ms.locfileid: "87362499"
   
  È possibile eseguire la corrispondenza sui domini singoli che costituiscono il dominio composito, ma non sul dominio composito in sé.  
   
-##  <a name="data-matching"></a><a name="Matching"></a>Corrispondenza dei dati  
+##  <a name="data-matching"></a><a name="Matching"></a> Corrispondenza dei dati  
  Oltre ad apportare modifiche manuali a una Knowledge Base tramite la gestione del dominio, è possibile aggiungere informazioni di corrispondenza a una Knowledge Base. Per preparare DQS al processo di deduplicazione dei dati, è necessario creare criteri di corrispondenza che verranno utilizzati per calcolare la probabilità di una corrispondenza. I criteri includono una o più regole di corrispondenza create dall'amministratore dei dati per definire il modo in cui le righe di dati vengono confrontate in DQS. L'amministratore dei dati determina quali campi dati nella riga devono essere confrontati e il peso di ciascun campo nel confronto. Determina inoltre il livello di probabilità al quale si può definire una corrispondenza. Le regole di corrispondenza vengono aggiunte alla Knowledge Base per essere utilizzate nell'attività di corrispondenza nel progetto Data Quality.  
   
  Per ulteriori informazioni sulla Knowledge Base e sulla corrispondenza dei dati, vedere [Corrispondenza di dati](../data-quality-services/data-matching.md)possono essere presenti più Knowledge Base.  

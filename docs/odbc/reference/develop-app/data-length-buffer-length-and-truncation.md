@@ -1,4 +1,5 @@
 ---
+description: Lunghezza dei dati, lunghezza del buffer e troncamento
 title: Lunghezza dei dati, lunghezza del buffer e troncamento | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2825c6e7-b9ff-42fe-84fc-7fb39728ac5d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2e7b8d1e60cd83594509c2ab5cbc24e04546eca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c9a9651f39c1ff4d2c6dc9b691453fb5354c9e1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465833"
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>Lunghezza dei dati, lunghezza del buffer e troncamento
 La *lunghezza dei dati* corrisponde alla lunghezza in byte dei dati, perché verrebbe archiviata nel buffer di dati dell'applicazione, non come viene archiviata nell'origine dati. Questa distinzione è importante perché i dati sono spesso archiviati in tipi diversi nel buffer dei dati rispetto all'origine dati. Pertanto, per l'invio dei dati all'origine dati, si tratta della lunghezza in byte dei dati prima della conversione al tipo dell'origine dati. Per i dati recuperati dall'origine dati, si tratta della lunghezza in byte dei dati dopo la conversione nel tipo di buffer di dati e prima che venga eseguito il troncamento.  

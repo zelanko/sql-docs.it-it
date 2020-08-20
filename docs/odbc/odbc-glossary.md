@@ -1,4 +1,5 @@
 ---
+description: Glossario di ODBC
 title: Glossario ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ac454a8c57fe6e2f12724440dc37c3a1953e4c85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57b08d48944ee288b4eba849917828b6fe1d4396
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302902"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466253"
 ---
 # <a name="odbc-glossary"></a>Glossario di ODBC
 ## <a name="a"></a>Una  
@@ -78,7 +79,7 @@ ms.locfileid: "81302902"
  **Tipo di dati C**  
  Tipo di dati di una variabile in un programma C, in questo caso l'applicazione.  
   
- **Catalogo**  
+ **catalog**  
  Set di tabelle di sistema in un database che descrivono la forma del database. Noto anche come *schema* o *dizionario dei dati*.  
   
  **funzione Catalog**  
@@ -90,7 +91,7 @@ ms.locfileid: "81302902"
  **client/server**  
  Strategia di accesso al database in cui uno o più client accedono ai dati tramite un server. I client di solito implementano l'interfaccia utente mentre il server controlla l'accesso al database.  
   
- **colonna**  
+ **column**  
  Contenitore per un singolo elemento di informazioni in una riga. Noto anche come *campo*.  
   
  **commit**  
@@ -255,7 +256,7 @@ ms.locfileid: "81302902"
  International Standards Organization/International Electrotechnical Commission. L'API ODBC è basata sull'interfaccia a livello di chiamata ISO/IEC.  
   
 ## <a name="j"></a>J  
- **Join**  
+ **join**  
  Operazione in un database relazionale che collega le righe in due o più tabelle in base ai valori corrispondenti nelle colonne specificate.  
   
 ## <a name="k"></a>K  
@@ -269,7 +270,7 @@ ms.locfileid: "81302902"
  Cursore scorrevole che rileva le righe aggiornate ed eliminate tramite un keyset.  
   
 ## <a name="l"></a>L  
- **valore letterale**  
+ **literal**  
  Rappresentazione in forma di caratteri di un valore di dati effettivo in un'istruzione SQL.  
   
  **blocco**  
@@ -333,7 +334,7 @@ ms.locfileid: "81302902"
  **matrice di stato del parametro**  
  Matrice contenente lo stato di un parametro dopo una chiamata a **SQLExecDirect** o **SQLExecute**.  
   
- **concorrenza pessimistica**  
+ **Concorrenza pessimistica**  
  Strategia per l'implementazione della serializzabilità, in cui le righe sono bloccate in modo che non possano essere modificate da altre transazioni. *Vedere anche* concorrenza ottimistica *e* serializzabilità.  
   
  **operazione posizionata**  
@@ -475,7 +476,7 @@ ms.locfileid: "81302902"
  **thunking**  
  La conversione di indirizzi a 16 bit in indirizzi a 32 bit o viceversa, quando le applicazioni a 16 bit vengono utilizzate con driver ODBC a 32 bit.  
   
- **transazione**  
+ **transaction**  
  Unità di lavoro atomica. Il lavoro in una transazione deve essere completato nel suo complesso. Se qualsiasi parte della transazione non riesce, l'intera transazione avrà esito negativo.  
   
  **isolamento delle transazioni**  

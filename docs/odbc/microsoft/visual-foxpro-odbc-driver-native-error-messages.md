@@ -1,4 +1,5 @@
 ---
+description: Messaggi di errore nativi del driver ODBC Visual FoxPro
 title: Messaggi di errore nativi del driver ODBC Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56d65221ba90b217521fa6a7563d70b7fc44f940
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: a4f4a57bc85e33708bd190aae833327e226d34ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363331"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466313"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Messaggi di errore nativi del driver ODBC Visual FoxPro
 Nelle tabelle seguenti vengono elencati i messaggi di errore nativi del driver ODBC Visual FoxPro.  
   
 ## <a name="001"></a>001  
   
-|Codice di errore|Messaggio di errore|  
+|Codice errore|Messaggio di errore|  
 |-|-|  
 |1|La funzionalità non è disponibile.|  
 |2|Operazione di input/output non riuscita.|  
@@ -36,7 +37,7 @@ Nelle tabelle seguenti vengono elencati i messaggi di errore nativi del driver O
   
 ## <a name="100"></a>100  
   
-|Codice di errore|Messaggio di errore|  
+|Codice errore|Messaggio di errore|  
 |-|-|  
 |100|Troppi file aperti.|  
 |101|Non è possibile aprire il file.|  
@@ -92,7 +93,7 @@ Nelle tabelle seguenti vengono elencati i messaggi di errore nativi del driver O
   
 ## <a name="200"></a>200  
   
-|Codice di errore|Messaggio di errore|  
+|Codice errore|Messaggio di errore|  
 |-|-|  
 |200|Errore di sintassi.|  
 |201|Troppi nomi utilizzati.|  
@@ -132,7 +133,7 @@ Nelle tabelle seguenti vengono elencati i messaggi di errore nativi del driver O
   
 ## <a name="300"></a>300  
   
-|Codice di errore|Messaggio di errore|  
+|Codice errore|Messaggio di errore|  
 |-|-|  
 |301|Mancata corrispondenza del tipo di operatore/operando.|  
 |302|Tipo di dati non corrispondente.|  
@@ -143,7 +144,7 @@ Nelle tabelle seguenti vengono elencati i messaggi di errore nativi del driver O
   
 ## <a name="400"></a>400  
   
-|Codice di errore|Messaggio di errore|  
+|Codice errore|Messaggio di errore|  
 |-|-|  
 |406|La stampante non è pronta.|  
 |407|Argomento non valido utilizzato con la funzione SET.|  
@@ -172,7 +173,7 @@ Nelle tabelle seguenti vengono elencati i messaggi di errore nativi del driver O
   
 ## <a name="500"></a>500  
   
-|Codice di errore|Messaggio di errore|  
+|Codice errore|Messaggio di errore|  
 |-|-|  
 |502|Non è possibile scrivere nel record perché è in uso.|  
 |503|Il file non può essere bloccato.|  
@@ -233,7 +234,7 @@ Nelle tabelle seguenti vengono elencati i messaggi di errore nativi del driver O
   
 ## <a name="600"></a>600  
   
-|Codice di errore|Messaggio di errore|  
+|Codice errore|Messaggio di errore|  
 |-|-|  
 |601|Il nome dell'alias è già in uso.|  
 |602|Operazione non valida per un campo Memo, generale o immagine.|  
@@ -251,7 +252,7 @@ Nelle tabelle seguenti vengono elencati i messaggi di errore nativi del driver O
   
 ## <a name="700"></a>700  
   
-|Codice di errore|Messaggio di errore|  
+|Codice errore|Messaggio di errore|  
 |-|-|  
 |700|Il record è usato da un altro utente.|  
 |701|Il file deve essere aperto in modo esclusivo.|  
@@ -277,7 +278,7 @@ Nelle tabelle seguenti vengono elencati i messaggi di errore nativi del driver O
   
 ## <a name="800"></a>800  
   
-|Codice di errore|Messaggio di errore|  
+|Codice errore|Messaggio di errore|  
 |-|-|  
 |802|SQL: Impossibile individuare la tabella.|  
 |872|Troppe colonne.|  
@@ -290,7 +291,7 @@ Nelle tabelle seguenti vengono elencati i messaggi di errore nativi del driver O
   
 ## <a name="900"></a>900  
   
-|Codice di errore|Messaggio di errore|  
+|Codice errore|Messaggio di errore|  
 |-|-|  
 |901|Il valore, il tipo o il conteggio dell'argomento della funzione non è valido.|  
 |902|Errore dell'analizzatore di espressioni.|  

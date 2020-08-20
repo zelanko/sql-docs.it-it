@@ -1,4 +1,5 @@
 ---
+description: Ricerca di parole vicine a un'altra parola con NEAR
 title: Cercare parole vicine a un'altra parola con NEAR | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 401be9b8f231704dc5fd44860d03208cc1fa7a5f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6fb4746b2dda07cfcc4872f3bc987df3276f8859
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629183"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465001"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Ricerca di parole vicine a un'altra parola con NEAR
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

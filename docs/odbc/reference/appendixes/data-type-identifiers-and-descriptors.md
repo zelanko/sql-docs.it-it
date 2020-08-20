@@ -1,4 +1,5 @@
 ---
+description: Identificatori e descrittori del tipo di dati
 title: Identificatori e descrittori del tipo di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f65bc86213f99112daf17c67a4ca522490d32149
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dce52118099ff4be572231e7f44f28a4cfca5ea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466221"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>Identificatori e descrittori del tipo di dati
 I tipi di dati elencati nelle sezioni tipi di dati [SQL](../../../odbc/reference/appendixes/sql-data-types.md) e tipi di dati [C](../../../odbc/reference/appendixes/c-data-types.md) precedenti in questa appendice sono tipi di dati "concisi". ogni identificatore fa riferimento a un singolo tipo di dati. Esiste una corrispondenza uno-a-uno tra l'identificatore e il tipo di dati. I descrittori, tuttavia, non sono in tutti i casi in cui viene utilizzato un singolo valore per identificare i tipi di dati. In alcuni casi, usano un tipo di dati "verbose" e un sottocodice di tipo. Per tutti i tipi di dati eccetto i tipi di dati DateTime e Interval, l'identificatore di tipo verbose corrisponde all'identificatore di tipo conciso e il valore in SQL_DESC_DATETIME_INTERVAL_CODE è uguale a 0. Per i tipi di dati DateTime e Interval, tuttavia, un tipo dettagliato (SQL_DATETIME o SQL_INTERVAL) viene archiviato in SQL_DESC_TYPE, un tipo conciso viene archiviato in SQL_DESC_CONCISE_TYPE e un sottocodice per ogni tipo conciso viene archiviato in SQL_DESC_DATETIME_INTERVAL_CODE. L'impostazione di uno di questi campi influisca sulle altre. Per ulteriori informazioni su questi campi, vedere la descrizione della funzione [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) .  

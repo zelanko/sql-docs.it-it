@@ -1,4 +1,5 @@
 ---
+description: SET ANSI (comando)
 title: IMPOSTA comando ANSI | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 97269642b4147b966fdd71003f5f81ebe7905282
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a9f9c576199905c23994af4dc6b031114f4ad72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300911"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466403"
 ---
 # <a name="set-ansi-command"></a>SET ANSI (comando)
 Determina il modo in cui i confronti tra stringhe di lunghezze diverse vengono eseguiti con l'operatore = nei comandi SQL di Visual FoxPro.  

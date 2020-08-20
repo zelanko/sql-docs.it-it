@@ -1,4 +1,5 @@
 ---
+description: Recupero di informazioni sulle notifiche degli eventi
 title: Recuperare informazioni sulle notifiche degli eventi | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8bc10867-66d6-4f57-ac32-a6c29f3327cd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d82126c304a40cfba88201f71b8073a815a169cc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bd3467841761b31d96e12bbc21c4d4a765406589
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764959"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464896"
 ---
 # <a name="get-information-about-event-notifications"></a>Recupero di informazioni sulle notifiche degli eventi
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

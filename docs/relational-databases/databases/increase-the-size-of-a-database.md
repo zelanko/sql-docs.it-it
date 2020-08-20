@@ -1,4 +1,5 @@
 ---
+description: Aumentare le dimensioni di un database
 title: Aumentare le dimensioni di un database | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 14f4206d-3afa-4ba9-9849-23e81d63306d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 381e611f78e1b3e6725312b534618ad10eb28ce0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6520e44a9a351c2cc2e433397575b90cc641e42f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726458"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465558"
 ---
 # <a name="increase-the-size-of-a-database"></a>Aumentare le dimensioni di un database
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85726458"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per il database.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-increase-the-size-of-a-database"></a>Per aumentare le dimensioni di un database  
   
@@ -68,7 +69,7 @@ ms.locfileid: "85726458"
   
 6.  Fare clic su **OK**.  
 
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-increase-the-size-of-a-database"></a>Per aumentare le dimensioni di un database  
   

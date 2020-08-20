@@ -1,4 +1,5 @@
 ---
+description: Chiedere all'utente informazioni di connessione
 title: Richiesta di informazioni di connessione all'utente | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b0f120a1076f14f5e67d506e52a446e0a3d4713
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f52e0d120fb150fe58b850107847d7ef5df20e7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282084"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465713"
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Chiedere all'utente informazioni di connessione
 Se l'applicazione usa **SQLConnect** ed è necessario richiedere all'utente le informazioni di connessione, ad esempio un nome utente e una password, questa operazione deve essere eseguita automaticamente. Sebbene ciò consenta all'applicazione di controllare il proprio aspetto, potrebbe forzare l'applicazione a contenere codice specifico del driver. Questo errore si verifica quando l'applicazione deve richiedere all'utente le informazioni di connessione specifiche del driver. Si tratta di una situazione impossibile per le applicazioni generiche, progettate per funzionare con tutti i driver, inclusi i driver che non esistono durante la scrittura dell'applicazione.  

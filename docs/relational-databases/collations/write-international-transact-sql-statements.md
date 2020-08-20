@@ -1,4 +1,5 @@
 ---
+description: Scrittura di istruzioni Transact-SQL internazionali
 title: Scrittura di istruzioni Transact-SQL internazionali | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2019
@@ -18,12 +19,12 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72b2d6056d3a48d21804d02677867a9757f4f671
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8192fcd7d657c5842dfd60fcca36fec3e945413d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465523"
 ---
 # <a name="write-international-transact-sql-statements"></a>Scrittura di istruzioni Transact-SQL internazionali
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,10 +36,10 @@ ms.locfileid: "86003932"
 
     In questo modo si evitano problemi di conversione della tabella codici. Per altre considerazioni, vedere [Differenze nell'archiviazione tra UTF-8 e UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).  
 
--   Fino a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] sostituire tutte le occorrenze dei tipi di dati **char**, **varchar** e **varchar(max)** con **nchar**, **nvarchar** e **nvarchar(max)** . Se si usano regole di confronto abilitate per [caratteri supplementari (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), i dati vengono codificati con UTF-16. L'uso di regole di confronto non SC comporta la codifica dei dati con UCS-2. In questo modo si evitano problemi di conversione della tabella codici. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). 
+-   Fino a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] sostituire tutte le occorrenze dei tipi di dati **char**, **varchar** e **varchar(max)** con **nchar**, **nvarchar** e **nvarchar(max)**. Se si usano regole di confronto abilitate per [caratteri supplementari (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), i dati vengono codificati con UTF-16. L'uso di regole di confronto non SC comporta la codifica dei dati con UCS-2. In questo modo si evitano problemi di conversione della tabella codici. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). 
 
     > [!IMPORTANT]
-    > Il tipo di dati **text** è deprecato e non deve essere usato in nuovi progetti di sviluppo. Pianificare la conversione dei dati **text** al tipo di dati **varchar(max)** .
+    > Il tipo di dati **text** è deprecato e non deve essere usato in nuovi progetti di sviluppo. Pianificare la conversione dei dati **text** al tipo di dati **varchar(max)**.
   
 -   Quando si eseguono confronti e operazioni con mesi o giorni della settimana, usare le parti numeriche della data invece delle stringhe di nomi. I nomi dei mesi e dei giorni della settimana restituiti variano a seconda dell'impostazione della lingua. Ad esempio, `DATENAME(MONTH,GETDATE())` restituisce `May` quando la lingua è impostata su inglese (Stati Uniti), `Mai` se è impostato il tedesco e `mai` se è impostato il francese. Specificare quindi una funzione quale [DATEPART](../../t-sql/functions/datepart-transact-sql.md) che usa il numero invece del nome del mese. Utilizzare i nomi DATEPART quando si compilano i set di risultati da visualizzare all'utente, in quanto le stringhe di nomi sono più significative delle parti numeriche. Non creare tuttavia il codice di logica che dipende dai nomi visualizzati di una lingua specifica.  
   

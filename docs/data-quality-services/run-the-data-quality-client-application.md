@@ -1,4 +1,5 @@
 ---
+description: Eseguire l'applicazione client Data Quality
 title: Eseguire l'applicazione client Data Quality
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 7125dd10e16b8013fccc1f584115550c026cc627
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ed5b6449ea470a63e27a1d23a057ed6507c2ed2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883338"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466666"
 ---
 # <a name="run-the-data-quality-client-application"></a>Eseguire l'applicazione client Data Quality
 
@@ -35,12 +36,12 @@ ms.locfileid: "85883338"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per potere accedere al [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], è necessario disporre di uno dei tre ruoli DQS (dqs_adminstrator, dqs_kb_editor o dqs_kb_operator) concessi per il database DQS_MAIN.  
   
-##  <a name="run-data-quality-client"></a><a name="Run"></a>Esegui Data Quality Client  
+##  <a name="run-data-quality-client"></a><a name="Run"></a> Esegui Data Quality Client  
  Per eseguire il [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] nel computer in cui è stato installato:  
   
 1.  Fare clic su **Start**, puntare **Tutti i programmi**, fare clic su **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**, su **Data Quality Services**, quindi su **Client Data Quality**.  
   
-2.  Nella finestra di dialogo **Connetti al server** :  
+2.  Nella finestra di dialogo **Connetti al server**:  
   
     1.  Specificare il server a cui si desidera connettere l'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Selezionare **(LOCAL)** per connettersi al [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] nel computer locale. È anche possibile fare clic sulla freccia in giù e selezionare **\<Browse network for more servers>** per connettersi a un server diverso (o per connettersi al server locale in base al nome). Verrà visualizzata la finestra di dialogo **Cerca server** . È possibile selezionare un server nella scheda **Server locali** o nella scheda **Server di rete** .  
   

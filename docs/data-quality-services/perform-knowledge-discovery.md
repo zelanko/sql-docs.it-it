@@ -1,4 +1,5 @@
 ---
+description: Esecuzione dell'individuazione delle informazioni
 title: Esecuzione dell'individuazione delle informazioni
 ms.date: 06/04/2013
 ms.prod: sql
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 9f1d6865a4c432694201c9b5a666fff3fd46d117
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 65bde5805bbe3e768b56094d165b385d01f68439
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883402"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466797"
 ---
 # <a name="perform-knowledge-discovery"></a>Esecuzione dell'individuazione delle informazioni
 
@@ -218,7 +219,7 @@ ms.locfileid: "85883402"
   
  Quando si esegue la pulizia interattiva dei dati nella pagina **Gestisci e visualizza risultati** dell'attività **Pulizia** , nella scheda **Non validi** della pagina **Gestisci e visualizza risultati** vengono inclusi sia i valori in errore che quelli non validi.  
   
-##  <a name="how-to-display-the-appropriate-values"></a><a name="Display"></a>Come visualizzare i valori appropriati  
+##  <a name="how-to-display-the-appropriate-values"></a><a name="Display"></a> Come visualizzare i valori appropriati  
  È possibile modificare la visualizzazione come segue:  
   
 -   **Filtrare** i risultati desiderati nella tabella, in base al relativo stato, selezionando lo stato nell'elenco a discesa **Filtro** .  

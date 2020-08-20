@@ -1,4 +1,5 @@
 ---
+description: SELECT (comando SQL)
 title: Comando SELECT-SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 640189a5a31d0c21642b037e906bd6361690a9a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b5fb0e3d38a2e5594cacf77b116844bcce219d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300941"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466423"
 ---
 # <a name="select---sql-command"></a>SELECT (comando SQL)
 Recupera i dati da una o più tabelle.  
@@ -113,7 +114,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
 -   Se si includono due tabelle in una query e non si specifica una condizione di join, ogni record della prima tabella viene unito a tutti i record della seconda tabella, purché vengano soddisfatte le condizioni del filtro. Una query di questo tipo può produrre risultati lunghi.  
   
--   Prestare attenzione quando si uniscono tabelle con campi vuoti perché Visual FoxPro corrisponde a campi vuoti. Se ad esempio si partecipa al cliente. ZIP e fattura. ZIP e se il cliente contiene 100 codici postali vuoti e la fattura contiene 400 codici postali vuoti, l'output della query contiene 40.000 record aggiuntivi risultanti dai campi vuoti. Utilizzare la funzione **Empty ()** per eliminare i record vuoti dall'output della query.  
+-   Prestare attenzione quando si uniscono tabelle con campi vuoti perché Visual FoxPro corrisponde a campi vuoti. Se ad esempio si partecipa a CUSTOMER.ZIP e INVOICE.ZIP e se il cliente contiene 100 codici postali vuoti e la fattura contiene 400 codici postali vuoti, l'output della query contiene 40.000 record aggiuntivi risultanti dai campi vuoti. Utilizzare la funzione **Empty ()** per eliminare i record vuoti dall'output della query.  
   
 -   Per connettere più condizioni di join, è necessario usare l'operatore AND. Ogni condizione di join ha il formato seguente:  
   
@@ -123,7 +124,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
 |Operatore|Confronto|  
 |--------------|----------------|  
-|=|Uguale|  
+|=|Uguale a|  
 |==|Esattamente uguale|  
 |LIKE|LIKE SQL|  
 |<>,! =, #|Diverso da|  

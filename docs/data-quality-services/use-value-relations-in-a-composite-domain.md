@@ -1,4 +1,5 @@
 ---
+description: Utilizzare le relazioni di valori in un dominio composito
 title: Utilizzare le relazioni di valori in un dominio composito
 ms.date: 11/22/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e9876e5a232174c387fb46cf4f3b2012f1435dc2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 67d6d4743fc373afd0ac008a72c7d97751b8ac29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883304"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466593"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>Utilizzare le relazioni di valori in un dominio composito
 
@@ -34,7 +35,7 @@ ms.locfileid: "85883304"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  Per visualizzare le relazioni di valori in un dominio composito, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="view-value-relations"></a><a name="Use"></a>Visualizza relazioni tra valori  
+##  <a name="view-value-relations"></a><a name="Use"></a> Visualizza relazioni tra valori  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -51,7 +52,7 @@ ms.locfileid: "85883304"
   
 6.  Non è possibile modificare alcun valore nella tabella. Se sono state eseguite le altre operazioni, fare clic su **Fine** per completare l'attività di gestione del dominio. In caso contrario, fare clic su **Annulla**.  
   
-##  <a name="follow-up-after-viewing-value-relations"></a><a name="FollowUp"></a>Completamento: fasi successive alla visualizzazione delle relazioni tra valori  
+##  <a name="follow-up-after-viewing-value-relations"></a><a name="FollowUp"></a> Completamento: fasi successive alla visualizzazione delle relazioni tra valori  
  Dopo avere visualizzato le relazioni di valori, è possibile eseguire ulteriori attività di gestione del dominio, quali l'individuazione delle informazioni per aggiungere informazioni al dominio o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  
   
   

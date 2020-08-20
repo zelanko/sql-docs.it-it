@@ -1,4 +1,5 @@
 ---
+description: Funzioni ODBC eseguite dalla libreria di cursori
 title: Funzioni ODBC eseguite dalla libreria di cursori | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2f1d3386-7e59-4d55-a5b4-3440b61343a3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 70fb48a8764a913ea4c2376c1a44bcd8712e7d29
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c49082492a35cb79a35c3a346b85af69dddf159c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466115"
 ---
 # <a name="odbc-functions-executed-by-the-cursor-library"></a>Funzioni ODBC eseguite dalla libreria di cursori
 > [!IMPORTANT]  

@@ -1,4 +1,5 @@
 ---
+description: Glossario dei termini per la pubblicazione Oracle
 title: Glossario dei termini per la pubblicazione Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 259ddd0128350fef480d4d25429808571d23ef11
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2dae5a66a762e53a4748bf43732aed70c5c0edfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465152"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Glossario dei termini per la pubblicazione Oracle
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85892439"
  Oggetto di database utilizzato per generare numeri univoci. Le sequenze vengono utilizzate nella replica per ordinare le modifiche apportate alle tabelle pubblicate.  
   
 #### <a name="sqlplus"></a>SQL\*Plus  
- Applicazione utilizzata per l'accesso e l'esecuzione di query in database Oracle. È simile a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]sqlcmd**di**.  
+ Applicazione utilizzata per l'accesso e l'esecuzione di query in database Oracle. È simile a  **sqlcmd** di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 #### <a name="synonym"></a>Sinonimo  
  Alias di un oggetto. Lo speciale sinonimo public **MSSQLSERVERDISTRIBUTOR** viene creato automaticamente quando viene configurato un server di pubblicazione Oracle. Il sinonimo fa riferimento alla tabella **HREPL_Distributor** e garantisce un puntatore logico al server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che gestisce il server di pubblicazione.  

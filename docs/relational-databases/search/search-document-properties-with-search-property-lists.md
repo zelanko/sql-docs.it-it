@@ -1,4 +1,5 @@
 ---
+description: Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca
 title: Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: daead13f4a3069966d1ede9aa677c47c8a784099
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4938844b0014745dd50060b0e1da43b4e574a20e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464966"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

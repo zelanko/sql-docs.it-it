@@ -1,4 +1,5 @@
 ---
+description: Stored procedure relative ai cursori (Transact-SQL)
 title: Stored procedure per cursori (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a4b6955b-9cae-40fb-99a1-2931e17a8e74
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5afec901b570169a7a72dfe39e38026fcc5d0fcf
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 330f57358155b823dd15636f2d87038486ebfe14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977621"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464721"
 ---
 # <a name="cursor-stored-procedures-transact-sql"></a>Stored procedure relative ai cursori (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

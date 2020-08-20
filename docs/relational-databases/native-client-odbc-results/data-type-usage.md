@@ -1,4 +1,5 @@
 ---
+description: Utilizzo del tipo di dati
 title: Utilizzo del tipo di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -19,11 +20,12 @@ ms.assetid: 4f19b0d6-94ac-4a98-a121-57d38787864c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a20fcafe79f5ba0ddb3a5cc98208158967aafb3b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4a2e5fce7a76c22ac89f324cc69010311ab01883
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465383"
 ---
 # <a name="data-type-usage"></a>Utilizzo del tipo di dati
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,9 +48,9 @@ ms.locfileid: "86002883"
 |Tipi di dati LONG|i parametri *data-at-execution* sono limitati per i tipi di dati SQL_LONGVARBINARY e SQL_LONGVARCHAR.|  
 |Tipi per valori di grandi dimensioni|Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client esporrà i tipi **varchar (max)**, **varbinary (max)** e **nvarchar (max)** come SQL_VARCHAR, SQL_VARBINARY e SQL_WVARCHAR (rispettivamente) nelle API che accettano o restituiscono tipi di dati ODBC SQL.|  
 |Tipo definito dall'utente (UDT)|Le colonne con tipo definito dall'utente vengono mappate come SQL_SS_UDT. Se una colonna con tipo definito dall'utente viene mappata in modo esplicito a un altro tipo nell'istruzione SQL mediante i metodi ToString() o ToXMLString() del tipo definito dall'utente oppure mediante le funzioni CAST/CONVERT, il tipo di colonna nel set di risultati rifletterà il tipo effettivo nel quale è stata convertita la colonna.<br /><br /> Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client può essere associato solo a una colonna con tipo definito dall'utente come binario. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta solamente la conversione tra i tipi di dati SQL_SS_UDT e SQL_C_BINARY.|  
-|XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]converte automaticamente il codice XML in testo Unicode. Il tipo XML viene mappato come SQL_SS_XML.|  
+|XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte automaticamente il codice XML in testo Unicode. Il tipo XML viene mappato come SQL_SS_XML.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elaborazione dei risultati &#40;&#41;ODBC](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [Elaborazione dei risultati &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

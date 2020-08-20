@@ -1,4 +1,5 @@
 ---
+description: Copia di descrittori
 title: Copia di descrittori | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 949a860d-6579-4218-882e-8c061688dd87
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2e2e5897afc3673a21396e256df04d25008c8cdf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 90f3acb5ccb479ba5c1d1eb4c405a486f7032f3f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301670"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465868"
 ---
 # <a name="copying-descriptors"></a>Copia di descrittori
 La funzione **SQLCopyDesc** viene chiamata per copiare i campi di un descrittore in un altro descrittore. I campi possono essere copiati solo in un descrittore dell'applicazione o in un oggetto dpi, ma non in un IRD. I campi possono essere copiati da qualsiasi tipo di descrittore. Vengono copiati solo i campi definiti per i descrittori di origine e di destinazione. **SQLCopyDesc** non copia il campo SQL_DESC_ALLOC_TYPE perché non è possibile modificare il tipo di allocazione di un descrittore. I campi copiati sovrascrivono i campi esistenti.  

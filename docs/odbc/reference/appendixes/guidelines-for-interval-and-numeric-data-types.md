@@ -1,4 +1,5 @@
 ---
+description: Indicazioni per i tipi di dati intervallo e numerici
 title: Linee guida per i tipi di dati interval e numeric | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 28a879a1-666e-4183-b731-d36b584d5d86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c22cf71468d8128688a44fa825c31dffa1c5414b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 58c7803b6fb1c558b7682f003f98ebfd2fe03eff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306957"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466167"
 ---
 # <a name="guidelines-for-interval-and-numeric-data-types"></a>Indicazioni per i tipi di dati intervallo e numerici
 Le sezioni seguenti riportano l'intervallo di indirizzi e tipi di dati numerici.  

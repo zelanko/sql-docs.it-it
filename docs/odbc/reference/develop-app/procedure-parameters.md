@@ -1,4 +1,5 @@
 ---
+description: Parametri di procedure
 title: Parametri di procedura | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 35d43ca7cf6e603d7dabca9eacf1e026daa753b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b21780cc4a6670c76e60daa69cf7933b4182b44e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465723"
 ---
 # <a name="procedure-parameters"></a>Parametri di procedure
 I parametri nelle chiamate di routine possono essere parametri di input, di input/output o di output. Si tratta di parametri diversi da quelli presenti in tutte le altre istruzioni SQL, che sono sempre parametri di input.  

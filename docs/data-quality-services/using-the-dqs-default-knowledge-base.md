@@ -1,4 +1,5 @@
 ---
+description: Utilizzo della Knowledge Base predefinita di DQS
 title: Utilizzo della Knowledge Base predefinita di DQS
 ms.custom: ''
 ms.date: 07/31/2012
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ef5ed9dc991d91c2f5be790ea6cc49948f237ed5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1954d4d732e239c4506f92ca3a5411201717e09a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466577"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>Utilizzo della Knowledge Base predefinita di DQS
 

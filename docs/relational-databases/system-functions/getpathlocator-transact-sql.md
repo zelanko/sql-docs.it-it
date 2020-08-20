@@ -1,4 +1,5 @@
 ---
+description: GetPathLocator (Transact-SQL)
 title: GetPathLocator (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 78b7e220-445b-4fdf-811b-7253f4f2b058
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 133d2b109c54271c2e94cba2e88831f8f7aecf16
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2551dfbb7d71b33542f4bc6fd8087c10f974e45b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662878"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464763"
 ---
 # <a name="getpathlocator-transact-sql"></a>GetPathLocator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,6 +53,6 @@ GetPathLocator(filenamespace_path)
  È possibile utilizzare la funzione **GetPathLocator** quando si esegue la migrazione di file da un file server a una tabella FileTable. In questo scenario si desidera spostare i file nella tabella FileTable, quindi sostituire il percorso UNC originale per ogni file con il percorso UNC della tabella FileTable. Per un esempio completo, vedere [caricare file in tabelle FileTable](../../relational-databases/blob/load-files-into-filetables.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzare directory e percorsi in FileTable](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
+ [Usare directory e percorsi in FileTable](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

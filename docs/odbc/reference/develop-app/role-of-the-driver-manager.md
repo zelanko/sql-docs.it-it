@@ -1,4 +1,5 @@
 ---
+description: Ruolo di Gestione driver
 title: Ruolo di gestione driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7b861c82-357e-4590-8074-45136e9ed15e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ee3d704ea43125c3cd912a4e67d90bf5d50c733e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f974fe6436173b55f39aced45cc38312221cffaa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465658"
 ---
 # <a name="role-of-the-driver-manager"></a>Ruolo di Gestione driver
 Gestione driver determina l'ordine finale in cui restituire i record di stato generati. In particolare, determina quale record ha il rango più alto e deve essere restituito per primo. Il driver è responsabile dell'ordinamento dei record di stato generati. Se i record di stato vengono pubblicati da Gestione driver e dal driver, gestione driver è responsabile dell'ordinamento. Per ulteriori informazioni, vedere [sequenza di record di stato](../../../odbc/reference/develop-app/sequence-of-status-records.md).  
