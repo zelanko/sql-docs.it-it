@@ -1,4 +1,5 @@
 ---
+description: Modificare il tipo di log delle transazioni dell'entità (Master Data Services)
 title: Modificare il tipo di log delle transazioni dell'entità
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 75250b32-3384-43c2-9b5c-1607cc3aa7b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: af42a3c638155ab07b77a2c21fff95ba87cc265b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 693311dcf687c4df6c138f7b881923c05f59da77
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811848"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500739"
 ---
 # <a name="change-the-entity-transaction-log-type-master-data-services"></a>Modificare il tipo di log delle transazioni dell'entità (Master Data Services)
 

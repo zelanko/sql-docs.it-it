@@ -1,4 +1,5 @@
 ---
+description: Implementazione dei driver di database desktop
 title: Implementazione di driver di database desktop | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b25a5e8ed7a39a11b207c185f47855c7670473e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19d9e95fff84340c520b37e64f88f845d161e25d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290611"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500314"
 ---
 # <a name="implementing-desktop-database-drivers"></a>Implementazione dei driver di database desktop
 Istruzioni e note tecniche su come implementare e configurare i driver di database di Microsoft ODBC desktop sono reperibili nella Guida in linea di Amministrazione origine dati ODBC. È possibile accedere a questo file durante le routine di installazione dei driver da [Amministrazione origine dati Microsoft ODBC](../../odbc/admin/odbc-data-source-administrator.md).  

@@ -13,12 +13,12 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 8682f7d5549389ff98d20862ce86f6d177b3116e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26a4a6790a63fc2f0f72d7a59247ff9bd83c190b
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486513"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646381"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>Viste del catalogo di SQL Data Warehouse e Parallel Data Warehouse
 
@@ -71,12 +71,13 @@ ms.locfileid: "88486513"
 
  [sys. pdw_materialized_view_mappings &#40;&#41;Transact-SQL ](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest) (anteprima)
 
+ [sys. pdw_permanent_table_mappings &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)
+
  [sys. workload_management_workload_classifier_details &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)
   
  [sys. workload_management_workload_classifiers &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)
   
- [sys. workload_management_workload_groups &#40;&#41;Transact-SQL ](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql?view=azure-sqldw-latest) 
-
+ [sys. workload_management_workload_groups &#40;&#41;Transact-SQL ](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql?view=azure-sqldw-latest)
 
 ## <a name="sspdw-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Viste del catalogo
 

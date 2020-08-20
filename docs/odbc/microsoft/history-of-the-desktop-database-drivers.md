@@ -1,4 +1,5 @@
 ---
+description: Cronologia dei driver di database desktop
 title: Cronologia dei driver del database desktop | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4a2aff8-bde7-4bd5-8580-bc50f27311c8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 89434b397c07fdee751ca4272b65ac2eada94cf3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80e8f1b52abac92ba09b97d35d45dfe0506963ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500324"
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>Cronologia dei driver di database desktop
 La tabella seguente illustra la cronologia delle versioni dei driver di database desktop.  

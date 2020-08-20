@@ -1,4 +1,5 @@
 ---
+description: ': (intervallo) (MDX)'
 title: ': (Intervallo) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6afc3a73b958062bd6472153b2452bc0e3fa6cfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d52a78a1fcdefa4ee7bf09fa4125b488165e09c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020625"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500464"
 ---
 # <a name="-range-mdx"></a>: (intervallo) (MDX)
 
@@ -62,6 +63,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento agli operatori MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
+ [Guida di riferimento agli operatori MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)  
   
   

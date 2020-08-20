@@ -1,4 +1,5 @@
 ---
+description: VisualTotals (MDX)
 title: VisualTotals (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a5becd3382f07a9adc89055a253235495a7e50a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c1e85f4384c322938f5e7937c32bcd116acdda2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500424"
 ---
 # <a name="visualtotals-mdx"></a>VisualTotals (MDX)
 
@@ -40,7 +41,7 @@ VisualTotals(Set_Expression[,Pattern])
 > [!NOTE]  
 >  L'applicazione della funzione **VisualTotals** ai membri della dimensione che non sono correlati a una misura o che si trovano sotto la granularità del gruppo di misure provocherà la sostituzione dei valori con null.  
   
- *Pattern*, che è facoltativo, specifica il formato per l'etichetta dei totali. Il *modello* richiede un asterisco (*) come carattere di sostituzione per il membro padre e il resto del testo nella stringa viene visualizzato nel risultato concatenato al nome padre. Per visualizzare un asterisco letterale, utilizzare due asterischi (\*\*).  
+ *Pattern*, che è facoltativo, specifica il formato per l'etichetta dei totali. Il *modello* richiede un asterisco (*) come carattere di sostituzione per il membro padre e il resto del testo nella stringa viene visualizzato nel risultato concatenato al nome padre. Per visualizzare un asterisco letterale, utilizzare due asterischi ( \* \* ).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituito il totale visualizzato per il terzo trimestre dell'anno di calendario 2001 in base all'unico discendente specificato, ovvero il mese di luglio.  

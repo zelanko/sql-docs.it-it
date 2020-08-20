@@ -1,4 +1,5 @@
 ---
+description: Utilizzo di funzioni stringa
 title: Uso di funzioni stringa | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 74eec478baad335cb5be6a78ec1faea2d15030ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2160662a5e8fe9e89e133e053cca820fc60a66e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500484"
 ---
 # <a name="using-string-functions"></a>Utilizzo di funzioni stringa
 
@@ -101,12 +102,12 @@ ms.locfileid: "68037987"
 >  Le funzioni **StrToMember** e **StrToSet** devono essere usate con cautela. in quanto, se utilizzate all'interno di definizioni di calcoli, possono ridurre drasticamente le prestazioni delle query.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Genera &#40;&#41;MDX](../mdx/generate-mdx.md)   
- [Nome &#40;&#41;MDX](../mdx/name-mdx.md)   
+ [Genera &#40;&#41;MDX ](../mdx/generate-mdx.md)   
+ [Nome &#40;&#41;MDX ](../mdx/name-mdx.md)   
  [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
  [Funzioni &#40;sintassi MDX&#41;](../mdx/functions-mdx-syntax.md)   
- [Utilizzo di stored procedure &#40;&#41;MDX](../mdx/using-stored-procedures-mdx.md)   
- [StrToMember &#40;&#41;MDX](../mdx/strtomember-mdx.md)   
- [StrToSet &#40;&#41;MDX](../mdx/strtoset-mdx.md)  
+ [Utilizzo di stored procedure &#40;&#41;MDX ](../mdx/using-stored-procedures-mdx.md)   
+ [StrToMember &#40;&#41;MDX ](../mdx/strtomember-mdx.md)   
+ [StrToSet &#40;&#41;MDX ](../mdx/strtoset-mdx.md)  
   
   

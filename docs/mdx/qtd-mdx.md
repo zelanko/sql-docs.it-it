@@ -1,4 +1,5 @@
 ---
+description: Qtd (MDX)
 title: Qtd (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a8856b28d8eec76d2bc262c4209b007c0a7fa04
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea3bd80fa85d95dd3adf52793d5895425b40b9fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020645"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500454"
 ---
 # <a name="qtd-mdx"></a>Qtd (MDX)
 
@@ -37,7 +38,7 @@ Qtd( [ Member_Expression ] )
  La funzione **QTD** è una funzione di collegamento per la funzione [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md) il cui argomento dell'espressione di livello è impostato su *Quarter*. In altre parole, dal punto di vista funzionale `Qtd(Member_Expression)` equivale a `PeriodsToDate(Quarter_Level_Expression, Member_Expression)`.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene restituita la somma `Measures.[Order Quantity]` del membro, aggregata nei primi due mesi del terzo trimestre dell'anno di calendario 2003 contenuti nella `Date` dimensione, dal cubo **Adventure Works** .  
+ Nell'esempio seguente viene restituita la somma del `Measures.[Order Quantity]` membro, aggregata nei primi due mesi del terzo trimestre dell'anno di calendario 2003 contenuti nella `Date` dimensione, dal cubo **Adventure Works** .  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First2MonthsSecondSemester2003] AS  

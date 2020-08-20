@@ -1,4 +1,5 @@
 ---
+description: '&lt;query sui dati di origine&gt;'
 title: '&lt;query sui dati di origine &gt; | Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7117409372fcbcbc6ef3662a2355f063b2a99d98
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: fedb3472755a8147e10aef046c7a7fc435b356cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970282"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500772"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;query sui dati di origine&gt;
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -53,6 +54,6 @@ ms.locfileid: "86970282"
 ## <a name="see-also"></a>Vedere anche  
  [Le estensioni di data mining &#40;DMX&#41; le istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
  [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)   
- [Tabelle nidificate &#40;Analysis Services-&#41;di data mining](https://docs.microsoft.com/analysis-services/data-mining/nested-tables-analysis-services-data-mining)  
+ [Tabelle nidificate &#40;Analysis Services-&#41;di data mining ](https://docs.microsoft.com/analysis-services/data-mining/nested-tables-analysis-services-data-mining)  
   
   

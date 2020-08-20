@@ -1,4 +1,5 @@
 ---
+description: Consente di selezionare una &lt; struttura &gt; . CASI
 title: Consente di selezionare una &lt; struttura &gt; . CASI | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2e0fc30945396f22184e1d18c6b132d8e2e2d781
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6e4a14565a0ac4b2aba19dd1ef0dfbbfdc4454b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970437"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500919"
 ---
 # <a name="select-from-ltstructuregtcases"></a>Consente di selezionare una &lt; struttura &gt; . CASI
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -39,7 +40,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
 ## <a name="arguments"></a>Argomenti  
  *n*  
- facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
+ Facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
   
  *elenco di espressioni*  
  Elenco di espressioni separate da virgola.  
@@ -53,7 +54,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
  *expression*  
- facoltativo. Espressione che restituisce un valore scalare.  
+ Facoltativo. Espressione che restituisce un valore scalare.  
   
 ## <a name="remarks"></a>Osservazioni  
  Se il drill-through è attivato sia nella struttura che nel modello, qualsiasi membro di un ruolo che dispone di autorizzazioni drill-through per il modello di data mining e per la struttura di data mining può restituire le colonne della struttura non incluse nel modello utilizzando la sintassi seguente:  

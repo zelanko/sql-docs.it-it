@@ -21,15 +21,16 @@ ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc11ec8d075d52643f06eb91f0a55a1b6948c88c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23a58092954d1026071a469676e3fbfcc6628158
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455245"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646339"
 ---
 # <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Contiene una riga per ogni tabella interna ottimizzata per la memoria usata per archiviare tabelle utente ottimizzate per la memoria. Ogni tabella utente corrisponde a una o più tabelle interne. Una singola tabella viene usata per l'archivio dati principale. Tabelle interne aggiuntive vengono usate per supportare funzionalità come l'archiviazione temporale, dell'indice columnstore e all'esterno di righe (LOB) per le tabelle ottimizzate per la memoria.
  

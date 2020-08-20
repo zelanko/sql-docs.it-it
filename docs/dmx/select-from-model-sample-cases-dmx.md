@@ -1,4 +1,5 @@
 ---
+description: Selezionare da &lt; modello &gt; . SAMPLE_CASES (DMX)
 title: Selezionare da &lt; modello &gt; . SAMPLE_CASES (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7eda9b0e13ee5cbf918d80f41b9a517906a56a57
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: af927d9c998d245c31511c29450eafac31e1d54b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970508"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500880"
 ---
 # <a name="select-from-ltmodelgtsample_cases-dmx"></a>Selezionare da &lt; modello &gt; . SAMPLE_CASES (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -32,7 +33,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
   
 ## <a name="arguments"></a>Argomenti  
  *n*  
- facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
+ Facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
   
  *elenco di espressioni*  
  Elenco delimitato da virgole contenente identificatori di colonna correlati.  
@@ -41,10 +42,10 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
  Identificatore del modello.  
   
  *Elenco condizioni*  
- facoltativo. Condizioni per limitare i valori restituiti dall'elenco di colonne.  
+ Facoltativo. Condizioni per limitare i valori restituiti dall'elenco di colonne.  
   
  *expression*  
- facoltativo. Espressione che restituisce un valore scalare.  
+ Facoltativo. Espressione che restituisce un valore scalare.  
   
 ## <a name="remarks"></a>Osservazioni  
  I case di esempio potrebbero essere generati e potrebbero non esistere effettivamente nei dati utilizzati per il training. Il case restituito è rappresentativo del nodo di contenuto specificato.  

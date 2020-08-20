@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6ad5bdd6b8fbf294a1c4f45a825910ec6a82af2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f746b454b18de7d88ca4c42d049eb058f671ba8e
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452803"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512297"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>Passaggio 2: Inizializzare la casella di riepilogo Main
 Per dichiarare oggetti record e recordset globali, inserire il codice seguente in (General) (dichiarazioni) per Form1:  
@@ -46,7 +46,7 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- Questo codice crea un'istanza degli oggetti record e recordset globali. L'oggetto record, `grec` , viene aperto con un URL specificato come ActiveConnection. Se l'URL esiste, viene aperto; Se non esiste già, viene creato. Si noti che è necessario sostituire " <https://servername/foldername/> " con un URL valido dall'ambiente.  
+ Questo codice crea un'istanza degli oggetti record e recordset globali. L'oggetto record, `grec` , viene aperto con un URL specificato come ActiveConnection. Se l'URL esiste, viene aperto; Se non esiste già, viene creato. Si noti che è necessario sostituire `https://servername/foldername/` con un URL valido dall'ambiente.  
   
  L'oggetto recordset, `grs` , viene aperto negli elementi figlio del record `grec` . `lstMain`Viene quindi popolato con i nomi di file delle risorse pubblicate nell'URL.  
   

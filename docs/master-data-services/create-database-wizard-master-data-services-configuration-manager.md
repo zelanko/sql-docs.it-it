@@ -1,4 +1,5 @@
 ---
+description: Procedura guidata Crea database (Gestione configurazione Master Data Services)
 title: Procedura guidata Crea database
 ms.custom: ''
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5379610bd7ca41f2648654eb3e3eaf27bf7dbae9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b5a2b1480db92f1cd3741aa4f3429755eeffce6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813032"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500658"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>Procedura guidata Crea database (Gestione configurazione Master Data Services)
 

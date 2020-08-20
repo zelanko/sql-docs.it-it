@@ -1,4 +1,5 @@
 ---
+description: StructureColumn (DMX)
 title: StructureColumn (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cb07dd463ddbbc15942ca6f62c4ccb708a8c5efd
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 43e02efd8594497ad4f3c02679a475531489141c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500775"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -43,7 +44,7 @@ StructureColumn('structure column name')
   
  I risultati restituiti da una query che utilizza la funzione **StructureColumn** sono interessati dalla presenza di filtri nel modello. ovvero il filtro del modello controlla i case inclusi nel modello di data mining. Una query nella colonna della struttura può pertanto restituire solo i case utilizzati nel modello di data mining. Per un esempio di codice che illustra l'effetto dei filtri del modello di data mining sia in tabelle del case che in tabelle nidificate, vedere la sezione Esempi di questo argomento.  
   
- Per ulteriori informazioni sull'utilizzo di questa funzione in un'istruzione DMX SELECT, vedere [SELECT FROM &#60;model&#62;. I case &#40;&#41;DMX](../dmx/select-from-model-cases-dmx.md) o [selezionare da &#60;struttura&#62;. CASI](../dmx/select-from-structure-cases.md).  
+ Per ulteriori informazioni sull'utilizzo di questa funzione in un'istruzione DMX SELECT, vedere [SELECT FROM &#60;model&#62;. I case &#40;&#41;DMX ](../dmx/select-from-model-cases-dmx.md) o [selezionare da &#60;struttura&#62;. CASI](../dmx/select-from-structure-cases.md).  
   
 ## <a name="error-messages"></a>messaggi di errore  
  Se l'utente non dispone di autorizzazioni drill-through sulla struttura di data mining padre, viene generato l'errore di sicurezza seguente:  

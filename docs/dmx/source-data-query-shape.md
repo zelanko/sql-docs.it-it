@@ -1,4 +1,5 @@
 ---
+description: '&lt;query dei dati &gt; di origine-forma'
 title: SHAPE (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4d5d93d4236b3cf86719c416ba87517401e4b4f5
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 16fff086514facbb8197d8d6f27b72b81f67c2e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970303"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500792"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;query dei dati &gt; di origine-forma
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -58,7 +59,7 @@ APPEND ({ <child table query> }
  Le query devono essere ordinate in base alla colonna che definisce la correlazione tra la tabella padre e la tabella figlio.  
   
 ## <a name="examples"></a>Esempi  
- Per eseguire il training di un modello contenente una tabella nidificata, è possibile utilizzare l'esempio seguente all'interno di un'istruzione [INSERT INTO &#40;&#41;DMX](../dmx/insert-into-dmx.md) . Le due tabelle all'interno dell'istruzione **Shape** sono correlate tramite la colonna **OrderNumber** .  
+ Per eseguire il training di un modello contenente una tabella nidificata, è possibile utilizzare l'esempio seguente all'interno di un'istruzione [INSERT INTO &#40;&#41;DMX ](../dmx/insert-into-dmx.md) . Le due tabelle all'interno dell'istruzione **Shape** sono correlate tramite la colonna **OrderNumber** .  
   
 ```  
 SHAPE {  

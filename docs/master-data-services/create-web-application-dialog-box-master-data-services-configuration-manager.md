@@ -1,4 +1,5 @@
 ---
+description: Finestra di dialogo Crea applicazione Web (Gestione configurazione Master Data Services)
 title: Finestra di dialogo Crea applicazione Web
 ms.custom: seo-lt-2019
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 246ac0977d84e1e011553937d1edd5ce39b53205
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 0f32becd4f98ec714102bbe38f7b15049b730508
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812017"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500662"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>Finestra di dialogo Crea applicazione Web (Gestione configurazione Master Data Services)
 

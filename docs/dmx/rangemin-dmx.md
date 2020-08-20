@@ -1,4 +1,5 @@
 ---
+description: RangeMin (DMX)
 title: RangeMin (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 47365778d51ba9b7ee857f9a634b3b0b25616d60
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 529a669b20719db93ddb702a2b4cff629f53c8db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970650"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500897"
 ---
 # <a name="rangemin-dmx"></a>RangeMin (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

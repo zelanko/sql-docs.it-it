@@ -1,4 +1,5 @@
 ---
+description: Associazione di colonne di set di risultati
 title: Colonne del set di risultati di associazione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4bc9c30f-83ae-4766-a746-032953c187ad
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 558ceb79d42d82477b70a028395de82cc023c170
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6a228de81deb5cdfdaa62ee7940185b14bcaef8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499944"
 ---
 # <a name="binding-result-set-columns"></a>Associazione di colonne di set di risultati
 Le applicazioni possono associare il numero di colonne del set di risultati che scelgono, inclusa l'associazione di nessuna colonna. Quando viene recuperata una riga di dati, il driver restituisce i dati per le colonne con binding all'applicazione. Il fatto che l'applicazione associ tutte le colonne nel set di risultati dipende dall'applicazione. Ad esempio, le applicazioni che generano report hanno in genere un formato fisso; in tali applicazioni viene creato un set di risultati contenente tutte le colonne utilizzate nel report, quindi vengono associati e recuperati i dati per tutte le colonne. Le applicazioni che visualizzano le schermate piene dei dati a volte consentono all'utente di decidere quali colonne visualizzare; tali applicazioni creano un set di risultati contenente tutte le colonne desiderate dall'utente, ma associano e recuperano i dati solo per le colonne scelte dall'utente.  

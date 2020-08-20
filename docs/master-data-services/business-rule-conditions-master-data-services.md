@@ -1,4 +1,5 @@
 ---
+description: Condizioni della regola business (Master Data Services)
 title: Condizioni della regola business
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4849b2f16c691db08766ca451673d0960ee69222
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 5d6894fa23743581be1b8c87f8dd4c9e5d7b799c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813709"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500815"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>Condizioni della regola business (Master Data Services)
 

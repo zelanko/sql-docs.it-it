@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eec9e95ccbc326d3d2f64d224cf11f3d059bb8f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 801602c78193f9fc3fa9cdab40b98c3dc3dd42e0
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717090"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512317"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Connettersi a SQL Server se gli amministratori di sistema sono bloccati 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ Per risolvere il problema di accesso, è consigliabile avviare l'istanza di [!IN
 
 Quando si avvia l'istanza in modalità utente singolo, arrestare innanzitutto il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. In caso contrario, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent potrebbe connettersi per primo, acquisendo l'unica connessione disponibile al server e impedendo quindi ulteriori accessi.
 
-È anche possibile che un'applicazione client sconosciuta usi l'unica connessione disponibile prima di poter eseguire l'accesso. Per evitare che ciò accada, è possibile usare l'opzione `-m` seguita da un nome di applicazione per limitare le connessioni a una singola connessione dall'applicazione specificata. Ad esempio, l'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con `-m"sqlcmd"` limita le connessioni a una singola connessione che viene identificata come programma client **sqlcmd**. Per connettersi tramite l'editor di query in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], usare `-m"Microsoft SQL Server Management Studio - Query"`.  
+È anche possibile che un'applicazione client sconosciuta usi l'unica connessione disponibile prima di poter eseguire l'accesso. Per evitare che ciò accada, è possibile usare l'opzione `-m` seguita da un nome di applicazione per limitare le connessioni a una singola connessione dall'applicazione specificata. Ad esempio, l'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con `-mSQLCMD` limita le connessioni a una singola connessione che viene identificata come programma client **sqlcmd**. Per connettersi tramite l'editor di query in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], usare `-m"Microsoft SQL Server Management Studio - Query"`.  
 
 
 > [!IMPORTANT]  
@@ -55,7 +55,7 @@ La tabella seguente riepiloga i diversi modi per avviare l'istanza in modalità 
 | Opzione | Descrizione | Utilizzo |
 |:---|:---|:---|
 |`-m` | Limita le connessioni a una singola connessione | Quando non sono presenti altri utenti che tentano di connettersi all'istanza di oppure non si è certi del nome dell'applicazione usato per la connessione all'istanza. |
-|`-m"sqlcmd"`| Limita le connessioni a una singola connessione, che deve identificarsi come programma client **sqlcmd**| Quando si prevede di connettersi all'istanza con **sqlcmd** e si vuole impedire ad altre applicazioni di ottenere l'unica connessione disponibile. |
+|`-mSQLCMD`| Limita le connessioni a una singola connessione, che deve identificarsi come programma client **sqlcmd**| Quando si prevede di connettersi all'istanza con **sqlcmd** e si vuole impedire ad altre applicazioni di ottenere l'unica connessione disponibile. |
 |`-m"Microsoft SQL Server Management Studio - Query"`| Limita le connessioni a una singola connessione che deve identificarsi come applicazione **Microsoft SQL Server Management Studio - Query**.| Quando si prevede di connettersi all'istanza tramite l'editor di query di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e si vuole impedire ad altre applicazioni di ottenere l'unica connessione disponibile. |
 |`-f`| Limita le connessioni a una singola connessione e avvia l'istanza con la configurazione minima | Quando un'altra configurazione impedisce l'avvio. |
 | &nbsp; | &nbsp; | &nbsp; |

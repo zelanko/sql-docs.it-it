@@ -1,4 +1,5 @@
 ---
+description: SQLGetTypeInfo (driver ODBC Visual FoxPro)
 title: SQLGetTypeInfo (driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 23db0350f0f7271f85e2bc5c6a9e6c8767443a85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e24f506f1134e9191e370971795a23bbbb3bd380
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "81299521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500177"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (driver ODBC Visual FoxPro)
 > [!NOTE]  
@@ -34,7 +35,7 @@ ms.locfileid: "81299521"
 |SQL_BIGINT|Non supportato. Non esiste alcun tipo Visual FoxPro a 64 bit.|  
 |SQL_BIT|Logico|  
 |SQL_CHAR|Carattere|  
-|SQL_DATE|Date|  
+|SQL_DATE|Data|  
 |SQL_DECIMAL|Numeric|  
 |SQL_DOUBLE|Double|  
 |SQL_FLOAT|Double|  

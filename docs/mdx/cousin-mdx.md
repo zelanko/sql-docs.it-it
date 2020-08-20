@@ -1,4 +1,5 @@
 ---
+description: Cousin (MDX)
 title: Cugino (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8a98d496467e2fd75924b0067257f192c79cdf6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eff78bb06f935311f178d2e39be11bec3e959776
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68047256"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500544"
 ---
 # <a name="cousin-mdx"></a>Cousin (MDX)
 

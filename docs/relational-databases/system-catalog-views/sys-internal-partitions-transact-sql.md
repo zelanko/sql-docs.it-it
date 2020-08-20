@@ -14,15 +14,16 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: abfff1a5f8a9ed447566e5f6a91fe23c51654890
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7e6f8d248ef4d000c98a664148a5a5b33f0786b
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88401457"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645937"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>sys. internal_partitions (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Restituisce una riga per ogni set di righe che tiene traccia dei dati interni per gli indici columnstore nelle tabelle basate su disco. Questi set di righe sono interni agli indici columnstore e tengono traccia delle righe eliminate, dei mapping rowgroup e dei RowGroups di archiviazione Delta. Consentono di tenere traccia dei dati per ogni partizione della tabella. ogni tabella include almeno una partizione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ricrea i set di righe ogni volta che viene ricompilato l'indice columnstore.   
   
