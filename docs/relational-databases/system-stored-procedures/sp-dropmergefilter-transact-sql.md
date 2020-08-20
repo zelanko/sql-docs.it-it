@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergefilter (Transact-SQL)
 title: sp_dropmergefilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2de7b17ff172c5945c7bfb83cae6a8a11325e6d0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5eb42c423d562ad251dc55ce015fdd111fa7d6fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464338"
 ---
 # <a name="sp_dropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,19 +40,19 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'`Nome dell'articolo. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @article = ] 'article'` Nome dell'articolo. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @filtername = ] 'filtername'`Nome del filtro da eliminare. *FilterName* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @filtername = ] 'filtername'` Nome del filtro da eliminare. *FilterName* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Abilita o Disabilita la possibilità di invalidare uno snapshot. *force_invalidate_snapshot* è un **bit**e il valore predefinito è **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Abilita o Disabilita la possibilità di invalidare uno snapshot. *force_invalidate_snapshot* è un **bit**e il valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo di merge non invalidano lo snapshot.  
   
  **1** indica che le modifiche apportate all'articolo di merge possono causare l'invalidità dello snapshot. In tal caso, il valore **1** consente di eseguire il nuovo snapshot.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`Abilita o Disabilita la possibilità di contrassegnare una sottoscrizione come non valida. *force_reinit_subscription* è un **bit**e il valore predefinito è **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Abilita o Disabilita la possibilità di contrassegnare una sottoscrizione come non valida. *force_reinit_subscription* è un **bit**e il valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate al filtro dell'articolo di merge non invalidano le sottoscrizioni.  
   
@@ -68,9 +69,9 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
   
 ## <a name="see-also"></a>Vedere anche  
  [Modificare le proprietà di pubblicazioni e articoli](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergefilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
- [sp_changemergefilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [sp_addmergefilter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
+ [sp_changemergefilter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

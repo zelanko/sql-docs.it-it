@@ -1,4 +1,5 @@
 ---
+description: sp_dropdynamicsnapshot_job (Transact-SQL)
 title: sp_dropdynamicsnapshot_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 224de422a7f43b7e2c3ff1dc090eeb3b55c752b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 85a81b9dac7fd543a1840263da91ec644652cadf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85860162"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464389"
 ---
 # <a name="sp_dropdynamicsnapshot_job-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +41,11 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione da cui viene rimosso il processo di snapshot dei dati filtrati. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione da cui viene rimosso il processo di snapshot dei dati filtrati. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`Nome del processo di snapshot dei dati filtrati da rimuovere. *dynamic_snapshot_jobname*è di tipo sysname. se non viene specificato, il nome del processo è associato a *dynamic_snapshot_jobid*.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Nome del processo di snapshot dei dati filtrati da rimuovere. *dynamic_snapshot_jobname*è di tipo sysname. se non viene specificato, il nome del processo è associato a *dynamic_snapshot_jobid*.  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`Identificatore del processo di snapshot dei dati filtrati da rimuovere. *dynamic_snapshot_jobid*è di tipo **uniqueidentifier**e il valore predefinito è null.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` Identificatore del processo di snapshot dei dati filtrati da rimuovere. *dynamic_snapshot_jobid*è di tipo **uniqueidentifier**e il valore predefinito è null.  
   
 > [!IMPORTANT]  
 >  È possibile specificare solo *dynamic_snapshot_jobid*o *dynamic_snapshot_jobname* . Se non vengono specificati valori per *dynamic_snapshot_jobid*o *dynamic_snapshot_jobname*, vengono rimossi tutti i processi di snapshot dinamici per la pubblicazione.  
@@ -61,6 +62,6 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_dropdynamicsnapshot**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_adddynamicsnapshot_job &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)  
+ [sp_adddynamicsnapshot_job &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)  
   
   

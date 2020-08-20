@@ -1,4 +1,5 @@
 ---
+description: sp_OAGetErrorInfo (Transact-SQL)
 title: sp_OAGetErrorInfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d190bf442b7c6e629058f6679291ff75ca64e5ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7336be191ea34fcf36b8221b2a1698ae179fa980
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464103"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,7 +72,7 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |------------------|---------------|-----------------|  
-|**Errore**|**binario (4)**|Rappresentazione binaria del numero di errore.|  
+|**Error (Errore) (Error (Errore)e)**|**binario (4)**|Rappresentazione binaria del numero di errore.|  
 |**Origine**|**nvarchar (nn)**|Origine dell'errore.|  
 |**Descrizione**|**nvarchar (nn)**|Descrizione dell'errore.|  
 |**HelpFile**|**nvarchar (nn)**|File della Guida relativo all'origine.|  
@@ -95,7 +96,7 @@ sp_OAGetErrorInfo [ objecttoken ]
  Per ulteriori informazioni sull'elaborazione dei codici restituiti HRESULT, vedere [codici restituiti e informazioni sugli errori di automazione OLE](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o l'autorizzazione Execute direttamente in questa stored procedure. `Ole Automation Procedures`la configurazione deve essere **abilitata** per l'utilizzo di qualsiasi procedura di sistema correlata all'automazione OLE.  
+ È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o l'autorizzazione Execute direttamente in questa stored procedure. `Ole Automation Procedures` la configurazione deve essere **abilitata** per l'utilizzo di qualsiasi procedura di sistema correlata all'automazione OLE.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono visualizzate le informazioni sull'errore di automazione OLE.  
@@ -122,7 +123,7 @@ END;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di automazione OLE &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [Stored procedure di automazione OLE &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Script di automazione OLE di esempio](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Metodo SetValue (classe ClientSettingsGeneralFlag)
 title: Metodo SetValue (ClientSettingsGeneralFlag)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0c07685bc6848fee979a743865fac0e138ed648d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a15a20916319bc79d1c198f1eb6bed80f27f28d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463609"
 ---
 # <a name="setvalue-method-clientsettingsgeneralflag-class"></a>Metodo SetValue (classe ClientSettingsGeneralFlag)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ object.SetValue(Value)
   
 #### <a name="parameters"></a>Parametri  
   
-|Parametro|Description|  
+|Parametro|Descrizione|  
 |---------------|-----------------|  
 |*Valore*|Valore booleano che specifica il valore del flag.|  
   
@@ -51,6 +52,6 @@ object.SetValue(Value)
 ## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
- [configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

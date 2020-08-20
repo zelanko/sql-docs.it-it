@@ -1,4 +1,5 @@
 ---
+description: Classe ClientSettings
 title: Classe ClientSettings
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cc58e1f2-2863-4034-ba21-aa9497320b07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e929a3982103db95839a9a69e8c7e54d311e9da3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4aa39070b137caaf10bbd26843736c9c68120d4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888848"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463660"
 ---
 # <a name="clientsettings-class"></a>Classe ClientSettings
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,6 +31,6 @@ ms.locfileid: "85888848"
  Questa classe consente la gestione a livello di programmazione del client.  
   
 ## <a name="see-also"></a>Vedere anche  
- [configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

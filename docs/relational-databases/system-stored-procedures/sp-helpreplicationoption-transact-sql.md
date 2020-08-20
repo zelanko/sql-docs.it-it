@@ -1,4 +1,5 @@
 ---
+description: sp_helpreplicationoption (Transact-SQL)
 title: sp_helpreplicationoption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e04daaa5be757df60f07a8bd9205e1fd44f95502
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 80d34e406b7672e31dd9cb70f42431bcd7392917
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775747"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464218"
 ---
 # <a name="sp_helpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,9 +38,9 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @optname = ] 'option_name'`Nome dell'opzione di replica per cui eseguire una query. *option_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @optname = ] 'option_name'` Nome dell'opzione di replica per cui eseguire una query. *option_name* è di **tipo sysname**e il valore predefinito è null.  
   
-|Valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**transazionale**|Viene restituito un set di risultati quando è attivata la replica transazionale.|  
 |**merge**|Viene restituito un set di risultati quando è attivata la replica di tipo merge.|  

@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobhistory (Transact-SQL)
 title: sp_help_jobhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a04d651467b8ccff057d3dcec0cb824edae73b12
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bf0766388b50fabfe3a0571b5cf4e86ab7e15520
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464283"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,44 +54,44 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id`Numero di identificazione del processo. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
+`[ @job_id = ] job_id` Numero di identificazione del processo. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
   
-`[ @job_name = ] 'job_name'`Nome del processo. *job_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @job_name = ] 'job_name'` Nome del processo. *job_name* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @step_id = ] step_id`Numero di identificazione del passaggio. *step_id* è di **tipo int**e il valore predefinito è null.  
+`[ @step_id = ] step_id` Numero di identificazione del passaggio. *step_id* è di **tipo int**e il valore predefinito è null.  
   
-`[ @sql_message_id = ] sql_message_id`Numero di identificazione del messaggio di errore restituito da Microsoft SQL Server durante l'esecuzione del processo. *sql_message_id* è di **tipo int**e il valore predefinito è null.  
+`[ @sql_message_id = ] sql_message_id` Numero di identificazione del messaggio di errore restituito da Microsoft SQL Server durante l'esecuzione del processo. *sql_message_id* è di **tipo int**e il valore predefinito è null.  
   
-`[ @sql_severity = ] sql_severity`Livello di gravità del messaggio di errore restituito da SQL Server durante l'esecuzione del processo. *sql_severity* è di **tipo int**e il valore predefinito è null.  
+`[ @sql_severity = ] sql_severity` Livello di gravità del messaggio di errore restituito da SQL Server durante l'esecuzione del processo. *sql_severity* è di **tipo int**e il valore predefinito è null.  
   
-`[ @start_run_date = ] start_run_date`Data di avvio del processo. *start_run_date*è di **tipo int**e il valore predefinito è null. *start_run_date* deve essere immesso nel formato AAAAMMGG, dove AAAA è un anno di quattro caratteri, mm è il nome di un mese con due caratteri e GG è il nome di un giorno a due cifre.  
+`[ @start_run_date = ] start_run_date` Data di avvio del processo. *start_run_date*è di **tipo int**e il valore predefinito è null. *start_run_date* deve essere immesso nel formato AAAAMMGG, dove AAAA è un anno di quattro caratteri, mm è il nome di un mese con due caratteri e GG è il nome di un giorno a due cifre.  
   
-`[ @end_run_date = ] end_run_date`Data di completamento del processo. *end_run_date* è di **tipo int**e il valore predefinito è null. *end_run_date*deve essere immesso nel formato AAAAMMGG, dove AAAA è un anno a quattro cifre, mm è il nome di un mese con due caratteri e GG è il giorno di due caratteri.  
+`[ @end_run_date = ] end_run_date` Data di completamento del processo. *end_run_date* è di **tipo int**e il valore predefinito è null. *end_run_date*deve essere immesso nel formato AAAAMMGG, dove AAAA è un anno a quattro cifre, mm è il nome di un mese con due caratteri e GG è il giorno di due caratteri.  
   
-`[ @start_run_time = ] start_run_time`Ora di avvio del processo. *start_run_time* è di **tipo int**e il valore predefinito è null. *start_run_time*deve essere immesso nel formato HHMMSS, dove HH è un'ora del giorno con due caratteri, mm è un minuto di due caratteri e SS è il secondo del giorno.  
+`[ @start_run_time = ] start_run_time` Ora di avvio del processo. *start_run_time* è di **tipo int**e il valore predefinito è null. *start_run_time*deve essere immesso nel formato HHMMSS, dove HH è un'ora del giorno con due caratteri, mm è un minuto di due caratteri e SS è il secondo del giorno.  
   
-`[ @end_run_time = ] end_run_time`Ora di completamento dell'esecuzione del processo. *end_run_time* è di **tipo int**e il valore predefinito è null. *end_run_time*deve essere immesso nel formato HHMMSS, dove HH è un'ora del giorno con due caratteri, mm è un minuto di due caratteri e SS è il secondo del giorno.  
+`[ @end_run_time = ] end_run_time` Ora di completamento dell'esecuzione del processo. *end_run_time* è di **tipo int**e il valore predefinito è null. *end_run_time*deve essere immesso nel formato HHMMSS, dove HH è un'ora del giorno con due caratteri, mm è un minuto di due caratteri e SS è il secondo del giorno.  
   
-`[ @minimum_run_duration = ] minimum_run_duration`Periodo di tempo minimo per il completamento del processo. *minimum_run_duration* è di **tipo int**e il valore predefinito è null. *minimum_run_duration*deve essere immesso nel formato HHMMSS, dove HH è un'ora del giorno con due caratteri, mm è un minuto di due caratteri e SS è il secondo del giorno.  
+`[ @minimum_run_duration = ] minimum_run_duration` Periodo di tempo minimo per il completamento del processo. *minimum_run_duration* è di **tipo int**e il valore predefinito è null. *minimum_run_duration*deve essere immesso nel formato HHMMSS, dove HH è un'ora del giorno con due caratteri, mm è un minuto di due caratteri e SS è il secondo del giorno.  
   
-`[ @run_status = ] run_status`Stato di esecuzione del processo. *run_status* è di **tipo int**e il valore predefinito è null. i possibili valori sono i seguenti.  
+`[ @run_status = ] run_status` Stato di esecuzione del processo. *run_status* è di **tipo int**e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
-|**0**|Operazione non riuscita|  
-|**1**|Operazione riuscita|  
+|**0**|Non riuscito|  
+|**1**|Completato|  
 |**2**|Nuovo tentativo (solo passaggio)|  
 |**3**|Cancellati|  
 |**4**|Messaggio di esecuzione in corso|  
-|**5**|Sconosciuto|  
+|**5**|Unknown|  
   
-`[ @minimum_retries = ] minimum_retries`Il numero minimo di volte in cui un processo deve ritentare l'esecuzione. *minimum_retries* è di **tipo int**e il valore predefinito è null.  
+`[ @minimum_retries = ] minimum_retries` Il numero minimo di volte in cui un processo deve ritentare l'esecuzione. *minimum_retries* è di **tipo int**e il valore predefinito è null.  
   
-`[ @oldest_first = ] oldest_first`Indica se presentare prima l'output con i processi meno recenti. *oldest_first* è di **tipo int**e il valore predefinito è **0**, che presenta prima i processi più recenti. **1** presenta prima i processi meno recenti.  
+`[ @oldest_first = ] oldest_first` Indica se presentare prima l'output con i processi meno recenti. *oldest_first* è di **tipo int**e il valore predefinito è **0**, che presenta prima i processi più recenti. **1** presenta prima i processi meno recenti.  
   
-`[ @server = ] 'server'`Nome del server in cui è stato eseguito il processo. il *Server* è di **tipo nvarchar (30)** e il valore predefinito è null.  
+`[ @server = ] 'server'` Nome del server in cui è stato eseguito il processo. il *Server* è di **tipo nvarchar (30)** e il valore predefinito è null.  
   
-`[ @mode = ] 'mode'`Indica se SQL Server stampa tutte le colonne del set di risultati (**full**) o un riepilogo delle colonne. la *modalità* è **varchar (7)** e il valore predefinito è **Summary**.  
+`[ @mode = ] 'mode'` Indica se SQL Server stampa tutte le colonne del set di risultati (**full**) o un riepilogo delle colonne. la *modalità* è **varchar (7)** e il valore predefinito è **Summary**.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -164,7 +165,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_purge_jobhistory &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
+ [sp_purge_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

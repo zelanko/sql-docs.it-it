@@ -1,4 +1,5 @@
 ---
+description: Impostazioni globali (finestre di dialogo) (MySQLToSQL)
 title: Impostazioni globali (finestre di dialogo) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6df20fbb-e92d-475f-a94d-aaf70b06eb9b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 60629e8fda61af000f633f8f7ede714e48517f7c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e902927b90ff868e8766b3eb1fe9839938dd8ece
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463416"
 ---
 # <a name="global-settings-dialogs-mysqltosql"></a>Impostazioni globali (finestre di dialogo) (MySQLToSQL)
 Utilizzare la pagina finestre di dialogo della finestra di dialogo **Impostazioni globali** per specificare le impostazioni predefinite per l'azione e l'avviso dell'utente per SSMA.  

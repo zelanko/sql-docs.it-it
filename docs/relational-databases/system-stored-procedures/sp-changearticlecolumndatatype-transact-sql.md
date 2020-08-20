@@ -1,4 +1,5 @@
 ---
+description: sp_changearticlecolumndatatype (Transact-SQL)
 title: sp_changearticlecolumndatatype (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98680c9e00fcb5a693ac257eaf6dd1265c3c3d62
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe96b4e0135bc7d1ca7cc3c2987f8f02da0a4475
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464505"
 ---
 # <a name="sp_changearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,19 +48,19 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione Oracle. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione Oracle. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'`Nome dell'articolo. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @article = ] 'article'` Nome dell'articolo. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @column = ] 'column'`Nome della colonna per cui modificare il mapping dei tipi di dati. *Column* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @column = ] 'column'` Nome della colonna per cui modificare il mapping dei tipi di dati. *Column* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @type = ] 'type'`Nome del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati nella colonna di destinazione. *Type* è di tipo **sysname**e il valore predefinito è null.  
+`[ @type = ] 'type'` Nome del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati nella colonna di destinazione. *Type* è di tipo **sysname**e il valore predefinito è null.  
   
-`[ @length = ] length`Lunghezza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati nella colonna di destinazione. *length* è di tipo **bigint**e il valore predefinito è null.  
+`[ @length = ] length` Lunghezza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati nella colonna di destinazione. *length* è di tipo **bigint**e il valore predefinito è null.  
   
-`[ @precision = ] precision`Precisione del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati nella colonna di destinazione. *Precision* è di tipo **bigint**e il valore predefinito è null.  
+`[ @precision = ] precision` Precisione del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati nella colonna di destinazione. *Precision* è di tipo **bigint**e il valore predefinito è null.  
   
-`[ @publisher = ] 'publisher'`Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -76,7 +77,7 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>Vedere anche  
  [Modificare le proprietà di pubblicazioni e articoli](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [Mapping dei tipi di dati per i Publisher Oracle](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
+ [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

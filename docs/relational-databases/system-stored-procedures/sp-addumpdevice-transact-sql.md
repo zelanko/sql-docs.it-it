@@ -1,4 +1,5 @@
 ---
+description: sp_addumpdevice (Transact-SQL)
 title: sp_addumpdevice (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 840214a807ff37eedcc024125fc4902587afa05c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 91343fe93ad66b4e89e1e0190f5a46be23142f6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85875905"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464677"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
-**Si applica a**: (da alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
 
 Viene aggiunto un dispositivo di backup a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -47,16 +48,16 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @devtype = ] 'device_type'`Tipo di dispositivo di backup. *device_type* è di tipo **varchar (20)** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
+`[ @devtype = ] 'device_type'` Tipo di dispositivo di backup. *device_type* è di tipo **varchar (20)** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**disco**|File del disco rigido impostato come dispositivo di backup.|  
 |**nastro**|Qualsiasi dispositivo nastro supportato da [!INCLUDE[msCoName](../../includes/msconame-md.md)].<br /><br /> Nota: Il supporto per i dispositivi di backup su nastro verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
   
-`[ @logicalname = ] 'logical_name'`Nome logico del dispositivo di backup utilizzato nelle istruzioni BACKUP e RESTOre. *logical_name* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
+`[ @logicalname = ] 'logical_name'` Nome logico del dispositivo di backup utilizzato nelle istruzioni BACKUP e RESTOre. *logical_name* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
   
-`[ @physicalname = ] 'physical_name'`È il nome fisico del dispositivo di backup. I nomi fisici devono essere conformi alle regole per i nomi di file del sistema operativo o alle convenzioni di denominazione universali per i dispositivi di rete e devono includere un percorso completo. *physical_name* è di **tipo nvarchar (260)** e non prevede alcun valore predefinito e non può essere null.  
+`[ @physicalname = ] 'physical_name'` È il nome fisico del dispositivo di backup. I nomi fisici devono essere conformi alle regole per i nomi di file del sistema operativo o alle convenzioni di denominazione universali per i dispositivi di rete e devono includere un percorso completo. *physical_name* è di **tipo nvarchar (260)** e non prevede alcun valore predefinito e non può essere null.  
   
  Quando si crea un dispositivo di backup in un percorso di rete remoto, assicurarsi che all'account specificato per l'avvio di [!INCLUDE[ssDE](../../includes/ssde-md.md)] siano associate le autorizzazioni di scrittura necessarie nel computer remoto.  
   
@@ -65,9 +66,9 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 > [!NOTE]  
 >  Questa procedura consente di immettere nel catalogo il nome fisico specificato ma non di accedere o creare il dispositivo.  
   
-`[ @cntrltype = ] 'controller_type'`Obsoleto. Se specificato, questo parametro viene ignorato. È supportato solo per motivi di compatibilità con le versioni precedenti. I nuovi utilizzi di **sp_addumpdevice** devono omettere questo parametro.  
+`[ @cntrltype = ] 'controller_type'` Obsoleto. Se specificato, questo parametro viene ignorato. È supportato solo per motivi di compatibilità con le versioni precedenti. I nuovi utilizzi di **sp_addumpdevice** devono omettere questo parametro.  
   
-`[ @devstatus = ] 'device_status'`Obsoleto. Se specificato, questo parametro viene ignorato. È supportato solo per motivi di compatibilità con le versioni precedenti. I nuovi utilizzi di **sp_addumpdevice** devono omettere questo parametro.  
+`[ @devstatus = ] 'device_status'` Obsoleto. Se specificato, questo parametro viene ignorato. È supportato solo per motivi di compatibilità con le versioni precedenti. I nuovi utilizzi di **sp_addumpdevice** devono omettere questo parametro.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

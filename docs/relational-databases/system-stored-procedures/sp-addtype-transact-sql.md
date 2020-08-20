@@ -1,4 +1,5 @@
 ---
+description: sp_addtype (Transact-SQL)
 title: sp_addtype (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1b4d469d8afd6946b35cce503efd6db6cdfcb3a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e924e286c036f7d26e93d88c18105696835d2f5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876225"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464641"
 ---
 # <a name="sp_addtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85876225"
   Crea un tipo di dati alias.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]In alternativa, usare [Create type](../../t-sql/statements/create-type-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, usare [Create type](../../t-sql/statements/create-type-transact-sql.md) .  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +45,7 @@ sp_addtype [ @typename = ] type,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @typename = ] type`Nome del tipo di dati alias. I nomi dei tipi di dati alias devono rispettare le regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md) e devono essere univoci in ogni database. *Type* è di tipo **sysname**e non prevede alcun valore predefinito.  
+`[ @typename = ] type` Nome del tipo di dati alias. I nomi dei tipi di dati alias devono rispettare le regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md) e devono essere univoci in ogni database. *Type* è di tipo **sysname**e non prevede alcun valore predefinito.  
   
 `[ @phystype = ] system_data_type`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Tipo di dati fisico o fornito su cui si basa il tipo di dati alias.* system_data_type* è di **tipo sysname**e non prevede alcun valore predefinito. i possibili valori sono i seguenti:  
   
@@ -70,7 +71,7 @@ sp_addtype [ @typename = ] type,
  *s*  
  Valore intero non negativo che indica il numero massimo di cifre decimali che è possibile archiviare a destra del separatore decimale. Deve essere minore o uguale al valore della precisione. Per altre informazioni, vedere [decimal e numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
-`[ @nulltype = ] 'null_type'`Indica il modo in cui il tipo di dati alias gestisce i valori null. *null_type* è di tipo **varchar (** 8 **)** e il valore predefinito è null. deve essere racchiuso tra virgolette singole (' null ',' not null ' o ' nonull '). Se *null_type* non è definito in modo esplicito da **sp_addtype**, viene impostato sul supporto di valori null predefinito corrente. Utilizzare la funzione di sistema GETANSINULL per determinare l'impostazione predefinita corrente per il supporto dei valori Null. Questa impostazione può essere modificata tramite l'istruzione SET o ALTER DATABASE. L'impostazione relativa al supporto dei valori Null deve essere definita in modo esplicito. Se ** \@ phystype** è **bit**e ** \@ nulltype** non è specificato, il valore predefinito è not null.  
+`[ @nulltype = ] 'null_type'` Indica il modo in cui il tipo di dati alias gestisce i valori null. *null_type* è di tipo **varchar (** 8 **)** e il valore predefinito è null. deve essere racchiuso tra virgolette singole (' null ',' not null ' o ' nonull '). Se *null_type* non è definito in modo esplicito da **sp_addtype**, viene impostato sul supporto di valori null predefinito corrente. Utilizzare la funzione di sistema GETANSINULL per determinare l'impostazione predefinita corrente per il supporto dei valori Null. Questa impostazione può essere modificata tramite l'istruzione SET o ALTER DATABASE. L'impostazione relativa al supporto dei valori Null deve essere definita in modo esplicito. Se ** \@ phystype** è **bit**e ** \@ nulltype** non è specificato, il valore predefinito è not null.  
   
 > [!NOTE]  
 >  Il parametro *null_type* definisce solo l'impostazione predefinita relativa al supporto di valori null per questo tipo di dati. Se l'impostazione per il supporto dei valori Null viene definita in modo esplicito quando si utilizza il tipo di dati alias durante la creazione di tabelle, questo valore sarà prioritario rispetto all'impostazione predefinita. Per ulteriori informazioni, vedere [ALTER TABLE &#40;Transact-sql&#41;](../../t-sql/statements/alter-table-transact-sql.md) e [Create Table &#40;transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
@@ -132,16 +133,16 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Crea tipo &#40;&#41;Transact-SQL](../../t-sql/statements/create-type-transact-sql.md)   
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
- [sp_bindefault &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
- [sp_bindrule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
- [sp_droptype &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
+ [sp_bindefault &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
+ [sp_bindrule &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
+ [sp_droptype &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sp_unbindefault &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
- [sp_unbindrule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
+ [sp_unbindefault &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
+ [sp_unbindrule &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

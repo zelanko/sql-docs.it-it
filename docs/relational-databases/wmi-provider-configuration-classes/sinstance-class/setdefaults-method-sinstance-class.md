@@ -1,4 +1,5 @@
 ---
+description: Metodo SetDefaults (classe SInstance)
 title: Metodo sedefaults (SInstance)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dc3c6a85-0711-4688-bf4f-91168c57af28
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 346c714dea89d171431527dfa42e8503aa30e5f4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c454a5b2819a07ecb9152b0b9fbece48434c2fd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888516"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463625"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>Metodo SetDefaults (classe SInstance)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ object.SetDefaults(OverwriteAll)
   
 #### <a name="parameters"></a>Parametri  
   
-|Parametro|Description|  
+|Parametro|Descrizione|  
 |---------------|-----------------|  
 |*OverwriteAll*|Valore booleano che specifica se sovrascrivere il valore esistente nell'istanza del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client: **true** se i dati esistenti vengono sovrascritti oppure **false** se i dati esistenti non vengono sovrascritti.|  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_keymappings (Transact-SQL)
 title: sp_fulltext_keymappings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 000c71e284f77b5024cd45727803af55fa8d8b06
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 59445fdd9d4d7588291b2fac0073b962155cde04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977739"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464361"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -55,7 +56,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 >  Per informazioni sull'utilizzo di uno, due o tre parametri, vedere la sezione "Osservazioni" più avanti in questo argomento.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- No.  
+ Nessuno.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -64,7 +65,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 |DocId|**bigint**|Colonna dell'identificatore interno del documento (DocID) corrispondente al valore della chiave.|  
 |Chiave|*|Valore di chiave full-text dalla tabella specificata.<br /><br /> Se nella tabella di mapping non esiste alcuna chiave full-text, viene restituito un set di righe vuoto.|  
   
- <sup>*</sup>Il tipo di dati della chiave è uguale al tipo di dati della colonna chiave full-text nella tabella di base.  
+ <sup>*</sup> Il tipo di dati della chiave è uguale al tipo di dati della colonna chiave full-text nella tabella di base.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Questa funzione è pubblica e non richiede autorizzazioni speciali.  

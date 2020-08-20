@@ -1,4 +1,5 @@
 ---
+description: sp_add_log_shipping_secondary_primary (Transact-SQL)
 title: sp_add_log_shipping_secondary_primary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1768b25ccb4f0e4ad2e75f3d667123d082dd4237
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e1123bfa1ce465989322c3b76a48da96c1fed7f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464633"
 ---
 # <a name="sp_add_log_shipping_secondary_primary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,23 +54,23 @@ sp_add_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @primary_server = ] 'primary_server'`Nome dell'istanza primaria di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nella configurazione log shipping. *primary_server* è di **tipo sysname** e non può essere null.  
+`[ @primary_server = ] 'primary_server'` Nome dell'istanza primaria di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nella configurazione log shipping. *primary_server* è di **tipo sysname** e non può essere null.  
   
-`[ @primary_database = ] 'primary_database'`Nome del database nel server primario. *primary_database* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @primary_database = ] 'primary_database'` Nome del database nel server primario. *primary_database* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @backup_source_directory = ] 'backup_source_directory'`Directory in cui vengono archiviati i file di backup del log delle transazioni dal server primario. *backup_source_directory* è di **tipo nvarchar (500)** e non può essere null.  
+`[ @backup_source_directory = ] 'backup_source_directory'` Directory in cui vengono archiviati i file di backup del log delle transazioni dal server primario. *backup_source_directory* è di **tipo nvarchar (500)** e non può essere null.  
   
-`[ @backup_destination_directory = ] 'backup_destination_directory'`Directory nel server secondario in cui vengono copiati i file di backup. *backup_destination_directory* è di **tipo nvarchar (500)** e non può essere null.  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` Directory nel server secondario in cui vengono copiati i file di backup. *backup_destination_directory* è di **tipo nvarchar (500)** e non può essere null.  
   
-`[ @copy_job_name = ] 'copy_job_name'`Nome da utilizzare per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo di Agent creato per copiare i backup del log delle transazioni nel server secondario. *copy_job_name* è di **tipo sysname** e non può essere null.  
+`[ @copy_job_name = ] 'copy_job_name'` Nome da utilizzare per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo di Agent creato per copiare i backup del log delle transazioni nel server secondario. *copy_job_name* è di **tipo sysname** e non può essere null.  
   
-`[ @restore_job_name = ] 'restore_job_name'`Nome del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo di Agent nel server secondario in cui vengono ripristinati i backup del database secondario. *restore_job_name* è di **tipo sysname** e non può essere null.  
+`[ @restore_job_name = ] 'restore_job_name'` Nome del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo di Agent nel server secondario in cui vengono ripristinati i backup del database secondario. *restore_job_name* è di **tipo sysname** e non può essere null.  
   
-`[ @file_retention_period = ] 'file_retention_period'`Periodo di tempo, in minuti, durante il quale un file di backup viene mantenuto nel server secondario nel percorso specificato dal @backup_destination_directory parametro prima di essere eliminato. *history_retention_period* è di **tipo int**e il valore predefinito è null. Se non si specifica un valore, verrà utilizzato il valore 14420.  
+`[ @file_retention_period = ] 'file_retention_period'` Periodo di tempo, in minuti, durante il quale un file di backup viene mantenuto nel server secondario nel percorso specificato dal @backup_destination_directory parametro prima di essere eliminato. *history_retention_period* è di **tipo int**e il valore predefinito è null. Se non si specifica un valore, verrà utilizzato il valore 14420.  
   
-`[ @monitor_server = ] 'monitor_server'`Nome del server di monitoraggio. *Monitor_server* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
+`[ @monitor_server = ] 'monitor_server'` Nome del server di monitoraggio. *Monitor_server* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
   
-`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'`Modalità di sicurezza utilizzata per la connessione al server di monitoraggio.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Modalità di sicurezza utilizzata per la connessione al server di monitoraggio.  
   
  1 = Autenticazione di Windows.  
   
@@ -77,15 +78,15 @@ sp_add_log_shipping_secondary_primary
   
  *monitor_server_security_mode* è di **bit** e non può essere null.  
   
-`[ @monitor_server_login = ] 'monitor_server_login'`Nome utente dell'account utilizzato per accedere al server di monitoraggio.  
+`[ @monitor_server_login = ] 'monitor_server_login'` Nome utente dell'account utilizzato per accedere al server di monitoraggio.  
   
-`[ @monitor_server_password = ] 'monitor_server_password'`Password dell'account utilizzato per accedere al server di monitoraggio.  
+`[ @monitor_server_password = ] 'monitor_server_password'` Password dell'account utilizzato per accedere al server di monitoraggio.  
   
-`[ @copy_job_id = ] 'copy_job_id' OUTPUT`ID associato al processo di copia nel server secondario. *copy_job_id* è di tipo **uniqueidentifier** e non può essere null.  
+`[ @copy_job_id = ] 'copy_job_id' OUTPUT` ID associato al processo di copia nel server secondario. *copy_job_id* è di tipo **uniqueidentifier** e non può essere null.  
   
-`[ @restore_job_id = ] 'restore_job_id' OUTPUT`ID associato al processo di ripristino nel server secondario. *restore_job_id* è di tipo **uniqueidentifier** e non può essere null.  
+`[ @restore_job_id = ] 'restore_job_id' OUTPUT` ID associato al processo di ripristino nel server secondario. *restore_job_id* è di tipo **uniqueidentifier** e non può essere null.  
   
-`[ @secondary_id = ] 'secondary_id' OUTPUT`ID del server secondario nella configurazione del log shipping. *secondary_id* è di tipo **uniqueidentifier** e non può essere null.  
+`[ @secondary_id = ] 'secondary_id' OUTPUT` ID del server secondario nella configurazione del log shipping. *secondary_id* è di tipo **uniqueidentifier** e non può essere null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

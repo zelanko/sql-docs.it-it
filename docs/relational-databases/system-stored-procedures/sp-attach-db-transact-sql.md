@@ -1,4 +1,5 @@
 ---
+description: sp_attach_db (Transact-SQL)
 title: sp_attach_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 896a4791d1b04de37f57496fd8ff71961a54f7ab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 62f7ed238899f6fe99c10f2c3c558e5e16af2e49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874618"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464525"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85874618"
   Collega un database a un server.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]È invece consigliabile utilizzare CREATE DATABASE *database_name* per l'associazione. Per alte informazioni, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] È invece consigliabile utilizzare CREATE DATABASE *database_name* per l'associazione. Per alte informazioni, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 > [!NOTE]  
 >  Per ricompilare più file di log quando uno o più hanno un nuovo percorso, usare CREATE DATABASE *database_name* per ATTACH_REBUILD_LOG.  
@@ -47,9 +48,9 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @dbname = ] 'dbnam_ '`Nome del database da collegare al server. Il nome deve essere univoco. *dbname* è di **tipo sysname**e il valore predefinito è null.  
+`[ @dbname = ] 'dbnam_ '` Nome del database da collegare al server. Il nome deve essere univoco. *dbname* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @filename1 = ] 'filename_n'`Nome fisico, incluso il percorso, di un file di database. *filename_n* è di **tipo nvarchar (260)** e il valore predefinito è null. È possibile specificare un massimo di 16 nomi di file. I nomi dei parametri iniziano da ** \@ filename1** e incrementano a ** \@ filename16**. L'elenco dei nomi di file deve includere almeno il file primario, il quale contiene le tabelle di sistema che fanno riferimento ad altri file del database. Tale elenco deve includere inoltre tutti i file spostati dopo lo scollegamento del database.  
+`[ @filename1 = ] 'filename_n'` Nome fisico, incluso il percorso, di un file di database. *filename_n* è di **tipo nvarchar (260)** e il valore predefinito è null. È possibile specificare un massimo di 16 nomi di file. I nomi dei parametri iniziano da ** \@ filename1** e incrementano a ** \@ filename16**. L'elenco dei nomi di file deve includere almeno il file primario, il quale contiene le tabelle di sistema che fanno riferimento ad altri file del database. Tale elenco deve includere inoltre tutti i file spostati dopo lo scollegamento del database.  
   
 > [!NOTE]  
 >  Questo argomento esegue il mapping al parametro FILENAME dell'istruzione CREATE DATABASE. Per alte informazioni, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
@@ -98,9 +99,9 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
   
 ## <a name="see-also"></a>Vedere anche  
  [Collegamento e scollegamento di un database &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_detach_db &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [sp_helpfile &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [sp_removedbreplication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
+ [sp_detach_db &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [sp_helpfile &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [sp_removedbreplication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

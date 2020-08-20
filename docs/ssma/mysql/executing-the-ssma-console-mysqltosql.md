@@ -1,4 +1,5 @@
 ---
+description: Esecuzione della console SSMA (MySQLToSQL)
 title: Esecuzione della console SSMA (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8cf2ded8823c03c5f002087277604ac65985aabc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 59a0075dfcee23c5e005853b0befd4b3eb0f39c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935597"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463452"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Esecuzione della console SSMA (MySQLToSQL)
 Microsoft offre un solido set di comandi di file script per eseguire e controllare le attività SSMA.  
@@ -39,9 +40,9 @@ I comandi di progetto gestiscono la creazione di progetti, l'apertura, il salvat
   
 **Script**  
   
-1.  `project-folder`indica la cartella del progetto da creare.  
+1.  `project-folder` indica la cartella del progetto da creare.  
   
-2.  `project-name`indica il nome del progetto. {string}  
+2.  `project-name` indica il nome del progetto. {string}  
   
 3.  `overwrite-if-exists`L'attributo facoltativo indica se è necessario sovrascrivere un progetto esistente. Boolean  
   
@@ -73,9 +74,9 @@ Apri progetto:
   
 **Script**  
   
-1.  `project-folder`indica la cartella del progetto da creare. Il comando ha esito negativo se la cartella specificata non esiste.  {string}  
+1.  `project-folder` indica la cartella del progetto da creare. Il comando ha esito negativo se la cartella specificata non esiste.  {string}  
   
-2.  `project-name`indica il nome del progetto. Il comando ha esito negativo se il progetto specificato non esiste.  {string}  
+2.  `project-name` indica il nome del progetto. Il comando ha esito negativo se il progetto specificato non esiste.  {string}  
   
 **Esempio di sintassi:**  
   
@@ -244,25 +245,25 @@ generate-assessment-report
   
 **Script**  
   
-1.  `assessment-report-folder:`Specifica la cartella in cui è archiviato il report di valutazione. (attributo facoltativo)  
+1.  `assessment-report-folder:` Specifica la cartella in cui è archiviato il report di valutazione. (attributo facoltativo)  
   
-2.  `object-name:`Specifica gli oggetti considerati per la generazione di report di valutazione. può includere nomi di oggetti singoli o un nome di oggetto gruppo.  
+2.  `object-name:` Specifica gli oggetti considerati per la generazione di report di valutazione. può includere nomi di oggetti singoli o un nome di oggetto gruppo.  
   
-3.  `object-type:`Specifica il tipo dell'oggetto specificato nell'attributo nome-oggetto (se viene specificata la categoria dell'oggetto, il tipo di oggetto sarà "Category").  
+3.  `object-type:` Specifica il tipo dell'oggetto specificato nell'attributo nome-oggetto (se viene specificata la categoria dell'oggetto, il tipo di oggetto sarà "Category").  
   
-4.  `assessment-report-overwrite:`Specifica se sovrascrivere la cartella dei report di valutazione, se esiste già.  
+4.  `assessment-report-overwrite:` Specifica se sovrascrivere la cartella dei report di valutazione, se esiste già.  
   
     **Valore predefinito:** false. (attributo facoltativo)  
   
-5.  `write-summary-report-to:`Specifica il percorso in cui verrà generato il report di riepilogo.  
+5.  `write-summary-report-to:` Specifica il percorso in cui verrà generato il report di riepilogo.  
   
     Se viene indicato solo il percorso della cartella, il file in base al nome **AssessmentReport &lt; n &gt; . XML** creato. (attributo facoltativo)  
   
     Per la creazione di report sono presenti due sottocategorie:  
   
-    -   `report-errors`(= "true/false", con il valore predefinito "false" (attributi facoltativi))  
+    -   `report-errors` (= "true/false", con il valore predefinito "false" (attributi facoltativi))  
   
-    -   `verbose`(= "true/false", con il valore predefinito "false" (attributi facoltativi))  
+    -   `verbose` (= "true/false", con il valore predefinito "false" (attributi facoltativi))  
   
 **Esempio di sintassi:**  
   
@@ -318,25 +319,25 @@ Convert-schema
   
 **Script**  
   
-1.  `conversion-report-folder:`Specifica la cartella in cui è archiviato il report di valutazione. (attributo facoltativo)  
+1.  `conversion-report-folder:` Specifica la cartella in cui è archiviato il report di valutazione. (attributo facoltativo)  
   
-2.  `object-name:`Specifica gli oggetti considerati per la conversione dello schema. può contenere nomi di oggetti singoli o un nome di oggetto gruppo.  
+2.  `object-name:` Specifica gli oggetti considerati per la conversione dello schema. può contenere nomi di oggetti singoli o un nome di oggetto gruppo.  
   
-3.  `object-type:`Specifica il tipo dell'oggetto specificato nell'attributo nome-oggetto (se viene specificata la categoria dell'oggetto, il tipo di oggetto sarà "Category").  
+3.  `object-type:` Specifica il tipo dell'oggetto specificato nell'attributo nome-oggetto (se viene specificata la categoria dell'oggetto, il tipo di oggetto sarà "Category").  
   
-4.  `conversion-report-overwrite:`Specifica se sovrascrivere la cartella dei report di valutazione, se esiste già.  
+4.  `conversion-report-overwrite:` Specifica se sovrascrivere la cartella dei report di valutazione, se esiste già.  
   
     **Valore predefinito:** false. (attributo facoltativo)  
   
-5.  `write-summary-report-to:`Specifica il percorso in cui verrà generato il report di riepilogo.  
+5.  `write-summary-report-to:` Specifica il percorso in cui verrà generato il report di riepilogo.  
   
     Se viene indicato solo il percorso della cartella, il file in base al nome **SchemaConversionReport &lt; n &gt; . XML** creato. (attributo facoltativo)  
   
     La creazione di report di riepilogo presenta due sottocategorie aggiuntive:  
   
-    -   `report-errors`(= "true/false", con il valore predefinito "false" (attributi facoltativi))  
+    -   `report-errors` (= "true/false", con il valore predefinito "false" (attributi facoltativi))  
   
-    -   `verbose`(= "true/false", con il valore predefinito "false" (attributi facoltativi))  
+    -   `verbose` (= "true/false", con il valore predefinito "false" (attributi facoltativi))  
   
 **Esempio di sintassi:**  
   
@@ -382,19 +383,19 @@ migrate-dati
   
 **Script**  
   
-1.  `object-name:`Specifica gli oggetti di origine considerati per la migrazione dei dati. può avere nomi di oggetti singoli o un nome di oggetto gruppo.  
+1.  `object-name:` Specifica gli oggetti di origine considerati per la migrazione dei dati. può avere nomi di oggetti singoli o un nome di oggetto gruppo.  
   
-2.  `object-type:`Specifica il tipo dell'oggetto specificato nell'attributo nome-oggetto (se viene specificata la categoria dell'oggetto, il tipo di oggetto sarà "Category").  
+2.  `object-type:` Specifica il tipo dell'oggetto specificato nell'attributo nome-oggetto (se viene specificata la categoria dell'oggetto, il tipo di oggetto sarà "Category").  
   
-3.  `write-summary-report-to:`Specifica il percorso in cui verrà generato il report di riepilogo.  
+3.  `write-summary-report-to:` Specifica il percorso in cui verrà generato il report di riepilogo.  
   
     Se viene indicato solo il percorso della cartella, il file in base al nome **DataMigrationReport &lt; n &gt; . XML** creato. (attributo facoltativo)  
   
     Per la creazione di report sono presenti due sottocategorie:  
   
-    -   `report-errors`(= "true/false", con il valore predefinito "false" (attributi facoltativi))  
+    -   `report-errors` (= "true/false", con il valore predefinito "false" (attributi facoltativi))  
   
-    -   `verbose`(= "true/false", con il valore predefinito "false" (attributi facoltativi))  
+    -   `verbose` (= "true/false", con il valore predefinito "false" (attributi facoltativi))  
   
 **Esempio di sintassi:**  
   
@@ -444,9 +445,9 @@ Mapping dello schema del database di origine allo schema di destinazione.
   
 **Script**  
   
-1.  `source-schema`Specifica lo schema di origine di cui si intende eseguire la migrazione.  
+1.  `source-schema` Specifica lo schema di origine di cui si intende eseguire la migrazione.  
   
-2.  `sql-server-schema`Specifica lo schema di destinazione in cui si desidera eseguire la migrazione.  
+2.  `sql-server-schema` Specifica lo schema di destinazione in cui si desidera eseguire la migrazione.  
   
 **Esempio di sintassi:**  
   
@@ -476,11 +477,11 @@ sincronizzazione-destinazione
   
 **Script**  
   
-1.  `object-name:`Specifica gli oggetti considerati per la sincronizzazione con il database di destinazione (può avere singoli nomi di oggetto o un nome di oggetto gruppo).  
+1.  `object-name:` Specifica gli oggetti considerati per la sincronizzazione con il database di destinazione (può avere singoli nomi di oggetto o un nome di oggetto gruppo).  
   
-2.  `object-type:`Specifica il tipo dell'oggetto specificato nell'attributo nome-oggetto (se viene specificata la categoria dell'oggetto, il tipo di oggetto sarà "Category").  
+2.  `object-type:` Specifica il tipo dell'oggetto specificato nell'attributo nome-oggetto (se viene specificata la categoria dell'oggetto, il tipo di oggetto sarà "Category").  
   
-3.  `on-error:`Specifica se specificare gli errori di sincronizzazione come avvisi o errori. Opzioni disponibili per l'errore:  
+3.  `on-error:` Specifica se specificare gli errori di sincronizzazione come avvisi o errori. Opzioni disponibili per l'errore:  
   
     -   report-totale-come-avviso  
   
@@ -488,7 +489,7 @@ sincronizzazione-destinazione
   
     -   script di errore  
   
-4.  `report-errors-to:`Specifica la posizione della segnalazione errori per l'operazione di sincronizzazione (attributo facoltativo) se viene specificato solo il percorso della cartella, quindi viene creato il file in base al nome **TargetSynchronizationReport.XML** .  
+4.  `report-errors-to:` Specifica la posizione della segnalazione errori per l'operazione di sincronizzazione (attributo facoltativo) se viene specificato solo il percorso della cartella, quindi viene creato il file in base al nome **TargetSynchronizationReport.XML** .  
   
 **Esempio di sintassi:**  
   
@@ -539,11 +540,11 @@ aggiornamento da database
   
 **Script**  
   
-1.  `object-name:`Specifica gli oggetti di origine considerati per l'aggiornamento dal database di origine. può contenere nomi di oggetti singoli o un nome di oggetto gruppo.  
+1.  `object-name:` Specifica gli oggetti di origine considerati per l'aggiornamento dal database di origine. può contenere nomi di oggetti singoli o un nome di oggetto gruppo.  
   
-2.  `object-type:`Specifica il tipo dell'oggetto specificato nell'attributo nome-oggetto (se viene specificata la categoria dell'oggetto, il tipo di oggetto sarà "Category").  
+2.  `object-type:` Specifica il tipo dell'oggetto specificato nell'attributo nome-oggetto (se viene specificata la categoria dell'oggetto, il tipo di oggetto sarà "Category").  
   
-3.  `on-error:`Specifica se specificare gli errori di sincronizzazione come avvisi o errori. Opzioni disponibili per l'errore:  
+3.  `on-error:` Specifica se specificare gli errori di sincronizzazione come avvisi o errori. Opzioni disponibili per l'errore:  
   
     -   report-totale-come-avviso  
   
@@ -551,7 +552,7 @@ aggiornamento da database
   
     -   script di errore  
   
-4.  `report-errors-to:`Specifica la posizione della segnalazione errori per l'operazione di sincronizzazione (attributo facoltativo) se viene specificato solo il percorso della cartella, quindi viene creato il file in base al nome **SourceDBRefreshReport.XML** .  
+4.  `report-errors-to:` Specifica la posizione della segnalazione errori per l'operazione di sincronizzazione (attributo facoltativo) se viene specificato solo il percorso della cartella, quindi viene creato il file in base al nome **SourceDBRefreshReport.XML** .  
   
 Richiede uno o più nodi della metabase come parametro della riga di comando.  
   
@@ -604,15 +605,15 @@ Usato per salvare gli script degli oggetti in un file indicato quando metabase =
   
 Richiede uno o più nodi della metabase come parametro della riga di comando.  
   
-1.  `object-name:`Specifica gli oggetti i cui script devono essere salvati. (Può avere nomi di oggetti singoli o un nome di oggetto gruppo)  
+1.  `object-name:` Specifica gli oggetti i cui script devono essere salvati. (Può avere nomi di oggetti singoli o un nome di oggetto gruppo)  
   
-2.  `object-type:`Specifica il tipo dell'oggetto specificato nell'attributo nome-oggetto (se viene specificata la categoria dell'oggetto, il tipo di oggetto sarà "Category").  
+2.  `object-type:` Specifica il tipo dell'oggetto specificato nell'attributo nome-oggetto (se viene specificata la categoria dell'oggetto, il tipo di oggetto sarà "Category").  
   
-3.  `metabase:`Specifica se si tratta della metabase di origine o di destinazione.  
+3.  `metabase:` Specifica se si tratta della metabase di origine o di destinazione.  
   
-4.  `destination:`Specifica il percorso o la cartella in cui deve essere salvato lo script, se il nome file non è specificato, un nome file nel formato (object_name valore dell'attributo). out  
+4.  `destination:` Specifica il percorso o la cartella in cui deve essere salvato lo script, se il nome file non è specificato, un nome file nel formato (object_name valore dell'attributo). out  
   
-5.  `overwrite:`Se true, sovrascrive se esiste lo stesso nome file. Può contenere i valori (true/false).  
+5.  `overwrite:` Se true, sovrascrive se esiste lo stesso nome file. Può contenere i valori (true/false).  
   
 **Esempio di sintassi:**  
   
@@ -650,25 +651,25 @@ oppure
   
 Convert-SQL-statement  
   
-1.  `context`Specifica il nome dello schema.  
+1.  `context` Specifica il nome dello schema.  
   
-2.  `destination`Specifica se l'output deve essere archiviato in un file.  
+2.  `destination` Specifica se l'output deve essere archiviato in un file.  
   
     Se questo attributo non viene specificato, l'istruzione T-SQL convertita viene visualizzata nella console. (attributo facoltativo)  
   
-3.  `conversion-report-folder`Specifica la cartella in cui è archiviato il report di valutazione. (attributo facoltativo)  
+3.  `conversion-report-folder` Specifica la cartella in cui è archiviato il report di valutazione. (attributo facoltativo)  
   
-4.  `conversion-report-overwrite`Specifica se sovrascrivere la cartella dei report di valutazione, se esiste già.  
+4.  `conversion-report-overwrite` Specifica se sovrascrivere la cartella dei report di valutazione, se esiste già.  
   
     **Valore predefinito:** false. (attributo facoltativo)  
   
-5.  `write-converted-sql-to`Specifica il percorso della cartella del file (o) in cui deve essere archiviata l'istruzione T-SQL convertita. Quando si specifica un percorso di cartella insieme all' `sql-files` attributo, per ogni file di origine sarà presente un file T-SQL di destinazione corrispondente creato nella cartella specificata. Quando si specifica un percorso di cartella insieme all' `sql` attributo, l'istruzione T-SQL convertita viene scritta in un file denominato Result. out nella cartella specificata.  
+5.  `write-converted-sql-to` Specifica il percorso della cartella del file (o) in cui deve essere archiviata l'istruzione T-SQL convertita. Quando si specifica un percorso di cartella insieme all' `sql-files` attributo, per ogni file di origine sarà presente un file T-SQL di destinazione corrispondente creato nella cartella specificata. Quando si specifica un percorso di cartella insieme all' `sql` attributo, l'istruzione T-SQL convertita viene scritta in un file denominato Result. out nella cartella specificata.  
   
-6.  `sql`Specifica le istruzioni SQL MySQL da convertire, una o più istruzioni possono essere separate mediante ";"  
+6.  `sql` Specifica le istruzioni SQL MySQL da convertire, una o più istruzioni possono essere separate mediante ";"  
   
-7.  `sql-files`Specifica il percorso dei file SQL che devono essere convertiti nel codice T-SQL.  
+7.  `sql-files` Specifica il percorso dei file SQL che devono essere convertiti nel codice T-SQL.  
   
-8.  `write-summary-report-to`Specifica il percorso in cui verrà generato il report di riepilogo. Se viene indicato solo il percorso della cartella, viene creato il file in base al nome **ConvertSQLReport.XML** . (attributo facoltativo)  
+8.  `write-summary-report-to` Specifica il percorso in cui verrà generato il report di riepilogo. Se viene indicato solo il percorso della cartella, viene creato il file in base al nome **ConvertSQLReport.XML** . (attributo facoltativo)  
   
     La creazione di report include 2 sottocategorie aggiuntive, vale a dire...:  
   

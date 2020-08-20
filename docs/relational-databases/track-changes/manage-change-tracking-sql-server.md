@@ -1,4 +1,5 @@
 ---
+description: Gestire il rilevamento delle modifiche (SQL Server)
 title: Gestire il rilevamento delle modifiche
 ms.custom: seo-dt-2019
 ms.date: 08/08/2016
@@ -16,12 +17,12 @@ ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58093593dc2824d67e4b04cb6a02e52a1422555a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4c965816a7eca3d0a512f87cdf556b4f194b20e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725358"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463785"
 ---
 # <a name="manage-change-tracking-sql-server"></a>Gestire il rilevamento delle modifiche (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85725358"
   
  Inoltre, la vista del catalogo [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) elenca le tabelle interne create quando il rilevamento delle modifiche è abilitato per una tabella utente.  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>Sicurezza  
  Per accedere alle informazioni sul rilevamento delle modifiche utilizzando le [funzioni di rilevamento delle modifiche](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md), l'entità deve disporre delle autorizzazioni seguenti:  
   
 -   Autorizzazione SELECT almeno nelle colonne chiave primaria nella tabella di cui sono state rilevate le modifiche per la tabella in cui si sta eseguendo la query.  

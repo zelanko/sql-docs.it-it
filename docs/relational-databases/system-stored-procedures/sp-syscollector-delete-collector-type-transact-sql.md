@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_delete_collector_type (Transact-SQL)
 title: sp_syscollector_delete_collector_type (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c24011a274b362a6b8267b7559d2641a4f1c6aa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5e24b7cce5992df21e11edf5aff4202abb67f0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892924"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464020"
 ---
 # <a name="sp_syscollector_delete_collector_type-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @collector_type_uid = ] 'collector_type_uid'`GUID per il tipo di agente di raccolta. *collector_type_uid* è di tipo **uniqueidentifier** e deve avere un valore se il *nome* è null.  
+`[ @collector_type_uid = ] 'collector_type_uid'` GUID per il tipo di agente di raccolta. *collector_type_uid* è di tipo **uniqueidentifier** e deve avere un valore se il *nome* è null.  
   
-`[ @name = ] 'name'`Nome del tipo di agente di raccolta. *Name* è di **tipo sysname** e deve avere un valore se *collector_type_uid* è null.  
+`[ @name = ] 'name'` Nome del tipo di agente di raccolta. *Name* è di **tipo sysname** e deve avere un valore se *collector_type_uid* è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -66,7 +67,7 @@ EXEC sp_syscollector_delete_collector_type @collector_type_uid = '302E93D1-3424-
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Raccolta dati](../../relational-databases/data-collection/data-collection.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_reinitsubscription (Transact-SQL)
 title: sp_reinitsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8bc377c269eeb6034ebbe0e5753f2605464ecd8a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b6aad3d76fca41075bd022eac703ce7d1a112bc1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464050"
 ---
 # <a name="sp_reinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,24 +45,24 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è all.  
+`[ @publication = ] 'publication'` Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è all.  
   
-`[ @article = ] 'article'`Nome dell'articolo. *article* è di **tipo sysname**e il valore predefinito è all. Per una pubblicazione con aggiornamento immediato, l' *articolo* deve essere **All**; in caso contrario, il stored procedure ignora la pubblicazione e segnala un errore.  
+`[ @article = ] 'article'` Nome dell'articolo. *article* è di **tipo sysname**e il valore predefinito è all. Per una pubblicazione con aggiornamento immediato, l' *articolo* deve essere **All**; in caso contrario, il stored procedure ignora la pubblicazione e segnala un errore.  
   
-`[ @subscriber = ] 'subscriber'`Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @subscriber = ] 'subscriber'` Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @destination_db = ] 'destination_db'`Nome del database di destinazione. *destination_db* è di **tipo sysname**e il valore predefinito è all.  
+`[ @destination_db = ] 'destination_db'` Nome del database di destinazione. *destination_db* è di **tipo sysname**e il valore predefinito è all.  
   
-`[ @for_schema_change = ] 'for_schema_change'`Indica se la reinizializzazione viene eseguita in seguito a una modifica dello schema nel database di pubblicazione. *for_schema_change* è di **bit**e il valore predefinito è 0. Se è **0**, le sottoscrizioni attive per le pubblicazioni che consentono l'aggiornamento immediato vengono riattivate fino a quando l'intera pubblicazione e non solo alcuni degli articoli vengono reinizializzate. Le reinizializzazione viene pertanto avviata in seguito a modifiche dello schema. Se è **1**, le sottoscrizioni attive non vengono riattivate fino a quando non viene eseguita la agente di snapshot.  
+`[ @for_schema_change = ] 'for_schema_change'` Indica se la reinizializzazione viene eseguita in seguito a una modifica dello schema nel database di pubblicazione. *for_schema_change* è di **bit**e il valore predefinito è 0. Se è **0**, le sottoscrizioni attive per le pubblicazioni che consentono l'aggiornamento immediato vengono riattivate fino a quando l'intera pubblicazione e non solo alcuni degli articoli vengono reinizializzate. Le reinizializzazione viene pertanto avviata in seguito a modifiche dello schema. Se è **1**, le sottoscrizioni attive non vengono riattivate fino a quando non viene eseguita la agente di snapshot.  
   
-`[ @publisher = ] 'publisher'`Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
 >  il server di pubblicazione non deve essere utilizzato per i *Server* di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione.  
   
-`[ @ignore_distributor_failure = ] ignore_distributor_failure`Consente la reinizializzazione anche se il server di distribuzione non esiste o è offline. *ignore_distributor_failure* è di **bit**e il valore predefinito è 0. Se è **0**, la reinizializzazione ha esito negativo se il server di distribuzione non esiste o è offline.  
+`[ @ignore_distributor_failure = ] ignore_distributor_failure` Consente la reinizializzazione anche se il server di distribuzione non esiste o è offline. *ignore_distributor_failure* è di **bit**e il valore predefinito è 0. Se è **0**, la reinizializzazione ha esito negativo se il server di distribuzione non esiste o è offline.  
   
-`[ @invalidate_snapshot = ] invalidate_snapshot`Invalida lo snapshot della pubblicazione esistente. *invalidate_snapshot* è di **bit**e il valore predefinito è 0. Se è **1**, viene generato un nuovo snapshot per la pubblicazione.  
+`[ @invalidate_snapshot = ] invalidate_snapshot` Invalida lo snapshot della pubblicazione esistente. *invalidate_snapshot* è di **bit**e il valore predefinito è 0. Se è **1**, viene generato un nuovo snapshot per la pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -92,8 +93,8 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
  Solo i membri del ruolo predefinito del server **sysadmin** , i membri del ruolo predefinito del database **db_owner** o l'autore della sottoscrizione possono eseguire **sp_reinitsubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Reinizializza una sottoscrizione](../../relational-databases/replication/reinitialize-a-subscription.md)   
- [Reinizializza sottoscrizioni](../../relational-databases/replication/reinitialize-subscriptions.md)   
+ [Reinizializzare una sottoscrizione](../../relational-databases/replication/reinitialize-a-subscription.md)   
+ [Reinizializzare le sottoscrizioni](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Aggiornamento dal database (DB2ToSQL)
 title: Aggiornare dal database (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2efc0667bd69e43cfe3d3246c0622fad18ff21e3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 973f3aae444b27be93b675d16c9b9a73d8fac518
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463478"
 ---
 # <a name="refresh-from-database-db2tosql"></a>Aggiornamento dal database (DB2ToSQL)
 La finestra di dialogo **Aggiorna da database** consente di selezionare gli oggetti da aggiornare dal database DB2. Le righe nella finestra di dialogo sono codificate a colori in base allo stato dei metadati:  

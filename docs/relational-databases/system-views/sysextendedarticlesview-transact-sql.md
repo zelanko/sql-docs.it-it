@@ -1,4 +1,5 @@
 ---
+description: sysextendedarticlesview (Transact-SQL)
 title: sysextendedarticlesview (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8bdd22f7-c268-49b6-820c-3fe603feb128
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c273b33c0bdecd86eb9ef21f086860bbe3c569b5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 347d05c4ca4d5c29c04af853581ad02efb287d10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881264"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463849"
 ---
 # <a name="sysextendedarticlesview-transact-sql"></a>sysextendedarticlesview (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85881264"
 |**artid**|**int**|Colonna Identity che offre un numero di ID univoco per l'articolo.|  
 |**creation_script**|**nvarchar(255)**|Script di creazione dello schema per l'articolo.|  
 |**del_cmd**|**nvarchar(255)**|Comando da eseguire a seguito di un'istruzione DELETE; in caso contrario il comando viene ricostruito dal log.|  
-|**Descrizione**|**nvarchar(255)**|Voce descrittiva per l'articolo.|  
+|**description**|**nvarchar(255)**|Voce descrittiva per l'articolo.|  
 |**dest_table**|**nvarchar(128)**|Nome della tabella di destinazione.|  
 |**filtro**|**int**|Identificatore di oggetto della stored procedure utilizzata per il partizionamento orizzontale.|  
 |**filter_clause**|**ntext**|Clausola WHERE dell'articolo, utilizzata per il filtro orizzontale.|  
@@ -56,11 +57,11 @@ ms.locfileid: "85881264"
 |**fire_triggers_on_snapshot**|**int**|Indica se i trigger replicati vengono eseguiti o meno quando lo snapshot viene applicato. I possibili valori sono i seguenti.<br /><br /> **0** = i trigger non vengono eseguiti.<br /><br /> **1** = i trigger vengono eseguiti.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Viste di replica &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addarticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_changearticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
- [sp_helparticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sysarticles &#40;&#41;Transact-SQL](../../relational-databases/system-tables/sysarticles-transact-sql.md)  
+ [Tabelle di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Viste di replica &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addarticle &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_changearticle &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
+ [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sysarticles &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/sysarticles-transact-sql.md)  
   
   

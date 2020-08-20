@@ -1,4 +1,5 @@
 ---
+description: sp_adjustpublisheridentityrange (Transact-SQL)
 title: sp_adjustpublisheridentityrange (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac449d2437184695c4d5957fea0788ce40a176ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9315025143c31d6fc1ef76aab4e70578e251694d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85875219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464593"
 ---
 # <a name="sp_adjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione in cui vengono riallocati i nuovi intervalli di valori Identity. *Publication* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publication = ] 'publication'` Nome della pubblicazione in cui vengono riallocati i nuovi intervalli di valori Identity. *Publication* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @table_name = ] 'table_name'`Nome della tabella in cui vengono riallocati i nuovi intervalli di valori Identity. *table_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @table_name = ] 'table_name'` Nome della tabella in cui vengono riallocati i nuovi intervalli di valori Identity. *table_name* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @table_owner = ] 'table_owner'`Proprietario della tabella nel server di pubblicazione. *TABLE_OWNER* è di **tipo sysname**e il valore predefinito è null. Se *TABLE_OWNER* viene omesso, viene utilizzato il nome dell'utente corrente.  
+`[ @table_owner = ] 'table_owner'` Proprietario della tabella nel server di pubblicazione. *TABLE_OWNER* è di **tipo sysname**e il valore predefinito è null. Se *TABLE_OWNER* viene omesso, viene utilizzato il nome dell'utente corrente.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  

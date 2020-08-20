@@ -1,4 +1,5 @@
 ---
+description: Creare tabelle (motore di database)
 title: Creare tabelle (motore di database) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/22/2016
@@ -13,12 +14,12 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d37b8d87be1b6207ba9dcfd9bc1a8dcaa1ab039
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: de52eb6abbcbcbb23638c07663d78a80ccffd22f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394586"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463831"
 ---
 # <a name="create-tables-database-engine"></a>Creare tabelle (motore di database)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -63,13 +64,13 @@ Questa attività richiede l'autorizzazione CREATE TABLE per il database e l'auto
   
      Per ulteriori informazioni sugli schemi, vedere [Create a Database Schema](../../relational-databases/security/authentication-access/create-a-database-schema.md).  
   
-9. Scegliere **Salva** **nometabella** dal menu *File*.  
+9. Scegliere **Salva** *nometabella* dal menu **File**.  
   
 10. Nella finestra di dialogo **Scegli nome** digitare un nome per la tabella, quindi fare clic su **OK**.  
   
 11. Per visualizzare la nuova tabella, in **Esplora oggetti**espandere il nodo **Tabelle** e premere **F5** per aggiornare l'elenco di oggetti. La nuova tabella viene visualizzata nell'elenco di tabelle.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 ## <a name="using-query-editor"></a>Uso dell'editor di query  
   

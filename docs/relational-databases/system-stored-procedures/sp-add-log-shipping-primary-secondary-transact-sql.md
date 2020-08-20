@@ -1,4 +1,5 @@
 ---
+description: sp_add_log_shipping_primary_secondary (Transact-SQL)
 title: sp_add_log_shipping_primary_secondary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 23b3e100-5318-410e-b8f3-51c89b2dd777
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 575656d0fb80328b65c72735d0a4c5b9e1a8a59e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68e63391d03d97aee8474a7aac95ebdfc09b04b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879798"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464679"
 ---
 # <a name="sp_add_log_shipping_primary_secondary-transact-sql"></a>sp_add_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +43,11 @@ sp_add_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @primary_database = ] 'primary_database'`Nome del database nel server primario. *primary_database* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @primary_database = ] 'primary_database'` Nome del database nel server primario. *primary_database* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @secondary_server = ] 'secondary_server',`Nome del server secondario. *secondary_server* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @secondary_server = ] 'secondary_server',` Nome del server secondario. *secondary_server* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @secondary_database = ] 'secondary_database'`Nome del database secondario. *secondary_database* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @secondary_database = ] 'secondary_database'` Nome del database secondario. *secondary_database* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

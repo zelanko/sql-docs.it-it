@@ -1,4 +1,5 @@
 ---
+description: sp_add_log_shipping_primary_database (Transact-SQL)
 title: sp_add_log_shipping_primary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 188a7d3b98021255074ccaf6b954b4c9b2100fd0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0ed823f2b6564593388893db74866931bc1c0c93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464661"
 ---
 # <a name="sp_add_log_shipping_primary_database-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,41 +56,41 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @database = ] 'database'`Nome del database primario log shipping. il *database* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
+`[ @database = ] 'database'` Nome del database primario log shipping. il *database* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
   
-`[ @backup_directory = ] 'backup_directory'`È il percorso della cartella di backup nel server primario. *backup_directory* è di **tipo nvarchar (500)** e non prevede alcun valore predefinito e non può essere null.  
+`[ @backup_directory = ] 'backup_directory'` È il percorso della cartella di backup nel server primario. *backup_directory* è di **tipo nvarchar (500)** e non prevede alcun valore predefinito e non può essere null.  
   
-`[ @backup_share = ] 'backup_share'`È il percorso di rete della directory di backup nel server primario. *backup_share* è di **tipo nvarchar (500)** e non prevede alcun valore predefinito e non può essere null.  
+`[ @backup_share = ] 'backup_share'` È il percorso di rete della directory di backup nel server primario. *backup_share* è di **tipo nvarchar (500)** e non prevede alcun valore predefinito e non può essere null.  
   
-`[ @backup_job_name = ] 'backup_job_name'`Nome del processo di SQL Server Agent nel server primario che copia il backup nella cartella di backup. *backup_job_name* è di **tipo sysname** e non può essere null.  
+`[ @backup_job_name = ] 'backup_job_name'` Nome del processo di SQL Server Agent nel server primario che copia il backup nella cartella di backup. *backup_job_name* è di **tipo sysname** e non può essere null.  
   
-`[ @backup_retention_period = ] backup_retention_period`Periodo di tempo, in minuti, per il quale il file di backup del log viene mantenuto nella directory di backup del server primario. *backup_retention_period* è di **tipo int**e non prevede alcun valore predefinito e non può essere null.  
+`[ @backup_retention_period = ] backup_retention_period` Periodo di tempo, in minuti, per il quale il file di backup del log viene mantenuto nella directory di backup del server primario. *backup_retention_period* è di **tipo int**e non prevede alcun valore predefinito e non può essere null.  
   
-`[ @monitor_server = ] 'monitor_server'`Nome del server di monitoraggio. *Monitor_server* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
+`[ @monitor_server = ] 'monitor_server'` Nome del server di monitoraggio. *Monitor_server* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
   
-`[ @monitor_server_security_mode = ] monitor_server_security_mode`Modalità di sicurezza utilizzata per la connessione al server di monitoraggio.  
+`[ @monitor_server_security_mode = ] monitor_server_security_mode` Modalità di sicurezza utilizzata per la connessione al server di monitoraggio.  
   
  1 = Autenticazione di Windows.  
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione di. *monitor_server_security_mode* è di **bit** e non può essere null.  
   
-`[ @monitor_server_login = ] 'monitor_server_login'`Nome utente dell'account utilizzato per accedere al server di monitoraggio.  
+`[ @monitor_server_login = ] 'monitor_server_login'` Nome utente dell'account utilizzato per accedere al server di monitoraggio.  
   
-`[ @monitor_server_password = ] 'monitor_server_password'`Password dell'account utilizzato per accedere al server di monitoraggio.  
+`[ @monitor_server_password = ] 'monitor_server_password'` Password dell'account utilizzato per accedere al server di monitoraggio.  
   
-`[ @backup_threshold = ] backup_threshold`Periodo di tempo, in minuti, dopo l'ultimo backup prima che venga generato un errore di *threshold_alert* . *backup_threshold* è di **tipo int**e il valore predefinito è 60 minuti.  
+`[ @backup_threshold = ] backup_threshold` Periodo di tempo, in minuti, dopo l'ultimo backup prima che venga generato un errore di *threshold_alert* . *backup_threshold* è di **tipo int**e il valore predefinito è 60 minuti.  
   
-`[ @threshold_alert = ] threshold_alert`Avviso da generare quando viene superata la soglia di backup. *threshold_alert* è di **tipo int**e il valore predefinito è 14.420.  
+`[ @threshold_alert = ] threshold_alert` Avviso da generare quando viene superata la soglia di backup. *threshold_alert* è di **tipo int**e il valore predefinito è 14.420.  
   
-`[ @threshold_alert_enabled = ] threshold_alert_enabled`Specifica se verrà generato un avviso quando viene superato *backup_threshold* . Il valore predefinito 0 indica che l'avviso è disabilitato e non verrà generato. *threshold_alert_enabled* è di **bit**.  
+`[ @threshold_alert_enabled = ] threshold_alert_enabled` Specifica se verrà generato un avviso quando viene superato *backup_threshold* . Il valore predefinito 0 indica che l'avviso è disabilitato e non verrà generato. *threshold_alert_enabled* è di **bit**.  
   
-`[ @history_retention_period = ] history_retention_period`Periodo di tempo in minuti in cui la cronologia verrà mantenuta. *history_retention_period* è di **tipo int**e il valore predefinito è null. Se non si specifica un valore, verrà utilizzato il valore 14420.  
+`[ @history_retention_period = ] history_retention_period` Periodo di tempo in minuti in cui la cronologia verrà mantenuta. *history_retention_period* è di **tipo int**e il valore predefinito è null. Se non si specifica un valore, verrà utilizzato il valore 14420.  
   
 `[ @backup_job_id = ] backup_job_id OUTPUT`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ID del processo di Agent associato al processo di backup nel server primario. *backup_job_id* è di tipo **uniqueidentifier** e non può essere null.  
   
-`[ @primary_id = ] primary_id OUTPUT`ID del database primario per la configurazione del log shipping. *primary_id* è di tipo **uniqueidentifier** e non può essere null.  
+`[ @primary_id = ] primary_id OUTPUT` ID del database primario per la configurazione del log shipping. *primary_id* è di tipo **uniqueidentifier** e non può essere null.  
   
-`[ @backup_compression = ] backup_compression_option`Specifica se una configurazione log shipping utilizza la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Questo parametro è supportato solo in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versione successiva.  
+`[ @backup_compression = ] backup_compression_option` Specifica se una configurazione log shipping utilizza la [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Questo parametro è supportato solo in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versione successiva.  
   
  0 = disabilitati. I backup del log non vengono mai compressi.  
   

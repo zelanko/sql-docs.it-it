@@ -1,4 +1,5 @@
 ---
+description: sp_drop_agent_parameter (Transact-SQL)
 title: sp_drop_agent_parameter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c284a3cb2601f66d48dd61ad7df6017052964aaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 24f037232818ef395bfd52d3734b5de9cce5378b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85860193"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464400"
 ---
 # <a name="sp_drop_agent_parameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_id = ] profile_id`ID del profilo per il quale è necessario eliminare un parametro. *profile_id* è di **tipo int**e non prevede alcun valore predefinito.  
+`[ @profile_id = ] profile_id` ID del profilo per il quale è necessario eliminare un parametro. *profile_id* è di **tipo int**e non prevede alcun valore predefinito.  
   
-`[ @parameter_name = ] 'parameter_name'`Nome del parametro da eliminare. *parameter_name* è di **tipo sysname**e il valore predefinito è **%** . Se **%** , vengono eliminati tutti i parametri per il profilo specificato.  
+`[ @parameter_name = ] 'parameter_name'` Nome del parametro da eliminare. *parameter_name* è di **tipo sysname**e il valore predefinito è **%** . Se **%** , vengono eliminati tutti i parametri per il profilo specificato.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -52,8 +53,8 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_drop_agent_parameter**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_agent_parameter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
- [sp_help_agent_parameter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
+ [sp_add_agent_parameter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
+ [sp_help_agent_parameter &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_add_log_shipping_secondary_database (Transact-SQL)
 title: sp_add_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: de65ab447394d17c6400f77c58986e111839e9b4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 384884e2b2b076b20cb9c679c3494a7c292f77a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879842"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464663"
 ---
 # <a name="sp_add_log_shipping_secondary_database-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,17 +54,17 @@ sp_add_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @secondary_database = ] 'secondary_database'`Nome del database secondario. *secondary_database* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @secondary_database = ] 'secondary_database'` Nome del database secondario. *secondary_database* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @primary_server = ] 'primary_server'`Nome dell'istanza primaria di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nella configurazione log shipping. *primary_server* è di **tipo sysname** e non può essere null.  
+`[ @primary_server = ] 'primary_server'` Nome dell'istanza primaria di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nella configurazione log shipping. *primary_server* è di **tipo sysname** e non può essere null.  
   
-`[ @primary_database = ] 'primary_database'`Nome del database nel server primario. *primary_database* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @primary_database = ] 'primary_database'` Nome del database nel server primario. *primary_database* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @restore_delay = ] 'restore_delay'`Quantità di tempo, in minuti, che il server secondario attende prima di ripristinare un file di backup specificato. *restore_delay* è di **tipo int** e non può essere null. Il valore predefinito è 0.  
+`[ @restore_delay = ] 'restore_delay'` Quantità di tempo, in minuti, che il server secondario attende prima di ripristinare un file di backup specificato. *restore_delay* è di **tipo int** e non può essere null. Il valore predefinito è 0.  
   
-`[ @restore_all = ] 'restore_all'`Se impostato su 1, il server secondario ripristina tutti i backup del log delle transazioni disponibili al momento dell'esecuzione del processo di ripristino. In caso contrario, l'operazione viene arrestata dopo il ripristino di un file. *restore_all* è di **bit** e non può essere null.  
+`[ @restore_all = ] 'restore_all'` Se impostato su 1, il server secondario ripristina tutti i backup del log delle transazioni disponibili al momento dell'esecuzione del processo di ripristino. In caso contrario, l'operazione viene arrestata dopo il ripristino di un file. *restore_all* è di **bit** e non può essere null.  
   
-`[ @restore_mode = ] 'restore_mode'`Modalità di ripristino per il database secondario.  
+`[ @restore_mode = ] 'restore_mode'` Modalità di ripristino per il database secondario.  
   
  0 = Ripristina log con NORECOVERY.  
   
@@ -71,21 +72,21 @@ sp_add_log_shipping_secondary_database
   
  il *ripristino* è di **bit** e non può essere null.  
   
-`[ @disconnect_users = ] 'disconnect_users'`Se impostato su 1, gli utenti vengono disconnessi dal database secondario quando viene eseguita un'operazione di ripristino. Valore predefinito = 0. la *disconnessione* degli utenti è di **bit** e non può essere null.  
+`[ @disconnect_users = ] 'disconnect_users'` Se impostato su 1, gli utenti vengono disconnessi dal database secondario quando viene eseguita un'operazione di ripristino. Valore predefinito = 0. la *disconnessione* degli utenti è di **bit** e non può essere null.  
   
-`[ @block_size = ] 'block_size'`Dimensione, in byte, utilizzata come dimensione del blocco per il dispositivo di backup. *block_size* è di **tipo int** e il valore predefinito è-1.  
+`[ @block_size = ] 'block_size'` Dimensione, in byte, utilizzata come dimensione del blocco per il dispositivo di backup. *block_size* è di **tipo int** e il valore predefinito è-1.  
   
-`[ @buffer_count = ] 'buffer_count'`Numero totale di buffer utilizzati dall'operazione di backup o ripristino. *buffer_count* è di **tipo int** e il valore predefinito è-1.  
+`[ @buffer_count = ] 'buffer_count'` Numero totale di buffer utilizzati dall'operazione di backup o ripristino. *buffer_count* è di **tipo int** e il valore predefinito è-1.  
   
-`[ @max_transfer_size = ] 'max_transfer_size'`Dimensione, in byte, della richiesta di input o output massima rilasciata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al dispositivo di backup. *max_transfersize* è di **tipo int** e può essere null.  
+`[ @max_transfer_size = ] 'max_transfer_size'` Dimensione, in byte, della richiesta di input o output massima rilasciata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al dispositivo di backup. *max_transfersize* è di **tipo int** e può essere null.  
   
-`[ @restore_threshold = ] 'restore_threshold'`Numero di minuti che possono trascorrere tra le operazioni di ripristino prima che venga generato un avviso. *restore_threshold* è di **tipo int** e non può essere null.  
+`[ @restore_threshold = ] 'restore_threshold'` Numero di minuti che possono trascorrere tra le operazioni di ripristino prima che venga generato un avviso. *restore_threshold* è di **tipo int** e non può essere null.  
   
-`[ @threshold_alert = ] 'threshold_alert'`Avviso da generare quando viene superata la soglia di backup. *threshold_alert* è di **tipo int**e il valore predefinito è 14.420.  
+`[ @threshold_alert = ] 'threshold_alert'` Avviso da generare quando viene superata la soglia di backup. *threshold_alert* è di **tipo int**e il valore predefinito è 14.420.  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`Specifica se viene generato un avviso quando viene superato *backup_threshold* . Il valore 1 (valore predefinito) indica che l'avviso viene generato. *threshold_alert_enabled* è di **bit**.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Specifica se viene generato un avviso quando viene superato *backup_threshold* . Il valore 1 (valore predefinito) indica che l'avviso viene generato. *threshold_alert_enabled* è di **bit**.  
   
-`[ @history_retention_period = ] 'history_retention_period'`Periodo di tempo in minuti in cui viene mantenuta la cronologia. *history_retention_period* è di **tipo int**e il valore predefinito è null. Se non si specifica un valore, verrà utilizzato il valore 14420.  
+`[ @history_retention_period = ] 'history_retention_period'` Periodo di tempo in minuti in cui viene mantenuta la cronologia. *history_retention_period* è di **tipo int**e il valore predefinito è null. Se non si specifica un valore, verrà utilizzato il valore 14420.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

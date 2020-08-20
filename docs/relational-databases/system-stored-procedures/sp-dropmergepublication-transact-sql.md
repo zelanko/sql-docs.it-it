@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergepublication (Transact-SQL)
 title: sp_dropmergepublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9b2b36484d34396ed573f4b06bd1feb5b0f83b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0a28a81d897f9319495963b0f9d049502fe8c7d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464351"
 ---
 # <a name="sp_dropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione da eliminare. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito. Se **tutti**, tutte le pubblicazioni di tipo merge esistenti vengono rimosse e il agente di snapshot processo associato. Se si specifica un valore specifico per la *pubblicazione*, vengono eliminate solo la pubblicazione e il processo agente di snapshot associato.  
+`[ @publication = ] 'publication'` Nome della pubblicazione da eliminare. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito. Se **tutti**, tutte le pubblicazioni di tipo merge esistenti vengono rimosse e il agente di snapshot processo associato. Se si specifica un valore specifico per la *pubblicazione*, vengono eliminate solo la pubblicazione e il processo agente di snapshot associato.  
   
-`[ @ignore_distributor = ] ignore_distributor`Utilizzato per eliminare una pubblicazione senza eseguire attività di pulizia nel server di distribuzione. *ignore_distributor* è di **bit**e il valore predefinito è **0**. Questo parametro viene utilizzato anche quando si reinstalla il server di distribuzione.  
+`[ @ignore_distributor = ] ignore_distributor` Utilizzato per eliminare una pubblicazione senza eseguire attività di pulizia nel server di distribuzione. *ignore_distributor* è di **bit**e il valore predefinito è **0**. Questo parametro viene utilizzato anche quando si reinstalla il server di distribuzione.  
   
-`[ @reserved = ] reserved`È riservato per usi futuri. *riservato* è di **bit**e il valore predefinito è **0**.  
+`[ @reserved = ] reserved` È riservato per usi futuri. *riservato* è di **bit**e il valore predefinito è **0**.  
   
-`[ @ignore_merge_metadata = ] ignore_merge_metadata`Solo per uso interno.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` Solo per uso interno.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -66,9 +67,9 @@ sp_dropmergepublication [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>Vedere anche  
  [Eliminare una pubblicazione](../../relational-databases/replication/publish/delete-a-publication.md)   
- [sp_addmergepublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [sp_changemergepublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_helpmergepublication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_changemergepublication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
+ [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

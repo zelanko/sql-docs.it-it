@@ -1,4 +1,5 @@
 ---
+description: Proprietà delle colonne delle tabelle (SQL Server Management Studio)
 title: Proprietà delle colonne delle tabelle (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
@@ -15,12 +16,12 @@ ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cb7e20e8f310b6cb6786c2d4cc1a62409dc81c6
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: c5792d13fc9fcfff9ffeadaf5aadee948f6060e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463819"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Proprietà delle colonne delle tabelle (SQL Server Management Studio)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -42,13 +43,13 @@ ms.locfileid: "87397003"
  **Tipo di dati**  
  Visualizza il tipo di dati della colonna selezionata. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore.  
   
- **Valore predefinito dell'associazione**  
+ **Valore predefinito o associazione**  
  Visualizza il valore predefinito utilizzato per la colonna quando non viene immesso alcun valore specifico. Il valore di questo campo può essere il valore di un vincolo predefinito di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure il nome di un vincolo globale cui è associata la colonna. Nell'elenco a discesa sono contenuti tutti i valori predefiniti globali impostati nel database. Per associare la colonna a un valore predefinito globale, selezionarlo dall'elenco a discesa. In alternativa, per creare un vincolo predefinito per la colonna, digitare direttamente il valore predefinito come testo.  
   
  **Lunghezza**  
  Indica il numero di caratteri consentiti per i tipi di dati basati su caratteri. Questa proprietà è disponibile solo per tipi di dati basati su caratteri.  
   
- **Ridimensionare**  
+ **Ridimensionamento**  
  Visualizza il numero massimo di cifre consentito dopo la virgola decimale nei valori inclusi nella colonna. Questa proprietà corrisponde a **0** per i tipi di dati non numerici.  
   
  **Precisione**  
@@ -125,7 +126,7 @@ ms.locfileid: "87397003"
  **Non applicare in processi di replica**  
  Indica se durante la replica vengono mantenuti i valori di identità originari. Per ulteriori informazioni sulla replica, vedere CREATE TABLE. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore.  
   
- **Elementi replicati**  
+ **Tabella replicata**  
  Indica se questa colonna è replicata in un'altra posizione.  
   
  **RowGuid**  
