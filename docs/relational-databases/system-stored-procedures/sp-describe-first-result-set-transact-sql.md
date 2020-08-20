@@ -1,4 +1,5 @@
 ---
+description: sp_describe_first_result_set (Transact-SQL)
 title: sp_describe_first_result_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2018
@@ -18,12 +19,12 @@ ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e3696f537cc538e011d3d037e82e54ed892da35
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 451884c5055ee0be3ceeb95f4fe3c9dddb388bc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394378"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469616"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,13 +43,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ \@tsql = ] 'Transact-SQL_batch'`Una o più [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni. *Transact-SQL_batch* può essere di **tipo nvarchar (***n***)** o **nvarchar (max)**.  
+`[ \@tsql = ] 'Transact-SQL_batch'` Una o più [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni. *Transact-SQL_batch* può essere di **tipo nvarchar (***n***)** o **nvarchar (max)**.  
   
 `[ \@params = ] N'parameters'`\@params fornisce una stringa di dichiarazione per i parametri del [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, che è simile a sp_executesql. I parametri possono essere di **tipo nvarchar (n)** o **nvarchar (max)**.  
   
  È una stringa che contiene le definizioni di tutti i parametri incorporati nella [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n* è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato nell'istruzione deve essere definito in \@ params. Se l' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch nell'istruzione non contiene parametri, \@ params non è necessario. Il valore predefinito per questo parametro è NULL.  
   
-`[ \@browse_information_mode = ] tinyint`Specifica se vengono restituite altre colonne chiave e informazioni sulla tabella di origine. Se impostato su 1, ogni query viene analizzata come se per essa fosse stata specificata un'opzione FOR BROWSE. Vengono restituite informazioni aggiuntive sulla tabella di origine e sulle colonne chiave.  
+`[ \@browse_information_mode = ] tinyint` Specifica se vengono restituite altre colonne chiave e informazioni sulla tabella di origine. Se impostato su 1, ogni query viene analizzata come se per essa fosse stata specificata un'opzione FOR BROWSE. Vengono restituite informazioni aggiuntive sulla tabella di origine e sulle colonne chiave.  
   
 -   Se impostato su 0, non viene restituita alcuna informazione.  
   
@@ -104,7 +105,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**tds_collation_id**|**int NULL**|Per uso interno.|  
 |**tds_collation_sort_id**|**tinyint NULL**|Per uso interno.|  
   
-## <a name="remarks"></a>Commenti  
+## <a name="remarks"></a>Osservazioni  
  **sp_describe_first_result_set** garantisce che se la procedura restituisce i primi metadati del set di risultati per (un ipotetico) batch a e se tale batch (a) viene eseguito successivamente, il batch (1) genera un errore in fase di ottimizzazione, (2) genera un errore di run-time, (3) non restituisce alcun set di risultati oppure (4) restituisce un primo set di risultati con gli stessi metadati descritti da **sp_describe_first_result_set**.  
   
  Il nome, l'ammissione di valori Null e il tipo di dati possono variare. Se **sp_describe_first_result_set** restituisce un set di risultati vuoto, la garanzia è che l'esecuzione del batch non restituirà set di risultati.  
@@ -154,11 +155,11 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione per eseguire l' \@ argomento TSQL.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
   
 ### <a name="typical-examples"></a>Esempi tipici  
   
-#### <a name="a-simple-example"></a>A. Esempio semplice  
+#### <a name="a-simple-example"></a>R. Esempio semplice  
  Nell'esempio seguente viene descritto il set di risultati restituito da una singola query.  
   
 ```  
@@ -399,7 +400,7 @@ N'
  Risultato: **int null** perché sia dbo. T1. a sia S1. T1. a sono di tipo **int** e di supporto di valori null diversi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_describe_undeclared_parameters &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys. dm_exec_describe_first_result_set &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys. dm_exec_describe_first_result_set_for_object &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ [sp_describe_undeclared_parameters &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sys. dm_exec_describe_first_result_set &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys. dm_exec_describe_first_result_set_for_object &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
  

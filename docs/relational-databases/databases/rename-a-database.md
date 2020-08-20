@@ -1,4 +1,5 @@
 ---
+description: Rinominare un database
 title: Rinominare un database | Microsoft Docs
 ms.custom: ''
 ms.date: 10/02/2018
@@ -14,12 +15,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ff09925b3fd51debbdeda647cd1ae7255f5fa0d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d6131b3481be154cda88aee47bd226ce293613e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471178"
 ---
 # <a name="rename-a-database"></a>Rinominare un database
 
@@ -40,7 +41,7 @@ ms.locfileid: "85728393"
   
      [Transact-SQL](#rename-a-database-using-transact-sql)  
   
-- **Completamento:**  [Dopo la ridenominazione di un database](#backup-after-renaming-a-database)  
+- **Follow Up:**  [After renaming a database](#backup-after-renaming-a-database)  
 
 > [!NOTE]
 > Per rinominare un database in Azure SQL Data Warehouse o Parallel Data Warehouse, usare l'istruzione [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md).
@@ -54,7 +55,7 @@ ms.locfileid: "85728393"
   - In SQL Server è possibile impostare un database in modalità utente singolo per chiudere le connessioni aperte. Per altre informazioni, vedere [Impostare un database in modalità utente singolo](../../relational-databases/databases/set-a-database-to-single-user-mode.md).
   - Nel database SQL di Azure è necessario assicurarsi che nessun altro utente abbia una connessione aperta al database da rinominare.
   
-### <a name="security"></a>Security  
+### <a name="security"></a>Sicurezza  
   
 #### <a name="permissions"></a>Autorizzazioni
 

@@ -1,4 +1,5 @@
 ---
+description: sys.database_principals (Transact-SQL)
 title: sys. database_principals (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2016
@@ -20,11 +21,12 @@ ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8773d6a3a8b65520fad6342477300f8818e9ac4d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b5f5069c17300f6559181f0cd0a4038f7b2e3651
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011961"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469975"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -122,8 +124,8 @@ JOIN sys.schemas AS s
   
 ## <a name="see-also"></a>Vedere anche  
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [sys. server_principals &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [Viste del catalogo di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Utenti di database indipendente: rendere portabile un database](../../relational-databases/security/contained-database-users-making-your-database-portable.md)   
  [Connettersi al Database SQL utilizzando l’autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)  
   

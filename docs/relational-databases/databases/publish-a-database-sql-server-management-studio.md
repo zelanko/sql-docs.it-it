@@ -1,4 +1,5 @@
 ---
+description: Pubblicazione di un database (SQL Server Management Studio)
 title: Pubblicazione di un database (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4e865731f65b58ab47bbab9a169917f377fa8cd9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 503fe13d4f2d24c1795993bea84f2e04fb4ba0e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471174"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>Pubblicazione di un database (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  È possibile utilizzare la procedura guidata **Genera e pubblica script** per pubblicare un database intero o singoli oggetti di database in un provider di hosting Web remoto.  
+   È possibile usare la procedura guidata **Genera e pubblica script** per pubblicare un database intero o singoli oggetti di database in un provider di hosting Web remoto.  
   
 > [!NOTE]  
 >  La funzionalità descritta in questo argomento era fornita da Pubblicazione guidata database. Poiché la funzionalità di pubblicazione è stata aggiunta alla procedura guidata Genera e pubblica script, la procedura Pubblicazione guidata database non è più supportata.  
@@ -41,7 +42,7 @@ ms.locfileid: "85728408"
   
     2.  Per specificare opzioni di pubblicazione avanzate, selezionare il pulsante **Avanzate** nella sezione **Pubblica su servizio Web** .  
   
-4.  Controllare le selezioni effettuate nella pagina **Riepilogo** . Fare clic su **Indietro** per modificare le selezioni. Fare clic su **Avanti** per pubblicare gli oggetti selezionati.  
+4.  Nella pagina **Riepilogo** controllare le selezioni effettuate. Fare clic su **Indietro** per modificare le selezioni. Fare clic su **Avanti** per pubblicare gli oggetti selezionati.  
   
 5.  Monitorare lo stato di pubblicazione nella pagina **Salva o pubblica script** .  
 

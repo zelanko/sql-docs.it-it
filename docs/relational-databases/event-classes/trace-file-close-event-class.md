@@ -1,4 +1,5 @@
 ---
+description: Trace File Close - classe di evento
 title: Classe di evento Trace File Close | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 128b7bac-cb64-43e7-ae9b-87b7d2ebb4ef
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dfe6ed9ef27255b634fbbcec4361d8cbb49b6d23
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d4e3dc2071abd0b8ce81662bc5075fa056bf4bb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728337"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470626"
 ---
 # <a name="trace-file-close-event-class"></a>Trace File Close - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La classe di evento **Trace File Close** indica che un file di traccia è stato chiuso durante un rollover del file di traccia.  
+   La classe di evento **Trace File Close** indica che un file di traccia è stato chiuso durante un rollover del file di traccia.  
   
 ## <a name="trace-file-close-event-class-data-columns"></a>Colonne di dati della classe di evento Trace File Close  
   

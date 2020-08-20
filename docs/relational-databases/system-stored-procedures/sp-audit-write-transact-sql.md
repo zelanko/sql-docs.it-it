@@ -1,4 +1,5 @@
 ---
+description: sp_audit_write (Transact-SQL)
 title: sp_audit_write (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 371bbb36abd6362c9724604a102f590869a74cc2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9d6d6c6214d4157519454ab4b7eb3eb32ddae360
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716171"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469727"
 ---
 # <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,10 +46,10 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
  Parametro definito dall'utente e registrato nella colonna **user_defined_event_id** del log di controllo. * \@ user_defined_event_id* è di tipo **smallint**.  
   
  `[ @succeeded = ] succeeded`  
- Parametro passato dall'utente per indicare se l'evento ha avuto esito positivo o meno. Viene visualizzato nella colonna del log di controllo indicante l'esito positivo. `@succeeded`è di **bit**.  
+ Parametro passato dall'utente per indicare se l'evento ha avuto esito positivo o meno. Viene visualizzato nella colonna del log di controllo indicante l'esito positivo. `@succeeded` è di **bit**.  
   
  `[ @user_defined_information = ] 'user_defined_information'`  
- Testo definito dall'utente e registrato nella nuova colonna user_defined_event_id del log di controllo. `@user_defined_information`è di **tipo nvarchar (4000)**.  
+ Testo definito dall'utente e registrato nella nuova colonna user_defined_event_id del log di controllo. `@user_defined_information` è di **tipo nvarchar (4000)**.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -81,13 +82,13 @@ EXEC sp_audit_write 27, 0;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sicurezza &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sys. server_principals &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [sp_addrole &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
- [CREAZIONE di un utente &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [sp_dropuser &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_grantdbaccess &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [sp_grantlogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [sp_addrole &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
+ [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
+ [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
+ [sp_grantdbaccess &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
+ [sp_grantlogin &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

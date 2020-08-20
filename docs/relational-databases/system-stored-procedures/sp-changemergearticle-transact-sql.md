@@ -1,4 +1,5 @@
 ---
+description: sp_changemergearticle (Transact-SQL)
 title: sp_changemergearticle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/09/2015
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e5533d228030349992dc9b6aa56812ada87872f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8775928ede4fd92072bd91e39bc9652bb7db53a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469734"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +43,13 @@ sp_changemergearticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione in cui è presente l'articolo. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione in cui è presente l'articolo. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'`Nome dell'articolo da modificare. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @article = ] 'article'` Nome dell'articolo da modificare. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @property = ] 'property'`Proprietà da modificare per l'articolo e la pubblicazione specificati. *Property* è di **tipo nvarchar (30)**. i possibili valori sono elencati nella tabella.  
+`[ @property = ] 'property'` Proprietà da modificare per l'articolo e la pubblicazione specificati. *Property* è di **tipo nvarchar (30)**. i possibili valori sono elencati nella tabella.  
   
-`[ @value = ] 'value'`Nuovo valore per la proprietà specificata. *value* è di **tipo nvarchar (1000)**. i possibili valori sono elencati nella tabella.  
+`[ @value = ] 'value'` Nuovo valore per la proprietà specificata. *value* è di **tipo nvarchar (1000)**. i possibili valori sono elencati nella tabella.  
   
  Nella tabella seguente vengono descritte le proprietà degli articoli e i valori corrispondenti.  
   
@@ -68,7 +69,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**creation_script**||Percorso e nome di uno script di schema dell'articolo facoltativo utilizzato per la creazione dell'articolo nel database di sottoscrizione.|  
 |**delete_tracking**|**true**|Le istruzioni DELETE vengono replicate, situazione corrispondente al funzionamento predefinito.|  
 ||**false**|Le istruzioni DELETE non vengono replicate.<br /><br /> L'impostazione ** \* \* \* importante \* ** **delete_tracking** a **false** restituisce la non convergenza ed è necessario rimuovere manualmente le righe eliminate.|  
-|**Descrizione**||Voce descrittiva per l'articolo.|  
+|**description**||Voce descrittiva per l'articolo.|  
 |**destination_owner**||Nome del proprietario dell'oggetto nel database di sottoscrizione, se diverso da **dbo**.|  
 |**identity_range**||**bigint** che specifica la dimensione dell'intervallo da usare per l'assegnazione di nuovi valori Identity se l'articolo ha **identityrangemanagementoption** impostato su **auto** o **auto_identity_range** impostato su **true**. Proprietà valida solo per gli articoli di tabelle. Per ulteriori informazioni, vedere la sezione relativa alla replica di tipo merge in [replicare le colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**identityrangemanagementoption**|**Manuale**|Disabilita la gestione automatica degli intervalli di valori Identity. Contrassegna le colonne Identity con NOT FOR REPLICATION per consentire la gestione manuale degli intervalli di valori Identity. Per altre informazioni, vedere [Replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
@@ -83,7 +84,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**3**|Il filtro applicato all'articolo restituisce partizioni non sovrapposte univoche per ogni sottoscrizione.<br /><br /> Nota: se si specifica un valore pari a **3** per **partition_options**, può essere presente una sola sottoscrizione per ogni partizione di dati nell'articolo. Se si crea una seconda sottoscrizione nella quale il criterio di filtro porta alla restituzione della stessa partizione della sottoscrizione esistente, quest'ultima viene eliminata.|  
 |**pre_creation_command**|**nessuna**|Se la tabella esiste già nel Sottoscrittore, non viene eseguita alcuna azione.|  
 ||**delete**|Esegue un'operazione di eliminazione in base alla clausola WHERE del filtro di subset.|  
-||**goccia**|Elimina la tabella prima di ricrearla.|  
+||**drop**|Elimina la tabella prima di ricrearla.|  
 ||**troncare**|Tronca la tabella di destinazione.|  
 |**processing_order**||**int** che indica l'ordine di elaborazione degli articoli in una pubblicazione di tipo merge.|  
 |**pub_identity_range**||**bigint** che specifica la dimensione dell'intervallo allocata a un Sottoscrittore con una sottoscrizione server se l'articolo ha **identityrangemanagementoption** impostato su **auto** o **auto_identity_range** impostato su **true**. L'intervallo di valori Identity è riservato al Sottoscrittore di ripubblicazione per l'assegnazione ai propri Sottoscrittori. Proprietà valida solo per gli articoli di tabelle. Per ulteriori informazioni, vedere la sezione relativa alla replica di tipo merge in [replicare le colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
@@ -144,7 +145,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0**|La firma digitale di un sistema di risoluzione personalizzato non viene verificata per stabilire se l'origine è attendibile.|  
 |NULL (predefinito)||Restituisce l'elenco dei valori supportati per la *Proprietà*.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Conferma che l'azione eseguita da questo stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è di **bit**e il valore predefinito è **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Conferma che l'azione eseguita da questo stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è di **bit**e il valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo di merge non invalidano lo snapshot. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   
@@ -152,7 +153,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
  Per informazioni sulle proprietà che richiedono la generazione di un nuovo snapshot quando vengono modificate, vedere la sezione Osservazioni.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`Conferma che l'azione eseguita da questo stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è di **bit**e il valore predefinito è **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Conferma che l'azione eseguita da questo stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è di **bit**e il valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo di merge non provocano la reinizializzazione della sottoscrizione. Se la stored procedure rileva che la modifica richiede la reinizializzazione delle sottoscrizioni esistenti, viene generato un errore e non viene apportata alcuna modifica.  
   
@@ -239,9 +240,9 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le proprietà degli articoli](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [Modificare le proprietà di pubblicazioni e articoli](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergearticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [sp_dropmergearticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
- [sp_helpmergearticle &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [sp_addmergearticle &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_dropmergearticle &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
+ [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

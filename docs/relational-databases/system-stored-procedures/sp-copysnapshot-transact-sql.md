@@ -1,4 +1,5 @@
 ---
+description: sp_copysnapshot (Transact-SQL)
 title: sp_copysnapshot (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 17a554d6bccdfb067600f10122122bd542fe9c6b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 85d15ffb52e41d072db3d583644eb7269cd57a33
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771201"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469704"
 ---
 # <a name="sp_copysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,13 +40,13 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione di cui si desidera copiare il contenuto dello snapshot. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione di cui si desidera copiare il contenuto dello snapshot. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @destination_folder = ] 'destination_folder'`Nome della cartella in cui verranno copiati i contenuti dello snapshot di pubblicazione. *destination_folder*è di **tipo nvarchar (255)** e non prevede alcun valore predefinito. Il *destination_folder* può essere un percorso alternativo, ad esempio in un altro server, in un'unità di rete o su un supporto rimovibile, ad esempio CD-ROM o dischi rimovibili.  
+`[ @destination_folder = ] 'destination_folder'` Nome della cartella in cui verranno copiati i contenuti dello snapshot di pubblicazione. *destination_folder*è di **tipo nvarchar (255)** e non prevede alcun valore predefinito. Il *destination_folder* può essere un percorso alternativo, ad esempio in un altro server, in un'unità di rete o su un supporto rimovibile, ad esempio CD-ROM o dischi rimovibili.  
   
-`[ @subscriber = ] 'subscriber'`Nome del Sottoscrittore. *Subscriber* è di tipo sysname e il valore predefinito è null.  
+`[ @subscriber = ] 'subscriber'` Nome del Sottoscrittore. *Subscriber* è di tipo sysname e il valore predefinito è null.  
   
-`[ @subscriber_db = ] 'subscriber_db'`Nome del database di sottoscrizione. *subscriber_db* è di tipo sysname e il valore predefinito è null.  
+`[ @subscriber_db = ] 'subscriber_db'` Nome del database di sottoscrizione. *subscriber_db* è di tipo sysname e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  

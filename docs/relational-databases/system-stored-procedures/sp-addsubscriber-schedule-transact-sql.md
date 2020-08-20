@@ -1,4 +1,5 @@
 ---
+description: sp_addsubscriber_schedule (Transact-SQL)
 title: sp_addsubscriber_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb643c0be953bcff19341f681654f2565be3d9e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7c5f355f735ba32c639d21d5137d6879f83cfa89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716371"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469819"
 ---
 # <a name="sp_addsubscriber_schedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,16 +50,16 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @subscriber = ] 'subscriber'`Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**. Il nome del Sottoscrittore deve essere univoco all'interno del database, non deve essere già esistente e non può essere NULL.  
+`[ @subscriber = ] 'subscriber'` Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**. Il nome del Sottoscrittore deve essere univoco all'interno del database, non deve essere già esistente e non può essere NULL.  
   
-`[ @agent_type = ] agent_type`Tipo di agente. *agent_type* è di **smallint**. i possibili valori sono i seguenti.  
+`[ @agent_type = ] agent_type` Tipo di agente. *agent_type* è di **smallint**. i possibili valori sono i seguenti.  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
 |**0** (predefinito)|Agente di distribuzione|  
 |**1**|Agente di merge|  
   
-`[ @frequency_type = ] frequency_type`Frequenza con cui pianificare la agente di distribuzione. *frequency_type* è di **tipo int**. i possibili valori sono i seguenti.  
+`[ @frequency_type = ] frequency_type` Frequenza con cui pianificare la agente di distribuzione. *frequency_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
@@ -66,14 +67,14 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**2**|On demand|  
 |**4**|Ogni giorno|  
 |**8**|Settimanale|  
-|**16**|Mensile|  
+|**16**|Ogni mese|  
 |**32**|Mensile relativa|  
 |**64** (impostazione predefinita)|Avvio automatico|  
 |**128**|Periodica|  
   
-`[ @frequency_interval = ] frequency_interval`Valore da applicare alla frequenza impostata da *frequency_type*. *frequency_interval* è di **tipo int**e il valore predefinito è **1**.  
+`[ @frequency_interval = ] frequency_interval` Valore da applicare alla frequenza impostata da *frequency_type*. *frequency_interval* è di **tipo int**e il valore predefinito è **1**.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval`Data del agente di distribuzione. Questo parametro viene usato quando *frequency_type* è impostato su **32** (mensile relativo). *frequency_relative_interval* è di **tipo int**. i possibili valori sono i seguenti.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Data del agente di distribuzione. Questo parametro viene usato quando *frequency_type* è impostato su **32** (mensile relativo). *frequency_relative_interval* è di **tipo int**. i possibili valori sono i seguenti.  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
@@ -83,9 +84,9 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**8**|Quarto|  
 |**16**|Last (Ultimo)|  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* è di **tipo int**e il valore predefinito è **0**.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* è di **tipo int**e il valore predefinito è **0**.  
   
-`[ @frequency_subday = ] frequency_subday`Frequenza di ripianificazione durante il periodo definito. *frequency_subday* è di **tipo int**. i possibili valori sono i seguenti.  
+`[ @frequency_subday = ] frequency_subday` Frequenza di ripianificazione durante il periodo definito. *frequency_subday* è di **tipo int**. i possibili valori sono i seguenti.  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
@@ -94,17 +95,17 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**4** (impostazione predefinita)|Minuto|  
 |**8**|Ora|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`Intervallo per *frequency_subday*. *frequency_subday_interval* è di **tipo int**e il valore predefinito è **5**.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Intervallo per *frequency_subday*. *frequency_subday_interval* è di **tipo int**e il valore predefinito è **5**.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day`Ora del giorno in cui il agente di distribuzione viene pianificato per la prima volta, formattato come HHMMSS. *active_start_time_of_day* è di **tipo int**e il valore predefinito è **0**.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Ora del giorno in cui il agente di distribuzione viene pianificato per la prima volta, formattato come HHMMSS. *active_start_time_of_day* è di **tipo int**e il valore predefinito è **0**.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day`Ora del giorno in cui l'agente di distribuzione viene arrestata, formattata come HHMMSS. *active_end_time_of_day*è di **tipo int**e il valore predefinito è 235959, che indica le 11:59:59. nel formato 24 ore.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Ora del giorno in cui l'agente di distribuzione viene arrestata, formattata come HHMMSS. *active_end_time_of_day*è di **tipo int**e il valore predefinito è 235959, che indica le 11:59:59. nel formato 24 ore.  
   
-`[ @active_start_date = ] active_start_date`Data della prima pianificazione del agente di distribuzione, formattata come AAAAMMGG. *active_start_date* è di **tipo int**e il valore predefinito è **0**.  
+`[ @active_start_date = ] active_start_date` Data della prima pianificazione del agente di distribuzione, formattata come AAAAMMGG. *active_start_date* è di **tipo int**e il valore predefinito è **0**.  
   
-`[ @active_end_date = ] active_end_date`Data di arresto della agente di distribuzione pianificata, formattata come AAAAMMGG. *active_end_date* è di **tipo int**e il valore predefinito è 99991231, ovvero il 31 dicembre 9999.  
+`[ @active_end_date = ] active_end_date` Data di arresto della agente di distribuzione pianificata, formattata come AAAAMMGG. *active_end_date* è di **tipo int**e il valore predefinito è 99991231, ovvero il 31 dicembre 9999.  
   
-`[ @publisher = ] 'publisher'`Specifica un server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
+`[ @publisher = ] 'publisher'` Specifica un server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
 >  il *Server* di pubblicazione non deve essere specificato per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
@@ -119,7 +120,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_addsubscriber_schedule**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_changesubscriber_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   
+ [sp_changesubscriber_schedule &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_droplinkedsrvlogin (Transact-SQL)
 title: sp_droplinkedsrvlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3f6df8ac0be9a6bfc8798697ec01e7e5a2c8e3d3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 934b936f6fdc301acde46af4160ee1edfc8374c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85859837"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469556"
 ---
 # <a name="sp_droplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @rmtsrvname = ] 'rmtsrvname'`Nome di un server collegato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui viene applicato il mapping degli account di accesso. *rmtsrvname* è di **tipo sysname**e non prevede alcun valore predefinito. *rmtsrvname* deve esistere già.  
+`[ @rmtsrvname = ] 'rmtsrvname'` Nome di un server collegato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui viene applicato il mapping degli account di accesso. *rmtsrvname* è di **tipo sysname**e non prevede alcun valore predefinito. *rmtsrvname* deve esistere già.  
   
-`[ @locallogin = ] 'locallogin'`Account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso nel server locale con mapping al server collegato *rmtsrvname*. *locallogin* è di **tipo sysname**e non prevede alcun valore predefinito. È necessario che esista già un mapping di *locallogin* a *rmtsrvname* . Se è NULL, il mapping predefinito creato da **sp_addlinkedserver**, che esegue il mapping di tutti gli account di accesso nel server locale agli account di accesso nel server collegato, viene eliminato.  
+`[ @locallogin = ] 'locallogin'` Account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso nel server locale con mapping al server collegato *rmtsrvname*. *locallogin* è di **tipo sysname**e non prevede alcun valore predefinito. È necessario che esista già un mapping di *locallogin* a *rmtsrvname* . Se è NULL, il mapping predefinito creato da **sp_addlinkedserver**, che esegue il mapping di tutti gli account di accesso nel server locale agli account di accesso nel server collegato, viene eliminato.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -74,8 +75,8 @@ EXEC sp_droplinkedsrvlogin 'Accounts', NULL;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addlinkedserver &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

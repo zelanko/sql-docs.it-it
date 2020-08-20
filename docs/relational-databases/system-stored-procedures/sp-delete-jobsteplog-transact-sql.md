@@ -1,4 +1,5 @@
 ---
+description: sp_delete_jobsteplog (Transact-SQL)
 title: sp_delete_jobsteplog (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b1ae68a2c09ca79917288381db0a0f9c92d4e33c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4b50fb6987fe43e78ae205f620fffa06750172a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85863684"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469640"
 ---
 # <a name="sp_delete_jobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,21 +44,21 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] 'job_id'`Numero di identificazione del processo che contiene il log dei passaggi del processo da rimuovere. *job_id* è di **tipo int**e il valore predefinito è null.  
+`[ @job_id = ] 'job_id'` Numero di identificazione del processo che contiene il log dei passaggi del processo da rimuovere. *job_id* è di **tipo int**e il valore predefinito è null.  
   
-`[ @job_name = ] 'job_name'`Nome del processo. *job_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @job_name = ] 'job_name'` Nome del processo. *job_name* è di **tipo sysname**e il valore predefinito è null.  
   
 > **Nota:** È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi.  
   
-`[ @step_id = ] step_id`Numero di identificazione del passaggio del processo per il quale è necessario eliminare il log dei passaggi del processo. Se non è incluso, tutti i log dei passaggi di processo nel processo vengono eliminati a meno che non vengano specificati ** \@ older_than** o ** \@ larger_than** . *step_id* è di **tipo int**e il valore predefinito è null.  
+`[ @step_id = ] step_id` Numero di identificazione del passaggio del processo per il quale è necessario eliminare il log dei passaggi del processo. Se non è incluso, tutti i log dei passaggi di processo nel processo vengono eliminati a meno che non vengano specificati ** \@ older_than** o ** \@ larger_than** . *step_id* è di **tipo int**e il valore predefinito è null.  
   
-`[ @step_name = ] 'step_name'`Nome del passaggio del processo per cui deve essere eliminato il log dei passaggi del processo. *step_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @step_name = ] 'step_name'` Nome del passaggio del processo per cui deve essere eliminato il log dei passaggi del processo. *step_name* è di **tipo sysname**e il valore predefinito è null.  
   
 > **Nota:** È possibile specificare *step_id* o *step_name* , ma non è possibile specificarli entrambi.  
   
-`[ @older_than = ] 'date'`Data e ora del log del passaggio di processo meno recente che si desidera memorizzare. Verranno rimossi tutti i log dei passaggi di processo antecedenti questa data e ora. *date* è di tipo **DateTime**e il valore predefinito è null. È possibile specificare sia ** \@ older_than** che ** \@ larger_than** .  
+`[ @older_than = ] 'date'` Data e ora del log del passaggio di processo meno recente che si desidera memorizzare. Verranno rimossi tutti i log dei passaggi di processo antecedenti questa data e ora. *date* è di tipo **DateTime**e il valore predefinito è null. È possibile specificare sia ** \@ older_than** che ** \@ larger_than** .  
   
-`[ @larger_than = ] 'size_in_bytes'`Dimensioni in byte del log dei passaggi di processo più grande che si desidera memorizzare. Vengono rimossi tutti i log dei passaggi di processo la cui dimensione è maggiore rispetto a quella indicata. È possibile specificare sia ** \@ larger_than** che ** \@ older_than** .  
+`[ @larger_than = ] 'size_in_bytes'` Dimensioni in byte del log dei passaggi di processo più grande che si desidera memorizzare. Vengono rimossi tutti i log dei passaggi di processo la cui dimensione è maggiore rispetto a quella indicata. È possibile specificare sia ** \@ larger_than** che ** \@ older_than** .  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -125,7 +126,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_help_jobsteplog &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
- [Stored procedure di SQL Server Agent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [sp_help_jobsteplog &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
+ [Stored procedure di SQL Server Agent &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

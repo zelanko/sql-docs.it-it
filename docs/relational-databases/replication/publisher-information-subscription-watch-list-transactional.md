@@ -1,4 +1,5 @@
 ---
+description: Informazioni sul server di pubblicazione, Elenco verifica sottoscrizioni (transazionale)
 title: Informazioni sul server di pubblicazione, Elenco verifica sottoscrizioni (transazionale) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -13,16 +14,16 @@ ms.assetid: 6bc64ddb-5c86-4681-a391-77fc1d3c4e6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6289b71f044bc3df3d9bc5306906483c6dd02886
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d335464f07ad5573a2c45fb7258152fc71d930a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470168"
 ---
 # <a name="publisher-information-subscription-watch-list-transactional"></a>Informazioni sul server di pubblicazione, Elenco verifica sottoscrizioni (transazionale)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  La scheda **Elenco verifica sottoscrizioni** è disponibile per i server di distribuzione in cui viene eseguito SQL Server 2005 e versioni successive. Consente di visualizzare informazioni sulle sottoscrizioni da tutte le pubblicazioni disponibili nel server di pubblicazione selezionato. È possibile filtrare l'elenco delle sottoscrizioni per visualizzare errori, avvisi ed eventuali sottoscrizioni con prestazioni scarse. Questa scheda offre gli amministratori un unico punto per il monitoraggio di tutte le attività di replica eseguite nel server di pubblicazione. Monitoraggio replica visualizza infatti tutte le sottoscrizioni che necessitano di attenzione in base al tipo di replica selezionato e all'opzione scelta nell'elenco a discesa **Mostra** . Poiché gli elementi visualizzati in questa scheda si basano sullo stato e le prestazioni correnti, le sottoscrizioni vengono visualizzate in questa pagina solo se queste corrispondono all'opzione selezionata nella casella di riepilogo **Mostra** .  
+   La scheda **Elenco verifica sottoscrizioni** è disponibile per i server di distribuzione che eseguono SQL Server 2005 e versioni successive. Consente di visualizzare informazioni sulle sottoscrizioni da tutte le pubblicazioni disponibili nel server di pubblicazione selezionato. È possibile filtrare l'elenco delle sottoscrizioni per visualizzare errori, avvisi ed eventuali sottoscrizioni con prestazioni scarse. Questa scheda offre gli amministratori un unico punto per il monitoraggio di tutte le attività di replica eseguite nel server di pubblicazione. Monitoraggio replica visualizza infatti tutte le sottoscrizioni che necessitano di attenzione in base al tipo di replica selezionato e all'opzione scelta nell'elenco a discesa **Mostra** . Poiché gli elementi visualizzati in questa scheda si basano sullo stato e le prestazioni correnti, le sottoscrizioni vengono visualizzate in questa pagina solo se queste corrispondono all'opzione selezionata nella casella di riepilogo **Mostra** .  
   
 ## <a name="options"></a>Opzioni  
  Per ulteriori informazioni su una sottoscrizione e sulle attività correlate, fare clic con il pulsante destro del mouse sulla riga della sottoscrizione e quindi scegliere un'opzione dal menu di scelta rapida. Per modificare la modalità di visualizzazione dei dati nella griglia, fare clic con il pulsante destro del mouse sulla griglia, quindi scegliere una delle opzioni seguenti:  
@@ -71,19 +72,19 @@ ms.locfileid: "85640401"
  **Sottoscrizione**  
  Nome di ogni sottoscrizione nel formato: *SubscriberName: SubscriptionDatabaseName*.  
   
- **Pubblicazione**  
+ **Publication**  
  Nome della pubblicazione con cui viene sincronizzata una sottoscrizione nel formato: *PublicationDatabaseName: PublicationName*.  
   
  **Prestazioni**  
  La valutazione delle prestazioni per ogni sottoscrizione è basata sulle misure più recenti rilevate da Monitoraggio replica e non riflette le prestazioni cronologiche. Le prestazioni vengono misurate per le sottoscrizioni delle pubblicazioni per le quali sono state definite soglie di prestazione. Se le soglie di prestazione non sono state definite per una pubblicazione, in questa colonna viene visualizzato **Non attivato**. La valutazione delle prestazioni può corrispondere a uno dei valori seguenti:  
   
--   Eccellenti  
+-   Eccellente  
   
--   Buone  
+-   Buono  
   
--   Discrete  
+-   Sufficiente  
   
--   Scarse  
+-   Scarso  
   
 -   Critico  
   

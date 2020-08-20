@@ -1,4 +1,5 @@
 ---
+description: Supporto per SQLGetInfo
 title: Supporto di SQLGetInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 57326f57-daba-46b6-b0be-6c97213b9ef1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a21c035a14814f51d4344894ef253b2cc844f4c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cff18a23c7d8c4526fc86904d75375ed5aaaf5a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471232"
 ---
 # <a name="sqlgetinfo-support"></a>Supporto per SQLGetInfo
 Quando ODBC 2. *x* l'applicazione chiama **SQLGetInfo** a un driver ODBC 3 *. x* , gli argomenti *InfoType* nella tabella seguente devono essere supportati.  
   
-|*InfoType*|Valori di codice restituiti|  
+|*InfoType*|Restituisce|  
 |----------------|-------------|  
-|SQL_ALTER_TABLE (ODBC 2,0) **Nota:** questo tipo di informazioni non è deprecato; le maschere di maschera nella colonna a destra sono deprecate.|Maschera di tipo SQLINTEGER che enumera le clausole nell'istruzione **ALTER TABLE** supportata dall'origine dati.<br /><br /> Per determinare le clausole supportate sono utilizzate le maschere di comando seguenti:<br /><br /> SQL_AT_DROP_COLUMN = è supportata la possibilità di eliminare le colonne. Indica se questa operazione comporta un comportamento Cascade o Restrict definito dal driver. (ODBC 2,0)<br /><br /> SQL_AT_ADD_COLUMN = è supportata la possibilità di aggiungere più colonne in una singola istruzione ALTER TABLE. Questo bit non si combina con altri SQL_AT_ADD_COLUMN_XXX bit o SQL_AT_CONSTRAINT_XXX bit. (ODBC 2,0)|  
+|SQL_ALTER_TABLE (ODBC 2,0) **Nota:**  questo tipo di informazioni non è deprecato; le maschere di maschera nella colonna a destra sono deprecate.|Maschera di tipo SQLINTEGER che enumera le clausole nell'istruzione **ALTER TABLE** supportata dall'origine dati.<br /><br /> Per determinare le clausole supportate sono utilizzate le maschere di comando seguenti:<br /><br /> SQL_AT_DROP_COLUMN = è supportata la possibilità di eliminare le colonne. Indica se questa operazione comporta un comportamento Cascade o Restrict definito dal driver. (ODBC 2,0)<br /><br /> SQL_AT_ADD_COLUMN = è supportata la possibilità di aggiungere più colonne in una singola istruzione ALTER TABLE. Questo bit non si combina con altri SQL_AT_ADD_COLUMN_XXX bit o SQL_AT_CONSTRAINT_XXX bit. (ODBC 2,0)|  
 |SQL_FETCH_DIRECTION (ODBC 1,0)<br /><br /> Il tipo di informazioni è stato introdotto in ODBC 1,0; ogni maschera di maschera è contrassegnata con la versione in cui è stata introdotta.|Maschera di tipo SQLINTEGER che enumera le opzioni di direzione di recupero supportate.<br /><br /> Le seguenti maschere di maschera vengono utilizzate insieme al flag per determinare quali opzioni sono supportate:<br /><br /> SQL_FD_FETCH_NEXT (ODBC 1,0) SQL_FD_FETCH_FIRST (ODBC 1,0) SQL_FD_FETCH_LAST (ODBC 1,0) SQL_FD_FETCH_PRIOR (ODBC 1,0) SQL_FD_FETCH_ABSOLUTE (ODBC 1,0) SQL_FD_FETCH_RELATIVE (ODBC 1,0) SQL_FD_FETCH_BOOKMARK (ODBC 2,0)|  
 |SQL_LOCK_TYPES (ODBC 2,0)|Maschera di errore SQLINTEGER che enumera i tipi di blocco supportati per l'argomento *Flock* in **SQLSetPos**.<br /><br /> Le seguenti maschere di maschera vengono utilizzate insieme al flag per determinare quali tipi di blocco sono supportati:<br /><br /> SQL_LCK_NO_CHANGE SQL_LCK_EXCLUSIVE SQL_LCK_UNLOCK|  
 |SQL_ODBC_API_CONFORMANCE (ODBC 1,0)|Valore SQLSMALLINT che indica il livello di conformità ODBC.<br /><br /> SQL_OAC_NONE = None<br /><br /> SQL_OAC_LEVEL1 = livello 1 supportato<br /><br /> SQL_OAC_LEVEL2 = livello 2 supportato|  

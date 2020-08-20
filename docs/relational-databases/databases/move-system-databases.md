@@ -1,4 +1,5 @@
 ---
+description: Spostare i database di sistema
 title: Spostare i database di sistema | Microsoft Docs
 ms.custom: ''
 ms.date: 08/26/2016
@@ -27,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 44fc9e7e1c15ae2bd5eb4471d1ee5e396274faa0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 799a5d9aeed185700015fcf9527e57e295d61020
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763222"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471249"
 ---
 # <a name="move-system-databases"></a>Spostare i database di sistema
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

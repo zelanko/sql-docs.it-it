@@ -1,4 +1,5 @@
 ---
+description: Convalida di un pacchetto di applicazioni livello dati
 title: Convalidare un pacchetto di applicazioni livello dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 62ea7a75bc9ed691f282aa0d886f64d006deb94b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 717d81dd0f6f7f55af78ec4264b4f3b9fb329583
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781638"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471428"
 ---
 # <a name="validate-a-dac-package"></a>Convalida di un pacchetto di applicazioni livello dati
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85781638"
   
 1.  **Prima di iniziare:**  [Prerequisiti](#Prerequisites)  
   
-2.  **Per aggiornare un'applicazione livello dati tramite la:**  [Visualizzare il contenuto di un'applicazione livello dati](#ViewDACContents), [Visualizzare modifiche al database](#ViewDBChanges), [Visualizzare azioni di aggiornamento](#ViewUpgradeActions), [Confrontare le applicazioni livello dati](#CompareDACs)  
+2.  **Per aggiornare un'applicazione livello dati, utilizzare:**  [Visualizza il contenuto di un'applicazione livello dati](#ViewDACContents), [Visualizza modifiche al database](#ViewDBChanges), [Visualizza azioni di aggiornamento](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
 
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> Prerequisiti  
  È consigliabile evitare di distribuire un pacchetto di applicazione livello dati proveniente da origini sconosciute o non attendibili. Tali pacchetti DAC possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema. Prima di usare un'applicazione livello dati proveniente da un'origine sconosciuta o non attendibile, distribuirla in un'istanza di test isolata del [!INCLUDE[ssDE](../../includes/ssde-md.md)], eseguire [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sul database ed esaminare anche il codice nel database, ad esempio stored procedure o altro codice definito dall'utente.  

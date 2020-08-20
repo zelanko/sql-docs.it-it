@@ -1,4 +1,5 @@
 ---
+description: Impostazioni database secondario
 title: Impostazioni database secondario | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ce372206ab771679eb002e051dd78e1c6be60940
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6db17f4c7930e03e65412c9addaef5340ec4645
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759015"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471129"
 ---
 # <a name="secondary-database-settings"></a>Impostazioni database secondario
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -96,7 +97,7 @@ ms.locfileid: "85759015"
  Consente di lasciare il database secondario in modalità STANDBY. Questa modalità consente di eseguire esclusivamente operazioni di sola lettura sul database.  
   
 > [!IMPORTANT]  
->  Se si modifica la modalità di recupero di un database secondario esistente, ad esempio da **Modalità nessun recupero** a **Modalità standby**, la modifica viene applicata solo dopo che il backup del log successivo è stato ripristinato nel database.  
+>   Se si modifica la modalità di recupero di un database secondario esistente, ad esempio da **Modalità nessun recupero** a **Modalità standby**, la modifica viene applicata solo dopo che il backup del log successivo viene ripristinato nel database.  
   
  **Ritardo minimo per il ripristino dei backup**  
  Consente di scegliere l'eventuale ritardo per il ripristino dei backup dei log delle transazioni nel server secondario.  

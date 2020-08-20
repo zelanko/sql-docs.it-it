@@ -1,4 +1,5 @@
 ---
+description: Convalida dei dati replicati
 title: Convalidare i dati replicati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 58fdc4a2f811e93651da79b9732acbe6ecc00435
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c83a02c9c2b0c8c22a62f1765c839a1c15534405
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110557"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470188"
 ---
 # <a name="validate-replicated-data"></a>Convalida dei dati replicati
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

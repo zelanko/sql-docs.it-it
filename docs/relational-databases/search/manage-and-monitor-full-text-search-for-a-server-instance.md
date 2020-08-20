@@ -1,4 +1,5 @@
 ---
+description: Gestione e monitoraggio della ricerca full-text per un'istanza del server
 title: Gestire e monitorare la ricerca full-text per un'istanza di SQL Server
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e638dfe871d2ba4582228c097291d7f118fa47d0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e4ad414772e61a0100b52e9e665255922e5b908e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629462"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470118"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Gestione e monitoraggio della ricerca full-text per un'istanza del server
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

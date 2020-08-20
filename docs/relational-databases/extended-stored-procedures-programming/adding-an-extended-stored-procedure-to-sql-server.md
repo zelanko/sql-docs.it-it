@@ -1,4 +1,5 @@
 ---
+description: Aggiunta di una stored procedure estesa a SQL Server
 title: Aggiunta di una stored procedure estesa a SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 22f2b2b5345d4d5cb11b96ecf7741ce144597548
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 45a0c13811152c9dd8e5e9590db2062f0f874664
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470487"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>Aggiunta di una stored procedure estesa a SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,7 +95,7 @@ Server: Msg 2812, Level 16, State 62, Line 1
  Non è necessario arrestare e riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addextendedproc &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
+ [sp_addextendedproc &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
  [sp_dropextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)  
   
   

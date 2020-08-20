@@ -1,4 +1,5 @@
 ---
+description: Convalida sottoscrizione
 title: Convalida sottoscrizione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e95a160e405adb8cdc77a763840489b436c9bf96
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 2e80697f75a6234b913e0784b0110873b3c848ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470140"
 ---
 # <a name="validate-subscription"></a>Convalida sottoscrizione
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,6 +45,6 @@ ms.locfileid: "87110536"
  Fare clic su questo pulsante per accedere alla finestra di dialogo **Opzioni di convalida delle sottoscrizioni** nella quale è possibile specificare se utilizzare la convalida mediante il conteggio delle righe oppure la convalida mediante checksum binario.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Convalidare i dati replicati](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
+ [Convalida dei dati replicati](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

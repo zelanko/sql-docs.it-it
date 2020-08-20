@@ -1,4 +1,5 @@
 ---
+description: sp_delete_log_shipping_secondary_database (Transact-SQL)
 title: sp_delete_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c71b21c0-ec04-4fbd-9735-01128b736935
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 28527dcb21243c7853439b2f8244fc1ca696b3c2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8eb3b4818674ebb8e52c340fad8452269a2a50d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85863236"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469682"
 ---
 # <a name="sp_delete_log_shipping_secondary_database-transact-sql"></a>sp_delete_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_delete_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @secondary_database = ] 'secondary_database'`Nome del database secondario. *secondary_database* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @secondary_database = ] 'secondary_database'` Nome del database secondario. *secondary_database* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

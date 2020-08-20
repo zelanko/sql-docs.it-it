@@ -1,4 +1,5 @@
 ---
+description: sp_dropdistributor (Transact-SQL)
 title: sp_dropdistributor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fdd3c733d93fa803906523d7150b4377e6f28666
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 404ef0654abde8b9d41659d7dd25bf80ac5b3bb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786939"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469573"
 ---
 # <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,13 +39,13 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @no_checks = ] no_checks`Indica se verificare la presenza di oggetti dipendenti prima di eliminare il server di distribuzione. *no_checks* è di **bit**e il valore predefinito è 0.  
+`[ @no_checks = ] no_checks` Indica se verificare la presenza di oggetti dipendenti prima di eliminare il server di distribuzione. *no_checks* è di **bit**e il valore predefinito è 0.  
   
  Se è **0**, **sp_dropdistributor** verifica che tutti gli oggetti di pubblicazione e distribuzione oltre al server di distribuzione siano stati eliminati.  
   
  Se è **1**, **sp_dropdistributor** Elimina tutti gli oggetti di pubblicazione e distribuzione prima di disinstallare il server di distribuzione.  
   
-`[ @ignore_distributor = ] ignore_distributor`Indica se questo stored procedure viene eseguito senza connettersi al server di distribuzione. *ignore_distributor* è di **bit**e il valore predefinito è **0**.  
+`[ @ignore_distributor = ] ignore_distributor` Indica se questo stored procedure viene eseguito senza connettersi al server di distribuzione. *ignore_distributor* è di **bit**e il valore predefinito è **0**.  
   
  Se è **0**, **sp_dropdistributor** si connette al server di distribuzione e rimuove tutti gli oggetti di replica. Se **sp_dropdistributor** non è in grado di connettersi al server di distribuzione, il stored procedure ha esito negativo.  
   
@@ -68,9 +69,9 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
   
 ## <a name="see-also"></a>Vedere anche  
  [Disabilitare la pubblicazione e la distribuzione](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistributor &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
- [sp_changedistributor_property &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
- [sp_helpdistributor &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [sp_adddistributor &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [sp_changedistributor_property &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
+ [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

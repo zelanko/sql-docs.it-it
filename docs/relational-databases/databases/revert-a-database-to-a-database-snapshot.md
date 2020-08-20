@@ -1,4 +1,5 @@
 ---
+description: Ripristinare un database a uno snapshot del database
 title: Ripristinare un database a uno snapshot del database | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 1a9c34408dd1f7731579830802fd8ac62d1f0bae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d4551044d0db95cfa8abaf177d683626c666dcf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759034"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471144"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Ripristinare un database a uno snapshot del database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85759034"
   
      [Sicurezza](#Security)  
   
--   **Per ripristinare un database a uno snapshot del database tramite:**  [Transact-SQL](#TsqlProcedure)  
+-   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -100,7 +101,7 @@ ms.locfileid: "85759034"
   
      Per un'operazione di ripristino è necessario disporre delle autorizzazioni RESTORE DATABASE nel database di origine. Utilizzare quindi l'istruzione Transact-SQL per ripristinare il database:  
   
-     RESTORE DATABASE *nome_database* FROM DATABASE_SNAPSHOT **=** _nome_snapshot_database_  
+     RESTORE DATABASE *nome_database* FROM DATABASE_SNAPSHOT **=**_nome_snapshot_database_  
   
      dove *nome_database* è il database di origine e *nome_snapshot_database* è il nome dello snapshot con cui ripristinare il database. Si noti che in questa istruzione è necessario specificare un nome di snapshot anziché un dispositivo di backup.  
   

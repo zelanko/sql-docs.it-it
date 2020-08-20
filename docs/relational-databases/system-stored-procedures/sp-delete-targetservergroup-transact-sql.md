@@ -1,4 +1,5 @@
 ---
+description: sp_delete_targetservergroup (Transact-SQL)
 title: sp_delete_targetservergroup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d8dd838e-64aa-419f-9ccb-ff04908cf3e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2d6f00cf5fcc0cad2c5b6874b7302d00655e7a76
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c35c95e7140de0ce3da453a8063cb849625639af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862373"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469593"
 ---
 # <a name="sp_delete_targetservergroup-transact-sql"></a>sp_delete_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_delete_targetservergroup [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name = ] 'name'`Nome del gruppo di server di destinazione da rimuovere. *Name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @name = ] 'name'` Nome del gruppo di server di destinazione da rimuovere. *Name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -63,8 +64,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_targetservergroup &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
- [sp_help_targetservergroup &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)   
- [sp_update_targetservergroup &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)  
+ [sp_add_targetservergroup &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
+ [sp_help_targetservergroup &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)   
+ [sp_update_targetservergroup &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)  
   
   

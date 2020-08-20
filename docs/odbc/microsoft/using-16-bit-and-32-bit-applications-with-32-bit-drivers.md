@@ -1,4 +1,5 @@
 ---
+description: Uso delle applicazioni a 16 e 32 bit con driver a 32 bit
 title: Uso di applicazioni a 16 bit e a 32 bit con driver a 32 bit | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fc65c988-b31f-4cc9-851f-30d2119604fd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7ce996a7c4816d4d14491e226f891904b6cf8c02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3985fa6fa4fd24ad9638e418915542b48abc26f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471376"
 ---
 # <a name="using-16-bit-and-32-bit-applications-with-32-bit-drivers"></a>Uso delle applicazioni a 16 e 32 bit con driver a 32 bit
 > [!IMPORTANT]  

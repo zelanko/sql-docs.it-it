@@ -1,4 +1,5 @@
 ---
+description: sp_addtabletocontents (Transact-SQL)
 title: sp_addtabletocontents (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 928d601fe544432b669b84b8d8a819405bcfbc7e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d0363795187e586a7a37481505240b74690aa425
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876037"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469769"
 ---
 # <a name="sp_addtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @table_name = ] 'table_name'`Nome della tabella. *table_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @table_name = ] 'table_name'` Nome della tabella. *table_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @owner_name = ] 'owner_name'`Nome del proprietario della tabella. *owner_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @owner_name = ] 'owner_name'` Nome del proprietario della tabella. *owner_name* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @filter_clause = ] 'filter_clause'`Specifica una clausola di filtro che controlla quali righe dei dati appena caricati devono essere aggiunte alle tabelle di rilevamento di tipo merge. *filter_clause* è di **tipo nvarchar (4000)** e il valore predefinito è null. Se *filter_clause* è **null**, vengono aggiunte tutte le righe caricate in blocco.  
+`[ @filter_clause = ] 'filter_clause'` Specifica una clausola di filtro che controlla quali righe dei dati appena caricati devono essere aggiunte alle tabelle di rilevamento di tipo merge. *filter_clause* è di **tipo nvarchar (4000)** e il valore predefinito è null. Se *filter_clause* è **null**, vengono aggiunte tutte le righe caricate in blocco.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  

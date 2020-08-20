@@ -1,4 +1,5 @@
 ---
+description: sp_addqueued_artinfo (Transact-SQL)
 title: sp_addqueued_artinfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de7f206aea8b536c86333698dd5a557e2f50b84b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22c1c38828ab6f1857d64136a402752b110a214e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469816"
 ---
 # <a name="sp_addqueued_artinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,22 +50,22 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @artid = ] 'artid'`Nome dell'ID dell'articolo. *artid* è di **tipo int**e non prevede alcun valore predefinito  
+`[ @artid = ] 'artid'` Nome dell'ID dell'articolo. *artid* è di **tipo int**e non prevede alcun valore predefinito  
   
-`[ @article = ] 'article'`Nome dell'articolo da inserire nello script. *article* è di **tipo sysname**e non prevede alcun valore predefinito  
+`[ @article = ] 'article'` Nome dell'articolo da inserire nello script. *article* è di **tipo sysname**e non prevede alcun valore predefinito  
   
-`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'` Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publisher_db = ] 'publisher_db'`Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'` Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publication = ] 'publication'`Nome della pubblicazione da inserire nello script. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'` Nome della pubblicazione da inserire nello script. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @dest_table = ] _'dest_table'`Nome della tabella di destinazione. *dest_table* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @dest_table = ] _'dest_table'` Nome della tabella di destinazione. *dest_table* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
  [** @owner =** ] **'**_proprietario_**'**  
  Proprietario della sottoscrizione. *owner* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @cft_table = ] 'cft_table'`Nome della tabella dei conflitti ad aggiornamento in coda per l'articolo. *cft_table*è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @cft_table = ] 'cft_table'` Nome della tabella dei conflitti ad aggiornamento in coda per l'articolo. *cft_table*è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -78,9 +79,9 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_addqueued_artinfo**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sottoscrizioni aggiornabili per la replica transazionale](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [sp_script_synctran_commands &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
- [MSsubscription_articles &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [sp_script_synctran_commands &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
+ [MSsubscription_articles &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_describe_parameter_encryption (Transact-SQL)
 title: sp_describe_parameter_encryption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2016
@@ -18,11 +19,12 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ccba808ada0276933608b9297b6c416c11cdb194
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d3f4b5dd2d6c63688046eda4a8b752bc10b9c943
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469583"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -64,7 +66,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|ID della riga nel set di risultati.|  
 |**database_id**|**int**|ID database.|  
 |**column_encryption_key_id**|**int**|ID della chiave di crittografia della colonna. Nota: questo ID indica una riga nella vista del catalogo [sys. column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) .|  
-|**column_encryption_key_version**|**int**|Riservato per utilizzi futuri. Attualmente, contiene sempre 1.|  
+|**column_encryption_key_version**|**int**|Riservato per usi futuri. Attualmente, contiene sempre 1.|  
 |**column_encryption_key_metadata_version**|**binario (8)**|Timestamp che rappresenta l'ora di creazione della chiave di crittografia della colonna.|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|Valore crittografato della chiave di crittografia della colonna.|  
 |**column_master_key_store_provider_name**|**sysname**|Nome del provider per l'archivio delle chiavi che contiene la chiave master della colonna usata per produrre il valore crittografato della chiave di crittografia della colonna.|  

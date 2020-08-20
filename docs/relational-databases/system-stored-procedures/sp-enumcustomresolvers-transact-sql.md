@@ -1,4 +1,5 @@
 ---
+description: sp_enumcustomresolvers (Transact-SQL)
 title: sp_enumcustomresolvers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ecff860e5dc101cc02b3e5fd7b97569510a8cf68
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2579e1d099d0543b1ed8d14bccef877bb892c64e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891902"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469505"
 ---
 # <a name="sp_enumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @distributor = ] 'distributor'`Nome del server di distribuzione in cui si trova il sistema di risoluzione personalizzato. *Distributor* è di **tipo sysname**e il valore predefinito è null. *Questo parametro è deprecato e verrà rimosso da una delle prossime versioni.*  
+`[ @distributor = ] 'distributor'` Nome del server di distribuzione in cui si trova il sistema di risoluzione personalizzato. *Distributor* è di **tipo sysname**e il valore predefinito è null. *Questo parametro è deprecato e verrà rimosso da una delle prossime versioni.*  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -61,8 +62,8 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ## <a name="see-also"></a>Vedere anche  
  [Implementare un gestore della logica di business per un articolo di merge](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [Implementare un sistema di risoluzione dei conflitti personalizzato per un articolo di merge](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
- [sp_lookupcustomresolver &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
- [sp_unregistercustomresolver &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
+ [sp_lookupcustomresolver &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
+ [sp_unregistercustomresolver &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

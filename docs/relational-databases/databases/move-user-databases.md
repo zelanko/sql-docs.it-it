@@ -1,4 +1,5 @@
 ---
+description: Spostare database utente
 title: Spostare database utente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,16 +25,16 @@ helpviewer_keywords:
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ae4bcbf6a8fe10fb07d644c697c8d3ac04631555
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0892e0a2a6db25e6a82f56177544572b8a5af388
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728433"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471238"
 ---
 # <a name="move-user-databases"></a>Spostare database utente
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è possibile spostare i file di dati, di log e del catalogo full-text di un database utente specificando il nuovo percorso file nella clausola FILENAME dell'istruzione [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) . Questo metodo è valido per lo spostamento dei file del database all'interno della stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per spostare un database in un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o in un altro server, usare le operazioni di [backup e ripristino](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) o di [collegamento e scollegamento](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md).  
+   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile spostare i file di dati, di log e del catalogo full-text di un database utente specificando il nuovo percorso file nella clausola FILENAME dell'istruzione [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Questo metodo è valido per lo spostamento dei file del database all'interno della stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per spostare un database in un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o in un altro server, usare le operazioni di [backup e ripristino](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) o di [collegamento e scollegamento](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md).  
   
 ## <a name="considerations"></a>Considerazioni  
  Quando si sposta un database in un'altra istanza del server, per garantire un sistema consistente a utenti e applicazioni, potrebbe essere necessario ricreare tutti i metadati del database o parte di essi. Per altre informazioni, vedere [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  

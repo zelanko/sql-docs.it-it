@@ -1,4 +1,5 @@
 ---
+description: sp_delete_targetserver (Transact-SQL)
 title: sp_delete_targetserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4489e34ec83bd3981e464e72cb8e72885fcc994f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 290da3e982e98287305e2e9f277037fea0e8f86a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469606"
 ---
 # <a name="sp_delete_targetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @server_name = ] 'server'`Nome del server da rimuovere come server di destinazione disponibile. il *Server* è di **tipo nvarchar (30)** e non prevede alcun valore predefinito.  
+`[ @server_name = ] 'server'` Nome del server da rimuovere come server di destinazione disponibile. il *Server* è di **tipo nvarchar (30)** e non prevede alcun valore predefinito.  
   
-`[ @clear_downloadlist = ] clear_downloadlist`Specifica se cancellare l'elenco di download per il server di destinazione. *clear_downloadlist* è di tipo **bit**e il valore predefinito è **1**. Quando *clear_downloadlist* è **1**, la procedura cancella l'elenco di download per il server prima di eliminare il server. Quando *clear_downloadlist* è **0**, l'elenco di download non viene cancellato.  
+`[ @clear_downloadlist = ] clear_downloadlist` Specifica se cancellare l'elenco di download per il server di destinazione. *clear_downloadlist* è di tipo **bit**e il valore predefinito è **1**. Quando *clear_downloadlist* è **1**, la procedura cancella l'elenco di download per il server prima di eliminare il server. Quando *clear_downloadlist* è **0**, l'elenco di download non viene cancellato.  
   
-`[ @post_defection = ] post_defection`Specifica se inviare un'istruzione di esclusione al server di destinazione. *post_defection* è di tipo **bit**e il valore predefinito è 1. Quando *post_defection* è **1**, la procedura Invia un'istruzione di esclusione al server di destinazione prima di eliminare il server. Quando *post_defection* è **0**, la procedura non invia un'istruzione di esclusione al server di destinazione.  
+`[ @post_defection = ] post_defection` Specifica se inviare un'istruzione di esclusione al server di destinazione. *post_defection* è di tipo **bit**e il valore predefinito è 1. Quando *post_defection* è **1**, la procedura Invia un'istruzione di esclusione al server di destinazione prima di eliminare il server. Quando *post_defection* è **0**, la procedura non invia un'istruzione di esclusione al server di destinazione.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -72,8 +73,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_help_targetserver &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
- [sp_msx_defect &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
+ [sp_help_targetserver &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
+ [sp_msx_defect &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

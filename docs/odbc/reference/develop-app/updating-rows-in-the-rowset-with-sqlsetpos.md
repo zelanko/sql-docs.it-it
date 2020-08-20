@@ -1,4 +1,5 @@
 ---
+description: Aggiornamento delle righe nel set di righe con SQLSetPos
 title: Aggiornamento di righe nel set di righe con SQLSetPos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4851d4ba741379fc188b2b88c895a378ef3bb80d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1b1b50007a03ee1973d92acafbe8f2be1022f52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471216"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>Aggiornamento delle righe nel set di righe con SQLSetPos
 L'operazione di aggiornamento di **SQLSetPos** consente all'origine dati di aggiornare una o più righe selezionate di una tabella, usando i dati nei buffer dell'applicazione per ogni colonna associata, a meno che il valore nel buffer di lunghezza/indicatore non sia SQL_COLUMN_IGNORE. Le colonne non associate non verranno aggiornate.  

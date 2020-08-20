@@ -1,4 +1,5 @@
 ---
+description: sys.credentials (Transact-SQL)
 title: sys. Credentials (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/06/2020
@@ -20,12 +21,12 @@ ms.assetid: ea48cf80-904a-4273-a950-6d35b1b0a1b6
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f87378897256f8b4fae26b30263577bedede6175
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0142b426be12bcec8b5c6ea7afba7b9da0b6cb7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80752885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469919"
 ---
 # <a name="syscredentials-transact-sql"></a>sys.credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-asdw-pdw-md.md)]
@@ -46,12 +47,12 @@ ms.locfileid: "80752885"
 Per le credenziali a livello di database, vedere [sys. database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md).
   
 ## <a name="permissions"></a>Autorizzazioni  
- `VIEW ANY DEFINITION` Richiede l'autorizzazione o `ALTER ANY CREDENTIAL` l'autorizzazione. Inoltre, all'entità non deve essere negata `VIEW ANY DEFINITION` l'autorizzazione.  
+ Richiede l'autorizzazione `VIEW ANY DEFINITION` o l' `ALTER ANY CREDENTIAL` autorizzazione. Inoltre, all'entità non deve essere negata l' `VIEW ANY DEFINITION` autorizzazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sys. database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
  [Credenziali &#40;motore di database&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
- [Viste del catalogo di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)  
   

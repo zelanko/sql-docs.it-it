@@ -1,4 +1,5 @@
 ---
+description: Stored procedure di sicurezza (Transact-SQL)
 title: Stored procedure di sicurezza (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -17,18 +18,18 @@ ms.assetid: 62b72907-7e95-4c97-9891-0c45d5b678ce
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ded4d62aa64ad6c45657924e187a859bfa91b61
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 5050644389090e826f7c86593e9c68aea4cc4863
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245588"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469802"
 ---
 # <a name="security-stored-procedures-transact-sql"></a>Stored procedure di sicurezza (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]supporta le seguenti stored procedure di sistema utilizzate per gestire la sicurezza. Alcune di queste stored procedure sono deprecate, ma continuano a essere disponibili per supportare la compatibilità con le versioni precedenti. Negli argomenti delle procedure deprecate sarà indicata le relativa sostituzione.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le seguenti stored procedure di sistema utilizzate per gestire la sicurezza. Alcune di queste stored procedure sono deprecate, ma continuano a essere disponibili per supportare la compatibilità con le versioni precedenti. Negli argomenti delle procedure deprecate sarà indicata le relativa sostituzione.  
 
 :::row:::
     :::column:::
@@ -277,7 +278,7 @@ ms.locfileid: "87245588"
 :::row-end:::
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Stored procedure di sistema &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Funzioni di sicurezza &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   
